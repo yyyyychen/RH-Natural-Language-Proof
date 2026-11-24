@@ -1,0 +1,53 @@
+\begin{lemma}[Boundary nonvanishing]\label{lem:boundary}
+For \(q\ge1\), \(\chi\in X(q)\) and \(t\in\mathbb R\), the boundary
+value at every regular point satisfies
+\[
+   (\chi,t)\ne(\chi_{0,q},0)\quad\Longrightarrow\quad
+                       L_q(1+it,\chi)\ne0 .
+\]
+\end{lemma}
+
+\begin{proof}
+For \(\sigma>1\) the Euler products give
+\[
+ \zeta(\sigma)^3\,|L(\sigma+it,\chi)|^4
+             |L(\sigma+2it,\chi^2)|\geq 1.
+\]
+For each prime power \(p^r\), the summand in the logarithm of
+the product has denominator \(rp^{r\sigma}\). If \(\chi(p)\ne0\),
+write \(\chi(p)^rp^{-irt}=e^{iv}\). Its numerator is
+\[
+             3+4\cos v+\cos(2v)=2(1+\cos v)^2\ge0.
+\]
+If \(\chi(p)=0\), the numerator is \(3\). These are all terms by
+absolute convergence. If \(L(s,\chi)\) has a zero of order \(m\ge1\)
+at \(1+it\) and \(L(s,\chi^2)\) is holomorphic at \(1+2it\),
+then the product is \(O((\sigma-1)^{4m-3})\) as
+\(\sigma\downarrow1\), contradicting its lower bound. A pole of
+the last factor requires \(t=0\) and \(\chi^2\) principal.
+
+It remains to treat \(t=0\) with \(\chi\) real and nonprincipal. Here a zero at one would cancel the pole of zeta:
+\[
+ L(1,\chi)=0\quad\Longrightarrow\quad P(s)=\zeta(s)L(s,\chi)\ \text{is entire}.
+\] Its Dirichlet series in
+\(\RePart s>1\) has coefficients \(a_n=\sum_{d\mid n}\chi(d)\).
+The coefficients are multiplicative, and
+\[
+ a_{p^j}=\sum_{i=0}^j\chi(p)^i
+   =\begin{cases}
+        j+1,&\chi(p)=1,\\
+        1,&\chi(p)=0,\\
+        \mathbf 1_{2\mid j},&\chi(p)=-1.
+     \end{cases}
+\]
+In particular all \(a_n\ge0\) and \(a_{m^2}\ge1\) for every \(m\). At a real \(\sigma_0>1\) the derivatives can
+be taken termwise by absolute convergence in a neighborhood.
+Entirety and the Taylor expansion of \(P(\sigma_0-r)\) give
+\[
+ P(\sigma_0-r)=\sum_{k\geq 0}\frac{r^k}{k!}
+             \sum_{n\geq 1}a_n(\log n)^k n^{-\sigma_0}
+             =\sum_{n\geq 1}a_n n^{-\sigma_0+r}\qquad(r\geq 0).
+\]
+Nonnegativity justifies interchanging the sums. Taking
+\(r=\sigma_0-1/2\) makes the subseries over squares diverge.
+\end{proof}

@@ -1,0 +1,386 @@
+\subsection{The joint estimate on the completed family}
+\label{subsec:joint-family-estimate}
+
+The two parameter runs now give local inequalities on one realized division pair. Returning to the original period coordinates and summing over places will put them in the same determinant estimate as the cohomological numerator.
+
+At each scale retain the field and the height exponent of
+Lemma~\ref{lem:window-parameter-choice}. The original-host estimate in
+Proposition~\ref{prop:actual-rank-budget} applies to all the required
+twists. Lemma~\ref{lem:strict-budget-after-cut} restricts its sum to
+the good types, and Proposition~\ref{prop:weighted-dual-cost} bounds
+the localized numerator on the linked row. We now compare its period
+lattices on the two covers of that same row.
+\begin{definition}[Indices on a pair of conjugate places]\label{def:joint-pair-indices}
+For a fixed completed member of Definition~\ref{def:completed-member}, write \(\omega_w=\log\mathrm Nw/[K:\mathbb Q]\) for the coefficient
+place weights, \(e_w\) for absolute ramification and
+\(\mathcal E=x^\epsilon(B_0+N_c)\).
+At a twisted place \(w\mid p\), let \(I_{wj}\) be the sum of the
+two signed transport indices of lift \(j\) at \(w,\bar w\). The
+error before passing to the restricted lattice \(r^0_{j,w}\), forced term \(F_j(w)\) and integer
+least exponent \(J_{j,w}\) are as in Section~\ref{sec:word-division}.
+\end{definition}
+
+\begin{lemma}\label{lem:joint-family}
+Fix the family with the parameter choice of
+Lemma~\ref{lem:window-parameter-choice} and the linked base
+and refined rows of Proposition~\ref{prop:linked-comparison-rows}.
+Use the good types of Lemma~\ref{lem:strict-budget-after-cut} on the
+original host and the integral numerator of
+Proposition~\ref{prop:weighted-dual-cost} on these rows. There are \(C_0\ge0\) and \(X_*\) such that, at
+every scale \(x\ge X_*\) in the family's domain, the base row of
+each compatible completed member of Definition~\ref{def:completed-member}
+satisfies, for \(C\ge C_0\),
+\begin{align}
+ \sum_j I_{wj}
+ &\le D_0\left(\sum_j(2e_wF_j(w)+e_w r^0_{j,w})
+                         +2e_w/p^2\right),\label{eq:joint-parent-local}\\
+ r^0_{j,w}&\ge0,\qquad
+ \sum_{w\ {\rm twisted}}\omega_w(e_w r^0_{j,w}+J_{j,w})
+                \le C\mathcal E.\label{eq:joint-parent-global}
+\end{align}
+On the final members of Construction~\ref{hyp:family-prescribed-realization}, use the reduced chart and product lattices of Lemmas~\ref{hyp:slice-chart-branch-lattices} and~\ref{hyp:slice-product-lattices} on the marked rows. The transport of Lemma~\ref{lem:parent-transport-cost} then compares the lattices at each compatible completion.
+The constants are uniform in the translates, words, lifts and
+places of the family.
+\end{lemma}
+
+\begin{proof}
+\proofstep{Choose a comparison that reads the parent row.}
+Choose the comparison in the completed division pair with
+the prescribed identification of coefficient embeddings, series
+reading and geometric core, as in Paragraph~\ref{par:linked-family-rows}.
+The primitive and divisor identifications hold on each such
+summand. Fix a compatible completed member \(P\), and write \(D(P)\) for
+its period maps, integral lattices and numerical sizes. The covolume
+comparison and the evaluation-grid comparison may choose different
+realizations over \(P\). Denote those identifications by \(\iota_{\rm cov}\) and
+\(\iota_{\rm ev}\), on the covolume and evaluation realizations
+over \(P\), respectively. Their period-and-lattice records satisfy
+\[
+         \iota_{\rm cov}(D_{\rm cov})=D(P)
+                                =\iota_{\rm ev}(D_{\rm ev}).
+\]
+
+
+More explicitly, let \(C_{\rm cov}(P)\) and \(C_{\rm ev}(P)\) denote the choices of auxiliary comparisons inducing the fixed data \(D(P)\). The constructions on the fixed row give an element of each set. Any pair in
+\[
+                  C_{\rm cov}(P)\times C_{\rm ev}(P)
+\]
+gives a simultaneous choice over \(P\). Apply the two inequalities there. Their
+row, weight, divisor and coefficient variables then coincide. For each further restriction
+with threshold \(X_i\), work on \(x\ge\max_i X_i\) in the
+domain of the chosen family.
+The rank, divisor data and choice of orientations in
+Section~\ref{subsec:completed-prime-runs} now apply there.
+\label{cor:joint-family-estimate-1}
+
+\proofstep{Descend the class sums to one coefficient field.}
+Let \(A(y)\) denote the complex form of a vector in the lift's
+coefficient frame over \(K\), and let \(\iota:K\hookrightarrow
+\mathbb C\) be its embedding. The images of a frame basis are
+complex linearly independent by the form isomorphism and its
+injective reading on the generating lowest vector. We need the
+class-sum map at the actual tuple level over this field. Its
+rationality uses the ray fields from Paragraph~\ref{par:linked-family-rows}.
+Write \(K_{2}\) for the imaginary quadratic subfield. Since it has degree two and contains the indicated square root,
+\[
+ \mathbb Q(\sqrt{-d})\subseteq K_{2},\qquad [\mathbb Q(\sqrt{-d}):\mathbb Q]=[K_{2}:\mathbb Q]=2,
+\]
+and the two fields coincide.
+
+At tuple level \(M\ge3\), the Weber values of
+the level torsion lie in the embedded ray field by complex
+multiplication. With the root of \(-d\) fixed, the Weber comparison
+gives the CM curve with the required level structure. The level
+of the cover divides \(M\), since its auxiliary level is one.
+The component comparison using the rank-one CM datum then gives
+geometric irreducibility of its components over the coefficient
+field, equivalently relative algebraic closure of that field in
+their function fields. Use this comparison when choosing the half
+levels and their covers on the normalized reference frame.
+
+On
+each tuple take the finite class representatives and their
+stabilizer masses in the new level. In an integral frame its local factor takes the form
+\[
+         K_{t,v}(z)=\mathbf1_{A_{t,v}}(z)
+                         \prod_\nu \chi_{\nu,t,v}(g_\nu(z))^{a_\nu},
+\]
+where \(A_{t,v}\) is the selected finite support and the exponents
+are integral. The admitted character values lie in \(\iota K\).
+Thus each local factor takes its values there, including zero
+off the support. The finite chart products therefore have the
+same coefficient field at all tuples. The original one-map comparison also extends from
+the reference frame to these tuple levels on the prescribed
+quotient primes. The change to the split character reading
+preserves its levels, individual chart maps and extremal vector.
+\label{cor:joint-family-estimate-2}
+
+Fix a lift of polynomial degree \(d_W\). With the same class factor \(c_\alpha\) in both presentations, their ordered pair of factors is
+\[
+ (u_1c_\alpha,u_2c_\alpha)=c_\alpha(u_1,u_2).
+\]
+To see the uniformity in this assertion, compare both readings
+of a single class in a standard frame. Identifying the adelic
+kernel with the short theta series gives an orientation
+\(\delta\in\{1,-1\}\). Evaluation of its Fock coefficient on
+the chosen extremal vector gives a phase \(a\), and comparison
+on the cover gives a phase \(c_0'\). A sign change of the
+polynomial argument acts by its total degree. Consequently the
+multiplier for a presentation is
+\[
+                 u=a(-\delta)^{d_W}/c_0' .
+\]
+
+The positive Lie multiplier is
+\(L=(\sqrt{2\pi\xi_{\mathbb R}})^{-d_W}\), with
+\(\xi_{\mathbb R}>0\) in the prescribed vacuum metric.
+The remaining factor \(c_\alpha\) compares the normalized
+frames on a component. Compute it once on the reference pair
+using its rational translation law for the density. Change of
+a marking in the same component gives the same value by the
+chart transformation rule. The orientation, extremal-vector
+phase and cover phase above are fixed before the tuple and
+its class vector. Summing the single-class identity with the
+stabilizer masses thus gives the same \(u\) for every tuple
+and \(\lvert u c_\alpha\rvert=1\).
+\label{cor:joint-family-estimate-3}
+
+For a fixed finite argument the two readings of the series
+on a source vector give
+\[
+ u_1c_\alpha L m_g a_g=u_2c_\alpha L m_g a'_g .
+\]
+The Lie factor \(L\) is positive. Cancelling \(u_1c_\alpha L\)
+gives \(m_g a_g=(u_2/u_1)m_g a'_g\), also when the component
+density \(m_g\) vanishes. For the second chart, the determinant character on the
+cover and the finite twist have finite orders. Their product
+of orders clears both multipliers. With the coefficient-field
+character values on the half level, the class sum then
+satisfies the descent law on the cover. Its weight is dominant
+with positive last weight, so the descended section is cuspidal.
+
+By scalar extension for cusp sections there are finitely many base cusp sections \(f_i\) and coefficients \(a_i\) such that the descended section \(f\) satisfies
+\[
+ f=\sum_i a_i f_i,\qquad a_i\in\iota K .
+\] Read each
+base section in the form frame and lift its coefficient
+through \(\iota\). Translating that section by the level action
+gives the finite translate of its adelic reading with the
+prescribed character factor. Incorporating the tuple scalar in its
+coordinates gives, for every tuple \(t\) and source \(a\),
+\[
+       \mathrm{ph}\,\Theta_t(a)=\rho A(y_{t,a}),\qquad
+       \rho=u_2/u_1,\quad y_{t,a}\in K^{n_W}.
+\]
+The equality on the lowest-vector evaluations gives the equality
+of forms by injectivity on that space. This uses the same
+finite group action for the two readings.
+\label{cor:joint-family-estimate-4}
+
+To descend the common scalar, use the good projector \(e\) at
+the reference tuple. Its rational lift matrix is bijective by
+the base comparison, and the target has dimension \(D_0>0\).
+Lift the vector with all coordinates one by its inverse. The
+resulting good theta reading is nonzero by injectivity of the
+target coordinates.
+
+At this tuple the comparison gives rational
+coordinates for the phased good lift. Applying the good projector
+to the preceding equality therefore gives
+\[
+           A(y_1)=\rho A(e y)\ne0.
+\]
+Complex linear independence gives
+\(\rho=\iota((y_1)_h/(e y)_h)\) at any coordinate with
+\((e y)_h\ne0\). Absorb this field element into each
+\(y_{t,a}\). The phase in the selected comparison is one.
+For each tuple restrict the resulting rational map to its level
+source. Its preimages under \(A\) are unique, hence additive
+and \(K\)-linear by semilinearity of both readings. This
+produces the rational class-sum operator \(\theta\) at every
+assigned pair \((w,j)\), even for a tuple with zero class sum.
+
+\proofstep{Verify equivariance and restriction on the good space.}
+Write the central good idempotent as \(\sum_g a_g[g]\), with
+actions \(e_X,e\) on the source and target. The descended
+class-sum map intertwines each \(g\), so
+\[
+     \theta e_Xx=\sum_g a_g g\,\theta(x)=e\theta(x).
+\]
+Centrality gives the same identity after restriction to the level
+character. To project in the source level metric, take a basis
+\(k_1,\ldots,k_h\) of \(\ker\theta\) and its Gram matrix \(G\),
+using the convention that the Hermitian form is linear in its
+second argument. The restricted matrix is invertible at the
+selected embedding, since the metric is positive definite there.
+Thus the correction has coordinates in the field:
+\[
+        {\rm pr}(x)=x-\sum_{i=1}^h a_i k_i,\qquad
+        Ga=(\langle k_j,x\rangle)_j .
+\]
+
+The correction satisfies \(\theta({\rm pr}(x))=\theta(x)\). The base lift is surjective
+onto the good rational space. For lattice membership, use
+Section~\ref{subsec:paired-row-indices} on this same rational
+map. On a tuple generator supported on its class the
+inverse-character trace over its stabilizer belongs to the
+level lattice. Its class-sum image is the chosen generator
+image times an integral character unit. The span comparison gives equality on generic fibres, and at each of the indicated places it gives the integral inclusion
+\[
+ \mathcal X_{3,w}\subseteq(e\theta(M_t))_w .
+\] The two places \(w,\bar w\) have
+the same tuple and residue characteristic.
+\label{cor:joint-family-estimate-5}
+
+\proofstep{Apply the geometric and arithmetic estimates to one record.}
+The local transport inequality and the weighted cohomological numerator have now been obtained. Their sum can be used in the determinant only after checking that their ranks, place labels and lattices all refer to the chosen member.
+
+Use the simultaneous choice of the outer, middle and last
+parameters in Section~\ref{subsec:window-points} for the
+finitely many family conditions. For the resulting family
+and \(C_H\), the run and rationality arguments have cutoffs
+\(x_R,x_Q\). The geometric, rank, twist, character-share,
+bad-type-share, exponent and numerical size estimates each
+have a lower bound on their main comparison constant.
+Choose \(c_0\) at least the maximum of these seven bounds
+and \(20\), and put
+\[
+ c=(c_0,14,66c_0+4),\qquad C_b=14+(66c_0+4)+4,\qquad
+ C_E=4c_0^2+25c_0+C_b+44 .
+\]
+The last two entries of \(c\) meet the two bad-prime allowances.
+Write \(x_i(c)\), \(1\le i\le7\), for the thresholds of these estimates
+at the chosen \(c\), and let \(x_{\rm fam}\) dominate the preceding family
+cutoffs.
+
+Take
+\[
+ X_*=\max\{x_{\rm fam},x_R,x_Q,3c_0,x_1(c),\ldots,x_7(c)\}.
+\]
+At any point beyond this threshold choose the two runs on its common
+geometric core. To build the record \(O\) of
+Section~\ref{subsec:completed-prime-runs}, use the second run at the
+first distinguished characteristic and the first run everywhere else.
+Its section maps and lattices are pulled back through the same
+cusp form frame. Its depth uses the canonical half ideals, the
+actual error generator and the point's weight data. Every
+one of the seven estimates applies to every pair of runs and
+record satisfying these identifications. We apply each to
+these particular runs and this \(O\).
+\label{cor:joint-family-estimate-6}
+
+Here are the hypotheses of those applications.
+\begin{enumerate}
+\item The numerical sizes come from the parameters of this family
+at \(x\). After increasing \(X_*\), the numerical conditions used for this point are simultaneous:
+\[
+ x\ge3c_0,\qquad C_{n_W}=10,\qquad \mathcal E\ge0 .
+\]
+The two primes and the level in this application are those of the point. The level and
+cutoff comparisons of Section~\ref{subsec:completed-prime-runs}
+give the bounds on the level squared and the cutoff \(Y_0\)
+in the prime sum.
+\item Use the geometric section theorem of that section with
+the orientation prescribed at each place. Its short sections
+span, their scaled lattice lies in the ambient lattice, and
+its remainder is chosen before restriction to a subspace.
+Pulling its estimate to the selected good subspace gives the
+index estimate of Section~\ref{subsec:paired-row-indices}.
+Use its four depth bounds at the pair \((C_E,C_H)\) for the
+ordinary, ramified, dyadic and level-prime cases. If \(a_w\) is the scaling scalar at the place under consideration, the forced content used in this application is read at the same place and with the same normalization:
+\[
+ \text{forced content at }w=v_w(a_w).
+\]
+\item For the rank comparison take the integral lattice \(J\)
+of base-character generators of the selected run. The class representatives of
+the base theta kernel give the spanning list. Indeed evaluation of a generator on its own finite
+representative recovers the class series, and tracing that
+representative over its stabilizer supplies every class in
+the list. The deletion-character values are in the point's
+field. The off-prime comparison for the used run identifies the
+localized short theta generators inside \(J\). The latter is
+finitely generated and lies in the level character space.
+The finite good projector commutes with the action there.
+
+For the character \(\chi\) and a vector \(v\) in its
+space, the unnormalized trace and its projected image are
+\[
+      \sum_{u\in U}\chi(u)^{-1}uv=|U|v,\qquad
+      e\sum_{u\in U}\chi(u)^{-1}uv=|U|ev .
+\]
+The short sections span the character space over the
+fraction field. Since \(|U|\ne0\), their projected
+traces give the full generic good space of \(eJ\). Apply this also at the conjugate place, using
+the same off-prime choice. \label{cor:joint-family-estimate-7}
+\item Now use the simultaneous test for the chosen twisting
+character with this full-rank baseline. At a place \(v\) of the chosen pair, Section~\ref{subsec:paired-row-indices} bounds the excess over the full-rank baseline:
+\[
+ [M_g:\mathcal X_3]_v-[M_g:eJ]_v\le e_v\epsilon_{vj}.
+\]
+On a pair the sum of both excesses over all lifts is at most
+\(2/p^2\). Its application uses the integral inclusion above
+and the prescribed character at both places.
+\item For the character share the common action on the cusp
+forms identifies the trace comparison with that for the
+actual weight. For the discarded share the two central
+finite-type idempotents act in the same representation.
+Equation~\eqref{eq:row-bad-share} bounds the discarded rank by
+the regular-representation trace times the multiplicity bound.
+Together the two estimates give
+\[
+ (1-y)R_j\le|U|d_0,\qquad (1-y)|U|\le I,\qquad
+ (1-\delta)d_0\le D_0,\qquad y\le1/8,\quad\delta\le1/4 .
+\]
+Here \(I\) is the level index. Hence \(R_j\le3 I D_0\).
+\item Finally the integral exponent comparison at \(p\) uses
+the actual pair of lift lattices in the record. The inclusion
+by the rational-prime power \(p^{B_j(p)}\) gives
+\(0\le J_{j,w}\le e_w B_j(p)\). Grouping the places above each rational prime and using \eqref{eq:division-least-sum} therefore gives
+\[
+ \sum_{w\mid p}e_w\omega_w=\log p,\qquad \sum_{w\ {\rm twisted}}\omega_w J_{j,w}\le32\mathcal E .
+\] The depth and exponent
+arguments use the same coefficient field as the signed lengths.
+\end{enumerate}
+
+The restriction, signed length and conjugation calculations in
+Section~\ref{subsec:paired-row-indices} now apply to \(O\) with
+the two class-sum identities and the base inclusion. The character
+and central projections in that calculation are the projections
+in its pulled-back level action. The lengths and rank therefore
+belong to the base row of this very member. By Section~\ref{subsec:parent-row-errors}, at every lift the three contributions to the weighted auxiliary error together obey
+\[
+ \text{weighted auxiliary error at }j\le C_E\mathcal E\qquad(1\le j\le m).
+\] On forgetting the split phase-one comparison,
+the normalized row has phase one. Substitution in the period
+and numerical readings identifies the matrices, both
+lattice indices, \(D_0\), the forced weights and the normalized
+exponents \(J_{j,w}/e_w\) with their parent values.
+They have these values for every choice of the numerical
+allowance \(C\).
+
+Write \(\mathfrak e_j(w)\ge0\) for the auxiliary
+transport error of the comparison before descent. The local
+bound gives
+\[
+   B_w:=D_0^{-1}\sum_h I_{wh}
+         -2\sum_h e_wF_h(w)-2e_w/p^2
+       \le \sum_h e_w\mathfrak e_h(w).
+\]
+The summands and the right-hand side are read at the selected
+completed member. Therefore its defining error
+\(e_w r^0_{j,w}=[B_w]_+/m\) is nonnegative and
+\(B_w\le\sum_j e_w r^0_{j,w}\), proving
+\eqref{eq:joint-parent-local}. For the weighted bound, first
+discard the nonnegative least exponents in each auxiliary
+transport budget. This gives
+\[
+ \sum_{w\ {\rm twisted}}\omega_w e_w r^0_{j,w}
+ \le \frac1m\sum_h\sum_{w\ {\rm twisted}}
+                    \omega_w e_w\mathfrak e_h(w)
+ \le C_E\mathcal E.
+\]
+For the fixed lift \(j\), discard instead the transport term
+to obtain \(\sum_{w\ {\rm twisted}}\omega_w J_{j,w}\le C_E\mathcal E\).
+Their sum proves \eqref{eq:joint-parent-global}, with
+\(C_0=2\max(C_E,0)\), at every member above the common threshold. \label{cor:joint-family-estimate-8}
+\end{proof}

@@ -1,0 +1,186 @@
+\subsubsection*{Equivariant realization of the selected row as cusp forms}
+\label{subsec:selected-cusp-reading}
+
+An index computed in geometric coordinates controls the selected row only through an equivariant identification. We exhibit the cusp-form realization on which the local cuts and the level actions agree.
+
+Fix a lift $j$ and the run used at a coefficient place $v$.
+Write $K_0$ for the construction field of the run, $K$ for
+the common row field and $C_j$ for the rational cusp space
+at its prescribed weight $\kappa$. The form coordinates
+identify $C_j$ with a $K_0$-subspace of $K^{R_j}$ and
+identify $K\otimes_{K_0} C_j$ with $K^{R_j}$. If \(b_1,\ldots,b_d\) is the common basis in the row data over \(K_0\), scalar extension preserves every coordinate independently:
+\[
+  K\otimes_{K_0}\bigoplus_{i=1}^dK_0 b_i=\bigoplus_{i=1}^dK(1\otimes b_i).
+\]
+ The chosen complex place determines an embedding
+$\sigma_0:K_0\hookrightarrow\mathbb C$ and an extension
+$\sigma:K\hookrightarrow\mathbb C$. Use the bijection
+between the two-level components and the run's components.
+At corresponding components the Hermitian data, frame
+domains, embeddings and weights agree. Restrict the holomorphic forms to these frame domains.
+
+The ordinary stable-range theta calculation in
+Section~\ref{subsec:theta-row-rank} supplies the span before
+projection. Here the target has rank $r$ over $E$ of
+degree $2f$, the positive definite source has even rank
+$n_V\ge 8fr+4$, and the level is odd with chosen split half
+coprime to its conjugate.
+The degree and rank conditions in the stable range combine to give
+\[
+  n_V\ge 8fr+4=4[E:\mathbb Q]r+4 .
+\]
+ Use the run's prescribed first
+character Gram comparison and its admissible weight,
+including positivity of the last weight. The chart
+independence and the short theta transformation specialize
+the stable unfolding to readings of raw short theta
+sections. Every such short section is cuspidal at this
+weight.
+
+On each component extend a bounded holomorphic
+section by zero off its frame domain, as a function on
+all frame coordinates. The extension belongs to the
+space on which the theta span is taken. The stable unfolding
+expresses its family of components in a finite complex
+span of the read short sections. Restricting the resulting
+identity to the domains and transporting by the component
+bijection gives the desired expansion of the original
+family on the two-level model. The construction uses
+the positive bad modulus and the Gram comparison of the
+actual run.\label{cor:paired-row-reading-1}
+
+\begin{proposition}[The equivariant cusp-form realization and the rank at the smaller level]
+\label{prop:equivariant-selected-row}
+For a lift \(j\) of either run in
+Proposition~\ref{prop:linked-comparison-rows}, use its rational
+cusp space \(C_j\) at weight \(\kappa\) over \(K_0\), with the
+form coordinates of Definition~\ref{def:common-row-lattices}.
+Extend along the complex embedding \(\sigma_0\) of \(K_0\). The chosen basis extends to a basis of the complex space of holomorphic cusp forms and identifies the corresponding character actions. The retained arithmetic projector is the same
+one in the two realizations. For each lift the partition of the retained base labels gives the small-level image dimension
+\[
+ dZ_0(j)=D_0.
+\]
+ The full rank of the integral image uses the separate
+off-prime trace inclusion.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Independence in the two coefficient realizations.}
+For independence take a finite $K_0$-independent family of
+cusp rules. Evaluate it on the framed test algebras through
+all maps to $\overline{K_0}$. These evaluations detect a
+relation of rules. Indeed the test algebras are reduced
+and of finite type, so a nonzero test value survives at
+a closed point over a finite extension of $K_0$. The span
+of the evaluation rows is invariant under
+$\operatorname{Gal}(\overline{K_0}/K_0)$, because composing
+each test map with an automorphism retains it in the family.
+
+If the row rank were deficient, the unique reduced row
+echelon basis of the annihilator would be Galois invariant.
+A nonzero basis row would give a $K_0$-relation among the rules. Hence some set \(I\) of rows, as large as the family of rules, gives a square matrix \(A_I\) with nonzero determinant. Under the chosen complex embedding \(\sigma\),
+\[
+  \det\big(\sigma(A_I)\big)=\sigma(\det A_I)\ne0 .
+\]
+ Framed base change realizes these tests
+as complex frames. Uniformization and the common Borel
+weight multiply all entries of an evaluation row by the
+same nonzero scalar when passing to its frame-domain
+representative. The resulting functions on frames are therefore independent. Restriction to the model domains preserves independence, since the functions vanish outside these domains and every component occurs.\label{cor:paired-row-reading-2}
+
+\proofstep{The same rational character space on the two levels.}
+Read the common $K_0$-basis in the two-level model and
+extend its coefficients by $\sigma$. Independence and the
+stable span give the isomorphism
+\[
+ \mathbb C\otimes_{K,\sigma} K^{R_j}\ \simeq\ V_\kappa .
+\]
+On a rational cusp form the lift of a level change acts on
+the right in its moduli coordinate. In frame coordinates
+this is the two-level pullback, with the same scalar and
+the same change of component as in the run. The equality
+on the basis therefore intertwines the full level action
+after extension of scalars. In particular the dimensions
+of the character kernel and its intersection with the kernel
+of the good projector can be computed in $V_\kappa$.
+Let \(A\) be the stacked character equations and \(P\) the good projector in these coordinates. Their common kernel is computed by the single matrix
+\[
+  \ker A\cap\ker P=\ker\begin{pmatrix}A\\P\end{pmatrix}.
+\]
+Changing the complex embedding preserves their algebraic
+ranks.\label{cor:paired-row-reading-3}
+
+\proofstep{Comparing with the retained arithmetic projector.}
+The identification with the retained arithmetic rank uses
+one more comparison at the selected point. In its row
+coordinates the tie is the composite of the map to
+$K\otimes_{K_0}C_j$ with the form-coordinate isomorphism
+above. It identifies the subgroup of the arithmetic row
+with the preimage of the base unipotent subgroup under the
+level injection and identifies their characters there.
+The determinant character in the coordinate change is
+one on that subgroup. Consequently the arithmetic character
+space maps bijectively to $V_\lambda$ after extension of
+scalars.
+Consequently the complex identification preserves the character rank, since scalar extension commutes with the common kernel
+\[
+  \bigcap_{u}\ker\big(\rho(u)-\mu(u)I\big).
+\]
+ The second row link uses the base-tuple theta
+lift and its rational reading. In the split part of the
+chosen realization these give the same reduced level
+group and the same target projector, because the scalar
+phase at the base is one.
+
+The base-level lift identifies
+the retained source space with
+$V_\lambda\cap\operatorname{im}e_{\rm good}$ in the target
+row. Its source dimension is the common $D_0$ of the
+point, for every lift $j$. In the rank comparison the
+base-tuple maps identify the dimensions of the summands
+indexed by each retained irreducible type. Those summands
+exhaust the respective spaces, so the sums of their
+dimensions agree. Thus the target character rank
+is the arithmetic $d_0$, and the retained rank is
+\[
+ D_0=d_0-\dim(V_\lambda\cap\ker e_{\rm good}).
+\]
+The equality uses invariance of the character space under
+$e_{\rm good}$ and its decomposition into the image and
+kernel of the restricted idempotent. In the integral
+comparison all row lattices are transported by
+this same tie. The scalar extension here computes ranks
+and the lattice comparison uses localization in the
+number field.\label{cor:paired-row-reading-4}
+
+\proofstep{The rank in the determinant denominator.}
+The small-level rank in the division denominator can be
+read from the projection at the base tuple. The level
+projection at the point's base index \(t_0\) is surjective
+for each lift. The tuple readout sends \(t_0\) to \(\mu_0\),
+since the base Hecke character is the identity and the
+tuple characters distinguish the used indices.
+On the matched row models the level projection induces the
+theta adjoint \(\Theta_{\mu_0,j}^{*}\) by the class-sum identity
+and the two level actions. Thus this adjoint surjects onto
+the reference row space. Since
+
+\[
+  \ker\Theta_{\mu_0,j}=(\operatorname{im}\Theta_{\mu_0,j}^*)^\perp,
+\]
+\(\Theta_{\mu_0,j}\) is injective.
+
+Decompose the reference row into the occurring class types.
+The tied eigenspace multiplicity formula for each type gives
+the sum of the row counts over that type's record labels.
+These label sets partition the \(D_0\) base row labels,
+and the class type summands form an internal direct sum.
+Summing gives \(D_0\) at every lift. By injectivity the
+small-level range \(\operatorname{im}\Theta_{\mu_0,j}\)
+has that same dimension. This proves the identity
+\(dZ_0(j)=D_0\) used in the cohomological division term.
+The full rank of the projected \(J_v\) at a twisted index
+follows separately from the local trace inclusion on the
+assigned tuple.
+\label{cor:paired-row-reading-5}
+\end{proof}

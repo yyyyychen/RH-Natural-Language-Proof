@@ -1,0 +1,264 @@
+\subsection{The fitted tower for the rank-four case}
+\label{sec:count-three-tower}
+
+The even-order construction used an induced Hilbert system. For the remaining nonprincipal odd-order character in the indicated congruence range, the starting representation will instead have two rank-two tensor factors.
+
+\begin{established}[Inertia in the odd-order case]\label{hyp:count-three-host}
+In the odd-order case of Lemma~\ref{lem:odd-prime-positive-ranges},
+take \(\xi\ne1\) of odd order \(o_\xi\), with
+\(\ell\nmid o_\xi\), \(\ell\ge5\),
+\(\ell\nmid\mathcal Np_1\) and \(\ell-1\mid2j\).
+Use \(b=p_1\), \(n=n_{\rm III}\) and the character
+\(\eta\) of Paragraph~\ref{par:dyadic-residual}.
+Write \(I_\ell\) for the inertia group and \(S_b\) for the places
+with nontrivial \(\ell\)-primary inertia in \(\xi\). Then
+\[
+      \xi(-1)=1,\qquad \eta|_{I_\ell}=\xi|_{I_\ell}=1,\qquad S_b=\varnothing .
+\]
+\end{established}
+\begin{proof}
+The order of \(\xi(-1)\) divides both two and \(o_\xi\).
+The conductor of \(\xi\) divides \(\mathcal N\); the conductor
+of \(\eta\) divides \(2^n p_1\) by its construction. Both are
+prime to \(\ell\). Finally every inertia image under \(\xi\)
+has order dividing \(o_\xi\).
+\end{proof}
+Write \(\sigma=\pm1\) for the sign of the second coordinate in
+the chosen rational ordinary flag.
+
+\subsubsection{Three auxiliary quadratic characters}
+
+The two tensor labels must separate on the starting field, while the character used for descent has a different prescribed restriction. The auxiliary quadratic fields impose these conditions simultaneously.
+
+\begin{proposition}[Fitted tame fields for the odd-order case]\label{prop:count-three-starting-fields}
+For the data of Lemma~\ref{hyp:count-three-host}, the fitted rank-four tower can start with the
+three quadratic characters and a tame field \(F_0\) constructed
+below. Write \(\lambda\) for the descent character and \(\lambda_0\) for the seed character, of prime conductor \(q_0\). Their two quadratic fields 
+\[
+ G_K=\ker\lambda,\qquad K'=\mathbb Q(\sqrt{-q_0})
+\]
+ have the indicated splitting at the marked primes.
+\end{proposition}
+
+\begin{proof}
+Choose an odd quadratic character \(\lambda_0\) with prime
+conductor \(q_0\) outside \(S\), split at \(S\), and
+write \(K'=\Q(\sqrt{-q_0})\).
+Choose two more odd quadratic characters \(\lambda,\lambda'\)
+with distinct prime conductors \(q,q'\), splitting all
+the primes in \(S\cup\{q_0\}\).
+We may avoid any fixed finite set when choosing these primes.
+For each choice Dirichlet's theorem supplies a prime
+congruent to \(-1\) modulo eight times the product of the
+odd primes required to split. Quadratic reciprocity and
+the supplementary law at two then give the splitting
+conditions. Put
+\[
+ \begin{split}
+ H&=\{g\in G_{\Q}:\eta(g)=\lambda_0(g),\
+                        \bar\Psi(g)=\bar\xi(g)\},\\
+ J_{\mathrm{quad}}&=\ker\lambda\cap\ker\lambda',\qquad
+ G_{F_0}=H\cap\ker(\lambda/\lambda'),\qquad G_K=\ker\lambda .
+ \end{split}
+\]
+These are open normal subgroups defined by finite abelian
+characters. In the second condition in \(H\), the quotient
+\(\bar\Psi/\bar\xi=\bar\omega^j\) has order dividing two.
+Complex conjugation lies in \(H\), since \(\eta\) and
+\(\lambda_0\) are odd and \(\Psi\) and \(\xi\) are even.
+
+It kills \(\lambda/\lambda'\), so \(F_0\) is totally real.
+The latter quotient has order two, as seen on inertia at
+\(q\), so \([F_0:\Q]\) is even.
+Intersect \(G_{F_0}\) with \(\ker\lambda\) to get
+\[
+              G_{F_0K}=H\cap\ker\lambda\cap\ker\lambda'.
+\]
+At \(q\), the unramified character \(\lambda'\) kills inertia.
+The defining relation \(\lambda=\lambda'\) on \(G_{F_0}\)
+makes \(\lambda\) trivial there too. Since \(\lambda\) is already
+unramified elsewhere, \(F_0K/F_0\) is unramified at all finite places.
+The field \(K\) is imaginary and split at every prime
+in \(S\). Above each place of \(F_0\) over \(\ell\),
+choose a decomposition embedding on the specified side of
+\(K\). This is possible because the two places of \(K\)
+above \(\ell\) are split and the chosen side specifies one
+of the two extensions to \(F_0K\).
+
+The inertia image in \(\operatorname{Gal}(F_0/\Q)\) at
+\(\ell\) has exponent dividing two, since here the only
+possibly nontrivial defining quotient is \(\bar\omega^j\).
+In particular \(F_0\) is tame there.
+On \(G_{F_0}\), the reduced characters satisfy
+\[
+        \bar\alpha=\lambda_0,\qquad\bar\Psi=\bar\xi.
+\]
+Both are trivial on inertia at \(\ell\), so their products
+give the identity full diagonal there.
+At any finite prime away from \(\ell\), if the
+residual diagonal is the identity on an inertia element
+of \(F_0\), then \(\bar\Psi=1\), and hence \(\xi=1\)
+there by injectivity of reduction on its roots of unity.
+The order condition for the restriction of \(\xi\) already
+holds on all of \(G_{F_0}\) and at each subsequent layer.
+
+\end{proof}
+
+\subsubsection{The normalizer and an inertia element at \(\ell\)}
+
+Restricting to the chosen field could identify the residual labels. An explicit normalizing element distinguishes the tensor factors there, and an inertia element tests the marked order at the residual prime.
+
+\begin{proposition}[Marked elements on the starting field]\label{prop:count-three-marked-elements}
+The starting field of Proposition~\ref{prop:count-three-starting-fields}
+retains the normalizer \(g_0\) distinguishing the two tensor labels
+and an inertia element \(u_0\) above \(\ell\) for the marked chart. The finite characters take the values 
+\[
+ \lambda_0(g_0)=\eta(g_0)=-1,\qquad \omega(g_0)=1.
+\]
+ Suitable powers of \(g_0\) and \(u_0\) lie in the deeper layer.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Choose \(g_0\) and \(u_0\) by their residual character values.}
+
+Take \(a\) in inertia at two with cyclotomic value \(-1\)
+on the \(2^n\)-th roots of unity, using total ramification.
+Its \(\eta\)-value is \(-1\), and its \(\omega\)-value is
+one. Raise it to \(o_\xi\) to kill \(\xi\) while preserving both
+values. Choose \(b\) in inertia at \(q_0\) with
+\(\lambda_0(b)=-1\). The characters \(\xi,\eta,\omega\)
+are all unramified there.
+
+Choose \(c\in G_{\Q}\) with
+\(\omega(c)=1\), \(\eta(c)=1\) and \(\xi(c)\ne1\)
+as follows. The odd order character \(\xi\) has no
+dyadic part and its conductor is prime to \(p_1\ell\).
+By the cyclotomic Chinese remainder theorem choose an
+element with nontrivial \(\xi\)-value which acts
+trivially on the \(\ell\)-th and \(p_1\)-th roots of unity.
+Raise the chosen element \(c_0\) to \(2^n\). Its values
+satisfy
+\[
+ \eta(c_0^{2^n})=1,\qquad \omega(c_0^{2^n})=1,\qquad
+                        \xi(c_0^{2^n})\ne1 .
+\]
+The last assertion uses the odd order of the nontrivial
+\(\xi(c_0)\).
+
+Now \(g_0=abc^2\) lies in \(H\cap J_{\mathrm{quad}}\).
+Indeed, the two factors \(a,b\) lie in the decomposition
+groups at split primes of \(K\) and the field of
+\(\lambda'\), and those two characters kill squares.
+The \(\lambda_0\)-value of \(g_0\) and its \(\eta\)-value
+are both \(-1\), and \(\omega(g_0)=1\).
+Set \(z=\bar\xi(c)^{2\sigma}\), a nontrivial element of
+odd order. The residual eigenvalues at \(g_0\), after
+division by the first one and inversion, are
+\[
+                              1,\quad -1,\quad z,\quad -z.
+\]
+For a root \((u,v)\) the value is \((-1)^u z^v\),
+where \((u,v)\ne(0,0)\) and each coordinate is \(0,\pm1\).
+
+If \(v=0\), it is \(-1\). If \(v=\pm1\), it is nontrivial
+because \(z^{\pm1}\) has odd order greater than one and so
+is neither \(1\) nor \(-1\). In particular
+\[
+            \operatorname{ord}(-z)
+                   =2\operatorname{ord}(z)\ge6
+\]
+for the root of bidegree \((1,1)\). A residual quadratic
+self-twist of the entire list which is trivial on the
+kernel of \(\omega\) fixes the eigenvalues at \(g_0\).
+The four distinct labels force the permutation to be
+the identity, and cancellation of any character in the
+list shows that the self-twist is trivial. Moreover,
+on \(G_{F_0}\) the root \((1,0)\) is precisely
+\(\lambda_0\), including on the two cosets of
+\(G_{F_0K'}\).
+
+Take a rational inertia element \(u\) above \(\ell\)
+whose \(\bar\omega\)-value generates \(\mathbf F_\ell^\times\).
+Its square \(u_0\) belongs to \(H\cap J_{\mathrm{quad}}\).
+At this element all diagonal residual characters are one, but
+\[
+                \operatorname{ord}\bar\omega(u_0)=(\ell-1)/2>1.
+\]
+Conjugating \(u_0\) gives this condition at
+every marked place. It proves the comparison of each
+residual root with the cyclotomic character and the
+local condition at \(\ell\).
+Chebotarev applied to \(F_0KK'\), the residual characters
+and \(\bar\omega\) now gives arbitrarily large rational
+primes split in these three fields, with trivial residual
+diagonal and nontrivial cyclotomic value. We may also
+apply Chebotarev to the identity class to get primes
+split in \(F_0K\) with both residual diagonal and
+cyclotomic value trivial. The two choices have distinct
+uses in the ordinary comparisons and the residual chain.
+
+\end{proof}
+
+\subsubsection{Passage to deeper layers}
+
+The component argument requires large degrees after tame base change. The marked elements constructed at the starting field must continue to distinguish the labels upon passage to these deeper layers.
+
+\begin{proposition}[Fitted fields and primes for the four-link path]\label{prop:count-three-fitted-layers}
+After adjoining the degree-\(\ell\) cyclotomic fields of the
+added tame primes and passing to a cyclotomic layer, the degree
+and local degree may be taken as large as required in
+Proposition~\ref{prop:tower-component-propagation}. If \(C\) is the cohomological constant of the tame intermediate field, the eventual layer can in particular satisfy 
+\[
+ [F:\mathbb Q]\ge30(C+1)^2.
+\]
+ The elements \(g_0,u_0\) of Proposition~\ref{prop:count-three-marked-elements} retain their properties after taking suitable powers. The two ordinary
+auxiliary primes at this stage use the cyclotomic value at a power of \(u_0\);
+the extra conditions at the splitting prime \(w\) for the seed
+are imposed separately.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Restrict powers of \(g_0,u_0\) to the deeper layers.}
+
+The properties just proved persist in any abelian
+\(\ell\)-power enlargement of \(F_0\) with the same \(K\).
+Take a common \(\ell\)-power of \(g_0\) and \(u_0\)
+which lies in the new group. If \(z\) is a residual character value of order \(e\) prime to \(\ell\), then
+\[
+ \operatorname{ord}(z^{\ell^a})=e/\gcd(e,\ell^a)=e .
+\] This retains the marked tests. Splitting and
+inertia restrictions persist by restriction. For
+\(g_0\) the first root is still \(-1\), so the
+quadratic restriction concerning \(K'\) continues to
+give both cosets. At a finite set of extra split primes
+\(w\equiv1\pmod\ell\), the compositum with the degree
+\(\ell\) subfields of \(\Q(\zeta_w)\) absorbs every
+\(\ell\)-torsion tame inertia quotient at those primes.
+These cyclic fields have total ramification of degree
+\(\ell\) at their own conductor and are unramified
+at \(\ell\). The resulting intermediate field \(F_1\)
+is still tame at \(\ell\).
+
+The depth bound is chosen on \(F_1\) after the finite set
+of extra primes has been specified. Use the cohomological
+constant \(C\) for the cyclotomic \(\mathbf Z_\ell\)-layers
+over this tame field. Then take a layer \(F\) with
+\[
+ d=[F:\Q]\geq30(C+1)^2.
+\]
+If \(\Q_m\) is the degree-\(\ell^m\) cyclotomic layer, then
+\[
+          [F_1\Q_m:F_1]=[\Q_m:\Q_m\cap F_1]\longrightarrow\infty .
+\]
+The denominator in this degree comparison stays bounded by
+\([F_1:\Q]\).
+This is the same order of choices as in the rank-four
+component argument. In the rank-four case the prime-to-\(\ell\)
+order of \(\xi\) already gives the deep character
+condition at every layer. The two ordinary exceptional
+primes can be chosen on \(FK\) using this power of \(u_0\). The splitting prime \(w\) used for the
+seed instead needs the identity Frobenius class modulo
+the residual and cyclotomic characters. Its additional
+local conditions enter the tensor construction.
+\label{cor:ordinary-count-iii-tower-1}
+\end{proof}

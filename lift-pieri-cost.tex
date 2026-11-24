@@ -1,0 +1,336 @@
+\paragraph{Divisibility on one row-weight space.}
+\hypertarget{source-lift-pieri-cost}{}
+We give the bounded-depth computation over \(\Z_{(p)}\).
+For a dominant weight \(\nu\), a row weight \(v\) and a vector
+of coefficients \(\xi=(\xi_a)_a\), put
+\(d_\xi(v)=\sum_a\xi_a(\nu_a-v_a)\).
+In the application, \(\xi_a=1\) on the first \(k_c+j\) coordinates
+and \(\xi_a=0\) on the others.
+
+\begin{lemma}[Rectangular Pieri denominator]
+\label{lem:rectangular-pieri-denominator}
+Consider first a rectangular
+initial block \(\nu=(w^b,\beta)\), where \(\beta\) is a
+partition of length at most \(d\) and \(\beta_1\le w\).
+An upper bound for the extra exponent in passing from the
+last \(d\) coordinates to the full coefficient module at
+\(n=bw-\sum_{a<b}v_a\) is
+\begin{equation}\label{eq:lift-pieri-polynomial}
+ v_p(D_n(w)),\qquad
+ D_n(Z)=\prod_{c}(Z-c)^{m(c)} .
+\end{equation}
+Here one takes partitions \(\tau\supset\beta\) with
+\(|\tau/\beta|=n\), column lengths of \(\tau/\beta\) at
+most \(b\), and no added box of content \(w\). Content is
+column minus row, both numbered from zero. The integer
+\(m(c)\) is the maximum number of boxes of content \(c\)
+in such a skew diagram, with empty maximum zero.
+
+In
+particular \(D_n(w)\ne0\). If \(p^e\) suffices on the
+Levi weight spaces with \(d_\xi\le I\) (extend their weights
+by the initial rectangle), then \(p^{e+v_p(D_n(w))}\)
+suffices on the indicated full weight space whenever
+\(d_\xi(v)\le I\) and \(\xi\) is decreasing in the weak sense.
+\label{cor:lift-pieri-cost-1}
+
+\end{lemma}
+
+\begin{proof}
+\proofstep{Integral raising and lowering tests.}
+Use the polynomial representation over \(\Q\) with the
+contravariant Fock form normalized to give the highest
+weight vector norm one. The Levi highest subspace \(W\)
+is generated from this vector by the last \(d\) rows. The
+first block acts there by the determinant character and the
+upper cross-block operators kill it. Let \(F_{u\alpha}\)
+be the cross-block lowering operator from first row \(\alpha\)
+to last row \(u\), and \(E_{\alpha u}\) its adjoint.
+The lowering operators commute with each other. Their products
+of order \(n\) applied to \(W\) span the depth \(n\) subspace.
+Indeed reordering words in row operators puts the lowering
+operators on the left and the raising operators on the right.
+Let \(T\) be the sum of the first diagonal operators. On the span of depth \(n\) it acts by \(bw-n\). Since it is self-adjoint in the contravariant form, vectors at different depths satisfy
+\[
+ (n'-n)\langle v_n,v_{n'}\rangle=\langle Tv_n,v_{n'}\rangle-\langle v_n,Tv_{n'}\rangle=0 .
+\]
+
+For a multiset \(m\) of \(n\) pairs let
+\(m!=\prod_{u,\alpha}m_{u\alpha}!\).
+The lowering generators of the integral lattice are
+\(F^m/m!\) on the Levi Weyl lattice. Each is a product of
+integral divided row powers. By adjunction, the test against a divided lowering word is a test in the dual Levi lattice. For a Levi vector \(z\),
+\[
+ \left\langle v_0,\frac{F^m}{m!}z\right\rangle =\langle y_m,z\rangle,\qquad y_m=\frac{E^m}{m!}v_0.
+\]
+These entries determine \(v_0\), by the spanning assertion
+and nondegeneracy. In the polynomial model, restriction to
+the Levi block identifies its highest weight generator and
+its divided row words with their smaller-rank counterparts.
+The restricted dual tests are integral there because their pairings
+with the transposed words read the coefficients on the unit
+lower triangular chart. The ordered row additions extract
+these coefficients and restriction is injective on \(W\).
+\label{cor:lift-pieri-cost-2}
+
+\proofstep{The commuting polynomial on multisets.}
+To compute with the entries, represent a vector by an array
+of ordered lowering words of length \(n\) with coefficients
+in \(W\). Let \(L\) denote evaluation of the words and \(S\)
+the map which sums the array over words of each multiset.
+Thus \(L\) factors through \(S\). In tensor position \(j\),
+numbered from one, set
+\[
+ J_j=\sum_{u,v}e^{(j)}_{uv}E^W_{vu}
+                       +\sum_{a<j}(a\ j)_Y ,
+ \qquad A(Z)=\prod_{j=1}^n(Z-J_j).
+\]
+Here \(e^{(j)}_{uv}\) acts on the last-block row index,
+\(E^W_{vu}\) on the Levi coefficient and the transpositions
+exchange just the last-block indices. The raising tests of
+\(Lz\) satisfy
+\[
+                    \iota Lz=S A(w) z,\qquad
+                    (\iota v_0)_m=E^m v_0/m! .
+\]
+For this identity commute the first raising operator past
+each lowering in a word, using
+\([E_{\alpha u},F_{v\beta}]
+  =\delta_{uv}E_{\alpha\beta}-\delta_{\alpha\beta}E_{vu}\).
+
+On the highest subspace the first term gives the scalar
+\(w\), the second gives the Levi action. Commuting the
+resulting row generators through the other letters gives
+the transpositions in \(J_j\). Iteration over the letters
+gives the ordered product on the sum over permutations of
+the word. In the sum over all orders of a fixed multiset, the stabilizer permutes the repeated copies of each pair. Its cardinality is
+\[
+ |\operatorname{Stab}(m)|=\prod_{u,\alpha}m_{u\alpha}!=m!,
+\]
+giving the divided raising test above on collecting equal words.
+These are identities over characteristic zero. The
+coefficients of \(A(Z)\) descend to commuting operators on
+multiset arrays. Indeed the successive partial quadratic
+Casimirs commute, their differences give the \(J_j\), and
+adjacent transpositions together generate the permutations.
+Conjugating the defining sums by the adjacent transposition on the last-block indices gives the two relations
+\[
+ sJ_a=J_{a+1}s-1,\qquad sJ_{a+1}=J_as+1,\qquad s=(a\ a+1).
+\]
+
+The transposition \(s\) commutes with the other \(J_i\).
+Using the two swap relations and commutativity of \(J_a,J_{a+1}\)
+gives
+\[
+        s(J_a+J_{a+1})=(J_a+J_{a+1})s,\qquad
+        sJ_aJ_{a+1}=J_aJ_{a+1}s .
+\]
+These are the two coefficients that show commutation with
+\((Z-J_a)(Z-J_{a+1})\), hence with \(A(Z)\). Swaps on the
+first-block indices commute with all the \(J_i\). Its coefficients preserve integral
+arrays since the operator upstairs uses integer permutations
+and Levi row operators and \(S\) is onto over the integers.
+
+\proofstep{Contents on the surviving Pieri paths.}
+Tensoring the irreducible Levi module successively with
+the defining representation gives the rational Pieri paths
+which add one box per step. On a path the eigenvalue of
+\(J_j\) is the content of the box just added. In fact the
+quadratic Casimir on shape \(\kappa\) has scalar
+\(\sum_a \kappa_a(\kappa_a+d-1-2a)\). For the box in row \(a\) the new column has zero-based index \(\kappa_a\).
+The change of the form, minus \(d\), is
+\[
+ (\kappa_a+1)(\kappa_a+d-2a)
+       -\kappa_a(\kappa_a+d-1-2a)-d=2(\kappa_a-a).
+\]
+Here the content is \(\kappa_a-a\), equivalently the
+column number \(\kappa_a+1\) in one-based column notation
+minus one, then minus \(a\). The tensor Casimir identity gives twice \(J_j\)
+for this operator difference.
+
+To see which paths can survive
+\(S\), fix the counts \(n_\alpha\) of the first-block letters.
+The multiset arrays with these counts, as a module of the
+last block in characteristic zero, are
+\(W\otimes\bigotimes_{\alpha=1}^b
+\operatorname{Sym}^{n_\alpha}(\Q^d)\).
+Indeed their multiset basis is indexed by one monomial per
+first-block letter. By the horizontal-strip Pieri rule, let \(\lambda^{(j)}/\lambda^{(j-1)}\) be the strip contributed by the \(j\)-th symmetric power.
+
+In each column \(c\),
+\[
+ (\tau/\beta)'_c=\sum_{j=1}^b\bigl((\lambda^{(j)})'_c-(\lambda^{(j-1)})'_c\bigr)\le b,
+\]
+since each summand is zero or one. Here the left side counts the boxes of the skew diagram in that column. The column bound kills the image under \(S\) of every
+\(\tau\) with a column of length \(>b\) in \(\tau/\beta\).
+For a surviving path, each successive \(J_i\) reads the
+content of its added box, so the scalar on its \(\tau\)-space is
+\[
+       P_\tau(Z)=\prod_{\square\in\tau/\beta}
+                   (Z-\operatorname{cont}(\square)).
+\]
+The product depends only on the skew shape. Since \(S\)
+is equivariant, \(S A(w)\) has image in the sum of the
+surviving spaces with \(P_\tau(w)\ne0\).
+\label{cor:lift-pieri-cost-3}
+
+\proofstep{The common content polynomial clears the inverse.}
+There is an integral way to invert this last operation up
+to the scalar \(D_n(w)\). Divide \(D_n(Z)\) by the universal
+monic polynomial \(Z^n+\sum_{a<n}c_a Z^a\) over
+\(\Z[c_0,\ldots,c_{n-1}]\), and evaluate the quotient
+at \(w\) with the commuting coefficient operators of \(A\)
+in place of \(c_a\). Call the resulting integral operator
+\(Q\).
+
+On every path occurring in the image,
+\(P_\tau\mid D_n\) by the content maxima. The specialized
+remainder is zero. The polynomial-division identity on a surviving path thus specializes to
+\[
+ A(w)Q=D_n(w)\,\mathrm{id}
+\]
+on the image under consideration.
+This division incurs no denominators for spectral
+projectors. The coordinate of a raising test has weight
+\(v+\sum m_{u\alpha}(e_\alpha-e_u)\).
+Each \(J_j\) respects the matching between coordinate
+indices and their required weights, since its matrix unit
+and Levi action have opposite weight changes. The depth condition is preserved since \(\xi_\alpha\ge\xi_u\) at each contributing pair. The weight shift in a raising coordinate has pairing
+\[
+ \left\langle\xi,\sum_{u,\alpha}m_{u\alpha}(e_\alpha-e_u)\right\rangle=\sum_{u,\alpha}m_{u\alpha}(\xi_\alpha-\xi_u)\ge0 .
+\]
+Thus under \(Q\) each coordinate remains in the dual Levi lattice at the allowed depth.
+Multiplication by \(p^e\) puts these coordinates in the
+Levi Weyl lattice.
+
+Apply the lowering-word evaluation
+to the multiset array \(p^e Q\iota v_0\). It belongs to
+the full Weyl lattice because each undivided word is an
+integer multiple of its divided word. Its raising tests
+are \(p^e D_n(w)\iota v_0\), so injectivity of the tests
+proves \eqref{eq:lift-pieri-polynomial}. The scalar prime
+to \(p\) is a unit. The descent to the smaller rank here
+uses the indicated polynomial Weyl lattices with their
+normalized pairing.\label{cor:lift-pieri-cost-4}
+
+\end{proof}
+
+\paragraph{Counting the factors at the selected weight.}
+\begin{lemma}[Depth bounds at the selected rectangular block]
+\label{lem:selected-pieri-depth}
+On the selected row-depth cutoff \(I=i_i\), write \(c_{\rm out}\) for the cost of the two parts outside the rectangle. Then
+\[
+ c_{\rm out}\le\frac{(j+q)(h_0-1)}{p-1}.
+\] The rectangular factors are counted by
+the shifted intervals below, for each integer \(0\le n\le I\).
+In the nonexceptional range \(h_0<p^2\) this gives the stated
+coarse exponent for the projected inclusion, using the original
+Frobenius label and the same grading.
+\end{lemma}
+
+\begin{proof}
+\proofstep{Complementary coordinates and the one-row costs.}
+For a rectangular block at the end reverse the coordinates
+and take complementary weights about a common bound \(M\).
+This is contragredience with a determinant twist. It
+interchanges the two block positions, replacing \(\xi\) by
+its negative reverse and preserving the graded deficit.
+In a one-row step the added skew diagram is a horizontal
+strip. Two boxes of the same content, farther right in a
+lower row, would force a common added column. Thus all
+contents in this strip are distinct. The surviving boxes cannot reach content \(w\)
+since each row starts at content at most \(w\) and must
+avoid \(w\).
+
+Taking the maximum of the shifted widths, the surviving factors therefore satisfy
+\[
+ 1\le w-c\le h_0-1.
+\] More precisely
+for an appended row \(a\), numbered from zero, the
+complementary rectangle is \(M-\lambda_a\), and the
+smallest possible content is \(1-a\) for \(a\ge1\).
+With \(M=\lambda_0\), all factors are at most
+\(\lambda_0+a-\lambda_a-1\le h_0-1\).
+In each such step the distinct positive integers \(w-c\)
+lie in \([1,h_0-1]\), so their product divides \((h_0-1)!\).
+The empty Levi contributes the product one. It follows that
+\[
+  v_p\!\left(\prod_c(w-c)\right)
+  \le v_p((h_0-1)!)
+  \le\left\lfloor\frac{h_0-1}{p-1}\right\rfloor .
+\]
+\label{cor:lift-pieri-cost-5}
+
+Start with the full exponent of the first \(k_c\) rows
+(zero for the selected nonexceptional prime). Append the next
+\(j\) rows one at a time, using the zero grading. Append
+the rectangle of length \(t\) at once, with
+\(w=\lambda_{k_c+j}\) before reversal. For this step the
+block depth equals the deficit above the rectangle by
+equality of the two total weights. Finally append the \(q\)
+bottom rows individually, retaining the grading by the
+first \(k_c+j\) entries. The preceding argument with
+decreasing \(\xi\) keeps the same allowance \(I=i_i\)
+through these last steps. The middle step must therefore be bounded at precisely the integer depths
+\[
+ n\in\{0,\ldots,I\},\qquad I=i_i .
+\] The two outside
+steps together cost at most \((j+q)(h_0-1)/(p-1)\).
+
+\proofstep{Which labels can occur at bounded depth.}
+On the reversed Levi let \(M=\lambda_0\) and
+\(\beta_b=M-\lambda_{k_c+j-1-b}\), with rectangle height
+\(M-w\). For a box of content \(c\), put
+\(x=M+t-1-c+q\). Subtract the top weight \(B_\tau=w+t-1+q\) of the original shifted block. The reversed height then contributes the same factor:
+\[
+ x-B_\tau=(M+t-1-c+q)-(w+t-1+q)=(M-w)-c .
+\] The labels in a row start
+one below its shifted weight and decrease by one at each
+box. They are strictly above \(B_\tau\) by the omitted
+content condition.
+
+The first \(k_c\) original rows have
+shifted weights in \([x_-,x_+]\) and the next \(j\)
+at most \(x_-\). The latter rows supply at most \(j\)
+boxes of each label below \(x_-\), none above or at that
+endpoint. The first \(k_c\) rows supply at most \(k_c\) boxes of a
+label, and at most \(t\) since boxes on one content
+diagonal force a common added column. For \(x<x_-\) each
+of these rows reaching \(x\) has at least \(x_--x\) added
+boxes. Their total is at most \(n\). If \(c_x\) counts these rows reaching \(x<x_-\), then
+\[
+       c_x(x_--x)\le n\le I,\qquad
+       c_x\le \min\{k_c,t,I/(x_--x)\}.
+\]
+This multiplicity estimate applies at each such label.
+
+\proofstep{Counting multiples of the residue prime.}
+The \(j\)-row contribution is bounded by
+\(jv_p((x_--B_\tau-1)!)\le j(h_0-1)/(p-1)\).
+All relevant positive \(x-B_\tau\le h_0<p^2\) have
+valuation at most one. In \([x_-,x_+]\) the number
+of multiples of \(p\) is at most \((x_+-x_-)/p+I_p\),
+with the indicator from Section~\ref{subsec:lift-exponent-primes}.
+For \(x<x_-\), use the representative of the residue of \(x_--B_\tau\) in \(\{1,\ldots,p\}\).
+
+The positive residue representative is
+\[
+ r_p=1+\bigl((x_--B_\tau-1)\bmod p\bigr).
+\] The
+possible distances \(x_--x\) are \(r_p+ap\), strictly
+less than \(x_--B_\tau\). The term \(a=0\) gives
+\(\min(k_c,t,I/r_p)\) if this strict inequality holds.
+For \(a\ge1\) sum \(I/(ap)\) to get at most
+\((I/p)(1+\log(h/p))\) when \(p\le h\).
+Enlarging the quantities in this bound gives the claimed coarse estimate:
+\[
+ k_c\le k,\qquad I\le qh,\qquad \frac{h_0-1}{p-1}\le\frac{h+r}{p-1}+6 .
+\] The cost is an
+integer, so one may take the floor. Finally the projected
+inclusion over \(O\) follows from the integral standard
+bideterminant spanning theorem. Each generator is homogeneous
+in the row degrees, and its projection is either itself or
+zero. Its prime-to-\(p\) clearing integer from the integral
+computation becomes a unit in \(O\).
+\label{cor:lift-pieri-cost-6}
+\end{proof}

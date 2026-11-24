@@ -1,0 +1,526 @@
+\paragraph{Keeping the selected mode under a change of frame.}
+
+To construct the CM arc, follow one nonzero Fourier coefficient through the change of flag.
+
+Fix the component and a nonzero low coefficient \(F_\nu\) on a
+rational isotropic line \(E\xi\). Let \(a_\tau(x)>0\) be the
+cusp time at a flag frame \(x\), normalized as the reciprocal of
+\(c_\tau\operatorname{maj}_{x,\tau}(\xi)\), with \(c_\tau\) the
+positive flow constant of the component. The complex transvection
+with parameter \(s=(s_\tau)_\tau\) sends these times to
+\(a_\tau(x)+\operatorname{Im}s_\tau\). Its domain is the product
+of half-planes given by positivity of the translated times.
+Real transvections act on the Fourier coefficient by
+
+\[
+  \exp(4\pi i\sum_\tau\nu_\tau s_\tau).
+\]
+The product of the flowed coefficient and the reciprocal
+exponential is holomorphic on these half-planes, by integrating
+the section over its compact period torus. It is constant under
+real translations. Its complex derivatives in those same
+directions vanish, so the product is constant throughout the
+domain. In particular transporting a nonzero reading to all
+times equal to one keeps it nonzero.
+
+For a flag write \(\widehat N(x)\) for the supremum of the
+normalized point norms of \(F_\nu\) over its frames. This is
+finite by the Fourier coefficient bound on the compact real
+period torus, since those real transvections preserve the point
+metric. It is positive at some flag of time one. Put
+
+\[
+  S=\sup_{a(x)=1}\widehat N(x)>0.
+\]
+ Take a flag of time one
+whose supremum is greater than \(S/2\), then a frame on it
+whose point norm is still greater than \(S/2\).
+Signed Gram--Schmidt is a right upper triangular change of frame.
+The weight character of the section and the norm factor cancel
+under this change, and the majorant depends only on the signed
+flag. We may therefore take an orthonormal frame \(x_0\) of the
+same flag, with point norm between \(S/2\) and \(S\).
+
+\begin{proposition}[A split frame detecting the selected mode]
+\label{prop:split-frame-low-mode}
+Fix the torsion order before the definite lift. If \(a_\nu\) is a nonzero selected low coefficient, it is detected by a bounded split approximation,
+\[
+ a_\nu\ne0\quad\Longrightarrow\quad \exists\,x_{\rm split}\quad a_\nu(x_{\rm split})\ne0.
+\]
+
+The construction keeps the component and isotropic line fixed.
+It chooses the quotient complement and the frame after the coefficient
+and order are fixed, using the metric and radius bounds below.
+\end{proposition}
+
+\begin{proof}
+\proofstep{A motion that preserves a large coefficient.}
+Put \(\rho=(12\pi(c_1+w_0))^{-1}\).
+For a frame with times in
+\([(1-\rho)/(1+\rho),(1+\rho)/(1-\rho)]\), move its times to one
+as above. A bound for the ratio of the norm factors follows
+from the leading Gram minors under that imaginary transvection.
+The change in the Gram matrix under a complex transvection
+with imaginary time \(s_\tau\) is a Hermitian rank-one
+update. Its coefficient has the sign of \(s_\tau\).
+
+For the \(i\)-th leading block let \(G_i(0)\) and \(G_i(s_\tau)\) be its Gram matrices before and after the update. The determinant lemma gives
+\[
+  \frac{\det G_i(s_\tau)}{\det G_i(0)}=1+s_\tau b_i.
+\]
+ Here \(b_i\) is the signed squared projection
+of the line onto that block in the flow normalization.
+Since the line is isotropic, the leading coefficients start
+and end at zero, increase on the positive block and decrease
+on the negative block, with maximum \(1/a_\tau\).
+Thus the ratios lie between \(1\) and \(1+s_\tau/a_\tau\)
+in either order.
+More explicitly, with \(a_\tau=a_\tau(x)\), the norm factor at
+\(x\) divided by the norm factor after transport is bounded by
+
+\[
+  \prod_\tau\max(a_\tau,a_\tau^{-1})^{s_\tau/2},
+\]
+ where
+\(s_\tau\) is the spread of the weight at \(\tau\). Both time
+ratios are at most \(1+3\rho\). This contributes at most
+\(\exp(3\rho w_0/2)\le e\).
+The quotient of the raw coefficient norms is
+\(\exp(4\pi\sum_\tau \nu_\tau(1-a_\tau))\).
+Since \(\nu_\tau\ge0\), \(\sum_\tau\nu_\tau\le c_1\) and
+\(1-a_\tau\le2\rho\), the quotient is at most
+
+\[
+  \exp(8\pi\rho c_1)\le e.
+\]
+ Thus
+\begin{equation}\label{eq:slice-split-near-sup}
+  \widehat N(x)\le e^2 S .
+\end{equation}
+The movement and the comparison apply to every frame of the flag,
+which explains the supremum on the left.
+
+\paragraph{The first minimum on the isotropic quotient.}
+Use \(L'\) for the Hermitian self-dual lattice of the component,
+and \(\mathcal L\) for its period lattice. The fixed factors satisfy
+\(N_A\mathcal L\subset L'\) and \(N_C L'\subset\mathcal L\). The
+majorant-orthogonal complement of the hyperbolic plane at \(x_0\)
+represents \(\xi^\perp/E\xi\). Write \(v_\tau\) for the image there
+of a putative short nonzero class represented by \(v\in L'\cap\xi^\perp\).
+Let \(N_0,H_0,K_0',R_0\) be the split parameters defined below, and
+\(e_{\rm sp}=\min(1,f^2/(N_0^2 N_C^2 c_1 R_0))\).
+
+We claim that
+\[
+ \max_\tau\operatorname{maj}_{x_0,\tau}(v_\tau)\ge e_{\rm sp}.
+\]
+If the maximum is smaller, choose \(0<\epsilon_0<e_{\rm sp}\)
+bounding it. The Hermitian self-pairing of \(v\) is integral
+and is the pairing of \(v_\tau\) at every embedding. It has
+absolute value less than one everywhere, so it is zero.
+Shift \(v\) by \(N_A b\xi\), \(b\in\mathcal O_E\), to make its
+majorant projection coefficient \(b_\tau'\) onto \(\xi\) satisfy
+
+\[
+  |b_\tau'|\le 2f^2\operatorname{rd}(E)N_A
+\]
+ at all places.
+Indeed the Euclidean dual of the embedded \(\mathcal O_E\)
+is the conjugate codifferent scaled by two, by the trace formula.
+
+For each nonzero element of the codifferent the field norm has
+absolute value at least \(1/d_E\), by the inclusion of its
+principal ideal in the codifferent. The arithmetic--geometric
+mean inequality gives Euclidean dual minimum at least
+\(2\sqrt f/\operatorname{rd}(E)\).
+Let \(\rho_2\) be the Euclidean covering radius and \(\lambda_1^*\) the dual minimum. Banaszczyk's bound in dimension \(2f\) gives
+\[
+  \rho_2\le\frac{2f}{2\lambda_1^*}\le\frac{\sqrt f\,\operatorname{rd}(E)}2.
+\]
+The maximum norm radius is therefore at most
+\(2f^2\operatorname{rd}(E)\). \cite{banaszczyk}
+The shift leaves \(v_\tau\) and the assumption of shortness
+unchanged. The two vectors \(\xi,N_Cv\) are now in \(\mathcal L\)
+and span a totally isotropic plane.
+
+\proofstep{The average along the transvection torus.}
+Average along the real transvection torus for this plane. Its
+characters are Hermitian two-by-two frequency matrices
+\(\chi_\tau=\tau(\beta)\). The principal level torus contains the
+translations obtained from integral Hermitian matrices after
+multiplying by the level. Trace duality, including the off-diagonal
+trace pairing, gives 
+\[
+  N_0\beta_{ij}\in\mathcal O_E,
+\]
+ with
+\(N_0=(g_0g_1)d_E^2\). Taking the \(\xi\)-coefficient first retains
+just \((\chi_\tau)_{00}=\nu_\tau\). The surviving frequencies are
+positive definite at every embedding.
+
+In fact translating in a
+rank-one positive direction with negative frequency would give
+exponential growth against the polynomially varying norm factor.
+This gives positive semidefiniteness. If one determinant vanishes,
+the algebraic determinant vanishes. A rational vector in the
+kernel gives a rational isotropic line on which the frequency
+is zero. The corresponding constant-term projection is zero by
+cuspidality. Translation averages commute on this abelian torus,
+so such a frequency has zero coefficient.
+
+Normalize the direction \(v_\tau\) to have cusp time one, writing
+it as \(a_{\tau,0}\xi+a_{\tau,1}N_Cv\) after this rescaling.
+The normalization gives
+\[
+ |a_{\tau,1}|^2
+   = (N_C^2 c_\tau\operatorname{maj}_{x_0,\tau}(v_\tau))^{-1},
+ \qquad 0<c_\tau\le2 .
+\]
+Write \(d_\tau=\det\chi_\tau>0\), let \(R_\tau\) be the value of
+this frequency on the normalized direction \(a_\tau\), and put
+\(T=2\sum_\tau R_\tau\). Completing the square in the first
+coordinate gives \(\nu_\tau R_\tau\ge d_\tau|a_{\tau,1}|^2\).
+
+The algebraic integer \(\det(N_0\beta)\) is nonzero, so the
+product of \(N_0^2d_\tau\) over the complex half is at least one.
+Since \(\sum_\tau\nu_\tau\le c_1\), two applications of the
+arithmetic--geometric mean inequality give
+\[
+ \sum_\tau d_\tau/\nu_\tau\ge \frac{f^2}{N_0^2c_1},
+ \qquad T\ge\frac{f^2}{N_0^2N_C^2c_1\epsilon_0}> R_0 .
+\]
+The first inequality uses
+\(\prod_\tau(f\nu_\tau/c_1)\le1\). In particular all the
+\(\nu_\tau\) under consideration here are positive.
+
+\proofstep{The first minimum at the same frequency.}
+The height count is on the same frequencies. In each embedding
+write the second standard vector as \(q a_\tau+p(1,0)\).
+Then \[
+ |q|^2=N_C^2 c_\tau\operatorname{maj}(v_\tau)\le2N_C^2,\qquad |p|^2=N_C^2|b_\tau'|^2.
+\]
+Positivity and Cauchy--Schwarz bound the second diagonal and
+the off-diagonal frequency entries by \(H_0(c_1+T/2)\).
+For the off-diagonal use
+
+\[
+  |(\chi_\tau)_{01}|^2\le\nu_\tau(\chi_\tau)_{11}.
+\]
+The first diagonal is prescribed, so the other two entries
+determine the frequency. In the maximum of the complex norms
+the integer lattice has minimum at least one, by the field norm.
+Disjoint translates of the open ball of radius \(1/2\) give at
+most \((1+2B)^{2f}\) lattice points in a ball of radius \(B\).
+For \(t\ge1\) use \(B=N_0 H_0(c_1+t/2)\) for each of the two
+entries. Counting both entries therefore bounds the number of Hermitian frequency matrices \(\beta\) by
+\[
+  \#\{\beta:T(\beta)\le t\}\le(K'_0t)^{4f}\qquad(t\ge1).
+\]
+
+The normalized \(v_\tau\)-transvection commutes with the
+\(\xi\)-flow. The time-one flag, and every frame in it, can be
+moved back by \(i/2\) in the normalized \(v_\tau\) direction
+at each place. Its time becomes \(1/2\), and the \(\xi\)-time
+stays one, since the two directions are majorant-orthogonal.
+The real period averages of the rank-two group at that moved
+point therefore bound the normalized coefficient by \(S\).
+Transport back multiplies the raw coefficient by \(e^{-\pi T}\)
+and changes the norm factor by at most \(2^{w_0/2}\).
+Group the resulting bounds by \(m=\lceil T\rceil\). For
+\(m>R_0=w_0+4f\log(8fK_0')+4f+2\), the inequality
+\(\log(m/(8f))\le m/(8f)-1\) gives
+
+\[
+  (K_0'm)^{4f}\le e^{2m-w_0-2}.
+\]
+Thus the sum of the coefficient bounds, divided by \(S\), is
+at most
+\[
+ 2^{w_0/2} e^{\pi-w_0-2}
+ \frac{e^{4(2-\pi)}}{1-e^{2-\pi}}<\tfrac12 .
+\]
+The absolute bound justifies recovering the section from its
+Fourier series on the compact torus. Taking the supremum over
+the original flag contradicts the choice above \(S/2\). This
+proves the quotient minimum with the cutoff fixed at \(c_1\).
+\label{cor:slice-split-frame-1}
+
+\paragraph{A signed rational complement.}
+
+The quotient on the isotropic line controls a first minimum. To turn that estimate into a CM frame we need a rational complement with the prescribed signs.
+
+The quotient of \(L'\cap\xi^\perp\) by \(L'\cap E\xi\) is
+a self-dual Hermitian lattice on \(\xi^\perp/E\xi\).
+One can check this locally. A generator of the saturated line
+is primitive, and self-duality supplies a partner pairing to one.
+If these vectors are \(\xi_0,\eta_0\), the Gram
+matrix on their plane is
+\[
+ \begin{pmatrix}0&1\\1&H(\eta_0,\eta_0)\end{pmatrix}
+\]
+and its determinant is \(-1\). Its inverse is integral,
+so subtracting the plane projection preserves the lattice.
+Inside this plane the perpendicular to \(\xi_0\) is
+the line it spans. Thus the quotient lattice is the
+integral orthogonal complement. Its signature in the selected convention
+is \((q_j-1,r-q_j-1)\).
+
+\proofstep{Choosing the rational complement by transference.}
+Use the transference bound for this lattice with lower majorant
+\(e_{\rm sp}\). In real dimension \(2f(r-2)\) it gives covering
+radius and an independent short family at
+
+\[
+  \mu=4(f(r-2))^3d_E/\sqrt{e_{\rm sp}}.
+\]
+Use the same lattice construction as for the full interior frame
+with approximation allowance \(\rho/40\). Namely, approximate
+the positive axes scaled by \(4\sqrt{r-2}\mu/(\rho/40)\),
+and multiply the orthogonal projections of the short spanning
+family to the negative space by the positive Gram determinant.
+The positive block errors have operator norm at most
+\(\sqrt{r-2}\mu\), so its span is a graph of norm at most
+\(\rho/120\). The negative projection is given by the Gram
+adjugate and is integral.
+
+The leading positive Gram determinant
+and the Gram-adjugate formula give the length bound
+\(B_{\rm rad}^{2q_j-1}\) on the resulting letters, with
+\(B_{\rm rad}=2\cdot4\sqrt{r-2}\mu/(\rho/40)\).
+Indeed, for a vector \((u,v)\) the negative projected norm
+squared is
+\[
+ \|(1-AA^*)^{-1/2}(v-Au)\|^2\le (1+\|A\|^2)\|(u,v)\|^2/(1-\|A\|^2)\le2\|(u,v)\|^2.
+\]
+Raising the common bound
+for the positive lengths to twice the number of positive
+axes pays the determinant. If \(q_j=1\) there is no positive
+axis in the quotient, and the short negative family needs
+no projection. Lift the letters to \(L'\cap\xi^\perp\).
+Their pairings and their quotient basis are independent
+of the choices of lifts.
+
+In the signed orthonormal basis put
+\(C_+=(1-A^*A)^{-1/2}\) and \(C_-=(1-AA^*)^{-1/2}\).
+The block matrix with the required positive graph is
+\[
+                 U_A=\begin{pmatrix}C_+&A^*C_-\\
+                                        AC_+&C_-\end{pmatrix}.
+\]
+For the form with matrix \(\operatorname{diag}(1,-1)\),
+the two column blocks are orthogonal: their mixed matrix
+is \(C_+(A^*-A^*)C_-=0\). Their squared Gram blocks are
+\[
+ C_+(1-A^*A)C_+=1,\qquad C_-(AA^*-1)C_-=-1.
+\]
+Thus \(U_A\) is unitary. Extend it by the identity on the
+hyperbolic plane.
+
+The
+resulting frame \(x_1\) has the selected letters in the two
+eigenspaces on the complement, and its \(\xi\)-time is still
+one. The positive plane in the chart of \(x_0\) has graph
+\(Z_1\) of norm at most \(\rho/100\). With
+\(t=(1-\rho/100)/(1+\rho/100)\), the majorant at \(x_1\) is
+between \(t\) and \(1/t\) times that at \(x_0\). The quotient
+lower bound for \(x_1\) is therefore \(t e_{\rm sp}\).
+
+\paragraph{Clearing the projection at the prescribed order.}
+Let \(W_\tau\) denote the complex complement at \(x_1\),
+and write \(P_\tau(\mu)\) for the coefficient of \(\xi\)
+in the projection of \(\mu\in\mathcal L\cap\xi^\perp\).
+The coefficient projection comes from the exact sequence
+\[
+ 0\longrightarrow \mathcal L\cap E\xi
+ \longrightarrow \mathcal L\cap \xi^\perp
+ \longrightarrow
+   (\mathcal L\cap\xi^\perp)/(\mathcal L\cap E\xi)
+ \longrightarrow 0.
+\]
+The quotient is torsion-free because the submodule is the
+intersection with an \(E\)-line. It is finitely generated over
+the Dedekind ring \(\mathcal O_E\), hence projective, so the
+sequence splits over \(\mathcal O_E\). Write \(l(\mu)\xi\) for an integral
+projection from such a splitting. Its coefficient extends
+by scalar extension to an \(E\)-linear form with 
+\[
+  l(\xi)=1.
+\]
+Hence the difference \(P_\tau-l_\tau\) is a linear form on
+the quotient.
+
+\proofstep{Simultaneous clearing at the prescribed torsion order.}
+We approximate \(n'(P_\tau-l_\tau)\) simultaneously by the
+linear forms of one lattice element. In the real tangent
+space \(\prod_\tau W_\tau\) with the Euclidean majorant metric,
+the image of \(\mathcal L\cap\xi^\perp\) is a lattice of
+dimension \(d=2f(r-2)\). The quotient minimum is at least
+\(\sqrt{t e_{\rm sp}}/N_A\): multiplication by \(N_A\) sends
+the projected lattice to the one used for the first-minimum bound.
+The marked Riemann pairing is
+\(\operatorname{Tr}_{E/\mathbb Q}(-\xi_0 H(-,-))\) on period
+vectors, where 
+\[
+  2|\tau(\xi_0)|=k_0.
+\]
+This pairing is perfect on the projected lattice, since it is
+perfect on the period lattice and the isotropic sublattice is
+saturated.
+
+To see this, extend a basis of the primitive
+isotropic sublattice by symplectic partners, obtained by lifting
+their dual functionals under the perfect pairing. The resulting
+even-rank block is unimodular, and the perpendicular quotient
+is its integral orthogonal complement.
+Relative to the majorant, the real operator associated to the
+pairing is \(k_0\) times an orthogonal map.
+Writing \(T=k_0 U\) with \(U\) orthogonal for the majorant gives
+\[
+  \|Tx\|=k_0\|x\|,\qquad T^*T=k_0^2I .
+\]
+ Indeed it is the
+product of multiplication by a purely imaginary scalar,
+the signature involution, and the factor two from the CM trace.
+
+The similarity \(T\) takes the projected lattice to its Euclidean dual.
+Thus the dual minimum is at least \(k_0\sqrt{t e_{\rm sp}}/N_A\).
+Transference and rounding in \(d\) independent vectors give
+covering radius at most
+\(d^3N_A/(2k_0\sqrt{t e_{\rm sp}})\) for the projected lattice.
+Via Riesz representation, the linear forms
+\[
+ u\longmapsto d_E(-\tau(\xi_0)) H_\tau(u,\mu_{0,\tau}),
+ \qquad \mu_0\in\mathcal L\cap\xi^\perp ,
+\]
+come from the projected lattice by an operator of norm
+\(d_Ek_0/2\) times an isometry. The covering estimate
+therefore approximates the tuple \(n'(P_\tau-l_\tau)\)
+with error in its representing vector bounded by
+\(d_Ed^3N_A/(4\sqrt{t e_{\rm sp}})\).
+The majorant of \(\xi\) is \(1/k_0\).
+
+Multiplying the error
+norm by \(1/\sqrt{k_0}\) for its value on the line is
+covered by \(B_{\rm ind}(t e_{\rm sp})\), the index allowance
+below evaluated with lower bound \(t e_{\rm sp}\).
+For the discriminant factor, the pairings \(H(L',L')\)
+generate the unit ideal by Hermitian self-duality.
+Since 
+\[
+  N_C L'\subset\mathcal L,
+\]
+ integrality of the trace
+pairing puts \(N_C^2(-\xi_0)\) in the codifferent. All its
+embedding norms equal \(N_C^2 k_0/2\). The ideal norm lower
+bound \(1/d_E\) therefore gives
+\(N_C^2 k_0\operatorname{rd}(E)\ge2\), as used in the index
+allowance.
+All these comparisons concern the projected lattice of the
+full period module, independent of the particular spanning
+letters just chosen.
+
+\proofstep{Returning to the Hermitian frame.}
+Dividing by \(n'\) gives a correction \(\delta_\tau\) on \(W_\tau\)
+of operator norm, as a map into the line with its majorant metric,
+at most \(\kappa=B_{\rm ind}(t e_{\rm sp})/n'\).
+It has the required integral effect. For \(\mu\in\mathcal L\cap\xi^\perp\)
+the corrected projection multiplied by \(n'\) has coefficient
+\[
+ n'l(\mu)+d_E(-\xi_0)H(\mu,\mu_0).
+\]
+The second summand is integral since its value before multiplication
+by \(d_E\), paired against each \(a\in\mathcal O_E\) by the trace,
+is \(\operatorname{Tr}_{E/\mathbb Q}(-\xi_0 H(a\mu,\mu_0))\in\mathbb Z\).
+Thus it is in the trace dual. The first summand belongs to the
+line coefficient module by the integral splitting. The vector
+with the displayed coefficient is in \(\mathcal L\cap E\xi\).
+
+At each embedding choose \(\xi'\) in the hyperbolic plane with
+\(H_\tau(\xi,\xi')=1\), of norm squared the reciprocal of
+\(\operatorname{maj}_{x_1,\tau}(\xi)\), and isotropic.
+Take \(w_\tau\in W_\tau\) with \(H_\tau(u,w_\tau)=\delta_\tau(u)\).
+The unitary fixing \(\xi\) acts by
+\[
+ u\longmapsto u+\delta_\tau(u)\xi,\qquad
+ \xi'\longmapsto
+ \xi'-w_\tau-\tfrac12 H_\tau(w_\tau,w_\tau)\xi .
+\]
+Preservation of all pairings follows by expanding them on the
+three summands. In this moved frame the line projection is
+\(P_\tau-\delta_\tau\) and the eigenspaces on the quotient are
+unchanged. The two linear off-diagonal terms have operator
+norm at most \(\kappa\) each and the quadratic term at most
+\(\kappa^2/2\), so the move differs from the identity by at
+most \(3\kappa\) in the \(x_1\) majorant when \(\kappa\le1\).
+
+In the \(x_0\) majorant the bound is \(\eta=3\kappa/t\).
+With \(z_1=\rho/100\), the transformed graph has norm at most
+\[
+ \frac{z_1+\eta(1+z_1)}{1-\eta(1+z_1)}<\rho/21 .
+\]
+Indeed the new upper block on \(\binom{1}{Z_1}\) differs from
+the identity by at most \(\eta(1+z_1)\), and the lower block
+changes by at most the same amount. The inequality on \(n'\)
+gives 
+\[
+  \kappa\le\rho/(1000t),
+\]
+ and \(\rho\le1/10\) gives the
+strict numerical bound. This construction uses the \emph{chosen}
+positive integer \(n'\). Clearing denominators first and then
+taking an arbitrary multiple would give a different quantifier.
+\label{cor:slice-split-frame-2}
+
+\paragraph{The small-chart nonvanishing test.}
+Let \(Z\) be the lower-block chart parameter of a final moved
+flag in the orthonormal frame \(x_0\). Use the operator norm on
+each block, and the maximum over the complex places. For
+\(\|W\|\le\rho\) the points \(x(W)\) of this chart are in the
+domain. For each singular value \(s\) of \(W\), the majorant in the
+associated signed two-plane has eigenvalues \((1+s)/(1-s)\)
+and its reciprocal relative to \(x_0\).
+The two relative eigenvalues are reciprocal, as can be read from
+\[
+  \frac{(1+s)^2}{1-s^2}=\frac{1+s}{1-s},\qquad \frac{(1-s)^2}{1-s^2}=\frac{1-s}{1+s}.
+\]
+ This follows from the
+unitary graph matrix above, whose two-by-two block is
+\((1-s^2)^{-1/2}\left(\begin{smallmatrix}1&s\\s&1\end{smallmatrix}\right)\).
+The remaining eigenvalues are one. Thus the majorants change by
+factors between \((1-\rho)/(1+\rho)\) and its reciprocal.
+
+For a dominant weight
+of spread at most \(w_0\), the norm factor \(J(x)\) satisfies
+\[
+  |\log J(x(W))-\log J(x_0)|\le 4w_0 r\|W\|^2\le \tfrac14 .
+\]
+For leading minors ending in the positive block one takes
+determinants of \(1-W_1^*W_1\), with \(W_1\) the relevant columns
+of \(W\). For larger minors, eliminate the retained negative
+identity block. The remaining factor is \(1-W_2^*W_2\), with
+\(W_2\) the rows of \(W\) after deleting that block. The full
+determinant has absolute value one.
+
+For each of the other positive absolute determinant ratios \(q_i\), the block bound gives
+\[
+  |\log q_i|\le-r\log(1-\|W\|^2).
+\]
+Summation by parts in the consecutive minor ratios charges
+only the weight spread, giving the stated quadratic estimate.
+This and the majorant comparison put the chart in the range of
+\eqref{eq:slice-split-near-sup}. If \(\|Z\|<\rho/21\), put
+\(R=\rho/\max(\|Z\|,\rho/22)>21\).
+The function \(g(t)=J(x_0)F_\nu(x(tZ))\) on \(|t|\le R\)
+has \(|g(t)|\le e^{9/4}S\), and \(|g(0)|>S/2\).
+If \(g(1)=0\), precompose with the automorphism of this disc
+that exchanges 0 and 1. Schwarz's lemma gives
+
+\[
+  |g(0)|\le e^{9/4}S/R<S/2,
+\]
+ a contradiction.
+This is the form of the nonvanishing argument used in the split
+detector. It allows the frame move to depend on the coefficient
+and the prescribed torsion order.
+\label{cor:slice-split-frame-3}
+\end{proof}

@@ -1,0 +1,475 @@
+\subsubsection*{The character and the two lattices on the retained family}
+\label{subsec:marked-localization}
+
+The adjoint comparison supplies the good row at the specified lift. Its contributions to the numerator are local: at each twisted place they use a particular Hecke character and the two integral lattices attached to it.
+
+Fix a member of the cut family at scale \(x\), a lift \(j\), and
+a twisted coefficient place \(w\mid\ell\). Let \(i\) be one of
+the Hecke localizations at \((j,w)\), with coefficient integers
+\(O\), and let \(\pi\) be a good eigencharacter there. In the
+following argument the index \(i\) specifies the twist, its side
+and its auxiliary level \(Q_i\). Write \(E\) for the auxiliary CM field
+and \(v\) for a place of \(E\) above \(\ell\).
+
+Let \(r\) be the rank of the complementary representation and \(t\) the
+number of characters in the theta string. For the \(\ell\)-adic cyclotomic
+character \(\chi_\ell\) of \(G_E=\operatorname{Gal}(\overline E/E)\), set
+\begin{equation}\label{eq:signature-cyclotomic-minimum}
+ \nu_\ell=\min_{g\in G_E}v_\ell\!\left(\chi_\ell(g)^{tr}-1\right),
+ \qquad v_\ell(\ell)=1.
+\end{equation}
+
+\begin{proposition}[The signature and the complement at a marked point]
+\label{prop:marked-signature}
+Fix the norm choice on the retained family before choosing the
+integral realizations at \(i\). The complement of the theta string
+at \(\pi\) identifies, with its integral lattice, with one of the
+good signatures tested on the prescribed side in
+Proposition~\ref{prop:one-retained-character}. For the length \(s_\pi\) of
+the annihilating quotient and the inertia readings \(\zeta_v\)
+of the chosen twist, the simultaneous estimates are
+\[
+ s_\pi<\infty,\qquad s_\pi\le\nu_\ell+\ell^{-2},\qquad
+ t\sum_{v\in Q_i} v_\ell(\zeta_v-1)\le\ell^{-2}.
+\]
+The one choice at \(w\) applies to all these presentations.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Read the normalized characteristic polynomial on the chosen side.}
+Proposition~\ref{prop:cut-multiplicity} gives an occurring good
+lower row \(\sigma\) for \(\pi\) at lift \(j\). In the coefficient model
+take a nonzero common eigenvector \(x_\sigma\) in its good
+isotypic space. The descent of an eigenvector here uses only
+linear algebra. Take the basis of the small-field form, also a
+basis after extension to the row field, and choose a nonzero
+coordinate \(u\) of \(x_\sigma\). Over the subfield containing
+the eigenvalues and the small-field matrices, choose a linear
+functional on the row field with value \(1\) at \(u\).
+
+Apply it
+to each coordinate and then apply the coefficient embedding of
+the chosen side. Write \(\lambda\) for the chosen functional and apply it coordinatewise. For every small-field Hecke matrix \(T\) and eigenvalue \(a_T\) in the field of linearity,
+\[
+ T\lambda(x_\sigma)=\lambda(Tx_\sigma)=a_T\lambda(x_\sigma),\qquad \lambda(u)=1.
+\]
+Applying the coefficient embedding preserves these identities. For the level action, undo the row character on each
+group element. Its inverse value is in the eigenvalue field,
+so the map also intertwines the sum giving the good projector.
+
+The resulting vector lies in the good level space on that side.
+At a split unramified prime \(P\) outside the finite omitted set,
+its \(h\)-th Hecke eigenvalue is the embedded row eigenvalue
+times \(c(P)^h\), with \(c(P)\ne0\) the normalizing character
+factor in the level action. Decompose the good level space at \(j\) on this side into its recorded simultaneous eigenspaces. A nonzero component yields a signature \(s\) with the same normalized eigenvalues for every \(1\le h\le r\).
+
+For corresponding unnormalized eigenvalues \(A_h,B_h\) and coefficient embedding \(\iota\), the cancellation reads
+\[
+ c(P)^h\iota(A_h)=c(P)^h\iota(B_h)\quad\Longrightarrow\quad A_h=B_h.
+\]
+For the normalized split roots \(\alpha_1,\ldots,\alpha_r\)
+these values are the coefficients in
+\[
+ \prod_{i=1}^r (T-\alpha_i)
+     =\sum_{h=0}^r(-1)^h e_h(\alpha_1,\ldots,\alpha_r) T^{r-h}.
+\]
+Thus equality of the embedded eigenvalues after dividing by
+\(c(P)^h\) gives equality of polynomials, with all multiplicities. Undoing the common reciprocal and
+scalar normalization identifies the Frobenius polynomials.
+The signature is one of the good ones tested in
+Section~\ref{subsec:retained-twist}: the localization at \(w\)
+uses a nonzero twist index, and its good type and lower
+cuspidal system are precisely those just selected.
+\label{cor:marked-localization-1}
+
+\proofstep{Choose integral realizations of all retained characters.}
+Take the full semisimple integral Galois realization \(R_x\)
+for each generic eigencharacter \(x\) of this localization,
+as in Section~\ref{subsec:retained-galois}. At a theta
+character the characteristic-zero representation has its
+labelled string of characters and a continuous integral
+complement \(\rho_x\). Denote the labelled characters by \(\chi_h\). At a good split Frobenius element \(g\), the comparison removes the string by the factorization
+\[
+ \det(1-XR_x(g))=\det(1-X\rho_x(g))\prod_h(1-X\chi_h(g)).
+\]
+The attached cuspidal summands realize the complementary factor. Density and semisimplicity identify the rational complement.
+
+To obtain a stable lattice, start with any full lattice
+\(L_0\) in the complement. Compactness gives a single integer
+\(a\ge 0\) such that, for a coefficient uniformizer \(\pi\),
+\[
+ L_0\ \subseteq\ L=\sum_{g\in G_E}\rho_x(g)L_0
+       \ \subseteq\ \pi^{-a}L_0,\qquad
+ \rho_x(h)L=L\quad(h\in G_E).
+\]
+The upper lattice is Noetherian, so the middle module is a
+full lattice. This construction only concerns the chosen complement.
+The coefficient choice of Section~\ref{subsec:retained-galois}
+splits the constituents and the roots of the marked corner.
+At a retained non-theta character only \(R_x\) enters the matrix algebra. The unused complement may be assigned
+\[
+ \rho_x=\mathbf1^{\oplus r}\qquad(x\ \text{outside the theta locus}).
+\]
+
+This constructs one family at all the retained characters.
+\label{cor:marked-localization-2}
+
+\proofstep{Identify the two character evaluation kernels.}
+For the comparison with \(s\), write \(O_0\) for the signature's
+base coefficient ring. The character \(\psi_0\) on the parent
+at \(w\) has its values in a common coefficient field. Its
+two evaluations give the Galois character at \(i\) and the
+character in the twist field, with the recorded side action.
+The localization construction extends the embeddings to a
+common field. On \(O_0\) it uses the prescribed map into
+\(O\) and the inclusion into the twist integers. On the
+parent field the two maps compare the same embedding at \(w\).
+Concretely, two embeddings inducing \(w\) differ on the
+completed algebraic coefficients by a local field embedding.
+Extend over the finite coefficient fields into an algebraic
+closure and transport the integral embedding by this
+conjugacy.
+
+For the local conjugacy \(\sigma\) and the absolute valuation \(v\), one has
+\[
+ v(\sigma a)=v(a)\ge0\qquad(a\in O_0).
+\]
+Thus the transported base coefficients are integral. The field used
+for the localized row includes these base readings by
+construction. Let \(\operatorname{ev}_i\) and \(\operatorname{ev}_s\) be the
+two character evaluations on \(O_0[G_E]\), and let \(\iota_i,\iota_s\)
+be their embeddings into the common field. For
+\(a=\sum_g a_g[g]\) one has
+\[
+ \iota_i(\operatorname{ev}_i a)
+     =\sum_g\iota_i(a_g)\iota_i(\operatorname{ev}_i[g])
+     =\sum_g\iota_s(a_g)\iota_s(\operatorname{ev}_s[g])
+     =\iota_s(\operatorname{ev}_s a).
+\]
+Injectivity of the common-field embeddings gives, for \(a\in O_0[G_E]\),
+\[
+ \operatorname{ev}_i(a)=0\iff\iota_i\operatorname{ev}_i(a)=0\iff\iota_s\operatorname{ev}_s(a)=0\iff\operatorname{ev}_s(a)=0.
+\]
+Applying this equality to \([g]-[1]\) also identifies
+triviality on each decomposition group. The side inversion in taking the Galois
+character of the ray class character is undone when the
+signature is read back on that side.
+\label{cor:marked-localization-3}
+
+\proofstep{Transfer the length and inertia estimates on normalized lattices.}
+The comparison of representations becomes a length estimate only after the character, the signature lattice and the chosen side of the place have been identified together.
+
+Apply Lemma~\ref{lem:retained-signature-specialization}
+to this \(\rho_\pi\) and this \(s\). The split polynomial identity
+identifies the two rational rank-\(r\) representations with the
+prescribed twists. After integral scaling the intertwiner \(A\) has nonzero reduction. Absolute residual irreducibility gives
+\[
+ \ker\bar A=0\quad\Longrightarrow\quad\det A\in O^\times,
+\]
+since the two lattices have the same rank. The equality of evaluation kernels
+identifies the generated orders. Extension from their common
+normalization preserves normalized length and the injection
+into the signature Selmer group. The ramification set on the
+signature side is exactly \(Q_i\). At each such place a marked inertia generator gives a generator
+\(\zeta\) of the same finite character image. A replacement by
+\(\zeta^a\) with \(a\) prime to its order preserves
+\(v_\ell(\zeta-1)\).
+
+Choose positive representatives \(a,b\) with \(ab\equiv1\) modulo
+the order of \(\zeta\). The two divisibilities follow from
+\[
+ \zeta^a-1=(\zeta-1)\sum_{j=0}^{a-1}\zeta^j,\qquad
+ \zeta-1=(\zeta^a-1)\sum_{j=0}^{b-1}\zeta^{aj}.
+\]
+Thus the two elements generate the same ideal. Thus its simultaneous character estimate gives the asserted
+bounds on the actual complement.
+The character used for this application was fixed with the
+norm choice before \(R_x,\rho_x\) were selected. At the cut
+the maps on the retained points restrict the original
+readings, including \(Q_i\) and the side. This proves the
+annihilation estimate for all of these integral presentations
+with one choice at \(w\). \label{cor:marked-localization-4}
+\end{proof}
+
+At a labelled embedding of the host at \(v\), the archimedean
+weights give the following candidate lists. Write \(c=(t-1)/2\), and use the real place \(\tau\)
+under this embedding. In the Harish--Chandra parameter at
+\(\tau\) put \(s=e_{j-1}\), write \(v_a\) for its \(k-1\)
+decreasing offsets and \(b_h\), \(0\le h<m\), for the
+increasing list interlaced with the \(e\)'s. On the positive
+half the three sets for \(R_x\chi_1^{-1}\) are
+\[
+ C_+=\{c+s+v_a\}_a,\qquad D_+=\{c+s-b_h\}_h,\qquad
+ I=\{0,\ldots,t-1\}.
+\]
+On the other half reflect the lists by \(a\mapsto t-1-a\),
+writing \(C_-,D_-\) for the first two images.
+
+\begin{lemma}[Signed jumps on the row and column]
+\label{lem:marked-signed-jumps}
+Writing \(\operatorname{HT}_d\) for the multiset of jumps on side \(d\) at a retained eigencharacter, one has
+\[
+ \operatorname{HT}_d(R_x\chi_1^{-1})=C_d\sqcup D_d\sqcup I,
+\]
+with all multiplicities one. At \(\pi\) the complement \(W=\rho_\pi\chi_1^{-1}\)
+has jumps \(C_d\cup D_d\) and avoids \(0,-1\). At paired split
+places the positive column of \(W\) and negative row of
+\(W^\vee(1)\) each have \(m-j\) negative jumps per embedding.
+\end{lemma}
+
+\begin{proof}
+\proofstep{Normalize the level-zero jump by the first character.}
+Let \(p\) be a Harish--Chandra parameter
+entry, \(d=\pm1\) the sign of the embedding and \(c_\tau\)
+the common archimedean shift. The common shift cancels on twisting by \(\chi_1^{-1}\). Subtracting its jump from the level-zero jump gives
+\[
+ (dp+c_\tau)-(-ds-c+c_\tau)=d(p+s)+c.
+\]
+
+For the three pieces of the shifted parameter \(p+s\) the
+entries are \(s+v_a\), \(s-b_h\), and the consecutive integers
+from \(-c\) to \(c\). This proves the indicated reflection and
+multiplicity formula. The cut gives the level-zero jump
+identity on every retained eigencharacter, including at a
+type prime. Away from the type primes its unramified
+Weil--Deligne parameter and zero monodromy give
+crystallinity; at a type prime use the potentially crystalline
+comparison with the retained tame label.
+\label{cor:marked-localization-5}
+
+\proofstep{Separate the consecutive string from the signed complement.}
+The inequalities on the selected weights give
+\(0\le v_a\le S_c\), \(|s-b_h|\le\eta_c\), and
+\(s>\eta_c+t+S_c\). The interlacing margins give the opposite signs on either side of \(j\):
+\[
+ s-b_h\ge(t+3)/2\ (h<j),\qquad s-b_h\le-(t+3)/2\ (h\ge j).
+\]
+These follow from the interlacing
+margins on either side of \(e_{j-1}\) and monotonicity of
+the \(b_h\). The three sets are disjoint and each jump is
+simple. In particular removing \(I\) at \(\pi\) leaves
+exactly \(C_d\cup D_d\) for \(W=\rho_\pi\chi_1^{-1}\);
+this avoids \(0,-1\). The Tate dual \(W^\vee(1)\) at
+the \emph{same} embedding sends each remaining \(a\) to
+\(-1-a\).
+
+For a complementary shifted entry \(z=p+s\), the positive
+column jump and the negative row's dual jump are
+\[
+     a_+=z+c,\qquad a_{\rm row}=-1-(-z+c)=z-c-1 .
+\]
+For the \(b_h\)-entries with \(h<j\) one has \(z\ge c+2\);
+both jumps are then positive. For \(h\ge j\) one has
+\(z\le-c-2\), and both are negative. The outer entries
+\(z=s+v_a\) exceed \(c+1\). Thus each side has \(m-j\)
+negative jumps per embedding.
+Thus each contributes at most the degree times \(m\) to
+the free finite cohomology bound, even at the last lift.
+\end{proof}
+
+Above the prime cutoff the stronger separation required in
+paragraph~\ref{subsec:outside-windows} follows directly from
+the parameter inequality
+\( |b_h-e_{j-1}|\ge 2b/\ell_*+t/2+3\). On either side
+this absolute value is \(|a-c|\) for \(a\in D_d\).
+On the complementary block \(C_d\) the place windows instead give
+\[
+ d(a-c)=s+v_a,\qquad W_0\le s\le W_0+\eta_c+1.
+\]
+
+Here \(W_0=b\) on the part with larger weights, \(\omega\) on the part with smaller weights and \(b_v+\lfloor b'/x\rfloor\) at a designated top.
+The floor accounts for the extra one at the top. Thus the
+exceptional integers tested there use the actual jump sets of
+the marked map. These weight inequalities belong to the same
+parameter record as \(\ell_*\).
+\label{cor:marked-localization-6}
+
+\subsubsection*{The two integral maps and the local cases}
+
+Lemma~\ref{lem:marked-signed-jumps} determines the ordered jumps on the two marked maps. Proposition~\ref{prop:marked-signature} supplies the length on the good complement. The prime range determines which map to use.
+Fix the exceptional primes computed from the host and the
+three weight windows, and put the selected character and its
+two auxiliary twist parameters in the family before choosing
+the matrices \(R_x,\rho_x\). Choose the integral period functors
+for the completions of this host with their comparison
+isomorphisms, as in Sections~\ref{subsec:cut-wach-models}
+and~\ref{subsec:split-local-length}.  In the rational matrix product
+over the characters put the fibre at \(\pi\) in the direct
+sum basis for the string and its complement.
+
+If this changes
+basis by \(B\) over the fraction field, it carries every sum
+\(\sum_g a_g R(g)\), with coefficients in the localized
+Hecke order, to the sum with the same coefficients in the new
+generators. Indeed
+\[
+ B\Big(\sum_g a_gR(g)\Big)B^{-1}
+      =\sum_g a_g\,BR(g)B^{-1}.
+\]
+Applying the identity with \(B^{-1}\) gives the reverse inclusion of
+the integral spans even if \(B\) is defined only over the fraction field. This transports the marked
+idempotents, the ordered corner roots and the element
+perturbing the cyclotomic corner. On the rank-\(r\) block
+the integral span maps onto \(M_r(O)\): its image modulo the
+maximal ideal is the whole matrix algebra by absolute residual
+irreducibility, and the cokernel vanishes by Nakayama.
+Section~\ref{subsec:split-selmer} carries this out with the
+split Frobenius polynomials of the chosen localization.
+
+Write \(T\) for the stable lattice of \(W\) in this direct sum.
+
+\begin{lemma}[Lattices for the local row and column comparisons]
+\label{lem:marked-row-column-lattices}
+In the integral presentation the evaluation at the rank-one corner gives a surjection
+\[
+ e_1\mathcal A\twoheadrightarrow T^*=\operatorname{Hom}(T,O)(1).
+\] The rational column
+representations have constituents in sums of \(R_x\chi_1^{-1}\).
+Their relations give finite classes on the rank-\(r\) target,
+an unramified class on the first character line, and zero on
+the other character lines.
+\end{lemma}
+
+\begin{proof}
+\proofstep{Use the full matrix image for the character row.}
+Write the rank-one projection as \(v\lambda\) with
+\(v\in T\), \(\lambda\in\operatorname{Hom}_O(T,O)\), and
+\(\lambda(v)=1\). For any \(\lambda'\in\operatorname{Hom}_O(T,O)\),
+choose the matrix \(M=v\lambda'\) in the full matrix image.
+The row of this product, evaluated on any \(x\in T\), is determined by
+\[
+ ((v\lambda)M)x=v\lambda\!\left(v\lambda'(x)\right)
+                =v\lambda(v)\lambda'(x)=v\lambda'(x).
+\]
+Thus the image contains every integral row.
+Put \(U_g=\chi_1(g)^{-1}R(g)\). The action on the row functional, including the Tate factor, is
+\[
+ g\cdot\lambda'=\epsilon(g)\lambda'\circ U_g^{-1}\quad\text{on }T^*.
+\]
+The source embeds rationally into a sum
+of the dual-twisted family by recording all its matrix rows.
+\proofstep{Use the direct-block projection for the column lifts.}
+The row argument used the entire matrix image. On the conjugate column the finite classes are read from the projection onto the original complementary block.
+
+For the column lifts one uses the left action on matrix
+columns and projection to the direct block. Its rational
+constituents belong to sums of \(R_x\chi_1^{-1}\).
+The column relations give finite classes in the rank-\(r\)
+block, an unramified class on the first character line and
+zero on the other lines, as shown in
+Section~\ref{subsec:split-selmer}.
+
+For the character-row map
+the extension with trivial quotient is integral: on
+\(Y=\sum_g\mathcal A(U_g-1)E\) use the cocycle \((U_g-1)E\).
+The map
+\[
+ (z,a)\mapsto(z+aE,a)
+\]
+embeds its rationalization
+in the matrix columns and a trivial line. The latter already
+occurs in the twisted string. These constructions justify the
+passage of the jump bounds to the lifting maps by exactness
+on crystalline subquotients. The modulus multiplying an
+integral finite class is computed on the actual surjection.
+For a finite extension \(O\subset O'\) of coefficient DVRs and a finite-length module \(M\),
+\[
+ \frac{\operatorname{length}_{O'}(M\otimes_O O')}{e(O')}=\frac{e(O'/O)\operatorname{length}_O(M)}{e(O'/O)e(O)}=\frac{\operatorname{length}_O(M)}{e(O)}.
+\]
+The normalized colength
+returns to this presentation. \label{cor:marked-localization-7}
+\end{proof}
+
+Apply Lemma~\ref{lem:marked-row-column-lattices} to the
+following cases on this same marked family.
+
+\paragraph{Unramified split and inert places.}
+For split places choose the side whose embedding sign makes
+the direct column positive, and take the conjugates of these
+places for its rows. If \(\mathcal R_\ell\) and \(\mathcal C_\ell\) denote the row and column places, at an inert prime these sets are
+\[
+ \mathcal R_\ell=\{v:v\mid\ell\},\qquad \mathcal C_\ell=\varnothing.
+\]
+The unramified Wach estimates apply to these surjections, with the order of Frobenius on the embeddings of \(E\) and the signed jump arrays above.
+Sections~\ref{subsec:ordinary-split-length} and~\ref{subsec:inert-rows}
+give the resulting split and inert allowances. Above the
+cutoff, Paragraph~\ref{subsec:outside-windows} applies to
+this same family with the exceptional set already specified.
+Proposition~\ref{prop:offwindow-local-vanishing} kills the additional
+local allowance outside these exceptions.
+
+\paragraph{The split conditions at two and three.}
+At two, and at three when \(3\nmid Q_S\), partition the places into columns and conjugate rows using the archimedean sign. One choice covers every good \(\pi\) at the localization and preserves the matrices, twist, support and character-row bound.
+The column and row lifting exponents are proved for these crystalline surjections over
+\(\mathbb Q_\ell(\mu_{\operatorname{lcm}(\ell,N)})\) and
+returned by corestriction in Section~\ref{subsec:split-local-length}.
+The preliminary choice of zero for an unused exponent supplies
+no such lifting result. The character-row estimate and its dual use the respective heights
+\[
+ h=\lfloor2b\rfloor,\qquad h^\vee=h+1,\qquad n_0=4nR.
+\]
+The extra unit allows the Tate-dual shift.
+The depth is at least two at \(2\). At \(3\mid Q_S\) use the
+ramified odd-prime estimate of
+Section~\ref{subsec:special-prime-lengths}.
+This includes the torsion of finite integral cohomology when
+its rational rank is zero. \label{cor:marked-localization-8}
+
+\paragraph{The common denominator of the two type projectors.}
+At a type prime apply the pair of finite series projectors
+for the labels of \(\pi\), multiplied by their common group
+denominator. If \(e_\pi\) denotes their product in the rational
+finite group algebra and \(a_\pi=h_Ge_\pi\) its integral
+multiple by the common group denominator \(h_G\), then
+\[
+       a_\pi|_{\operatorname{im} e_\pi}=h_G\,\mathrm{id},
+        \qquad a_\pi|_{\ker e_\pi}=0 .
+\]
+Both projectors commute with the Hecke action since the
+level actions and the split Hecke correspondences commute.
+The remaining support has the two inertia labels of \(\pi\)
+at its theta points. Such a point is good by the cut.
+
+The
+norm choice identifies the inertia characters on this
+support with the labels of the same finite series, including
+inversion on the conjugate side. Hence the common tame
+lattice comparison of Section~\ref{subsec:special-prime-lengths}
+applies on the support of this operator. Use
+\[
+ \eta=\lfloor\eta_c\rfloor,\ s_T=\lfloor3b\rfloor+2,\ S_T=0
+\]
+with the opposite signs at the paired places and \(C_T=40\).
+The auxiliary prime bound there gives the strict size inequality
+once \(b\ge C_T\). The pushout estimate then bounds the
+finite-index defect for the rank-\(r\) target and each of
+its character targets. Multiplying the resulting element
+of the congruence order by that very projector clears its
+complement. This gives the type-prime length on each graded
+piece. \label{cor:marked-localization-9}
+
+\paragraph{A threshold shared by the local length estimates.}
+All these estimates may be used at a single late point.
+The unramified row comparison first fixes its absolute
+constant \(C_2\ge1\). The type-prime, small-prime, parameter
+and exceptional-prime comparisons supply finitely many
+further constants. Write \(A_1,\ldots,A_s\) for the further upper bounds after insertion of \(C_2\). Choose
+\[
+ C\ge\max\{C_2,A_1,\ldots,A_s\}.
+\]
+
+For
+that bound take the maximum of the thresholds for the
+integral setup, the size of the exceptional set, the
+special primes, the large-prime vanishing, the ordinary
+split and inert estimates, the parameter inequalities,
+and the bounds at two and three. Each has already been
+obtained for all point indices above its own threshold.
+Only now take the point and evaluate its exceptional set
+and integral models. An empty good locus has zero projected
+lattice. At each other localization the rank-\(r\) term has
+the signature bound above and the character terms have
+the strict and class-number bounds of
+Section~\ref{subsec:division-length}. This gives the local
+table used in the weighted return on precisely these cuts.
+\label{cor:marked-localization-10}

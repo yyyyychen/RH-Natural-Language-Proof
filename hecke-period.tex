@@ -1,0 +1,376 @@
+\subsection{Moving a neighbor operator through the period}
+\label{subsec:hecke-period}
+
+The column lattice is now fixed. To use its local divisibility inside the period, one must commute the neighbor operators with the kernels at the stages assigned to their orbits.
+
+\newcommand{\hecbin}[2]{\genfrac{[}{]}{0pt}{}{#1}{#2}_{Q}}
+
+A column generator in \eqref{eq:tag-c4} contains \(m\) copies of the same
+operator \(Y_v\) for each orbit \(v\) in a subset \(J\) of the
+selected orbits. The stage at which to use a copy can be different
+at the different orbits. We derive the operator identity and the
+cost of making that choice. The local kernels in this calculation
+retain the test function in the theta series.
+
+Fix one of the split general linear factors in the unramified
+lattice model. Its residue cardinality is \(Q=p^{2h}\), where the
+length of the embedding cycle is \(2h\). Number the stages by
+\(1\le j\le m\), put \(g=t+1\) and 
+\[
+  N_j=k+jg,
+\]
+ and write
+\(K_j\) for the lift from rank \(N_{j-1}\) to rank \(N_j\).
+In this paragraph write \(N=N_{j-1}\), \(N'=N_j\).
+At the lower and upper lattices \(A,B\) let the test function of
+the split place be the indicator of \(zA\subset B\) on
+\({\rm Hom}(F^N,F^{N'})\). Write \(l(A),l(B)\) for log volumes
+to base \(Q\), relative to the reference lattices. In standard
+split coordinates the scalar in the kernel has local part
+\[
+ a^{l(A)}(a')^{l(B)}
+ p^{-h(Nl(B)-N'l(A))}
+ p^{\Delta_j(l(A)-l(B))},\qquad
+ \Delta_j=\sum_{s\ {\rm even}}w_j(s)-\sum_{s\ {\rm odd}}w_j(s).
+ \tag{P1}\label{eq:tag-p1}
+\]
+\begin{proposition}[The neighbor identity on a single lift]\label{prop:hecke-period-neighbor-identity}
+At the chosen split factor with \(Q=p^{2h}\), the source and target neighbor operators satisfy \textup{\eqref{eq:tag-p3}} with the test function retained in \(K_j\),
+\[
+ E_{j,i}K_j=u_j^iK_j\sum_{l=0}^i e_l\big((m_j\beta_b)_{b=0}^t\big)E_{j-1,i-l}.
+\]
+
+Both factors lie away from the character support, the
+translation level is prime to \(p\), and the other local
+data are fixed. The transfer uses
+the same mass of each incident pair in both orders of summation.
+\end{proposition}
+
+\begin{proof}
+\proofstep{The scalar of the incident vacuum.}
+
+The factors \(a,a'\) are the values on the uniformizer of the
+unramified character factors at this stage, with valuation zero.
+Only the indicated place varies. More precisely, the kernel on
+the indicator includes the fixed linear functionals at the other places, the differential operator and the sum over rational
+arguments. The Haar volume of \({\rm Hom}(A,B)\) relative to the
+reference ball is \(Q^{Nl(B)-N'l(A)}\), by changing a basis on
+each side.
+
+Taking the inverse square root of the Hom-ball volume gives the factor
+\[
+  \big(Q^{N l(B)-N'l(A)}\big)^{-1/2}=Q^{(N'l(A)-N l(B))/2}.
+\]
+ The
+character of a change of basis with valuation-zero determinant is
+trivial here, so the character factors depend only on the two
+lengths. The last factor is the determinant twist in the source and target evaluations. In the determinant twist each increment of the length difference has the same multiplier. With \(u=l(A)-l(B)\) the ratio is
+\[
+  p^{\Delta_j(u+1)}/p^{\Delta_j u}=p^{\Delta_j},\qquad \Delta_j=\sum_{s\ {\rm even}}w_j(s)-\sum_{s\ {\rm odd}}w_j(s).
+\]
+ These are the hypotheses on the split vacuum
+and its normalization in \eqref{eq:tag-p1}.
+
+\proofstep{Apply the coefficientwise indicator relation.}
+
+Proposition~\ref{prop:incident-covariance} supplies the linearity.
+Fix the away data on a finite family of lattice pairs, and
+use a single pair as reference. At the split prime suppose both members and their conjugates
+are away from the character support and the translation level
+is prime to the residue characteristic. Denote by \(I_{A,B}\)
+the Hom-ball indicator and by \(c_{A,B}\) the full scalar of
+\eqref{eq:tag-p1}, including the relative volume to power \(-1/2\).
+The source and target lattice changes commute on the split Hom
+space.
+
+The kernel \(K_j(A,B)\) for the fixed away data is thus determined by one functional \(\mathcal L\) on the indicators
+\[
+  c_{A,B}^{-1}K_j(A,B)=\mathcal L(I_{A,B}).
+\]
+Torsion translation, evaluation and jets all enter this common functional. Thus, for the finite set of pairs in \eqref{eq:tag-p2},
+\[
+ \sum_{A,B}n_{A,B}I_{A,B}=0
+ \quad\Longrightarrow\quad
+ \sum_{A,B}n_{A,B}\mathcal L(I_{A,B})=0 .
+\]
+The implication for rational coefficients also descends to any
+algebraic coefficient field in which the values are read.
+The identification of the local coordinate lattices requires
+that their completions in the two fixed frames equal the lattices
+of the Hom model.
+
+\proofstep{Count neighbors by the kernel of the residue map.}
+
+Let \(T_{j,i}\) sum over the sublattices of a target lattice of
+codimension \(i\) in its reduction modulo \(p\); \(T_{j,0}=1\).
+For fixed \(z\) the number of such targets at rank \(N'\)
+containing \(zA\) is
+\[
+ \sum_{l=0}^i Q^{(i-l)(g-l)}
+ \hecbin{g}{l}\,
+ \#\{A_1\supset A:[A_1:A]=Q^{i-l},\ pA_1\subset A,                                      zA_1\subset B\},
+ \tag{P2}\label{eq:tag-p2}
+\]
+where terms with \(l>g\) are zero. Indeed if \(zA\not\subset B\),
+both sides vanish. Otherwise let \(d\) be the dimension of the
+kernel of \(\bar z:A/pA\to B/pB\). The count on the left is
+\(\hecbin{d+g}{i}\), by duality in the cokernel. The inner
+count on the right is \(\hecbin{d}{i-l}\).
+
+To count dimension
+\(i\) planes in a sum of dimensions \(d\) and \(g\), first fix
+an \(l\)-plane in the second factor and an \((i-l)\)-plane in
+the first. The planes with that intersection and projection are
+graphs of maps from the fixed projection in the first factor to
+the second factor modulo the fixed intersection, of dimension \(g-l\). This gives
+the power of \(Q\) in \eqref{eq:tag-p2} for every rank of \(\bar z\).
+
+\proofstep{Transfer the identity with the same pair masses.}
+
+Shrinking \(B\) by \(i\) multiplies \eqref{eq:tag-p1} by
+
+\[
+  C_A=(a')^{-i}p^{i\Delta_j+hNi};
+\]
+ enlarging \(A\) by
+\(i-l\) multiplies it by
+\(C_C=a^{i-l}p^{(i-l)\Delta_j+hN'(i-l)}\).
+Apply the same linear functionals to \eqref{eq:tag-p2}, multiply by \(C_A\),
+and divide the term indexed by \(l\) by \(C_C\).
+In the sum over source classes the up correspondence moves to a
+down correspondence on the input section. Indeed the mass of
+each orbit of incident pairs is its inverse stabilizer order in
+either summation, by the orbit-stabilizer formula. Thus all the
+class masses in the new sum agree with the original ones. With
+\[
+ E_{j,i}=p^{-hi(N_j-i)}T_{j,i},\quad
+ u_j=(aa')^{-1},\quad m_j=a p^{\Delta_j},\quad
+ \beta_b=p^{h(t-2b)}\quad(0\le b\le t)
+\]
+write \(e_l\) for the elementary symmetric polynomial of degree
+\(l\). The identity becomes
+\[
+ E_{j,i}K_j
+ =u_j^i K_j\sum_{l=0}^i
+       e_l\big((m_j\beta_b)_{b=0}^t\big) E_{j-1,i-l}.
+ \tag{P3}\label{eq:tag-p3}
+\]
+
+To check the scalar, the
+coefficient of \(z^l\) in \(\prod_{b=0}^t(1+\beta_b z)\)
+is \(p^{-h l(g-l)}\hecbin{g}{l}\), by expanding the product
+in increasing powers of \(Q\). Multiplying the two sides of
+\eqref{eq:tag-p2} by their length and \(E\) normalizations gives exactly
+this coefficient times \(u_j^i m_j^l\) on the normalized
+source operator. Thus \eqref{eq:tag-p3} includes all ranks, also the identity
+operator and the zero coefficient when \(l>g\).
+
+\end{proof}
+
+\paragraph{Removing the extra Euler factors.}
+
+Moving a neighbor operator along the chain introduces Euler factors. Their inverse must act integrally on the same stages for the divisibility gain to survive.
+
+\begin{proposition}[The integral Euler inverse on the chain]\label{prop:hecke-period-euler-inverse}
+For \(1\le r\le k/2\), take dominant weights \(\lambda_s\) at the
+\(2h\) letters. Assume \(w_1(s)\ge-\lambda_{s,k}\) and
+\(w_1(s)\le\cdots\le w_m(s)\). At stage \(1\le j\le m\), the
+normalized operator in \textup{\eqref{eq:tag-p5}} transfers \(Y_v\) through
+\(K_{[j]}\) with denominator exponent \(P_{j,v}\). For the coefficients \(c_l\), with \(c_r\) the coefficient of the zero-index term,
+\[
+ v_p(c_l)\ge0\quad(0\le l\le r),\qquad v_p(c_r)\ge A_+.
+\]
+
+\end{proposition}
+
+\begin{proof}
+\proofstep{Invert the scalar polynomial through degree \(r\).}
+
+Let \(K_{[j]}=K_j\cdots K_1\), \(U_j=u_1\cdots u_j\), \(U_0=1\).
+Put \(\mathcal E_j(z)=\sum_{i\ge0}U_j^{-i}E_{j,i}z^i\).
+After dividing \eqref{eq:tag-p3} by \(U_j^i\), iteration gives
+\[
+ \mathcal E_j(z)K_{[j]}=
+ K_{[j]}\mathcal E_0(z)
+ \prod_{a=1}^j\prod_{b=0}^t(1+\xi_{ab}z),\qquad
+ \xi_{ab}=U_{a-1}^{-1}m_a\beta_b .
+ \tag{P4}\label{eq:tag-p4}
+\]
+All products can be taken modulo \(z^{r+1}\), where \(1\le r\le k/2\)
+is the neighbor dimension. The inverse of the scalar product has
+coefficient \((-1)^l h_l(\xi)\) in degree \(l\), with \(h_l\)
+the complete homogeneous symmetric polynomial. This follows by
+multiplying the geometric series of its individual factors.
+
+\proofstep{Compute the exponent of \(p\) in the operator identity.}
+
+Use the dominant base weights \(\lambda_{s,1},\ldots,\lambda_{s,k}\)
+at the \(2h\) letters and put
+\[
+ d_i(j)=\sum_{s\ {\rm even}}\sum_{a=1}^i\lambda_{s,a}
+             +i\sum_{s\ {\rm odd}}w_j(s),\qquad
+ \widetilde T_{j,i}=p^{d_i(j)}T_{j,i}.
+\]
+Multiplying the degree-\(r\) identity in \eqref{eq:tag-p4} by
+\(p^{d_r(j)+hr(N_j-r)}\) expresses the input operator on
+every vector in the image of the chain as
+\[
+ Z_{j,v}K_{[j]}=p^{P_{j,v}}K_{[j]}Y_v,\qquad
+ Z_{j,v}=\sum_{l=0}^r(-1)^l c_l U_j^{-(r-l)}\widetilde T_{j,r-l},
+ \tag{P5}\label{eq:tag-p5}
+\]
+\[
+ \begin{split}
+ c_l&=p^{d_r(j)-d_{r-l}(j)+hl(N_j-2r+l)}h_l(\xi),\\
+ P_{j,v}&=\sum_{s\ {\rm odd}}\!
+      \left(rw_j(s)+\sum_{a=k-r+1}^k\lambda_{s,a}\right)
+                +hrj(t+1).
+ \end{split}
+\]
+Indeed \(Y_v=p^{A_r}T_{0,r}\), where \(A_r\) is the even head
+sum minus the odd tail sum of length \(r\). Subtracting this
+and the initial \(hr(k-r)\) from the multiplying exponent gives
+\(P_{j,v}\). An upper bound for \(P_{j,v}\) therefore gives the required lower bound on the valuation.
+
+\proofstep{Bound the coefficients, including the zero-index term.}
+
+Write \(\alpha_s=\lambda_{s,1}-\lambda_{s,2}\) at a top and
+zero elsewhere, and \(A_+=\sum_{s\ {\rm even}}\alpha_s\).
+The weight construction has \(w_1(s)\ge-\lambda_{s,k}\)
+and \(w_a(s)\) nondecreasing for \(1\le a\le m\). Hence
+\[
+ v_p(\xi_{ab})\ge \sum_{s\ {\rm even}}w_1(s)
+                   -\sum_{s\ {\rm odd}}w_j(s)-ht\quad(a\le j).
+\]
+Every monomial of \(h_l\) uses exactly \(l\) entries. Substitution
+in \eqref{eq:tag-p5} yields
+\[
+ v_p(c_l)\ge
+ \sum_{s\ {\rm even}}\sum_{a=r-l+1}^{r}
+                   (\lambda_{s,a}+w_1(s))
+             +hl(N_j-2r+l-t)\ \ge0 .
+ \tag{P6}\label{eq:tag-p6}
+\]
+Here \(j\ge1\) and \(k\ge2r\). At \(l=r\) the sum includes
+\(\lambda_{s,1}+w_1(s)\ge\lambda_{s,1}-\lambda_{s,2}\)
+for every even top. Thus \(v_p(c_r)\ge A_+\).
+This estimate pays for the absence of a positive-index Hecke
+operator in that summand.
+
+\end{proof}
+
+\paragraph{Choosing the stages on a single column.}
+We spell out the remaining entry hypothesis for the use of \eqref{eq:tag-p5}.
+Suppose the normalized stage kernel on the tuple at \(w\), on
+integral input, has the following simultaneous bounds. Choose any
+set \(B\subseteq V\) of distinct active orbits at stage \(j\), where
+\(V\) is the image of the first-embedding representatives, and an
+index \(0\le i_v\le r\) at each of its members. On applying \(\prod_{v\in B}
+\widetilde T_{j,i_v}\) at the target, the lower valuation is
+\[
+ L_j+\sum_{v\notin B} b_{jv}
+    +\sum_{v\in B}\big(G_{jv}-{\bf1}_{i_v=0}A_{+,v}\big).
+ \tag{P7}\label{eq:tag-p7}
+\]
+The sums over \(v\) in \eqref{eq:tag-p7} and \eqref{eq:tag-p8} run over \(V\).
+
+In the
+range \(\log_p(2a)\ge1\), one uses
+\(b_{jv}=\max(0,g^0_{jv})\) and \(G_{jv}=g^U_{jv}\),
+provided the numerical lower bounds lie below the local base
+and positive-index bounds and the numerical upper bound dominates
+\eqref{eq:tag-p5}. In the other range both required improvements over zero
+are nonpositive, so the baseline zero suffices on \(V\).
+At the places outside \(V\) let \(F'_{jv}\) be the common
+one-place lower bound, and let \(d_{j-1}\) bound the
+stabilizer denominator in the transition. The term in \eqref{eq:tag-p7} is
+
+\[
+  L_j=\sum_{v\notin V}F'_{jv}-d_{j-1}.
+\]
+In the application below the cutoff,
+\(F'_{jv}=F_{\rm orb}-\mathrm{err}_F\) on the second-embedding
+orbit, which can have either sign. Above the cutoff it is zero.
+Changing the representative rotates the letters of the cycle,
+preserving the forced sum and the number of tops in the error.
+Thus one may aggregate these entries by their cycles when
+checking the required common lower bound against 
+\[
+  \sum_j L_j.
+\]
+ In this hypothesis a lower
+bound means membership in the integral target multiplied by the
+uniformizer to the ceiling of the bound times the ramification
+index. The entry hypothesis involves a single lift.
+
+It need only
+be proved on basis columns and on one incident source and target
+at a time, before summing their path expansion with the
+stabilizer denominator.
+For basis elements \(e_i\) at the source and a fixed target test \(\ell\), extension to an integral column uses
+\[
+  v_w\!\left(\ell\!\left(A\sum_i c_i e_i\right)\right)\ge\min_i v_w\bigl(\ell(Ae_i)\bigr)\qquad(c_i\in{\cal O}_w).
+\]
+ For instance if the entries expand into
+an integral series in the separate local parameters times a
+product of one factor per orbit, expand the integral series into
+monomials. Each jet of given order uses only finitely many
+monomials, each of which splits over the orbits. Individual
+bounds valid for every integral monomial then add over the
+orbits by the ultrametric inequality. This explains the need
+for the entry bounds in frames adapted simultaneously to the
+chosen neighbors.
+
+By \eqref{eq:tag-p6}, expanding \(\prod_{v\in B}Z_{j,v}\) in \eqref{eq:tag-p7} gives the
+same bound without any \(A_+\)-loss. The factors \(U_j\) are units.
+For fixed \(J\) let \(Y_J=\prod_{v\in J}Y_v\).
+\begin{proposition}[Valuation of a period after choosing its stages]\label{prop:period-stage-prices}
+On the selected orbit set \(J\), with the local period identities
+\eqref{eq:tag-p1} and \eqref{eq:tag-p7} and the action of each \(Y_v\) on the integral input lattice as in \eqref{eq:tag-c1}, write \(b\) for the transferred period of the marked column. Adding the local valuation bounds in \eqref{eq:tag-p8} gives
+\[
+ v_p(b)\ge\sum_{a=1}^j\left(L_a+\sum_{v\notin J}b_{av}+\sum_{v\in J}\max\{b_{av},G_{av}-P_{a,v}\}\right).
+\]
+ At an orbit outside the local condition only the baseline term \(b_{av}\) enters.
+\end{proposition}
+
+\begin{proof}
+We prove by induction that, for every integral \(f\), the valuation of \(K_{[j]}Y_J^j f\) is at least
+\[
+ \sum_{a=1}^j\left(
+ L_a+\sum_{v\notin J}b_{av}
+     +\sum_{v\in J}\max(b_{av},G_{av}-P_{a,v})\right).
+ \tag{P8}\label{eq:tag-p8}
+\]
+The case \(j=0\) is integrality. At step \(j\) take
+\(B=\{v\in J:G_{jv}-P_{j,v}> b_{jv}\}\).
+The operators at distinct orbits commute on the input, so
+
+\[
+  Y_J^j f=Y_B Y_J^{j-1}(Y_{J\setminus B}f).
+\]
+ The last input
+in parentheses is integral by \eqref{eq:tag-c1} and the integral Weyl action.
+Move \(Y_B\) through the whole chain using \eqref{eq:tag-p5}, losing
+\(\sum_{v\in B}P_{j,v}\). Apply the induction hypothesis
+through stage \(j-1\) and \eqref{eq:tag-p7} with its coefficient correction
+at stage \(j\). Linearity adds the two valuation bounds since
+
+\[
+  \lceil x\rceil+\lceil y\rceil\ge\lceil x+y\rceil.
+\]
+This proves \eqref{eq:tag-p8} for the full range of \(j\).
+For \(v\in I\setminus J\) the scalar \(p^{S_v}\) in the original
+generator pays for the sum of the omitted positive differences
+over \emph{all} stages by the definition of \(S_v\).
+Taking the integral span and the trace-zero intersection
+preserves this lower bound. Thus for a period with \eqref{eq:tag-p1} and \eqref{eq:tag-p7},
+the column in \eqref{eq:tag-c5} realizes the full gain on the selected orbit at the cost of
+the single-stage allowances in \eqref{eq:tag-p7}. At an orbit without the local condition the
+base bound alone enters. The bound is uniform in the number of
+monomials, words and active sets. Proposition~\ref{prop:incident-jet-indices}
+proves the individual coefficient estimates. Sections~\ref{subsec:incident-sections}
+and~\ref{subsec:second-period} identify the selected theta
+readings and the contributions of the other cycles at a prime with a selected orbit. The bound at the assigned prime has its own marked incidence
+identity \eqref{eq:tag-w2}. \label{cor:hecke-period-1}
+\end{proof}
+

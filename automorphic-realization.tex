@@ -1,0 +1,3197 @@
+\subsubsection*{Starting the automorphic construction at the assigned levels}
+\label{subsec:automorphic-realization}
+\hypertarget{source-automorphic-realization}{}
+
+The field, levels and weight functions have been chosen at a translate. We now give the Hecke and character calculations used in Construction~\ref{hyp:family-prescribed-realization}. The first set of signed tests selects the characters. The second calculation determines their actual spaces and local orders on the rebuilt member.
+
+\begin{paramdefinition}[Fields, frames and levels at a translate]\label{hyp:initial-adelic-frame}
+Fix the auxiliary CM field \(E\) of Definition~\ref{def:family-original-host},
+one translate, its two weight functions, and all the
+primes assigned to the sequences. Denote the small field and the two coefficient
+fields by \(K_s\subset K_0\subset K\subset\mathbb C\), in
+their distinguished embeddings. The underlying Hermitian spaces,
+the marked split identifications, the two deletion characters
+\(\delta,\delta'\) of Lemma~\ref{lem:split-deletion-characters}, and the levels at the primes assigned to the sequences belong to the initial data.
+Let \(\Xi\) denote the finite set of tuple characters. The successive field requests are finite sets of algebraic numbers with
+\[
+ S_1(K_s)\subseteq K_0,\qquad S_2(K_s,K_0,\Xi)\subseteq K .
+\] Combine requests at each stage by taking their union with the preceding arguments fixed. The prescribed rational prime set includes the two type primes, \(d\), and every prime at most \(X''\).
+\end{paramdefinition}
+
+To meet these finite requests, first fix the embedded small field, then adjoin the union of the first sets, and only then evaluate the second sets in that field and take their compositum. Every extension in these two steps is finite. The field cost for the geometric requests on the initial frames is proved in Lemma~\ref{lem:marked-original-geometric-field}.
+\begin{lemma}[Initial characters and support over the smaller field]
+For Definition~\ref{hyp:initial-adelic-frame} with trivial auxiliary characters,
+\(\Xi=\{1,\delta,\delta'\}\). For every \(a\in\mathcal O_{K_0}\), the support test factors through contraction:
+\[
+ v(a)>0\quad\Longleftrightarrow\quad a\in v\cap\mathcal O_{K_0}.
+\]
+Thus any support selected by these tests is a union of fibres of the contraction map.
+\end{lemma}
+\begin{proof}
+The reference contributes \(1\). At a coefficient place the
+deletion rule uses \(\delta'\) over the first deletion prime
+and \(\delta\) otherwise. The three distinguished tuples realize
+the three listed values. Thus the final finite field request
+\(S_2(K_s,K_0,\Xi)\) is determined before localization in \(K\);
+adjoining it requires no new word level. For \(x\in\mathcal O_{K_0}\),
+\[
+ v(x)>0\quad\Longleftrightarrow\quad x\in v\cap\mathcal O_{K_0}.
+\]
+The positivity tests coincide at two places exactly when their
+contractions coincide. Apply this to the prospective nonbase support.
+\end{proof}
+
+Begin with the untwisted saturated form of the marked adelic datum.
+Its localization set is empty and its prescribed orders are
+\[
+                 \eta_j(v)=0\qquad(1\le j\le m,\ \text{all selected }v).
+\] The two
+weight comparisons used in making the choice are the lower
+unitary comparison and the comparison at the residue characteristic
+of the lift. The first division lattice at this step uses the zero
+orders, the unit coordinate frame and the full word-column lattices.
+It gives a starting row before the local arithmetic orders are
+inserted. The row stage comes from the lowest discrete series at
+the specified archimedean weights and the finite types on that
+adelic datum. \label{cor:automorphic-realization-1}
+
+\paragraph{Forming the adelic row on the prescribed group.}
+Retain the original Hermitian frame, the finite level group and
+the marked split half. Let \(P\) be the finite rational prime set in
+Definition~\ref{hyp:initial-adelic-frame}. Before restricting the
+support, allow the entire set of coefficient places
+\[
+             \{v:v\mid p\text{ for some }p\in P\},
+\]
+which is finite and stable under conjugation. The split-half condition is used even
+when two different tuple conductors contain places at the same
+rational prime. Both must use the same chosen half there. The
+place of each real subfield is the one below the specified
+column place, so the pinned choice gives this condition for
+all the conductors at once.
+
+Use the active tuple characters and their conductor sets in the
+level datum. The distinguished tuple has character one. At the
+two deletion characteristics use the prescribed split side, and
+carry the original ramification test at every other place. If \(S_{\rm type}\) is the set of chosen type places and \(\bar G_v\) the matrix group given by reduction there, the quotient is identified place by place:
+\[
+ G_{\rm type}\simeq\prod_{v\in S_{\rm type}}\bar G_v .
+\] Use the diagonal self-dual
+frames when they have been supplied by the Hermitian frame.
+
+In
+the standard lattice case the coordinate frames with unit scales
+are self-dual. These give the frames for the row and each of the
+lifts. The finite group and character comparison then supplies
+the type projectors on this product, together with the inert place
+and tuple assignments. The identity map of the finite group can
+serve as the preliminary label map. The Fock and lowest-type
+models are to be built for these very groups and characters.
+\label{cor:automorphic-realization-2}
+
+
+\begin{proposition}[Adelic realization on the prescribed frame]
+Use the fields and levels of Definition~\ref{hyp:initial-adelic-frame}
+and the marked self-dual frames at the chosen split halves. Take the
+level volumes in their common Haar measure, the regular discrete-series
+parameters and their specified lowest compact types, and the definite
+standard lattices with \(n_V\ge 8fr+4\) in the matched geometric model.
+Then the initial row admits the prescribed real
+intertwiners and theta lifts on the chosen finite types. At the distinguished tuple, if \(\theta\) is the theta series of a rational input and \(f\) its algebraic class sum, the normalized comparison is
+\[
+ f=\theta .
+\]
+The phase is one for this normalization.
+\end{proposition}
+\begin{proof}
+The finite-place characters take values in the fixed coefficient
+subfield on ideles with trivial archimedean component. The analytic construction
+uses these character values. The proof uses the volume tie on this
+same group to supply the core, its coefficient algebra and these
+finite character values. The real models at every place use
+the regular parameter of the prescribed weight and its
+specified lowest compact type. The discrete series of the
+determinant cover give these models. We use Harish--Chandra's
+discrete-series theorem for the regular parameters and the
+Casselman--Wallach theorem to extend the admissible
+Harish--Chandra-module intertwiners to the smooth
+moderate-growth globalizations.
+
+For the Harish--Chandra modules \(V,W\) in this comparison and their
+smooth moderate-growth globalizations \(V^\infty,W^\infty\), the
+Casselman--Wallach equivalence identifies
+\[
+ \operatorname{Hom}_{G}(V^\infty,W^\infty)
+       \simeq\operatorname{Hom}_{(\mathfrak g,K)}(V,W).
+\]
+Thus the extension preserves the intertwining
+identities on the dense compact-finite vectors. With the
+chain and the finite-action identities on these models, take
+the theta map from the lowest-type Fock coefficient map.
+Rapid decay of the cusp input gives the convergent integrals
+for the intermediate lifts. The final projected lift uses the
+good projector built on the chosen finite quotient. This is
+the role of the intertwiner and lift existence assertions in
+the fine datum. \cite{harish-chandra-degree,casselman-wallach}\label{cor:automorphic-realization-3}
+
+For the geometric realization use the standard definite lattices.
+The dimension inequality required there is
+\[
+                          n_V\ge8fr+4 .
+\]
+Use the same frame for the volume normalization and the algebraic
+identifications. At each lift the finite comparison has one scalar for all allowed tuples. Determine it at the distinguished tuple in this common frame.
+
+To determine the scalar relating the two forms, take the
+theta series \(\theta\) of a rational input there, and let \(f\)
+be its algebraic class sum. For a fixed class \(x\), the definite theta integral is a finite class sum. 
+
+Let \(K_f\) be its finite level, \(h\) range over the double cosets, and \(\Gamma_h\) be the stabilizer in that class (with the same central quotient in the measure and the class sum). Write \(k(x,h)\) for the already normalized kernel times the input, paired at infinity. Splitting the integral into the individual level orbits gives
+\[
+ \theta(x)=\sum_{[h]}\frac{\operatorname{vol}(K_f)}{|\Gamma_h|}\,k(x,h)=f(x).
+\]
+Here each orbit has the indicated mass by the finite stabilizer formula; the second equality uses the same character, kernel and measure in the algebraic class sum. Evaluation over all classes therefore gives
+\[
+  \bigl({\rm ev}_x(f-\theta)\bigr)_x=0,\qquad
+  \bigcap_x\ker({\rm ev}_x)=0 .
+\]
+Thus \(f=\theta\) with phase one. The weight scalars and geometric
+indices transport this equality on the same levels, finite
+group, tuple characters and selected places. The construction
+keeps the intertwiners, group action and lattices together
+in the normalized adelic realization. \label{cor:automorphic-realization-4}
+\end{proof}
+
+\begin{proposition}[The same multiplicity on the linked real and finite types]\label{prop:linked-type-multiplicity}
+For the linked unitary groups with the same finite level and
+the real and split actions in the frames of
+Definition~\ref{hyp:initial-adelic-frame}, write \(m_H(\sigma)\) and \(m_{H'}(\sigma')\) for the multiplicities of matching types in the two groups. At either initial weight the trace comparison gives
+\[
+ m_H(\sigma)=m_{H'}(\sigma').
+\]
+\end{proposition}
+
+\begin{proof}
+The multiplicity assertion compares the ranks of spaces of
+finite-adelic intertwiners into cuspidal forms of fixed real
+discrete-series type. It compares the row group with the group
+of the indicated lift. Their odd ranks agree, their real
+parameters agree at every real place with adjacent gaps at
+least \(100r^4\), and the finite group isomorphism identifies
+the lattice frames modulo the type places. The selected type
+has the no-fixed-vector condition along the prescribed proper
+parabolic radicals. The representations in the comparison are
+irreducible admissible and have a level-fixed vector surviving
+the type projector. Denote the two groups by \(H,H'\) and the
+transport of a finite representation \(\sigma\) by \(\sigma'\).
+With the real models included in the multiplicities, the required identity is
+\[
+                         m_H(\sigma)=m_{H'}(\sigma').
+\]
+\label{cor:automorphic-realization-5}
+
+\proofstep{Match the projected trace at the prescribed weight.}
+At each real place use the pseudo-coefficient normalized to
+select the specified discrete series for the trace. At the
+finite places use the type tests and an auxiliary split place
+outside their support. The constant terms along proper
+rational parabolics vanish for these tests. The prescribed
+split test allows only regular semisimple elements on the
+diagonal kernel, and the nonfield terms vanish in the class
+integrals. The trace expansion is then a finite sum over
+the regular polynomial classes with field centralizer. If \(T\) is the common torus identifying the two centralizers, use a single measure \(dt\) on it. For the corresponding identifications \(i,i'\) the measures on the two sides are
+\[
+ d\mu_{\mathrm{cent}}=i_*dt,\qquad d\mu'_{\mathrm{cent}}=i'_*dt .
+\]
+Transport the finite Haar measures with the frame isometries.
+This identifies the finite orbital factors, including the
+normalizations of the lattice stabilizers.
+\label{cor:automorphic-realization-6}
+
+At a real place where the torus is compact, write its distinct
+eigenvalues as \(z_1,\ldots,z_r\). The real conjugacy classes
+are the choices of which eigenlines have positive sign, with
+the number of signs determined by the real form. Write \(W_K\subset S_r\) for the stabilizer of the sign pattern.
+The classes provide the disjoint decomposition
+\[
+                         S_r=\coprod_y y^{-1}W_K .
+\] For ordered integral
+Harish--Chandra parameters \(\lambda_j\), put
+\(a_j=\lambda_j+(r-1)/2\). The discrete-series character
+on the class indexed by \(y\) is the alternating sum over
+\(W_K\) on the reordered eigenvalues divided by their
+Vandermonde. Its overall factor \((-1)^{pq}\) is one
+because \(p+q=r\) is odd.
+
+Moving each denominator to the
+same ordering contributes the sign of \(y\), so the sum of the
+quotients is
+\[
+   \frac{\det(z_i^{a_j})_{1\leq i,j\leq r}}
+        {\det(z_i^{r-j})_{1\leq i,j\leq r}}.
+\]
+Indeed, expanding the compact alternating sums on the cosets gives
+\[
+ \sum_y\sum_{w\in y^{-1}W_K}\operatorname{sgn}(w)
+         \prod_{i=1}^r z_i^{a_{w(i)}}
+ =\sum_{w\in S_r}\operatorname{sgn}(w)\prod_{i=1}^r z_i^{a_{w(i)}}
+ =\det(z_i^{a_j}).
+\] These are the Weyl character
+coordinates of highest weight \(a_j-r+j\). In the orbital
+integral the formula is conjugated and divided by the same
+torus volume. At a real place with noncompact centralizer
+the orbital integrals of the chosen pseudo-coefficients
+vanish. This computes the two real stable factors in terms
+of the same eigenvalues and weights even when the signatures
+are different. Thus, writing \(h'\) for the transport of the finite test \(h\), the equality assembled from the orbital integrals is
+\[
+ \operatorname{tr}_{\rm cusp}(h)=\operatorname{tr}'_{\rm cusp}(h').
+\] \label{cor:automorphic-realization-7}
+
+Choose a common compact open subgroup on the finite side
+for the tests, and transport it to \(H'\). The fixed-vector
+spaces in the corresponding discrete-series multiplicity
+spaces have finite dimension by cuspidal spectral finiteness.
+Make one finite list \(\sigma_1,\ldots,\sigma_d\) of distinct
+irreducible admissible representations covering both spectra
+seen by the tests and include the given \(\sigma\). The
+spectral trace and the preceding equality give, for every
+allowed finite test \(h\),
+\[
+   \sum_{i=1}^d a_i\operatorname{tr}\sigma_i(h)=0,
+   \qquad a_i=m_H(\sigma_i)-m_{H'}(\sigma_i').
+\]
+Let \(e_v\) be the local convolution idempotent for the chosen
+type at a type place, the normalized Iwahori indicator at
+the auxiliary split place \(u\), and the normalized maximal
+compact indicator at the remaining places. Their pure tensor
+acts on \(\sigma_i\) by a finite-rank idempotent \(P_i\).
+
+The resulting projector is nonzero on the stipulated \(\sigma\). For a finite-adelic
+element \(g=(g_v)_v\), set
+\[
+ b_v(x)=e_v(g_v^{-1}x),\qquad f_v=e_v*b_v.
+\]
+Since \(b_v*e_v=b_v\), the test at a type place satisfies
+\(e_v*f_v*e_v=f_v\). Away from the type places and \(u\)
+it is bi-invariant under the maximal compact. The family
+agrees with the unit Hecke family almost everywhere. At \(u\)
+it is left Iwahori-invariant. Replacing only \(f_u\) by
+\(1_{ItI}\), for each \(t\) in the strict dominant torus
+cone, preserves all the conditions for the trace comparison.
+The original pure tensor acts by \(P_i\sigma_i(g)P_i\).
+\label{cor:automorphic-realization-8}
+
+For a local isomorphism class \(\lambda\) at \(u\), collect all
+the factors away from \(u\) in the coefficient
+\[
+ b_\lambda=\sum_{i:\,\sigma_{i,u}\simeq\lambda}
+             a_i\prod_{v\ne u}{\rm tr}\,\sigma_{i,v}(f_v).
+\]
+Classes without Iwahori invariants contribute zero. For \(t\) in
+the strict dominant cone the trace relation therefore reads
+\[
+ 0=\sum_\lambda b_\lambda{\rm tr}\,\lambda(1_{ItI})
+   ={\rm vol}(I)\delta_B(t)^{-1}
+       \sum_\lambda b_\lambda\sum_{\xi\in J(\lambda)}\xi(t).
+\]
+Here \(J(\lambda)\) lists the unnormalized Jacquet exponents with
+multiplicities (normalized exponents give the common factor
+\({\rm vol}(I)\delta_B(t)^{-1/2}\)). The cited exponent separation
+on the local classes in this comparison forces \(b_\lambda=0\).
+Reinsert \(f_u\). Cyclicity of finite-rank trace gives
+\({\rm tr}(P_i\sigma_i(g)P_i)={\rm tr}(\sigma_i(g)P_i)\),
+so \(\sum_i a_i{\rm tr}(\sigma_i(g)P_i)=0\) for all \(g\).
+\cite{zelevinsky-induction}\label{cor:automorphic-realization-9}
+The commutant of \(\sigma_i\) is \(\mathbb C\): an endomorphism
+has an eigenvector on a nonzero finite-dimensional fixed space,
+and that vector generates the irreducible module.
+
+For a prescribed
+index \(k\), apply Jacobson density to bases of the finite spaces
+\({\rm im}\,P_i\) in the distinct modules. There is a group
+algebra element \(a\) such that
+\[
+ \sigma_i(a)|_{{\rm im}\,P_i}=\delta_{ik}\,{\rm id},\qquad
+ 0=\sum_i a_i{\rm tr}(\sigma_i(a)P_i)=a_k\operatorname{rk}P_k .
+\]
+Since \(P_k\ne0\) at the selected type, its multiplicities agree.
+The identical finite and real actions transport this equality at
+both initial weights. \label{cor:automorphic-realization-10}
+\end{proof}
+
+\begin{lemma}[Rational separation by common row tests]\label{lem:rational-row-separation}
+Use the prescribed tests of Definition~\ref{hyp:fitted-pointwise-nonvanishing} and their nonvanishing in Lemma~\ref{lem:fitted-completed-nonvanishing}. For the rational row maps \(B_t:A_t\to E_{\mathbb C}\) at the allowed tuples, one finite coefficient request supplies complex-linear functionals \(\lambda_a\) with
+\[
+ \bigcap_a\ker\lambda_a=0,\qquad\lambda_a\bigl(B_t(A_t)\bigr)\subseteq K\quad\text{for every }a,t,
+\]
+where \(K\) denotes its specified embedded copy.
+The fixed-field and support comparisons used at rank zero
+preserve these maps under restriction of the coefficient
+places.
+\end{lemma}
+
+\begin{proof}
+Write \(K\) for the large coefficient field with its fixed
+embedding, \(A_t\) for a rational row of tuple \(t\), and
+\(B_t(x)=\Theta_t(j_t x)\) for its image in the
+common complex row space \(E_\mathbb C\). We need complex-linear
+functionals \(\psi_u\) with zero common kernel on
+\(E_\mathbb C\) and every \(\psi_u(B_t(x))\) in the
+embedded \(K\). This is the field supplied by the finite
+coefficient request on the actual tuple set.
+
+For each allowed finite test type \(\alpha\), let
+\(C_\alpha\) be the column space and \(c_{\alpha,u}\) its fitted
+spanning columns. The common theta integral identifies the row
+tests with the Bessel pairings for the specified real vector and
+covector. For a row \(y\) and \(c=\sum_u a_uc_{\alpha,u}\), convergence
+and linearity give
+\[
+ {\cal B}_\alpha(c,y)=\sum_u a_u\,{\cal B}_\alpha(c_{\alpha,u},y).
+\]
+If all the column tests vanish on \(y\), linearity kills every pairing on every \(C_\alpha\). On the given base multiplicity space Proposition~\ref{prop:fitted-grid-base-separation} chooses one real test and a basis of the dual from these allowed tests. Evaluation against this basis gives \(y=0\).
+A finite family suffices: if the current common kernel has positive
+dimension, choose one further test nonzero there. Each choice
+strictly lowers that dimension. \label{cor:automorphic-realization-11}
+
+For the field assertion first apply the rational good
+projector to the input \(x\), giving \(x'\). If \(P\) denotes the good projector, equivariance and the good target give
+\[
+ B_t(x')=B_t(Px)=P B_t(x)=B_t(x).
+\] Write \(C_t=\prod_{i,j}c_{ij,t}\) for
+the product of the nonzero fitted square constants and
+\(0\) for the distinguished tuple. The finite Fourier and
+class sum reads \(v_{t,u}(x')\) in the embedded coefficient
+field. Write \(\iota\) for the coefficient embedding, \(\zeta_t\)
+for the coefficient-field root of unity, and \(\kappa\) for
+the single complex scalar for the chosen test family.
+On the good input the formula reads
+\[
+   \iota(\zeta_t) C_t\,\psi_u(B_t(x))
+     = \kappa v_{t,u}(x').
+\]
+The bottom toric comparison in its nonvanishing integer range gives
+\(C_t/C_0=\prod_{i,j}(c_{ij,t}/c_{ij,0})\in\iota(K)^\times\).
+If \(\kappa\ne0\), set \(\psi'_u=(C_0/\kappa)\psi_u\). Then
+\[
+ \psi'_u(B_t x)=\frac{v_{t,u}(x')}{\iota(\zeta_t)(C_t/C_0)}
+             \in\iota(K),\qquad \bigcap_u\ker\psi'_u=0.
+\]
+
+If \(\kappa=0\), the displayed Fourier identity gives
+\(\psi_u(B_tx)=0\), already in the field. Make the request on the whole
+tuple family so that these comparisons use the same field.
+For a complex row with conjugate scalar action, precompose
+with its conjugate-linear identification and conjugate the
+output. The resulting functionals are complex-linear, and
+their values are in the conjugate coefficient embedding.
+If \(X_1,X_2\) are the cutoffs for the test and field assertions, impose them simultaneously by taking
+\[
+ x\ge \max\{X_1,X_2\}
+\]
+and increasing the scale further whenever the application requires it. The Hida size setting is supplied
+on a bare state with the same group, so the tests pull back
+to the original state along its complex row isomorphism.
+Their values and field are preserved. This is the second
+assertion at the residue-characteristic weights. It is used
+jointly with multiplicity on the restricted datum.
+\label{cor:automorphic-realization-12}
+
+With respect to a \(K\)-basis \((a_i)\) of \(A_t\), the normalized
+tests have coefficient matrix
+\[
+               M_t=\big(\iota^{-1}\psi_u(B_ta_i)\big)_{u,i}.
+\]
+The finite test map \(\Psi=(\psi_u)_u\) is injective, hence
+\[
+ \ker\Theta_t=\ker(\Psi\Theta_t)=j_t(\mathbb C\otimes_K\ker M_t).
+\]
+The last equality follows by row reduction over \(K\). Equivariance
+of \(\Theta_t\) makes this descended kernel stable under the level group.
+
+To pass from the full allowed place set to the actual nonbase
+support, restrict to the places detected by the index tests,
+together with their conjugates. The other places have trivial
+auxiliary character. Restrict the tuple-indexed data along
+the inclusion of the smaller set, then update the weight
+scalars on the restrictions of the same group and geometric
+maps. The two index tests commute with that restriction.
+They depend on the place readings retained on the restriction
+and are unchanged by the accompanying scalar update.
+
+Denote restriction to the detected places and their conjugates by \(R\), and the support recovered from the two tests by \(S\). The preceding compatibility gives
+\[
+ S(RD)=S(D)
+\]
+for the datum \(D\) under consideration. Thus a second restriction discards no further places. The residue-characteristic weight comparison is
+applied \emph{after} this step. Its hypotheses include equality
+with the recovered support, the definite weight condition,
+the core and group conditions and membership of all residue
+characteristics in the allowed prime set. It returns the
+comparison used to construct the first row-lift family.
+\label{cor:automorphic-realization-13}
+
+The fixed-field part of the support argument uses an earlier fine
+adelic datum on the same pre-level frame. For the fixed small field
+one requests a finite list of algebraic coefficients in \(K_0\)
+and a finite list of residue characteristics. The uniformity here
+is over the generator choices and auxiliary numerical parameters
+at the prescribed levels. Let \(p\) be a type prime or the prime
+assigned to a sequence. The norm relation gives the same bound at every embedding:
+\[
+              \pi\bar\pi=p\quad\Longrightarrow\quad
+               |\sigma(\pi)|=\sqrt p\qquad(\sigma:E\hookrightarrow\mathbb C).
+\] In the
+Minkowski embedding the possible \(\pi\)'s lie in the finite set
+\[
+ \mathcal O_E\cap\prod_{\sigma:E\hookrightarrow\mathbb C}
+                          \{z:|z|\le\sqrt p\}.
+\]
+
+For each occurring tuple of generators at the finitely many word
+and type primes, choose one fine reference realization with its
+lower-unitary comparison. Its two zero-content index tests compare
+full lattices in a common space. For each pair choose \(N>0\) clearing both lattice inclusions.
+Localizing gives
+\[
+ NL\subseteq L',\quad NL'\subseteq L
+        \quad\Longrightarrow\quad L_v=L'_v\quad(v\nmid N).
+\] Request the finitely many resulting
+residue primes and their conjugates, and an embedded rational basis
+of the reference coefficient field. The comparison at fixed generators
+preserves the lower-unitary maps and these zero-content tests when
+the other numerical parameters vary. Thus the union over reference
+tuples is finite before \(K_0\) is chosen.
+
+The chosen reference coefficient field embeds into \(K_0\).
+Transport its support with zero added content to \(K\).
+In the enlarged datum this inherited support is supplemented by
+places with nonzero numerical content at the prescribed scale and
+their conjugates. The latter residue characteristics are among the
+type primes, the auxiliary prime and primes at most \(X''\), so they are
+already allowed. The inherited residue characteristics were included
+with the finite list. For either part of the support let \(S\) denote its set of places. Saturation over \(K_0\) means precisely
+\[
+ w\cap K_0=w'\cap K_0\quad\Longrightarrow\quad(w\in S\ \Longleftrightarrow\ w'\in S).
+\]
+
+For the inherited part, two primes over the same \(K_0\)-prime
+restrict to the same prime of the earlier coefficient field, and
+the comparison identifies membership with the test at that prime.
+For the numerical content part the test on a lift is a function
+of the rational residue characteristic. It is invariant under
+the same contraction. This gives the saturation on the
+actual datum used to initialize the zero row orders. The fixed-field
+comparison uses an enlargement of the fine datum carrying the
+lower-unitary maps, with the same finite group and rational readings.
+\label{cor:automorphic-realization-14}
+\end{proof}
+
+\begin{proposition}[Ray splitting and Galois representations on the initial row]\label{prop:initial-row-arithmetic-readings}
+For the fixed initial row and its marked finite types, the ray
+splitting test identifies the pinned ray field over the marked
+quadratic base. The local type and the Galois representation attached to the same
+row agree on the prescribed inertia data. For a continuous de Rham representation of rank \(a\) at a coefficient place, let \(h_{\tau,i}\) be the multiplicity of jump \(i\) at an embedding \(\tau\) inducing that place. Then
+\[
+ \sum_i h_{\tau,i}=a\qquad\text{for each such }\tau.
+\]
+\end{proposition}
+
+\begin{proof}
+\proofstep{Identify the two principal prime ideals and the pinned ray field.}
+Keep the split places, the old row representation for each
+finite type \(\sigma\), and the two central actions on the
+ambient and multiplicity spaces. Let \(E\) be the auxiliary field,
+and let \(g_0,g_1\) be the two primes used for the finite
+types. Proposition~\ref{prop:two-type-primes} supplies generators
+\(\pi_k\) in the integers of its distinguished quadratic subfield.
+With \(Q_S=\operatorname{lcm}(2^{e+2},f_\psi)\) as in
+\eqref{eq:host-character-compositum}, they satisfy
+\[
+   \pi_k\overline{\pi_k}=g_k,
+   \qquad \pi_k\equiv 1\pmod{Q_Sqd}.
+\]
+
+Under the fixed embedding \(j_E\) of \(E\), both
+\(j_E(\pi_k)\) and \((j_E(\pi_k)-1)/(Q_Sqd)\)
+are integral over \(\mathbb Z\). Extend complex conjugation on \(E\) to an automorphism of the algebraic closure. The
+product of \(j_E(\pi_k)\) and its image under this
+automorphism is \(g_k\). This is the ray-prime test used
+for splitting in the ray field of the marked base. To
+see the splitting, put \(c=Q_Sqd\).
+
+In the imaginary
+quadratic base the two conjugate factors are integral
+and each is one modulo \(c\). Thus \(g_k\equiv1\pmod c\)
+and \(g_k\nmid c\). For the pinned ray field \(M\), the
+ray-field ramification comparison gives
+\[
+              g\mid\operatorname{disc}(M/\mathbb Q)
+                  \ \Longrightarrow\ g\mid c
+              \qquad(g\text{ a rational prime}).
+\]
+The quadratic base has discriminant \(-d\), and \(d\)
+divides \(c\). At \(g\nmid c\) the base is unramified and
+the ray extension is unramified at every prime above \(g\)
+by reciprocity for the modulus \((c)\). Multiplicativity of
+ramification indices in the tower gives the comparison for
+the absolute discriminant. Apply it with \(g=g_k\).
+The two principal ideals have
+norm \(g_k\) and multiply to \((g_k)\). They are distinct
+because their product is \((g_k)\) and \(g_k\) is unramified.
+Each has trivial ray class
+and splits in the ray class field by reciprocity.
+\label{cor:automorphic-realization-15}
+
+Conversely let \(\mathfrak p\) be a degree-one prime away from \(c\)
+splitting in the ray field. For the modulus \((c)\), reciprocity gives
+\[
+ {\rm Frob}_{\mathfrak p}=1
+ \ \Longleftrightarrow\ [\mathfrak p]_{(c)}=1
+ \ \Longleftrightarrow\
+ \mathfrak p=(\alpha),\quad \alpha\equiv1\bmod c.
+\]
+In the imaginary quadratic base the norm of \(\alpha\) is the
+positive rational prime below \(\mathfrak p\). These are the
+generator and congruence conditions under the fixed embedding of \(E\). The ray
+field, its marked conjugation and the old finite type actions are
+transported with that embedding. \label{cor:automorphic-realization-16}
+Indeed, if every marked ray-test prime splits completely in a finite
+extension of the base, so does every such degree-one prime.
+
+Degree-one primes suffice here: the primes of the imaginary quadratic
+base of higher residue degree have Dirichlet density zero. Chebotarev's
+split-prime inclusion criterion puts the extension inside the ray
+field, which is therefore maximal for this test. For the embedded field \(K\) the corresponding ring is recovered from integrality alone:
+\[
+ \mathcal O_K=\{z\in K:f(z)=0\text{ for some monic } f\in\mathbb Z[X]\}.
+\] Transport also preserves the integral row
+exponents at the type primes and the valuation zero in the
+lower-left comparison. \label{cor:automorphic-realization-17}
+\proofstep{Use the fixed-vector comparison on the actual split local component.}
+At a marked place over \(g_k\), let \(K_1\) be the first
+principal congruence subgroup and \(\pi_v\) the split component
+of the old row of type \(\sigma\). The split comparison embeds
+\(gK_1g^{-1}\) into both bottom levels, where both level
+characters are trivial. A nonzero bottom-level vector therefore
+gives, by local factorization,
+\[
+ \pi_v^{gK_1g^{-1}}\ne0,\qquad
+       \pi_v(g^{-1})\pi_v^{gK_1g^{-1}}=\pi_v^{K_1}.
+\]
+This uses the two level maps on the actual bottom frame.
+It supplies the same depth condition for all finite types and
+marked places in that row. At these places the completion
+is \(\mathbb Q_{g_k}\). Depth-zero compatibility of local Langlands gives trivial wild inertia for the Weil--Deligne representation \(r_v\):
+\[
+ r_v(P_v)=\{1\},\qquad P_v\subset I_v\ \text{the wild inertia subgroup}.
+\] Keep the local reciprocity parameter
+at every split place and the Satake multiset at the spherical
+inert places. \label{cor:automorphic-realization-18}
+
+Use a tame inertia generator coupled to the fixed residue
+generator at each type place. The Green labelling gives the
+series idempotents in these coordinates. A local unit
+representing this inertia generator can be compared with
+its rational residue representative by reciprocity. Testing
+the character on that representative gives the Teichm\"uller value
+of the inverse finite character in the allowed orientation.
+
+If
+\(\alpha_1,\ldots,\alpha_r\) are the tame inertia eigenvalues
+listed with multiplicity and \([\cdot]\) denotes Teichm\"uller lift,
+the residual support polynomial is
+\[
+ P_\sigma(T)=\prod_{h=1}^r(T-\overline{\alpha_h}),\qquad
+ [\overline{\alpha_h}]=\alpha_h .
+\]
+The reductions here are at the marked residue valuation, with the
+chosen tame eigenvalues in the prime-to-residue-characteristic
+roots of unity. Its degree is \(r\) because the parameter is tame. Transport the
+place on the closure and its generator by the marked conjugation;
+the residue generator law transports the polynomial with them, on the same Galois place frame and with the two original finite type actions.
+\label{cor:automorphic-realization-19}
+On this parameter family the character and cuspidal
+comparison realizes the local parameters on the automorphic
+side of the bare level.
+
+This comparison uses local reciprocity, the
+finite-dimensional fixed-level automorphic comparisons and
+the character lifting at the selected ray field. In the ray
+stage replace the auxiliary parameter records by those of
+the split ray class field. For every chosen residue label \(u\), Teichm\"uller lifting followed by reduction at the specified ray place returns that very label:
+\[
+ [u]\longmapsto\overline{[u]}=u .
+\]
+Distinct roots in the reduction field stay distinct because
+their orders are prime to the residue characteristic.
+The ray modification preserves the two central actions,
+the series idempotents and the marked places. Throughout
+these operations the localization index set is empty and
+the prescribed order data are carried along. The arithmetic
+enrichment is applied before the later specialization of
+the orders. \label{cor:automorphic-realization-20}
+
+Let \(\iota_G\) identify the old and new finite groups using the
+indexed type places and their matrix coordinates. The series
+idempotents have matching coefficients. For either row comparison
+\(J\) and central element \(z=\sum_g z_g[g]\), equivariance gives
+\[
+ J\rho(z)=\sum_g z_g J\rho(g)
+         =\sum_g z_g\rho'(\iota_G g)J=\rho'(\iota_G z)J .
+\]
+The old row fits and geometric and finite isotypic readings
+therefore use the same central projectors. The underlying host,
+rank, empty index set, algebraic closure with its host embedding,
+prime valuations and type-place indices are fixed. The places
+above the real subfield still project to the specified list.
+\label{cor:automorphic-realization-21}
+The algebraic-closure frame extends the chosen embedding
+of the host.
+
+On the same Weil--Deligne realization impose
+continuity of each \(\ell\)-adic matrix representation in
+the de Rham condition. Write \(f:A\to B\) for either coefficient map. Continuity of the transported representation follows from entrywise composition:
+\[
+ G\xrightarrow{\ \rho\ }\mathrm{Mat}_a(A)\xrightarrow{(a_{ij})\mapsto(f(a_{ij}))}\mathrm{Mat}_a(B).
+\] Thus the old
+continuous local lifts still satisfy the strengthened
+condition. The unramified and monodromy tests use the
+original de Rham condition. \proofstep{Read the dimension of the de Rham filtration at the chosen embedding.}
+Apply the Hodge--Tate
+comparison to a continuous rank-\(a\) representation
+that satisfies the local de Rham condition at \(w\).
+For an embedding \(\tau\) into the \(\ell\)-adic
+coefficient closure inducing \(w\), extend it to the
+algebraic closure with the prescribed valuation ring.
+One obtains the extension by conjugating a field
+embedding over the host, since the two valuation
+rings restrict to the same ring on the host. The continuous
+representation descends to a finite extension of \(\mathbb Q_\ell\)
+containing the local field. In the labelled de Rham space \(D_\tau\) this gives
+\[
+ \sum_i\dim\operatorname{gr}^i D_\tau
+ =\sum_i(\dim\operatorname{Fil}^i D_\tau-
+               \dim\operatorname{Fil}^{i+1}D_\tau)=\dim D_\tau=a .
+\]
+The jumps are counted with multiplicity at each \(\tau\) inducing
+\(w\), equivalently \(x\in\mathfrak m_w\) if and only if
+\(|\tau(x)|_\ell<1\) on host integers. \label{cor:automorphic-realization-22}
+\end{proof}
+
+\begin{proposition}[Isotypic span in the rational row]\label{prop:rational-row-isotypic-span}
+At a lift \(1\le j\le m\), write \(V_{j,\lambda}\) for the space with prescribed label \(\lambda\). Its internal isotypic decomposition is
+\[
+ V_{j,\lambda}=\bigoplus_{\sigma\ {\rm occurring},\ {\rm label}(\sigma)=\lambda}I_{j,\sigma}.
+\] In the rational
+model, the allowed split Hecke operators preserve the
+indicated coefficient lattices and furnish eigenvalues
+on the full good simultaneous eigenspaces.
+\end{proposition}
+
+\begin{proof}
+The lower-unitary multiplicity equality applies on the
+same frame at every state with those pins. To see which
+finite types it compares, use the good projector for the
+actual two type primes. Its coefficients at \(g\) and
+\(g^{-1}\) agree by the finite type inversion identity.
+Inversion takes an irreducible character to the character
+of its dual. In the expansion of the good projector in primitive central idempotents, inversion interchanges the labels \(\sigma\) and \(\sigma^\vee\). Independence of irreducible characters now gives
+\[
+ \sigma\in\operatorname{supp}(e_{\rm good})\quad\Longleftrightarrow\quad\sigma^\vee\in\operatorname{supp}(e_{\rm good}).
+\] The
+character comparison descends through the injective
+coefficient embedding. This is the duality stability
+condition in the multiplicity comparison.
+\label{cor:automorphic-realization-23}
+
+\proofstep{Compare the dimension of each label with the sum of its cuspidal isotypic dimensions.}
+Let \(I_{j,\sigma}\) be the row's complex isotypic space
+at a lift \(1\le j\le m\), and let \(n(\sigma)\) be
+the dimension of the good finite-type space of \(\sigma\)
+on the compact base row. Transport through the lift
+pairing and the tensor-product identification reads
+\(I_{j,\sigma}\) as the intersection of the global
+\(\sigma\)-part with the fixed level, level character and
+good projector of the lift. In the finite cuspidal
+decomposition, the multiplicity equality identifies its
+dimension with the compact counterpart. The compact
+comparison identifies that dimension with the base count
+\(n(\sigma)\). Hence
+\[
+                      \dim I_{j,\sigma}=n(\sigma).
+\]
+Only the fixed locus, the level character and the same
+good projector enter this dimension comparison.
+\label{cor:automorphic-realization-24}
+
+The rational reading available at this point consists of
+the rational coordinate isomorphisms for the sharp and
+base forms, the two complex readings, their metrics at
+the other embeddings, and the lift maps from rational
+coordinates to the complex rows. No order comparison
+is needed for these maps. The bottom Hecke action assigns
+each \(\sigma\) a constituent label \(c(\sigma)\).
+The theta adjoint identity on the rational generators
+extends to arbitrary test vectors.
+
+For a theta map
+\(\Theta\), project a source vector to
+\((\ker\Theta)^\perp\). Both sides of the adjoint identity vanish
+on the discarded kernel; linearity extends it from the generators.
+On a labelled image the adjoint identity gives
+\[
+ \Theta\Theta^*y=\lambda y,\qquad
+ \lambda\|y\|^2=\|\Theta^*y\|^2>0\quad(y\ne0).
+\] For the common Hecke label \(c\)
+and its lift space \(V_{j,c}\) the dimension comparison gives
+\[
+ \bigoplus_{\sigma:\,c(\sigma)=c}I_{j,\sigma}\subset V_{j,c},
+ \qquad \dim V_{j,c}=\sum_{\sigma:\,c(\sigma)=c}n(\sigma).
+\]
+Distinct cuspidal projectors give the direct sum, and
+\(\dim I_{j,\sigma}=n(\sigma)\). Thus the inclusion is an equality
+at every lift. \label{cor:automorphic-realization-25}
+
+\proofstep{Read the operators and eigenvalues on the same integral coefficient model.}
+At the arithmetic level these decompositions give the
+span test for the good simultaneous Hecke eigenspaces.
+The rational forms come from the full geometric lattices
+and are read through \(K_s\hookrightarrow K_0\).
+At each type prime \(g_k\), the inverse of the
+chosen primitive \(g_k\)-th root of unity defines
+a nontrivial additive character of \(\mathbb F_{g_k}\).
+Compose it with the marked linear combination of the
+superdiagonal entries of the upper unipotent matrices.
+
+Write \(L(u)\) for the marked linear combination of the superdiagonal entries and \(\zeta\) for the chosen primitive root. The level character is the inverse unipotent character because
+\[
+ (\zeta^{-1})^{L(u)}=(\zeta^{L(u)})^{-1}.
+\] The split
+Hecke transform and its rational realization give the operators
+on the same rational forms, with the index-zero operator
+equal to the identity. The integral comparison gives
+stability for the indicated coefficient lattices.
+Use the isotypic span and the good finite-type condition
+to choose their eigenvalue arrays. The finite set of
+excluded places contains the indicated ramified and level
+places. These rational operators act on the same integral lattices
+whose characters and Hecke span were just determined. \label{cor:automorphic-realization-26}
+\end{proof}
+
+\paragraph{Theta series and marked points on the rational row.}
+Proposition~\ref{prop:rational-row-isotypic-span} supplies the
+integral operators and their simultaneous eigenvalues.
+The cuspidal parameter comparison uses the same good lower
+types that occur in the rational row. At split primes outside
+its finite exclusions, the rational arrays read the elementary
+symmetric polynomials in the normalized Satake parameters.
+The index-zero identity fixes the normalization of the
+Hecke operators. The matching of Frobenius polynomials on
+these split primes, with semisimplicity and Chebotarev, gives
+the coefficient-field condition for the cuspidal polynomials
+used in the local multiplicity models. The comparison also
+uses the fixed lower-left valuation and the reciprocal
+character twist in passing back to the original row.
+\label{cor:automorphic-realization-27}
+
+
+\begin{proposition}[A common grid for the coefficient and geometric models]
+At the prescribed grid size, depth and finite list of levels, the cuspidal forms, toric coefficients, and marked-point evaluations can be chosen with common grid characters, excluded places and signed indices. If \(J\) identifies the original row with its twisted copy in the identity multiplicity frame, every Hecke operator \(T\) outside the common exclusions satisfies
+\[
+ T^{\rm new}J=JT^{\rm old}.
+\]
+Use the multiplicity comparison of Proposition~\ref{prop:linked-type-multiplicity}
+and the coefficient-ring and marked-point identifications for this
+grid. \label{cor:automorphic-realization-28}
+\end{proposition}
+\begin{proof}
+Take a grid on this row at the prescribed size and depth.
+The cusp multiplicity construction and the class-group
+coefficient-ring construction each specify a finite
+coefficient extension at every indicated residue prime and
+lift. Use their compositum. Choose one finite set \(S_x\)
+of places of \(E\) containing the exclusions of the rational
+Hecke action and the allowed conductors of the grid.
+The twisted coefficient rings can then be chosen with
+excluded place sets containing \(S_x\). The two coefficient
+extensions compare in these very rings. In particular the
+coefficient matrix of the cuspidal row and the finite-order
+toric character can both be read there. This common choice
+is needed because the toric construction compares at the
+same grid entries and away from the same exclusions.
+\label{cor:automorphic-realization-29}
+
+For the cyclotomic coefficient valuation ring \(O_v\), the
+integrality test in the signed comparison is
+\[
+ a/b\in O_v\quad\Longleftrightarrow\quad v(a)\ge v(b)
+       \qquad(a,b\in O_v,\ b\ne0).
+\]
+
+The toric-character construction takes the
+grid characters with their Teichm\"uller lifts and
+their values in the fixed field. It uses the lower-left
+unit and the inclusion of their conductor in the excluded
+set. The toric ratio comparison identifies the coefficient
+reading of these characters. Apply the multiplicity
+comparison both at the trivial character and at the
+selected toric characters, using the same full
+coefficient-module basis. The settings obtained this way
+carry the rational Hecke reading and the complete grid.
+\label{cor:automorphic-realization-30}
+
+Let \(J\) identify the old row with its twisted copy in the
+identity multiplicity frame. The exclusion sets at corresponding
+places agree, so for an allowed Hecke operator \(H\) one has
+\[
+ H^{\rm new}J=JH^{\rm old},\qquad
+ H^{\rm old}v=\lambda v\ \Longrightarrow\
+             H^{\rm new}(Jv)=\lambda Jv .
+\]
+The excluded residue characteristics obey their previous bound.
+The level identification transports the unipotent character and
+the grid with the coefficient forms. The series comparison on
+these same forms supplies the designated lift support and the
+signed level condition. \label{cor:automorphic-realization-31}
+
+For the geometric step from the series, the marked
+points detect the coefficient algebra in the framed
+space. The signed comparison descends the support
+condition to the geometric model. Let \(k_H(x)\) count the allowed kernels of a split Hecke correspondence \(H\) at a framed point \(x\). Outside the excluded characteristics the local level gives a single count: 
+\[
+ k_H(x)=k_H^{\rm level}=k_H(x')\qquad(x,x'\text{ in the prescribed frame}).
+\]
+ Its quotient read over the
+complete field is integral in the chosen geometric
+coordinates. The integral correspondence and the series support outside the selected range give the marked moduli-point model. Transport of level preserves the grid characters, their field values and their roots. \label{cor:automorphic-realization-32}
+
+In particular the character assignment to coefficient places uses an index map \(v\mapsto i(v)\) satisfying
+\[
+ i(\bar v)=i(v)\qquad\text{at each assigned place }v .
+\] Apply reciprocity to its finite-order Hecke
+character, valued in the roots of unity of the specified
+prime-power order. Let \(C_v\) be the set of conductor places of the character chosen
+at \(v\), and \(B_{i(v)}\) the exclusions for its index. The two
+support conditions are
+\[
+ C_v\cap B_{i(v)}=\varnothing,\qquad
+ C_v=\varnothing\quad(v\text{ outside the twist support}).
+\] Use the
+integral ring-class descent at the two readings to put
+the twist into the coefficient model. The rank test
+for each reading is the level comparison at its actual
+signed place. Equality of the characters gives equality
+of their ramification supports, so the two conjugate
+choices agree after the signed transport. The construction
+at a fixed finite set of levels makes these choices for
+the whole list of prescribed indices. Its spectral
+specialization must keep the chosen twist labels while
+inserting the actual row orders.
+\label{cor:automorphic-realization-33}
+
+\end{proof}
+
+\begin{proposition}[Localization of the integral Hecke algebra]\label{prop:marked-hecke-localization}
+At a prescribed coefficient place, tuple, and lift, a finite
+extension of the local coefficient field splits the occurring
+full Hecke eigensystems and contains any prescribed finite list
+of scalar values. Over its integers \(O\), the Hecke order \(\mathbb T\) decomposes into residual-character blocks. If \(V_\sigma\) is a full eigenspace with character \(\lambda_\sigma\), the summand with residual character \(\bar\lambda\) is described by
+\[
+ \mathbb T=\prod_{\bar\lambda}\mathbb T_{\bar\lambda},\qquad V_{\bar\lambda}=\bigoplus_{\sigma:\,\overline{\lambda_\sigma}=\bar\lambda} V_\sigma.
+\] The construction preserves the original
+integral action under restriction to the block.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Split the commuting spherical operators over one finite extension.}
+Let \(v\) be a marked coefficient place of residue characteristic
+\(\ell\), and keep its comparison \(\iota_v\colon
+\overline{\mathbb Q}_\ell\simeq\mathbb C\). The strict-henselian
+character choice fixes the tuple, level and conductor on the definite
+multiplicity spaces. For each lift \(j\), use the existing rational
+model of the corresponding space and its integral lattice. At the
+allowed split primes outside the conductor, \(\ell\) and the other
+exceptional places, the normalized spherical double cosets act by
+rational operators preserving that lattice. On each complex isotypic summand \(V_\sigma\) of the definite decomposition, the hyperspecial fixed line of the local spherical representation has a Hecke character \(\lambda_\sigma\). The spherical operator \(T\) acts on each copy through this same character, so
+\[
+ T|_{V_\sigma}=\lambda_\sigma(T)\,\mathrm{id}_{V_\sigma}.
+\] Equivalently, the convolution adjoint is obtained
+by inversion and conjugation, so the commuting spherical operators
+are simultaneously diagonalizable for the invariant pairing.
+
+A basis for the rational Hecke algebra involves only finitely many
+of the allowed double cosets. Let \(T_1,\ldots,T_s\) be generators
+so obtained, and choose \(F_{j,v}/\mathbb Q_\ell\) finite containing
+the marked coefficient field and their eigenvalues. The simultaneous
+eigenspace for a character \(\lambda\) is
+\[
+                 \bigcap_{a=1}^s\ker(T_a-\lambda(T_a)I) .
+\]
+The equations are defined over \(F_{j,v}\), so they split the entire
+action there. Take the compositum
+with the fields for the local parameter comparisons and the finite
+character values. Adjoin the requested complex coefficients in the specified embedding.
+
+For a finite set \(S_v\subset\mathbb C\) this amounts to the extension
+\[
+ F_{j,v}\ \subseteq\ F_{j,v}(\iota_v^{-1}(S_v)).
+\] All local factors over \((j,v)\)
+thus have the required coefficient inclusion with the original
+embedding. The chosen finite character takes values in units, and
+its auxiliary factor is trivial on inertia at the conductor primes
+where ramification of the marked factor is required. The product
+retains those ramified primes. Its conductor is away from \(\ell\)
+and the excluded level primes by the character choice.
+\label{cor:automorphic-realization-34}
+
+\proofstep{Identify maximal ideals with reductions of full characters.}
+Put \(O=\mathcal O_{F_{j,v}}\). On the base-changed lattice the integral
+algebra \(A\) acting faithfully is finite over \(O\), as a submodule
+of the integral endomorphism ring. If the space is zero, the index
+list is empty. Otherwise
+\[
+ A\otimes_O F_{j,v}=\prod_{\alpha}F_{j,v},
+ \qquad A\subset\prod_{\alpha} O ,
+\]
+where \(\alpha\) runs through the occurring full characters.
+Each eigenvalue belongs to \(O\) by the monic characteristic
+polynomial of its integral operator. Write \(k=O/\mathfrak m_O\).
+Since \(\prod_\alpha O\) is finite over \(A\), lying over gives
+\[
+ \operatorname{Max}A
+   =\{\ker(A\xrightarrow{\alpha}O\longrightarrow k):\alpha\}.
+\]
+Two residual characters with this kernel induce the same map
+to \(k\), since both fix \(k\) on diagonal scalars. Completeness
+lifts the residual factors to orthogonal idempotents \(e_{\mathfrak m}\).
+Thus for the original lattice \(L\),
+\[
+ (e_{\mathfrak m}L)\otimes_O F_{j,v}
+   =\bigoplus_{\ker\bar\alpha=\mathfrak m} (L\otimes_O F_{j,v})[\alpha].
+\]
+The decomposition intertwines every integral Hecke operator.
+
+\proofstep{Recover the complex isotypic summands from the same character.}
+Write \(v=\sum_\sigma v_\sigma\) in the complex isotypic
+decomposition. For an allowed generator \(H\),
+\[
+ (H-\alpha(H))v=0
+ \quad\Longleftrightarrow\quad
+   (\alpha_\sigma(H)-\alpha(H))v_\sigma=0\quad\text{for every }\sigma .
+\]
+Intersecting these conditions over \(H\) gives precisely the
+summands with full character \(\alpha\). The hyperspecial factor
+has trivial level character at an allowed split prime. A nonzero
+summand there is spherical, so its Hecke polynomial reads the
+unramified parameter with the rank-\(a\) twist
+\(\lvert\det\rvert^{(1-a)/2}\). The tuple, lift and multiplicities
+are common across the coefficient factors. At the two marked
+type primes away from \(\ell\), only the prescribed residue
+character acts on inertia, with its inverse at the conjugate
+place. The Weil--Deligne and infinity comparisons use the
+designated embeddings. \label{cor:automorphic-realization-35}
+
+The block lists are determined by the normalized split polynomials
+on the constituents used here. For a block of length \(d\) centred on a conjugate self-dual cusp
+\(\pi\) of rank \(a\), its terms, with multiplicity, are
+\[
+           \pi |\det|^{(d-1)/2-k},\qquad 0\le k<d .
+\] In total rank \(r\) the common
+Galois normalization adds \((1-r)/2\). Relative to the normalization
+in rank \(a\), the requisite algebraic shift is \(u+(a-r)/2\).
+The allowed infinity parameters are regular with the block's
+parity, so the shifted cuspidal Galois realizations in this comparison
+are supplied by the regular algebraic cuspidal input. The norm twist
+changes the polarizing character by a norm power. For a regular
+algebraic polarized cusp over a CM field the attachment is
+continuous, with the normalized local polynomial at each unramified
+place away from the residue characteristic. This is the part of
+Barnet-Lamb, Gee, Geraghty and Taylor's attachment theorem used here.
+
+To pass from the split Frobenius elements to the Galois group, compare each coefficient of the two direct-sum polynomials. The difference is continuous, so
+\[
+ \{g:\det(1-X\rho_1(g))=\det(1-X\rho_2(g))\}
+\]
+is closed and contains a dense set. Here \(\rho_1,\rho_2\) denote the two direct sums in the comparison. In particular there is equality of the normalized
+polynomials at all but finitely many primes. Cancel the common
+normalization and apply Jacquet and Shalika's uniqueness for the
+isobaric sums with their real norm twists. Unitarity and the
+central characters distinguish the real exponent of each
+cuspidal term. Fix one cusp; let \(e\) be the largest exponent
+left and \(m(e)\) its multiplicity. Its longest remaining blocks
+have length \(2e+1\), with one occurrence of \(e\) per block.
+Update all exponent multiplicities by
+\[
+ m_{\rm new}(s)=m(s)-m(e)\,\mathbf 1_{\{e,e-1,\ldots,-e\}}(s).
+\]
+Induction on the number of terms recovers even the blocks with
+overlapping strings. \cite{blggt-attachment,jacquet-shalika-ii}\label{cor:automorphic-realization-36}
+
+For each row type and residue place which has an integral Galois
+realization, reduce one such realization and take the direct sum of
+its composition factors. The kernel is open since it contains
+the open kernel of the reduction. Any two admissible realizations
+of this type at the same place read the same split polynomials
+through the common coefficient embedding. Reduce the coefficient
+identities in that marked valuation ring outside the finite union
+of their bad primes.
+
+For two such residual representations \(\bar\rho_1,\bar\rho_2\),
+the coefficient functions are locally constant. Equality on the dense
+split Frobenius conjugates therefore gives, for every Galois element \(g\),
+\[
+ \det(X-\bar\rho_1(g))=\det(X-\bar\rho_2(g)).
+\] The polynomial is unchanged by
+semisimplification, by the block triangular determinant formula.
+If there is no such realization the comparison has an empty source
+and the auxiliary residual representation may be taken trivial.
+This supplies the semisimple data for arbitrary prescribed
+\(S_v\). The comparison is coefficientwise also at the small residue
+characteristics. Its assertion about the polynomials is independent
+of the degree of the coefficient enlargement.
+\label{cor:automorphic-realization-37}
+\end{proof}
+
+\begin{proposition}[Simultaneous coefficient requests and local row orders]\label{prop:joint-row-orders}
+At each prescribed tuple and lift, finitely many conditions
+on the compatible semisimple readings may be imposed at once
+by adjoining the union of their coefficient requests. Write \(l_\alpha\) for the ordinary \(O\)-lengths of the indicated localizations. On these specializations
+\[
+ \eta_j(v)=\frac{\sum_\alpha l_\alpha}{\operatorname{length}_O(O/\ell O)};
+\]
+in the untwisted case all the lengths and the order vanish. The comparison uses the same good
+projector and is unchanged by enlarging the coefficient DVR
+at the given place.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Meet the field requests by union before applying specialization.}
+Use the localized order of Proposition~\ref{prop:marked-hecke-localization}.
+Every coefficient condition here has the form of a finite set
+\(S_v\) at each original place \(v\), followed by an assertion
+about every compatible semisimple realization whose marked embeddings
+contain \(S_v\). For the two conditions with requests \(S_v^{(1)}\) and \(S_v^{(2)}\), impose the single request
+\[
+ S_v=S_v^{(1)}\cup S_v^{(2)}\qquad\text{at each original place }v .
+\]
+
+The coefficient construction just given works for that union and
+keeps the conductor, level and tuple unchanged. For a compatible specialization the two implications can therefore be applied at the same homomorphism. For an occurring eigencharacter, choose a nonzero eigenvector \(u\) in the geometric row. The resulting specialization is the homomorphism
+\[
+    \mathbb T\longrightarrow O,\qquad T\longmapsto\lambda_u(T),
+                         \qquad Tu=\lambda_u(T)u .
+\]
+Here the row is the one constructed in Lemma~\ref{lem:constructed-signed-coefficient-row}. Its integrality follows from the stable ball of Lemma~\ref{lem:marked-semistable-local-ball}. At a new ray type, occurrence on the tested Hecke algebra is proved in Lemma~\ref{lem:new-ray-type-occurrence}. In particular the order identity,
+which is proved on specializations satisfying the full coefficient
+ring conditions, can be imposed together with those conditions.
+
+At the fixed tuple and weight only finitely many systems of split
+Hecke polynomials occur. Enlarge their exceptional set to contain
+the conductors and excluded level places. For each realized system
+fix one continuous integral representative
+\(\rho:G_E\to{\rm GL}_a(\overline{\mathbb Q}_\ell)\).
+Writing the algebraic closure as a countable union of finite
+extensions \(F_b\), one has
+\[
+ G_E=\bigcup_b\rho^{-1}({\rm GL}_a(F_b)).
+\]
+These are closed subgroups of the compact group \(G_E\); by Baire
+one is open. Adjoin the matrix entries of finitely many coset
+representatives to obtain a finite field of definition \(F_\rho\).
+There are finitely many extensions of \(F_\rho\) of degree
+\(\le a\) in the chosen closure. Their compositum contains every
+root of \(\det(T-\rho(g))\). By split Frobenius density any other
+realization of the system has the same characteristic polynomials.
+Request generators of these finitely many composita. An unrealized
+system imposes no condition.
+
+To impose the integral block condition, first specialize with the
+rational eigenvalues, split polynomials and decomposition of the
+good locus. Every occurring good block lies over a good residual
+block here by descent of residual irreducibility. For each such
+block use its separating Galois element and the matrices at its
+finitely many characteristic-zero points. At each original \(v\)
+make the \emph{single} request
+\[
+ S_v=S_v^{\rm split}\ \cup\
+    \bigcup_{\text{these blocks and points at }v}
+       \{\text{roots of the chosen characteristic polynomials}\}.
+\]
+Integral base change carries those matrices into the final blocks.
+Thus all the root tests and order comparisons hold on the one
+specialization obtained after the union. \label{cor:automorphic-realization-38}
+
+For the row orders, fix a lift \(j\) and a place \(v\) with
+nonreference tuple. At this tuple the rational definite space
+carries an integral lattice \(L\). Let \(p_G\) denote its rational good projector.
+Put \(G=\operatorname{im}p_G\) for the good space and \(B=\ker p_G\)
+for its complement in the ambient row. Use the matched theta reading,
+so \(B\) is the kernel of its adjoint. The tuple identification,
+twisted vacuum identity and rational class-sum comparison give the
+following pair of geometric lattices in this row:
+\[
+ L_{\rm upper}=p_G L=G\cap(L+B),\qquad L_{\rm lower}=L\cap G .
+\]
+For the middle equality write \(a=p_Ga+(1-p_G)a\) for \(a\in L\).
+Conversely a vector of \(G\) in \(L+B\) projects to itself.
+The lower identity follows by pulling \(L\) back along the injective
+good-space embedding. These identifications give the same lattice
+quotient in the two realizations. \label{cor:automorphic-realization-39}
+
+The good projector in the localized definite model is the sum of
+the good point projectors. For the finite type check on the
+original row the supported lifts at a marked split factor are
+\((g,(g^{-1})^{\mathsf t})\) in the paired integral coordinates.
+The principal congruence kernels fix the forms at both marked
+row levels. If \(e=\sum_g c_g[g]\) is the finite idempotent, choose a lift \(\tilde g\) of each element by surjectivity.
+
+On the representation factoring through reduction one obtains
+\[
+ \sum_g c_g\,\rho(\tilde g)=\sum_g c_g\,\bar\rho(g)=\bar\rho(e).
+\] A nonzero vector in the good part of an isotypic
+summand retains that idempotent after projection onto an
+irreducible copy in which it has a nonzero component. One full
+good product of finite series projectors therefore acts
+nontrivially in its local components. The tame type dictionary
+identifies the degree-\(r\) support polynomials with their
+inertia polynomials including multiplicity. Conjugation gives
+the dual series, and the good set is dual stable. This gives
+the original good-label test carried into the localization.
+\label{cor:automorphic-realization-40}
+
+For the matched theta range, fix a localized index and denote the
+upward theta map by \(T\). On every nonzero lower isotypic summand the adjoint identity reads
+\[
+             T^*T=\lambda_\sigma I,\qquad \lambda_\sigma>0.
+\]
+At a split prime of norm \(q\), remove the common normalization.
+The lifted root multiset is the smaller one together with the
+specified string of length \(t\). Its largest modulus is
+\(q^{(t-1)/2}\), attained exactly once. For a block of length \(d<t\)
+with cuspidal root \(\alpha\),
+\[
+ |\alpha|q^{(d-1)/2}<q^{d/2}\le q^{(t-1)/2}.
+\]
+
+If a block of length \(d\ge t\) has centre of rank \(a\), its rank
+alone consumes \(ad\) dimensions. Thus
+\[
+                ad\le r+t<2t\le2d,\qquad a=1 .
+\] That center is unitary, so its largest modulus forces
+\(d=t\), and uniqueness of the top root forces a single such
+block. Dividing that root by \(q^{(t-1)/2}\) recovers its center.
+Reciprocity and split Frobenius density identify the global
+character. Remove one copy of this block, with multiplicities.
+At a good point \(x\),
+let \(U_x\) be the sum of the lower summands with the corresponding
+parameters, and \(V_x\) the point eigenspace. The parameter
+comparison gives \(TU_x\subset V_x\). Any other lower summand lifts orthogonally to \(V_x\).
+
+Indeed, writing \(C\) for the common tuple block and \(L,L'\) for the lower parameter multisets, cancellation gives
+\[
+ L\sqcup C=L'\sqcup C\quad\Longrightarrow\quad L=L' .
+\] Consequently \(T^*V_x\)
+is contained in \(U_x\). The downward nonvanishing condition
+is injectivity of \(T^*\) on the whole \(V_x\) for a good point.
+Section~\ref{subsec:selected-point-adjoint} gives injectivity of
+\(T^*|_{V_x}\) before the row orders are inserted, for the specified
+rank-one string \(t\ge r+5\), good finite type and marked moduli
+model. For \(v\in V_x\) one has
+\[
+ v\perp TU_x\ \Longrightarrow\
+ T^*v\in U_x\cap U_x^\perp=0\ \Longrightarrow\ v=0.
+\]
+The inclusion \(TU_x\subset V_x\) is therefore an equality.
+The class-sum identity and the good-type incidence rule now
+identify the sum of these ranges with the range of the good
+projector. The remaining simultaneous eigenspaces give its
+complement. \label{cor:automorphic-realization-41}
+
+Localize and extend scalars to the marked coefficient DVR.
+The integral double cosets preserve \(L\), with the same conductor
+in both its rational and spectral realizations. It decomposes
+integrally as \(\bigoplus_\alpha L_\alpha\) over the occurring
+residual blocks, and \(G=\bigoplus_\alpha G_\alpha\),
+\(B=\bigoplus_\alpha B_\alpha\) after scalar extension.
+The two lattices in the quotient
+\[
+          \frac{G\cap(L+B)}{G\cap L}
+\]
+therefore split by the same residual idempotents. Write \(Q_\alpha\) for the resulting localized quotient, and
+\(O_v\) for the coefficient DVR at \(v\mid\ell\). The normalized total
+order of this quotient is
+\[
+              \frac{\sum_\alpha\operatorname{length}_{O_v} Q_\alpha}
+                   {\operatorname{length}_{O_v}(O_v/\ell O_v)} .
+\]
+\proofstep{Normalize length by the original coefficient valuation.} This convention is invariant under extension of DVRs
+at the same place. Flatness carries the intersections and images
+to the extended comparison, and a composition factor over the
+old ring becomes a module of length the ramification index.
+For an extension \(O_v\to O_w\) of ramification index \(e\), this
+is the cancellation of Lemma~\ref{lem:retained-dvr-normalized-length}:
+\[
+ \frac{e\operatorname{len}_{O_v}(M)}{e v_v(\ell)}
+          =\frac{\operatorname{len}_{O_v}(M)}{v_v(\ell)}
+\]
+for the index quotient \(M\). At an untwisted place \(v\) there are no localization terms, and for every lift one obtains
+\[
+ \sum_{\text{localizations at }v}\operatorname{ord}(M)=0=\eta_j(v).
+\] This proves
+the identity with the prescribed \(\eta_j(v)\) at every place
+and every \(1\le j\le m\), with no factor from the local degrees
+or the number of localizations. The equality uses the good
+projector and integral comparison on the same chosen tuple.
+\label{cor:automorphic-realization-42}
+
+\proofstep{Carry the order to the level-three row specialization.}
+Apply the archimedean and type comparison to the localization that
+meets the united request. It uses the Lie and Galois comparisons
+on its compatible local parameter data and obtains the normalized
+character, local type and level data on that specialization.
+The row-lift family there is read in the same finite group and
+marked adelic frame. Write \(o_j(v)\) for the integral localization order on this row. The input to the normalized family is the pointwise equality
+\[
+ o_j(v)=\eta_j(v)\qquad(1\le j\le m,\ v\text{ a coefficient place}).
+\] Transporting the row to the normalized theta family preserves
+the original weight functions and character. The grid list transports by the
+preserved marked readings at each allowed depth. The initial
+pass and the rebuilt pass apply this argument to their respective
+strict-henselian inputs. Their resulting row specializations are identified by the same
+row and character comparisons.
+\label{cor:automorphic-realization-43}
+\end{proof}
+
+\begin{lemma}[Type of the universal theta series]\label{lem:universal-theta-type}
+Fix an index, a lift, and a sign in the prescribed row.
+Let \(M_0\subset M\) be the submodule with the marked level
+type. If \(\Theta=\sum_{g\in\Delta}a_g[g]\) is the universal theta series in \(M\otimes_O O[\Delta]\), then
+\[
+ a_g\in M_0\quad(g\in\Delta),\qquad \Theta_{\rm ordinary}\in M_0.
+\] After an admitted specialization the
+series lies in the scalar-extended type submodule.
+\end{lemma}
+
+\begin{proof}
+Fix an index, a lift \(1\le j\le m\), and a sign.
+Write \(M\) for the coefficient module of this row
+and \(M_0\) for the submodule satisfying the marked level
+type. Writing \(T_h\) for a level operator and \(A_h\) for its prescribed
+type action in these coordinates, the defining equations are
+\[
+                    M_0=\bigcap_h\ker(T_h-A_h)\subseteq M.
+\] The injection into the complex model intertwines these
+operators, so their kernel conditions may be tested there. There the theta transformation law
+gives the marked type. The same law holds for each admitted
+twisted generator and for every admitted universal coefficient
+viewed in the original row. The real comparison uses the
+uniform lift reading and the identical complex models
+of the actual row. \label{cor:automorphic-realization-44}
+
+\proofstep{Extract the coefficient for each element of the finite twist group.}
+The universal series lies in \(M\otimes_O O[\Delta]\)
+for the finite twist group \(\Delta\) and the coefficient
+ring \(O\) at this index. On the group-algebra basis the extraction of one coefficient is
+\[
+  (1\otimes[\delta]^*)\!
+    \left(\sum_{d\in\Delta}m_d\otimes[d]\right)=m_\delta .
+\] In the admitted case its
+class-sum formula is a finite sum over terms of that label.
+Each term belongs to the prescribed type submodule \(M_0\) of \(M\), so their sum is in
+\(M_0\) as well. Off the specified range the universal
+series is zero.
+
+Since the coefficient maps recover
+every coefficient of any expansion in the group basis,
+this proves the type assertion for every expansion
+and every label. The ordinary theta series itself lies
+in \(M_0\) by the same faithful type test. Thus every
+datum in the designated lift range may be used for the
+base equivariance of the theta data. For an admitted
+specialization the corresponding type assertion holds
+in the scalar-extended type submodule.
+\label{cor:automorphic-realization-45}
+\end{proof}
+
+\input{real-row-realization}
+\input{level-four-core}
+
+\begin{auxlemma}[The theta generator on a semistable split Hecke branch]\label{lem:marked-hecke-semistable-unit}
+Let \(R\) be a complete discrete valuation ring of mixed
+characteristic \((0,\ell)\) with finite residue field. Use a
+principally polarized semistable PEL fibre \((A,\lambda)\),
+with \(\mathcal O_E\)-action of Rosati involution \(a\mapsto\bar a\).
+Write \(\mathcal P_A\) for the rigidified Poincar\'e bundle on
+\(A\times A^\vee\). The marked theta line on this fibre is
+\[
+ L_A=(1,\lambda w_0)^*\mathcal P_A,\qquad
+            w_0\in\mathcal O_E,\quad w_0+\bar w_0=1 .
+\]
+
+Extend \(L_A\) cubically to the identity component of the
+semistable model. For a split Hecke prime \(p\ne\ell\) away
+from the marking, the \(\mathcal O_E\)-linear branch and its
+target line satisfy
+\[
+       f:A\longrightarrow B,\qquad f^\vee\lambda_B f=p^2\lambda,
+              \qquad L_B=(1,\lambda_Bw_0)^*\mathcal P_B .
+\] The theta trace on this branch carries an integral
+generator to an integral generator after the finite extension
+defining the branch. This holds also for \(p=2\) when this split
+prime is admitted.
+\end{auxlemma}
+\begin{proof}
+\proofstep{Identify the model norm for this theta line.}
+After finite extension take split Raynaud uniformization with period
+lattice \(Y\), character lattice \(X\) and principal polarization
+\(\Phi:Y\overset{\sim}{\to}X\). Write \(t(y,x)\) for the
+biextension trivialization on \(Y\times X\) and set
+\[
+     b(y,z)=-\log\|t(y,\Phi z)\| .
+\]
+This is the positive definite monodromy pairing.
+
+The Poincar\'e trivializations on the two period axes are rigidified.
+Translating both arguments multiplies the axis factors by the
+biextension value at the pair of periods. At the rigidified origin
+the axis factors are one, so the graph trivialization is
+\[
+                     c(y)=t(y,\Phi w_0y)\qquad(y\in Y).
+\] The resulting line on the abelian part is the same graph
+pullback of its Poincar\'e bundle. Bilinearity identifies the
+rigidified biextension with its pullback by \((-1,-1)\), so both
+graph lines are symmetric. Functoriality with respect to
+\(w_0\) and the adjoint identity give
+\[
+          -\log\|c(y)\|=b(y,w_0y)=b(y,\bar w_0 y)
+                      =\tfrac12 b(y,y).
+\]
+The graph description thus specifies the characteristic of the
+actual line. \cite[preprint, Section~3.4 and Theorems~3.10, 4.10]{frss-nonarch-theta}
+
+For a nonzero principal theta section \(s\), the coefficient at
+\(\Phi y\) in the Raynaud expansion is its coefficient at zero
+translated on the good abelian part and multiplied by \(c(y)\)
+in the corresponding Poincar\'e fibres. Translation preserves the
+model norm there. Write \(\gamma\) for the negative logarithm of
+the norm of the zero coefficient at the generic point of the good
+special fibre. In skeleton coordinates \(z\in Y_{\mathbb R}\),
+the Gauss formula and the quadratic correction for the cubical
+metric give
+\[
+ \begin{aligned}
+   -\log\|s(\xi_z)\|_{\rm can}
+    &=\gamma+\tfrac12 b(z,z)
+       +\min_{y\in Y}\{\tfrac12 b(y,y)+b(y,z)\}\\
+    &=\gamma+\tfrac12\min_{y\in Y}b(y+z,y+z).
+ \end{aligned}
+\]
+Indeed the correction \(\tfrac12 b(z,z)\) cancels the change
+\(b(y,z)+b(y,y)/2\) in the period functional equation. It gives the
+rigidified canonical metric by compatibility with pullback by
+\([2]\), which multiplies the quadratic form by four.
+\cite[Proposition~9.1 and its proof]{dejong-shokrieh-theta}
+
+The displayed minimum is zero at the origin of the skeleton.
+The supremum on each retraction fibre is attained at its Gauss point.
+At the identity component the negative logarithm there is the
+vertical order of the section in the cubical extension, using the
+valuation with \(-\log|\pi|=1\). Hence
+\[
+       -\log\sup_{x\in A^{\rm an}}\|s(x)\|_{\rm can}
+                    =\operatorname{ord}_{0}(s).
+\]
+A section on the generic fibre extends to the identity model
+precisely when this order is nonnegative: the model is smooth,
+the special fibre is integral, and all its other divisorial points
+lie on the generic fibre. Thus a generator has supremum norm one.
+The same calculation applies to \(B\). \cite[Proposition~10.3 and
+Corollary~10.4]{dejong-shokrieh-theta}
+
+\proofstep{Compare the two kernel actions at the actual level.}
+Let \(C=\ker f\), \(C_0=C\cap A[p]\) and \(\mathcal L=f^*L_B\).
+Write \(\mathcal B_A=(1\times\lambda)^*\mathcal P_A\) on
+\(A\times A\), with \(\mathcal B_B\) defined similarly.
+Functoriality and the polarization relation give rigidified
+isomorphisms of biextensions and of their restrictions to the graph:
+\[
+ (f,f)^*\mathcal B_B\simeq([p],[p])^*\mathcal B_A,\qquad
+             \mathcal L\simeq[p]^*L_A.
+\]
+For \(d\in C_0\), the two lifts of translation by \((d,0)\)
+differ by an invertible function on the proper connected
+\(A\times A\), hence by a scalar. Its restriction to
+\(A\times\{0\}\) is one by rigidification. Apply the same
+argument on \(\{0\}\times A\) to \((0,w_0d)\), using
+\(w_0d\in C_0\) by \(\mathcal O_E\)-linearity. Composing along
+the graph identifies the splittings \(U\) from \(f\) and \(V\)
+from \([p]\):
+\[
+                    U_d=V_d\qquad(d\in C\cap A[p]).
+\]
+
+Put \(S=[p]^*s\). The trace is \(C\)-invariant and therefore
+defines a section \(s'\) on \(B\) by
+\[
+                       f^*s'=\sum_{c\in C/C_0}U_cS .
+\]
+The rigidified pullback isomorphism preserves the canonical metrics
+by their multiplication law. Thus \(U_c,V_a\) are isometries for
+the supremum norm: each is a deck action on its own pullback line.
+The summands have distinct \(A[p]\)-characters by the perfect
+commutator pairing on \(A[p^2]\), since \(A[p]^\perp=A[p]\) there.
+Over a finite extension splitting the torsion, the zero-character
+projector therefore gives
+\[
+        |A[p]|^{-1}\sum_{a\in A[p]}V_a(f^*s')=S .
+\]
+Its denominator is an \(\ell\)-adic unit. Apply the ultrametric
+inequality first to the trace and then to the projector:
+\[
+ \|f^*s'\|_{\sup}\le\|S\|_{\sup}\le\|f^*s'\|_{\sup}.
+\]
+Surjectivity of \(f\) and \([p]\) now gives
+\(\|s'\|_{\sup}=\|s\|_{\sup}\). The first part of the proof now identifies the
+integral generator on the target.
+
+The complementary isogeny
+\(f'=\lambda^{-1}f^\vee\lambda_B\) satisfies \(f'f=ff'=[p^2]\).
+After extension both maps act on the identity components of the
+N\'eron models. Since \(p\) is a unit, \(p^{-1}df\) and
+\(p^{-1}df'\) are mutually inverse integral maps on each saturated
+eigensummand of the Lie lattice. Thus the tangent frame and theta
+generator remain integral on every such branch, including traits
+with toric reduction. Counting the branches gives an integral sum
+on these frames. Identifying this operator with a spectral Hecke
+operator on a specified rational subspace further requires the
+equivariance of its realization in the marked sections.
+\end{proof}
+
+\begin{auxlemma}[The geometric local unit ball and its scalar extensions]
+\label{lem:marked-semistable-local-ball}
+Let \(v\mid\ell\) be a coefficient place of the embedded small field
+\(F\). At a fixed marked level and weight, take \(V\) in the space of
+\(F\)-rational cusp sections.
+For every complete discrete valuation ring \(R\) with finite residue
+field and fraction field \(K\), take all embeddings
+\(F\to K\) over \(v\) and all framed semistable tests \(y\)
+over \(R\). The tangent vectors are bases of the saturated
+\(\mathcal O_E\)-eigenlattices and the theta section is a generator
+on the identity component. Use the extended valuation with
+\(v_R(\pi_v)=1\), where \(\pi_v\) is a uniformizer at \(v\). Set
+\[
+ M_v(V)=\{s\in V:\ v_R(s(y))\ge0\quad
+                \text{for every }(R,F\to K,y)\}.
+\]
+
+Let \(P\) be an admitted split place away from the level and
+splitting-character conductor, of rational characteristic \(p\ne\ell\).
+Write \(q_P=|\mathcal O_E/P|=\mathrm NP\). Fix a Hecke degree
+\(0\le a\le r\) and let \(n_V\) be the even theta weight.
+The geometric branch sum with scalar
+\[
+ c=q_P^{-a n_V/2},\qquad u_{\rm geom}=c(\mathrm NP)^{-a n_V/2}
+\]
+preserves this ball if it preserves \(V\). For a field extension
+\(F'/F\) and any valuation ring \(O\) of \(F'\) inducing \(v\), it
+preserves
+\[
+  \langle1\otimes M_v(V)\rangle_O
+       \ \cap\ (F'\otimes_F V_0)
+\]
+for every invariant subspace \(V_0\subseteq V\). The same conclusion
+holds for an invariant subspace over a larger coefficient field in
+the corresponding scalar-extended ambient space.
+\end{auxlemma}
+\begin{proof}
+On a test \(y\) each geometric kernel and its quotient may be defined
+over a finite extension. By Lemma~\ref{lem:marked-hecke-semistable-unit}
+the transported frame is integral there. Replacing its eigenbasis by
+an integral basis of the same flag and multiplying its theta generator
+by a unit change the weight evaluation by a unit. With the valuation
+still normalized on \(F\), each term in the branch sum satisfies
+\[
+    v_{R'}(s(y_C))\ge0,\qquad
+    v_{R'}\!\left(u_{\rm geom}\sum_C s(y_C)\right)\ge0 .
+\]
+Both integers \(q_P\) and \(\mathrm NP\) are powers of \(p\).
+The estimate descends to \(R\) on the original evaluation.
+Preservation of the \(O\)-span follows by linearity. Intersecting
+two invariant modules gives the stated restriction for valuation
+rings of arbitrary rank.
+\end{proof}
+
+In geometric coordinates the normalized trace contributes
+\((\mathrm NP)^{-a n_V/2}\). Writing its adelic evaluation as
+a sum of right translations introduces the splitting character
+of the reading. With \(c=q_P^{-a n_V/2}\) the respective
+coefficients are
+\[
+ u_{\rm geom}=c(\mathrm NP)^{-a n_V/2},\qquad
+ u_{\rm ad}=c\,\mu_0(\varpi_P)^{-a}.
+\]
+To compute the valuation of the character, choose \(h>0\) with
+\(P^h=(\alpha)\) and \(\alpha\equiv1\) modulo its conductor.
+The algebraic infinity type expresses a fixed positive power of
+\(\mu_0(\varpi_P)^h\) as a root of unity times a monomial in the
+conjugates of \(\alpha\). Each conjugate has all its finite prime
+divisors over \(p\), so
+\[
+                    v(\mu_0(\varpi_P))=0\qquad(v\nmid p).
+\]
+
+A finite family of CM evaluations can be used to bound a prescribed
+collection of vectors inside a full \(M_v(V)\). Its fixed inverse
+matrix costs the power of \(\pi_v\) in
+Lemma~\ref{lem:marked-bounded-denominator}. If the realized
+spectral span is the quotient of the same class-input space by the
+kernel of the geometric evaluation, this construction gives a
+specific integral module in that quotient, by inverse image under
+the injection into cusp sections. Using its ball for an independently
+specified rational row requires the specified reading to identify
+the two evaluations and their normalizations.
+
+\begin{auxlemma}[Finite harmonic jets in a semistable theta frame]
+\label{lem:marked-bounded-jet-frame}
+Fix the embedded CM field \(E\), the dimensions, an order \(d\)
+of differentiation and a coefficient place \(v\mid\ell\). Use the
+principal graph line of Lemma~\ref{lem:marked-hecke-semistable-unit}.
+On each of the semistable tests in
+Lemma~\ref{lem:marked-semistable-local-ball}, evaluate the harmonic
+jet of order \(d\) in any integral eigenframe. Start with sections
+of canonical supremum norm at most one, and form a fixed finite
+linear combination of their rigidified isogeny pullbacks and
+finite-order theta translations, of the marked tensor weight.
+Writing \(J_P\) for this contracted jet, there is a constant \(b\)
+depending only on the order, the polynomial, the tensor weight and
+the finite operations such that
+\[
+             v_R(J_P(y))\ge-b\quad\text{for every test }y,
+                         \qquad v_R(\pi_v)=1 .
+\]
+\end{auxlemma}
+\begin{proof}
+\proofstep{Trivialize the biextension to finite order.}
+Let \(G\) be the identity model. The biextension
+\(\mathcal B=(1,\lambda)^*\mathcal P\) on the generic fibre extends
+to \(G\times G\) as the polar biextension of its cubical line.
+In particular the two rigidified restrictions have the generic identification
+\[
+            \mathcal B|_{(1,w_0)}\simeq L_A .
+\]
+It extends to the identity model: the
+generic isomorphism can have vertical divisor only a multiple
+of the integral special fibre, and comparison at the identity
+makes its order zero. The same argument extends the rigidified
+adjoint isomorphisms for the \(\mathcal O_E\)-action.
+
+Use logarithmic coordinates \(z,w\) on the two formal groups over
+the fraction field. In smooth integral parameters the logarithm
+is obtained by integrating the invariant differentials with identity
+linear term. Its coefficients through degree \(D=\max(2,d)\) and
+those of its inverse have bounded denominators depending only on
+\(D\): integration divides by integers at most \(D\), and inversion
+with identity linear term uses finitely many additions and products.
+Thus for the logarithm \(l\) and exponential \(e\) of the formal group there is an integer \(c_D>0\), independent of the test, with
+\[
+    c_D [z^\alpha]l,\quad c_D[z^\alpha]e\ \in R^{\dim G}
+                   \qquad(1\le|\alpha|\le D).
+\]
+Substitution along integral tangent eigenvectors preserves this bound.
+
+Pick an integral formal frame for \(\mathcal B\) trivialized on
+both axes. Denote by \(h_1,h_2\) the logarithms of its discrepancies
+under doubling the first or second variable, using the biextension
+law to identify the resulting line with its tensor square.
+The discrepancy of addition in the first variable is one if either
+summand is zero. On putting the summands equal, its logarithm
+therefore has first-variable degree at least two. Likewise \(h_2\)
+has second-variable degree at least two. Commutativity of the two
+doublings gives in bidegree \((a,b)\)
+\[
+ (2^b-2)(h_1)_{ab}=(2^a-2)(h_2)_{ab}\qquad(a,b\ge1).
+\]
+
+Multiplying the frame by \(\exp H\) changes the two logarithms by
+\((2^a-2)H_{ab}\) and \((2^b-2)H_{ab}\), respectively. Thus one
+can make both vanish by setting
+\[
+ H_{ab}=\begin{cases}
+ -(h_1)_{ab}/(2^a-2),&a\ge2,\\
+ -(h_2)_{ab}/(2^b-2),&a=1,\ b\ge2,\\
+ 0,&a=b=1.
+ \end{cases}
+\]
+For the addition discrepancy of the new frame, simultaneous
+doubling of the two summands in the first variable doubles its
+logarithm. It has total degree at least two in those summands
+and consequently vanishes. The second variable gives the same
+conclusion. This constructs a frame compatible with both addition
+laws; at order \(D\) only finitely many of the indicated integers
+and exponential factorials occur in denominators.
+
+\proofstep{Impose the adjoint identity.}
+For \(t\in\mathcal O_E\), the discrepancy between the frame at
+\((tz,w)\) and at \((z,\bar t w)\) is the exponential of a bilinear
+form \(B_t(z,w)\), since both frames respect both additions.
+For a pair of eigenlabels \(\tau,\sigma\), put
+\(\sigma^*(t)=\sigma(\bar t)\). On this pair, addition and composition
+of endomorphisms give
+\[
+ B_{t+s}=B_t+B_s,\qquad
+ B_{ts}=\tau(s)B_t+\sigma^*(t)B_s,\qquad B_m=0\quad(m\in\mathbb Z).
+\]
+
+If \(\tau=\sigma^*\), these identities give a derivation of the
+separable number field \(E/\mathbb Q\) with values in the coefficient
+space. It vanishes, as follows by differentiating a separable
+minimal polynomial. Otherwise choose one primitive integral element
+\(t_0\) of \(E\). Replacing the frame by the exponential of a
+bilinear form changes \(B_t\) by
+\((\tau(t)-\sigma^*(t))\) times that form. Choose its coefficient
+to kill \(B_{t_0}\). Commuting \(t\) and \(t_0\) in the adjusted frame gives
+\[
+       (\tau(t_0)-\sigma^*(t_0))B_t
+           =(\tau(t)-\sigma^*(t))B_{t_0}=0 .
+\]
+The first factor is nonzero, so every \(B_t\) vanishes.
+
+The extra denominator is one of the finitely many nonzero
+differences of conjugates of \(t_0\). Each coefficient of
+\(B_{t_0}\) is bounded in the actual eigenvectors, since it
+uses only the integral adjoint isomorphism and the preceding
+finite-order frame. The adjusted frame has the required uniform
+denominator when evaluated in those vectors.
+
+The graph of \(w_0\) now gives a formal frame of the theta line.
+Two such adjoint-compatible frames differ on the graph by the
+exponential of a quadratic form coupling only opposite eigenlabels.
+Over all the columns its coefficients give the contractions
+\[
+       \sum_h\partial_{\tau,i,h}\partial_{\bar\tau,j,h} P=0
+\]
+of the specified harmonic symbol \(P\). Multiplication by this
+exponential therefore leaves its contracted jet unchanged. This
+identifies the computed harmonic jet with the one in the marked
+formula, including the one read in complex coordinates.
+
+\proofstep{Bound the translated germs.}
+A rigidified pullback between the corresponding symmetric lines
+is isometric for their canonical metrics by the multiplication
+law. A finite-order theta lift above torsion of order \(h\) also
+preserves the metric. Indeed take \(m>1\) with \(m\equiv1\bmod h\).
+The discrepancy of the two metrics, as a real logarithm \(b\) on
+the compact analytic abelian variety, obeys
+\[
+                  b([m]x)=m^2 b(x)+c
+\]
+for a constant \(c\), since the two rigid line isomorphisms differ
+by a scalar. Surjectivity of \([m]\) forces the oscillation of \(b\)
+to equal \(m^2\) times itself. Thus \(b\) is constant, and a power
+of the lift is the identity, so \(b=0\).
+
+By the identification at the identity Gauss point in
+Lemma~\ref{lem:marked-hecke-semistable-unit}, each resulting
+norm-bounded section has vertical order at least zero there.
+For exterior products and symmetric powers use the tensor powers
+of the same cubical metric at this point. The section consequently
+has an integral germ in any integral local frame.
+Converting its \(d\)-jet to the graph frame, applying the harmonic
+differential and summing the fixed coefficients cost only the
+finitely many denominators above. This proves the bound.
+\end{proof}
+
+\begin{auxlemma}[Fullness on the rational span of theta classes]
+\label{cor:marked-full-class-ball}
+Let \(V\) be the image of a finite-dimensional space of fixed
+definite class inputs under the marked algebraic theta map. At
+every coefficient place \(v\), its local unit ball \(M_v(V)\)
+satisfies
+\[
+      M_v(V)\simeq\mathcal O_{F,v}^{\dim_F V},\qquad
+                  F\otimes_{\mathcal O_{F,v}}M_v(V)=V .
+\]
+Its inverse
+image on the class space modulo the kernel gives the same lattice
+in that rational realization of the spectral span.
+\end{auxlemma}
+\begin{proof}
+Choose a basis \(s_1,\ldots,s_m\) of \(V\) among the class images.
+The principal theta generator has norm one by
+Lemma~\ref{lem:marked-hecke-semistable-unit}. Its fixed class
+formula consists of the finite operations of
+Lemma~\ref{lem:marked-bounded-jet-frame}. Thus a single \(b\ge0\)
+makes \(\pi_v^b s_i\) integral on every test. Use the separating
+marked CM evaluations on \(V\), at integral frames after one finite
+extension of the local field. Their fixed matrix is invertible on
+these basis sections. Every vector in the unit ball has integral
+readings there, so the inverse matrix bounds its coordinates:
+\[
+  \pi_v^b\sum_i\mathcal O_{F,v}s_i\ \subseteq\ M_v(V)
+       \ \subseteq\ \pi_v^{-c}\sum_i\mathcal O_{F,v}s_i
+                         \qquad(c\ge0).
+\]
+Over the discrete valuation ring this submodule is finite free of
+rank \(m\). The assertion includes \(m=0\). Pulling back to the
+quotient by the kernel preserves both inclusions. For a different
+prescribed realization one needs its identification with this
+particular quotient before transporting the lattice.
+\end{proof}
+
+\begin{proposition}[Signed theta coefficients on the original specialization]\label{prop:signed-theta-data}
+On the initial member with the prescribed row, tuple, and
+coefficient embeddings, the normalized signed theta coefficients
+are rational in the original coefficient coordinates. Fix an admitted
+index \(i\), lift, sign and theta datum \((s,h,P)\) consisting of support,
+adelic argument and harmonic polynomial. Let \(L_i^{\rm sup}\) be the
+supremum lattice over the coefficient DVR \(O_i\), and \(R\) the signed
+series map on the rational row. Write \(x_{Q,M,\delta}\) for the
+normalized row vector of the coefficient at \([\delta]\) of the universal
+series with auxiliary level \(Q\) and depth \(M\). There is one integer
+\(N\ge0\), depending on the fixed data, such that, with
+\(x=x_{Q,M,\delta}\),
+\[
+ \ell_i^Nx\in L_i^{\rm sup},\qquad
+ \ell_i^N R(x)\in R(L_i^{\rm sup}).
+\]
+
+This holds for every allowed \(Q\) away from the norm product of
+\(s\), every admitted depth \(M\), and each \(\delta\) in the resulting
+finite ray quotient. The same coefficient
+choices give the prescribed residual Galois representations on the
+averaged row.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Compare the real and theta-series realizations of the rational row.}
+The real and series realizations of the initial member use the same marked lattice, point evaluations and finite Hecke action. At index \(i\), lift \(j\) and sign \(b\), let
+\(O_i\) be the coefficient DVR, \(F_i\) its fraction field
+and \(\ell_i\) its residue characteristic. Denote the signed
+rational series map by \(R\), with values in the complex
+coefficient functions. The matched rational ray-level test
+applies to the base, twisted and universal series over the
+split deletion places.
+
+The ray-level test uses an orthonormal frame on the
+chosen test space and a common nonzero normalization scalar.
+One can move the frame to obtain this test. The moved and
+original readings agree after the phase and coordinate changes,
+so rationality of the three series transfers to the original
+reading. In the zero cusp space every test reads the zero vector. Thus if \(A,B\) denote the two readings,
+\[
+ A=B=0\quad\Longrightarrow\quad A=cB\quad\text{for every }c\ne0,
+\]
+so the normalization can still be chosen nonzero.
+\label{cor:automorphic-realization-46}
+
+\proofstep{Clear the universal coefficients before changing the level or depth.}
+A single denominator must work across the allowed levels and depths.
+
+Fix a nonzero index, a lift, a sign and one admitted theta datum
+\((s,h,P)\), consisting of its support, adelic argument and harmonic
+polynomial. The coefficient estimate requires an integer \(c\)
+for this datum. It must apply to every auxiliary level \(Q\) in the
+allowed range whose places lie away from the integer norm product
+of \(s\), every auxiliary exponent \(M\), and every group-algebra
+coefficient.
+
+For a harmonic
+polynomial whose evaluation is a generator of the small-field
+coefficient lattice, the integral core calculation supplies a
+nonzero factor \(u\) and a power of \(\ell_i\). Multiplying
+the coefficient by their product gives a sum of evaluations
+of integral core forms in the supremum lattice over \(O_i\).
+The two constants have different dependencies:
+\[
+ u=u(i,j,b,s,h)\ne0,\qquad
+ c_\gamma=c_\gamma(i,j,b,s,h,P_\gamma).
+\]
+They are uniform in the admissible auxiliary level, the auxiliary
+exponent and the coefficient of the group algebra.
+Lift the finite integral expansion of the evaluation of \(P\).
+Injectivity of harmonic evaluation gives
+\[
+ P=\sum_\gamma a_\gamma P_\gamma,\qquad
+ c=\max_\gamma c_\gamma,\qquad
+ \ell_i^c u\,x(P)=\sum_\gamma a_\gamma\ell_i^{c-c_\gamma}
+                              \bigl(\ell_i^{c_\gamma}u\,x(P_\gamma)\bigr).
+\]
+Here \(x\) denotes the coefficient evaluation before normalization.
+The right side is integral for each allowed \(Q,M\) and coefficient.
+For \(P=0\) no clearing is necessary. \label{cor:automorphic-realization-47}
+
+Dividing by the common normalization \(\nu\ne0\) gives
+\[
+ \lambda R(x)=R(x'),\qquad \lambda=\ell_i^c u/\nu,\qquad
+ x'\in L_{i}^{\rm sup}.
+\]
+The \(R\)-images of an \(F_i\)-basis are complex linearly
+independent. Hence \(x'_k=\lambda x_k\) in each coordinate.
+For any nonzero coordinate this gives
+\[
+                 \lambda=x'_k/x_k\in F_i
+\]
+in the chosen embedding. In this case choose \(N\) with
+\(\ell_i^N/\lambda\in O_i\); then \(\ell_i^Nx=(\ell_i^N/\lambda)x'\)
+is integral for every admissible coefficient vector \(x\). If \(\lambda\notin F_i\), every such vector vanishes. Thus the exponent may be chosen as
+\[
+ N=0\qquad(\lambda\notin F_i).
+\] The exponent depends
+on the datum, index, lift and sign and is common to all \(Q,M\)
+and coefficients. \label{cor:automorphic-realization-48}
+
+For the full Hecke preservation, take an allowed split prime \(P\)
+away from the two type primes and its normalized finite double coset
+on the lower row. Use a coefficient valuation of rational
+characteristic different from that of \(P\). The framed evaluation
+identifies the double-coset action with the corresponding transform
+of cusp sections, since their evaluations at the test points agree and
+the evaluation map is injective.
+
+For the degree \(a\) double coset, let \(c=q_P^{-a n_V/2}\).
+In the geometric frame the scalar and its adelic reading are
+\[
+  u_{\rm geom}=c(\mathrm NP)^{-a n_V/2},\qquad
+  u_{\rm ad}=c\,\mu_0(\varpi_P)^{-a}.
+\]
+Lemma~\ref{lem:marked-semistable-local-ball} proves the pointwise bound in the geometric frame, using the transported integral generator on each branch. The finite action commutes with the Hecke sum, since it changes the markings on its source and target simultaneously. Intersecting the extended ball with the type or good space gives the asserted preservation.
+
+\label{cor:automorphic-realization-49}
+
+The Galois input begins with the regular algebraic polarized
+attachment just used in block uniqueness. For a regular
+algebraic real norm shift \(\nu\) of a conjugate self-dual
+cusp \(\pi\), use the representation of \(\pi\nu\).
+Its labelled de Rham weights are those of the shifted infinity
+type with the rank normalization. At a place \(w\mid\ell\) with spherical local component, the unramified case of the stated attachment identifies its local Galois representation as crystalline:
+\[
+ \dim D_{\rm cris}(\rho|_{G_w})=\dim\rho ,
+\]
+with the dimensions taken over the respective base coefficient fields. For the potential crystallinity
+test, suppose that the local parameter has zero monodromy
+and the stipulated local type. First take a conjugate
+self-dual algebraic shift of \(\pi\). For an integral norm
+exponent take the trivial character.
+
+For a half-integral norm
+exponent use the following construction on the marked CM
+extension \(E/F\) with the chosen CM type \(\Phi\).
+This extension is unramified at every finite place. Let
+\(\eta\) be its quadratic idele class character on \(F\). Its local values in the unramified finite normalization are
+\[
+ \eta_v(\varpi_v)=
+ \begin{cases}1,&v\text{ split},\\-1,&v\text{ inert} .\end{cases}
+\]
+The real factors are sign characters.
+The CM type and field supply, for every root of unity \(\zeta\) in
+\(E\), an element \(\delta\in E^\times\) for which
+\[
+ \frac{\delta}{\bar\delta}=\zeta,\qquad
+ v_P(\delta)\text{ is even for }P\text{ inert over }F,\qquad
+ \prod_{\phi\in\Phi}\frac{\phi(\delta)}{|\phi(\delta)|}=1 .
+\]
+For \(\zeta\ne-1\), take \(\delta=1+\zeta\); explicitly
+\[
+                   \frac{1+\zeta}{1+\zeta^{-1}}=\zeta .
+\] The marked CM type has a fixed-point-free involution
+induced by a nonidentity Galois involution in its indexing
+subgroup that inverts the roots of unity. The phases in each
+pair are complex conjugates, so their product is one.
+
+For \(\zeta=-1\) take the marked square root of \(-d\).
+It has phase \(i\) at each member of the CM type, whose
+cardinality is a multiple of four. Both choices have
+valuation zero away from the rational conductor of the host.
+For the square root this follows from \(d\) dividing the
+conductor. For \(\zeta\ne-1\), a prime away from the conductor cannot divide \(1+\zeta\). Otherwise injectivity of reduction on the relevant roots of unity would give
+\[
+ \bar\zeta=\overline{-1}\quad\Longrightarrow\quad\zeta=-1 .
+\] The prime divisors of the
+conductor split in \(E/F\), giving the inert valuation condition.
+\label{cor:automorphic-realization-50}
+
+On ideles with unit finite components prescribe the product of
+the phases at \(\Phi\). On principal ideles prescribe one, and on
+finite lifts of uniformizers of \(F\) prescribe the values of
+\(\eta\). To verify compatibility, let \(k\in E^\times\) and let
+\(m_v\) be the exponents of the chosen uniformizers. Since all ramification indices here are one, the valuation of the product at \(P\mid v\) is the sum of the scalar valuation and the prescribed exponent. The unit condition is
+\[
+ v_P(k)+m_v=0\quad\Longleftrightarrow\quad v_P(k)=-m_v\qquad(P\mid v).
+\] Thus \(k/\bar k\) is a unit of absolute value
+one at every embedding. Kronecker's theorem and the preceding
+choice of \(\delta\) give
+\[
+ k/\bar k=\delta/\bar\delta,\qquad a=k/\delta\in F^\times,\qquad
+ m_v\equiv-v(a)\pmod 2\quad(v\text{ inert}).
+\]
+The split uniformizers have assigned value one.
+
+Write
+\(\operatorname{ph}_\Phi(x)=\prod_{\phi\in\Phi}\phi(x)/|\phi(x)|\).
+The intersection test becomes the quadratic product formula
+\[
+ \prod_v\eta_v(\varpi_v)^{m_v}
+ =\eta_{\rm fin}(a)^{-1}=\eta_\infty(a)
+ =\operatorname{ph}_\Phi(a)=\operatorname{ph}_\Phi(k).
+\]
+The character so defined on the generated open subgroup extends
+to the idele group by divisibility of the circle group. It is
+continuous because its restriction to the open subgroup is
+continuous. It is trivial on principal ideles, unramified at
+finite places and restricts to \(\eta\) on the ideles of \(F\).
+On an idele \(x\) the product evaluates the character on a norm; triviality of \(\eta\) there gives
+\[
+ (\xi\xi^c)(x)=\xi(x)\xi(x^c)=\xi(xx^c)=1 .
+\]
+The factor \(z/|z|\) at a member of \(\Phi\) has exponent
+\(1/2\) there and \(-1/2\) at its conjugate, in the convention
+of labelled exponents.
+\label{cor:automorphic-realization-51}
+
+Call the chosen character in either parity \(\xi\).
+Its exponents differ from those of \(\nu\) by integers at each
+label. It follows that \(\pi\xi\) is regular algebraic, since
+the change is a common integral shift within each infinity
+parameter. The quotient \(\nu/\xi\) is an algebraic Hecke
+character unramified at finite places. Its rank-one Galois
+character is crystalline above \(\ell\).
+At the specified local type in rank at least two, local-global
+compatibility gives zero monodromy on the de Rham attachment
+to \(\pi\xi\). It is potentially semistable and hence potentially
+crystalline when the monodromy vanishes. The twist back to the
+original attachment satisfies
+\[
+ r_\ell(\pi\nu)\simeq r_\ell(\pi\xi)\otimes r_\ell(\nu/\xi).
+\]
+Indeed the two semisimple sides have equal characteristic
+polynomials at dense Frobenius classes. The second factor on the
+right is crystalline, so the tensor product is potentially crystalline.
+\cite{blggt-attachment,caraiani-monodromy,berger-differential}\label{cor:automorphic-realization-52}
+
+The remaining Galois inputs are read at the actual indices.
+The full degree label gives the trivial wild inertia
+required for the level type. At conjugate places the local
+conjugate self-dual comparison transports the dual parameter.
+Inverting the eigenvalues at a transported tame generator
+preserves separation. In rank one the split Frobenius values identify the row character with the reciprocity character. Tameness makes its restriction to the principal units trivial:
+\[
+ \chi_w|_{1+\mathfrak p_w}=1 .
+\] The marked signature comparison and the
+toric datum join these properties in the cohomological and
+toric hypotheses of the export. Here the original rank and
+the two type primes satisfy \(r\ge100\) and \(g_k\ge2r\).
+
+The toric denominator uses
+integral normalized representatives at the tested prime and
+the finite norm calculation of
+Section~\ref{subsec:fitted-square-ratios}. The same class-zeta
+bound applies to each normalized class term and each class
+sum twisted by a ring-class character. The added level consists
+of split places prime to the base conductor and away from the
+tested characteristic. This gives the threshold at the
+given index before choosing the added level. The required roots of unity
+come from the joint coefficient choice for the two type
+primes. Thus the signed conditions use the row, series and
+character identifications of the averaged bases.
+\label{cor:automorphic-realization-53}
+\end{proof}
+
+\subsubsection*{Coefficient fields and character data for the second twist}
+
+The averaged theta bases already realize the assigned characters for the initial rational rows. We now compare the coefficient fields and character data required by the second twist, using those rows and their period values.
+For an index \(i\) over a prime \(\ell_i\), a lift
+\(1\le j\le m\) and a sign \(b\), the relevant theta vectors
+are the class averages of the signed theta series in the
+type-selected Hecke space. The rank used to choose the finite
+set of vectors is the rank of this span. The twist theorem uses
+the full-rank assertion to identify the span with the rational
+reading of the type-selected subspace.
+
+\begin{proposition}[Finite basis for the retained retwisting row]\label{prop:retwisting-row-basis}
+For an index \(i\) over \(\ell_i\), a lift \(1\le j\le m\) and
+a sign \(b\) in Proposition~\ref{prop:signed-theta-data}, the class averages
+of the signed theta series generate a finite free lattice
+\(L_{i,j,b}\) over \(O_i\). One can select class averages \(a_1,\ldots,a_d\) that give an integral basis:
+\[
+ L_{i,j,b}=\bigoplus_{k=1}^{d} O_i a_k.
+\] For the nonbase tuple, the tied
+range and faithfulness hypotheses identify its rational
+span with the good subspace used by the retwisting theorem.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Use the integral comparison before extending the fraction field.}
+The
+finite-class construction gives the integral comparison of the
+class sums with the Hecke coefficient module. The roots of
+unity of orders \(g_0(g_0-1)\) and \(g_1(g_1-1)\) are in the
+embedded field \(K_0\) for the coefficient values at the type
+primes. Write \(O_i\) for the local coefficient DVR. Take the
+integral comparison at trivial twist and empty auxiliary level.
+The \(O_i\)-span of the raw series injects via \(u\mapsto 1\otimes u\)
+into the image of the finitely generated multiplicity lattice under
+the theta map over the trivial-twist extension ring.
+
+For the finite faithfully flat extension ring \(B/O_i\), the descent map is injective:
+\[
+ U\hookrightarrow B\otimes_{O_i}U,\qquad u\longmapsto1\otimes u .
+\]
+The multiplicity image in which the raw series are read is finitely generated over \(O_i\). Since \(O_i\) is
+Noetherian, the raw span is finitely generated. Its image under
+the integral averaging operator is consequently a finitely generated
+torsion-free \(O_i\)-module \(L_{i,j,b}\).
+
+\proofstep{Choose a basis among the reductions, then lift by Nakayama.}
+Write \(L=L_{i,j,b}\), \(k_i=O_i/\mathfrak m_i\) and
+\(d=\dim_{k_i} L/\mathfrak m_iL\). Choose \(d\) averaged vectors
+whose reductions form a basis. Their column map satisfies
+\[
+ O_i^d\xrightarrow{\,C\,}L,\qquad
+ k_i^d\xrightarrow[\sim]{\,\bar C\,}L/\mathfrak m_iL .
+\]
+Nakayama gives surjectivity of \(C\). Since \(L\) is finite and torsion-free over the DVR, it is free of
+rank \(d\). The surjection \(C\) fits into the exact sequence
+\[
+       0\longrightarrow \ker C\longrightarrow O_i^d
+              \xrightarrow{C} L\longrightarrow0 .
+\]
+If \(K\) denotes the kernel over the coefficient DVR \(O\), its rank-zero and torsion-free conditions together give
+\[
+ K\hookrightarrow K\otimes_O\operatorname{Frac}(O)=0 .
+\]
+This also gives the empty basis when \(d=0\).
+
+\proofstep{Identify the rational span using the actual signed theta range.}
+The second argument determines the rational rank of \(L_{i,j,b}\)
+inside the signed Hecke space. The real-side map from each signed
+finite model is injective under the rational row comparison.
+The nonzero scalar multiplying its theta reading and the chosen
+real vector give the same coefficient reading on the rational
+form.
+
+At a nonbase index, let \(V_{\rm good}\) denote the good complex space at the indicated base reading. The range hypothesis and the finite class sum give 
+\[
+ V_{\rm good}=\operatorname{span}_{\mathbb C}(\text{projected lifts})\subseteq\operatorname{span}_{\mathbb C}(\text{averaged series}).
+\]
+ For the base reading the projected image is the good row by Proposition~\ref{prop:span-original-theta} in its stated stable range. 
+
+At a nonbase reading the marked comparison must identify the projected lifts and their signed class sums on the same space. On a tied good eigenspace \(V\), with lower summand \(U\) and lift \(T:U\to V\), Proposition~\ref{prop:downward-on-good-space} gives
+\[
+ V\ominus T(U)=\ker(T^*|_V)=0
+\]
+in the rank range of Lemma~\ref{hyp:tied-adjoint-level}, using \(T^*V\subseteq U\). Thus no choice of a basis of the integral lattice by itself provides the rational spanning assertion. 
+
+Over the rational form giving
+the complex reading, the dimension of this span is the largest
+size of a nonzero minor of a coefficient matrix. For the coefficient matrix \(C\) and local embedding \(\tau\), apply \(\tau\) to each minor:
+\[
+ \det\tau(C_{I,J})=\tau(\det C_{I,J})\quad\Longrightarrow\quad\operatorname{rank}\tau(C)=\operatorname{rank}C .
+\] This proves full rank
+of \(L_{i,j,b}\). The integral index in the Hecke lattice
+continues to enter the twist estimates.
+\label{cor:automorphic-realization-54}
+
+Use these bases in the all-coprime-powers choice of
+Section~\ref{subsec:retained-twist}. The type comparison
+above supplies the universal coefficient membership. Use the
+clearing powers and full Hecke preservation with the Galois
+and toric hypotheses on this same initial system. For a
+nonzero index \(i\) served by a nonbase tuple, the output is
+\(N_0(i)\), a level \(Q_i\) and a character with values in
+\(\mu_{\ell_i^{k_i}}\), \(k_i\ge1\). The quantifier on the signed
+character and valuation tests is
+\[
+ \exists\, Q_i,k_i,\varphi_i\quad
+ \forall a\in\mathbb Z,\quad (a,\ell_i)=1
+       \ \Longrightarrow\ \varphi_i^a\ \text{satisfies both tests}.
+\]
+Before each choice put all host primes over the exclusions into
+the avoidance set, including the two deletion primes, the sequence
+primes, the residual test prime and the original level primes.
+
+For successive indices also exclude all rational primes used
+earlier. The auxiliary places have degree one; this gives disjoint
+levels even after taking their rational norms.
+To choose the index at a coefficient place, group the contracted
+primes of \(K_0\) into orbits under conjugation. The marked
+two-place covering provides the original index and signed
+valuation on the fixed coefficient subfield at each place. Let \(\mathcal O\) be an orbit of contracted primes meeting the nonbase support. Choose one supported place \(r\) over the orbit, then use the single index
+\[
+ i(w)=i_{\rm orig}(r)\qquad(w\text{ supported},\ w|_{K_0}\in\mathcal O).
+\] The
+export gives the full rank and the basis on that very index,
+since \(r\) is assigned a nonbase tuple.
+
+At places contracting
+to the same prime as \(r\), its original side recovers the same
+valuation tests on \(\mathcal O_{K_0}\). At the conjugate prime
+use the conjugate side. Its embedding is the first embedding
+composed with conjugation. If the contracted prime is fixed,
+the representative's side already gives the valuation tests.
+At each place off the support keep its original index and
+signed reading, with trivial auxiliary character. Thus there
+is a reading at every place. The index is constant under
+conjugation and on each contraction fibre on the support.
+\end{proof}
+
+\begin{auxlemma}[Transport of the reference coefficients]\label{lem:reference-field-transport}
+Let \(K_s\subset K_0\subset K\) be the three coefficient fields of
+the reference calculation, embedded by \(\iota:K\hookrightarrow\mathbb C\).
+Let \(\Xi\) be its finite set of selected Hecke characters. Suppose a
+finite set \(S(\Xi)\subset\overline{\mathbb Q}\subset\mathbb C\) of
+additional character values, roots of unity and ray-field generators
+is required. There is a finite extension \(K'/K\), with embedding
+\(\iota'\) extending \(\iota\), containing these prescribed complex
+values. The embedded copies of \(K_s,K_0\) may be kept equal. If
+conjugation stability is required, assume that \(\iota K\) is stable
+under complex conjugation. In this case a possible image is
+\[
+    \iota'K'=\iota K\bigl(S(\Xi),\overline{S(\Xi)}\bigr)
+                           \ \subset\mathbb C .
+\]
+
+Let \(\mathcal H\) be the Hecke algebra away from the excluded
+places, let \(V\) be the reference space over \(K\), and give it and
+its two marked Hecke actions their original embeddings. If
+\(e\in\mathcal H\otimes K\) is either prescribed reference idempotent
+and \(\lambda\) a character acting on a reference vector, their copies
+on \(V\otimes_K K'\) satisfy
+\[
+  (eV)\otimes_K K'=(e\otimes1)(V\otimes_KK'),\qquad
+  \lambda'(T)=\iota'^{-1}\iota(\lambda(T))
+                  \quad(T\in\mathcal H).
+\]
+These identities apply to the reference summands carried to the new
+construction.
+\end{auxlemma}
+\begin{proof}
+Inside \(\mathbb C\) take the compositum of \(\iota K\) and the fields
+generated by the finitely many specified elements, and also by their
+conjugates when required. Give the two smaller fields their original
+embeddings. The required inclusion is the unique one satisfying
+\[
+    j=(\iota')^{-1}\circ\iota:K\longrightarrow K'.
+\]
+Tensor the direct sum \(V=eV\oplus(1-e)V\) with \(K'\). On a
+reference eigenvector \(v\) one has
+\((T\otimes1)(v\otimes1)=(v\otimes1)j(\lambda(T))\).
+A reference evaluation expressed in a fixed cusp basis has the same
+complex coordinates after replacing each coefficient \(a\) by \(j(a)\).
+When \(w\) lies above \(v\), contraction of prime ideals gives
+\[
+    j^{-1}(\mathfrak p_w)=\mathfrak p_v,\qquad
+    \operatorname{ord}_w(j(a))=e(w/v)\operatorname{ord}_v(a).
+\]
+Consequently an original vanishing condition modulo \(v\), or a
+nonzero residue, pulls back to the corresponding condition modulo
+every \(w\) above it. For a marked set specified by these original
+conditions, the resulting set of places is the entire inverse image.
+\end{proof}
+
+\begin{auxlemma}[The reference datum after adjoining the ray characters]
+\label{lem:second-core-reference}
+Fix the Hermitian spaces, lattices, levels at the word primes, split
+halves and deletion characters at one translate as in
+Definition~\ref{hyp:initial-adelic-frame}. Suppose the preliminary
+realization at this translate has been constructed. Write
+\[
+ K_s\subset K_0\subset K\subset\mathbb C,\qquad
+ \iota:K\hookrightarrow K'\subset\mathbb C
+\]
+for the distinguished fields and the finite enlargement of
+Proposition~\ref{prop:second-specialization-row}. Keep the images
+of \(K_s,K_0\) fixed in \(\mathbb C\). The geometric and adelic
+data of the reference tuple admit a presentation over this
+enlargement with the original small field, marked points, class
+representatives, oscillator, measures and analytic theta maps.
+
+For a coefficient-valued reference class form \(\phi\), denote the
+resulting form by \(\phi^\iota\). For its Hecke operators away
+from the levels and conductors one has
+\[
+ \phi^\iota(h)=\iota_*\phi(h),\qquad
+ T\phi^\iota=(T\phi)^\iota .
+\]
+Here \(\iota_*\) applies the inclusion to the coefficients of the
+value polynomial. These assertions hold on the reference row and
+on each copy of a common test at its own level.
+\end{auxlemma}
+\begin{proof}
+\proofstep{Retain the geometric model.}
+The PEL equations, integral structures, marked base point, component
+maps and the correspondence with the analytic quotient are already
+defined in the preliminary presentation. If \(F\subset K_0\)
+denotes its embedded geometric coefficient field, use the map
+\[
+                 F\longrightarrow K\xrightarrow{\iota}K'.
+\]
+Both embeddings of \(F\) into \(\mathbb C\) agree. Keep the
+model over \(F\), its ring of integers, its polarization, frames,
+and all the maps at its original levels. Its presentation over
+\(K'\) is obtained by pullback. The Hermitian groups and their
+adelic quotients depend on the original host and Hermitian
+spaces. We can use the original fundamental sets and Haar measures.
+Thus both their orbit masses and the Petersson integrals on the
+old complex forms have the original values.
+
+\proofstep{Identify the reference level and the copied forms.}
+Let \(S_{\rm type}\) be the prescribed set of type places and
+\(Q(\mu)\) the conductor support used for a tuple \(\mu\).
+For the reference tuple \(\mu_0\),
+\[
+              Q(\mu_0)=\varnothing,\qquad
+              S_{\rm type}\cup Q(\mu_0)=S_{\rm type}.
+\]
+At these places a pair consisting of a level subgroup \(J\) and
+its character \(\lambda\) becomes \((J,\iota\lambda)\).
+For each definite class represented by \(h\), apply \(\iota\)
+to the coefficients of \(\phi(h)\). The stabilizer and
+right-\(J\) equations commute with \(\iota_*\), since the
+weight action and the level character extend coefficientwise.
+Thus these polynomials define the form \(\phi^\iota\). On
+evaluation in \(\mathbb C\) at the distinguished embeddings,
+\[
+              (\iota_*\phi(h))_{\mathbb C}=\phi(h)_{\mathbb C}.
+\]
+For any fixed integral class lattice given by these finite
+stabilizer and level equations in the same value lattices, scalar
+extension to a finite extension of discrete valuation rings is
+flat. It commutes with their common kernel. This observation
+applies to the copied equations and their coefficient lattices.
+
+\proofstep{Transport the operators.}
+With the same oscillator vector and integration domain, the
+reference theta operator is given by the same integral on the
+same smooth inputs. The normalized algebraic reading agrees by
+Lemmas~\ref{lem:marked-theta-fibre-comparison}
+and~\ref{lem:marked-vacuum-scalar}. At a good prime a Hecke
+double coset has the same right-coset representatives on the
+copied level. If \(A_d\) is the coefficient action in the
+chosen convention, then at each representative \(h\)
+\[
+ (T\phi^\iota)(h)
+   =\sum_d \iota_*(A_d\phi(hd))
+   =\iota_*\!\left((T\phi)(h)\right).
+\]
+In particular a copied nonzero eigenvector of eigenvalue \(a_T\)
+has eigenvalue \(\iota(a_T)\). If a supported tuple requires a
+finer level, use its forgetful map to the reference level for
+the pullback of the old form. At a good prime the local factors
+of the two level subgroups coincide, so the same computation
+intertwines pullback and \(T\).
+
+\proofstep{Insert a moving character at its actual level.}
+For a carried tuple \(\mu\), the prescribed local level uses
+\(S_{\rm type}\cup Q(\mu)\), its split halves, and the finite
+level character specified there. Realize a level character on
+the cover by its kernel, where it acts by deck transformations.
+For an allowed fixed ray test with universal polynomial
+\(\sum_{\delta\in\Delta} a_\delta[\delta]\), choose the same
+test on this cover and pull back its value frames. Then for any
+allowed character \(\varphi\), with values read in a common
+extension,
+\[
+       \sum_{\delta\in\Delta}\iota_*(a_\delta)
+                   (\iota\varphi)(\delta)
+        =\iota_*\!\left(\sum_{\delta\in\Delta}
+                         a_\delta\varphi(\delta)\right).
+\]
+
+Here \(\iota\) also denotes the chosen extension to the field
+of the character values. Using a different primitive-root
+identification at a place above it replaces \(\varphi\) by
+\(\varphi^a\) for one \(a\) prime to its order.
+Proposition~\ref{prop:retwisting-row-basis} supplies the
+selected tests for all such powers. The equality compares the
+same fixed test and character in two coefficient presentations.
+The reference eigenvalue identity concerns the copied
+eigenvector. A newly twisted eigenvector is tested with its
+own finite character and level.
+\end{proof}
+
+The construction therefore starts with one preliminary realization.
+It exports the chosen finite indices, ray supports, characters and
+their all-powers tests. After adjoining their values the reference
+data can be carried as in Lemma~\ref{lem:second-core-reference}.
+At a place \(w\) of the larger field the index is obtained by
+contraction to the preceding field. The prescribed character
+and all-powers comparison then apply at \(w\). The final row
+must realize the new local types, the corresponding integral
+and real comparisons, and the estimates at its actual levels.
+Once it has been so constructed, write \(D'\) for that final
+member, with \(M_{w,D'}\) its column lattices.
+Both division estimates use the lattices of \(D'\); the
+preliminary member supplies the selection of characters. This
+order uses no comparison between the division errors of two
+different members.
+
+\begin{auxlemma}[A single period on the copied rational row]
+\label{lem:copied-reference-period}
+Fix a served coefficient index \(i\), a lift \(1\le j\le m\)
+and a sign \(b\). Use the reference realization of
+Lemma~\ref{lem:second-core-reference} and its fixed extremal
+vector \(v_0\). Suppose the first signed reading on its rational
+row is given by a period \(\nu_{ijb}\ne0\). On the copy one may
+take the very same \(\nu_{ijb}\), including for the common ray
+tests. Under the fixed-field identification the resulting
+reading at \(K'\) restricts to the old reading.
+Writing \(R,R'\) for the two signed readings and \(j\) for transport of coefficients, this gives on every common test
+\[
+                         R'(jz)(g)=R(z)(g).
+\]
+\end{auxlemma}
+\begin{proof}
+Write \(\sigma\) and \(\sigma'\) for the signed coefficient
+embeddings into the common complex realization, with
+\(\sigma'\iota=\sigma\). On a pure tensor \(z\otimes f\) and a
+marked representative \(g\), the normalized value on the copy is
+\[
+   \frac{\sigma'(\iota z)}{\nu_{ijb}}\,
+            \operatorname{ev}_{v_0}(f^\iota)(g)
+       = \frac{\sigma(z)}{\nu_{ijb}}\,
+            \operatorname{ev}_{v_0}(f)(g).
+\]
+
+The evaluation vectors and the analytic kernels are the copied
+ones. The identity on tensors gives equality on the original
+rational span and determines its scalar extension. To compare a
+common test supported at \(Q\), use the local section of each
+ray label, the original Fourier weights, and the determinant
+translation at \(g\). For its coordinate \(a\in\Delta_Q\), the
+translated local section is indexed by
+\[
+                      a-d_Q(g),\qquad d_Q(g)\in\Delta_Q .
+\]
+This label, the input polynomial and the placed finite
+representative coincide in the copied formulas. The stabilizer
+and Haar factor at each matching definite source class coincide
+as well. Their weighted sums give the same value for that
+coordinate. Finite specialization and the normalized value
+therefore commute at every eligible common test in this copy.
+\end{proof}
+
+\begin{auxlemma}[The character line at an added split prime]\label{lem:new-ray-character-line}
+At an added split prime \(v\in Q\) of a retained tuple, let
+\(F_v\) have ring of integers \(A\) and residue field \(k\).
+Write \(\xi:k^\times\to\mathbb C^\times\) for the nontrivial tame
+restriction of the chosen ray character, in the selected split half.
+Use a row of rank \(r+d\), where \(d=jt\), and the inverse image \(J\)
+in \(K=\mathrm{GL}_{r+d}(A)\) of the upper \((r,d)\) block parabolic.
+On the conjugate automorphic input the suffix is twisted by \(\xi\).
+After putting the determinant multiplier of the Weil action into the
+group coefficient, the normalized induced representation and the
+character to be tested there are
+\[
+ \pi'=\operatorname{Ind}_{P_{r,d}}^{\mathrm{GL}_{r+d}(F_v)}
+       \big((\tau_0\otimes\widetilde\xi^{-1}\circ\det)
+                           \boxtimes\sigma_0\big),
+ \qquad \eta(j)=\xi^{-1}(\det\bar j_{00}).
+\]
+
+Here \(\widetilde\xi\) extends \(\xi\) to \(F_v^\times\), with its
+unramified part absorbed in the spherical factors \(\tau_0,\sigma_0\).
+The representation on the rank-\(r\) block is spherical before the
+displayed twist. The rank-\(d\) factor is the spherical representation
+of the preceding \(j\) determinant strings. Then
+\[
+               \dim_{\mathbb C}\operatorname{Hom}_{J}(\eta,\pi')=1.
+\]
+The formula includes \(d=0\) and every power of the retained character
+prime to its order.
+\end{auxlemma}
+\begin{proof}
+Write \(X=\left(\begin{smallmatrix}A_0&B_0\\C_0&D_0\end{smallmatrix}\right)\)
+in the split oscillator model, with \(A_0\) square of size \(r\).
+On integral matrices take the test
+\[
+ f(X)={\bf1}_{\{A_0\in\mathrm{GL}_r(A),\,C_0\equiv0\bmod\varpi\}}
+                   \xi(\det\bar A_0).
+\]
+Right multiplication by \(j\in J\) multiplies this test by
+\(\xi(\det\bar j_{00})\). The scalar of the oscillator action on units
+is \(\xi(\det\bar j)^{-1}\). Their product is
+\(\xi(\det\bar j_{11})^{-1}\), the suffix character in the level.
+After conjugating the automorphic coefficient and moving the
+oscillator scalar to that coefficient the character is
+\[
+     \xi(\det\bar j_{11})\xi(\det\bar j)^{-1}=\eta(j).
+\]
+The same computation with left inverse multiplication gives the
+inverse level law on the other leg.
+
+Take unit spherical vectors in \(\tau_0,\sigma_0\), with product \(u\).
+The normalized induction on \(P_{r,d}\cap J\) acts on \(u\) by
+\(\eta\), since the modulus character is one there. Thus
+\[
+ v(pj)=\delta_{P_{r,d}}(p)^{1/2}
+             (\tau\boxtimes\sigma_0)(p)\eta(j)u,\qquad
+ \tau=\tau_0\otimes(\widetilde\xi^{-1}\circ\det),
+\]
+with value zero off \(P_{r,d}J\), is well defined and \(v(1)=u\).
+
+To bound the dimension, take unramified principal-series
+presentations surjecting onto the two spherical factors and induce
+in stages. Taking a \(J\)-character is exact by compact averaging.
+The cells \(B\backslash \mathrm{GL}_{r+d}(F_v)/J\), for the upper Borel
+\(B\), are indexed by \(r\)-element subsets of the diagonal positions.
+On diagonal units the characters of the principal series are
+\[
+        \underbrace{\xi^{-1},\ldots,\xi^{-1}}_{r},
+        \underbrace{1,\ldots,1}_{d}.
+\]
+Only the subset of the first \(r\) positions can match \(\eta\),
+because \(\xi\ne1\). On that cell a section is determined by a single
+scalar. This also proves the assertion when the suffix is empty.
+A power prime to the order leaves the inertia character nontrivial.
+\end{proof}
+
+\begin{auxlemma}[Occurrence on the signed row after specializing the ray character]\label{lem:new-ray-type-occurrence}
+Use the signed row of Proposition~\ref{prop:retwisting-row-basis} and the
+coefficient tests of Lemma~\ref{hyp:simultaneous-retained-twist}.
+Fix a served index, a lift \(1\le j\le m\) and either side. Let
+\(\varphi\) be its retained character and \(a\) prime to \(\ell\).
+Let \(V\) be the good rational span in that row. On the prescribed
+finite-class realization at the tuple \(\varphi^a\), denote by \(X_a\)
+the character space of source forms and by \(L_a:X_a\to V\) the theta
+class sum followed by the good projection, extending scalars as needed.
+
+Then \(L_a\) is onto. In its complex Petersson realization, for
+each joint bottom eigencharacter \(\lambda\) of the spherical operators
+outside the exceptional places where the attached local theta
+transfer is specified,
+\[
+ L_a^*(V[\lambda])\ \subseteq\ X_a[\lambda_a],\qquad
+ \dim X_a[\lambda_a]\ \geq\ \dim V[\lambda],
+\]
+where \(\lambda_a\) is obtained by that transfer. The assertion also
+holds after imposing the common finite type idempotent intertwined by
+the two theta actions. Thus every occurring bottom eigensystem has a
+nonzero vector on the prescribed upper character space.
+\end{auxlemma}
+\begin{proof}
+Put \(n=\dim V\). Proposition~\ref{prop:row-pair-removal} supplies a basis
+of the row lattice and a common clearing scalar \(x=\ell^c\).
+For the \(n\) selected source class generators \(z_i(a)\) at this
+tuple the specialized matrix in that basis satisfies
+\[
+       C_Q(u^a-1)=
+         [\,xL_a z_1(a)\ \cdots\ xL_a z_n(a)\,],\qquad
+       \det C_Q(u^a-1)=f_M(u^a-1)\ne0 .
+\]
+Use the inverse tuple on the side defined with the inverse character.
+The nonvanishing for both sides and all these powers is the simultaneous
+choice of Proposition~\ref{prop:one-retained-character}.
+Lemma~\ref{lem:universal-theta-type} gives the signed type on each
+specialized column. For the source character law, translate the
+class representative in its finite sum by a level element: the
+change in its determinant index multiplies its coefficient by the
+prescribed character, and its polynomial is transported by the
+coefficient representation. These are precisely the transformation
+laws defining \(X_a\). The columns span \(V\), including the empty
+case \(n=0\).
+
+For a tied arrow let \(h\) be an upper spherical operator and
+\(\mathcal T(h)\) its lower transferred operator. The good projection
+is orthogonal and commutes with this algebra. The downward
+intertwining law on the kernel and the Petersson adjoint give
+\[
+ L_a h^*=\mathcal T(h^*)L_a,\qquad
+ h L_a^*=L_a^*\mathcal T(h).
+\]
+
+Indeed the local transfer respects the involution. In normalized
+Satake coordinates the involution conjugates and inverts the
+parameters. The splitting characters are unitary and the appended
+string is fixed under this operation, by \(j'\leftrightarrow t-1-j'\).
+At an unramified place the local transfer on normalized parameters of
+one upward arrow, with its oriented splitting characters
+\(\chi_S,\chi_T\), is the multiset map
+\[
+ B_w\longmapsto
+     (\chi_S/\chi_T)(\varpi_w)B_w
+       \ \sqcup\
+     \{\chi_S(\varpi_w)({\rm N}w)^{\,j'-(t-1)/2}:0\le j'<t\}.
+\]
+It is injective by multiset cancellation. At inert hyperspecial
+places this formula reads the base-change parameter over \(E_w\);
+the Hecke operator is the relative spherical operator over \(F_v\).
+
+Iterate the formula along the tied arrows. At the residue-type
+places simultaneous translation of the two copies of the first
+block in the Weil kernel intertwines the common finite projector.
+The spherical operators commute with this projector by disjoint
+support. Equivalently the latter statements can be imposed first
+in forming \(X_a,V\).
+
+If \(v\in V[\lambda]\), the intertwining identity gives
+\(hL_a^*v=\lambda(\mathcal T(h))L_a^*v\). Surjectivity gives
+\[
+          \ker L_a^*=(\operatorname{im}L_a)^\perp=0 .
+\]
+This proves the asserted lower bound with the same finite test
+for each vector of the bottom eigenspace. When several full labels
+have the same restriction to the tested operators, the argument
+applies to their direct sum. It supplies a bound on the whole
+restricted eigenspace. It gives no numerical multiplicity for a
+particular representation inside that eigenspace without a projector
+separating that representation. In the comparison of the two signed
+coefficient models alone, the tested operators have split primes
+\(P\notin S_0(i)\) and degrees \(1\le k\le r\); the signed
+normalization multiplies their degree-\(k\) eigenvalue by
+\(c_{i,b,P}^{\,k}\).
+\end{proof}
+
+\begin{proposition}[Preservation of the row under the second specialization]\label{prop:second-specialization-row}
+In the two-pass construction, retain the embedded fields
+\(K_s,K_0\), the selected character data and the assigned
+word levels. Extension of the coefficient field and the second
+specialization preserve the transported row and the tuple
+character at each marked place and the grid tests at every
+admitted depth. If \(w\) lies over an original marked place \(v\), its tuple character is inherited from \(v\). In particular
+\[
+ \{\chi_{v(w)}:w\text{ over the marked places}\}=\{\chi_v:v\text{ marked}\},
+\]
+and the same tuple list includes the distinguished characters \(1,\delta,\delta'\).
+\end{proposition}
+
+\begin{proof}
+Carry the averaged bases of Proposition~\ref{prop:retwisting-row-basis}
+into this comparison, with their level type from
+Lemma~\ref{lem:universal-theta-type}.
+
+Keep the embedded fields \(K_s,K_0\) and the character frame.
+For each selected index choose a complex identification of its
+cyclic \(\ell_i^{k_i}\)-th roots and use class field theory for
+its ray quotient to form the complex finite-order Hecke
+character. At a prime outside \(Q_i\), let \(\gamma\) be
+the image of its Frobenius in the ray quotient, and let \(j_i\)
+be the chosen embedding of its character values. In the given
+Artin convention,
+\[
+ \chi_i(\mathfrak p)=j_i(\varphi_i(\gamma))^{-1},\qquad
+ \chi_i^c=\chi_i^{-1}.
+\]
+The second equality follows from conjugation on the ray character.
+The kernel is open because the quotient is finite and continuous.
+Injectivity of \(j_i\) preserves the nontrivial inertia at each
+place of \(Q_i\); the character is unramified elsewhere, and
+\(Q_i\) avoids the primes over \(\ell_i\).
+
+For every original
+coefficient place, use the character for its assigned index
+on the prescribed nonbase support, and use the trivial
+character on the complement. A new place of any eventual
+coefficient extension then inherits the complex character,
+level and root order from the place below it. If \(w\) is an upper prime and \(K\) the lower field in the contraction, compatibility of the field inclusion with conjugation gives
+\[
+ (\bar w)\cap K=\overline{w\cap K}.
+\]
+Under contraction,
+places with the same prime of \(K_0\) have contractions with the
+same prime of \(K_0\). The saturation of the initial support
+and the constancy of the index on this support show that
+these assignments agree there, including on the complement.
+The conjugate pair of local readings inherits the same index.
+The rational prime set of the marked data is unchanged.
+
+Let \(S\) be the set of the three distinguished characters and the
+deletion-character products from the assigned places. Contraction
+\(\pi\) is onto, so for the assignment \(v\mapsto\chi_v\) one has
+\[
+ \{\chi_{\pi(w)}:w\text{ in the extension}\}
+                 =\{\chi_v:v\text{ in the original field}\}.
+\]
+Thus \(\Xi'=S\) is known before adjoining roots. Adjoin to \(K\)
+the roots of orders \(\ell_i^{k_i}\), the values required by
+\(\Xi'\), and \(S_2(K_s,K_0,\Xi')\). Only finitely many places
+lie over the prescribed rational primes; at the other places
+the assigned root order is one. Choose finitely many generators
+of \(K/\mathbb Q\).
+
+Let \(A\) consist of these generators, the requested entries and
+roots, and \(i\). The required enlargement is
+\[
+ K'=\operatorname{Spl}_{\mathbb Q}
+          \left(\prod_{a\in A}\operatorname{minpol}_{\mathbb Q}(a)\right)
+           \subset\mathbb C .
+\]
+It is finite and normal, and complex conjugation permutes the roots
+of every factor. Hence it acts on \(K'\).
+The inclusions retain both coefficient embeddings: if \(i'\) denotes the inclusion of the enlarged field, then
+\[
+ i'|_{K_s}=i_s,\qquad i'|_{K_0}=i_0,
+\]
+where \(i_s,i_0\) are the original maps into \(\mathbb C\). If an additional field requirement concerns the
+reconstruction of the adelic datum or finite coefficient matrices,
+its finite list must be included in this step, with its
+additional avoidance set imposed before selecting the ray
+characters. The interval caller itself uses empty additional
+avoidance sets. \label{cor:automorphic-realization-55}
+
+There is a root identification to check when comparing the
+old character with the rebuilt one at \(w\) above \(v\).
+Write \(i=i(v)\), \(n=\ell_i^{k_i}\) and use the transported ray
+quotient with both marked maps on \(K_0\). In the common local
+fraction field let \(j_1,j_2\) read the old and new roots. Both embeddings account for all \(n\) distinct roots of \(X^n-1\) in the common local fraction field \(L\). Thus
+\[
+ j_1(\mu_n)=\mu_n(L)=j_2(\mu_n).
+\] For one
+primitive \(\zeta\) there is therefore a unit \(a\bmod n\) with
+\[
+ j_2(\zeta)=j_1(\zeta)^a,\qquad
+ j_2(\zeta^k)=j_1(\zeta^k)^a\quad(k\in\mathbb Z).
+\]
+The same exponent works on the whole ray-character image.
+
+Both the new arithmetic character and the old ray character
+read the same complex Hecke character at Frobenius outside
+\(Q_i\) and the residue characteristic. For an arbitrary element
+\(\gamma\) of the finite ray quotient, surjectivity of the Artin
+map gives a preimage in the Galois group of the ray extension.
+The abelian Chebotarev theorem realizes \(\gamma\) by a
+Frobenius at a place outside those exclusions.
+
+At that place
+each reading uses the inverse of the complex Hecke value, so
+the common exponent gives
+\[
+             \varphi^{\mathrm{new}}_{w}(\gamma)
+                         =\varphi_i(\gamma)^a
+\]
+after identifying the common coefficient rings. Equality in
+the fraction field gives equality in the root ring by
+injectivity. Hence the rebuilt tuple of index, level, root order
+and raw character is the original tuple with its character
+raised to a power prime to \(\ell_i\). The exponent may vary
+with \(w\), and the all-powers twist bound covers each new place.
+For the base support use the trivial auxiliary character.
+\par
+For the scalar extension of a fixed coefficient lattice, the
+length comparisons use normalized valuations. If a finite
+length module over the first local integer ring has elementary
+divisors \(\pi_v^{a_1},\ldots,\pi_v^{a_h}\), their orders after
+extension are \(e(w/v)a_1,\ldots,e(w/v)a_h\). Transitivity of ramification indices gives the equality of
+normalized lengths explicitly:
+\[
+ \frac{\sum_j e(w/v)a_j}{e(w/\ell_i)}
+       =\frac{\sum_j a_j}{e(v/\ell_i)} .
+\] The same calculation applies to the
+valuation of a scalar. Applying this observation to an
+automorphic comparison requires identifying the actual
+transported lattice and period on both sides.
+\label{cor:automorphic-realization-56}
+
+The rebuilt adelic datum uses the same column frame,
+choice of split places and character coordinates and the
+extended finite readings. Its bare row is built on the
+extended fine datum. The same-Galois construction and the
+rational and cuspidal readings give the intermediate state
+there. The first pass fixes the moduli point, its signed integral series and its eigensystem. For each good Hecke operator \(T\) at a split place away from both levels, write \(H_T\) for the finite level correspondence there. For a form \(a\) the test on a marked point \(z\) has the double-coset description
+\[
+             (Ta)(z)=\sum_{h\in H_T}a(zh)
+\]
+with the same normalization (and coefficient action) on both levels. Thus pullback of the values along the marked correspondence intertwines the two Hecke operators. If the marked value tests separate the form, equality of these evaluations gives equality of the carried eigensystems. 
+
+Lemma~\ref{lem:placed-row-theta} gives the marked points. The tests and their integral evaluations on the reference space are transported as in Lemma~\ref{lem:constructed-signed-coefficient-row}. At the chosen new type, Lemma~\ref{lem:new-ray-type-occurrence} supplies the eigencharacter on the tested algebra. The two bare Galois
+frames agree by transitivity, through the comparison
+with the bare source in each construction.
+\label{cor:automorphic-realization-57}
+
+Write \(i',i\) for the two fixed-field embeddings. Equality of their images defines the identification by
+\[
+ K'_0\xrightarrow{\ i^{-1}\circ i'\ }K_0 .
+\] This identification respects
+conjugation and integer rings. For the place map \(\pi\) and an
+integer \(a\in\mathcal O_{K_0}\) the local comparison reads
+\[
+ a\in\mathfrak p_{\pi(v')}\ \Longleftrightarrow\
+   a\in\mathfrak p_{v'}\cap\mathcal O_{K_0},\qquad
+ S_{\rm new}=\pi^{-1}(S_{\rm old}) .
+\]
+If \(S_i\) denotes the old support at index \(i\), the transported
+support is \(\pi^{-1}(S_i)\). Since contraction is surjective,
+\[
+                \pi^{-1}(S_i)\ne\varnothing
+                     \quad\Longleftrightarrow\quad S_i\ne\varnothing .
+\] \label{cor:automorphic-realization-58}
+
+These comparisons give a copy of the original
+eigensystem in the new intermediate state. It transports
+the twisting, scalar and theta data after the finite
+group and trivial-tuple projector have been identified.
+The series on the copy uses the comparison of the
+Hecke readings after restriction at the new types.
+The positive multiplicity and signed level comparisons
+are made on this series and give the new second
+intermediate level. They refer to the copied
+eigenvalues, the same range of lifts and the copied
+unipotent character. They also supply the conductor
+and level data for the two signed readings of the
+appropriate local twist.
+\label{cor:automorphic-realization-59}
+
+\proofstep{Keep the selected place and transport the old level tests using the same support.}
+The field comparison must preserve the selected place at which the row tests are imposed.
+
+Let \(p_*\) be the least split auxiliary prime specified for the grid and \(v_*\) its prescribed base place. This choice meets both exclusions simultaneously:
+\[
+ v_*\notin S_{\rm grid}\cup \bigcup_\mu\operatorname{supp}(\operatorname{cond}\chi_\mu),
+\]
+where \(S_{\rm grid}\) denotes the bad places of the grid.
+Use the compatible
+place on the enlarged frame, with the same selected
+host place above it. The field values and required
+roots lift through the inverse of the fixed-field
+identification. Since the distinguished and deleted
+character coordinates agree, the formula for each
+grid character agrees. The old level test at a supported
+index applies at its new presentation by the equality
+of support just proved. This gives transport of the list
+at every depth for which the old list is given.
+\label{cor:automorphic-realization-60}
+
+Let \(\pi\) denote contraction on coefficient places and \(i(v)\)
+the exported index. At the geometric point of the carried series
+the character choice is
+\[
+                 i_{\rm new}(w)=i(\pi w),\qquad
+                 i_{\rm new}(\bar w)=i_{\rm new}(w).
+\]
+The first equality uses the pulled-back support and its allowed
+reading; the second uses conjugation on the original assignments.
+The geometric comparison carries the grid, and spectral
+specialization preserves this index. Hence its signed tests use
+the exported signature and basis. The first specialization supplies
+these data from the original real and series readings and the
+second receives them on the transported series.
+\label{cor:automorphic-realization-61}
+
+For the tuple set \(U\) on this system, injectivity of the tuple-to-character map and the description of its image give the bijection
+\[
+ U\xrightarrow{\ \sim\ }\Xi',\qquad \mu\longmapsto\chi_\mu .
+\] Its distinguished tuples read
+\(1,\delta,\delta'\), and its assigned nonbase tuples read the
+products just constructed. Off the selected support the
+auxiliary character is trivial. On the base tuple the two
+conjugate readings have twisting order zero. The mass
+formula of Section~\ref{subsec:selected-word-level} returns
+the original \(d_{u,*}\) and \(D_*\) on this assembled member.
+The volume-to-mass identity uses its measured row, and its
+signatures and Weyl weights are the prescribed ones.
+
+For the
+stabilizer divisor use its single value across words and
+tuples, supplied by the column comparison. The congruence
+orders off the twist support vanish as above. These assignments exhaust the tuple range. On the twist support this follows from the tuple character formula; elsewhere its auxiliary factor is one. Since the tuple-to-character map is injective, equality of the two readings also identifies their labels:
+\[
+ \chi_{\mu_1}=\chi_{\mu_2}\quad\Longrightarrow\quad \mu_1=\mu_2 .
+\] These identities extend the member
+by its numerical conditions. Forgetting those conditions
+returns exactly its constructed object. In particular the
+pre-level masses are valid for the member obtained after both
+passes at any permitted levels at the primes assigned to the sequences.
+\label{cor:automorphic-realization-62}
+\end{proof}
+
+\paragraph{Substitution of the division lattices.}
+
+\begin{lemma}[Simultaneous substitution of the division lattices]
+At a fixed good member let \(M_u\) denote its rational ramified word columns. The divisor, arithmetic and period comparisons may be transported simultaneously for any assignment
+\[
+ u\longmapsto(N_u,h_u),\qquad N_u\subseteq M_u\text{ an integral submodule},\quad h_u\in\mathbb R.
+\] For a compatible completion these are its local
+lattices and heights.
+\end{lemma}
+\begin{proof}
+Write \(M_u\) for the rational space of the ramified word
+column. The substitution is made independently in every word column. Its entire input is
+\[
+ (N_u,h_u)_u,\qquad N_u\subset M_u\ \text{a coefficient-integer submodule},\quad h_u\in\mathbb R .
+\] Substitute \(N_u,h_u\) in the division
+coordinates of the member. Its Hermitian forms, local
+comparison bases, positions, split levels and degree-zero column
+are carried in the same coordinates. In particular their joint
+reconstruction can use the old matrices, local coefficient
+embeddings, bases and weight arrays with the new division
+coordinates inserted in the original column datum. Its kernel
+family on each selected pair uses the same class, series and
+substitution matrices. The expression of its entries from
+the chosen places and adapted bases is carried with the series.
+The downward maps and their paired integral identities persist
+with the same test, function, character and Haar measure.
+
+Let \(\pi\) pull an index of the substituted flag datum back to
+its original flag. At a flag \(a\) the quotient-prime set and
+model degree satisfy
+\[
+ Q^{(N,h)}(a)=Q(\pi a),\qquad
+ \deg^{(N,h)}(a)=\deg(\pi a).
+\]
+The marked chart, weights and model fibre are read at the same
+\(\pi a\). Closure of the geometric condition under a single
+\((N,h)\) substitution thus applies both to the initial flags
+and to flags resulting from earlier substitutions. \label{cor:automorphic-realization-63}
+
+For the arithmetic comparison use the two row realizations with their
+rational coordinates, lattices, finite types and signatures.
+In the revised norm choice retain the normalized character and
+signed basis. The same-row comparison transfers its grid list.
+If \(a\) identifies the earlier field and series with the present origin and \(b\) identifies that origin with the new one, the induced identification is
+\[
+ x\longmapsto b(a(x)).
+\]
+
+In the measured comparison use the saturation for the
+degree-zero column just transported and its original scale and
+evaluation. Its spectral data therefore transport on these
+columns with the prescribed \(N,h\). The sharp normalization
+and the type choices defining the logarithmic values transfer
+on the carried row. The two finite sets in the twist test and the
+same signed theta data give its transported test. The error
+model is the one read from the carried Hermitian column.
+For a fixed \((N,h)\) the transported column, comparison map, twist form and kernel are identified together. Thus the spectral and error estimates concern the same lattices and heights. \label{cor:automorphic-realization-64}
+
+Now fix a compatible completion \(p\). Take the actual local
+prime exponents prescribed by \(p\) and its heights \(h_u(p)\).
+By the primary-component construction the submodule \(N_u\)
+realizing these conditions satisfies, at each marked place \(v\),
+\[
+              (N_u)_v=N_{u,v}(p).
+\]
+Insert this joint choice in the preceding transport. Every
+coordinate, including the ramified column in the adapted entry,
+is the coordinate of \(p\). The transported column thus has the prescribed
+localizations and heights \(h_u(p)\). The
+twist and tuple laws give its local divisor and character tests.
+The scale, mass and size comparisons fixed the threshold before
+\(p\) was chosen. \label{cor:automorphic-realization-65}
+
+\end{proof}
+
+\subsection{The period operator at the selected subspace}
+\label{subsec:selected-completion-period}
+
+The localizations and heights now come from a single completed point \(q\). We must identify the operator that acts on its selected subspace. We first obtain the
+reciprocity data there from rational coordinates and the
+rational-pairing law of the chosen norm extension. We then
+identify the period of Section~\ref{sec:selected-row-gram}
+in the ramified coordinates of that same point. The measured
+row, the word cosets and the evaluation translate are those
+already chosen on \(q\).
+
+
+\begin{lemma}[The period pairing in rational coordinates]\label{lem:completed-rational-period-reading}
+Let \(D_c(Z)\) be the definite column data at an allowed subspace
+of the completion, with its chosen levels, jets, tuple characters
+and integral kernel. For a word \(u\) and tuple \(a\) in use, write
+\(\mathcal P^{\rm col}_{u,a}\) for the complex period pairing between
+its column forms and the row of that tuple. For a rational column
+coordinate \(x\) and face coordinate \(F\), the embedded scalar of \(D_c(Z)\) equals
+\[
+ \mathcal P^{\rm col}_{u,a}
+       \big(j_{N,u}(e_{\nu,u}x),\,j_{A,a}(r_{V,0}F)\big),
+\]
+where \(r_{V,0}\) restricts the original row at the refined level.
+\end{lemma}
+\begin{proof}
+The rational coordinate comparison accepts any Hilbert space,
+period operator and distinguished subspace on each \(D_c(Z)\).
+Use \((\mathbb C,0,0)\) provisionally. Its word index is the
+identity. The fitted rational column isomorphism satisfies
+\[
+       e_{\nu,u}\big(e_{\nu,u}^{-1}\Lambda_u\big)=\Lambda_u .
+\]
+For the other argument, the form recovered from \(r_{V,0}F\)
+and the restriction of the form defining the face have the same
+evaluation. Evaluation on restricted forms is injective, so their
+embeddings in the tuple row agree. Applying the definite column
+pairing gives the stated scalar, using the twisted form at a
+nonreference tuple. \label{cor:automorphic-realization-66}
+\end{proof}
+
+\begin{proposition}[Rationality of a nonzero period factor]\label{prop:rational-period-factor}
+In the coordinates of Lemma~\ref{lem:completed-rational-period-reading}, the reference sharp
+period descends to the rational good quotient. At a used tuple write \(P_\mu\) for the period and \(B_\mu\) for the indicated quotient pairing. For the coefficient embedding \(e:H\hookrightarrow\mathbb C\),
+\[
+ 0\ne P_\mu=c B_\mu\quad\Longrightarrow\quad c\in e(H).
+\]
+\end{proposition}
+
+\begin{proof}
+\proofstep{Keep the provisional periods while forming the rational quotient.}
+Put \(H\) for the coefficient field and \(e:H\to\C\) for its
+given embedding. For this calculation keep the provisional
+periods and the original size coordinates. The new real errors
+are those read on the resulting face. The original Petersson
+scalar and row scalars still give its primitive, separation
+and character identities, since its \(l_{6m,j}\) have their
+original values. The tuple labels, sharp and bottom embeddings
+and all the coordinate and lattice readings in the displayed
+period identity are therefore still available.
+
+On the reference tuple let \(T=j_A r_{V,0}\) be the sharp
+coordinate map and \(P_q\) the rational matrix to the good row.
+Its range is the entire good coordinate space by the primitive
+comparison. On the sharp coordinates the reference row identification makes the two composites agree:
+\[
+ \iota T=j_{EE}e_RP_q,\qquad T=j_A r_{V,0}.
+\]
+The complex span of the image of \(T\) is the degree-zero
+space \(V_0\) by equality of the two sharp projector ranges.
+The subspace removed by the orthogonal projection is
+\[
+ U=V_0\cap\ker\iota=\operatorname{span}_{\mathbb C}T(\ker P_q).
+\] Indeed the images of a rational row basis
+under \(j_{EE}\) are complex linearly independent, so ordinary
+elimination in the rational matrix \(P_q\) describes its
+kernel after extension of scalars. The same computation
+applied to \(T\) gives the asserted image in \(V_0\).
+
+Choose a rational \(G\) with \(e_RP_qG=v\). Pick a basis
+\(u_a=TG_a\) of \(U\) with \(G_a\in\ker P_q\). The projection
+coefficients of \(TG\) satisfy the Gram system
+\[
+ \left\langle u_a,TG-\sum_b c_b u_b\right\rangle=0
+ \quad(\text{each }a).
+\]
+The Gram matrix is invertible and its coefficients and the
+right sides lie in \(e(H)\), a field stable under conjugation.
+Hence all \(c_b\) lie in \(e(H)\). Their rational preimages
+give \(G'=\sum_b e^{-1}(c_b)G_b\in\ker P_q\). Now
+\[
+ T(G-G')\in V_0\cap U^\perp,\qquad \iota T(G-G')=j_{EE}v .
+\]
+This is the representative used by the quotient pairing.
+For every rational \(\phi,v\) it follows that
+\[
+   B_u^{\C}(j_N\phi,j_{EE}v)
+    = \mathcal P^{\rm col}_{u,0}
+       \big(j_N\phi,T(G-G')\big)\ \in e(H),
+\]
+by the rational scalar of the definite column with
+\(x=e_{\nu,u}^{-1}\phi\). This holds even when the orthogonal
+projection of \(TG\) is nonzero.
+
+The division construction requires a family of forms over \(H\)
+before rationality has been proved. Put
+\(b_u(\phi,v)=B_u^{\C}(j_N\phi,j_{EE}v)\) on rational coordinates.
+Use the single test \(b_{u'}(\phi',v')\in e(H)\) for all words and
+all rational pairs. Define, simultaneously for every \(u\),
+\[
+ B_{k,u}(\phi,v)=
+ \begin{cases}
+  e^{-1}(b_u(\phi,v)),&\text{if the test holds for every pair and word},\\
+  0,&\text{otherwise}.
+ \end{cases}
+\]
+In the first case the two coordinate maps are semilinear over \(e\).
+
+For \(a,b\in H\), complex bilinearity gives
+\[
+ b_u(a\phi,bv)=e(a)e(b)b_u(\phi,v).
+\]
+Applying \(e^{-1}\) on the image of \(H\) gives scalar bilinearity
+there, and additivity follows in each argument in the same way.
+The other case gives the zero forms. This defines the full family
+before the rationality proof. Localization carries the
+resulting conditional identity from the initial state, and
+changing \(N,h\) preserves the underlying rational spaces,
+maps and this identity. The calculation above satisfies its
+hypothesis on the completed data. Thus for all these pairs
+the displayed value is \(e(B_{k,u}(\phi,v))\).
+\label{cor:automorphic-realization-67}
+
+\proofstep{Choose a nonzero pair of rational coordinates before taking the ratio.}
+A rational pairing determines the comparison of two period normalizations from any pair of coordinates on which the denominator is nonzero. The choice below avoids dividing by an individual period that could vanish.
+
+Fix a word \(u\) and tuple \(\mu\). On \(V_0(\mu)\) suppose the period is given by the scalar \(d\) and the projected reading
+\[
+ v\longmapsto d\,B_u^{\C}\bigl(\iota(p_\perp v)\bigr),
+\]
+where \(p_\perp\) projects orthogonally onto \(V_0(\mu)\cap U(\mu)^\perp\). Suppose some period there is
+nonzero. Write \(p_\perp\) for that orthogonal projection. The kernel calculation identifies the two inputs to the period:
+\[
+ v-p_\perp v\in U(\mu)\quad\Longrightarrow\quad \iota(v)=\iota(p_\perp v)\qquad(v\in V_0(\mu)).
+\]
+An unused tuple has zero row image and could not have such a
+period. For a used tuple the sharp coordinate vectors project
+to a spanning set in \(V_0(\mu)\), and the rational column
+vectors span the complex column.
+
+If the right-hand pairing
+vanished on every pair of those vectors, complex linearity in
+each variable would give vanishing throughout. Thus there
+are rational coordinates \(x,F\) with nonzero denominator.
+The quotient image of the row vector is \(j_{EE}v\) for a
+rational \(v\) by the identification of the row space at the refined level at that tuple.
+Consequently
+\[
+        d=e\!\left(
+          \frac{D_c(Z).\operatorname{Pt}_{u,\mu}(x,F)}
+               {B_{k,u}(e_{\nu,u}x,v)}\right)
+\]
+at the selected row subspace \(Z\) of the rational reading.
+The original row chooses its scalar to agree with any such
+nonzero factor lying in \(e(H)\). This proves that agreement
+for every complex factor meeting the stated hypotheses. Here
+the factor multiplies the quotient pairing to give the column
+period. On a nonzero reading this is the reciprocal convention
+to the factor multiplying the column period in
+Section~\ref{subsec:selected-period}. \label{cor:automorphic-realization-68}
+\end{proof}
+
+\paragraph{The compatible reciprocity data.}
+
+\begin{proposition}[Compatibility of the marked reciprocity data]
+Let \(E\) be the original marked CM host. The spectral comparison and standard kernel at the adapted entry admit compatible Galois and automorphic embeddings with
+\[
+ \iota_{\rm Galois}|_E=\iota_{\rm aut}|_E .
+\]
+They retain the prescribed ray field, auxiliary extension and local choices.
+\end{proposition}
+\begin{proof}
+The host level in the completed point is supported on the two
+type primes, the two distinguished primes and the specified
+base auxiliary prime. Its level realization follows from the
+word system over this marked host. Retain the existing full and
+degree-zero word forms and their local comparison maps, the
+normalized character, the divisor geometry and the theta action.
+Use the twist supplied by the good member in the local Galois
+and norm data. Its choice agrees with the retained selection,
+so its character frame and tuple characters, local types,
+cover and Galois frame are the prescribed ones.
+
+Thus, writing \(E\) for the CM host, the two comparison embeddings restrict to the same map on \(E\):
+\[
+ \iota_{\rm Galois}|_E=\iota_{\rm aut}|_E .
+\] Artin reciprocity and the Weber
+ray-field comparison on the marked imaginary quadratic field
+identify the two prescribed field pieces (the ray field and
+the chosen auxiliary extension) in this frame. The row
+coefficient comparison just proved supplies the scalar
+condition on the same rows. These identities assemble the
+spectral data with the original geometry, tuple choices and
+word columns. \label{cor:automorphic-realization-69}
+
+Use the transported adapted entry to choose the standard
+kernel with its original class, frame, characteristic and
+support readings. In the standard coordinates the two Hermitian forms have the same
+Gram matrix and the two lattices impose the same local membership
+test. At each word, stage and admissible frame the identity matrix
+therefore satisfies both comparisons:
+\[
+           I^*H_{\rm std}I=H_{\rm std},\qquad
+           I\Lambda_{\rm std}=\Lambda_{\rm std}.
+\] The
+frame equality uses the ordinary comparison at an ordinary
+slot and the conjugate comparison at a dual slot. The
+original and twisted lower maps give the two row comparisons
+in these coordinates. Use the compatibility of the divisor
+character, the additive character of sign \(-1\), and the
+common Weil action to retain the joint comparisons.
+
+Let \(S\) contain the assigned sequence primes and all contractions
+of nonreference quotient primes. For a base ideal class represented
+by \(\mathfrak a\), choose \(b\in\mathfrak a^{-1}\) by approximation
+with \(v_P(b)=-v_P(\mathfrak a)\) for \(P\in S\). Then
+\[
+ b\mathfrak a\subset\mathcal O_E,\qquad
+ v_P(b\mathfrak a)=0\ (P\in S),\qquad [b\mathfrak a]=[\mathfrak a].
+\]
+Over the totally complex field \(E\), Artin reciprocity
+identifies the given Hilbert class field with the maximal unramified
+abelian extension. Its integers lie in the prescribed field by the
+marked integral containment. Transport through the specified
+embedding preserves the Galois property of the coefficient extension
+over \(\mathbb Q\). These choices give the required realization on
+the original host. \label{cor:automorphic-realization-70}
+\end{proof}
+
+Let \(Z_*\) be the subspace determined by the actual real row and
+its face. Use the positive definite counting Hilbert space
+\(\mathcal H_X\) of that measured comparison. Its character
+level and its good projector \(G\) were fixed on \(q\).
+Transport of the degree-zero word forms identifies them with the
+automorphic column functions at this level. Write \(J_u\) for
+the resulting bijection from the automorphic column to the
+abstract full column. On the former, let \(\mathcal P_u\) be
+the Poincar\'e sum using the specified coset representatives for the sequence.
+Its membership in \(\mathcal H_X\) and its linearity are the
+period identities for the sequence in the measured model.
+
+Write \(e_i\) for the rational coordinate vector and
+\(e_{\mu,u}\) for the complex column evaluation.
+In the ramified
+subspace of the full column put
+\[
+       b_{u,i}=e_{\mu,u}\,j_{N,u}(e_{\nu,u}e_i).
+\]
+Identify the word
+at a column label by the inverse of the bijection between the chosen sequence indices.
+Let \(\sigma\) be identity or complex conjugation according to
+the comparison of the coefficient embedding with the selected
+archimedean place. Use the Hilbert space with scalar action
+twisted by \(\sigma\). On its underlying additive space the
+operator at \(Z_*\) is
+\[
+   \operatorname{out}\,P_{u,*}(z)
+     =\mathcal P_u\,J_u^{-1}
+        \left(\sum_i\sigma(z_i)b_{u,i}\right).
+\]
+\begin{lemma}[The operator on the selected row]
+With the \(\sigma\)-twisted target action, the underlying operator satisfies
+\[
+ P_{u,*}(av+bv')=\sigma(a)P_{u,*}(v)+\sigma(b)P_{u,*}(v')\qquad(a,b\in\mathbb C).
+\]
+Thus it is complex linear into that target. On the good row its restriction is the ramified column reading at \(Z_*\).
+\end{lemma}
+\begin{proof}
+On the underlying Hilbert space, substitution of \(az+bz'\) in
+the displayed formula gives \(\sigma(a)\operatorname{out}P_{u,*}(z)
++\sigma(b)\operatorname{out}P_{u,*}(z')\), which is the required
+linearity in the twisted space. Membership in the distinguished
+row is tested by \(Gv=v\) after inclusion into \(L^2\).
+Consequently unfolding \(\mathcal P_u\) on these word functions
+restricts that very operator to the ramified columns.
+\label{cor:automorphic-realization-71}
+\end{proof}
+
+Replace the provisional period record at \(Z_*\) by this one.
+Keep the fitted words and their maps \(e_{\nu,u}\). The selected
+map into the row space at the refined level \(s_E\) is the measured evaluation at the
+original translate and Haar scale times the positive
+normalization chosen for the placement. On the sharp subspace
+it satisfies \(n_P\|s_Ev\|^2=\|v\|^2\).
+Read the size coordinates with the actual \(\Delta,h_0\) and
+\(N_c\) from the completion, where \(\eta_{\rm sz}=mh_0\).
+For the given real coefficient \(c'\), the update acts simultaneously
+on the size coordinates:
+\[
+ \widetilde l_{6m,j}=l_{6m,j}-c'l_{6u},\qquad \widetilde l_{6u}=0 .
+\]
+Every subtraction uses the original \(l_{6u}\).
+
+\paragraph{Placement on the updated face.}
+The row and divisor comparisons identify the two ambient realizations,
+the intermediate modules and the finite group identification
+after this replacement. For each nonzero base isotypic row labelled by \(\sigma\), the occurrence condition on the real row has two parts. At each required tuple \(\mu\), and at each other infinite place \(v\), it requires
+\[
+ V_{\mu,\sigma}\ne0,\qquad \pi_{\sigma,v}\simeq\pi_{\sigma,v}^{\rm prescribed},
+\]
+where \(V_{\mu,\sigma}\) is the corresponding tuple summand. This is the multiplicity comparison
+on the real row, applied with the generic series character and
+the chosen type data. With these inputs the column construction
+permits the new period and scale at fixed rational readings.
+
+Apply the definite-column comparison to the resulting face.
+It uses the equality of kernels and definite columns, the
+fitted period map for the sequence and the original rational coordinates. It then
+identifies its entire family of period spaces with the
+\emph{updated} family, including \(P_{u,*}\) at its selected
+subspace. The same comparison gives the actual weights, finite
+character labels and compatible column characters.
+\label{cor:automorphic-realization-72}
+
+\input{completed-division}

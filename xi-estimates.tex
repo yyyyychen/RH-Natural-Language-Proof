@@ -1,0 +1,472 @@
+\section{Integrable unipotent majorants}
+\label{sec:xi}
+
+The Fourier calculation controls oscillation. Absolute convergence of the real Bessel integrals also requires decay along the unipotent radical, including directions of the flag that the character does not suppress.
+
+Write \(\operatorname{Del}_l(g)\) for the square root of the Gram determinant of the first \(l+1\) vectors in the translated null frame, with the Euclidean inner product. For small positive defects \(e_l\) from the reference exponents \(s_l^0\), the positive function on the real unitary group used in the orbital integral is 
+\[
+ \Xi(g)=\prod_l\operatorname{Del}_l(g)^{-(s_l^0-e_l)}.
+\]
+ Proposition~\ref{prop:xi-group-majorant} uses this function for both translations and establishes integrability on the unipotent radical. The exponent for the
+group norm in this calculation can be taken to be
+\(A\ge 2(k+r)(r+1)+1\), where the unitary group has signature
+\((k+r,r+1)\). 
+
+The following argument proves existence at each rank. The constants in this existence argument may
+depend on the rank and the permitted exponent defects.
+This suffices for absolute convergence of the local integrals
+and the exchanges of order of integration used in the Bessel
+normalization and local amplitude estimates of
+Sections~\ref{sec:bessel-periods} and~\ref{sec:local-amplitudes}.
+
+\subsection{Heisenberg integrals}
+
+Successive integration along a null flag removes one Heisenberg group at a time. Its central coordinate and its two isotropic coordinates enter the Gram minors differently.
+
+Use variables \(a,b\in\C^p\), \(c\in\C^m\) and \(\beta\in\R\).
+With indices \(0\le l\le p\) set
+\[
+ \begin{split}
+ L_l&=1+\sum_{j<l}|a_j|^2,\qquad
+ R_l=L_p+\|c\|^2+\sum_{j\ge l}|b_j|^2,\\
+ B_l&=-\|c\|^2/2+i\beta-\sum_{j\ge l}b_j\overline{a_j},
+ \qquad D_l^2=L_lR_l+|B_l|^2.
+ \end{split}
+\]
+The critical list is \(s_l^0=2\) for \(l<p\) and
+\(s_p^0=m+1\).
+
+\begin{lemma}[Heisenberg integrability]\label{lem:heisenberg-integrability}
+The integral with exponents \(-s_l^0-\nu_l\) is finite
+if all prefix sums of \(\nu_l\) are positive and every
+proper prefix plus twice its tail is positive.
+For \(p\ge1\), the integral of
+\[
+ |b_0|^{-\gamma}\prod_l D_l^{-s_l^0+e_l}
+\]
+is finite if \(0<\gamma\le1\), \(e_l>0\), and
+\(e_0+2\sum_{l>0}e_l<\gamma/2\).
+\end{lemma}
+
+\begin{proof}
+\proofstep{The unsigned integral.}
+The integral of
+\(\prod_l D_l^{-s_l^0-\nu_l}\) is finite when the
+prefix sums of \(\nu\) are positive and every proper
+prefix plus twice its tail is positive. If \(p=0\),
+\(D_0^2=(1+\|c\|^2/2)^2+\beta^2\), so integrating \(\beta\)
+leaves a constant times \((1+\|c\|^2/2)^{-m-\nu_0}\).
+
+For \(p\ge1\) put \(R=1+|a_0|^2\). The first square completes as
+\[
+ D_0^2=R|b_0-a_0B_1/R|^2+D_1^2/R .
+\]
+The first prefix condition gives \(\nu_0>0\). Translation
+of \(b_0\), followed by polar coordinates, gives the exact identity
+\[
+ \int_{\mathbb C}D_0^{-2-\nu_0}\,d^2b_0
+  =\frac{\pi}{R}\int_{D_1^2/R}^{\infty} t^{-1-\nu_0/2}\,dt
+  =\frac{2\pi}{\nu_0}R^{-1+\nu_0/2}D_1^{-\nu_0}.
+\]
+
+More generally, with a prefactor
+\(R^{-1+\alpha/2}D_1^{-\alpha}\), scale the remaining
+complex coordinates by \(\sqrt R\) and \(\beta\) by \(R\).
+The remaining \(D_l\) scale by \(R\), while the measure
+scales by \(R^{2(p-1)+m+1}\). The reference exponents
+\(\sum_{l>0}s_l^0=2(p-1)+m+1\) cancel this Jacobian.
+The resulting \(a_0\)-density is
+\[
+ R^{-1+\alpha/2}\,R^{-\alpha-\sum_{l>0}\nu_l}d^2a_0
+   =R^{-1-\alpha/2-\sum_{l>0}\nu_l}d^2a_0 .
+\]
+The lower-rank integral merges \(\alpha\) into \(\nu_1\).
+For \(\alpha=\nu_0\) the integral over \(a_0\in\mathbb C\) is
+finite precisely when
+\[
+             \nu_0+2\sum_{l=1}^p\nu_l>0.
+\]
+This is the first proper-prefix condition. The reduced list is
+\((\nu_0+\nu_1,\nu_2,\ldots,\nu_p)\); its prefix and tail tests
+are exactly the remaining tests on the original list. Induction
+therefore proves convergence.
+
+\proofstep{A singular weight in the first opposite coordinate.}
+
+The unsigned integral controls the tail at infinity. The character estimate will also insert a singular power of one opposite coordinate, so local integrability at its zero has to be checked.
+
+
+There is a second integral with all exponents just below
+critical. If \(p\ge1\), \(0<\gamma\le1\), \(e_l>0\) and
+\(e_0+2\sum_{l>0}e_l<\gamma/2\), then
+\[
+  \int |b_0|^{-\gamma}\prod_l D_l^{-s_l^0+e_l}<\infty .
+\]
+Indeed for \(0<e<\gamma<2\) and \(d>0\),
+\[
+ \int_{\C} (|x-h|^2+d^2)^{-1+e/2}|x|^{-\gamma}\,d^2x
+ \le C_{e,\gamma} (|h|^2+d^2)^{-(\gamma-e)/2}.
+\]
+Rescale to \(|h|^2+d^2=1\).
+
+If \(d\ge1/2\), the
+first factor is bounded on bounded sets. Otherwise
+the singularities at \(0\) and \(h\) are separated.
+The local powers are integrable at either point and the
+infinite tail has exponent \(-2+e-\gamma\).
+The square completion now gives the bound
+\(C R^{-1+\gamma/2}D_0(b_0=0)^{-(\gamma-e_0)}\).
+Put \(\alpha=\gamma/2-e_0\). Since \(D_0(b_0=0)\ge
+D_1/\sqrt R\) and \(D_0(b_0=0)\ge|\beta-\beta_*|\),
+this bound is at most
+\[
+ C R^{-1+\gamma/2+\alpha/2}
+                  D_1^{-\alpha}|\beta-\beta_*|^{-\gamma/2}.
+\]
+The remaining density in \(\beta\) is a product of
+negative powers of \((A_l^2+(\beta-\beta_l)^2)^{1/2}\)
+with all widths \(A_l\ge R\).
+
+On
+\([\beta_*-R,\beta_*+R]\) each square root varies by a
+factor at most three. Averaging the density over that
+interval and integrating the singular factor bounds the
+integral by \(C R^{-\gamma/2}\) times the integral of the
+density. The same comparison holds on the complement
+since \(|\beta-\beta_*|\ge R\). We are left with the
+previous prefactor \(R^{-1+\alpha/2}D_1^{-\alpha}\)
+and \(\nu_l=-e_l\) for \(l>0\). Its conditions follow
+from \(\alpha>2\sum_{l>0}e_l\).
+
+\end{proof}
+
+\subsection{The character weight}
+
+Inserting the unipotent character introduces a real linear form in addition to the Gram weights. Decay in its translate is needed when the remaining coordinates are integrated.
+
+\begin{proposition}[A character-weighted Heisenberg integral]\label{prop:heisenberg-character}
+For the Heisenberg coordinates, minor exponents \(s_l^0-e_l\)
+near their reference values, and linear form with nonzero
+coefficient \(\eta\) on \(b_0\), the inserted weight
+\((1+|2\operatorname{Im}\mathcal L+c_0|)^{-\delta}\)
+gives an integral bounded by
+\(C|\eta|^{-\gamma}(1+|c_0|)^{-\delta/4}\) in the range 
+\[
+ p\ge1,\quad 0<\delta\le\tfrac12,\quad 0<\gamma\le\delta/8,\quad e_l>0,\quad e_0+2\sum_{l>0}e_l<\gamma/2.
+\]
+ The constant
+is independent of the coefficients of the linear form and \(c_0\).
+\end{proposition}
+
+\begin{proof}
+\proofstep{A quadratic sublevel estimate.}
+
+A polynomial of degree at most two on \([1,2]\) with maximum
+coefficient modulus \(M>0\) has a sublevel set of measure
+at most \(C\sqrt u\) where its modulus is at most \(uM\).
+In a sublevel set of positive measure \(v\) choose three
+points \(t_i\) separated by at least \(v/4\). Lagrange interpolation gives
+\[
+ P(t)=\sum_{i=1}^3 P(t_i)\prod_{j\ne i}\frac{t-t_j}{t_i-t_j}.
+\]
+Each coefficient on the right has magnitude \(O(uM/v^2)\),
+so \(v^2\ll u\). Splitting at \(u=M^{-1/2}\) proves
+\(\int_1^2(1+|P(t)|)^{-\delta}\,dt\le
+C_\delta(1+M)^{-\delta/2}\) for \(0<\delta\le1/2\).
+
+\proofstep{Averaging the linear character.}
+
+Consider \(2\operatorname{Im}\mathcal L+c_0\), with
+\(\mathcal L\) linear in the complex coordinates and nonzero
+coefficient \(\eta\) on \(b_0\). Rotate all complex
+coordinates by \((1+it)^2/(1+t^2)\).
+The \(D_l\) and measure are invariant. Write \(\mathcal L=A+iB\) before rotation. After multiplying
+by \(1+t^2\), the phase is
+\[
+     (c_0+2B)+4At+(c_0-2B)t^2 .
+\]
+Its maximum coefficient is comparable to \(|c_0|+|\mathcal L|\).
+The sublevel estimate thus bounds the averaged weight
+by \(C(1+|c_0|)^{-\delta/4}(1+|\mathcal L|)^{-\delta/4}\).
+Average next over \(a_0\mapsto ta_0,b_0\mapsto b_0/t\)
+for \(t\in[1,2]\). The measure is invariant, and each \(D_l\)
+is comparable to its original value by fixed factors.
+
+Write the resulting linear form as \(tA'+t^{-1}\eta b_0+C_0\).
+Multiplication by \(t\) gives the quadratic
+\[
+          t^2 A'+t C_0+\eta b_0 .
+\]
+Its maximum coefficient is at least \(|\eta b_0|\), so the
+averaged weight is at most \(C(1+|\eta b_0|)^{-\delta/8}\).
+For \(0<\gamma\le\delta/8\) apply the singular integral
+above. This gives
+\[
+ \int \prod_l D_l^{-s_l^0+e_l}
+       (1+|2\operatorname{Im}\mathcal L+c_0|)^{-\delta}
+ \ \le\ C|\eta|^{-\gamma}(1+|c_0|)^{-\delta/4}.
+\]
+The constant is uniform in the coefficients of the
+linear form and in \(c_0\).
+
+\end{proof}
+
+\begin{proposition}[Character-weighted convergence on the flag unipotent]\label{prop:xi-flag-unipotent}
+In the flag coordinates and with the Bessel character under
+consideration, the character-weighted unipotent integral with
+minor exponents near \(s_l^0\) is finite for sufficiently small
+positive defects. At fixed rank and for \(0<\delta\le1/2\), the induction chooses positive defects at each radical. Its character exponent after one radical and its permitted loss there are 
+\[
+ \delta_{\rm next}=\delta/4,\qquad 0<\gamma\le\delta/8,
+\]
+ by Proposition~\ref{prop:heisenberg-character}. The measure is product Lebesgue measure in the successive Heisenberg coordinates.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Identifying the unipotent integrals.}
+
+For the group interpretation remove the first hyperbolic
+pair \(e,f\), with form \(J\) on the remaining space.
+The Heisenberg radical has matrices
+\[
+ h(x,t)=
+ \begin{pmatrix}
+ 1&-x^*J&-x^*Jx/2+it\\0&1&x\\0&0&1
+ \end{pmatrix}.
+\]
+Multiplying the two matrices gives
+\[
+ h(x,t)h(y,u)=h\bigl(x+y,t+u-\operatorname{Im}(x^*Jy)\bigr).
+\]
+Left or right translation has triangular Jacobian with
+diagonal entries one. Thus \(dx\,dt\) is Haar in these
+coordinates. The smaller unipotent acts linearly on \(x\)
+by a determinant-one unitary matrix and fixes the central
+parameter \(t\), so the successive product measure is Haar.
+In the opposite null frame \(v_j\), its Euclidean dual
+and the remaining positive directions, the variables are
+\[
+   x=\sum_j(a_jJv_j+b_jv_j)+c,\qquad
+   \beta=t+\operatorname{Im}\sum_j b_j\bar a_j .
+\]
+The shear is translation in the central coordinate, so it
+preserves measure. The Gram determinant of the first
+column \(h(x,t)f\) and the next \(l\) null columns
+\(h(x,t)v_j=v_j-\bar a_j e\) is \(D_l^2\).
+
+In fact the latter columns have Gram determinant
+\(L_l\). Subtracting their \(b_j\)-multiples from
+the first column leaves middle and last squared
+length \(R_l\) and top coefficient \(B_l\).
+The Gram matrix of the last \(l\) columns is an identity
+plus the rank-one matrix from \((a_j)_{j<l}\). If \(e\) is
+the top unit vector, its squared projection on their orthogonal
+complement is \(1-\|(a_j)_{j<l}\|^2/L_l=1/L_l\).
+The Schur complement for the first column thus gives
+\[
+       D_l^2=L_l\bigl(R_l+|B_l|^2/L_l\bigr).
+\]
+
+\proofstep{Induction in the flag rank.}
+
+The one-step estimate retains dependence on the translate of the character. That retained decay permits integration over the next layer of the flag.
+
+
+For a fixed smaller element \(m_0\), Euclidean
+Gram--Schmidt writes its translated opposite frame
+as a compact translate times a triangular matrix
+\(P\). For the positive and negative projections of an orthonormal
+isotropic frame, the two Gram matrices sum to the identity and
+have zero difference. Thus
+\[
+    G_++G_-=I,\qquad G_+-G_-=0,\qquad G_+=G_-=I/2 .
+\]
+The compact group acts transitively on these pairs of scaled
+orthonormal frames. The triangular multiplier at each stage
+is the corresponding principal Euclidean Gram
+square root \(\operatorname{Del}_l(m_0)\).
+In the new Heisenberg variables the character has
+constant term equal to the smaller character phase
+and linear part pairing \(x\) with \(m_0 w_*\) after
+the compact frame change, for the first smaller
+Bessel vector \(w_*\). Thus
+\[
+ |P_{11}|\,|\eta|=|\langle v_1,w_*\rangle_J|,
+ \qquad |P_{11}|=\operatorname{Del}_0(m_0).
+\]
+The pairing is the dual null pairing if the smaller
+rank is positive.
+
+In rank zero \(w_*\) is negative
+and a null perpendicular space is nonnegative.
+The inserted coefficient is therefore nonzero.
+By Proposition~\ref{prop:heisenberg-character}, the integration
+over the first radical inserts \(|\eta|^{-\gamma}\) and leaves
+a smaller character weight of exponent \(\delta/4\).
+The displayed identity for \(\eta\) makes this the insertion
+of \(\operatorname{Del}_0(m_0)^\gamma\), times a constant.
+Thus only the first smaller minor exponent is reduced, by
+\(\gamma\).
+If the smaller rank permits defects less than \(e'\),
+choose \(0<\gamma\le\min(\delta/8,e'/2)\) and take
+the new defects less than \(\min(e'/2,\gamma/(4p+4))\).
+The induction starts with the trivial unipotent.
+
+\end{proof}
+
+\begin{construction}
+\begin{tabular}{@{}ll@{}}\toprule
+Columns at one Heisenberg step & Euclidean Gram data\\\midrule
+\(h(x,t)v_j=v_j-\bar a_j e\) & determinant \(L_l\)\\
+\(h(x,t)f\), projected off these columns &
+squared length \(R_l+|B_l|^2/L_l\)\\
+All \(l+1\) columns & determinant \(D_l^2=L_l R_l+|B_l|^2\)\\\bottomrule
+\end{tabular}
+\caption{Computing one flag minor by orthogonal projection. The rank-one correction to the Gram matrix of the last \(l\) columns contributes the denominator \(L_l\).}\label{fig:heisenberg-gram-minor}
+\end{construction}
+
+\subsection{The group bound}
+
+The one-step integrations control the successive unipotent coordinates. A uniform estimate on the real group must also allow a translate of the null frame on either side.
+
+Let \(a(g)=\|g\|_{\mathrm{Frob}}\) and write \(F_s(g)\)
+for the product of \(-s_l\)-th powers of the absolute
+values of the leading Hermitian minors of \(g\) on the
+opposite null flag. Take \(s_l=s_l^0-e_l\) with small
+positive defects. For a bi-compact-invariant weight,
+translating \(F_s\) on either side translates the
+associated null frame. Gram--Schmidt and compact
+invariance then factor out the products of the
+principal Euclidean Gram square roots to the powers
+\(-s_l\). This gives \(\Xi(x)\Xi(y)\) for translation
+by \(x,y\), with \(\Xi=\prod_l\operatorname{Del}_l^{-s_l}\).
+
+\begin{proposition}[Integrability for the two-sided majorant]\label{prop:xi-group-majorant}
+With the small positive defects of the Heisenberg argument,
+the group of signature \((k+r,r+1)\) satisfies 
+\[
+ \int_G F_s(g)a(g)^{-A}\,dg<\infty\qquad\bigl(A\ge2(k+r)(r+1)+1\bigr).
+\]
+ The resulting
+two-sided weight is bounded by a fixed constant times
+\(\Xi(x)\Xi(y)\), with the corresponding absolute unipotent
+integrals in the same normalization.
+\end{proposition}
+
+\begin{proof}
+\proofstep{The full-measure cell.}
+
+We check \(\int_G F_s(g)a(g)^{-A}dg<\infty\).
+With \(n\) the dimension after removing \(e,f\), write
+the full-measure cell as
+\(h(x,t)^{-1}w(c)\operatorname{lev}(g_0)h(y,u)\).
+Here \(w(c)e=cf,\ w(c)f=\bar c^{-1}e\).
+In the first-column coordinates, scaling the \(n\) unrestricted
+complex entries and the complex \(e\)-coefficient contributes
+\(|c|^{2(n+1)}\). The real null equation contributes
+\(|c|^{-2}\), leaving density
+\[
+   |c|^{2n}\,d^2c\,dx\,dt .
+\] The stabilizer of
+the first column has product Haar measure on the lower
+group and Heisenberg radical. Each leading Hermitian
+minor factors as the product of \(c\) and its smaller
+minor, by first row and column elimination. The Haar
+integral thus has a factor \(|c|^{2n-\sum_l s_l}\).
+
+\proofstep{Two bounds on the right radical.}
+
+Put \(d=2n+1\). Integration over the right radical at
+fixed \(c,g_0\) satisfies
+\[
+ E(c,g_0)=\int a(w(c)\operatorname{lev}(g_0)h(y,u))^{-A}dy\,du
+ \le C_A\min(|c|^{-d},|c|^{-1})a(g_0)^{d-A}.
+\]
+The squared norm bounds the two expressions
+\[
+   a(g_0)^2+|c|^2(\|y\|^2+u^2),\qquad
+   a(g_0)^2+\|g_0y\|^2+|c|^2u^2.
+\]
+For the first use \((y,u)\mapsto |c|(y,u)/a(g_0)\).
+For the second use \((y,u)\mapsto(g_0y,|c|u)/a(g_0)\), where
+\(|\det_{\R}g_0|=1\). The inverse Jacobians give
+\(|c|^{-d}a(g_0)^d\) and \(|c|^{-1}a(g_0)^d\), respectively.
+
+\proofstep{Induction after fixing the first column.}
+
+Let \(D_0=\|h(x,t)^{-1}f\|\). Use a compact element
+carrying \(f\) to \(D_0^{-1}h(x,t)^{-1}f\).
+If the chosen compact element is \(k_0\), its removal gives
+the first-column computation
+\[
+    w(cD_0)^{-1}k_0^{-1}\bigl(c h(x,t)^{-1}f\bigr)
+                    =w(cD_0)^{-1}(cD_0f)=e .
+\]
+The remaining factor is a lower group element times
+a right radical. Its smaller Euclidean Gram square
+roots are \(D_l/D_0\) for \(l>0\), by taking the
+Gram determinant after projection off the first
+column.
+
+Translate in the right radical and apply
+the compact-transfer identity on the lower group.
+This bounds the lower integral of the norm by
+the lower induction at exponent \(A-d\), multiplied
+by \(\prod_{l>0}(D_l/D_0)^{-s_l}\) and the right
+radical estimate at \(cD_0\).
+The threshold \(2(k+r)(r+1)+1\) drops by \(d+1\)
+when \(r\) decreases by one, as required.
+For \(\sigma=\sum_l s_l\) we have \(1<\sigma<2n+1\).
+In the bound for the right radical let \(c'=cD_0\). The
+weighted integral in \(c\) is
+\[
+ D_0^{-(2n-\sigma+2)}
+   \int_{\C}|c'|^{2n-\sigma}\min(|c'|^{-d},|c'|^{-1})\,d^2c' .
+\]
+
+Since \(d=2n+1\), the radial part of the last integral is
+a constant times
+\[
+    \int_0^1 t^{2n-\sigma}\,dt
+        +\int_1^\infty t^{-\sigma}\,dt .
+\]
+It is finite exactly for \(1<\sigma<2n+1\).
+After multiplying by \(\prod_{l>0}(D_l/D_0)^{-s_l}\)
+the remaining Heisenberg integral has defects
+\(\nu_0=e_0+2\sum_{l>0}e_l\) and \(\nu_l=-e_l\) for \(l>0\).
+Thus each prefix has positive defect sum,
+\[
+ \sum_{l=0}^j\nu_l=e_0+2\sum_{l>0}e_l-\sum_{0<l\le j}e_l>0.
+\]
+
+All those sums are small when the original defects are small.
+
+\proofstep{The last group integral.}
+
+At this point both radical integrations have bounds in the remaining variables. The group integral is finite only if the exponents left after both integrations still give decay.
+
+
+The group base is \(r=0\) with smaller compact
+\(U(k-1)\). For \(k\ge2\) the preceding \(c\)-integral
+leaves the single tail with exponent \(k+e_0\).
+For \(k=1\) the two extreme entries give the bound
+\[
+ E(c,1)\le C_A |c|^{-1}(|c|^2+|c|^{-2})^{(1-A)/2}.
+\]
+The \(c\)-integral then converges for \(A\ge3\) and
+\(0<s_0<1\). The remaining central variable has
+exponent \(2-s_0>1\).
+
+Finally each leading minor is bounded by a constant
+times \(a(g)^{l+1}\), so \(a(g)^{-A}\le C F_s(g)\)
+at these exponents. The shifted group integral
+therefore supplies the required product majorant.
+The integrable unipotent tails follow from the
+character bound above. Compact factors in the two
+definite stabilizers normalize the unipotent and
+preserve its measure and character. Their smallest
+singular values have positive lower bounds, giving
+fixed lower bounds on the translated Gram square
+roots. The same \(\Xi\) works for the group and
+unipotent integrals.
+\end{proof}

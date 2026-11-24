@@ -1,0 +1,207 @@
+\paragraph{Bounding the incidence form by an integral section.}
+We detail the Chow estimate used above. The integral lower bound
+needed is at one specified multiple of the light weight. Let
+\(M=(s+2)N\), \(t=1+\lceil P_O\rceil\), and suppose \(\delta>0\).
+Put
+\[
+ h=8M^2(s+1)\delta t,\qquad h'=8hM(s+1)\delta .
+\]
+For every component \(Z\) the input is
+\begin{equation}\label{eq:chow-lower-section}
+ \operatorname{mean}_{\sigma}\log\|g|_Z\|_{\sup,\sigma}
+                    \ge-h P_0 S_L
+\end{equation}
+whenever \(g\) is an integral linear combination of products
+of \(h\) light columns and \(g|_Z\ne0\). A lower bound on the
+supremum over the union of all components alone would not
+give this inequality. The integer \(h\) is fixed before applying it.
+
+\begin{proposition}[The component Chow form]
+\label{prop:integral-chow-bound}
+With the componentwise input \eqref{eq:chow-lower-section} at the
+chosen \(h\), the incidence forms of the selected family satisfy
+\[
+ \sum_Z h_0(F_Z)
+ \le(s+2)\delta(P_0 S_L+G_c S_L+\log N+1).
+\]
+The sum is over the same components as the slice degree.
+\end{proposition}
+
+\begin{proof}
+\proofstep{The incidence polynomial under a linear substitution.}
+Write \(Y_i=\sum_l U_{il}w_l\), \(0\le i\le s+1\), with
+all \(M\) entries of \(U\) independent. Let \(q(U,Y)\) be
+the primitive irreducible equation of the projected image of
+the given light component in \(\mathbb P^{s+1}_{K(U)}\).
+Set \(d_0=\deg_Y q\), \(u=\deg_U q\), and let \(m_Z\)
+be the covering multiplicity used in \(F_Z\). We use the
+incidence construction with
+\[
+ 1\le m_Zd_0\le\delta_Z,\qquad u\le(s+1)\delta_Z,\qquad
+                    h_0(F_Z)\le m_Z h_{\mathbb T}(q).
+\]
+Here \(h_{\mathbb T}\) uses the same Gauss norms and the
+mean log absolute value on unit \emph{circles} in all
+variables. To see the incidence comparison, let \(F_0\) be
+the Chow polynomial of the light image, so \(F_Z\) is its
+\(m_Z\)-th power up to scalar.
+
+On \(Y_0\ne0\) substitute in the \(s+1\) rows of the Chow polynomial the incidence coordinates
+\[
+  U'_{i l}=Y_0U_{i+1,l}-Y_{i+1}U_{0l}.
+\]
+After inverting \(Y_0\) this is a change of independent row
+variables followed by multiplication by units. The resulting
+equation is irreducible up to powers of \(Y_0\); removing
+those powers gives \(q\). Geometrically it tests equality
+of a projected image point and \([Y_0:\cdots:Y_{s+1}]\).
+For a general line in the target its inverse image is cut by
+\(s\) light hyperplanes. Counting those points bounds
+\(m_Zd_0\) by \(\delta_Z\); the row substitution gives the
+stated bound for \(u\). The homogeneous equations vanishing
+after 
+\[
+  Y_i=\sum U_{il} w_l
+\]
+ form the principal prime \((q)\):
+over \(K(U)\) the image has dimension \(s\) (a general linear
+projection preserves dimension), and primitivity descends
+divisibility to \(K[U,Y]\). Equivalently the differential
+argument for the generic rows proves this dimension statement.
+
+In the substitution into \(F_Z\) the coefficient of the
+highest power of \(Y_0\) is the original polynomial in the
+other rows of \(U\). Its log Gauss norm and torus mean do not
+exceed those of the substituted polynomial, by extraction
+of a leading coefficient and Jensen on the \(Y_0\) circle.
+In particular for \(P(Y_0)=\sum_{j=0}^d a_jY_0^j\) the local coefficient estimate is
+\[
+  \|a_d\|_{\rm Gauss}\le\max_{0\le j\le d}\|a_j\|_{\rm Gauss}=\|P\|_{\rm Gauss}.
+\]
+The mean on spheres of \(F_Z\) is at most its torus mean:
+condition on the radii and apply monotonicity of circle
+means of a subharmonic function, one variable at a time.
+Gauss norms and torus means are multiplicative, in logarithms
+additive; the scalar and the power of \(Y_0\) have global
+height zero.
+For a product of nonzero polynomials the logarithmic torus mean satisfies
+\[
+  \int_{\mathbb T^n}\log|FG|=\int_{\mathbb T^n}\log|F|+\int_{\mathbb T^n}\log|G| .
+\]
+ This proves the comparison.
+
+\proofstep{The coefficient estimate when the height is positive.}
+There is nothing to prove when \(h_0(F_Z)\le0\). Otherwise
+\(H=h_{\mathbb T}(q)>0\). Consider coefficient vectors of
+polynomials homogeneous of degree \(h\) in \(Y\) and degree
+at most \(h'\) in \(U\). Their dimension and the dimension of
+the multiples of \(q\) are, respectively,
+\[
+ A=\binom{h+s+1}{s+1}\binom{h'+M}{M},\qquad
+ B=\binom{h-d_0+s+1}{s+1}\binom{h'-u+M}{M}.
+\]
+Indeed both degrees add exactly in a product in a polynomial
+domain, and the quotient of a homogeneous polynomial by a
+homogeneous factor is homogeneous. Thus the shifted monomials
+times \(q\) give a basis for the second space. We need
+\[
+ \frac{B}{A-B}\ge \frac h{(s+2)d_0},\qquad
+                    \log A+P_O\le h .
+\]
+
+For the first assertion use the product expressions for \(B/A\).
+The sum of the deficits of their factors is at most
+\[
+ (s+1)d_0/h+Mu/h'\le(s+1+1/8)d_0/h.
+\]
+Since \(d_0/h\le 1/(8M^2(s+1))\), division by one minus
+this last deficit gives 
+\[
+  A/B-1\le(s+2)d_0/h.
+\]
+For the second assertion bound \(A\le(h+1)^{s+2}(h'+1)^M\)
+by counting exponents separately. Now \(h'\le h^2\),
+\(h\ge32M^2\) for \(s\ge3\), and \(\log(h+1)\le\sqrt h\).
+Hence \(\log A\le3M\sqrt h\le3h/\sqrt{32}\), leaving
+more than \(P_O\) by the definition of \(h\).
+
+\proofstep{The metric on the quotient of the coefficient lattice.}
+Give the coefficient spaces the Euclidean coefficient norms.
+The normalized Arakelov degree of the saturated sublattice of
+multiples in \(\mathcal O_K^A\) is at most \(-BH\).
+Here is a direct determinant calculation. At a finite place, multiplicativity of the Gauss norm identifies the cofactor lattice by
+\[
+  \|qg\|_{\rm Gauss}\le1\quad\Longleftrightarrow\quad \|g\|_{\rm Gauss}\le\|q\|_{\rm Gauss}^{-1}.
+\]
+At an embedding, order the cofactor monomials lexicographically.
+Gram--Schmidt on their multiples by \(q\) gives at each step
+the norm of \(q\) times a polynomial with leading coefficient
+one, measured in the coefficient \(L^2\) norm of the product.
+For the cofactor multiple \(H\), Parseval followed by Jensen gives
+\[
+  \Big(\sum_\alpha |[X^\alpha]H|^2\Big)^{1/2}=\|H\|_{L^2(\mathbb T^n)}\ge\exp\!\left(\int_{\mathbb T^n}\log|H|\right).
+\]
+ The mean
+logarithm of the monic factor is nonnegative by iterated
+Jensen. Thus each orthogonal length is at least the
+exponential of the mean log absolute value of \(q\). Multiplying
+these bounds and inserting the finite Gauss balls gives
+the claimed degree with the indicated sign.
+
+The orthogonal quotient lattice therefore has normalized
+degree at least \(BH\) in rank \(A-B\). Minkowski's convex
+body theorem applied to the lattice of real dimension
+\([K:\mathbb Q](A-B)\) supplies an integral coefficient
+vector \(Q\) with nonzero image such that its quotient norms
+satisfy
+\[
+ \operatorname{mean}_\sigma\log\|[Q]\|_\sigma
+    \le-\frac{BH}{A-B}+\tfrac12\log A+P_O .
+\]
+In detail, the real covolume in the conjugate-compatible
+sum metric is \(|\operatorname{disc} K|^{(A-B)/2}\)
+times the exponential of minus the unnormalized degree.
+The Euclidean unit ball in dimension \(a\) contains the
+cube of side \(2/\sqrt a\). Applying Minkowski and then
+arithmetic--geometric mean to the embedding norms cancels
+\(\sqrt{[K:\mathbb Q]}\), leaving \(\sqrt{A-B}\)
+and half the log root discriminant. The bound above enlarges
+both allowances. The quotient is the image of the integral
+coefficient lattice, so its nonzero vector lifts to such a
+\(Q\).
+
+\proofstep{Applying the integral section bound at the prescribed weight.}
+After substituting 
+\[
+  Y_i=\sum_l U_{il}w_l,
+\]
+ some coefficient
+\(g\) of the resulting polynomial in \(U\) is nonzero on
+\(Z\) by the kernel assertion. This is a single integral
+combination of \(h\)-fold products. To bound it at an embedding
+one may subtract the orthogonal projection of \(Q\) onto the
+space of multiples of \(q\) over \(\mathbb C\), since the
+substitution of the difference has the same value on \(Z\).
+Its coefficient one-norm is at most \(\sqrt A\|[Q]\|_\sigma\).
+
+If \((c_i)_{1\le i\le A}\) are the coefficients of the orthogonal representative, Cauchy--Schwarz gives
+\[
+  \sum_{i=1}^{A}|c_i|\le\sqrt A\left(\sum_{i=1}^{A}|c_i|^2\right)^{1/2}=\sqrt A\,\|[Q]\|_\sigma .
+\]
+Each substituted \(Y\)-monomial contributes at most
+\(N^h e^{h m_\sigma}\) in the pointwise metric, by the
+triangle inequality for the expansion. The same upper bound
+holds for every extracted coefficient times the one-norm.
+Comparing with \eqref{eq:chow-lower-section} gives
+\[
+ \frac{hH}{(s+2)d_0}\le
+ h(P_0 S_L+G_c S_L+\log N)+\log A+P_O .
+\]
+The two monomial counts and \(m_Zd_0\le\delta_Z\) prove the
+Chow bound for \(F_Z\) and summation proves the required
+bound for the family. Although \(h,h'\) grow with the number
+of rows and columns, both cancel in this estimate. The
+remaining arithmetic input in this step is the componentwise
+lower bound at precisely \(h w_L\).
+\label{cor:slice-chow-1}
+\end{proof}

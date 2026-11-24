@@ -1,0 +1,489 @@
+\subsection{The prime sums at a selected point}\label{subsec:loss-prime-account}
+\hypertarget{source-prime-class-loss}{}
+
+For primes outside the small-share estimate the loss depends on the Frobenius orbits and their endpoint weights. Both sums below use the translate already fixed in the slope comparison.
+
+\begin{established}[Cutoffs and widths in the prime-loss sum]\label{hyp:selected-prime-loss-weights}
+Fix the target character family and \(0<\epsilon<1/52\).
+Use a completed translate of Proposition~\ref{prop:translate-completion}, at
+scale \(x\), with \(n=|A|\), real degree \(f=2n\) and last rank
+\(N_m=k+m(t+1)\). Write \(a_s,-b_s\) for its two endpoint entries at
+\(s\in T\), \(i_p\) for the local image loss, and \(G_a\) for the
+arithmetic quantity in the local lattice comparison. Set
+\[
+ \begin{gathered}
+ z=x^\epsilon,\quad b=e^z,\quad a=xb,\quad X'=e^{z^{1/3}},\quad X''=xnX',\\
+ b'=a/X',\quad w''=a/X'',\quad \delta_1=z^{-1/8},\quad \ell=\log x .
+ \end{gathered}
+\]
+Then the prime split \(P=\lceil k^2x^{26}\rceil\), the relative width
+\(h=1/(kx^{13})\), and the share cutoff \(1/z\) may be used at every
+translate with \(a\le a_s\le a(1+h)\) and \(b_s\ge b'\).
+\end{established}
+\begin{proof}
+The independent integer choices in Section~\ref{subsec:frobenius-selection}
+place the first entry in \([a,a+a/(kx^{13})]\) and the second in an
+interval starting at \(b'\). Passing to the completed translate retains
+these entries. Squaring the inverse first width gives precisely the
+prime split \(P=\lceil h^{-2}\rceil\). All implied constants below are
+bounded by a common \(K\ge1\) after the family and \(\epsilon\) are fixed.
+\end{proof}
+
+\begin{proposition}[Prime loss before and after the lattice map]
+\label{prop:joint-prime-loss}
+With the two weight functions, the prime cutoff \(P\) and the
+share threshold \(z^{-1}\) of Lemma~\ref{hyp:selected-prime-loss-weights},
+there is a constant \(K\) for the fixed
+family and \(\epsilon\) such that eventually, uniformly in
+the translate index,
+\begin{equation}\label{eq:joint-prime-loss}
+ S_{\mathrm{prime}}-G_a\le(3K+13)m|T|b,\qquad
+ \sum_p(\log p)i_p\le m|T|b .
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+\proofstep{Move both sides to rational primes with the same local degree weights.}
+For a lift \(j\) and a top \(s\in T\), let \(W_{j,s,p,i}\) be the
+filled weight at the partner reached after \(i\) Frobenius steps.
+The second weight \(b_s\) enters this filling on the top positions.
+At an inert prime (the signal or the residue class in the host)
+the contribution before its logarithmic weight is
+\[
+ A_{j,s}(p)=\sum_{i>0,\ i\ {\rm odd}}
+                 (a_s p^{-i}-W_{j,s,p,i})_+ .
+\]
+Every filling is at least \(w''\ge1\). This follows at a top from
+\(b_s\ge b'\) and the positive offset. The lower offset is \(b\)
+at the other positions with larger weights and \(w''\) at positions
+with smaller weights. Thus at the positions with odd exponents one need retain only
+\[
+ 1\le i\le\lfloor\log_p a_s\rfloor+1,\qquad i\equiv1\pmod 2 .
+\]
+
+At \(d\) there is one sum with all
+positive exponents and the discriminant-partner weights. These
+weights are nonnegative and beyond the indicated cutoff the partner lies in
+the supported weights, where the weight is at least one.
+The same truncation applies there. In particular the weight sum at the selected point has the cutoff \(\lceil2a\rceil\) of the selector.
+
+Write \(g_j(p)\) for the gain kept at lift \(j\) and \(\tau(p)\) for the baseline cost of the restricted lattice; the total kept gain at the prime is
+\[
+ \sum_{j=1}^m g_j(p).
+\] The point identifies
+each local gain, cost and set of top indices on selected orbits with the corresponding quantity indexed by the rational prime. Inert primes at most \(X''\) have every place above them in
+the support. For larger primes both gain and baseline cost vanish,
+and at a non-inert place their difference contributes zero.
+Indeed the candidate-orbit set is empty above \(X''\), and the
+definition of the gain cuts it off there. If \(F\) is the
+coefficient field then 
+\[
+ \sum_{w\mid p}e_w f_w=[F:\mathbb Q],\qquad \frac1{[F:\mathbb Q]}\sum_{w\mid p}e_w\log\mathrm Nw=\log p.
+\]
+
+Consequently the sum of the normalized weights
+\(e_w\log{\rm N}w/[F:\mathbb Q]\) above \(p\) is \(\log p\).
+Hence the ordinary part of the difference in
+\eqref{eq:joint-prime-loss} is exactly
+\begin{equation}\label{eq:loss-deficit-per-prime}
+ 2\sum_p \log p\,
+ \left(\sum_{j,s} A_{j,s}(p)-\sum_j g_j(p)+\tau(p)\right),
+\end{equation}
+over inert primes. The \(d\)-sum has multiplier \(\log d\).
+The prime assigned to the sequence cannot occur in this inert sum. Its chosen norm
+generator and congruence give \(T_u\equiv1\) modulo the conductor of the auxiliary field times \((g_0g_1)^2\). In particular it is prime to
+the conductor and \(T_u\equiv1\bmod 4d\), so quadratic reciprocity
+gives \(({-d}/T_u)=1\). The dyadic prime divides the auxiliary conductor. Its splitting in the quadratic subfield follows from the discriminant test:
+\[
+ -d\equiv1\pmod 8\quad\Longrightarrow\quad 2\text{ splits in }\mathbb Q(\sqrt{-d}).
+\] These observations
+justify the inert drop rule without an exception depending on the sequence.
+\label{cor:prime-class-loss-1}
+
+\proofstep{Charge the top indices orbit by orbit.}
+Let \(S_c\) be the weight bound in the auxiliary data, with
+\(c_G=4S_c\), and let \(\eta\) bound the weight offset.
+Write \(\lambda_{\rm ord}\) for the order parameter of
+Section~\ref{sec:host-edge-tests} and \(r_G\) for the plane
+dimension, fixed for this choice of \(\epsilon\).
+Let \(C\ge1\) be a constant that may be increased a fixed
+number of times before \(x\) is chosen. Define
+\[
+ \begin{gathered}
+ K_0=k^2x^{78},\quad L_p=1+\lceil\log_p K_0\rceil,\qquad
+ H_\circ=\exp(x^{\epsilon/2}),\qquad S_k=S_c+k+\eta,\\
+ Q_1=C r_G b'\ell,\qquad
+ Q_2=C\bigl(b'/x+\eta+S_c+(w''+t)\ell/\delta_1\bigr)+H_\circ,\\
+ O_p=C\ell\left(\frac{\lambda_{\rm ord} a}{pk}
+       +\begin{cases}a p^{-L_p}&p<P,\\ a/p^2&p\ge P,\end{cases}\right),\\
+ B_p^*=C S_k\log_p(2a)+{\bf1}_{p<X'}
+                \bigl(O_p+{\bf1}_{p<P}Q_1+{\bf1}_{p\ge P}Q_2\bigr),\\
+ F_p=Cf\bigl(N_m^2\log_p a+(\log_p a)^2\bigr).
+ \end{gathered}
+\]
+At a prime \(p\) retained in the sum, write \(T_p\) for the
+top indices on its selected orbits. We claim
+\begin{equation}\label{eq:top-service-prime}
+ \sum_j\sum_{s\in T_p}\big(A_{j,s}(p)-B_p^*\big)-m F_p
+                  \le \sum_jg_j(p)-\tau(p).
+\end{equation}
+
+To verify this, first suppose that the set \(V\) of selected orbits
+at \(p\) is nonempty. It consists of the good orbits of a candidate
+prime in the residue class below \(X'\). Number one of them cyclically
+with length \(n'\). Write \(v\) for its number of tops and fix \(j\).
+By the good-orbit count in Section~\ref{sec:host-edge-tests},
+\(v\ge1,\ n'\delta_1\ll v\ell,\ n'\ll v\ell/\delta_1\), and
+\(N_+=40n'\delta_1\). Write \(L=\log_p(2a)\). The local digit cost is
+\[
+ d_v=c_1 n' N_m^2L+c_2 vL^2.
+\]
+
+For each top set \(M_s=\sum_{i>0,\ i\ {\rm odd}}
+\min(a_sp^{-i},W_{j,s,p,i})\).
+Termwise addition gives \(A_{j,s}(p)+M_s=a_s p/(p^2-1)\).
+With \(g^U_{jv}\) the gain using the up operator, this gives
+\begin{equation}\label{eq:orbit-min-balance}
+ \sum_{s}A_{j,s}(p)+\sum_{s\ {\rm even\ top}} M_s
+                  \le g^U_{jv}+d_v+3v c_G L .
+\end{equation}
+In fact the first term of the up gain uses \(a_s-2c_G\) at all
+tops.
+
+At an odd top it also subtracts the minima with the adjusted
+capacity \(W_{j,s,p,i}-\kappa_j+c_G\), where
+\(0\le\kappa_j\le N_m\), and this capacity is nonnegative.
+Writing the difference as a sum of positive parts, the two separate costs are bounded by
+\[
+ 2c_G\sum_{i\ {\rm odd}}p^{-i}\quad\text{(numerator)},\qquad c_G\quad\text{per originally positive term (capacity)} .
+\] There are at most \(L\) such indices since \(W\ge1\).
+At an even top only the numerator shift is needed. Here \(L\ge1\).
+
+Let \(P_{jv}\) be the exponent of \(p\) in the Hecke operator identity \eqref{eq:tag-p5}, \(t_v\) the real order
+and \(D_p\) the integral depth in the local edge test. For \(p<P\)
+the exponent \(P_{jv}\) is at most
+\(3r_G[v b'+n'(w''+\eta+c_G+N_m)]\).
+The expression for \(t_{\rm II}\) in Section~\ref{sec:host-edge-tests}
+costs
+\[
+ O\!\left(r_G v
+    (\lambda_{\rm ord} a/(pk)+a p^{-L_1}+c_0+k p^{G'})
+                  +r_G n'c_G\right).
+\]
+The local exponent here is \(L_1=\lceil\log_p((kx^{26})^4)\rceil\).
+Since \(p<k^2x^{26}\), \(pK_0\le(kx^{26})^4\), so \(L_p\le L_1\).
+Also \(c_0=2b'+2c_G=O(b')\), \(k p^{G'}\le b'\) by the
+small-prime bound there, and
+\((\ell/\delta_1)(w''+\eta+c_G+N_m)\ll b'\).
+
+For the last estimate \(w''=b'/(xn)\), the ranks are polynomial
+in \(x\), and \(\log(1+\eta+c_G)=O(x^{\epsilon/4}+\ell)\).
+In particular the displayed formula for \(D_{\rm II}\) gives
+\[
+ D_{\rm II}\ll r_G v b'\ell .
+\] Indeed the factor multiplying
+\(N_+\log_p a\) is polynomial, \(N_+\ll v\ell\), and
+\(n'c_G\ll v b'\). Together these estimates give \(P_{jv}+\lceil t_v\rceil+D_p+1\le v(Q_1+O_p)\). Integer roundings cost at most
+one apiece.
+
+For \(P\le p<X'\) there is a term in \(t_{\rm I}\) of the size of
+a top weight. Discarding this term as an error would exceed the
+available bound. At each odd top \(y\) take the preceding even top
+\(u\) and its positive distance \(i\), with summand zero if no
+such top exists. The length \(n'\) is even on these candidate
+orbits, so \(i\) is odd also across the end of the cycle.
+
+The pair \((u,i)\) recovers the residue \(y\), proving injectivity:
+\[
+ (u,i)=(u',i')\quad\Longrightarrow\quad y\equiv u+i=u'+i'\equiv y'\pmod{n'} .
+\]
+Thus the sum of the terms \(\min(b_y,a_up^{-i})\) costs at most
+\(\sum_{u\ {\rm even\ top}}M_u\), as \(W_y\ge b_y\). The variable
+part of the exponent \(P_{jv}\) is
+\(\sum_{y\ {\rm odd\ top}}(W_y-\kappa_j-b_y)\).
+The chosen offsets bound this by \(v(b'/x+\eta)\).
+This explains the surviving term \(b'/x\) in \(Q_2\).
+
+The residual terms in the large-prime order are bounded, up to fixed
+constants, by
+\[
+ vN_1\big(a/p^2+\lambda_{\rm ord} a/(pk)\big)
+  +v\big(p^{G'}c_6+kp^{G'}+k\log_p a+c_G\big)+2n'c_G .
+\]
+Here \(c_6=8(D_{\rm I}+1)+O(N_+k\log_p a+(N_++n')c_G)\)
+is the internal conductor. The remaining contribution to \(P_{jv}\) is
+\(O(n'(w''+\eta+c_G+N_m))\).
+
+We have \(N_1\ll\ell\), and the \(n'w''\) part costs
+\(O(vw''\ell/\delta_1)\).
+The depth \(D_{\rm I}\) is polynomial in \(x\). Moreover
+\(\log(p^{G'})=O_\epsilon(x^{11\epsilon/24}\ell)\).
+Set aside the two terms already bounded by \(O_p\) and \(w''\ell/\delta_1\). The remaining terms per top, including conductors, depth and roundings, have logarithm bounded by
+\[
+ O_\epsilon\!\left(1+x^{11\epsilon/24}\ell+x^{\epsilon/4}+\log x\right)=o(x^{\epsilon/2}).
+\] Their sum is therefore at most \(H_\circ\).
+The coefficient of \(H_\circ\) can be one for all sufficiently late
+points. This proves from \eqref{eq:orbit-min-balance}, in both
+ranges, that
+\[
+ \sum_{s\text{ on }v}(A_{j,s}(p)-B_p^*)\le
+     g^U_{jv}-P_{jv}+d_v-(\lceil t_v\rceil+D_p+1).
+\]
+These are the same orders and depths that define the common baseline
+of the restricted column in Section~\ref{subsec:column-orbit-length}.
+
+Sum over \(v\in V\) and the \(m\) lifts. The kept gain uses
+\(\max(g^U_{jv}-P_{jv},g^0_{jv},0)\) on \(V\), and
+\(\max(g^0_{jv},0)\) elsewhere. The restricted-lattice baseline at \(p\) is
+\[
+ \tau(p)=e_0+m\sum_{v\in V}(\lceil t_v\rceil+D_p+1).
+\] The Frobenius cosets partition the relevant labels, using both
+signs at signal primes. Thus the sum of their lengths is at
+most \(f\) and the number of tops in them is \(|T|\le f\).
+
+In conjunction with \(p\le X''\le a\), \(L\le2\log_p a\)
+and \(e_0\ll fk^2\log_p a\) from \eqref{eq:tag-c2}, the bounds defining
+\(d_v\) give \(\sum_{v\in V}d_v+e_0\le F_p\).
+The sum of the negative baseline terms is
+\(-\tau(p)+e_0\). Consequently the orbit estimates give
+\[
+ \sum_j\sum_{s\in T_p}(A_{j,s}(p)-B_p^*)\le
+  \sum_j g_j(p)-\tau(p)+m\sum_{v\in V}d_v+e_0
+  \le \sum_j g_j(p)-\tau(p)+mF_p .
+\]
+The last step uses \(m\ge1\) to cover the single \(e_0\)
+with the same allowance.
+
+If \(V\) is empty, \(\tau(p)=0\). Below \(X'\) in the residue
+class no top indices are then selected. On a signal prime or above the
+cutoff the base gain suffices. In the base formula of
+Section~\ref{subsec:hecke-entries} the excluded odd displacements
+are first visits to a different top on the unbarred side.
+At a signal prime the odd partner is on the barred side. For \(p\ge X'\), write \(U_i\) for an excluded numerator
+and \(W_i\) for its fill at the destination. Then
+\[
+ \frac{U_i}{p^i}\le\frac{a(1+h)}{X'}
+       \le b'+\frac{b'}{x}\le W_i,
+ \qquad \bigl(U_i p^{-i}-W_i\bigr)_+=0 .
+\]
+The positive-part comparison used for \eqref{eq:orbit-min-balance}
+bounds the shifts by \(3c_G\log_p(2a)\) per top, and the digit
+costs sum to \(F_p\).
+
+In the residue class with zero Frobenius step, above this cutoff
+every partner is the starting top and every required positive
+part is already zero. This covers the convention that the gain
+in that case is zero. For primes near \(X''\) where
+\(\log_p(2a)\ge1\) the same shift bound applies.
+The calculation has used the unshifted fill of the actual prime sum.
+Replacing the actual fill \(W\) in one summand by \(W-\kappa_j\)
+has the elementary cost
+\[
+ 0\le (v-W+\kappa_j)_+-(v-W)_+\le\kappa_j\le N_m .
+\]
+Here \(W-\kappa_j\ge1\), so for \(v=a_sp^{-i}\) the
+difference can be nonzero only when \(p^i<a_s\). Summing over
+the allowed \(i\) gives at most \(N_m\log_p(2a)\). Increase the
+fixed constant \(C\) in the \(S_k\) term to absorb this cost.
+\label{cor:prime-class-loss-2}
+
+\proofstep{Sum the contributions from the selected orbits, exceptional primes, and the large-prime tail.}
+Let \(\mathcal D\) be the remaining dropped inert primes, and
+write \(\mathcal H\) for the candidates with share strictly above
+\(z^{-1}\). The three sets used in the summation are disjoint:
+\begin{equation}\label{eq:inert-dropped-prime-classes}
+ \begin{aligned}
+ \mathcal D
+  ={}&\{p\in\mathcal D:p>X''\}
+    \ \sqcup\ \{p\in\mathcal D:p\le X'',\ p\in\mathcal H\}\\
+   &\ \sqcup\ \{p\in\mathcal D:p\le X'',\ p\notin\mathcal H\}.
+ \end{aligned}
+\end{equation}
+On all three \(g_j(p)=\tau(p)=0\), and the set of selected orbits is empty.
+The candidate test requires a residue-class prime below
+\(X'\) of large order and excludes powers in the forbidden band.
+The share test in \eqref{eq:inert-dropped-prime-classes} decides whether a candidate's good orbits
+enter the selected set. Candidates with share strictly above
+\(z^{-1}\) remain in the second dropped class and in the weighted
+sum below. For an odd-order residue step the
+projection to the dyadic quotient is zero, so it also fails the
+large-order condition on these hosts. The drop and no-gain tests
+agree on inert primes since every prime assigned to the sequence splits.
+
+Let \(Q=m|T|b\). For every \(s,j\),
+\[
+ 2(\log p)A_{j,s}(p)
+     \le 2a_s(\log p)\frac{p}{p^2-1}\le4a\,\frac{\log p}{p}.
+\]
+Apply this estimate to \(T\setminus T_p\) at a prime with a selected orbit.
+There is no missing top at a signal prime or at \(p\ge X'\).
+Otherwise a missing top lies in a bad cycle: the prime is a
+candidate in the large-order residue set, and its retained tops
+are exactly those with good representatives. The weighted
+bad-top count from Section~\ref{subsec:frobenius-selection} then
+gives \(4Qz/x\) as in Section~\ref{subsec:small-share-slope}.
+At dropped primes of large share the same inequality gives, after summation, the contribution bound
+\[
+ 2Qx^{-8}.
+\]
+
+At any other dropped \(p\le X''\) the definition of the drop set
+gives at least one of the following.
+\begin{itemize}
+\item The prime is at most \(M=\max(X'(1+C_r\rho),X'')\) and its
+order in \((\mathbb Z/2^{e_2+2}\mathbb Z)^\times/\{\pm1\}\)
+is at most \(J=\lfloor x^{\epsilon/4}\rfloor\). Here \(e_2\) is
+the exponent of the dyadic modulus and \(C_r\) is fixed. The Frobenius
+projection identifies this order with that of the dyadic component
+of the Frobenius element, so its order divides that of the element. The dyadic component has order a power of two. For a Frobenius element of odd order it therefore satisfies
+\[
+ \operatorname{ord}(\text{dyadic component})\mid\gcd(2^a,\operatorname{ord}(\text{Frobenius element}))=1,
+\]
+with \(2^a\) the order of the dyadic quotient.
+\item \(p\ge P\) and \(X'(1-\rho)\le p^i\le X'(1+\rho)\) for some
+integer \(i\ge1\), where \(0\le\rho\le x^{-2}\) is the common
+relative width from the host construction.
+\end{itemize}
+The alternatives follow by removing the high and large-share cases
+from the no-gain test. Any remaining residue-class obstruction is
+a short order below the enlarged cutoff, a forbidden power, or the
+odd-step case. On the signal class those residue conditions are absent.
+
+In the first alternative the dyadic calculation in Section~\ref{subsec:frobenius-selection} leaves only two classes:
+\[
+ p\equiv\pm1\pmod H,\qquad H=2^{e_2+2-\lfloor\log_2 J\rfloor}.
+\]
+Here \(x^2\le 2^{e_2}\le n\), so \(H\ge4\) eventually.
+Summing \((\log p)/p\) over \(p=jH\pm1>1\) up to \(M\) gives at most
+\[
+ C_{\rm ord} J\,\frac{\log^2(2^{e_2}M)}{2^{e_2}}
+\]
+by the harmonic sum and \(H\ge 2^{e_2}/J\), for an absolute
+\(C_{\rm ord}\).
+
+In the second alternative \(p\ge8\) and
+\(p^i\le2X'\), so \(i\le\lfloor\log X'\rfloor\) at large \(x\).
+Writing \(R=(X')^{1/i}\) confines \(p\) to
+\([R(1-\rho),R(1+\rho)]\). The count of integers is at most
+\(2\rho R+1\) and \(p\ge\max(P,R/2)\). After extracting \(\log(2X')\), the interval length and one possible endpoint contribute respectively \(4\rho\) and \(1/P\). Together the resulting contribution is bounded by
+\[
+ \left(4\rho+\frac1P\right)\log(2X').
+\]
+Multiplying each of these two prime sums by \(4m|T|a\) bounds
+the losses even when the alternatives overlap.
+
+If \(p>X''\), \(A_{j,s}(p)\) can be positive only for \(i=1\) and
+\(p<X''(1+h)\). Indeed, the scale and weight bounds together imply
+\[
+ \frac{a}{p^2}=\frac{w''X''}{p^2}\le \frac{w''}{2}\le\frac{W}{2}.
+\] The remaining positive part is at most \(w''h\).
+There are at most \(X''h+1\) such integers, giving a cost at most
+\(2m|T|\log(2X'')(ah^2+w''h)\). At \(d\) the exponents include
+the even ones, and summing the full geometric series gives
+\(a_s/(d-1)\le 2a/d\) for \(d\ge4\). The cost is at most
+\(2m|T|a\log d/d\). Eventually \(d\ge x^2>e\). Since \(t\mapsto(\log t)/t\) decreases for \(t>e\),
+\[
+ \frac{\log d}{d}\le\frac{\log(x^2)}{x^2}=\frac{2\ell}{x^2}.
+\]
+
+It remains to sum \(F_p,B_p^*\) from \eqref{eq:top-service-prime}.
+There are at most \(X''\) primes with selected orbits. Use
+\(\log p\log_p a=\log a\) and \(1/\log p\le2\). This gives the
+following two bounds for the floor and common per-top costs,
+respectively,
+\[
+ 2m C fX''\big(N_m^2\log a+2(\log a)^2\big),
+ \qquad 2m|T|C S_kX''\log(2a).
+\]
+For \(P\) and \(X'\) the elementary Chebyshev inequality
+\(\sum_{p\le y}\log p\le y\log4\) gives a combined bound
+\(2m|T|\log4\,(P Q_1+X'Q_2)\).
+
+For the order term use
+\[
+ p^{1-L_p}\le K_0^{-1},\qquad
+ \sum_{p\le y}\frac{\log p}{p}\le\log y+\log4 .
+\]
+For the second inequality, compare
+\(\sum_{p\le n}\lfloor n/p\rfloor\log p\le \log(n!)\)
+with \(n\log n\) and apply Chebyshev to the rounding error,
+with \(n=\lfloor y\rfloor\). Also
+\(\sum_{j\ge P}(\log j)/j^2\le
+2(\log(P-1)+1)/(P-1)\) by integral comparison for \(P\ge3\).
+The order term therefore costs at most
+\[
+ 2m|T|C\ell a\left[
+  (\lambda_{\rm ord}/k+1/K_0)(\log X'+\log4)
+       +2\frac{\log(P-1)+1}{P-1}\right].
+\]
+
+\proofstep{Separate the one term that does not vanish after division by \(Q\).}
+Use \(K\ge\max(1,C,C_{\rm ord})\) fixed and put
+\(s_x=100K z^4/x\). Eventually \(s_x\le1\).
+All rank and cutoff bounds in these comparisons are simultaneous:
+\(x^2\le 2^{e_2}\le n,\ x^2\le k,\ x^4+1\le P\);
+\(n,k,N_m,t,P\le x^{E}\) with \(E\) fixed for this family;
+\(\lambda_{\rm ord}\le z^2\), \(S_c,\eta\le \exp(z^{1/4})\),
+and \(1\le X'(1+C_r\rho)\le 2X'\).
+
+The two factors in \(S_c=4k\Delta_{\rm host}\) each contribute at most half the exponent on the eventual scale, since \(k\) is polynomially bounded:
+\[
+ \log S_c=\log(4k)+\log\Delta_{\rm host}\le z^{1/4}/2+z^{1/4}/2=z^{1/4}.
+\] The stated lower
+bound on \(d\) follows from the positive power lower bound on
+\(\log d\) for this fixed family. One may take
+\(E=\max(40,C_t+3)\) using the size choices in
+Section~\ref{sec:family-window}. These bounds apply before any
+choice of \(j,s,p\) or translate.
+
+Divide the preceding costs by \(Q\). The two order and band
+exceptional sets cost respectively
+\(O(K z^{1/4}(\ell+\log X')^2/x)\) and
+\(O((\log X')\log(2X')/x)\) since \(n\le x^E\).
+The high-prime and discriminant bounds are
+\(O(\log(2X'')/x)\) and \(O(\ell/x)\) since \(h\le1/x\) and
+\(w''\le b\).
+
+Since \(|T|\ge1\), the floor and common per-top costs are bounded by the following quantity, whose exponential decay comes from \(b=e^z\):
+\[
+ O\!\left(\frac{x^{O(1)}X'\exp(z^{1/4})}{b}\right)=\exp\bigl(-z+z^{1/3}+z^{1/4}+O(\log x)\bigr).
+\]
+The small-prime contribution \(P Q_1/b\) is \(O(x^{O(1)}/X')\).
+Each expression is \(o(s_x)\). For the order term for the selected orbits,
+\(\lambda_{\rm ord}/k+1/K_0\le(z^2+1)/x^2\),
+\(\log X'=z^{1/3}\) and \(\log(P-1)=O(\ell)\). Thus its
+ratio to \(Q\) is \(O(C\ell(1+z^2)(1+z^{1/3})/x)=o(s_x)\).
+
+There is one main term. The contribution from the larger primes is
+\[
+ \frac{X'Q_2}{b}= C+
+ C\frac{X'(\eta+S_c)}{b}
+ +C\frac{\ell}{n\delta_1}
+ +C\frac{X't\ell}{b\delta_1}
+ +\frac{X'H_\circ}{b}.
+\]
+Here \(X'b'/x=b\) and \(X'w''=b/n\). Every term after \(C\)
+is \(o(s_x)\), including the last one since
+\(\log(X'H_\circ)=z^{1/3}+z^{1/2}=o(z)\).
+This calculation needs the cancellation of the preceding-even-top
+minima before estimating the contribution from the larger primes.
+
+For sufficiently large \(x\), each of the two floor and common costs,
+small-prime contribution, order contribution for the selected orbits, two first-class costs, high-prime
+tail and discriminant cost is at most \(s_xQ\). The error from top indices outside the selected orbits
+and large-share costs are each at most \(s_xQ\). The contribution from the larger primes is at most \((2C\log4+3s_x)Q\).
+Summing the contributions gives
+\[
+ S_{\mathrm{prime}}-G_a\le(2C\log4+13s_x)Q.
+\]
+The share error is absorbed since
+\[
+ Qx^{-8}\le s_xQ .
+\] The weighted sum of the output over the coefficient
+places reduces to the same sum over candidate primes by the local
+degree formula already used in \eqref{eq:loss-deficit-per-prime}.
+The joint local hypotheses and the small-share weight condition
+carry both inequalities to each selected point. The common threshold
+is a finite maximum of the bounds uniform in the point.
+\label{cor:prime-class-loss-3}
+\end{proof}

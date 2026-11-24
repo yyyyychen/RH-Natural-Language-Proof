@@ -1,0 +1,93 @@
+\begin{auxlemma}[A thick-frame lower bound for the evaluation norm]
+\label{lem:deep-thick-evaluation}
+Fix a nonterminal quotient weight \(u_1\) on a deep component \(Z\).
+Write \(\mathcal B_{u_1,Z}(y)\) for the squared operator norm of
+evaluation at the unit flag frame \(y\), on the cusp space with
+the Petersson measure normalized to mass one on \(Z\). The same lower
+bound holds for the restriction to \(Z\) of the probability measure
+on the full marked object, since its component mass is at most one. Let \(\lambda\) denote the first
+minimum of the polarized trace lattice in the positive majorant at
+that frame, and let \(M_Z\) be its principal congruence level. There is
+an absolute \(C\) such that, on the selected family,
+\[
+ M_Z\lambda^2\ge b
+  \quad\Longrightarrow\quad
+ \mathcal B_{u_1,Z}(y)\ge e^{-B_1},\qquad
+ B_1=C\{\|u_1\|_1+(fr)^8\}.
+\]
+The constant is independent of the component, lift and coefficient embedding.
+\end{auxlemma}
+\begin{proof}
+Pass to an orthonormal flag frame by an upper triangular change. The normalized point norm, the positive majorant and the Petersson integral are invariant under this change. In the lower triangular coordinates \(I+z\) used in Lemma~\ref{lem:short-weight-curvature}, set
+\[
+       d=f\binom r2,\qquad R=(100r^2)^{-1}.
+\]
+If a group element \(\gamma\) identifies two points of \(\|z\|\le R\), it increases majorant lengths by at most a factor two. Indeed the operator norm of \(z\) at each infinite place is at most \(R\); on each initial coordinate subspace the Gram matrix therefore differs from the diagonal sign matrix by at most \(2R+R^2\). Successive orthogonal projections in triangular elimination change the form by a factor at most \((1-4rR)^{-r}<\sqrt2\). Comparing each of the two flag frames with the center gives the claimed factor.
+
+In particular the coordinate change satisfies
+\[
+           \|\gamma v\|_y\le 2\|v\|_y\qquad(v\in\Lambda\otimes\mathbb R).
+\]
+
+The polarized integral alternating pairing identifies the trace lattice with its Euclidean dual via the orthogonal complex structure of the majorant. In real dimension \(2fr\) transference consequently supplies a rational basis of lattice vectors of length at most \((2fr)^2/\lambda\). If \(\gamma\ne1\), it moves some member \(v\) of this basis. Principal congruence and the length comparison give
+\[
+      M_Z\lambda\le\|(\gamma-1)v\|
+          \le3\|v\|\le3(2fr)^2/\lambda .
+\]
+This contradicts \(M_Z\lambda^2\ge b> 12(fr)^2\) for large scale. Thus this chart injects on the component. \cite{banaszczyk}
+
+We construct the evaluation section on the complex flag quotient. Use the invariant Kähler metric given by a strictly positive flag weight, with gaps one inside the two blocks and a cross-block gap of order \(r\). It is complete: a homogeneous Riemannian metric on the flag domain is complete and its quotient by a properly discontinuous group is complete. In a unitary root coordinate \(z_{ij}\) the Levi form of a weight \(v\), using the sign convention of Lemma~\ref{lem:short-weight-curvature}, has coefficient
+\[
+           (v_i-v_j)J_j/J_i\qquad(i<j).
+\]
+
+The normalized line of the section is tensored with the inverse canonical bundle when applying the top-degree \(L^2\) estimate. This subtracts the volume weight, whose successive differences have modulus two. The divided row has consecutive gaps at least \(T\) before passing to the flag order. In that order the within-block gaps and the opposite signed gap across the two blocks have the positive signs in the displayed formula. Unitary invariance gives this curvature comparison on the entire quotient.
+
+Put \(\rho=R/2\), choose a fixed smooth \(0\le\chi\le1\) equal to one for \(t\le1/4\) and zero for \(t\ge1\), and use the local holomorphic triangular frame of norm one at its center to extend \(F_0=\chi(\|z\|^2/\rho^2)\) by zero. At its center introduce the nonpositive weight
+\[
+ \psi_\delta(z)=d\chi(\|z\|^2/\rho^2)
+          \log\big((\|z\|^2/\rho^2+\delta)/2\big),\quad 0<\delta\le1 .
+\]
+
+The triangular frame is holomorphic throughout the ball, so
+\[
+   \operatorname{supp}\bar\partial F_0
+       \subset\{\rho/2\le\|z\|\le\rho\}.
+\]
+
+On the inner ball the Levi form of \(\psi_\delta\) is nonnegative. On the transition annulus the modulus of the logarithm is bounded by three and its first two radial derivatives are bounded by absolute constants in the variable \(\|z\|^2/\rho^2\). Thus throughout the chart
+\[
+  i\partial\bar\partial\psi_\delta
+       \ge-Cd\rho^{-2}i\partial\bar\partial\|z\|^2
+       \qquad(0<\delta\le1).
+\]
+ The triangular change to an orthonormal chart and its inverse have bounded derivative on this ball: the inverse Gram matrices on initial subspaces have norm at most \((1-2R-R^2)^{-1}\) and triangular elimination gives the bound \((1-4rR)^{-2r}\). The positive gaps absorb this loss since
+\[
+          d\rho^{-2}\ll fr^6,\qquad T\ge (frL)^{24}.
+\]
+
+Solve \(\bar\partial u_\delta=\bar\partial F_0\) with this weight by the complete Kähler \(L^2\) estimate. In the unit frame the invariant metric of the weight line is a product of powers of successive Gram determinants. On the ball every successive pivot has absolute value between \(1/2\) and \(2\), so both this metric and its inverse are at most \(\exp(C\|u_1\|_1)\). 
+The volume density has the analogous bound \(\exp(Cdr)\). On the support of the derivative, \(\psi_\delta\ge-3d\) and \(\|\bar\partial F_0\|\ll\rho^{-1}\) in the chart norm. Integration over the chart and replacement of its volume by the larger component volume give, in probability measure,
+\[
+       \int_Z\|u_\delta\|^2e^{-\psi_\delta}
+       \le \exp\{C(\|u_1\|_1+(fr)^8)\}.
+\]
+
+Weak compactness on an exhaustion as \(\delta\downarrow0\) gives a solution \(u\) with the limiting bound. It is holomorphic near the center. If \(u(0)\ne0\), the limiting norm is infinite since its radial integral contains
+\[
+           \int_0^{\rho/2} t^{-2d} t^{2d-1}\,dt=\infty .
+\]
+ Hence \(s=F_0-u\) is holomorphic, \(s(y)=1\), and its squared Petersson norm satisfies the same exponential bound after enlarging \(C\). \cite[Theorem~5.1]{demailly-complete-kahler} \cite{hormander-slice}
+
+For these regular weights the holomorphic square-integrable section is cuspidal. At a rational boundary use the Fourier expansion in the unipotent radical. Integration over its period parallelepiped bounds the norm below by the contribution of any one Fourier coefficient. If that coefficient is nonzero, its continuous point norm is bounded below on a compact transverse coordinate ball of positive measure in the boundary chart. For an index \(\nu\) vanishing on a rational boundary ray \(Y\), the factor along that ray satisfies
+\[
+    \left|e^{2\pi i\langle\nu,x+itY\rangle}\right|
+                         = e^{-2\pi t\langle\nu,Y\rangle}=1.
+\]
+Thus this Fourier mode cannot gain radial decay. The normalized squared frame factor grows with exponent at least the positive cross-block gap, whereas the Haar density loses at most \(2fr^2\) in that radial coordinate (the sum of positive root multiplicities with their radial weights). Writing \(t\ge0\) for logarithmic radial length, such a coefficient would contribute at least a positive multiple of
+\[
+             \int_0^\infty\exp[(T-2fr^2)t]\,dt=\infty .
+\]
+
+Negative frequencies likewise violate integrability. This is the zero-cutoff case of the cusp-flow calculation in the proof of Lemma~\ref{lem:short-weight-curvature} and the ensuing Fourier estimate. The analytic identification of the specified marked holomorphic row in Lemma~\ref{lem:marked-full-holomorphic-row}, applied with this deep congruence marking, realizes the section in the cusp space at level \(M_Z\). The quotient \(|s(y)|^2/\|s\|_{\rm P}^2\) gives the assertion.
+\end{proof}

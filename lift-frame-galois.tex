@@ -1,0 +1,225 @@
+\paragraph{Automorphic and crystalline realizations at the chosen place.}
+Use the coefficient field and the twisted tuple of this
+lift at \(w\mid p\). Choose a \(p\)-adic embedding \(j_w\) inducing \(w\) and an isomorphism \(\iota:\overline{\Q}_p\to\C\). On the coefficient field their composite is prescribed:
+\[
+ \iota\circ j_w=j_{\mathbb C},
+\]
+where \(j_{\mathbb C}\) is the selected complex embedding. The latter comparison is algebraic.
+The finite Hecke operators can be read through it because
+their matrices on the finite class model are formed by
+the same right translations and transported level
+matrices.
+
+At each member of the selected CM half, use
+the finite adelic reading extending that \(p\)-adic
+embedding. In the adapted basis the level matrices and
+their inverses have integral entries. The twist is a
+finite character, so adjoining the roots of unity of its
+order puts these matrices and character values in the
+same ring of integers \(O\). Evaluation at the finite
+double classes gives the common integral form model.
+The selected tame level makes the stabilizer orders units
+in \(O\), including for the smaller weight \(\mu\).
+\label{cor:lift-frame-galois-1}
+
+\begin{proposition}[The oriented crystalline frame and the marked string]
+\label{prop:lift-frame-crystalline-reading}
+In the selected definite model, with the prescribed algebraic
+type and spherical local factors over \(p\), the attached
+crystalline representation has the rank-\(r\) normalized
+Satake readings. For the \(\lambda\) system assume the specified
+length-\(t\) divisor of the Hecke polynomial, \(r<2t\), and the
+isolated length-\(t\) run in the weight at every label. Its
+unique long Speh factor gives the marked consecutive crystalline
+string. After the common character twist the \(\mu\)-frame has the following jumps at the two labels, in the given orientation:
+\[
+ \text{jump at }\tau=h_0-U'_{\tau,\bar a},\qquad\text{jump at }c\tau=U'_{\tau,a}.
+\]
+The marked string uses this orientation and the Frobenius transport of the proof.
+\end{proposition}
+
+\begin{proof}
+\proofstep{The Hecke action after transport to the definite group.}
+The characteristic-zero coefficient model first gives
+a vector-valued form on the original definite space.
+The isometry to the standard definite group transports
+its rational and level actions. Use the algebraic
+coefficient action at infinity to extend the finite
+class values. Pair them using the positive invariant
+Hermitian form on the coefficient type and take a
+nonzero irreducible component of the resulting weight
+space, using an invariant orthogonal complement.
+The transported finite Hecke sums are the same on these
+components.
+
+In the split reading the prime is the
+conjugate of the marked row prime. An isometry of the
+two split groups identifies the right coset sums using
+the dual double-coset label, which sends the list of elementary-divisor exponents to
+\[
+ (a_1,\ldots,a_r)\longmapsto(-a_r,\ldots,-a_1).
+\]
+This reads the given
+Hecke eigenvalue, under \(\iota\), at the conjugate
+prime. At primes of \(E\) above \(p\) the selected
+level is spherical and the level character is trivial
+on the corresponding hyperspecial group. The operators
+indexed by good split primes away from \(p\) include
+all coefficients of their Satake polynomials.
+\label{cor:lift-frame-galois-2}
+
+\proofstep{Attachment to the normalized Speh factors.}
+Use unitary base change
+with these local readings, the discrete spectrum
+classification for \(\mathrm{GL}_r\), and Galois
+attachment for the regular algebraic polarized cuspidal
+constituents. Writing \(F=E^+\) for the totally real field of the definite group, the field hypotheses are
+\[
+ [F:\Q]\ge2,\qquad E/F\text{ unramified at all finite places}.
+\] Base change has the
+archimedean infinitesimal characters of the selected
+algebraic type and the spherical components over \(p\).
+Its discrete factors are Speh representations with
+conjugate self-dual unitary cuspidal data. The spherical
+component of the induced local product forces the
+cuspidal local factors to be spherical.
+
+For a cuspidal datum \(\pi\) of rank \(a\) in a Speh factor
+of length \(d\), put
+\[
+ s_j=\frac{r-1}{2}+\frac{d-1}{2}-j,
+ \qquad c_j=\frac{a-1}{2}-s_j \qquad (0\le j<d).
+\]
+In the unitary infinitesimal parameter let \(z\) range over
+the exponents of \(\pi\) at a label. Regular algebraicity of
+the full rank-\(r\) parameter gives
+\[
+ s_j-z\in\Z,
+\]
+because
+\(z+(d-1)/2-j\) occurs there. The same regularity makes the
+cuspidal exponents distinct at every label. The twist
+\(\pi_j=\pi\otimes |\det|^{c_j}\) has exponents \(z+c_j\)
+in \((a-1)/2+\Z\), and is polarized by the norm-power
+character descending from \(|\cdot|^{2c_j}\). If \(a\) is odd,
+multiply the polarizing character on the real subfield by
+the quadratic character of the CM extension to give the
+required sign at every real place. Its pullback is trivial.
+
+Apply
+Barnet-Lamb--Gee--Geraghty--Taylor, Theorem~2.1.1, to this
+regular algebraic polarized cuspidal representation
+in rank \(a\). With unitary Satake roots \(\alpha_{\pi,h}\) and Hodge labels
+\(z_{\pi,\tau,h}\), the reciprocal normalization in rank \(a\)
+reads
+\[
+ \operatorname{HT}_\tau(\rho_{\pi_j})
+     =\{(a-1)/2-z_{\pi,\tau,h}-c_j\}_h
+     =\{s_j-z_{\pi,\tau,h}\}_h,\qquad
+ \operatorname{Sat}(\rho_{\pi_j})=\{q^{s_j}\alpha_{\pi,h}\}_h
+\]
+at the indicated good split prime for the Satake expression.
+The first equality is the Hodge--Tate normalization and the
+second multiset uses \((a-1)/2-c_j=s_j\).
+The representation is crystalline above \(p\) because
+\(\pi_j\) is spherical there. At a good split prime of
+norm \(q\), the twist and the rank-\(a\) local Langlands
+normalization multiply the unitary Satake roots by
+\[
+ q^{-c_j+(a-1)/2}=q^{s_j}.
+\]
+
+The direct sum over the cuspidal data and \(j\) therefore
+has the full rank-\(r\) Satake roots scaled by
+\(q^{(r-1)/2}\), with the corresponding full set of
+crystalline jumps. Purity in Theorem~2.1.1 gives equal
+absolute values for the unramified roots in each
+cuspidal factor. If the cuspidal roots in unitary normalization have the common absolute value \(A>0\), then their product has modulus
+\[
+ A^a=1,
+\]
+where \(a\) is the rank of this cuspidal factor. This equality uses the unitary central character. Thus \(A=1\).
+\cite{labesse-cm,blgg-weight}\label{cor:lift-frame-galois-3}
+
+\proofstep{Identifying the unique long rank-one string.}
+For the selected system of weight \(\lambda\) there is
+additional information. Its occurrence in the chosen
+block of the row supplies, at a good split prime, the
+divisor of its Hecke polynomial coming from the
+length-\(t\) string. Its center has modulus one in
+unitary Satake normalization. To identify the global
+factor, each cuspidal Satake multiset in the discrete
+decomposition has unit modulus at this prime, by
+temperedness of the cohomological conjugate self-dual
+cuspidal factors in their unitary normalization. If a Speh constituent has length \(s\) and cuspidal rank \(a\),
+its largest root modulus is \(q^{(s-1)/2}\), and its rank
+contribution is \(as\). A root of modulus \(q^{(t-1)/2}\)
+therefore requires
+\[
+       s\ge t,\qquad as\le r<2t .
+\]
+Hence \(a=1\), and two such constituents cannot fit in rank \(r\).
+
+At each
+archimedean label the specified length-\(t\) constant
+run in the highest weight has strict drops at its two
+ends when those ends are present. The shifted
+infinitesimal exponents at this label are distinct.
+The long Speh constituent gives a consecutive interval
+of exponents. It cannot cross either drop, because each
+drop leaves an absent intermediate exponent. The other intervals together have at most \(r-s<t\)
+entries. They cannot cover the designated consecutive run of
+\(t\) entries. The long interval must meet that run and cannot
+cross a missing exponent at either boundary, so \(s\le t\).
+Combining the size bound for the constituent and the two boundary gaps gives
+\[
+ t\le s\le t,\qquad s=t.
+\]
+Thus the long interval is exactly the specified run. Its Galois factors are the \(t\) successive
+crystalline twists of a rank-one character. The
+remaining Speh factors give \(\rho\).
+\label{cor:lift-frame-galois-4}
+
+\proofstep{Filtration jumps for the two CM orientations.}
+The common normalization fixes their readings on both
+orientations. Write \(\tau\) for a member of the
+\(p\)-adic half chosen by the frame, \(c\tau\) for its
+conjugate, \(s_\tau\) for the determinant weight shift
+there, and
+\[
+ \bar a=r-1-a
+\]
+for a reversed coordinate.
+Before the common twist, the type on \(\tau\) has highest
+weight \(\mu_{\tau,a}+s_\tau\) and the type on \(c\tau\)
+has its dual. The algebraic Hecke character with
+crystalline jumps \(h_0-r+1+s_\tau\) on \(\tau\) and
+\(-s_\tau\) on \(c\tau\) is chosen unramified over \(p\).
+The sum of the two jumps is constant on all pairs, as
+required for the algebraic character. Under the
+reciprocal Frobenius convention the untwisted jump is
+\(\bar a-\lambda_{{\rm aut},\bar a}\) in either local
+highest weight \(\lambda_{\rm aut}\).
+
+Adding the character
+jump gives the two arrays
+\[
+ J_{\tau,a}=h_0-U'_{\tau,\bar a},\qquad
+ J_{c\tau,a}=U'_{\tau,a},\qquad
+ U'_{\tau,a}=\mu_{\tau,a}+r-1-a .
+\]
+Thus the marked orientation for \(U'\) is the conjugate
+of the half used for the complex automorphic frame.
+Apply the same twist to the selected \(\lambda\) system.
+On that orientation the marked line jumps are
+\(B_\tau+s\), \(0\le s<t\), with \(B_\tau\) the bottom
+of the shifted run of \(\lambda\). On the other orientation
+their bottom is \(h_0-B_\tau-(t-1)\), with the order of
+the marked indices reversed. Both arrays and both
+families of lines therefore lie in \([0,h_0]\).
+The Frobenius permutation acts on all embeddings of the
+unramified host and commutes with their CM involution.
+This determines the transported label and its
+orientation together in the crystalline comparison.
+\label{cor:lift-frame-galois-5}
+\end{proof}

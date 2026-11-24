@@ -1,0 +1,290 @@
+\subsection{The coefficient rings and sizes on the selected cycles}
+\label{sec:host-edge-tests}
+\hypertarget{source-host-edge-tests}{}
+
+The preceding transfer and averaging estimates are conditional on local size bounds. We now check those bounds on the good cycles supplied by the arithmetic choice of primes.
+
+Fix the target character and \(0<\epsilon<1/52\). Fix a candidate prime \(p\) of even Frobenius order and a good cycle as in Section~\ref{subsec:frobenius-selection}. For its Frobenius step \(a_p\), the cycle length satisfies
+\[
+ n'=d_p=\operatorname{ord}(a_p),\qquad 2\mid n'.
+\] Write \(N\) for the
+number of tops, \(r_G=K+1\) for the fixed plane dimension,
+\(G'=G\) for the length bound there, and \(Q=p^{G'}\).
+Numbering from the chosen orbit representative identifies its
+\(s\)-th place with the translate by \(s a_p\). Thus the top
+positions, the signs by parity and the two endpoint weights agree
+with those in the local test.
+
+At a top the first and last entries
+are \(a_s,-b_s\). The other entries there and all entries at the
+remaining places have absolute value at most \(\lfloor c_G\rfloor\).
+Here
+\[
+ c_G=4S_c=16k\Delta_{\rm host},
+\]
+where \(\Delta_{\rm host}\)
+is the size parameter bounding the middle weights. These bounds specify the weights used in the local lattice estimate.
+
+\paragraph{The local field.}
+Write \(W=W(\mathbb F_{p^{n'}})\) and \(K_0=\operatorname{Frac}W\).
+Take
+\[
+ O_s=W(\mathbb F_{p^{2n'}})[w]
+\]
+with \(w^2=p\). Fix a
+place \(\mathfrak w\mid p\) of the number field of coefficients
+\(F\). Embed \(F\) in an algebraic closure of
+\(K_s=\operatorname{Frac}O_s\) by embedding its completion
+\(F_{\mathfrak w}\) there over \(\mathbb Q_p\). The field
+\[
+ K'=K_s F
+\]
+in that closure is finite over \(K_s\), since a
+primitive element of \(F/\mathbb Q\) is algebraic over \(K_s\).
+
+The ring \(O'\) of integers of \(K'\) is the integral closure
+of \(O_s\), a finite free module over the complete DVR \(O_s\).
+Its valuation, normalized by \(v(p)=1\), restricts to the chosen
+valuation on \(F\). This is the ring used for the place in the
+host construction. The maps on \(W,K_0\) are the composites of the
+standard embeddings with \(O_s\to O'\), \(K_s\to K'\), and the
+square root of \(p\) is the image of the specified \(w\).
+
+\begin{lemma}[Finite base change of an edge test]\label{lem:edge-test-host-base-change}
+For \(O_s\subset O'\) at the chosen place of the coefficient extension, keep the
+same vertices over \(W\) and the same competing edges.
+Write \(o,c\) for the order and conductor of a depth-\(D\) test with \(m\) successful directions over \(O_s\). Extension to \(O'\) preserves these four parameters
+\[
+ (m',D',o',c')=(m,D,o,c).
+\]
+ The ambient dimension is unchanged.
+The valuation normalization is \(v(p)=1\) in both rings.
+\end{lemma}
+
+\begin{proof}
+\proofstep{The source and target over the actual local rings.}
+The vertices are still lattices over \(W\) in \(K_0^k\).
+In particular the same edges and all their competitors are
+present after enlarging coefficients. At position \(s\) the
+twisted lattice is spanned by the images of a \(W\)-basis under
+the \(s\)-th Frobenius followed by the embedding. This span,
+and the sum of the two spans with multipliers \(1,w\) at an
+edge, commute with extension to \(O'\). One may evaluate the
+Weyl lattice in any one frame of this sum. A second frame
+differs by an integral invertible change of basis and acts by
+an integral automorphism, including its determinant twist.
+
+The products of flag minors generating the lattice in this
+frame extend coefficient by coefficient. Thus for a lattice \(H\) in one frame its realization after extension of coefficients is
+\[
+ H_{O'}=\sum_{h\in H}O'\,\iota(h)\simeq O'\otimes_{O_s}H,
+\]
+where \(\iota\) denotes coefficient extension in that frame.
+The same assertion holds for their tensor product on a cycle.
+The tableau basis gives the same dimension over both fraction
+fields. In the dual space extend each linear functional in that
+basis. Integrality on the old lattice then implies integrality
+on the new span. Multiplying the endpoint and edge lattices by
+their defining powers of \(p,w\) commutes with the maps.
+
+For a target evaluation map with chosen source vectors and
+target covectors giving \(p^D I_m\), take their images at the
+new place. If \(\iota:O_s\to O'\) is the coefficient map, the evaluation on the chosen test vectors has matrix
+\[
+ \bigl(\iota(p^D\delta_{ij})\bigr)_{i,j}=p^D I_m.
+\]
+This follows by extending the bilinear evaluation on each frame basis. The new
+lattice conditions at the same vertices are given by those
+basis spans, so extending each vector and covector preserves
+them. In particular the preimages of the scaled coordinate
+vectors still give a right inverse after the same scaling. All required memberships at the
+other edges are preserved. The number \(m\) and its denominator
+\(\dim V\) are identical. This proves finite base change even
+when \(O'/O_s\) is ramified.  \label{cor:host-edge-tests-1}
+
+\end{proof}
+
+\paragraph{Counting tops and bounding the parameters of the auxiliary construction.}
+Summing condition (iii) defining a good cycle over its \(n'\)
+possible interval starts counts each top \(G'\) times. Also every
+gap between consecutive even tops is at most \(G'\). Thus
+\[
+ n'/G'\le N\le n'N_1/G'\le 40n'\delta=:N_+ .
+\]
+For the last step use
+\(N_1\le2+\max(6eG'\delta,(h+3)\log_2 x)\), with
+\(G'\delta\ge (6r_G+1)(h+3)10^{6r_G+1}\log x\).
+In particular \(N\gg_\epsilon x^{\epsilon/8}/\log x\),
+as \(n'\ge x^{\epsilon/4}\), and \(N_+\le20N_*\) with
+\(N_*=2n\delta\). The same marked blocks give at least two
+segments and their length and interior counts are bounded by
+\(G',N_1\).
+
+We have \(3G'\le n'\) and
+\(2L_1(p)\le L_2<\lceil1/\delta\rceil\).
+In both ranges use
+\[
+ \Lambda=C_0 N_1^2\log a,\quad a=x\exp(x^\epsilon),
+ \quad b'=a/X',\quad X'=\exp(x^{\epsilon/3}).
+\]
+Here and below the constants in the local estimates are fixed
+before \(x\). From the rank bounds of
+Section~\ref{subsec:frobenius-selection}, \(n\ll x^{2+8\epsilon}\),
+\(x^{9/2+10\epsilon-\epsilon/100}\le k\le2x^{9/2+10\epsilon}\)
+and \(N_1=O_\epsilon(\log x)\). The discriminant bound
+\(\log\Delta_{\rm host}\le x^{\epsilon/4}/2\) gives
+\(\log(1+c_G)\ll x^{\epsilon/4}+\log x\).
+All comparisons below are uniform in the candidate prime, the
+cycle and the weights within the indicated intervals.
+
+\paragraph{Large primes.}
+Put \(Y=x^{13},\ Y_b=x^\epsilon/20\) and let \(I_b\)
+denote the length \(N_* x^\epsilon\Lambda b'/k\) of the
+second weight interval. Then
+\[
+ k^2Y^2\le p<X',\qquad
+ Y_bN\Lambda b'/k\le I_b\le b'/2,\qquad
+ 2Y_bN\Lambda+C N\Lambda^2=o(k)
+\]
+for each fixed \(C\). Indeed \(N\le40n\delta\) and both
+\(x^\epsilon\Lambda\) and \(\Lambda^2\) are
+\(x^{2\epsilon+o(1)}\).
+We have \[
+ \begin{gathered}
+ 2N_1+2\le k-1, \\ 8\log(NY)\le\Lambda, \\ c_G\le\Lambda b'/k, \\ kY^2Y_bN\Lambda\log a\le X',
+\end{gathered}
+\] the last left side being
+polynomial in \(x\). These verify the spacing and width
+conditions even at the ends of the integer intervals.
+
+\paragraph{The hypotheses for the large-prime test.}
+To check that the weight ranges remain separated, use the width parameter
+\(\Delta=C_{\Delta}N_1\mathcal L/k+2(b_h-b_l)/b'\),
+where the local reference \(a\) may be rounded up by one and
+\(\mathcal L\) is then computed there. The original real interval
+has width \(I_b\). A shift by \(\lfloor c_G\rfloor\), the lower
+boundary allowance and the enlarged box add \(O(\Lambda b'/k)\)
+to the widths on each side of this interval
+(the shift from the harmonic decomposition is bounded by
+\(\Lambda b'/k\)). Thus a band of relative half-width
+\[
+          4I_b/b'+C_\rho N_1\Lambda/k
+\]
+covers the local band of half-width \(2\Delta\), taking the
+fixed \(C_\rho\) large enough for these shifts and rounding
+the center upward by at most \(1/b'\).
+
+The possible increase
+relative to the center \(a/b'\) is \(O(1/a)\).
+This is the band included in the exceptional set of
+Section~\ref{subsec:frobenius-selection}. We may take
+\(C_\Delta\) large enough that the enlarged weight deviation
+is at most \(\Delta/2-18N_1\mathcal L/k\) and
+\(40N_1\mathcal L/k\le\Delta\). We have \(\Delta<1/6\)
+eventually by the bound on the exceptional width.
+
+\paragraph{Depth and conductor on the selected Frobenius cycle.}
+The depth for this cycle is
+\[
+ D_{\rm I}=\left\lceil C_D N_+Y^2(N_1^5+k^3)\log_p a\right\rceil .
+\]
+\begin{proposition}[Comparison of the selected lattices for large primes]
+\label{prop:host-large-prime-test}
+In the stated large-prime range, the rank estimate applies
+on the selected lattices at depth \(D_{\rm I}\) and conductor
+\(8(D_{\rm I}+1)\). If \(\bar\delta_{\rm I}\) denotes the resulting mean deficit, the depth, conductor and deficit satisfy
+\[
+ D=D_{\rm I},\qquad c=8(D_{\rm I}+1),\qquad\bar\delta_{\rm I}=O(NN_1/x^{13}).
+\]
+
+\end{proposition}
+
+\begin{proof}
+The defining inequality makes \(D_{\rm I}\) dominate the local
+depth, and the size bounds make it polynomial in \(x\).
+Since \(G'\ll_\epsilon x^{\epsilon/8}\log x\) and \(p<X'\),
+\(\log Q\ll_\epsilon x^{11\epsilon/24}\log x=o(x^\epsilon)\).
+Consequently
+\[
+ C k^3NQ^4\big(8(D_{\rm I}+1)+(N+n')c_G\big)Y=o(b')
+\]
+for every fixed \(C\), by taking logarithms. The larger internal
+conductor in Section~\ref{sec:edge-transfer}, which includes
+\(O(Nk\log_p a)\), satisfies the same inequality.
+
+In particular
+\(kQ\le N_1\mathcal L b'/k\). Dividing the expression for \(E_0\)
+in Section~\ref{sec:symbol-correction} by \(a\), using
+\(p\ge k^2Y^2\), \(b'/a=1/X'\) and the same bound on
+\(Q^2c/a\), gives \((E_0+Q)/a=o(N_1\mathcal L/k)\).
+The large-prime estimate therefore applies at the prescribed depth
+and conductor \(8(D_{\rm I}+1)\). From \(p<a/b'\) we obtain both comparisons needed in the order estimate,
+\[
+ \frac{b'}p<\frac a{p^2},\qquad \frac{\mathcal L b'}k<\frac{\mathcal L a}{pk}.
+\]
+
+The local deficit bound is unchanged by the finite scalar
+extension in Lemma~\ref{lem:edge-test-host-base-change}: both
+the test rank and its denominator are dimensions of the same
+extended vector spaces. Thus it gives \(O(NN_1/x^{13})\)
+on the host.
+\end{proof}
+
+\paragraph{Smaller primes.}
+Proposition~\ref{prop:residue-plane-neighbor-test} gives the
+tests in this range. We check its size conditions on the
+same cycles and level choices as in the larger-prime case.
+
+\begin{proposition}[Comparison of the selected lattices for smaller primes]
+\label{prop:host-small-prime-test}
+For \(13\le p<p_0=k^2x^{26}\) on the same selected cycles,
+the residue-plane comparison applies at order
+\(\lceil t_{\rm II}\rceil\) and conductor \(8(D_{\rm II}+1)\),
+with the depth and order in \eqref{eq:small-prime-depth-order}.
+Writing \(\kappa\) for its deficit, the resolution and the bound are
+\[
+ o=\lceil t_{\rm II}\rceil,\qquad c=8(D_{\rm II}+1),\qquad\kappa=O(Nx^{-12}).
+\]
+
+\end{proposition}
+
+\begin{proof}
+Set \(Y_2=x^{26}\),
+\(c_0=2b'+2c_G\), \(A=a-c_G\), and
+\(L_1=\lceil\log_p((kx^{26})^4)\rceil\). The interval conditions
+give \(A+\lfloor c_G\rfloor\le a_s\le 2A-\lfloor c_G\rfloor\)
+and \(b_s+2\lfloor c_G\rfloor\le c_0\), as \(c_G=o(b')\).
+For large \(x\) the lower bound on \(N\) gives
+\(N_1^2\le r_G N\). Also \(2\le r_G\le Y_2\),
+\(N_1+3r_G\le k\), and \(C N_1^2\log a\le k\). The spacing
+condition follows from
+\[
+ p^{L_1-1}\ge k^4 x^{104}/p
+ \ge k^2 x^{78}\ge256k^2 N Y_2^2 .
+\]
+Here the last inequality uses \(N\le n\le x^3\).
+The prescribed depth and real order are
+\begin{equation}\label{eq:small-prime-depth-order}\begin{aligned}
+ D_{\rm II}={}&\left\lceil C_D' N_+(N_1^3+r_G^5+k^2)\log_p a
+                 +2r_Gn' c_G+r_G N_+c_0\right\rceil,\\
+ t_{\rm II}={}&C_t r_G N\big(\Lambda a/(pk)+a p^{-L_1}
+                         +c_0+kQ\big)+2r_G n'c_G .
+\end{aligned}\end{equation}
+
+Now \(\log Q\ll_\epsilon x^{\epsilon/8}(\log x)^2
+=o(x^{\epsilon/3})\), since \(p\) is polynomially bounded.
+Thus \(D_{\rm II}\le x^{O(1)} b'\) and
+\[
+ C k^3r_G^2NQ^5\big(8(D_{\rm II}+1)+r_G N c_0+
+                 2r_G n'c_G\big)Y_2=o(a)
+\]
+by \(a/b'=X'\). These are all the numerical hypotheses for
+the smaller-prime test at the host. Section~\ref{sec:plane-lifts}
+proves the estimate on edges with residue quotient of dimension
+\(r_G\), at order \(\lceil t_{\rm II}\rceil\) and conductor
+\(8(D_{\rm II}+1)\). With the bounds on \(r_G,k\) and
+\(Y_2=x^{26}\), the deficit
+\(\min(1,CNr_G^2 k/Y_2)\) is \(O(Nx^{-12})\).
+Lemma~\ref{lem:edge-test-host-base-change} preserves both
+ranks in this fraction. \label{cor:host-edge-tests-2}
+\end{proof}

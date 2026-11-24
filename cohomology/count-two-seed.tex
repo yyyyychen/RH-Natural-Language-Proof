@@ -1,0 +1,175 @@
+\paragraph{The integral flags of the mixed seed.}
+\label{par:count-two-seed-flags}
+Keep the eigenbasis just constructed. To compare the seed with the target we first
+need the positions of the seed's ordinary flags in these coordinates.
+
+\begin{lemma}[Residual entries and ordinary flags of the mixed seed]
+\label{lem:rank-four-mixed-flags}
+Use the eigenbasis of Lemma~\ref{lem:rank-four-seed-diagonalization}.
+Let \(r\) be the induced representation in that basis. Write \(\operatorname{supp}_{\rm off}(\bar r)\) for the pairs \((i,j)\), \(i\ne j\), for which \(\bar r_{ij}(g)\ne0\) for some \(g\). Then 
+\[
+ \operatorname{supp}_{\rm off}(\bar r)\subseteq\{(1,0),(3,2),(3,0),(1,2)\}.
+\]
+ The \((1,0)\) entry is nonzero
+somewhere or both \((3,0)\) and \((1,2)\) are nonzero somewhere.
+At every prescribed \(\ell\)-adic place, an integral lower
+unipotent symplectic frame for the ordinary flag has \((2,0)\)
+entry equal to \(\pm1\) and \((2,1)\) entry in the maximal ideal.
+The inertia deletion conditions of the mixed seed hold in this
+frame. All entries and comparisons may be read over one finite
+coefficient extension.
+\end{lemma}
+
+\begin{proof}
+\proofstep{Compute the residual entries before and after the other coset.}
+For \(g\in G_{Fk_0}\), write \(X(g),Y(g)\) for the
+residual upper-right entries of the two rank-two
+constituents on the original two cosets. The two
+diagonal characters of both constituents are
+\(1,\bar\eta\), since \(\eta\) comes from \(\Q\).
+Put \(\gamma=b/a\) in the basis change \(P\) above.
+Multiplying by \(P^{-1}\) on the left and \(P\) on the
+right gives
+\[
+\begin{array}{c|rrrr}
+\text{entry} &(1,0)&(3,2)&(3,0)&(1,2)\\ \hline
+\text{value}&
+(\bar\gamma X-Y)/2 &-(\bar\gamma X-Y)/2&
+(\bar\gamma X+Y)/2 &-(\bar\gamma X+Y)/2 .
+\end{array}
+\]
+All other off-diagonal entries are zero. The diagonal
+entries have the marked residual order. On the other
+coset in \(G_F\), multiplication by the diagonal matrix
+of \(\tau\) preserves the same support and gives the
+remaining marked characters. Since \(X\) is nonzero
+somewhere, either the \((1,0)\) entry is nonzero at some
+element, or both \((3,0)\) and \((1,2)\) are nonzero.
+On reducing, the scalar twist therefore has no effect on the tested entries: for its character \(\chi\),
+\[
+ \overline{\chi(g)r(g)}=\bar\chi(g)\bar r(g)=\bar r(g).
+\]
+
+\proofstep{Normalize the eigenlines in each ordering of the local constituents.}
+At a place above \(\ell\) the decomposition group is
+inside \(G_{Fk_0}\). Its two constituents evaluate
+\(r_2\) at the distinct places of \(k_0\) above \(\ell\)
+because \(\tau\) exchanges those places. The residual
+ordinary lines have opposite characters. Choose an element of the local decomposition group at which
+\(\bar\eta\ne1\), and write its matrix as
+\(\left(\begin{smallmatrix}a_0&b_0\\c_0&d_0\end{smallmatrix}\right)\).
+The lattice of the triangular residual extension has
+\(a_0\equiv1\), \(d_0\equiv\eta\), and \(c_0\equiv0\).
+
+For an eigenvector \((p,q)^{\mathsf t}\) of eigenvalue \(\lambda\),
+\[
+       (\lambda-a_0)p=b_0 q,\qquad
+       (\lambda-d_0)q=c_0 p.
+\]
+If \(\bar\lambda=\bar\eta\), the first multiplier is a unit,
+so \(|p|\le|q|\) and the line has a generator \((u,1)\).
+If \(\bar\lambda=1\), the second multiplier is a unit and
+\(|c_0|<1\), so the generator has the form \((1,w)\) with
+\(|w|<1\).
+
+In the first ordering, these lines are \((u,1)\) in
+the first constituent and \((1,w)\) in the second.
+The largest exponent is \(k+t\) on the first line.
+Applying \(P^{-1}\) and normalizing gives first flag
+column \((1,\gamma u,-1,\gamma u)^{\mathsf t}\).
+The second line is proportional to
+\((w,-1,w,1)^{\mathsf t}\).
+Write \(v_1=(1,\gamma u,-1,\gamma u)^{\mathsf t}\) for the normalized first column. Subtract its first-coordinate multiple from the second generator and normalize the second coordinate:
+\[
+ v_2=\frac{(w,-1,w,1)^{\mathsf t}-wv_1}{-1-\gamma uw}.
+\]
+
+In the other ordering, the largest exponent is on
+the second constituent. The corresponding first flag
+column is \((1,-u,1,u)^{\mathsf t}\), and the other
+line is proportional to
+\((w,\gamma,-w,\gamma)^{\mathsf t}\).
+Subtract \(w\) times the first column and divide by
+\(\gamma+uw\) for the second flag column.
+The ultrametric inequality computes both divisors in the two flag normalizations. Since \(|\gamma|=1\) and \(|uw|<1\),
+\[
+ |-1-\gamma uw|=1,\qquad |\gamma+uw|=1 .
+\]
+
+\proofstep{Complete the pair of columns to a symplectic flag.}
+In either case the two columns span a Lagrangian
+plane, since the original lines lie in separate
+symplectic summands. Write the columns as
+\((1,p,q,r)^{\mathsf t},(0,1,s,t)^{\mathsf t}\).
+The Lagrangian equation is \(t+ps=q\). Complete them
+with \((0,0,1,-p)^{\mathsf t}\) and
+\((0,0,0,1)^{\mathsf t}\); the resulting lower
+unipotent matrix is symplectic by the same equation.
+The first three columns span the orthogonal of the
+first line. Thus the frame is adapted to the full
+stable flag, with characters of exponents
+\(k+t,k,0,-t\) before the scalar twist.
+
+In the two orderings the required entries \(q\) and \(s\) of the normalized matrix satisfy
+\[
+ q\in\{1,-1\},\qquad |s|<1
+\]
+in positions \((2,0)\) and \((2,1)\), respectively.
+The two constituents' ordinary characters reduce,
+in this order, to \(\bar\eta,1,\bar\eta,1\).
+They coincide with the marked characters because
+\(\overline\Psi\) is trivial on the decomposition
+group and the diagonal order was fixed at \(\tau\).
+
+\proofstep{Check the scalar twist on the deleted inertia.}
+With \(\vartheta=\epsilon_\ell^{e+1}\omega^{-1}\eta\psi_0\),
+the square of the scalar twist is
+\[
+ \delta^2=\epsilon_\ell^{e+1-k}\omega^{-1}\psi_0\phi_0^{-1}
+ \quad\text{on }G_F.
+\]
+On the deep tower \(\psi_0\) has prime-to-\(\ell\) order.
+Above \(\ell\), \(\phi_0\) is one on the decomposition
+group and \(\omega\) is the Teichm\"uller part of
+\(\epsilon_\ell\). On inertia in the cyclotomic kernel,
+\(\psi_0\) reduces to one by the prescribed residual
+inertia. Its prime-to-\(\ell\) order makes it one.
+
+The two possible square roots are separated by reduction. Thus
+\[
+ (\delta-1)(\delta+1)=0,\qquad\delta\equiv1\quad\Longrightarrow\quad \delta=1
+\]
+at these places. On open inertia where
+\(\psi_0=\omega=1\), the exponent of \(\delta^2\) is
+\(e+1-k\), which gives the doubled weights used
+above. At a prescribed inertia element away from
+\(\ell\) with trivial residual labels, the tame
+tower condition kills \(\psi_0\), and the prime-to-
+\(\ell\) character \(\eta\) is one by reduction. The
+quadratic character \(\phi_0\) is unramified on the
+tower and \(\epsilon_\ell,\omega\) are unramified away
+from \(\ell\). The two constituents are trivial on these inertia elements because the type is \(1\oplus\eta\) and \(\eta=1\) on them. Thus \(\delta^2=1\) there and the same reduction test gives
+\[
+ \delta^2=1,\quad\bar\delta=1\quad\Longrightarrow\quad\delta=1 .
+\]
+These are the required inertia conditions for the
+integral seed and its reduction.
+
+\proofstep{Choose one finite coefficient extension.}
+All these matrices descend to the integers of one
+finite extension of \(\Q_\ell\). For the representation,
+write \(\overline{\Q}_\ell\) as a countable union of
+finite fields over \(\Q_\ell\). Their intersections
+with the matrix entries cut out closed subgroups
+covering the compact Galois group. By the Baire category theorem at least one of these closed subgroups has nonempty interior. Calling it \(H\), compactness then gives
+\[
+ H\text{ open in }G,\qquad [G:H]<\infty .
+\] Adjoining the entries on finitely
+many coset representatives, and the finitely many
+flag entries, then gives the desired field.
+The displayed unit and strict norm bounds persist
+under this coefficient choice. Thus the reduced seed
+has the required support and nonzero marked entries
+over a common residual coefficient extension.
+\label{cor:cohomology-count-two-seed-1}
+\end{proof}

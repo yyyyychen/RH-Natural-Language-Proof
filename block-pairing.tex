@@ -1,0 +1,466 @@
+\subsection{The normalized pairing of two digit symbols}
+\label{sec:block-pairing}
+\hypertarget{source-block-pairing}{}
+
+Ranks count the retained symbols, but combining the segment tests at an edge also requires their pairings. The two models use factorials at different degrees. Here we
+compare their pairings before lifting off the symbol. All
+valuations in this calculation have \(v(p)=1\) and \(w^2=p\).
+
+\paragraph{Factorial units.}
+
+To compare the coarse and true factorial pairings, separate the unit part of the factorial of an exponent with prescribed low digit.
+
+For \(P=p^d\), \(d\ge1\), and \(0\le h<P\), write
+\[
+ (h+Pn)!=h!\,n!\,(P!)^n C_P(n)D_{P,h}(n),\qquad
+ D_{P,h}(n)=\prod_{1\le j\le h}(1+Pn/j).
+\]
+Here \(C_P(0)=1\) and
+\(C_P(n+1)/C_P(n)=\prod_{1\le j<P}(1+Pn/j)\),
+as is seen by cancelling the last multiple of \(P\) in the
+factorial quotient. Every \(P/j\) in these products belongs
+to \(p\mathbb Z_p\). Both factors are units.
+
+\begin{lemma}[Approximating inverse factorial units]
+\label{lem:factorial-unit-polynomial}
+For any finite product of the factors \(C_P(\mu_i)^{\pm1}\) and
+\(D_{P,h}(\mu_i)^{\pm1}\), with the indicated restrictions on \(P,h\),
+and any positive integer \(c\), write \(A(\mu)\) for that product. One polynomial \(P_c\) works for every nonnegative integral vector \(\mu\),
+\[
+ \deg P_c\le4c,\qquad P_c(\mu)\equiv A(\mu)\pmod{p^c}.
+\]
+ Its coefficients in the product
+binomial basis belong to \(\mathbb Q\cap\mathbb Z_p\).
+\end{lemma}
+
+\begin{proof}
+\proofstep{Polynomial interpolation of the factorial units.}
+We need a uniform polynomial for the inverse units modulo
+\(p^c\), with degree controlled independently of the radices,
+digits and number of variables. We include a finite difference
+proof. In each product \(B(x)=\prod_{j\le h}(1+Px/j)^{\pm1}\),
+the coefficient of \(x^e\) has valuation at least \(e\). This
+also holds for negative exponents by the convergent geometric
+series, uniformly on \(\mathbb Z_p\). For the forward difference
+\(\nabla f(x)=f(x+1)-f(x)\),
+\[
+ v(\nabla^l(B-1)(x))\ge\max(1,l)
+       \quad (l\ge0,\ x\in\mathbb Z_{\ge0}).
+\]
+Indeed the constant term of \(B-1\) is zero and the \(l\)-th
+difference kills powers of degree less than \(l\).
+
+For \(F=C_P^{\pm1}\) we have \(\nabla F=(B-1)F\) with \(h=P-1\).
+The shifted product rule gives
+\[
+ \nabla^j F(x)
+   =\sum_{l=0}^{j-1}\binom{j-1}{l}
+       \nabla^l(B-1)(x)\,\nabla^{j-1-l}F(x+l).
+\]
+Using the bound on \(B-1\) and induction on \(j\), each term
+has valuation at least \(\max(1,l)+(j-1-l)/2\ge j/2\). The same bound holds for
+\(D_{P,h}^{\pm1}\) by the coefficient estimate. Repeated use of
+the product rule preserves this bound for products in one
+variable.
+
+For a product of such functions in several variables
+the mixed difference of order \(\nu\) at zero has valuation
+at least \(|\nu|/2\). Newton's finite difference formula at a
+nonnegative integer vector \(\mu\) is exact with indices
+\(\nu\le\mu\), by binomial inversion in each coordinate.
+Truncating to \(|\nu|\le4c\) thus gives a polynomial
+\[
+ H(\mu)=\sum_{|\nu|\le4c} q_\nu\prod_v\binom{\mu_v}{\nu_v},
+ \qquad q_\nu\in\mathbb Q\cap\mathbb Z_p,
+\]
+congruent to the desired product modulo \(p^c\) for every
+\(\mu\). A variable on which the unit is constant occurs with
+degree zero. The decomposition applies to any finite product of digit factors.
+
+\end{proof}
+
+\begin{established}[Injectivity of the block monomial embedding]\label{hyp:digit-block-embedding}
+Embed the block variables in the \(k\) coordinates of the
+two letters at each interior top and at the next even top.
+The \(r\) ordinary coordinates occupy columns 1 through \(r\).
+At a tie the extra coordinates \(Z,S\) occupy column zero in
+the vector and covector, respectively, including at the final
+pair. A block monomial \(X^\mu\) maps to \(X^{I(\mu)}\) by
+multiplying its exponents at interior top \(i\) by \(P_i\),
+then adding the digit vectors. At an untied interior top also
+add \(P_i(A_i-w_i),P_i h_i\) in the two columns zero.
+There are no free variables in those two columns.
+Writing \(\mathcal M_B\) for the monomials in block \(B\), the map satisfies
+\[
+ I_B(\mu)=I_B(\nu)\Longrightarrow\mu=\nu,\qquad
+ I_B(\mathcal M_B)\cap I_{B'}(\mathcal M_{B'})=\varnothing\quad(B\ne B').
+\]
+\end{established}
+\begin{proof}
+At the
+end the radix is one and the digits are zero.  On each ordinary coordinate the recovery is Euclidean division. If \(m\) is its true exponent at top \(i\), then
+\[
+ m=P_i q+\delta,\qquad q=\lfloor m/P_i\rfloor,\quad \delta=m\bmod P_i.
+\]
+At an untied top the
+quotients in column zero recover \(w_i,h_i\). All remaining
+coarse exponents are then recovered by division by the radices.
+At any tie the difference of the exponents of \(Z\) and \(S\)
+is its decoration \(z\), because each power of
+\(E=ZS+x\cdot y\) has weight zero for that difference.
+This recovers \(o_i=A_i-z_i\) or \(o_+=a_+-z_+\).
+Thus different blocks have disjoint monomial supports and
+\(I\) is injective within a block.
+\end{proof}
+
+\begin{lemma}[The scale of the digit block]\label{lem:digit-block-scale}
+For the embedding of Lemma~\ref{hyp:digit-block-embedding}, the factor
+\(\Phi\) in \(I(\mu)!=\Phi\,\mu!\,U(\mu)\) is independent
+of \(\mu\). For the scale \(\gamma_I\) of \eqref{eq:digit-block-scale} one has
+\[
+ 0\le v(\gamma_I)\le(k+1)L_I.
+\]
+ These bounds use the
+same valuation \(v(p)=1\) as the digit pairing.
+\end{lemma}
+
+\begin{proof}
+\proofstep{The degrees and the common scalar factor.}
+Write \(g_x\) for the sum of the exponents in the free
+variables belonging to a particular true letter \(x\), before
+inserting digits. It is constant on all the levels of the
+block. At an untied pair these sums are \(w_i,C_i-h_i\), at a
+tie they are \(A_i,C_i\), and at the end they are \(a_+,b_+\).
+Indeed each term of \(E\) has bidegree \((1,1)\), and each
+\(Z^z\) restores its prescribed decoration. Write \(D_x\) for
+the true degree after adding digits and the two fixed columns.
+Put
+\[
+ b_*=\prod_{i<\sigma}(A_i-w_i)!\,h_i!,\qquad
+ T=b_*\prod_x g_x!,\qquad V=v_p(T),\qquad
+ L_I=\sum_x\lfloor\log_p D_x\rfloor .
+\]
+Use a zero log for a zero degree. We have \(b_*\mu!\mid T\)
+on this block, by multiplying the letter multinomials.
+
+Let \(U\) be the product of the \(C_PD_{P,h}\) over the free
+coordinates at the odd top indices.
+The factorial-unit identity gives, for a fixed integer
+\(\Phi>0\) depending on this block and all its ambient degrees,
+\[
+ I(\mu)!=\Phi\,\mu!\,U(\mu).
+\]
+The factors independent of \(\mu\)
+in \(\Phi\) are the factorials of the two fixed column
+exponents at each untied top and the digit factorials in the
+free coordinates. The remaining factor is
+\(\prod_x(P_x!)^{g_x}\), independent of \(\mu\) by the preceding
+homogeneity.
+
+Write \(\partial^{[\nu]}\) for the divided derivative.
+Apply the polynomial just proved to \(U^{-1}\),
+with variables restricted to the odd tops. It gives the
+diagonal operator
+\[
+ \mathcal H=\sum_\nu q_\nu X^\nu\partial^{[\nu]},
+ \qquad \mathcal H X^\mu=H(\mu)X^\mu .
+\]
+Define
+\begin{equation}\label{eq:digit-block-scale}
+ Z_I=\frac{p^{kL_I}}{\prod_x D_x!},\qquad
+ \gamma_I=Z_I p^V\Phi/b_* .
+\end{equation}
+Then
+\[
+ 0\le v(\gamma_I)\le(k+1)L_I.
+\]
+To see the
+cancellation in this assertion, form an exponent \(\mu^0\)
+by putting each undecorated letter degree in its first ordinary
+coordinate, all decorations in \(Z\) and zero in \(S\).
+This uses level zero and has the right letter degrees,
+irrespective of whether it obeys the prefix cuts.
+
+In each
+letter \(\mu^0\) has at most two nonzero entries. The
+integer \(\prod_xg_x!/\mu^0!\) is a product of binomials,
+of valuation between zero and \(L_I\) by the carry bound.
+The true multinomials in \(\prod_xD_x!/I(\mu^0)!\) have
+valuations summing to at most \((k-1)L_I\).
+Legendre's formula proves both bounds, since at each positive
+power of \(p\) the difference of the floor sums is at most one
+for two entries and \(k-1\) for \(k\) entries. As
+\[
+ v(I(\mu^0)!)=v(\Phi)+v(\mu^0!),
+\]
+subtraction gives
+\[
+ v(\gamma_I)=kL_I+
+ v\!\left(\frac{\prod g_x!}{\mu^0!}\right)
+ -v\!\left(\frac{\prod D_x!}{I(\mu^0)!}\right).
+\]
+Both factorial quotients in this formula have nonnegative
+valuation. Their upper bounds from the selected monomial
+are \(L_I\) and \(kL_I\), respectively. Substituting them
+gives the two endpoints for \(v(\gamma_I)\); in particular
+\(\gamma_I\) is nonzero and integral.
+
+\end{proof}
+
+\paragraph{The two symbols.}
+For two inputs \(u,u'\) in the factorial lattice of the block
+take \(s(u)=w^V\mathcal H u\), \(s'(u')=w^V u'\).
+As \(b_*\mu!\mid T\), the defining monomial inequality of
+that lattice makes \(w^V u\) coefficient-integral. The same
+holds after applying \(\mathcal H\).
+
+We verify membership in the symbol lattice at the required
+margin. First the integral span of the generators at a fixed
+margin is saturated inside its rational span and the
+coefficient lattice. Write a rational combination in levels
+as a sum of \(\prod E_i^{j_i}Z_i^{z_i}\) times polynomials in
+the reduced ordinary letters and the residual \(\xi\)'s.
+Set every \(Z_i=1\) and then substitute
+\[
+ S_i\mapsto S_i-x_i\cdot y_i,
+\]
+including the last pair. These integral substitutions
+take \(E_i\) to \(S_i\). Extracting the coefficients of
+\(\prod S_i^{j_i}\xi^\alpha\) recovers separately the
+constrained ordinary-letter polynomials. If the original
+combination was integral these polynomials belong to the
+coefficient lattice of their constrained rational spaces,
+and reassembling them gives integral generators.
+
+\begin{proposition}[The two lifts reproduce the block pairing]
+\label{prop:digit-symbol-pairing}
+Write \(B(u,u')\) for the normalized diagonal Fock pairing of the two block symbols. Then
+\[
+ B(u,u')-\gamma_I b_*\langle u,u'\rangle\in\gamma_I w^c O.
+\]
+ This holds for inputs in the two coefficient
+lattices, including the allowed denominators. If the generators satisfy
+the raw-tail assertion \eqref{eq:raw-tail-required}, the simultaneous
+lifts preserve this congruence and give the two integral tests in
+\eqref{eq:two-letter-tensor-rank}.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Compatibility with a variation of one coordinate.}
+Next, replacing one coordinate \(v\) by \((1+t)v\) and taking
+\([t^b]\) realizes \(v^b\partial_v^{[b]}\).
+On the constrained letter part it increases each allowed first
+row by at most \(b\). In fact in a prefix frame change a
+rescaling of one coordinate becomes a change by \(t\) times a
+rank-one endomorphism on that letter. Its degree-\(a\) term
+is a sum of polynomials with \(a\) variables replaced and
+\(a\) derivatives.
+
+In any conjugate frame, replacing one
+variable of a given vector (or covector) letter by another
+changes the first torus-coordinate weight by at most one.
+This proves the prefix-weight bound for the whole orbit, hence
+the highest-weight cutoff. The integral divided-derivative
+formula preserves integrality. Rescaling an odd coordinate also
+changes at most one \(E_i\) and its adjacent \(Z_i^{z_i}\).
+If a term of \(E_i\) is hit, write
+\[
+ E_i\mapsto E_i+tM.
+\]
+For an ordinary variable \(M=x_h y_h\).
+For \(Z_i\) or \(S_i\),
+\[
+ M=Z_iS_i=E_i-x_i\cdot y_i.
+\]
+
+After expanding, removing \(l\) powers of \(E_i\) inserts
+\(l\) ordinary bilinears. Each has vector and covector degrees
+one and first-coordinate weight at most one in every prefix
+frame (also at the prefix between its letters). Moving from
+level \(j_i\) to \(j_i-l\) supplies precisely those degrees.
+The power of \(Z_i\) contributes just an integer binomial
+coefficient. Thus \([t^b]\) relaxes every cutoff by at most
+\(b\) and preserves the span of the integral generators at the
+relaxed cutoffs. Iteration costs at most \(|\nu|\le4c\) in
+every cutoff. Since
+\[
+ m_0(C_m)-m_0(13)=(C_m-13)kN_1Qc\ge4c
+\]
+for \(C_m\ge17\),
+both symbols belong to the required integral span at
+\(m_0(13)\).
+
+\proofstep{The diagonal Fock pairing.}
+The Fock form on monomials has diagonal \(I(\mu)!\).
+For all inputs in one block, including those with denominators,
+we now have
+\[
+ Z_I\langle I(s(u)), I(s'(u'))\rangle
+   \equiv \gamma_I b_*\langle u,u'\rangle
+                  \pmod{\gamma_I w^c O}.
+\]
+Indeed \(H(\mu)U(\mu)\equiv1\pmod{p^c}\), the two factors of
+\(w^V\) give \(p^V\), and each
+\(b_*\mu!\,u_\mu u'_\mu\) is integral by the two defining
+coefficient inequalities. Distinct blocks pair to zero by
+disjoint support. Products of the symbol maps over the segments
+multiply the pairings since their true letters are disjoint,
+and \(Z_{\mathrm{ten}}=\prod Z_I\). The diagonal multiplier
+has depth at most
+\[
+ (k+1)\sum_I L_I\le4\kappa_0,
+\]
+since the \(2N\) degrees
+are at most \(2a\), \(\log_p(2a)\le2\log_p a\), and
+\(\kappa_0=2Nk\log_p a\). This gives the segment-to-symbol
+identity, including its uniform relative congruence.
+
+To use the identity on two lifted polynomials it suffices that
+their normalized edge substitutions be coefficient-integral
+and congruent to the respective product symbols modulo \(w^c\).
+On the true letter degrees the monomial diagonal of
+\(Z_{\mathrm{ten}}\langle\ ,\ \rangle\) is integral, by the
+same multinomial carry bound. Bilinearity then preserves the
+congruence modulo \(w^c\). \paragraph{Orders, corrections and duality.}
+Sections~\ref{sec:column-lifts} and~\ref{sec:symbol-correction}
+construct the lifts used here. The order of a
+block at a segment and the order of a tuple are
+\[
+ o_I=o_++\sum_i\left(P_i u_i+\sum_{h=1}^r\rho_{ih}+\tau_{i0}\right),
+ \qquad o=\sum_I o_I .
+\]
+Let \(S_I=\sum_i\min(b_i,a_{\rm start}/p^{d_i})\). Write
+\(R=a/p^2+b'/p+\mathcal L a/(pk)+\mathcal L b'/k+kQ\).
+Then \(o_I\le S_I+30(s+1)R\). Indeed the digits in each summand
+cost at most \(kQ\), and
+\(P_i K_i\le a/p^{d_i}+2b'/p\) since \(P_i B\le a/p^{d_i}\)
+and \(P_i\sum_{l<i}A_l\le (4/p^2)P_i A_i\le8b'/p^2\).
+
+In the initial list the minimum in \(S_I\) is \(b_i\) by
+the excluded band. The retained upper bound for \(u_i\) gives
+\[
+ P_iu_i\le b_i(1+4/p^2)+(\mathcal L/k)P_i K_i.
+\]
+In the tied list the minimum is at least \(a/p^{d_i}\), and
+\(P_i u_i\le P_i K_i+2\mathcal L b'/k\).
+For the end, put
+\[
+ C_{\rm end}=a/p^2+3b'/p+
+       (\mathcal L/k+4/p^2)4a/p+2\mathcal L b'/k .
+\]
+The increasing distances are odd, \(P_i\ge p\), and \(G\ge2\).
+Hence \(B\le a/p^2\), \(\sum A_i\le3b'/p\) and
+\[
+ \sum 2a/P_i\le4a/p
+\]
+by summing the geometric series. The
+last retained cutoff implies \(o_+\le C_{\rm end}\). These bounds
+give the claimed constant for \(p\ge5\). Summing them and using
+\(\sum(s+1)\le N\) proves \(o\le\lfloor t_0\rfloor\)
+for \(C_t\ge30\), as the additional \(Qc\) term is nonnegative.
+
+\proofstep{The two lift maps in a basis adapted to the edge.}
+Fix an edge line and use its adapted frame as the identity.
+Denote by \(S_g\) the normalized substitution on polynomials
+in the frame \(g\). The residue lines parametrize neighbors of
+the source. Write \(A_1=13kN_1Q\) and \(M_0=12c\).
+At precision \(0\le n\le c\) take the integral span of
+product symbols with order at most \(o\), prefix margin
+\(M_0+nA_1\), and excess
+\[
+ e=(c-n)A_1
+\]
+in their block bounds.
+The relaxed bounds keep digit compatibility, the unused labels
+equal to zero and the usual integer degree ranges. They require
+\[
+ h_i\le2\mathcal L B/k+e\ (i<\sigma),\qquad
+ o_i\le (1-\Delta/4)A_i+e\ (i\ge\sigma),\qquad
+ o_+\le\min(a_+,C_{\rm end}+e).
+\]
+Every retained block satisfies these bounds at \(n=c\).
+
+For
+the middle inequality use \(K_i\le B+\delta A_i\), the second
+part of \eqref{eq:coarse-split}, and
+\(\delta+\mathcal L/k\le3\Delta/4\).
+Call this span \(\mathcal S(n,o)\). A polynomial is clean at
+order \(o\) if it has the true multidegrees, its product by
+\(w^o\) has integral coefficients in the source frame, and
+its substitutions at every other residue line belong to
+\(w^c O[X]\).
+
+\proofstep{The required raw polynomial tail.}
+The raw polynomial assertion is the following. For each
+product generator \(b\) of \(\mathcal S(n,o)\), \(1\le n\le c\),
+of actual order \(o_b\le o\), there is a clean \(F_0\)
+at that order with
+\begin{equation}\label{eq:raw-tail-required}
+ S_1F_0-b\equiv\sum_{\epsilon=1}^{n-1}w^\epsilon b_\epsilon
+ \pmod {w^nO[X]},\qquad
+ b_\epsilon\in\mathcal S(n-\epsilon,o_b+\epsilon).
+\end{equation}
+Given this, induction lifts the entire span exactly to the
+required precision. At zero use the zero polynomial. At \(n\)
+lift \(b_\epsilon\) by induction and subtract \(w^\epsilon\)
+times its lift. The multiplier recovers the lost source order
+\(o_b\) and preserves cleanliness at every other line. It
+raises the precision of the correction to \(n\). Integral
+linear combinations finish the induction. At \(n=c\) the
+margin is \(m_0(13)\), precisely the one obtained above, and
+we can do this independently on an edge and on its dual.
+
+\proofstep{The covector in the integral dual.}
+Here is the identification of the second lift with a covector.
+In polynomial coordinates let
+\[
+ \Xi(y)(x)=Z_{\rm ten}\langle x,y\rangle.
+\]
+Multihomogeneous polynomial coordinates realize
+the tensor of one-row vector and covector representations,
+with the monomial coefficient lattices in the corresponding
+frames. The Fock form transports between a frame and its
+inverse transpose. Indeed it is obtained by contracting
+all indices of two symmetric tensors, summed over the
+permutations in each letter, or equivalently by evaluating
+the constant term of \(P(\partial)Q\). This works for both
+letter orientations. On integral coefficients its normalized
+form is integral in any such paired frames.
+
+At a vertex
+with frame \(b\), the dual frame is \(b^{-t}\). Along an edge
+write \(D(u)=\operatorname{diag}(u,1,\ldots,1)\).
+The intermediate frame is \(bD(w^{-1})\).
+On the dual edge starting at the dual of the original target
+the intermediate frame agrees with the inverse transpose, since
+\(w^2=p\) and \(D\) is diagonal:
+\[
+ b^{-t}D(p)D(w^{-1})=b^{-t}D(w)=(bD(w^{-1}))^{-t}.
+\] This remains true on all
+Frobenius-twisted coefficient frames, since the twist on
+\(b\) fixes \(p\). Thus \(\Xi\) takes the vertex and intermediate
+integral lattices on the dual edge into the duals of those
+on the original edge. In particular for a lattice \(L\) and an integer \(a\), linearity gives
+\[
+ \Xi(w^a L)=w^a\Xi(L).
+\]
+
+In particular the two normalized intermediate lattices both
+carry \(w^{-A_H}\), where \(A_H\) is the sum of vector
+degrees. The order multiplier \(w^{-t}\) at the vertex and the
+conductor multiplier \(w^c\) at every other intermediate
+lattice transport with the same exponents. Duality bijects
+outgoing neighbors of the dual source with incoming neighbors
+of the original target, preserving the distinguished pair.
+This proves the target membership required of the second lift.
+In the distinguished frames the normalized substitution of
+each polynomial carries \(w^{A_H}\) times its expression in
+its intermediate frame. Hence pairing its two substitutions
+with \(Z_{\rm ten}\) agrees with evaluation by \(\Xi\) after applying the edge normalization
+\[
+ w^{A_H}\cdot w^{A_H}=w^{2A_H}=p^{A_H}.
+\]
+This gives the congruence used in
+\eqref{eq:two-letter-tensor-rank} using
+\eqref{eq:raw-tail-required}, proved in Section~\ref{sec:symbol-correction}.
+\end{proof}

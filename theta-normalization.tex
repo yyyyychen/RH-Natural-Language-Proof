@@ -1,0 +1,375 @@
+\subsection{One normalization for the fourth theta tensor}
+\label{subsec:theta-normalization}
+
+Local integral models can have different generators. The fourth tensor needs a scalar normalization compatible with all the translates occurring in one period.
+
+Fix an imaginary quadratic field \(K=\mathbb Q(\sqrt{-d})\)
+with \(d\) prime, \(d\equiv7\bmod8\). Put
+\(\tau=(b+\sqrt{-d})/2\) and take
+\(\Gamma=\lambda(a\mathbb Z+\tau\mathbb Z)\), where
+\(4ac=b^2+d\), \(a>0\) is odd and \(\lambda\ne0\).
+Thus \(b\) is odd and \(c\) is even. Write
+\(H_0(z,w)=\sum z_i\overline{w_i}/\operatorname{area}(\Gamma)\).
+
+For a positive Hermitian form \(H\), linear in the first
+variable, put \(E=\Im H\). A CM lattice \(M\) here is a full
+\(\mathcal O_K\)-lattice self-dual for \(E\). Its sign character is
+\[
+  \alpha(x)=\exp\big(\pi i\,\sqrt d\,H(x,x)/2\big).
+\]
+Indeed the quadratic expression in the exponent divided by
+\(\pi i\) is \(E(\tau x,x)\). For \(x,y\in M\) its
+polarization is \(2E(\tau x,y)-bE(x,y)\), congruent to
+\(E(x,y)\bmod2\). Consequently
+
+\[
+  \alpha(x+y)=\alpha(x)\alpha(y)e^{\pi i E(x,y)}.
+\]
+On one copy of \(\Gamma\) the quadratic expression is
+\(au^2+buv+cv^2\) at \(\lambda(au+\tau v)\). Its parity is
+\(u+uv\), the sign of the odd sigma section translated by
+the half period \(\lambda a/2\). In an orthogonal sum the
+signs multiply. Let \(f_\nu\) denote the translated one-variable sigma section in the \(\nu\)-th coordinate, divided by its nonzero value at zero. The product section in these coordinates is
+\[
+  F_0((z_\nu)_\nu)=\prod_\nu f_\nu(z_\nu),\qquad f_\nu(0)=1,\qquad F_0(0)=1.
+\]
+
+Take a positive CM Hermitian space of rank \(n\) with such
+a lattice \(M\), in the complex scale of \(\Gamma\).
+There is a rational isometry \(g_0\) of its fourfold sum to
+the standard space of rank \(m=4n\). In fact diagonalize the
+Hermitian form over \(K\) relative to the rational CM form
+underlying \(H_0\). Every diagonal entry is a positive rational
+number \(r\).
+
+For a positive entry \(r=a/b\) with \(a,b\in\mathbb Z_{>0}\), Lagrange's theorem gives
+\[
+  ab=n_1^2+\cdots+n_4^2,\qquad r=\sum_{i=1}^4(n_i/b)^2.
+\]
+ The matrix of multiplication by the resulting
+quaternion has transpose times itself equal to \(r I_4\).
+Taking the block diagonal sum of the four-dimensional
+quaternion matrices gives \(g_0\). Its equality of forms is
+\[
+       g_0^*H_0^{\oplus 4n}g_0=H^{\oplus4}
+\]
+in the corresponding ordered coordinates, with \(H_0\)
+the standard form on one line. In particular \(L_0=g_0 M^4\) and \(S=\Gamma^m\)
+are commensurable in the common rational space.
+
+\paragraph{Choosing a local isometry and its determinant.}
+
+To transport the normalized theta tensor from the standard lattice, we need a local isometry with the prescribed determinant.
+
+\begin{lemma}[Local comparison with the standard CM lattice]
+\label{lem:cm-standard-local-isometry}
+For each finite prime \(p\) the lattices \(L_0\) and \(S\) are
+locally isometric. The isometry at \(p\) can be chosen rational
+with \(1-\delta\) invertible. For \(L_1=\delta L_0\), its intersection \(I=L_1\cap S\) satisfies
+\[
+ p\nmid[L_1:I]\,[S:I].
+\]
+
+\end{lemma}
+
+\begin{proof}
+After removing the common complex scale, write
+\(\mathfrak a=a\mathbb Z+\tau\mathbb Z\) for the ideal of the
+reference curve. It is invertible with
+
+\[
+  \mathfrak a\overline{\mathfrak a}=a\mathcal O_K,\qquad {\rm N}\mathfrak a=a
+\]
+ since
+\(\mathrm N\mathfrak a=a\).
+
+Tracing the Hermitian pairing
+\(h(x,y)=\sum x_i\bar y_i/a\) against
+\(1/\sqrt{-d}\) gives \(E(x,y)\). Since the inverse
+different is \((1/\sqrt{-d})\mathcal O_K\), stability under
+\(\mathcal O_K\) identifies self-duality for \(E\) with
+unimodularity for \(h\). Locally choose a generator of
+\(\mathfrak a\), so \(S\) has Gram matrix a unit times the
+identity. At a split prime the two direct summands of a lattice
+are in perfect duality. For a basis \(e_i\) of one summand and the dual basis \(e'_j\) of the other, the split pairing has entries
+\[
+  h(e_i,e'_j)=\delta_{ij}.
+\]
+This description includes \(p=2\).
+
+At an inert odd prime, reducing a
+unimodular form gives a nondegenerate Hermitian form over
+\(\mathbb F_{p^2}\). It has a vector of nonzero norm by
+polarization. Lift the vector, split its orthogonal complement
+and iterate. The norm on unramified units is surjective, by
+finite-field norm surjectivity and lifting the norm using the
+surjective residue trace.
+For the successive corrections to a norm, the linear term is the residue trace: for \(n\ge1\),
+\[
+  N(1+p^nx)\equiv 1+p^n\operatorname{Tr}(x)\pmod {p^{n+1}}.
+\]
+ Thus all diagonal units may be matched.
+
+At the odd ramified prime the residual forms are nondegenerate
+symmetric forms. They have the same determinant square class
+because the generic change of basis has determinant of norm a
+unit, and the residue of that norm is a square. Dimension and
+determinant classify nonsingular forms over the finite field of
+odd order. Lift a residual isometry modulo the uniformizer.
+For a resulting Gram matrix \(B\) close to the desired \(C\),
+\(B^{-1}C\) is self-adjoint for \(B\) and congruent to one.
+Put \(A=B^{-1}C\) and \(R=A^{1/2}\).
+The binomial series is integral since \(A\) is congruent
+to \(1\) and \(1/2\in\mathbb Z_p\). Each power is
+self-adjoint for \(B\), hence so is \(R\), and
+\[
+                  R^* B R=BR^2=BA=C .
+\] This proves the local assertion.
+
+The transporter of the two lattices is open in the local
+unitary group. It contains elements for which both \(1+\delta\)
+and \(1-\delta\) are invertible. For example multiply a
+transporter by nearby scalar norm-one elements, avoiding its
+finitely many forbidden eigenvalues. On this open subset
+the Cayley change \(X=(1-\delta)(1+\delta)^{-1}\) parametrizes
+the group by skew-Hermitian matrices. The rational skew-Hermitian
+matrices are dense in their localization since they form a
+rational vector space. We can therefore take \(\delta\) rational,
+with \(\delta L_{0,p}=S_p\) and \(1-\delta\) invertible.
+Put \(g_1=\delta g_0\). Each intersection index of
+\(L_1=g_1M^4\) and \(S\) is prime to \(p\).
+\end{proof}
+
+For the choices in Lemma~\ref{lem:cm-standard-local-isometry}
+one algebraic number suffices for normalization. Let
+\(J=(\bigwedge^m L_0)/(\bigwedge^m S)\) be the fractional
+ideal ratio in the common determinant line, with complex scale
+removed. At every prime the local transporter has norm-one
+determinant and \((\det\delta)J_p=\mathcal O_{K,p}\).
+Hence \(J\bar J=\mathcal O_K\). Choose \(h>0\) with
+\(J^h=(u)\), using finiteness of the ideal class group.
+The positive rational number \(u\bar u\) generates the unit
+ideal, so equals one. Fix any \(\kappa^{2h}=u\). All complex
+conjugates of \(\kappa\) have modulus one. For every embedding
+at \(p\) and every such \(\delta\) we have
+\begin{equation}\label{eq:kappa-determinant}
+             |\kappa|_p^2 |\det\delta|_p=1 .
+\end{equation}
+In particular the two valuations above a split prime are
+accounted for separately.
+
+\begin{lemma}[Integral Cayley change of the theta isometry]\label{lem:theta-cayley-scalar}
+For the self-dual CM lattices with the intrinsic sign above,
+use an isometry \(\delta\) for which the stated Cayley
+operators are defined. The transport and its scalar satisfy
+\[
+ F\circ\delta^{-1}=c_\delta T_{L,\delta L}F,\qquad c_\delta^8=(\det\delta)^4.
+\]
+
+\end{lemma}
+
+\begin{proof}
+The theta line of a self-dual lattice with the given
+semicharacter consists of the entire functions fixed by
+\(\alpha(x)U_x\) for every lattice vector, where
+\[
+ U_xF(z)=e^{-\pi H(z,x)-\pi H(x,x)/2}F(z+x).
+\]
+It has dimension one by Riemann--Roch for a principal
+polarization: the positive line bundle has vanishing higher
+cohomology and top self-intersection divided by \(m!\) equal
+to the Pfaffian of \(E\), of absolute value one. Equivalently
+one can choose a symplectic basis and solve the automorphy
+relations for its Fourier coefficients. For commensurable
+self-dual \(L_i,L_j\) with the same quadratic sign on their
+intersection, define
+\[
+ T_{ij}F=[L_j:L_i\cap L_j]^{-1/2}
+       \sum_{x\in L_j/(L_i\cap L_j)}\alpha(x)U_xF .
+\]
+The Heisenberg multiplication rule
+
+\[
+  U_x U_y=e^{-\pi i E(x,y)}U_{x+y}
+\]
+ shows independence of
+representatives and the fixed-vector property on \(L_j\).
+Use the Gaussian metric and normalized Haar average on any
+common period domain. The distinct summands are orthogonal:
+translation by \(\ell\in L_i\) distinguishes the characters
+\(e^{2\pi i E(x,\ell)}\), by self-duality of \(L_i\).
+Each has the norm of \(F\), since the translated density has
+the same mean. Thus \(T_{ij}\) is an isometry of lines.
+
+For three such lattices carrying the intrinsic quadratic signs,
+\(T_{23}T_{12}=\xi T_{13}\) with \(\xi^8=1\). To compute the
+phase, project onto the initial line by averaging its
+translations, or equivalently retain the coefficient of the
+trivial \(L_1\)-character in the preceding orthogonal expansion.
+Up to positive index factors the scalar is the sum over pairs
+\(z\in L_3,y\in L_2,z+y\in L_1\) of
+\[
+ \alpha(z)\alpha(y)\alpha(z+y)e^{-\pi i E(z,y)} .
+\]
+For a common finite quotient take \(z,y\) modulo
+\(2(L_1\cap L_2\cap L_3)\) in their respective lattices.
+This counts each contributing pair of cosets in the two
+intertwiners with the same multiplicity: translates of
+\(z\) by \(t\in L_2\cap L_3\) are paired with translates of
+\(y\) by \(-t\), and \(y\) can independently be shifted by
+\(L_1\cap L_2\).
+
+The Heisenberg law leaves the summand
+unchanged under both operations. The displayed function
+on the finite group of pairs is a homogeneous quadratic
+character, by its quadratic exponent. Its sum is nonzero
+because the intertwining maps are isometries and the
+coefficient of the initial line in \(T_{13}\) is positive.
+On the radical of its polarization its restriction is a
+character.
+Indeed on the radical \(R\) the defining polarization is trivial, so
+\[
+  q(x+r)=q(x)q(r)\qquad(r\in R).
+\]
+ A nontrivial such restriction would annihilate
+the sum by translation.
+In fact translation by a radical element \(r\) multiplies the sum by \(q(r)\), giving
+\[
+  \sum_xq(x)=\sum_x q(x+r)=q(r)\sum_xq(x).
+\]
+ Passing to the quotient by the
+radical therefore changes the sum by a positive integer.
+
+For completeness, let \(q\) be a nondegenerate homogeneous
+quadratic character on a finite abelian group \(B\). Writing \(b(x,y)=q(x+y)/(q(x)q(y))\), character orthogonality gives
+\[
+  \left|\sum_xq(x)\right|^2=\sum_h q(h)\sum_y b(h,y)=|B|.
+\]
+Denote this Gauss sum by \(G\). To see that its
+phase is an eighth root of unity, put \(N=|B|\) and choose
+four integer squares summing to \(N^2-1\). Left quaternion
+multiplication by this vector gives an integer similarity
+\(Q\) of the sum of four squares with
+\(Q^{t}Q=(N^2-1)I\), invertible on \(B^4\).
+Expanding the quadratic character and its symmetric
+bicharacter gives
+
+\[
+  \prod_i q((Qv)_i)=(\prod_i q(v_i))^{N^2-1}
+=\overline{\prod_i q(v_i)}.
+\]
+ Here \(q(Nx)=q(x)^{N^2}=1\).
+Thus \(G^4\) is real. This also covers \(N=1\).
+As \(|\xi|=1\), the triple comparison follows.
+
+An additional determinant occurs for a change of variables.
+Let \(L=S\) and take the rational unitary \(\delta\) of
+Lemma~\ref{lem:cm-standard-local-isometry}. Put
+\(A=1-\delta^{-1}\), \(I=L\cap\delta L\) and \(j=[L:I]\).
+Then for \(F\) on the theta line of \(L\),
+\begin{equation}\label{eq:cayley-multiplier}
+   F\circ\delta^{-1}=c_\delta T_{L,\delta L}F,\qquad
+              c_\delta^8=(\det\delta)^4 .
+\end{equation}
+
+To compute the scalar, periodize the Gaussian kernel in its
+first variable:
+\[
+ P(v,z)=\sum_{x\in L}\alpha(x)
+      U_x\big(e^{\pi H(\cdot,z)}\big)(v).
+\]
+Positive definiteness gives normal convergence on compact sets
+by a Euclidean lattice Gaussian, and \(P(\cdot,z)\) lies in the
+theta line. Integrate \eqref{eq:cayley-multiplier}'s first
+identity for this section, evaluated at \(z\), against
+\(e^{-\pi H(z,z)}\,dz\) on a fundamental cell of \(I\).
+Before inserting \(c_\delta\), the right side integrates to
+\(\operatorname{vol}(I)/\sqrt j\), where \(\operatorname{vol}\)
+of a lattice denotes covolume. Indeed in the expansion of
+\(T P\) the oscillatory factors are characters
+\(e^{2\pi i E(x+y,z)}\) for \(x\in L\), \(y\in\delta L/I\);
+integration leaves just \(x+y=0\).
+
+On the left the summand for \(x\) is
+\[
+ q_A(x)\,e^{-\pi H(A(z-A^{-1}x),\,z-A^{-1}x)},\qquad
+ q_A(x)=\alpha(x)\exp[-\pi H((A^{-1}-\tfrac12)x,x)] .
+\]
+This is completion of the square using
+\(A+A^*=A^*A\). Its absolute Gaussian has exponent
+\(-\pi H(Az,Az)/2\) after recentering. The polarization
+of \(q_A\) on \(L\) is \(e^{-2\pi i E(A^{-1}x,y)}\).
+Its radical consists precisely of \(AI\): self-duality
+says \(A^{-1}x\in L\), and \(x\in L\) forces
+\(\delta^{-1}A^{-1}x\in L\). For \(x=Av\) with \(v\in I\),
+substituting \(x=v-\delta^{-1}v\) and
+
+\[
+  \alpha(\delta^{-1}v)=\alpha(v)
+\]
+ into the semicharacter
+law gives \(q_A(x)=1\). Hence it descends to a
+nondegenerate homogeneous quadratic character on \(L/AI\).
+Group the sum by this quotient and unfold the translates by
+\(I\). Absolute integrability follows from the finite number
+of recentered Gaussians. Diagonalizing \(A\) in unitary
+coordinates yields
+\[
+ \int e^{-\pi H(Az,z)}\,dz=
+      (\det A)^{-1}\int e^{-\pi H(z,z)}\,dz
+       =\operatorname{vol}(L)/\det A .
+\]
+Each eigenvalue has positive real part since \(1\) is excluded
+from the spectrum of \(\delta\). The last equality follows in
+orthonormal coordinates from the symplectic covolume one of a
+self-dual lattice. Since \([L:AI]=j|\det A|^2\), division by
+the right-hand integral gives
+\[
+  c_\delta=\frac{|\det A|}{\det A}
+      \frac{1}{\sqrt{[L:AI]}}\sum_{x\in L/AI}q_A(x).
+\]
+The normalized sum has eighth power one.
+Finally \(A^*=-\delta A\), so
+\(\overline{\det A}=(-1)^m\det\delta\det A\);
+this proves the asserted eighth power with its sign and exponent.
+\end{proof}
+
+\paragraph{Returning to the local coefficients.}
+Apply Lemma~\ref{lem:theta-cayley-scalar} before taking the
+fourth tensor and returning to the local argument lattice.
+Set \(K_i=(T_{S,L_i}F_0)\circ g_i\). Transport of \(U_x\)
+under \(\delta\) and the triple comparison give
+\(K_0=cK_1\) with \(c^8=(\det\delta)^4\). Explicitly, in
+the \(g_1\) coordinates the transported section is
+\(T_{\delta S,L_1}(F_0\circ\delta^{-1})\).
+Use \eqref{eq:cayley-multiplier} and then compose the two
+intertwiners. Since the theta line of \(M^4\) is the fourth
+tensor power of the line of \(M\), there exists a theta
+vector \(\Theta\), unique up to a fourth root of unity,
+with \(\Theta^{\otimes4}=\kappa K_0\). This fixes its
+complex norm at every conjugate of the determinant scalar.
+
+For each finite embedding 
+\[
+  \Theta^{\otimes4}=\kappa K_0=(\kappa c)K_1
+\]
+and \(|\kappa c|_p=1\) by \eqref{eq:kappa-determinant}.
+Every summand of \(T_{S,L_1}F_0\) is a product of
+one-variable translates with prime-to-\(p\) denominators,
+and its normalization is a sign times a unit square root
+of an inverse index. A further translation by a point of
+order prime to \(p\) adds points of the same kind in the
+standard coordinates: a prime-to-\(p\) multiple of its
+\(g_1\)-image lies in \(L_1\), and a prime-to-\(p\) index
+carries that lattice into \(S\).
+
+Since the two translation arguments belong to the rational space of \(S\), write \(E(y,y')=a/b\) with \(b>0\). The composition phase satisfies
+\[
+  \bigl(e^{\pi iE(y,y')}\bigr)^{2b}=e^{2\pi ia}=1.
+\]
+This gives the normalized orthogonal fourth tensor expansion
+used in Section~\ref{subsec:cm-models}. Section~\ref{subsec:baseline-jets} expresses the
+coordinate change on the argument lattices by CM matrices
+integral at the place and deduces integrality of derivatives.
+The positive gains also use the incident chart and its
+linear forms in Section~\ref{subsec:incident-sections}.

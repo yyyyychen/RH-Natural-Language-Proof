@@ -1,0 +1,839 @@
+\begin{paramdefinition}[Component, determinant line and frame metrics]\label{hyp:flat-determinant-frames}
+Fix a component \(Z\) of the deep cover over its coefficient field \(F\),
+and a label \(\tau\) of the CM field \(E\). Write \(V_\tau,V_{\bar\tau}\)
+for the two Lie eigenspaces, of dimensions \(p,q\). For frames \(v,w\) put
+\[
+ \mathcal L_\tau=\det V_\tau\otimes(\det V_{\bar\tau})^{-1},\qquad
+ e(v,w)=(v_1\wedge\cdots\wedge v_p)\otimes
+                      (w_1\wedge\cdots\wedge w_q)^{-1}.
+\]
+The flat weight is \((-1,+1)\) on the two determinants, with zero
+theta exponent. Indeed, if \(\phi=f(v,w)e(v,w)\), then
+\[
+ f(vA,wB)=\frac{\det B}{\det A}f(v,w).
+\]
+Use the determinant metric induced by the polarization. At a finite
+place take the integral eigenframes of the given prime-to-residue
+level model. Write \(\mathfrak d_E\) for the different,
+\(R_E=\log\operatorname{rd}(E)\), and \(D_0'=\log d_0\), where \(d_0\)
+is the positive discriminant parameter of the marked quadratic field.
+For the odd quadratic character \(\chi\) of \(\mathbb Q(\sqrt{-d_0})\),
+use the CM normalization
+\[
+              \omega=\frac{L'(0,\chi)}{L(0,\chi)}+D_0'-R_E .
+\]
+\end{paramdefinition}
+
+\begin{construction}
+\begin{tikzpicture}[>=Stealth,every node/.style={align=center,inner sep=2pt}]
+\node (line) at (0,0) {\(\mathcal L_\tau\) with generator \(\phi\)};
+\node (arch) at (-2.75,-1.12) {Archimedean frames\\\(\|\phi\|_\sigma=c_\sigma\)};
+\node (fin) at (2.75,-1.12) {Integral frames over \(w\)\\constant normalized order};
+\node (cm) at (0,-2.35) {Compare on a CM frame};
+\node (deg) at (0,-3.48) {\(\widehat{\deg}_{\rm flat}(\mathcal L_\tau)
+        =\tfrac{p-q}{2}\omega+q(D'_0-R_E)\)};
+\draw[->] (line) -- (arch);
+\draw[->] (line) -- (fin);
+\draw[->] (arch) -- (cm);
+\draw[->] (fin) -- (cm);
+\draw[->] (cm) -- (deg) node[midway,right=1mm] {\(\scriptstyle-\sum_w\delta_{w,\tau}\log{\rm N}w/[F:\mathbb Q]\)};
+\end{tikzpicture}
+\caption{Archimedean norms and finite orders of the flat generator in Definition~\ref{hyp:flat-determinant-frames}. The finite correction converts the CM frame degree to the normalized degree of Proposition~\ref{prop:deep-flat-line-degree}.}\label{fig:flat-cm-frames}
+\end{construction}
+
+\begin{proposition}[The normalized degree of the flat line]
+\label{prop:deep-flat-line-degree}
+For each component \(Z\) and label \(\tau\) of
+Definition~\ref{hyp:flat-determinant-frames}, the determinant rule gives a
+generator \(\phi\) on the proper normal generic fibre, up to scalar.
+Its norm is constant on the archimedean frame tests at each embedding. At a finite place its normalized order is constant on the integral
+frame tests. With the finite-order correction
+\[
+ \delta_{w,\tau}=q\{\operatorname{ord}_w(\tau\mathfrak d_E)
+                              -\operatorname{ord}_w(d_0)\},
+\]
+the normalized degree is
+\[
+ \widehat{\deg}_{\rm flat}(\mathcal L_\tau)
+       =\frac{p-q}{2}\,\omega+q(D_0'-R_E).
+\]
+Thus the contribution to the slope coefficient, with the squared-norm convention of this comparison, is
+\[
+ -\widehat{\deg}_{\rm flat}(\mathcal L_\tau)=-\tfrac{p-q}{2}\omega+q(R_E-D'_0).
+\]
+
+\end{proposition}
+
+\begin{proof}
+Choose the generic generator \(\phi\) of
+Lemma~\ref{lem:flat-generic-generator}. At the embedding \(\sigma\)
+write \(\Gamma,\Delta\) for the Gram matrices of the two frames.
+The frame coefficient \(f\) then satisfies
+\[
+ |f|^2\,|\det\Gamma|/|\det\Delta|=c_\sigma^2
+ \qquad(c_\sigma>0\text{ constant for the chosen }\phi).
+\]
+At a finite place \(w\) let \(\pi_w\) be a uniformizer. Degree zero on special-fibre curves
+(Lemma~\ref{lem:flat-special-curve}) lets us apply
+Lemma~\ref{lem:flat-vertical-ratio} to the projected determinant
+lattice \(\det Q_\tau\). If \(R\) is the ring of a valued frame
+over \(w\), the order computed in this lattice satisfies
+\[
+ \frac{\operatorname{ord}_{Q,R}(\phi)}{v_R(\pi_w)}
+    =\max_{D\ {\rm vertical\ over}\ w}
+       \frac{\operatorname{ord}_{Q,D}(\phi)}
+            {\operatorname{ord}_D(\pi_w)} .
+\]
+To read the same section in the separate integral Lie frames,
+Lemma~\ref{lem:projected-lie-frame-index} gives
+\[
+   \operatorname{ord}_{{\rm Lie},R}(\phi)
+       =\operatorname{ord}_{Q,R}(\phi)-h_{R,\tau}.
+\]
+The Hodge multiplicities are fixed on this component, so
+\(h_{R,\tau}/v_R(\pi_w)\) is the same at the CM frame and
+at every other valued frame. The order and the metric may therefore
+both be evaluated on the CM frame.
+Lemma~\ref{lem:flat-cm-degree} evaluates their normalized frame
+degree as \((p-q)\omega/2\).
+
+For \(c\in F^\times\), replacing \(\phi\) by \(c\phi\) adds the
+divisor of \(c\), whose normalized arithmetic degree is zero. Subtract
+\(\delta_{w,\tau}\) from the order in each finite frame. Taking ideal
+norms gives
+\[
+ \frac{1}{[F:\mathbb Q]}\sum_w\delta_{w,\tau}\log{\rm N}w
+ =q\left(
+ \frac{\log{\rm N}_{E/\mathbb Q}\mathfrak d_E}{[E:\mathbb Q]}
+ -\log d_0\right)=q(R_E-D_0').
+\]
+Here the finite sum runs over the places of \(F\). The factor
+\([F:E]\) from extending an ideal cancels in the normalization.
+The corrected degree is the frame degree minus this sum. Its formula
+contains no component-dependent quantity.
+\label{cor:deep-cover-flat-degree-1}
+\end{proof}
+
+To compute the degree in Proposition~\ref{prop:deep-flat-line-degree}, we need one generator that can be evaluated in both kinds of frame. We first construct it on the generic component, then determine how its orders vary over a special fibre.
+
+\begin{lemma}[Extension of the period generator]\label{lem:flat-generic-generator}
+On the proper normal generic component of
+Definition~\ref{hyp:flat-determinant-frames}, \(\mathcal L_\tau\) has an \(F\)-generator whose value in the prescribed frame at each complex embedding \(\sigma\) is a constant multiple of the normalized period determinant \(\Delta_{{\rm per},\sigma}\),
+\[
+ \phi_\sigma=c_\sigma\Delta_{{\rm per},\sigma},\qquad c_\sigma\ne0.
+\]
+
+\end{lemma}
+\begin{proof}
+In the marked period basis the first tangent block and the conjugate
+of the second block have complementary directions. Pair the second
+block by the Hermitian form and take the determinant. The marked
+level comparison gives invariance under the change of period basis
+on \(Z\). With \(\Gamma,\Delta\) the two frame Gram matrices, the
+determinant identity, after division by the reference period constant,
+reads
+\[
+ |f(v,w)|^2=\frac{|\det\Delta|}{|\det\Gamma|},\qquad
+ \|f(v,w)e(v,w)\|^2=|f(v,w)|^2\frac{|\det\Gamma|}{|\det\Delta|}=1.
+\]
+It holds first at the embedding respecting the marked quadratic root.
+Conjugating the frames preserves the absolute determinants.
+\label{cor:deep-cover-flat-degree-2}
+
+Take a proper smooth resolution of the generic component of the
+normal model at \(2\), using the prime-to-\(2\) marking. In a
+toroidal chart the boundary is \(z_1\cdots z_a=0\). The two
+extending eigenframes are independent in the smooth semiabelian Lie
+bundle. The boundary comparison for precisely these frames gives
+\[
+ C^{-1}Q(z)^{-A}\le u\le C Q(z)^A\quad (u=|\det\Gamma|,\ |\det\Delta|),
+ \qquad Q(z)=1+\sum_{i=1}^a|\log|z_i|| .
+\]
+Consequently \(|f|,|1/f|\le C Q^A\), after increasing \(C,A\).
+For \(g=f\) or \(1/f\), fix the other punctured coordinates \(z'\).
+The Laurent coefficient of index \(-m\), \(m\ge1\), satisfies
+\[
+ \left|\frac{1}{2\pi i}\int_{|\zeta|=\rho}
+          g(\zeta,z')\,\zeta^{m-1}\,d\zeta\right|
+ \le C(z')\rho^m(1+|\log\rho|)^A\longrightarrow0 .
+\]
+Apply this to each boundary variable. The Laurent series on the
+product of punctured discs has no negative multi-index in any
+variable. Thus both \(f\) and \(1/f\) extend, and their product
+remains one. Uniqueness on overlaps gives a generator on the resolution.
+\label{cor:deep-cover-flat-degree-3}
+
+Write \(Y\) for this proper geometrically integral resolution.
+By GAGA and coherent base change,
+\[
+ H^0(Y,\mathcal L_\tau)\otimes_F\mathbb C
+ \simeq H^0(Y_{\mathbb C}^{\rm an},\mathcal L_\tau^{\rm an})
+ =\mathbb C\,\Phi ,
+\]
+where \(\Phi\) denotes the just-extended section and the line on
+\(Y\) denotes its pullback. Any nonzero \(F\)-section therefore
+generates after scalar extension, hence already over \(F\).
+On the normal generic component use a local frame \(e\). Properness
+of the resolution lifts each height-one valuation, so both
+\(\phi/e\) and \(e/\phi\) have nonnegative order there. A normal
+Noetherian domain is the intersection of its height-one valuation
+rings. Thus both quotients are regular, as required. At another
+finite prime the same construction on its prime-to-residue model
+gives a generic generator. The quotient of the two generators lies
+in \(F^\times\) since the generic component is proper and
+geometrically integral. \label{cor:deep-cover-flat-degree-4}
+\end{proof}
+
+Fix the normal integral component of the prime-to-\(\ell\) model in
+Definition~\ref{hyp:flat-determinant-frames}. Its generic point is
+in the abelian locus. Let \(G\) be its smooth semiabelian group,
+with its integral \(\mathcal O_E\)-action and rigidified polarizing
+line. Write \(n=[E:\mathbb Q]\), \(d_G=\dim G\), and
+\(r=p+q\), so \(2d_G=nr\). Over a local ring \(R\) on this
+model choose formal coordinates at the identity and a rigidification
+of the polarization biextension on the coordinate neighborhood.
+These give the polarized tangent module
+\[
+       H_R=V_R\oplus V_R^*,\qquad V_R=\operatorname{Lie}(G)_R .
+\]
+
+The second summand is the space of linear terms of changes of
+rigidification. Write \(U_a\) for the differential of \(a\in
+\mathcal O_E\). The isomorphism between pulling the biextension
+back by \(a\) in the first variable and by \(\bar a\) in the
+second is represented in these frames by a unit equal to one on
+both axes. Write \(C_a\) for its mixed linear coefficient, with
+the first variable indexing the rows. The induced action is
+\[
+       (v,\alpha)\longmapsto
+       (U_av,\ U_{\bar a}^{t}\alpha-C_a^{t}v).
+\]
+
+These formulas are integral even in characteristic two: the mixed
+coefficient is the coefficient of \(st\) after substituting
+\((sv,tw)\) with \(s^2=t^2=0\). Composition of the rigidified
+isomorphisms gives matrix multiplication. A change of coordinates
+acts on the first summand by its differential and on the second by
+the inverse transpose, with a shear given by the mixed coefficient
+of the change of frame. The inverse change has the same integral
+description. Thus the displayed modules glue and commute with
+base change.
+
+\begin{auxlemma}[Local freeness over the integral coefficient algebra]
+\label{lem:polarized-stalk-free}
+On the marked component the polarized tangent module is locally
+free of rank \(r\) over \(\mathcal O_X\otimes_{\mathbb Z}\mathcal O_E\).
+In particular, on every geometric fibre of characteristic \(\ell\)
+and for each Artinian local factor \(B\) of
+\(k\otimes_{\mathbb Z}\mathcal O_E\),
+\[
+                   H_k\otimes_{k\otimes\mathcal O_E}B\simeq B^r .
+\]
+\end{auxlemma}
+\begin{proof}
+\proofstep{The abelian part of a geometric fibre.}
+Work over an algebraically closed residue field \(k\) of
+characteristic \(\ell\). In the interior the fibre is principally
+polarized. At a boundary point choose a complete DVR dominating its stalk
+whose generic point lies over the abelian generic point: normalize
+the blowup of the maximal ideal, take the DVR of an exceptional
+prime divisor, and complete. A one-dimensional normal stalk
+itself supplies the DVR in dimension one. Its characteristic-zero
+fraction field contains the local domain. After finite extension
+the residue torus splits. The Raynaud extension and the cubical
+line in the polarized degeneration datum reduce to
+\[
+  1\longrightarrow T\longrightarrow G_k
+   \xrightarrow{\pi} A\longrightarrow1,\qquad
+  L_{G_k}\simeq\pi^*L_A .
+\]
+
+Here the geometric fibre may be read after the further residue
+field extension. Both ranks and local freeness descend faithfully.
+For the period and character lattices \(Y\) and \(X^*(T)\), the
+polarization induces an injection \(\Phi:Y\hookrightarrow X^*(T)\).
+The degree formula for the degeneration datum gives
+\[
+   1=\deg\lambda_{\rm gen}
+      =[X^*(T):\Phi Y]^2\deg\lambda_A,
+      \qquad \deg\lambda_A=1 .
+\]
+The prime-to-residue model is used also when \(\ell\) divides the
+original level. The Rosati adjoint is \(a\mapsto\bar a\).
+\cite[Chapter~II, \S\S1--4, and Chapter~III, Corollary~7.2]{faltings-chai}
+
+For \(0\ne a\in\mathcal O_E\) let \(K=\ker(a:A\to A)\).
+The action is an isogeny when \(A\) has positive dimension, since
+some integral multiple of \(a^{-1}\) is integral. The two
+rigidified pullbacks of the Poincar\'e line give the perfect
+Cartier pairing of \(K\) and
+\(K^D=\ker(\bar a:A\to A)\).
+\cite[Theorem~9.1]{milne-av-isogeny}
+Let \(B_K\subset k[K]\) be the Hopf subalgebra generated by
+the primitive functions, and set
+\[
+     J=\ker(K\longrightarrow\operatorname{Spec}B_K),\qquad
+     t=\dim_k\operatorname{Lie}(K^D).
+\]
+
+A tangent vector to \(K^D\) is a character \(1+\epsilon u\) over
+\(k[\epsilon]/\epsilon^2\). The character law reads
+\[
+             \Delta u=u\otimes1+1\otimes u .
+\]
+Thus the tangent vectors correspond to the primitive functions. The derivative of this function at a tangent
+vector \(v\in\operatorname{Lie}K\) is the mixed coefficient of the
+Cartier pairing. In our coordinates it equals
+\(v^t C_a w\), up to the common choice of the inverse pairing, for
+\(w\in\ker U_{\bar a}\). Indeed the two trivializations defining
+the pairing on the kernels restrict to the rigidifications on the
+axes. Evaluating their ratio on \((sv,tw)\) leaves just its
+\(st\) coefficient.
+
+A pair in the kernel on \(H_A\) therefore satisfies
+\[
+ U_av=0,\qquad U_{\bar a}^{t}\alpha=C_a^t v,\qquad
+ v\in\operatorname{Lie}J .
+\]
+The last condition follows by pairing the middle equality with
+each \(w\in\ker U_{\bar a}\). For a fixed \(v\) the ambiguity
+in \(\alpha\) has dimension \(t\). For any finite group scheme
+\(D\) over \(k\), its first Frobenius kernel has order
+\(\ell^{\dim\operatorname{Lie}D}\), by the height-one
+correspondence and the restricted enveloping algebra basis theorem.
+\cite[Theorem~1.4.23]{brion-height-one}
+Apply this first to \(J\), then to the Cartier dual of
+\(\operatorname{Spec}B_K\), whose Lie algebra contains the \(t\)
+independent primitives. Multiplicativity of orders in the finite
+group scheme quotient gives
+\[
+   \dim\ker(a\mid H_A)\le \dim\operatorname{Lie}J+t
+                          \le v_\ell(\deg a|_A).
+\]
+When \(A=0\) this contribution is zero.
+
+\proofstep{The torus and the uniform kernel bound.}
+The cocharacter lattice of \(T\) is torsion-free over
+\(\mathcal O_E\), since multiplication by nonzero \(a\) divides
+multiplication by a nonzero integer. It is projective over this
+Dedekind ring. Put \(b_T=\operatorname{rk}_{\mathcal O_E}X_*(T)\)
+and \(N_a=|N_{E/\mathbb Q}(a)|\).
+The dimension of the kernel on \(\operatorname{Lie}T=X_*(T)\otimes k\)
+is bounded by the sum of the \(\ell\)-adic elementary divisors
+of multiplication by \(a\) on this lattice. For the toric term
+and its conjugate dual the bounds are
+\[
+    \dim\ker U_{a,T}\le b_Tv_\ell(N_a),\qquad
+    \dim\ker U_{\bar a,T}^t\le b_Tv_\ell(N_a) .
+\]
+
+Write \(P:V\to\operatorname{Lie}A\) for the quotient differential.
+Use a rigidification pulled back from \(A\) on the geometric
+fibre. The mixed coefficient there is \(P^t C_{a,A}P\).
+In another rigidification the difference is a shear, so it
+conjugates the action. The stable subspaces
+\[
+ \operatorname{Lie}T\oplus0\ \subset V\oplus P^*(\operatorname{Lie}A)^*\ \subset\ H_k
+\]
+have successive quotients \(\operatorname{Lie}T,H_A,
+(\operatorname{Lie}T)^*\), the last with the conjugate action.
+Kernel dimensions are subadditive along this filtration.
+On the prime-to-\(\ell\) rational Tate module of \(A\), an
+integral primitive element of \(E\) acts semisimply. Its rational
+characteristic polynomial is a power of its minimal polynomial,
+so every embedding occurs with multiplicity \(2\dim A/n\).
+The degree of \(a\) is its determinant on this module.
+\cite[Theorem~10.9 and Proposition~10.20]{milne-av-isogeny}
+It follows that
+\[
+ \dim_k\ker(a\mid H_k)
+   \le (2b_T+2\dim A/n)\,v_\ell(N_a)
+   =r\,v_\ell(N_a).
+\]
+
+\proofstep{Recovering a free module at a ramified prime.}
+On the characteristic-zero generic fibre the \(\tau\)-part of
+\(H\) has dimension \(p+q\) for each embedding. At each stalk
+the characteristic polynomial of \(a\) therefore equals that
+of its regular action on \(\mathcal O_E\) raised to the \(r\)-th
+power. The coefficients belong to the local domain and agree in
+its fraction field, giving the integral identity
+\[
+      \det(X-a\mid H)=\det(X-a\mid\mathcal O_E)^{r}.
+\]
+For \(\mathfrak l\mid\ell\), of ramification
+index \(e\) and residue degree \(f_{\mathfrak l}\), its factors
+over \(k\) have the form \(B_\sigma=k[u]/(u^e)\). Each summand
+\(H_\sigma\) has dimension \(er\) over \(k\). Indeed, choose
+an element with nonzero residue generating the residue field at
+\(\mathfrak l\) and zero residue at the other primes. The
+multiplicities of its distinct nonzero eigenvalues in the preceding
+characteristic polynomial are precisely these dimensions.
+
+Choose \(a\) of valuation one at \(\mathfrak l\) and zero
+at all other primes over \(\ell\), by the Chinese remainder
+theorem. Then \(v_\ell(N_a)=f_{\mathfrak l}\). Multiplication
+by \(a\) has the same kernel as \(u\) on the factors at
+\(\mathfrak l\), and is invertible elsewhere. Thus
+\[
+ \sum_{\sigma}\dim_k\ker(u\mid H_\sigma)\le r f_{\mathfrak l},
+ \qquad \dim_k\ker(u\mid H_\sigma)\ge \dim_k H_\sigma/e=r .
+\]
+All Jordan blocks have length at most \(e\), so equality forces
+exactly \(r\) blocks of length \(e\) at every \(\sigma\).
+This proves freeness over each \(B_\sigma\), including \(e>1\).
+Over a characteristic-zero residue field the same conclusion follows
+from the characteristic polynomial and separability of \(E\).
+
+Freeness at the geometric fibre descends to projectivity at the
+residue field by faithful flatness. The coefficient algebra there
+is a product of local Artinian rings, and the common rank \(r\)
+gives a free module. Lift a set of \(r\) coefficient generators
+to the stalk. If \((b_i)\) is an integral basis of \(\mathcal O_E\),
+the reductions of the \(b_i x_j\) are a basis of size \(nr=2d_G\).
+Their determinant in the chosen tangent coordinates is a unit.
+They give a basis over the local ring, hence the \(x_j\) are a
+basis over its coefficient algebra.
+\end{proof}
+
+\begin{auxlemma}[Integral evaluation of a projected frame]
+\label{lem:polarized-stalk-evaluation}
+Let \(R\) be a stalk of this normal model and let the integral
+character \(\sigma:\mathcal O_E\to R\) extend the label \(\tau\).
+For any coefficient basis \(x_1,\ldots,x_r\) from
+Lemma~\ref{lem:polarized-stalk-free}, the character quotient is
+free with the indicated basis:
+\[
+ Q_{\sigma,R}=H_R/\sum_a(a-\sigma(a))H_R
+             =\bigoplus_{j=1}^r R\,\bar x_j .
+\]
+Its generic-fibre realization is the image of \(H_R\) under
+the characteristic-zero eigenprojection, and its bases and their
+transition matrices specialize to the function field and every
+valuation ring of every normalized special-fibre curve.
+\end{auxlemma}
+\begin{proof}
+In coefficient coordinates, the map on each summand is
+\(R\otimes\mathcal O_E\to R\), \(b\otimes a\mapsto b\sigma(a)\).
+Its kernel is generated by \(1\otimes a-\sigma(a)\otimes1\).
+After passing to the fraction field this evaluation is precisely the
+corresponding projection in the split coefficient algebra. In
+particular the integral quotient embeds there as the span of its
+projected basis. No integral idempotent for the individual embedding
+is required at a ramified prime.
+
+Let \(C\) be a normalized curve, \(K=k(C)\) and
+\(V_z=\mathcal O_{C,z}\). If \(x\) and \(x'\) are frames taken
+at the image of \(z\) and of the generic point, compare them over
+the latter stalk. Write their change of basis as \(T\) over its
+coefficient algebra, in the convention \(x=x'T\). Then
+\[
+       \bar x=\bar x'\,T_\sigma,\qquad
+       T_\sigma=(1\otimes\sigma)(T),\qquad
+       \det T_\sigma\in\mathcal O_{X,\eta_C}^{\times}.
+\]
+The two maps from \(\mathcal O_{X,z}\) (at the image of \(z\))
+to \(K\), through \(V_z\) and through \(\mathcal O_{X,\eta_C}\),
+agree. Hence \(Q_{\sigma,V_z}\) in the generic curve frame
+is \(T_\sigma V_z^r\), with the entries read in \(K\).
+The determinant lattice is \((\det T_\sigma)V_z\). The determinant
+can have nonzero \(z\)-valuation. Its valuation is exactly the
+transition contribution to the degree on the curve.
+\end{proof}
+
+The integral image of an eigenprojection and the intersection with an
+eigenspace may differ at a ramified prime. The following determinant
+calculation compares the two conventions in
+Proposition~\ref{prop:deep-flat-line-degree}.
+
+\begin{auxlemma}[The local change from the projected to the two Lie frames]
+\label{lem:projected-lie-frame-index}
+Let \(R\) be the valuation ring of a finite extension of the local
+coefficient field containing all embeddings of \(E\), write
+\(K=\operatorname{Frac}R\), and let \(v_R\) be its integral valuation.
+For a marked integral test write \(L=\operatorname{Lie}(G)_R\),
+\(S_\gamma=L\cap(L_K)_\gamma\) and
+\(n_\gamma=\dim_K(L_K)_\gamma\).
+Let \(I_\tau\) be the embeddings inducing the same prime
+\(\mathfrak l\mid\ell\) and residue embedding as \(\tau\).
+For a uniformizer \(\theta\) of \(E_{\mathfrak l}\) put
+\[
+ h_{R,\tau}=\sum_{\gamma\in I_\tau\setminus\{\tau\}}
+        n_\gamma v_R\bigl(\gamma(\theta)-\tau(\theta)\bigr).
+\]
+In the generic determinant identification, the lattice
+\(\det S_\tau\otimes(\det S_{\bar\tau})^{-1}\) is contained in
+\(\det Q_{\tau,R}\) with colength \(h_{R,\tau}\). In particular
+the normalized difference of the two frame orders depends only on the
+coefficient field, the place and the multiplicities.
+\end{auxlemma}
+
+\begin{proof}
+On the factor selected by the common residue embedding the coefficient
+algebra is monogenic. Indeed the unramified part splits over \(R\),
+and a uniformizer generates the totally ramified integer ring over
+its unramified part. On this factor put \(D=\theta-\tau(\theta)\).
+It has the presentation
+\[
+ R[X]\big/\prod_{\gamma\in I_\tau}(X-\gamma(\theta)),\qquad
+          Q_{\tau,R}=H_R/DH_R
+\]
+where \(H_R\) on the right denotes the selected factor. Take the
+same factor of the exact sequence formed by the second summand and
+the projection onto the first,
+\[
+         0\longrightarrow F\longrightarrow H_R
+                              \longrightarrow L\longrightarrow0 .
+\]
+Here \(L\) in the sequence also means its selected factor, and
+\(F\) is the corresponding factor of the integral dual of the
+full Lie module, with conjugate action. Its projected image is
+\(S_{\bar\tau}^*\): restriction to the saturated free sublattice
+\(S_{\bar\tau}\) is surjective over a DVR, and the generic
+restriction is the dual eigenprojection.
+
+Since \(Q_{\tau,R}\) is free, the image of \(F/DF\) in it is its
+torsion-free quotient, which the preceding description identifies with
+\(S_{\bar\tau}^*\). Right exactness gives
+\[
+     0\longrightarrow S_{\bar\tau}^*\longrightarrow Q_{\tau,R}
+                       \longrightarrow L/DL\longrightarrow0 .
+\]
+Write \(I=L\cap\bigoplus_{\gamma\ne\tau}(L_K)_\gamma\) on this
+factor. The torsion in \(L/DL\) is \(I/DL\) and the free quotient
+is \(L/I\). The colength in the assertion is consequently
+\[
+    \operatorname{length}(I/DL)+
+    \operatorname{length}\bigl(L/(I+S_\tau)\bigr).
+\]
+
+This follows by a basis change over the DVR, first
+saturating \(S_{\bar\tau}^*\) in \(Q_{\tau,R}\) and then taking
+the index of \(S_\tau\) in the free quotient \(L/I\).
+The map \(D\) identifies \(L/(I+S_\tau)\) with \(DL/DI\),
+since its kernel on \(L\) is \(S_\tau\). The two lengths add to
+\[
+  \operatorname{length}(I/DI)
+     =v_R\bigl(\det(D\mid I_K)\bigr)=h_{R,\tau}.
+\]
+The formula holds also for an unramified factor, when the sum is empty.
+Passing to a further finite extension multiplies both the colength
+and \(v_R(\pi_w)\) by its ramification index.
+\end{proof}
+
+\begin{lemma}[Degree on special-fibre curves]\label{lem:flat-special-curve}
+Use the integral eigenframes of Definition~\ref{hyp:flat-determinant-frames}
+on the normal model at a finite place of residue characteristic \(\ell\).
+The determinant line measuring the order of the section \(\phi\)
+of Lemma~\ref{lem:flat-generic-generator} has degree zero on the normalization \(\widetilde C\) of every complete integral curve \(C\) in this special fibre,
+\[
+ \deg_{\widetilde C}(\mathcal L_\tau|_{\widetilde C})=0.
+\]
+
+\end{lemma}
+\begin{proof}
+Apply Lemma~\ref{lem:polarized-stalk-evaluation} on the marked
+model after extending constants to contain the integral label
+\(\sigma\). On the generic fibre the projected polarized tangent
+space is an extension of \(V_\tau\) by \(V_{\bar\tau}^*\).
+Lift the \(v_i\) to this extension and adjoin the dual frame of
+the \(w_j\). Its determinant is independent of the lifts and
+transforms by \(\det A/\det B\). It identifies
+\[
+       \det Q_{\sigma,\operatorname{Frac}R}
+                 =\det V_\tau\otimes(\det V_{\bar\tau})^{-1} .
+\]
+Its extension on the curve has the integral determinant lattices
+computed in Lemma~\ref{lem:polarized-stalk-evaluation}. These
+are the orders to which Lemma~\ref{lem:flat-vertical-ratio} will
+be applied. The comparison with the separate Lie frames in the CM
+calculation keeps the different at the given place.
+\label{cor:deep-cover-flat-degree-5}
+
+\proofstep{Compare the two Hodge degrees on a Siegel model.}
+Enlarge the finite field of constants \(k\) to split the residue
+fields of \(\mathcal O_E\) above \(\ell\). Write \(e\) for a primitive
+idempotent in \(k\otimes\mathcal O_E\), and write \(H_e=eH\).
+We compare determinants using the underlying principally polarized
+family. Choose a full Siegel marking of some order \(n\ge3\) prime
+to \(\ell\) on a finite cover of the abelian generic locus. Take the
+normalized closure of the graph of its map to a projective Siegel
+toroidal compactification at that level. If \(X\) denotes our
+model and \(X'\) this graph, the projections give
+\[
+ X\ \longleftarrow\ X'\ \longrightarrow\ \overline{\mathcal A}_{d_G,n}^{\rm tor}.
+\]
+The first projection is proper and surjective. On this normal cover the two
+semiabelian families agree: their generic isomorphism and its inverse
+extend uniquely. \cite[I, Proposition~2.7]{faltings-chai}
+
+There is a complete integral curve upstairs dominating
+\(\widetilde C\) after normalization. Indeed a closed point of the
+preimage of its generic point has residue field finite over
+\(k(\widetilde C)\); take the closure in the proper fibre product
+and normalize. For this finite map \(h:C'\to\widetilde C\),
+\[
+              \deg_{C'} h^*\det H_e
+                    =(\deg h)\deg_{\widetilde C}\det H_e ,
+\]
+using degrees relative to the same ground field. We can therefore
+compute on \(C'\), even for a curve contained in the boundary.
+
+Let \(D\) be the pullback of the covariant logarithmic de Rham
+bundle on the Siegel compactification. Its Hodge and conjugate
+filtrations form an \(F\)-zip: the two filtrations are by subbundles
+and their graded bundles match in reverse order after Frobenius
+pullback. The boundary assertion here is the logarithmic one for
+principally polarized Siegel families in characteristic \(\ell\),
+including \(\ell=2\). In a toroidal chart its covariant realization
+is the Lie algebra of the period-equivariant universal vector
+extension of the Raynaud extension. For split torus \(T\), abelian
+quotient \(A\) and period lattice \(Y\), its weight filtration has
+successive quotients
+\[
+          \operatorname{Lie}T,\qquad D(A),\qquad Y\otimes\mathcal O .
+\]
+Here \(D(A)\) denotes the ordinary de Rham homology of \(A\). \cite[VI, Theorem~1.1]{faltings-chai}
+\cite[\S2D, pp.~476--477]{vdg-looijenga-boundary-zip}
+
+The coefficient action on these filtrations also extends. On the
+completed normal degeneration chart, after splitting the torus,
+the action preserving the polarization in the Rosati sense acts
+integrally on the Raynaud extension and its period homomorphism
+\(u\). If \(a_Y,a_{G^\natural}\) are the induced maps, then
+\[
+ u:Y\longrightarrow G^\natural_\eta,\qquad
+          u\circ a_Y=a_{G^\natural}\circ u .
+\]
+This is the equivalence for integral endomorphism structures in
+\cite[Theorem~5.1.1.4]{lan-pel-degeneration}.
+Applying the universal vector extension and its Lie functor gives
+the action on \(D\). It commutes with relative Frobenius and
+Verschiebung by functoriality on the degeneration data. The
+actions agree on overlaps by their common generic action. In
+particular the construction applies to every \(a\in\mathcal O_E\),
+including elements of positive \(\ell\)-adic valuation.
+
+Put \(V=\operatorname{Lie}(G)|_{C'}\), and let \(U=V^*\) with the
+conjugate dual action induced by principal polarization. Write
+\(F\) for absolute Frobenius of \(C'\) and \(F_k(e)\) for the
+idempotent obtained by raising the scalar coefficients of \(e\)
+to the \(\ell\)-th power. Taking the indicated direct summands
+of the two filtrations gives exact sequences on the whole curve:
+\[
+\begin{aligned}
+ 0&\longrightarrow U_e\longrightarrow D_e
+                 \longrightarrow V_e\longrightarrow0,\\
+ 0&\longrightarrow F^*V_e\longrightarrow D_{F_k(e)}
+                 \longrightarrow F^*U_e\longrightarrow0 .
+\end{aligned}
+\]
+The quotients are vector bundles, so pullback to the curve and
+projection by the idempotents preserve exactness.
+
+The polarized
+tangent bundle itself has \(0\to U_e\to H_e\to V_e\to0\).
+Consequently degree additivity and \(\deg F^*L=\ell\deg L\)
+for a line bundle give
+\[
+ \deg H_{F_k(e)}=\deg D_{F_k(e)}
+       =\ell(\deg U_e+\deg V_e)=\ell\deg H_e .
+\]
+The permutation \(e\mapsto F_k(e)\) has finite order \(s>0\).
+Iteration gives \((\ell^s-1)\deg H_e=0\). This argument uses
+the whole local Artinian factor selected by \(e\), before reduction
+by its maximal ideal.
+
+The local Artinian factor \(B\) at the chosen character has residue
+field \(k\). Filter \(B\) by ideals with simple quotients \(k\).
+If \(b=\operatorname{length}_B B\), Lemma~\ref{lem:polarized-stalk-free} identifies
+each quotient of the induced filtration of \(H_e\) with the same
+bundle \(H_e\otimes_B k\) (up to a constant one-dimensional factor).
+By degree additivity,
+\[
+ 0=\deg H_e=b\,\deg(H_e\otimes_B k).
+\]
+The determinant of the eigencharacter quotient therefore has degree
+zero, including when \(B\) has nilpotents.
+\label{cor:deep-cover-flat-degree-6}
+\end{proof}
+
+\begin{auxlemma}[A curve through a prescribed point]
+\label{lem:flat-specialization-curve}
+Let \(T\) be an integral proper variety of positive dimension over
+a finite field, \(U\subset T\) a dense open subset, and \(z\) a closed
+point of \(T\). Let \(k\) be the finite ground field. There is a finite extension \(k'/k\), a complete integral curve \(C\subset T_{k'}\) and a point \(z'\in C\) over \(z\) such that its generic point satisfies
+\[
+ z'\in C\cap(T_{k'})_z,\qquad \eta_C\in U_{k'}.
+\]
+
+\end{auxlemma}
+\begin{proof}
+Over an algebraic closure take a reduced irreducible component through
+a lift \(z'\) of \(z\). The inverse image of \(U\) is dense there.
+Take an affine neighborhood \(V\) of \(z'\) on this component and a
+finite Noether normalization \(f:V\to\mathbb A^d\).
+For the closed subset \(Z=V\setminus U_{\bar k}\) one has
+\[
+   \dim f(Z)=\dim Z<d\qquad(Z\ne\varnothing).
+\]
+Choose a line through \(f(z')\) and a point outside \(f(Z)\).
+For any component \(C_0\) of its inverse image through \(z'\),
+the \(d-1\) linear equations and finiteness give
+\[
+ 1=d-(d-1)\le \dim C_0=\dim f(C_0)\le1 .
+\]
+The finite image is the whole line, so \(C_0\) meets the given open
+set. Its closure in the proper variety is the required integral curve.
+The component, line and curve are defined by finitely many data over
+the algebraic closure of a finite field and hence descend to a finite
+extension.
+\end{proof}
+
+\begin{lemma}[The vertical order on a connected fibre]\label{lem:flat-vertical-ratio}
+Let \(\mathcal L\) be the integral determinant line on the proper
+normal component over a DVR with uniformizer \(\pi\) and connected
+special fibre. Assume it has degree zero on every normalized
+complete integral curve in that fibre. If \(\phi\) generates on
+the generic fibre, then, for every valued frame over this DVR,
+\[
+ \operatorname{ord}(\phi)=\frac{a}{m}\operatorname{ord}(\pi),\qquad
+ \frac{a}{m}=\max_{D\ {\rm vertical}}
+            \frac{\operatorname{ord}_D(\phi)}{\operatorname{ord}_D(\pi)},
+ \quad m>0 .
+\]
+\end{lemma}
+\begin{proof}
+The rational section \(s=\pi^a\phi^{-m}\) of \(\mathcal L^{-m}\)
+has horizontal order zero. Its order along a vertical prime \(D\) is
+\[
+ a\,\operatorname{ord}_D(\pi)-m\,\operatorname{ord}_D(\phi)\ge0 .
+\]
+By normality \(s\) is regular. Its unit locus \(U\) contains the
+generic point of a component attaining the maximum.
+
+Take any irreducible special-fibre component \(T\) meeting \(U\).
+If \(T\setminus U\) is nonempty, choose a closed point \(z\) there.
+If \(\dim T=0\) then \(T\) consists of a single point, contrary to
+the choice of \(z\). Otherwise apply Lemma~\ref{lem:flat-specialization-curve}
+to \(T_{\rm red}\) and its open unit locus, and normalize the resulting
+curve. Its image in the original fibre is an integral curve. Pullback
+along the finite map of normalized curves preserves degree zero.
+
+On this complete normal curve \(C\), the pullback of \(s\) is
+regular and generically nonzero, so
+\[
+ 0=-m\deg_C\mathcal L=\deg_C\operatorname{div}(s)
+       =\sum_{x\in C_{\rm cl}}[k(x):k_C]\operatorname{ord}_x(s),
+ \qquad \operatorname{ord}_x(s)\ge0 ,
+\]
+where \(k_C\) is its constant field. A point over \(z\) would
+contribute a positive summand. Hence \(T\subset U\). Across any
+intersection with a neighboring component its generic point belongs
+to the same open \(U\). Connectedness of the finite component graph
+gives the result on the whole fibre. Pulling the unit \(s\) back to
+a valued frame gives \(m\operatorname{ord}(\phi)=a\operatorname{ord}(\pi)\).
+Changing the generic generator by \(c\in F^\times\) translates its
+order by \(\operatorname{ord}(c)\). The local models and framed
+uniformization supply nonempty tests at the required places.
+\label{cor:deep-cover-flat-degree-7}
+\end{proof}
+
+The vertical calculation has made the normalized orders independent of the component of a connected fibre. We can therefore evaluate the remaining degree at the prescribed CM frame.
+
+\begin{lemma}[CM calculation in the frame metrics]\label{lem:flat-cm-degree}
+For the polarized determinant line on \(Z\) in
+Definition~\ref{hyp:flat-determinant-frames}, before the finite-order
+correction of Proposition~\ref{prop:deep-flat-line-degree}, the normalized arithmetic degree in the CM frame norms satisfies
+\[
+ \widehat{\deg}_{\rm CM}(\mathcal L_\tau)=\frac{p-q}{2}\,\omega.
+\]
+
+\end{lemma}
+\begin{proof}
+At a pure CM test on the component use the two elliptic types of
+\(\mathbb Q(\sqrt{-d_0})\), with their good integral abelian models,
+integral Lie generators and normalized principal polarizations. Write
+\(n_{\pm,s}\) for the squared Lie lengths at a complex embedding \(s\).
+In a common finite field of definition \(k/F\), write \(\langle
+\cdot\rangle_\infty\) for the mean over all \([k:\mathbb Q]\) complex
+embeddings, counting conjugates. The Chowla--Selberg comparison and
+the functional equation of the odd primitive quadratic character give
+\[
+ \begin{aligned}
+ -\langle\log n_{\pm,s}\rangle_\infty=X
+ &=\gamma+\log(2\pi/\sqrt{d_0})-L'(1,\chi)/L(1,\chi)\\
+ &=L'(0,\chi)/L(0,\chi)+D_0'/2,\qquad
+ \omega=X-R_E+D_0'/2 .
+ \end{aligned}
+\]
+The mean is invariant under further field extension.
+\cite{colmez-chowla-selberg}\label{cor:deep-cover-flat-degree-8}
+
+Let \(T\) change the reference period basis to the two orthogonal
+CM blocks. Let \(G\) be the reference Hermitian determinant, and
+\(G_+,G_-\) the two block determinants. In these frames the
+coefficient of \(\phi\) is \(\eta\,\tau(G_-)/\tau(\det T)\).
+The elliptic period scalars for the two blocks are included in
+\(\eta\). Evaluating the algebraic generator on the algebraic
+frames shows that \(\eta\in k^\times\) after finite extension.
+The identity \(G_+G_-=(\det T)\overline{\det T}\,G\) cancels the
+transition determinant against the determinant metric. With the
+two squared length scales \(n_{\pm,s}\sqrt{d_0}\), this gives
+\[
+ A_s=\log|s\eta|+\tfrac12\log|s(\tau G)|
+       +\tfrac p2(\log n_{+,s}+D_0'/2)
+       -\tfrac q2(\log n_{-,s}+D_0'/2).
+\]
+\label{cor:deep-cover-flat-degree-9}
+
+At \(\ell\) take a locally integral CM basis with
+\(t_\ell=\det T_\ell\). For \(j:k\hookrightarrow\mathbb C_\ell\)
+put \(i=j\circ\tau\), \(D_j=\log|i(\mathfrak d_E)|_\ell\) and
+\(d_\ell=\log|d_0|_\ell\). The absolute value of an ideal here is
+that of a local generator. Unimodularity of the polarized period
+lattice and trace duality with the different give
+\[
+ \log|i(t_\ell)|_\ell+\log|i(\bar t_\ell)|_\ell+\log|i(G)|_\ell
+       =-(p+q)D_j,\qquad \log|i(G_-)|_\ell=-qD_j .
+\]
+
+The second identity uses the orthogonal pure-type block. The
+locally integral period basis spans the CM product lattice over
+the marked quadratic order up to prime-to-\(\ell\) index.
+Projecting to each integral eigenlattice by the trace-dual basis
+contributes a generator of \(\mathfrak d_E/(\sqrt{-d_0})\), whose
+log absolute value is \(D_j-d_\ell/2\) on either conjugate
+label. The two frame exponents are \(-p,+q\), giving the finite log norm
+\[
+ B_j=\log|j\eta|_\ell-\log|i(t_\ell)|_\ell-qD_j
+                              +(q-p)(D_j-d_\ell/2).
+\]
+\label{cor:deep-cover-flat-degree-10}
+
+To sum, put \(B'_j=B_j-q(D_j-d_\ell)\). Conjugation permutes
+the embeddings of \(E\) with equal multiplicities at \(\ell\),
+so the two sums for \(t_\ell,\bar t_\ell\) coincide. The first
+trace-dual identity yields
+\[
+ \sum_{j\mid\ell} B'_j
+ =\sum_{j\mid\ell}\left(\log|j\eta|_\ell+\tfrac12\log|i(G)|_\ell
+              -\tfrac{p+q}{2}D_j+\tfrac{p+q}{2}d_\ell\right).
+\]
+Write \(\langle\cdot\rangle_f\) for the sum over finite embeddings,
+divided by \([k:\mathbb Q]\), with \(|\ell|_\ell=\ell^{-1}\).
+Only finitely many places contribute. Ideal norms give
+\(\langle D_j\rangle_f=-R_E\), \(\langle d_\ell\rangle_f=-D_0'\).
+The product formula cancels the \(\eta,G\) terms. Therefore
+\[
+ \begin{aligned}
+ -\langle A_s\rangle_\infty-\langle B'_j\rangle_f
+ &=\tfrac{p-q}{2}(X-D_0'/2)+\tfrac{p+q}{2}(D_0'-R_E)\\
+ &=\tfrac{p-q}{2}\omega+q(D_0'-R_E),\\
+ -\langle A_s\rangle_\infty-\langle B_j\rangle_f
+ &=\tfrac{p-q}{2}\omega .
+ \end{aligned}
+\]
+The last equality restores \(B_j-B'_j=q(D_j-d_\ell)\) in the
+frame norms. \label{cor:deep-cover-flat-degree-11}
+\end{proof}

@@ -1,0 +1,390 @@
+\subsubsection{Changing one Hilbert weight}
+\label{par:mixed-hilbert}
+
+The two places over the residual prime have different roles in the induction. Changing the Hilbert weight at one while retaining both ordinary lines produces the required local orders.
+
+\begin{proposition}[Simultaneous cuspidal lift at a mixed weight]\label{prop:mixed-hilbert-lift}
+For the marked Eisenstein data over the real quadratic field
+\(k_0\), the ordinary specialization below lifts the residual
+system with one weight changed, retaining the specified unit-root
+ordinary lines. Let \(t_w=t\) at the selected place and \(t_w=0\) at the other. The holomorphic weights are \(k+1+2t_w\). The original and lifted eigenvalues obey 
+\[
+ \ell^{t_w}\lambda^{\prime}_w\equiv\lambda_w\pmod{\mathfrak m}\quad(w\mid\ell),\qquad \lambda^{\prime}_w\equiv\lambda_w\pmod{\mathfrak m}\quad(w\nmid\ell),
+\]
+ after finite coefficient extension.
+\end{proposition}
+
+\begin{proof}
+Let \(P\) consist of the place of \(k_0\) above \(\ell\)
+at which the Eisenstein unit root is the Hecke value of
+\(\eta\). At the other place it is \(1\). Write \(c(w)\)
+for the conductor exponent of the Hecke character associated
+to \(\eta\) away from \(\ell\), and put \(c(w)=1\) at both
+places above \(\ell\). We need a cuspidal system of the
+same central character and level with holomorphic weights
+\(k+1+2t_w\), where \(t_w=t\) on \(P\) and \(t_w=0\)
+at the other embedding. The comparison required of its
+eigenvalues is
+\[
+ \ell^{t_w}\lambda'_w\equiv\lambda_w\pmod{\mathfrak m}
+       \quad(w\mid\ell),\qquad
+ \lambda'_w\equiv\lambda_w\pmod{\mathfrak m}
+       \quad(w\nmid\ell).
+\]
+Here and below reduction of a normalized eigenvalue uses a
+finite extension of \(\Q_\ell\) containing it.
+
+We give a proof using the definite quaternion algebra available
+over this real quadratic field. Its two ramified places are
+the two real places, so all finite Hecke operators keep their
+local double cosets. Global Jacquet--Langlands transfers a
+cuspidal representation that is discrete series at both real
+places to this algebra. In the opposite direction, an
+automorphic representation of the quaternion algebra of
+dimension greater than one transfers back with the same finite
+components. At a real place the compact type for weight
+\(h\ge2\) restricts to \(\operatorname{Sym}^{h-2}\) on the
+norm-one group. The central character fixes its extension.
+\hfill\mbox{\cite{jacquet-langlands}}
+
+Put \(d_0=k-1\). At the two split \(\ell\)-adic places use
+the integral coefficient module
+\[
+ V_{\mathbf t}=\bigotimes_{w\mid\ell}
+       \bigl(\operatorname{Sym}^{d_0+2t_w}(O^2)\otimes\det^{-t_w}\bigr).
+\]
+For a scalar matrix \(zI\), the two actions on one tensor factor multiply to
+\[
+ z^{d_0+2t_w}\det(zI)^{-t_w}
+ =z^{d_0+2t_w}(z^2)^{-t_w}=z^{d_0}.
+\]
+Thus the central exponent is independent of the shift at \(w\). Use a sufficiently large finite
+coefficient DVR \(O\). We describe the
+Hecke normalization. If \(D\) denotes the quaternion algebra,
+write \(x\in D^\times(\mathbb A_f)\) and use finite level
+\(K_c=\prod_w K_1(w^{c(w)})\) under the finite splittings.
+Quaternionic forms are functions invariant on the left by
+\(D^\times(k_0)\), of the given central character with its
+algebraic normalization, and satisfying
+\[
+ f(xu)=\rho_{\mathbf t}(u_\ell)^{-1}f(x)
+\]
+for \(u\in K_c\).
+Here \(\rho_{\mathbf t}\) is the displayed coefficient action.
+For a double coset with right cosets \(a_iK_c\) the operator
+is \(\sum_i\rho_{\mathbf t}(a_{i,\ell})f(xa_i)\).
+
+To see its scalar normalization, start in the unitary
+normalization with the compact type at infinity, write
+the form as a vector-valued function on the finite ideles,
+and transfer the algebraic action on its values to \(\ell\)
+using the fixed embeddings. Multiply its value at \(x\) by
+\[
+ |\operatorname{nrd}x|_f^{-d_0/2}\,
+                \rho_{\mathbf t}(x_\ell)^{-1}.
+\]
+For a rational quaternion the real normalization of its
+algebraic coefficient action contains the factor
+\(|N_{k_0/\Q}\operatorname{nrd}x|^{-d_0/2}\). The product
+formula thus gives the asserted left invariance.
+
+For a finite central idele \(z\), apart from the finite-order
+character, the factor is
+\[
+             |z|_f^{-d_0}\prod_{w\mid\ell}z_w^{-d_0}.
+\]
+Because \(\ell\) splits in \(k_0\), the valuation of the
+central multiplier is
+\[
+  d_0\sum_{w\mid\ell}v_\ell(z_w)
+                       -d_0\sum_{w\mid\ell}v_\ell(z_w)=0 .
+\]
+Both coefficient modules have this same central factor. The scalar multiplying a
+degree-one Hecke double coset relative to its unitary action
+is \((Nw)^{d_0/2}\), for both weights. At \(w\mid\ell\) we
+further multiply by \(\ell^{t_w}\) to obtain an integral
+operator. Indeed its representatives there have the form
+\(\left(\begin{smallmatrix}\ell&b\\0&1\end{smallmatrix}\right)\),
+\(b\bmod\ell\). For such a representative the normalized matrix on the coefficient module is
+\[
+ \ell^{t_w}\det(a_i)^{-t_w}\operatorname{Sym}^{d_0+2t_w}(a_i)
+ =\operatorname{Sym}^{d_0+2t_w}(a_i) .
+\]
+It preserves the integral symmetric power because \(a_i\) has integral entries. Away from \(\ell\) the representatives may
+be taken to have identity \(\ell\)-components.
+
+The double quotient by the center and \(K_c\) is finite by
+finiteness of the ideal classes of a definite quaternion
+order and finite index of the level. Evaluation at its
+representatives gives a direct sum of coefficient modules
+fixed by their projective stabilizers, with the indicated
+central factors. The stabilizers are finite: the rational
+projective group is discrete adelically, the archimedean
+group is compact, and the finite level is compact modulo
+the center.
+
+At the ramified place of \(\eta\) of norm two
+the positive level forces the local projective stabilizer
+into a conjugate of the image of \(K_1(w^{c(w)})\).
+Its reduction is contained in the order-two unipotent subgroup
+\[
+ \left\{\begin{pmatrix}1&a\\0&1\end{pmatrix}:a\in\mathbf F_2\right\},
+\]
+and its congruence kernel is pro-\(2\). The rational
+projective group maps injectively to the local projective
+group, since a quaternion which becomes scalar there was
+already scalar. For the reduction map on a finite stabilizer \(H_x\), both the kernel and the image have 2-power order. Hence
+\[
+ |H_x|=|\ker(\mathrm{red}|_{H_x})|\,|\mathrm{red}(H_x)|
+\]
+is a power of two.
+\[
+ |H_x|=|\ker(\mathrm{red}|_{H_x})|\,
+       |\mathrm{red}(H_x)| .
+\]
+The kernel is contained in a pro-2 group, and the image lies in the upper unipotent group over \(\mathbf F_2\).
+
+For a projective stabilizer \(H_x\) at a coset \(x\),
+the \(O\)-linear projector on its fixed values is
+\(e_x=|H_x|^{-1}\sum_{h\in H_x}\rho_x(h)\), including
+the fixed central multipliers in the action \(\rho_x\).
+The order of \(H_x\) is a power of two and \(\ell\) is odd,
+so \(e_x\) is integral. The splitting \(V=e_xV\oplus(1-e_x)V\) reduces to the analogous splitting over the residue field. For an equivariant surjection \(u:V\to W\), if \(w=e_xw=u(v)\), then
+\[
+ w=e_xu(v)=u(e_x v).
+\]
+This proves surjectivity on the two fixed submodules. Summing over the finite coset set
+proves both assertions for forms.
+
+In each symmetric power let the last-coordinate quotient
+be given by the coefficient of the pure power of the
+second basis vector. Modulo \(\mathfrak m\) the matrices
+of \(K_1(w)\) are upper triangular, so this is a quotient
+of their action. For \(t\) a positive multiple of \(\ell-1\)
+the determinant factor on the units is trivial after
+reduction. The two weights induce the same character on
+the last-coordinate quotient, since all diagonal reductions
+lie in \(\mathbf F_\ell^\times\). The normalized operators
+at \(w\mid\ell\) also act by the same local quotient map:
+their representatives have lower right entry one and the determinant factor is
+\[
+ \ell^{t_w}\det(a_i)^{-t_w}=1.
+\]
+
+Tensor the two quotient maps. Write \(Q\) for the product of last-coordinate maps
+on the residue modules of forms. In either weight,
+\[
+                   \ker Q\subseteq\ker(U_{w_1}U_{w_2}) .
+\]
+This inclusion is at coefficient reduction modulo \(\mathfrak m\)
+and uses the two normalized operators. Indeed for a local representative \(a_i\), modulo \(\ell\)
+its matrix on the standard space is
+\(\begin{pmatrix}0&\bar b\\0&1\end{pmatrix}\).
+Write \(D_w=d_0+2t_w\), the exponent in the coefficient
+module \(V_{\mathbf t}\). On its symmetric power the
+reduced matrix acts by
+\[
+ e_1^a e_2^{D_w-a}\longmapsto
+ \begin{cases}
+ 0,&a>0,\\
+ (\bar b e_1+e_2)^{D_w},&a=0 .
+ \end{cases}
+\]
+The determinant normalization contributes one. Thus after
+taking both factors, every tensor monomial in the kernel
+of the two last-coordinate quotients is killed. The
+level preserves the quotient and its kernel, so the
+calculation holds for all double-coset representatives.
+
+Normalize an eigenvector in the starting weight to be
+primitive in the integral lattice of forms. Its reduction \(\bar f\) is nonzero and satisfies
+\[
+ U_{w_1}U_{w_2}\bar f
+          =(\bar a_{w_1}\bar a_{w_2})\bar f\ne0
+\]
+because both eigenvalues are units. The inclusion just proved
+therefore gives \(Q(\bar f)\ne0\). The quotient of the mixed-weight lattice surjects onto the
+same residual Hecke module. If \(\mathfrak m\) is the
+character's maximal ideal, this gives
+\[
+                    (M_{\mathrm{mixed}})_\mathfrak m\ne0 .
+\]
+Thus the residual character is in its support.
+
+Let \(\mathbb T\) be the finite torsion-free algebra generated by the commuting operators on the lattice, and choose a minimal prime \(P\) below the residual maximal ideal. A uniformizer \(\pi\) acts injectively on \(\mathbb T\), whereas each element of a minimal prime is a zero divisor. Hence
+\[
+ \pi\notin P,\qquad (\mathbb T/P)[1/\pi]\ne0 .
+\]
+In the normalization of \(\mathbb T/P\), choose a prime above
+\(\mathfrak m/P\) by lying over. Completing at this prime yields
+a characteristic-zero character over a finite coefficient extension
+whose reduction is the prescribed residual character. 
+
+This character occurs on the lattice after inverting \(\ell\) and extending
+scalars, by faithfulness and simultaneous triangularization.
+The degree \(d_0>0\) of the compact type at the unchanged
+embedding rules out all one-dimensional quaternionic
+representations. Transfer back gives the claimed cuspidal
+Hilbert eigensystem. The two normalized eigenvalues above \(\ell\) reduce to the
+prescribed nonzero elements \(\bar a_{w_1},\bar a_{w_2}\), so both
+ordinary lines survive. The weight can be chosen with
+\[
+                    t\in(\ell-1)\mathbb Z_{>0},\qquad t\ge2
+\]
+as large as required for the subsequent local construction.
+\label{cor:ordinary-mixed-hilbert-1}
+
+\end{proof}
+
+\subsubsection{Local and global images of the rank-two seed}
+
+An ordinary eigenform with the desired weights supplies a Galois representation. Using that representation after extending the base field requires control of its image on open subgroups.
+
+\begin{proposition}[Absolute irreducibility of the mixed-weight seed on open restrictions]\label{prop:mixed-hilbert-restriction}
+The resulting cuspidal rank-two system has the local images used
+for the ordinary seed. In the chosen residual situation, with
+\(\bar\eta^2\ne1\), let \(V\) be the two-dimensional space of \(r_2\) over \(\overline{\mathbb Q}_\ell\). Absolute irreducibility on open restriction means 
+\[
+ \forall U\le_{\rm open}G_{k_0},\qquad \{W\subseteq V:\dim W=1,\ r_2(U)W=W\}=\varnothing.
+\]
+
+\end{proposition}
+
+\begin{proof}
+Apply local--global compatibility for a cuspidal Hilbert
+eigenform of discrete-series weights at least two, all of
+the same parity and with algebraic central normalization.
+The mixed weights just constructed have these properties.
+At \(w\nmid\ell\), newform theory and the fixed vector at
+\(K_1(w^{c(w)})\) give the upper bound for the local parameter
+\(W_w\):
+\[
+               c(w)=a(\det W_w)\le a(W_w)\le c(w).
+\]
+The middle inequality follows by comparing invariant
+codimensions over each ramification subgroup.
+
+For the finite inertial part of the
+Weil--Deligne parameter, the codimension of invariants on
+each ramification subgroup is at least that for the
+determinant, and monodromy can only increase the
+conductor. At positive conductor equality in the inertia
+term forces a one-dimensional fixed space and distinct
+inertial characters \(1,\eta\). In the two distinct inertia lines the commuting operator \(N\) is diagonal. Consequently
+\[
+ N=\operatorname{diag}(n_1,n_2),\qquad N^2=0
+ \quad\Longrightarrow\quad n_1=n_2=0 .
+\] At zero conductor
+the parameter is unramified. This gives the full inertia
+action away from \(\ell\), in particular at the norm-two
+place.
+\hfill\mbox{\cite{skinner-hilbert}}\label{cor:ordinary-mixed-hilbert-2}
+
+At the two split places the normalized ordinary eigenvalues
+are units. In the normalization before the final cyclotomic
+twist the determinant is \(\epsilon_\ell^{-k}\eta\).
+The two exponents are
+\[
+ m_0=t_w,\qquad m_1=-k-t_w,\qquad m_0+m_1=-k.
+\]
+A nonzero \(U_w\)-eigenvalue
+at \(K_1(w)\) level supplies a Borel Jacquet exponent.
+With arithmetic Weil degree its normalized Weil character is
+\(s\mapsto(\lambda'_w)^{-\deg s}\). Indeed the translation
+by the uniformizer on the Jacquet module gives the \(U_w\)
+eigenvalue after the Borel modulus factor.
+
+Passing to the
+algebraic Weil parameter cancels this factor. The second
+Weil character is unramified too since the determinant is
+unramified on the Weil inertia group. The Hodge filtration
+jumps are \(-m_0,-m_1\). The normalized unit reading and the determinant give the
+Newton slopes
+\[
+        v_\ell(\lambda'_w)=-m_0,\qquad
+        k-v_\ell(\lambda'_w)=-m_1 .
+\]
+Here crystalline Frobenius is inverse to arithmetic Weil
+Frobenius in the stated convention. On the
+potentially semistable module the smaller-slope line is
+stable under monodromy, which lowers slope by one. It is
+stable under descent, since each slope occurs once. Its
+induced Hodge number is at least the smaller jump. Weak
+admissibility gives the reverse bound by the Newton number,
+so the line is weakly admissible. The equivalence for
+semistable representations and descent give a Galois line.
+Its character \(\kappa_0\) has inertia \(\epsilon_\ell^{m_0}\)
+by the rank-one comparison.
+
+On an arithmetic Frobenius
+\(\sigma\) the same comparison gives
+\[
+     (\kappa_0\epsilon_\ell^{-m_0})(\sigma)^{-1}
+                 = \ell^{m_0}\lambda'_w .
+\]
+The other character follows from the determinant. The two reductions of
+the first character are \(\bar\eta\) on \(P\) and \(1\)
+on its complement, by the weight congruence and local
+reciprocity. Twisting by \(\epsilon_\ell^k\) leaves the reductions fixed
+since \(\ell-1\mid k\). The determinant becomes
+\(\epsilon_\ell^k\eta\) and the ordered exponents become
+\[
+       (m_0+k,m_1+k)=(k+t_w,-t_w).
+\]
+These are \((k,0)\) and \((k+t,-t)\) at the respective places.
+Away from the level and \(\ell\), comparison of the Hecke
+polynomials with the Eisenstein system gives residual trace
+\(1+\bar\eta\) and determinant \(\bar\eta\). In particular at good Frobenius elements \(g\) the residual polynomial is
+\[
+ X^2-(1+\bar\eta(g))X+\bar\eta(g)=(X-1)(X-\bar\eta(g)).
+\]
+Chebotarev and Brauer--Nesbitt identify the residual semisimplification with \(1\oplus\bar\eta\).
+\hfill\mbox{\cite{skinner-hilbert,colmez-fontaine}}\label{cor:ordinary-mixed-hilbert-3}
+
+For irreducibility one can also use the unequal gaps at the
+two embeddings. If the representation were reducible, the
+two constituents would be global \(\ell\)-adic characters,
+locally algebraic at both places by the flags and of finite
+inertial image away from \(\ell\). In a totally real field
+the cyclotomic exponents of such a character are parallel.
+Indeed, restrict by reciprocity to totally positive units in
+the kernels of all finite inertial factors. A finite-index
+subgroup of the totally positive units remains, and the
+product of its embedded values to the indicated integer
+powers is one.
+
+For the finite-index group of totally positive units,
+transfer their algebraic identities to \(\R\). The local
+exponents \(a_\sigma\) then satisfy
+\[
+          \sum_\sigma a_\sigma\log|\sigma(\epsilon)|=0
+                        \qquad(\epsilon\text{ in that group}).
+\]
+Their logarithms span the trace-zero hyperplane by the unit
+theorem, so all \(a_\sigma\) are equal. The possible exponents \(k,0\) at one place and
+\(k+t,-t\) at the other are disjoint.
+
+Finally let \(H\) be the normal core of any open subgroup.
+An inertia element at the unchanged place has infinite
+cyclotomic image and a positive power belongs to \(H\).
+The two eigenvalues of this power are distinct. If \(H\)
+had an invariant line, all such lines would be among
+the two eigenlines of that element, and the full group
+would permute them. Global irreducibility forces a
+transitive action on two lines. The character \(\nu\)
+of this permutation is a nontrivial quadratic self-twist:
+in the basis of the two lines, conjugation by
+\(\operatorname{diag}(1,-1)\) twists the representation by
+\(\nu\). Reducing characteristic polynomials gives
+\[
+ \{1,\bar\eta\}=\{\bar\nu,\bar\nu\bar\eta\}
+\]
+as
+multisets of characters. The nontrivial quadratic \(\nu\) has nontrivial reduction since \(\ell\ne2\). The two entries must therefore be exchanged:
+\[
+ \bar\nu=\bar\eta,\qquad \bar\nu\bar\eta=1
+ \quad\Longrightarrow\quad\bar\eta^2=1,
+\]
+contrary to the order of the chosen \(\bar\eta\). Thus every open restriction
+is absolutely irreducible.
+\end{proof}

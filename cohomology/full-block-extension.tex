@@ -1,0 +1,235 @@
+\subsubsection{A nonsplit extension of the two blocks}
+\label{par:full-block-extension}
+\hypertarget{source-cohomology-full-block-extension}{}
+
+To apply the two-link test to a point with a full block, one first replaces the split representation by a nonsplit extension. The replacement must preserve the characteristic polynomials on which that test depends.
+
+\begin{proposition}[Full-block extension with the same characteristic polynomials]\label{prop:full-block-extension}
+For the normalized two-block representation with one full block
+and the marked ordinary flag of the rank-four calculation, write \(r\) for the normalized representation. The small complete integral model admits a nonsplit extension \(r'\) with the same similitude and ordinary diagonal characters and with 
+\[
+ \det(X-r'(g))=\det(X-r(g))\qquad\text{for every }g.
+\]
+ It satisfies the same prescribed inertia conditions
+and can be used in the nonsplit branch in either characteristic.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Projection preserving the flag and character polynomials.}
+
+The alternating form pairs the two planes
+\[
+          V_-=\langle e_0,e_2\rangle,\qquad
+          V_+=\langle e_1,e_3\rangle .
+\]
+On each block complex conjugation is the scalar with its residual
+sign. Indeed its square is one and subtracting the opposite scalar
+gives an invertible matrix, since \(\ell\) is odd.
+In the one-sided triangular case, first take the block-diagonal
+projection. This is multiplicative on the block-triangular algebra
+and commutes with the symplectic adjoint. It preserves the multiplier,
+the two block matrices and the total characteristic polynomial. In
+the normalized chart the chosen local element \(\phi\) is block
+diagonal and its two residual block polynomials are coprime.
+
+If \(f_-f_+\) is the product of the two monic factors
+at \(r(\phi)\), choose \(af_-+bf_+=1\) by coprimality.
+Then
+\[
+                      e_-=b(r(\phi))f_+(r(\phi))
+\]
+projects onto \(V_-\).
+It preserves the ordinary flag. Write \(a\in\{0,1\}\) for the action of \(e_-\) on a flag quotient. If \(X\) acts there by \(\lambda\), the projected matrix acts by
+\[
+ a^2\lambda+(1-a)^2\lambda=\lambda .
+\]
+Thus the ordinary diagonal characters are preserved. Every prescribed inertia element that acted
+as the identity still acts as the identity. We use this projected
+point in characteristic \(\ell\), and the given block-diagonal point
+in the characteristic-zero full-block test.
+
+\proofstep{The rank-three off-block module.}
+
+Use the small integral model of this point, with adically
+continuous matrices and flag over a complete DVR \(A\), of finite
+residue field of characteristic \(\ell\), and a local injection
+into the ambient valuation ring. In particular it is this model
+that is complete at a uniformizer \(\pi\), in either characteristic.
+Write \(r\) for its block-diagonal representation, \(u\) for
+the symplectic flag basis, and \(s\) for the selected element of
+the rational decomposition group \(G_\ell\) with
+\(\epsilon_\ell(s)=1\). Its residual eigenvalues separate the two
+blocks. Define
+\[
+ \begin{aligned}
+ M&=\{X: X(V_+)=0,\ X(V_-)\subset V_+,\ X^*=-X\},\\
+ P&=\{X\in M:u^{-1}Xu\text{ is strictly upper triangular}\}.
+ \end{aligned}
+\]
+Here \(*\) is the symplectic adjoint and \(G_\Q\) acts on \(M\) by
+\(\rho(g)X=r(g)Xr(g)^{-1}\). The paired-block description identifies
+\(M\) with the symmetric bilinear forms on \(V_-\), so it is free
+of rank three.
+
+All products of two elements of \(M\) vanish.
+Complex conjugation \(c\) acts as minus one, and \(\rho(s)-1\) is
+invertible: on matrices from \(V_-\) to \(V_+\) its residual
+eigenvalues are ratios of residual eigenvalues from distinct
+blocks minus one. Since \(P\) is saturated, reduction modulo \(\pi\) preserves
+the short exact sequence with quotient \(M/P\). For \(T=\rho(s)-1\), a basis adapted to \(P\subset M\) gives
+\[
+ \det(T|_M)=\det(T|_P)\det(T|_{M/P})\in A^\times .
+\]
+Over the local ring \(A\) both factors are units, so both induced maps are invertible. Stability under \(G_\ell\) follows because upper
+triangular changes of basis preserve the strictly upper triangular
+matrices. Saturation follows by testing the lower and diagonal
+entries of \(u^{-1}Xu\) over the domain \(A\).
+
+\proofstep{A nonzero ordinary local submodule.}
+
+The submodule \(P\) is nonzero. The residual labels of the first
+two flag quotients are in \(V_-\) and \(V_+\), respectively. The
+block projectors of \(r(s)\) preserve the flag by the same
+coprime-factor argument. Its Lagrangian plane \(F_2\) therefore
+contains a rank-one summand in \(V_+\). For a nonzero vector
+\(w\) in that summand, the endomorphism
+\(x\mapsto\langle w,x\rangle w\) belongs to \(M\). Isotropy gives \(X(F_2)=0\), while the image lies in \(Aw\subset F_2\). Thus
+\[
+ X(F_1)=X(F_2)=0,\qquad X(F_3)\subset F_2,\qquad X(F_4)\subset F_2\subset F_3 .
+\]
+This is the required strict flag condition.
+
+\proofstep{Produce a normalized ordinary cocycle.}
+
+A normalized nonsplit extension requires a nonzero local class with the prescribed ordinary behavior. This is the role of the local submodule in the global cocycle construction.
+
+
+To obtain the extension, put \(M_n=M/\pi^n M\) and let
+\(P_n\subset M_n\) be the image of \(P\). Use the Greenberg--Wiles
+cardinality formula for finite \(\ell\)-primary modules of
+\(G_{\Q,S}\), where \(S\) contains \(\ell\) and the ramified primes
+of \(r\), with local Tate-orthogonal conditions on the dual
+module. At a finite prime \(v\nmid\ell\) put \(B=M_n^{I_v}\) and \(T=\operatorname{Frob}_v-1\). For the unramified local condition, finiteness of \(B\) gives
+\[
+ |H^1_{\rm unr}(G_v,M_n)|=|B/TB|=|\ker(T|_B)|=|H^0(G_v,M_n)|.
+\] At \(\ell\) use the image of \(H^1(G_\ell,P_n)\).
+The relevant sequence has
+\[
+     H^0(G_\ell,M_n/P_n)=0\longrightarrow H^1(G_\ell,P_n)
+                        \longrightarrow H^1(G_\ell,M_n).
+\]
+Therefore the chosen local space is isomorphic to
+\(H^1(G_\ell,P_n)\). Both \(M_n\) and its Tate dual have
+trivial invariants globally and at \(\ell\): test at \(s\), where
+the cyclotomic twist is trivial and \(\rho(s)-1\) is invertible.
+
+The same test gives trivial invariants for \(P_n\) and its Tate
+dual. The local Euler characteristic and local Tate duality give
+\(\lvert H^1(G_\ell,P_n)\rvert=\lvert P_n\rvert\). Write
+\(L_v\) for the local conditions and \(L^\perp\) for their
+Tate orthogonals on \(M_n^\vee(1)\), the Tate dual. The
+cardinality identity is
+\[
+ \frac{|H^1_L(G_{\Q,S},M_n)|}
+ {|H^1_{L^\perp}(G_{\Q,S},M_n^\vee(1))|}
+ =\frac{|H^0(G_{\Q,S},M_n)|}{|H^0(G_{\Q,S},M_n^\vee(1))|}
+ \prod_{v\in S\cup\{\infty\}}\frac{|L_v|}{|H^0(G_v,M_n)|}
+ =|P_n|.
+\]
+The real place contributes a factor one since \(c\) acts
+by \(-1\) and \(\ell\) is odd. In particular
+\(|H^1_L(G_{\Q,S},M_n)|\geq |P_n|\). The cardinality formula
+and finiteness follow from the finite-module Poitou--Tate sequence,
+local duality and the global Euler characteristic.
+\cite[Chapter I, Theorems 4.10 and 5.1]{milne-duality}
+
+Every such class has exactly one representative with \(z_n(c)=0\),
+by adding a coboundary using the invertibility of two. It vanishes on
+\(I_p\cap\ker r\) for \(p\ne\ell\): its restriction to inertia is
+a coboundary, and \(\ker r\) acts trivially on coefficients. Its
+local condition is
+\[
+ z_n(h)-(\rho(h)y_n-y_n)\in P_n\qquad(h\in G_\ell)
+\]
+for some \(y_n\in M_n\). Consider all continuous cocycles with these
+three conditions. They form a finite group for each \(n\), since
+they are normalized and unramified outside \(S\), and its size is
+at least \(\lvert P_n\rvert\). If at some level every such cocycle
+vanished modulo \(\pi\), this would also hold at every higher
+level by reduction. A cocycle vanishing modulo \(\pi\) at level
+\(m\) can be divided by \(\pi\) to give a cocycle at level \(m-1\)
+with the same conditions.
+
+At \(s\) reduce the local relation modulo \(\pi\) and project
+onto \(M_1/P_1\). When the cocycle reduces to zero, it gives
+\[
+       (\rho(s)-1)[y_m]=0\text{ in }M_1/P_1 .
+\]
+Invertibility forces \(y_m\bmod\pi\in P_1\).
+Subtract a lift in \(P_m\) from \(y_m\) and divide by \(\pi\).
+Saturation of \(P\) then permits division of the whole local
+condition. If \(\mathcal Z_m\) denotes the finite group of normalized
+cocycles at depth \(m\), then on its subgroup of zero
+reduction the division operation just constructed is an
+injection into \(\mathcal Z_{m-1}\), with recovery by
+multiplication by \(\pi\).
+
+If every cocycle at some depth
+\(n\) reduced to zero, this would hold at every \(m\ge n\).
+The injections at successive depths would give, for every \(m\ge n\),
+\[
+ |P_m|\le|\mathcal Z_m|\le|\mathcal Z_{m-1}|\le\cdots\le
+ |\mathcal Z_{n-1}|,
+\]
+with the zero module at depth zero. This contradicts \(|P_m|\to\infty\).
+Thus there are cocycles with nonzero reduction at every level.
+Take the finite sets of pairs \((z_n,y_n)\) with this property.
+Reduction maps preserve the property. The inverse limit is nonempty
+by compactness, since any finite set of compatibility conditions
+can be met by reducing from a sufficiently high level. Completeness
+gives a nonzero continuous cocycle \(z\) over \(A\) and a local vector \(y\) satisfying
+\(z(h)-(\rho(h)y-y)\in P\) for all \(h\in G_\ell\). Multiply both by \(\pi\) to make the correction
+zero modulo \(\pi\) while preserving nonvanishing over \(A\).
+
+Now set \(r'(g)=(1+z(g))r(g)\) and \(u'=(1-y)u\).
+Because products of two elements of \(M\) vanish,
+\[
+ r'(g)r'(h)
+  =(1+z(g))(1+\rho(g)z(h))r(gh)
+  =(1+z(g)+\rho(g)z(h))r(gh)
+  =r'(gh).
+\]
+Also \((1+X)^*(1+X)=1+(X+X^*)+X^*X=1\) for \(X\in M\), so
+the multiplier stays fixed and \(u'\) is symplectic. At \(h\in
+G_\ell\) we have
+\[
+ (u')^{-1}r'(h)u'=
+ \bigl(1+u^{-1}(z(h)-\rho(h)y+y)u\bigr)\,u^{-1}r(h)u.
+\]
+This is upper triangular with the original diagonal. The inertia
+conditions away from \(\ell\) hold because \(z\) kills the prescribed
+subgroups of \(\ker r\). The residual representation, local ordinary
+characters and small integral model satisfy all the original
+point conditions. The two original diagonal blocks are unchanged,
+so \(r'\) and \(r\) have identical characteristic polynomials
+on \(G_\Q\).
+
+A stable complement to \(V_+\) over the ambient field would be
+the graph of a map \(Y:V_-\to V_+\). Write \(r_-(g)\) and
+\(r_+(g)\) for the original block matrices. Invariance of
+the graph means
+\[
+        Y r_-(g)=r_+(g)Y+z(g)r_-(g).
+\]
+At complex conjugation \(z(c)=0\) and the two signs are opposite,
+so \(2Y=0\). The residue characteristic is odd, hence \(Y=0\).
+The displayed equality for every \(g\) then gives \(z=0\),
+contrary to the construction.
+Fullness of the minus block implies fullness of the plus block:
+the latter is its dual times the multiplier, which acts by
+nonzero scalars, and inverse matrices run over the same group.
+We may therefore apply the nonsplit block-extension branch of the
+modularity argument to \(r'\). The equality of characteristic
+polynomials transports its special-fiber or Frobenius conclusions
+back to the original block point. \label{cor:cohomology-full-block-extension-1}
+\end{proof}

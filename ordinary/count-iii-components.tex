@@ -1,0 +1,206 @@
+\subsection{Component propagation at the extra vertices in the rank-four construction}
+\label{sec:count-three-components}
+
+Having the required residual links describes a path of points. At its extra vertices one still needs to pass between components without losing the condition that both ordinary ideals vanish.
+
+\begin{proposition}[Propagation through the extra vertices]\label{prop:count-three-extra-vertices}
+At the extra vertices of the residual path in
+Proposition~\ref{prop:count-three-residual-path}, use the
+depth and inertia-coincidence dimension bounds of
+Proposition~\ref{prop:tower-component-propagation}. If \(P,P'\) are any two component primes through such a vertex and \(J\) denotes the ordinary ideal there, 
+\[
+ J\subseteq P\quad\Longrightarrow\quad J\subseteq P'.
+\]
+ Along the
+four links this gives the backward propagation from the integral
+seed of Proposition~\ref{prop:count-three-ordinary-attachment}.
+\end{proposition}
+
+\begin{proof}
+For the first three vertices of
+Section~\ref{sec:count-three-chain}, the ordinary
+component argument of Paragraph~\ref{par:count-two-propagation}
+already applies. We prove the additional statement
+for a residual datum in \(\mathcal A\) having global root
+\(-w_\Psi\), or both \(-w_\beta,-w_\vartheta\).
+The ideal in the argument is the same sum of the two
+ordinary Hecke ideals.
+
+\proofstep{The reducible loci at an extra vertex.}
+Use the nine supports in the component argument.
+The ninth is
+\[
+                   Y=\{\pm w_\beta,\pm w_\vartheta\}.
+\]
+For every other support meeting the extra vertex, the
+tangent dimension is at most \(d+20C\).
+Indeed, use the symplectic cocharacter with exponents
+\((0,0,1,1)\). It sends the global matrices to the
+diagonal and the frame at \(v\) to
+\[
+                     N_v=1+b_v(E_{10}-E_{32}),
+                     \qquad b_v\ne0.
+\]
+The tangent dimension can only increase at this
+limit. The first-column flag equation at a datum in
+\(\mathcal A\) gives \(d_0=d_1\) on each marked
+decomposition group, since global row one has no
+off-diagonal entries and \((N_v)_{10}\ne0\).
+The same equality holds at the limit.
+
+For a global tangent cocycle \(U\) and a frame
+variation \(V_v\), put
+\(Z(s)=U(s)+\mathcal D(s)V_v\mathcal D(s)^{-1}-V_v\)
+at the local group. Its conjugate by \(N_v\) is
+upper triangular. Direct multiplication gives
+\[
+ Z_{10}=b_v^2 Z_{01}+b_v(Z_{00}-Z_{11}),\qquad
+ Z_{21}=0,\qquad Z_{30}=0 .
+\]
+For the last equality use also entries \((2,0),(3,1)\)
+of the upper triangular condition.
+First fix the two independent global diagonal
+cocycles. This costs at most \(2C\).
+After fixing the two diagonal cocycles, the local equations give
+\[
+       U_{10}=b_v^2U_{01},\qquad [U_{21}]=[U_{30}]=0
+         \text{ in the local root cohomology}.
+\]
+The root character for \(U_{10},U_{01}\) is trivial here,
+so their frame terms vanish.
+
+For the eight supports preceding \(Y\), the ones
+that can meet these vertices are rows \(1,4,5,7,8\)
+in the order of the displayed list.
+Fix the global cocycle indicated for each surviving row.
+\[
+ \begin{array}{c|ccccc}
+ \text{row}&1&4&5&7&8\\\hline
+ \text{entry}&(1,2)&(0,3)&(0,1)&(1,2)&(0,3)
+ \end{array}
+\]
+The image dimension of this coordinate map costs at most \(d+C\).
+In the resulting kernel the two upper long-root
+entries \((0,3),(1,2)\) vanish, either by this choice
+or by the support.
+
+In each row either \((0,1)\)
+or \((1,0)\) also vanishes globally. The local
+relation and \(b_v\ne0\) force both to vanish
+locally. Thus every odd root entry is locally
+a coboundary. The remaining global entries
+have dimension at most \(10C\) by the strict
+and even cohomology bounds. At most \(6g\)
+frame coordinates remain, where \(g\le C\)
+is the number of places over \(\ell\). Including
+the three fixed cocycles, the tangent bound is
+\[
+                   2C+(d+C)+10C+6g\le d+20C .
+\]
+The completed support quotient therefore has
+dimension at most \(d+20C+1\), with the extra
+parameter from the coefficient DVR.
+
+\proofstep{The support \(Y\).}
+A representation supported in \(Y\) preserves
+the two planes with indices \(\{0,3\}\) and
+\(\{1,2\}\). Its two determinants are both the
+similitude \(\nu\).
+At any local point where the first lower flag
+entry \((N_v)_{10}\) is nonzero, the ordinary first
+vector has nonzero projection on each plane.
+
+Let \(u_1,u_2\) be the two nonzero projections of
+the first flag vector. Both satisfy
+\(r(h)u_i=\psi_{v,0}(h)u_i\) on the decomposition group,
+since the two plane projections commute with \(r(h)\).
+The determinant \(\nu\) of each plane determines its other
+graded character. Thus the full composition multiset is
+\[
+       \{\psi_{v,0},\psi_{v,0},\nu/\psi_{v,0},\nu/\psi_{v,0}\}.
+\]
+Since the pairing gives \(\psi_{v,3}=\nu/\psi_{v,0}\),
+the multiset forces on the same decomposition group the coincidence
+\[
+               \psi_{v,1}=\psi_{v,0}\quad\text{or}\quad
+               \psi_{v,1}=\psi_{v,3}.
+\] At every prime of the completion at a
+vertex in \(\mathcal A\) the frame entry stays
+nonzero, since it is a unit at the vertex.
+
+The dimension comparison with the characteristic
+polynomial and ordinary character ring also holds
+on the part of \(Y\) outside the first eight
+supports. On this part each plane has both of
+its off-diagonal entries nonzero somewhere.
+Over the fraction field, the four eigenvalues
+of the normalizer are algebraic over the base.
+If \(\lambda_i\) are the marked eigenvalues, the four traces are
+\[
+    \operatorname{tr}(r(g_0)^j r(g))
+            =\sum_i\lambda_i^j r(g)_{ii}\qquad(0\le j<4).
+\]
+Invert the Vandermonde matrix to read the diagonal entries. The same holds for
+the diagonal entries of \(r(gh)\).
+Subtracting products of the known diagonals
+therefore determines
+\[
+                  r(g)_{ij}r(h)_{ji}
+\]
+for each opposite pair of allowed off-diagonal
+positions and all \(g,h\).
+
+Choose one nonzero
+value in one direction for each plane. All other
+entries in both directions in that plane are
+then obtained from these products by division.
+Thus two field generators, together with the
+four entries determining each local lower
+symplectic frame, suffice over an algebraic
+extension of the base field. The finite type
+dimension comparison increases the dimension
+by at most \(2+4g\), just as at the absolutely
+irreducible primes.
+
+\proofstep{The selected arc.}
+
+An arc avoiding the excluded loci lets us apply the one-point support result.
+
+At an intersection of adjacent components through
+an extra vertex, start on the modular component
+and cut by the coefficient uniformizer. Choose
+a prime in the intersection with quotient
+dimension at least \(N=2d+1-2g\).
+The depth inequalities give
+\[
+     d+20C+1<N,\qquad 2d+1-d_v+2+4g<N .
+\]
+If \(Z\) is the chosen integral closed subset, its
+dimension is at least \(N\). The first inequality gives
+\(Z\not\subseteq\) any of the eight small reducible supports.
+The second gives the same exclusion for inertia coincidence loci,
+using the dimension comparison on \(Y\).
+In particular the prime cannot be supported
+in \(Y\): its unit lower frame entry would
+force a coincidence on the full decomposition
+group and hence on the open inertia.
+The prime therefore has absolutely irreducible
+generic representation and separated inertia
+characters.
+
+In the local coordinate domain of \(Z\), choose \(0\ne f_i\) from each forbidden-locus ideal and \(0\ne t\) from the maximal ideal. The element
+\[
+ f=t\prod_i f_i\ne0
+\]
+belongs to the maximal ideal and vanishes on each forbidden locus. Lemma~\ref{lem:local-curve-avoidance} gives a one-dimensional quotient retaining that product. Normalizing as in the component argument gives the centered formal arc with generic point outside the exclusions. Local vanishing at this
+arc puts the shared Hecke ideal in the adjacent
+component. This proves the required implication
+from one modular component to all modular
+components at both new kinds of vertices.
+It applies to every vertex in the residual
+chain, so the backwards argument of
+Paragraph~\ref{par:count-two-propagation} applies
+once the integral seed lies in the ordinary
+support with its cuspidal attachment.
+\label{cor:ordinary-count-iii-components-1}
+\end{proof}

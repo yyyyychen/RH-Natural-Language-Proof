@@ -1,0 +1,273 @@
+\paragraph{Specialization of the incidence form.}
+\hypertarget{source-slice-integrals}{}
+The finite orders describe the vertical contribution. For the horizontal term in the moving height we must identify the divisor obtained by specializing the incidence form. Suppress row zero, put \(A=K[X_{ij}:1\le i\le s]\),
+\(B=\operatorname{Frac} A\), and let \(L/B\) be the incidence
+field of one component with that row suppressed. Its degree
+is \(\delta_Z\). Adjoining the independent zeroth row to
+both fields gives the incidence extension used above. In a
+generic light frame choose \(w_b\ne0\), and put \(r_j=w_j/w_b\).
+The polynomial
+\[
+       U(Y)=\operatorname{Norm}_{L/B}\big(\sum_j Y_jr_j\big)
+             \quad\in B[Y]
+\]
+has degree \(\delta_Z\).
+
+Multiplication by one scalar of \(B^*\)
+makes it primitive over the factorial ring \(A\), unique up
+to \(K^*\). This primitive polynomial is \(F_Z(Y,X)\).
+Indeed over the geometric generic cut it is the product of
+the linear forms of its points, so its zero set for the last
+hyperplane is exactly the locus cut out by the Chow polynomial.
+The multiplicity at a general point of the light image is
+the degree of the component field over that image. Both
+polynomials have that multiplicity: on the norm side the
+points over the image appear as the factors of the separable
+norm. The irreducible Chow polynomial depends on row zero
+and is primitive in that row over \(A\). Gauss's lemma
+identifies its indicated power with the primitive polynomial.
+
+\begin{proposition}[Specialization and integrability on the incidence slice]
+\label{prop:integrable-incidence-heights}
+On the selected horizontal cut for a component \(Z\), write \(L/B\) for its incidence extension of degree \(\delta_Z\), and \(r_j\) for the light-coordinate ratios in a nonzero light frame. The moving incidence divisor is computed by specializing the primitive representative of
+\[
+ \operatorname{Norm}_{L/B}\!\left(\sum_j Y_jr_j\right),\qquad [L:B]=\delta_Z.
+\]
+ The weight metrics
+used to compute \(H_L\) and \(H_F\) are integrable on those charts.
+At the definite lift the same discriminant comparison applies with
+the baseline finite-depth term and the full cusp space.
+\end{proposition}
+
+\begin{proof}
+\proofstep{The contribution over a horizontal prime.}
+For an irreducible \(q\) of \(A\), write \(w\mid q\) for the
+places of \(L\) above its order. The order of the content of
+\(U\) at \(q\) is
+\[
+           \sum_{w\mid q} f_w\min_j w(r_j).
+\]
+Indeed extend the base valuation to the independent \(Y\)'s
+by the Gauss rule. Its extensions from each \(w\) still have
+the same ramification index and residue degree. This follows
+by tensoring the local normalization with the Gauss DVR and
+localizing: the old residue fields acquire independent
+transcendentals \(\bar Y\), so remain fields and the old
+uniformizers still generate the local maximal ideals.
+
+In these extensions the order of the sum is the minimum.
+The norm valuation formula follows by taking the determinant
+of multiplication on the normalization, or by counting the
+successive residue field quotients of each local principal
+ideal. Replacing \(Y\) by a constant tuple \(x\) for which
+\(w_x=\sum_jx_j w_j\ne0\) on each component gives
+\[
+ v_q(F_Z(x,X))=
+   \sum_{w\mid q} f_w\big(w(w_x/w_b)-\min_j w(r_j)\big).
+\]
+Fix a \(B\)-basis of the finite algebra. If \(M_l\)
+is multiplication by the \(l\)-th column ratio, the norm in
+the moving row is
+\[
+             \det\!\left(\sum_l X_{0l}M_l\right).
+\]
+Its specialization is the determinant for multiplication
+by the specialized row, since determinant is a polynomial
+in the matrix entries over \(B\). Hence no denominator
+depending on the specialized row has been introduced.
+
+At a place trivial on the component field both terms vanish.
+At any other contributing place \(\zeta\), compare in an
+integral frame. If \(a_\zeta=\min_l v_\zeta(w_l)\), then
+\[
+       v_\zeta(w_x)-v_\zeta(S_0)=v_\zeta(w_x)-a_\zeta .
+\]
+Here the generic zeroth row realizes the minimum by the
+Gauss rule. For each horizontal prime \(q\), the pushforward coefficient is
+\[
+ \sum_{\zeta\mid q} f_{\zeta}
+            \bigl(v_{\zeta}(w_x)-a_{\zeta}\bigr).
+\]
+This is precisely the coefficient of the moving divisor at \(q\).
+The specialized polynomial is nonzero. Holding the other cut rows
+generic, its factors as a polynomial in the remaining row are
+readings at the \(\delta_Z\) points of the complementary cut,
+counted with degree. Each such factor is linear in that row. The
+degree is therefore \(\delta_Z\) per row, and summing over components
+gives \(\delta\).
+Adding the row degrees of the component contributions gives
+\[
+  \sum_Z\delta_Z=\delta .
+\]
+
+\proofstep{Line weights and changes of cut coordinates.}
+For the horizontal orders of any rational section of a weight
+line there are only finitely many contributing \(q\). Here
+is a geometric way of seeing this on the present proper
+flag model. Normalize the affine space of cut rows in \(L\).
+Write \(\pi:Y\to\operatorname{Spec}K[X]\) for this finite
+normalization and \(\mathcal F\) for the proper flag compactification.
+At a codimension-one point \(\zeta\) of \(Y\), properness extends the
+generic flag reading to \(\operatorname{Spec}\mathcal O_{Y,\zeta}\).
+The finitely many coordinates in an affine chart about its closed
+image extend on an open neighbourhood of \(\zeta\). Thus the rational
+flag reading is a morphism \(\theta:Y^\circ\to\mathcal F\) away from
+a subset of codimension at least two.
+
+For a rational weight section
+\(u\), the coefficient at \(q\) is
+\[
+ \bigl[\pi_*\operatorname{div}_{Y^\circ}(\theta^*u):q\bigr]
+         =\sum_{\zeta\mid q} f_\zeta\,v_\zeta(\theta^*u).
+\]
+The Weil divisor on the left has finite support because \(\theta^*u\)
+is a rational section of an invertible sheaf on the noetherian open
+\(Y^\circ\). Each order on the right is exactly the flag-and-theta
+frame order at \(\zeta\).
+The same reasoning applies to the minimum of finitely many
+column orders. Adjoining the independent row zero pulls
+back these divisors, without acquiring any further order.
+
+A change of basis of the \(s\) cut rows leaves the generic
+point on the flag variety fixed under the induced isomorphism
+of incidence fields. Thus its pushed-down divisors are invariant
+under \(\mathrm{GL}_s\).
+For a pushed-down horizontal divisor \(D\) this invariance is
+\[
+  g^*D=D\qquad(g\in{\rm GL}_s).
+\]
+ Each of their finitely many irreducible
+components is invariant: the image of the product of the
+connected algebraic group and a geometric irreducible component
+is irreducible, contains that component, and lies in the
+finite union. Descent gives the statement over \(K\).
+
+If \(F_D\) generates the corresponding prime in \(K[X]\),
+each \(F_D(gX)\) is another generator.
+Since the units of \(K[X]\) are constants, the two prime generators satisfy
+\[
+  F_D(gX)=c(g)F_D(X),\qquad c(g)\in K^\times\quad(g\in{\rm GL}_s(K)).
+\]
+ Its ratio to \(F_D(X)\)
+is a scalar, and the scalars form an algebraic character of
+\(\mathrm{GL}_s\). Write it as \(\det^m\). Restriction to the
+diagonal torus gives
+\[
+ F_D\bigl(\operatorname{diag}(t_1,\dots,t_s)X\bigr)
+          =(t_1\cdots t_s)^m F_D(X).
+\]
+Thus every nonzero term has degree \(m\) in each cut row. This justifies
+using one cut-row degree in \eqref{eq:slice-height-disc}.
+\label{cor:slice-integrals-1}
+
+\paragraph{Integrability of the weight metrics.}
+The logarithm of the absolute value of a nonzero polynomial
+in the rows is integrable on the product of spheres. The
+phase argument for \eqref{eq:slice-sphere-lower} applies
+also to a polynomial with terms of unequal degrees. Its
+positive part is bounded and its leading term gives a finite
+lower integral. In particular a nonzero polynomial has zero
+set of sphere measure zero. If \(r\in L^*\), consider the
+characteristic polynomial of multiplication by \(r\) and the
+one for \(r^{-1}\). Their coefficients are rational
+functions of the cut rows.
+
+For every generic complex
+point of this finite cover the two Cauchy root bounds give
+\[
+          |\log |r(P)||\le A_r(X)
+\]
+where \(A_r\ge0\) is integrable on the product of spheres:
+one can take the sum of two copies of \(\log 2\) and the
+positive logarithms of the absolute values of all nonzero
+coefficients. These logarithms are dominated by sums of the
+absolute logarithms of polynomial numerators and denominators.
+The bound holds simultaneously at all sheets over a tuple.
+
+\proofstep{Integrability of the logarithms of norms on the flag chart.}
+Use a nonzero component light column \(w_b\) and set
+\[
+ x=-\log\|w_b(P)\|,\qquad
+ y=-\log\|\eta(P)\|/n_1,\qquad z_1=-\log\|t_1(P)\| .
+\]
+The bounded suprema give constant lower bounds for these
+three quantities. Write \(B_L=(\sum_j\|w_j(P)\|^2)^{1/2}\).
+The rational ratios \(r_j\), with \(r_b=1\), show that
+\(0\le\log(B_L/\|w_b(P)\|)\) is bounded by an integrable
+function, by the preceding root bounds applied to the
+nonzero ratios. The archimedean inequality just proved
+therefore implies \(x\le A(X)+\beta y\) with an integrable
+majorant \(A\) common to the sheets of this component.
+
+The first weight identity makes
+\[
+ h=\frac{t_1^{n_1}\eta^2}{w_b^{2n_1}}
+\]
+a nonzero rational function on this component. Away from its zeros and
+poles, \(\log|h|=2n_1(x-y-z_1/2)\). The preceding bounds for
+\(\log^+|h|\) and \(\log^+|h^{-1}|\) give an integrable majorant
+for \(\bigl|\log|h|\bigr|\). Hence
+
+\[
+  y=x-z_1/2+O(A'(X)),
+\]
+ where \(A'\) is integrable.
+In particular \(y\le x+A''(X)\) since \(z_1\) is bounded
+below. As \(\beta\le1/2\), substitution bounds \(x\)
+above by an integrable function. This bounds \(y\) above,
+then \(z_1\) as well. For any nonzero short section of
+weight \(w_F\) on this component use its product with \(t_2\)
+divided by \(w_b^{s+4}\). The logarithm of this rational
+function and the bound for \(x\) control the sum of the
+two negative log norms; both summands are bounded below.
+
+Finally a change to any other rational frame within a
+weight adds the logarithm of a nonzero rational function.
+The additional term is integrable by the two log bounds for a rational function \(h\ne0\) and its inverse, since
+\[
+  \big|\log |h|\big|=\log^+|h|+\log^+|h^{-1}|\qquad(0<|h|<\infty).
+\]
+This proves integrability for all the section and moving
+metrics used in the height argument. Measurability of the
+sheet sums follows on the finite \'etale open by locally
+labeling its sheets and using the continuous weight metrics;
+the excluded algebraic set is null. Here the integrable
+majorants may depend on the lift. Their sizes never enter
+the final inequality, which uses the uniform numerical
+prices of the height calculation. \label{cor:slice-integrals-2}
+
+\paragraph{At the definite last lift.}
+For the terminal, negative-definite lift the first-minimum term in the analytic height vanishes. The resulting integral can therefore be estimated directly. On the negative-definite space the invariant majorant
+is the definite Hermitian form with its sign changed, independent
+of the negative subspace; the run's first-minimum threshold is
+below its lower lattice bound. At the last index the displayed function therefore vanishes. We have
+
+\[
+  -\log B_L\le P_5D_F
+\]
+ and the local test is simply
+\(v(w_b)\le\nu_\lambda\) relative to the uniformizer of
+\(K_\lambda\). Its horizontal version gives minimum order
+at most zero. Integrality gives the opposite inequality.
+Thus \(E_q=0\), \(a_L=\delta\), and
+\[
+ H_L\le H_{\rm mov}+\delta(P_N+P_5)S_L .
+\]
+For integrability, \(-\log\|w_b(P)\|\) is bounded below
+and the upper bound follows directly from \(-\log B_L\)
+and the integrable ratio bound. The calculation with
+\(t_2\) then gives integrability at \(w_F\) and at the
+complementary weight. The Chow comparison gives \(a_2,a_F\le(s+4)\delta\), and the discriminant contribution gives
+\[
+ H_F\le(s+4)H_L+\delta P_4 s S_L+s a_2\ell_N .
+\]
+
+For example the Chow bound gives
+\(H_L/(\delta S_L)\le
+(s+2)(P_0+G_c+P_{rw})+P_{rw}+P_N+P_5\).
+With \(P_H\) as above, \(s\ge3\), the resulting upper bound
+on \(H_F\) fits \((s+4)(s+1)\delta S_L(2G_c+6P_H)\).
+Only the discriminant term is used at this lift. These
+simplifications give the definite height inequality without
+a bound for the auxiliary order. \label{cor:slice-integrals-3}
+\end{proof}

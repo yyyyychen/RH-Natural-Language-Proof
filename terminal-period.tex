@@ -1,0 +1,186 @@
+\hypertarget{source-terminal-period}{}
+Use the column lattice \(N_u\) and the integrality tests on the row lattice \(M_\mu\) of Section~\ref{subsec:selected-period}. We describe
+the effect of the class sums on the column and the terminal
+reading on these tests. These steps take place over the
+coefficient field \(K\). Write \(\mathcal O_w\) for its local
+ring and 
+\[
+  v=v_w/e_w
+\]
+ normalized by \(v(p)=1\). Let \(D_{\Gamma,u}\) be the
+common stabilizer multiple of the chain and put
+\(\Delta_w=v_p(D_{\Gamma,u})\). The multiple includes the
+terminal classes of the reference and used twisted chains.
+
+\begin{proposition}[The terminal valuation without a neighbor operator]\label{prop:unserved-terminal-valuation}
+At a level-free place without the local orbit condition,
+with \(p\notin Q(\mu(w))\), suppose the stage coefficients
+have normalized valuations at least \(B_j\) in the actual
+incoming frames. For each terminal period value \(b\) on the local tests of \(M_\mu\),
+\[
+ v_p(b)\ge\sum_{j=1}^m B_j-m\Delta_w,\qquad \Delta_w=v_p(D_{\Gamma,u}),
+\]
+where \(D_{\Gamma,u}\) is the common
+chain stabilizer multiple including both terminal class sets.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Pass from coefficient valuations to outgoing integral Weyl tests.}
+At a level-free place the localized lattice of stage \(i\)
+is read by the local Weyl values at each of its classes.
+In the coordinates of the incoming member of the chain these
+values are integral for every flag-minor test. Conversely,
+for a vector in the rational stage space, integrality of
+these values is the defining local lattice condition.
+
+For
+one incoming and one outgoing class the kernel reading is
+the derivative polynomial in the incoming frame, multiplied
+by a unit. Expand it in products of flag minors on the
+incoming frame. Integral straightening as in
+Section~\ref{subsec:cycle-jets} shows that a coefficient
+bound \(B_j\) gives coefficients of valuation at least \(B_j\)
+also in such a reading.
+Each straightened coefficient is an integral linear combination; explicitly,
+\[
+  v(a_i)\ge B_j,\quad u_i\in{\cal O}_w\quad\Longrightarrow\quad v\!\left(\sum_i u_i a_i\right)\ge B_j .
+\]
+ Applying the incoming local
+functional gives the same bound on the outgoing values.
+The class map is rational and the stage space is stable
+under the full operator. These two facts let one use the
+local lattice criterion after rescaling the output. Indeed
+a nonzero rational value of valuation at least \(B_j\)
+has 
+\[
+  v_w(y)=e_w v(y)\ \ge\ \lceil e_w B_j\rceil\qquad(y\ne0,\ v(y)\ge B_j),
+\]
+ so the rescaling can be
+by a power of a uniformizer chosen in \(K\). This applies
+also when \(B_j<0\).
+
+\proofstep{Charge an incoming stabilizer at each stage where it occurs.}
+The full map is the sum of the class maps with weights
+\(1/|\Gamma_c|\) on the incoming class \(c\). This costs
+at most \(\Delta_w\) in \(v\) at stage \(j\) when \(j>1\).
+The first incoming group is trivial for the reference
+and every used twist. Consequently the accumulated
+valuation of the stage-\(m\) vector, relative to its
+localized stage lattice, is at least
+\[
+           \sum_{j=1}^m B_j-(m-1)\Delta_w .
+\]
+The same composition applies to a bound proved on
+the entire column at a specified level with its specified
+starting lattice. Products of the successive scalars add
+their valuations, so composition introduces no rounding
+loss. The estimates without the local orbit condition start in the ramified
+submodule of the original trace-zero column. The
+calculation at the prime assigned to the sequence uses the lattice with its extra
+local condition at the assigned prime.
+
+For a vector \(y\) in the localized stage-\(m\) lattice,
+first take its image under the point restriction and the
+lowering map into the last compact row model. The point
+lattice comparison sends integral stage vectors into the
+designated integral terminal lattice. For the reference
+chain, the normalized Petersson period decomposes over
+terminal classes as
+\begin{equation}\label{eq:terminal-period-valuation}
+     P_\mu(y,F)=
+         \sum_{c}\frac{q_{\mu,c}(y,F)}{|\Gamma_{\mu,c}|}.
+\end{equation}
+The same formula holds for the used twist with its own
+terminal class restrictions. It follows by restricting
+both functions to each orbit in the finite double quotient.
+The characteristic projectors of the classes are disjoint.
+
+In the invariant Hermitian pairing each class contributes
+the local pairing with weight \(1/|\Gamma_{\mu,c}|\).
+Writing \(P_c\) for the period restricted to class \(c\) and \(\langle\ ,\ \rangle_c\) for its local pairing, this weighting reads
+\[
+  P_c(y,F)=|\Gamma_{\mu,c}|^{-1}\langle y_c,F_c\rangle_c .
+\]
+The real type pairing uses the orthonormal frame for the
+positive terminal form and the normalized invariant product
+in that frame. The same normalization is used for the
+Weyl tests in the terminal lattice.
+
+The integral row condition represents the restriction of
+each sharp test \(F\) by a flag-minor polynomial on the
+local terminal lattice at \(c\). This is the same lattice
+whose derivative dual reads the point image of the
+column. More explicitly, in a lattice frame take the
+span of the flag-minor products of the prescribed diagram.
+A change of basis of the underlying lattice and the
+inverse-transpose change in its dual transport the
+constant-coefficient derivative pairing. They carry
+the row span and the dual column lattice together.
+In the reference frame the numerator of the pairing for a row monomial \(X^\alpha\)
+is given by \(\partial^\alpha\) at zero.
+
+For monomials this numerator has the diagonal form
+\[
+  (\partial^\alpha X^\beta)(0)=\begin{cases}\alpha!&\alpha=\beta,\\0&\alpha\ne\beta.\end{cases}
+\]
+ Divide by the product
+of the squared Fock norms of the highest polynomials, as in
+Section~\ref{subsec:terminal-realization}. The distinguished
+real normalized form is this polynomial pairing on the
+restricted representation, with the row conjugation in
+its coordinates. Thus evaluating an integral point
+column on the integral row span gives the embedded
+value of its \(K\)-valued Weyl pairing. Equivalently
+multiply the period of the two class restrictions by
+\(|\Gamma_{\mu,c}|\) to recover that pairing, since the
+single-class weight in the real period is its reciprocal.
+
+In particular, if \(P_c\) denotes the period of the two restrictions to this class,
+\[
+  q_{\mu,c}(y,F)=|\Gamma_{\mu,c}|P_c .
+\]
+This gives \(q_{\mu,c}(y,F)\) in \(K\) of valuation
+at least zero. The same duality applies in the used
+twisted chain with its transported row span. Its
+integral period reading is used at \(p\notin Q(\mu)\).
+The claim holds for localized \(y\) by \(K\)-linearity in
+the column. For the normalized integral column, the scalar
+\(D_{\Gamma,u}/|\Gamma_{\mu,c}|\) is integral for every class \(c\).
+Consequently \eqref{eq:terminal-period-valuation} gives
+\[
+ D_{\Gamma,u}P_\mu(y,F)
+   =\sum_c \frac{D_{\Gamma,u}}{|\Gamma_{\mu,c}|}\,q_{\mu,c}(y,F)
+        \in\mathcal O_w,\qquad v(P_\mu(y,F))\ge-\Delta_w .
+\]
+This incurs one stabilizer loss for the entire terminal sum. A scalar removed from the column before this
+reading multiplies the period and adds its own valuation.
+
+It follows for the case without the local orbit condition that the valuation of the
+rational period is at least
+\begin{equation}\label{eq:unserved-terminal-bound}
+                   \sum_{j=1}^m B_j-m\Delta_w .
+\end{equation}
+For a place with the local orbit condition the same terminal loss removes the
+single \(+\Delta_w\) in the column bound. At the prime assigned to the sequence the stabilizer multiple is prime to \(T_u\), so the
+terminal reading preserves the bound at the assigned prime.
+Indeed the terminal denominator at this prime has
+\[
+  T_u\nmid D_{\Gamma,u}\quad\Longrightarrow\quad v_{T_u}(D_{\Gamma,u})=0 .
+\]
+ At
+either type prime the local transport estimate is
+already a bound on the period against the row test.
+
+To apply this to the actual test space for \(w\), take
+\(\mu=\mu(w)\). The level exclusion \(p\notin Q(\mu(w))\)
+refers to the coefficient place of this reading. The row space at the refined level image of these tests, localized at \(w\), is \(R_w\).
+The selected period comparison over \(K\) induces the same
+valuation on the common rational pairing. The local bound
+therefore applies to every test vector in \(R_w\), including
+localized linear combinations of the images.
+
+Section~\ref{subsec:terminal-realization} identifies these
+classwise row spaces at the refined levels and terminal points on both tuples.
+\label{cor:terminal-period-1}
+\end{proof}
+

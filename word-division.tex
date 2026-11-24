@@ -1,0 +1,470 @@
+\section{Division on the selected sequence}\label{sec:word-division}
+\hypertarget{source-word-division}{}
+
+The period estimates shift the columns. On the row, division compares two transport indices and a Hermitian-dual index.
+We bound the transport errors at conjugate places and the dual
+error with its cohomological numerator. The same realized
+point, rational period coordinates and base lattices enter
+both bounds. Their common rank and place weights allow the
+two estimates to be combined lift by lift before the average
+in Section~\ref{subsec:fixed-weight-absorption}.
+
+Keep the selected bundle and write \(\mathcal E=z(B_0+N_c)\)
+as in Section~\ref{subsec:division-length}. Work with the
+squared-norm slope and height throughout. For a finite place \(w\) of the coefficient field \(K\),
+write \({\rm N}w\) for the cardinality of its residue field.
+Let \(D_0>0\) be the common rank and \(I\) the local index at \(w\) in the lift comparison. Define the finite weight \(\omega_w\) and the normalized contribution by
+\begin{equation}\label{eq:division-local-index-weight}
+ \omega_w=\frac{\log{\rm N}w}{[K:\mathbb Q]},\qquad
+ I\longmapsto\frac{\omega_w I}{D_0}.
+\end{equation}
+This same rank is used on both orientations. Write \(\bar\kappa\)
+for the mean of \(\log\kappa(v)\) at the infinite places.
+
+\input{paired-row-indices}
+\input{division-level-pins}
+
+\subsection{The two row errors}
+\label{subsec:parent-row-errors}
+
+The same level identifications enter both estimates. Conjugate places occur in transport, and the cohomological length controls the dual index.
+
+Fix one translate of the chosen family and its completed point.
+For the \(m\ge1\) lifts use the coefficient field, comparison tuple
+at \(w,\bar w\), and positive base rank \(D_0\) of
+Section~\ref{subsec:division-level-pins}. Write \(W_{\rm tw}\) for the
+twisted places. For \(w\mid p\) let \(e_w\) be its ramification index,
+\(c_w=2e_w/p^2\), and \(I_{wj}\) the sum of the two signed transport
+indices of the \(j\)-th lattice at \(w,\bar w\). All three signed indices have determinant weight \(\omega_w/D_0\). Write \(F_j(w)\) for the
+forced weight, \(J_{j,w}\ge0\) for the least-exponent contribution in
+\eqref{eq:division-least-sum}, and \(\mathfrak e_j(w)\ge0\) for the
+auxiliary transport error supplied by the two local comparisons.
+
+\begin{lemma}[Transport before averaging over lifts]\label{lem:aux-transport-cost}
+With the depth and bad-prime constants \(C\ge20,C_b\) of the two
+runs, set \(E_*=(4C^2+25C+C_b+44)\mathcal E\).
+For every \(w\in W_{\rm tw}\) and every lift \(j\), respectively,
+the local and global bounds are
+\[
+ \frac{1}{D_0}\sum_{h=1}^m I_{wh}
+       \le 2\sum_h e_w F_h(w)+c_w+\sum_h e_w\mathfrak e_h(w),
+ \qquad
+ \sum_{v\in W_{\rm tw}}\omega_v(e_v\mathfrak e_j(v)+J_{j,v})\le E_* .
+\]
+\end{lemma}
+
+\begin{proof}
+The local determinant comparison bounds the sum of the two signed
+indices by the forced weights, the residual term \(c_w\), and the depth
+and remainder terms on the assigned tuple. Dividing by \(D_0\) gives
+the first inequality.
+The two-run local comparison writes \(\mathfrak e_j(w)\)
+as the prime-wise depth error plus the sum of the two local
+remainders, each divided by its ramification index, and then
+divided by the common level index times \(D_0\).
+Use \(\mathfrak e_j(w)\) on the rows at \(w\) and \(\bar w\)
+of the assigned tuple. The same lift and tuple determine
+the pair \(\mathcal C_w,\mathcal D_w\) of Section~\ref{subsec:division-length}.
+
+Write \(\widehat W=2fb\), and let \(Y_0,X_2,S_e\)
+be the cutoff and weight correction parameters of the
+two-run local estimate. The construction takes \(C\ge20\).
+On this same tuple the contribution from the weighted tail satisfies
+\[
+  Ck\widehat W\,\frac{20}{k}=20C\widehat W\le C^2\widehat W.
+\]
+ Its weighted depth contribution,
+before adding the designated bad primes, is at most
+\[
+ 2\left[
+ C(m\widehat W\log k+fkS_e)\log Y_0+C^2\widehat W
+ +2.04 C k\widehat W/X_2+(\log4)Y_0\right].
+\]
+The size conditions give \(\log k\le z\),
+\(\log Y_0\le2z\), \(Y_0\le mb\), \(kS_ez\le mb\),
+and \(k\le X_2\). The term involving \(m\widehat W\log k\)
+is at most \(8CzB_0\). The other terms together are at most
+\((4C^2+17C)fmb\), using \(f,m,C\ge1\).
+
+The weighted bad-prime term is at most \(C_b B_0\),
+so the weighted depth bound is \((4C^2+25C+C_b)zB_0\).
+The restriction and conjugation argument of
+Section~\ref{subsec:paired-row-indices} gives the combined
+remainder \(12fmb\le12zB_0\).
+At each lift the error is the sum of the depth majorant and the two normalized remainders.
+Combining the depth and remainder estimates on this lift uses
+\[
+  (4C^2+25C+C_b)zB_0+12zB_0=(4C^2+25C+C_b+12)zB_0 .
+\]
+ The allowance is
+uniform in \(j\) because both depth and rank use the same upper
+bounds. The determinant comparison sums these per-lift errors.
+Equation~\eqref{eq:division-least-sum} now supplies the
+least exponent with its ramification factor. Its weighted sum costs
+at most \(32\mathcal E\). Adding the depth cost and the allowance
+\(12zB_0\), and using \(zB_0\le\mathcal E\), gives \(E_*\).
+\end{proof}
+
+In returning to the original period coordinates the phase is one.
+The complex realization identifies the base-level coordinate map and the
+projected lattices. In particular \(D_0,I_{wj}, e_w,F_j(w),J_{j,w}\)
+are the same in the two computations. This identification lets us apply
+the following averaging argument on the original row.
+\label{cor:word-division-1}
+
+\begin{lemma}[The transport cost on the original row]\label{lem:parent-transport-cost}
+In Lemma~\ref{lem:aux-transport-cost}, write \([v]_+=\max(v,0)\).
+Define the original error at each \(w\in W_{\rm tw}\) by
+\[
+ e_w r^0_{j,w}=\frac1m\left[
+ \frac{\sum_h I_{wh}}{D_0}-2\sum_h e_w F_h(w)-c_w\right]_+ .
+\]
+It is nonnegative and independent of \(j\). The local index bound still
+holds with \(r^0_{j,w}\) in place of \(\mathfrak e_j(w)\). For every
+\(1\le j\le m\) one has
+\[
+ E_{1,j}:=\sum_{w\in W_{\rm tw}}\omega_w(e_w r^0_{j,w}+J_{j,w})
+       \le 2E_* .
+\]
+\end{lemma}
+
+\begin{proof}
+The sum of the \(m\) identical terms \(e_w r^0_{j,w}\) is the
+positive part of the local excess. It therefore covers that excess.
+By the auxiliary local bound, the excess is at most
+\(\sum_h e_w\mathfrak e_h(w)\), which is nonnegative. Consequently
+\[
+ \sum_w\omega_w e_w r^0_{j,w}
+ \le \frac1m\sum_{h=1}^m\sum_w\omega_w e_w\mathfrak e_h(w)
+ \le E_* .
+\]
+Here the sums run over \(W_{\rm tw}\). In the last step one may discard
+\(J_{h,w}\ge0\) from each auxiliary budget. For the fixed lift \(j\)
+one may instead discard \(e_w\mathfrak e_j(w)\ge0\), leaving
+\(\sum_w\omega_w J_{j,w}\le E_*\). Adding the bounds gives the factor
+two even when the two largest costs occur on different lifts. The
+comparison constant can be enlarged once for the whole family.
+\end{proof}
+
+\begin{proposition}[The dual index on the same completed point]\label{prop:parent-dual-cost}
+With the good-character multiplicities at the point used in
+Lemma~\ref{lem:parent-transport-cost}, let \(E_{2,j}\) denote the
+error in the Hermitian-dual index at lift \(j\). For the common
+class denominator \(d_*\) and the fixed scale \(s=1\),
+\[
+ E_{2,j}\le (|C_N|+1)\mathcal E+\log d_*
+       \le (|C_N|+3+9C_\Gamma)\mathcal E\qquad(1\le j\le m).
+\]
+\end{proposition}
+
+\begin{proof}
+At the place \(w\), keep its assigned tuple, its good characters
+and the multiplicities of their eigenspaces. The cut numerator
+uses the marked Tate-dual row and the direct column lattice of
+Section~\ref{subsec:marked-localization}; return to the uncut
+lattices by the index comparison of Section~\ref{subsec:division-length}.
+
+On an ordinary inert window the
+bounds of Section~\ref{sec:inert-row-table} are uniform in
+that character. Sum with its actual eigenspace multiplicity.
+For \(\ell>\ell_*\) outside the exceptional windows and away from both type primes, Paragraph~\ref{par:residue-wach-realization} and its ensuing comparisons give
+\[
+                  \mathcal L_\ell=0 .
+\] These contributions
+join the other entries of the table before the sum over
+coefficient places. At each localization the marked Tate lines
+contribute the strict terms with the exact cyclotomic ratios.
+For the ramified integral comparison and its finite cohomology classes use Proposition~\ref{prop:ramified-integral-wach-comparison} and Lemma~\ref{lem:ramified-restricted-herr}. At \(\ell=2\) and positive character exponent \(e\), the cohomological calculation also uses Lemma~\ref{lem:dyadic-integral-period}. The type-prime comparison is already weighted at the coefficient place.
+
+To see which local quantity is being charged, write \(\mathcal T\) for this lift's direct lattice and \(\mathcal T^\#\) for its global Hermitian dual. Proposition~\ref{prop:signed-lift-dual-index} gives, after summing at the twisted places,
+\[
+ \frac1{D_0}\sum_w\omega_w[\mathcal T_w:(\mathcal T^\#)_w]_w
+ -\sum_w\omega_w J_{j,w}
+ \le \frac1{D_0}\sum_w\omega_w e_w\eta_j(w)
+                 +\log d_*+\log s .
+\]
+The first sum on the right uses the multiplicities on this lift. The subtracted sum occurs in \(E_{1,j}\) of Lemma~\ref{lem:parent-transport-cost}. This separates the two contributions before either is averaged over lifts. Let \(N_j\) denote the resulting multiplicity-weighted numerator cost. Proposition~\ref{prop:weighted-dual-cost} gives
+\[
+ N_j\le(|C_N|+1)\mathcal E,\qquad
+ E_{2,j}-N_j\le\log d_*+\log s,\qquad
+ \log d_*\le(2+9C_\Gamma)\mathcal E .
+\]
+Substitution of \(s=1\) proves the two inequalities without
+changing the field, lift or assignment.
+\label{cor:word-division-2}
+\end{proof}
+
+\paragraph{Passage to the row space at the refined level.}
+The covolume estimate, the paired local indices and the bound
+on the maximal slope of the direct row are applied to the
+base level of one realization. The corresponding refined level
+uses the same place-to-tuple map, period scalar \(\kappa(v)\)
+at each infinite place, and block scalars \(\lambda_{j,t,\pi}(v)\).
+The two level identifications in
+Section~\ref{subsec:division-level-pins} use the same
+twist character at \(t\) and frame comparisons on the same
+type summands. The lattices at the two levels are related
+by the level passage inequality below.
+\label{cor:word-division-3}
+
+\begin{lemma}[Simultaneous base estimates]
+One comparison constant and an eventual family threshold can be
+chosen so that the covolume and direct-row estimates hold together:
+\[
+ L_{3,j}\le\sum_\rho(p_j-q_j)w_{j\rho}\log\Omega+(C_0+1)U,\qquad
+ \mu_{\max}(R_0)+\bar\kappa\le b x^{C_H}.
+\]
+They are uniform in the translate, word, lift and coefficient embedding.
+\end{lemma}
+\begin{proof}
+Use the primitive maps of the geometric realization in its base
+and sharp divisor frames. The class-sum reading and the level
+representation on the retained part use the same character. To pass to the complex period row,
+take the discrete series at the specified lowest weight, the
+corresponding Harish--Chandra modules, and their smooth moderate
+growth globalizations. Rapid decrease places the cuspidal realizations in \(L^2\) with the level measure. For two such vectors \(f,h\), absolute convergence of their scalar product follows from
+\[
+  \int |f(g)\overline{h(g)}|\,dg\le\|f\|_2\|h\|_2<\infty.
+\]
+The isotypic projections, adjoints and relative matrices are then
+those used in Sections~\ref{subsec:selected-period}
+and~\ref{subsec:fitted-row-height}.
+
+On the arithmetic side the
+canonical core field satisfies the recursive size bound and the
+finite Green character sum uses the pinned ray class character
+of this same realization. Thus the form and level comparisons
+proved apply to its class-sum row. Proposition~\ref{prop:selected-base-covolume}
+and the integral good projection of paragraph~\ref{par:parent-full-cusp-slope}
+give the first inequality. The base frame of the primitive maps has the parent's relative isomorphisms and Gram matrices at every place. Thus the fitted Fourier estimate applies in that frame and gives
+\[
+  \mu_{\max}(R_0)+\bar\kappa\le b x^{C_H}.
+\]
+\label{cor:word-division-4}
+
+First choose the larger of the two field cutoffs, for the grid
+and for the Fourier fit. At each successive parameter, write \(\mathbf a\) for the earlier choices already fixed in this family. If the two lower bounds on the next choice are \(L_1(\mathbf a)\) and \(L_2(\mathbf a)\), take
+\[
+  a_{\rm next}\ge\max\{L_1(\mathbf a),L_2(\mathbf a)\}.
+\]
+Use this same value in both comparisons before proceeding to the next parameter. Fix the comparison constant for that family, then take
+the larger of the two scale thresholds. Both inequalities now
+hold at every later point index. \label{cor:word-division-5}
+\end{proof}
+
+Let \(2F_O\) be twice the sum of the weighted forced
+contributions \(e_w F_j(w)\), with the same place and lift
+indices. Write \(\mu_{\rm base}\) for the dual slope of the base
+row, \(L_{3,j}\) for the lift's covolume bound divided by \(D_0\),
+and \(C_3\) for the absolute upper bound for the residual prime sum.
+
+\begin{construction}
+\[
+\begin{array}{ccl}
+\text{original row at lift }j&\xrightarrow{\text{transport}}& E_{1,j}\\
+\text{Hermitian dual at the same lift}&\xrightarrow{\text{index}}& E_{2,j}\\[3pt]
+\text{base slope}&\longleftarrow&\displaystyle\sum_{j=1}^m(E_{1,j}+E_{2,j})\\
+\text{residual terms counted once}& &\lambda=\log|G|,\quad C_3
+\end{array}
+\]
+\caption{The two indices in the determinant comparison. The row, lift and character multiplicities are fixed before the two estimates are added.}\label{fig:common-division-errors}
+\end{construction}
+
+\begin{proposition}[Passage from the base level to the refined level]
+\label{prop:refined-row-slope}
+On the common realization just described, let \(\mu_{\rm sharp}\) be
+the dual slope of the row at the refined level. Then, uniformly in
+the sequences on the eventual family,
+\[
+ \mu_{\rm sharp}-\bar\kappa
+ \le \sum_{j,\rho}(p_j-q_j)w_{j\rho}\log\Omega+2F_O
+                   +O(m\mathcal E).
+\]
+\end{proposition}
+
+\begin{proof}
+At this point Lemma~\ref{lem:parent-transport-cost} bounds the
+transported index and Proposition~\ref{prop:parent-dual-cost}
+bounds the dual index. The two residual terms in the determinant
+occur once. For the Gram term and the local prime-square error respectively,
+\[
+ \sum_w\omega_w v_w(|G|)=\log|G|=\lambda,\qquad
+ \sum_p\sum_{w\mid p}\frac{2e_w\omega_w}{p^2}
+   =2\sum_p\frac{\log p}{p^2}\le C_3 .
+\]
+The Gram determinant bounds its contribution by the first quantity.
+\label{cor:word-division-6}
+The determinant comparison bounds \(\mu_{\rm base}-\bar\kappa\)
+by the sum \(\Xi\) given by
+\[
+ \mu_{\rm base}-\bar\kappa\le
+ \Xi:=\sum_j L_{3,j}+2F_O+\lambda+
+                     \sum_j(E_{1,j}+E_{2,j})+C_3,
+\]
+In this comparison the off-base rows are read at the assigned
+tuples, the real determinant ratio comes from the product of
+the lift scalars, and the finite signed indices account for the
+corresponding changes of determinant lattices.
+
+At untwisted
+places the three lift indices sum to zero. These are the
+hypotheses of the base determinant comparison.
+The selected covolume bound on each \(L_{3,j}\) has main
+term \(\sum_\rho(p_j-q_j)w_{j\rho}\log\Omega\).
+Here \(p_j=k+j-1\) and \(q_j=m-j\), so
+\(|p_j-q_j-k|\le m-1\). Its error is \(O(B_0\log\log x)\).
+Thus the row size estimates and \(\log\log x\le z\) give
+\begin{equation}\label{eq:division-base-numerical}
+ \Xi\le \sum_{j,\rho}(p_j-q_j)w_{j\rho}\log\Omega
+                   +2F_O+O(m\mathcal E).
+\end{equation}
+
+\proofstep{The cost of changing levels.}
+The sharp-level comparison uses the same period scalar
+\(\kappa\) and the density error \(\delta=8fr/\min(g_0,g_1)\).
+At \(0\le\delta\le1/3\) it bounds the slope of the dual row lattice at the refined level
+above by
+\[
+ \mu_{\rm base}+3\delta(\mu_{\rm base}-\bar\kappa
+                          +x^{C_H}b+28\lambda)+28\lambda .
+\]
+Put \(Q_b=\max(1,\Xi+x^{C_H}b+28\lambda)\). The covolume main
+term, common hook term \(2F_O\) and \(m\mathcal E\) in
+\eqref{eq:division-base-numerical} give \(\Xi\le b^2\) eventually:
+before absorption each is at most \(b\) times a fixed polynomial
+in the size parameter, and \(x^A=o(e^{x^\epsilon})\) for fixed
+\(A,\epsilon>0\). The same size bounds give \(x^{C_H}b,28\lambda\le b^2\),
+\(72fr\le b^6\) and \(b^8\le\min(g_0,g_1)\).
+
+Since \(b\ge1\),
+\(Q_b\le3b^2\). With \(\delta=8fr/\min(g_0,g_1)\) this gives
+\[
+ 3\delta Q_b\le \frac{72fr\,b^2}{\min(g_0,g_1)}\le1 .
+\]
+Since \(Q_b\ge1\), this also gives \(\delta\le1/3\). The increase
+in slope is at most \(1+28\lambda=O(m\mathcal E)\).
+\label{cor:word-division-7}
+\end{proof}
+
+\paragraph{The main term for the sequence.}
+By \eqref{eq:selected-reference-height}, the numerical
+upper height of the period map for the sequence is
+\(h_u=h_{\rm num}(u)-\bar\kappa\).
+Write \(a_\rho=0\) at the indices outside the top set.
+Let \(H_{j\rho}\) be the scalar hook product, and let
+\(e_{j\rho},\delta_{j\rho}\) be the errors in the convex
+weight comparison and the linear degree identity.
+
+\begin{proposition}[Division bound for one sequence]\label{prop:sequence-division}
+Put
+\[
+ \mathcal M_u=\sum_{t\in T}
+      \bigl(m(\varphi(a_t)-a_t\log\Omega)-a_t\log T_u\bigr).
+\]
+For every selected sequence on the eventual family,
+\begin{equation}\label{eq:selected-word-division}
+ \mu_{\rm sharp}+h_u-2F_O
+ \le \mathcal M_u+O\bigl(|T|aL_a+m z(B_0+N_c)\bigr).
+\end{equation}
+The implied constant is uniform in the point and sequence.
+Here \(h_u\) is the numerical upper height even if the period map vanishes.
+\end{proposition}
+
+\begin{proof}
+The convex and linear weight comparisons for each lift read
+\[
+ \sum_i\varphi(\nu_{j\rho i})-\log H_{j\rho}
+          \le \varphi(a_\rho)+e_{j\rho},\qquad
+ \sum_i\nu_{j\rho i}=a_\rho+kw_{j\rho}+\delta_{j\rho}.
+\]
+The selected size hypotheses give
+\[
+\begin{split}
+ \sum_{j,\rho}e_{j\rho}&=O(fmbL_a),\\
+ \sum_{j,\rho}|\delta_{j\rho}|&=O(fmb+|T|a),\\
+ \sum_{j,\rho}|(p_j-q_j-k)w_{j\rho}|&\le2fm^2b .
+\end{split}
+\]
+Indeed \(w_{j\rho}\le2b\), and \(S_c,N_m^2,m(t+1)\eta\)
+are at most a fixed multiple of \(b\), by the size
+conditions in the data for the sequence. These bound the terms in
+\(e_{j\rho}/L_a\). The additional terms in the degree
+error are bounded using \(kN_m\le b,\ kS_c\le b\)
+and the \(k b'\) term at each top label, summed using
+\(mkb'\le a\). The last line uses \(|p_j-q_j-k|\le m-1\).
+
+For the kernel contribution apply the two bounds simultaneously:
+\[
+  m^3N_m^2z\le b,\qquad N_m^2\le b.
+\]
+Inserting them in the kernel error bounds its total by \(O(fmbL_a)\). The evaluation error from
+Section~\ref{subsec:selected-norms} is
+\(O((|T|a+f b)L_a)\), using \(b'N_m\le a\),
+\(N_m S_c\le b\) and \(m\eta N_m\le b\).
+The hook-product lower bounds also have total error
+\(O(fmbL_a)\). All these estimates have constants fixed
+before varying the point, word or lift.
+
+Substituting the two weight comparisons into the height
+expression and adding \eqref{eq:division-base-numerical}
+leaves \((p_j-q_j-k)w_{j\rho}\log\Omega\) from the linear
+chain terms.
+For one such coefficient the absolute value is bounded by
+\[
+  |(p_j-q_j-k)w_{j\rho}\log\Omega|\le (m-1)(2b)(3z).
+\]
+ Since \(|\log\Omega|\le L_a\le3z\), this
+costs \(O(m\mathcal E)\). The remaining top weights contribute
+\(m\sum_t(\varphi(a_t)-a_t\log\Omega)\); the degree in the evaluation
+contributes \(-\sum_t a_t\log T_u\). Their sum is precisely
+\(\mathcal M_u\).
+
+Proposition~\ref{prop:refined-row-slope} gives
+\eqref{eq:selected-word-division}.
+The period map for this sequence sends the shifted lattice
+into the dual of the row lattice with the prescribed local
+conditions by Section~\ref{subsec:division-shift}. The
+inequality also holds when the map is zero, since
+\(h_{\rm num}(u)-\bar\kappa\) is the numerical height used
+in \eqref{eq:selected-word-division}.
+In the global slope comparison \(\mathcal M_u\) is the main
+term for this sequence and \(2F_O\) is the common shift.
+Since \(z\le x^{2\epsilon}\), the estimate gives \(e_D=2\).
+\label{cor:word-division-8}
+\end{proof}
+
+\begin{lemma}[Spread of the adjusted numerical heights]\label{lem:division-height-spread}
+For two sequences \(u,u'\) on the same weight datum put
+\(S_a=\sum_{t\in T}a_t\). Uniformly in the two sequences,
+\[
+ \big|(h_u+S_a\log T_u)-(h_{u'}+S_a\log T_{u'})\big|
+              =O_\epsilon(fmbz)=O_\epsilon(B_0).
+\]
+\end{lemma}
+
+\begin{proof}
+The selected numerical height has the same hook terms,
+height allowances and period scalar for all sequences.
+After adding \(S_a\log T_u\) the difference for two words
+is therefore the sum of the differences of
+\(\varphi(\nu_{j\rho i})-\nu_{j\rho i}\log\Omega\).
+The first and last head coordinates and the lower blocks
+of \(\nu\) agree between words. In each of the remaining
+head coordinates the two entries differ by at most \(S_c\),
+since the varying head parameter lies in \([0,S_c]\);
+both entries lie in \([1,S_c+w_{j\rho}]\).
+
+On \([1,M]\), the derivative of \(\varphi(y)\) is
+\(\log y\), so the absolute difference in a varying
+summand is at most \(S_c(\log M+|\log\Omega|)\).
+At \(M=6x^6 b\) the selected weight bound gives
+\[
+ S_c+w_{j\rho}\le M,\qquad \log M+|\log\Omega|=O_\epsilon(z).
+\]
+There are at most \(k\) varying coordinates per label
+and lift, and \(kS_c\le b\).
+This gives spread \(O_\epsilon(fmbz)=O_\epsilon(B_0)\),
+so the comparison of slopes in Section~\ref{sec:frames} can use a single bound for the spread of heights across all these sequences.
+\label{cor:word-division-9}
+\end{proof}
+

@@ -1,0 +1,313 @@
+\subsection{The deep cover of the original core}
+\label{subsec:deep-cover-on-core}
+
+The polynomial estimate bounds the component slopes at the level where its metrics were defined. To use it on a chosen lift we must put the actual integral type and the shifted weights on a common cover.
+
+Fix a completed point and a nonterminal lift \(j\). Write \(K_0\)
+for the coefficient field of the original core, \(E\) for its
+CM field, and \(M=g_0g_1\) for its original level. The arithmetic
+for the base covolume uses a cover of this marked lift with
+\[
+ e=\left\lfloor\frac{3L}{\log 3}\right\rfloor,\qquad N=M15^e .
+\]
+Here \(L\) is the scale of the point. In this local cover calculation
+we denote the distinguished primes \(p_d,p_d'\) by \(d,d'\).
+The two signed section comparisons use \(Md\) and \(Md'\). Each of these three covers
+maps to level \(M\), preserving the original polarization
+and lift. A forgetful map from \(N\) to either signed level
+would require \(d\mid15^e\) or \(d'\mid15^e\). Both distinguished
+primes are \(1\) modulo \(15\) and prime to \(M\).
+\label{cor:deep-cover-on-core-1}
+
+\begin{lemma}[Half-levels above the original marking]
+The two halves of the original marking admit extensions \(\mathfrak a,\mathfrak b\), taken from the marked imaginary quadratic order, such that
+\[
+ \mathfrak a+\mathfrak b=(1),\qquad \mathfrak a\mathfrak b=(M15^e).
+\]
+
+\end{lemma}
+\begin{proof}
+Let \(\alpha_0=\sqrt{-d_0}\) for the marked fundamental
+discriminant \(-d_0\). Splitting at 3 and 5 and the Chinese
+remainder theorem give \(s^2+d_0\equiv0\bmod15\) and \((2s,15)=1\).
+In \(\mathcal O_E\) put \(J=(15,s+\alpha_0)\). The two conjugate
+ideals contain 15 and their sum contains \(2s\). Consequently
+\[
+ J+\bar J=\mathcal O_E,\qquad
+ (15)\subset J\cap\bar J=J\bar J\subset(15).
+\]
+The last inclusion uses \((s+\alpha_0)(s-\alpha_0)=s^2+d_0\).
+Thus \(J^e,\bar J^e\) are coprime with product \((15^e)\).
+They are extended from the quadratic order since
+\(\alpha_0=2(1+\alpha_0)/2-1\). Multiply the old two halves by
+these powers in order. Coprimality to \(M\) means this is the
+marked principal level used at positive rank with auxiliary
+level one. \label{cor:deep-cover-on-core-2}
+\end{proof}
+
+Let \(R_N\) be the ray class field of \(\mathbb Q(\alpha_0)\)
+for \((N)\), in the chosen complex embedding, and put
+\(F=K_0R_N\), \(s_{\rm fld}(K)=\log[K:\mathbb Q]+\log\operatorname{rd}(K)\).
+
+\begin{lemma}[Cost of the ray field]
+The compositum is stable over \(K_0\) and satisfies
+\[
+  s_{\rm fld}(F)\le s_{\rm fld}(K_0)+20(\log N+\log d_0+1).
+\]
+\end{lemma}
+\begin{proof}
+Conjugation fixes the ray modulus, hence \(R_N/\mathbb Q\) is
+Galois. The ray class sequence and the conductor--discriminant
+formula give
+\[
+ [R_N:\mathbb Q(\alpha_0)]\le h(-d_0)N^2,\qquad
+ \operatorname{rd}(R_N)\le\sqrt{d_0}\,N^2 .
+\]
+For the second bound each relative character conductor divides
+\((N)\). For the first, Minkowski gives an integral ideal of
+norm at most \(B=2\sqrt{d_0}/\pi\) in every class. There are at most
+\(\sum_{n\le B}\sum_{a\mid n}1\le B^2\le d_0\) such ideals:
+prime factorization bounds their number at norm \(n\) by the
+divisor function. Degrees multiply as an upper bound on a
+compositum. Root discriminants satisfy the same bound by the
+tower formula and divisibility of the base-changed different.
+Taking logarithms proves the estimate. \label{cor:deep-cover-on-core-3}
+\end{proof}
+
+The ray field contains the \(N\)-th roots of unity and the
+\(j\)-invariant and Weber values of the host CM lattice at
+level \(N\), by reciprocity for the imaginary quadratic
+field with discriminant \(-d_0\). The component argument for
+the split covers applies with these values in \(F\), at the
+same signature and with the same rank-one existence test.
+In particular each component has field of constants \(F\).
+\label{cor:deep-cover-on-core-4}
+
+\begin{lemma}[Coefficient-field size on the deep cover]\label{lem:deep-cover-field-size}
+For the prescribed \(F=K_0R_N\) and \(N=g_0g_1 15^e\),
+the parameter bounds for the chosen field and level with \(z=frL\) give
+\[
+ \log N\le30L,\qquad s_{\rm fld}(F)\le391z^2.
+\]
+
+At every residue characteristic at least one of the two
+type primes belongs to the prime-to-characteristic level.
+\end{lemma}
+
+\begin{proof}
+\proofstep{Growth of the field and its root discriminant.}
+Put \(z=frL\), with \(r\) the rank and \(f\) the number of
+real labels. The core and host size estimates give
+\(s_{\rm fld}(K_0)\le217z^2\), \(f\ge8\), \(L\ge10\),
+\(\log g_k\le9L+1\) and \(\log d_0\le L\).
+Since \(15\le3^3\), we have \(e\log 15\le9L\), so
+\(\log N\le27L+2\le30L\). The field increment is at most
+\(20(28L+3)\le174z^2\). Thus \(s_{\rm fld}(F)\le391z^2\),
+with numerical constants independent of the lift, translate
+and growing level. At each residue characteristic the
+prime-to-characteristic factor of \(N\) contains at least one
+of \(g_0,g_1\), since they are distinct. This is the level
+condition in the integral toroidal comparisons.
+\label{cor:deep-cover-on-core-5}
+
+\end{proof}
+
+\paragraph{The lattice to be estimated.}
+Use the rational embedding of the original lift lattice
+in its marked Hermitian space. At a good embedding of \(F\)
+the period-space construction with principal level \(N\)
+uses that same rational space. Its frame construction takes
+the constant function \(1\) for the prescribed Lie minimum,
+giving Lie minima one and the original Hermitian lattice
+model on each uniformized component. The probability
+Petersson norm with this Lie normalization is the norm
+for sections on the cover. Pullback of a base form has
+the same probability integral, since on the complex
+quotient the covering measure pushes to the normalized
+base measure.
+\label{cor:deep-cover-on-core-6}
+
+\begin{proposition}[The pulled-back type lattice on the original core cover]\label{prop:deep-cover-type-lattice}
+In the indicated central weight, write \(C_{\rm int}\) for the deep integral cusp lattice, \(C_\chi\) for the deep character lattice, and \(\pi\) for the cover map. Then
+\[
+ C_\chi=C_{\rm int}\cap\operatorname{span}_F(\pi^*A_j).
+\]
+ This is a saturated
+lattice in that span. The probability Petersson metric on its
+pullback comes from the original base metric.
+\end{proposition}
+
+\begin{proof}
+\proofstep{The saturated pullback of the original type.}
+In the central weight let \(A_j\) be the original integral
+type lattice. Write \(\pi\) for the forgetful map and \(L_{\rm cusp}\) for the deep integral cusp lattice. The lattice to compare is
+\[
+ L_{\rm cusp}\cap\operatorname{span}_F(\pi^* A_j).
+\]
+The coefficients in its type equations
+are in the base coefficient field. On the finite marking quotient, pullback gives rules
+invariant under the subgroup forgetting the refinement.
+Conversely a rule invariant under this subgroup is constant
+on each fibre of the forgetful map, with the same weight
+transformation law, so it descends on the generic fibre.
+
+Applying the remaining level elements to the descended
+rule gives the original equations for \(A_j\), using the
+inverse action on rules. Thus the rational invariants have
+exactly the claimed span before imposing integrality. Intersecting this rational
+identification with the deep integral cusp lattice gives
+the integral character lattice on the cover. It is this
+saturated intersection whose degree is compared by the
+two shift maps. The final coefficient descent to \(A_j\)
+uses the different, as in Section~\ref{sec:flag-component-transfer}.
+\label{cor:deep-cover-on-core-7}
+
+\end{proof}
+
+\paragraph{Regularity of a weight lattice on this cover.}
+Let \(V_\lambda\) be a cusp space on the framed cover
+and \(\Lambda_\lambda\) its supremum lattice, defined by
+\[
+ \Lambda_\lambda=\{f\in V_\lambda:\operatorname{ord}_y(f)\ge0\text{ for every integral test frame }y\},
+\]
+with normalized orders. For signature \((p,q)\) and label set \(\Sigma^+\), the nonterminal range used here is
+\[
+ \min(p,q)\ge1,\qquad |\Sigma^+|>2.
+\]
+Consider first a weight \(\lambda\) which is decreasing
+in each label with adjacent gap at least one across the two
+signature blocks. The central exponent is initially zero.
+The geometric comparisons needed for the lattice are the
+following.
+
+\input{deep-cover-denominators}
+
+\paragraph{Finite generation and full span.}
+For finite generation, the CM point test supplies, for each
+nonzero \(f\in V_\lambda\), an algebraic marked frame \(y\)
+on this moduli space with \(f(y)\ne0\). The denominator test
+at the same \(y\) gives an integer \(a_y\ne0\) such that
+\(a_y g(y)\in\mathcal O_{F_y}\) for all \(g\in\Lambda_\lambda\),
+where \(F_y/F\) is its finite coefficient extension. Choose
+these evaluations successively on the common kernel of the
+ones already chosen. Each nonzero kernel loses dimension.
+In at most \(\dim_F V_\lambda\) steps the integral lattice
+injects into a finite direct sum of the \(\mathcal O_{F_y}\).
+Since \(\mathcal O_F\) is Noetherian, this proves finite
+generation. The integers \(a_y\) can depend on the frame
+and the weight. The argument uses no quantitative height
+bound on them.
+\label{cor:deep-cover-on-core-8}
+
+\begin{proposition}[The lattice on the deep cover has full span]
+\label{prop:deep-cover-full-lattice}
+For the fixed nonterminal deep cover, write \(C_{\rm int}(u)\) for the integral cusp lattice and \(C_F(u)\) for the rational section space at an indicated weight. The lattice is finite over \(\mathcal O_F\) and its scalar extension includes every component summand,
+\[
+ C_{\rm int}(u)\otimes_{\mathcal O_F}F=C_F(u).
+\]
+ The proof uses finite detecting frames,
+the high-weight clearing and the flat shift. The terminal lift
+uses its base lattice.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Full span by clearing in a large weight.}
+For spanning, use the matching of exponents for this weight.
+Its two multiplier rules \(g,h\) satisfy \(gh=t\in F^\times\)
+and \(h\) has nonnegative order at every test. For a given
+cusp form \(f\), the matching gives a positive integer \(b\)
+for which \(f^b g\) has a dominant weight of sufficiently
+large column count. At this latter weight the denominator
+theorem gives \(s\in F^\times\) making \(s f^b g\) have
+nonnegative orders at every test, simultaneously. It
+applies at an even column count at least \(4[E:\Q]r+4\).
+The orders of
+\[
+ st f^b=(s f^b g)h
+\]
+are then nonnegative.
+
+Choose a nonzero rational integer \(a\) such that \(c=ast\)
+is an algebraic integer in \(F\). At each finite valuation
+in the test, \(v(c)\ge0\) and \(v(cf^b)\ge0\). Hence, at a
+test with \(v(f)\) finite,
+\[
+ b\,v(cf)=v(cf^b)+(b-1)v(c)\ge0 .
+\]
+At a zero reading the desired order holds as well. Thus
+\[
+ cf\in\Lambda_\lambda,
+\]
+which spans \(V_\lambda\) over \(F\).
+All the powers and multiplier rules here are taken on the
+same cover. In particular a denominator for a rational
+point alone would give no such spanning statement.
+\label{cor:deep-cover-on-core-9}
+
+\proofstep{Returning through the flat twist.}
+At even original column count \(2m_0\) the central weight
+and its two Hodge shifts have the same exponents as the
+respective shifted block weights with theta-root exponent
+\(m_0\). The selected weight record gives the antitone
+inequalities and the block gap for each shifted weight and
+for the quotient weight. For any positive integer \(b\), adjacent differences scale as 
+\[
+ (b\lambda)_i-(b\lambda)_{i+1}=b(\lambda_i-\lambda_{i+1}),
+\]
+ preserving both dominance and the required block gap. For the theta-root weights the
+finite-generation argument uses the denominator test
+with the theta-root power at the CM frame. To obtain the
+span, use the \(m_0\)-th power of the theta-root twist
+on each component. The root sections on the deep level
+are available from the prime-to-residue level and the
+marked period model. Multiplication by the twist gives
+a rational isomorphism of the component cusp spaces.
+A fixed nonzero scalar clears its finite valuation
+loss on that component.
+
+On a component \(Z\) let \(u_Z\) denote this rational
+twist and choose a single nonzero \(c_Z\) satisfying
+\[
+ v_y(c_Z)+v_y(u_Z)\ge0\qquad(\text{every integral test }y\text{ on } Z).
+\]
+For \(s\) in the shifted weight, clear
+the inverse image by choosing \(a_Z\ne0\) with
+\[
+ a_Zu_Z^{-1}s|_Z
+\]
+in the exponent-zero lattice. Then
+\[
+ (c_Zu_Z)\bigl(a_Zu_Z^{-1}s|_Z\bigr)=c_Za_Zs|_Z
+\]
+belongs to the shifted lattice. Extension by zero is
+integral: at every test the idempotent of \(Z\) has value
+\(0\) or \(1\), whose order is \(+\infty\) or \(0\).
+Summing the extended component restrictions gives the
+desired spanning statement over the coefficient field. The norm is Hermitian by the \(L^2\) reading on
+the normalized quotient. This explains the lattice and
+metric tests at the three shifted weights and the
+quotient weight. Positivity of the rank at the negative
+shift uses a nonzero quotient-weight section and the flat
+twist to that shift.
+\label{cor:deep-cover-on-core-10}
+
+\end{proof}
+
+\paragraph{Scope of the geometric estimates.}
+The construction uses the integer \(e\), the ray field and the
+two extended half-levels above separately at each qualifying
+point. Lemma~\ref{lem:deep-cover-field-size} bounds their cost
+in terms of the original scale, uniformly in the translate and
+nonterminal lift. The flat-degree, moving-degree, rank-share and component
+height statements are estimates for every cover satisfying
+the preceding field and frame conditions on such a point.
+Given these estimates with their own uniform thresholds,
+take their finite maximum and apply all of them to the cover
+constructed here. The core and the quotient-weight interval
+are the same in these applications. The terminal lift
+uses the base lattice at that lift directly. This
+identifies the models for the covolume argument below.
+The regularity argument uses the local CM models and
+the two short theta comparisons stated above. The following component calculations use these models for
+the flat degree, boundary orders and short generators.
+\label{cor:deep-cover-on-core-11}

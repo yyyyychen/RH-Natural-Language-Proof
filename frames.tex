@@ -1,0 +1,975 @@
+\section{From Gram matrices to the slope comparison}\label{sec:frames}
+\hypertarget{source-frames}{}
+
+At the point selected in Section~\ref{sec:family-window}, the period maps have different column lattices but a common cuspidal target. A comparison of mean slopes requires a lower bound for the dimension of their joint image. The Gram matrices control that rank question at one
+complex place. A column lattice is the integral source of
+one period operator. The row is the common cuspidal target
+of these operators with the prescribed level and types.
+The height and divisibility estimates give
+filtration shifts for the global Hermitian lattices. This chapter
+proves the linear algebra for integrating those shifts and,
+using the local, geometric and dimension estimates proved
+below, closes the normalized prime-sum bound. At the chosen complex place, let \(A_i\) map a column of dimension \(r_i\) into the common target of dimension \(D\). Their sum is
+\[
+ A:\bigoplus_i\mathbb C^{r_i}\longrightarrow\mathbb C^D,\qquad
+ (v_i)_i\longmapsto\sum_i A_i v_i,\qquad AA^*=\sum_i A_i A_i^* .
+\]
+Lemma~\ref{lem:frame-rank} estimates its image, and
+Lemma~\ref{lem:frame-slope} compares the source filtrations on that target.
+
+\begin{lemma}[Rank from Gram estimates]\label{lem:frame-rank}
+Let \(A_i\) be complex matrices with \(D>0\) rows and \(r_i\)
+columns in a finite collection. Let \(R=\sum_i r_i>0\),
+\(K_i=A_i^*A_i\) and \(Q=\sum_i A_iA_i^*\), where \(A_i^*\)
+is the conjugate transpose. Write \(I\) for an identity
+matrix of the indicated size and \(\|\cdot\|_{\rm HS}\)
+for the Hilbert--Schmidt norm. Suppose
+\[
+ \sum_i\|K_i-I\|_{\rm HS}^2\le eR,\qquad
+ \operatorname{tr}(Q^2)\le(1+\eta)(\operatorname{tr}Q)^2/D,
+ \qquad 0\le e\le1/4,\quad \eta\ge0.
+\]
+For \(\varepsilon\ge0\), if \(L_i\subseteq\C^{r_i}\) are
+subspaces of total codimension
+at most \(\varepsilon R\), then
+\[
+ \operatorname{codim}\left(\sum_i A_iL_i\right)
+          \le D(\eta+4\varepsilon+4\sqrt e).
+\]
+\end{lemma}
+
+\begin{proof}
+Let \(P_i\) project orthogonally onto \(L_i\) and let \(P\) project
+onto the orthogonal complement of \(\sum_i A_iL_i\).
+Since \(PA_iP_i=0\) and orthogonal projection is a contraction,
+\[
+ \operatorname{tr}(PQ)=\sum_i\|PA_i(I-P_i)\|_{\rm HS}^2
+ \le \sum_i\operatorname{tr}((I-P_i)K_i)
+ \le(\varepsilon+\sqrt e)R.
+\]
+The last inequality uses Hilbert--Schmidt Cauchy--Schwarz and
+\(\sum_i\|I-P_i\|_{\rm HS}^2\le R\). Applying the same estimate
+with the identity matrices gives
+\(\operatorname{tr}Q\ge (1-\sqrt e)R\ge R/2\).
+Put \(t=\operatorname{tr}(PQ)/\operatorname{tr}Q\).
+Then \(0\le t\le1\) and \(t\le2(\varepsilon+\sqrt e)\).
+Cauchy--Schwarz gives
+\[
+ (1-t)^2(\operatorname{tr}Q)^2
+  =(\operatorname{tr}((I-P)Q))^2
+  \le (D-\operatorname{rk}P)\operatorname{tr}(Q^2).
+\]
+The trace-ratio hypothesis now yields
+\(\operatorname{rk}P/D\le 1-(1-t)^2/(1+\eta)\le\eta+2t\).
+\end{proof}
+
+\begin{construction}
+\begin{tabular}{@{}l@{\hspace{1.2em}}l@{}}
+\toprule
+\textit{From the columns} & \textit{On the common target} \\
+\midrule
+\(L_i\subseteq\mathbb C^{r_i}\) & \(\sum_i A_iL_i\subseteq\mathbb C^D\) \\
+\(P_i=\operatorname{proj}_{L_i}\) & \(PA_iP_i=0\) \\
+\(K_i=A_i^*A_i,\quad Q=\sum_i A_iA_i^*\) & \(\operatorname{tr}(PQ)\le(\varepsilon+\sqrt e)R\) \\
+Second moment of \(Q\) & \(\operatorname{tr}P\le D(\eta+4\varepsilon+4\sqrt e)\) \\
+\bottomrule
+\end{tabular}
+\caption{The projection argument in Lemma~\ref{lem:frame-rank}. Here \(P\) projects onto the orthogonal complement of the surviving image.}\label{fig:analytic-rank}
+\end{construction}
+
+\begin{lemma}[Slope estimate]\label{lem:frame-slope}
+Let \(N_i\) and \(C\) be Hermitian lattices over a number field,
+with normalized Harder--Narasimhan slopes. For such a lattice
+\(M\), write \(\mu(M)\) for its mean slope and
+\(\mu_{\min}(M),\mu_{\max}(M)\) for its extreme slopes.
+Let \(N_{i,\ge t}\)
+and \(C_{\ge t}\) denote the rational filtration subspaces with
+slopes at least \(t\). Suppose maps \(B_i:N_i\to C\)
+and adjustments \(h_i\) satisfy
+\[
+ B_i(N_{i,\ge t+h_i})\subseteq C_{\ge t}\qquad(t\in\R).
+\]
+Let \(D_C\) be the target dimension and let \(0\le\delta<1\)
+satisfy \(D_C\ge(1-\delta)D\). At one complex place suppose
+\(B_i\) is given, in suitable coordinates, by \(A_i\)
+as in Lemma~\ref{lem:frame-rank} followed by projection to
+the target.
+The ranks of \(N_i\) equal the respective \(r_i\).
+
+List the slopes of all \(N_i\), with multiplicities, after
+subtracting \(h_i\) from the slopes of \(N_i\).
+Assume this list has mean at least \(s\) and every entry is at
+most \(s+U\) for some \(U\ge0\). If \(H>0\) and
+\(H\ge s-\mu_{\min}(C)\), then the mean slope \(\mu(C)\) satisfies
+\[
+ s-\mu(C)\le
+ \frac{4U\log(1+H/U)+(\eta+4\sqrt e)H}{1-\delta}.
+\]
+For \(U=0\) the logarithm term is understood by continuity.
+\end{lemma}
+
+\begin{proof}
+Let \(\lambda_a\) be the adjusted source slopes and let
+\(q_N(\tau)=\#\{a:\lambda_a<s-\tau\}/R\).
+Since \(s+U-\lambda_a\ge0\) and its mean is at most \(U\),
+\[
+ (U+\tau)q_N(\tau)
+ \le R^{-1}\sum_a(s+U-\lambda_a)\le U .
+\]
+For \(U=0\) every \(\lambda_a=s\), hence \(q_N=0\).
+
+Apply Lemma~\ref{lem:frame-rank} to the subspaces
+\(N_{i,\ge s-\tau+h_i}\) at the chosen embedding. Their projected
+images lie in \(C_{\ge s-\tau}\). A surjective projection cannot
+increase the codimension of a subspace, so the fraction \(q_C(\tau)\)
+of target slopes below \(s-\tau\) satisfies
+\[
+ q_C(\tau)\le \frac{D}{D_C}\{\eta+4\sqrt e+4q_N(\tau)\},
+ \qquad q_C(\tau)=0\quad(\tau\ge H).
+\]
+Count each target slope \(\lambda\) over the interval
+\(0\le\tau<s-\lambda\). The layer integral gives
+\[
+ s-\mu(C)\le D_C^{-1}\sum_\lambda(s-\lambda)_+
+ =\int_0^H q_C(\tau)\,d\tau .
+\]
+Insert the two bounds and use \(D/D_C\le(1-\delta)^{-1}\).
+For \(U>0\) the variable term integrates to \(4U\log(1+H/U)\);
+for \(U=0\) it vanishes.
+\end{proof}
+
+For the application take \(M=N_{i,\ge t+h_i}\). If its image had nonzero projection to \(C/C_{\ge t}\), the minimum-slope inequality for this quotient map would give
+\[
+  t\le\mu_{\min}(M)-h_i\le
+       \mu_{\max}(C/C_{\ge t})<t .
+\]
+Here the last strict inequality is the defining property of the Harder--Narasimhan step. This proves the inclusion for every \(t\), including when the image is zero.
+
+The slope polygon over the totally complex coefficient field \(K\) is formed from saturated \(\mathcal O_K\)-sublattices. For each successive quotient in this filtration the squared-norm slope and the underlying integral rank use
+\[
+ \lambda\longmapsto 2\lambda+c_K,\qquad
+ \operatorname{rk}_{\mathbb Z}=[K:\mathbb Q]\operatorname{rk}_K .
+\]
+Here \(\lambda\) is the logarithmic covolume slope in the Euclidean realization of this quotient, with the sign convention for degrees. Each step of field rank \(r\) occupies \([K:\mathbb Q]r\) integral ranks. The common offset cancels in slope differences, and the common rank factor cancels in the fractions in Lemma~\ref{lem:frame-slope}.  \label{cor:frames-1}
+
+The factor multiplying \(H\) is important. The height limit
+has the form \(H\le b x^{c_{HH}}\) at scale \(x\).
+We give the compression of the full blocks and the resulting
+product bound. Work at the place of the normalized period
+matrices. The selected sequence embedding is isometric by the class
+metric in Section~\ref{subsec:selected-column-metric} and its
+restriction in Section~\ref{subsec:column-orbit-length}.
+The common row identity of Section~\ref{sec:transport}
+has the following matrix consequence. Denote the full analytic row operator by \(P_u\). The inclusion \(\iota_u\) of the ramified column is isometric, so in adjoint coordinates it satisfies
+\[
+ \iota_u^*\iota_u=\mathrm{id}\quad\text{on the ramified column}.
+\] Let \(\beta_u\ne0\) be the
+scalar from unfolding the period, let \(U_u\) be the column
+isometry, let \(V\) be the row isometry common to all
+sequences, and let \(J\) be the conjugate-linear row embedding.
+
+For a column vector \(\phi\) and row vector \(F\), the
+period identity is the equality of bilinear forms
+\[
+   \mathcal B_u(\phi,F)
+    =\beta_u \langle J V F, P_u\iota_u U_u\phi\rangle .
+\]
+The inner product is conjugate-linear in the first
+variable. Thus \(JV\) carries an orthonormal basis of the common
+row space to an orthonormal family in the ambient row space.
+Extend it to one orthonormal basis of that space. If \(B_u\)
+is the arithmetic pairing matrix in rational bases and \(Z,W_u\)
+are the row and column changes to orthonormal bases, the restricted analytic matrix has top block
+\[
+  \beta_u^{-1}Z^{\mathsf t}B_uW_u .
+\] The transpose comes from the bilinear
+row evaluation. The other rows of the full matrix remain in the
+Gram estimate. If the infinite place is represented by the
+conjugate embedding, conjugate all entries. This preserves the
+Gram inequalities and the isometries.
+
+Let \(r_u^f\) be the full column rank at the sequence index \(u\).
+The analytic Gram operator at \(u,u'\) is
+\((c_u c_{u'})^{-1/2}P_u^*P_{u'}\), with \(c_u\) the
+nonnegative unfolding constant. This constant is positive
+for each sequence once the diagonal Gram error is
+less than the positive rank \(r_u^f\). Indeed \(c_u=0\) would make the unfolded diagonal operator zero and give
+\[
+ \text{squared error}=r_u^f\qquad(c_u=0).
+\] Use \(c_u^{-1/2}P_u\) as
+the full normalized operator. The extra nonzero scalar on
+the top block for each sequence preserves the image of every
+complex subspace, which is the condition needed in the
+slope argument.
+
+Write \(A_u^f\)
+for the full blocks, including the positive normalization
+scalar on each block, and \(A_u=A_u^f V_u\) for the
+ramified blocks, where \(V_u^*V_u=1\).
+Write \(R_f=\sum_u r_u^f\) and let \(R\) be the sum of the
+ramified ranks. The dimension of the
+full target is \(D\) and its reference dimension is \(D_*>0\).
+
+\begin{lemma}[Compression to the ramified columns]\label{lem:gram-compression}
+Let \(W\) be the finite index set of the sequences. Write
+\(\eta_0,e_0,\eta_1\) for the off-diagonal Gram error,
+diagonal Gram error and dimension error, respectively.
+Assume the bounds
+\[
+\begin{split}
+ \|(A_u^f)^*A_{u'}^f\|_{\mathrm{HS}}^2
+       &\le (1+\eta_0)\,r_u^f r_{u'}^f/D_*
+                         \quad (u\ne u'),\\
+ \|(A_u^f)^*A_u^f-1\|_{\mathrm{HS}}^2&\le e_0 r_u^f,\qquad
+ D\le(1+\eta_1)D_* .
+\end{split}
+\]
+For \(0<\sigma\le1/20\) take
+\(-1\le\eta_0\le\sigma/2\), \(\eta_1\le\sigma/2\),
+\(\sqrt{e_0}\le\sigma/2\), \(D_*/R_f\le\sigma\), and
+\(R\ge(1-d)R_f\) with \(0\le d\le1/4\).
+Then the ramified blocks satisfy the diagonal and trace-ratio bounds
+in Lemma~\ref{lem:frame-rank} with \(e=2e_0\) and
+\(\eta=5\sigma+3\sqrt d\).
+\end{lemma}
+
+\begin{proof}
+Let \(\Gamma\) be the size parameter used for the number of
+sequences and let \(C_0>0\) be the constant in the two rank
+bounds below. Multiplying the sequence count by the uniform per-sequence lower
+bound gives the rank ratio:
+\[
+ R_f=\sum_{u\in W}r_u^f\ge |W|\frac{D_*}{C_0\Gamma^2}
+       \ge\frac{D_*}{\sigma}.
+\]
+For the diagonal error, isometric compression is a
+Hilbert--Schmidt contraction. Thus the first hypothesis of
+Lemma~\ref{lem:frame-rank} holds with \(e=2e_0\).
+
+With \(Q_f=\sum_u A_u^f(A_u^f)^*\) and \(Q=\sum_u A_u A_u^*\),
+we have \(0\le Q\le Q_f\), hence
+\(\operatorname{tr}Q^2\le\operatorname{tr}Q_f^2\) by the
+nonnegative trace of \((Q_f-Q)(Q_f+Q)\).
+The denominator in the trace ratio satisfies
+\[
+ \operatorname{tr}Q\ge(1-\sqrt e)R\ge(1-\sigma)(1-d)R_f .
+\]
+Expand \(\operatorname{tr}Q_f^2\) into squared Gram blocks and
+bound the diagonal blocks by the triangle inequality. This gives
+\[
+ \frac{D\operatorname{tr}Q^2}{(\operatorname{tr}Q)^2}
+ \le
+ \frac{(1+\sigma/2)^2+\sigma(1+\sigma/2)^3}
+ {(1-\sigma)^2(1-d)^2}
+ \le 1+5\sigma+3\sqrt d .
+\]
+
+In the last inequality the numerator is at most \(1+9\sigma/4\),
+which is at most \((1+5\sigma)(1-\sigma)^2\) on the stated
+range. Also \((1-d)^{-2}\le1+4d\) and
+\(4(1+5\sigma)d\le3\sqrt d\).
+This is the frame compression, with \(\eta=5\sigma+3\sqrt d\).
+\label{cor:frames-2}
+
+\end{proof}
+
+\input{frame-height-limit}
+
+\begin{lemma}[Trace error at the height cutoff]\label{lem:trace-at-height}
+Use the full Gram estimates on the selected row, the ramified rank
+loss of Section~\ref{sec:ramified-column}, and the common exponent
+\(C_H=c_{HH}\) from Proposition~\ref{prop:marked-frame-height}.
+Uniformly in the retained translates and their sequence indices,
+for sufficiently large \(x\),
+\begin{equation}\label{eq:normalized-trace-product}
+ (\eta+4\sqrt e)x^{C_H}\le6,\qquad
+ (\eta+4\sqrt e)H\le6b\quad (0\le H\le bx^{C_H}).
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Use the middle choice of Proposition~\ref{prop:marked-frame-height}
+both for the number of sequences and for the upper limit
+\(H=bx^{c_{HH}}\) in the slope integral. Put
+\(C_H=c_{HH}\) and \(\sigma=x^{-C_H}\).
+The full-block estimates on the selected
+records use the errors \(\eta_0,\eta_1,\sqrt{e_0},\sqrt d\)
+bounded above by \(E=\exp(-x^{\epsilon/8})\). The ramified
+rank loss in Section~\ref{sec:ramified-column} yields this bound
+on \(\sqrt d\) for large \(x\) because \(T_u\ge b^{m/2}\)
+uniformly over the sequence indices. The normalized bounds and the full
+dimension are supplied by Section~\ref{sec:selected-row-gram}
+on the linked row.
+
+Take \(x\) so large
+that \(E\le \sigma/18\) and \(x^{C_H}\ge20\).
+By Lemma~\ref{lem:gram-compression} the resulting errors satisfy
+\[
+ 3\sqrt d+4\sqrt e\le11E\le\sigma,\qquad
+ \eta+4\sqrt e\le5\sigma+11E\le6\sigma .
+\]
+Multiplication by \(x^{C_H}\), or by the allowed \(H\), proves
+\eqref{eq:normalized-trace-product}.
+These thresholds depend on the fixed exponents and size
+constants. They are independent of the sequence index, its coefficient
+place, and the point among the retained translates at scale \(x\).
+The product in \eqref{eq:normalized-trace-product} is the
+term in the arithmetic comparison \eqref{eq:fourier-compare}.
+
+\end{proof}
+
+\subsection{Divisibility and quotient slopes}
+
+The frame estimate counts directions. To use the finite divisibilities one must count each column slope with the multiplicity it has in the quotient.
+
+Fix a nonempty set of columns indexed by \(W\). For \(u\in W\),
+let \(M_u,N_u\) be the reference and quotient column lattices.
+Average over the columns with weights proportional to \(\rk N_u\).
+Thus for a list \((z_u)_{u\in W}\) the notation \(\overline z\)
+means
+\[
+ \overline z =
+ \frac{\sum_{u\in W}(\rk N_u)z_u}{\sum_{u\in W}\rk N_u}.
+\]
+This counts each slope of the concatenated list in
+Lemma~\ref{lem:frame-slope} with its multiplicity. Write \(\mu_C=\mu(C)\)
+for the mean slope of the common target lattice \(C\), and
+let \(h_u\) be the shift used in Lemma~\ref{lem:frame-slope}.
+Let \(T_u>0\) be the column size, \(F\) a common shift,
+\(L_u\) the loss in the quotient, and \(E_u\) the exponent
+correction.
+
+Write \(G_a\) for the arithmetic quantity from the local lattice calculation. The error \(L_P\) is one-sided, in the direction
+\[
+ S_{\rm prime}\le G_a+L_P .
+\]
+Let \(S\) be the sum of the top weights, \(D_0\) the
+divisibility main term specified below, \(E_D\) the
+divisibility error, and \(E_1\) the error in the maximum
+slope bound. We will use the following three inequalities simultaneously on these lattices.
+The divisibility main term \(D_0\) in the first line is a real number.
+In Section~\ref{sec:word-division} the same letter denotes the rank
+in the determinant computation supplying that line.
+\begin{align}
+ \mu_C+h_u-F&\le D_0-S\log T_u+E_D,\label{eq:division-slopes}\\
+ \mu(N_u)&\ge\mu(M_u)+G_a+F-E_u-L_u,\label{eq:lower-slopes}\\
+ \mu_{\max}(N_u)&\le\mu_{\max}(M_u)+G_a+F-E_u+E_1.
+ \label{eq:upper-slopes}
+\end{align}
+Write \(a_t\) for the top weights, so \(S=\sum_t a_t\).
+
+Let \(f\) be the number of places used for the \(m\) lifts, let
+\(w_{j\rho}>0\) be the weight at lift \(j\) and place \(\rho\),
+and let \(v>0\) be the scale in the divisibility comparison.
+Write \(\ell_P\) for the real logarithmic derivative in the
+centering term, \(Q_c\ge0\) for the error in the column count,
+and \(\lambda\) for the common term in the centered exponent estimate.
+Define \(\Omega\), \(D_0\) and the logarithmic lower bound
+\(L_0\) by the following formulas.
+\[
+ \begin{aligned}
+ D_0 &= m\sum_t(a_t\log a_t-a_t-a_t\log\Omega),\\
+ \log\Omega&=\gamma+\log(\pi/v)-\ell_P,\\
+ \log T_u &\ge L_0
+     =\sum_{j=1}^m\frac1f\sum_{\rho=1}^f
+               \log(w_{j\rho}v/\pi)+m\lambda-Q_c .
+ \end{aligned}
+\]
+Let \(B_0=fmb\log b\), let \(k\) be the column rank parameter,
+and let \(c_E,c_{\rm count}\ge0\) be constants from the local exponent and column level estimates.
+\begin{lemma}[Exponent and level spread]\label{lem:exponent-level-spread}
+On the family of Sections~\ref{subsec:selected-exponent}
+and~\ref{subsec:selected-word-level}, for every pair \(u,u'\)
+at a fixed point one has
+\begin{equation}\label{eq:slope-word-count-exponent}
+ \left|E_u-mS\lambda\right|\le c_E mB_0,
+ \qquad
+ \left|\log T_u-\log T_{u'}\right|\le c_{\rm count}\log k .
+\end{equation}
+\end{lemma}
+\begin{proof}
+Let \(\mathcal S\) be the finite support of the point and let
+\(e_w,\omega_w\) be the absolute ramification index and
+normalized logarithmic weight at a place \(w\in\mathcal S\).
+Write \(E_{u,j}(w)\) for the local exponent contribution.
+The normalized finite-place contribution of lift \(j\) is
+\[
+ s_{u,j}=\sum_{w\in\mathcal S}\omega_w e_w E_{u,j}(w),
+\]
+In the squared lattice metric \(E_u=2\sum_j s_{u,j}\), so summing
+the two-sided deviation at each lift gives
+\[
+ |E_u-mS\lambda|\le\sum_{j=1}^m |2s_{u,j}-S\lambda|
+                     \le c_E mB_0 .
+\]
+
+In the count comparison, write \(X_u\)
+for the continuous level parameter from the volume formula and
+\(\Gamma_*\ge1\) for the common size correction. The level choice
+lies in the interval from \(X_u\Gamma_*^{-2/(fk)}\) to that
+number times \(1+1/(fk)\). Hence
+\(\log T_u-\log X_u+2\log\Gamma_* /(fk)\in[0,1/(fk)]\).
+The volume estimate therefore gives the second inequality with \(c_{\rm count}\ge c_5+1\). Indeed, on the eventual scale,
+\[
+ |\log X_u-\log X_{u'}|+1/(fk)\le c_5\log k+\log k .
+\] Section~\ref{subsec:selected-word-level} gives this volume estimate
+and the centered lower bound with \(\lambda=\log(g_0g_1)\) and
+\(Q_c=O(L)\). Section~\ref{subsec:selected-exponent} proves the exponent comparison on the same point by summing both type fibres and the absolute off-type cost.
+\label{cor:frames-3}
+\end{proof}
+Thus \(E_0=c_E mB_0\) bounds the error in the mean. To compare that mean with the prime sum, separate the centering term in the logarithms.
+Expanding the logarithms yields
+\[
+ D_0-SL_0+mS\lambda=S_{\mathrm{cent}}+SQ_c,\qquad
+ S_{\mathrm{cent}}=m\sum_t a_t(\log a_t-1-\gamma+\ell_P)
+                 -S\sum_{j=1}^m\frac1f\sum_{\rho=1}^f\log w_{j\rho}.
+\]
+This is the centering of the prime-power sum. In particular the
+logarithms of the chain weights have coefficient \(-S\).
+
+The two slope estimates for \(M_u\) apply to the level-zero
+lattice of the selected sequence. Write \(A=|T|a\)
+and let \(c_L L\) be the logarithmic parameter in the two
+column bounds. The lower and upper calculations can have
+different constants and thresholds. In the notation of the
+weights for the sequences their conclusions are
+\begin{align*}
+ -\mu(M_u) &\le
+  \frac{\log T_u}{k}\sum_{t\in T}a_t(u)
+  +c_-\bigl(A\log k+fk(b'+S_c)\log k+
+        fS_c\log T_u+fk^2 c_L L\bigr),\\
+ \mu_{\max}(M_u)&\le
+  c_+\bigl(A\log(kv)+f(b'+S_c)(k\log(kv)+\log T_u)
+          +fk^2 c_L L\bigr).
+\end{align*}
+The lower estimate starts from the determinant slope of
+the integral Weyl lattice with its character scale. The
+upper estimate uses short dual vectors on the class lattices
+and a highest-weight norm bound. The finite and infinite
+coordinate identifications and both slope proofs are in
+Section~\ref{subsec:selected-column-metric}. The local quotients and the ideal
+shift of this \(M_u\) are those of
+Section~\ref{subsec:column-orbit-length}.
+\label{cor:frames-4}
+
+\begin{lemma}[Uniform reference slopes]\label{lem:reference-column-slopes}
+Apply the lower and upper bounds of
+Proposition~\ref{prop:level-zero-column-slopes} to the level-zero
+lattice \(M_u\) of each selected word. Then the selected size bounds give
+\[
+ -\mu(M_u)\le C_M A L_a(1+m/k),\qquad
+ \mu_{\max}(M_u)\le C_M A L_a
+\]
+at every column beyond one threshold, where
+\(C_M=2C_T+\max(0,c_-,c_+)(12+C_T+c_L)\).
+\end{lemma}
+\begin{proof}
+Use \(a_t(u)\le2a\), \(\log T_u\le C_TmL\),
+\(fk(b'+S_c),fk^2\le A\), \(m\le k\), and \(L\le L_a\).
+In the common size bounds \(\log k\le5L_a\) and
+\(\log(kv)\le6L_a\). The first term in the lower estimate costs at
+most \(2C_T A(m/k)L_a\). Each parenthesis in the two estimates costs
+at most \((12+C_T+c_L)A L_a\), by the preceding inequalities.
+The claimed bounds follow. Once the common sizes and weights have
+been fixed, the larger of the two thresholds works in every column.
+\label{cor:frames-5}
+\end{proof}
+
+\begin{proposition}[The prime-sum gap at a fixed point]\label{prop:fixed-point-slope-gap}
+Assume \eqref{eq:division-slopes}--\eqref{eq:upper-slopes} on one
+family of columns, the reference bounds \(-\mu(M_u)\le A_-\),
+\(\mu_{\max}(M_u)\le A_+\), and the level and exponent bounds
+of Lemma~\ref{lem:exponent-level-spread}. Suppose the heights
+\(h_u+S\log T_u\) have spread at most \(c_HB_0\), as in
+Lemma~\ref{lem:division-height-spread}. Put \(X=x^{c_{HH}}\),
+\(E_0=c_E m B_0\), and \(V=(c_H+2c_E m)B_0+S c_{\rm count}\log k\).
+With the height cutoff \(H=bX\), the normalized Gram and slope
+hypotheses of Lemma~\ref{lem:frame-slope} imply
+\begin{align}
+ S_{\mathrm{prime}}-S_{\mathrm{cent}}\le{}&
+ A_-+E_D+E_0+SQ_c+\overline L+L_P+\log|W| \notag\\
+ &+\frac{4\log(1+X)(A_++A_-+V+E_1+\overline L+b)
+               +(\eta+4\sqrt e)Xb}{1-\delta}.
+ \label{eq:pointwise-slope-comparison}
+\end{align}
+Here \(\overline L\) uses weights proportional to \(\rk N_u\).
+\end{proposition}
+
+\begin{proof}
+\proofstep{The mean of the adjusted slopes.}
+Put \(s=\overline{\mu(N_u)-h_u}\). Eliminating \(F\) between
+\eqref{eq:division-slopes} and \eqref{eq:lower-slopes}, and using
+the preceding identity, gives
+\begin{equation}\label{eq:mean-slope-lower}
+ s-\mu_C\ge G_a-S_{\mathrm{cent}}
+           -(A_-+E_D+E_0+SQ_c+\overline L).
+\end{equation}
+\proofstep{The largest adjusted slope.}
+To control the upper separation, subtract
+\(\mu(N_{u'})-h_{u'}\) from \(\mu_{\max}(N_u)-h_u\).
+The common terms \(G_a+F\) cancel in
+\eqref{eq:lower-slopes} and \eqref{eq:upper-slopes}. Write
+\(H_u=h_u+S\log T_u\) and use the height spread of
+Section~\ref{sec:word-division}, say \(|H_u-H_{u'}|\le c_H B_0\).
+Then
+\[
+ (-E_u-h_u)-(-E_{u'}-h_{u'})
+  =(E_{u'}-E_u)+(H_{u'}-H_u)+S(\log T_u-\log T_{u'}).
+\]
+The three differences are bounded by \eqref{eq:slope-word-count-exponent}
+and the height estimate, since \(S\ge0\). The required
+spread is at most \(V=(c_H+2c_E m)B_0+S c_{\rm count}\log k\).
+The difference of slopes is thus at most
+\(A_++A_-+V+E_1+L_{u'}\). \label{cor:frames-6}
+Average over \(u'\) and maximize over \(u\) to obtain
+\[
+ U=\max_u(\mu_{\max}(N_u)-h_u)-s
+          \le A_++A_-+V+E_1+\overline L .
+\]
+
+\proofstep{Integrating the slope tail.}
+Let \(X=x^{c_{HH}}>0\) and use \(H=bX\) by \eqref{eq:marked-frame-height}.
+Concavity of \(\log(1+y)\) gives its tangent bound at \(X\).
+Thus for \(U>0\)
+\[
+ U\log(1+H/U)
+ \le U\log(1+X)+\frac{H-UX}{1+X}
+ \le (U+b)\log(1+X).
+\]
+The inequality holds at \(U=0\) by continuity.
+Apply the slope upper bound, allowing the additional
+\(\log|W|\) term in the source, and combine it with
+\eqref{eq:mean-slope-lower}. This gives \eqref{eq:pointwise-slope-comparison}.
+\end{proof}
+
+The construction must give the same column lattice data for
+\eqref{eq:division-slopes} and \eqref{eq:lower-slopes}, with
+uniform bounds for all terms in \eqref{eq:pointwise-slope-comparison}.
+
+Section~\ref{subsec:fixed-weight-absorption} bounds the right side by the bracket in Lemma~\ref{lem:comparison}. \label{cor:frames-7}
+
+\subsection{Small shares at the common cutoff}
+\label{subsec:small-share-slope}
+
+The pointwise comparison \eqref{eq:pointwise-slope-comparison} still contains an error from primes at which too small a proportion of the column survives. Estimate this contribution before summing the remaining prime losses. Write \(Q=|T|mb\), \(a=xb\), and fix a
+point carrying the common weight vector. For the set
+\(\mathcal S\) of candidate primes, let \(\sigma_p\ge0\)
+be the share statistic and \(\theta\) its threshold. The small-share condition is
+\begin{equation}\label{eq:gram-small-share-input}
+ \sum_{p\in\mathcal S}\frac{\log p}{p}
+        \bigl(2\mathbf1_{\sigma_p>\theta}+4\sigma_p\bigr)
+       \le x^{-9}.
+\end{equation}
+\begin{lemma}[Three losses at the small-share cutoff]\label{lem:three-share-losses}
+At one point assume \eqref{eq:gram-small-share-input}. Suppose the
+local image loss satisfies \(i_p\le 4\sigma_p a m|T|/p\), the
+second-class loss is bounded by the corresponding indicator term
+with multiplier \(2am|T|\), and the loss for missing orbit labels
+is at most \(4am\sum_{p\in\mathcal P_R}|B_p|(\log p)/p\).
+Assume also the bad-prime count
+\[
+ \sum_{p\in\mathcal P_R}|B_p|\frac{\log p}{p}\le |T|x^{-2+\epsilon}.
+\]
+Then the image loss summed over the candidate set \(\mathcal S\),
+the loss above the share threshold in the second class, and the loss
+of labels without the required orbit condition are respectively at most
+\[
+ Qx^{-8},\qquad 2Qx^{-8},\qquad 4Qx^{-1+\epsilon}.
+\]
+\end{lemma}
+\begin{proof}
+Let \(i_p\) be the loss in the image of the local map. Its pointwise
+bound \(i_p\le4\sigma_p a m|T|/p\) gives
+\[
+ \sum_{p\in\mathcal S}(\log p)i_p
+             \le a m|T|x^{-9}=Qx^{-8}.
+\]
+For the primes in the second class, membership in
+\(\mathcal S\) and \(\sigma_p>\theta\) give the loss
+bound \(2a m|T|x^{-9}=2Qx^{-8}\) by the indicator
+term in the same sum. Both estimates hold on each shift
+for the same share statistic.
+
+At a prime \(p\) with a selected orbit, every index with larger
+weight that fails the local orbit condition belongs to the bad
+set \(B_p\). The occurrence of any such index puts \(p\) in the
+large-order residue set \(\mathcal P_R\).
+The common bad-prime count is
+\[
+ \sum_{p\in\mathcal P_R}|B_p|\frac{\log p}{p}\le |T|x^{-2+\epsilon}.
+\]
+Indeed this is the count over the original set of indices with larger weights,
+before passing to the subset of indices without the local orbit condition for a
+particular record. The loss of those labels is bounded by
+\(4am\) times that sum, which is \(4Qx^{-1+\epsilon}\).
+\end{proof}
+Section~\ref{subsec:loss-prime-account} derives the remaining
+contributions from the orbit gains and the same size bounds for the auxiliary data.
+\label{cor:frames-8}
+
+\input{prime-class-loss}
+
+\begin{lemma}[One small-share vector at each scale]\label{lem:one-share-vector}
+Fix \(0<\epsilon<1/52\). At each sufficiently large scale \(x\) in a selected window there is an admissible vector \(o\) for which the shares satisfy
+\[
+ \sum_{p\in\mathcal S}\left(2{\bf1}_{\sigma_p(o)>x^{-\epsilon}}+4\sigma_p(o)\right)\frac{\log p}{p}\le x^{-9}.
+\]
+This one choice of \(o\) works at every point of the scale carrying it.
+\end{lemma}
+
+\begin{proof}
+To select the weight vector, take one reference point at \(x\)
+and let \(\mathcal W\) be its nonempty finite set of admissible
+vectors. At a candidate prime sum the local exceptional fractions
+over its good Frobenius cycles, with the factor \(m\) for the lifts.
+The two local estimates in Propositions~\ref{prop:host-small-prime-test}
+and~\ref{prop:host-large-prime-test} give the mean bound of
+Paragraph~\ref{par:top-weight-selection}, namely
+\[
+     \mathbb E_{o\in\mathcal W}\sigma_p(o)\le m|T|x^{-12}
+                         \qquad(p\in\mathcal S).
+\] Here the expectation is the uniform
+mean and the candidate set is fixed before the vector is chosen.
+For \(\theta=x^{-\epsilon}\) and \(s\ge0\),
+\(2\mathbf1_{s>\theta}+4s\le(2/\theta+4)s\).
+
+Since the candidates are primes below \(X'=\exp(x^{\epsilon/3})\),
+the elementary estimate \(\sum_{p\le y}(\log p)/p=\log y+O(1)\) gives
+\(\sum_{p\in\mathcal S}\log p/p\le2x^{\epsilon/3}\).
+After summing the mean-share estimate, the mean of the required
+statistic is at most
+\[
+ (2x^\epsilon+4)m|T|x^{-12}\cdot 2x^{\epsilon/3}.
+\]
+
+The size bounds are \(m\le x^{(1-\epsilon/8)/2+\epsilon/100}\)
+and \(|T|\le2x^{2+8\epsilon+\epsilon/100-\epsilon/8}\).
+The last display is bounded by \(24x^{-19/2+c\epsilon}\) with
+\(c=9+1/3+2/100-3/16\). For \(0<\epsilon<1/52\) one has
+\(-19/2+c\epsilon+1/4<-9\). Taking \(x^{1/4}\ge24\)
+gives a mean at most \(x^{-9}\), so some vector attains the
+small-share inequality at the reference point. The share statistic
+and candidate set are invariant among points of that scale carrying
+the chosen vector, by the Galois and scale identifications.
+\label{cor:frames-9}
+
+\end{proof}
+
+\begin{proposition}[Simultaneous estimates on the translates]\label{prop:estimates-each-translate}
+At each sufficiently large scale in a selected window one can use
+the same weight pair for all translates. For every translate
+\(u_0\) there is a completed point \(i(u_0)\) where the count,
+slope, frame, division and loss estimates hold together.
+At every such \(i(u_0)\) the admissible cutoff and the exponents in the division and loss bounds are
+\[
+ N=\lceil2a\rceil,\qquad(e_D,e_L)=(2,0).
+\]
+
+\end{proposition}
+\begin{proof}
+By Lemma~\ref{lem:one-share-vector} choose an admissible weight pair
+at one reference point. Proposition~\ref{prop:translate-completion} realizes
+this pair at every translate of the common field and binary sequence
+assignment. On identifying the indices, the larger weights, the
+dimensions and the share statistic at \(i(u_0)\) have their chosen
+values. In particular the two terms at each prime give precisely the
+small-share bound used in Lemma~\ref{lem:three-share-losses}.
+Every larger weight is at most \(2a\) and every denominator weight
+is at least one. Thus the choice of \(N\) applies to the same
+\(S_{\mathrm{prime}}\) in the local loss and in the slope inequality.
+
+Fix the original character weights and then choose the family in the
+order of Lemma~\ref{lem:window-parameter-choice}. Take the maximum of the
+finitely many uniform thresholds for its realization and the stated
+estimates. At every later \(i(u_0)\),
+Proposition~\ref{prop:sequence-division} and the joint loss bounds of
+Proposition~\ref{prop:joint-prime-loss} now give the claimed exponents.
+\label{cor:frames-10}
+\end{proof}
+
+\subsection{Combining the estimates with the fixed weights}
+\label{subsec:fixed-weight-absorption}
+
+The prime losses can now be inserted in the slope inequality. Keeping the weight vector fixed in this substitution is what permits the later average over translates.
+\begin{established}[Numerical bounds on a completed member]\label{hyp:absorption-inputs}\label{cor:frames-11}
+Write \(n_T=|T|\), \(n_2=|T_2|\), and \(A=n_Ta\).
+Here \(f=2n\), \(B_0=fmb\,x^\epsilon\), and
+\(N_c=n_2 k b x^{2\epsilon}/n^2\) is the rank contribution
+from the comparison in Section~\ref{subsec:division-length}.
+Define the factors \(y,y_D,y_L\), the expression \(\mathcal B\),
+and its weighted version \(P\) in that order.
+\[
+ y=x^\epsilon,\qquad y_D=x^{e_D\epsilon},\qquad
+ y_L=x^{e_L\epsilon},\qquad
+ \mathcal B=A(1+m^2/k)+m(B_0+N_c),\qquad
+ P=y_Dy_Ly\,\mathcal B .
+\]
+These factors are all at least one on the size range, which has
+\(1\le b\le a\), \(m\le k\), \(mb\le a\), \(kb'\le a\),
+\(X''\le a\), and \(L,L_a\le2y\).
+There is a constant \(K\ge6\), independent of the member and translate for
+this family, for which the following estimates hold beyond one scale.
+
+In the notation of Proposition~\ref{prop:fixed-point-slope-gap} these estimates give
+\begin{align*}
+ S Q_c&\le S K L_a(1+m^2/k),&
+ E_D&\le K\big(A L_a+m(B_0+N_c)y_D\big),\\
+ E_0&\le K mB_0,& E_1&\le K mB_0,\\
+ V&\le K\big(2mB_0+A L_a+mB_0+S\log k\big),&
+ L_P&\le K n_Tmb\,y_L,\\
+ \overline L&\le K^2 n_Tmb\,y_L
+      + K^2 n_Tm^2(a/k+b')L+KX''+1 .
+\end{align*}
+With \(X=x^{c_{HH}}\) and the good-label dimension deficit
+\(\delta=1-D_{\rm good}/D\), the auxiliary bounds are
+\[
+ S\le2A,\qquad \log|W|\le a,\qquad
+ (\eta+4\sqrt e)Xb\le K y A,\qquad (1-\delta)^{-1}\le2.
+\]
+\end{established}
+\begin{proof}
+The count in Lemma~\ref{lem:exponent-level-spread} gives \(Q_c=O(L)\).
+Its exponent estimate gives \(E_0\le c_E m B_0\). The maximal-slope
+bound \eqref{eq:tag-c8} and the rounding estimate in
+Proposition~\ref{prop:shifted-column-slopes} give the stated bound for
+\(E_1\) on the same shifted lattice, as in the proof of
+Proposition~\ref{prop:marked-frame-height}.
+
+The estimate for \(E_D\) is Proposition~\ref{prop:sequence-division}, in the form \eqref{eq:selected-word-division}. The bound for \(V\) adds the
+exponent and count differences in \eqref{eq:slope-word-count-exponent}
+and the variation of the adjusted height in
+Section~\ref{sec:word-division}. For \(L_P\), use the first
+bound in Proposition~\ref{prop:joint-prime-loss}, equation~\eqref{eq:joint-prime-loss}. For \(\overline L\),
+combine the weighted output bound in the same equation with
+the contributions at the assigned prime in
+Section~\ref{subsec:word-period} and the rounding error.
+For the remaining slope terms take the two bounds for \(A_-,A_+\)
+in Lemma~\ref{lem:reference-column-slopes}. Each top weight is at most
+\(2a\) by Lemma~\ref{hyp:translate-weights}. The binary injection of
+Lemma~\ref{lem:window-parameter-choice} and the selected rank range give
+\[
+ S=\sum_{t\in T}a_t\le2n_Ta,\qquad
+ \log|W|\le(k-2)\log2\le k\le a
+\]
+eventually, since \(k\le x^5\) and \(b\le a\) grows faster than
+every fixed power of \(x\). Finally, Proposition~\ref{prop:selected-rank-comparison}
+and Lemma~\ref{lem:trace-at-height} give
+\[
+ \delta\le e^{-x^{e_z/7}}\le\tfrac12,\qquad
+ (\eta+4\sqrt e)Xb\le6b\le6yA .
+\]
+Take \(K\) to be the maximum of six and the finitely many family constants.
+\end{proof}
+
+\begin{lemma}[Absorption at one completed point]\label{lem:absorption-at-point}
+At a completed member use the estimates of Lemma~\ref{hyp:absorption-inputs},
+with its constant \(K\), in the slope inequality
+\eqref{eq:pointwise-slope-comparison}. Let \(g,h\ge1\) satisfy \(\log k\le gy\) and
+\(\log(1+X)\le hy\). If \(y\ge200(1+K)^2hg\), then
+\[
+ S_{\mathrm{prime}}-S_{\mathrm{cent}}
+      \le x^{(e_D+e_L+3)\epsilon}\mathcal B .
+\]
+The bound applies at every translate once the common thresholds
+for the inputs have been passed.
+\end{lemma}
+
+\begin{proof}
+\proofstep{Bounding the two parts of the slope inequality.}
+Take \(g,h\ge1\) such that \(\log k\le gy\) and
+\(\log(1+X)\le hy\). They are fixed by the power bounds
+on \(k\) and \(X\) once \(\log x\le y\). In estimating the
+terms of \eqref{eq:pointwise-slope-comparison}, \(P\)
+dominates each of \(A\), \(mB_0\), \(b\), \(X''\), and
+\(A(1+m^2/k)\). The quadratic term in Lemma~\ref{hyp:absorption-inputs}
+has the sharper bound
+\[
+ n_Tm^2(a/k+b')\le2Am^2/k,\qquad
+ \overline L\le(5K^2+K+1)P .
+\] The sum of the terms on
+the first line of \eqref{eq:pointwise-slope-comparison}
+is therefore at most \((5K^2+14K+2)P\), by using
+\(4KP,3KP,KP,4KP\) for the count, division, centered
+exponent and lower reference costs, and \(KP\) for \(L_P\).
+
+In the second line the sum multiplying \(4\log(1+X)\)
+is at most \((5K^2+13K+2Kg+2)P\). In fact the two
+reference costs total at most \(6KP\), the spread costs
+\((5+2g)KP\), and \(E_1\) adds \(KP\).
+Combining these bounds and the trace-product term gives
+\[
+ S_{\mathrm{prime}}-S_{\mathrm{cent}}
+ \le \big(5K^2+16K+2+8h(5K^2+13K+2Kg+2)\big)yP
+ \le 200(1+K)^2 hg\,yP.
+\]
+The last inequality follows by \(h,g\ge1\) and comparison
+of the three coefficients of the polynomial in \(K\).
+The threshold \(y\ge200(1+K)^2 hg\) now gives
+\[
+ S_{\mathrm{prime}}-S_{\mathrm{cent}}
+ \le x^{(e_D+e_L+3)\epsilon}\mathcal B.
+\]
+This derivation is uniform in the sequence and translate.
+With the stated values of \(B_0\) and \(N_c\),
+\(\mathcal B\) is the bracket of
+Lemma~\ref{lem:comparison} with \(a_E=a\).
+On the common inputs \(e_D=2\) and \(e_L=0\), so this
+gives \(C=5\) at every point where the stated estimates
+hold. \label{cor:frames-12}
+
+\end{proof}
+
+\begin{corollary}[The translate bound on one completed family]\label{cor:raw-gap-completed-scale}
+At a sufficiently late scale of the family in Proposition~\ref{prop:estimates-each-translate},
+fix its weight vector and take the selected member over each \(u\in A_0\).
+Use its base and refined rows as identified in
+Proposition~\ref{prop:linked-comparison-rows}. With \(a_E=a\), the centered local errors of Definition~\ref{def:translate-errors} satisfy
+\[
+ \max_{u\in A_0}\sum_{j=1}^m\sum_{t\in T}\Delta_{j,t}(u)
+ \le x^{5\epsilon}\!
+ \left[n_Ta_E\left(1+\frac{m^2}{k}\right)
+      +m\left(2nmbx^\epsilon+\frac{n_2kb x^{2\epsilon}}{n^2}\right)\right].
+\]
+\end{corollary}
+
+\begin{proof}
+For each \(u\), Proposition~\ref{prop:translate-completion} gives the
+completion at the prescribed levels. The strict cohomology bound on its
+original host passes to its good characters by Lemma~\ref{lem:strict-budget-after-cut}.
+Proposition~\ref{prop:uniform-parent-remainders} gives the geometric bounds
+on the two covers of its fixed core. Thus Lemma~\ref{lem:joint-family} and Proposition~\ref{prop:parent-dual-cost} bound respectively the paired transport and the signed index of the localized global dual at the \emph{same} point. Proposition~\ref{prop:sequence-division} inserts them in the division bound there. With the other numerical inputs, Lemma~\ref{lem:absorption-at-point} now gives
+\[
+ \sum_{j,t}\Delta_{j,t}(u)
+ =S_{\rm prime}(u)-S_{\rm cent}(u)
+ \le x^{(2+0+3)\epsilon}\bigl[A(1+m^2/k)+m(B_0+N_c)\bigr].
+\]
+The right side is independent of \(u\). Substitute \(A=n_Ta_E\), \(B_0=2nmbx^\epsilon\), and \(N_c=n_2kbx^{2\epsilon}/n^2\), then take the maximum over \(A_0\).
+\end{proof}
+
+\begin{auxlemma}[A single numerical threshold on a family of marked rows]
+\label{lem:uniform-numerical-application}
+Fix the outer parameters and \(\epsilon>0\). Choose the middle height
+exponent \(C_H=c_{HH}\ge1\) of Proposition~\ref{prop:marked-frame-height}
+before choosing the sequences. Let \(S\subset[1,\infty)\) be a set of scales.
+Require one threshold \(X_{\rm in}\) with
+\[
+ \forall x\in S\cap(X_{\rm in},\infty),\quad
+ \forall u_0\in A_0(x),\quad
+ \exists\ \text{a marked row over }(x,u_0)
+\]
+satisfying the following conditions. Here \(A_0(x)\) is the kernel in
+Definition~\ref{def:translate-scale} for the host chosen at \(x\).
+The two signed runs have the common form coordinates of
+Lemma~\ref{lem:selected-form-level-tie}, the linked comparison of
+Proposition~\ref{prop:linked-comparison-rows}, and the weighted numerator
+estimate of Proposition~\ref{prop:weighted-dual-cost} with its original
+place assignment. The period, measure and size data on those rows satisfy
+the hypotheses of Propositions~\ref{prop:selected-rank-comparison}, \ref{prop:marked-frame-height} and~\ref{prop:fixed-point-slope-gap}. The remaining input estimates in
+Lemma~\ref{hyp:absorption-inputs} hold with a common constant.
+Assume the selected size range, in particular \(k\le x^5\).
+
+There exists \(X_{\rm num}\), depending only on these uniform data, such
+that for every \(x\in S\) above \(X_{\rm num}\),
+\[
+   \max_{u_0\in A_0}\sum_{j,t}\Delta_{j,t}(u_0)
+     \le x^{5\epsilon}
+       \left[n_Ta\left(1+\frac{m^2}{k}\right)
+             +m\left(2nmbx^\epsilon+
+                     \frac{n_2kb x^{2\epsilon}}{n^2}\right)\right].
+\]
+The conclusion holds on all scales covered by the hypotheses,
+including the endpoints of any closed interval contained in
+\(S\cap(X_{\rm num},\infty)\).
+\end{auxlemma}
+
+\begin{proof}
+\proofstep{Use the actual cut and rank.}
+Fix \(x\in S\) above \(X_{\rm in}\), take any \(u_0\in A_0(x)\),
+and choose its marked row from the hypothesis. Lemma~\ref{lem:parent-slice-lattices}
+identifies its branch and product lattices. Proposition~\ref{prop:uniform-parent-remainders}
+therefore bounds every tested subspace in those same coordinates.
+Use the same row to evaluate the numerator. At the rescaled argument
+\(x'=x/\kappa_{\rm sc}\) the integers required by the local twists
+have the range
+\[
+     1\le a'<t\le\lfloor x^{400}\rfloor
+                 \le\lfloor(x')^{401}\rfloor
+           \qquad(x\ge\max\{2^{100},\kappa_{\rm sc}^{401}\}).
+\]
+The bound on \(t\) is the size calculation in
+Section~\ref{sec:family-window}. The last inequality follows from
+\(x^{400}\le(x/\kappa_{\rm sc})^{401}\). Thus each signed numerator is
+charged within the original list at \(x'\). The indices in
+Lemma~\ref{lem:joint-family} and Proposition~\ref{prop:parent-dual-cost}
+are now those of this one member. With the prime losses of
+Proposition~\ref{prop:joint-prime-loss}, Proposition~\ref{prop:sequence-division}
+gives \((e_D,e_L)=(2,0)\).
+
+\proofstep{Use the same height in the trace and dimension bounds.}
+Let \(K\ge6\) bound the finitely many uniform constants in
+Lemma~\ref{hyp:absorption-inputs}, after making this substitution.
+Put \(g=5\), \(h=C_H+1\), and set
+\begin{align*}
+ B&=1+\log18+16C_H/\epsilon,\\
+ X_1&=\max\{X_{\rm in},2^{100},\kappa_{\rm sc}^{401},
+             20^{1/C_H},(\max\{1,2/\epsilon\})^{2/\epsilon}\},\\
+ X_{\rm num}&=\max\{X_1,B^{16/\epsilon},
+                        [200(1+K)^2gh]^{1/\epsilon}\}.
+\end{align*}
+Here \(X_{\rm in}\) includes the uniform thresholds of the cited
+estimates once the outer and middle parameters have been chosen.
+For \(v=x^{\epsilon/16}\ge B\),
+\[
+ x^{\epsilon/8}=v^2\ge(16 C_H/\epsilon)v+\log18
+       \ge C_H\log x+\log18 .
+\]
+Write \(E=\exp(-x^{\epsilon/8})\) and \(\sigma=x^{-C_H}\). Hence
+\(E\le\sigma/18\) and \(\sigma\le1/20\).
+Proposition~\ref{prop:selected-rank-comparison} gives
+\[
+ \max\{\eta_0,\eta_1,\sqrt{e_0},\sqrt d\}\le E,\qquad
+             D_*/\sum_u d_u\le\sigma .
+\]
+Lemma~\ref{lem:trace-at-height} therefore gives
+\((\eta+4\sqrt e)H\le6b\) throughout \(0\le H\le bx^{C_H}\).
+The exponent used in the dimension estimate is the exponent used
+to truncate this very slope integral.
+
+\proofstep{Absorb the constants uniformly.}
+Finally \(y=x^\epsilon\ge\log x\), since
+\(\log x=(2/\epsilon)\log(x^{\epsilon/2})\le
+(2/\epsilon)x^{\epsilon/2}\le x^\epsilon\).
+Thus \(\log k\le gy\) and \(\log(1+x^{C_H})\le hy\). Our choice
+ensures \(y\ge200(1+K)^2gh\). Lemma~\ref{lem:absorption-at-point}
+bounds the difference on the chosen row by
+\(x^{(2+0+3)\epsilon}\mathcal B\). Its right hand side depends
+on the base data at \(x\), fixed before the choice of \(u_0\).
+Substitution of \(\mathcal B\) and maximization over \(u_0\) prove
+the assertion.
+\end{proof}
+
+At each scale of Proposition~\ref{prop:all-window-applications} the marked
+family supplies a member over every \(u_0\in A_0(x)\). Corollary~\ref{cor:raw-gap-completed-scale}
+identifies the two comparison rows on each such member. Thus the maximum in
+Lemma~\ref{lem:uniform-numerical-application} ranges over the entire kernel,
+as required for \(E\) in Proposition~\ref{prop:translate-fourier}.
+Lemma~\ref{hyp:translate-weights} supplies its two weight ranges. Translation averaging has mass one. The weight replacement costs \(2b/x\) for each of the \(n_Tm\) pairs, hence \(2Q/x\) in \eqref{eq:fourier-compare}. The two rank inequalities in Lemma~\ref{lem:comparison} follow on the selected size range from
+\[
+ \frac{k}{n^2}\le\frac{2x^{9/2+10\epsilon}}{x^{4+16\epsilon}}
+     \le x^{1/2-\epsilon}\quad(x^{5\epsilon}\ge2),\qquad
+ xm\le x^{3/2+\epsilon/2}\le x^{9/2+10\epsilon}\le k .
+\]
+With the stated density, \(m\)-range and \(\Sigma(x)\) bounds this gives \(G_{\mathcal K}(x)\le x^{1/2+9\epsilon}\) at that scale.
+
+The common threshold just obtained can be used on an entire
+interval. In Proposition~\ref{prop:all-window-applications} the
+family is chosen before the threshold. Lemma~\ref{lem:disjoint-common-pair-windows}
+then permits its left endpoint to exceed \(X_{\rm num}\) and
+any prescribed bound. This is the passage from one completed
+scale to \eqref{eq:uniform-raw-gap} in
+Theorem~\ref{hyp:uniform-arithmetic-data}.
+
+For the weaker square-argument criterion in Lemma~\ref{lem:square-window-transfer},
+the proof of the corollary is used only at the translate selected in
+Lemma~\ref{lem:maximizing-translate}. Both indices must still come from
+the same marked member there.

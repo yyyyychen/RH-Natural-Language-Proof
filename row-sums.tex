@@ -1,0 +1,852 @@
+\section{Combining local estimates in the row sum}
+\label{sec:row-sums}
+
+For a fixed pair of words, each reduced Gram label contributes a fibre of integral terms. We sum the squared-norm loss in \eqref{eq:row-l2} and, on the cells where it is available, the pointwise loss in \eqref{eq:row-abs}. We combine the
+height bounds with the counts from Section~\ref{sec:flag-counts}
+and separate the contributions according to their Gram
+invariants. The exponents in the resulting global bounds are
+used in the full Gram estimate to control the off-diagonal
+part.
+
+Fix two sequences \(u,u'\) and use their word norms \(T,T'\).
+Write \(d=\dim\pi_u\), \(p=r+1\), \(m=2p\), \(h=cr^2\)
+with the height constant \(c\ge1\), and \(f\) for the number of real
+places. At a real place \(v\), write \(d_v\) for the dimension of the local factor of the definite representation \(\pi_u\). The common
+archimedean scale and normalized amplitudes are
+\[
+              \upsilon\ge1,\qquad A_t=a_t/\sqrt d .
+\]
+
+Only terms with positive local Gram invariants \(G_{Z,v}\) enter this
+sum. The pair of terms can still have a degenerate determinant in the
+count of Section~\ref{sec:flag-counts}. A third distinction within
+one term is whether its preceding minor \(\Delta_r\) vanishes. This
+determines which local bound is available. Put \(g=g_0g_1\) and
+\[
+ G_Z=g^{-mf}\prod_vG_{Z,v},\quad N_T=T^f,\quad
+ n_Z=\left(\frac{e\pi}{k\upsilon}\right)^{kf}(G_Z/N_T)^k .
+\]
+Choose \(C_h\) as in Lemma~\ref{lem:minor-orbital-iterate}
+and write \(B=b^{C_hm^2}\). For leading minors \(D_{l,v}\) of the
+reduced label define
+\[
+ s_v=\prod_{l=1}^{p}\max\{1,|D_{l,v}|/B\},\qquad
+ \sigma_Z=\prod_vs_v,\qquad
+ P=b^{(c^2+2\max(C_h-c,0))m^3 f}.
+\]
+The reduced height and the term volume satisfy
+\(H_Z\le P\sigma_Z^4\) and \(\operatorname{vol}(t)\le H_Z^h\).
+
+At a block end write \(d_{l,v}=|D_{l,v}|>0\), and put
+\(G_v=G_{Z,v}\). The local squared-norm and pointwise losses, with
+the fixed comparison constant \(C\), are respectively
+\[
+ \begin{aligned}
+ L_v&=b^{Cm^4}\max(G_v,G_v^{-1})^{Cm^2}
+           \prod_{l\ {\rm end}}\max(d_{l,v},d_{l,v}^{-1})^{Cm},\\
+ P_v&=\left(b^{Cm}\max\big(\{1\}\cup
+                 \{d_{l,v}^{-1}:l\text{ a block end}\}\big)\right)^{Cr^3}.
+ \end{aligned}
+\]
+For a moment order \(q\) in the range of Lemma~\ref{lem:row-moment-budget}, set \(a=q/p\),
+\(E=\exp(C_2m^6 f\log b)\), and \(\Gamma_S=b^{C_\Gamma m^5f}\).
+Put \(t_v=T_{{\rm crit},v}/T'\), \(r_{DD}(u')=d_{u'}/D_*\) and \(\tau=(1+\delta)r_{DD}(u')\). The estimate on their product comes from the full marked dimension.
+
+Write \(R=k+m-1\) for the ambient row rank. Multiplying the defining formulas for \(T_{{\rm crit},v}^k\) in Section~\ref{sec:local-amplitudes} yields exactly the archimedean, discriminant and level powers of \(D_*/d_{u',*}\) in the proof of Proposition~\ref{prop:prime-target-size}. The factors left over are
+\[
+ Z=\sum_{j=k+1}^R\log L_j+
+        f\sum_{i=0}^1\sum_{j=k+1}^R\log(1-g_i^{-j}).
+\]
+In fact the archimedean factors at \(v\) are \(\kappa^{-[(m-1)k+m(m-1)/2]}\) times the ratio of the ambient and column Vandermondes. Proposition~\ref{prop:marked-column-dimension} now gives
+\[
+ \frac{D_*}{d_{u'}}=e^Z (1-(T')^{-k})^{-f}\prod_v t_v^k .
+\]
+
+For \(j\ge2\), \(\log\zeta(j)\le\sum_{n\ge2}n^{-j}\le3\cdot2^{-j}\), by integral comparison. The Euler bounds in Proposition~\ref{prop:prime-target-size} imply \(|Z|\le9f2^{-k}\). Also \(-\log(1-(T')^{-k})\le2(T')^{-k}\). Thus on the selected range
+\[
+ \prod_v t_v^{-k}\le e^{11f2^{-k}}\frac{d_{u'}}{D_*}\le\tau .
+\]
+The last inequality holds once \(11f2^{-k}\le\log(1+\delta)\), uniformly in the word. In particular the scale conditions \(f\le k\), \(k\ge m^5(\log b)x^2\) allow the tolerance \(\delta=b^{-7}\) used in the row estimates. \label{cor:row-sums-1}
+
+\begin{lemma}[Products of local height losses]\label{lem:row-height-products}
+For the reduced label and its common block ends, suppose
+\(C_2\ge\max(6C,C,C^2+CC_h)\) and \(C+6CC_h\le C_\Gamma m\).
+The local factors satisfy
+\[
+ \prod_v L_v\le\Gamma_S\sigma_Z^{C_2m^2},\qquad
+ \prod_v P_v\le E\sigma_Z^{C_2m^4}.
+\]
+The second bound also applies to a product over a subset of places.
+\end{lemma}
+
+\begin{proof}
+Put \(X=B^f\sigma_Z\). For any leading minor, multiplication of
+its local bounds gives \(\prod_v\max(1,|D_{l,v}|)\le X\).
+At a block end integrality gives \(\prod_v d_{l,v}\ge1\). Likewise
+\(\prod_v G_v\ge1\) and \(G_v\le |D_{p,v}|^2\).
+For a positive \(y\), both inverse-height factors are controlled by
+\[
+ \max(1,y^{-1})=\max(1,y)/y,\qquad
+ \max(y,y^{-1})=\max(1,y)^2/y.
+\]
+There are at most \(m\) common ends. Thus the two products are at
+most \(b^{Cm^4 f}X^{6Cm^2}\) and \((b^{Cmf}X^m)^{Cr^3}\),
+respectively. The indicated inequalities on the constants absorb the
+powers of \(B\). Each \(P_v\ge1\), which gives the subset assertion.
+\end{proof}
+
+When \(\Delta_r=0\) set \(K_Z=1\). Otherwise define the Cayley factor by
+\[
+ \mathrm{sh}_v^2=\frac{G_{Z,v}}{TT'|\Delta_{r,v}|^2},\qquad
+ \mathrm{ch}_v=\sqrt{1+\mathrm{sh}_v^2},\qquad
+ K_Z=\prod_v(1+\mathrm{ch}_v)/\mathrm{sh}_v.
+\]
+It satisfies \(K_Z^2\le9^f H_Z^3\): use
+\(1+\sqrt{1+x^2}\le3\max(1,x)\) for \(x>0\) and the height bounds
+on the norms, the preceding minor and the inverse Gram product.
+
+\input{row-cell-evaluation}
+
+The bounds on products of height losses can now be inserted into the local norm estimates. The resulting inequalities concern a single normalized orbital term and are ready to be multiplied for a flag pair.
+
+\begin{proposition}[Two bounds for a single amplitude]\label{prop:two-row-amplitude-bounds}
+Use the normalized local Bessel bounds of
+Sections~\ref{sec:local-amplitudes} and~\ref{sec:absolute},
+the height hypotheses of Lemma~\ref{lem:row-height-products}, and
+the minor iteration of Lemma~\ref{lem:minor-orbital-iterate}
+with \(pq\le C_{\rm pr}km^3\).
+On the selected range where
+\(T'/T\le A\), \(T_{{\rm crit},v}g^{-m}\ge k^{3r}\),
+\(r+2\le\delta_m k\), \(C_{\rm pt}\le C_a\le k\),
+\(Cm\ge2r+4\), \(e\pi\le k\), and \(C_a\ge6e\pi A\), one has
+\begin{equation}\label{eq:row-l2}
+ n_Z A_t^2\le L_Z,\qquad
+ L_Z=H_Z^{2h}\Gamma_S\tau\,\sigma_Z^{C_2m^2-2a}.
+\end{equation}
+The additional estimate needed when a pair has a degenerate determinant is
+\begin{equation}\label{eq:row-abs}
+ n_Z A_t^2 K_Z^{2k}T^{-kf}\le
+ H_Z^{2h}\Gamma_S E^2(C_a/k)^{kf}
+                 \sigma_Z^{C_2m^2+2C_2m^4-2a}.
+\end{equation}
+\end{proposition}
+
+For the two marked words Proposition~\ref{prop:assigned-prime} gives \(A=2\) in either orientation. Take \(C_a=\max(1,C_{\rm pt},12e\pi)\) and \(k\ge C_a^3\) at the common threshold. 
+We prove both bounds in the next subsection. The second estimate
+will cancel the factor \(T^{-kf}K_X^kK_Y^k\) in a pair count.
+
+\subsection{Local conversion from the operator norm}
+
+The proposition concerns normalized row terms, whereas the local estimates concern orbital operators. The conversion uses the cell density at every block end as well as the dimension of the definite type.
+
+\begin{proof}[Proof of Proposition~\ref{prop:two-row-amplitude-bounds}]
+\proofstep{Gram factor and cell density.}
+The cell density \(w\) is related to the Gram factor by the
+block determinant. At one place put \(d_a=|\Delta_a|\) at
+each block end and \(E(a)=4(p-a)+2k\). An ordinary block of
+size \(s\) from \(a\) to \(a+s\) contributes
+\((d_{a+s}/d_a)^F\), where
+\(F=2(2(p-a-s)+k+s-2)\).
+The block contributes the ratio
+\[
+ \frac{d_{a+s}^{E(a+s)}}{(d_{a+s}/d_a)^F d_a^{E(a)}}=
+ d_{a+s}^{E(a+s)-F}d_a^{F-E(a)}
+     =d_{a+s}^{4-2s}d_a^{-(2s+4)} .
+\]
+Both exponents have absolute value at most \(m+4\). Start with
+\(G_{Z,v}^k\le d_p^{2k}\) and insert the blocks backwards.
+
+For a terminal singleton with pivot \(t_0\) the factor is
+\((|t_0|^2-TT')^{k-1}\).
+In that case \(G_{Z,v}=d_r^2(|t_0|^2-TT')\), so the
+initial ratio is \(G_{Z,v}d_r^{-6}\).
+Since \(d_0=1\), the resulting comparison in both cases is
+\[
+ G_{Z,v}^k\le w\,\max(G_{Z,v},G_{Z,v}^{-1})
+       \prod_a\max(d_a,d_a^{-1})^{2(m+4)} .
+\]
+
+\proofstep{Normalization of the local squared norm.}
+Let \(M_\lambda\) be the squared norm of the local amplitude
+in the common Bessel measure, and set \(t=T_{\rm crit}/T'\).
+For the squared-norm estimate one first bounds the point value
+of the unit-cell-norm amplitude \(U_\mu=J_\mu/\sqrt{M_\mu}\).
+Write \(w\) for the cell density computed above.
+Lemma~\ref{lem:unit-cell-evaluation} bounds
+\(w\|U_\mu(\gamma)\|_{\rm HS}^2\) on the full endpoint
+window \(\|\mu-\lambda\|_1\le pq\).
+Proposition~\ref{prop:local-operator-normalization} fixes \(M_\mu\).
+The formal-degree
+and compact Weyl normalizations give
+\[
+ (e\pi g^{-m}/(k\upsilon T))^k M_\lambda
+       \le d_v\,t^{-k}b^{C_c m^2}
+\]
+at the base parameter.
+
+To compare the constants, write
+\(\mathcal F(j)=\prod_{i=1}^{j-1}i!\) and use
+\(\operatorname{vol}U(j)=(2\pi)^{j(j+1)/2}/\mathcal F(j)\).
+Expansion of the volume quotient cancels the compact
+dimension denominator \(\mathcal F(k)\) and leaves the
+factor \((e/k)^k(k-1)!\le e\). The remaining level and volume
+factor is bounded by
+\[
+ (2\upsilon g)^{(r+1)(2r+1)}
+       \le b^{(1+2C_g)m^2/2}
+\]
+using \(2\upsilon\le b\), \(g\le b^{2C_g}\) and
+\((r+1)(2r+1)\le m^2/2\). The Schur comparison costs at most
+\(b^{C_Sm^2}\). This gives the stated
+bound with \(C_c\ge C_S+1+(1+2C_g)/2\).
+The cell-height factor and the shifted pointwise loss
+combine with \(b^{C_c m^2}\) in \(L_v\).
+
+At one place let \(D=|\Delta_r|\),
+\(n=(e\pi g^{-m}G_{Z,v}/(k\upsilon T))^k\), and
+\(s_0=s_v^{-q/p}\). The \(L^2\) bound has the form
+\(n\|J\|_{\rm HS}^2/d_v\le L_v\,t^{-k}s_0^2\).
+For \(D>0\) the pointwise bound is
+\[
+ \|J\|_{\rm op}\le
+   P_v\,(C_{\rm pt}/(k\upsilon))^{r(k-r-2)}D^{-(k-r-2)}s_0.
+\]
+For the Hilbert--Schmidt inequality, apply
+Lemma~\ref{lem:minor-orbital-iterate} to \(U\) with the square
+root of \eqref{eq:unweighted-unit-cell-evaluation} as endpoint
+bound. Multiply back by \(\sqrt{M_\lambda}\) only at the base.
+For the operator inequality take \(V=J\) and apply
+Proposition~\ref{prop:absolute-cell-operator} at every nonzero
+endpoint. Its \(D,D_e\), measures and constants are the same
+there. Thus the two local multipliers are respectively
+\[
+   s_v^{-2q/p}\quad\hbox{in the squared estimate},\qquad
+   s_v^{-q/p}\quad\hbox{in the operator estimate}.
+\]
+The second application requires \(D>0\); the first uses
+\(G_{Z,v}>0\) and permits \(D=0\).
+
+For the first global inequality multiply these local squared-norm
+bounds. Tensor factorization supplies \(n_Z A_t^2\) with a factor
+of the term volume squared. On the right one obtains
+\[
+ H_Z^{2h}\left(\prod_v L_v\right)
+          \left(\prod_v t_v^{-k}\right)\sigma_Z^{-2a}.
+\]
+Lemma~\ref{lem:row-height-products} and the word-weight estimate give \eqref{eq:row-l2}.
+
+\proofstep{A local gain from the preceding minor.}
+
+The squared norm applies on the whole allowed cell. An additional gain becomes available when the preceding minor is nonzero, the hypothesis needed for the absolute orbital estimate.
+
+The rank estimate \(\|J\|_{\rm HS}^2\le d_v\|J\|_{\rm op}^2\)
+turns the pointwise bound into a bound for the weighted square.
+For \(D>0\) the preceding minor is a block end, and
+\(D^{2r+4}\le L_v\) since \(Cm\ge2r+4\).
+After using this inequality the squared pointwise bound
+with weight \(n\) is at most
+\[
+ L_v\,P_v^2s_0^2
+ \left(\nu g^{-m}(C_{\rm pt}/k)^{2r(1-(r+2)/k)}\right)^k,
+ \qquad \nu=G_{Z,v}/(TD^2).
+\]
+Here \(\upsilon\ge1\) and \(e\pi\le k\).
+Take the minimum with the \(L^2\) estimate. For \(C_{\rm pt}\le C_a\le k\)
+and \(r+2\le\delta_m k\), the resulting multiplier after
+factoring out \(t^{-k}\) is bounded by
+\[
+ \min\bigl(1,\nu t g^{-m}(C_a/k)^{2r(1-\delta_m)}\bigr)^k.
+\]
+\proofstep{Combining the two estimates at each place.}
+The case \(D=0\) uses the \(L^2\) bound with cap equal to one.
+
+For \(\mathrm{sh}\ge1\) the local Cayley factor satisfies
+\(K_v^2\le(1+\sqrt2)^2<6\). The critical-level estimate
+\(T'tg^{-m}\ge k^{3r}\) then gives
+\[
+ \frac{n\|J\|_{\rm HS}^2K_v^{2k}}{d_v T^k}
+ \le L_v\,s_0^2(6A g^{-m}k^{-3r})^k,
+ \qquad T'/T\le A .
+\]
+The case \(D=0\) uses the same bound with \(K_v=1\).
+For \(0<\mathrm{sh}<1\) insert \(G_{Z,v}=TT'D^2\mathrm{sh}^2\)
+in the squared operator-norm bound. The factors
+\(\mathrm{sh}^{2k}\) cancel, and
+\((1+\sqrt{1+\mathrm{sh}^2})^2<6\).
+The pivot loss absorbs \(D^{2r+4}\) as before, leaving
+\(L_v\,P_v^2s_0^2(6e\pi A/k)^k\).
+Taking the absolute bound constant at least \(6e\pi A\)
+gives \eqref{eq:row-abs} upon taking products, using the
+place-product bounds for the losses.
+\end{proof}
+
+\subsection{The sums at corank at least two}
+
+At higher corank two independent sums remain, over the Gram labels and over the term pairs with given labels. Decay in the label height will make the first sum finite after the fibre count has been inserted.
+
+\begin{lemma}[Summation over reduced Gram labels]\label{lem:gram-label-sum}
+For \(\phi(Z)=\sigma_Z^{-12p^2}\) the sum over the reduced labels in
+the row satisfies 
+\[
+ \sum_Z\phi(Z)\le\Phi=(C_*^fP^3)^{p^2},
+\]
+
+with the absolute constant \(C_*\) of the lattice packing bound.
+\end{lemma}
+
+\begin{proof}
+Each of the \(p^2\) scaled entries lies in a fixed lattice
+of multiplicative minimum one. The sum of its weight
+\(\prod_v\max(1,|z_v|)^{-3}\) is at most \(C_*^f\) by the
+packing estimate, with \(C_*\) absolute. The entry height
+is at most \(P\sigma_Z^4\). The product of the entry weights
+therefore dominates \(\phi(Z)/P^{3p^2}\).
+The entries determine \(Z\), yielding
+\(\sum_Z\phi(Z)\le\Phi=(C_*^fP^3)^{p^2}\).
+\end{proof}
+
+\begin{lemma}[Summing estimates on a label fibre]\label{lem:row-fibre-weight}
+Let \(M\) be the row mass and \(N(X,Y)\) a bound for the
+weighted size of the fibre divided by \(M\). Suppose its two
+amplitudes divided by \(\sqrt d\) have bounds \(\alpha(X)\)
+and \(\beta(Y)\). If
+\(N(X,Y)\alpha(X)\beta(Y)\le R\phi(X)\phi(Y)\),
+its contribution \(C(X,Y)\) satisfies 
+\[
+ |C(X,Y)|\le MdR\phi(X)\phi(Y).
+\]
+
+\end{lemma}
+\begin{proof}
+Write \(w_{t,t'}\ge0\) for the counting weight of an ordered
+pair in the fibre. Then
+\[
+ \sum_{(t,t')\mapsto(X,Y)} w_{t,t'}|a_t a_{t'}|
+ \le d\alpha(X)\beta(Y)\sum_{(t,t')\mapsto(X,Y)}w_{t,t'}
+ \le MdN(X,Y)\alpha(X)\beta(Y).
+\]
+The same estimate holds for any finite partial sum of the fibre,
+so the weighted count also bounds the full absolute sum.
+\end{proof}
+
+Summability in each label leaves the number of pairs in a fixed fibre. At corank at least two this count depends on whether the joint orthogonal determinant degenerates.
+
+\begin{proposition}[Pairs of corank at least two]\label{prop:row-higher-corank}
+For \(s\ge2\) in the pair count set
+\(E_s=c((s+m)m+2+\log_2 f)\). In the nondegenerate case
+\[
+ a\ge4ck+4E_k+4h+|C_2|m^2/2+12p^2
+\]
+suffices to leave the summable weight \(\phi(X)\phi(Y)\) after
+applying \eqref{eq:row-l2}. In the degenerate case adding
+\(|C_2|m^4\) to this lower bound suffices. The two amplitudes
+together gain \((C_a/k)^{kf}\) from \eqref{eq:row-abs}.
+More precisely, let \(S_s^{\rm nd}\) and \(S_s^{\rm deg}\) be the
+absolute pair sums in these two cases, in units of the total row
+mass times \(d=\dim\pi_u\), before the finite frame factor is inserted.
+For \(2\le s\le k\) put
+\[
+ W_s=\Phi^2\Gamma_S (csf)^{6sf}P^{2(E_s+h)}\Xi_s(P^2),
+\]
+where \(\Xi_s\) is the factor in Proposition~\ref{prop:flag-pair-counts}.
+Then
+\begin{equation}\label{eq:high-corank-summed-prices}
+ \begin{aligned}
+ S_s^{\rm nd}
+ &\le W_s\,\tau\,(2/g)^{(s-1)kf}(k\upsilon/(e\pi))^{kf},\\
+ S_s^{\rm deg}
+ &\le W_s\,E^2(2/g)^{(s-2)kf}(C_a\upsilon/(e\pi))^{kf}.
+ \end{aligned}
+\end{equation}
+\end{proposition}
+\begin{proof}
+For corank \(s\ge2\) the count has factors
+\[
+ \frac{D_{\rm pair}^k}{N_T^k}\,
+ \Xi_s(H_XH_Y)(H_XH_Y)^{E_s}(csf)^{6sf},
+ \qquad E_s=c((s+m)m+2+\log_2 f).
+\]
+By \eqref{eq:flag-pair-mass-factor}, \(\Xi_s(H_XH_Y)\) is constant in the
+heights for \(s\le k-2\). At \(s=k-1,k\) it contributes the
+additional factor \((H_XH_Y/P^2)^{ck}\) relative to its value at \(P^2\).
+
+In the nondegenerate case use the bound
+\(D_{\rm pair}\le(2/g)^{(s-1)f}\sqrt{G_XG_Y}\).
+The product of the two normalization factors is
+\[
+ (n_Xn_Y)^{-1/2}
+    =\left(\frac{k\upsilon}{e\pi}\right)^{kf}
+        \frac{N_T^k}{(G_X G_Y)^{k/2}}.
+\]
+It cancels the \(N_T^{-k}\) and the Gram powers in the
+determinant estimate, leaving the factor
+\[
+ (2/g)^{(s-1)kf}\left(\frac{k\upsilon}{e\pi}\right)^{kf}.
+\]
+
+Set \(j_s=0\) for \(2\le s\le k-2\) and \(j_s=ck\) otherwise.
+For \(Z=X,Y\), the variable part of the height bound is
+\[
+ (H_Z/P)^{j_s+E_s+h}\le \sigma_Z^{4j_s+4E_s+4h}.
+\]
+The constant part from both labels is exactly bounded by
+\(\Xi_s(P^2)P^{2(E_s+h)}\). After the nondegenerate amplitude loss the net exponent is bounded by
+\[
+       4ck+4E_s+4h+C_2m^2/2-a\le-12p^2 .
+\]
+The last inequality uses the assumed lower bound on \(a\),
+so Lemma~\ref{lem:row-fibre-weight} applies with the indicated
+summable weight.
+
+For the degenerate case the determinant bound uses
+\((2/g)^{(s-2)f}\sqrt{G_XG_Y}T^{-f}K_XK_Y\).
+Indeed \eqref{eq:row-abs} bounds
+\(\sqrt{n_Z}|A_t|K_Z^k T^{-kf/2}\) by the square root
+of its right-hand side. Multiply the two square-root bounds. Their extra factors become
+\[
+      (K_X^kT^{-kf/2})(K_Y^kT^{-kf/2})
+                 =T^{-kf}K_X^kK_Y^k,
+\]
+exactly the additional factor in \(D_{\rm pair}^k\). The two determinant
+bounds lie below \((H_XH_Y)^3\) by the bound on \(K_Z\)
+and the height allowances \(G_Z\le H_Z\) and \(3^f\le H_Z\).
+
+In a nonempty fibre the integral determinant is at least one.
+The degenerate row gains \((C_a/k)^{kf}\) and costs an
+additional \(|C_2|m^4\) in the required lower bound on \(a\).
+Thus the indicated choices of \(a\) leave the same exponent
+\(-12p^2\) on each label. Summing the two weights costs one
+\(\Phi^2\) by Lemma~\ref{lem:gram-label-sum}. The two square
+roots of the pointwise bounds contribute \(\Gamma_S E^2\);
+those of the squared-norm bounds contribute \(\Gamma_S\tau\).
+This gives both rows of \eqref{eq:high-corank-summed-prices}.
+\end{proof}
+
+\begin{auxlemma}[The total error from pairs of corank at least two]\label{lem:higher-corank-total-error}
+For the marked words \(u,u'\) of Proposition~\ref{prop:assigned-prime},
+let \(Q=kf\log k\), \(d=\dim\pi_u\), and
+\(\theta_{uu'}=d_ud_{u'}/D_*\). Take the moment order of
+Lemma~\ref{lem:row-moment-budget} in \eqref{eq:high-corank-summed-prices}.
+Let \(M_u\) be the total row mass for \(T=T_u\), and let
+\(\Gamma_1\) be the finite diagonal squared norm of a coarse frame at the
+two split type primes. For sufficiently large \(x\), uniformly in
+\(u,u'\),
+\begin{equation}\label{eq:high-corank-in-gram-units}
+ \Gamma_1 M_u d\sum_{s=2}^k(S_s^{\rm nd}+S_s^{\rm deg})
+       \le e^{-Q/2}\theta_{uu'} .
+\end{equation}
+Both terms in every pair here have positive single-term Gram invariant.
+\end{auxlemma}
+\begin{proof}
+\proofstep{Decay of the middle-corank mass.}
+Write \(L=\log b\) and \(\upsilon=\operatorname{rd}(E)/2\). In
+\(2\le s\le k-2\) put \(a_s=\min(s,k-s)\), \(t=k-a_s\) and
+\(n=a_st=s(k-s)\). With \(R_i=m_i/m_{i-1}\), cancellation gives
+\[
+ \Xi_s=\frac{m_1}{R_{t+1}}\prod_{i=2}^{a_s}\frac{R_i}{R_{t+i}} .
+\]
+
+In \eqref{eq:adjacent-unimodular-genus-masses}, each Euler product
+at \(i\ge2\) lies between \(\zeta(i)^{-f}\) and \(\zeta(i)^f\),
+hence between \(2^{-f}\) and \(2^f\).
+The factorial denominator from \(R_{t+1}\) is \(t!\). In each
+remaining quotient it is \((t+i-1)!/(i-1)!\ge t!\).
+The power of \(\upsilon/\pi\) in the denominator is
+\(t+1+(a_s-1)t=n+1\) at each real place. Therefore
+\begin{equation}\label{eq:middle-corank-factorial}
+ \Xi_s\le m_1(2\upsilon)^{f/2}4^{a_sf}
+               (\pi/\upsilon)^{(n+1)f}(t!)^{-a_sf}.
+\end{equation}
+
+In particular \(\Xi_2=m_2/(R_{k-1}R_k)\). The degenerate level
+factor at \(s=2\) is exactly one. Multiplication by
+\((C_a\upsilon/(e\pi))^{kf}\) still leaves the power
+\(\upsilon^{-(k-3)f}\) in \eqref{eq:middle-corank-factorial},
+apart from the rank-one factor \(m_1(2\upsilon)^{f/2}\).
+
+For both rows of \eqref{eq:high-corank-summed-prices}, bound the
+archimedean factor by \((Ck\upsilon)^{kf}\).
+Since \(n\ge2(k-2)\), \(t\ge k/2\) and \(\upsilon\ge1\), the volume
+power \(\upsilon^{(k-n-1)f}\) is at most one for \(k\ge4\).
+By the rank-one and class-number estimates of
+Section~\ref{sec:flag-counts},
+\[
+ m_1\le2^f(2\upsilon)^{f(1+\log_2(2f))},\qquad
+ \log\!\big(m_1(2\upsilon)^{f/2}\big)\ll f(1+\log f)L .
+\]
+Now \(t!\ge(t/e)^t\). As \(f\le k\), \(2\upsilon\le b\) and
+\(L=o(k)\) on the chosen row, \eqref{eq:middle-corank-factorial} gives
+\[
+ \log\!\big(\Xi_s(Ck\upsilon)^{kf}\big)
+ \le -(n-k)f\log k+O(nf)+O(f(1+\log f)L)
+ \le -(1-o(1))Q .
+\]
+For large \(k\) the first two terms together decrease
+with \(n\), so inserting \(n=2(k-2)\) gives a uniform estimate.
+
+\proofstep{Summation of the heights and the extreme coranks.}
+From the definitions of \(P,\Phi,\Gamma_S,E,E_s,h\),
+the logarithm of the height, packing and label factors in
+\(W_s E^2/\Xi_s(P^2)\) is at most
+\[
+ C\{(s+m)m^4 fL+m^6fL+sf\log(Csf)\}.
+\]
+Here \(2+\log_2 f\le m\). The selected size bounds
+\(m\le x,\ k\ge m^5Lx^2\) imply \(m^6L=o(k)\).
+For \(s=2\) the displayed cost is \(o(Q)\).
+For \(s\ge3\), its \(s\)-dependent terms are
+\(o((s-2)kf\log(g/2))\), since \(s/(s-2)\le3\),
+\(sf\le k^2\), and \(g_i\ge(kb)^8\). The remaining terms are \(o(Q)\).
+Thus even the smaller level exponent \(s-2\) pays the
+\(s\)-dependent loss in every middle corank \(s\ge3\).
+
+For \(s=k-1,k\) the rank-zero or rank-one packing estimate uses
+\(\Xi_s(P^2)=(ck)^{kf}(P^2 N_T)^{ck}\).
+By Proposition~\ref{prop:assigned-prime}, \(\log T\ll mL\), so
+\[
+ \log\Xi_s(P^2)\ll kf\log k+k m^3 fL .
+\]
+The archimedean logarithm is \(O(kf(\log k+L))\).
+Both are \(o((k-3)kf\log(g/2))\), using \(m^3=o(k)\) and
+\(\log(g/2)\gg L+\log k\). Together with the preceding height bound
+this leaves an exponent \(\le-2Q\) in either extreme corank,
+before restoring the word dimensions.
+
+\proofstep{Conversion to the Gram normalization.}
+Proposition~\ref{prop:flag-row-mass} gives \(M_u=m_k(T_u^k-1)^f\).
+At a split type prime of residue cardinality \(q\) the diagonal
+finite norm is \(|\mathrm{GL}_k(\mathbb F_q)|/|U_k(\mathbb F_q)|\)
+by Lemma~\ref{lem:coarse-split-gram}, where \(U_k(\mathbb F_q)\)
+is the upper unitriangular subgroup. Its product over both primes
+and the \(f\) places is \(I_k\) of Proposition~\ref{prop:marked-column-dimension}.
+The definite dimension there is precisely \(d\), hence
+\[
+ \Gamma_1 M_u d=I_k\,m_k(T_u^k-1)^f d=d_u .
+\]
+
+In Gram units the nondegenerate row has
+\(d_u\tau/\theta_{uu'}=1+\delta\). For the degenerate row, use
+the lower endpoint \(T_{u',*}\) of the prime interval in Proposition~\ref{prop:assigned-prime}.
+The defining equation for the target, \(T_{u'}\ge T_{u',*}\)
+and Bernoulli's inequality give the lower end of \eqref{eq:linked-rank-window},
+\[
+ \frac{d_{u'}}{D_*}
+ =\Gamma_S^{-2}(T_{u'}/T_{u',*})^{kf}(1-T_{u'}^{-k})^f
+ \ge \Gamma_S^{-2}(1-f2^{-k})\ge(2\Gamma_S^2)^{-1}.
+\]
+Thus the logarithmic cost is at most \(\log(2\Gamma_S^2)=o(Q)\).
+After these conversions each of the two bounds at each corank
+is at most \(e^{-3Q/4}\theta_{uu'}\). Finally \(2k\le e^{Q/4}\)
+for large \(k\), giving \eqref{eq:high-corank-in-gram-units}.
+\end{proof}
+
+\begin{construction}
+\begin{tabular}{@{}lll@{}}\toprule
+Pair determinant & Single-term estimate & Level factor in the pair sum\\\midrule
+Nondegenerate & \eqref{eq:row-l2} & \((2/g)^{(s-1)kf}\)\\
+Degenerate & \eqref{eq:row-abs} & \((2/g)^{(s-2)kf}\)\\\midrule
+Corank & \multicolumn{2}{l}{Mass or packing factor for both determinant cases}\\\midrule
+\(s=2\) & \multicolumn{2}{l}{\(\Xi_2=m_2/(R_{k-1}R_k)\)}\\
+\(3\le s\le k-2\) & \multicolumn{2}{l}{\(\Xi_s=m_s m_{k-s}/m_k\)}\\
+\(s=k-1,k\) & \multicolumn{2}{l}{\(\Xi_s(P^2)=(ck)^{kf}(P^2N_T)^{ck}\)}\\\bottomrule
+\end{tabular}
+\caption{Factors in the high-corank counts. For a degenerate pair at \(s=2\) the level factor equals one. The amplitude gain \((C_a/k)^{kf}\) leaves \((C_a\upsilon/(e\pi))^{kf}\) after normalization. The two adjacent-rank mass denominators supply the factorial decay in \eqref{eq:middle-corank-factorial}.}\label{fig:high-corank-amplitude-choice}
+\end{construction}
+
+\subsection{Corank one}
+
+For the sharp estimate between different words, a nonscalar pair
+of corank one forces a gain on at least one side. The distinction
+records what happens to the distinguished negative vectors when the
+two terms are compared.
+
+\begin{definition}[The scalar relation of a pair]\label{def:corank-one-scalar}
+Write \(F,F_j\) for the two flags of term \(j=1,2\), so that \(F\)
+is common. Write \(X,X_j\) for their isotropic spans and \(z,z_j\)
+for their distinguished vectors. Put
+\[
+ V_j=X+Ez+X_j+Ez_j,\qquad
+ Y_j=V_j\cap(X+Ez)^\perp,\quad Y'_j=V_j\cap(X_j+Ez_j)^\perp .
+\]
+For \(y\in Y_j,\ y'\in Y'_j\) record the relation
+\[
+ {\cal R}_j(y,y')=
+ \{(\alpha,\alpha')\in E^2:
+ y-y'-\alpha z-\alpha'z_j\in X+X_j\}.
+\]
+Let \(\beta\) be the comparison isometry taking \(F_1\) to \(F_2\).
+A pair of common rank \(k-1\) is \emph{scalar} if for all
+\(y_j\in Y_j,\ y'_j\in Y'_j\) one has
+\[
+ y_1-y_2\in X,\quad y'_2-\beta y'_1\in X_2
+       \ \Longrightarrow\
+ {\cal R}_1(y_1,y'_1)={\cal R}_2(y_2,y'_2).
+\]
+\end{definition}
+
+\begin{lemma}[A small term in a corank-one pair]\label{lem:row-corank-one-gain}
+For a nonscalar pair of generic terms of corank one assume
+\(0\le\delta_m\le1/4\), \(\max(1,C_a)^3\le k\), and
+\(\prod_v t_v^k\le2C_0\Gamma_S^2\). At least one of the two terms
+satisfies
+\[
+ n_Z A_t^2\le L_Z E^2\sigma_Z^{2C_2m^4}Q,\qquad
+ Q=2C_0\Gamma_S^2
+       (4\sqrt{T'/T}\,g^{-(2r+1)}k^{-r})^{kf}.
+\]
+\end{lemma}
+
+\begin{proof}
+For the nonscalar pair of two generic terms, the corank-one
+gluing alternative gives a product lower bound
+\((\sqrt{TT'}/g)^f\) for the mixed factors. When both preceding
+minors are nonzero, at each place the mixed factor is
+\[
+ \frac{\sqrt{1+x^2}+\sqrt{1+y^2}}{xy}
+ \ \le\ \frac4{\min(1,x)\min(1,y)},\qquad
+ x=\mathrm{sh}_v(X),\quad y=\mathrm{sh}_v(Y).
+\]
+Write \(P_X=\prod_v\min(1,\mathrm{sh}_v(X))\) and use \(P_Y\)
+for the other term. Multiplying the mixed-factor estimate yields
+\[
+      \min(P_X^2,P_Y^2)\le P_XP_Y
+                          \le (4g/\sqrt{TT'})^f .
+\] When one preceding minor vanishes,
+the mixed factor is \(1/\mathrm{sh}\) for the other term.
+The same bound then follows for the other term since its
+truncated product is at most one. Two zero preceding minors
+would contradict the positive mixed product. It follows that
+one term, with \(\nu_v=T'\mathrm{sh}_v^2\), satisfies
+\(\prod_v\min(\nu_v,T')\le(4g\sqrt{T'/T})^f\).
+
+On that term put \(t_v=T_{\rm crit,v}/T'\),
+\(C'=\max(1,C_a)\) and \(u=(C'/k)^{2r(1-\delta_m)}\).
+With \(0\le\delta_m\le1/4\) and \((C')^3\le k\) we have
+\(k^{-2r}\le u\le k^{-r}\). The critical-level estimate
+gives \(T't_v g^{-m}\ge k^{3r}\). Consequently
+\[
+ \min(1,\nu_vt_v g^{-m}u)
+       \le \min(\nu_v,T')t_v g^{-m}u .
+\]
+The inequality follows directly for \(\nu_v\le T'\), and the
+right side is at least one for \(\nu_v>T'\).
+Multiplying the surviving local factors gives the stated \(Q\)
+after taking the \(k\)-th power and using the bound on \(\prod_v t_v^k\).
+\end{proof}
+
+The improvement just proved can occur on either side of a pair. To sum it over a fibre, the count must work in both orientations.
+
+\begin{proposition}[Summed contribution at corank one]\label{prop:summed-row-corank-one}
+For the nonscalar generic pairs of Lemma~\ref{lem:row-corank-one-gain},
+if \(a\ge12h+|C_2|m^2/2+|C_2|m^4+12p^2\), let \(C_1(X,Y)\) denote their contribution in the fibre of Lemma~\ref{lem:row-fibre-weight}. In units of the row mass \(M\) and dimension \(d\),
+\[
+       \frac{1}{Md}\sum_{X,Y}|C_1(X,Y)|\le 2c^fP^{6h}\Gamma_S E\tau\sqrt Q\,\Phi^2,
+\]
+where \(\Phi\) is the bound of Lemma~\ref{lem:gram-label-sum}.
+\end{proposition}
+\begin{proof}
+In the fibre count, the switch and partner estimates in the
+two orientations give
+\[
+ N(X,Y)\le c^f(H_XH_Y)^h\min(H_X^h n_X,H_Y^h n_Y).
+\]
+The two amplitudes contribute the denominator \(\sqrt{n_Xn_Y}\).
+Writing the counting estimate in those units gives
+\[
+ \frac{\min(H_X^h n_X,H_Y^h n_Y)}{\sqrt{n_Xn_Y}}
+              \le (H_XH_Y)^{h/2}.
+\]
+
+Use Lemma~\ref{lem:row-corank-one-gain} on one side and
+\eqref{eq:row-l2} on the other. For
+\(a\ge12h+|C_2|m^2/2+|C_2|m^4+12p^2\) the remaining factors
+are bounded by \(c^fP^{6h}\Gamma_S E\tau\sqrt Q\,\phi(X)\phi(Y)\).
+Indeed the three height powers on each label are \(h\) from the
+count, \(h/2\) from the geometric mean, and \(h\) from the
+amplitude. Their sum is \(5h/2\le3h\). After substituting
+\(H_Z\le P\sigma_Z^4\), either orientation leaves exponent at most
+\[
+   12h+C_2m^2/2+|C_2|m^4-a\le-12p^2
+   \qquad(Z=X,Y).
+\]
+There are two choices of the side giving the gain, and
+\(\sum_{X,Y}\phi(X)\phi(Y)\le\Phi^2\) by
+Lemma~\ref{lem:gram-label-sum}.
+\end{proof}
+
+\paragraph{Choosing a common moment order.}
+
+The three counts impose different lower bounds on the order of the moment. The local estimates also impose an upper bound, so one must exhibit a single admissible integer for all three.
+
+\begin{lemma}[A common moment order for the three counts]\label{lem:row-moment-budget}
+Put \(p=m/2=r+1\) and \(h=cr^2\). Suppose the size parameters satisfy
+\[
+ m+3\le k,\qquad 2+\log_2 f\le m,\qquad 3|C_2|m^5\le k .
+\]
+Let \(a_0\) be the largest of the two lower bounds in
+Proposition~\ref{prop:row-higher-corank} and the lower bound in
+Proposition~\ref{prop:summed-row-corank-one}. All three counts admit the same integral moment order:
+\[
+ q=\lceil p a_0\rceil\le(9c+3)km^2,\qquad a=q/p\ge a_0 .
+\]
+\end{lemma}
+
+\begin{proof}
+Let \(a_0\) be the maximum of the three required bounds,
+and put \(q=\lceil p a_0\rceil\). With \(p=m/2\) and \(h=cr^2\),
+use \(m+3\le k\) and \(2+\log_2 f\le m\). In the higher
+corank bounds, \(p(4ck+4E_k)\le 5ckm^2\) and
+\(4ph\le ckm^2/2\). In the corank-one bound,
+\(12ph\le 3ckm^2/2\).
+
+In all cases
+\[
+ p|C_2|(m^4+m^2/2)\le k/3,\qquad 12p^3\le 3km^2/2
+\]
+under \(3|C_2|m^5\le k\). Adding one for the ceiling leaves
+\(q\le(9c+3)km^2\). The last condition on \(k\) holds
+eventually by the selected size bounds.
+
+In particular the actual endpoint radius, for every minor order
+\(l\le p=m/2\), is bounded by
+\[
+  ql\le pq\le \tfrac12(9c+3)km^3 .
+\]
+Fix \(C_n=(9c+3)/2+1\) in Lemma~\ref{lem:minor-orbital-shift}.
+At depth \(j<q\) the one-step proof also needs the moment at
+\(\nu+\mathbf1_I\), whose radius is \((j+1)l\le pq\).
+The internal moment computation needs
+\[
+      p(24r^3+1)+pq\le km^5,\qquad p(24r^3+1)\le2n^2 .
+\]
+Both follow eventually from fixed \(c\), \(p=m/2\), and \(k\ge m^4\).
+The marked gap dominates the additional \(200pq\) needed for
+point evaluation since \(\gamma=nm^{10}\), \(n\ge k\).
+Thus all endpoints lie in the same chamber and the same quantitative
+window for both words.
+
+In each case the two label sums contribute one factor \(\Phi^2\)
+by Lemma~\ref{lem:gram-label-sum}. Together with
+\(P^{2(E_s+h)}\) at higher corank, or \(P^{6h}\) at corank one,
+this contributes
+\(b^{O_{c,C_h}((s+m)m^4f)}\) at higher corank
+and \(b^{O_{c,C_h}(m^5f)}\) at corank one. The fixed
+constants in these powers are uniform in the labels,
+the places, and the group size. At higher corank the additional
+factor \(\Xi_s(P^2)\) remains in \eqref{eq:high-corank-summed-prices}.
+\end{proof}
+
+\subsection{The generic corank-one sum on an equal-word block}
+
+For two copies of a word the allowed error is larger than in the
+comparison of different words. The generic partner count in the two
+orders already suffices for this diagonal estimate. It includes
+pairs satisfying Definition~\ref{def:corank-one-scalar}.
+
+\begin{auxlemma}[Generic corank-one pairs on a diagonal block]\label{lem:equal-word-generic-corank-one}
+Fix a marked word \(u\) and its prime \(T=T_u\). Take both words
+equal to \(u\) in the amplitude and height estimates of this
+section, with \(q=\lceil p a_0\rceil\) as in
+Lemma~\ref{lem:row-moment-budget}. Let \(\mathcal S\) be any subset
+of the matching ordered pairs of generic terms having positive
+single-term Gram invariants and common rank \(k-1\). Write
+\(w_{t,t'}\) for the counting weight of Lemma~\ref{lem:row-fibre-weight},
+\(a_t\) for the archimedean coefficient norm there, and \(\Gamma_1\)
+for the finite diagonal squared norm of Lemma~\ref{lem:higher-corank-total-error}.
+For \(L=\log b\), \(M=m^5fL\), there is a constant \(C_B\)
+independent of \(C_\Gamma\) such that, on all sufficiently late rows,
+\begin{equation}\label{eq:equal-word-generic-corank-one}
+ \Gamma_1\sum_{(t,t')\in\mathcal S} w_{t,t'}|a_ta_{t'}|
+             \le \exp(C_B M)\,\theta_{uu},
+ \qquad \theta_{uu}=d_u^2/D_* .
+\end{equation}
+\end{auxlemma}
+\begin{proof}
+\proofstep{Counting with either term first.}
+Fix reduced labels \(X,Y\) for the two terms. In the count of
+Proposition~\ref{prop:flag-pair-counts}, the orthogonal determinant
+of a generic first term with label \(X\) is \(G_X\). By
+\eqref{eq:generic-first-term-factor} its normalized genus mean is at most
+\[
+ H_X^h\left(\frac{e\pi}{k\upsilon}\right)^{kf}
+          (G_X/N_T)^k=H_X^h n_X .
+\]
+The common rank is \(k-1\), so the integral orthogonal lattice of
+the first term lies in its partner modulo the isotropic space.
+After fixing that lattice, \eqref{eq:flag-over-P} bounds the number
+of partner classes with label \(Y\) by \(c^f(H_XH_Y)^h\), with
+\(h=cr^2\) for the common counting constant fixed before \(q\).
+The level congruence makes the comparison isometry unique in the
+pair class, as in Proposition~\ref{prop:flag-pair-counts}.
+
+Switching the two terms replaces the comparison isometry by its
+inverse. Both terms are generic, and the base row retains the same
+flag, prime \(T_u\) and reciprocal stabilizer weight in this
+count. For the total row mass \(M_u=m_k(T_u^k-1)^f\) it follows that
+\[
+ \frac1{M_u}\sum_{\substack{(t,t')\in\mathcal S\\(t,t')\mapsto(X,Y)}}w_{t,t'}
+ \le c^f(H_XH_Y)^h\min(H_X^h n_X,H_Y^h n_Y).
+\]
+These counts depend only on integrality and on the common rank. In
+particular the same estimate holds on restricting \(\mathcal S\)
+to the scalar pairs of Definition~\ref{def:corank-one-scalar}.
+
+\proofstep{Keeping the height and the column dimension separate.}
+Set \(D_L=C+6CC_h\). In the proof of Lemma~\ref{lem:row-height-products}
+the first product is bounded by
+\(b^{Cm^4f}(B^f\sigma_Z)^{6Cm^2}\).
+Using this expression in the derivation of \eqref{eq:row-l2}
+gives the squared amplitude bound for a term of label \(Z\),
+\[
+ n_Z|a_t|^2/d
+ \le H_Z^{2h}\,b^{D_Lm^4f}\,\tau\,
+                   \sigma_Z^{C_2m^2-2a},\qquad
+ \tau=(1+\delta)d_u/D_*,\quad d=\dim\pi_u .
+\]
+The finite levels enter \(G_Z\) and \(n_Z\) in the same way in
+both calculations. Dividing the minimum in the fibre count by
+\(\sqrt{n_Xn_Y}\) costs at most \((H_XH_Y)^{h/2}\), by the
+geometric mean. The two square roots of the amplitude bounds then
+leave the height power \(5h/2\) on each label.
+
+Now \(H_Z\le P\sigma_Z^4\), and our moment order satisfies
+\[
+ 10h+C_2m^2/2-a\le-12p^2 .
+\]
+Thus both remaining label weights sum by Lemma~\ref{lem:gram-label-sum}.
+Use the finite norm identity \(\Gamma_1 M_u d=d_u\) from
+Lemma~\ref{lem:higher-corank-total-error}. The sum on the left of
+\eqref{eq:equal-word-generic-corank-one} is at most
+\[
+       (1+\delta)c^f P^{5h}\Phi^2 b^{D_Lm^4f}\,\theta_{uu}.
+\]
+This is an absolute majorant, so it also bounds the sum of the real
+parts of the matching coefficient inner products.
+
+\proofstep{Size and order of the constants.}
+Write \(A_P=c^2+2\max(C_h-c,0)\) and take \(C_*\ge1\) in the
+packing bound. Since \(\Phi=(C_*^fP^3)^{p^2}\), the logarithm
+of the multiplier is
+\[
+ \log(1+\delta)+f\log c+2p^2f\log C_*
+ +(5h+6p^2)A_Pm^3fL+D_Lm^4fL .
+\]
+For \(L\ge1,\ \delta\le1\), use \(p\le m\) and \(h\le cm^2\).
+One may take
+\[
+ C_B=1+\log c+2\log C_*+(5c+6)A_P+D_L .
+\]
+The counting exponent \(c\), the local bounds \(C,C_h,C_2\), and
+the moment constants in Lemma~\ref{lem:row-moment-budget} are
+fixed by the level, weight and measure bounds. In particular the
+upper bound \(\log T_u\ll mL\) already follows from
+\(T_u\le(1+1/(fk))X_u\) in Proposition~\ref{prop:prime-target-size}.
+
+After \(C_\Gamma\) is chosen, the actual target has the correction
+\(2C_\Gamma m^5L/k\) in its logarithm. This tends to zero since
+\(k\ge m^5Lx^2\). The inequality \(11f2^{-k}\le\log(1+b^{-7})\)
+also holds eventually. They supply the selected prime range and
+\(\delta=b^{-7}\) at a possibly later threshold. The value of
+\(C_B\) above applies at that threshold.
+\end{proof}
+\input{row-nonprimitive-diagonal}

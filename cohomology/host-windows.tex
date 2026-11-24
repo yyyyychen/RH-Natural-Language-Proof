@@ -1,0 +1,505 @@
+\section{Selecting the two auxiliary primes}\label{sec:hosts}
+
+Fourier projection leaves terms twisted by either of two auxiliary quadratic
+characters or by their product. Their untwisted factors are the primitive characters
+inducing powers of the fixed primitive character \(\psi\).
+We select the auxiliary primes in prescribed progressions
+using correlation estimates for the prime sums and a
+simultaneous exclusion of bad pairs. For the selected pair
+the unwanted modes are small throughout the interval used
+in Section~\ref{sec:comparison}. Appendix~\ref{sec:cohomology}
+then supplies a cohomology subinterval for this same pair. Definition~\ref{hyp:host-residue-class} specifies the congruence and size conditions on the candidate primes. The pair is selected from the two logarithmic intervals in \eqref{eq:host-pair-log-windows}.
+
+\subsection{Correlation in a progression}
+
+Fix the progression from which a prime will be chosen. We first average the Jacobi symbol over its candidate primes for each admissible squarefree denominator, allowing one exceptional denominator. The choice of a pair for the whole interval comes later.
+
+\begin{paramdefinition}[Parameter range for the progression average]\label{hyp:host-residue-class}
+Fix \(0<\varepsilon<1/52\) as in Proposition~\ref{prop:quadratic-prime-pair}. Let \(Y_0\) be the prime selection scale, \(J\ge1\) a fixed exponent,
+and \(Z=Y_0^{400J}\). Let \(m_0,a_0\) be integers with \(8\mid m_0\) and \(\gcd(a_0,m_0)=1\). The primes under consideration form the set
+\[
+ \mathcal P=\{l\text{ prime}:\sqrt U<l\le U,\ l\equiv a_0\pmod{m_0}\}.
+\] The admissible range of \(U\) for this modulus is
+\[
+ \log U\ge\tfrac14(\log Y_0)^2\log m_0,\qquad
+ Y_0^{\varepsilon/6}\le\log U
+       \le Y_0^{\varepsilon/5}(\log Y_0)^2 .
+\]
+The moduli in this range are restricted to those for which each prime divisor of \(m_0\) is at most
+\(Y_0^{\varepsilon/5}\) or exceeds \(Z\).
+\end{paramdefinition}
+For the first selection take \(m_0=8\) and
+\(\log U=Y_0^{\varepsilon/5}\); all inequalities hold for large
+\(Y_0\). For the second selection \eqref{eq:host-pair-log-windows}
+and the modulus calculation following it verify the same range
+with the first prime already fixed.
+
+\begin{proposition}[Quadratic correlation in one progression]\label{prop:quadratic-host-correlation}
+For the data of Definition~\ref{hyp:host-residue-class}, for any fixed \(B>0\)
+and all sufficiently large \(Y_0\), the relative
+prime number theorem and the exceptional-character alternative give
+\begin{equation}\label{eq:quadratic-corr}
+       \left|\sum_{l\in\mathcal P}(l/s)\right|
+       \le Y_0^{-B}\abs{\mathcal P}
+\end{equation}
+for all odd squarefree \(1<s\le Z^2\) coprime to \(m_0\), with at most
+one exceptional value of \(s\). Here \((\cdot/s)\) is the Jacobi symbol.
+
+\end{proposition}
+
+\begin{proof}
+\proofstep{Use the relative progression estimate.}
+
+To obtain \eqref{eq:quadratic-corr}, use the relative progression
+estimate at modulus \(m_0s\). The displayed hypotheses imply
+\(\log(m_0s)=o(\log U)\) uniformly for \(s\le Z^2\).
+For example, Corollary~1.4 of Thorner and Zaman applies at all
+intermediate scales \(\sqrt U\le t\le U\), since
+\(t\ge(m_0s)^{12}\) for sufficiently large \(Y_0\).
+
+To pass from logarithmic weights to a count of primes, keep the exceptional character in the main term. Put \(m=m_0s\), \(V=\sqrt U\), and, for a reduced class \(b\bmod m\), set
+\[
+ h_b(t)=1-\xi(b)t^{\beta-1},\qquad F_b(t)=\int_0^t h_b(v)\,dv .
+\]
+If the modulus has no exceptional character use \(h_b=1\). For \(V\le t\le U\), Corollary~1.4 of Thorner and Zaman gives
+\[
+ \sum_{p\le t,\ p\equiv b\ (m)}\log p
+     =\frac{F_b(t)}{\varphi(m)}(1+O(E)),\qquad
+ E=e^{-c\log U/\log m}+e^{-c\sqrt{\log U}}
+\]
+with an absolute \(c>0\), decreased to allow the lower endpoint.
+For \(\xi(b)=1\), the function \(h_b\) increases and
+\(0\le F_b(t)\le t h_b(t)\) in this range. The lower inequality follows from
+\(t^{1-\beta}\ge1/\beta\) for \(\log t\ge2\), since an exceptional zero has \(\beta>1/2\).
+For \(\xi(b)=-1\), \(F_b(t)\le3t\) and \(h_b(t)\ge1\).
+
+Thus partial summation gives
+\[
+ \#\{V<p\le U:p\equiv b\ (m)\}
+ =\frac{I_b}{\varphi(m)}(1+O(E)),\qquad
+ I_b=\int_V^U h_b(t)\frac{dt}{\log t}.
+\]
+Indeed its two endpoint errors and integral error together are
+\(O(EU h_b(U)/(\varphi(m)\log U))\). This is a relative error:
+the last half of the interval supplies
+\[
+ I_b\ge \int_{U/2}^U h_b(t)\frac{dt}{\log U}
+       \ge \frac{U h_b(U)}{4\log U}.
+\]
+For the plus character value this follows from
+\(1-e^{-z/2}\ge(1-e^{-z})/2\) with \(z=(1-\beta)\log U\).
+\cite[Corollary~1.4 and (1.7)]{thorner-zaman}
+
+Separate the two integrals in the exceptional case:
+\[
+ I=\int_V^U\frac{dt}{\log t},\quad I_\beta=\int_V^U t^{\beta-1}\frac{dt}{\log t},
+ \qquad I_b=I-\xi(b)I_\beta .
+\]
+
+Under the Chinese remainder identification write
+\(b=(a_0,c)\), \(c\in(\Z/s)^\times\), and
+\(\xi(b)=\xi_0(a_0)\xi_s(c)\). The ordinary weighted
+main term contains \(\sum_c(c/s)=0\). The exceptional
+weighted term contains
+\[
+   \xi_0(a_0)\sum_{c\in(\Z/s)^\times}(c/s)\xi_s(c),
+\]
+which vanishes unless \(\xi_s=(\cdot/s)\). In that case
+\(\sum_c\xi_s(c)=0\), so the unweighted main term is \(I/\varphi(m_0)\). Since \(t\ge\sqrt U\) throughout the integral,
+\[
+  0\le I_\beta/I\le U^{-(1-\beta)/2}.
+\]
+In both cases the sum of the errors is bounded by the
+relative error factor times the unweighted main term,
+because the individual progression main terms are nonnegative.
+
+\proofstep{Use a single exceptional-character range.}
+
+For all moduli take \(D=m_0Y_0^{800J}\). The lower bound on
+\(\log U\) gives the two estimates
+\[
+ \log m_0\le\frac{4\log U}{(\log Y_0)^2},\qquad
+ 800J\log Y_0=o_J\!\left(\frac{\log U}{(\log Y_0)^2}\right).
+\]
+Thus, for large \(Y_0\),
+\[
+       \frac{\log U}{\log D}\ge\tfrac15(\log Y_0)^2 .
+\]
+If \(1-\beta\ge c/\log D\), the exceptional contribution therefore satisfies
+\[
+ I_\beta/I\le\exp\!\left(-\frac{c\log U}{2\log D}\right)
+     \le \exp\!\left(-\tfrac c{10}(\log Y_0)^2\right)\ll_B Y_0^{-B}.
+\]
+Here \(B\) is any fixed exponent.
+
+For nearer zeros, the Landau--Page alternative gives the same
+primitive real character for all moduli up to \(D\).
+Its restriction can equal the primitive quadratic character of
+at most one such \(s\). Indeed, the restrictions for two squarefree
+values differ on a prime dividing exactly one of them, as is seen
+by taking a nonsquare there and the unit residue at the other primes.
+Finally apply the same interval estimate at \(m_0\).
+In the worst class the lower bound for \(I_b\) on \([U/2,U]\) gives
+\[
+ |\mathcal P|\gg\frac{U}{\varphi(m_0)\log U}
+                 \min\{1,(1-\beta)\log U\}.
+\]
+Without an exceptional zero the last factor is one. With one, use
+\(1-\beta\gg m_0^{-1/2}\) from \cite[(1.2), with exponent \(1/2\)]{thorner-zaman}.
+Since \(\log m_0=o(\log U)\), this lower bound exceeds \(U^{9/10}\) for all sufficiently large \(Y_0\). These uses of relative prime
+distribution and Page uniqueness concern the whole range of moduli.
+\hfill\mbox{\cite{page,thorner-zaman}}\label{cor:cohomology-host-windows-1}
+
+\end{proof}
+
+\subsection{A mean square over the whole scale interval}
+
+A bound at one scale would allow the exceptional primes to vary with the scale. To keep one set of primes throughout, we estimate the variation of the truncated sum.
+For coefficients \(\abs{\kappa(n)}\le1\) put
+\[
+ S_l(y)=\sum_{n\le Z}\Lambda(n)\min(1,y/n)\,\kappa(n)(n/l),
+ \qquad Y_0\le y\le Y_0^J .
+\]
+\begin{proposition}[Uniformity over the scale interval]\label{prop:quadratic-host-uniform}
+For the data of Definition~\ref{hyp:host-residue-class}, fix \(\tau>0\) and a
+list of bounded cardinality of coefficient sequences with
+\(|\kappa(n)|\le1\) for every \(n\).
+Then all but an \(O_\tau(Y_0^{-\tau})\)
+fraction of \(\mathcal P\) satisfy, simultaneously for every sequence in the list, 
+\[
+ \lvert S_l(y)\rvert\le y^{1/2+\tau}/2\qquad(Y_0\le y\le Y_0^J).
+\]
+
+\end{proposition}
+
+\begin{proof}
+\proofstep{Truncation and coefficient bounds.}
+
+Write \(A(t)=\sum_{j\ge2,\,p^j\le t}\log p\). Chebyshev's estimate
+\(\sum_{p\le v}\log p\ll v\) gives, for \(t\ge2\),
+\[
+ A(t)\ll \sqrt t+t^{1/3}\log t\ll\sqrt t .
+\]
+Indeed the term with \(j=2\) gives the first bound and there
+are at most \(\log_2 t\) remaining powers to sum. Including the
+weighted tail, the unsigned contribution of higher powers is at most
+\[
+ A(y)+y\int_{(y,Z]}t^{-1}\,dA(t)
+   =yA(Z)/Z+y\int_y^Z A(t)t^{-2}\,dt\ll\sqrt y .
+\]
+The prime contribution from \(p\mid m_0\) is
+\(O(Y_0^{\varepsilon/5})\), since the large divisors exceed
+\(Z\). For the other primes write
+\(a_p=(\log p)\min(1,y/p)\kappa(p)\).
+Chebyshev's bound and partial summation give
+\[
+ \sum_p|a_p|^2\ll
+  \sum_{p\le y}(\log p)^2+y^2\sum_{p>y}\frac{(\log p)^2}{p^2}
+  \ll y\log y,\qquad
+ \sum_p|a_p|\ll y\log Z .
+\]
+
+\proofstep{Diagonal, exceptional pair and remaining pairs.}
+
+On expanding \(\sum_l\abs{S_l(y)}^2\), the diagonal is bounded by
+\(\abs{\mathcal P}\sum\abs{a_p}^2\). For distinct primes \(p,r\)
+the product of symbols is \((l/(pr))\) times a fixed sign by
+quadratic reciprocity, since the class modulo \(8\) is fixed.
+The exceptional value in \eqref{eq:quadratic-corr} can correspond
+to at most one unordered pair \(\{p,r\}\), which costs at most
+\(\abs{\mathcal P}(\abs{a_p}^2+\abs{a_r}^2)\).
+The other pairs cost \(\ll Y_0^{-B}\abs{\mathcal P}y^2(\log Z)^2\).
+With \(B>J\), these estimates give
+\[
+ \sum_{l\in\mathcal P}\abs{S_l(y)}^2\ll\abs{\mathcal P}\,y\log y .
+\]
+\proofstep{Bounding the proportion of primes exceptional somewhere in a dyadic interval.}
+
+This bound is uniform in the coefficients. Since \(yS_l'(y)\)
+is the same sum restricted to \(n>y\) almost everywhere,
+\(\sum_l\abs{S_l'(y)}^2\ll\abs{\mathcal P}\log y/y\).
+For \(V\le W\le2V\) in the interval and arbitrary
+\(w_l\in[V,W]\), the finite sum \(S_l\) is absolutely
+continuous. Hence \(S_l(w_l)-S_l(V)=\int_V^{w_l}S_l'(y)\,dy\).
+The square of this increment is bounded by
+\((W-V)\int_V^W|S_l'(y)|^2\,dy\). Summing over \(l\)
+gives
+\[
+ \sum_l\abs{S_l(w_l)}^2
+   \le 2\sum_l\abs{S_l(V)}^2+
+       2V\int_V^W\sum_l\abs{S'_l(y)}^2\,dy
+   \ll\abs{\mathcal P}\,V\log(2V).
+\]
+
+Fix \(\tau>0\). For primes at which the bound
+\(\abs{S_l(y)}\le y^{1/2+\tau}/2\) fails anywhere in
+\([V,W]\), choose \(w_l\in[V,W]\) with \(\abs{S_l(w_l)}>w_l^{1/2+\tau}/2\). The fraction of these
+primes is \(O(V^{-2\tau}\log(2V))\). Summing across dyadic blocks
+shows that all but \(O_\tau(Y_0^{-\tau})\) of the primes meet the
+bound for every \(y\in[Y_0,Y_0^J]\).
+A union bound applies to any list of bounded cardinality.
+
+\end{proof}
+
+\subsection{The full smoothed sum and the shared interval}
+
+The mean square controls a truncated polynomial. The Fourier comparison uses the full
+smoothed sum and several twists at once. We now impose these requirements on the same
+primes.
+
+\begin{auxlemma}[Logarithmic derivative inside a zero-free rectangle]\label{lem:host-log-derivative}
+Let \(Q\ge4\), \(3/4\le\alpha<1\), and \(0<\nu<1-\alpha\).
+Suppose \(\chi\) is primitive and nonprincipal, of conductor \(f\le Q\).
+If \(L(s,\chi)\) has no zero in
+\(\RePart s\ge\alpha,\ |\Ima s|\le Q\), then
+\[
+ \left|\frac{L'}{L}(\sigma+it,\chi)\right|
+   \ll(1+\nu^{-1})\log Q
+     \qquad(\sigma\ge\alpha+\nu,\ |t|\le Q-1)
+\]
+with an absolute implied constant.
+\end{auxlemma}
+
+\begin{proof}
+For \(\sigma\ge2\) the absolute Euler series gives the bound.
+For \(\alpha+\nu\le\sigma\le2\) write \(s=\sigma+it\),
+\(s_0=2+it\) and \(\rho=\beta+i\gamma\) for a nontrivial zero,
+counted with multiplicity. Subtract the logarithmic derivatives of
+the Hadamard product at \(s\) and \(s_0\). The conductor factor cancels.
+The gamma factors contribute \(O(1)\), by Stirling's formula for
+\(|t|\ge2\) and compactness for \(|t|\le2\). Consequently
+\[
+ \frac{L'}{L}(s,\chi)=O(1)+\sum_\rho
+        \left(\frac1{s-\rho}-\frac1{s_0-\rho}\right).
+\]
+The unit-interval zero count gives
+\(\#\{\rho:j\le|\gamma-t|<j+1\}\ll\log(f(3+|t|+j))\)
+for integers \(j\ge0\). Both this estimate and the product are
+given in \cite[Lemma~10.3 and Section~10.2]{classical-region}.
+
+For \(j=0\) use \(|s-\rho|\ge\nu\) and \(|s_0-\rho|\ge1\).
+For \(j\ge1\) use the difference of the two fractions. Its
+absolute value is at most \(2/j^2\). The two contributions are
+bounded, respectively, by
+\[
+ (1+\nu^{-1})\log(f(3+|t|)),\qquad
+ \sum_{j\ge1}\frac{\log(f(3+|t|))+\log(1+j)}{j^2}
+    \ll\log(f(3+|t|)).
+\]
+Now use \(f\le Q\) and \(|t|\le Q-1\).
+\end{proof}
+
+\begin{proposition}[Removing the truncation for a bounded list of twists]\label{prop:quadratic-host-smoothed}
+Assume Definition~\ref{hyp:host-residue-class}. Fix \(\tau>0\)
+and an upper bound for the cardinality of the list of primitive base
+characters. Their conductors may vary subject to \(f\le F\le\sqrt U\).
+There is a subset \(\mathcal P'\subseteq\mathcal P\) with
+\(|\mathcal P\setminus\mathcal P'|/|\mathcal P|=o(1)\) as
+\(Y_0\to\infty\), uniformly over such lists. For every \(l\in\mathcal P'\)
+and each twist \(\chi\) of a listed character by \((\cdot/l)\),
+\[
+ \lvert G_\chi(y)\rvert\le y^{1/2+\tau}\qquad(Y_0\le y\le Y_0^J).
+\]
+
+\end{proposition}
+
+\begin{proof}
+\proofstep{Zero density is applied to primitive twists.}
+
+For a primitive base character of conductor \(f\le F\le\sqrt U\),
+the twist at \(l\in\mathcal P\) is primitive of conductor \(fl\).
+Put \(Q=FU\) and \(\alpha=1-1/400\). Jutila's estimate (1.6) gives
+\[
+ \sum_{q\le Q}\ \sum_{\chi\bmod q}^{*}N(\alpha,Q,\chi)
+     \ll (Q^3)^{2(1-\alpha)+1/100}\ll Q^{1/4} .
+\]
+The star denotes primitive characters and \(N(\alpha,T,\chi)\)
+counts zeros with real part at least \(\alpha\) and height at most
+\(T\) in absolute value. The exponent in Jutila's bound uses
+\(\alpha\ge21/26\) and \(Q\ge2\), with the parameter \(k=2\).
+Hence there are \(O(Q^{1/4})\) primitive characters of conductor
+at most \(Q\) with a zero in that rectangle. The conductor \(fl\)
+determines \(l\), as \(l>F\). Consequently the excluded primes
+are \(O(U^{3/8})\), a vanishing fraction of \(\mathcal P\).
+\hfill\mbox{\cite{jutila}}
+
+\proofstep{Estimate the tail by a contour difference.}
+
+For a remaining twist \(\chi\), write
+\[
+  R_\chi(z)=-\ell_\chi(1)-\sum_{n\le z}\Lambda(n)\chi(n)/n .
+\]
+Here \(\ell_\chi=L'/L(\,\cdot\,,\chi)\). Since \(f<l\) and the
+quadratic twist is nontrivial at \(l\), the primitive twist is
+nonprincipal. Lemma~\ref{lem:host-log-derivative} applies with
+\(\alpha=1-1/400\) and \(0<\nu\le1/800\). Use the contour formula for \(S_\chi(z)\) on
+\(\RePart s=2\) and take the difference at \(z+h\) and \(z\),
+where \(0<h\le z\). Shift to \(1-1/400+\nu\) at heights
+\(\pm Q/2\). The residue at \(1\) is \(-h\ell_\chi(1)\).
+
+On the new edge \(\RePart s=\sigma_1=1-1/400+\nu\),
+\[
+ (z+h)^s-z^s=s\int_z^{z+h}u^{s-1}\,du,\qquad
+ \int_{-Q/2}^{Q/2}\frac{dt}{|\sigma_1+it-1|}
+      \ll_\nu\log Q .
+\]
+Since \(0<h\le z\), the first integral cancels the factor
+\(s\) and leaves size at most \(h z^{\sigma_1-1}\).
+The horizontal edges and the two tails on \(\RePart s=2\)
+give \(O_\nu((\log Q) z^2/Q)\). Thus for
+\(\sigma_1=1-1/400+\nu\)
+\[
+ \abs{S_\chi(z+h)-S_\chi(z)+h\ell_\chi(1)}
+ \ll_\nu (\log Q)^2 h z^{\sigma_1-1}
+                       +(\log Q) z^2/Q .
+\]
+The difference of the finite sums is
+\(h\sum_{n\le z}\Lambda(n)\chi(n)/n\) plus an error from
+\(z<n\le z+h\). Its modulus is at most
+\(h(h+1)\log(z+h)/z\). Dividing by \(h\) bounds the tail \(R_\chi(z)\).
+
+\proofstep{Return to the smoothed sum.}
+
+Take \(X=Y_0^J\), \(z=X^{400}\), \(h=z/X^2\) and
+\(\nu=\varepsilon/(1600J)\). Multiplication by \(X\) gives
+\[
+ \abs{X R_\chi(z)}
+ \ll_{\varepsilon,J}(\log Q)^2Y_0^{\varepsilon/4}
+      +(\log Q)X^{403}/Q+ X^{-1}\log X .
+\]
+Here \(Y_0^{\varepsilon/6}\le\log Q\le Y_0^{\varepsilon/4}\)
+for sufficiently large \(Y_0\). The bound is eventually at most
+\(Y_0^\varepsilon\). Also
+\(\abs{\ell_\chi(1)}\ll_J\log Y_0\) by the definition of the
+tail and the factorial identity \eqref{eq:factorial-mangoldt-bound}.
+
+For \(z=Z\) split the defining sums at \(y\). The identity and the
+two bounds, including Proposition~\ref{prop:quadratic-host-uniform}, give
+\[
+ \begin{aligned}
+ G_\chi(y)&=-S_l(y)-yR_\chi(Z),\\
+ |G_\chi(y)|&\le \tfrac12 y^{1/2+\tau}+Y_0^\varepsilon
+             \le y^{1/2+\tau}\qquad (Y_0\le y\le X).
+ \end{aligned}
+\]
+The last inequality holds for large \(Y_0\) since \(\varepsilon<1/52\). The constants and the choice of the prime apply to
+every twist of the bounded list at once. To recover the explicit bound needed when the argument of the weight is shifted, use the estimate with \(0<\tau'<\min(\tau,1/2)\). The centered identity and \eqref{eq:factorial-mangoldt-bound} give, uniformly on the interval,
+\[
+ |\ell_\chi(1)|\le y^{-1/2+\tau'}+\sum_{n\le y}\Lambda(n)/n
+              \le 4\log y
+\]
+for sufficiently large \(Y_0\).
+
+\end{proof}
+
+The remaining choice is simultaneous in the two primes. Once the first is chosen, the
+twists needed for the product must also be included when choosing the second.
+
+\begin{proposition}[A single prime pair for all primitive twists]\label{prop:common-host-prime-pair}
+Fix the scale exponents \(J,\varepsilon\) of
+Definition~\ref{hyp:host-residue-class}, \(\tau>0\), and a fixed
+bounded list of primitive characters. For sufficiently large
+\(Y_0\) there exist primes \(q\equiv3\bmod8\) and
+\(d\equiv7\bmod16\), with logarithms in \eqref{eq:host-pair-log-windows}, satisfying 
+\[
+ q\mid d+1,\qquad p\mid d+1\quad(3\le p\le Y_0^{\varepsilon/5},\ p\text{ prime}).
+\]
+ The bound of
+Proposition~\ref{prop:quadratic-host-smoothed} holds for the
+primitive twists at \(q,d,qd\) for every \(Y_0\le y\le Y_0^J\).
+\end{proposition}
+
+\begin{proof}
+\proofstep{Select the pair in order.}
+
+For the first prime choose \(q\equiv3\bmod 8\), with
+\(\log q\) in the first interval of \eqref{eq:host-pair-log-windows}.
+Keeping this prime, choose \(d\equiv7\bmod16\) with \(d+1\)
+divisible by \(q\) and all odd primes at most \(Y_0^{\varepsilon/5}\).
+The two logarithm windows are
+\begin{equation}\label{eq:host-pair-log-windows}
+ \tfrac12Y_0^{\varepsilon/5}<\log q\le Y_0^{\varepsilon/5},\qquad
+ \tfrac12Y_0^{\varepsilon/5}(\log Y_0)^2<\log d
+           \le Y_0^{\varepsilon/5}(\log Y_0)^2 .
+\end{equation}
+Put \(Y=Y_0^{\varepsilon/5}\). The conditions on \(d\)
+give a reduced class by the Chinese remainder theorem at
+\[
+ m_0=16q\prod_{3\le p\le Y}p,\qquad
+ \log m_0\le (2+o(1))Y.
+\]
+For the second selection choose \(\log U=Y(\log Y_0)^2\).
+The modulus size then gives
+\[
+ \tfrac14(\log Y_0)^2\log m_0
+ \le (\tfrac12+o(1))Y(\log Y_0)^2\le\log U .
+\]
+The factor \(q\) exceeds \(Z\), and every other prime
+divisor of \(m_0\) is at most \(Y\), as required in
+Proposition~\ref{prop:quadratic-host-correlation}.
+
+In the second application the base list consists of the original
+list and its twists at the already selected \(q\).
+If \(F_0\) is the largest original conductor, then the
+largest conductor in the second list is at most \(F_0q\).
+In the second selection \(F_0\) is fixed and
+\[
+  \log(F_0q)\le\log F_0+Y\le\tfrac12\log U
+\]
+for all sufficiently large \(Y_0\). The bad primes for that
+list can therefore be discarded by
+Proposition~\ref{prop:quadratic-host-smoothed}.
+The first choice controls the twists at \(q\), and the
+second choice controls the twists at \(d\) and at \(qd\).
+This gives one pair for the whole interval \(Y_0\le y\le Y_0^J\).
+
+\end{proof}
+
+\begin{construction}
+\begin{tabular}{@{}lll@{}}\toprule
+Prime selected & Base list for the selection & New twists controlled\\\midrule
+\(q\equiv3\bmod8\) & \(\chi\) & \(\chi\chi_q\)\\
+\(d\equiv7\bmod16\) & \(\chi,\ \chi\chi_q\) &
+\(\chi\chi_d,\ \chi\chi_q\chi_d\)\\\bottomrule
+\end{tabular}
+\caption{Selecting one ordered pair for all characters \(\chi\) in the fixed list and all scales \(Y_0\le y\le Y_0^J\). Here \(\chi_p\) is the quadratic character at \(p\), and each product denotes its inducing primitive character.}\label{fig:ordered-prime-twist-list}
+\end{construction}
+
+\begin{lemma}[Rescaling the shared interval]\label{lem:host-rescaling}
+Let \(q,d\) be the pair of Proposition~\ref{prop:common-host-prime-pair}
+and let \([W,W^2]\) be its cohomology interval from
+Lemma~\ref{lem:exceptional-twist-window}, with \(Y_0=X^{1/J}\).
+For the fixed \(c\ge1\) and \(a_*=c^{1/(2+8\varepsilon)}\), if
+\(W\ge\max(a_*^3,a_*^{400})\), the dyadic frame and twist bounds transfer under the change of variables 
+\[
+ a_*W\le x\le (a_*W)^{3/2},\quad x'=x/a_*\quad\Longrightarrow\quad W\le x'\le W^2.
+\]
+
+\end{lemma}
+
+\begin{proof}
+\proofstep{Use the same cohomology interval after rescaling.}
+
+Fix the common field factor \(c\ge1\) depending on \(\psi\), and
+put \(a_*=c^{1/(2+8\varepsilon)}\). The cohomology window
+\([W,W^2]\) will be chosen for this pair, with
+\(X^{1/J}\le W\le\sqrt X\) and \(Y_0=X^{1/J}\).
+On \([a_*W,(a_*W)^{3/2}]\) write \(x=a_*x'\).
+If \(W\ge a_*^3\), then the upper rescaled endpoint is
+\((a_*W)^{3/2}\le W^2\).
+
+Since \(a_*\ge1\),
+\[
+ W\le x'=x/a_*\le x\le W^2,
+ \qquad Y_0\le x\le X.
+\]
+Multiplication by \(c=a_*^{2+8\varepsilon}\) carries the
+dyadic frame interval at \(x'\) to the frame interval at
+\(x\). Moreover, if \(W\ge a_*^{400}\), then
+\(x^{400}=a_*^{400}(x')^{400}\le(x')^{401}\).
+In particular every integer \(1\le j<\lfloor x^{400}\rfloor\)
+lies in the strict dyadic range \(1\le j<\lfloor(x')^{401}\rfloor\).
+The error bound transfers because
+\(\exp((x')^\varepsilon/2)\le\exp(x^\varepsilon/2)\).
+The same prime pair is used before and after rescaling.
+\end{proof}

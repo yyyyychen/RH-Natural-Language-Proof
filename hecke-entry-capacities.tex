@@ -1,0 +1,265 @@
+\paragraph{How the remaining minors bound \(P+M\).}
+For a fixed \((s,q)\), all the corresponding linear terms replace
+columns at \(s+q\) by multiples of the same vector
+\(\xi_s^{p^q}\) before the frame is applied. A determinant with two
+such replacements vanishes. Therefore \(m_{sq}\le c_{s+q}\).
+More generally the total number of replacements in a fixed set of
+columns at a letter is at most the number of those columns in
+the remaining minors, counted with multiplicity over the minors.
+In a column set \(J\) the resulting bound over the remaining minors is
+\[
+  \#\{\text{replacements in }J\}\le\sum_{C}|C\cap J|.
+\]
+This follows by expanding the Hasse coefficient by columns;
+each column of a determinant changes at most once. A minor with
+a repeated original column already vanishes.
+
+Orient every top--top term from the endpoint with the larger
+exponent index \(u\) to the endpoint with the smaller index \(v\)
+in \eqref{eq:tag-j2}. The indices have opposite parity since \(d\) is even.
+Their difference \(u-v>0\) is congruent to the forward displacement
+from the source \(s\) to the target \(t\).
+In particular the directed displacement obeys
+\[
+  u-v\equiv t-s\pmod d,\qquad u-v\ge1,\qquad u-v\equiv1\pmod2 .
+\]
+ Let \(q\) be its least
+positive residue modulo \(d\), so \(q\) is odd and belongs to
+\(D_s\). Such a term uses at least \(p^q\) units at \(s\).
+For fixed \((s,q)\), the number of these terms together with
+\(m_{sq}\) is at most \(a_s/p^q\), by the available top degree.
+
+When \(q\notin D_s\) only the linear terms enter, and their
+number is bounded also by \(c_{s+q}\). Now
+\[
+ \sum_{q>0\ {\rm odd}}p^{-q}=p^{-1}\sum_{a\ge0}p^{-2a}=\frac{p}{p^2-1}=\gamma.
+\]
+Subtract the two counts just obtained in \eqref{eq:tag-j3}, for every
+\((s,q)\) separately. This proves the contribution \(A\) in \eqref{eq:tag-j1}.
+Every top--top term also uses one unit at an even top, as does
+each linear term whose source is even. Together those uses are
+at most \(\sum_{s\ {\rm even}}a_s\). The odd-source linear
+terms cost at most
+\(\sum_{s\in T\ {\rm odd}}\sum_{q>0\ {\rm odd}}\min(a_s/p^q,c_{s+q})\).
+This proves the other index-zero estimate.
+
+For \(i>0\), choose integral bases for the incident inclusion
+whose reduction has the standard codimension-\(i\) plane.
+Write \(J=\{1,\ldots,i\}\) for the scaled target coordinates.
+On a minor of height \(b\) with column list \(C\), the exponent
+contributed by the normalized incident operator is
+\[
+ \begin{cases}
+    \min(b,i)-|C\cap J|,&s\text{ even},\\
+    |C\cap J|,&s\text{ odd}.
+ \end{cases}                                                       \tag{J4}\label{eq:tag-j4}
+\]
+The diagonal map scales the \(J\)-coordinates by \(p^{-1}\)
+in an even polynomial factor and by \(p\) in an odd
+contragredient factor. The missing even powers are supplied by
+the target determinant twist and the normalization in \eqref{eq:tag-p5}:
+\[
+ d_i(j)+i\Delta_j
+   =\sum_{s\ {\rm even}}\sum_{a\le i}(\lambda_{s,a}+w_j(s))
+   =\sum_{C\ {\rm in\ even\ diagrams}}\min(b_C,i).
+\]
+The second equality counts the boxes in the first \(i\) rows,
+column by column with multiplicity. The calculation is at the
+neighbor in the chart, with the normalized theta section already
+included. Multilinearity of minors preserves their spans under
+integral changes of basis of these same lattices.
+
+For every top--top term with column in \(J\), pay one from its
+odd top degree, and for column outside \(J\), pay one from its
+even top degree. The corresponding height-one factors of \eqref{eq:tag-j4}
+charge exactly these degrees. For a linear term with even source
+and column outside \(J\), pay from the same even top factor.
+For one with even source and column in \(J\), pay from a
+replacement in the odd residual minor at its destination. By
+the column count already proved these payments fit in
+
+\[
+  \sum_C |C\cap J|
+\]
+ over the odd residual minors. No top
+factor has been charged beyond its multiplicity in the
+\(y\)-derivative. All unused exponents in \eqref{eq:tag-j4} are nonnegative
+because the columns in a nonzero minor are distinct.
+Thus \eqref{eq:tag-j4} accounts for \(P\) and the even-source terms in
+\(M\). For each odd source the number of replacements is at most
+the smaller of the available source degree and the destination
+capacity. Summing the remaining charges gives
+\[
+ \sum_{s\in T\ {\rm odd}}\sum_{q>0\ {\rm odd}}m_{sq}
+ \le \sum_{s\in T\ {\rm odd}}\sum_{q>0\ {\rm odd}}
+                    \min(a_sp^{-q},c_{s+q}),
+\]
+as required for the bound \(G\) in \eqref{eq:tag-j1}.
+The ultrametric inequality and the Gauss valuation in the frame
+entries pass the estimate to every coefficient. Saturation of the
+integral flag-minor span, proved in Section~\ref{sec:finite-valuations},
+passes it to each functional integral on that span.
+
+For a joint series the factor in the integral formal parameters
+can involve all places. In any prescribed jet its finitely many
+contributing monomials are products of local monomials with
+integral coefficients. The bounds above hold for every such monomial.
+On a second-embedding orbit a lower bound for all those monomials,
+such as the cyclic-jet bound in Section~\ref{subsec:cycle-jets},
+adds its own exponent. Summing the entries on the class
+representatives takes one stabilizer denominator. This proves
+\eqref{eq:tag-p7} from the claimed local chart shape, integral evaluations and the numerical comparisons 
+\[
+  g^0_{jv}\le A,
+\]
+ \(g^U_{jv}\le G\)
+on the selected range.
+
+In the large-characteristic range the
+index-zero integrality proved above suffices for the base gain.
+These implications use the full range of heights, top sets and
+cycle lengths with the explicit digit loss in \eqref{eq:tag-j1}. Applying them
+to the global period also requires the chosen split charts to
+have this shape in the incident bases and the complementary
+places to give the stated forced terms and denominator.
+\label{cor:hecke-entry-capacities-1}
+
+\end{proof}
+
+\paragraph{Comparison with the numbers on the selected cycle.}
+\begin{proposition}[Valuation gains and denominator exponents on the selected cycle]\label{prop:selected-cycle-numerical-comparisons}
+Use the first-embedding cycles and endpoint weights of
+Section~\ref{sec:host-edge-tests}. For \(H=\log_p(2a)\ge1\),
+the prescribed gains satisfy \(g^0_{jv}\le A\) and \(g^U_{jv}\le G\).
+Put \(C=w''+\eta+c_G+N_m\), let \(d\) be the cycle length and
+\(T\) the set of tops. Write \(B_s^*=-\lambda_{s,k}\). For the denominator exponent in \eqref{eq:tag-p5} one has
+\[
+ P_{j,v}\le
+ \begin{cases}
+  \sum_{s\in T\ {\rm odd}}(w_j(s)-B_s^*)+K_P dC, & r=1,\ K_P\ge1,\\
+  r\bigl(|T|(2b'+c_G)+dC\bigr), & r=r_G<k .
+ \end{cases}
+\] For \(p>2a\) the digit loss dominates both
+would-be gains and the integral index-zero estimate applies.
+All comparisons hold uniformly on the chosen family.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Identify the least odd displacements on the actual cycle.}
+
+To avoid a conflict
+with the number \(a_s\) of extracted columns, denote the first
+weight at a top by \(A_s^*\) and the negative of its last weight
+by \(B_s^*\). Use the cycle numbering of
+Section~\ref{sec:host-edge-tests}, so that a forward step is
+addition of the Frobenius displacement \(a_p\) in the Galois group of the auxiliary field.
+Let \(d\) be the additive order of the displacement \(a_p\). Two positions give the same position on the Frobenius cycle precisely when
+\[
+  s a_p=t a_p\quad\Longleftrightarrow\quad d\mid(s-t),
+\]
+so the identification is injective on the cycle. Odd positions
+are the odd top subset of the up-gain formula. In particular
+each odd least distance in \(D_s\) gives an excluded odd
+displacement in the sum over the cycle. An earlier visit to that
+target would contradict leastness modulo the cycle length.
+
+\proofstep{Compare the two capacity programs with the selected fills.}
+
+In the sums over the selected cycles replace \(a_s\) at a top by
+\(A_s^*-2c_G\), and the destination capacity \(c_{s+q}\)
+by the filled weight \(w_j(s+q)+c_G\). The first substitution
+decreases the argument since 
+\[
+  |\lambda_{s,2}|\le c_G;
+\]
+the second increases it since the retained first or second
+base row has weight at most \(c_G\). These substitutions
+can only decrease the positive-part summands of \(A\).
+For \(G\), write the positive first sum as the sum of
+\(a_s p^{-q}\) over all positive odd \(q\) and all tops.
+After subtraction the summand for a positive odd \(q\) is
+\[
+  \begin{cases}
+      (a_s p^{-q}-c_{s+q})_+, & s\text{ an odd top},\\
+      a_s p^{-q}, & s\text{ an even top}.
+  \end{cases}
+\]
+Decreasing \(a_s\) and increasing \(c_{s+q}\) can therefore only
+decrease the up gain. This argument works even if a substituted first
+argument is negative.
+
+\proofstep{Bound the digit lengths by the prescribed error term.}
+
+Write \(N_m=k+m(t+1)\), \(H=\log_p(2a)\), and suppose
+\(H\ge1\). The size bounds for the auxiliary data give 
+\[
+  N_j\le N_m\le a,
+\]
+\(c_G\le a\), \(A_s^*\le2a\), \(w_j(s)\le4a\)
+at a common late threshold. Here the rank grows polynomially in \(x\), while
+\(a=x\exp(x^\epsilon)\) and the width satisfies \(c_G=o(b')\)
+as in Section~\ref{sec:host-edge-tests}. The selected fill is at most
+\(B_s^*+b'/x+\eta\) at a top, where \(B_s^*\le5b'/4\),
+and at most \(w''+\eta\) elsewhere; \(w''\le b'\le a\)
+and \(\eta\le a\). These are the common fill and offset sizes
+of the first embedding.
+
+Removing the first-row excess at a top
+leaves all row lengths at most \(w_j(s)+c_G\), also on each
+added block by nonnegativity of its earlier fill. Hence
+\(a_s\le 3a\le(2a)^2\) and 
+\[
+  l_s\le5a^2\le(2a)^4.
+\]
+In particular
+\[
+              D\le 8dN_m^2H+9|T|H^2 .                            \tag{J5}\label{eq:tag-j5}
+\]
+Indeed the two digit lengths are bounded by \(3H,5H\). This
+is covered by the prescribed loss for this cycle with both coefficients
+at least nine. Subtracting that loss proves
+\(g^0_{jv}\le A\), \(g^U_{jv}\le G\) with the selected fills.
+
+\proofstep{Bound the denominator exponent in the line and plane ranges.}
+
+Set \(C=w''+\eta+c_G+N_m\). In the line range \(r=1\)
+the odd top contribution is exactly \(w_j(s)-B_s^*\);
+each other odd letter costs at most \(w''+\eta+c_G\).
+Since \(j(t+1)/2\le N_m\), this gives the upper bound
+
+\[
+  \sum_{s\in T\ {\rm odd}}(w_j(s)-B_s^*)+K_Pd C
+\]
+ with
+\(K_P\ge1\). In the plane range \(r=r_G<k\), the tail of
+length \(r\) omits the large first row. Every entry in the
+tail is at most \(c_G\). At tops the filled weight is at most
+\(2b'+\eta\) because \(x\ge2\); the other weights have the
+non-top bound above. Write \(C_{\rm plane}\) for the resulting total tail cost. Summing \eqref{eq:tag-p5} with these bounds gives
+\[
+  C_{\rm plane}\le r\{|T|(2b'+c_G)+d C\}.
+\]
+ Both are the prices subtracted on
+their respective ranges in \eqref{eq:tag-c4}. They are nonnegative, since
+\(w_j(s)\ge B_s^*\) at each top.
+
+\proofstep{Use the integral baseline above the size cutoff.}
+
+When \(p>2a\), both valuation gains before subtracting the digit contribution are at most \(2a\gamma |T|\). Indeed the capacity is
+nonnegative and the positive part of any substituted first
+argument is at most \(2a\). For \(2a\ge e\), monotonicity of
+\(y/\log y\) on \([e,\infty)\) gives
+
+\[
+  2a/p\le\log_p(2a).
+\]
+ Since \(\gamma\le2/p\) and
+\(|T|\le d\), the first error term
+\(K_1dN_m^2\log_p(2a)\), \(K_1\ge9\), already exceeds
+both gains. At these primes take the index-zero integral bound
+at every stage, absorbing every unused neighbor operator in the
+integral input as in the proof of \eqref{eq:tag-p8}. The constants in \eqref{eq:tag-j5} and
+these bounds for the denominator exponent are independent of the word, prime, stage,
+number of tops and coefficient extension.
+\label{cor:hecke-entry-capacities-2}
+\end{proof}

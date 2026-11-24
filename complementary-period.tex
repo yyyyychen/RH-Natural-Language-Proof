@@ -1,0 +1,164 @@
+\subsection{The second real embedding in the estimate at primes with selected orbits}
+\label{subsec:second-period}
+
+The first embedding supplies a gain from the selected orbits. The product estimate also needs the contribution at the other real embedding.
+
+Fix a word, a used tuple, and a coefficient place over a prime
+\(p\) of the selected class. The tuple's twist support avoids \(p\).
+The CM field splits at the places of its real subfield used for the
+local matrix pairs, while \(p\ge5\) is inert in the quadratic
+field of the elliptic curve. The real embeddings are indexed by \(\{0,1\}\times H\), where \(H\) is the finite abelian factor indexing the second coordinate. Writing \(h=h_p\), its Frobenius action on the labels satisfies
+\[
+       (i,a)\longmapsto(i,a+h),\qquad d=\operatorname{ord}(h)>0,\quad 2\mid d .
+\] Let \(R\)
+contain one representative of each coset modulo \(\langle h\rangle\).
+The choice of first-embedding places in \eqref{eq:tag-p7} assigns to each
+\(r\in R\) the cycle starting at \((0,r)\).
+
+\begin{proposition}[The complementary contribution, including class denominators]\label{prop:complementary-period-price}
+In the selected class and on the indicated level-free tuple,
+the complementary lower bounds \(L_j\) at the successive stages satisfy
+\[
+ \sum_{j=1}^m L_j\ge
+ {\bf1}_{p\le X''(n)}\sum_{j=1}^m
+   \bigl(F_{\rm inert}(j,p)-E_{\rm inert}(j,p)\bigr)
+  -(m-1)v_p(D_{\Gamma,u}).
+\]
+The terminal contraction may cost at most one more
+\(v_p(D_{\Gamma,u})\).
+\end{proposition}
+
+\begin{proof}
+\proofstep{Assign each complementary cycle in the fixed embedding coordinates.}
+The comparison of embeddings identifies the pairs \((v,s)\) of
+a local place and one of its residue embeddings bijectively with
+the real positions. In fact the position of the first embedding
+of \(v\) determines \((b_v,t_v)\). Composing with residue
+Frobenius gives \((b_v,t_v+s h)\) at embedding \(s\).
+The residue degree is the order of the same Frobenius element in
+the unramified host. Thus the map gives each position of this
+cycle exactly once. A place outside the chosen first-embedding
+places must have \(b_v=1\), since each \((0,r)\) already occurs.
+
+For each \(r\in R\), the unique preimage of \((1,r)\) gives its
+second-embedding place. The latter is independent of the starting
+letter in the coset. In particular, writing \(V\) for the chosen
+first-embedding places, we have
+\[
+  \sum_{v\notin V} f(t_v)=\sum_{r\in R}f(r)
+  \qquad\bigl(f(t+h)=f(t)\bigr).
+  \tag{S1}\label{eq:tag-s1}
+\]
+The set \(V\) contains the first-embedding places even for
+orbits at which the generator uses only the scalar option.
+
+Consider a transition of ranks \(N=N_{j-1},N'=N_j\).
+For a second-embedding cycle let \(w_s\) be its selected positive
+stage weights. Use the linear program in
+Section~\ref{subsec:cycle-jets} and put
+\[
+ F_{jr}={\cal F}_p(((k-1)w_s)_s),\qquad N_* = N_m .
+\]
+There are no designated tops at this real embedding. The bounds
+on the shape of the stage diagram here read
+\[
+ H_s=(k-1)w_s+e_s,\qquad 0\le e_s\le4w_s,\qquad H_s\le a^2 .
+\]
+Here \(H_s\) counts all the boxes. In particular the list of
+distinguished rows reserved in Proposition~\ref{prop:cyclic-jet}
+is empty.
+
+For a monomial in the integral parameters, the trace
+basis substitution of Section~\ref{subsec:curve-exponents} and the
+flow comparison \eqref{eq:flow-comparison} bound its normalized
+differential coefficient from below by
+\[
+ F_{jr}-11\sum_s w_s/p-dNN'(1+\log_p a^2).
+\]
+To see how the two logarithms bound the error, on \(p\le X''(n)\le a\) set
+\[
+ E_{jr}= c_6\sum_s w_s/p
+ +dNN'\bigl(1+\log_p(4dN_*a)\bigr)
+ +d\,d_1 N_*^2\log_p(2a).
+ \tag{S2}\label{eq:tag-s2}
+\]
+Use \(c_6=12,d_1=5\). The last two terms majorize
+\(dNN'(1+2\log_p a)\), since \(N,N'\le N_*\).
+In the general orbit formula both the maximum-width loss and
+the squared digit loss have a factor counting tops. This count
+is zero on the cycles in \eqref{eq:tag-s2}.
+
+For precision about coefficients, take a monomial in the integral
+formal parameters over the Witt ring. The differential polynomial
+has its coefficients in the Witt fraction field after the trace
+basis change for the local model. Its normalized valuation there
+is integer-valued. For each coefficient \(b\) in this unramified valuation, integrality of its order strengthens the given lower bound to
+\[
+  v_p(b)\ge F_{jr}-E_{jr}\quad\Longrightarrow\quad b\in p^{\lceil F_{jr}-E_{jr}\rceil}W.
+\]
+For a negative exponent the right side denotes the corresponding fractional ideal. An integral multiplier in a larger coefficient
+ring gives the same bound. Indeed truncate its expansion in
+parameters at the total degree of the differential operator.
+Substitution by series with zero constant term preserves the
+order filtration. The remainder still has order strictly greater
+than the differential degree after multiplication by the phase,
+whose constant coefficient is one.
+
+For a differential operator of total order \(h\), truncation is justified by
+\[
+  F\in (X)^{h+1},\quad |\alpha|\le h\quad\Longrightarrow\quad \partial^\alpha F(0)=0 .
+\]
+ The finitely many surviving
+terms are the Witt monomial evaluations multiplied by their
+integral coefficients. This proves the bound for arbitrary
+integral multipliers, including those involving variables at
+other places. Above the cutoff one only uses the bound zero,
+which follows from the integral ordinary derivatives of the
+phase and of the integral multiplier as in
+Section~\ref{subsec:hecke-entries}.
+
+Both \(F_{jr}\) and \(E_{jr}\) are invariant under rotating the
+cycle. Rotation bijects feasible flows, preserving the objective,
+and permutes the weights in \eqref{eq:tag-s2}. The full inert forced value
+\(F_{\rm inert}(j,p)\) is the sum of \(F\) over both sets of
+cycles. Equivalently it is the sum over positions divided by \(d\).
+Write \(F_{j,0}\) for the sum over first-embedding cycles. In this
+prime class the inert error in the division table is
+\[
+ E_{\rm inert}(j,p)=\max(0,F_{j,0})+\sum_{r\in R}E_{jr}.
+\]
+Indeed the first term of that table is the positive part of the
+sum at first positions divided by \(d\). The other terms sum
+\eqref{eq:tag-s2} over the second positions, since each cycle has \(d\)
+positions. The exceptional term for a nonzero step of odd order
+vanishes. It follows from \eqref{eq:tag-s1} that for \(p\le X''(n)\)
+\[
+ \sum_{v\notin V}(F_{j,t_v}-E_{j,t_v})
+ \ \ge\ F_{\rm inert}(j,p)-E_{\rm inert}(j,p).
+ \tag{S3}\label{eq:tag-s3}
+\]
+This inequality subtracts the positive part after summing over
+the first cycles. It holds for either sign of each forced value.
+
+Finally let \(d_i\) be the maximum valuation of the point
+stabilizer orders at the source of transition \(i+1\), with an
+empty maximum taken to be zero. These orders divide the common
+integer \(D_{\Gamma,u}\). At level zero the two fine type levels
+have trivial rational stabilizer by
+Section~\ref{sec:ramified-column}. \proofstep{Charge only the incoming class denominators, then include the terminal contraction.}
+The class sum at each next
+transition costs at most \(d_i\), by the ultrametric inequality.
+Consequently \(\sum_{i=0}^{m-1}d_i\le(m-1)v_p(D_{\Gamma,u})\).
+Substituting \eqref{eq:tag-s3} into \eqref{eq:tag-p7} gives
+\[
+ \sum_{j=1}^m L_j\ \ge {\bf1}_{p\le X''(n)}\sum_{j=1}^m
+      (F_{\rm inert}(j,p)-E_{\rm inert}(j,p))
+       -(m-1)v_p(D_{\Gamma,u}).
+ \tag{S4}\label{eq:tag-s4}
+\]
+The terminal period contraction in \eqref{eq:terminal-period-valuation}
+can consume the remaining copy of \(v_p(D_{\Gamma,u})\). None
+of these losses depends on the number of paths or on the
+degree of the field of coefficients. \label{cor:complementary-period-1}
+\end{proof}
+

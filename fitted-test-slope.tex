@@ -1,0 +1,194 @@
+\subsection{The coefficient lattice of the fitted test}
+\label{subsec:fitted-test-slope}
+
+At the other end of the height comparison the coefficient functionals must act on an integral lattice. Its highest-weight space and dual fix the normalization of each grid test.
+
+\begin{established}[Rank and metric of the fitted dual lattice]\label{hyp:fitted-dual-lattice}
+For the fitted top test let \(r=k+m-1\) and \(H\) be the Hermitian
+Gram matrix on a definite class lattice in its chosen frame.
+The rank and the Gram matrix of the test on the dual are
+\[
+ n_*=(k+m)+m(k+m+4)=(r+1)+m(r+5),\qquad
+ J=(H^{-1})^{\mathsf t},\quad \det J=(\det H)^{-1}.
+\]
+The target of the Fourier coefficient map is the bilinear dual of
+the orthogonal sum of the transported differential Weyl lattices over
+all the test data and classes.
+\end{established}
+\begin{proof}
+The base contributes \(k+m\) rows and every one of the \(m\) bands
+contributes \(k+m+4\). At each finite place the class representative
+acts isometrically. For its local lattice \(L_v\),
+\[
+              (g_v L_v)^\#=g_v L_v^\#=g_v L_v .
+\]
+Intersecting the local lattices in the rational space gives the same
+identity globally. At infinity the definite form gives a positive
+matrix in every selected coefficient embedding, as the embeddings
+respect involution. Evaluation pairs a frame with its bilinear dual.
+Transporting the form through this pairing gives the inverse
+transpose on each summand, and taking determinants proves the formula.
+\end{proof}
+
+\begin{proposition}[Maximal slope of the fitted coefficient lattice]\label{prop:fitted-coefficient-slope}
+In the test dual \(M\) of Lemma~\ref{hyp:fitted-dual-lattice}, let \(R_*\) be the
+weight-spread bound on the selected fitted grid. Uniformly in the blocks and twists in the prescribed parameter ranges,
+\[
+ \mu_{\max}(M)\le4fn_*R_*\log(n_*R_*).
+\]
+
+Here \(n_*\le2mr\), \(R_*\le CmN^3b\), and
+\(\log(n_*R_*)\le4\log b\).
+\end{proposition}
+
+\begin{proof}
+\proofstep{Compare the integral Weyl lattice with the column-symmetric tensor lattice.}
+Let \(n\) be the
+underlying rank and \(R\ge1\) a bound for the spread of
+each dominant weight \(\lambda_\tau\) at the \(f\) labels.
+For each label remove the determinant twist
+\(\lambda_{\tau,n}\), leaving a partition
+\(\nu_\tau\) whose first part is at most \(\lfloor R\rfloor\).
+The standard highest vector is the product of leading minors
+with multiplicities \(\nu_{\tau,i}-\nu_{\tau,i+1}\).
+
+For a complex polynomial \(P\) in the matrix variables,
+the unnormalized Fischer inner product has squared norm
+\(\sum_\alpha\alpha!|P_\alpha|^2\).
+Let \(s_\tau\) be the squared norm of this highest vector.
+The sum of the absolute coefficients is at most
+\((n!)^{\lfloor R\rfloor}\), by expanding all the minors.
+Each monomial has degree \(\nu_{\tau,j}\) in column \(j\),
+so 
+\[
+ \prod_i\alpha_{ij}!=\nu_{\tau,j}!\binom{\nu_{\tau,j}}{\alpha_{1j},\ldots,\alpha_{nj}}^{-1}\le\nu_{\tau,j}!\le\lfloor R\rfloor!.
+\]
+In particular \(s_\tau\) is a positive integer and
+\[
+  s_\tau\le (n!)^{2\lfloor R\rfloor}
+                            (\lfloor R\rfloor!)^n.
+\]
+The tensor pairing on the representation is normalized by
+\(s=\prod_\tau s_\tau\). Thus
+\[
+                 \log s\le 4fnR\log(nR).
+\]
+
+The integral comparison uses the two standard Weyl lattices
+in the polynomial realization. For the Fischer pairing
+normalized by \(s\), the lattice obtained by divided powers
+of the row lowering operators on the extremal vector and
+the lattice spanned by the integral bideterminants are mutual
+duals. In the tableau proof the row words pair with the
+semistandard bideterminants by the coefficients of lower
+unipotent substitution. The leading tableau monomials give
+a triangular family with diagonal entries one. This yields
+dual bases over the integers for the normalized form and the
+same duality over each coefficient ring.
+The duality is computed at every finite place in paired
+frames. More explicitly, at a coefficient prime \(w\) choose
+a frame at \(\overline w\) and its Hermitian dual frame at
+\(w\). For the transported basis \(b_i\) and its Hermitian dual \(b_j^\vee\), the transition Gram has entries
+\[
+  h(b_i,b_j^\vee)=\delta_{ij}.
+\]
+
+In those coordinates the pairing of the two
+standard lattices is perfect. Thus the Hermitian dual of
+the transported differential Weyl lattice is the transported
+bideterminant lattice of the Hermitian dual
+underlying frame. In the self-dual case these two
+underlying frames are bases of the same underlying lattice
+at the indicated places. For two vectors in the transported
+bideterminant lattice at \(\overline w\) and \(w\), their
+transition Gram has integral entries and unit determinant.
+After multiplication by \(s\), the pairing is the integer
+coefficient Fischer pairing with factorial weights,
+evaluated after a substitution by this integral Gram.
+The determinant twist contributes a unit even if
+\(\lambda_{\tau,n}\) is negative.
+For a transition Gram \(G\) between the two integral frames this last assertion reads
+\[
+  v_w(\det G)=0\quad\Longrightarrow\quad v_w\big((\det G)^{\lambda_{\tau,n}}\big)=0\qquad(\lambda_{\tau,n}\in\mathbb Z).
+\]
+ This proves integrality
+at all \(w\). Summing over the orthogonal class blocks
+preserves integrality with the same \(s\).
+\label{cor:fitted-test-slope-1}
+
+Let \(H\) denote the rational Gram of that sum and \(L\)
+its test lattice. For \(x\) in its bilinear dual the vector
+\(H^{-1}\overline{x}\) lies in the Hermitian dual.
+Pairing the images of \(y,x\) in that order gives
+\(\overline{x}^{\,t}(H^{-1})^t y\). Hence the scaled
+target form \(s(H^{-1})^t\) is integral on \(M\).
+For the determinant comparison take a rank-\(j\)
+sublattice with rational basis matrix \(U\) and determinant
+ideal \(I\) in that basis. Write \(J=(H^{-1})^t\), let
+\(c\) be the coefficient involution and put
+\(\Delta=\det(c(U)^tJU)\). On the determinant line the two conclusions are
+\[
+       s^j\Delta\,c(I)I\subseteq O_K,\qquad \Delta\ne0 .
+\]
+The inclusion follows from integrality of the scaled form.
+
+For the
+second assertion, \(c\) is complex conjugation at the selected
+embedding and the Gram form there is positive definite.
+For each embedding \(\sigma\) put \(\sigma'=\overline{\sigma\circ c}\)
+and write \(G_\sigma=\overline{\sigma(U)}^{\,t}\sigma(J)\sigma(U)\).
+The entries of \(J\) lie in the CM subfield on which \(c\) is
+conjugation, so \(\sigma'(J)=\sigma(J)\). Taking the exterior
+power of the mixed Gram pairing therefore gives
+\[
+ |\sigma(\Delta)|^2
+       \le\det G_{\sigma'}\,\det G_\sigma,\qquad
+ \frac{\log|\mathrm N_{K/\mathbb Q}\Delta|}{[K:\mathbb Q]}
+       \le \frac{1}{[K:\mathbb Q]}\sum_\sigma\log\det G_\sigma .
+\]
+The first bound is Cauchy--Schwarz for the two exterior basis
+vectors. Summing its logarithm gives the second because
+\(\sigma\mapsto\sigma'\) permutes the embeddings.
+Taking norms of the integral ideal gives
+\[
+ -j\log s\le
+  \frac{2\log\mathrm N I}{[K:\Q]}
+  +\operatorname{mean}_{\sigma}\log
+                     \det(\sigma(U)^*\sigma(J)\sigma(U)).
+\]
+The right side is the negative degree of the sublattice.
+This proves \(\mu_{\max}(M)\le\log s\) regardless of the
+number of test blocks.
+\label{cor:fitted-test-slope-2}
+
+Write \(L_c\) for the maximum of the nonnegative differences
+\(v_2-v_k\) between the head weights at each index, and
+let \(g(C)\) be the gap parameter of the polynomial size
+bounds. \proofstep{Bound the spread of the actual fitted weights.}
+For the actual weight spread use
+\[
+       R_*=(m+1)(g(C)+1)+L_c+n_*.
+\]
+The top test uses comparison parameter one in its highest
+weight. Before its index shifts, the ordered test entries
+lie between \(v_k-1/2\) and
+\(v_2+1/2+(m+1)g(1)\). The lower endpoint bounds the
+smallest head weight. The band and top entries lie
+between that endpoint and the top endpoint by the
+interlacing inequalities. The conversion from the ordered
+entries to the highest weight adds an index difference
+of at most \(n_*\).
+
+Since \(g(1)\le g(C)\) for \(C\ge1\),
+this proves the bound \(R_*\) on every weight difference.
+Therefore the fitted target satisfies
+\[
+             \mu_{\max}(M)\le4fn_*R_*\log(n_*R_*).
+\]
+The selected size conditions give \(n_*\le2mr\),
+\(R_*\le CmN^3b\) and \(\log(n_*R_*)\le4\log b\).
+The bound is uniform over the test blocks and the twists
+at every point of this size record.
+\label{cor:fitted-test-slope-3}
+\end{proof}
+

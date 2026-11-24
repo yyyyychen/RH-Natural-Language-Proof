@@ -1,0 +1,240 @@
+\subsubsection*{The row lattice measured by the twist}
+\label{subsec:twist-row-lattices}
+
+The spanning argument is rational. For a bound on division one must also compare the lattice of bounded forms in that span with the lattice actually used to evaluate the twist.
+
+Fix one row and side at the chosen coefficient place. Let
+\(F_0\) be the rational subspace on which the prescribed
+unipotent subgroup acts by the prescribed character, and
+let \(B_{\rm sup}\) be the integral lattice of bounded
+forms. Write \(e\) for the rational central type idempotent,
+\(g\) for the order of the finite row group, and put
+\[
+ M_{\rm all}=B_{\rm sup}\cap F_0,\qquad V_0=eF_0,\qquad
+ B=M_{\rm all}\cap V_0,\qquad A=ge .
+\]
+\begin{lemma}[The original integral type lattice]
+\label{lem:projected-row-type}
+Over the fraction field \(K\) of the coefficient DVR the intersections satisfy
+\[
+ M_{\rm all}\otimes K=F_0,\qquad B\otimes K=V_0,\qquad A(M_{\rm all})\subseteq B\quad(A=ge).
+\] Any residual
+simultaneous Hecke eigencharacter of \(B\) is the reduction of
+one of the rational signature characters on the same row
+and side.
+\end{lemma}
+
+\begin{proof}
+\proofstep{Integral intersection and type projection.}
+These intersections use the given embeddings in the rational
+space. In the row model \(B_{\rm sup}\) is a full finitely
+generated lattice stable under the finite group and the
+admitted Hecke operators, which commute with the group
+action. Clearing denominators in this lattice shows that
+\(M_{\rm all}\) spans \(F_0\) and \(B\) spans \(V_0\);
+both intersections are finitely generated over the DVR.
+The Hecke operators preserve each intersection by commutation.
+The integral central representative of \(ge\) preserves \(B_{\rm sup}\) and sends \(F_0\) onto \(V_0\) since \(g\ne0\). Writing \(K\) for the fraction field of the coefficient DVR, we obtain
+\[
+ ge(M_{\rm all})\subseteq B_{\rm sup}\cap V_0=B,\qquad
+ \operatorname{span}_{K}ge(M_{\rm all})=V_0 .
+\]
+These give the lattice and the operator used in the row
+determinant. Dividing by \(g\) on the integral lattice at
+this stage could alter a length.
+
+\proofstep{One actual residual signature.}
+The residual character test used after pair removal follows
+from the rational signature decomposition on this same
+\(V_0\). Let \(x\in B\) lift a nonzero residual simultaneous
+eigenvector of the Hecke operators. Decompose in the rational simultaneous eigenspaces as
+\[
+ x=\sum_a y_a,
+\]
+where the signature \(a\) on this row and side has eigenvalues \(e_a(T)\), integral at the coefficient place. Suppose each one differs from the
+residual character on some admitted operator \(T_a\). Then
+\[
+ \prod_a(T_a-e_a(T_a))
+\]
+kills \(x\), by commutativity
+on the sum of these eigenspaces. Each factor acts on
+\(\bar x\) by a nonzero scalar, so its product has nonzero
+value on \(\bar x\). This is a contradiction since each
+factor preserves \(B\). Thus some signature has every
+required residual eigenvalue. A decomposition of the
+integral lattice into its characteristic-zero eigenspaces
+is unnecessary for this test.
+
+\end{proof}
+
+\begin{lemma}[Clearing the universal row coefficients]
+\label{lem:universal-row-denominator}
+For the finite original basis there exists \(c\ge0\) such that every individual universal coefficient function \(\Xi\) at every allowed level satisfies
+\[
+ \ell^c\Xi\in B_{\rm sup}.
+\]
+This uses the boundedness and common-phase comparisons. The same exponent
+clears the sum of coefficient functions whose class labels identify
+in the row.
+\end{lemma}
+
+\begin{proof}
+\proofstep{A denominator for all individual class coefficients.}
+For the common denominator, write the universal lift of a
+chosen datum at \(Q,M\) as a finite group-ring sum
+\(\sum_\delta \Xi_\delta[\delta]\). In the row realization,
+the coefficient functions for the individual class labels
+lie in the rational row and have the prescribed unipotent
+type. If the bounded-coefficient estimate gives
+\[
+ \ell^{c(a)}\Xi\in B_{\rm sup}
+\]
+for each such coefficient
+of datum \(a\), with \(c(a)\) independent of \(Q,M\),
+then the same exponent clears all the \(\Xi_\delta\)
+in \(M_{\rm all}\). Indeed the map from class labels to
+coordinates can identify labels, and its coefficient at
+\(\delta\) is the sum of their coefficients. Thus the exponent used in \(C_Q\) is uniform in the level and can be chosen by
+\[
+ c=\max_{a\text{ in the original basis}}c(a).
+\]
+The bound needed here is on the individual
+universal coefficients as the modulus varies.
+
+\proofstep{The common phase and its inverse in the coefficient field.}
+Propositions~\ref{prop:theta-uniform-cover-clearing}
+and~\ref{prop:ray-cover-descent} give one phase and one
+clearing power on each generator of the harmonic coefficient
+lattice. A finite linear combination of these generators
+admits the maximum of their clearing powers, since the phase
+is common and the coefficient scalars are integral.
+The harmonic polynomial realization is injective in the
+range where the sum of the two signature dimensions is at
+most the target rank. Consequently the expression for the
+coefficient function applies to its given polynomial.
+
+Let
+\(\mathrm{rd}\) be the complex realization of the rational
+row. With its fixed comparison scalar incorporated, the
+integral combination gives a single \(\lambda\in\mathbb C^\times\)
+such that, for every coefficient \(x\) under consideration,
+there is \(x'\in B_{\rm sup}\) with
+\[
+ \mathrm{rd}(x')=\lambda\mathrm{rd}(x).
+\]
+Faithfulness
+here includes linear independence over \(\mathbb C\) of
+the images of a rational basis. If some \(x\ne0\), comparing
+a nonzero coordinate gives \(\lambda\) in the embedded
+fraction field. Clear its inverse once by a power of
+\(\ell\); injectivity gives that power times every \(x\)
+in \(B_{\rm sup}\). If every \(x\) vanishes, exponent zero
+suffices. This gives the coefficient estimate in
+\(B_{\rm sup}\) used above.
+
+\end{proof}
+
+Let \(L_0=e\Theta_0\) be the projected original theta module
+of the specified row indices, and \(L_\psi=e\Theta_\psi\)
+the projected integral module generated by their allowed
+twisted series on the chosen side, over the DVR \(O_k\)
+of the character. Write \(B_k\) for the scalar extension
+of \(B\). For full lattices use the signed index
+\([U:V]_\ell\), the valuation of the determinant of a basis
+of \(V\) in a basis of \(U\), normalized by \(v(\ell)=1\).
+Negative values are allowed.
+
+\begin{proposition}[Signed index of the actual twisted row]
+\label{prop:twisted-row-index}
+With the faithful coefficient comparisons and the selected
+character and row defined above, \(L_\psi\) is full in \(V_{0,k}\)
+and
+\[
+          [(L_0)_k:L_\psi]_\ell\le\epsilon_{j,b}.
+\]
+Its inclusion in the projected level lattice persists under
+finite coefficient extension, and the index bound persists after
+extension in the normalization \(v(\ell)=1\).
+\end{proposition}
+
+\begin{proof}
+\proofstep{Specialization of the universal series.}
+The chosen basis and full-rank
+condition give \(L_0\) full in \(V_0\). The twisted type law puts \(L_\psi\subset V_{0,k}\). It is finitely generated, being a submodule of the projected finitely generated level lattice over a DVR. At a character of order dividing \(\ell^k\)
+factor evaluation through its chosen ray coordinates. Avoidance makes every basis datum in \(C_Q\) prime to \(Q\) in level. The specialized row series belongs to the integral span of that datum's twisted series by the following calculation. At a chosen place of residue
+field \(k_P\), size \(q\), put \(r_0\le n_0\) for the two
+matrix dimensions and let \(y\) have \(r_0\) rows. Sum over
+codimension-\(r_0\) planes \(U\subset k_P^{n_0}\).
+
+For each plane the normalized local contribution is
+\[
+ q^{-r_0(n_0-r_0)}\begin{cases}[d_U(y)],&\operatorname{row}(y)\oplus U=k_P^{n_0},\\ 0,&\text{otherwise}.\end{cases}
+\]
+Here \([d_U(y)]\) is the group-ring element attached to the quotient determinant. Choose a basis adapted
+to each plane. Then
+\[
+ d_U(y)=c_U\det((yg_U)_{[r_0]})
+\]
+for a fixed residue unit \(c_U\), an invertible change of
+basis \(g_U\), and the first square block of \(yg_U\).
+The flat local function at the coordinate character \(\chi\) is
+\[
+ B\longmapsto\begin{cases}\chi(\det B),& B\text{ invertible},\\
+ 0,& B\text{ singular}.
+ \end{cases}
+\]
+The preceding formula expresses the evaluation as a sum of its translates. The normalization times the residue character of \(c_U\) is integral since \(\ell\nmid q\). Lift the changes of basis integrally at the chosen places. Multiplication and linearity of theta summation now give an integral combination of the allowed translates. The character of the determinant
+agrees with the specialization by Artin reciprocity and the
+coordinate restriction law.
+
+In the rational row comparison
+both forms have these same complex evaluations; injectivity
+after scalar extension gives membership on the prescribed
+row. After applying \(A\),
+its value belongs to \(g L_\psi\). Hence every full lattice
+\(T\) containing \(g L_\psi\) satisfies the same estimate
+from the determinant,
+\[
+           [B_k:T]_\ell\le [B:gL_0]_\ell+\epsilon_{j,b}.
+\]
+These comparisons concern the whole specialized theta
+module; equality between a single universal column and a
+chosen basis vector of that module is not needed.
+
+\proofstep{Full rank and scalar cancellation in the index.}
+The lattice index only measures a determinant if the specialized rows have full rank. It remains to verify this rank directly before cancelling the scalar common to the two covolumes.
+
+In particular \(L_\psi\) spans \(V_{0,k}\). To see this
+without assuming its rank in the index inequality, take
+\[
+ T_n=L_\psi+\ell^n B_k.
+\]
+If two consecutive terms of this
+descending chain coincide, Nakayama on \(T_n/L_\psi\)
+gives \(T_n=L_\psi\), which has full rank. Otherwise every
+strict inclusion increases \([B_k:T_n]_\ell\) by at least
+\(1/e_{O_k}\); every \(T_n\) contains \(g L_\psi\), so
+this contradicts the common bound. We may now take
+\(T=gL_\psi\). The valuation of a determinant is unchanged
+under normalized finite DVR extension, and indexing two
+full lattices after multiplying both by the same nonzero
+scalar leaves their relative index unchanged. Additivity
+therefore gives
+\[
+           [(L_0)_k:L_\psi]_\ell\le\epsilon_{j,b}.
+\]
+
+For any further finite extension \(O'/O_k\) and full
+reference lattice \(M'\) in that space the bound is
+\(
+ [M':(L_\psi)_{O'}]_\ell
+ \le [M':(L_0)_{O'}]_\ell+\epsilon_{j,b}.
+\)
+The inclusion into the projected level lattice persists under
+this flat extension. These are the lattice, inclusion and
+index assertions used at every permitted power of the
+single selected character. Their geometric inputs are the
+bounded-coefficient estimate, type preservation, the faithful row
+comparison and integral containment, and the original
+full-rank basis on these very levels. \label{cor:twist-row-lattices-1}
+\end{proof}

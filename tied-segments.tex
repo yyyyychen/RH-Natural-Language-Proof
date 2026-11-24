@@ -1,0 +1,272 @@
+\subsection{The estimate on a segment with several pairs}
+\hypertarget{source-tied-segments}{}
+
+A segment may contain several adjacent pairs with linked variables. The one-pair Gram calculation must then be iterated on the successive spaces of restricted polynomials.
+
+Consider \(N\) ordered vector or covector variables. Write \(\mathbf n=(n_i)\) for the degrees of the covectors that vary, and let \(Y(\mathbf n)\) be the space defined by the prescribed upper bounds on the first entry of the highest weight at each designated prefix. A tie is an adjacent vector--covector pair with operator \(\Phi_{z_i}\) as in Lemma~\ref{lem:tied-gram-polynomial}. The first positions
+are strictly increasing, hence the pairs are disjoint. The end
+of the vector of each pair is among the specified prefixes.
+The covector degrees \(n_i\) range independently over progressions
+of lengths \(H_i\ge1\) and positive steps prime to \(p\).
+Denote progression \(i\) by \(I_i\). Its upper endpoint and the parameter set are
+\[
+ n_i^+=\max I_i,\qquad \mathbf n\in\prod_i I_i.
+\]
+
+Write \(S_i^+\) for the total degree through the vector of pair
+\(i\) at the upper corner of the box. Suppose \(S_i^+\le\min n_i\),
+all degrees and \(z_i\) are at most \(2a\), \(r\ge2\), \(p\) is odd,
+\(a\ge1\), and
+\[
+ 2aN+r\le p^2(8a+r)^2.
+\]
+Put
+\[
+ \Lambda=1+\log_p(8a+r),\qquad
+ \kappa\ge\tfrac32(N+2)r^2\Lambda,\qquad E\ge1 .
+\]
+On the coefficient lattice \(Y_{\mathbb Z_p}(\mathbf n)\) use the
+Fock form divided by the product of the letter factorials, with the
+product of the tie operators applied in the first argument.
+Denote by \(b(\mathbf n,D)\) its rank minus the largest size of
+two systems of integral vectors whose cross matrix is \(p^D I\).
+\begin{proposition}[Mean rank loss for tied pairs]
+\label{prop:mean-tied-rank}
+For \(t\) pairs and \(D=\lfloor t(E+\kappa)+\kappa\rfloor\),
+the estimate is
+\begin{align}
+ \mathbb E_{\mathbf n} b(\mathbf n,D)
+ &\le\sum_{i=1}^t\left(\frac{2S_i^+}{H_i}
+            +\frac{2\kappa+2S_i^+\Lambda/H_i}{E}\right)
+          \mathbb E_{\mathbf n}
+              \dim Y(\mathbf n_{i\leftarrow n_i^+}).\label{eq:ties}
+\end{align}
+The expectations give every point in the box equal weight.
+In particular the dimension on the right is evaluated with just
+\emph{one} degree replaced by its endpoint.
+
+\end{proposition}
+
+\begin{proof}
+\proofstep{The test for a single pair of letters.}
+Fix a pair \(i\), with \(b\) letters through its vector, and first
+impose only the cutoffs through that vector. In the prefix
+including the following covector \(\eta\), the highest space for
+\(\mathrm{GL}_r\) of weight \(\lambda\) is the image of the \(\mathrm{GL}_{r-1}\) highest-weight space of weight
+\(w=\lambda+n_i e_\rho\) under the map
+\[
+ f\longmapsto f_{n_i}=\eta_\rho^{\,n_i-S_i}T_\eta f ,
+\]
+where \(S_i\) is the total degree through the vector of pair \(i\) and
+\(T_\eta\) is the substitution used in Lemma~\ref{lem:tied-gram-polynomial}.
+Evaluation at \(\eta=e_\rho\) takes a highest-weight polynomial to the
+weight-\(w\) space for \(\mathrm{GL}_{r-1}\).
+
+Order the basis with the distinguished coordinate \(\rho\) last.
+On the chart \(\eta_\rho\ne0\), upper triangular unipotent matrices
+whose only off-diagonal entries are in column \(\rho\) remove the other covector
+coordinates. Invariance and homogeneity uniquely reconstruct the
+polynomial there from this restriction. Acting on the old
+letters gives the substitution in the preceding section:
+the last coordinate of each vector becomes
+\((v\cdot\eta)/\eta_\rho\), and the other components of a covector become
+\[
+ u'_j=\frac{\eta_\rho u_j-u_\rho\eta_j}{\eta_\rho}=u_j-u_\rho\frac{\eta_j}{\eta_\rho}\qquad(j\ne\rho).
+\]
+
+Multiplication by \(\eta_\rho^{n_i}\) clears all denominators
+since \(n_i\ge S_i\), the prefix degree through the vector.
+This expression is invariant under the upper unipotents (the
+subgroup on the other coordinates acts on the original highest
+vector) and has weight \(\lambda\). The earlier cutoffs persist:
+in each prefix the simultaneous substitution is an invertible
+group change over the chart followed by a scalar on every fixed
+multidegree. Evaluation and reconstruction preserve integral
+coefficients. Evaluation is inverse to the polynomial lift:
+\[
+ \left.f_{n_i}\right|_{\eta=e_\rho}=f .
+\]
+Thus \(f\mapsto f_{n_i}\) takes an integral basis of the
+\(\mathrm{GL}_{r-1}\) highest-weight space to an integral basis of the
+\(\mathrm{GL}_r\) highest-weight space.
+
+In the prefix multiplicity space for each \(w\), take left and
+right Smith bases of \(p^{\lceil\kappa\rceil}\Gamma_{n_i}\).
+Let \(h_j,k_j\) be the images of these basis vectors under
+\(f\mapsto f_{n_i}\), and let \(d_j\) denote
+the corresponding diagonal entries. A good index satisfies
+\[
+ v(d_j)\le E.
+\]
+
+With the same scalar \(c_i\) as in the tied Gram matrix
+(including \(p^{\lceil\kappa\rceil}\)), we have
+\[
+ c_i \langle\Phi_{z_i}h_j,k_l\rangle=d_j\delta_{jl},
+ \qquad G_{jl}=c_i\langle h_j,h_l\rangle\in\mathbb Z_p.
+\]
+For the latter assertion use the factorial count in the term
+with zero contractions: the numerator and denominator factorial
+arguments have equal total and at most \((b+1)r\) numerator
+terms are needed. The binomial factor \(\binom Bo\) is integral.
+For the first matrix the binomial-basis estimate above costs at
+most \(\lceil\kappa\rceil\), as \(b\le N-1\) and \(3S_i\le6a\).
+
+\proofstep{The retained spaces and their extension operators.}
+Let \(\pi_i\) retain the good \(h_j\)'s and kill the rest.
+On these highest spaces define a second operator by
+\[
+            T_i h_l=\sum_{j\ {\rm good}}
+                   p^{\lfloor E\rfloor}d_j^{-1}G_{jl}\,k_j .
+\]
+All its coefficients are integral, since \(v(d_j)\) is an integer.
+Both operators extend equivariantly to each prefix isotypic
+summand, by acting on multiplicities, and act as the identity
+on the tensor factor of later letters. Here this last convention
+means tensoring the prefix operator with the identity.
+
+The
+operators map the space with cutoffs through the vector to itself.
+They preserve subsequent cutoffs by equivariance under the
+larger prefix groups. They commute with all later tie operators
+on the later letters. The Gram identities on highest vectors
+give on this earlier constrained space, and after adjoining tails,
+\[
+     B(\Phi_{z_i}u,T_i y)
+                   =p^{\lfloor E\rfloor}B(\pi_i u,y),
+\]
+where \(B\) is the normalized untied Fock form. Indeed pairings
+between distinct types vanish, and on equivalent irreducibles
+the form with the matrix-unit transposition as adjoint is
+determined by its value on the two highest vectors. The same
+normalizing scalar occurs on both sides.
+
+Here are bounds for extending the integral highest-vector
+calculation to the coefficients of arbitrary vectors. Put
+\[
+ e_1=\binom r2\lfloor\log_p(2aN+r-1)\rfloor.
+\]
+
+On every prefix isotypic projection costs at most \(e_1\) by the
+Hom construction, since the width of coordinate weights is at
+most the total degree. In an isotypic integral lattice,
+multiplication by \(p^{e_1}\) expresses any integral vector
+in the divided-power span of its integral highest vectors.
+Use the integral intertwiners evaluated on the lattice generated
+by a highest vector, as in the proof of \eqref{eq:res-sat}.
+Apply these facts in the constrained prefix lattice, which is
+divided-power stable because the diagonal prefix action preserves
+all earlier type bounds. For an integral word each coefficient
+of a later monomial is integral and obeys those earlier bounds.
+Consequently \(p^{2e_1}T_i\) is integral on the full constrained
+word lattice. We may use the weaker allowance
+\[
+ (N+2)e_1\le\kappa
+\]
+
+for every \(i\), by the size condition on \(2aN+r\).
+
+\proofstep{Simultaneous restrictions for all pairs.}
+Intersect \(Y\) with the fixed spaces of all \(\pi_i\), obtaining
+a rational space \(W\). For \(u\in W\), apply the identity
+\[
+ B(\Phi_{z_i}v,T_i y)=p^{\lfloor E\rfloor}B(\pi_i v,y)
+\]
+successively for \(i=1,\ldots,t\), keeping the \(T_i\) in the same
+composition order. At step \(i\), the projector \(\pi_i\) commutes with
+the remaining \(\Phi_{z_j}\) for \(j>i\) and satisfies \(\pi_i u=u\).
+Each later \(T_j\) preserves \(Y\).
+The successive identities reduce the twisted pairing with the
+composition of the \(T_i\) to \(p^{t\lfloor E\rfloor}B(u,y)\).
+For a primitive \(u\in W\cap Y_{\mathbb Z_p}\), choose a monomial
+\(m\) with unit coefficient in \(u\).
+
+Let \(P_Y\) be the product of
+the commuting prefix type projectors. Self-adjointness and
+\(P_Yu=u\) give
+\[
+ y=p^{Ne_1}P_Ym\in Y_{\mathbb Z_p},\qquad
+ B(u,y)=p^{Ne_1}B(u,m),\qquad v(B(u,y))\le Ne_1.
+\]
+The integer exponent clears at most one projector per prefix.
+The valuation bound uses that the normalized Fock norm of \(m\)
+is the reciprocal of an integer.
+Thus each such \(u\) has a partner in the full integral lattice
+for the twisted form with valuation at most \(D\).
+In Smith coordinates the directions with valuation greater
+than \(D\), including the null directions, span a space of
+dimension \(b(\mathbf n,D)\). Write \(B_{>D}\) for this Smith subspace. The dimension formula gives
+\[
+ \dim(B_{>D}\cap W)\ge b(\mathbf n,D)-\operatorname{codim}_Y W.
+\]
+If the right side were positive, their intersection with \(W\) would contain a primitive
+integral vector with no such partner. Hence
+\(b(\mathbf n,D)\le\operatorname{codim}_Y W\).
+
+\proofstep{Counting the lost continuation dimensions.}
+To compute this codimension bound, let \(m_{iw}\) be the
+dimension of the old highest space of weight \(w\) and let
+\(d_{iw}(\mathbf n)\) be the dimension of the allowed continuations
+of one irreducible summand generated by the image
+\(f_{n_i}\) of its highest-weight vector \(f\). This
+includes the copy itself tensored with the tail and intersected
+with all remaining cutoff spaces. All copies of the same type
+have identical continuation dimensions, since the remaining
+prefix actions intertwine identifications of the copies tensored
+with the identity on the tail. Complete reducibility and the
+highest-space bijection give
+\[
+     \sum_w m_{iw}d_{iw}(\mathbf n)=\dim Y(\mathbf n).
+\]
+A bad Smith direction for pair \(i\) costs at most
+\(d_{iw}(\mathbf n)\) dimensions. Let \(Y\) be the ambient continuation space and \(K_i\subseteq Y\)
+the subspace satisfying the \(i\)-th condition. The diagonal map gives
+\[
+ Y/\bigcap_i K_i\hookrightarrow\bigoplus_i Y/K_i,\qquad
+ \operatorname{codim}_Y\bigcap_iK_i\le\sum_i\operatorname{codim}_Y K_i .
+\]
+This applies without a commutativity assumption on the \(\pi_i\).
+
+These continuation dimensions are nondecreasing in \(n_i\).
+For an increase of \(u\) multiply by \(\eta_\rho^u\) and project
+on the prefix through \(\eta\) to the Cartan component of highest
+weight \(\lambda-u e_\rho\). Its generating highest vector and new weight are
+\[
+ \eta_\rho^u f_{n_i},\qquad \operatorname{wt}(\eta_\rho^u f_{n_i})=\lambda-u e_\rho.
+\]
+Indeed in the product of the old
+copy with \(\operatorname{Sym}^u(\mathrm{Std}^*)\) this is the
+top tensor type of multiplicity one. Its image under polynomial
+multiplication is nonzero.
+
+The prefix map commutes with all upper
+raising operators, shifts weights by \(-u e_\rho\), and is
+nonzero on the old highest line. Its kernel on that copy is
+zero: any nonzero stable kernel for the torus and upper
+operators would contain a highest vector. Different tail
+monomials give independent images. Multiplication by a
+covector power preserves the earlier cutoffs and does not
+increase the maximal first weight for longer prefixes.
+The projection preserves the longer bounds by equivariance
+and its range satisfies the earlier ones because its highest-weight generator \(\eta_\rho^u f_{n_i}\) satisfies them. Thus multiplication followed by Cartan projection injects the old continuation space into the new one. In particular
+\[
+ d_{iw}(\mathbf n)\le d_{iw}(\mathbf n+u e_i)\qquad(u\ge0),
+\]
+for the two allowed degrees on this fibre.
+
+Finally fix every coordinate except \(i\). Both the old highest
+space and its integral basis may be fixed on this fiber.
+For each \(w\) the polynomial estimate gives the mean number
+of bad Smith directions at most \(m_{iw}\) times the parenthesis
+in \eqref{eq:ties}. Indeed take \(h=\lceil\log_p
+\max(H_i,2S_i+1)\rceil\le\Lambda\) in
+\eqref{eq:smith-average}. The graded determinant bound gives
+\(v_*\le(N+2)r^2\Lambda\), and
+\[
+ \lceil\kappa\rceil+v_*+3\Lambda\le2\kappa
+\]
+by the assumed
+slack. Weight those bad counts by the endpoint continuation
+dimensions and sum over \(w\). The dimension identity gives
+the endpoint on the right of \eqref{eq:ties}. Average over the remaining coordinates and sum in \(i\). The resulting bound, also valid for an empty set of ties, is the one applied to the enlarged box of sampled degrees.
+\end{proof}

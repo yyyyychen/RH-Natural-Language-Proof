@@ -1,0 +1,233 @@
+\paragraph{Cyclotomic correction at fixed precision.}
+\label{par:thick-integral-correction}
+Put
+\[
+ M=1+\lfloor h/(\ell-1)\rfloor,\qquad
+ \sigma_1=\left\lceil 1+(M+\eta)/(\ell-1)\right\rceil .
+\]
+For a vector \(v\in XN_i(T)\) there is an integral correction
+\(\tau(v)\in P_i^{(1)}(T)\) well-defined modulo
+\(X^Mq^\eta P_i^{(1)}(T)\), with
+\[
+  \ell^{\sigma_1}\Phi v-(\gamma-1)\tau(v)
+             \in X^Mq^\eta P_i^{(1)}(T).
+\]
+We use it at an even \(i\), where the odd destination gives
+\(q^\eta P_i^{(1)}(T)\subset N_{i+1}(T)\).
+There is also a two-step correction with precision \(Xq^{2H}\)
+on \(P_i^{(2)}(T)\) and exponent
+\(\sigma_*=\lceil1+2H/(\ell-1)^2\rceil\).
+
+Here are the divisions that give these two claims. In either
+case solve \((\gamma-1)d=v\) modulo a large power \(X^K\),
+over the coefficient field. The degree-by-degree solution
+of Paragraph~\ref{par:wach-cut-correction} puts the term in
+degree \(y\) in \(\ell^{-e_y}X^yN_i(T)\), where
+\[
+ e_y=\lceil\ell y/(\ell-1)\rceil.
+\]
+Take \(d\) with zero
+constant coefficient. Write \(J\) for the exponent of \(q\)
+in the precision ideal and \(a_y=(\ell-1)y\). In one step
+\(\phi(X)^y\) is a unit times \(X^yq^{a_y}\).
+
+If \(a_y<J=\eta\), then \(e_y\le\sigma_1\), since
+\(J\le (\ell-1)M\). If \(a_y\ge J\) and \(y<M\),
+expand \(q^{a_y-J}=(X+\ell)^{a_y-J}\).
+The terms which survive modulo \(X^Mq^J\) are divisible by
+\(\ell^{\max(0,\ell y-J-M+1)}\). For \(e_y>\sigma_1\)
+we have \(\ell y>J+M+\ell-1\); hence
+\[
+ \ell y-J-M+1\ge e_y-\sigma_1.
+\]
+
+For \(a_y\ge J\) and \(y\ge M\) the entire term vanishes.
+
+For two steps use \(M=1\), \(J=2H\), and
+\(\phi^2(X)^y\) associated to
+\(X^yq^{a_y}p_1^{a_y}\).
+If \(a_y\ge J\) the terms with \(y>0\) vanish. Otherwise
+\(p_1\in(\ell,q^\ell)\), by reduction modulo \(\ell\).
+After factoring out \(X^yq^{a_y}\), the terms of the binomial
+expansion that can survive have \(q^\ell\) used at most
+\(\lfloor(J-a_y-1)/\ell\rfloor\) times. If
+\(e_y>\sigma_*\), then
+\(a_y>J/\ell+(\ell-1)^2/\ell\), and
+\[
+ a_y-\frac{J-a_y-1}{\ell}
+      \ge \frac{\ell a_y-J}{(\ell-1)^2}
+      \ge e_y-\sigma_* .
+\]
+The last inequality uses the defining roundings. Thus the
+required division is integral. Here one may take \(K>\max(M,J)\), since
+\(\phi^j(X)^K\) then belongs to the precision ideal in both
+cases.
+
+The integral coefficient quotient by \(X^Mq^J\) is free
+over \(O\) by monic Weierstrass division. For either free Frobenius span \(P\) and its precision submodule \(P_{\rm prec}\), saturation gives
+\[
+ (P_{\rm prec}[1/\ell])\cap P=P_{\rm prec}.
+\]
+
+The resulting representative of \(\ell^{\sigma_1}\Phi d\)
+or \(\ell^{\sigma_*}\Phi^2d\) satisfies the claimed
+cyclotomic congruence, by commutation and saturation.
+Uniqueness of \(d\) modulo \(X^K\) over the coefficient field
+follows from the nonzero diagonal \(\chi(\gamma)^{(\ell-1)y}-1\)
+in positive degrees. Hence the corrections are linear modulo
+the precision and natural in maps of crystalline lattices.
+They may be made linear on a free family by choosing
+representatives on its basis. In one step the correction to a
+vector of \(X^MN_i(T)\) can be taken zero. The calculation of
+\(d\) in that case starts at degree \(M\), and
+\[
+ (\ell-1)M\ge\eta.
+\]
+For \(v=(\gamma-1)w\) with
+\(w\in XN_i(T)\) one can use \(d=w\).
+
+\paragraph{Second restriction and the alternating sum.}
+Write \(N_i=N_i(T_2)\) for this construction. For even \(c\)
+set
+\[
+ \xi_c=\ell^{s_1}z_c+(\gamma-1)m_c\in XN_c.
+\]
+
+Choose \(t_c=\tau(\xi_c)\) linearly on the restricted family.
+At the odd letter \(c+1\) put
+\[
+ L_c=\ell^{\sigma_1}\Phi m_c+
+             \ell^{s_1+\sigma_1}y_{c+1}-t_c,\qquad
+ \Xi_c=\ell^{s_1+\sigma_1}z_{c+1}+(\gamma-1)L_c .
+\]
+The Herr relation gives
+\(\Xi_c=\ell^{\sigma_1}\Phi\xi_c-(\gamma-1)t_c\).
+
+Consequently \(\Xi_c\in X^MN_{c+1}\). It lies more precisely
+in \(X^Mq^\eta P_c^{(1)}(T_2)\).
+To make the next difference integral, write
+\[
+ U_{c+1}=\ell^R L_c-\ell^{s_1+\sigma_1}\mu_{c+1}
+        =\ell^{\sigma_1}\Phi u_c+\ell^{s_1+\sigma_1}A_{c+1}
+           -\ell^R t_c .
+\]
+The signed height and \eqref{eq:thick-extension-data} show that \(q^\eta U_{c+1}\in N_{c+1}\).
+Applying \(\gamma-1\) gives \(\ell^R\Xi_c\) minus
+\(\ell^{s_1+\sigma_1}(\ell^R z_{c+1}+(\gamma-1)\mu_{c+1})\).
+This is in \(N_{c+1}\). Its only possible Laurent obstruction
+is again degree zero, this time in
+\(\mathrm{Fil}^{-\eta}D_{c+1}/\mathrm{Fil}^0D_{c+1}\).
+Only central jumps contribute, so taking one kernel of rank
+at most \(m\) per odd destination makes each \(U_{c+1}\) integral.
+There are at most \(n\) restrictions including the first ones.
+
+On the resulting family define at each even \(c\)
+\[
+ w_c=\Phi L_{c-2}+\ell^{s_1+\sigma_1}y_c-\ell^{\sigma_1}m_c,
+ \qquad Y_c=\Phi w_c+t_c .
+\]
+All indices are cyclic, including when the word has length two.
+There are three useful tests on \(w_c\). First,
+\[
+ \ell^R w_c=\Phi U_{c-1}-\ell^{\sigma_1}u_c
+                        +\ell^{s_1+\sigma_1}A_c .
+\]
+The height bounds place the right side, after multiplication
+by \(q^{B_c}\), in \(N_c\). Multiplication instead by \(q^\eta\)
+places it in \(P_{c-1}^{(1)}(T_2)\) after a possible
+additional factor \(\ell^R\), by \eqref{eq:thick-extension-data}.
+Both lattices are \(\ell\)-saturated inside the integral
+\'etale module.
+
+For the Frobenius span, reduce in a Wach basis
+and extend scalars by the finite free Frobenius coefficient map.
+The original basis stays independent over the residue Laurent
+field because the linearized Frobenius on the \'etale module
+is invertible. Cancel these powers of \(\ell\).
+Second, \((\gamma-1)w_c=\Phi\Xi_{c-2}-\ell^{\sigma_1}\xi_c\)
+belongs to \(XN_c\), since
+\(\Phi(X^MN)\subset q X^MN\). Third,
+\[
+                (\gamma-1)Y_c=\Phi^2\Xi_{c-2}-\Xi_c
+                                 \in X^MN_{c+1}.
+\]
+These calculations give exactly the pole, first pullback
+and cyclotomic tests on \(w_c\) used by the even-letter estimates.
+
+Define \(Z_c=(\Phi-1)^{-1}(\gamma-1)Y_c\) in \(X^MN\),
+where the inverse exists by contraction on the product of all
+letters. Then the sum of \((Y_c,Z_c)\) over even \(c\)
+represents \(\ell^{s_1+\sigma_1}(y,z)\). Indeed let
+\[
+  B=\sum_{c\text{ even}}\bigl(L_c+\Phi L_c
+                                  +\ell^{s_1+\sigma_1}y_{c+2}\bigr).
+\]
+Summing first components gives
+\(\sum_cY_c=\ell^{s_1+\sigma_1}y+(\Phi-1)B\)
+by invariance of the even labels under the shift by two.
+For the second components
+\(\ell^{s_1+\sigma_1}z+(\gamma-1)B
+ =\sum_c(\Xi_c+\Phi\Xi_c)\in X^MN\).
+The Herr relation and uniqueness of the inverse prove the same
+coboundary identity for the whole pair.
+\label{cor:inert-thick-herr-1}
+
+\paragraph{Integral comparison with the lifted vectors.}
+For an admissible \(w\) at an even \(c\), use the first
+correction to form
+\[
+             V(w)=\ell^{\sigma_1}\Phi w
+                          -\tau((\gamma-1)w).
+\]
+Its cyclotomic defect lies in \(X^MN\). The second component is uniquely determined at this precision by
+\[
+ z=(\Phi-1)^{-1}(\gamma-1)V(w),\qquad z\in X^MN.
+\]
+
+Its first component has denominators in finitely many
+cyclotomic factors, by the height bounds, and the second
+belongs to \(X^MN\). The crystalline criterion proved in
+Section~\ref{sec:inert-long-orbit} therefore makes its
+integral Herr class finite. A change of representative of
+the correction changes both components by a coboundary.
+Indeed if the first component of a pair is in \(X^MN\)
+along with its second component, the first is the
+\((\Phi-1)\)-image of a vector in \(X^MN\). Commutation
+and injectivity on \(X^MN\) give the other component of
+the coboundary. This also shows that the resulting class
+depends linearly on \(w\) and is natural in the marked map.
+Writing \([V(w)]\) for the resulting class, the last property of the correction gives
+\[
+ w\in XN_c\quad\Longrightarrow\quad[V(w)]=0.
+\]
+Thus integral congruence modulo \(XN_c\) is
+sufficient for comparing classes.
+
+For \(w=w_c\), the defect at letter \(c\) is
+\(\Phi\Xi_{c-2}-\ell^{\sigma_1}\xi_c\).
+Its first summand lies in \(X^MN_c\), on which the
+correction is zero. Its second summand has correction
+\(-\ell^{\sigma_1}t_c\) modulo the precision.
+Thus
+\[
+ V(w_c)\equiv\ell^{\sigma_1}Y_c\pmod{X^MN}.
+\]
+
+The resulting finite classes, denoted by \(\kappa_c\), sum
+to \(\ell^{s_1+2\sigma_1}\) times the original class.
+The displayed cocycle uses \(\Phi-1\) and \(\gamma-1\)
+in this order and has the displayed plus sign. If the
+opposite convention for the extension class is used, replace
+the sum of the source lifts by its negative.
+
+In particular, if
+\[
+ \ell^e w_c-f(u_c')\in XN_c(T_2)
+\]
+for an admissible vector \(u_c'\) in the source, the
+finite class attached to \(u_c'\) maps to
+\(\ell^e\kappa_c\). All these comparisons take place on
+the original rank block and the same map; they do not
+require exactness of the Wach functor on the right or a
+choice of integral splitting of the surjection.
+\label{cor:inert-thick-herr-2}

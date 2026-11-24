@@ -1,0 +1,197 @@
+\paragraph{Coordinates on a short arc.}\label{par:short-wach-frame}
+\begin{proposition}[Common coordinates for short-arc comparisons]\label{prop:short-arc-coordinates}
+For a short arc, use the same integral vertical and
+horizontal frames and the corresponding cyclotomic levels.
+For an arc ending at \(c\) of length \(a=a_c\), the offset \(0\le j<a\)
+has size \(u_j=s_{c-j}\) and cyclotomic factor \(P_j=\phi^j(X+\ell)\). The horizontal and vertical comparisons use the same positive pole and negative zero factors
+\[
+ D=\prod_{j\ {\rm positive}}P_j^{u_j},\qquad V=\prod_{j\ {\rm negative}}P_j^{u_j+S}.
+\]
+The two ordinary lifting rules use these coordinates. In the single-letter edge cases the
+positive rule applies to every input, and the negative rule
+uses the empty pole set and the initial constant lift.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Fix the same cut coordinate and ordered cyclotomic levels for both rules.}
+Write \(a=a_c,\ c'=c-a,\ G=w+S,\ u_j=s_{c-j}\), and
+\(P_j=\phi^j(q)\), so \(P_0=q=X+\ell\).
+Let \(\mathcal R=O[[X]]=O[[q]]\). All ideals of fractions below
+are in the component at \(c\).
+Call an offset positive or negative according to its large Hodge
+jumps. This sign is used even at the first letter of small size.
+The full denominator for transport over \(a\) steps and the two
+smaller products determined by the jumps are
+\[
+ \Lambda=P_{a-1}^{G}\prod_{j<a-1}P_j^h,\qquad
+ D=\prod_{j\ {\rm positive}}P_j^{u_j},\qquad
+ V=\prod_{j\ {\rm negative}}P_j^{u_j+S}.
+\]
+Choose a basis of the tame-invariant Wach lattice at \(c'\).
+The unique formal \(\gamma\)-fixed basis with the same constants is
+its horizontal basis.
+
+Write \(U(X)=I+\sum_{r>0}U_rX^r\) for the change
+to the horizontal basis, and let \(F_r(U_1,\ldots,U_{r-1})\)
+be the degree-\(r\) residual computed with \(U_r=0\).
+The recursion is
+\[
+       (\omega_X^r-1)U_r=-F_r(U_1,\ldots,U_{r-1}).
+\]
+Its new denominator has order \(1+v_\ell(r)\) at step \(r\).
+Thus through that step the denominators divide
+\(\ell^{r+v_\ell(r!)}\). This also holds for the inverse change
+of basis, by the factorial inequality for products of coefficients.
+Use the basis truncated before degree \(M\). These are coordinates
+on the given lattice map: a map of Wach lattices acts on horizontal
+columns by its matrix of constants at \(c'\), since both sides solve
+the same equation with the same constant. Frobenius transports these
+constants to the crystalline space at \(c\).
+
+Here are details on the precision of these coordinates. Put
+\[
+ P(T)=\langle\Phi^aN_{c'}(T)\rangle_{\mathcal R}.
+\]
+
+Represent \(v\in\Lambda^{-1}P(T)\) modulo \(X\Lambda P(T)\)
+in the transported horizontal basis, allowing powers of \(\ell\)
+to clear coefficients in this comparison. Equivalently multiply
+by \(\Lambda\) and compare modulo \(X\Lambda^2 P(T)\).
+The tails beyond the truncation have a factor
+\(\phi^a(X)^M\), divisible by \(X\Lambda^2\) since
+\((\ell-1)M>2h\). The finite coefficients, and the inverse matrix,
+can be transported integrally at cost \(\sigma\). Indeed on
+the first step one reduces \(\ell^\sigma\phi(X)^r/\ell^{r+v_\ell(r!)}\)
+modulo \(X^Mq^{2G}\).
+
+The term \(X^r q^{(\ell-1)r}\) pays the
+denominator after this precision, by the binomial division of
+Paragraph~\ref{par:wach-cut-correction} with one forward step and
+precision \(2G\). More explicitly, for \(k=r+v_\ell(r!)-\sigma>0\)
+one needs
+\[
+ (\ell-1)r\ge 2G+k+M-r-1.
+\]
+Then modulo \(\ell^k\)
+the binomial expansion of \((X+\ell)^{(\ell-1)r-2G}\) is divisible
+by \(X^{M-r}\). If \(k>0\), the coefficient bound gives
+\(r>(\ell-1)\sigma/\ell\). Together with the definition of
+\(\sigma\) this yields the preceding power inequality.
+
+In
+the binomial expansion the terms of \(\ell\)-degree \(\ge k\)
+vanish modulo \(\ell^k\); every other term has \(X\)-degree
+at least \((\ell-1)r-2G-k+1\ge M-r\). Thus the termwise
+division is legitimate at the first precision. The next
+\(a-1\) Frobenius maps give
+\[
+             \phi^{a-1}\bigl((X^Mq^{2G})\bigr)
+                                     \subseteq (X\Lambda^2)
+\]
+by the same level bounds defining \(\Lambda\). Thus the transported matrices are represented by
+integral lifts of \(\ell^\sigma\phi^a(U)\) and
+\(\ell^\sigma\phi^a(U^{-1})\) modulo \(X\Lambda^2\)
+in the Frobenius basis. If \(A,B\) denote these two integral lifts in the displayed order, their common precision gives
+\[
+ AB\equiv BA\equiv\ell^{2\sigma}I\pmod{X\Lambda^2}.
+\]
+
+
+For clarity, the coefficient test in these coordinates is as
+follows. If a constant direction \(d\) at the end of the arc
+belongs to \(\mathcal F_j^{-\alpha_j}\) for each transported
+filtration, then \(d\) with coefficient in
+\((\prod P_j^{\alpha_j})\mathcal R\) passes the Wach test at
+each level. Sums of such terms after scalar extension give the
+rational test; the bounded integral numerators are required as
+well.
+
+To see the rational assertion, separate the levels by the
+Chinese remainder theorem for their distinguished polynomials
+and take a basis of the filtration at each level. For a basis vector \(d\) of jump \(u\), the corresponding generator and its Laurent order are
+\[
+ t^{-u}d,\qquad \operatorname{ord}_t(t^{-u})=-u,
+\]
+as in
+Paragraph~\ref{par:wach-level-models}. Multiplying the other
+level factors to sufficiently high orders realizes each of these
+finite jets without imposing further conditions there.
+Divisibility of bounded numerators by a product of these
+polynomials descends to \(\mathcal R\) by monic division.
+
+Let \(u\) denote a coordinate vector satisfying all the
+local tests and let \(n\) be a vector in \(N_c\).
+The forward comparison and its inverse give, in their
+respective quotients by the transported precision,
+\[
+   f_{\rm hor}(u)=[\ell^\sigma u]_{\rm Wach},
+   \qquad g_{\rm hor}(n)=[\ell^\sigma n]_{\rm coordinates},
+   \qquad g_{\rm hor}f_{\rm hor}=\ell^{2\sigma}.
+\]
+Thus an admissible coordinate vector produces a Wach class,
+and the restricted inverse sends a Wach vector back into the
+tested coordinate module. Indeed the transported forward
+and inverse matrices above give integral lifts with the bounded
+denominator, and changes by \(X\Lambda P(T)\) lie in \(XN_c\)
+by the height bounds.
+
+For an admissible vector one tests
+\((\gamma-1)/X\) in the same manner. This gives an integral
+vector with \((\gamma-1)v\in XN_c\), since its horizontal
+columns are fixed to the indicated precision. A product of the
+\(P_j\) clears its denominators in \(N_c\). These statements
+apply to subarcs beginning at \(c'\) with their own product
+\(\Lambda\). \label{cor:inert-short-frame-1}
+
+We will lift a coordinate \(f\) on a target horizontal column
+\(d\) which belongs to \(\mathcal F_j^{u_j}\) at every positive
+level. Its scalar hypotheses are
+\begin{equation}\label{eq:short-scalar}
+ Df\in\mathcal R,\qquad
+ D(\ell^{k_j}f-x_j)\in P_j^{u_j+S}\mathcal R
+ \quad(j\ {\rm negative})
+\end{equation}
+for some \(k_j\ge0,\ x_j\in O\). A lift at cost \(e\) represents
+\(\ell^e f d\) by the image of an admissible source vector up to
+\(XN_c(T_2)\) and the coordinate precision. There are two ways
+to construct it.
+\begin{enumerate}
+\item If \(Df\in V\mathcal R\), then \(fd\) passes the target
+Wach test. The poles at the positive levels are allowed by the
+filtration of \(d\); the zeros at the negative levels accommodate
+the lowest possible jump. The coordinate comparison and scalar image bound at \(c\) use successive multipliers
+\[
+ \ell^\sigma\ell^R=\ell^{R+\sigma}.
+\]
+Tame averaging preserves the lifted image, so no extra exponent enters this case.
+\item Suppose the poles are confined to a subset of the positive
+levels and an integral source direction maps to \(\ell^t d\) and
+lies in \(\mathcal F_j^{u_j}\) there. At each omitted positive
+level also require that \(f\) is constant modulo \(P_j^\eta\)
+after clearing scalars and the retained denominator. Then the
+coefficient \((\gamma f-f)/X\) times this source direction passes
+the level tests. For each level factor, write \(\gamma P_j/P_j=1+Xh_j\) with \(h_j\in\mathcal R\). Then
+\[
+ (\gamma P_j-P_j)/X=h_jP_j.
+\]
+
+For every \(n\in\mathbb Z\) the ratio \((1+Xh_j)^n\) belongs to \(1+X\mathcal R\). Thus
+\[
+ (\gamma P_j^n-P_j^n)/X\in P_j^n\mathcal R ,
+\]
+including for negative powers. The constant disappears
+at each omitted positive or negative level. Equation~\eqref{eq:short-scalar}
+therefore supplies the required zeros at negative levels, and
+\(\eta\) supplies them at omitted positive levels. The retained
+positive poles pass by the source filtration. The admissible-vector
+construction gives the lift at \(t+\sigma\). For an integral constant, transport the constant term of the initial target basis lift at \(c'\). Its coefficient differences vanish, so its cost is at most \(R+\sigma\).
+\end{enumerate}
+
+In the second rule the congruences use the denominator for the
+retained positive levels. Costs of two summands may be padded
+to their maximum, by linearity of the source map and of the
+coordinate comparison. For a single positive letter the first
+rule applies to every \(f\). For a single negative letter use
+the second with empty pole set and the initial constant lift.
+\end{proof}
+

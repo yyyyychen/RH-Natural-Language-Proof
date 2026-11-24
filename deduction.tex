@@ -1,0 +1,118 @@
+\section{Nonvanishing and the functional equations}
+\label{sec:deduction}
+
+We return to the character with which the introduction began. Proposition~\ref{prop:arithmetic}, proved using Theorem~\ref{hyp:uniform-arithmetic-data}, supplies the intervals required by the Laplace-transform criterion for each primitive character. We pass to arbitrary moduli using the finite
+Euler factors, then use the functional equation to relate \(s\) to \(1-s\)
+in the open critical strip. For \(\zeta\) the
+explicit functional equation also determines which zeros can
+occur to the left of the strip. These steps prove all parts of
+Theorem~\ref{thm:claims}.
+
+\begin{definition}[Completion at the primitive conductor]\label{def:completed-dirichlet}
+For a primitive Dirichlet character \(\chi\) of conductor \(f_\chi\),
+let \(a_\chi=(1-\chi(-1))/2\). Thus \(a_\chi=0\) for an even character
+and \(a_\chi=1\) for an odd character. Its completed \(L\)-function is
+\[
+ \Lambda(s,\chi)=
+ \left(\frac{f_\chi}{\pi}\right)^{(s+a_\chi)/2}
+ \Gamma\!\left(\frac{s+a_\chi}{2}\right)L_{f_\chi}(s,\chi).
+\]
+In this chapter \(q\) is the modulus of the character under consideration;
+for an induced character the completion above is applied to its primitive
+inducer \(\chi^*\). The omitted local factors are those of
+\eqref{eq:imprimitive-euler-factors}.
+\end{definition}
+
+\begin{construction}
+\begin{tabular}{@{}l@{\hspace{1.2em}}l@{}}
+\toprule
+\textit{Characters and domain} & \textit{Mathematical input} \\
+\midrule
+Primitive \(\psi,\ \RePart s>1/2\) & Weighted sum on \([Y,Y^{3/2}]\) \\
+Induced \(\chi,\ \RePart s>0\) & Extra Euler factors are nonzero \\
+Primitive \(\chi,\ 0<\RePart s<1\) & \((s,\chi)\mapsto(1-s,\bar\chi)\) \\
+\(\zeta,\ \RePart s<1/2,\ s\ne0\) & Cosine factor, with \(\zeta(1-s)\ne0\) \\
+\bottomrule
+\end{tabular}
+\caption{Domains of the final deductions. The first row excludes \(s=1\) for the principal character.}\label{fig:analytic-scopes}
+\end{construction}
+
+\begin{proof}[Proof of Theorem~\ref{thm:claims}]
+\proofstep{The right half-plane.}
+Fix a primitive character
+\(\psi\) and a proposed zero \(\rho\) with \(\RePart\rho>1/2\).
+Choose \(1/2<\theta<\min(1,\RePart\rho)\), and then take
+\(0<\epsilon<\epsilon_0\) with \(9\epsilon\leq\theta-1/2\).
+On the intervals supplied by Proposition~\ref{prop:arithmetic}, with \(Y\) arbitrarily large,
+\[
+   G_{\mathcal K}(y)\le y^{1/2+9\epsilon}\le y^\theta
+            \qquad(Y\le y\le Y^{3/2}).
+\]
+The weights of \(\mathcal K\) are positive and \(\psi\in\mathcal K\),
+so Theorem~\ref{thm:window} with \(\delta=1/2\) excludes \(\rho\).
+
+This proves the primitive case at the conductor. For a character \(\chi\bmod q\)
+induced by \(\chi^*\) of conductor \(f_\chi\mid q\), the Euler-factor
+identity \cite[(25.15.4)]{dirichlet} is
+\[
+ L_q(s,\chi)=L_{f_\chi}(s,\chi^*)\prod_{\substack{p\mid q\\p\nmid f_\chi}}
+       (1-\chi^*(p)p^{-s})
+\]
+by comparison of the Euler products and meromorphic continuation.
+The factors are nonzero for \(\RePart s>0\) since
+\(\lvert\chi^*(p)p^{-s}\rvert\leq p^{-\RePart s}<1\). This gives the
+nonvanishing for \(\RePart s>1/2\), with \(s=1\) excluded for the principal character.
+
+\proofstep{The open critical strip.}
+We can now reflect the nonvanishing statement inside the strip. For a primitive
+nonprincipal \(\chi\), let \(\bar\chi\) denote its
+complex conjugate and let \(\varepsilon(\chi)\) denote its root number. With the completion in
+Definition~\ref{def:completed-dirichlet}, the primitive Dirichlet
+functional equation \cite[(25.15.5)]{dirichlet} takes the form
+\[
+\Lambda(s,\chi)=\varepsilon(\chi)\Lambda(1-s,\bar\chi),
+                   \qquad |\varepsilon(\chi)|=1.
+\]
+For \(\chi=1\) we have \(f_\chi=1\) and \(a_\chi=0\). The functional
+equation of the Riemann \(\xi\)-function gives
+\[
+ \Lambda(s,1)=\pi^{-s/2}\Gamma(s/2)\zeta(s)=\Lambda(1-s,1)
+                     \qquad (0<\RePart s<1),
+\]
+after cancelling its factor \(s(s-1)/2\).
+\cite[(25.4.3)--(25.4.4)]{zeta}
+
+In both cases the gamma factors are finite and nonzero there.
+Thus for primitive characters the functional equations give
+\[
+ L(s,\chi)=0\quad\Longleftrightarrow\quad
+ L(1-s,\bar\chi)=0\qquad(0<\RePart s<1).
+\]
+If \(\RePart s<1/2\), then \(\RePart(1-s)>1/2\), which
+contradicts primitive nonvanishing for \(\bar\chi\).
+Primitive nonvanishing also excludes \(\RePart s>1/2\).
+For an induced character, the Euler factors above are units
+at every point of the open strip, so its zeros there agree with the
+zeros of the primitive character inducing it.
+
+\proofstep{The remaining zeta zeros.}
+For \(\RePart s<1/2\) and \(s\ne 0\), the zeta functional
+equation \cite[(25.4.1)]{zeta} gives
+\[
+ \zeta(s)=2(2\pi)^{s-1}\Gamma(1-s)
+           \cos\left(\frac{\pi(1-s)}2\right)\zeta(1-s).
+\]
+Here \(\Gamma(1-s)\) is finite and nonzero and the
+right-half-plane result gives \(\zeta(1-s)\ne0\).
+The point \(s=0\) was excluded, so \(\zeta(1-s)\) is also finite.
+Consequently for \(\RePart s<1/2\) and \(s\ne0\),
+\[
+ \zeta(s)=0 \quad\Longleftrightarrow\quad
+ \cos\!\left(\frac{\pi(1-s)}2\right)=0
+ \quad\Longleftrightarrow\quad s\in\{-2,-4,-6,\ldots\}.
+\]
+Together with \(\zeta(0)=-1/2\), this identifies all zeros
+strictly to the left of the line. The modulus-one
+right-half-plane result excludes the other side away from \(s=1\).
+\end{proof}
+

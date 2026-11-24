@@ -1,0 +1,341 @@
+\subsection{The level at the assigned prime and its dimension}\label{subsec:selected-word-level}
+\hypertarget{source-selected-word-level}{}
+
+Fix the two common split primes \(g_0,g_1\) and the weights of a point. The assigned prime varies with the word. Its contribution to the dimension must be explicit before the columns can be placed in a common rank range. For each sequence \(u\), choose the third prime \(T_u\) and the level there as in Proposition~\ref{prop:assigned-prime}. Write \(F=E^+\), \(f=[F:\mathbb Q]\), and use \(M_j\)
+for the self-dual quotient volume \eqref{eq:row-self-dual-mass} in
+rank \(j\). We use the class and volume calculation of the companion
+reconstruction \cite{companion-word-rank}.
+
+\subsubsection{The class count in the marked genus}
+
+The marking changes the local stabilizer at the assigned prime. Counting its nonzero possibilities in the split genus isolates the entire dependence of the column dimension on that prime.
+
+\begin{proposition}[Dimension of the marked definite column]\label{prop:marked-column-dimension}
+For the column lattice of discriminant index \(T_u^{2f}\) at the
+split assigned prime, with the nonzero marking at each place over
+\(T_u\), the definite column has dimension
+
+\[
+ d_u=d_{u,*}(T_u^k-1)^f.
+\]
+ The factor \(d_{u,*}\) is computed
+from the self-dual class volume, the common index and the
+definite weights, before the marking is imposed.
+\end{proposition}
+
+\begin{proof}
+\proofstep{The self-dual enlargement.}
+
+At \(v\mid T_u\) write the two split parts of the column lattice as
+\(B_+\oplus B_-\). Their duals for the cross pairing are
+\(B_-^*\oplus B_+^*\). The marking is a nonzero residue row on the
+discriminant module with scalars through one residue factor, called
+the plus factor.
+
+At \(v\mid T_u\) write \(l_v^+,l_v^-\) for the two defect lengths.
+Elementary divisors for the cross pairing identify them. The nonzero
+marking and the discriminant index \eqref{eq:selected-column-discriminant}
+give
+\[
+ l_v^+=l_v^-\ge1,\qquad
+ \sum_{v\mid T_u}(l_v^++l_v^-)=2f .
+\]
+There are \(f\) places, so both lengths are one at each, and \(B_+\) is the kernel of the row
+on \(B_-^*\). Take \(N_v=B_-^*\oplus B_-\) at these places and the
+original self-dual lattice elsewhere. Taking the inverse image of
+\(\bigoplus_v N_v/B_v\) in \(B^\vee\) gives a global lattice \(N\).
+Duality commutes with localization, hence \(N=N^\vee\).
+
+Write \(K\) for its finite stabilizer. An isometry preserving the
+marked lattice preserves \(N\) by its construction. In \(K_v\) at
+the prime assigned to the sequence, fixing the residue row preserves its kernel and
+hence the original lattice. The level index is \(T_u^k-1\) there
+by transitivity on nonzero rows and surjectivity of reduction. At
+each \(g_i\) the fine level reduces to the upper unitriangular group
+in \(\mathrm{GL}_k\). Put
+\[
+ I_k=\prod_{i=0,1}
+ \left(\frac{|\mathrm{GL}_k(\mathbf F_{g_i})|}
+ {g_i^{k(k-1)/2}}\right)^f .
+\]
+At other places the index is one.
+
+For a coarse double coset \(y\),
+the fine classes above it are the orbits of
+\(\Delta_y=y^{-1}U(F)y\cap K\) on the finite coset space of the
+fine level in \(K\). Each orbit has \(|\Delta_y|\) elements by the
+pro-\(g_i\) and cyclotomic degree argument of
+Section~\ref{sec:ramified-column}. The coarse reciprocal-stabilizer
+sum is \(M_k\), since \(E/F\) is unramified at the finite places
+and \(N\) is self-dual. Summing the orbit counts gives
+\[
+ \#\{\text{fine classes}\}
+ = I_k(T_u^k-1)^f\sum_y |\Delta_y|^{-1}
+ = M_k I_k(T_u^k-1)^f .
+\]
+
+For each such class the selected column reads a form at its
+representative in the frame coordinates of
+Section~\ref{subsec:selected-column-metric}. The class
+parametrization is bijective and changing the real frames is
+invertible. Trivial stabilizers imply that any given collection of
+coefficient values extends uniquely by equivariance. The local
+coefficient space is the polynomial Weyl space of the recorded
+weight with its determinant twist. Evaluation in a frame preserves
+its dimension since frames form a dense open set after
+complexification. If \(a_{\rho,i}\) are its shifted highest-weight
+coordinates, put
+\[
+ V_{u,\rho}=\prod_{i<j}(a_{\rho,i}-a_{\rho,j}),\qquad
+ F_j=\prod_{i=0}^{j-1}i!,\qquad
+ d_{u,*}=M_k I_k\prod_\rho(V_{u,\rho}/F_k).
+\]
+Weyl's formula and the free choice of values give
+\(d_u=d_{u,*}(T_u^k-1)^f\). The same formula uses the weight of the
+finite class lattice, since adding a constant to every coordinate
+leaves the differences unchanged.
+\label{cor:selected-word-level-1}
+
+\end{proof}
+
+\subsubsection{The target before prime selection}
+
+After removing the local marking factor from the column dimension, the remaining data specify a real target for the prime. Its size and variation across words determine how accurately a prime must approximate it.
+
+Write \(r=k+m-1\), \(g=g_0g_1\), \(L=\log b=x^\epsilon\),
+\(v=d_E/2\) with \(d_E\) the root discriminant, and let
+\(X_u=(D_*/d_{u,*})^{1/(fk)}\).
+
+\begin{proposition}[Bounds for the target before selection]\label{prop:prime-target-size}
+Let \(d_{u,*}\) be the pre-level column factor of
+Proposition~\ref{prop:marked-column-dimension}, and \(D_*\) the
+identity term of Proposition~\ref{prop:projector-dimension}.
+Set \(X_u=(D_*/d_{u,*})^{1/(fk)}\), \(g=g_0g_1\), \(v=d_E/2\).
+Then
+\[
+ \log X_u\ge \sum_j f^{-1}\sum_\rho\log(w_{j\rho}v/\pi)+m\log g-O(L),
+ \qquad \log X_u\ll(1+C_g)mL.
+\]
+Consequently \(t=X_u\Gamma^{-2/(fk)}\) satisfies \(\log t\ge mL/2\)
+for every word at one sufficiently late threshold, using
+\(w_{j\rho}\ge1\), \(g_i\ge(kb)^8\),
+\(m\le x^{1/2+\epsilon/100}\) and \(k\ge m^5 Lx^2\).
+\end{proposition}
+
+\begin{proof}
+\proofstep{Compare the level indices and formal degrees.}
+
+Both quantities in this ratio
+are defined before \(T_u\) is chosen. Let \(I_r\) be the original row-level index and \(d_\rho\) the
+formal degree in compact-transfer measure. The identity term of the
+trace and Harish--Chandra's formal degree formula give
+\[
+ D_*=M_r I_r\prod_\rho d_\rho,\qquad
+ d_\rho F_r=V_{\lambda,\rho}
+\]
+for the regular row parameter.
+The compact scalar circle has mass one and its central character
+has absolute value one in the squared matrix coefficient.
+\cite{atiyah-schmid}
+
+Put \(s=m/2-1\). In each row reduction over \(g_i\) there are \(s\)
+single blocks on either side of the block of size \(k+1\).
+All strictly upper off-block entries are free. The middle block
+is \(\operatorname{diag}(A,1)\) with \(A\) upper unitriangular.
+Its subgroup together with those entries has order
+\(g_i^{(r^2-(k+1)^2-2s)/2+k(k-1)/2}\). Dividing its index by the
+column index and using the finite general linear orders gives
+\[
+ I_r/I_k=g^{f(km+m(m-1)/2)}
+       \prod_{i=0,1}\prod_{j=k+1}^r(1-g_i^{-j})^f .
+\]
+
+In \eqref{eq:row-self-dual-mass} the ratio \(M_r/M_k\) cancels
+all Euler factors up to \(k\), and the factorials cancel those of
+the degree and dimension formulas. Use \(L_j\) for the Euler
+products of \eqref{eq:row-self-dual-mass}, and put
+\(J=(m-1)k+m(m-1)/2\). This gives the identity
+\begin{align*}
+ fk\log X_u={}& fJ\log(v/\pi)-\tfrac12 f(m-1)\log d_E\\
+ &+f(km+m(m-1)/2)\log g
+       +\sum_\rho\log(d_\rho F_r/V_{u,\rho})+Z,\\
+ Z={}&\sum_{j=k+1}^r\log L_j+
+       f\sum_{i=0,1}\sum_{j=k+1}^r\log(1-g_i^{-j}).
+\end{align*}
+For \(j\ge2\), the Euler-product majorant gives
+\(|\log L_j|\le f\log\zeta(j)\), and
+\(-\log(1-g_i^{-j})\le\log\zeta(j)\). Thus
+\[
+ |Z|\le 3f\sum_{j=k+1}^r\log\zeta(j)\ll fm .
+\]
+
+\proofstep{Compare the uncancelled Vandermonde factors.}
+
+After cancellation, the remaining weight differences control variation of the target across words.
+
+
+At a real place cancel the Vandermonde on the \(k-2\) interior
+nodes against the one on the corresponding row nodes. The
+logarithm of their ratio is \(O(k(1+\log k))\), by the binary
+displacements of Section~\ref{sec:local-amplitudes}. At most \(2k-3\)
+uncancelled column gaps involve an end coordinate, each at most
+\(2a\) on the weight window. The cross gaps in the row contribute
+at least \(\prod_j B_j^{k-1}\). Unused row gaps are at least one.
+Here \(B_j\) is the absolute value of the \(j\)-th negative
+coordinate and \(w_{j\rho}\) the corresponding chain weight.
+The window has \(0<w_{j\rho}-B_j\le B_j/x\) and \(w_{j\rho}\le2b\).
+Consequently
+\[
+ (k-1)\log B_j\ge k\log w_{j\rho}-k/x-\log(2b),\qquad
+ \log(d_\rho F_r/V_{u,\rho})\ge k\sum_j\log w_{j\rho}-O(kL).
+\]
+
+We used \(m\le x,\ m\le k,\ \log k+\log(2a)=O(L)\).
+In the opposite direction at most \((m+1)r\) row gaps remain,
+each \(O(b^2)\), and each remaining column gap is at least one.
+This bounds the log ratio from above by \(O(mkL)\).
+
+\proofstep{Bound the remaining field and scale factors.}
+
+The host contains the real subfield of the sixteenth cyclotomic
+field. The conductor-discriminant formula there gives root
+discriminant \(2^{11/4}>2\pi\). In the full host \(d_E\) is at most
+its conductor \(N_E\). Thus \(0\le\log(v/\pi)\le L\) eventually,
+and \(\log g\le 2C_gL\). Division by \(fk\) gives
+\[
+ \log X_u\ge
+ \sum_j f^{-1}\sum_\rho\log(w_{j\rho}v/\pi)+m\log g-O(L),
+ \qquad \log X_u\ll (1+C_g)mL .
+\]
+The replacement of \(J/k\) by \(m\) in the lower bound costs
+at most \(L\). The gamma correction is \(2C_\Gamma m^5 L/k\).
+
+In the chosen family \(m\le x^{1/2+\epsilon/100}\) and the lower
+rank bound gives \(k\ge m^5 L x^2\) eventually
+\label{cor:selected-word-level-2}. Thus this correction is \(o(1)\).
+As \(w_{j\rho}\ge1\) and \(g_i\ge(kb)^8\), the target
+\(t=X_u\Gamma^{-2/(fk)}\) has \(\log t\ge mL/2\).
+
+\end{proof}
+
+\subsubsection{Prime selection and uniform comparison}
+
+The target has been bounded uniformly in the word. We must now realize it by a prime satisfying the splitting and congruence conditions closely enough to preserve the required dimension interval.
+
+\begin{proposition}[Choice in the linked rank interval]\label{prop:assigned-prime}
+For \(t=X_u\Gamma^{-2/(fk)}\) there is an assigned prime
+\(T_u\in[t,(1+1/(fk))t]\) in the required splitting and
+congruence class. With one threshold for the selected words, 
+\[
+ mL/2\le\log T_u\ll mL,\qquad
+ \max\{T_u/T_{u'},T_{u'}/T_u\}\le \exp(1/2+O((1+\log k)/k)).
+\]
+
+\end{proposition}
+
+\begin{proof}
+\proofstep{A degree-one prime in the short interval.}
+
+Use the identity ray class in \(\mathbb Q(\sqrt{-d})\) for
+\(Q=N_Eg^2\). The relative Chebotarev estimate used for \(g_0,g_1\)
+applies at \(t\) and \(t(1+1/(fk))\). Indeed
+\(\log(4dQ^2)=O(L)\), \(\log t\gg mL\), and \(m\ge x^{1/4}\).
+Its relative error is \(o(1/(fk))\) since \(fk\) grows polynomially.
+In the exceptional-zero case put \(W(t)=1-t^{\beta-1}\), and
+otherwise put \(W(t)=1\). Let \(t_1=t(1+1/(fk))\). For an exceptional zero, differentiation gives
+\[
+ \frac{d}{du}\operatorname{Li}(u^\beta)
+ =\frac{\beta u^{\beta-1}}{\log(u^\beta)}
+ =\frac{u^{\beta-1}}{\log u},\qquad
+ \frac{d}{du}\big(\operatorname{Li}(u)-\operatorname{Li}(u^\beta)\big)
+ =\frac{W(u)}{\log u}.
+\] In the ordinary case the derivative of
+\(\operatorname{Li}(u)\) is \(1/\log u\). As \(W\) increases and
+\(t_1\le2t\), the main term increment before division by the
+ray class number is at least
+\[
+ \int_t^{t_1} W(u)\,\frac{du}{\log u}
+       \ge \frac{tW(t)}{fk\log(2t)} .
+\]
+
+The relative error bound at the two endpoints is
+\(o(tW(t)/(fk\log t))\) in the same normalization.
+For the exceptional case, write \(a=1-\beta>0\). Since
+\(t\ge2\) and \(2t\le t^2\),
+\[
+ W(2t)\le1-t^{-2a}=(1+t^{-a})W(t)\le2W(t).
+\]
+For the exceptional zero in the Chebotarev estimate \(\beta\ge1/2\).
+At either endpoint \(u\) use \(\log v\ge\beta\log u\) throughout the integral and \(\beta\ge1/2\): 
+\[
+ \int_{u^\beta}^{u}\frac{dv}{\log v}\le\frac{u-u^\beta}{\beta\log u}\le\frac{2uW(u)}{\log u}.
+\]
+ For the ordinary
+case \(\operatorname{Li}(u)\ll u/\log u\) gives the same bound
+with \(W=1\).
+Write \(h_Q\) for the ray class number. The quadratic ideal
+count gives \(h_Q=\exp(O(L))\), and Stark's bound gives
+\(W(t)\ge\exp(-O(L))\).
+
+For sufficiently large \(t\), the
+two endpoint errors together are at most one half of the
+main term lower bound. Thus the interval contains at least
+\[
+ \frac{tW(t)}{2fk\,h_Q\log(2t)}=t^{1-o(1)}
+\]
+prime ideals of the required class, since
+\(\log t\gg mL\) and \(m\ge x^{1/4}\).
+The \(O(\sqrt{2t}+\log Q)\) ideals of degree two or at
+ramified residue primes cannot exhaust them. Choose a remaining degree-one prime ideal in the identity ray
+class and a ray generator \(\pi_u=1+Qz\) with integral \(z\)
+(the ideal is integral). In this quadratic field
+\[
+ T_u=N(\pi_u)=1+Q\operatorname{Tr}(z)+Q^2N(z)\equiv1\pmod Q .
+\]
+The norm congruence gives complete splitting in the host and the
+required disjointness from the common level. Ratios of two such
+generators give the norm scalars carrying the levels at the primes assigned to the sequences.
+\cite[Theorems 1.4 and 3.3]{tz-chebotarev}
+
+To compare two words at the same point, put \(J=k-2\).
+At each real place the interior coordinates in
+Definition~\ref{hyp:critical-level-weights} are binary perturbations
+of a single arithmetic progression of spacing \(4\Delta\). The
+logarithm of the interior Vandermonde differs from that of this
+progression by at most \(J/4\) by Lemma~\ref{lem:binary-vandermonde-run}.
+Using the same progression for both words gives
+\[
+ \left|\log\frac{V^{\mathrm{int}}_{u,\rho}}
+                         {V^{\mathrm{int}}_{u',\rho}}\right|\le J/2 .
+\]
+
+
+The two endpoints agree for both words at this place. The gap from
+the upper endpoint to any interior coordinate is at least
+\(4k\Delta\). A gap to the lower endpoint at distance \(h\ge1\)
+is at least \(3h\Delta\), also when that endpoint is replaced by
+the lower top-place coordinate. Each interior coordinate moves by at
+most \(\Delta\). Since \(|\log x-\log y|\le|x-y|/\min(x,y)\), the first
+endpoint costs at most \(J/(4k)\), the last at most \(H_J/3\), with
+\(H_J=\sum_{h=1}^J h^{-1}\). The endpoint pair itself contributes zero.
+Thus the exact formula for the pre-level column and the prime interval give
+\[
+ \begin{aligned}
+ |\log X_u-\log X_{u'}|
+ &\le \frac{J/2+J/(4k)+H_J/3}{k},\\
+ |\log T_u-\log T_{u'}|
+ &\le |\log X_u-\log X_{u'}|+\log(1+1/(fk)).
+ \end{aligned}
+\]
+
+
+In the first line the sum over the \(f\) real places cancels the
+factor \(f\) in the exponent \(1/(fk)\). In the second, the common
+factor \(\Gamma^{-2/(fk)}\) cancels and both logarithmic rounding
+errors belong to the same interval of the displayed length. In
+particular the ratio in either orientation is at most \(2\) at
+one sufficiently late threshold. Proposition~\ref{prop:two-row-amplitude-bounds}
+and Lemma~\ref{lem:row-corank-one-gain} can use \(A=2\) and the fixed
+constant \(C_a=\max(1,C_{\rm pt},12e\pi)\). Increasing the same
+threshold gives \(C_a^3\le k\).
+\end{proof}

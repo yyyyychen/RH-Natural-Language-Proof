@@ -1,0 +1,302 @@
+\section{An ordinary Hecke eigenpoint from quadratic automorphic induction}
+\label{sec:count-two-seed-specialization}
+
+Knowing how to attach a representation to a constituent leaves the question of occurrence. In the even-order rank-four case, quadratic automorphic induction of the mixed-weight Hilbert eigenform, followed by the prescribed weight twist, produces an ordinary eigenpoint at each of the two levels. Proposition~\ref{prop:rank-four-ordinary-seed} identifies its Galois determinant and the ordered characters of its ordinary flag. This is the starting point for the rank-four component comparison in the even-order case. Appendix~\ref{sec:additional-rank-four} constructs the links to the component being counted.
+
+Consider the characteristic-zero seed on one of the two links.
+Make the integral weight adjustment by the prescribed scalar
+twist. The resulting representation \(\rho\) over \(L\) is
+absolutely irreducible. The mixed Hilbert construction and quadratic automorphic induction give a regular algebraic, conjugate self-dual cuspidal representation \(\Pi\) with
+\[
+ \Pi\text{ on }\mathrm{GL}_4(\mathbb A_L),\qquad \Pi^c\simeq\Pi^\vee,\qquad r_\ell(\Pi)\simeq\rho
+\]
+in the attachment normalization in use. The character of the twist
+is locally algebraic by the parity choice of the link.
+
+Write
+\(x\) for the specialized determinant point, and \(\psi_{w,i}\)
+for its ordered local characters. At every place over \(\ell\)
+these characters have cyclotomic exponents \(m_{w,i}\) on open
+inertia, decreasing with gaps at least two. The corresponding
+Hodge numbers \(h_i=-m_{w,i}\) increase with these gaps at
+each embedding. These exponents determine the weight change in both determinant comparisons. The remaining question is whether the resulting point \(x\) belongs to the localized ordinary Hecke support at the chosen level.
+
+\begin{proposition}[Admission of the even-order seed]\label{prop:rank-four-ordinary-seed}
+At either of the two link levels in Section~\ref{sec:count-two-level-data}, the determinant point
+\(x\) belongs to the support of the localized ordinary Hecke
+module. If \(D_{{\rm Hecke},x}\) denotes the specialized Hecke determinant, then 
+\[
+ D_{{\rm Hecke},x}=\det\rho.
+\]
+ Its ordinary characters are the ordered \(\psi_{w,i}\).
+\end{proposition}
+
+\subsection{Local vectors of the seed}
+
+An induced representation can have the desired determinant without contributing to a given level. To prove its occurrence here, construct local vectors for the actual coefficient types, including the ordered ordinary vector at the places above the coefficient prime.
+
+\begin{proof}[Local vectors for Proposition~\ref{prop:rank-four-ordinary-seed}]
+\proofstep{The local types away from the coefficient prime.}
+Away from \(\ell\) the cuspidal local--global comparison applies
+to \(\rho\) and \(\Pi\). Inertia is trivial outside the finite
+level set and at its exceptional place. At the other type
+places, the rank-two Hilbert system has finite inertia
+characters \(1,\eta\) of order prime to \(\ell\). Upon induction
+the inertia image on the subgroup fixing the inducing field
+is still finite of order prime to \(\ell\), and the quotient
+has order dividing two. The scalar corrections on this inertia
+have order prime to \(\ell\): the square of the seed correction
+there has order prime to \(\ell\), and the link scalar has
+only its prime-to-\(\ell\) finite part away from \(\ell\).
+Hence the inertia image of \(\rho\) has finite order \(m\) prime
+to \(\ell\).
+
+For \(g\) in inertia, every eigenvalue \(\alpha\)
+satisfies \(\alpha^m=1\). Reduction on this group of roots is injective:
+\[
+ \mu_m(\overline{\mathbb Q}_\ell)\xrightarrow{\;\sim\;}
+ \mu_m(\overline{\mathbb F}_\ell),\qquad
+ \alpha=[\bar\alpha].
+\]
+Thus the reduced characteristic polynomial determines the full multiset
+of inertia roots, including their multiplicities. The residual
+semisimplification is the tuple of the prescribed global
+labels. It follows that the full inertial type of \(\Pi\)
+at each of these places is the type of
+Section~\ref{sec:count-two-level-data}, including zero monodromy.
+It is spherical at the exceptional place and off the finite
+level set away from \(\ell\).
+\cite[Theorem 2.1.1]{blggt}
+
+\proofstep{The Frobenius characters and zero monodromy.}
+At \(w\mid\ell\), apply the exact potentially semistable
+functor to the ordinary filtration. The four graded Weil
+characters give the Frobenius eigenvalues \(\alpha_i\) of the
+full parameter. Equality of Hodge and Newton numbers in rank
+one gives, with \(e=e(L_w/\Q_\ell)\) and \(q_w=\ell^f\),
+\[
+ e\,v_\ell(\alpha_i)=\sum_\tau h_i(\tau),\qquad
+ v_\ell(\alpha_{i+1}/\alpha_i)
+    =e^{-1}\sum_\tau(h_{i+1}(\tau)-h_i(\tau))\ge2f .
+\]
+Write \(V_\alpha\) for a Frobenius eigenspace. The
+Weil--Deligne relation is
+\[
+ N(V_\alpha)\subseteq V_{q_w^{\pm1}\alpha},
+ \qquad v_\ell(q_w^{\pm1}\alpha)-v_\ell(\alpha)=\pm f .
+\]
+The sign depends on the Frobenius convention. Neither valuation
+difference occurs among the roots above, so all the spaces on
+the right are zero and \(N=0\). The
+inertia characters extend to the Weil group, so Frobenius
+preserves their isotypic spaces. Its distinct roots split the
+parameter into four Weil lines.
+
+At every embedding the Hodge numbers obey
+\[
+ (h_{i+1}(\tau)-(i+1))-(h_i(\tau)-i)
+             =h_{i+1}(\tau)-h_i(\tau)-1\ge1 .
+\]
+Hence the algebraic highest weight has strict consecutive gaps.
+This implies Shin regularity, which gives full Frobenius-semisimplified
+local--global compatibility at \(\ell\). \cite[Theorem 1.1]{blggt-lg}
+The local representation is the normalized principal series
+of these four lines with the common algebraic normalization
+undone. The four inducing Weil characters \(\omega_i\) are unlinked. Indeed their uniformizer values satisfy
+\[
+ \omega_i(\varpi_w)/\omega_j(\varpi_w)\notin\{q_w,q_w^{-1}\}\qquad(i\ne j),
+\]
+which rules out \(\omega_i/\omega_j=|\cdot|^{\pm1}\) and makes the normalized principal series irreducible.
+
+Apply cuspidal descent to the standard definite unitary group.
+The extension \(L=L^+K_0\) is unramified at finite places over
+\(L^+\). The local calculation away from \(\ell\) and splitting
+at \(\ell\) give the required ramification condition
+\[
+ \{v\text{ finite of }L^+: \Pi_w\text{ ramifies for some }w\mid v\}
+       \subseteq \{v:v\text{ splits in }L\}.
+\]
+Descent therefore gives a constituent \(\sigma\) with the specified
+components at split places and hyperspecial invariants at inert places.
+Its archimedean weight is the one read from the labeled Hodge numbers.
+\cite[Theorem 4.4]{thorne-unitary-descent}
+
+\proofstep{A unit ordinary eigenvalue at each step.}
+The chosen local types and Frobenius characters place the induced form at the correct finite level. Ordinary projection retains it only if all the required, normalized operators have unit eigenvalues.
+
+Choose the ordered inducing datum of the ordinary quotients
+at each place over \(\ell\). For sufficiently deep \(d\), write an element of the Iwahori subgroup as \(nt\bar n\) in its decomposition \(J_d=NT\bar N_d\). The diagonal character modulo that depth extends by
+\[
+ \chi_{J_d}(nt\bar n)=\chi_T(t) .
+\] It agrees on the upper triangular
+intersection with the inducing character. In the induced
+model the function supported on \(B J_d\) with value one at
+the identity is well-defined and has this compact character.
+Here \(B\) is the upper triangular group. Identity evaluation is nonzero on this line and reads the ordered Jacquet eigenvalues of the unnormalized translations. Indeed all representatives
+\(u\,\operatorname{diag}(\varpi I_j,I_{4-j})\) in the translation
+sum lie in \(B\), and evaluation of the inducing relation
+gives the Borel modulus and the index used in
+\eqref{eq:ordered-translation}.
+
+Let \(\lambda_j\) denote these scalars and \(U_j\) the commuting
+translations. The evaluation functional \(\lambda^*\) is therefore an eigenfunctional with scalars \(\lambda_j\). For a generalized eigenvector \(v\) of \(U_j\) of eigenvalue \(b\ne\lambda_j\), choose \(a\) with \((U_j-b)^av=0\). Then
+\[
+ 0=\lambda^*((U_j-b)^av)=(\lambda_j-b)^a\lambda^*(v)\quad\Longrightarrow\quad \lambda^*(v)=0 .
+\] Thus
+the summand \(V_\lambda\) at the specified tuple is nonzero.
+The operators \(U_j-\lambda_j\) are commuting nilpotents there.
+Successively taking kernels keeps a nonzero space, giving
+\[
+ 0\ne\bigcap_j\ker((U_j-\lambda_j)|_{V_\lambda}).
+\]
+A vector in this intersection realizes the required tuple.
+
+For a geometric Artin lift \(g_w\) of the uniformizer,
+rank-one reciprocity and \eqref{eq:ordered-translation} identify
+the weight-normalized eigenvalue as
+\[
+    \lambda_{w,j}=\prod_{i<j}(\psi_{w,i}\epsilon_\ell^{\,i})(g_w),
+             \qquad v_\ell(\lambda_{w,j})=0.
+\]
+Indeed each continuous character of the compact decomposition
+group has valuation zero.
+The smooth unit characters of the vector have the required
+weight after removal of the algebraic factors. This
+construction allows equality of some smooth unit characters.
+Taking the product of these local vectors, the type vectors
+away from \(\ell\) and spherical vectors off the level gives
+a classical ordinary form on the specified level. Its
+spherical Hecke values are the normalized coefficients of
+the Frobenius polynomials of \(\rho\).
+
+\end{proof}
+
+\begin{construction}
+\[
+\begin{array}{rcl}
+\Pi\text{ on }\mathrm{GL}_4(\mathbb A_L)
+    &\longrightarrow&\text{classical form with the chosen local vectors}\\
+\text{classical form}&\xrightarrow{\text{weight adjustment}}&
+        \text{ordinary eigenform at the link}\\
+\text{Hecke eigenvalues}&\longrightarrow&
+        x\text{ with determinant of }\rho\text{ and characters }\psi_{w,i}
+\end{array}
+\]
+\caption{The specialization uses the local choices at the link where the seed is being admitted. The ordered character list is retained at that level.}\label{fig:ordinary-seed-admission}
+\end{construction}
+
+\subsection{Specialization into the same Hecke algebra}
+
+The local vectors place the induced form at the specified level. The remaining step converts its algebraic weight into a scalar ordinary function and verifies that evaluation gives the prescribed determinant point of that level's Hecke algebra.
+
+\begin{proof}[Completion of the proof of Proposition~\ref{prop:rank-four-ordinary-seed}]
+\proofstep{The scalar ordinary function.}
+Increase the coefficient DVR to contain the finitely many
+values and coefficients of the form. The classical form has
+a realization \(F\) as a finite adelic function with values
+in \(W_\lambda\) and the fixed tame coefficient space.
+It satisfies
+\(F(\gamma g)=W_\lambda(\gamma)F(g)\) for rational \(\gamma\)
+and has the smooth coefficient conditions on the right. It can
+be defined over a finite coefficient extension because at a
+fixed finite level the space is constructed on a finite
+double-coset set with algebraic coefficient matrices.
+The function
+\[
+                F_\ell(g)=W_\lambda(g_\ell)^{-1}F(g)
+\]
+is left invariant under the rational group, with the
+displayed action on the weight factor. Project the
+algebraic coefficient at each \(\ell\)-adic place to
+the lowest torus weight quotient \(p_\lambda\), which is
+the coinvariant line for the upper unipotent group.
+
+On a diagonal tuple \(y\) the character is the product over embeddings and ordered diagonal entries:
+\[
+ y\longmapsto\prod_{\tau,i}\tau(y_i)^{\lambda_{\tau,3-i}} .
+\]
+The function \(p_\lambda(F_\ell(g))\) now transforms by
+the inverse specialized weight \(\theta_x\).
+It is invariant on the right under the integral upper
+unipotents. For every fixed coefficient precision it is
+invariant under a sufficiently deep lower unipotent group,
+by continuity of the algebraic action and the finite level
+of \(F\). Its values are bounded, using compactness at
+fixed level and finitely many double cosets. Thus scaling
+places the function in the integral specialized space.
+
+\proofstep{Nonvanishing and intertwining.}
+The projection is nonzero on this form. If it vanished everywhere, fix \(g\) with \(F_\ell(g)\ne0\)
+and let \(C\) be a sufficiently small open compact subgroup
+at \(\ell\) fixing the original smooth form. Writing \(\rho_\lambda\)
+for the algebraic coefficient action, right translation would give
+\[
+    p_\lambda\bigl(\rho_\lambda(h)^{-1}F_\ell(g)\bigr)=0
+                        \qquad(h\in C).
+\]
+The subgroup \(C\) is Zariski dense in the product of the local
+restrictions of scalars. Thus its translates of \(p_\lambda\)
+span a nonzero algebraic subrepresentation of the dual of the
+irreducible coefficient representation. They span the entire dual,
+contradicting \(F_\ell(g)\ne0\).
+Spherical operators away from \(\ell\) commute with the
+projection.
+
+In a translation sum at \(\ell\) the upper
+unipotent factors act trivially on the quotient line, and
+the diagonal translation acts by the inverse algebraic
+factor in \eqref{eq:ordered-translation}. This intertwines
+the weight-normalized classical operators with the
+operators on the scalar ordinary functions. For every ordinary translation eigenvalue \(\alpha\) on this function the valuation criterion reads
+\[
+ \alpha\in\mathcal O^\times\quad\Longleftrightarrow\quad v_\ell(\alpha)=0 .
+\]
+Thus the function lies in the ordinary subspace.
+
+\proofstep{Integral weight specialization.}
+The weight base-change comparison can be made on the
+integral scalar functions. Reduction of the ordinary space
+over either the weight algebra or the specialized DVR is
+the ordinary summand at sufficiently deep finite level for
+the reduced character. At this precision functions lift
+by their values on the double cosets, which have trivial
+stabilizers. The ordinary projector commutes with reduction,
+and the value filtration on its image is the coefficient
+filtration. This is the finite-level argument of
+Paragraph~\ref{par:ordinary-functions}.
+
+If \(M_\Lambda^{\rm ord}\) is the universal ordinary
+module and \(O_x\) the specialized DVR, the map is
+\[
+ M_\Lambda^{\rm ord}\otimes_{\Lambda,\theta_x} O_x
+                          \longrightarrow M_x^{\rm ord}.
+\]
+Its reduction is the identity on the ordinary summand of
+the same finite scalar-function space, by the lifting
+and projector comparisons. The modules are finite free
+of equal rank, so the map is an isomorphism by Nakayama's
+lemma. This argument uses only the reduced
+weight character to choose the depth for reduction, so it
+applies to the locally algebraic \(\theta_x\).
+
+\proofstep{Identification of the specialized point.}
+The ordinary eigenvalues must now recover the specified determinant point of this level.
+
+The spherical and ordinary Hecke values of the ordinary
+function reduce to the prescribed residual values of
+Section~\ref{sec:count-two-level-data}. Hence it belongs to
+the same residual summand. Its eigenvalues define a
+character of the localized Hecke algebra. The good split Frobenius classes are dense. On them the Hecke determinant and the determinant of \(\rho\) have the same characteristic coefficients, so continuity gives
+\[
+ D_{\rm Hecke,x}=\det\rho .
+\]
+The local characters are determined by their prescribed
+values on inertia and the consecutive products at a
+uniformizer. Thus the eigencharacter pulls back to \(x\)
+on all the determinant and ordinary-character coordinates.
+The kernel \(I_i\) of the localized Hecke action lies in
+\(\ker x\). This is the arithmetic point assertion used
+at the actual Initial representation in the even-order case on link \(i\). The argument
+applies to both exceptional places with their own compact
+conditions and the same source of the seed.
+\end{proof}

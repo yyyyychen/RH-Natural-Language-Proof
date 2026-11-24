@@ -1,0 +1,1758 @@
+\section{Integral length bounds from rank-three Frobenius traces}
+\label{sec:rank-three-length}
+\hypertarget{source-ordinary-rank-three-length}{}
+
+The descent has identified the ordinary constituents in the two packets. We now return
+to the original coefficient ring to measure the length they contribute.
+The graded deformation directions give a bound on the
+integral lengths in terms of valuations of Frobenius trace
+differences in the two descended packets. The bounds enter the odd-prime cohomology window of
+Appendix~\ref{sec:cohomology}. The localization kernel maps to the torsion derivations in \eqref{eq:local-length-1}. The final bound \eqref{eq:local-length-11} uses the valuation on the original coefficient field and one representative of each two-sided orbit.
+
+Conjugation by \(D(t)=\operatorname{diag}(t,1,t^{-1})\) gives the grading directly on matrix units. With \((w_1,w_2,w_3)=(1,0,-1)\),
+\[
+ D(t)E_{ij}D(t)^{-1}=t^{w_i-w_j}E_{ij}.
+\] An entry in row \(i\)
+and column \(j\), numbered from zero, has weight \(j-i\).
+The semidirect product describing the polarization acts on its
+Lie algebra through \(X\mapsto-JX^{\mathsf T}J\) on the
+quadratic coset, with \(J\) the reversal matrix. This
+involution preserves the entry weights. Write \(r_0\) for the
+split representation and \(g_*=g_1\) for the mark. The
+matrix of \(r(c)\) is fixed. The normalization at the mark
+diagonalizes
+\[
+              r(g_*)-r(cg_*^{-1}c^{-1})
+              \quad\text{on the quadratic kernel.}
+\]
+The difference at \(r_0\) has
+diagonal entries \(\Psi(g_*)-\Psi(g_*)^{-1},0,
+\Psi(g_*)^{-1}-\Psi(g_*)\). These are distinct in the residue
+field by the separator and oddness of \(\ell\).
+
+\subsection{The integral cotangent comparison}
+
+Which part of the integral cotangent module can record the desired length? The grading
+isolates it. Let \(O\) be the coefficient DVR, with fraction field \(E\),
+uniformizer \(\pi\) and \(v_\pi(\pi)=1\). If \(x:A\to O\) is
+the origin of a graded ambient algebra, put \(J_x=\ker x\).
+The lattice at weight \(-1\) is the image \(C_{-1}\) of
+\(A_{-1}\) in \(J_x/\operatorname{sat}_O(J_x^2)\). The
+equations \(F_i\) of weight \(-1\) give a submodule
+\(\langle F_i\rangle\) of this lattice.
+
+\begin{construction}
+\[
+\begin{array}{ccc}
+\text{Smith summand}&\text{admissible image of its generator}&\text{length}\\ \hline
+O/(\pi^d),\ d<s&\pi^{s-d}O/(\pi^s)&d\\
+O/(\pi^d),\ d\ge s&O/(\pi^s)&s\\ \hline
+&&\min(d,s)
+\end{array}
+\]
+\caption{One Smith summand in the conormal bound, with \(s=v_\pi(b)\). A point derivation with values in \(O/(b)\) can see at most the smaller exponent.}\label{fig:cotangent-smith-factors}
+\end{construction}
+
+\begin{lemma}[Torsion derivations and the saturated conormal]
+\label{lem:torsion-derivations-conormal}
+Suppose an additive
+injection from an \(O\)-module \(M\) sends a class \(m\) to
+an \(O/(b)\)-valued point derivation, for \(0\ne b\in O\).
+Suppose each derivation kills the \(F_i\) and is the
+reduction of an \(O\)-valued point derivation of weight
+\(-1\) on \(A\). If the quotient
+\(C_{-1}/\langle F_i\rangle\) has finite length, then
+\[
+ \operatorname{length}_O M\le
+ \operatorname{length}_O(C_{-1}/\langle F_i\rangle).
+\]
+\end{lemma}
+
+\begin{proof}
+Every integral point derivation at \(x\)
+kills \(J_x^2\) by the product rule and its saturation
+by torsion freeness of \(O\). It follows that the injection
+factors through
+\[
+             \operatorname{Hom}_O(C_{-1}/\langle F_i\rangle,O/(b)).
+             \tag{1}\label{eq:local-length-1}
+\]
+Indeed the scalars and every weight other than \(-1\)
+already have zero derivative. If the domain lattice
+quotient has finite length, the summand \(O/(\pi^d)\)
+in its Smith decomposition gives a summand of length
+\(\min(d,v_\pi(b))\) in \eqref{eq:local-length-1}. Counting both finite additive
+groups in powers of the residue field cardinality gives
+the desired length inequality even for an additive
+injection. In fact if \((d_i)_i\) are the Smith exponents,
+the target has length
+\(\sum_i\min\{d_i,v_\pi(b)\}\le\sum_i d_i\).
+\end{proof}
+
+\begin{auxlemma}[Annihilation in large multidegree]\label{lem:rees-multidegree-annihilation}
+Let \(R\) be a Noetherian \(\mathbb N^s\)-graded algebra generated over
+\(R_{\boldsymbol0}\) by the pieces \(R_{\mathbf e_i}\) in the unit
+directions. Put \(R_+=\prod_{i=1}^s (R_{\mathbf e_i})\).
+Let \(H\subset R\) be a homogeneous ideal and \(J\subset R_{\boldsymbol0}\) an ideal.
+If each prime containing \(H\) but not containing \(R_+\) contains \(J\),
+there is an integer \(h\ge1\) such that
+\[
+ J^h(R/H)_{\mathbf d}=0\qquad(d_i\ge h\text{ for every }i).
+\]
+\end{auxlemma}
+
+\begin{proof}
+Every prime over \(H\) contains \(J R_+\), so \(J R_+\subseteq\sqrt H\).
+By finite generation \((J R_+)^h\subseteq H\) for some \(h\).
+A monomial of multidegree \(\mathbf d\) with every \(d_i\ge h\)
+contains at least \(h\) factors from each unit direction. Consequently
+\[
+ R_{\mathbf d}\subseteq R_+^h,\qquad
+ J^h R_{\mathbf d}\subseteq (J R_+)^h\subseteq H.
+\]
+\end{proof}
+
+\begin{proposition}[Graded cotangent length bound]\label{prop:rank-three-conormal}
+Let \(B=A_0\) be complete Noetherian local
+and let \(A\) be generated over \(B\) by finitely many
+elements of weights \(-2,-1,1,2\). Write \(I\) for the
+ideal of the representation chart in \(A\). The ambient
+point has a smooth formal chart at \(x\) over \(E\),
+with the first row giving the tangent dimensions and
+the second row the number of equations of \(I\).
+The equations vanish at the section \(x\).
+\[
+\begin{array}{c|ccccc}
+ j&-2&-1&0&1&2\\ \hline
+ \text{ambient dimensions}&s&r&m&r'+1&s'+1\\
+ \text{equations}&s&r+1&m&r'&s'
+\end{array}
+\tag{2}\label{eq:local-length-2}
+\]
+The equations in nonpositive weights span the rational
+cotangent spaces of their weights.
+
+Assume that \(B/(I\cap B)\)
+is finite over \(O\). Over an algebraic closure of \(E\)
+a point is two-sided if some negative and some positive
+weight coordinate are nonzero. Over a fixed point other
+than \(x\), at least one of the two strictly one-sided
+sets with the same restriction to \(B\) must be empty.
+At a two-sided point all tangent derivations of \(A/I\)
+are generated by the torus tangent. A function \(a\in B\)
+vanishes at \(x\) and is nonzero at every two-sided point.
+
+For \(r\ge1\), these hypotheses give
+\[
+ \operatorname{length}_O(C_{-1}/\langle F_i\rangle)
+       \le 2\sum_{\xi\in T}v_\pi\bigl(\xi(a)\bigr),
+ \tag{3}\label{eq:local-length-3}
+\]
+where \(T\) contains exactly one point from each two-sided
+torus orbit.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Slices transverse to the grading torus.}
+A point of an orbit can be rescaled to the
+slice \(f=1\) for a weight \(-2\) element \(f\) nonzero
+on it. Use also a weight \(2\) element \(g\) nonzero on
+it. Such even-weight elements are available by squaring.
+Only finitely many \(f,g\) from generating sets are
+needed. Inverting \(fg\) makes both \(f\) and \(g\) units.
+
+On each slice all even-weight values follow from the
+invariant values. Products of pairs of odd-weight values
+follow in the same way. The only remaining ambiguity is the action of \(\mu_2\) on the slice. Thus for the tuple of these coordinates it is a common sign:
+\[
+ (y_i)_i\longmapsto(\varepsilon y_i)_i,\qquad\varepsilon\in\{1,-1\}.
+\] The slices are finite over the invariant fibers
+and reduced by the tangent hypothesis. This proves the
+finiteness of \(T\). It also proves that each generic
+invariant point on this locus contributes at most one
+copy to any given weight in the unsquared equation quotient.
+
+\proofstep{Squaring the equation list.}
+For completeness, start the length calculation by replacing
+the \(F_i\) with a Smith list. In the formal chart the linear terms of these equations are independent in their respective coordinates, and the extra relation starts in higher degree:
+\[
+ \operatorname{lin}(F_i)=\pi^{h_i}y_i\ (1\le i\le r),\qquad \operatorname{lin}(F_*)=0 .
+\] The length on the left of
+\eqref{eq:local-length-3} equals \(\sum_i h_i\). Over \(E\), eliminate the
+weight-zero variables by the \(m\) independent equations
+of weight zero. Denote the resulting formal chart map
+by \(\phi\). If necessary, replace \(a\) by
+\(a+F_i u\) for \(u\in A_1\) with nonzero image under
+\(\phi\), so that \(\phi(a)\) is nonzero. This change
+keeps every value in \eqref{eq:local-length-3}.
+
+Use the three Rees directions over \(B\) given by
+\[
+        A_{-2},\qquad A_2,\qquad BF_*^2+A_{-2}^2A_2.
+        \tag{4}\label{eq:local-length-4}
+\]
+In the power series chart write the variables as \(x_i\)
+with weights \(w_i\). A finite set \(M_j\) of componentwise
+minimal exponent vectors generates the solutions of
+\(\sum_i w_i\alpha_i=j\) by addition of weight-zero exponents.
+Indeed the minimal set is finite by Dickson's lemma, and any
+nonminimal vector above \(\beta\in M_j\) has weight-zero difference
+\(\alpha-\beta\). Assign each term of a series to one such \(\beta\).
+This gives a finite sum \(\sum_{\beta\in M_j}x^\beta f_\beta\)
+with each \(f_\beta\) of weight zero.
+
+Similarly at weight \(2n\)
+one can remove a weight-two submonomial for \(n\ge1\): use a
+positive weight-two factor when one is present, or two factors
+of weight one otherwise. Repeat on the remaining monomial.
+Reverse all signs at weight \(-2n\). Grouping the terms shows
+\[
+                       A_{\pm2n}=A_{\pm2}^{\,n}.
+\] Quotient the Rees ring by the
+homogeneous ideal of coefficients killed by \(\phi\), and
+write \(R\) for the quotient. Choose sections \(\mathbf t\)
+consisting of \(F_i^2\) and the weight \(-2\) equations
+in the first direction, the squares of the weight \(1\)
+equations and the weight \(2\) equations in the second,
+and \(F_*^2\) in the third. Regularity of \(a\) on this quotient means that multiplication by \(a\) gives the exact sequence
+\[
+ 0\longrightarrow R\xrightarrow{\ \cdot a\ }R\longrightarrow R/aR\longrightarrow0 .
+\]
+
+\proofstep{Preserving the relevant leading coefficients.}
+In large multidegree \(d\), the pieces of \(R/(\mathbf t)\)
+are finite \(O\)-modules. To check the support, work away
+from the ideal generated by products of sections of the
+three directions. Choose a section outside the prime
+in each direction. Any relation of \(I\cap B\) can
+be written as a sum of homogeneous equation multiples.
+For even-weight equations, multiply by enough of the
+chosen sections to put each term in a Rees degree in
+which the equation is a factor.
+
+For an odd-weight equation, pass to its square in the even comparison and then use the implication valid in a prime ideal \(\mathfrak p\):
+\[
+ z^2\in\mathfrak p\quad\Longrightarrow\quad z\in\mathfrak p .
+\]
+A section with coefficient \(F_*^2\) in the first
+direction can be exchanged with the section carrying
+the same coefficient in the third direction after
+multiplication by the chosen third section. Thus, with \(J=I\cap B\) and \(R_+\) the product of the
+three ideals generated by unit-direction sections, we have
+\[
+ (\mathbf t)\subseteq\mathfrak p,\quad R_+\not\subseteq\mathfrak p
+     \quad\Longrightarrow\quad J\subseteq\mathfrak p\cap B .
+\]
+This contraction holds on the integral Rees ring.
+
+Suppose now that a characteristic-zero contracted prime
+also kills \(A_{-2}A_2\). Nonvanishing of the first and second
+sections implies that their coefficients survive outside
+the nilradical in the corresponding fiber of \(A/I\).
+Indeed, if a power of either coefficient belongs to the
+fiber ideal, clearing denominators and making the same
+section comparisons forces the power of the section
+into the prime. This gives both a negative and a positive
+point above the same invariant values. Both points are one-sided. Indeed, at a point over a field the vanishing of all products forces at least one side to vanish:
+\[
+ A_{-2}(z)A_2(z)=0\quad\Longrightarrow\quad A_{-2}(z)=0\ \text{or}\ A_2(z)=0 .
+\] Scaling to the fixed point
+keeps their invariant values.
+
+For the fiber of \(x\),
+the rational spanning in weight \(-1\) kills all weight
+\(-1\) values on a negative one-sided point. In the
+saturated square at weight \(-1\) every contribution
+has a positive factor or a weight-zero factor vanishing
+at \(x\). In weight \(-2\) every additional product has two factors of weight \(-1\). If \(z\) is the point under consideration, then for each such pair
+\[
+ (ab)(z)=a(z)b(z)=0\qquad(a,b\text{ of weight }-1).
+\]
+Spanning then also kills the weight \(-2\) values. Thus
+the negative point cannot occur at \(x\). At every other
+fixed point the one-sided hypothesis gives the exclusion.
+
+\proofstep{Saturation in the three Rees directions.}
+Apply Lemma~\ref{lem:rees-multidegree-annihilation} over the
+coefficient DVR to \(H=(\mathbf t)\), using the integral prime
+contraction just proved. For a fixed integer \(h\ge1\) this gives
+\[
+      J^h(R/(\mathbf t))_d=0\qquad(d_1,d_2,d_3\ge h).
+\] Each nilpotent thickening of
+the finite invariant quotient is also finite over \(O\),
+by the filtration by powers of its defining ideal.
+Adding the equation \(a=0\) leaves only special-fiber support in these
+pieces by its assumed nonvanishing at the two-sided
+points. These support tests apply to the homology of the
+corresponding Koszul lists, which is killed by the list
+of sections.
+
+In large multidegrees write \(\chi\) for the alternating
+sum of lengths of Koszul homology. The comparison is
+\[
+   \chi(\mathbf t;R/aR)_d
+          \le \chi(a;(R/(\mathbf t))_d).
+          \tag{5}\label{eq:local-length-5}
+\]
+Here \(a\) is regular on \(R\), so the left side equals
+\(\chi(\mathbf t,a;R)_d\). Successively taking
+kernel and cokernel of multiplication by each section
+gives the inequality. The omitted terms have nonnegative
+Euler characteristics in large degrees. This positivity,
+also used for monotonicity under quotients, follows by
+homogeneous prime filtration and induction on the list:
+on a prime factor a nonvanishing first section is regular.
+
+If it vanishes, the contribution is the difference of the
+two shifted Euler characteristics for the tail. If the replacing section has multidegree \(e\) and is regular on the prime factor \(M\), the calculation uses the sequence
+\[
+ 0\longrightarrow M(-e)\xrightarrow{\ \cdot s\ } M\longrightarrow M/sM\longrightarrow 0 .
+\]
+Thus only its degree enters the difference of shifted Euler characteristics. If the whole section degree vanishes on the
+prime factor, the factor has zero pieces in large degrees
+in that direction. For a degree-zero section one can
+take the replacement to be \(1\).
+
+\proofstep{The lower bound from the Smith exponents.}
+On the left of \eqref{eq:local-length-5}, take leading coefficients in the chart \(\phi\) in the respective negative and positive weighted degrees
+\[
+ X_d=2d_0+4d_2,\qquad Y_d=2d_1+2d_2 .
+\]
+Each element in degree \(d\) has at least these totals:
+\(F_*\) has weight \(-1\) and no linear term, so its
+negative total is at least two. The leading coefficients
+form a finite free \(O\)-module acted on by \(B\)
+through \(x\). They span the full bidegree over \(E\).
+To see the spanning, use representatives of the
+individual chart axes in their weights. Group the
+weight \(1\) axes in pairs and the weight \(2\) axes
+singly on each side. Each third-direction factor takes
+two negative blocks and one positive block. Within the
+fixed bidegree the products of axis representatives
+have independent leading terms by the filtration by
+ordinary total degree. The resulting action factors through the vanishing of \(a\) at the point, namely
+\[
+ R\twoheadrightarrow R/aR\qquad(a(x)=0),
+\]
+
+On this quotient \(F_i^2\) acts by \(\pi^{2h_i} y_i^2\).
+Splitting off its scalar by Koszul additivity contributes
+\(2h_i\) times the Euler characteristic modulo \(\pi\)
+of the list with this section omitted. The degree
+pieces are torsion-free, so the successive
+\(\pi\)-quotients count the same monomials. Positivity
+also applies to the list with all scalars removed.
+The Hilbert series for the two leading degrees is
+\[
+ \frac{1}{(1-X)^r(1-X^2)^s(1-Y)^{r'+1}(1-Y^2)^{s'+1}}.
+\]
+
+The remaining sections multiply it by
+\((1-X^2)^{r-1+s}(1-Y^2)^{r'+s'}(1-X^4Y^2)\).
+After cancellation the first numerator factors are
+\((1+X)^{r-1}(1+Y)^{r'}\). Separate the two degrees in the numerator by adding and subtracting \(Y^2\):
+\[
+ 1-X^4Y^2=(1-Y^2)+Y^2(1-X^4).
+\]
+The second summand has bounded \(X\)-degree after
+cancellation. The first summand has eventual coefficient
+\(2^{r+r'-1}\). Thus the left side of \eqref{eq:local-length-5} is at least
+\(2^{r+r'}\sum_i h_i\).
+
+\proofstep{The upper bound from two-sided orbits.}
+On the right of \eqref{eq:local-length-5} the kernel and cokernel lengths on
+the \(O\)-torsion cancel. On the free part the Euler
+characteristic is the valuation of the determinant of
+multiplication by \(a\). It is the sum over the geometric
+invariant points with the multiplicities in the generic
+degree piece. At these points multiplication by a negative and by a positive even-weight unit permits shifts between the corresponding weight pieces: if \(u\) is such a unit of weight \(w\),
+\[
+ M_j\xrightarrow[\sim]{\ \cdot u\ } M_{j+w},\qquad m'\longmapsto u^{-1}m'\ \text{for the inverse}.
+\] Each module in \eqref{eq:local-length-4}
+then becomes its full weight piece.
+
+The generic Rees
+piece is a quotient of the corresponding weight piece
+with ordinary equations \(F_i^2,F_*^2,E_i^2\), the
+weight \(2,-2\) equations, and the weight-zero
+equations, where \(E_i\) are the weight \(1\) equations.
+Replacing an equation \(q\) by \(q^2\) at most doubles
+each multiplicity bound, by the two pieces of the
+filtration by \(q\), with one grade shifted. The
+unsquared orbit bound above gives multiplicity at
+most \(2^{r+1+r'}\) after the replacements. The factor
+of two in \eqref{eq:local-length-3} follows on comparing with the lower bound.
+\label{cor:ordinary-rank-three-length-1}
+
+\end{proof}
+
+\subsection{The split point and the localization kernel}
+
+To apply the cotangent comparison we must identify the part of the localization kernel
+it detects. Begin at the split point with rational coefficients, then pass to finite
+torsion depth.
+
+\begin{lemma}[Rational vanishing at the normalized split point]
+\label{lem:rank-three-split-vanishing}
+For the split representation at the Gaussian fixed-inertia chart of
+Proposition~\ref{prop:gaussian-rank-three-chart} or the general
+crystalline chart of Proposition~\ref{prop:rank-three-crystalline-local-base}, the normalized rational point derivations satisfy 
+\[
+ \operatorname{Der}_{x,j}^{\rm norm}=0\qquad(j=-2,-1,0),
+\]
+ where the subscript denotes the weight at the split point \(x\). In these
+weights the equations therefore span the rational conormal
+spaces in the hypotheses of Proposition~\ref{prop:rank-three-conormal}.
+\end{lemma}
+
+\begin{proof}
+Write \(\Gamma\) for the host Galois group, and
+\(\Psi=\epsilon_\ell^{\,e}\psi\). On the quadratic kernel
+the weight \(j\) adjoint space of \(r_0\) has scalar action
+\(\Psi^j\). On \(\Gamma\) its eigencharacters are
+\(\Psi^j\) and \(\eta\Psi^j\), on the \(+1\) and \(-1\)
+eigenspaces, respectively, of \(-JX^{\mathsf T}J\).
+The involution sends \(E_{ij}\) to \(-E_{2-j,2-i}\) for \(0\le i,j\le2\). A two-element orbit contributes one eigenvector of each sign. A fixed matrix position contributes one negative eigenvector. Counting the orbits in each weight gives
+\[
+ \begin{array}{c|rrrrr}
+ j&-2&-1&0&1&2\\ \hline
+ \dim (\mathrm{Ad}\,r_0)_j&1&2&3&2&1\\
+ \dim (\mathrm{Ad}\,r_0)_j^{+}&0&1&1&1&0\\
+ \dim (\mathrm{Ad}\,r_0)_j^{-}&1&1&2&1&1
+ \end{array}
+\]
+
+The rational nonpositive-weight groups used at the split
+point vanish by the following rank-one argument. At
+weight zero restrict to the quadratic kernel, so that
+both characters are trivial. The local condition gives
+an unramified additive character everywhere. For the
+Gaussian chart this follows from vanishing on the
+residual-kernel inertia and finite index there, and
+from the unramified weight-zero condition at \(\ell\).
+For the crystalline chart, inertia at \(\ell\) lies in
+the quadratic kernel and the finite local conditions on
+the trivial character are unramified. Class field theory
+makes the resulting homomorphism zero, since the class
+group is finite. Restriction to an open subgroup is
+injective on rational cohomology by corestriction.
+
+\proofstep{The negative-weight strict local condition.}
+For negative \(j\), write \(j=-n\) with \(n>0\). The corresponding characters have the form
+\[
+ \epsilon_\ell^{ej}\theta=\epsilon_\ell^{-en}\theta,\qquad\theta\text{ finite}.
+\]
+At \(\ell\) the Gaussian local condition kills the class;
+a crystalline tangent at the split point has finite local
+condition, which is zero for a negative Tate twist of a
+finite character. Indeed its de Rham quotient by
+\(\mathrm{Fil}^0\) and its invariant space are zero.
+Restriction to a finite field killing the finite local
+type gives the same finite condition by averaging over
+the finite quotient. Away from \(\ell\) an unramified
+class with these coefficients vanishes because Frobenius
+minus one on its inertia invariants is invertible. Even the full local rational cohomology vanishes here.
+
+For this one-dimensional character space \(V\) away from \(\ell\), the local Euler characteristic formula and duality give
+\[
+ \dim H^1_v(V)=\dim H^0_v(V)+\dim H^0_v(V^\vee(1))=0 .
+\] Thus the
+global class becomes everywhere locally split on a finite
+abelian extension \(L\) killing \(\theta\) and containing
+\(\mu_\ell\). The field is totally complex since
+\(\ell\) is odd. Take \(S\) over \(L\) to contain the
+places above \(\ell\) and the ramification of the cocycle
+and coefficients. The classes under consideration are
+unramified outside such a finite \(S\).
+
+\proofstep{Rational vanishing from the height and duality inputs.}
+Use the finiteness part of the height estimate of
+Section~\ref{sec:cohom-height} at the fixed field \(L\)
+and exponent \(en+1\). For a \(G_{L,S}\)-module \(M\) write \(\operatorname{Sha}^i(M)\)
+for the kernel of localization in degree \(i\), with all
+places of \(S\) included. Poitou--Tate gives
+\[
+ \operatorname{Hom}\!\left(\operatorname{Sha}^1(\Q_\ell/\Z_\ell(-en)),
+                                     \mathbb Q/\mathbb Z\right)
+       \simeq \operatorname{Sha}^2(\Z_\ell(en+1)).
+\]
+The height input makes the right side finite, so the strict
+torsion kernel on the left has finite order.
+Extra places of \(S\) preserve the required finiteness bound
+on this kernel: in the degree-two localization sequence
+the new terms are local terms, where the class in the
+kernel has zero image.
+
+Equivalently an everywhere locally
+split cocycle in degree one factors through the group
+unramified outside the places above \(\ell\).
+Finite coefficient extension preserves this finiteness.
+A nonzero rational class would give torsion classes of
+unbounded order: multiply a rational class by
+arbitrary inverse powers of the uniformizer and project
+to the divisible coefficient module. Let \(V\) be the rational coefficient representation and \(T\) its lattice. The sequence of coefficients identifies the kernel of projection on cohomology:
+\[
+ \ker\bigl(H^1(V)\to H^1(V/T)\bigr)=\operatorname{im}\bigl(H^1(T)\to H^1(V)\bigr).
+\]
+The image is a lattice in its rational span by finiteness of the residual global cohomology. Local splitting persists
+under projection. This contradicts finiteness of the
+strict torsion kernel.
+
+For a cocycle with values in an
+algebraic coefficient closure, a finite extension contains
+its values. To see this, use the countable family of finite
+extensions containing the field of definition of the action.
+Their preimages under the cocycle are closed subgroups,
+and Baire's theorem gives one with open preimage. For a cocycle \(z\) let \(H\) be the open preimage obtained in this way. If \(g_1,\ldots,g_r\) represent \(G/H\), adjoining the finitely many coordinate values of \(z(g_i)\) suffices by
+\[
+ z(g_i h)=z(g_i)+g_i z(h)\qquad(h\in H).
+\] This proves the nonpositive-weight vanishing
+over both fields of coefficients.
+
+An infinitesimal normalized point at \(r_0\) now has
+zero derivative in each of these weights. Its matrix
+derivative times \(r_0(g)^{-1}\) is a cocycle, by the
+product law with square-zero coefficients. A coboundary
+is infinitesimal conjugation by \(1+\varepsilon X\).
+Fixing \(r(c)\) and the normalization at \(g_*\) imposes the simultaneous conditions
+\[
+ X=-JX^{\mathsf T}J,\qquad X\text{ diagonal}.
+\] Such an
+\(X\) is a multiple of \(\operatorname{diag}(1,0,-1)\),
+which centralizes the split polarized representation.
+Since matrix entries separate infinitesimal deformations,
+the chart derivative is zero. Dualizing, the equations
+span the rational cotangent spaces in \eqref{eq:local-length-2}. In the
+Gaussian power series presentation this can also be
+tested over \(O\): a rational vector in the annihilator
+would have an integral nonzero multiple annihilating
+the equations and would give a normalized point over
+\(O[\varepsilon]/(\varepsilon^2)\).
+\hfill\mbox{\cite{bloch-kato-finite,milne-duality}}\label{cor:ordinary-rank-three-length-2}
+
+\end{proof}
+
+\paragraph{Transfer at every torsion depth.}
+Rational vanishing deals with the generic fibre. A length comparison requires a map
+that detects classes even at finite depth.
+
+\begin{proposition}[Integral transfer at all coefficient depths]
+\label{prop:rank-three-integral-transfer}
+The weight-minus-one localization kernel with coefficients
+\((E/O)(\Psi^{-1})\), on either of the two designated hosts,
+injects at each torsion depth into the derivations in condition
+\textup{\eqref{eq:local-length-1}}. Lifting uses the Gaussian chart or the crystalline
+local base, respectively. Let \(G\) be this kernel over the coefficient ring \(O\) with
+uniformizer \(\pi\) and absolute ramification index \(e_O\). A uniform
+length bound from \eqref{eq:local-length-3} passes to the full kernel:
+\[
+ (\forall h\ge1,\ \operatorname{length}_O G[\pi^h]\le L)
+       \quad\Longrightarrow\quad \operatorname{length}_O G\le L .
+\]
+The normalized bound is divided by \(e_O\) to use \(v_\ell\).
+\end{proposition}
+
+\begin{proof}
+\proofstep{The weight-minus-one cocycle.}
+Let \(W=(E/O)(\Psi^{-1})\) and \(b\in O\setminus\{0\}\).
+For brevity put \(W[b]=(O/(b))(\Psi^{-1})\), using the
+isomorphism \(u\mapsto u/b\bmod O\). A class in the
+rank-one localization kernel killed by \(b\) has a
+representative valued in \(W[b]\). In fact if \(bz\)
+is the coboundary of \(u\in W\), choose a vector \(u'\)
+with \(bu'=u\) and subtract its coboundary. The class
+in finite-coefficient global cohomology is unique, since
+\(\Psi(g_*)^{-1}-1\) is a unit and thus \(W^\Gamma=0\).
+
+On an inertia subgroup on which \(\Psi=1\), the action on the coefficient is trivial. Thus a coboundary on that subgroup satisfies
+\[
+ (da)(i)=i\cdot a-a=0,
+\]
+and the finite representative vanishes there. At a decomposition group where some
+\(\Psi(g)^2-1\) is a unit, a trivializing vector in \(W\)
+for this representative is killed by \(b\). Indeed
+its product with \(\Psi(g)^{-1}-1\) is killed by \(b\).
+Consequently the local class already vanishes with
+coefficients in \(W[b]\).
+
+The weight \(-1\) adjoint embedding of \(W[b]\) uses
+\(T=E_{10}-E_{21}\), where \(E_{ij}\) is the elementary
+matrix in row \(i\) and column \(j\). Write
+\(g_*'=cg_*^{-1}c^{-1}\). Normalize the cocycle \(z\)
+by making
+\[
+    L(z)=\Psi(g_*)z(g_*)-\Psi(g_*')z(g_*')
+\]
+zero. Subtract the coboundary of
+\(L(z)/(\Psi(g_*)^{-1}-\Psi(g_*))\), which is defined
+since the denominator is a unit. Also \(z(c)=0\)
+because \(c^2=1\), \(\Psi(c)=1\) and \(2\) is a unit.
+The representation
+\[
+             (1+\varepsilon z(g)T)r_0(g),
+       \qquad \varepsilon^2=0,\quad b\varepsilon=0,
+             \tag{6}\label{eq:local-length-6}
+\]
+therefore satisfies the two normalization conditions.
+Write \(D_{10}(g)\) for the coefficient of \(\varepsilon\) in the \((1,0)\) entry of \eqref{eq:local-length-6}. Since \(T_{10}=1\), the entry calculation gives
+\[
+    D_{10}(g)=\Psi(g)z(g),\qquad
+    z(g)=\Psi(g)^{-1}D_{10}(g)\quad(g\in\Gamma).
+\]
+Thus the resulting derivatives determine the normalized cocycle, and addition of cocycles adds the derivatives entrywise.
+
+\proofstep{Integral lifting on the Gaussian chart.}
+For the Gaussian chart quotient by the torsion-depth
+local conditions at \(\ell\) and at the exceptional
+tame places where \(\Psi(g)^2-1\) is a unit on some
+element of the decomposition group. These are precisely
+the places where weight \(-1\) must be a local coboundary
+in \eqref{eq:local-length-6}. At the other tame places the representation
+kills the residual-kernel inertia, on which
+\(\Psi=1\). The normalized representation therefore
+defines a point of its universal algebra. In the ambient power series ring centered at the split point, let \(X_i\) be its coordinates.
+
+For each coordinate of weight \(-1\) choose \(d_i\in O\) lifting the given derivative in \(O/(b)\); set \(d_i=0\) in every other weight. The point derivation
+\[
+  D(f)=\sum_i d_i\,\frac{\partial f}{\partial X_i}(0)
+\]
+is integral. Modulo \((b)\) it gives the original infinitesimal point, so \(D(F)\equiv0\pmod b\) for every equation \(F\) of the chart. The original
+localization group on the absolute Galois group
+descends to \(G_{\Q,S}\), with \(S\) the primes dividing
+\(\ell N\), because its cocycles vanish on all inertia
+outside \(S\). Thus \eqref{eq:local-length-1} bounds every \(b\)-torsion
+subgroup by the same cotangent length.
+
+\proofstep{Integral lifting on the crystalline chart.}
+For the general-data chart the global condition kills
+the residual-kernel inertia at each place away from
+\(\ell\). The datum makes \(\Psi\) trivial on those
+subgroups. For a class \(z\) in this localization kernel the condition at each prime dividing \(\ell N\) is on the full group:
+\[
+ \operatorname{res}_{D_p}[z]=0\qquad(p\mid\ell N).
+\] Otherwise it is zero already on
+inertia. In either case the finite representative vanishes
+on the subgroup to be killed, including above primes
+ramified only in the quadratic field.
+
+At \(\ell\) the mark's unit separator gives a trivializing vector in \(O/(b)\). Lift a conjugating matrix for this vector to a weight \(-1\) matrix \(Y\) over \(O\), choosing its sign to recover the given coboundary. The integral local lift is
+\[
+ (1+\varepsilon Y)r_0(g)(1+\varepsilon Y)^{-1}
+    =r_0(g)+\varepsilon\bigl(Yr_0(g)-r_0(g)Y\bigr),
+       \qquad \varepsilon^2=0
+\]
+on the positive component, with the polarized action extending it. Being conjugate to the split point, it lies on the crystalline local quotient. The ambient global chart is a relative
+power series algebra over that quotient, as described
+below. Sending its remaining coordinates to arbitrary
+integral lifts of their derivatives in weight \(-1\)
+gives an integral point derivation of the ambient algebra.
+Its reduction comes from \eqref{eq:local-length-6} and vanishes on every
+global equation. This is the lift required by \eqref{eq:local-length-1}.
+Lifting on the crystalline local quotient first is
+necessary for this use of saturation.
+
+\proofstep{The union over all coefficient depths.}
+The divisible module \(W\) is the union of its
+finite torsion submodules, and a continuous cocycle
+into it has finite image by compactness. Thus the
+localization group is a union of its \(\pi^h\)-torsion
+subgroups. For the localization group \(G\) the torsion filtration and its common length bound \(L\) satisfy
+\[
+ G_h=G[\pi^h]\subseteq G_{h+1},\qquad \operatorname{length}(G_h)\le L\quad(h\ge1).
+\] Additivity gives
+\[
+ \operatorname{length}_O(G_{h+1}/G_h)
+ =\operatorname{length}_O G_{h+1}-\operatorname{length}_O G_h .
+\]
+Every strict inclusion contributes at least one; the sum of these increments is at most \(L\). The chain stabilizes and its union \(G\) has length at most \(L\). Dividing by the
+ramification index of \(O/\Z_\ell\) takes the bound
+in \eqref{eq:local-length-3} from \(v_\pi\) to \(v_\ell\). The procedure
+keeps the packet bound independent of torsion depth
+and of the residue-field and coefficient degrees.
+\label{cor:ordinary-rank-three-length-3}
+
+\end{proof}
+
+\subsection{The Gaussian inertia chart}
+
+The integral comparison is ready to use once the local presentation is known. We
+construct it first for the Gaussian point, where the deformation fixes inertia.
+
+\begin{proposition}[The Gaussian fixed-inertia presentation]
+\label{prop:gaussian-rank-three-chart}
+Under the Gaussian mark and its local conditions, the graded
+presentation has the dimensions and equations of \textup{\eqref{eq:local-length-2}},
+with a finite degree-zero ring as required for
+Proposition~\ref{prop:rank-three-conormal}. Let \(n_{-1}\) be the number of weight-minus-one variables and \(G\) the
+localization kernel of Proposition~\ref{prop:rank-three-integral-transfer}.
+The coordinate map in \eqref{eq:local-length-6} gives
+\[
+                         n_{-1}=0\quad\Longrightarrow\quad G=0 .
+\]
+\end{proposition}
+
+\begin{proof}
+\proofstep{The fixed-inertia local problem.}
+Use \(S=\{v:v\mid\ell N\}\), the Auxiliary field over \(\mathbb Q(i)\) quotient
+\(\Gamma=G_{\Q,S}\), and the one mark from
+Section~\ref{sec:marked-hosts}. At \(\ell\) the local
+representation preserves a flag with the three ordered
+inertia characters \(\Psi,1,\Psi^{-1}\). At an exceptional
+tame place it is diagonal up to a change of basis
+congruent to the identity, with the prescribed inertia
+characters. On the other tame decomposition groups the inertia subgroup killed by the representation is prescribed by
+\[
+ N_v=\ker(\eta|_{I_v})\cap\ker(P|_{I_v}),\qquad P=\bar\Psi .
+\] This is the subgroup on which the
+coefficient character is trivial there. In both tame
+cases \(I_v/N_v\) has order prime to \(\ell\).
+The local determinant or polarization condition is the
+one inherited from the semidirect product.
+
+\proofstep{Lifting the local conditions across an extension.}
+These local conditions lift across a graded Artinian
+small extension. Here the kernel is killed by the
+maximal ideal and is supported in one weight. At
+\(\ell\), use the eigenspaces of the separator to
+choose the flag basis, with the lines labelled by their
+reductions. Let \(T\) be the lifted separator and \(\alpha_i\) its labelled eigenvalues. The projector onto its \(i\)-th eigenspace is integral, because
+\[
+ e_i=\prod_{j\ne i}\frac{T-\alpha_j}{\alpha_i-\alpha_j},\qquad \alpha_i-\alpha_j\in O^\times\quad(i\ne j).
+\]
+Thus the necessary changes of flag basis with the prescribed entry weights lift. In the flag basis lift the torus
+action by taking the given inertia characters and
+lifting a Frobenius in the semidirect torus. The
+procyclic unramified quotient permits this choice,
+also when \(\eta\) acts on the torus. Lift the
+upper triangular entries in order of root height.
+At each step let \(u(g,h)\) be the multiplication error in
+the small-extension kernel of that root weight \(j>0\).
+
+Associativity of the lifted products gives the two-cocycle identity for their additive defect:
+\[
+ g\,u(h,k)-u(gh,k)+u(g,hk)-u(g,h)=0 .
+\] The separator \(x\) has
+\(\bar\epsilon_\ell(x)=\eta(x)=1\) and \(P(x)^2\ne1\).
+On \(\operatorname{Hom}(V_j,k(1))\) it acts by \(P(x)^{-j}\),
+which is nontrivial for both possible positive weights \(1,2\).
+Therefore
+\[
+ H^2(\Q_\ell,V_j)\simeq H^0(\Q_\ell,V_j^\vee(1))^\vee=0.
+\]
+Write \(u=da\) for a continuous cochain \(a\). Subtracting
+\(a\) from the selected root lifts removes the multiplication
+error while keeping the other weights fixed. At each exceptional tame place, the separator kills invariants and dual invariants in nonzero weights. Local duality and the Euler characteristic in residue characteristic different from \(\ell\) then give 
+\[
+ h^2=0,\qquad h^1=h^0+h^2=0,
+\]
+ where \(h^i\) denotes the local dimension in the selected nonzero weight. A canonical
+eigenbasis there diagonalizes the inertial action,
+and the decomposition group preserves these lines
+with the action prescribed by \(\eta\).
+
+Lifting its
+Frobenius in the torus and changing back to the original
+basis gives the desired lift. At the remaining tame
+places lift the finite prime-to-\(\ell\) action of
+\(I_v/N_v\) by averaging. Its lifts are conjugate by
+a matrix in the kernel. Let \(r_I\) be the lifted inertia action and \(F\) a first Frobenius lift. Reduction identifies the two inertia maps, since the residual representation already respects conjugation:
+\[
+ \overline{F r_I(i) F^{-1}}=\overline{r_I(\mathrm{fr}\,i\,\mathrm{fr}^{-1})}.
+\] The averaging argument conjugates
+one to the other by a kernel matrix \(C\). Replacing \(F\)
+by \(CF\) gives
+\[
+         (CF)r_I(i)(CF)^{-1}
+                    =r_I(\mathrm{fr}\,i\,\mathrm{fr}^{-1}).
+\]
+This is the required Frobenius-inertia relation. The
+extension of the finite inertia group by the unramified
+procyclic quotient is generated by inertia and one
+Frobenius with those relations. All the linear
+corrections in the kernel can be taken in the chosen
+weight, because the residual adjoint action preserves
+the grading.
+
+\proofstep{The tangent and obstruction dimensions.}
+We give the dimension computation controlling the global
+relations. Fix a weight \(j\), let \(d=\dim V_j\),
+let \(d_\infty=\dim V_j^{c=1}\), and write \(g_i,h_{v,i}\)
+for the dimensions of the global and local cohomology
+groups. For the space of permitted local cocycle classes the inclusion is
+\[
+ L_v\subseteq H^1(\mathbb Q_v,V_j).
+\] At a tame place
+\(\dim L_v=h_{v,0}\). Indeed restriction to inertia
+of a cocycle vanishing on \(N_v\) is a coboundary by
+averaging. Let \(T\) be Frobenius on \(V_j^{I_v}\). Rank-nullity identifies the dimension of its coinvariants with that of its invariants:
+\[
+ \dim\operatorname{coker}(T-1)=\dim\ker(T-1).
+\]
+
+At exceptional places the same
+formula holds by the specified inertia and the
+vanishing of \(H^1\) in nonzero weights.
+At \(\ell\), \(L_\ell=0\) for \(j<0\), is unramified
+for \(j=0\), and is all of \(H^1\) for \(j>0\).
+The tangent assertion for the flag follows directly
+from the ordered characters. A negative-weight
+entry comes only from changing the flag basis, a
+weight-zero entry can vary its unramified character,
+and an upper-weight cocycle gives a flag-preserving
+deformation with fixed diagonal.
+
+Let \(t_j\) be the dimension of the Selmer tangent
+space and \(o_j\) the dimension of its obstruction
+space. If \(\lambda\) is the rank of the localization
+map to \(\bigoplus_v H^1(\Q_v,V_j)/L_v\), then
+\[
+ \begin{split}
+ t_j&=g_1-\lambda,\\
+ o_j&=\sum_v (h_{v,1}-\dim L_v)-\lambda
+        +g_2-\sum_v h_{v,2}.
+ \end{split}
+ \tag{7}\label{eq:local-length-7}
+\]
+The first part of \(o_j\) is the degree-one localization
+cokernel. The rest is the kernel of localization in
+degree two in the cochain complex recording a global
+multiplication error and its local trivializations.
+The degree-two localization map is surjective by the
+Poitou--Tate end sequence.
+
+In fact
+\(H^0(\Q,V_j^\vee(1))=0\) for each \(j\): for
+nonzero \(j\) use the preceding separator, and for
+\(j=0\) use an element of inertia at \(\ell\) with
+nontrivial residual cyclotomic value. The global
+Euler characteristic is
+\(g_1+ d_\infty=g_0+g_2+d\).
+The local Euler characteristic is
+\(h_{v,1}=h_{v,0}+h_{v,2}+d\,1_{v=\ell}\).
+Subtracting the two lines of \eqref{eq:local-length-7} gives
+\[
+           t_j-o_j=g_0-d_\infty+\dim L_\ell-h_{\ell,0}.
+           \tag{8}\label{eq:local-length-8}
+\]
+For \(j\ne0\) the global and \(\ell\)-local invariants
+are zero by the separator. In positive weights
+\(h_{\ell,1}=d\) because \(h_{\ell,2}=0\).
+At weight zero \(g_0=d_\infty=1\).
+Consequently the five defects, in increasing weight,
+are \(0,-1,0,1,1\).
+
+For clarity, these are bounds for a presentation of
+the normalized deformation problem. The residual
+representation is fixed, the flags in the local
+conditions have the marked residual labels, and the
+inertia conditions are invariant under a change of
+frame. At the global origin any infinitesimal
+cocycle can have its value at \(c\) and the
+off-diagonal derivative of the marked difference removed
+by a coboundary. If \(z\) is the adjoint cocycle and
+\(dY(g)=g\cdot Y-Y\), then
+\[
+ z(c)+c\cdot z(c)=0,\qquad d\bigl(-z(c)/2\bigr)(c)=z(c).
+\]
+Subtract this coboundary first. The remaining normalization
+uses a \(c\)-invariant matrix \(Y\).
+
+In the eigenbasis of the
+marked operator with eigenvalues \(\lambda_i\), let \(D=\operatorname{diag}(\lambda_i)\). To realize the required off-diagonal change \(Z\) in the derivative solve
+\[
+ [D,Y]_{ij}=(\lambda_i-\lambda_j)Y_{ij}=Z_{ij},\qquad
+ Y_{ij}=\frac{Z_{ij}}{\lambda_i-\lambda_j}\quad(i\ne j).
+\]
+The denominators are units at the mark. The prescribed change belongs to the invariant off-diagonal space, on which this commutator is invertible. The remaining conjugators centralize the split
+point. Thus normalized tangents contain
+one representative of every Selmer class.
+
+The cohomology of every open subgroup of \(G_{\Q,S}\)
+with finite \(\ell\)-torsion coefficients is finite in
+degree one. This is the finite-dimensional tangent
+condition for pro-representability of the framed
+deformation problem. The frame supplies a complete
+Noetherian universal ring. Its matrix entries,
+after subtracting their split values, give
+homogeneous variables. Choose homogeneous entries whose classes form a basis of the relative cotangent space modulo the maximal ideal. With \(r\) such entries \(x_i\), the resulting presentation over the coefficient ring \(O\) has the map
+\[
+ O[[X_1,\ldots,X_r]]\twoheadrightarrow R,\qquad X_i\longmapsto x_i .
+\] That choice generates by complete
+Nakayama. The variables have weights in
+\([-2,2]\). The ideal of relations is homogeneous,
+as follows by applying the torus character with an
+indeterminate unit and comparing weights in each
+finite quotient.
+
+\proofstep{The relation count for the completed global presentation.}
+Here is the relation bound underlying this presentation.
+For a graded small extension, choose a set-theoretic
+lift of the matrices and local homomorphism lifts.
+Let \(I\) denote the square-zero extension kernel, \(c\) the global multiplication error and \(b_v\) the local correction at \(v\). In the mapping-cone convention of \eqref{eq:local-length-7}, associativity and the local lifting equations give
+\[
+  dc=0,\qquad \operatorname{res}_v(c)-db_v=0 .
+\]
+If the global lift changes by \(\alpha\), let \(\lambda_v\) be the difference between the two permitted local lifts, read as a local tangent cocycle. Its class lies in the prescribed local subspace \(L_v\). The change of the error pair is
+\[
+   \bigl(d\alpha,(\operatorname{res}_v\alpha-\lambda_v)_v\bigr).
+\]
+A local change of basis gives the special case \(\lambda_v=d\beta_v\).
+
+In the relative complex with the specified local tangent conditions, all these changes give the same obstruction class, as reflected in the quotient by \(L_v\) in \eqref{eq:local-length-7}. If a functional \(u\) on the extension kernel kills the obstruction class \(o\), its pushout has obstruction
+\[
+ o_{\rm pushout}=u_*(o)=0 .
+\]
+Hence there is a global lift with the required local conditions. The normalization at \(c\)
+and the mark can be restored there by a kernel
+conjugation as above. Apply this to the dual of the
+space of minimal relations of one weight in the
+power series presentation. The calculation can be
+made in a finite quotient inducing the same space
+of minimal relations, by Artin--Rees. A functional
+giving a lift would let the universal ring map back
+to the corresponding nonzero extension of its
+Artinian quotient.
+
+If the two maps out of the power series ring differ by \(\delta_i\in I\) on the variables, then for each minimal relation \(F\) their difference is
+\[
+ F(\mathbf X+\boldsymbol\delta)-F(\mathbf X)
+     =\sum_i (\partial_i F)(\mathbf X)\,\delta_i=0.
+\]
+The Taylor expansion ends after its linear part because \(I^2=0\). For the minimal relations each linear coefficient lies in the maximal ideal, so 
+\[
+ (\partial_i F)\delta_i\in\mathfrak m I=0\qquad\text{for every }i.
+\]
+ The section would thus kill the selected relation even in the extension where its class is nonzero, a contradiction. Hence the dual
+of the minimal relation space injects into
+the obstruction space. This proves the bound of
+\(o_j\) relations in weight \(j\).
+
+If \(n_j\) is the number of chosen variables, then
+\(n_j\ge t_j\). By \eqref{eq:local-length-8} the relation bounds can be
+padded by zero equations to
+\[
+ (n_{-2},\ n_{-1}+1,\ n_0,\ n_1-1,\ n_2-1).
+\]
+There is at least one variable in each positive
+weight by \eqref{eq:local-length-8}. In case \(n_{-1}=0\) every
+localized class has zero image in the coordinate
+derivations in \eqref{eq:local-length-6}, so the desired length is zero.
+Otherwise these variables and equations have
+exactly \eqref{eq:local-length-2}. Take \(A\) to consist of finite
+sums of homogeneous series in the ambient power
+series ring. Its split formal chart has the
+specified weight dimensions. Homogeneous projection
+shows the ideal of the quotient is generated in
+\(A\) by the homogeneous equations. The invariant
+ring in the quotient is finite by the Gaussian
+fixed-mark argument, and it also makes the
+rescaling to integral points possible. This gives
+the chart to which \eqref{eq:local-length-3} applies.
+\hfill\mbox{\cite{milne-duality}}\label{cor:ordinary-rank-three-length-4}
+
+\end{proof}
+
+\subsection{The crystalline chart for general data}
+
+For the general point the local calculation at the coefficient prime uses a
+crystalline chart. In the rank-three trace estimate the order of \(\psi\) is prime to \(\ell\),
+so its values can be taken over an unramified
+coefficient DVR. Normalized length is invariant
+under further coefficient extension. Work over
+the general datum with \(\ell\nmid D_K h_K\),
+where \(h_K\) is the class number. Away from \(\ell\)
+kill \(I_v\cap\ker\eta\cap\ker P\); the split lift
+kills it because the finite inertia character has
+order prime to \(\ell\). We may work with the
+finite set of places above \(\ell N|D_K|\), using
+the normal closure of the killed subgroups in the
+global deformation problem.
+
+\paragraph{The base at \(\ell\).}
+To keep the codimension count integral we must control saturation at the coefficient
+prime. The following elementary calculation is the local ingredient.
+
+\begin{auxlemma}[A coefficient test for saturation]\label{lem:crystalline-coefficient-test}
+Let \((B,\mathfrak n)\) be a local ring with \(\mathfrak n^h=0\).
+Suppose \(P,y\in B[t]/(t^n)\) satisfy \(Py=0\) and the image of \(P\)
+in \((B/\mathfrak n)[t]/(t^n)\) is \(t^b\) times a unit, where
+\(0\le b<n\). Evaluation at the origin then satisfies
+\[
+                       n>hb\quad\Longrightarrow\quad y(0)=0\quad\text{in }B .
+\]
+\end{auxlemma}
+\begin{proof}
+Write \(y=\sum_{i<n}y_i t^i\). We prove
+\[
+  i<n-vb\quad\Longrightarrow\quad y_i\in\mathfrak n^v
+  \qquad(0\le v\le h).
+\]
+For \(v=0\) the assertion holds in \(B\). Suppose it holds at \(v<h\)
+and truncate modulo \(t^{n-vb}\). The truncated coefficients of \(y\)
+lie in \(\mathfrak n^v\), so \(P\) acts on their classes in
+\(\mathfrak n^v/\mathfrak n^{v+1}\) by its residue \(t^b u\), with \(u\)
+invertible. Cancelling \(u\) in the truncated polynomial module gives
+\[
+ t^b\sum_{i<n-vb}[y_i]t^i=0\pmod {t^{n-vb}}.
+\]
+Consequently \([y_i]=0\) for \(i<n-(v+1)b\), as required.
+At \(v=h\), \(0<n-hb\) puts \(y_0\) in \(\mathfrak n^h=0\).
+\end{proof}
+
+\begin{construction}
+\[
+\begin{array}{ccc}
+ B &\longleftarrow& B[t]/(t^n)\\[-2pt]
+ \downarrow\ {\scriptstyle\bmod\,\mathfrak n}&&
+    \downarrow\ {\scriptstyle\bmod\,\mathfrak n}\\
+ E&\longleftarrow&E[t]/(t^n)\\
+ \multicolumn{3}{c}{\text{horizontal arrows evaluate at }t=0}\\[2pt]
+ \multicolumn{3}{c}{\ker\bigl(B[t]/(t^n)\longrightarrow
+       B\times_E E[t]/(t^n)\bigr)=t\mathfrak n[t]/(t^n)}
+\end{array}
+\]
+\caption{The test algebra joining the given point to the unramified curve. Evaluation and reduction have common target in the residue field. Formal smoothness lifts the compatible pair across the resulting nilpotent kernel.}\label{fig:crystalline-thickening-test}
+\end{construction}
+
+\begin{proposition}[The saturated crystalline local chart]
+\label{prop:rank-three-crystalline-local-base}
+For the general-data host with \(\ell\nmid D_K h_K\) and
+\(\psi\) of order prime to \(\ell\), kill
+\(I_v\cap\ker\eta\cap\ker P\) on inertia away from \(\ell\).
+Use the prime through
+the split point in the radical of the ordered-inertia equations
+saturated by \(\ell D_0D_1\). Its formal characteristic-zero chart is crystalline, including at
+the split point. The dimensions \(d_j\) of the homogeneous coordinate
+spaces in \eqref{eq:rank-three-crystalline-chart} are
+\[
+                (d_{-2},d_{-1},d_0,d_1,d_2)=(1,2,3,4,2).
+\] On the selected global chart the test-curve
+comparison gives a finite degree-zero algebra, and the
+two-sided characteristic-zero orbits have integral representatives.
+\end{proposition}
+
+\begin{proof}
+\proofstep{The ordered-inertia equations and their saturation.}
+Let \(U_\ell\) be the unrestricted framed
+local ring and \(H=\ker\eta\cap\ker\tau\) in
+the local group, where \(\tau\) is the finite
+character in \(\Psi|_{I_\ell}=\epsilon_\ell^e\tau\).
+For \(s\in H\cap I_\ell\) put \(q_i(s)=\Psi(s)^{1-i}\),
+\(0\le i\le2\), and \(S_i(s)=r(s)-q_i(s)1\).
+Impose the characteristic polynomial with roots
+\(q_0(s),q_1(s),q_2(s)\), and impose
+\[
+          S_0(s_0)S_1(s_1)S_2(s_2)=0
+          \qquad(s_i\in H\cap I_\ell).
+\]
+
+Choose \(s\in H\cap I_\ell\) of infinite
+cyclotomic image. Its three \(q_i(s)\) are
+distinct. With \(c_i=\prod_{j\ne i}(q_i(s)-q_j(s))\),
+the spectral projector onto the \(i\)-th
+eigenline is \(c_i^{-1}\prod_{j\ne i}S_j(s)\)
+over the fraction field. Take \(\mathrm{fr}\in H\)
+generating the unramified quotient and let
+\(T_i\) be the trace of
+\(\prod_{j\ne i}S_j(s)r(\mathrm{fr})\).
+The two adjacent differences are
+\[
+       D_i=c_{i+1}T_i-
+            \epsilon_\ell(\mathrm{fr})c_iT_{i+1}
+       \qquad(i=0,1).
+\]
+The local ideal is the prime through the split
+point of the radical of the ordinary equations
+saturated by \(\Delta=\ell D_0D_1\).
+We explain the use of saturation in both directions.
+
+\proofstep{The ordered crystalline equations after inverting the adjacent factors.}
+In characteristic zero the ordinary equations give
+an ordered flag. For the first line and last
+quotient, use a variable inertia element in
+the first and last factors of the triple product
+respectively and the chosen \(s\) in the other two.
+The projectors isolate the first line and the last quotient of the ordered flag. On those one-dimensional graded pieces the operator thus has the two scalar restrictions
+\[
+ q_0\,\mathrm{id}\quad\text{on the first line},\qquad q_2\,\mathrm{id}\quad\text{on the last quotient}.
+\] The middle value follows from the trace.
+These flags are unique with the ordered characters
+because the eigenvalues at \(s\) are distinct.
+The decomposition group preserves the flag with
+the conjugate-dual action on the quadratic coset.
+On \(H\), write \(\nu_1,\nu_2,\nu_3\) for the unramified twists. The ordered graded characters restrict to
+\[
+ \nu_1\epsilon_\ell^e,\qquad\nu_2,\qquad\nu_3\epsilon_\ell^{-e}.
+\]
+In the ordered basis \(T_i/c_i\) is the \(i\)-th
+Frobenius value.
+
+Fix a finite local characteristic-zero coefficient
+algebra \(B\) on the saturated quotient. One can
+factor its point through a finite local algebra
+\(B'\) of that quotient such that any element of
+\(B'\) killed by \(\Delta\) maps to zero in \(B\).
+Indeed in the generic local ring of the saturated
+quotient, \(\Delta\) is a nonzerodivisor. Apply
+Artin--Rees to its principal submodule and the
+powers of the maximal ideal \(\mathfrak m\).
+Writing \(R\) for this local ring, choose \(c\) from Artin--Rees,
+so \(\mathfrak m^h\cap\Delta R\subseteq\mathfrak m^{h-c}\Delta R\)
+for \(h\ge c\). Since \(\Delta\) is a nonzerodivisor,
+\[
+ \Delta b\in\mathfrak m^h\quad\Longrightarrow\quad
+ b\in\mathfrak m^{h-c}.
+\]
+Choose \(h\) large enough that this last ideal maps to zero in \(B\). Taking
+\(B'\) to be this \(\mathfrak m^h\)-quotient
+gives the assertion. Its residue field is
+finite over the coefficient fraction field,
+since the point has values in a finite
+algebra.
+
+\proofstep{The vanishing required by the saturation.}
+On \(H\), a ratio of adjacent characters is an
+unramified twist of \(\epsilon_\ell^e\).
+For a positive Tate exponent \(a\), the
+quotient of \(H^1\) by its finite subspace
+is dual to the finite \(H^1\) of the Tate
+dual, by local duality. For \(a>1\) the Tate dual has exponent \(1-a<0\). Its finite local group vanishes, so local duality gives
+\[
+ H^1/H_f^1=0\qquad(a>1).
+\] For \(a=1\), write the coefficient as
+\(\epsilon_\ell\otimes\theta\) with \(\theta\) unramified.
+The Tate dual is \(\theta^\vee\). Its finite
+\(H^1\) is the Frobenius coinvariant quotient.
+Dualizing that quotient makes the possible nonfinite
+part the kernel of \(\theta(\mathrm{fr})-1\).
+In terms of the adjacent characters this scalar is
+\[
+ \theta(\mathrm{fr})-1
+  = \frac{(\kappa_i/\kappa_j)(\mathrm{fr})
+                          -\epsilon_\ell(\mathrm{fr})}
+          {\epsilon_\ell(\mathrm{fr})}.
+\]
+The denominator is a unit.
+
+Over \(B'\) a class in this
+kernel is killed by the indicated factor of \(\Delta\),
+hence is killed by \(\Delta\), so its image in \(B\)
+is zero by the choice of \(B'\). This gives finite
+extensions on the two adjacent subquotients.
+For the outer character ratio the positive exponent is at least two, so the preceding local dimension calculation gives
+\[
+ 2e\ge2\quad\Longrightarrow\quad H^1/H_f^1=0
+\]
+for that ratio.
+There is no additional obstruction for the
+full upper triangular representation. Once
+the upper two-dimensional block is crystalline,
+tensor it by the inverse of the last character.
+Its two successive characters have positive
+exponents. The finite \(H^1\) maps onto the
+finite \(H^1\) of its last quotient by exactness
+and the dimension formula for the de Rham
+quotient. The remaining outer-line class is
+finite as just proved. Thus the full point
+over \(B\) is crystalline on \(H\).
+
+\proofstep{Recovering the crystalline quotient, including the split point.}
+Conversely take a crystalline deformation on \(H\)
+over a local Artin coefficient algebra reducing
+to the split lift. The Frobenius after a full
+residue-field period has three distinct slopes
+at the split lift and hence three separate
+eigenlines over the Artin algebra. Order the three Frobenius eigenlines \(D^{(1)},D^{(2)},D^{(3)}\) by increasing slope. The initial subspaces for which crystallinity must be checked are
+\[
+ D_1=D^{(1)},\qquad D_2=D^{(1)}\oplus D^{(2)} .
+\] To verify this with
+nilpotent coefficients, regard the filtered
+Frobenius module as a vector space over the
+coefficient field. Its multiset of Hodge
+weights is the split multiset repeated
+according to the length of the Artin
+algebra. The Newton number of each initial
+eigenline sum is the sum of the corresponding
+lowest Hodge weights. The induced filtration on a subspace of this dimension has
+at least the sum of the smallest Hodge weights, counted with
+those multiplicities.
+
+If \(D_i\) is either initial eigenline
+sum, and \(h_{\min}(D_i)\) is that minimum, then
+\[
+ h_{\min}(D_i)\le t_H(D_i)\le t_N(D_i)=h_{\min}(D_i).
+\]
+The middle inequality is weak admissibility of the full
+object on the Frobenius-stable \(D_i\). Equality, together
+with the inherited inequalities on all its subobjects, makes
+\(D_i\) weakly admissible. The crystalline equivalence
+gives the desired flag on the representation.
+The graded terms are rank one over the
+Artin algebra, with fixed Tate exponents
+and unramified factors on \(H\). Freeness
+can be checked by reduction and the
+underlying vector space dimension.
+
+On the overlap of two base changes the two pulled-back ordered flags have the same defining property. Uniqueness therefore gives the descent compatibility, with \(p_1,p_2\) the two projections:
+\[
+ p_1^*\mathcal F=p_2^*\mathcal F .
+\] Its finite inertial
+characters lift those at the split point,
+because the order of a finite inertia
+quotient is invertible over a characteristic-zero
+coefficient field. This proves the ordinary
+equations on every such deformation.
+
+For a single crystalline point as above,
+\(\Delta\) need not be a unit. To see that
+it kills the saturated ideal, let \(\Delta^k a\)
+lie in the ordinary ideal and use the following
+deformation of the test algebra. Take the local algebra \(B\) with residue coefficient field \(E\) and maximal ideal \(\mathfrak n\) of nilpotence index at most \(h\):
+\[
+ B/\mathfrak n=E,\qquad \mathfrak n^h=0 .
+\] Choose \(n>2kh\). On
+\(C=E[t]/t^n\), vary the split lift by
+an unramified torus character with value
+\(\operatorname{diag}(1+t,1,(1+t)^{-1})\)
+on a generator of the unramified quotient.
+On \(\mathrm{fr}\) the power of \(1+t\)
+has nonzero exponent. Each adjacent difference either has nonzero constant term or differs from a nonzero multiple of \(t\) by higher terms.
+
+For the latter case in characteristic zero use
+\[
+ (1+t)^a-1\equiv at\pmod{t^2},\qquad a\ne0 .
+\]
+Its order in \(t\) is therefore one. The image of \(\Delta\)
+is \(t^j\) times a unit with \(j\le2\).
+The local crystalline functor at the split
+lift is formally smooth. In the filtered
+Frobenius description one lifts the invertible
+Frobenius and the filtration by direct summands
+across a nilpotent extension. Across the strict successive layers the Hodge and Newton numbers are additive. Writing \(D_i\) for the successive quotients, the equality starts with
+\[
+ t_H(D)=\sum_i t_H(D_i)=\sum_i t_N(D_i)=t_N(D).
+\]
+Strictness and weak admissibility of the layers give the subobject inequalities as well. Equivalence with
+crystalline representations recovers the action
+and one lifts the frame on its free coefficient
+module. The fixed finite type on descent
+is unchanged across the nilpotent extension.
+This is the local smoothness of the crystalline
+quotient theorem.
+
+On the unramified
+quadratic kernel the conjugate-dual descent
+datum is retained by order-two averaging
+on the characteristic-zero lifting and
+change-of-basis spaces. The given \(B\)-point and the unramified twist over
+\(C\) reduce to the same split lift. They therefore give
+a point over \(B\times_E C\). The coefficient map
+\[
+       B[t]/t^n\longrightarrow B\times_E C,\qquad
+             f(t)\longmapsto (f(0),\bar f(t))
+\]
+is surjective with kernel \(t\mathfrak n[t]/(t^n)\).
+The kernel is nilpotent. Formal smoothness with the
+polarized descent retained gives a lift across this map.
+
+\proofstep{Keeping the integral local equation after saturation.}
+Let \(P\) be the image of \(\Delta^k\)
+and \(y\) the image of \(a\) in this
+thickening. The ordinary equations give
+\(Py=0\) and \(P\bmod\mathfrak n\) is
+\(t^{jk}\) times a unit. At the two possible positive weights the nilpotence bound stays strictly below the truncation order:
+\[
+ j\le2\quad\Longrightarrow\quad hjk\le2kh<n .
+\] Lemma~\ref{lem:crystalline-coefficient-test} with \(b=jk\) gives \(y(0)=0\). Evaluation at \(t=0\) recovers the given \(B\)-point, so that point kills \(a\), as required for every element of the saturated ideal.
+The saturation consequently gives the
+crystalline formal germ at the split lift,
+including tangent points over dual numbers.
+The completed germ is smooth and therefore
+has a single component through that point.
+Its closure defines the integral local base.
+
+Conjugation congruent to the identity preserves
+the split component. Indeed the action by the
+universal congruence matrix on a domain
+component lands in a formal power series domain
+over that component. The preimage of its zero
+prime under the conjugation map is contained in
+the original component prime by specialization
+to the identity. If \(P\) denotes the original component prime and \(Q\) the contracted zero prime, this gives a chain of primes
+\[
+ Q\subseteq P,\qquad P\text{ minimal}\quad\Longrightarrow\quad Q=P .
+\] In particular the conjugate of
+the split representation over the integral
+dual numbers factors through the chosen local
+quotient, as used in the transfer.
+
+\proofstep{The local weight directions on the selected component.}
+With characteristic-zero adjoint coefficients, the dimension at the split point is
+\[
+ \dim H^1_f(V_j)=h^0_j+\dim\bigl(D_{\rm dR}(V_j)/\mathrm{Fil}^0\bigr).
+\]
+Changing the actual frame contributes
+\(\dim V_j-h^0_j\). The de Rham quotient has
+dimension \(\dim V_j\) in positive weights and
+zero in other weights. This follows from the
+Tate twists \(\epsilon_\ell^{ej}\) on the
+weight spaces, with only finite character
+factors. The local framed smooth chart therefore
+has dimensions
+\[
+                    (1,2,3,4,2)
+                    \tag{9}\label{eq:rank-three-crystalline-chart}
+\]
+in increasing weight. Homogeneous matrix
+entries give compatible axes. In the formal
+completion over the fraction field, their
+differentials span because a tangent annihilating
+all entries gives the split deformation.
+
+Choose
+a homogeneous basis among them and change formal
+coordinates by the inverse function theorem.
+This gives the graded local chart, with the
+same weights on the ambient integral
+presentation. The integral component injects into
+the smooth completed chart, since its defining
+prime is the contraction of the prime of that
+chart. Matrix entries map to homogeneous functions.
+Thus for a relation with homogeneous components \(F_j\), projection to any fixed weight in the completed chart yields
+\[
+ \sum_j F_j=0\quad\Longrightarrow\quad F_i=0\quad\text{in weight }i .
+\] By injectivity on the
+integral component, the component ideal is closed
+under these weight projections. The integral
+relative presentation inherits this completed
+grading.
+\hfill\mbox{\cite{bloch-kato-finite,colmez-fontaine,kisin-crystalline}}\label{cor:ordinary-rank-three-length-5}
+
+\proofstep{Inertia on test curves.}
+The ordinary flag at the generic point of
+the same component has the full prescribed
+inertia characters. On \(H\cap I_\ell\)
+these are given by the ordinary equations.
+For a character ratio \(\delta\) trivial on \(H\cap I_\ell\), the remaining inertia datum factors through the finite quotient
+\[
+ I_\ell\twoheadrightarrow I_\ell/(H\cap I_\ell)\xrightarrow{\ \delta\ }\operatorname{im}(\delta).
+\]
+Specialization at the split lift fixes this finite factor.
+More explicitly the eigenspaces of \(r(s)\)
+at the separating element \(s\) label the
+flag across any specialization in which
+the \(q_i(s)\) stay distinct, including
+the split lift over the fraction field.
+The ratios at other inertia elements
+have finite order and hence are constant
+on the component on this labelled
+chart once their value at the split
+point is fixed. The ordered flag with
+its prescribed action is a closed
+condition on the projective flag
+scheme over the integral local base.
+
+Let \(Z\) denote that closed flag locus and \(S\) its integral base. Properness makes the image closed, so
+\[
+ \eta_S\in\operatorname{im}(Z\to S)\quad\Longrightarrow\quad\operatorname{im}(Z\to S)=S .
+\]
+Each field specialization thus has a flag after extending its residue field.
+This also follows by extending the
+generic flag over valuation rings.
+For a map to a complete local DVR, write \(A\) for the
+matrix of the separator. Its distinct reduced eigenvalues
+lift by Hensel's lemma to roots \(a_i\) with unit differences.
+The projectors
+\[
+                   e_i=\prod_{j\ne i}
+                        \frac{A-a_j}{a_i-a_j}
+\]
+give the integral eigenlines. The ordered flag after field
+extension is the sum of these lines in the prescribed residual
+order, so it descends to the original valuation ring. This supplies the marked
+ordinary condition even when the DVR
+kills the coefficient uniformizer.
+
+\proofstep{Applying the residual polynomial comparison to this chart.}
+Now apply the finite-end statement of
+Section~\ref{sec:marked-hosts} to
+each such characteristic-\(\ell\) DVR
+point of the crystalline global ring.
+Away from \(\ell\), the inertia elements to be killed form the intersection
+\[
+ \ker(\eta|_{I_v})\cap\ker(\Psi|_{I_v}) .
+\]
+For the general datum this agrees with the prescribed residual kernel. The statement
+makes the characteristic polynomial
+split on a fixed subgroup of finite
+index. The finite-index argument in
+that section makes it split on the
+whole quadratic kernel, and the mark
+then gives triangularity with the
+split diagonal. Thus every diagonal
+coordinate minus its split value, and
+every balanced monomial with a
+positive and a negative entry, vanishes
+on every test curve.
+
+As on the auxiliary field over \(\mathbb Q(i)\), the curve test puts each such generator \(z\) in the radical of the uniformizer ideal. Equivalently, in the indicated local ring \(R\),
+\[
+ z\in\sqrt{\varpi R}\quad\Longleftrightarrow\quad z^m\in\varpi R\ \text{for some }m\ge1 .
+\] Complete Nakayama gives
+finiteness of the degree-zero algebra
+over \(O\) on the selected chart.
+The same valuation interval as in
+the Gaussian case gives an integral
+representative of every two-sided
+characteristic-zero orbit. Here the
+fact that this point is on the
+crystalline quotient supplies the
+finite condition at \(\ell\) for
+its infinitesimal deformations.
+\label{cor:ordinary-rank-three-length-6}
+
+\end{proof}
+
+\paragraph{The relative global presentation.}
+With the integral base in hand we can count the remaining global variables and
+relations relative to it.
+
+\begin{lemma}[The normalized relative presentation]
+\label{lem:relative-rank-three-presentation}
+Over the integral local base of Proposition~\ref{prop:rank-three-crystalline-local-base},
+the completed relative presentation after normalization at
+\(c,g_*\) has the counts of \eqref{eq:local-length-10}. In increasing order of
+weights \(-2,-1,0,1,2\), its numbers of coordinates and equations are
+\[
+ \begin{aligned}
+ (n_j)_j&=(a_{-2}+1,a_{-1}+2,a_0+3,a_1+4,a_2+2),\\
+ (r_j)_j&=(a_{-2}+1,a_{-1}+3,a_0+3,a_1+3,a_2+1).
+ \end{aligned}
+\]
+These counts, its rational chart and the integral derivative lift
+apply to the same quotient.
+\end{lemma}
+
+\begin{proof}
+\proofstep{Separating the local and relative global presentations.}
+Before normalizing at \(c,g_*\), the relative
+deformation problem fixes a framed representation
+at \(\ell\) on the chosen local quotient. In the
+global presentation it records the local
+conjugacy comparing the two frames. For a
+residual weight space \(V_j\), write
+\(g_i,h_{v,i}\) as in \eqref{eq:local-length-7}, and let \(\lambda\)
+be the rank of localization into the full
+\(H^1\) at \(\ell\) and the quotient by the
+unramified conditions at the other places.
+Those away conditions have dimension \(h_{v,0}\)
+by averaging over the residual inertia quotient.
+At \(\ell\) a global relative tangent has
+zero cohomology class. Its local trivializing
+vector can still vary by local invariants.
+
+After taking the global changes of frame
+into account, the relative tangent dimension is
+\[
+                a_j=g_1-\lambda+h_{\ell,0}-g_0 .
+\]
+Here the cancellation of the common change of
+frame can also be seen by setting the local
+conjugacy equal to the identity at \(\ell\)
+and allowing the global frame to vary. For
+the obstruction space the relative complex gives
+\[
+ h_{\ell,1}+\sum_{v\ne\ell}(h_{v,1}-h_{v,0})
+                  -\lambda+g_2-\sum_v h_{v,2}.
+\]
+To justify the last sum, the general datum
+gives an element with \(\eta=-1\),
+\(P=1\) and \(\bar\epsilon_\ell=1\), from
+ramification of \(K\) away from \(\ell N\).
+Multiplying it by \(c\) gives an element
+acting trivially on all \(V_j\) but with
+cyclotomic value \(-1\). On the Tate-twisted dual the element just constructed acts as minus the identity. Hence in characteristic zero
+\[
+ v\in H^0(\mathbb Q,V_j^\vee(1))\quad\Longrightarrow\quad v=-v\quad\Longrightarrow\quad v=0 .
+\]
+Poitou--Tate then gives the claimed surjectivity in degree two.
+The local and global Euler formulas now give
+obstruction dimension \(a_j+\dim V_j^{c=1}\).
+
+\proofstep{The relative equations and their weights.}
+The relative ring is a quotient of a power
+series algebra over the local crystalline
+quotient with \(a_j\) additional variables
+of weight \(j\). Indeed the relative tangent
+coordinates lift a basis modulo the
+local base and its maximal ideal. The
+small-extension computation for the Gaussian
+chart applies with the lift at \(\ell\)
+prescribed by this base. One records its
+change of frame in degree one of the
+relative complex. The tame lift still
+uses the finite inertia quotient.
+For each weight \(j\), write \(\mathrm{Rel}_j\) for the space of relative minimal relations and \(\mathrm{Obs}_j\) for the corresponding relative obstruction space. The small-extension test gives
+\[
+ \mathrm{Rel}_j^\vee\hookrightarrow\mathrm{Obs}_j,\qquad\dim\mathrm{Rel}_j\le\dim\mathrm{Obs}_j .
+\] This proves the
+claimed relation bound over the local base.
+Represent the additional coordinates by
+matrix entries, so their weights stay in
+\([-2,2]\). Zero equations pad each weight
+to the bound.
+
+\proofstep{The eight normalization equations.}
+There are eight normalization equations.
+Applied at \(c\), the relation \(c^2=1\) imposes the following symmetry on the matrix \(Y\) of the quadratic coset:
+\[
+ Y=JY^{\mathsf T}J .
+\] The entries in positions
+\((0,0),(1,1),(0,1),(1,0),(0,2),(2,0)\)
+therefore suffice to set \(Y=1\).
+Once this is done the marked difference is
+\(Z-JZ^{\mathsf T}J\) with \(Z=r(g_*)\).
+The off-diagonal equations reduce to the
+\((0,1)\) and \((1,0)\) entries, one of
+each weight \(1,-1\). Thus the normalization
+adds \((1,2,2,2,1)\) equations in
+increasing weight. The combined chart has
+\[
+\begin{array}{c|ccccc}
+j&-2&-1&0&1&2\\ \hline
+\text{ambient dimensions}&
+a_{-2}+1&a_{-1}+2&a_0+3&a_1+4&a_2+2\\
+\text{equations}&
+a_{-2}+1&a_{-1}+3&a_0+3&a_1+3&a_2+1 .
+\end{array}
+\tag{10}\label{eq:local-length-10}
+\]
+
+We retain the entire integral local base
+when forming the relative power series
+ring. Its formal chart over the fraction
+field is obtained by adjoining the same
+relative variables to \eqref{eq:rank-three-crystalline-chart}. Passing to the
+finite sums of homogeneous components
+commutes with the quotient by the
+homogeneous equations by projection on
+each weight. Thus the smoothness,
+equation counts and integral derivative
+lifting required for \eqref{eq:local-length-3} and \eqref{eq:local-length-1} refer
+to the same chart.
+\hfill\mbox{\cite{milne-duality}}\label{cor:ordinary-rank-three-length-7}
+
+\end{proof}
+
+We now have the local and global models used in
+Proposition~\ref{prop:rank-three-conormal}. The Gaussian
+model and the crystalline model are used in separate
+applications. In each one the bound is read on the original
+coefficient ring.
+
+\subsection{Frobenius trace bounds for the original Galois representations}
+
+Return to the representations before passage to the marked field. The comparison on
+either chart now expresses the length bound in terms of traces in the corresponding
+packet.
+
+\begin{proposition}[A length bound in terms of Frobenius trace differences]
+\label{prop:rank-three-original-trace-bound}
+Use the packet over the original field and the normalized Gaussian
+or crystalline chart of Propositions~\ref{prop:gaussian-rank-three-chart}
+and~\ref{prop:rank-three-crystalline-local-base}, respectively, with the
+relative presentation of Lemma~\ref{lem:relative-rank-three-presentation}.
+The normalized
+length \(s_\ell(\psi,e)\) satisfies \textup{\eqref{eq:local-length-11}}: its bound is
+twice the sum of valuations of the selected Frobenius trace
+differences over representatives of the two-sided orbits.
+For one character kernel \(J_0\), its rank-three contribution \(S(J_0)\) at the selected test prime satisfies 
+\[
+ S(J_0)\le 2v_\ell(A_{J_0}(p)),\qquad p\ne\ell.
+\]
+
+The Gaussian large-conductor application uses its separate
+inert-prime packet. The packet exponents are those of the
+original hosts.
+\end{proposition}
+
+\begin{proof}
+We check the remaining point conditions of \eqref{eq:local-length-3}.
+On a fixed point, the restriction to the
+quadratic kernel is diagonal. Each of its
+three characters differs from the corresponding
+split character by a character unramified at
+every finite place of \(K\) and congruent
+to one. Here are the inertia checks for
+that statement. At a tame place of residual
+kernel type the diagonal character factors
+on inertia through a group of order prime
+to \(\ell\). Let \(m\) be the order of the finite inertia quotient. Reduction distinguishes the character values because \((m,\ell)=1\), so
+\[
+ \zeta,\zeta'\in\mu_m,\quad\bar\zeta=\bar\zeta'\quad\Longrightarrow\quad\zeta=\zeta'.
+\] At a tame place of prescribed
+inertia type the local eigenbasis has its
+residual labels. The same argument using
+the local eigenbasis at \(\ell\) gives the
+ordered labels there.
+
+In the general-data chart, on the inertia subgroup where the ordered polynomials are imposed, let \(\chi_i\) denote the three diagonal characters and \(\chi_i^0\) their prescribed values. Take a separating element \(h\) and label the three distinct roots \(\lambda_i=\chi_i(h)=\chi_i^0(h)\) in the fixed frame. Work over the characteristic-zero field of this fixed point. For any \(g\) in that subgroup, equality of the traces prescribed at \(h^a g\) gives
+\[
+ \sum_{i=1}^3 \lambda_i^a\bigl(\chi_i(g)-\chi_i^0(g)\bigr)=0
+              \qquad (a=0,1,2).
+\]
+The determinant of these three equations is \(\prod_{i<j}(\lambda_j-\lambda_i)\ne0\). Thus each labeled value agrees, even when \(g\) itself has coinciding roots.
+
+By unramified class field theory the quotient character \(\xi\)
+factors through the class group of \(K\). Its image is finite and
+congruent to one, and hence has \(\ell\)-power order. Thus
+\[
+ |\operatorname{im}\xi|\mid h_K,\qquad
+ |\operatorname{im}\xi|=\ell^u,\qquad \ell\nmid h_K
+ \quad\Longrightarrow\quad \xi=1.
+\] For the Gaussian
+case \(h_K=1\). The fixed value at complex
+conjugation determines the representation
+on the other coset. Hence the only
+fixed point is \(x\). This suffices for
+the one-sided condition away from \(x\).
+
+\proofstep{The tangent criterion for the two-sided points.}
+At a two-sided point of the Gaussian chart,
+the block exclusion in Section~\ref{sec:host-descent}
+gives an irreducible restriction to \(K\).
+For general data, the two possibilities for the restriction are
+\[
+ V\text{ irreducible of dimension }3,\qquad\text{or}\qquad V=W_{\rm outer}\oplus U_{\rm middle}
+\]
+with an irreducible outer plane and a middle line. In both charts
+restrict the marked integral representative
+at \(\ell\) to obtain the finite adjoint
+local condition. For the Gaussian chart
+this was the fixed-inertia derivative
+calculation of Section~\ref{sec:host-descent}.
+
+For the general datum it follows on the
+crystalline local quotient by the
+crystalline extension criterion, after
+the same finite base change that
+trivializes the local type. Away from
+\(\ell\), the inertia condition gives
+the finite local condition by restriction
+and averaging. Thus the adjoint class
+of any tangent to a two-sided point
+vanishes by the rational Selmer results
+of that section. The constraints from complex conjugation and the marked difference leave only the following line of coboundary matrices:
+\[
+ X=u\operatorname{diag}(1,0,-1).
+\]
+It produces exactly the torus tangent.
+
+\proofstep{Continuity and the completed integral chart.}
+These point and derivative arguments apply
+on the graded algebra. A degree-zero
+point is integral on the finite invariant
+quotient. Nonzero products of opposite
+weights give the strict interval of
+allowable torus rescalings, so the full
+matrix coordinates can be taken in the
+maximal ideal of a finite coefficient
+DVR away from their split values. A first
+order lift of this point has the same
+extension to the complete chart. For
+each generator of nonzero weight its value
+is the rescaled integral value plus a
+nilpotent term.
+
+In a dual-number ring, a product of \(n\) rescaled
+values \(a_i+\delta b_i\) has the expansion
+\[
+ \prod_{i=1}^n(a_i+\delta b_i)
+   =\prod_{i=1}^n a_i+
+       \delta\sum_{i=1}^n b_i\!\prod_{j\ne i}a_j .
+\]
+The \(a_i\) are in the maximal ideal, and the finitely
+many \(b_i\) have one fixed lower valuation bound. Both
+coefficients therefore tend to zero uniformly in such products
+as \(n\) increases. At the
+finite invariant quotient, a point
+derivation on its local coefficient
+algebra is continuous by this same
+product rule on powers of the maximal
+ideal. Hence completing the chart
+gives a normalized dual-number
+deformation. Its matrix entries still
+separate the derivations. This is the
+chart version of the torus tangent
+condition in \eqref{eq:local-length-3}.
+
+\proofstep{Applying the conormal bound to the selected trace.}
+Take \(a\) to be the trace at the
+selected Frobenius minus the split
+trace. It has weight zero and
+vanishes at \(x\). The packet bounds
+of Section~\ref{sec:host-descent}
+show it is nonzero at each of
+the two-sided points. Apply \eqref{eq:local-length-3}
+and the integral transfer \eqref{eq:local-length-1} at
+every torsion depth. With \(T\)
+one representative of each
+two-sided orbit, the normalized
+rank-one length satisfies
+\[
+ s_\ell(\psi,e)
+ \ \le\ 2\sum_{\xi\in T}
+   v_\ell\!\left(\operatorname{tr}r_\xi(\mathrm{Frob}^{-1})
+                  -\operatorname{tr}r_0(\mathrm{Frob}^{-1})\right).
+ \tag{11}\label{eq:local-length-11}
+\]
+An intertwiner on the quadratic
+kernel is diagonal in the marked
+bases. For an irreducible triple,
+polarization then makes it a scalar
+times a grading-torus element.
+For the plane plus line, the
+middle diagonal entry can be
+changed to the square root of the
+product of the two outer entries.
+This preserves the intertwiner.
+So in either case the injection
+from orbits to the packet indices
+in \eqref{eq:local-odd-d} applies to precisely the
+representatives in \eqref{eq:local-length-11}.
+
+\proofstep{Normalized valuations on the original packets.}
+For the rank-three trace estimate sum \eqref{eq:local-length-11} over the
+characters with one kernel. At a test prime \(p\ne\ell\) the common congruence integer bounds the sum over characters with this kernel by
+\[
+ 2v_\ell(A_{J_0}(p)).
+\]
+Two fixed distinct test primes
+give the bound at all admissible
+\(\ell\), as in the arithmetic sum
+following \eqref{eq:local-odd-l}. The cardinality
+and valuation factors are at the
+original levels \(N\) and \(N|D_K|\).
+Once \(K\) and the pair of test
+primes are fixed, the exponent
+depends on neither \(N,e\) nor the
+residual prime or coefficient
+ring.
+
+For the case over the Gaussian field, the fixed
+Gaussian field and the inert
+prime \(p\le 12\ell N\) give
+\(s_\ell(\psi,1)\log\ell\ll
+(\ell N)^C\) at the large
+dyadic conductor, using only the
+rank-three packet. The smaller
+conductor goes through the
+height estimate as in the
+odd-prime count. These deductions
+use the height and marked
+support inputs of the previous
+sections. The enlargement of the
+marked field enters neither
+packet exponent.
+\label{cor:ordinary-rank-three-length-8}
+\end{proof}

@@ -1,0 +1,792 @@
+\subsection{Integral transfer from the tensor of two-letter spaces}
+\label{sec:edge-transfer}
+\hypertarget{source-edge-transfer}{}
+
+Each top in the tensor model has independent vector and covector variables. Transferring its tests to the actual weight space requires an integral comparison with the irreducible summands.
+
+Let \(T\) be the set of tops on the cycle and \(O\) the coefficient valuation ring. Put \(N=|T|\), \(k=m+1\), and \(K=\operatorname{Frac}(O)\).
+Use \(A_s,B_s\) for the two nonnegative degrees at a top.
+The tensor model \(U\) takes independent vector and covector
+variables at each top. At an odd top their roles switch, so the
+first-coordinate normalization of \(U\) is
+\[
+ a_U=\sum_{s\ {\rm even}}A_s+\sum_{s\ {\rm odd}}B_s.
+\]
+Use the component frames of the preceding subsection for the
+coefficient lattice \(U(M)\), for a tuple \(M\) of \(O\)-lattices.
+Apply the definitions of the edge tests to \(U\) with \(a_U\) in
+place of \(A_1\), including the pairing \(p^{a_U}\phi(u)\).
+
+In one component let \(P_{A,B}\) be the polynomials of bidegree
+\((A,B)\) in \(x,y\), and let \(h=\sum_i x_i y_i\) and
+\[
+ \Delta=\sum_i\partial_{x_i}\partial_{y_i}.
+\]
+
+Writing \(\beta_{A,B}\) for the quotient by \(hP_{A-1,B-1}\),
+this quotient is the dual Weyl model for
+\((A,0,\ldots,0,-B)\), with its determinant twist.
+The identification holds on coefficient lattices. To see the
+normalization, send \(x\) to the first column and \(y\) to the
+signed \((k-1)\)-row minors of the first \(k-1\) columns. Use
+independent matrices for the two-letter space and one matrix
+for the quotient. Under a change of the row frame, the column
+transforms as a vector and the minors as a covector times the
+determinant. The twist cancels the determinant.
+
+\begin{proposition}[Transfer of a tensor test to the weight summands]\label{prop:edge-test-transfer}
+Take \(k\ge3\), \(w^2=p\), and \(A_s+B_s+1\le8a\) at each top.
+Put \(u=N\lceil(k+1)\log_p(8a+k-1)\rceil\). Suppose a test for
+\(U\) has \(r_U\) directions at depth \(D_0\) at a fixed edge,
+with the specified endpoint order and conductor. Then there are
+tests with \(r_j\) directions on the summands \(V_j\) of weights
+\((A_s-j_s,0,\ldots,0,-B_s+j_s)\),
+\(0\le j_s\le\min(A_s,B_s)\), at depth \(D_0+3u\), with
+the same endpoint order and conductor and total rank bounded below by
+\[
+ \sum_j r_j\ge r_U,\qquad D_0+3u\le D_1=D_0+4u.
+\]
+In particular the tests are available at depth \(D_1\).
+\end{proposition}
+
+\begin{proof}
+\proofstep{The injective substitution and differential operators.}
+In the independent model the substitution is injective over
+every field, since each nonzero covector is the exterior
+product of some frame of its kernel, with one frame variable
+rescaled to give the specified exterior product. In the
+common-matrix model the image is dense in the incidence
+hypersurface \(h=0\). Over an algebraic closure, for any
+nonzero \(x,y\) with \(y(x)=0\), extend \(x\) to a basis of
+\(\ker(y)\) and adjust one of the other vectors to realize
+\(y\). Here \(k\ge3\). The polynomial \(h\) is irreducible, by
+viewing it as primitive of degree one in any \(y_i\); hence the ideal of relations in the common-matrix substitution is
+\[
+ \ker(\text{common-matrix substitution})=(h).
+\]
+These arguments also apply over the residue
+field after base change to its algebraic closure.
+
+Over \(O\)
+one may divide by the monic leading monomial of \(h\), so the
+bihomogeneous quotient is free. The injection after reduction
+modulo \(w\) proves saturation of its image. In the standard
+frame the integral polynomial realization of the dual Weyl
+module is its span over \(K\) intersected with the coefficient
+lattice. Equivalently one uses the integral standard monomial
+basis in products of column minors \cite[Theorem II.2.16]{abw-schur}.
+The Cartan product of the
+first-column and cofactor weights generates that module, giving
+the quotient identification. A change of frame gives the assertion for every \(M\).
+
+\proofstep{Projectors on fixed bidegree.}
+For \(a,b\ge0\), let \(H_{a,b}\) be the projector onto
+\(\ker\Delta\) along \(hP_{a-1,b-1}\).
+The commutator formula
+\[
+ \Delta(h^i u)=h^i\Delta u+i(k+c+d+i-1)h^{i-1}u
+\]
+
+for \(u\in P_{c,d}\) gives
+\[
+ H_{a,b}=\sum_{i=0}^{\min(a,b)}
+    \frac{(-1)^i h^i\Delta^i}{i!(k+a+b-2)^{\underline i}},
+ \qquad t^{\underline i}=t(t-1)\cdots(t-i+1).
+\]
+Indeed \(\Delta H=0\), and the constant summand gives the
+identity modulo \(h\). If \(u=h^j v\) with \(\Delta v=0\),
+\(\Delta^j u=j!(k+A+B-2j)^{\overline j}v\), where the bar
+denotes a rising factorial. Induction on \(\min(A,B)\) gives
+the unique decomposition into the \(h^j\ker\Delta\).
+For \(a=A-j,b=B-j\), its projection and inclusion in
+quotient coordinates are
+\[
+ \pi_j f=\beta_{a,b}\frac{H_{a,b}\Delta^j f}
+                        {j!(k+a+b)^{\overline j}},
+ \qquad
+ \iota_j\beta_{a,b}(u)=h^jH_{a,b}u.
+\]
+The formula for \(\pi_j\) follows by applying \(\Delta^j\)
+to each harmonic summand and killing the terms still divisible
+by \(h\).
+
+Both maps have denominator at most
+\(p^{(k+1)\lfloor\log_p(A+B+k)\rfloor}\) in every component
+frame. For \(\pi_j\), in the \(i\)-th summand of its formula
+expand \(\Delta^{i+j}\) by multi-indices \(\nu\) with
+\(|\nu|=i+j\). Apart from integral binomial coefficients
+from the two differentiated monomials, the coefficient is,
+up to sign,
+\[
+ \frac{\binom{i+j}{i}^2}
+ {\binom{i+j}{\nu}\binom{k+a+b-2}{i}\binom{k+a+b+j-1}{j}}.
+\]
+The factorial formula for a valuation sums one term per \(p\)-power.
+For the multinomial that term is at most \(k-1\); each binomial
+contributes at most one. All factorial arguments are at most
+\(A+B+k\). For \(\iota_j\) the projector formula has the same
+estimate with \(j=0\), and an integral lift of the quotient
+exists by its coefficient-lattice identification. Both maps
+commute with the paired vector and covector action, so one
+bound works for all frames.
+
+\proofstep{Tensoring with control of denominators.}
+Tensor these maps over the tops. Let \(j=(j_s)_s\),
+\(0\le j_s\le\min(A_s,B_s)\), and let \(V_j\) be the weight
+space with endpoints \(A_s-j_s,-(B_s-j_s)\). Write
+\[
+ \pi_j:U\to V_j,\ \iota_j:V_j\to U
+\]
+for the products of
+the maps just constructed. Factoring the sum independently at each top gives
+\[
+ \sum_{\mathbf j}\iota_{\mathbf j}\pi_{\mathbf j}
+ =\bigotimes_s\left(\sum_{j_s=0}^{\min(A_s,B_s)}
+        \iota_{s,j_s}\pi_{s,j_s}\right)
+ =\bigotimes_s 1=1_U ,
+\]
+where the map with first index \(s\) is the corresponding single-top
+map.
+
+When \(A_s+B_s+1\le8a\), the common lattice allowance is
+\[
+ u=N\left\lceil (k+1)\log_p(8a+k-1)\right\rceil.
+\]
+Thus \(p^u\pi_j U(M)\subset H_j(M)\) and
+\(p^u\iota_j H_j(M)\subset U(M)\). Put \(a_j=A_1(V_j)\)
+and \(\delta_j=a_U-a_j=\sum_s j_s\).
+The maps with the normalizations of the edge tests are
+\[
+ \widetilde\pi_j=w^{\delta_j}\pi_j,\qquad
+ \widetilde\iota_j=w^{-\delta_j}\iota_j .
+\]
+If \(x,\phi\) satisfy the two tests at an edge for \(U\), then
+\begin{equation}\label{eq:edge-test-maps}
+ p^u\widetilde\pi_j x\in C_e(V_j),\qquad
+ p^{2u+\delta_j}\phi\circ\widetilde\iota_j\in C'_e(V_j).
+\end{equation}
+For source vectors the factor \(w^{\delta_j}\) changes the
+edge scale \(w^{-a_U}\) into \(w^{-a_j}\), including at every
+other outgoing edge.
+
+At the source itself it only increases
+integrality. For covectors use
+\(p^u(\phi_0\circ\iota_j)\in H_j(M)^\vee\) whenever
+\(\phi_0\in U(M)^\vee\), which follows by evaluating against
+\(p^u\iota_j H_j(M)\). The uniform covector estimate in this argument allows
+\(2u\) in this step. The factors
+\(p^{\delta_j}w^{-\delta_j}=w^{\delta_j}\) give the same
+edge and endpoint scales on the dual side. In the normalized
+pairing the total effect is exactly \(p^{3u}\), since
+\[
+ p^{a_j}p^{2u+\delta_j}p^u\,
+ \phi(\widetilde\iota_j\widetilde\pi_j x)
+       =p^{3u}\,p^{a_U}\phi(\iota_j\pi_j x).
+\]
+Thus the strength of the extra vanishing at the other edges
+is preserved. The exponent \(\delta_j\) may grow with the
+weights and is canceled in the pairing.
+
+Let \(zI_{r_U}\) be the matrix of the tensor test after its
+integral right multiplication. Apply \eqref{eq:edge-test-maps}
+and use the same right multiplier on every summand. This produces
+integral matrices \(M_j\) of size \(r_U\) with
+\[
+                    \sum_j M_j=z_*I_{r_U},
+             \qquad z_*=p^{3u}z\ne0 .
+\]
+For each \(j\), let \(r_j\) count the Smith diagonal entries
+dividing \(z_*\), and let \(E_j\subset O^{r_U}\) be the span
+of the corresponding left Smith vectors. Over the DVR all
+other entries are multiples of \(wz_*\). Consequently the images
+of the \(M_j\) in \(O^{r_U}/\sum_j E_j\) are contained in
+\(w\) times the image of \(z_*O^{r_U}\). Their sum contains
+the image of \(z_*O^{r_U}\), so that image is zero by Nakayama's
+lemma. This gives
+\[
+  r_U=\operatorname{rk}_O\bigl(\textstyle\sum_j E_j\bigr)
+                                       \le\textstyle\sum_j r_j .
+\]
+
+In the \(j\)-th pairing, take the retained Smith rows and columns
+and multiply the right partners by \(z_*\) divided by their
+diagonal entries. These factors lie in \(O\), so they preserve
+all source and target membership and vanishing tests. The
+resulting scalar identity has depth at most \(D_0+3u\).
+
+\end{proof}
+
+\subsection{Combining segment tests at one edge}
+
+Transfer identifies the tensor model on one edge. The segment ranks multiply there only after their pairings and the associated denominator bounds have been combined.
+
+\begin{proposition}[Assembly of the segment tests]\label{prop:segment-edge-assembly}
+Use the two-letter tensor \(U\), the retained segment lattices
+of ranks \(R_I\), and the segment tests of depths \(D_I\) and
+ranks \(r_I\ge(1-\kappa_I)R_I\). Assume the supported
+block-pairing congruence and order \(\lfloor t_0(A,B)\rfloor\)
+from Sections~\ref{sec:block-pairing}--\ref{sec:symbol-correction},
+and let \(D_0=\sum_I D_I+4\kappa_0\). If \(c>2D_0\), the
+tensor edge test has depth \(D_0\) and at least \(\prod_I r_I\)
+directions. Writing \(r_{\rm edge}\) for the rank of this test, the retained-product bound \eqref{eq:retained-product} gives
+\[
+ r_{\rm edge}\ge\prod_I r_I\ge\left(1-\kappa_P-\sum_I\kappa_I\right)\frac{\dim U}{g}.
+\]
+
+\end{proposition}
+
+\begin{proof}
+Choose Smith bases separately on each retained digit block. A
+fractional pairing may first be multiplied by a uniformizer
+power, which is then removed from the resulting diagonal entries.
+If the Smith entries are \(s_i\), the low-valuation rank is
+\[
+ r_I=\#\{i:v(s_i)\le D_I\},\qquad v(0)=+\infty.
+\]
+
+The \(r_I\) left basis vectors span a saturated sublattice; a
+primitive vector in it has a unit coordinate, so pairing against
+the corresponding right basis vector gives a value of valuation
+at most \(D_I\). Conversely, a saturated sublattice of larger
+rank has a nonzero intersection with the rational span of the
+remaining left vectors. Rescale a vector in the intersection to
+be primitive in that sublattice. Every integral partner gives
+valuation greater than \(D_I\). Thus the Smith count is exactly
+the rank tested by primitive vectors.
+
+Multiply the right partner for a retained entry \(s_i\) by
+\[
+ w^{\lfloor2D_I\rfloor}/s_i.
+\]
+The ratio is integral because
+\(v(w)=1/2\) and \(2v(s_i)\) is an integer. We obtain diagonal
+segment matrices with common value \(w^{\lfloor2D_I\rfloor}\)
+and retain the original block support.
+
+\proofstep{The rank after tensoring the segment tests.}
+Let \(R_I\) be the rank of the retained lattice for segment \(I\)
+and
+\[
+ r_I\ge(1-\kappa_I)R_I
+\]
+its successful rank at depth
+\(D_I\). Sections~\ref{sec:block-pairing}--\ref{sec:symbol-correction} give the following identity
+for a tuple of supported vectors and a tuple of supported
+partners. If the support labels are \(\boldsymbol\beta\) and
+\(\boldsymbol\beta'\), and the segment pairings are \(a_I\),
+the normalized edge pairing is congruent to
+\[
+  {\bf 1}_{\boldsymbol\beta=\boldsymbol\beta'}\,
+                z_{\boldsymbol\beta}\prod_I a_I \pmod{w^c},
+   \qquad z_{\boldsymbol\beta}\ne0,\quad
+                      v(z_{\boldsymbol\beta})\le4\kappa_0 .
+\]
+The lifted vectors must satisfy the tests \(C_e(U),C'_e(U)\)
+at order \(\lfloor t_0(A,B)\rfloor\) and conductor \(c\).
+ The scalar is allowed
+to depend on the tuple of blocks. Because the segment
+matrices are diagonal, the lifted matrix is diagonal modulo
+\(w^c\), with nonzero diagonal values of valuation at most
+\(D_0=\sum_I D_I+4\kappa_0\).
+
+If \(c>2D_0\), write the matrix as the diagonal matrix times
+an integral matrix congruent to the identity modulo \(w\).
+The inverse of the latter is integral. Scaling the
+diagonal values to \(w^{\lfloor 2D_0\rfloor}\) then gives a
+tensor edge test on \(\prod_I r_I\) directions.
+
+Equation~\eqref{eq:retained-product} supplies the ordinary rank count
+on retained blocks.
+Combining this with the tests gives
+\[
+ r_U\ge \left(1-\kappa_P-\sum_I\kappa_I\right)\dim U/g .
+\]
+In the nonvacuous case all the discarded fractions and their
+sum are in \([0,1]\), so the inequality follows by multiplying
+the rank bounds and using \(\prod(1-\kappa_I)\ge1-\sum\kappa_I\).
+When the right side is nonpositive the zero test suffices.
+This proves the required tensor rank at the chosen filtration.
+
+\end{proof}
+
+\subsection{Averaging the rank deficits}
+
+The tensor space decomposes into summands of different dimensions. An estimate for the proportion discarded by the edge test must therefore average their deficits with dimension weights.
+
+Let \(D(a)=\binom{a+k-1}{k-1}\) for \(a\ge0\), set
+\(D(-1)=0\), and put
+\(d(a,b)=D(a)D(b)-D(a-1)D(b-1)\).
+The dimensions are \[
+ \dim U=\prod_s D(A_s)D(B_s),\qquad \dim V_j=\prod_s d(A_s-j_s,B_s-j_s).
+\]
+Summing the latter over \(j\) telescopes to \(\dim U\).
+The maximal successful rank at a fixed depth and order is
+the same at every edge because \(\mathrm{GL}_k(\operatorname{Frac}W)\)
+is transitive on these pairs of lattices. A frame change also
+transports the neighboring edges and both endpoint tests.
+Thus every summand of the transferred test has
+\(r_j\le\dim V_j/g\) when \(4D_1<c\), by the previous
+source rank argument.
+
+\paragraph{Inputs to the dimension-weighted average.}
+The dimension-weighted sum assumes rank bounds on its tensor constituents. We specify which sampled segment tests supply them on the enlarged box. For the enlarged weight box
+below, the tensor edge test is required at depth \(D_0\)
+and order \(\lfloor t_0(A,B)\rfloor\) with
+\begin{equation}\label{eq:two-letter-tensor-rank}
+ r_U\ge (1-\kappa_X(A,B))\dim U/g,\qquad
+ \kappa_X(A,B)=\kappa_P+\sum_I\kappa_I(A,B).
+\end{equation}
+The sum is over segments, and \(\kappa_P\) accounts for the
+digit blocks cut away by the margins. The two-letter construction supplies these tests at the base level.
+Sections~\ref{sec:segment-window} and~\ref{sec:retained-rank} give \(\kappa_P\le C_s NN_1/Y\)
+and, on the enlarged product box for fixed \(B\),
+\[
+ \mathbb E_A\kappa_I(A,B)
+      \le C_A (s_I+1)N_1/Y,\qquad \sum_I(s_I+1)\le N.
+\]
+Here \(s_I+1\) is the number of sampled \(A\)-coordinates in
+the segment, including its appended coordinate.
+
+These coordinates have different indices in the sampling box, so their law is the
+product marginal on that segment. In particular a uniform
+bound for fixed \(B\) implies the same bound averaged over
+both \(A\) and \(B\). This gives
+\(\mathbb E\kappa_X\le(C_A+C_s)NN_1/Y\).
+
+The function \(t_0\) is a constant independent of \(A,B\)
+plus a sum of at most \(N\) terms of the form
+\(\min(B_s,A_{s'}/p^e)\) with \(e\ge0\).
+Let \(J=\lfloor J_0\rfloor\), where \(J_0\) is the cleaning
+budget below. For \(0\le j_s\le J\), each term changes by
+at most \(J_0\) under simultaneous subtraction of \(j\).
+Thus the order
+\[
+ t_*(a',b')=\lceil t_0(a',b')+NJ_0\rceil
+\]
+
+for the lower weights is at least
+\(\lfloor t_0(A,B)\rfloor\). Increasing the order only enlarges
+the two endpoint lattices. Write \(F(\alpha,\beta)\) for
+the least discarded fraction at depth \(D_1\) and order
+\(t_*(\alpha,\beta)\) for the weight with these endpoints
+and zero intermediate entries. When \(J\le\min_s(A_s,B_s)\),
+the improved bound for the small \(j\)'s is
+\begin{equation}\label{eq:transferred-small-deficit}
+ r_j\le (1-F(A-j,B-j))\,\dim V_j/g.
+\end{equation}
+The comparison can now be stated entirely in terms of the
+retained rank of the large tensor and the discarded fractions
+of the transferred tests.
+
+\begin{lemma}[Weighted rank deficit]\label{lem:transfer-rank-deficit}
+Let \(J\le\min_s(A_s,B_s)\). Suppose the transferred ranks at
+depth \(D_1\) satisfy \(\sum_j r_j\ge r_U\) and
+\(r_j\le\dim V_j/g\) for every summand, with the sharper bound
+\eqref{eq:transferred-small-deficit} for \(0\le j_s\le J\).
+Assume the tensor lower bound \eqref{eq:two-letter-tensor-rank}. With the dimension weights of the indicated summands, the discarded fractions satisfy
+\[
+ \sum_{0\le j_s\le J\ (\forall s)}\frac{\dim V_j}{\dim U}F(A-j,B-j)\le\kappa_X(A,B).
+\]
+
+\end{lemma}
+
+\begin{proof}
+Using \eqref{eq:two-letter-tensor-rank} and
+\(\sum_jr_j\ge r_U\) gives the weighted inequality
+\begin{equation}\label{eq:edge-mean-weighted}
+ \sum_{0\le j_s\le J} F(A-j,B-j)
+    \prod_{s\in T}\frac{d(A_s-j_s,B_s-j_s)}{D(A_s)D(B_s)}
+        \le \kappa_X(A,B).
+\end{equation}
+The upper rank bounds for the omitted summands are essential
+to this inequality. The number \(g\) cancels before averaging.
+
+\end{proof}
+
+\begin{proposition}[From dimension weights to the product box]\label{prop:edge-box-deficit}
+Let \(J=\lfloor J_0\rfloor\), \(e=J+c_{\rm cl}\) and
+\(I_a^+,I_b^+\) be the respective upper enlargements by \(e\)
+of the intervals \(I_a,I_b\) of lengths \(H_a,H_b\).
+For \(0\le\tau\le c_{\rm cl}\), assume
+\eqref{eq:edge-mean-weighted} on the enlarged box and the density
+bound \eqref{eq:edge-marginal-density}, with \(\delta>0\), for every
+coordinate pair in \((I_a+\tau)\times(I_b+\tau)\). Then
+\[
+ \mathbb E_{(I_a+\tau)^T\times(I_b+\tau)^T}F
+ \le \delta^{-N}
+    \left(\frac{(H_a+e)(H_b+e)}{H_aH_b}\right)^N
+       \mathbb E_{(I_a^+)^T\times(I_b^+)^T}\kappa_X .
+\]
+The prefactor is less than two under \eqref{eq:edge-marginal-loss}. The assertion is uniform in the common shift \(\tau\).
+\end{proposition}
+
+\begin{proof}
+Use integer intervals \(I_a,I_b\) of lengths \(H_a,H_b\)
+for the original weight choice. Denote by \(I_a^+,I_b^+\)
+their enlargements at the upper ends by \(e=J+c_{\rm cl}\),
+where \(c_{\rm cl}\) bounds the permitted intermediate entries
+and bounded shifts. For each \(0\le \tau\le c_{\rm cl}\)
+and \((\alpha,\beta)\in(I_a+\tau)\times(I_b+\tau)\),
+one has
+\begin{equation}\label{eq:edge-marginal-density}
+ \sum_{j=0}^J\frac{d(\alpha,\beta)}{D(\alpha+j)D(\beta+j)}
+    \ge \delta,\qquad
+ \delta=(1-(k-1)J_0/a)(1-\exp(-\Lambda_0/3)).
+\end{equation}
+Here \(a\) is the rounded lower endpoint of \(I_a\),
+\(\Lambda_0=C_0N_1^2\log a\),
+\(J_0=\Lambda_0 b_0/k\), and \(b_0\) is the reference
+value for the second weight. Assume \(\alpha\ge a\),
+\(\beta+J+1+(k-1)\le2b_0\), \(k\ge3\), and
+\((k-1)J_0/a\le1\).
+
+In fact
+\(D(\alpha)/D(\alpha+j)\ge1-(k-1)J_0/a\)
+by multiplying its reciprocal factors and applying Bernoulli's
+inequality. Also
+\[
+ d(\alpha,\beta)/[D(\alpha)D(\beta)]\ge (k-1)/(\beta+k-1).
+\]
+Writing \(v_j=D(\beta)/D(\beta+j)\), the latter lower bound
+times \(v_j\) dominates \(v_j-v_{j+1}\).
+The final term \(v_{J+1}\) is at most
+\(\exp(-(k-1)(J+1)/(2b_0))\le\exp(-\Lambda_0/3)\).
+This proves the density for one top.
+
+Write \(\mathcal B=(I_a+\tau)^T\times(I_b+\tau)^T\) and
+\(\mathcal B^+=(I_a^+)^T\times(I_b^+)^T\). For every
+\((\alpha,\beta)\in\mathcal B\) and \(0\le j_s\le J\), the source
+\((A,B)=(\alpha+j,\beta+j)\) belongs to \(\mathcal B^+\), and each
+such term occurs once for that \(j\) in the enlarged sum.
+Keeping exactly those nonnegative terms in
+\eqref{eq:edge-mean-weighted} gives
+\[
+ \sum_{(\alpha,\beta)\in\mathcal B} F(\alpha,\beta)
+ \prod_{s\in T}\left(
+ \sum_{j=0}^{J}\frac{d(\alpha_s,\beta_s)}
+ {D(\alpha_s+j)D(\beta_s+j)}
+ \right)
+ \le
+ \sum_{(A,B)\in\mathcal B^+}\kappa_X(A,B).
+\]
+This is a change of summation order over the product box and
+uses no independence assumption on \(F\). Apply
+\eqref{eq:edge-marginal-density} in each coordinate and divide
+by \(\delta^N|\mathcal B|\) to obtain the stated prefactor. We use the
+bounds below when
+\begin{equation}\label{eq:edge-marginal-loss}
+ N\left((k-1)J_0/a+\exp(-\Lambda_0/3)+e/H_a+e/H_b\right)
+ \le 0.395 .
+\end{equation}
+
+\proofstep{Uniformity of the losses in the averaging.}
+To check the constants, write \(\Lambda_*=C_0N_1^2\log a_{\rm real}\)
+for the value before rounding, and
+\(Z=\Lambda_* b_0/k\). The size hypotheses give
+\(\Lambda_*\le\Lambda_0\le2\Lambda_*\), \(c_{\rm cl}\le Z\),
+\(H_a,H_b\ge Y_bNZ/2\) and \(a\ge Y_b N\Lambda_* b_0\)
+with \(Y_b\ge400\). These bound the first and last two
+normalized terms by \(2/Y_b,6/Y_b,6/Y_b\).
+Also
+\[
+ N\exp(-\Lambda_0/3)\le N(NY)^{-8/3}\le0.36
+\]
+
+for \(N\ge2,Y\ge1\).
+Bernoulli bounds \(\delta^N\) below by \(1-s\), where
+\(s=N((k-1)J_0/a+\exp(-\Lambda_0/3))\).
+The enlargement factor is at most \(\exp(t)\), with
+\(t=N(e/H_a+e/H_b)\). The numerical bounds give
+\[
+ e^t\le(1-t)^{-1},\qquad s+t\le0.395.
+\]
+Hence the prefactor
+in the last mean is less than two.
+
+\end{proof}
+
+\input{edge-contraction}
+
+\subsection{Bounded changes of the full weight}
+
+Apply the contraction to the two flat weights bracketing each prescribed top weight \((\alpha,\beta)\), with endpoints \((\alpha,\beta)\pm c_{\rm cl}\). Their deficits
+are \(F_-\) and \(F_+\). The higher order \(t_*\) for the plus
+weight can be used in both tests, since \(t_*\) is increasing in
+each degree. The minus test is used when each shifted endpoint
+is still in its original lower range. Write \(H_-\), \(H_+\)
+and \(H_\lambda\) for the corresponding flat, enlarged flat,
+and prescribed top weight spaces. Let \(d_-,d_+,d_\lambda\)
+be their dimensions divided by \(g\).
+
+The integral comparison needed here is stronger than a dimension
+inequality. At each edge it uses a map \(i:H_-\to H_+\),
+and maps \(U_b:H_-\to H_\lambda,\ L_a:H_\lambda\to H_+\),
+such that
+\[
+ L_a U_b= \begin{cases}p^{q_b}i,&a=b,\\0,&a\ne b.\end{cases}
+\]
+The number \(b_0'\) of pairs of maps is the product, over the
+tops, of the dimensions of the \(\mathrm{GL}_{k-2}\) modules
+of the intermediate weights. The map \(i\) carries the
+clean source lattice into the enlarged flat one and identifies
+its normalized raw edge lattice with a saturated submodule
+of the enlarged raw edge lattice.
+
+Each \(U_b\) maps clean
+sources to clean sources at the same order and conductor.
+Pullback by each \(L_a\), with the correction
+\(p^{A_1(H_+)-A_1(H_\lambda)}\), takes clean covectors on
+\(H_+\) to clean covectors on \(H_\lambda\) with conductor
+reduced by \(2Nc_{\rm cl}\). The denominator bound for these maps is
+\(q_b\le N\lceil\kappa_1(p,a,k-1)\rceil\).
+The contraction maps above have these properties.
+
+\begin{proposition}[Edge tests with the restored bounded weights]\label{prop:bounded-weight-test-transfer}
+Assume the maps \(i,U_b,L_a\) satisfying the indicated integral
+properties, the two flat tests at depth \(D_1\) with deficits
+\(F_-,F_+\), and \(4D_1<c\). On every nonboundary weight
+where the two tests are available, denote the number of successful directions by \(r_\lambda\). In the prescribed size range,
+\[
+ r_\lambda\ge(1-F_--2F_+-\eta)d_\lambda,\qquad \eta=12Nkc_{\rm cl}/b_0.
+\]
+
+Under the following reserve and conductor bounds the depth is
+at most \(D_p\) and the competitor conductor is \(c_\star\).
+With the full loss assigned to the missing minus tests on the
+lower boundary, the mean deficit over the original box is at most
+\(6(C_A+C_s)NN_1/Y+2/Y\).
+\end{proposition}
+
+\begin{proof}
+\proofstep{Recovering rank through the integral comparisons.}
+Given these maps, the integral rank deduction goes as follows.
+Use \(n_-,n_+\) successful directions in the respective flat
+tests at depth \(D_1\), and make their two pairing matrices
+scalar identities \(z_- I,z_+ I\). Transport the \(n_-\)
+sources by \(i\), and pair them against the \(n_+\) clean
+covectors in \(H_+\), giving a rectangular integral matrix
+\(M\). Let \(r\) count its Smith factors dividing \(z_-z_+\),
+and let \(s=n_--r\). In Smith coordinates the last \(s\) source rows therefore satisfy
+\[
+  M_{ij}\in w z_-z_+O\qquad(r<i\le n_-,\ 1\le j\le n_+).
+\]
+Here and below these are rows after the integral changes of bases.
+
+Saturation gives an integral retraction of the raw edge
+lattice in \(H_+\) onto that in \(H_-\), by Smith form.
+Pull the \(n_-\) original covectors back along this retraction,
+using the pairing scale \(p^{A_1(H_-)-A_1(H_+)}\).
+They are integral on the raw edge lattice; they need no
+additional vanishing at other edges. Take the column
+combinations dual to the row operations of the preceding
+paragraph and retain the \(s\) complementary columns.
+Their evaluations on the \(s\) rows give \(z_- I_s\).
+Now adjoin the \(n_+\) clean rows and covectors. The combined
+matrix has blocks
+\[
+ \begin{pmatrix}z_- I_s & z_-z_+ E\\ B & z_+ I_{n_+}\end{pmatrix},
+ \qquad E\in w\operatorname{Mat}(O),\quad B\in\operatorname{Mat}(O).
+\]
+The Schur complement of the second diagonal block is
+\(z_- (I-EB)\).
+
+For right-hand side \((a',b')\), solve explicitly:
+\[
+ x=(I-EB)^{-1}(z_-^{-1}a'-Eb'),\qquad
+ y=z_+^{-1}(b'-Bx).
+\]
+Since \(E\) vanishes modulo \(w\), \(I-EB\) has an integral
+inverse. Thus multiplication of the inverse of the combined
+matrix by \(z_-z_+\) makes it integral. This gives \(s+n_+\)
+directions at depth at most \(2D_1\), with clean source rows
+and raw edge covectors. The outgoing-edge
+rank bound used earlier needs extra vanishing only on the
+sources, and therefore applies here when \(4D_1<c\).
+Edge transitivity allows the same count at every outgoing edge.
+It follows that
+\[
+ r\ge n_-+n_+-d_+.
+\]
+
+
+The low Smith factors of \(M\) supply \(r\) directions
+with matrix \(z_-z_+ I_r\) using the clean covectors.
+Apply \(U_b\) to these rows and the corrected pullbacks by
+\(L_a\) to these covectors. The matrices are block diagonal
+with blocks \(p^{q_b}z_-z_+ I_r\).
+Scaling each block to the largest valuation, the test on
+\(H_\lambda\) has at least
+\[
+ b_0'((1-F_-)d_- - F_+d_+)
+\]
+directions, at depth
+\(2D_1+N\lceil\kappa_1(p,a,k-1)\rceil\).
+
+\proofstep{Comparing the Weyl dimensions.}
+The Weyl dimension formula compares these dimensions without
+any loss that depends exponentially on the number of tops.
+At a top write \(A=\alpha-c_{\rm cl}\), \(B=\beta-c_{\rm cl}\)
+and \(\mu\) for the intermediate weight.
+The internal \(\mu\)-factors form the \(\mathrm{GL}_{k-2}\)
+dimension.
+
+Each of the remaining \(2k-3\) factors changes by a
+ratio between \(1\) and \(1+6c_{\rm cl}/b_0\) from the lower
+flat weight to the prescribed weight, or from the lower flat
+weight to the enlarged flat weight. This follows directly from
+\(|\mu_i|\le c_{\rm cl}\) and \(A,B\ge b_0/3\). Hence
+\[
+ b_0' d_-\le d_\lambda\le {\cal E}b_0'd_-,
+ \qquad d_+\le{\cal E}d_-,\qquad
+ {\cal E}=(1+6c_{\rm cl}/b_0)^{(2k-3)N}.
+\]
+Put \(\eta=12Nk c_{\rm cl}/b_0\), with \(\eta\le1/Y\)
+and \(\eta\le1/9\) in the size regime. Since
+\({\cal E}\le\exp(\eta)\), one has \[
+ 1/{\cal E}\ge1-\eta,\qquad {\cal E}\le2.
+\] Together with \(0\le F_-\le1\),
+these estimates give at least
+\[
+ (1-F_--2F_+-\eta)d_\lambda
+\]
+directions.
+
+At positions outside the tops all weights have absolute value
+at most \(c_{\rm cl}\). Tensor with a pair of dual bases
+in their normalized raw edge lattices. In an edge frame, the
+three component lattices have a single coordinate at respective
+scales \(1,w^{-1},w^{-2}\), so on the small-weight factors all
+normalized orders differ by at most \(2n'c_{\rm cl}\) in
+uniformizer units, where \(n'\) is the cycle length. In the
+adapted basis let \(j\) be the total weight in that coordinate
+and let \(a_S\) be the sum of the first weights of the small
+factors. The two normalized exponents have opposite \(j\)-terms,
+\[
+ e_{\rm source}=j-a_S,\qquad e_{\rm dual}=-j-a_S.
+\]
+
+Their differences from the endpoint exponents \(0,-2j\)
+are each between \(-2n'c_{\rm cl}\) and zero.
+These same inclusions hold in the frames for all other
+edges at either endpoint.
+Thus the additional factors increase the endpoint order by
+\(2n'c_{\rm cl}\), decrease the conductor by the same amount
+and multiply the number of successful directions and the
+total dimension by the same factor.
+The conductor is first set to
+\[
+ c=c_*+2Nc_{\rm cl}+2n'c_{\rm cl}
+\]
+to allow these losses.
+
+For the numerical comparison let \(a_r\) be the real lower
+endpoint, \(a'=\lceil a_r\rceil\), \(L=\log_p a_r\) and
+\(\ell=1+\log_p(8a'+k-1)\). The size hypotheses give
+\(L\ge1\), \(\ell\le3L\), \(\log_p a'\le2L\), \(N_1^2\le k\),
+\(2\le N\le k\) and \(Y\ge1\). Put \(P=NY^2k^3L\),
+\(u_0=\lceil(k+1)\ell\rceil\), \(k_1=\lceil(k-1)^2\ell\rceil\)
+and \(\kappa_0=2Nk\log_p a'\). There are \(n_s\le N\) segments.
+Adding their depths and the two changes of lattices gives
+\[
+ D_1=n_s(C_A Y^2 N_1^2k^2\ell+2\kappa_0)+4\kappa_0+4Nu_0.
+\]
+
+In units of \(P\), the four terms on the right are bounded by
+\(3C_A,8,16,16\), respectively, and \(Nk_1\le4P\).
+Indeed \(u_0\le4kL\), \(k_1\le4k^2 L\), and
+\(n_sN k\le Nk^2\). Thus the prescribed depth
+\(D_p\ge C_H NY^2(N_1^5+k^3)L\), with \(C_H\ge8C_A+93\),
+satisfies \(2D_1+Nk_1\le(6C_A+84)P\le D_p\).
+As \(c_*\ge8(D_p+1)\), the strict inequalities used when
+combining tests hold. The final conductor is exactly \(c_*\).
+
+\proofstep{The depth and order after restoring the weights.}
+For the order put \(\mathcal L=C_0N_1^2\log a_r\),
+\(\mathcal L'=C_0N_1^2\log a'\), \(Q=p^{G'}\), and set
+\[
+ f(a,B)=a/p^2+b_0/p+Ba/(pk)+Bb_0/k.
+\]
+Here \(b_0\) is the lower reference parameter called \(b'\) in
+the segment estimate. Let \(S\) be the sum over odd tops \(y\)
+of \(\min(b_y,a_{\rm prev}/p^{d_{\rm prev}})\), with the
+preceding even top and its distance taken cyclically. Each odd
+top occurs once among all segment interiors. Under the plus
+shift each summand increases by at most \(c_{\rm cl}\), giving
+\(S'\le S+Nc_{\rm cl}\).
+
+The pre-rounding order at these plus
+degrees is \(t_0=S'+C_tN(f(a',\mathcal L')+kQ+Qc)\).
+Adding \(N\mathcal L' b_0/k\), taking the ceiling and allowing
+for the small factors gives
+\begin{align*}
+ t_*+2n'c_{\rm cl}\le{}&S+C NN_1 f(a_r,\mathcal L)+2n'c_{\rm cl}\\
+ &+CN\big[Q(c_*+CNkL+4Nc_{\rm cl}+2n'c_{\rm cl})
+                      +kQ+kL+c_{\rm cl}\big].
+\end{align*}
+Indeed \(a'\le2a_r\) and
+\[
+ \mathcal L'\le2\mathcal L,
+\]
+so the
+four terms in \(f\) grow by factors at most \(2,1,4,2\).
+The extra \(N\mathcal L'b_0/k\) uses the fourth term and the
+ceiling costs at most \(1\le NkQ\). Taking \(C\ge4C_t+4\) proves
+the bound, including the displayed conductor contributions.
+
+\proofstep{Transport at the boundaries of the intervals.}
+To transport a test, first identify the two degree-\(n'\)
+unramified coefficient rings over \(\mathbb Z_p\). Their residue
+field is \(\mathbb F_q\) with
+\[
+ q=p^{n'}.
+\]
+Each embeds in the
+unramified ring of degree \(2n'\), with residue extension
+\(\mathbb F_{q^2}/\mathbb F_q\). The specified isomorphism
+on the smaller residue field extends to the larger ones, by
+uniqueness of the quadratic finite field extension. Its Witt
+lift extends the specified unramified-ring identification and
+commutes with arithmetic Frobenius.
+
+Adjoining the specified
+root \(w^2=p\) to each larger ring gives the full valuation
+ring by Eisenstein's criterion and total ramification. Extending
+by
+\[
+ x+yw\mapsto\phi(x)+\phi(y)w'
+\]
+identifies both fraction
+fields, the embedded smaller coefficient rings, the specified
+uniformizers and the Frobenius on the smaller rings. Every
+lattice membership and matrix pairing test therefore transports
+in both directions, preserving its depth, conductor and integer
+weight indices. Fixing one setting defines the same bound for
+all settings at once. When there are no settings the uniform
+assertion there is vacuous.
+
+On the lower boundary assign \(F_-=1\) when a minus endpoint
+falls outside its interval, and use the deficit bound
+\(\kappa_{\rm text}=F_-+2F_++\eta\). For each nonboundary
+point, shifting both families of degrees by \(-c_{\rm cl}\)
+injects the point into the original box. Hence
+\[
+ \mathbb E F_-\le\mathbb E_{\rm box}F+
+                     Nc_{\rm cl}(H_a^{-1}+H_b^{-1}),
+ \qquad \mathbb E F_+=\mathbb E_{\rm plus\ box}F .
+\]
+The extra term bounds the union of the lower slices in the
+\(2N\) intervals and is at most \(1/Y\); also \(\eta\le1/Y\).
+
+Proposition~\ref{prop:edge-box-deficit} bounds both displayed
+means of \(F\) by \(2(C_A+C_s)NN_1/Y\), using the same
+enlargement and the fixed-\(B\) segment mean. Thus
+\[
+ \mathbb E\kappa_{\rm text}
+ \le 6(C_A+C_s)NN_1/Y+2/Y .
+\]
+At \(Y=x^{13}\) this yields \(C N_vN_1/x^{13}\), where
+\(N=N_v\), in Section~\ref{subsec:frobenius-selection}.
+All allowances used for this estimate depend only on the
+stated size data, rather than the edge or coefficient setting.
+
+\end{proof}

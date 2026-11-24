@@ -1,0 +1,284 @@
+\paragraph{Choosing the cut on the unfolded domain.}
+\label{par:slice-interpolation}
+\hypertarget{source-slice-interpolation}{}
+We derive the flat-section facts used in the rank estimates.
+We use the algebraic realization of the listed forms in the
+complex uniformization, including their common weight lines.
+\begin{lemma}[One transverse cut on the unfolded domain]
+\label{lem:transverse-selected-cut}
+A common choice of rows gives the reduced finite cut on all the
+components. Writing \(w_0\) for row zero and \(S_1,\ldots,S_s\) for the cut rows, at every point \(y\) of the cut one has
+\[
+ w_0(y)\ne0,\qquad d(S_1/w_0)\wedge\cdots\wedge d(S_s/w_0)|_y\ne0,
+\]
+ and away from the selected
+zero neighborhoods their squared norms control the squared norm of
+the light vector as used below.
+\end{lemma}
+
+\begin{proof}
+\proofstep{The generic incidence map.}
+Take all the cut-row coefficients algebraically independent
+over the coefficient field. Their exceptional sets below
+are null for Lebesgue measure. The Zariski closure of the
+projective light image of one component has dimension \(s\).
+Thus \(s+1\) generic linear forms have no common zero on
+that closure. On its compact complex projective points the
+sum of their squared absolute values in a unit representative
+is bounded below. With the notation \(S_i\) of the rank
+calculation this says
+\[
+       \sum_l\|w_l\|^2\le C\sum_{i=0}^s\|S_i\|^2 .
+\]
+Let \(X\) be the smooth open flag chart, \(A\) the affine
+space of cut coefficients and \(L\) the light line. The incidence
+space is the zero scheme of \((S_1,\ldots,S_s)\) on \(X\times A\).
+At a common zero choose a light column \(w_b\ne0\).
+Differentiation in the \(s\) variables \(X_{ib}\) gives
+\[
+ (\dot X_{1b},\ldots,\dot X_{sb})
+               \longmapsto(\dot X_{1b}w_b,\ldots,\dot X_{sb}w_b)
+                        \in L_x^{\oplus s}.
+\]
+This is onto, so the incidence scheme is smooth there.
+
+The generic slice computation gives a generically finite
+map to \(A\), so generic smoothness gives reduced
+zero-dimensional fibres. The complement in the
+incidence variety of the dense open on which its map is
+finite \'etale has proper image after restricting the base
+to a suitable dense open. Indeed its dimension is smaller
+than the dimension of the coefficient space. Equivalently
+one may first compactify the graph and remove its boundary
+and the branch divisor. Thus the complex points at a generic
+cut are the \(\delta_Z\) points of the incidence field and
+give the required isolated orbits under uniformization.
+Over a complex point outside the branch and boundary loci, a finite separable component algebra of degree \(\delta_Z\) has fibre algebra
+\[
+  \underbrace{\mathbb C\times\cdots\times\mathbb C}_{\delta_Z\ \mathrm{factors}} .
+\]
+With \(w_0=S_0\), their transverse coordinates are
+\(S_i/w_0\).
+
+
+\proofstep{The lower bound off the zero neighborhoods.}
+There is also an estimate off neighborhoods of these
+orbits. Here are the details before the last lift, where
+the domain need not be compact. In the analytic weight
+conventions let 
+\[
+  n=i_\eta g_0^*/2
+\]
+ and let \(b_1\)
+be the bounded nonzero complementary section of weight
+\(2w_L-w_d\). The section \(a=\eta b_1^n\) has weight
+\(2n w_L\). On each component it is nonzero, and the
+first-minimum bounds give, for \(W=\sum_l\|w_l\|^2\),
+\[
+                  \|a\|^2\le C' W^{2n+1}.
+\]
+In fact \(W\gg e^{-2cP}\), \(\|\eta\|^2\ll e^{-2i_\eta P}\),
+and \((2n+1)c\le i_\eta\) by the chosen margin
+\(Tcg_0^*\le1\), \(T\ge2\), \(P\ge0\).
+
+Consider the projective map with coordinates \(a\) and
+all the degree-\(2n\) monomials in the \(w_l\).
+The closure of its image has dimension at most \(s\)
+and no component lies entirely in \(a=0\). If \(Y\) denotes this image closure, the hyperplane therefore cuts its dimension by at least one:
+\[
+  \dim\big(Y\cap\{a=0\}\big)\le\dim Y-1\le s-1.
+\]
+In that hyperplane the remaining coordinates lie in the
+Veronese image of light directions. Pulling back by the
+Veronese isomorphism onto its image gives a closed set
+of light directions of dimension at most \(s-1\). It
+misses the generic linear space cut by rows \(1,\ldots,s\).
+If along a sequence \(W\to0\) and
+
+\[
+  \sum_{i=1}^s |S_i|^2/|S_0|^2\to0,
+\]
+ pass to a limiting
+light direction. The displayed estimate shows that the
+normalized coordinate \(|a|/(\sum_l |w_l|^2)^n\) tends
+to zero. In this expression all factors from the common
+weight metric cancel. The limiting direction lies both
+in the forbidden set and in the generic linear space.
+This contradiction bounds \(W\) away from zero when the
+ratio is sufficiently small.
+
+Each light column is cuspidal, with normalized norm tending
+to zero when the first minimum tends to zero.
+For the finite light family the individual decay has the simultaneous consequence
+\[
+  \lambda_1(y_n)\longrightarrow0\quad\Longrightarrow\quad\max_l\|w_l(y_n)\|\longrightarrow0 .
+\]
+ This uses the
+cuspidal decay estimate for these bounded sections. Hence
+in the small-ratio region there are compact representatives
+by reduction theory. Away from prescribed invariant open
+neighborhoods of the cut points, the continuous ratio
+\(W/\sum_{i=1}^s\|S_i\|^2\) is bounded on these representatives.
+Where the ratio to \(|S_0|^2\) is large, the first displayed
+inequality already bounds it. At the definite lift take
+compact representatives from the start. This proves the
+off-neighborhood bound used in the maximum argument.
+Only existence of these chart-dependent compactness constants
+enters the rank, allowing one choice of rows to work on the
+finitely many components. \label{cor:slice-interpolation-1}
+
+\end{proof}
+
+\input{slice-short-analytic}
+
+\paragraph{Interpolation with a Fourier cutoff.}
+The short weight \(w_F\) interpolates arbitrary values at
+the cut with all modes through the selected cutoff zero. Write \(\varphi_F,\varphi_L\) for the weight
+potentials, so the squared norm is the squared modulus of the holomorphic coefficient times \(e^{-\varphi}\). Let \(D\) be the invariant measure density in the open flag cell and \(R\) its radius potential.
+
+Take the invariant
+\(\psi=(1+c_1/a_1)\psi_0\), where \(a_1>0\) is the decay
+coefficient of \(\psi_0\) on the cusp flows, \(c_1\ge0\)
+the required Fourier cutoff. Use \(m=m_{\rm int}\), \(\beta=5fr^2\) and the two
+curvature bounds just proved.
+\[
+ \mathcal L(\varphi_F-\log D-s\varphi_L+\psi)
+        \ \ge\ m\mathcal L(R),\qquad
+ \mathcal L(\varphi_F-\log D-s\varphi_L+\psi)
+        \ \ge\ 2\epsilon_0\mathcal L(\varphi_L)
+\]
+for some \(\epsilon_0>0\), on the centred cells.
+The light form has positive curvature, \(R\) is plurisubharmonic,
+and \(\psi\) is smooth and bounded above. Subtract \(\beta R\)
+from the expression in parentheses to obtain a potential
+\(V\). Its Levi form is at least
+\((1-\beta/m)2\epsilon_0\mathcal L(\varphi_L)\). In particular
+it is strictly positive on a small closed coordinate ball
+at the chosen cut point.
+
+\begin{proposition}[Prescribing cut values with the low modes zero]
+\label{prop:cut-interpolation-with-cusp-gap}
+At the specified short weight on a nondefinite lift, let \(S_0\) be the space of cusp forms whose Fourier--Jacobi modes through the selected cutoff vanish. If \(Z\) is the common cut and \(\mathcal L_y\) is its value line at \(y\), then evaluation is surjective
+\[
+ \operatorname{ev}_Z:S_0\twoheadrightarrow\bigoplus_{y\in Z}\mathcal L_y,\qquad f\longmapsto(f(y))_{y\in Z}.
+\]
+ Interpolation
+is at this particular cut and weight. The definite case uses the
+full cusp space.
+\end{proposition}
+
+\begin{proof}
+\proofstep{A local interpolating section with the frequency cutoff.}
+Take a smooth cutoff \(\chi\) equal to one near that point
+and zero outside the ball, with its derivative supported
+in an annulus free of other zeros. In the matrix coordinates
+of the big cell, the function \(R(z)+\log(1+\|z\|^2)\)
+is a plurisubharmonic exhaustion. In the matrix coordinates of the CM factors the exhaustion is
+\[
+  R=-\sum_\tau\log\det(I-Z_\tau^*Z_\tau).
+\]
+The summands are plurisubharmonic, by the Levi formula for
+these determinants and for the log of a squared norm of
+holomorphic coordinates. Each determinant lies in \((0,1]\).
+A sublevel therefore bounds the coordinates and keeps the
+determinants away from zero. Its closure stays in the cell
+because the limiting semidefinite matrices are then positive
+definite.
+
+Removing the zero hypersurface of one nonzero
+cutting section preserves the exhaustion after adding the
+squared absolute value of its holomorphic reciprocal.
+\label{cor:slice-interpolation-2}
+There apply the
+weighted \(L^2\) estimate for \(\bar\partial\) with weight
+\(V+s\log\sum_i|S_i|^2\) and right hand side
+\(\bar\partial\chi\).
+On the complement of the removed divisor the correction satisfies
+\[
+  \bar\partial u=\bar\partial\chi,\qquad \bar\partial(\chi-u)=0 .
+\]
+ The log sum of squares has nonnegative
+Levi form. On the supporting annulus the inverse Levi cost
+is bounded, since \(V\) is strictly positive in curvature
+there and the sum of squares is bounded away from zero.
+Equivalently, pair the datum with a test form, use the
+weighted basic estimate for its Levi norm and then apply
+Hilbert space duality to the adjoint equation. One obtains
+a solution \(u\) with
+\[
+           \int |u|^2 e^{-V}
+                 \big(\sum_i |S_i|^2\big)^{-s}<\infty .
+\]
+
+By exhaustion this proof also applies to a weight whose
+Levi form has zero directions off the support. The
+holomorphic \(F=\chi-u\) extends across the removed
+hypersurface by local square integrability. The singular
+factor still controls \(F-\chi\) almost everywhere after
+extension. At a cut point the simple coordinates make
+this factor comparable with \(|z|^{-2s}\), which has
+divergent integral in dimension \(s\). Continuity forces
+\(F\) to equal the cutoff there. Thus it reads one at the
+chosen point and zero at other zeros in the cell.
+\cite{hormander-slice}\label{cor:slice-interpolation-3}
+
+\proofstep{The estimate needed for Poincaré summation.}
+For passage to the automorphic section one uses the integral
+on the whole cell, including the factor \(e^{\beta R}\) in
+\(e^{-V}\). In an adapted frame the invariant density for
+that integral is
+\[
+ D e^{-(\varphi_F+\psi)} e^{\beta R}
+          \big(\sum_i\|S_i\|^2\big)^{-s}.
+\]
+All \(S_i\) are bounded in the normalized light norm. Boundedness of the \(S_i\) gives a positive lower bound for the inverse power of their squared norm sum. The weighted estimate for \(u\), compact support of \(\chi\) and \(F=\chi-u\) then give the bound needed for summation
+\[
+  \int_{\rm cell}|F|^2D e^{-(\varphi_F+\psi)}e^{\beta R}<\infty.
+\]
+ The frame extension uses LU decomposition
+on the big cell and the weight character on its triangular
+factor. Local square integrability in the invariant metric
+on compact flag neighborhoods gives removable singularities
+for this extension across the missing chart divisor.
+
+Near a
+zero outside the original chart the same change of coordinates
+applies to the singular integral, with the cutoff extended
+by zero there: its compact support in the original chart
+is disjoint from a sufficiently small such neighborhood.
+The smooth local densities and frame factors are bounded
+above and below on the smaller neighborhoods. A nonzero limiting value would give, up to a positive constant, the lower bound
+\[
+  \int_0^\delta r^{2s-1}r^{-2s}\,dr=\int_0^\delta\frac{dr}{r}=+\infty.
+\]
+Local integrability therefore forces the value to vanish. This gives a Borel-equivariant
+holomorphic seed, with the specified values on the translates
+of all cut orbits. The good level acts without point stabilizers
+on the flags in this comparison.
+
+\proofstep{Returning the sum to the arithmetic cusp space.}
+The Poincar\'e sum with inverse character factors makes this
+seed automorphic. The estimate on coordinate balls gives locally normal
+convergence and bounds the sum's normalized norm by a
+constant times the supremum of \(e^{\psi/2}\) on balls of
+any sufficiently small fixed radius. The cusp-flow test
+then kills every frequency below \(a_1+c_1\), including
+all those at most \(c_1\).
+Thus a frequency of total size at most \(c_1\) satisfies
+\[
+  \sum_\tau\nu_\tau\le c_1<a_1+c_1.
+\]
+At the chosen representative just one summand is nonzero,
+with its nonzero weight character. At all other representatives
+the sum vanishes. Rescaling and adding these sections now
+interpolates arbitrary values with the stated Fourier
+vanishing. The interpolation coefficients and convergence constants
+are used here only for existence and rank.
+
+The subsequent \hyperref[par:shifted-good]{trace descent} applies
+this vanishing to the coefficient tests at \(\kappa\). It uses the
+\hyperref[par:shifted-theta]{full cusp readings} at the selected
+level and every extension of the coefficient embedding. At the
+definite end the test space consists of all sections.
+\label{cor:slice-interpolation-4}
+\end{proof}

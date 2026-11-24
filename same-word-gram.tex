@@ -1,0 +1,276 @@
+\subsubsection{The nonidentity terms with vanishing single-term Gram invariant}
+\label{subsec:zero-gram-diagonal}
+
+Fix one word \(u\). We first sum the terms of \(K''_{uu}\) on the actual marked row. Two different ranks occur in this calculation. The integer \(j\) below belongs to a single pair of flags defining an orbital term. The corank of a pair of orbital terms enters later, after the terms with zero Gram invariant have been removed.
+
+\begin{definition}[The minor label of an orbital term]\label{def:zero-gram-label}
+Put \(s=m/2-1\), \(d=\operatorname{rd}(E)\), and write \(v\) for one complex embedding above each real place of the maximal real subfield. In the two ordered isotropic flags write \(Z_h=(\langle e_a,e'_b\rangle)_{a,b\le h}\). Let \(j=\operatorname{rank}_E Z_s\), \(\delta_0=1\), \(\delta_h=\det Z_h\) for \(1\le h\le j\), and \(\delta_h=0\) for \(j<h\le s\). For the resulting label \(\delta\) set
+\[
+ e_h=\sum_{a=1}^h(s+1-a),\quad
+ a_{v,h}=|v(\delta_h)|d^{-2e_h},\quad
+ D_\delta=\prod_v a_{v,j}^2.
+\]
+For \(H_1=b^{C_Hm}\), with \(C_H\) the common length constant below, put
+\[
+ S_v=\max\left(1,\max_{h\le j}\frac{a_{v,h}}{(2H_1)^{2s}}\right),
+ \quad S_\delta=\prod_v S_v,\quad H_C=b^{Cm^2f}.
+\]
+\end{definition}
+
+\begin{auxlemma}[The positive rank of a nonidentity term]\label{lem:zero-gram-positive-rank}
+For a term of \(K''_{uu}\) with nonzero coefficient, the isotropic flags have a common tail after unipotent changes of frame. The prefix pairing consists of invertible scalar multiples of reversed identity matrices on consecutive blocks. In particular
+\[
+                 1\le j\le s,\qquad \delta_j\ne0.
+\]
+\end{auxlemma}
+\begin{proof}
+The finite integral restricts to supported flags. Translating the real integral by a member of their common unipotent changes it by the ratio of the two characters. A nonzero coefficient therefore requires their equality on this intersection. Here the last vector in each augmented flag has negative norm \(-T_u\). 
+
+Write \(X_a=\langle e_1,\ldots,e_a\rangle\), \(X=X_s\), and similarly for the other flag, with \(e_{s+1}=z\), \(e'_{s+1}=z'\). Put \(I=X\cap X'\). The complement of the distinguished negative line in \(X^\perp/X\) is positive definite. Thus
+\[
+   y\in(X+Ez)^\perp,\quad\langle y,y\rangle=0
+                      \quad\Longrightarrow\quad y\in X .
+\]
+Also \(z\notin X+X'\): if \(z=x+x'\) with \(x\in X,x'\in X'\), orthogonality of \(z\) to \(x\) gives \(\langle x',x\rangle=0\), contradicting \(\langle z,z\rangle=-T_u\). Both facts hold on exchanging the flags.
+
+Suppose first that \(0\ne w\in I\) has leading terms \(\alpha e_a\), \(\alpha'e'_{a'}\) in the two filtrations. For \(v\perp X_a+X'_{a'}\), the infinitesimal shear
+\[
+       Y(\xi)=\langle\xi,v\rangle w-\langle\xi,w\rangle v
+\]
+belongs to both unipotent Lie algebras. Its character derivatives read the coefficients \(\alpha\langle e_{a+1},v\rangle\) and \(\alpha'\langle e'_{a'+1},v\rangle\). All earlier superdiagonal entries vanish by the two orthogonality conditions. Varying \(v\) through its scalar multiples and using the nondegenerate trace pairing gives
+\[
+  \alpha e_{a+1}-\alpha'e'_{a'+1}\in
+    ((X_a+X'_{a'})^\perp)^\perp=X_a+X'_{a'} .
+\]
+
+
+As long as both successors are isotropic, moving the two lower terms to their respective sides constructs a vector in \(I\) with leading coefficients \(\alpha,\alpha'\) on the next steps. If \(a\ne a'\), one side reaches its negative vector first, placing it in \(X+X'\). Thus \(a=a'\). At the end
+\[
+       z'-cz\in X+X',\qquad c=\alpha/\alpha' .
+\]
+This quotient determines \(c\) uniquely since \(z\notin X+X'\). Starting from the least common leading index \(j+1\) constructs every subsequent index. Subtracting these vectors in descending order proves \(X=X_j\oplus I\), \(X'=X'_j\oplus I\).
+
+If \(x\in X_j\) pairs to zero with \(X'_j\), then \(x\perp X'\) and \(x\perp z'\), the latter by \(z'-cz\in X+X'\). The positivity implication for the primed flag gives \(x\in I\), hence \(x=0\). Therefore the prefix pairing is invertible.
+
+For \(I=0\), take \(j=s\). Write \(d_a=\det Z_a\), now including \(z,z'\) as the last entries at \(a=s+1\). The single-term condition in the chosen normalization is
+\[
+      |d_{s+1}|^2-T_u^2|d_s|^2=0 .
+\]
+
+
+If \(d_s=0\), a nonzero \(x\in X\) annihilates \(X'\). Necessarily \(\langle x,z'\rangle\ne0\) by positivity and \(I=0\). But \(d_{s+1}=0\) gives a nonzero \(x'+\beta z'\), \(x'\in X'\), orthogonal to \(X+Ez\). Here \(\beta\ne0\) by the same positivity argument with the frames interchanged. These relations imply the contradiction
+\[
+        0=\langle x,x'+\beta z'\rangle
+             =\bar\beta\langle x,z'\rangle\ne0 .
+\]
+Therefore \(d_s\ne0\).
+
+ Remove the projections of \(z,z'\) onto the hyperbolic space \(X+X'\); these projections lie in \(X,X'\), respectively, so their removal preserves both negative norms. The Schur complement has absolute value \(|d_{s+1}/d_s|=T_u\). Equality in the reversed Cauchy--Schwarz inequality for the two resulting negative vectors makes them proportional: subtract the projection onto the first negative line; the residual norm in its positive definite perpendicular is zero. This again gives \(z'-cz\in X+X'\).
+
+On the paired prefix, write the pivot in column \(b\) as \(t_b\) in row \(\pi(b)\). Conjugate an elementary shear between columns \(c<b\) with \(\pi(c)=\pi(b)+1\) into the opposite frame. Equality of characters for every scalar gives
+\[
+              b=c+1,\qquad t_c=t_b .
+\]
+Starting in the first column, locate the preceding pivot row, and repeat until row one is reached. This produces the first reversed block. Deleting it gives the same rule in the remaining columns. On this first block, of size \(h=\pi(1)\), the pivot relations read
+\[
+      \pi(b)=h+1-b,\qquad t_b=t_1\quad (1\le b\le h).
+\]
+
+In both cases the unitriangular changes and the clearing of the active pairings place the two terminal vectors on the same negative line. For \(I\ne0\) one first takes \(I^\perp/I\) and splits off the hyperbolic prefix. Its projections of \(z,z'\) lie on the respective isotropic sides, since each vector is orthogonal to its own flag. Removal preserves the norms and leaves vectors differing by the scalar \(c\). Hence
+\[
+               -T_u=-T_u c\bar c .
+\]
+
+If \(j=0\) all isotropic flag steps and both enlarged final spaces coincide. Primitivity of the graded lattices gives \(c\in\mathcal O_E^\times\). Every conjugate has modulus one. The characteristic polynomials of the powers of \(c\) have bounded integral coefficients, so \(c\) has finite order. 
+
+The markings imply
+\[
+     c\equiv1\pmod {\mathfrak g_i}\quad(\mathfrak g_i\mid g_i,\ i=0,1),
+     \qquad (T_u,g_0g_1)=1 .
+\] The reduction kernel on roots of unity at \(g_i\) has \(g_i\)-power order: for an order prime to \(g_i\), the factor \((c^a-1)/(c-1)\) is a unit when \(c\equiv1\) and \(g_i\nmid a\). Thus \(c=1\).
+
+For equal graded vectors the two integral lifts at each step differ in the preceding flag lattice. Successive upper triangular shears remove these differences. The graded ideals are projective over \(\mathcal O_E\), so each shear lifts from the graded quotient; the dual action is the inverse adjoint. The residual difference of distinguished vectors lies in the common isotropic space, as allowed in the identity class. This is precisely the identity part removed in Definition~\ref{hyp:full-gram-row}.
+\end{proof}
+
+\begin{auxlemma}[Decay at fixed minor label]\label{lem:zero-gram-fixed-label}
+Write \(w_\Lambda=1/|\Delta_\Lambda|\) for the definite row mass and divide the real coefficient vector by its endpoint factor \(\sqrt{w_\Lambda w_{\Lambda'}}\), where \(\Lambda,\Lambda'\) are its two endpoint rows. Denote its resulting Hilbert--Schmidt norm by \(A_t\). For an adapted rational normal form let \(\Gamma_0\) be its reference integral stabilizer and \(\Gamma_\Lambda\) the actual integral stabilizer of the term. With \(J=\Gamma_0\cap\Gamma_\Lambda\), put
+\[
+ \omega_t=\inf_{\text{adapted forms}}
+          \frac{[\Gamma_0:J]}{[\Gamma_\Lambda:J]} .
+\]
+Let \(C_p=16\). There are fixed \(C_H,C\) and a scale threshold, independent of the retained row and word, for which
+\begin{equation}\label{eq:zero-gram-angular-gain}
+ \frac{A_t}{\sqrt{\dim V_u}}\le
+ \omega_t (C/k)^{j(k-1-j)f}
+       D_\delta^{-(k-1-j)/2} H_C^{Cs^4}
+                    S_\delta^{-(C_p+4)k}.
+\end{equation}
+\end{auxlemma}
+
+\begin{proof}
+\proofstep{Moments on each side of the integral.}
+For the orthogonalized lengths \(l_0,\ldots,l_s\) of either frame set
+\[
+ R(x)=\max(1,l_0,l_0^{-1},\ldots,l_s,l_s^{-1}),\qquad
+ q=\lceil C_1ks\rceil ,
+\]
+where \(C_1\) is a sufficiently large fixed numerical constant. Use the lowest type with initial shift zero in the first-length and successive-ratio recursions in Proposition~\ref{prop:paired-frame-moments}. Their iteration is valid for all sufficiently large selected ranks since
+\[
+       (s+1)q\le\min(km^5,2(k+m-1)^2).
+\]
+
+ For inverse lengths the terminal vector has negative norm: subtracting vectors of its isotropic flag preserves this norm. The Euclidean majorant of the squared norm is consequently at least its absolute value. Thus \(l_s\ge \sqrt{T_u}\) in the original frame, and transport to the standard character costs at most \(b^{C m}\). Use
+\[
+ l_a=l_0\prod_{i<a}(l_{i+1}/l_i),\qquad
+ l_a^{-1}=l_s^{-1}\prod_{i=a}^{s-1}(l_{i+1}/l_i).
+\]
+H\"older with at most \(s+1\) equal exponents gives a common \(H_1=b^{C_Hm}\) in the two \(2q\)-moments of every length. Increasing \(C_H\) absorbs \(2s+3\) on taking the \(2q\)-th root. If \(\mu_F=|F|^2d\nu/\int|F|^2d\nu\), Markov's inequality gives
+\[
+       \mu_F\{R>2^a H_1\}\le 2^{-2aq}\qquad(a\ge0).
+\] Use the trivial bound on \(R(x)\le 2H_1\).
+
+\proofstep{Volume in the noncommon directions.}
+Work at a single real place in an adapted Witt decomposition with positive majorant. Write \(D=a_{v,j}\), \(D_e=\max(1,\max_{a_{v,h}>0}a_{v,h}^{-1})\), and \(n=k-1-j\). The two frames have \(j\) noncommon unipotent columns \(B_1,\ldots,B_j\in\mathbb C^{k+1}\). 
+
+In Iwasawa coordinates remove the last coordinate and the direction of the transported negative vector by orthogonal projection onto \(P\). These impose at most two complex linear conditions, so \(p=\dim P\ge k-1\). In the transformed middle coordinates put
+\[
+ Y=\|P B_1\wedge\cdots\wedge P B_j\| .
+\]
+Equivalently, the projected wedge of the first \(j\) opposite frame vectors has norm \(DY\): the normal-form change of its \(j\) columns has determinant of modulus \(D\). Define \(Y'\) by exchanging the frames. If both length heights are at most \(R_0\), put
+\[
+                      M=R_0^{2s}D_e .
+\]
+
+ Solving for a unipotent column by the prefix pairing uses a cofactor divided by its block-end minor. The numerator is bounded by the products of the two prefix volumes, at most \(R_0^{2s}\), by the exterior-power Cauchy--Schwarz inequality. In the transverse coordinates the resulting boxes have radii
+\[
+   \|B_i\|\le M,\qquad |u_{ab}|\le M,\qquad
+   |v_{ab}|,\ |\Im v_{aa}|\le 2sM^2 .
+\]
+Here \(u\) is the upper triangular change between blocks, and \(v\) is the central skew-Hermitian coordinate. Its quadratic correction is half the pairwise Gram matrix of the columns. Triangular coordinates have unit Jacobian, and only \(O(s^2)\) complex or real entries occur outside the \(B_i\).
+
+
+
+To bound the volume where \(0<Y\le 2y\), integrate the columns in order. Project the \(i\)-th column perpendicular to the previous \(i-1\) projected columns. Writing \(p_i=p-i+1\), its length \(r_i\) has radial measure
+\[
+             \frac{2\pi^{p_i}}{(p_i-1)!}r_i^{2p_i-1}dr_i,
+             \qquad p_i>n.
+\]
+The exceptional dependent columns have measure zero. Since \(p-i+1>n\), integration of \(r_i^{-2n}\) on the ball of radius \(M\) is finite. On \(\prod_i r_i\le2y\) insert \((2y/\prod_i r_i)^{2n}\). 
+
+The remaining powers of \(M\) from each full column are \(2(k+1-n)=2j+4\). The disk integrals in the at most \(i+1\) removed complex directions cost at most \(C^{i+1}\) apart from these powers of \(M\). Using \(n!\ge(n/e)^n\) gives the transverse volume bound
+\begin{equation}\label{eq:zero-gram-fibre}
+ (Cs)^{Cs^2}M^{Cs^2}(C/n)^{jn}(2y)^{2n}.
+\end{equation}
+
+\proofstep{Pairing the two transverse volumes.}
+Write \(Z\) for the nonsingular \(j\)-square prefix pairing and \(U,U'\) for the matrices of the two opposite projected frames before division of their wedge norms by \(D\). Up to the choice of Hermitian convention the mixed form on the two positive projections has matrix
+\[
+                         U (Z^{-1})^{\mathsf t} U'^* .
+\]
+It is a difference of two pairings. To see this, split a projected vector into its component orthogonal to the isotropic flag and its isotropic component. In the latter term solve for the prefix coefficients using \(Z\); the common tail pairs to zero. 
+
+The two remaining pairings are the original positive-majorant pairing and the pairing on the positive definite complement of the negative line. The latter components have norm at most that of the test vectors: the discarded isotropic component is orthogonal to the definite component for the Hermitian form and has norm zero for that form. Writing \(B_1,B_2\) for these two forms, Cauchy--Schwarz gives
+\[
+ |B_i(\xi,\eta)|\le\|\xi\|\,\|\eta\|,\qquad
+                  \|B_1-B_2\|_{\rm op}\le2 .
+\] Taking the \(j\)-th exterior power therefore gives
+\[
+ \frac{\|\wedge^j U\|\,\|\wedge^j U'\|}{|\det Z|}
+                 =DYY'\le 2^j .
+\]
+
+
+Cauchy--Schwarz on the unfolded integral uses the square root of each of the two bounds \eqref{eq:zero-gram-fibre}. More explicitly, integrate first along the stabilizer of each individual frame. The Bessel norm is constant on this fibre and the quotient by the common stabilizer has the transverse coordinates above. Applying Fubini on both sides of Cauchy--Schwarz leaves the full squared Bessel norm on each individual quotient. The same integer \(n=k-1-j\) occurs in both volumes.
+
+For fixed dyadic length heights let \(R_0\) be the larger endpoint. Then \(Y,Y'\le M^j\) by Hadamard. On dyadic wedge shells with lower endpoints \(y,y'\), sum \((yy')^n\) subject to \(yy'\le 2^j/D\). 
+
+For fixed product the number of shells is at most \(1+\log_2^+(M^{2j}/(yy'))\); summation in successively halved products gives
+\[
+       \sum (yy')^n\le C^{jn}D^{-n}
+                (1+\log^+(DM^{2j})).
+\]
+The logarithm costs at most an extra polynomial factor in \(s,R_0,D_e\): the nonzero minor \(D\) is bounded by \(R_0^{2s}\). 
+
+The dyadic subdivisions therefore give a factor \((C/k)^{jn}D^{-n}\) per place, since \(n\ge k/2\). On the length shells with indices \(a,a'\) the remaining multiplier is at most
+\[
+              (CsH_1)^{Cs^3}D_e^{Cs^2}2^{Cs^3(a+a')}.
+\]
+
+Hadamard applied separately to the two prefixes also gives \(S_v\le 2^{s(a+a')}\). Use a portion of the moment decay \(2^{-q(a+a')}\) to extract \(S_v^{-(C_p+6)k}\). The rest sums geometrically, since \(k\gg s^4\) and \(C_1\) can be chosen after all the absolute box constants. 
+
+For every nonzero label minor the graded ideals of the two flags give \(\delta_h\in\mathfrak d^{2e_h}\), where \(\mathfrak d\) denotes the different. Hence \(\prod_v a_{v,h}\ge1\). In particular
+\[
+ \prod_v D_{e,v}\le\prod_{\delta_h\ne0}\prod_v\max(1,a_{v,h})
+                 \le ((2H_1)^{2sf} S_\delta)^{s+1}.
+\]
+Indeed for a nonzero minor
+\[
+       \prod_v\max(1,a^{-1}_{v,h})
+             =\frac{\prod_v\max(1,a_{v,h})}{\prod_v a_{v,h}} .
+\] Its contribution to the exponent of \(S_\delta\) is \(O(s^3)\), absorbed by the two spare multiples of \(k\). Multiplication of \(D^{-n}\) over the places gives \(D_\delta^{-n/2}\).
+
+\proofstep{The common stabilizer and quotient measures.}
+Write \(v_E=d/2\). The middle directions of the reference stabilizer are the \(s-j\) common columns with coefficients in the rank-\(k\) definite lattice. In the scaled graded coordinates each such column has covolume \(v_E^{kf}\): the lattice is unimodular and the powers of the different in its graded ideal cancel the frame dilation. In the ordinary complex coordinates the scalar formula underlying this computation is
+\[
+      \operatorname{covol}(\mathcal O_E)=2^{-f}|D_E|^{1/2}=v_E^f .
+\]
+
+ The upper and skew-Hermitian layers have at most \(2(s+1)^2\) real coordinates per place. An off-diagonal complex entry is in its graded fractional ideal; a diagonal skew entry is in the trace-zero part. 
+
+Taking successive quotients by the central entries eliminates the quadratic cross terms. Clearing a factor of two on each skew diagonal suffices for the half-Gram correction. Pairing conjugate off-diagonals and using the dual graded ideal bounds the remaining factors by \((8v_E)^{2(s+1)^2 f}\) for the common stabilizer, with one further such factor for the two frame normalizations together. The resulting bound, including the Jacobian from both real frames, is
+\[
+  \omega_t v_E^{k(s-j)f}(8v_E)^{4(s+1)^2f}
+  \left((2v_E)^{-sk}2^{s(k+1)+s(s-1)}\right)^f .
+\]
+
+
+Indeed, comparison on the common finite-index subgroup \(J\) multiplies the reference volume by \([\Gamma_0:J]/[\Gamma_\Lambda:J]\); the bound is valid in every adapted frame. The high powers of \(v_E\) and two in the last display simplify to \(v_E^{-kjf}2^{s^2f}\le2^{s^2f}\). Since \(2\le d\le b\), all remaining height costs, including \((CsH_1)^{Cs^4f}\), are at most \(H_C^{Cs^4}\) for a fixed larger \(C\). The two squared Bessel integrals divided by the identity normalization have product one for the operator norm; passing to Hilbert--Schmidt norm costs \(\sqrt{\dim V_u}\). Taking the infimum in the index ratio proves \eqref{eq:zero-gram-angular-gain}.
+\end{proof}
+
+\input{same-word-gram-count}
+
+\begin{auxlemma}[Summing the vanishing-Gram contribution on the diagonal]\label{lem:zero-gram-diagonal}
+With \(Q=kf\log k\), the sum over the nonidentity terms at the fixed word satisfies
+\[
+                      \|K''_{uu}\|_{\rm HS}^2\le d_u e^{-Q}.
+\]
+\end{auxlemma}
+\begin{proof}
+Multiply the bound for each fixed label in Lemma~\ref{lem:zero-gram-fixed-label} by the corresponding arithmetic factor \(E_\delta\) of Lemma~\ref{lem:zero-gram-label-pairs}. The factors occur once for each member of the counted pair. The remaining power of \(D_\delta\) in each product is \((j+1)/2\). By Definition~\ref{def:zero-gram-label},
+\[
+ 0<D_\delta\le (2H_1)^{4sf}S_\delta^2\le H_C S_\delta^2,\qquad
+ D_\delta^{(j+1)/2}S_\delta^{-4k}
+       \le H_C^{(j+1)/2}S_\delta^{-3s}.
+\]
+
+
+To sum the last factor over labels at fixed \(j\), put \(U_h=(2H_1)^{2s}d^{2e_h}\). Then
+\[
+ S_\delta^{-3s}\le\prod_{h=1}^{j}\prod_v
+             \max(1,|v(\delta_h)|/U_h)^{-3}.
+\]
+For an integral variable \(z\), the disk packing in the proof of Lemma~\ref{lem:lattice-frequency} gives at most \(9^f(\prod_v R_v)^2\) points when every \(R_v\ge1\). 
+
+Sum the boxes \(R_v=2^{a_v}U_h\) for \(a_v\ge0\). Their decay pays \(2^{-3\sum a_v+3f}\) and their volumes cost \(2^{2\sum a_v}U_h^{2f}\). Including zero, the sum for one coordinate is at most \(C^f U_h^{2f}\). Summing independently over all \(j\) integral coordinates costs at most \(\exp(Cm^3fL)\), since \(e_h\le s^2\). Thus the sum over labels of rank \(j\), after extracting the mass and compact dimension, has bound
+\[
+ B_j=\exp(Cm^6fL)(C/k)^{j(k-1-j)f}.
+\]
+
+It remains to restore the finite Gram factor in the original normalization. Write \(\Gamma_1\) for the diagonal squared norm of a finite coarse vector before division by that norm, and \(M_u=\sum_\Lambda w_\Lambda\). The product of the two finite stabilizer weights in a matching pair is \(w_\Lambda w_{\Lambda'}\) as in Lemma~\ref{lem:zero-gram-label-pairs}. 
+
+A full marking above \(\Lambda\) is obtained by choosing a local coset of the marked subgroup in the lattice stabilizer. If \(I_\Lambda\) denotes this local coset count and \(N_\Lambda\) the number of its rational classes, orbit--stabilizer gives
+\[
+               I_\Lambda\le |\Delta_\Lambda|N_\Lambda .
+\] The local coset number is at least \(\Gamma_1\): at the split type primes the quotient onto relative frame indices is surjective, by lifting matrices with prescribed reduction, and counting the unipotent markings in a frame gives the diagonal squared norm. Equivalently the full fibre contains at least \(\Gamma_1/|\Delta_\Lambda|\) classes. Each contributes \(\dim V_u\), by Proposition~\ref{prop:marked-column-dimension}. Hence
+\[
+                    \Gamma_1 M_u\dim V_u\le d_u .
+\]
+
+For a finite set of terms group first by endpoint rows and then by the finite coarse index. Orthogonality of different endpoint rows and Lemma~\ref{lem:coarse-split-gram} bound its squared norm by \(P_g\Gamma_1\) times the sum of the products of the two coefficient norms over matching pairs. Here \(P_g=\prod_{i=0}^1(1+3/g_i)^f<2\) since \(g_i\ge(kb)^8\), \(f\le k\). The preceding two label sums and their genus mean give
+\[
+     \|K''_{uu}\|_{\rm HS}^2\le 2d_u\Big(\sum_{j=1}^s B_j\Big)^2 .
+\]
+
+
+The passage to all terms follows from Lemma~\ref{lem:gram-term-sum}. On the selected window, \(s=o(k)\), \(m^6L=o(k\log k)\), and \(j(k-1-j)\ge k-2\) for \(1\le j\le s\). Consequently \(B_j\le e^{-3Q/4}\) uniformly once the row scale is sufficiently large. Since \(2s^2\le e^{Q/2}\) there, the asserted estimate follows. The argument fixes any realized target character throughout.
+\end{proof}

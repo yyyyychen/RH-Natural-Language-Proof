@@ -1,0 +1,543 @@
+\subsection{The adelic division pair on the completed point}
+\label{subsec:completed-division}
+
+The preceding period comparison identifies the operator in the ramified coordinates. For the division argument this identification must also respect the degree-zero forms, their metrics and the refinements of level at every word.
+
+Fix a completed member \(q\) of Definition~\ref{def:completed-member}
+and its compatible reciprocity data \(R\). For each word \(u\) the
+degree-zero column forms of \(R\) agree with those of \(q\). Apply this equality to the measured
+saturation and its remaining spectral data. This gives the
+measured saturation for \(R\) with the same group, measure,
+evaluation translate and comparison of the full and good rows.
+The finite part of the saturation puts each period indexed by the sequence in the
+level space of its indicated character. Thus the period
+construction above uses the prescribed level projector on
+every word.
+
+\begin{proposition}[The completed division pair]\label{prop:completed-division-pair}
+On a completed member in the sense of Definition~\ref{def:completed-member}, the real, Hecke, and lower
+comparisons identify the square-integrable and geometric
+realizations of the definite columns, periods, and size
+functions at all subspaces. The identified point carries
+the original tuple characters and reciprocity data,
+including the prescribed side at each selected prime.
+In particular, writing \(q,R\) for the two identified realizations and \(F_u^0\) for the degree-zero forms of word \(u\),
+\[
+ F_u^0(q)=F_u^0(R)\qquad\text{for every }u.
+\]
+Both parameter runs are evaluated on this same completed point.
+\end{proposition}
+
+\begin{proof}
+Use the two ambient identifications on \(q\), the intermediate
+modules and the finite group comparison of the preceding
+construction. Denote the resulting adelic row data and face by
+\(x\). The adelic division pair is formed from the base and
+sharp form readings of \(x\) and its word columns. Its
+intersection comparison over the coefficient field is the
+base change of the one on the original row. The rational word
+isomorphisms and the sharp and base ambient identifications
+are those in the construction of \(x\).
+
+Let \(n_{\rm sh}\) be the sharp-level index. Write \(E\) for
+sharp evaluation with the measured translate and Petersson
+comparison, using the conjugate scalar action at a conjugate
+reading. The placement chosen in the preceding construction
+is \(s_{\rm sh}=\kappa E\) with \(\kappa>0\) and
+\[
+                 n_{\rm sh}\|s_{\rm sh}v\|^2=\|v\|^2
+\]
+on the refined row. In particular its phase is \(1\). Writing \(F_u^0\) for the degree-zero form space, the identification on the two realizations is wordwise:
+\[
+ F_u^0(q)=F_u^0(R)\qquad\text{for each word }u .
+\]
+The saturation therefore uses the same level projector, character,
+evaluation translate and Haar measure in the norm identity.
+
+Let \(e_F,\mathrm{fi}\) be the two coefficient maps in the normal
+expansion. A substitution of face sizes or error changes the
+arguments of the expansion. Its form and polynomial coefficients
+are read in the original rational frame, so the coefficient maps
+are still \(e_F,\mathrm{fi}\). The diagonal forms, positive
+terms, standard Hermitian frames and their lattices are those
+of \(q\); uniqueness gives the standard additive character of
+sign \(-1\) on both sides. Use the bounded real comparison on
+this core with its frame weights, extremal vectors, level action
+and local uniformization maps. All its phase factors are the
+one just computed. This identifies the intersection, norm and
+period comparisons on a single pair. \label{cor:completed-division-1}
+
+\proofstep{Identify the actual Hecke eigenvalues and tuple characters.}
+
+On the base row write the decomposition by complete Hecke systems as
+\[
+ V_{\rm base}=\bigoplus_{\lambda}V_{\rm base}[\lambda].
+\] Fix one
+occurring eigensystem \(\lambda\) and a required tuple \(\mu\).
+Multiplicity gives its nonzero constituent at \(\mu\) with
+the prescribed infinite components off the distinguished place.
+The generic series choice makes the product of the finite
+character and level projectors nonzero on the required labels.
+At each tuple in use the adelic and marked characters satisfy
+\[
+ \chi^{\rm adelic}_\mu=\chi^{\rm marked}_\mu=\chi^R_\mu .
+\]
+The first equality uses the tuple map and the second uses
+compatibility with \(R\). In particular the character depends only on the tuple label. For two positions \(a,b\) the implication is
+\[
+ \mu(a)=\mu(b)\quad\Longrightarrow\quad \chi_{\mu(a)}=\chi_{\mu(b)} .
+\] Discrete-series reciprocity at the actual
+weights gives the relative parameter as the logarithm of the
+positive lift parameter; intersection at the refined level gives
+both rational realizations of this constituent. \label{cor:completed-division-2}
+
+\proofstep{Identify the lower maps in both ambient realizations.}
+
+At the base tuple use the reference lower map of the
+standard columns. At a nonreference tuple the lower map uses
+the integral columns of the actual twist. To see the
+polynomial comparison there, let \(P\) be the highest-weight
+polynomial in the span for the prescribed top weight. Take
+the standard original and twisted columns and a last-stage
+frame whose determinant is a unit.
+Suppose the evaluation of the specified twisted vector on the
+given class agrees at every argument with the function of \(P\)
+in that frame, with its prescribed coordinate shift. In the standard last-stage coordinates these evaluations recover the polynomial
+\[
+ P_{\rm recovered}=\rho_\lambda(A)P,
+\]
+where \(A\) is the matrix of the last-stage frame and \(\rho_\lambda\) its polynomial action. Applying the lower
+map means taking its branching projection. The two true
+weights interlace.
+
+In those weights the restriction to the
+last block commutes with the projection in the sense
+\[
+                 \operatorname{br}\big(\rho_{\lambda}(A)P\big)
+                  =\operatorname{br}_{\rm tens}(P)
+\]
+with the lower map expressed in its standard coordinates.
+Substitution in the top formula followed by extraction in the standard twisted coordinates recovers \(\rho_\lambda(A)P\). The block branching formula, with the upper and
+lower weight shifts, then gives the displayed equality and
+the determinant factor of the lower coordinate is \(1\).
+This comparison uses the equality of the twist datum, the
+standard twisted column maps, and the standard original
+columns on \(q\). The unit condition restricts the frame in this statement.
+
+The sharp ambient map is the map obtained from the sharp
+identification at \(q\) and the two forms of the tuple
+reading. The splitting of the lower modules is the splitting
+of the adelic pair. If \(s_1,s_2\) are the stabilizer orders at the two levels and \(C\) the common stabilizer multiple, the original class and level conditions give
+\[
+ s_1\mid C,\quad s_2\mid C,\qquad \operatorname{lcm}(s_1,s_2)\mid C .
+\] These identities supply
+both lower maps as well as the two ambient realizations on
+\(x\). \label{cor:completed-division-3}
+
+\proofstep{Identify the two sets of marked primes under the prescribed field isomorphism.}
+
+Let \(\theta\) be the auxiliary field isomorphism from the
+standard kernel to the column model. Write \(Q_{\ker}(\mu)\)
+for its finite set of quotient primes. The two prime comparisons
+in the construction give
+\[
+ \theta_*Q_{\ker}(\mu)=Q(\mu),\qquad
+ \theta_*(\operatorname{im}\mathfrak P_{\ker})=
+                         \operatorname{im}\mathfrak P .
+\]
+Here \(\mathfrak P(v)\) is the selected prime of \(E\) over
+\(v\) in \(E^+\). A prime contracting under \(\theta\) to
+\(P\in Q_{\ker}(\mu)\) is necessarily \(\theta_*P\). The
+level comparison at a used tuple consequently puts that very
+prime in the adelic quotient-prime set. For
+\(\ell\in\{p_d,p_d'\}\), if \(\ell\in\mathfrak P(v)\), then
+\(v\mid\ell\). The marked side law at \(v\) identifies the
+contraction of \(\mathfrak P(v)\) to the imaginary quadratic
+field with the \(\ell\)-prime specified by \(R\).
+\label{cor:completed-division-4}
+
+\proofstep{Substitute the common columns before comparing the periods and sizes.}
+Compare periods and heights on these identified columns.
+
+
+For any subspace \(U\), identify its square-integrable column
+with its geometric column by the definite comparison. The
+resulting period spaces on this one domain agree, including the
+Poincar\'e period in the updated component. In symbols, writing
+\(C,\mathcal P,H\) for the column, its period space and its size,
+the successive identifications give
+\[
+ C_{L^2}(U)=C_{\rm geom}(U),\qquad
+ \mathcal P_{L^2}(U)=\mathcal P_{\rm geom}(U),\qquad
+ H_{L^2}(U)=H_{\rm geom}(U).
+\]
+For the last equality both sides use the record of \(q\), the
+nonnegative integer values assigned to \(\Delta,\eta_{\rm sz}/m\) and the same
+replacement of \(l_{6m,j},l_{6u}\) at the given real coefficient.
+Transport of the bounded real datum through these identifications
+preserves the weights, word placement, side and lower maps, on
+the point with record \(R\). \label{cor:completed-division-5}
+\end{proof}
+
+\begin{construction}
+\begin{tabular}{@{}l@{\hspace{1.2em}}l@{}}
+\toprule
+\textit{Datum of the completed point} & \textit{Identification used in both runs} \\
+\midrule
+Word and tuple character & Same rational column and level projector \\
+Measured sharp evaluation \(E\) & \(s_{\rm sh}=\kappa E,\ \kappa>0\) \\
+Sharp-level index \(n_{\rm sh}\) & \(n_{\rm sh}\|s_{\rm sh}v\|^2=\|v\|^2\) \\
+Base and sharp forms & One adelic division pair at the chosen translate \\
+\bottomrule
+\end{tabular}
+\caption{The comparison data carried into both parameter runs by Proposition~\ref{prop:completed-division-pair}.}\label{fig:analytic-completed-pair}
+\end{construction}
+
+\subsection{Two parameter runs on one division pair}
+\label{subsec:completed-prime-runs}
+
+Choose the point of Proposition~\ref{prop:completed-division-pair}.
+The depth estimates and the exceptional-prime estimates call for two choices of numerical parameters. Their comparison uses the same row, level and period identification at this point.
+
+\paragraph{Row normalization and the numerical point.}
+The numerical point used for the runs has the face, word
+lattices, period spaces and scale of the bundle. To form it,
+take a recursive realization with the base and refined level
+characters, a normalization of the real rows, and the local
+row comparison between that normalization and the recursive
+realization. This is the choice of comparison denoted by a
+summand of the bundle. Denote the row spaces before and after this comparison by superscripts \(1,2\). The same identifications apply simultaneously to both rows and the word columns:
+\[
+ V_{\rm full}^{(1)}=V_{\rm full}^{(2)},\qquad V_{\rm good}^{(1)}=V_{\rm good}^{(2)},\qquad M_u^{(1)}=M_u^{(2)}\quad(\text{each word }u).
+\]
+
+The row normalization uses the equality of the character
+frames, the identification of the type primes with the
+kernel's type places and the conjugate-level and character
+identities of the finite translate. It keeps the standard
+frames and the coefficient values on the standard word
+vectors. For the recursive comparison use the standard
+additive character on these levels and the local row
+reading of the marked Galois level. The degree-three
+normalization uses the equality of the zero section with
+the one in the original scale datum.
+
+For \(z=v\) or \(\bar v\), write \(I_j(z),J_j(z),Z_j(z)\) for the
+base-row index, lower-map index and value of the zero-section test at lift \(j\);
+nonzero means that the corresponding test detects the place. The twist
+support has the following intrinsic description:
+\[
+ \mathcal S_{\rm tw}
+ =\{v:\ (I_j(z),J_j(z),Z_j(z))\ne(0,0,0)
+            \text{ for some }j\text{ and }z\in\{v,\bar v\}\}.
+\]
+All three tests precede the choice of the height and error constants.
+Let \(S\) be the set selected by the three tests and \(\mu_0\) the base tuple. The tests identify the tuple map on conjugate places by
+\[
+ S=\bar S,\qquad v\in S\ \Longleftrightarrow\ \mu(v)\ne\mu_0,\qquad \mu(\bar v)=\mu(v).
+\] In particular each
+single-index place is twisted.
+These are comparisons on \(x\). Substitution of the three
+family equalities of Section~\ref{subsec:completed-division}
+transports them to the bundle with \(R\) fixed.
+\label{cor:completed-division-6}
+
+\input{linked-family-rows}
+
+The two runs below use the rows of Proposition~\ref{prop:linked-comparison-rows}
+for the selected compatible comparison.
+
+\begin{lemma}[The two prime orientations on the common core]
+For \(\ell=p_d,p_d'\) there is a full short-section extension of
+the same core \(J\) with distinguished prime \(\ell\) at every
+short weight. For a twisted place \(v\), the determinant character and short cover use the marked half prime of the assigned orientation, where
+\[
+ p(v)=\begin{cases}p_d',&v\mid p_d,\\ p_d,&v\nmid p_d.\end{cases}
+\]
+\end{lemma}
+\begin{proof}
+Write \(J\) for the common geometric core at \(P\). It
+has its canonical frames, positive ranks and half-level
+divisibility of the error data. The two field conditions and
+the values of both distinguished characters hold in the
+prescribed fields. The half-level ideal \(\mathfrak m_b\)
+of the common core is the product of the marked type prime
+ideals of the row. In fact the full level is squarefree
+and factors into its two indicated halves. The divisor
+comparisons and the equality of the core and row half
+primes give the same prime factors on the indicated
+side. Equality follows from the squarefree factorization.
+
+Fix \(\ell\in\{p_d,p_d'\}\). For this orientation choose
+the distinguished character \(\delta_\ell\) of the frame at
+\(\ell\), and use the field condition at \(\ell\). Define
+the own prime of a coefficient place \(v\) by
+\[
+  p(v)=
+  \begin{cases}
+    p_d' & \text{if the residue characteristic of \(v\) is \(p_d\)},\\
+    p_d & \text{otherwise}.
+  \end{cases}
+\]
+For twisted places with \(p(v)=\ell\), the marked side
+comparison supplies one prime of the imaginary quadratic
+field over \(\ell\) for all the quotient primes over
+\(\ell\) on the tuples of those places. Extension of that
+prime is contained in every one of these quotient primes,
+by contraction. If the class of such places is empty, any
+prime above \(\ell\) suffices for this orientation.
+
+On the finite ideles the character construction gives
+characters \(\xi_\ell,d_\ell\) with
+\[
+                        \xi_\ell(a/\bar a)=d_\ell(a).
+\]
+Here \(d_\ell\) is the prescribed finite-idelic restriction of
+\(\delta_\ell\). A character of finite order on the ideles
+is trivial on the archimedean subgroup of the CM field,
+since its archimedean part is a product of copies of \(\C^\times\).
+For a character \(\xi\) of order \(n\) and any archimedean idele
+\(z\), take an archimedean \(w\) with \(w^n=z\). Then
+\[
+ \xi(z)=\xi(w^n)=\xi(w)^n=1 .
+\] Thus
+its restriction to the finite ideles inherits triviality on principal ideles,
+triviality on real ideles, and the specified coefficient
+values.
+
+The finite character is trivial on integral units congruent to \(1\)
+at the prescribed level. At a prime over \(\ell\), choose
+a unit with a nontrivial character value, using the
+distinguished character's prescribed tame ramification.
+An idele equal to this unit at that prime and to \(1\)
+elsewhere is congruent to \(1\) at the two type primes
+because their rational primes differ from \(\ell\).
+This gives the required nontrivial test there.
+
+On finite ideles put \(h(b)=b/\bar b\). Finite idele Hilbert
+90 gives \(\operatorname{im}h=\ker N_{E/E^+}\). Since
+\(\ker h\) consists of real ideles and \(d_\ell\) is trivial
+there, the assignment
+\[
+ \xi_\ell(h(b))=d_\ell(b)
+\]
+is well defined. Extend this character to the finite idele
+group; its required congruence and finite-order properties
+concern the norm-one subgroup. For a principal norm-one
+element \(a\), explicit preimages are
+\[
+ b=1+a\ (a\ne-1),\qquad
+ b\in E^\times,\ \bar b=-b\ (a=-1).
+\]
+Thus \(\xi_\ell(a)=1\) on principal norm-one elements.
+The congruence form of Hilbert 90 transports the tame
+congruences at the two type primes and at \(\ell\), giving
+the stipulated ramification and coefficient values.
+\label{cor:completed-division-7}
+
+Extend the core to the upper geometric model, then take the
+full short-section extension with the prime and the
+character just chosen. These constructions use the laws
+of \(J\), the canonical frames, positive ranks and the
+host hypotheses at \(\ell\). The full extension has the
+same core \(J\), and its short cover at each lift has
+distinguished prime \(\ell\) at every short weight.
+For a determinant root \(b\) of an adelic element \(g\), let \(b_f\)
+be its finite part. The finite determinants and character values satisfy
+\[
+ \det(g)_f=b_f/\bar b_f,\qquad
+ \xi_\ell(\det(g)_f)=d_\ell(b_f).
+\] Rational determinant roots give
+value \(1\). At a twisted \(v\) with \(p(v)=\ell\), the
+same formula gives the specified determinant character and
+the chosen short cover above the marked half prime. This
+verifies the own-prime and character pinning at that place.
+Taking \(\ell=p_d\) and \(\ell=p'_d\) gives the two extensions.
+\label{cor:completed-division-8}
+\end{proof}
+
+\input{split-level-sections}
+
+\begin{lemma}[One level action for both orientations]
+Let \(\bar A_g^{(1)},\bar A_g^{(2)}\) be the two induced operators of the finite row group on the core half-level quotient \(\Lambda/\mathfrak m_b\Lambda\) at lift \(j\). With the common level-form identification,
+\[
+ \bar A_g^{(1)}=\bar A_g^{(2)}\quad\text{on }\Lambda/\mathfrak m_b\Lambda\qquad\text{for every }g.
+\]
+This action intertwines that on the level forms.
+\end{lemma}
+\begin{proof}
+Write \(\Lambda\) for this lattice and \(A_g\) for the core level
+map at \(g\). The congruences of the level comparison give
+\[
+ \bar A_1=1,\qquad \bar A_g\bar A_h=\bar A_{gh}
+       \quad\text{on }\Lambda/\mathfrak m_b\Lambda .
+\]
+In particular \(\bar A_{g^{-1}}\) is the two-sided inverse
+of \(\bar A_g\). This action is defined on \(J\) before either
+extension. Two integral lifts of \(\bar A_g\) differ by a map
+into \(\mathfrak m_b\Lambda\); on the complementary level
+sublattice their difference lands in the full level multiple.
+Thus they give the same allowed change of level vector. Pullback
+on forms depends only on the quotient map, and the geometric
+action in the common frame intertwines it with the row action.
+\label{cor:completed-division-9}
+\end{proof}
+
+At \(v\) use the extension at \(p(v)\). Its own prime
+differs from the residue characteristic, including when
+the residue characteristic is \(p_d'\). The place
+\(\bar v\) uses the same orientation as \(v\).
+Consequently the short-cover laws, the
+determinant comparisons and the one level action apply
+on the indicated parts of this single numerical point.
+No scale cutoff is used in this selection. The linked row
+hypotheses and the numerical inequalities for section counts
+have their own thresholds.
+\label{cor:completed-division-10}
+
+
+\begin{lemma}[Common form coordinates on the two runs]
+At each lift \(j\), write \(I_j\) for the common arithmetic frame identification. The same inverse coordinate map can be used for both orientations:
+\[
+ z_j^{(1)}=z_j^{(2)}=I_j^{-1}=:z_j.
+\] It reads the
+same finite action, good projector and depth scalar at \((v,j)\).
+The short sections at \(v\) come from its own prime \(p(v)\).
+\end{lemma}
+\begin{proof}
+Use the phase-one base row of \(P\). Its weights are the positive
+entries \(a^+_{j,\tau}\) and the reversed negatives of
+\(a^-_{j,\tau}\), of signature \((k+j-1,m-j)\) and central
+weight \(n_V\). These are the product order and the light and
+short weights of the numerical record.
+
+Let \(I_j\) denote the injective comparison of core cusp forms
+with the arithmetic frame. The level quotient determines the
+pullback \(A_g\) for each element of the mirabolic group.
+It suffices to read the representation \(\rho\) at one coefficient
+place, because \(I_j A_g=\rho(g)I_j\) in the common frame.
+In particular
+\[
+ I_jA_gA_h=\rho(g)\rho(h)I_j=I_jA_{gh}.
+\]
+Injectivity gives composition, and gives linearity by the same
+argument. The basis comparison makes the scalar extension of
+\(I_j\) invertible.
+
+Take \(z_j=I_j^{-1}\) on this extension, as
+in Paragraph~\ref{par:selected-form-coordinates}. For the
+arithmetic projector \(e_{\rm good}\) and a rational class-sum
+map \(T_\mu\) in these coordinates, the corresponding form
+readings are \(z_je_{\rm good}I_j\) and \(z_jT_\mu\).
+Thus
+\[
+ I_j(z_je_{\rm good}I_j)=e_{\rm good}I_j,\qquad
+ I_j(z_jT_\mu)=T_\mu .
+\]
+Use this one isomorphism for the ambient lattice and the scaled
+and unscaled short sections at \(p(v)\). The section lattice in
+the good row is the projector image of the theta lattice at
+\(\mu(v)\).
+
+The embedding of the host integers into the point field factors
+through the integral coefficient ring of the core, and agrees
+with complex conjugation on the host involution. It therefore
+reads the same half-level and error generators and the same
+scalar in the form and depth comparisons. Its integral exponent
+is the depth in the local section estimate. The remaining
+parameters \(f,m,r,k,x,\epsilon,b',X''\), the type primes and
+the determinant and cutoff data are those of the common numerical
+point. Only the local short-section spans depend on the
+distinguished prime. \label{cor:completed-division-11}
+\end{proof}
+
+
+\begin{proposition}[One remainder before choosing the cut]
+At the common point of Proposition~\ref{prop:completed-division-pair},
+assume the linked rows of Proposition~\ref{prop:linked-comparison-rows}
+and the section counts of Proposition~\ref{prop:slice-rank-shares}.
+Use the simultaneous short basis of
+Lemma~\ref{lem:slice-short-basis-before-localization} on the cut by
+the selected light columns, with \(C_{n_W}=10\), \(\log g_i\le9L+1\), \(C_P\ge1000\)
+and \(C_P^{20}\le frL\). At sufficiently large scale the section
+remainder on each lift of either orientation satisfies
+\[
+                 \langle r\rangle\le R_j fmb\delta_2 .
+\]
+The scale threshold is common to the orientations and lifts.
+At each place the selected remainder precedes the choice of the
+cut and its integer depth.
+\end{proposition}
+\begin{proof}
+Use the core coefficient bound \(C_K\) in \(S_\kappa\le C_K kfb\)
+in the scale inequalities \eqref{eq:slice-remainder-scales}.
+Write \(X_{\rm net}(20,C_K)\) for a scale beyond which the size
+inequalities of Proposition~\ref{prop:slice-evaluation-net} hold
+with exponent \(20\) and this core bound. Increase the common
+scale threshold \(x_1\) to satisfy
+\[
+ x_1\ge\max\{10^{60},X_{\rm net}(20,C_K)\}.
+\]
+Read the half-error divisibility on \(J\), and the nonzero short
+sections on the selected full extension. The full, short and
+light weights and the index depth are those of
+Section~\ref{subsec:paired-row-indices}.
+
+At \(p=p(v)\) fix the split marking, once for all three weight spaces. The input level and its special character are
+\[
+ g_0g_1p,\qquad g\longmapsto\xi_p(\det g),\qquad \xi_p(y/\bar y)=d_p(y).
+\] Read them in the core weight spaces at
+\(\kappa_j,w_{F,j},w_{L,j}\) by the common form isomorphism.
+The incidence chart is the one for the light columns of this
+run on the core. Its full level in the light-weight inequalities
+is \(g_0g_1\). Select the \(d_s\) scaled short sections before localization by
+Lemma~\ref{lem:slice-short-basis-before-localization}, using independent
+evaluation on the geometric generic intersection. The shifted
+discriminant of this basis is computed in \eqref{eq:slice-discriminant-order}.
+
+If \(A\) is the selected square evaluation minor over the generic
+field \(K\), then for each branch field \(K_\zeta/K\) one has
+\[
+                    0\ne\det A\in K\hookrightarrow K_\zeta .
+\]
+Thus the same sections give full rank on every branch. Their local
+integral index still contributes to \(I_\lambda\). The choice by rank in the
+boundary and complementary spaces preserves the light columns
+and, before the final lift, the same auxiliary section
+\eqref{eq:selected-eta-product}. Hence the finite valuation
+test, the two sections for the height calculation and the
+determinants concern this one family with the new choice of sections. The evaluation
+net gives the second norm on the same rational spaces and
+integral section lattices. Changing this norm in the
+determinant proof preserves the index on those modules.
+
+
+Let \(e\) be the branch ramification index. At its reference point the weight-\(w_F\) section \(g_0\) fixes the valuation offset
+\[
+ c_\zeta=v(g_0(y_\zeta)).
+\]
+It cancels against the denominator in the quotient reading.
+The Gauss value \(\nu_\zeta\) of the generic light row is the
+minimum over its light columns, giving the shifted order
+\[
+              e\bigl(v_{y_\zeta}(F)-T\nu_\zeta\bigr).
+\]
+This uses the normalized point valuation of the depth estimate.
+The vertical, horizontal and archimedean comparisons in
+\eqref{eq:slice-height-disc} bound the discriminant and auxiliary
+costs on this slice. The remaining two costs are its boundary
+determinant and complementary CM determinant heights. Their
+ranks give the \(s^2/T\) savings in \eqref{eq:geometric-four-terms}.
+At the definite lift the auxiliary cost and complementary rank
+are zero. The four bounds give the claimed inequality with the
+chosen finite net and the same polynomial bounds at \(frL\)
+for every \(j\) and both \(p\).
+\label{cor:completed-division-12}
+\end{proof}
+
+Extending the form frame to the point field now puts this remainder
+estimate in the coordinates of the paired index bound. The
+restriction and depth argument uses that bound on the same
+lattice and level action. \label{cor:completed-division-13}
+
+\input{joint-family-estimate}

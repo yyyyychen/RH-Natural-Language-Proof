@@ -1,0 +1,428 @@
+\subsection{The polarized matrix algebra at a comparison arc}
+\label{sec:patching-matrices}
+\hypertarget{source-ordinary-patching-matrices}{}
+
+The marking keeps the tests fixed along the chain. To recover matrix entries from
+determinant data, begin with the common patch ring. It carries the universal group determinant on the
+free marked cover, the ordered local characters, the ordered
+Frobenius roots, the tame variables and one coefficient variable.
+In its quotient \(B_0\) impose the kernel of the marking, polarization,
+ordinary and inertia identities and the auxiliary trace identities against
+all group elements. Its augmentation maps onto the ordered splitting
+algebra of the original determinant ring. Indeed the images contain the
+original determinant coefficients, ordered characters, coefficient
+variable and the adjoined ordered roots, which generate that algebra.
+The group and character maps give the augmentation, and each auxiliary
+identity maps to the Cayley--Hamilton identity for an actual split
+characteristic polynomial or to zero on tame inertia.
+
+\begin{lemma}[Common coefficients on a marked chain]\label{lem:common-marked-coefficients}
+A finite marked chain of comparison arcs admits one enlarged
+finite residue field with all ordered roots and link
+inclusions preserved. The arc maps are surjections to
+\(k[[t]]\). At an arc with comparison ring \(B\), the marked
+coefficient map extends to the completion of
+\(O[[S]]_{(\varpi)}\) and identifies its residue field by
+\[
+ \operatorname{Frac}(k[[S]])\xrightarrow[\ S\mapsto t\ ]{\ \sim\ } k((t)).
+\]
+With this identification the residual coefficient map is the identity.
+\end{lemma}
+
+\begin{proof}
+\proofstep{Coefficient extensions at a marked arc.}
+Here are the coefficient choices implicit in completing at a point.
+Enlarge the residue fields of the finite list of arcs to one finite field
+\(k\), extend the coefficient DVR by the corresponding unramified extension
+and adjoin \(s\), evaluated at a uniformizer \(t\) of each arc.
+Write \(Q_1\supseteq P\subseteq Q_2\) for a link between adjacent curve kernels. In the finite flat coefficient extension start with a lift \(Q'_1\) of \(Q_1\). Going down and then going up give primes with contractions 
+\[
+ Q'_1\supseteq P'\subseteq Q'_2,\qquad P'\cap R=P,\quad Q'_2\cap R=Q_2,
+\]
+ where \(R\) denotes the ring before coefficient extension. Lying over applies also to a chain with just
+one point.
+
+The monic polynomial lifting the separable residue extension splits over each arc
+after the chosen enlargement, so the specified prime over the curve is
+the kernel of one of the evaluations. Extending each link by power series
+in \(s\) retains a domain quotient and its inclusion in both adjacent
+evaluation kernels. Apply the same zigzag lifting to the finite free
+ordered splitting algebra. For a monic \(P(T)\) of degree \(n\), division with remainder over \(S\) gives the free module decomposition for the first root algebra
+\[
+ S_1=S[T_1]/(P(T_1))=\bigoplus_{j=0}^{n-1} ST_1^j .
+\] In \(S_1[T]\) one has
+\[
+ P(T)=(T-T_1)P_1(T),\qquad \deg P_1=n-1 .
+\]
+Repeating with \(P_1\) gives the ordered splitting algebra, of rank \(n(n-1)\cdots1\) before selecting the prescribed factor. Select the local direct factor
+with the prescribed residual ordering by lifting its residue
+idempotent.
+
+It remains finite free over the complete local ring.
+Here each actual characteristic polynomial
+splits with distinct roots in the fraction field of the arc, and those
+roots lie in its DVR by integrality. Tensoring the fiber at the generic
+point of the arc with that field gives a product indexed by the compatible orderings.
+Thus every chosen prime over the arc picks an evaluation with those
+roots. The maps to the arc contain the constants and send \(s\) to \(t\). Completeness supplies every series by
+\[
+ \sum_{i\ge0}a_i s^i\longmapsto \sum_{i\ge0}a_i t^i\qquad(a_i\in k),
+\]
+so the maps are surjective. Inclusion of the original Hecke ideal can be tested after
+contraction. At a link with nonsemisimple residue algebra,
+the field extension and the change of
+group require the argument in Section~\ref{subsec:closed-link}.
+
+Fix one such arc and let \(a:B_0\twoheadrightarrow k[[t]]\)
+be the comparison map. Write \(\mathfrak p=\ker a\),
+\(B=\widehat{(B_0)_{\mathfrak p}}\) and \(F=k((t))\).
+The residue map \(B\to F\) extends \(a\).
+Let \(O\) be the coefficient DVR with uniformizer \(\varpi\),
+surjecting onto \(k\), and let \(s\in B_0\) evaluate to \(t\).
+\proofstep{The coefficient DVR at the comparison point.}
+The continuous substitution \(O[[S]]\to B_0\) sends \(S\) to
+\(s\). Composing with \(a\) reduces the coefficients and
+sends \(S\) to \(t\), so the kernel of the composition is
+\((\varpi)\). For \(D_0=O[[S]]_{(\varpi)}\), this substitution gives
+\[
+ D_0/\varpi D_0=\operatorname{Frac}(k[[S]])
+        \xrightarrow[\ S\mapsto t\ ]{\ \sim\ } k((t))=F .
+\]
+Every denominator outside \((\varpi)\) thus maps to a unit of \(B\); the map factors through \(D_0\). Since \(\varpi^h D_0\) maps into \(\mathfrak m_B^h\) for all \(h\) and \(B\) is complete, it extends to \(\mathcal O=\widehat{D_0}\). The identification
+of its residue field with \(F\) is induced by the same
+substitution. Lifts of elements of
+\(k[[t]]\) can be taken in \(O[[S]]\), so their images in \(B\)
+also come from \(B_0\).
+\label{cor:ordinary-patching-matrices-1}
+
+\end{proof}
+
+\paragraph{The finite Cayley--Hamilton quotient.}
+To pass from traces to an algebra acting on a module, start on the CM subgroup \(G_{\rm CM}\) of Section~\ref{sec:patching-marking}
+take the closed Cayley--Hamilton quotient \(E_0\) of
+\(B_0[G_{\rm CM}]\). Take the closed ideal generated by the ordered ordinary, prescribed inertia and auxiliary relations together with their images under polarization. The determinant descends through that ideal by
+the trace-kernel calculation below. The resulting algebra \(E_0\) carries a determinant and an anti-involution. On a group element the latter sends \[ g\ \longmapsto\ \epsilon(g)^{1-n}(cgc^{-1})^{-1}. \] Here \(c\) is the real involution from the marking. The polarization is expressed in the frame in which the anti-involution specializes to transpose at the arc point. We use degree-\(n\)
+determinants as multiplicative polynomial laws, with their
+Cayley--Hamilton identity under arbitrary scalar extension.
+\cite{chenevier}\label{cor:ordinary-patching-matrices-2}
+
+\begin{auxlemma}[Detecting the full matrix span by traces]\label{lem:matrix-span-by-traces}
+Let \(k\subseteq k'\) be fields, \(n\ge1\), and let \(S\subseteq M_n(k')\) satisfy \(\operatorname{tr}(XY)\in k\) for all \(X,Y\in S\).
+The \(k'\)-span of \(S\) equals \(M_n(k')\) if and only if some \(X_1,\ldots,X_{n^2}\in S\) satisfy
+\[
+ \det\bigl(\operatorname{tr}(X_aX_b)\bigr)_{1\le a,b\le n^2}\ne0\quad\text{in }k.
+\]
+\end{auxlemma}
+
+\begin{proof}
+The matrix units have trace-dual basis \((E_{ji})\), since
+\[
+ \operatorname{tr}(E_{ij}E_{uv})=\delta_{ju}\delta_{iv}.
+\]
+Thus a basis selected from a spanning set has nonsingular trace matrix. Conversely a nonsingular trace matrix forces the \(n^2\) selected elements to be independent over \(k'\), so they span. The determinant belongs to \(k\), and the inclusion into \(k'\) preserves nonvanishing.
+\end{proof}
+
+\begin{proposition}[The finite polarized Cayley--Hamilton algebra]
+\label{prop:marked-finite-ch-algebra}
+Over the completed arc comparison \(B_0\) built from
+Proposition~\ref{prop:marked-profinite-system}, the closed
+Cayley--Hamilton quotient \(E_0\) of \(B_0[G_{\rm CM}]\) is finite
+with its adic topology, polarized anti-involution and determinant law. When the residue characters are distinct, lifts of their diagonal
+idempotents can be chosen self-adjoint. In the two-block case let
+\(M\) be the mixed corner module over the coefficient ring \(B\).
+At every specialization with coefficient kernel \(Q\) admitting a nonsemisimple residue quotient one has
+\[
+          \operatorname{Ann}_B(M)\subseteq Q .
+\]
+\end{proposition}
+
+\begin{proof}
+\proofstep{Finiteness and the adic topology of the quotient.}
+We record the finiteness and continuity needed for the matrix
+realization. The original residual determinant on \(G_{\rm CM}\)
+is the direct sum of \(n\) distinct characters over the finite
+residue field of \(O\). In a finite group quotient through
+which they factor, let \(C\) be the corresponding residual
+Cayley--Hamilton algebra. It surjects onto the product of the
+\(n\) scalar factors, since distinct characters are linearly
+independent. Its kernel \(J\) consists of nilpotents by the
+Cayley--Hamilton equation, so \(J\) is its radical in this
+finite-dimensional algebra. The diagonal units lift to
+orthogonal idempotents.
+
+For a lifted rank-one idempotent the determinant law and its corner satisfy
+\[
+ D(1+Xe_i)=1+X,\qquad e_iCe_i=k_0 e_i,
+\]
+where \(k_0\) is the residual field. These are the idempotent rank
+and corner rules for determinants. Expand a product in \(J^n\) by inserting \(\sum_i e_i=1\) between
+its factors. A term has indices \(i_0,\ldots,i_n\). Some
+\(i_a=i_b=i\) with \(a<b\), and the corresponding subproduct lies in
+\[
+ e_iJ^{\,b-a}e_i\subseteq e_iJe_i=0.
+\]
+Every summand vanishes, hence \(J^n=0\).
+In \(J/J^2\) a linear functional on the \((i,j)\)-corner
+produces a cocycle for \(\chi_i\chi_j^{-1}\) by reading the
+\((i,j)\) entry of a group element and dividing by \(\chi_j\).
+
+For the chosen functional write \(x(g)\) for its value on that
+entry and \(z(g)=x(g)/\chi_j(g)\). Since \(J^2=0\) in the first-order
+quotient, multiplication gives
+\[
+ x(gh)=\chi_i(g)x(h)+x(g)\chi_j(h),\qquad
+ z(gh)=z(g)+(\chi_i\chi_j^{-1})(g)z(h).
+\]
+This map is injective on the dual corner, since the images
+of the group elements span \(C\), and \(i\ne j\) on each
+nonzero radical corner. The dimension of each space of
+these continuous cocycles on \(G_{\rm CM}\) is bounded by \(h\),
+uniformly in the finite quotient. For example their values
+at a finite topological generating set determine them,
+and \(G_{\rm CM}\) is open in a finitely generated profinite group.
+Products of radical lifts span every \(J^j/J^{j+1}\).
+It follows that
+\[
+                 \dim_{k_0} C\le n+\sum_{j=1}^{n-1}(n^2 h)^j .
+\]
+
+For each coefficient truncation, adding \(u-1\) for all \(u\)
+in an open normal subgroup gives an algebra quotient of a
+finite group ring. Its reduction modulo the coefficient
+maximal ideal has the preceding bound once that subgroup
+lies in the residual character kernels. Lifting spanning
+group elements and using Nakayama gives the same number
+of generators over each coefficient truncation. At a fixed depth \(b\) write \(C_{U,b}\) for the resulting quotient at an open normal subgroup \(U\). If at most \(d\) generators suffice over the finite scalar ring \(R_b\), then 
+\[
+ U'\subseteq U\ \Longrightarrow\ C_{U',b}\twoheadrightarrow C_{U,b},\qquad |C_{U,b}|\le |R_b|^d.
+\]
+ After a quotient attains the maximal size, every smaller subgroup gives an isomorphism.
+
+To choose one
+set of group elements, take a spanning set after stabilization
+at residue depth. Every deeper group and coefficient quotient
+with that residue quotient is generated by the same elements,
+again by Nakayama. For each element of the closed quotient
+its expressions with these generators at finite depth define
+nonempty closed sets in a fixed finite power of \(B_0\),
+which is compact. Let \(C_b\) be the closed set of coefficient vectors representing the chosen element at depth \(b\). Compatibility and compactness give
+\[
+ C_{b+1}\subseteq C_b,\quad C_b\ne\varnothing\ (b\ge1)\quad\Longrightarrow\quad \bigcap_{b\ge1} C_b\ne\varnothing .
+\] This proves finite generation in the closed quotient.
+At each coefficient depth the stabilized group quotient
+also shows that \(u-1\) lies in that coefficient power times
+\(E_0\) on an open normal subgroup.  Take the closed quotient using the finite group and coefficient quotients. \label{cor:ordinary-patching-matrices-3}
+
+\proofstep{Checking the trace kernel at finite precision.}
+For the trace-kernel calculation first take the finite
+closed Cayley--Hamilton quotient without the extra
+relations. Over \(B_0\), the split residual characters
+give \(n\) rank-one idempotents with scalar corners,
+by the idempotent lifting argument below applied to
+the original residue field. The trace radical in this quotient \(C\) is the common kernel
+\[
+ \bigcap_{x\in C}\ker\bigl(z\longmapsto\operatorname{tr}(xz)\bigr).
+\]
+Cyclicity of trace makes it a two-sided ideal. Its diagonal corners are
+zero by taking \(x=e_i\). These properties hold for the
+image of the ideal after any scalar extension. The
+determinant of \(1+z\) for a member of this ideal is
+one: use elimination in the rank-one corners. Each pivot
+is one because all corrections are in the trace radical.
+Off-diagonal transvections have determinant one by scaling
+their entry by a conjugation over a Laurent polynomial
+ring and specializing the polynomial identity at zero.
+
+For general \(x\), let \(P_x(X)=D(X+x)\), a monic
+polynomial. Cayley--Hamilton makes \(X+x\) invertible after
+localizing at \(P_x\), and the trace radical is an ideal.
+Thus multiplicativity in that localization gives
+\[
+ D(X+x+z)=D(X+x)\,
+                  D(1+(X+x)^{-1}z)=D(X+x).
+\]
+Multiplication by a monic polynomial is injective over
+any scalar ring. The equality therefore holds before
+localization, and \(X=0\) proves invariance on each
+trace-radical coset as a polynomial law. Thus a relation whose trace pairings
+with all group elements vanish is killed as a polynomial
+law, in arbitrary residue characteristic.
+ The ordered ordinary and fixed inertia
+generators are the relations of the ordinary pair, whose
+polarized images also lie in this ideal. The closure
+preserves the relations by continuity. \label{cor:ordinary-patching-matrices-4}
+
+Extend scalars to the completed point ring. Finiteness over \(B\) identifies the resulting algebra with its completion: 
+\[
+ E=B\otimes_{B_0}E_0\simeq\varprojlim_b E/\mathfrak m_B^bE.
+\]
+ The determinant and anti-involution extend by scalar extension. There is a homomorphism
+\(r:E\to M_n(F)\) given by the specialized point
+representation. The point kills the defining relations,
+so this homomorphism extends the given action on \(G_{\rm CM}\).
+Let \(n_a\) denote the constituent dimensions. The positive cyclotomic kernel already spans the full diagonal blocks at the arc. Since \(B\to F\) is onto, 
+\[
+ r(E)=\bigoplus_a M_{n_a}(F)\subseteq M_n(F).
+\]
+
+The determinant of \(r(x)\) and its characteristic
+polynomial are the reductions of the corresponding
+polynomial law for each \(x\in E\). For \(x\in\ker r\) its residual characteristic polynomial has only the term of highest degree, so Cayley--Hamilton gives
+\[
+ x^n\equiv0\pmod{\mathfrak m_B E}.
+\]
+
+\paragraph{Self-adjoint rank-one idempotents.}
+We need idempotents compatible with the polarization. Lift the diagonal matrix units
+successively, each time in the
+corner complementary to the idempotents already lifted.
+For a lift \(x\) of a diagonal unit, averaging \(x\) with
+\(x^*\) makes it self-adjoint, since \(2\) is a unit.
+The defect \(x^2-x\) lies in \(\ker r\) and is topologically
+nilpotent by the previous calculation. Write \(d=x^2-x\). Since \((2x-1)^2=1+4d\), the inverse of
+\(2x-1\) exists by completeness and commutes with \(x\).
+One Newton step gives
+\[
+      x'=x-(2x-1)^{-1}d,\qquad (x')^2-x'=(2x-1)^{-2}d^2 .
+\]
+Iteration squares the defect up to a unit at every step.
+Its limit is a self-adjoint idempotent of the same reduction.
+
+In successive complementary corners the resulting lifts
+are orthogonal, and the final complement itself lifts the
+last diagonal unit. Denote the family by \(e_i\).
+For an idempotent \(e_i\) the determinant on \(1+Xe_i\) is
+\((1+X)^{r_i}\) over the local ring. The leading coefficient of \((1+X)^{r_i}\) is one, so reduction
+preserves its degree. Since the reduction is \(1+X\), we have \(r_i=1\).
+For \(y\in e_iEe_i\), its degree-one characteristic polynomial
+in this corner is \(T-\operatorname{tr}(y)\). The corner unit is
+\(e_i\), so Cayley--Hamilton reads
+\[
+ y-\operatorname{tr}(y)e_i=0,\qquad e_iEe_i=B e_i .
+\] Its trace sends \(e_i\) to \(1\).
+ \cite{chenevier}\label{cor:ordinary-patching-matrices-5}
+
+\proofstep{Lifting and matching the matrix units.}
+Choose a reference index \(o(i)\) for each block, constant
+throughout that block. Lift the matrix unit \(E_{o(i),i}\)
+to \(z_i\in e_{o(i)}Ee_i\). The two products belong to the rank-one corners at \(i\) and
+\(o(i)\). Their coefficients coincide because
+\[
+ \operatorname{tr}(z_i^*z_i)=\operatorname{tr}(z_i z_i^*),
+ \qquad \operatorname{tr}(e_i)=\operatorname{tr}(e_{o(i)})=1.
+\]
+Write \(b_i\) for this common coefficient. Its residue
+is \(1\). Taking its unique square root congruent to \(1\)
+and dividing \(z_i\) by that root gives \(u_i\) with
+\[
+            u_i^*u_i=e_i,\qquad u_i u_i^*=e_{o(i)} .
+\]
+For the reference index use \(u_i=e_i\).  In particular
+\[
+      x\longmapsto (u_i x u_j^*)_{ij},
+      \qquad (x_{ij})\longmapsto\sum_{i,j}u_i^*x_{ij}u_j
+\]
+are inverse coordinate changes. Each \(x_{ij}\) lies in the
+corner with indices \(o(i),o(j)\). The matrix multiplication
+rule follows by summing over the middle index and using
+\(\sum_i e_i=1\). With one block this is the full algebra
+\(M_n(B)\).
+
+With two blocks with references \(p,q\), let \(M=e_pEe_q\).
+Use the involution to identify \(e_qEe_p\) with \(M\).
+For \(u,v\in M\), define \(\beta(u,v)\in B\) by
+\(uv^*=\beta(u,v)e_p\). The involution fixes \(Be_p\),
+so \(\beta\) is symmetric. Cyclicity of the trace shows that
+\(u^*v=\beta(u,v)e_q\). Associativity in \(E\) gives
+\(\beta(u,v)w=u\beta(v,w)\) for \(w\in M\).
+Thus the rule
+\[
+       (b,u)(b',u')=(bb'+\beta(u,u'),\,bu'+b'u)
+\]
+makes \(B\oplus M\) a finite commutative \(B\)-algebra,
+with an injective scalar map.
+
+All the \(\beta(u,v)\) lie
+in \(\mathfrak m_B\) because the mixed corners reduce to zero.
+The coordinate changes identify \(E\) with the full space of
+matrices having scalar diagonal blocks and entries in \(M\)
+in the off-block rectangles, with involution transpose.
+ In particular the group matrices
+span the entire pattern over \(B\). Their integral
+\(B_0\)-span is finite and continuous in the
+\(\mathfrak m_{B_0}\)-adic sense proved for \(E_0\).
+\label{cor:ordinary-patching-matrices-6}
+
+\proofstep{The determinant law in the normalized basis.}
+After extending scalars to the ring \(B\oplus M\), the determinant law on the group matrices is therefore
+\[
+ D(g)=\det\bigl(R(g)\bigr)
+\]
+in the indicated matrix realization \(R\).
+One way to see the equality for any scalar algebra is to add
+independent variables \(X_i\) to the diagonal and eliminate
+successive pivots. Each pivot is a scalar in the enlarged
+base once the previous pivots have been inverted. It is
+monic in its new \(X_i\), and hence this localization is
+injective. For \(i\ne j\), conjugation by \(1+(T-1)e_i\) over the
+Laurent polynomial ring proves
+\[
+ D(1+a e_{ij})=D(1+Ta e_{ij}).
+\]
+Both sides are polynomials in \(T\); the polynomial ring
+injects into its Laurent localization over any base.
+
+At
+\(T=0\) this gives \(D(1+a e_{ij})=1\).
+On the diagonal, multiplying the idempotent factors gives
+\[
+  D(\operatorname{diag}(a_1,\dots,a_n))
+    =\prod_i D(1+(a_i-1)e_i)=\prod_i a_i .
+\]
+Here the idempotent lines had rank one by the specialized
+characteristic polynomial identity. Elimination now identifies
+the two determinant laws before setting the \(X_i\) to zero.
+The identity includes singular matrices and all coefficient
+characteristics at issue.  The relation quotient imposes the ordered flag, fixed inertia and auxiliary identities. The transpose rule gives the polarization identity.
+\label{cor:ordinary-patching-matrices-7}
+
+\paragraph{Full matrix algebras and nonsemisimple residue algebras.}
+The off-diagonal products determine which block pattern survives specialization. Write
+\(I_M=(\beta(M,M))\). For a prime \(Q\) of \(B\),
+extend to a field residue of \(B\oplus M\) over \(Q\).
+Such a field exists by finiteness and the injective scalar
+map. If \(M\) has nonzero image in this field, the span
+contains every matrix unit by rescaling a nonzero entry
+from the full mixed span. If \(M\) maps to zero, the span
+is block diagonal. The mixed image is detected by its products: 
+\[
+ M\longmapsto0\text{ in }k'\quad\Longleftrightarrow\quad I_M\subseteq Q,
+\]
+ where \(k'\) is the chosen residue field. Indeed each mixed square is given by \(\beta\), and a square-zero field element vanishes.
+
+Let \(k'/\kappa(Q)\) be the chosen residue-field extension. The group matrices have trace products in \(\kappa(Q)\) because the trace comes from \(B\). Applying Lemma~\ref{lem:matrix-span-by-traces} to the two-block calculation gives
+\[
+ I_M\not\subseteq Q
+ \quad\Longleftrightarrow\quad
+ \exists\,g_1,\ldots,g_{n^2}:\ 
+ \det\!\left(\operatorname{tr}(R(g_a)R(g_b))\right)_{a,b=1}^{n^2}\ne0
+ \quad\text{in }\kappa(Q).
+\]
+The matrices themselves are evaluated over \(k'\).
+ In the one-block case the span is full.
+
+For the other criterion suppose the residue algebra obtained
+from the indicated Cayley--Hamilton kernel presents a
+nonsemisimple algebra over a field with coefficient kernel
+\(Q\). If \(b\in\operatorname{Ann}_B M\) lies outside \(Q\),
+then all the mixed corners vanish after scalar extension
+to this field. The Cayley--Hamilton quotient then becomes
+the product of its two full diagonal matrix algebras.
+The scalar extension statement follows by taking the span
+of the kernel generators in the field group algebra, since
+the group algebra surjects onto \(E\) with that defining
+ideal. Any quotient of this product is semisimple, a
+contradiction. This proves \(\operatorname{Ann}_B M\subset Q\). Both criteria supply the inputs for the
+completed local comparison in the next subsection.
+\label{cor:ordinary-patching-matrices-8}
+\end{proof}

@@ -1,0 +1,451 @@
+\subsection{Selecting the same top positions for all Frobenius cycles}
+\label{subsec:frobenius-selection}
+
+The top indices in Section~\ref{sec:comparison} determine the coefficients of the surviving characters. Their prescribed proportions in the quotient must be reconciled with restrictions along the Frobenius cycles at many primes. Fix a scale \(x\) in a selected interval
+of Proposition~\ref{prop:quadratic-prime-pair} and \(0<\epsilon<1/52\). Set
+\[
+ h=2+8\epsilon,\quad \delta=x^{-\epsilon/8},\quad
+ K=\lceil8(h+2)/\epsilon\rceil,\quad r=K+1 .
+\]
+\begin{paramdefinition}[Group data and admissible cycle windows]\label{hyp:frobenius-top-cycle}
+The finite abelian group \(A\) has order \(n\asymp x^h\).
+In the arithmetic application \(A_0=\ker\pi_\psi\) is the
+subgroup of Definition~\ref{def:translate-scale}; its index
+\(o\) is the order of the fixed target character \(\psi\).
+The combinatorial argument uses only this index. For each of a finite
+set of primes \(p\), fix a step \(a_p\in A\) of order
+\(d_p\ge x^{\epsilon/4}\) and an origin on each of its
+cycles. Number the positions on that cycle from \(0\) to
+\(d_p-1\). In the application the prime list is restricted to a prescribed congruence class and to primes inert in the auxiliary quadratic field. The two size tests on such a prime and its step are
+\[
+ p<X'=\exp(x^{\epsilon/3}),\qquad \operatorname{ord}(a_p)=d_p\ge x^{\epsilon/4}.
+\]
+Each prime has
+weight \(\omega_p=\log(p)/p\).
+
+Let \(L_2\) be a common upper bound for the short distances
+used at these primes. We require \(L_2\le L_b\) for a
+constant fixed before \(x\). Put
+\[
+\begin{gathered}
+ u=\lceil1/\delta\rceil,\qquad l=(6r+1)u,\qquad
+ M=\lceil(h+3)10^{6r+1}\log x\rceil,\\
+ G=(M+5)l,\qquad
+ N_1=1+\lceil\max(6eG\delta,(h+3)\log_2 x)\rceil .
+\end{gathered}
+\]
+A full block is one of the consecutive aligned intervals
+of length \(l\) starting at position zero. Its \(6r+1\)
+cells have length \(u\). A marked block has its first,
+third and subsequent odd-numbered cells empty. Each
+intervening cell contains exactly one selected position
+of even index on the cycle. Call a cycle good if
+
+\begin{enumerate}
+\item every cyclic interval of length \(L_2\) contains at
+most \(K\) selected positions,
+\item among every \(M+1\) successive full blocks, taken
+cyclically in the list of full blocks, there is a marked block,
+\item every cyclic interval of length \(G\) has at most
+\(N_1\) selected positions.
+\end{enumerate}
+
+The quantities \(L_b\) and \(\epsilon\) are fixed independently of the scale.
+\end{paramdefinition}
+
+\begin{auxlemma}[Lengths of admissible Frobenius cycles]
+\label{lem:cycle-geometric-margins}
+On the arithmetic list in Definition~\ref{hyp:frobenius-top-cycle}, uniformly in the prime list,
+\[
+ L_2\le 2(620J/\epsilon+1),\qquad L_2<u,\qquad 3G\le d_p
+\]
+for large \(x\). In a good cycle each marked block supplies \(3r\) even selections separated by more than \(u\). The gap to the next marked even position is at most \(G\) and contains at most \(N_1\) intermediate selections.
+\end{auxlemma}
+\begin{proof}
+For the arithmetic choice,
+\(L_2\) is twice the supremum of
+\(\lceil\log_p((kx^{26})^4)\rceil\) over the primes on this list. Every odd prime up to \(Y^{\epsilon/5}\)
+splits in \(\mathbb Q(\sqrt{-d})\) by the congruence on
+the auxiliary discriminant, and \(2\) splits as well.
+Here the prime-selection interval has \(x\le Y^J\)
+with \(J\) bounded in this family. Thus \(\log p>(\epsilon/(5J))\log x\) at each relevant prime.
+
+Substituting \(k\le2x^{9/2+10\epsilon}\) in the definition gives, uniformly for large \(x\),
+\[
+ L_2\le 2\bigl(620J/\epsilon+1\bigr).
+\]
+These conditions bound both the crowded regions and the gaps.
+The deterministic geometry of these tests requires
+\[
+ L_2<u,\qquad 3G\le d_p.
+\]
+Both hold eventually, uniformly in the primes of the list, since
+\[
+ G/d_p=O_\epsilon(x^{-\epsilon/8}\log x)=o(1),\qquad L_2/u=O_\epsilon(x^{-\epsilon/8}).
+\]
+
+Every marked block supplies \(3r\) even selected positions
+with gaps greater than \(u\) and buffers of at least \(u\)
+at its ends. The next marked block starts within \((M+2)l\),
+including a possible final partial block. In particular the
+gap to the next selected even position is at most \(G\) and
+the number of intermediate selected positions is at most
+\(N_1\). The first condition bounds by \(r-1\) the number
+of possible incoming selected indices in a preceding short
+window. Thus the constants are also valid when an origin
+falls near the end of the numbered cycle.
+
+\end{proof}
+
+\begin{proposition}[One top set for the selected cycles]\label{prop:top-set-cycles}
+For the finite group and cycle data of Definition~\ref{hyp:frobenius-top-cycle},
+there is a single set \(T\subset A\) with
+\(\delta n/2\le|T|\le2\delta n\) and all of the following
+bounds. For any coset \(C\) of \(A_0\) let \(\lambda_C\)
+equal \(4/(3o+1)\) for \(C=A_0\) and \(3/(3o+1)\)
+otherwise. Then
+\begin{align}
+  \big||T\cap C|-\lambda_C|T|\big|
+    &\le x^{-1+\epsilon}|T|,\label{eq:coset-shares}\\
+  \sum_p\omega_p\#\{t\in T:\text{the }p
+           \text{-cycle through }t\text{ is bad}\}
+    &\le 4C_bx^{-2}\delta n\sum_p\omega_p .\label{eq:bad-cycles}
+\end{align}
+Here \(C_b\) and the lower threshold for \(x\) depend only
+on \(\epsilon,L_b\), the bound on \(o\) and the constants in
+\(n\asymp x^h\). There is no dependence on the steps, the
+origins or the number of primes.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Bound the failure probability at one selected position.}
+Choose the membership indicators independently with success
+probability \(\delta\) on \(A_0\) and \(3\delta/4\) on
+its complement. Fix a position and condition on its being
+selected. All the other trials retain their initial laws.
+In each short window failure requires at least \(K\) further
+successes. There are \(d_p\) starting positions. Summing over the possible \(K\)-subsets in each window and using \(d_p\le n\) gives
+\[
+ d_p\binom{L_2}{K}\delta^K\ll_{L_b,\epsilon}x^{h}x^{-(h+2)}\ll x^{-2}.
+\]
+For a run of \(M+1\) full
+blocks discard the block containing the conditioned position
+if present. At least \(M\) untouched blocks remain, on
+independent trials. A cell required to be empty has
+probability at least \((1-\delta)^u\). The probability for
+a cell required to contain exactly one even index is at least
+\(\lfloor u/2\rfloor(3\delta/4)(1-\delta)^{u-1}\), by
+summing the disjoint singleton events.
+
+For \(\delta\le1/100\)
+we have
+\[
+ (1-\delta)^u\ge e^{-(1+\delta)/(1-\delta)}>0.3
+\]
+and \(\lfloor u/2\rfloor\delta\ge(1-\delta)/2\).
+The \(6r+1\) cell events in an untouched block are independent, each with probability greater than \(1/10\). Thus
+\[
+ \Pr(\text{block is marked})\ge10^{-(6r+1)}.
+\]
+The
+chance of a failed run anywhere is at most
+\(d_p\exp(-10^{-(6r+1)} M)\ll x^{-3}\).
+For a length-\(G\) window the conditioned count is bounded
+by one plus a binomial variable with parameters \(G,\delta\).
+For \(s=N_1-1\le G\) the union bound over \(s\)-subsets gives
+\[
+ \Pr(\text{at least }s\text{ unconditioned successes})\le \binom{G}{s}\delta^s\le(eG\delta/s)^s\le2^{-s}.
+\]
+The tail is zero for \(s>G\).
+Summing over starts gives \(O(x^{-3})\). Together the
+conditional failure probability is at most \(C_bx^{-2}\).
+
+\proofstep{Sum the failure counts with the prime weights.}
+Let \(I_t\) be the membership indicator at position \(t\)
+and let \(F_{p,t}\) be the failure of its cycle test at \(p\).
+Combining the three conditional probabilities gives
+\(\Pr(F_{p,t}\mid I_t=1)\le C_bx^{-2}\). Consequently
+\[
+ \mathbb E\sum_p \omega_p\sum_t I_t\mathbf1_{F_{p,t}}
+   \le C_bx^{-2}\sum_p\omega_p\sum_t\Pr(I_t=1)
+   \le C_b x^{-2}\delta n\sum_p\omega_p .
+\]
+Markov's inequality gives \eqref{eq:bad-cycles} with
+probability at least \(3/4\), also when this expectation vanishes.
+
+\proofstep{Control the coset counts for the same set.}
+The surviving selections satisfy the restrictions along the Frobenius cycles. Their coset counts still have to give the prescribed character weights, so the probability estimate must concern this same selection.
+
+The mean of \(|T|\) lies between \(3\delta n/4\)
+and \(\delta n\), and its variance is at most \(\delta n\).
+For each \(C\), the signed count
+\(|T\cap C|-\lambda_C|T|\) has mean zero, because the
+cosets have equal cardinalities and the membership
+probabilities have ratio \(4:3\). Its variance is at most
+\(\delta n\) by independence. Chebyshev's inequality for
+the total size and these \(o\) counts shows that the
+probability of violating their bounds, using
+\(x^{-1+\epsilon}\delta n/2\) as the coset tolerance, is
+\[
+ O\!\left((\delta n)^{-1}
+             +\frac{o x^{2-2\epsilon}}{\delta n}\right)=o(1).
+\]
+Intersect the events. This proves both requirements on the
+same \(T\) and allows all translates used in the Fourier
+projection to be taken afterwards.
+\end{proof}
+
+For the
+stated prime weights and \(p<X'\),
+\(\sum_p\log(p)/p\le\log X'(1+\log X')\).
+Thus \eqref{eq:bad-cycles} costs at most
+\(|T|x^{-2+\epsilon}\) for sufficiently large \(x\).
+Only this weighted count of failed cycles enters the global
+estimate, even if an individual prime has several failed
+cycles.
+
+\paragraph{The large-weight set inside the identity coset.}
+For the larger weights choose the labels \(s\) in
+\(\mathbb Z/n_0\mathbb Z\) via \eqref{eq:dyadic-coordinate-orders}.
+A label \(s\) denotes the unique member of \(A_0\) whose real
+cyclotomic coordinate is \(t_0 s\bmod D\). Write \(T_2\) for the set
+of these members. At fixed
+\(\epsilon\) and bounded \(o\), let \(2\le L\ll_\epsilon\log x\)
+bound the lengths of the arithmetic progressions being tested.
+
+\begin{lemma}[Progression bounds for the second set]\label{lem:second-set-progressions}
+Fix \(0<\epsilon<1/52\), the group of
+Definition~\ref{hyp:frobenius-top-cycle} with bounded index \(o\),
+and an integer \(2\le L\ll_\epsilon\log x\). Put \(n_0=n/o\).
+There is an absolute \(C\) and a subset \(T_2\) of the cyclic
+kernel, with coordinate labels \(0<s<n_0/(4L)\) in
+\eqref{eq:dyadic-coordinate-orders}, such that
+\[
+ |T_2|\ge \frac{n_0}{L}\exp(-C\sqrt{\log n_0\log L}),
+ \qquad x^{-\epsilon}n\le |T_2|\le\frac{n_0}{4L}
+\]
+for all sufficiently large \(x\). Moreover every translate
+of \(T_2\) in \(\mathbb Z/n_0\mathbb Z\) contains at most two
+members of any progression of length \(L\) whose step has
+order greater than \(4L\). An entire coset of a cyclic
+subgroup of order at most \(4L\) meets that translate in at
+most one point.
+\end{lemma}
+
+\begin{proof}
+\proofstep{Encode lattice points on one sphere.}
+Put \(X=n_0/(8L)\),
+\(t=\lfloor\sqrt{\log X/\log(4L)}\rfloor\),
+\(B=\lfloor X^{1/t}\rfloor\) and
+\(D=\lfloor B/(4L)\rfloor\). Eventually \(t\ge2\),
+\(D\ge B/(8L)\) uniformly in the stated range.
+
+In
+\(\{0,\ldots,D-1\}^t\), some sphere centered at the
+origin contains at least \(D^t/(1+tD^2)\) points, since
+the squared norms are integers. Encode its points \(z\)
+by \(s=1+\sum_{a=0}^{t-1}z_aB^a\). This is injective,
+and \(s\le B^t\le X\). The size bound follows from
+\(B^t\ge X/2^t\), \(\log B\le (\log X)/t\) and
+\[
+ t\log(16L)+2(\log X)/t+\log(1+t)
+                      =O(\sqrt{\log X\log(4L)}).
+\]
+Since \(L\ll_\epsilon\log x\) and \(n_0\asymp x^h/o\),
+the logarithmic density loss is \(o(\log x)\) uniformly.
+This proves the second lower bound.
+
+Suppose three distinct points satisfy
+\(j(s_2-s_1)=i(s_3-s_1)\) with distinct nonzero integers
+\(|i|,|j|\le L\). The contribution at each digit has
+absolute value at most \(2L(D-1)<B\), so reduction modulo
+\(B\) and induction on digit positions give
+\(j(z_2-z_1)=i(z_3-z_1)\) as vectors. In fact, put \(v=z_2-z_1\ne0\). On the line \(z_1+tv\) the common
+squared norm condition is
+\[
+ \|z_1+tv\|^2-\|z_1\|^2
+   =t\bigl(2\langle z_1,v\rangle+t\|v\|^2\bigr)=0.
+\]
+Its roots are \(0\) and \(1\), whereas the third point would give
+\(t=j/i\notin\{0,1\}\). This proves
+the exclusion for integer equalities.
+
+If the order of the
+step is greater than \(4L\), three visits to a translate
+within a progression of length \(L\) would give three
+distinct integers \(s_a\) in the chosen range and the
+same equality modulo \(n_0\) by eliminating the step.
+The absolute value of the difference of the two sides is
+less than \(n_0\), yielding the forbidden integer equality.
+For a step of order \(b\le4L\) two distinct visits would force the incompatible conditions
+\[
+ n_0\mid b(s_2-s_1),\qquad 0<|b(s_2-s_1)|<n_0.
+\]
+This proves both intersection
+bounds. The construction depends on \(n_0,L\); it works
+for every translate and every step simultaneously.
+
+\end{proof}
+
+\paragraph{Short orders and prime powers near the cutoff.}
+\begin{auxlemma}[Short orders in the real dyadic quotient]
+\label{lem:short-real-dyadic-order}
+Let \(e\ge0\), let \(n\) be odd, and suppose its image in
+\((\mathbb Z/2^{e+2}\mathbb Z)^\times/\{\pm1\}\) has order \(2^v\).
+Then
+\[
+ 2^{e+2-v}\mid n-1\qquad\text{or}\qquad2^{e+2-v}\mid n+1.
+\]
+\end{auxlemma}
+
+\begin{proof}
+Choose \(z=\pm n\) with \(z\equiv1\pmod4\). Its \(2^v\)-th power is
+\(\pm1\pmod{2^{e+2}}\), and reduction modulo four forces the plus sign.
+The assertion is immediate for \(z=1\). Otherwise every
+\(z^{2^j}+1\) has 2-adic valuation one, giving
+\[
+ e+2\le v_2(z^{2^v}-1)
+      =v_2(z-1)+\sum_{j=0}^{v-1}v_2(z^{2^j}+1)=v_2(z-1)+v .
+\]
+\end{proof}
+
+Two other exceptional sets in the finite calculation admit
+bounds without averaging the top positions. The host contains
+the real cyclotomic field of conductor \(2^{e+2}\) with
+\(2^e\asymp_\psi x^h\). The image of the Frobenius step
+at an unramified odd prime \(p\) on this factor is the class
+of \(p\bmod 2^{e+2}\) modulo signs. If the order of the
+step is below \(x^{\epsilon/4}\), that image has order
+\(2^v\le x^{\epsilon/4}\). Lemma~\ref{lem:short-real-dyadic-order} gives
+\(p\equiv\pm1\pmod{2^{e+2-v}}\). All the exceptional primes therefore satisfy
+\[
+ p\equiv\pm1\pmod B,\qquad B=2^{e+2-\lfloor\log_2(x^{\epsilon/4})\rfloor}\gg_\psi x^{h-\epsilon/4}.
+\]
+
+Sum over integers \(jB\pm1>1\) and use \(jB-1\ge jB/2\).
+For \(X''=xnX'\) this gives
+\[
+ \sum_{\substack{p<X''\\ {\rm ord}(a_p)<x^{\epsilon/4}}}
+              \frac{\log p}{p}
+ \ll \frac{\log X''(1+\log X'')}{B}
+ \ll_\psi x^{-h+11\epsilon/12}\le x^{-h+\epsilon}
+\]
+for all sufficiently large scales, also after restricting the sum to the prescribed unramified primes.
+
+There is also an exceptional band when some positive power
+of \(p\) is in \([X'(1-\rho),X'(1+\rho)]\) with
+\(p_0=k^2x^{26}\le p<X'\). Here the larger width used
+for all of the choices satisfies
+\[
+ 0\le\rho\ll
+  \frac{(n\delta x^\epsilon+\log x)N_1^2\log a}{k},
+ \qquad a=x\exp(x^\epsilon).
+\]
+The two terms arise from the widths of the weight intervals,
+with common factor \(C N_1^2\log(a)/k\) for a fixed constant
+\(C\). The rank estimates give
+\[
+ k\ge x^{9/2+10\epsilon-\epsilon/100},\qquad
+ N_1=O_\epsilon(\log x),\qquad n\ll x^h .
+\]
+Thus \(\rho\le x^{-2}\) for sufficiently large \(x\).
+
+For fixed power \(v\)
+the ratio of the greatest and least eligible primes is
+at most \(((1+\rho)/(1-\rho))^{1/v}\le1+3\rho\).
+If the least prime is \(p_*\), there are at most
+\(1+3\rho p_*\) integers in this interval. Each contributes
+at most \((\log X')/p_*\). There are at most
+\(1+2\log X'\) possible powers since \(p\ge2\).
+Thus the band contributes
+\[
+  \sum_p (\log p)/p\ll (1+\log X')^2(\rho+p_0^{-1})
+                    \le x^{-1}
+\]
+for sufficiently large \(x\), absorbing the implied constant.
+Both estimates have thresholds uniform in the particular
+host of the fixed target family.
+
+\paragraph{Choosing the top weights after the positions.}
+\label{par:top-weight-selection}
+The cutting off of exceptional local subspaces involves a
+second simultaneous choice. At each \(t\in T\), choose two
+integer weights independently and uniformly in the intervals
+\[
+  [a,a+a/(kx^{13})],\qquad
+  [b',b'+2n\delta x^\epsilon\Lambda b'/k],
+  \qquad b'=a/X'.
+\]
+Set the weights to zero off \(T\). Both intervals contain
+integers for large \(x\), since \(a,b'\) grow faster
+than every fixed power of \(x\) and \(k\) has polynomial
+growth. The same independent uniform choices on a single
+cycle give exactly the marginal law of the global weights.
+For a candidate \(p\), exclude the short orders and the
+band above. Write \(N_v\) for the number of selected
+positions on a good cycle \(v\). The local interpolation
+estimate required here is a nonnegative fraction \(\kappa_v\)
+of exceptional directions with
+\[
+                 \mathbb E(\kappa_v)\le N_v x^{-12}.
+\]
+
+For \(p<p_0\) its numerical bound has the form
+\(\min(1,C N_v r^2 k x^{-26})\), which suffices since
+\(k\ll x^{9/2+10\epsilon}\). For the complementary range \(p\ge p_0\), the local estimate is
+\[
+ \text{local expectation}\ \le C N_vN_1 x^{-13}.
+\] Section~\ref{sec:interpolation} identifies
+the tested integral rank and proves the determinant estimate
+for varying a weight on a progression.
+Section~\ref{sec:edge-transfer} obtains the large-prime mean
+on the full edge lattices from the two-letter tensor edge
+test. Sections~\ref{sec:segment-window}--\ref{sec:block-pairing} prove
+the segment mean, the retained rank and the symbol pairing. Sections~\ref{sec:column-lifts} and \ref{sec:symbol-correction} construct
+the required simultaneous lifts at the prescribed order and conductor.
+Section~\ref{sec:host-edge-tests} verifies the sizes in both
+ranges and extends the tests to the specified place of the host.
+Section~\ref{sec:plane-lifts} proves the smaller-prime bound by
+counting source vectors and constructing a target covector for
+every primitive combination at a single plane.
+
+We apply these bounds to select the weights simultaneously.
+Let \(m\) be the length of the lift chain and put
+\[
+ \Sigma_p=m\sum_{v\ {\rm good}}\kappa_v.
+\]
+
+The cycle decomposition bounds its mean, and Markov's inequality bounds the rejected primes:
+\[
+ \mathbb E\Sigma_p\le m|T|x^{-12},\qquad \Pr(\Sigma_p>x^{-\epsilon})\le x^\epsilon\mathbb E\Sigma_p.
+\]
+Since
+\(\mathbf1_{\Sigma_p>x^{-\epsilon}}\le x^\epsilon\Sigma_p\),
+the expectation of
+\[
+   \sum_{p\ {\rm candidate}} \frac{\log p}{p}
+       (2\mathbf1_{\Sigma_p>x^{-\epsilon}}+4\Sigma_p)
+\]
+is at most
+\((2x^\epsilon+4)m|T|x^{-12}\log X'(1+\log X')\).
+With \(m\le x^{1/2+\epsilon/2}\) and \(|T|\le 2\delta n\), the size bounds give
+\[
+ (2x^\epsilon+4)m|T|x^{-12}\log X'(1+\log X')\ll x^{-19/2+11\epsilon}\le x^{-9}
+\]
+eventually. Some single pair of
+weight vectors attains this bound. At a candidate where
+\(\Sigma_p\le x^{-\epsilon}\) use every good cycle, and
+at the others use none.
+
+By Section~\ref{subsec:column-orbit-length} the local length
+error on the retained cycles is bounded by \(2\Sigma_p\max_v S_v\)
+with \(S_v\le2mN_v a/p\). Its total logarithmic cost is therefore
+at most \(m|T|a x^{-9}\). The missing prime sum at rejected
+candidates is controlled by the same choice. The smoothed
+positive part at one top in one lift is at most
+\[
+ 2a\sum_{j\ge1,\ j\text{ odd}}p^{-j}
+   =\frac{2a}{p(1-p^{-2})}\le\frac{8a}{3p}\le\frac{3a}p .
+\] These estimates charge a prime for its actual
+weight and hold simultaneously over every subset of the
+candidate primes.

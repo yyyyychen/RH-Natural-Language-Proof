@@ -1,0 +1,567 @@
+\paragraph{A generic linear section and the local remainder.}
+We compute the remainder of Proposition~\ref{prop:geometric-run-index}
+on the generic slice. The local argument constructs a cokernel
+length at a fixed place. Its four terms will be averaged only
+after the same slice and sections have been chosen over the
+number field.
+\hypertarget{source-run-index-length}{}
+Fix one run, one weight 
+\[
+  \kappa=w_F+Tw_L
+\]
+ and one finite
+place \(\lambda\). In this calculation let \(O\) be the completed
+DVR, \(\pi\) its uniformizer and \(M\) the completed cusp lattice.
+Write \(s=\dim Y\), \(T\ge\max(1,s)\), 
+\[
+  a=T-s.
+\]
+
+Take \(s+1\)
+generic combinations \(L_i=\sum_k X_{ik}w_k\) of the integral
+generators of the light sections. The coefficients are independent
+indeterminates. Localize \(O[X]\) at \((\pi)\) to obtain a DVR
+\(O'\) with the same uniformizer. The valuation of a nonzero
+polynomial is the minimum of the valuations of its coefficients.
+The residue field is the rational function field in the reductions
+of the \(X_{ik}\). Flatness sends a simple factor \(O/(\pi)\) in a finite
+length filtration to \(O'/(\pi)\), again a simple factor.
+In particular for every finite-length \(O\)-module \(C\),
+\[
+ \operatorname{length}_{O'}(C\otimes_O O')
+   =\operatorname{length}_O(C).
+\]
+
+\begin{established}[Integral sections on the branches of the generic cut]\label{hyp:slice-chart-branch-lattices}
+On the chart \(L_0\ne0\), put \(u_i=L_i/L_0\) for \(1\le i\le s\).
+The algebra \(A\) of \(u_1=\cdots=u_s=0\) over \(K'=\operatorname{Frac}O'\)
+is finite and reduced. Choose a weight-\(w_F\) frame \(g_0\) on this cut.
+For a prime \(\zeta\) of its normalization over \(O'\), write \(e_\zeta\)
+and \(f_\zeta\) for its ramification index and residue degree and
+\(c_\zeta=e_\zeta v_{y_\zeta}(g_0)\). In the \(g_0\)-frame the module
+\[
+ B_0=\{v:\operatorname{ord}_\zeta(v/g_0)+c_\zeta\ge0
+                    \ \text{for every }\zeta\}
+\]
+is a full \(O'\)-lattice. The short integral sections \(t'_i\) can be
+chosen before localization so that their restrictions \(t_i\) belong to
+\(B_0\) and \(I_\lambda=\operatorname{length}_{O'}(B_0/\sum_i O't_i)<\infty\).
+\end{established}
+\begin{proof}
+Proposition~\ref{prop:selected-generic-cut} gives the finite reduced
+intersection and identifies the branch readings with point evaluations
+in integral frames. Its algebra is a product of separable fields. A
+generator of a line over this product is obtained by taking a nonzero
+vector in every field factor. Each \(c_\zeta\) is the order of this
+vector in the integral point frame, hence an integer. In each field
+factor the normalization of the excellent DVR \(O'\) is finite and
+semilocal Dedekind. Writing \(\mathfrak p_\zeta\) for the respective maximal ideals in
+this normalization, the defining inequalities identify the module:
+\[
+               g_0^{-1} B_0=\prod_\zeta\mathfrak p_\zeta^{-c_\zeta}.
+\]
+
+Each fractional ideal is a full lattice.
+Lemma~\ref{lem:slice-short-basis-before-localization} gives one basis
+over the generic coefficient field that remains a basis over \(K'\).
+At each branch an integral section satisfies
+\(\operatorname{ord}_\zeta(t_i/g_0)+c_\zeta=e_\zeta v_{y_\zeta}(t'_i)\ge0\).
+Its span is thus a sublattice of the same rank, as asserted.
+\end{proof}
+
+\begin{established}[The products and the complementary lattice]\label{hyp:slice-product-lattices}
+Let \(N_1\) be the \(O'\)-span of the products on the left below.
+Among those on the right one can select a rational basis for their
+span. Denote its \(O'\)-span by \(Z\):
+\[
+ L_1^{\alpha_1}\cdots L_s^{\alpha_s}L_0^{T-|\alpha|}t'_i
+ \quad(|\alpha|<a),\qquad
+ L_1^{\alpha_1}\cdots L_s^{\alpha_s}t_k^0
+ \quad(|\alpha|=a).
+\]
+Here \(t_k^0\) belongs to the integral short family of weight
+\(w_F+s w_L\). The subspace \(H_g\) of forms with vanishing designated
+low coefficients lies in the rational span of \(N_1+Z\) over \(K'\).
+One can select integral products \(\theta_i\) whose images are a
+rational basis modulo \(H_g\). In particular,
+\[
+ L_{Q,\lambda}
+ =\operatorname{length}_{O}\left(
+ M/\left((M\cap H_g)+\textstyle\sum_i O\theta_i\right)\right)<\infty .
+\]
+At the last lift this length is zero.
+\end{established}
+\begin{proof}
+The shifted families of Proposition~\ref{prop:three-shifted-spanning-sets}
+span the required spaces. Their integral products therefore span the
+quotient used to choose the \(\theta_i\), by
+Proposition~\ref{prop:shifted-low-mode-descent}. Extract independent columns
+there, and independently extract columns at the boundary over the generic
+coefficient field. Proposition~\ref{prop:descent-of-slice-division} puts
+\(H_g\) in the resulting span by equality of the matrix ranks before and
+after adjoining each of its basis vectors. Extending the coefficient
+field preserves these ranks. Since each \(L_j\) is an \(O'\)-linear
+combination of integral light columns, both displayed families belong
+to \(\Theta\otimes O'\). The \(\theta_i\) are chosen over the original
+coefficient field from the integral products. The module in the
+denominator of the length has full rank. At the final lift the low-mode
+quotient is zero and \(M\cap H_g=M\).
+\end{proof}
+
+\begin{lemma}[Saturation length of the boundary products]\label{lem:slice-boundary-saturation}
+After extending to \(O'\), write \(Z^{\rm sat}\) for the
+intersection of the rational span of \(Z\) with \(M_{O'}\).
+For the selected independent boundary columns \(z_k(X)\),
+let \(G_\lambda\) be the minimum Gauss valuation among nonzero
+determinants \(\det(\phi_i(z_k(X)))\), where the \(\phi_i\)
+are integral at \(\lambda\). Then
+\[
+          \operatorname{length}_{O'}(Z^{\rm sat}/Z)\le G_\lambda .
+\]
+For \(Z=0\), use the empty determinant and \(G_\lambda=0\).
+\end{lemma}
+
+\begin{proof}
+The exterior product of the boundary columns lies in
+\(\pi^b\bigwedge^{\operatorname{rk}Z} Z^{\rm sat}\), where
+\(b=\operatorname{length}_{O'}(Z^{\rm sat}/Z)\) by Smith form.
+An integral system of linear functionals evaluates that product
+into \(\pi^b O'\), so every nonzero determinant in the
+definition has Gauss valuation at least \(b\). Some determinant
+is nonzero because the chosen columns are rationally independent
+and integral functionals span the rational dual. Taking the
+minimum gives the claimed bound. The argument is on the generic
+DVR, where specialization of \(X\) at one tuple might raise the
+valuation.
+
+\end{proof}
+
+\paragraph{Lengths in the thickened intersection.}
+
+Simple restriction to the reduced intersection would discard its higher orders. The quotient by a power of the defining ideal keeps these contributions in the local length.
+
+Write \(J=(u_1,\ldots,u_s)\), and restrict sections to the
+quotient of the weight-\(w_F\) module by its product with \(J^a\).
+The restriction map \(\rho\) first divides a weight-\(\kappa\)
+section by \(L_0^T\). Let \(A_{\boldsymbol m}\) be the lattice
+generated by classes admitting representatives whose coefficient
+Hasse derivatives through degree \(a-1\), restricted to the
+intersection, have orders at least \(-m_\zeta\) in the shifted
+trivializations above. The Hasse derivatives are Taylor
+coefficients for the substitution 
+\[
+  X\mapsto X+U
+\]
+ in the
+generic sections. They include the derivative of order zero.
+
+Write \(A=A_{\boldsymbol 0}\). For \(a=0\) the quotient is
+zero and both lengths below vanish. For \(a>0\) we require
+the local lifting hypothesis of the construction: every
+\(b\in B_0\) is the restriction of a section with class in
+\(A\). This condition involves a lift through order \(a-1\).
+
+\begin{lemma}[Lengths from the \(J\)-adic filtration of a slice]\label{lem:slice-thickening-length}
+Use the reduced cut and shifted branch lattices of
+Lemma~\ref{hyp:slice-chart-branch-lattices}. For \(a>0\)
+assume every \(b\in B_0\) lifts to a class in \(A=A_{\boldsymbol 0}\)
+through order \(a-1\). Let \(m_\zeta\ge0\) be integers. In the thickened intersection,
+with \(R=\binom{T-1}{s}\), one has
+\[
+ \operatorname{length}(A/\rho N_1)\le R I_\lambda,\qquad
+ \operatorname{length}(A_{\boldsymbol m}/A)\le
+                             R\sum_\zeta f_\zeta m_\zeta .
+\]
+The map \(\rho\) is injective on the rational span of \(N_1\),
+kills \(Z\), and has kernel \(Z^{\rm sat}\) on the integral
+lattice in the span of \(N_1+Z\). At \(a=0\) the thickening
+and both displayed quotients are zero.
+\end{lemma}
+
+\begin{proof}
+\proofstep{Which graded pieces contribute.}
+Here is why only
+\[
+               R=\#\{\alpha\in\mathbb N^s:|\alpha|<a\}
+                      =\binom{T-1}{s}
+\]
+copies of the branch lengths occur. Filter this quotient by
+\(J^k\). A representative in filtration degree \(k\), modulo
+degree \(k+1\), has the form 
+\[
+  \sum_{|\alpha|=k}u^\alpha b_\alpha
+\]
+by ideal multiplication; only the restrictions of \(b_\alpha\)
+to the intersection matter. To read those restrictions, write
+\(v_l=(w_l/L_0)|_{J=0}\).
+
+The valuation identification at
+\(\zeta\) reads its order as \(e_\zeta\) times the difference
+between the value of \(w_l\) and the depth of the light lattice.
+This is nonnegative since \(w_l\) belongs to that lattice.
+Furthermore \(\sum_l X_{0l}v_l=1\). The \(v_l^k\) therefore
+generate the unit ideal in the integral closure at every degree
+\(k\): a maximal ideal containing all positive \(k\)-th powers
+would contain all the \(v_l\). Choose coefficients \(d_{kl}\)
+integral on all the branches with 
+\[
+  \sum_l d_{kl}v_l^k=1;
+\]
+for \(k=0\) any one column suffices.
+
+For each column \(l\), vary only its coefficients in rows
+\(1,\ldots,s\), leaving row zero fixed. Write \(U\) for these changes with \(L_0\) fixed. All \(k\)
+factors of \(u^\beta\) must receive a derivative to survive
+at \(J=0\). Thus, for \(|\alpha|=|\beta|=k\), the coefficient map is
+\[
+  [U^\alpha](u^\beta b_\beta)(X+U)\big|_{J=0}
+        =\mathbf1_{\alpha=\beta}v_l^k b_\beta\big|_{J=0}.
+\]
+The same map kills \(J^{k+1}\). Summing the maps over \(l\)
+with weights \(d_{kl}\), whose pairing with \((v_l^k)_l\)
+is one, gives the \(O'\)-linear reading
+
+\[
+  \operatorname{gr}^k_J\to\prod_{|\alpha|=k} (B_0\otimes_{O'}\operatorname{Frac} O')
+\]
+with components \(b_\alpha|_{J=0}\).
+If every output is zero, all the \(b_\alpha\) vanish on the
+slice, and the class has filtration degree at least \(k+1\).
+The resulting map into the direct sum of the branch spaces is
+therefore injective.
+
+\proofstep{The integral degree-zero lattice on each graded piece.}
+Let \(B_{\boldsymbol m}\) denote the degree-zero lattice
+with lower orders decreased by \(m_\zeta\). An element of
+\(A_{\boldsymbol m}\) in filtration degree \(k\) has each
+reading in \(B_{\boldsymbol m}\). Indeed, changing its
+representative by order \(a\) does not affect a derivative
+of order \(k<a\), and every coefficient of the Taylor
+expansion of an \(O'\)-scalar is integral in \(O'\).
+For the latter assertion use the geometric series for the
+inverse of a polynomial with Gauss-unit constant term in its
+Taylor expansion.
+For an invertible constant term \(b\) and an increment \(h\) of positive order, the expansion used here is
+\[
+  (b+h)^{-1}=b^{-1}\sum_{j\ge0}(-h/b)^j .
+\]
+ Thus formation of the indicated spans
+preserves the derivative conditions.
+
+For \(A\), the products
+in \(N_1\) of degree \(k\) realize a separate copy of
+\(\sum_i O't_i\) in each slot. They lie in \(A\): after
+division by \(L_0^T\) they are \(u^\alpha t'_i\). For all
+coefficient variations the Taylor expansion of \(u_i\) on
+the intersection is
+\[
+             \frac{\sum_l U_{il}v_l}
+                       {1+\sum_l U_{0l}v_l}\quad(i>0).
+\]
+It has integral coefficients. Multiplying a class in \(A\)
+by any \(u^\alpha\) preserves the zero-pole condition, and
+\(t'_i\) is constant under changes of \(X\).
+For the comparison of \(A_{\boldsymbol m}\) with \(A\), use
+the lifting hypothesis: for any tuple \(b_\alpha\in B_0\)
+choose lifts \(\widetilde b_\alpha\in A\). In degree \(k\)
+the coefficient reading just constructed sends
+\[
+ \sum_{|\alpha|=k}u^\alpha\widetilde b_\alpha
+ \ \longmapsto\ (b_\alpha)_{|\alpha|=k}.
+\]
+As the tuple varies, the image contains the entire product of the
+integral branch lattices \(B_0\).
+Thus one can subtract a lift of the integral part before
+passing to the next degree.
+
+\proofstep{Computing lengths in the normalized branches.}
+The integral closure of a DVR in the finite reduced
+characteristic-zero algebra is a product of Dedekind rings;
+here the field factors are finite separable extensions.
+The shifted lattices in its one-dimensional section module
+are fractional ideals componentwise. Changing the bound by
+one at \(\zeta\) adds a simple residue factor of length
+\(f_\zeta\) over \(O'\). Adding the lengths of the graded
+quotients gives
+\begin{equation}\label{eq:thick-intersection-lengths}
+  \operatorname{length}(A/\rho N_1)\le R I_\lambda,\qquad
+  \operatorname{length}(A_{\boldsymbol m}/A)
+                        \le R\sum_\zeta f_\zeta m_\zeta .
+\end{equation}
+For \(s>0\) the count for \(R\) follows by adjoining a slack
+coordinate to compositions of \(a-1\).
+
+For \(s=0\) there is
+one empty multi-index, and \(T\ge1\). At \(T=s>0\) both
+sides of the count are zero. The derivative reading also
+proves that \(\rho\) is injective on the rational span of
+the first family: take the least degree occurring in a
+nontrivial relation and use linear independence of the \(t_i\)
+in each slot. All of \(Z\) maps to zero by its degree \(a\).
+Consequently the kernel on the integral lattice in the
+span of \(N_1+Z\) is \(Z^{\rm sat}\).
+\label{cor:run-index-length-1}
+
+\end{proof}
+
+\input{selected-slice}
+\input{generic-slice-lifting}
+
+The branch lattices just constructed are the ones used in
+\eqref{eq:thick-intersection-lengths}. In particular their
+integer orders already include the absolute ramification
+in the corresponding completed field.
+
+\paragraph{The branch contribution and the complementary sections.}
+This is the local part of the proof of
+Proposition~\ref{prop:geometric-run-index}. We first bound
+the possible excess order on each branch, and then use the
+two spaces of sections that are omitted by the branch
+restriction.
+\begin{proposition}[The local remainder is independent of the subspace]\label{prop:local-product-colength}
+Fix the run, lift and place, and use the short sections,
+light columns and auxiliary section of the selected slice.
+Use the local lifting condition of
+Lemma~\ref{lem:slice-thickening-length}, the depth bound
+\eqref{eq:slice-tied-depth}, and the rational containment
+\(H_g\subseteq\operatorname{span}(N_1+Z)\) of
+Lemma~\ref{hyp:slice-product-lattices}. Define \(r_\lambda\) by
+\eqref{eq:geometric-four-terms}. It is independent of the
+integer \(h\ge\max(0,T\nu_\lambda)\) and the subspace \(V\)
+of the completed cusp space. The resulting colength over the local coefficient DVR satisfies
+\[
+ \operatorname{length}\!\left(\frac{V\cap M}{V\cap M\cap\Theta}\right)
+      \le h\dim V+r_\lambda .
+\]
+\end{proposition}
+
+\begin{proof}
+Let \(h\ge0\) be an integer with \(h\ge T\nu_\lambda\), and
+let \(\nu_\zeta\) denote the depth of the light lattice at
+the point for \(\zeta\). For every integral weight-\(\kappa\)
+section \(F\) the evaluation has nonnegative point valuation.
+The branch comparison identifies the shifted order of
+\(F/L_0^T\) with \(e_\zeta\) times its point valuation
+minus \(e_\zeta T\nu_\zeta\). Its Taylor coefficients on
+the intersection are this restriction times the coefficients
+of \((1+\sum_l U_{0l}v_l)^{-T}\). The latter are integral.
+It follows, also for \(O'\)-linear combinations, that
+\(\rho(\pi^h M_{O'})\subseteq A_{\boldsymbol m}\) for
+\[
+ m_\zeta=\max\bigl(0,\lceil e_\zeta(T\nu_\zeta-h)\rceil\bigr).
+\]
+On each branch let \(n_\zeta\) be the minimum of the integer
+orders of the same scaled columns.
+
+The light pivot in the
+normal-chart comparison has that order. The exact order \(n_\zeta=e_\zeta\nu_\zeta\) is an integer,
+so the ceiling in the earlier bound makes no change. The
+comparison is
+\[
+ m_\zeta=(Tn_\zeta-e_\zeta h)_+
+      =e_\zeta(T\nu_\zeta-h)_+
+      \le e_\zeta T(\nu_\zeta-\nu_\lambda)_+ .
+\]
+The point bound \eqref{eq:slice-tied-depth} and its normal-chart
+extension give
+\[
+ \nu_\zeta\le\nu_\lambda+c_+v_\zeta,\qquad c_+=\max(0,c).
+\]
+Here \(v_\zeta\) is nonnegative and, before the final lift,
+is the value of the selected auxiliary section \(\eta\) at
+the same point divided by twice its weight parameter \(i_\eta>0\).
+At the final lift \(v_\zeta=0\). Since \(h\ge T\nu_\lambda\),
+it follows that \(m_\zeta\le Tc_+e_\zeta v_\zeta\), with no
+additive term per branch. Here \(e_\zeta\) is the branch
+ramification over the construction field. Equation
+\eqref{eq:light-frame-order} has already accounted for the
+extension at the algebraic point used to obtain the split chart.
+Write
+
+\[
+  N_{\eta,\lambda}=\sum_\zeta e_\zeta f_\zeta
+\operatorname{val}_{y_\zeta}(\eta)
+\]
+ before the last lift.
+
+Put \(M'=M_{O'}\), \(H=\operatorname{span}(N_1+Z)\), and
+\(U=(\pi^hM'\cap H)+N_1+Z^{\rm sat}\).
+Lemma~\ref{lem:slice-thickening-length} identifies the
+kernel of \(\rho|_U\). In particular there is an exact sequence
+\[
+ 0\longrightarrow Z^{\rm sat}/Z
+  \longrightarrow U/(N_1+Z)
+  \longrightarrow \rho U/\rho N_1
+  \longrightarrow 0 .
+\]
+Here \(N_1\cap Z^{\rm sat}=0\), since \(\rho\) is injective
+on the span of \(N_1\). The last quotient embeds in
+\(A_{\boldsymbol m}/\rho N_1\). Applying the two length
+bounds in \eqref{eq:thick-intersection-lengths} and
+Lemma~\ref{lem:slice-boundary-saturation} gives
+\[
+ \operatorname{length}\bigl(U/(N_1+Z)\bigr)
+       \le G_\lambda+R I_\lambda
+                          +R\sum_\zeta f_\zeta m_\zeta .
+\]
+
+The rational containment of \(H_g\) puts the image of
+\(\pi^h(M'\cap H_g)\) modulo \(\Theta_{O'}\) in this bound.
+The chosen quotient generators \(\theta_i\) and their
+\(\pi^h\)-multiples belong to \(\Theta_{O'}\). Thus passing
+from \(\pi^h(M'\cap H_g)\) to \(\pi^hM'\) introduces at most
+\(L_{Q,\lambda}\) more length. Substituting the branch depth
+bound gives
+\begin{equation}\label{eq:geometric-four-terms}
+ r_\lambda=R\left(I_\lambda+
+ {\bf1}_{j<m}\frac{Tc_+}{2i_\eta}N_{\eta,\lambda}\right)
+                 +G_\lambda+L_{Q,\lambda},
+\end{equation}
+where the term involving \(i_\eta\) is absent when \(j=m\).
+
+The extension to \(O'\) preserves lengths of finite lattice
+quotients, so \(r_\lambda\) bounds the image of \(\pi^hM\) in
+\(M/\Theta\). For \(L=V\cap M\), the image of \(\pi^hL\)
+is a submodule of that image. The remaining quotient of
+the image of \(L\) is a quotient of \(L/\pi^hL\) and has
+length at most \(h\dim V\). This gives the asserted bound
+for every \(V,h\) using the same \(r_\lambda\).
+
+\end{proof}
+
+\begin{proposition}[Averaging the four local costs]\label{prop:global-product-colength}
+Use the short families at weights \(w_F,w_F+s w_L,\kappa\),
+with the branch choices of
+Proposition~\ref{prop:local-product-colength}, the ranks of
+Proposition~\ref{prop:slice-rank-shares}, the height bounds
+\eqref{eq:slice-branch-mean-bounds}, and the determinant bounds
+of Propositions~\ref{prop:slice-boundary-determinant-cost}
+and~\ref{prop:slice-complement-determinant-cost}. Assume \(T>s\)
+and \(0\le Tc_+g_0^*\le1\). If \(R_j>0\), the remainders of
+Proposition~\ref{prop:local-product-colength} satisfy
+\[
+ \frac{\langle r\rangle}{R_j}
+ \le H_s+\frac{44s^2}{T}(H_z+P_Q)S_\kappa
+\]
+Here \(H_s,H_z\) are given in \eqref{eq:slice-height-price-constants}
+and \(P_Q\) is the quotient height constant of
+Proposition~\ref{prop:slice-complement-determinant-cost}.
+At the last lift the auxiliary
+and complementary contributions are absent.
+\end{proposition}
+
+\begin{proof}
+\proofstep{The four terms in the global height bound.}
+The global size estimate has a separate role. For a place
+quantity \(U_\lambda\) write 
+\[
+  \langle U\rangle=
+\sum_\lambda U_\lambda\log {\rm N}\lambda/[K_0:\Q].
+\]
+The four contributions enter with weights \(R\), \(RTc_+/(2i_\eta)\),
+one, and one in this sum. More explicitly, let \(d_s\) be the
+number of short restricted sections, \(r_z\) the number of
+boundary columns and \(r_q\) the number of complementary
+sections. With 
+\[
+  S_L=|w_L|,
+\]
+ \(S_\kappa=|\kappa|\) denoting
+weight sizes and \(H(t'_i)\) the mean log supremum over the
+embeddings, use the \hyperref[par:shifted-small]{scaled short
+families} at the three weights.
+
+Choose the \(t'_i\) from the
+first family by independent restriction, choose the boundary
+columns among the products of the second family by their generic
+rank, and choose independent images of the third family in the
+quotient by \(H_g\). These choices precede completion at the
+finite places. The new choice keeps all the light columns and
+\(\eta\). Thus the depth estimate and the following determinant
+estimates apply to the same list, with
+
+\[
+  \sum_i H(t'_i)\le d_sG_c|w_F|.
+\]
+ The discriminant and auxiliary-section contributions to the four-term local index satisfy
+\begin{equation}\label{eq:slice-branch-mean-bounds}\begin{aligned}
+ 2\langle I\rangle &\le d_s\log d_s+2\sum_i H(t'_i)
+ +\tfrac83 s(s+4)d_s P_{rw} S_L\\
+ &\hspace{5em}+2(s+4)(s+1)d_s(2G_c+6P_H) S_L,\\
+ \langle N_\eta\rangle/i_\eta
+ &\le g_0^*\big((s+1)d_s(2G_c+6P_H) S_L
+              +\tfrac43 s d_s P_{rw} S_L\big)+d_sP_\eta
+                      \qquad(j<m).
+\end{aligned}\end{equation}
+Here \(0\log0=0\). The constant \(G_c\) bounds mean heights per unit weight, \(P_{rw}\) bounds the logarithm of the number of light generators per unit weight, and \(P_H,P_\eta\) bound the projective and auxiliary section heights. The auxiliary weight factor is \(g_0^*\), equal to \(1250r\) at the scale below. For the other two terms the
+required height bounds are
+\[
+ \langle G\rangle\le r_z\big(2G_c+P_{rw}+P_L
+                    +\tfrac32(P_d+P_O)\big) S_\kappa,
+ \qquad
+ \langle L_Q\rangle\le 2r_q P_Q S_\kappa .
+\]
+Here \(-P_L S_\kappa\) bounds the mean log supremum of a
+nonzero integral form from below; \(P_d,P_O,P_Q\) are the
+metric, coefficient-field and quotient bounds of the run.
+At the last lift the quotient has rank zero.
+
+For the selected
+size range \(T>s\), the rank comparisons used in the sum are
+\[
+ R d_s\le R_j,\qquad
+ r_q\le 22s^2 R_j/T,\qquad
+ r_z\le r_q+22s^2 R_j/T .
+\]
+In particular \(r_z\le44s^2 R_j/T\). At the last lift the
+coefficient 22 suffices there also. To see the effect on the
+first two terms put \(B=2G_c+6P_H\), use
+\(H(t'_i)\le G_c|w_F|\), \(\log d_s\le P_d\) for \(d_s>0\),
+and \(0\le Tc_+g_0^*\le1\). The last bound is imposed when
+choosing the light weight and \(T\); it prevents the auxiliary
+divisor from multiplying the slice height by \(T\). Define
+\begin{equation}\label{eq:slice-height-price-constants}\begin{aligned}
+ H_s={}&\tfrac12 P_d+G_c |w_F|
+ +\tfrac43 s(s+4)P_{rw} S_L+(s+4)(s+1)B S_L\\
+ &+\tfrac12\big((s+1) B S_L+\tfrac43 s P_{rw} S_L
+                           +Tc_+P_\eta\big),\\
+ H_z={}&2G_c+P_{rw}+P_L+\tfrac32(P_d+P_O).
+\end{aligned}\end{equation}
+
+The first two terms of \eqref{eq:geometric-four-terms} are
+bounded after weighting by \(Rd_s H_s\). This uses
+\(Tc_+g_0^*\le1\) on the contribution to
+\(N_\eta/i_\eta\), while the term involving \(P_\eta\)
+keeps its factor \(Tc_+\). The boundary and quotient terms
+are bounded by \(r_z H_z S_\kappa\) and
+\(2r_q P_Q S_\kappa\), respectively. Thus
+\[
+ \langle r\rangle
+ \le R d_s H_s+(r_z H_z+2r_qP_Q)S_\kappa .
+\]
+Using \(Rd_s\le R_j\), \(r_z\le44s^2R_j/T\) and
+\(2r_q\le44s^2R_j/T\) gives the stated inequality. When
+\(R_j=0\), the lattice quotient is zero. At \(j=m\) the
+auxiliary term was omitted in the local estimate, and one can
+use \(r_q=0\) and \(r_z\le22s^2R_j/T\).
+\label{cor:run-index-length-2}
+
+\end{proof}
+
+\input{slice-orders}
+\input{selected-auxiliary-cusp}
+\input{selected-height-sections}
+\input{slice-heights}
+\input{slice-chow}
+\input{slice-cm-transference}
+\input{slice-integral-norm}
+\input{slice-light-integral}
+\input{slice-finite-depth}
+\input{slice-unscaled-depth}
+\input{slice-metrics}
+\input{slice-integrals}
+\input{slice-shares}
+\input{slice-interpolation}
+\input{slice-short-division}
+\input{slice-cm-coefficients}
+\input{slice-budget}

@@ -1,0 +1,1092 @@
+\section{Taylor--Wiles tests on a chain of curve points}
+\label{sec:marked-patching}
+\hypertarget{source-ordinary-marked-patching}{}
+
+To move between components of ordinary Hecke support, we shall compare a chain of
+residual curve points at one marked level. Choosing Taylor--Wiles primes separately at
+each point would leave us without a common comparison.
+We work with the normalized representation over the
+characteristic-\(\ell\) power-series ring and test its
+off-diagonal entries and local flags. The tests give the
+patching hypotheses used in the component comparison of
+Appendix~\ref{sec:linked-components}. Lemma~\ref{hyp:marked-square-zero-data} fixes the curve representation, its cyclotomic kernel and its coefficient field before any test elements or auxiliary places are chosen.
+
+\begin{established}[Integral representatives at a normalized ordinary curve]\label{hyp:marked-square-zero-data}
+Use a fitted point of Proposition~\ref{prop:fitted-points-three-tests}
+at one of the three marked levels. Let \(G\) denote the CM subgroup,
+\(H=\ker(\epsilon|_G)\) its full cyclotomic kernel, \(c\) the chosen
+complex conjugation and \(\sigma h=chc^{-1}\). Let \(A=K[[t]]\)
+and \(E=K((t))\) at the normalized curve, with \(K\) finite of
+odd characteristic \(\ell\). In the polarized coordinates the
+curve representation satisfies \(r(\sigma h)=\mu(h)r(h)^{-\mathsf T}\),
+where \(\mu\) is the level multiplier. The span \(S=\operatorname{span}_E r(H)\) and the off-diagonal module
+\(M\) are
+\[
+ (S,M)=\begin{cases}
+ (M_n(E),0),&\text{type I},\\
+ (M_a(E)\oplus M_b(E),\text{the off-diagonal blocks}),
+      &\text{type II},\quad a+b=n .
+ \end{cases}
+\]
+
+Use the conjugation action on \(M\) and \(-\mathsf T\) at \(c\).
+The subspace of \(H^1\) whose classes have an upper triangular
+representative in each ordered ordinary flag and are unramified on
+the prescribed inertia away from \(\ell\) has a finite basis
+represented by integral cocycles \(\kappa_1,\ldots,\kappa_g\) with
+\[
+ \kappa_j(c)=0,\qquad
+ \kappa_j(\sigma h)=-\kappa_j(h)^{\mathsf T}.
+\]
+One can choose the representatives and their local changes of
+frame over a single denominator.
+\end{established}
+\begin{proof}
+The two span formulas follow from the irreducible, pairwise
+inequivalent constituents on \(H\) in
+Proposition~\ref{prop:fitted-points-three-tests}. In type II, if \(V_1,V_2\) denote these constituents, their matrix
+coefficient modules give
+\[
+ E[r(H)]=\operatorname{End}_E(V_1)\oplus\operatorname{End}_E(V_2),
+ \qquad M=\operatorname{Hom}_E(V_1,V_2)\oplus\operatorname{Hom}_E(V_2,V_1).
+\]
+
+The marked
+auxiliary place in Proposition~\ref{prop:separated-marked-host}
+supplies an element of \(G\) with nontrivial residual cyclotomic
+character. For the finitely ramified real and CM groups and their
+open subgroups \(U\), class field theory gives
+\(\#\operatorname{Hom}_{\rm cont}(U,\mathbf F_\ell)<\infty\):
+only the finite class group, the units at finitely many finite
+places and finitely many uniformizers contribute modulo \(\ell\).
+After passing to an open subgroup acting trivially on the residual
+lattice, the action and integral cocycles factor through its
+maximal pro-\(\ell\) quotient. 
+For that quotient \(P=U^{(\ell)}\), finite generation follows from
+\[
+      \dim_{\mathbf F_\ell}P/\overline{P^\ell[P,P]}
+       =\dim_{\mathbf F_\ell}\operatorname{Hom}_{\rm cont}(U,\mathbf F_\ell)<\infty .
+\] Evaluating cocycles on
+these generators and a finite set of coset representatives
+bounds the dimension of the full cohomology, hence of the
+subspace cut out by the local conditions.
+
+For any cocycle \(z\), the identity \(c^2=1\) gives
+\(c z(c)=-z(c)\). Subtract the coboundary of \(-z(c)/2\) to
+obtain a representative vanishing at \(c\). The cocycle identity
+at \(chc^{-1}\) then gives the transpose formula. Its continuous
+image on the compact Galois group is bounded. Choose such
+representatives for a basis, together with the finitely many
+local changes permitted by the definition of the ordinary
+subspace. A common power of \(t\) clears their denominators
+without changing independence over \(E\). Boundaries between
+normalized representatives have value zero at \(c\), so their
+defining matrices satisfy \(Y=-Y^{\mathsf T}\).
+\end{proof}
+
+\subsection{The paired determinant test}
+\label{subsec:det-test}
+
+Begin at one curve point. The determinant must detect the cocycles together with the
+underlying representation, so over \(E\) we form the finite algebra
+\[
+ B=S\oplus M^g,\qquad
+ (x,p)(y,q)=(xy,xq+py).
+\]
+The second summand has square zero. The homomorphism
+\[
+ R(h)=\bigl(r(h),(\kappa_j(h)r(h))_j\bigr)
+\]
+takes values in \(B^\times\) by the cocycle rule. Entrywise transpose
+on each component is an anti-involution \(\tau\) of \(B\), and
+\(R(\sigma h)=\mu(h)\tau(R(h))^{-1}\). All these formulas are defined
+on the evident free \(A\)-lattices.
+
+\begin{lemma}[Spanning the marked square-zero algebra]\label{lem:marked-square-zero-span}
+For the normalized cocycles and block decomposition of
+Lemma~\ref{hyp:marked-square-zero-data}, one has
+\[
+   B=\operatorname{span}_E\{R(h):h\in H\}.
+\]
+\end{lemma}
+
+\begin{proof}
+\proofstep{Projection onto the two radical directions.}
+The span of \(R(H)\) is a subalgebra
+mapping onto \(S\). Its intersection \(W\) with \(M^g\) is an
+\(S\)-bimodule, since the ideal has square zero. In the one-block
+case there is no second summand. In the two-block case write
+\(M=M_{12}\oplus M_{21}\). These are distinct simple split
+\(S\)-bimodules. The central idempotents separate directions. The matrix units in each block then recover all of a submodule from its coefficient subspace:
+\[
+ W_{ij}=M_{ij}\otimes_E U_{ij}\subseteq M_{ij}\otimes_E E^g,\qquad U_{ij}\subseteq E^g .
+\] If \(W\) is proper, take a nonzero row \(d=(d_j)\) annihilating
+one of the \(U_{ij}\). For a lift \((x,(p_j))\) in the span of
+\(R(H)\), define \(D(x)=\sum_j d_j p_j^{ij}\). Changing the lift
+adds an element of \(M_{ij}\otimes U_{ij}\), which this row kills.
+The square-zero multiplication rule gives
+\[
+                  D(xy)=xD(y)+D(x)y.
+\]
+Thus \(D\) is an \(E\)-linear derivation into the \(ij\)-corner.
+\proofstep{The coboundary forced by a missing direction.}
+For \(e_i\) the central idempotent of
+the target block, put \(Y_{ij}=D(e_i)\). On the \(ij\)-corner the left action of \(e_i\) is one
+and its right action is zero. Differentiating \(e_i x=xe_i\)
+therefore gives
+\[
+                  Y_{ij}x + D(x) = xY_{ij}.
+\] It follows
+that the \(ij\)-part of \(\sum_j d_j\kappa_j(h)\), for \(h\in H\),
+is \(r(h)Y_{ij}r(h)^{-1}-Y_{ij}\). Polarization at \(\sigma h\)
+gives the other part with matrix \(-Y_{ij}^{\mathsf T}\). The
+difference from this skew coboundary vanishes on \(H\). Its
+values on \(G\) are then \(H\)-invariant by normality, and an
+off-diagonal matrix commuting with \(r(H)\) is zero by the
+two block idempotents. At \(c\) the difference is zero by
+normalization and skew symmetry. This contradicts independence
+of the \(\kappa_j\) and proves the spanning assertion.
+
+\end{proof}
+
+\paragraph{The twisted dual and the trace test.}
+To read the determinant test as a condition on a linear functional, identify \(B^\vee=\operatorname{Hom}_E(B,E)\) with pairs
+\(z=(\phi,(\lambda_j)_j)\) by the perfect pairing
+\[
+ \langle z,(x,p)\rangle=\operatorname{tr}(\phi x)
+     +\sum_j\operatorname{tr}(\lambda_jp_j),
+ \qquad \phi\in S,\quad\lambda_j\in M .
+\]
+The dual bimodule acts by \((a z b)(d)=z(bda)\).
+Thus the trace pairing exchanges the two off-diagonal
+directions. In this pairing \(\phi\) has coefficient \(\eta\), and \(\lambda_j\) has coefficient
+\(\varepsilon_j'\), paired with \(\varepsilon_j\) by
+\(\varepsilon_i\varepsilon_j'=\delta_{ij}\eta\).
+The action on this dual is conjugation multiplied by the scalar twist:
+\[
+ h\cdot z=\chi(h)R(h)zR(h)^{-1}.
+\]
+
+In evaluating this action, conjugate the argument \((x,p)\)
+of the functional by \(R(h)^{-1}\). Factoring
+\(R(h)=(1,\kappa(h))(r(h),0)\) shows that the radical
+part of the argument acquires the commutator
+\(x\kappa_j(h)-\kappa_j(h)x\) before conjugation by
+\(r(h)^{-1}\). Moving it across the trace gives the
+commutator in the first coordinate below. The second coordinates are
+\(\chi(h)r(h)\lambda_jr(h)^{-1}\). Its first coordinate is
+\[
+ \chi(h)\left(r(h)\phi r(h)^{-1}
+       +\sum_j[\kappa_j(h),r(h)\lambda_jr(h)^{-1}]\right).
+\]
+Here \([P,Q]=PQ-QP\). Conjugation at \(c\) acts as
+\(s\tau^*\), where \(\tau^*\) is transpose under the pairing
+and \(s=-\chi(c)\). In particular \(s^2=1\).
+For a twisted cocycle with \(z(c)=0\), the test at \(h\in H\) is
+\[
+ \mathcal L_h(z)=\langle z(h),R(h)\rangle
+  =\operatorname{tr}(\phi(h)r(h))
+     +\sum_j\operatorname{tr}(\lambda_j(h)\kappa_j(h)r(h)).
+ \tag{10}\label{eq:local-patch-10}
+\]
+This is the \(\eta\)-coefficient of the infinitesimal trace.
+
+\begin{lemma}[Paired trace detection]\label{lem:paired-trace-detection}
+With the curve and block data of Lemma~\ref{hyp:marked-square-zero-data},
+let \(z\) be a cocycle with values in the \(\chi\)-twisted dual and
+\(z(c)=0\). The detection implication over \(E\) is
+\[
+  (\forall h\in H,\ \mathcal L_h(z)=0)\quad\Longrightarrow\quad [z]=0
+\]
+in first cohomology with these coefficients. For an integral cocycle
+one can clear the boundary matrix by a power of \(t\).
+\end{lemma}
+
+\begin{proof}
+\proofstep{From the vanishing trace to a derivation.}
+Suppose all the tests vanish. For \(h\in H\), set
+\(D_h=z(h)R(h)\in B^\vee\). Then
+\(D_{hh'}=D_hR(h')+R(h)D_{h'}\).
+If \(\sum_i a_iR(h_i)=0\), evaluate \(\sum_i a_i D_{h_i h'}\)
+at the identity of \(B\). The vanishing of the tests and the
+relation imply
+\[
+       \left\langle\sum_i a_i D_{h_i},R(h')\right\rangle=0 .
+\]
+Lemma~\ref{lem:marked-square-zero-span} gives
+\(\sum_i a_i D_{h_i}=0\).
+There is consequently a derivation \(D:B\to B^\vee\)
+with \(D(R(h))=D_h\).
+
+\proofstep{The action of the cyclotomic quotient.}
+For \(v\in G\), put \(u_v=R(v)\) and \(w_v=D(u_v)u_v^{-1}\).
+Write \(\delta_Y(x)=xY-Yx\). Applying the derivation rule to
+\(u_v x u_v^{-1}\) gives
+\[
+ u_v D(u_v^{-1}x u_v)u_v^{-1}=D(x)+\delta_{w_v}(x).
+\]
+The cocycle rule on \(v h v^{-1}\), with \(h\in H\), gives
+\[
+ D(x)=\chi(v)u_v D(u_v^{-1}x u_v)u_v^{-1}
+                                  -\delta_{z(v)}(x)
+ \quad (x=R(v h v^{-1})).
+\]
+By linearity this holds on \(B\). Choosing \(v\) with
+\(\chi(v)\ne1\) shows that \(D\) is inner. Subtract its twisted
+coboundary from \(z\). The resulting cocycle vanishes on \(H\),
+and takes values in the invariant subspace of \(B^\vee\) under
+\(R(H)\). Such a functional satisfies \(xY=Yx\) for every
+\(x\in B\) by the span.
+
+On this subspace the action of \(G\)
+is therefore the scalar \(\chi\). Since \(G/H\) is abelian,
+the cocycle \(z_0\) on it satisfies
+\[
+ (\chi(v)-1)z_0(v')=(\chi(v')-1)z_0(v).
+\]
+The same choice of \(v\) makes \(z_0\) a coboundary. In the final
+boundary matrix replace \(Y\) by \((Y+s\tau^*(Y))/2\).
+The polarized cocycle rule and the formula for \(R(\sigma h)\)
+imply that the new matrix gives the same boundary on \(G\),
+and it is fixed by the action at \(c\). Thus it also gives the
+boundary on the full real group. This proves the test after
+inverting \(t\), or, integrally, after multiplying the cocycle
+by a power of \(t\) to clear the matrix denominators.
+
+\end{proof}
+
+\begin{construction}
+\[
+\begin{array}{rl}
+1&\text{Fix the finite chain of marked curve points.}\\
+2&\text{Choose one finite set of tests in the cyclotomic kernel.}\\
+3&\text{Fix the coefficient depth }m.\\
+4&\text{At each point test at the base and at } N\gg_m1.\\ \hline
+ &\#\{\text{tested dual classes at the point}\}\le |K|^{C},
+      \quad C\text{ independent of }m .
+\end{array}
+\]
+\caption{Order of choices for the paired determinant tests. The finite test set works across the fixed chain, while the bound on size may depend on the point.}\label{fig:marked-test-quantifiers}
+\end{construction}
+
+\subsection{Common tests and the finite-depth dual bound}
+
+At a single point we have a trace test. Its use along a chain requires two kinds of
+uniformity. The tests must be chosen in common, and their error at each point must
+stay bounded as the torsion depth grows.
+
+\begin{proposition}[Uniform bounds for the tested dual classes]
+\label{prop:marked-uniform-dual-tests}
+For the fixed finite chain, a common finite choice of tests in the
+cyclotomic kernel detects the stated paired dual classes. For each
+point there is a constant \(C\) independent of \(m\) so that the tested dual cohomology group \(H_{\rm test}\) at depth \(m\) satisfies 
+\[
+ |H_{\rm test}|\le|K|^C\qquad\text{at the base and at every auxiliary level }N\gg_m1.
+\]
+ The finite set
+of tests is chosen before the auxiliary levels.
+\end{proposition}
+
+\begin{proof}
+\proofstep{A fixed generating set for the finite-depth cocycles.}
+For the standard adjoint module, the odd module and the paired
+dual, the action on an open normal subgroup has pro-\(\ell\)
+image. For these finite-free \(A\)-modules one can take the
+kernel of the reduction of the action. At all finite
+truncations the kernel of reduction consists of successive
+additive matrix groups. At depth \(m\) write \(V_m\) for the additive coefficient module and \(\rho_m\) for its action. The cocycle equation is precisely the multiplication rule 
+\[
+ (z(xy),\rho_m(xy))=(z(x)+\rho_m(x)z(y),\rho_m(x)\rho_m(y)).
+\]
+ The image on the chosen subgroup therefore lies in an extension of two finite \(\ell\)-groups. The maximal pro-\(\ell\) quotient of the
+open subgroup has finitely generated Frattini quotient by the
+stated Galois finiteness, and hence is topologically finitely
+generated. Adding lifts of the finite quotient gives a fixed
+finite generating set on which all the cocycles are
+determined, integrally and modulo every \(t^m\).
+
+\proofstep{Finite test functionals on the common dense set.}
+On a finite chain of points, regular semisimplicity on \(H\) is
+an open dense condition for each point by the nice-point
+hypotheses. Its openness follows by reducing the nonzero
+discriminant at sufficiently high depth. The intersection is
+dense, and by continuity a cocycle vanishing under \eqref{eq:local-patch-10} there
+passes every test on \(H\). Evaluation at a fixed finite generating set \(g_1,\ldots,g_d\) identifies a cocycle by its values. For the coefficient space \(V\) at this point the injection is
+\[
+ Z^1(G,V)\hookrightarrow V^d,\qquad z\longmapsto(z(g_1),\ldots,z(g_d)).
+\] Finitely many of the tests span the same space of
+linear forms as the tests on the entire intersection. Take
+the union of these finite sets for all points, say
+\(h_1,\ldots,h_q\).
+
+Split the characteristic polynomials of these elements by
+finite extensions of each curve field, using the integer
+rings for the extensions. The support kernels are unchanged
+because the ring maps are injective. The rings are complete
+equicharacteristic DVRs with finite residue fields. They can
+be enlarged again until the residue fields all have the same
+cardinality, as follows. If their degrees over \(\mathbf F_\ell\) are \(d_1,\ldots,d_s\), take unramified extensions to the field of cardinality 
+\[
+ \ell^{\operatorname{lcm}(d_1,\ldots,d_s)}.
+\]
+ Each coefficient extension is finite
+free over the preceding DVR.
+
+For a finite free extension \(A\subset A'\) of these
+DVRs, choose a basis \(b_i\) of \(A'\) over \(A\).
+An \(A'\)-valued cochain is a unique sum \(z=\sum_i b_i z_i\)
+with continuous \(A\)-valued cochains \(z_i\). For an \(A\)-linear
+equation \(\mathcal T\) in the cocycle and the matrices imposing its local conditions,
+\[
+       \mathcal T(z)=\sum_i b_i \mathcal T(z_i).
+\]
+Hence the equations cut out the scalar extensions of their
+kernels. The image of the boundary map is also the scalar
+extension of its image, and so is the cohomology quotient.
+After inverting the uniformizer this preserves the chosen odd
+cohomology basis. In particular the new tests still give precisely
+the coboundaries over the new fraction fields.
+
+\proofstep{Frobenius approximation at every fixed depth.}
+At depth \(N\) use the finite image of the product
+of the current marking quotient, the CM sign, and
+\(\epsilon_\ell\bmod\ell^N\). The image of \(h_j\) is
+\[
+            (h_j\bmod V_N,\ 1,\ 1),
+\]
+since \(h_j\) is in the positive full cyclotomic kernel.
+Thus the simultaneous congruence is realized in that
+finite quotient. Chebotarev for its inverse class gives
+geometric Frobenius in the desired class. Excluding the
+fixed level and previously chosen primes still leaves a
+choice of distinct split places. The cyclotomic coordinate specifies the norm of every chosen place: 
+\[
+ Q_{j,N}\equiv1\pmod{\ell^N}.
+\]
+ The auxiliary
+level retains the chosen decomposition groups and tame
+inertia generators.
+
+Passing to the open subgroup cutting
+out the residual diagonal characters and the mod-\(\ell\)
+cyclotomic character, the point representations have
+unipotent residual image. A finite group consisting of
+unipotent matrices is an \(\ell\)-group by Cauchy's theorem.
+Its congruence kernels and the cocycle semidirect images
+are likewise \(\ell\)-groups at finite depth. This is the
+factorization through the pro-\(\ell\) quotient used in
+comparing the level kernels. Fix \(m\). The coefficient actions and base cocycles at precision \(t^m\) are recorded by finitely many maps to finite groups. If \(N_i\) is the open normal kernel for the \(i\)-th such map, they all factor through
+\[
+ G/\bigcap_i N_i\ \hookrightarrow\ \prod_i G/N_i .
+\] Frobenius agreement thus holds eventually
+for all of them at once.
+
+\proofstep{The Smith bounds for the tested complex.}
+Here is the integral size comparison. Use evaluation on the
+finite generating set to write the entire cocycle and test
+system as linear equations on \(A^d\), where \(d\) here denotes
+the number of scalar generator coordinates. On a free
+profinite group the tuples define cocycles by the
+semidirect product universal property. The relations of its
+quotient, the condition at \(c\) and \eqref{eq:local-patch-10} give rows over
+\(A\). The submodule of the dual of \(A^d\) spanned by the
+rows is finitely generated, so the same finite matrix
+\(F\) gives the system at every truncation.
+
+The matrix
+\(\Delta\) of the coboundaries from the \(c\)-fixed subspace
+has image in its kernel. That subspace commutes with
+reduction since the eigenprojections of the involution
+use division by two. Over the fraction field, passing the tests is equivalent to being a boundary. Thus 
+\[
+ \operatorname{im}(\Delta\otimes_A E)=\ker(F\otimes_A E).
+\]
+ If their common dimension is \(j\), Smith
+normal form gives
+\[
+        |\ker F_m|\le |K|^{mj+C_1},\qquad
+        |\operatorname{im}\Delta_m|\ge |K|^{mj-C_2}
+\]
+with constants given by valuations of the nonzero
+elementary divisors. This bounds the size of the tested
+cohomology by \(|K|^{C_1+C_2}\) for all \(m\).
+
+\proofstep{Descent of the tested auxiliary classes.}
+A dual class at an auxiliary level is tested if it
+restricts to a coboundary on each new decomposition
+group. In that case its value at tame inertia is zero,
+because the coefficient action is pulled back from the
+base level. Its cocycle descends to the base: the
+auxiliary kernel is generated, after passing to the
+pro-\(\ell\) quotient, by the normal closure of those tame
+generators. On the auxiliary kernel the action on the coefficients is trivial. Thus a cocycle that vanishes on a generator vanishes on its conjugates by the cocycle rule, and then on the closed subgroup they generate by continuity:
+\[
+ z(ghg^{-1})=g\,z(h)\qquad(h\text{ in the kernel}).
+\] Normalize
+the cocycle at \(c\) by subtracting the coboundary of
+\(-z(c)/2\).
+
+At each new Frobenius the normalized value
+is still a local coboundary, whose product trace against
+the Frobenius matrix vanishes by cyclicity. At sufficiently
+large \(N\) the agreement modulo \(t^m\) transports this
+vanishing to \eqref{eq:local-patch-10} on the chosen \(h_j\). Boundaries descend
+with it, so the bound for the tested cohomology applies
+at the auxiliary level. The dual bound is uniform in the sense \(\exists C\,\forall m\,\forall N\gg_m 1\). The constant is
+allowed to depend on the fixed curve point and finite tests.
+
+\end{proof}
+
+\subsection{The first-order bound}
+
+We next apply the common tests to first-order deformations. Passing from normalized
+cocycles to their quotient by boundaries is essential for the dimension count in the
+completed local ring.
+
+\begin{proposition}[First-order cohomology at a marked point]
+\label{prop:marked-first-order-bound}
+With the standard adjoint and chosen local conditions at a marked
+point, let \(Z^1_{m,\mathcal L}\) be the normalized cocycles at depth \(m\) satisfying these conditions and \(B_m^1\) their normalized coboundaries. Then
+\[
+                       \bigl|Z^1_{m,\mathcal L}/B_m^1\bigr|\le |K|^{m(nd+nq)+C},
+\]
+where \(d=[L^+:\mathbb Q]\) and \(q\) is the number of auxiliary
+places in this comparison. The constant is independent of \(m\)
+and the bound holds on the shared auxiliary system for \(N\gg_m1\).
+\end{proposition}
+
+\begin{proof}
+\proofstep{Local dimensions at the places above the coefficient prime.}
+Let \(d=[L^+:\Q]\) again and let \(d_v\) be the local degree
+at \(v\mid\ell\). Let \(d'_v\) be the rank of the pro-\(\ell\)
+inertial units after removing their torsion. The local
+abelianized quotient for the diagonal cocycles then has
+rank \(d'_v+1\), including the unramified generator.
+Here \(\sum_v d_v=\sum_v d'_v=d\), by local class field
+theory on the chosen split places. Put
+\[
+ \nu=\binom{a}{2}+\binom{b}{2}+gab
+\]
+with \(a=n,b=0\) in type I. The primal first-order
+coefficient module is \(B\) under conjugation by \(R\),
+with \(-\tau\) at \(c\). Its rank is \(n+2\nu\).
+At depth \(m\) the perfect pairing with the twisted dual is the composite 
+\[
+ (z,b)\longmapsto \langle z,b\rangle\longmapsto [t^{m-1}]\langle z,b\rangle\longmapsto \operatorname{Tr}_{K/\mathbf F_\ell}\!\left([t^{m-1}]\langle z,b\rangle\right).
+\]
+
+At \(v\mid\ell\), make the local odd coboundary changes
+used in the choice of \(\kappa_j\) so that \(R\) is
+upper triangular in the ordered local flag. The
+local upper triangular coefficient subspace has
+rank \(n+\nu\). The \(n\) diagonal cocycles kill the
+local torsion prescribed by the level. Each of the
+other positions, including the \(g\) copies for every
+mixed-block position, is filtered by its distance
+above the diagonal. For positions at a fixed diagonal distance, the higher-distance contributions vanish in the associated quotient. The action on the coordinate \((i,j)\) becomes
+\[
+ x_{ij}\longmapsto\psi_{v,i}(g)\,x_{ij}\,\psi_{v,j}(g)^{-1}\qquad(i<j).
+\] The local
+nonresonance test excludes the cyclotomic character
+for these ratios. The finite module with this
+character at depth \(m\) has order \(|K|^m\).
+
+Tate local duality bounds its second cohomology by
+\(|K|^{O(1)}\), since some ratio divided by the
+cyclotomic character differs from one by a fixed
+nonzero element of \(A\). The local Euler characteristic
+formula and the formula for the size of coboundaries
+then give \(|K|^{m(1+d_v)+O(1)}\) for its first
+cocycles. Multiplying along the successive kernels gives
+\[
+       |Z_v|\le
+       |K|^{m[n(d'_v+1)+\nu(1+d_v)]+C_v}.
+\]
+The image of \(Z_v\) in local cohomology quotients
+by at least the coboundaries of the upper triangular
+coefficient subspace. The upper triangular subspace has \(|K|^{m(n+\nu)}\) elements. Dividing by its coboundaries in the Greenberg--Wiles local term gives 
+\[
+ \frac{|L_v|}{|H_v^0|}\le \frac{|Z_v|}{|K|^{m(n+\nu)}}.
+\]
+
+
+\proofstep{The unramified and auxiliary factors.}
+At each fixed non-\(\ell\) place of the unramified local
+condition, the local term is one. At the new places
+and at the distinguished test place the primal local
+condition is full. Local Euler characteristic in
+residue characteristic different from \(\ell\) makes
+the local term the size of the local twisted-dual
+invariants, and the dual local class must vanish.
+At the auxiliary places the twist is trivial in
+characteristic \(\ell\).
+
+Write \(T\) for the regular Frobenius of the base curve. Its simple spectrum and the disjointness of the spectra in the two blocks give 
+\[
+ \dim_E\{X\in S:XT=TX\}=n,\qquad\{X\in M:XT=TX\}=0.
+\]
+ In the paired dual,
+an invariant at the fraction field therefore has
+\(\lambda_j=0\) for every \(j\) and at most \(n\)
+free diagonal coordinates. For \(N\) sufficiently large as a function of \(m\), the finite-depth Frobenius equations agree with the fixed ones. The at most \(n\) free coordinates and the bounded Smith factors give the estimate
+\[
+ |K|^{mn}\,|K|^{C_j}=|K|^{mn+C_j} .
+\]
+
+\proofstep{Invariant spaces at the distinguished and real places.}
+At the distinguished place the decomposition subgroup \(D_v\) must satisfy the intertwining test 
+\[
+ \bigl\{Y:\chi(h)r(h)Y=Yr(h)\text{ for every }h\in D_v\bigr\}=0.
+\]
+ This holds
+over \(E\) by clearing denominators in \(Y\). Applying it
+first to the off-diagonal projections and then to the
+diagonal projection gives zero invariants for the paired
+dual over \(E\), and a bounded finite-depth term.
+For primal global invariants, commutation
+with the span \(B\) forces centrality, while the
+real action requires skew symmetry. The center consists of block scalars fixed by transpose. Since \(\ell\ne2\), the real skew condition gives 
+\[
+ Z\in Z(B),\quad Z=-Z^{\mathsf T}\quad\Longrightarrow\quad 2Z=0\quad\Longrightarrow\quad Z=0.
+\]
+ Hence the integral comparison contributes only bounded torsion at finite depth. At every real place
+the primal invariant module has at least
+\(\nu\) independent coordinates at each depth.
+Indeed if \(c'\) is its conjugation, the matrix
+\(R(c'c)\) is symmetric by the polarization
+relation and \(\epsilon(c'c)=1\). Multiplication
+by this matrix embeds the skew matrices in the
+\(c'\)-fixed space.
+
+\proofstep{The Greenberg--Wiles product.}
+Greenberg--Wiles duality, with the tested dual bound,
+gives the estimate in cohomology. The exponent of
+\(|K|\) that multiplies \(m\) is
+\[
+  \sum_{v\mid\ell}
+    \bigl(n(d'_v+1)+\nu(1+d_v)-(n+\nu)\bigr)
+     +nq-\nu d=nd+nq .
+\]
+The primal cocycles normalized at \(c\) modulo their
+normalized coboundaries give the same cohomology,
+again by division by two. Thus the bound is
+\(|K|^{m(nd+nq)+C}\) for all \(m\) and all sufficiently
+large \(N\) at that \(m\). This estimate holds on the same auxiliary systems for every point in the chain.
+
+\end{proof}
+
+\subsection{The odd obstruction bound}
+\label{subsec:odd-obstruction}
+
+The first-order estimate counts directions. To bound the relations among them we must
+also control the obstruction to lifting; it is the odd part that enters the two-block
+calculation.
+
+\begin{proposition}[Uniform control of the odd obstruction module]
+\label{prop:marked-odd-obstruction-bound}
+Use the fixed normalized point of Lemma~\ref{hyp:marked-square-zero-data}.
+The module \(U_m\) is relative second cohomology of the odd matrix
+module over \(K[[t]]/(t^m)\), with the local projections by the upper
+triangular part at \(v\mid\ell\) and the unramified local condition
+away from \(\ell\). A cocycle includes a trivialization of each
+projected local class. There is a constant \(C\) independent of \(e,m\)
+such that for every \(e\le m\)
+\[
+                  |U_m/t^e U_m|\le |K|^{ge+C}.
+\]
+In particular the quotient by the first \(g\) elementary-divisor
+summands is killed by \(t^C\). Among any \(g+1\) classes there is
+a combination with a unit coefficient whose multiple by \(t^C\)
+vanishes.
+\end{proposition}
+
+\begin{proof}
+\proofstep{The obstruction module at a fixed depth.}
+Keep the fixed point and let \(A_e=A/(t^e)\).
+Use the odd matrix module \(M_e\) over \(A_e\),
+with conjugation by \(r\) and with \(-\mathsf T\)
+at \(c\). At a place \(v\mid\ell\) the local
+coefficient quotient \(Q_{v,e}\) is by the
+upper triangular part in the ordered flag. Its
+rank over \(A_e\) is \(ab\), one lower entry for each
+pair of indices from different blocks. At the other
+finite places the quotient is \(M_e\) itself and
+the local condition is unramified.
+
+In particular at a place above \(\ell\) the localization condition on the projected class \(\bar z\) is
+\[
+ \operatorname{res}_v[\bar z]=0\qquad(v\mid\ell).
+\] Let \(S_e\)
+denote the resulting first cohomology group with
+these conditions. Let \(U_e\) denote second
+cohomology with these local conditions.
+Represent a class of \(U_e\) by a global
+two-cocycle and a local one-cochain trivializing
+its projection at every place. One quotients by the
+changes from global one-cochains and local
+one-cocycles with the allowed local restrictions.
+Let \(r_e^2\) denote restriction followed by projection
+in second cohomology, and set
+\[
+ a_e\colon H^1(G^+,M_e)\longrightarrow
+             \bigoplus_v H^1(G_v,Q_{v,e})/L_{v,e}.
+\]
+Then the obstruction group sits in
+\[
+ 0\longrightarrow\operatorname{coker}a_e\longrightarrow U_e
+ \longrightarrow\ker r^2_e\longrightarrow0.
+ \tag{11}\label{eq:local-patch-11}
+\]
+
+In \eqref{eq:local-patch-11} the local indices are precisely the primes above \(\ell\)
+and the fixed tame primes dividing the level cutoff away from \(\ell\).
+The distinguished place and the new Taylor--Wiles places belong to the
+global ramification set. Only the new inertia evaluations enter \eqref{eq:local-patch-12}
+in comparing with the base. Here \(G^+\) denotes the real-field group
+\(G_{L^+,S'}\), the Galois group of the maximal extension unramified
+outside the level set \(S'\) and the archimedean places. The subgroup \(L_{v,e}\) is the group unramified on the prescribed tame inertia kernel away from
+\(\ell\) and zero above \(\ell\). The sequence follows
+by first sending the cocycle to its global class.
+If that class is zero one subtracts a global
+coboundary and is left with the indicated local
+classes modulo global restrictions.
+
+At the base level,
+\[
+                         |S_e|\le |K|^{ge+C_0}.
+ \tag{12}\label{eq:local-patch-12}
+\]
+Use evaluations on finitely many generators as for
+the paired dual. For each local condition add the
+coordinates of a local boundary matrix at the
+places above \(\ell\), and require zero restrictions
+on the prescribed inertias away from \(\ell\), where
+the odd module is unramified. One obtains a
+finite matrix of linear equations by taking the
+row span, including all relations and local
+equations. If \(F\) denotes this matrix, its nonzero Smith factors contribute a bounded correction: 
+\[
+ \log_{|K|}|\ker(F\bmod t^e)|=e\dim_E\ker(F\otimes_A E)+O_F(1).
+\]
+ Project to the generator
+coordinates and divide by global boundaries.
+The kernel of projection is given by the local
+invariance equations on the added matrices,
+so its count also has the corresponding
+dimension estimate. This gives \eqref{eq:local-patch-12}, since the
+resulting fraction-field quotient has dimension
+\(g\).
+
+At the auxiliary level, evaluate each class on
+the new tame generators. Boundaries vanish there.
+The Frobenius relation, the trivial inertia action
+and \(Q_{j,N}\equiv1\pmod\ell\) make the
+tame value fixed by conjugation under the
+auxiliary Frobenius. Fix \(m\) and take \(N\) large enough for that depth. For every \(e\le m\) the tame value \(Z\) then obeys the same commutation equation as at the test element: 
+\[
+ Zr(h_j)=r(h_j)Z\pmod {t^e}.
+\]
+ The commutant of
+\(r(h_j)\) has no off-diagonal part over \(E\)
+because the full eigenvalue list is distinct.
+By Smith normal form the cardinality of this evaluation image satisfies the bound
+\[
+ |\operatorname{im}({\rm ev})|\le |K|^{C_{\rm aux}}\qquad(e\le m).
+\] In the kernel
+the cocycle is zero on the new inertia and
+descends to the base, with its old local
+conditions. This proves \eqref{eq:local-patch-12} at the auxiliary
+level with the additional constant \(C_{\rm aux}\).
+
+Two more invariant groups have uniformly bounded
+order. For \(H^0(G_v,Q_{v,e})\) above \(\ell\),
+filter the lower entries so that the induced
+characters are the lower ordered ratios. On a lower-entry graded piece, an invariant \(x_{ij}\) satisfies 
+\[
+ (\psi_{v,i}(h)\psi_{v,j}(h)^{-1}-1)x_{ij}=0\quad\text{for every }h.
+\]
+ Distinctness of the ordinary characters forces \(x_{ij}=0\) over the fraction field. Successive application to the filtration kills every invariant. The
+same finite-row and Smith argument bounds
+the finite-depth invariants. For the
+cyclotomic twisted dual of \(M_e\), its invariants
+on \(H\) vanish over \(E\). The twist is trivial
+there, and conjugation invariants on the odd
+matrices vanish by the block idempotents in
+the span of \(r(H)\). The matrix trace pairing
+identifies the odd module with its \(A_e\)-dual.
+
+For \(X,Y\) in the odd matrix module the induced finite-field
+pairing is
+\[
+ (X,Y)\longmapsto
+ \operatorname{Tr}_{K/\mathbf F_\ell}\!\left([t^{e-1}]
+                    \operatorname{tr}(XY)\right).
+\]
+Indeed a coefficient at degree \(j<e\) in a nonzero trace pairing
+is detected by multiplication of the other vector by \(t^{e-1-j}\)
+and a scalar of \(K\), using nondegeneracy of the field trace.
+It gives a fixed
+bound \(|K|^{C_d}\) for the global Tate dual
+invariants. This remains valid at all auxiliary
+levels because the coefficient action is
+pulled back by a surjection. In particular
+\[
+          |\operatorname{coker} r^2_e|\le |K|^{C_d}.
+ \tag{13}\label{eq:local-patch-13}
+\]
+Indeed take first the arithmetic level defining the global and local
+groups. The finite set \(S'\) contains every place over \(\ell\) and
+\(\ell\) is odd.
+
+For the finite discrete \(\ell\)-primary coefficients
+here global \(H^3\) vanishes, even in the presence of real places.
+Local \(H^3\) at the finite places vanishes as well. Thus for any short exact sequence of these finite discrete coefficient modules, the end of the cohomology sequence is
+\[
+ H^2(G,A)\longrightarrow H^2(G,B)\longrightarrow H^2(G,C)\longrightarrow H^3(G,A)=0
+\]
+for \(0\to A\to B\to C\to0\). This is the required right exactness.
+Poitou--Tate bounds the cokernel of
+global localization with full local coefficients
+by the global Tate dual invariants. Drop the components outside the fixed indices and identify each retained local group with the decomposition group at the chosen split prime of the CM field. For any retained local quotient \(T\twoheadrightarrow T'\) with kernel \(T_0\), local cohomological dimension two gives the exact segment 
+\[
+ H^2(D_v,T)\longrightarrow H^2(D_v,T')\longrightarrow H^3(D_v,T_0)=0.
+\]
+
+The level map from the arithmetic group at \(V_N\) to the group
+for this count is a continuous bijection by the level-map
+surjectivity and the injectivity in the arithmetic group comparison. Compactness and Hausdorffness make its inverse
+continuous. Pullback of cochains thus identifies the global cohomology
+and commutes with the fixed local restrictions, the signed real
+involutions and the cyclotomic twist.  They precede passage to
+the relative pro-\(\ell\) quotients for the patch.
+
+\proofstep{The global and local Euler factors.}
+\proofstep{Bounding the auxiliary odd classes by duality.}
+The global Euler characteristic gives
+\[
+ |H^1(G^+,M_e)|=
+    |H^0(G^+,M_e)|\,|H^2(G^+,M_e)|\,|K|^{eabd}.
+\]
+Each real conjugation has \(ab\) fixed coordinates
+on \(M_e\). In the normalized basis its action
+is minus transpose. At another real conjugation
+multiplication by the corresponding invertible
+symmetric block-diagonal matrix identifies the
+fixed space with the skew off-diagonal matrices.
+The local Euler term at \(v\mid\ell\) for
+\(Q_{v,e}\) is \(|K|^{eab d_v}\) in the numerator
+of \(|H^1|/(|H^0||H^2|)\). At the other
+places \(|H^1_{\rm ur}|=|H^0|\), by taking the prime-to-\(\ell\) inertia invariants
+and evaluating on Frobenius, as explained below. Taking orders
+in \eqref{eq:local-patch-11}, using \(\sum d_v=d\) and dropping
+the global \(H^0\) denominator, gives
+\[
+ |U_e|\le |S_e|\,
+    \prod_{v\mid\ell}|H^0(G_v,Q_{v,e})|\,
+                   |\operatorname{coker} r^2_e|.
+ \tag{14}\label{eq:local-patch-14}
+\]
+In particular the two Euler contributions cancel
+even if the finite-depth local quotients have
+nonzero invariants.
+
+To control elementary divisors, use both coefficient
+sequences for \(e\le m\),
+\[
+ 0\to A_{m-e}\xrightarrow{t^e} A_m\to A_e\to0,
+ \qquad
+ 0\to A_e\xrightarrow{t^{m-e}} A_m\to A_{m-e}\to0.
+\]
+They stay exact on the odd modules and their local
+quotients, since the local upper triangular kernel
+has a free complement in its local frame. Write
+\(i:U_{m-e}\to U_m\) for the first inclusion map
+and \(r:U_m\to U_{m-e}\) for the second reduction
+map. Multiplication and the first reduction satisfy 
+\[
+ i\circ r=t^e\operatorname{id}_{U_m},\qquad \ker(U_m\longrightarrow U_e)\subseteq i(U_{m-e}).
+\]
+
+
+To see this, subtract a lift of the coboundary
+expression after reduction, global and local.
+At a fixed tame place let \(D_u,I_u\) be its absolute
+decomposition and inertia groups, and
+\(J_u=I_u\cap\bigcap_i\ker\bar\chi_i\) for the residual diagonal
+characters pulled back to \(D_u\). Its image on the base level is the
+inertia kernel prescribed for the point. Thus \(J_u\) acts trivially on
+the odd modules at every depth. The inertia quotient embeds into a product of multiplicative groups of the finite residual field \(k\). Therefore, for the number \(a\) of factors in the embedding,
+\[
+ |P_u|\mid (|k|-1)^a,\qquad (|P_u|,\ell)=1 .
+\] A cocycle zero on \(J_u\) descends to
+\(D_u/J_u\). Its restriction to \(P_u\) is a boundary by averaging.
+
+Subtract that boundary and obtain a cocycle on
+\(D_u/I_u\simeq\widehat{\mathbb Z}\) with values in the
+\(P_u\)-invariants. Invariants lift under a surjection by the same
+averaging. Lift the value on Frobenius, which gives a continuous
+cocycle since the cyclic subgroup generated in the finite affine
+group is finite. Add back a lift of the boundary to lift the original
+one-cocycle exactly. This calculation also identifies the local
+\(H^1\) unramified on \(J_u\) with Frobenius coinvariants on
+the \(P_u\)-invariants. On the finite invariant coefficient module \(M\), let \(T=\mathrm{Frob}-1\).
+Rank counting for this endomorphism gives
+\[
+ |\operatorname{coker}T|=\frac{|M|}{|\operatorname{im}T|}
+                         =|\ker T|.
+\]
+Thus the Frobenius coinvariants and invariants have the same order. At the
+\(\ell\)-adic places the local allowed classes
+are boundaries and their boundary matrices
+lift. The remaining cochains are then in the
+coefficient kernel and hence give the inverse
+image under \(i\).
+
+For the second sequence,
+\(|\operatorname{coker}r|\) is bounded by
+\(|\operatorname{coker}r^2_e|\). Lift the global class
+using surjectivity on global second cohomology.
+The defects of its local nullhomotopies now have
+coefficients in \(A_e\). For the finite, discrete coefficient modules a section of the coefficient surjection is continuous as a map of sets. A local one-cochain \(b\) therefore has a continuous lift by composition:
+\[
+ \tilde b=s\circ b,\qquad \operatorname{pr}\circ\tilde b=b .
+\]
+The defects are second cohomology classes in
+the local quotients at depth \(e\). Changing the
+global lift changes them by the image of
+\(r^2_e\). If the defect in its cokernel vanishes,
+adjust the global lift accordingly and use the
+local cochains of the corrections; this produces
+a lift in \(U_m\). The same comparison on
+differences shows that equal defects yield the
+same element of \(\operatorname{coker}r\).
+This is the local restriction cokernel bound,
+using global cohomological dimension two.
+
+\proofstep{The quotient at a smaller depth and the elementary divisors.}
+Consequently
+\[
+ |U_m/t^eU_m|\le |U_e|\,|\operatorname{coker} r^2_e|
+                  \le |K|^{ge+C},\qquad e\le m.
+ \tag{15}\label{eq:local-patch-15}
+\]
+Here \(C\) is the sum of the constants in \eqref{eq:local-patch-12},
+the auxiliary correction, the local invariant
+bounds and twice the constant in \eqref{eq:local-patch-13}. It is
+chosen before \(m\) or \(e\). Write the elementary
+divisors of \(U_m\) as \(A/(t^{h_i})\) in
+nonincreasing order, with \(h_i\le m\).
+If there is a \((g+1)\)-st divisor, use its own exponent as the test depth in \eqref{eq:local-patch-15}:
+\[
+ e=h_{g+1}\quad\Longrightarrow\quad h_{g+1}\le C .
+\]
+Thus the quotient by the first \(g\) summands is
+killed by \(t^C\).
+
+For any \(g+1\) obstruction
+classes, their projections to the first \(g\)
+summands admit a linear relation with at least
+one unit coefficient. For example lift to a
+matrix of \(g\) rows over \(A\), take a
+fraction-field linear dependence and rescale to
+integral coefficients with a unit. Multiplying
+this combination by \(t^C\) kills the full
+obstruction. For \(g=0\) \eqref{eq:local-patch-15} directly gives the
+same annihilation bound.  Its obstruction classes
+are the odd two-cocycles with their local
+trivializations. Their coboundaries are precisely
+the global one-cochain changes with the same
+local conditions, as in \eqref{eq:local-patch-11}.
+
+\end{proof}
+
+\input{patching-marking}
+\input{patching-matrices}
+\input{patching-cotangent}
+\input{closed-link}
+
+\subsection{Recovering the augmentation support}
+\label{subsec:marked-augmentation}
+
+We have compared primes above each curve point. To obtain a statement about ordinary
+Hecke support, we must now follow them back to the common level by augmentation.
+
+\begin{proposition}[Support transport across a marked chain]\label{prop:marked-chain-support}
+Fix a finite chain of normalized curve points at the same
+ordinary level, with the auxiliary system of
+Proposition~\ref{prop:marked-profinite-system} and the local
+comparison of Proposition~\ref{prop:marked-stable-prime-inclusion}. Suppose there is a stable prime of the
+ordinary Hecke support below the initial curve kernel.
+If successive curves share a thick prime as in the
+completed local comparison, write \(Q_{\rm end}\) for the last stable or thick target prime
+and \(J_{\rm ord}\) for the image of the ordinary Hecke ideal at the target. Then
+\[
+                      J_{\rm ord}\subseteq Q_{\rm end}.
+\] The augmentation comparison is made at the
+target, where the tame variables vanish.
+\end{proposition}
+
+\begin{proof}
+\proofstep{The common augmented comparison.}
+Use the ordinary finite-level modules of
+Section~\ref{par:ordinary-patching} with the same
+choice of auxiliary places for the finite chain.
+Write \(J\subset D\) for the annihilator-support
+ideal in the base determinant ring, and let
+\(D^{\rm sp}\) be the finite free splitting algebra
+adjoining the ordered Frobenius roots. A common
+coefficient extension and the variable specializing
+to \(t\) are included in the base weight algebra.
+They are also included in the base module \(X\)
+after extension to \(D^{\rm sp}\). For every prime
+of that algebra its support is the inverse image
+of \(V(J)\). Indeed, let \(D\to S\) be the base change, \(\mathfrak q\in\operatorname{Spec}S\) and \(\mathfrak p=\mathfrak q\cap D\). The fibre of the finite module is
+\[
+ (X\otimes_D S)\otimes_S k(\mathfrak q)
+  \simeq (X\otimes_D k(\mathfrak p))
+                    \otimes_{k(\mathfrak p)} k(\mathfrak q).
+\]
+A field extension preserves nonzero vector spaces. Applying Nakayama at each of the two primes identifies the support test with the ideal test:
+\[
+ \mathfrak q\in\operatorname{Supp}(X\otimes_D S)\quad\Longleftrightarrow\quad J\subseteq\mathfrak p .
+\]
+
+\proofstep{The fixed marked limit for the chosen finite chain.}
+The common finitely generated limit group gives
+a coefficient ring \(R_0\) acting on these modules
+at each precision. Its augmentation maps to the
+base splitting algebra. The limiting relation ideal
+\(I\) includes the group, polarization, ordered
+ordinary, old inertia and auxiliary root and inertia
+relations. Write \(\mathbf y\) for the \(nq\) tame
+parameters and \(f\) for the specializations of the
+two-map product. At every curve point \(f\) is a unit
+after localization. Its factors reduce there to
+differences of distinct roots since the new norms
+tend to one.
+
+At each fixed tame degree and coefficient precision
+the modules at sufficiently deep levels are free
+over the truncated coefficient and tame algebra.
+Let \(u\) and \(v\) be the limiting comparison maps between the augmentation of the patched module and the base module \(X\), in opposite directions. Their composites specialize to multiplication by the same \(f\), so on inverting \(f\),
+\[
+ (f^{-1}v)u=1,\qquad u(f^{-1}v)=1 .
+\]
+This identifies the augmentation after localization with \(X[1/f]\).
+The tame graded pieces are the corresponding
+free monomial pieces over that augmentation.
+This is the same module construction as for
+one arc.
+
+In particular approximation of a power
+of each relation by the finite-level annihilators
+makes that relation nilpotent on the patched
+module. Here both the tame degree and coefficient
+precision are fixed before taking the auxiliary
+level depth. One may quotient by the relations
+for the support comparison. More explicitly,
+if \(U\) is the finite patched module over the
+completed localized ring and
+\(I\subseteq\sqrt{\operatorname{Ann}U}\), the
+finite module \(U/IU\) has the same support by
+Nakayama. Equivalently the comparison may be
+made at each support prime before imposing the
+relations. At augmentation primes the identity
+\[
+  \mathfrak q\in\operatorname{Supp}U
+  \quad\Longleftrightarrow\quad
+  \mathfrak q/(\mathbf y)\in
+       \operatorname{Supp}(U/(\mathbf y)U)
+ \tag{16}\label{eq:local-patch-16}
+\]
+follows by local Nakayama at a prime containing
+\((\mathbf y)\). Apply \eqref{eq:local-patch-16} to the original patched
+module, whose augmentation is \(X[1/f]\); this
+avoids requiring its quotient by \(I\) to have
+the original graded pieces.
+
+\proofstep{Support after completed localization.}
+For completed localization at the \(i\)-th
+curve kernel, the completed weight ring has
+dimension \(1+nd\). Indeed its coefficient and
+weight algebra before localization includes
+the uniformizer, one parameter specializing
+to \(t\), and \(nd\) weight parameters. The
+evaluation quotient has dimension one and
+the localized weight ring is regular. The
+selected completed summand of the augmentation
+module is finite free over this completed weight
+ring. On completing the finite algebra acting faithfully on \(X\), let \(e_i\) be its mutually orthogonal local idempotents. They exhibit the summands by
+\[
+ 1=\sum_i e_i,\qquad \widehat X=\bigoplus_i e_i\widehat X .
+\]
+The factor module is a direct summand of a finite
+free module over a local ring, hence is free.
+Quasi-regularity of \(\mathbf y\) means that the
+graded pieces of the completed patched module are
+the monomial pieces on this free augmentation.
+
+Write \(W\) for the completed weight ring, \(Y=(y_1,\ldots,y_{nq})\), and \(U\) for the completed patched summand. Lift a \(W\)-basis of \(U/YU\), of size \(d_0\), to \(U\). The resulting map
+\[
+  W[[\mathbf y]]^{d_0}\longrightarrow U
+\]
+induces the isomorphism on each graded piece
+\[
+ \bigoplus_{|\alpha|=h}W^{d_0}\mathbf y^\alpha
+      \xrightarrow{\ \sim\ }Y^hU/Y^{h+1}U\qquad(h\ge0)
+\]
+by quasi-regularity. Induction on \(h\) gives the isomorphism modulo \(Y^{h+1}\), and completeness gives it on the full modules. The support
+algebra embeds in the endomorphisms of this
+finite free module. It is finite torsion-free over
+the regular power series ring, of dimension
+\(1+nd+nq\).
+
+Let \(S\) be the regular power series ring and \(C\) this finite support algebra. Fix a minimal prime \(P\) of \(C\). If \(0\ne s\in P\cap S\), its image in the zero-dimensional Noetherian local ring \(C_P\) is nilpotent. Clearing a denominator gives
+\[
+               u s^a=0\quad\text{for some }u\in C\setminus P,\ a\ge1 .
+\]
+Multiplication by \(s\) on the free module is injective and hence is injective on its endomorphisms and on \(C\). This would force \(u=0\). Therefore \(S\hookrightarrow C/P\) is finite and integral. Going-up lifts prime chains of \(S\), and incomparability makes the contractions of strict chains in \(C/P\) strict. It follows that
+\[
+ P\cap S=0,\qquad \dim C/P=\dim S=1+nd+nq.
+\]
+
+The same statement holds for the minimal support
+primes after the relations are imposed, since
+the underlying support is unchanged.
+
+\proofstep{Movement across a link and augmentation at the target.}
+For clarity, the support is moved across a link
+as follows. Take the stable start prime
+on the augmentation and lift it to the completion
+at the starting point. It lies in the patched
+support by \eqref{eq:local-patch-16}. Choose a minimal support prime
+below it, which is stable because stability is
+preserved under generization. Sections~\ref{sec:patching-cotangent}
+and~\ref{subsec:closed-link} put this prime below a lift of the
+outgoing thick prime. Let \(R\) be the common tame-adic patch ring. Imposing the tame parameters is precisely the quotient
+\[
+ \pi:R\twoheadrightarrow R/(\mathbf y),\qquad\ker\pi=(\mathbf y).
+\] If \(\mathfrak t\) is the outgoing prime contracted to \(R\), then \((\mathbf y)\subseteq\mathfrak t\).
+
+For the next curve kernel \(\mathfrak k'\) in \(R\), the link on the augmentation gives
+\[
+  \mathfrak p_{\rm st}\cap R\ \subseteq  \mathfrak t=\pi^{-1}(\mathfrak t/(\mathbf y))\ \subseteq\ \mathfrak k' ,
+\]
+where \(\mathfrak p_{\rm st}\) is the minimal support prime chosen in the starting completion. Lift this latter
+contraction by faithful flatness to the next
+completed localization. Its support membership
+comes from base change of the common patched
+module. The stable prime in this step need not
+contain \((\mathbf y)\). After iterating, apply the
+local comparison to the last target and use
+\eqref{eq:local-patch-16} there, where the target does contain
+\((\mathbf y)\). Contracting to the original
+determinant ring gives the inclusion of \(J\)
+at that target. This is the support step in
+the finite-chain comparison. It uses the
+finite-level relation and comparison maps at
+the actual Hecke levels and the local
+cotangent and dimension implication at each
+point.
+\hfill\mbox{\cite{milne-duality}}\label{cor:ordinary-marked-patching-1}
+\end{proof}

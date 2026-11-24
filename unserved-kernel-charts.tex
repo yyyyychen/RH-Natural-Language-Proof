@@ -1,0 +1,401 @@
+\paragraph{The finite sum on a class pair.}
+\begin{proposition}[Evaluation of the finite kernel on a pair of classes]\label{prop:unserved-reader-integral}
+At a level-free place of Lemma~\ref{hyp:unserved-level-free}, the value of the finite kernel on this pair of classes is the sum
+\eqref{eq:unserved-reader}. For each coefficient \(a\) and translation point \(P\) occurring there,
+\[
+ v_w(a)\ge0,\qquad \gcd(\operatorname{ord}P,p)=1,
+\]
+  and
+the Taylor coefficients in the prescribed differential frames
+can be transported coefficientwise by the embedding at \(w\).
+\end{proposition}
+
+\begin{proof}
+\proofstep{Use the local levels of the two self-dual companions.}
+
+Fix both classes of the matrix entry. Write \(L,L'\) for their
+companion lattices in the two standard Hermitian spaces. They are
+self-dual by the localization argument of
+Proposition~\ref{prop:incident-companion-lattices}. Let \(\Lambda\) be the
+embedded period lattice obtained from the inverse half different
+times \(\operatorname{Hom}_{\mathcal O_E}(L,L')\), with the
+curve period scale. At the finite test places the two half lattices
+\(A,B\) have opposite level exponents.
+
+If \(c\) is the positive
+integer defining the level of the finite kernel, its prime divisors
+are in \(S=\{T_u,g_0,g_1\}\cup Q(\mu)\), and
+\[
+ cA+cB\subseteq\Lambda,\qquad c\Lambda\subseteq A\cap B.
+\]
+These follow by comparing each of the exponents with the
+valuation of \(c\) locally, including the zero exponents off the
+level. Write \(S_X,S_A,S_B\) for representatives, respectively, of
+\[
+ A/(A\cap\Lambda),\quad
+ (\Lambda\cap A)/(\Lambda\cap A\cap B),\quad
+ B/(B\cap\Lambda).
+\]
+In particular \(h=|S_A|\) is prime to \(p\). Indeed the middle
+quotient is finite and killed by \(c\).
+
+\proofstep{Compute the finite Fourier expansion.}
+
+Put \(E_H(x,y)=\Im H(x,y)\) for the alternating period form,
+\(\alpha(x)=\exp(\pi i\sqrt d\, H(x,x)/2)\), and let
+\(\Xi\) be the actual finite test extended by zero off the
+embedded rational Hom space. For the normalized theta
+\(\Theta_{L,L'}\), the finite part of the entry is
+\begin{equation}\label{eq:unserved-reader}
+ \sum_{x\in S_X,\ y\in S_B}
+   \alpha(x)\alpha(y)e^{-\pi i E_H(x,y)}
+   \left(\frac1h\sum_{s\in S_A}
+      \Xi(s-x)e^{2\pi i E_H(s,y)}\right) U_{x+y}\Theta_{L,L'} .
+\end{equation}
+The Fourier sum at \(y\) uses the inverse commutator \(\exp(-2\pi i E_H(s,y))\), with the counting
+measure divided by \(h\). The kernel reading uses volume one.
+Applying \(U_x\) to the resulting \(U_y\) gives the displayed
+Weyl factor. Since \(E_H(\Lambda,\Lambda)\subset\mathbb Z\)
+and \(\sqrt d\,H(v,v)/2\in\mathbb Z\) on \(\Lambda\), all three
+phase factors and the Fourier character are roots of unity.
+The translates have order dividing \(c\) modulo \(\Lambda\).
+
+\proofstep{Check the additive and determinant character factors.}
+
+The word support is
+a characteristic function. The type tests and twist tests on
+a residue matrix multiply finite additive characters and values
+of finite multiplicative characters, with zero on the excluded
+residue classes. Each nonzero value is a root of unity.
+Thus, for a nonzero finite character factor \(\xi\) of order \(n\),
+\[
+  n\,v_w(\xi)=v_w(\xi^n)=v_w(1)=0 .
+\]
+ In a
+moved test the extra factors are integer powers of square roots
+of the residue cardinality and local determinant characters.
+At a type place the two movers preserve the submitted lattices,
+so their determinants are local units and the residue characters
+suffice.
+
+At a twist place the uniformizer value and its inverse
+are integral away from that place's rational prime and the type
+levels. Indeed raise the ideal of the place to a principal power
+with generator congruent to one at the character conductor.
+The defining algebraic infinity type expresses that power of
+the value as a product of conjugates of the generator to
+integer powers, up to a root of unity. If \(\mathfrak P^A=(\alpha)\) with \(\alpha\equiv1\)
+at the conductor, the value \(u\) satisfies
+
+\[
+  u^A=\zeta\prod_\tau\tau(\alpha)^{a_\tau}
+\]
+in the algebraic normalization. Thus
+\[
+       A v_w(u)=\sum_\tau a_\tau v_w(\tau(\alpha))=0
+\]
+for \(w\) outside that rational prime and the type levels. The off-type matching of the
+column character with this ideal character gives the assertion
+for the actual local value. The types are disjoint from the
+auxiliary twist places. Finally the pinned terminal row either
+uses an indicator or its finite Fourier reading. Its nonzero
+values are integral additive character values, with a possible
+factor \(q^{-Mn}\) at a place of cardinality \(q\), rank \(n\)
+and depth \(M\). At the coefficient place under consideration, \(q\) is a unit. For any nonzero additive-character value \(\xi\) this gives
+\[
+  v_w(q^{-Mn}\xi)=-Mn\,v_w(q)+v_w(\xi)=0.
+\]
+ The
+nonterminal classes use the matrix test, by the terminal pinning
+of the supplementary rows. This proves integrality of every
+scalar multiplying a translate in \eqref{eq:unserved-reader}.
+It applies also when an entire entry vanishes.
+\label{cor:unserved-kernel-charts-1}
+
+All Taylor identities here are identities of coefficients.
+\proofstep{Transport the Taylor coefficients in their fixed normalization.}
+
+For clarity, algebraicity of the translated derivatives can
+also be tested at one auxiliary good prime. Choose it away from
+the denominators of the period comparison, the translate and a
+rational basis of the Hom directions, away from the discriminant,
+and split completely in the host. The fourfold expansion and the
+baseline derivative estimate of Section~\ref{subsec:baseline-jets}
+apply for every isomorphism of \(\mathbb C\) with \(\mathbb C_p\)
+over a fixed embedding of \(\overline{\mathbb Q}\) at this auxiliary
+prime. For each fixed derivative \(c\) in those directions the resulting bound \(M_c\) is uniform in the chosen isomorphism:
+\[
+  |\iota(c)|_p\le M_c\qquad\bigl(\iota:\mathbb C\xrightarrow{\sim}\mathbb C_p\text{ over the fixed algebraic embedding}\bigr).
+\]
+ In particular, the argument matrices are
+integral after a fixed denominator clear for the rational
+directions. The embedded matrices of a rational basis over the
+quadratic field span the complexified Hom at the CM type, by
+separability of \(E/K\).
+
+For a fixed total order \(d\), the induced action on derivatives
+is the degree-\(d\) tensor of the inverse direction matrix. Its
+entries are algebraic and fixed. Thus every labelled coefficient
+is a fixed finite algebraic linear combination of the bounded
+directional derivatives. The triangle inequality gives the same
+uniformity in the field isomorphisms.
+Suppose one coefficient \(c\) were transcendental, and fix one
+of the comparison isomorphisms \(\iota\colon\mathbb C\to\mathbb C_p\).
+For each \(n\ge1\), the map 
+\[
+  c\mapsto p^{-n}c
+\]
+ extends by
+transcendence bases to an automorphism \(\alpha_n\) over
+\(\overline{\mathbb Q}\). The same directional bound would then
+apply to all the isomorphisms \(\iota\circ\alpha_n\), whereas
+\[
+ |(\iota\circ\alpha_n)(c)|_p=p^n|\iota(c)|_p\longrightarrow\infty .
+\] Division by the multi-index factorial preserves
+algebraicity. The finite sums, linear substitutions and the
+map on derivatives can consequently be transported by the
+specified coefficient embedding at the original \(w\).
+
+\end{proof}
+
+\paragraph{Removing the differential generator in the actual frames.}
+
+A differential generator can change the valuation in a scalar chart. In the actual integral frames the following comparison removes that factor.
+
+\begin{proposition}[Removing the generator in integral frames]\label{prop:unserved-normalized-frame}
+At the enhanced places in this comparison, including \(p=d\),
+one can choose the class frames so that the substitution of \eqref{eq:unserved-normalized-frame} reads
+\[
+ Z_\tau\longmapsto \rho_\tau(P_{i+1})Z_\tau\rho_\tau(P_i)^{-1}.
+\]
+ The axis
+generators and the resulting scalar factors in the coefficient
+tests are units in the chosen coefficient valuation.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Choose simultaneous rational unitary frames.}
+
+For each stage \(i\) and each of its classes choose a rational
+unitary matrix \(P_i\) whose columns span its lattice at all
+places above \(p\). Such a matrix exists simultaneously there.
+The selected host extension \(E/F\) is unramified at finite places.
+At a split place the two summands of a self-dual lattice are
+mutually dual.
+In paired local coordinates the Gram block between dual bases \(e_i,e'_j\) is
+\[
+  \big(h(e_i,e'_j)\big)_{ij}=I .
+\]
+
+At an unramified nonsplit place, orthogonal
+splitting and surjectivity of the unramified unit norm identify
+two unimodular Hermitian lattices. The resulting local
+transporters are open. Multiplication by nearby scalar norm-one
+elements avoids the eigenvalue \(-1\) at each place. Approximate
+their inverse Cayley transforms in the rational vector space of
+skew-Hermitian matrices by weak approximation over \(F\), and
+apply the Cayley transform back. Thus both the columns and the
+inverse coordinates clear into the required lattices by
+integers prime to \(p\). The same matrix \(P\) works at every label over the place. Its inverse adjoint property is
+\[
+  P=(P^*)^{-1},\qquad P^*P=I.
+\]
+
+\proofstep{Separate the residual axes.}
+
+For a CM type embedding \(\rho_\tau\) at \(w\) write \(d_\tau\)
+for the image of the generator of its axis in the module
+spanned by \((\rho_z a)_z\), \(a\) in the inverse half different.
+At these enhanced places that ideal is the unit ideal locally.
+The entries are integral. For two distinct type labels \(\tau,\tau'\), one can consequently separate their residue embeddings by an integer:
+\[
+  a\in{\cal O}_E,\qquad \overline{\rho_\tau(a)}\ne\overline{\rho_{\tau'}(a)}.
+\]
+ Indeed the labels
+all extend the same embedding of \(K\), and the relative inertia
+in \(E/K\) is trivial at these primes.
+
+Distinct primes are
+separated by the Chinese remainder theorem and distinct
+embeddings of the same unramified local field are separated
+on the residue field. This also applies at \(p=d\), where
+\(K/\mathbb Q\) itself is ramified. Acting on the embedded
+all-ones vector with the product, over \(z\ne\tau\), of
+\(a_z-\rho_z(a_z)\), where
+\(\rho_\tau(a_z)-\rho_z(a_z)\) is a unit, isolates the
+\(\tau\)-axis with unit coordinate. The module is stable under
+these actions. Its axis generator is therefore a unit, and
+membership of the generator supplies a finite expression
+\[
+ d_\tau {\bf1}_\tau=\sum_l r_l(\rho_z a_l)_z,
+ \qquad |r_l|_w\le1,\quad a_l\in\mathfrak b^{-1},
+\]
+where \(\mathfrak b\) denotes the half different.
+This last expression keeps its global period directions.
+
+\proofstep{Absorb the unit without changing the norm tests.}
+
+Set \(a_\tau=d_\tau^{-1}\) and use the frame
+\(a_\tau^i\rho_\tau(P_i)\) at stage \(i\). In the incident
+Hom variable the factor
+\(d_\tau a_\tau^{i+1}/a_\tau^i\) is exactly one. The substitution
+on the series in \eqref{eq:unserved-reader} is now
+\begin{equation}\label{eq:unserved-normalized-frame}
+ Z_\tau\longmapsto
+    \rho_\tau(P_{i+1}) Z_\tau\rho_\tau(P_i)^{-1},
+\end{equation}
+with the row of \(Z_\tau\) indexed by the target. These are
+admissible choices for the true columns.
+
+The product of the
+column minors of a diagram \(\nu_\tau\) gains
+\((a_\tau^i)^{|\nu_\tau|}\) on input frames. A determinant twist
+of exponent \(s\) gains \((a_\tau^{iN_i})^s\), including signed
+exponents. The target formulas use \(i+1\). Every such factor
+is a unit, and homogeneity gives the same power on every term
+of the corresponding polynomial reading. Thus the original
+coefficient norm tests survive this change of frames, while the
+Taylor map itself has the precise coefficient in
+\eqref{eq:unserved-normalized-frame}. \label{cor:unserved-kernel-charts-2}
+
+\end{proof}
+
+\paragraph{One curve model before the inert orbit estimates.}
+\begin{proposition}[One inert curve model for all translates]\label{prop:unserved-common-inert-model}
+At the selected inert places \(p\ge5\) with \(p\ne d\), the two classes and all their prime-to-\(p\) translates use one good curve law, tangent unit \(c_w\) and quadratic correction \(q\). In good curve coordinates with logarithm \(l\), the parameter change for all these charts is
+\[
+ t(X)=l^{-1}(c_w L(X)),\qquad c_w\in{\cal O}_w^\times.
+\]
+
+In the even and signal cases the resulting normal form is
+\textup{\eqref{eq:tag-i4}}. The odd case uses the doubled orbit and
+the zero-step case uses the repeated-variable one-letter
+phase. The phase and its coefficient estimates are uniform
+in the labels, although the integral series may depend
+on the classes and on every variable.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Fix the model and the common unit.}
+
+The four cases treated here share the following hypotheses on the residue characteristic
+\[
+  p\ge5,\qquad p\ne d,\qquad \left(\frac{-d}{p}\right)=-1.
+\]
+Apply Proposition~\ref{prop:good-inert-cm-model} to the discriminant-normalized
+period lattice. Changing the integral ideal representative of the
+curve prime to \(p\) changes the discriminant root by the inverse
+homothety and leaves its scaled lattice fixed. The good-model
+homothety is a unit since its twelfth power compares two unit
+discriminants. Write \(l\) for the good curve logarithm and \(L\) for the comparison logarithm. The integral parameter change \(t\) fixes the tangent unit through
+\[
+  l(t(X))=c_wL(X),\qquad t'(0)=c_w\in{\cal O}_w^\times.
+\]
+Use this one choice of parameter, Frobenius and curve phase \(q\) throughout the place. These precede the choice of the two classes, their ranks,
+their diagrams, and the translations in the reader.
+
+\proofstep{Choose the underlying Hom frame before the translates.}
+
+Here is a rational orthonormal chart for the Hom of the actual
+pair. For the standard lattices one matrix coordinate carries
+the trace Hermitian form on the inverse half different over \(K\).
+It is unimodular at \(p\) by duality of the trace lattice
+(the half different times its conjugate is the relative
+different).
+Split off a vector of unit norm from its reduction.
+For a lift \(u\) with unit norm, let \(\ell\) be its Hermitian pairing in the linear variable. The integral projection and its kernel are
+\[
+  x\longmapsto \ell(x)\ell(u)^{-1}u,\qquad \ell(u)\in{\cal O}^{\times},\qquad \ker\ell=u^\perp.
+\]
+ Such a
+vector exists in every nonzero nonsingular Hermitian space over
+the quadratic residue field, by polarization. Lift it to the
+localized rational lattice.
+
+Orthogonal projection onto its
+complement divides only by that unit, so iteration gives an
+orthogonal basis with positive rational norms \(n_j/e_j\) whose
+numerators and denominators are prime to \(p\). Positivity and
+rationality follow from definiteness and the fixed field of
+conjugation on \(K\). In four copies of each line choose four
+integer squares summing to \(n_je_j\). If \(Q_j\) is their quaternion matrix, then
+\[
+ Q_j^tQ_j=n_je_j I_4,\qquad
+ (Q_j/n_j)^t\bigl((n_j/e_j)I_4\bigr)(Q_j/n_j)=I_4 .
+\]
+Both \(Q_j/n_j\) and its inverse are integral at \(p\). Use these four copies in each
+\(2\)-by-\(2\) block of matrix entries, possible since both
+ranks are even. Transport the resulting basis by
+
+\[
+  X\mapsto P_{i+1} X P_i^{-1}.
+\]
+ This is a rational isometry
+and spans the Hom lattice over the local quadratic integers.
+The basis is chosen before any translate.
+
+\proofstep{Descend the corrected integral section from the fourth tensor.}
+
+On four copies the normalized theta expansion of
+Section~\ref{subsec:theta-normalization} has integral coefficients
+in the locally matched frame. Its arguments are integral
+unitary transforms of the orthonormal directions just
+constructed. The one-variable translated section multiplied by
+\(\exp(q)\) is integral in group coordinates. For the sum of
+phases a unitary change preserves its class modulo logarithms
+of principal integral units by the polarized CM norm relation
+\eqref{eq:cm-norm-relation}.
+
+Apply the change and extract four
+equal coefficient indices on disjoint copies. This proves, in the
+orthonormal basis \(b_j\), that the product
+\[
+  \exp\!\left(\sum_j q(X_j)\right)
+  \Theta\!\left(\left(c_w\sum_j\rho_\tau(b_j)L(X_j)
+                        \right)_\tau\right)
+\]
+is integral, for each of the normalized translates \(\Theta\)
+in the finite reader. It holds also for an integral linear
+combination since the multiplier and arguments are common. A pair
+of lattices agreeing only locally at \(p\) gives the same conclusion.
+Two integers prime to \(p\) clear the source and target lattice
+inclusions in both directions, preserving these local arguments
+and prime-to-\(p\) torsion.
+
+\proofstep{Read the phases in the trace-dual cycle variables.}
+
+In an even orbit expand the two parities in a basis and its
+trace dual over the quadratic local field. For one pair of parity vectors \(e,o\) in a matrix coordinate, the Gram block is
+\[
+  \begin{pmatrix}h(e,e)&h(e,o)\\ h(o,e)&h(o,o)\end{pmatrix}=\begin{pmatrix}0&1\\1&0\end{pmatrix}.
+\]
+ This follows by multiplying the unitary
+source and target changes in
+\eqref{eq:unserved-normalized-frame} by their inverse adjoints
+on the conjugate coordinates. Thus the change from the
+orthonormal variables gives the hyperbolic substitution of
+Section~\ref{subsec:curve-exponents}, with the trace-dual sums
+there called \(E\) and \(O\). The root-of-unity average over
+\(p^{d_p}-1\) elements is integral and replaces the summed
+polarization by \(B_{d_p}\) modulo logarithms of integral
+units.
+The averaging denominator is a unit, since
+\[
+  p^{d_p}-1\equiv-1\pmod p,\qquad v_p\big((p^{d_p}-1)^{-1}\big)=0.
+\]
+
+Returning to additive coordinates gives \eqref{eq:tag-i4} of
+Section~\ref{subsec:incident-sections}, with exponent
+\(-B_{d_p}\) on each entry and argument scale given by the
+common tangent unit. This works for any choice of the orbit
+representatives and includes the signal orbits. The same
+orthonormal identity at odd order is used below with the
+trace-dual variables on the doubled orbit. At order one the
+labelled basis is already unitary over the quadratic integers.
+The norm relation transports the one-variable gauge, and its
+polarization at the repeated variable gives the one-letter
+phase with the factor \(1/2\). Thus in each case the integral
+factor can depend on the classes and on every variable, while
+the phase and its coefficient estimates are uniform in both
+classes and all entries of their diagrams. \label{cor:unserved-kernel-charts-3}
+\end{proof}

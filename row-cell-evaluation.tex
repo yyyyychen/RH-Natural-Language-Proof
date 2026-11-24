@@ -1,0 +1,284 @@
+\begin{auxlemma}[Evaluation of the cell norm at a positive Gram point]
+\label{lem:unit-cell-evaluation}
+Let \(J_\mu\) be the amplitude in Lemma~\ref{lem:minor-orbital-shift},
+\(\mu=\lambda+\nu\), \(\|\nu\|_1\le C_nkm^3\).
+Use the actual ordered words, compact types and root measures at a
+marked real place. Write \(w(\gamma)\) for the orbital Jacobian of
+the block containing \(\gamma\), and \(G=G_{Z,v}>0\).
+For all sufficiently late marked rows, uniformly for every nonzero
+pair of periods in this window,
+\begin{equation}\label{eq:unweighted-unit-cell-evaluation}
+ w(\gamma)\,\frac{\|J_\mu(\gamma)\|_{\rm HS}^2}{M_\mu}
+       \le b^{C_bm^4}\max(1,G^{-1})^{C_bm^2},
+ \qquad M_\mu=\|J_\mu\|_{\rm cell}^2 .
+\end{equation}
+The constant \(C_b\) depends on the fixed weight, character and
+measure bounds. The threshold may also depend on \(C_n\).
+\end{auxlemma}
+
+\begin{proof}
+\proofstep{Point evaluation on a sequence of blocks.}
+Use the single compact-finite coefficient representing \(J_\mu\)
+in Proposition~\ref{prop:local-operator-normalization}. For any such
+coefficient \(F\), denote its transformed squared norm at the point
+and its integrated squared norm on the big cell by
+\[
+ E_F(\gamma)=w(\gamma)\|J_F(\gamma)\|_{\rm HS}^2,\qquad
+ {\cal M}(F)=\int_{\text{big cell}} E_F(c)\,dc .
+\]
+Put \(p=r+1\), \(p_0=2p\), \(N=3p\). In a cut between differing
+compact coordinates divide a diagonal word energy by its positive
+word weights as in Proposition~\ref{prop:real-node-positivity}.
+For the point estimate one needs the three-derivative profile
+\[
+             {\cal P}(\xi)=\min\{1,(\Lambda/|\xi|)^3\},
+             \qquad {\cal P}(0)=1,\qquad \Lambda\le b^{C m}.
+\]
+
+A cut of length \(30p^2+6\) admits \(3p(2r+2)=6p^2\) nodes
+five units apart and at least two units from the endpoints, since their total required length is \(5(6p^2-1)+4\). In each interpolation take fresh
+nodes for the degree (at most \(2r+1\)) of the new letter, using
+Proposition~\ref{prop:letter-polynomial-degree}. Use the positive
+normalizer \(\prod_i(|Y+\lambda_i|+c_0)\). With \(n_*=30p^2+6\)
+and \(A_*=4p+n_*\), one may take
+\[
+ e=\|\nu\|_1+p(A_*+n_*+N+2),\qquad c_0=2+2e .
+\]
+
+Multiplication by the determinant costs \(pA_*\) unit shifts, the
+compact contractions cost at most \(pn_*\), and \(N\) radial letters
+use at most \(pN\) further shifts. Thus the normalizer includes every
+ambient eigenvalue used below. Writing \(h_*\) for the least
+unshifted row gap, Lemma~\ref{lem:marked-paired-moment-range} gives
+\[
+ h_* \ge \min(4\Delta,\eta_{\rm size}/m,b_1)>nm^{10},
+ \qquad e\le C_nkm^3+O(m^3),\quad 200 c_0<h_*
+\]
+on the late family. In particular all shift and degree budgets in
+Definition~\ref{hyp:paired-frame-moment-range} allow these endpoints.
+
+For each of the two column polynomials, pair the \(k-1\) interlaced
+row roots with the adjacent column roots \emph{away from} the cut.
+Each such numerator distance is at most its paired denominator
+distance. Omit the two coordinates adjoining the cut if the compact
+type has been moved there. Each exceptional numerator is bounded
+by \(b^{O(1)}\), and the interior nodes stay a fixed distance from
+the column poles and their unit translates.
+
+Padding the row roots by \(c_0\) has a bound even at the actual
+endpoint radius \(pq\). Remove a root nearest \(Y\), and bound its
+padded factor directly by \(b^{O(1)}\). The \(j\)-th remaining
+root on either side has distance at least \(jh_*/2\). Thus the
+other ratios have product at most
+\[
+ \exp\!\left(\frac{4c_0}{h_*}\sum_{j=1}^n\frac1j\right)
+        \le (\mathrm{e}n)^{4c_0/h_*}\le\mathrm{e}n .
+\]
+The other \(m\) ambient factors are each at most \(b^{O(1)}\).
+These estimates hold also at the adjacent unit translates of the
+nodes. Previous letters change the rational factors there by bounded
+ratios for each of the at most \(N\) letters, since distinct nodes
+are five units apart. Interpolating a leading coefficient on
+integer-spaced nodes has total absolute cost at most \(2^{2r+1}\),
+by the product formula for the interpolation weights. This gives
+the asserted \(\Lambda\), after incorporating the character and line
+norms of Definition~\ref{hyp:paired-frame-moment-range}.
+
+Apply the signed derivative step of
+Proposition~\ref{prop:positive-block-fourier} three times, as in
+the point recursion following Lemma~\ref{lem:empty-word-exhaustion}. For a size-one block, Fourier inversion of its diagonal
+costs at most
+\[
+              \int_{\C}{\cal P}(\xi)\,d\xi=3\pi\Lambda^2 .
+\]
+For a larger block choose the coset of the square lattice of side
+\(\Lambda^{-1}\) through the prescribed point. Keep that diagonal
+in the nonnegative period sum of Lemma~\ref{lem:germ-period}.
+The comparison for a block of one smaller size uses the
+inverse-coordinate frequencies in Lemma~\ref{lem:gram-limit}.
+The \(j\)-th annulus of the dual lattice contains \(O(j+1)\)
+frequencies. For a block of size \(s\) this gives
+\[
+ \sum_{\xi\ {\rm dual}}{\cal P}(\xi)
+       \ll 1+\sum_{j\ge1}(j+1)j^{-3}\ll1,\qquad
+ E_{h\|(s,t)}\le(C\Lambda^2)^s\max_{|w'|-|w|\le3s}E_{h,w'} .
+\]
+The power of \(\Lambda^2\) at each unit of size is the reciprocal
+covolume of the translation lattice.
+
+Apply this argument first away from \(G=0\) with a smooth cutoff.
+At total size \(p\) the cost is \((C\Lambda^2)^p\). At the empty
+prefix the limiting normalized energy of every resulting word is
+at most \({\cal M}(F)\) when \(F\) is the coefficient multiplied
+by \(G^{p_0}\) and the compact contractions below. Indeed the
+commuting Casimirs can be moved to this coefficient in the big-cell
+pairing by Lemma~\ref{lem:radial-cutoff-transfer}. Tensoring with the
+matrix polynomials in \(F\) gives a finite sum of infinitesimal
+characters. Different characters are orthogonal under the invariant
+pairing, and the positive normalizer bounds each eigenvalue at
+every letter. Hence its normalized product has modulus at most one.
+
+The extra matrix polynomial and the cutoff satisfy
+\[
+ \deg(\text{multiplier})\le 2pp_0+pn_0,\qquad n_0\le30p^2+6,\qquad
+                        N=3p\le4p=2p_0 .
+\]
+The comparison following Lemma~\ref{lem:empty-word-exhaustion}
+gives the integrable majorant for both compact types. For a fixed positive
+point the cutoff eventually equals one. Removing it gives
+\[
+                    E_F(\gamma)\le(C\Lambda^2)^p{\cal M}(F).
+\]
+
+\proofstep{Obtaining a cut for both compact types.}
+For different marked types a differing coordinate gives a cut of
+length at least \(30p^2+6\) by
+Definition~\ref{hyp:critical-level-weights} and the marked spacings.
+Use \(F=G^{p_0}f\) with \(f\) representing \(J_\mu\), and put
+\(n_0=0\). When the types agree take \(n_0=30p^2+6\) and choose
+a gap in the compact row. The shifts producing the two long cuts are
+\[
+        u_i-u_{i+1}\ge2n_0+1,\qquad
+    u^+=u+n_0\mathbf1_{\{i+1\}},\quad u^-=u-n_0\mathbf1_{\{i\}} .
+\]
+
+For clarity, let \(L_1>\dots>L_k\) be the strictly decreasing integer
+coordinates of that compact row after subtracting its common scalar.
+On restriction to the stabilizer of a unit vector the type labels
+\(M\) satisfy \(L_{j+1}<M_j\le L_j\). The squared projections when
+one upper coordinate \(L_a\) is raised or lowered are respectively
+\[
+ \frac{\prod_{j<k}|M_j-1-L_a|}{\prod_{j\ne a}|L_j-L_a|},
+ \qquad
+ \frac{\prod_{j<k}|M_j-L_a|}{\prod_{j\ne a}|L_j-L_a|}.
+\]
+These are the residues of the compact branching polynomials in
+Lemma~\ref{lem:residual-single-cofactors}: taking the \(a\)-th
+spectral projection divides the characteristic polynomial of the
+compressed operator by the derivative of the full polynomial at
+\(L_a\). The raising polynomial has roots \(M_j-1\) and the lowering
+polynomial roots \(M_j\), from the unit shift in the dual action.
+
+For \(M_i\ge L_{i+1}+n_0+1\) the entire raising chain is allowed.
+Otherwise \(M_i\le L_i-n_0\) and the lowering chain is allowed.
+In any allowed step write \(b_j=\max(1,|L_j-L_a|)\).
+The \(j\)-th numerator factor is at least \(b_{j+1}\) for \(j<a\)
+and \(b_j\) for \(j\ge a\), by interlacing and integrality.
+Multiplying the lower bounds gives the cancellation
+\[
+ \frac{\prod_{j<a}b_{j+1}\prod_{a\le j<k}b_j}
+      {\prod_{j\ne a}b_j}
+       =\frac{1}{b_1b_k},\qquad b_a=1 .
+\]
+If \(B_1=b^{C'}\) bounds the compact entries
+and the shifted width is at most \(3B_1\), each squared projection
+on the allowed chain is at least \((3B_1)^{-2}\).
+Both chains have operator norm at most one at a unit vector.
+
+To obtain the contraction vector at \(\gamma\), take the last row of the
+adjugate of the cross-pairing matrix. Combine the left frame with
+its conjugate coefficients, transport by \(\gamma^{-1}\), then
+project onto the right positive middle space perpendicular to \(z'\).
+The adjugate identity annihilates its pairings with the first \(r\)
+right columns. Its pairing with \(z'\) has modulus \(|\Delta_p|\).
+Before subtracting its \(z'\)-component only the left distinguished
+line contributes to the norm. Its squared positive length is thus
+\[
+               |\Delta_p|^2/T'-T|\Delta_r|^2=G/T' .
+\]
+
+Let \(A_\pm\) be the two contraction chains evaluated at this vector,
+oriented from the shifted compact type to the original one. Sum the
+squared lower bound over the orthogonal \(M\)-components and use
+homogeneity of degree \(n_0\). For any \(y\) in the original type,
+\[
+ \|A_\pm\|^2\le(G/T')^{n_0},\qquad
+ \sum_\pm\|A_\pm^*y\|^2\ge (3B_1)^{-2n_0}(G/T')^{n_0}\|y\|^2 .
+\]
+The contraction is invariant under both unipotents and the left
+stabilizer. Right compact translation changes \(A_\pm\) by its
+two compact actions, which cancel those in the orbital integral.
+Thus \(J_{F_\pm}=G^{p_0}J_f A_\pm\) for \(F_\pm=G^{p_0}f A_\pm\).
+The same point, stabilizer Haar and quotient measure occur in all
+three integrals. Taking adjoints and summing over a target
+orthonormal basis gives
+\[
+ E_f(\gamma)\le(3B_1)^{2n_0}(T')^{n_0}G^{-A}
+                 \sum_\pm E_{F_\pm}(\gamma),\qquad A=2p_0+n_0.
+\]
+For different types the same estimate has just one term and \(A=2p_0\).
+
+\proofstep{The determinant moment in the integrated norm.}
+On the big cell \(0<G\le|\Delta_p|^2\). Hence
+\[
+ {\cal M}(F_\pm)\le (T')^{-n_0}
+       \int_{\text{big cell}}|\Delta_p|^{2A}E_f(c)\,dc .
+\]
+Use \eqref{eq:minor-shift-unit} with \(l=p\), now \(A\) times,
+in the Hilbert space of square-integrable operator-valued sections.
+Each nonzero endpoint has norm one. Minkowski's inequality gives
+\[
+ \|\Delta_p^A U_\mu\|_{\rm cell}\le B^A,\qquad
+ \int_{\text{big cell}}|\Delta_p|^{2A}E_f(c)\,dc\le B^{2A}M_\mu .
+\]
+Here \(A\le40p^2\), so the extra radius \(Ap\le40p^3\) fits
+the window of Lemma~\ref{lem:minor-orbital-shift} after increasing
+\(C_n\) by one. This use of its finite expansion precedes any
+bound on a point value. The factors \((T')^{n_0}\) cancel.
+The two remaining factors satisfy
+\[
+    2(C\Lambda^2)^p(3B_1)^{2n_0}B^{2A}\le b^{O(m^4)},\qquad
+                   G^{-A}\le\max(1,G^{-1})^{10m^2}.
+\]
+
+Finally, transporting the character to unit size by the flag torus
+scales its \(j\)-th column by \(\alpha^j\) for \(0\le j\le r\).
+The line and Gram scalings are
+\[
+ (T,T')\longmapsto\alpha^{2r}(T,T'),\qquad
+    G=|\Delta_p|^2-TT'|\Delta_r|^2\longmapsto\alpha^{2rp}G .
+\]
+
+For a prefix of length \(a\) the minor scales by
+\(\alpha^{a(a-1)}\). In each ordinary block the \(2k\) part of the
+density exponent multiplies the ratio of the two block-end minors.
+Across the blocks these terms telescope. If the last block is a
+singleton the identity \(G=|\Delta_r|^2(|t_0|^2-TT')\) gives the
+same total exponent \(2krp\) as on the big cell. The common
+\(k\)-dependent dilation cancels in the ratio of the two energies.
+
+In big-cell pivot coordinates the \(j\)-th complex coordinate
+scales by \(\alpha^{2j}\), so its section Jacobian is
+\[
+             J_{\rm sec}=\prod_{j=0}^r\alpha^{4j}=\alpha^{2rp}.
+\]
+
+In a block of size \(s\) the within-block root coordinates are
+indexed by pairs \(a<b\). Write \(D_{\rm rt}=\sum(b-a)\) over these pairs and
+\(c=\sum_{\rm blocks}\binom{s}{2}\). On a block starting after
+\(j\) columns the remaining density exponent, relative to splitting
+the block into singletons, is
+\[
+ 4\sum_{i=0}^{s-1}(j+i)(2i+1-s)
+       =4\sum_{0\le a<b<s}(b-a).
+\]
+
+The root \(ab\) has complex-coordinate Jacobian
+\((\alpha^b/\alpha^a)^2\) and contributes \(\alpha^{-1}\)
+in the unit-root normalization. Thus the square of their
+combined orbital change has exponent \(4D_{\rm rt}-2c\).
+Canceling against the density and section changes leaves the
+factor \(J_{\rm sec}\alpha^{-2c}\), or its reciprocal on reversal. Both therefore satisfy
+\[
+ \max\{J_{\rm sec}\alpha^{-2c},(J_{\rm sec}\alpha^{-2c})^{-1}\}
+   \le\max(\alpha,\alpha^{-1})^{2rp+2c},\qquad 2c\le rp .
+\]
+
+Multiplication by \(G^{-A}\) costs at most a further \(2rpA\)
+powers of this scale. The independent root Haar factor \(\theta'\)
+in \eqref{eq:absolute-root-scales} satisfies
+\(b^{-|C_1|m^2}\le\theta'\le b^{|C_1|m^2}\), so its inverse square
+costs at most \(b^{2|C_1|m^2}\). Since
+\(\max(\alpha,\alpha^{-1})\le b^{O(1)}\), all these powers are
+absorbed in \(b^{C_bm^4}\).
+\end{proof}

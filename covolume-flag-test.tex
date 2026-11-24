@@ -1,0 +1,1593 @@
+\section{The arithmetic test on the two flag spaces}
+\label{sec:covolume-flag-test}
+
+The preceding surface calculation fixes a Hodge intersection. To use it on the marked flag space, we evaluate the second power sum of the graded lines against two classes of fibre degree one. The next chapter uses these evaluations to determine a degree functional on weight polynomials.
+
+Changing the metric at a finite prime also changes the vertical intersection. We shall prove that the whole Hodge--Tate square vanishes on the supporting vertical cycles. The relative degree-two Frobenius identity of Lemma~\ref{lem:flag-finite-frobenius-model} is needed already at the primes dividing the discriminant, and at every further prime used in the mixed degree.
+Definition~\ref{hyp:covolume-flag-degrees} fixes the marked flag object,
+its positive block rank \(j\), and its embedding set \(\mathcal T\).
+The variables \(x_{\tau i}\) are the graded-line Chern roots of these
+flags; the metric and component volume belong to the chosen object.
+
+\begin{paramdefinition}[The marked flag space and degree conventions]\label{hyp:covolume-flag-degrees}
+Fix one of the marked flag objects used in the covolume
+comparison. Write \(N\) for its rank, \(j\) for the positive
+block rank, and \(\mathcal T\) for its embedding index set.
+Here \(1\le j<N\) and \(f(N-1)>2\), with \(f\) the real
+degree used in the flag dimension. Use the graded line
+metrics of this object at its given level. Normalize every arithmetic intersection by the coefficient field degree and, on a dominating model, also by the model degree. Write \(V\) for the volume of the
+object and \(\deg_{\rm fl}\) for its flag degree, normalized to have value one on the product of the point monomials \(m_n\) of the two blocks at each embedding.
+\label{cor:covolume-flag-test-1}
+
+Use roots \(x_{\tau i}\), with \(0\le i<N\) and \(\tau\in
+\mathcal T\). For \(k\ge1\), split the power sum at the block boundary,
+\[
+ P^-_{\tau,k}=\sum_{i<j}x_{\tau i}^{k},\qquad P^+_{\tau,k}=\sum_{i\ge j}x_{\tau i}^{k}.
+\]
+Set
+\[
+ \lambda=\sum_\tau(P^+_{\tau,1}-P^-_{\tau,1}),\qquad
+ d=|\mathcal T|j(N-j),\qquad
+ P_2=\sum_\tau(P^-_{\tau,2}+P^+_{\tau,2}).
+\]
+For a block of rank \(n\) with its variables in their
+given order, put
+\[
+ m_n=\prod_{a=0}^{n-1}(-x_a)^{n-1-a},\qquad
+ v_n=\frac{1}{n!}\prod_{a<b}(x_b-x_a).
+\]
+Let \(F\) and \(W\) be the products of these two polynomials,
+respectively, over both blocks of every embedding. Define
+\[
+ Q_F=\lambda^{d-1}F,\qquad Q_W=\lambda^{d-1}W,\qquad
+ I=\sum_\tau\deg_{\rm fl}(P^-_{\tau,1}Q_F),\qquad
+ B_{\rm fl}=\left(\frac1j-\frac1{N-j}\right)I.
+\]
+The total flag dimension is \(D_{\rm fl}=|\mathcal T|\binom N2\).
+The fibre products have degree \(D_{\rm fl}-d\), so \(Q_F,Q_W\)
+have degree \(D_{\rm fl}-1\). Set \(T_F=P_2Q_F\).
+\end{paramdefinition}
+
+\begin{lemma}[Degrees of the two flag tests]\label{lem:flag-point-degrees}
+For the polynomials and metrics of Definition~\ref{hyp:covolume-flag-degrees},
+the Chern evaluation on a polynomial \(Q\) of top degree is
+\(C(Q)=V\deg_{\rm fl}(Q)\). The two fibre polynomials \(F,W\)
+have equal relative degree, and
+\begin{equation}\label{eq:flag-test-degrees}
+ \deg_{\rm fl}(\lambda Q_F)=-2I,\qquad
+ \deg_{\rm fl}(\lambda Q_W)=\deg_{\rm fl}(\lambda Q_F).
+\end{equation}
+\end{lemma}
+\begin{proof}
+On each component, integrating the curvature of the invariant
+graded lines with the measure defining its volume gives that volume
+times \(\deg_{\rm fl}(Q)\). Sum over components.
+
+At each embedding the total first power sum comes from the fixed
+ambient space and has zero intersection with \(Q_F\). Thus
+\[
+ \deg_{\rm fl}(P^+_{\tau,1}Q_F)=-\deg_{\rm fl}(P^-_{\tau,1}Q_F).
+\]
+Summing the difference gives \(-2I\). Finally expand each
+Vandermonde as the signed permutation sum of \(m_n\).
+The factor \(\lambda^d\) is invariant under each block permutation
+and the flag degree, given by the signed coefficient of the top
+exponent pattern \(0,1,\ldots,N-1\), is alternating. The \(n!\)
+terms therefore have the same signed contribution. This proves the
+second equality and, on each fibre, the equality of the two relative
+degrees. \label{cor:covolume-flag-test-2}
+\end{proof}
+
+\paragraph{The difference of the de Rham degrees.}
+Let \(R\ge2\) be the smoothing parameter and \(T\) a finite set of rational primes. Use the Hodge--Tate metrics on the fibres at \(T\), and the de Rham metrics at the other primes. Write \(S(T,R)\) for the resulting mixed arithmetic intersection of the second power sum with \(Q_F\). For \(T=\varnothing\), replacing \(Q_F\) by \(Q_W\) in this de Rham intersection defines \(W_R\). The second power sum is the same in both degrees. By linearity their difference has root factor
+\[
+ Q_F-Q_W\quad\text{in}\quad S(\varnothing,R)-W_R.
+\]
+
+
+In terms of the block power sums, the contribution of the whole de Rham blocks to the mixed intersection is
+\[
+ \tfrac12\sum_\tau(P^-_{\tau,2}+P^+_{\tau,2})=\tfrac12P_2.
+\]
+Replacing this by
+\(P_2\) in the difference is an arithmetic intersection
+identity. On a common alteration the eigenlines and the
+whole de Rham lines are the graded lines of two
+generically identified flags with isometric
+ambient metrics on the complex fibres. Each dual root has the same square as the original root, since
+\[
+ c_1(L^\vee)^2=(-c_1(L))^2=c_1(L)^2.
+\]
+After
+relabeling, the discrepancy is the difference of the
+sums of squares of the two sets of graded lines, times
+the \((d-1)\)-st power of their signed determinant and
+the relative fibre factor \(F-W\). Choose compatible
+reference flags on the base by taking the closures of
+the common rational flags and a regular alteration.
+
+For either ambient metric, changing from the
+tautological to the reference flag adds the degree-two
+Bott--Chern form for its successive exact sequences.
+The corresponding forms for the two flags agree by
+the isometry and compatibility of the flags. Thus the
+difference of the squares can be evaluated on the
+reference flags, where it is pulled back from the base.
+Write \(\pi\) for the flag projection and \(A\) for the
+resulting base class, including the \((d-1)\)-st power of
+the signed determinant. The relative degree comparison
+following \eqref{eq:flag-test-degrees} gives the cancellation
+\[
+ \widehat{\deg}\bigl(\pi^*A\cdot(F-W)\bigr)
+ =\widehat{\deg}\bigl(A\cdot\pi_*(F-W)\bigr)=0 .
+\]
+Both arithmetic intersections are normalized by the degree of the same alteration. The argument applies for each \(R\)
+to the graded line metrics defining the mixed intersection. It gives the arithmetic evaluation of
+\(P_2(Q_F-Q_W)\) for \(S(\varnothing,R)-W_R\).
+\label{cor:covolume-flag-test-3}
+
+\paragraph{Arithmetic alternation on a block.}
+
+The ordered point monomial and its alternating representative agree on the fibre degree. Their arithmetic degrees may differ, so we compute the change one block at a time.
+
+\begin{proposition}[The difference between the ordered and alternating flag degrees]
+\label{lem:arithmetic-flag-alternation}
+Use the marked flag space and degree conventions of
+Definition~\ref{hyp:covolume-flag-degrees}. At each \(R\ge2\) the difference between the ordered flag degree \(S(\varnothing,R)\) and the alternating flag degree \(W_R\) is
+\[
+ S(\varnothing,R)-W_R
+ =V\left(-\frac{j-1}{j}+\frac{N-j-1}{N-j}\right)I.
+\]
+The same component weights enter both degrees.
+\end{proposition}
+
+\begin{proof}
+\proofstep{The Bott--Chern relation for two adjacent roots.}
+Let \(\mathcal A,\mathcal G\) be the arithmetic and geometric
+intersection evaluations for the graded lines on a common
+flag bundle. At an adjacent pair \(x,y\) in a block, put
+\(u=y-x\), \(t=(x+y)/2\). The rank-two arithmetic flag
+formula for the subquotient of the intermediate flag gives
+\[
+ \mathcal A(u^{2k}M)=h_k\,\mathcal G(u^{2k-1}M),
+ \qquad h_0=0,\qquad h_{k+1}-h_k=\frac{1}{2k+1},
+\]
+for \(M\) independent of \(u\), with the right side interpreted
+as zero at \(k=0\). The line metrics are induced from the
+Hermitian metric of the rank-two bundle. The other factors
+are pulled back from the partial flag, since \(t\) is half
+the determinant class of that bundle. The formula uses
+the arithmetic degree on a regular model with the
+Bott--Chern term for the tautological exact sequence.
+The geometric functional changes sign under the adjacent
+exchange. Both formulas descend from the regular cover
+by the projection formula. \label{cor:covolume-flag-test-4}
+
+\proofstep{Evaluating the rank-two relation on the splitting flag.}
+For the rank-two computation choose a splitting flag
+on the base after alteration. With its roots \(b,c\)
+and the tautological first class \(x\), put \(v=c-b\).
+The determinant identity gives \[
+ u=b+c-2x,\qquad u^2-v^2=4(b-x)(c-x).
+\]
+The classes \(b-x,c-x\) read the two rational sections
+of the relative projective line. Their mixed geometric
+intersection is zero. The normalized arithmetic
+section formula gives
+\[
+ \mathcal A\bigl((b-x)(c-x)u^{2i}M'\bigr)
+       =\frac{\mathcal G_{\rm base}(v^{2i}M')}{2(2i+1)}
+\]
+for base factors \(M'\) of the appropriate degree,
+with the two section metrics induced from the same
+Hermitian bundle. Use the factorization
+\[
+ u^{2k}-v^{2k}=(u^2-v^2)\sum_{a=0}^{k-1}u^{2(k-1-a)}v^{2a}.
+\]
+Inserting the rank-two formula then gives \(2h_k\,\mathcal G_{\rm base}(v^{2k-2}M)\).
+The term pulled back entirely from the base has zero
+top arithmetic degree. Geometrically \(u^2\) can be
+replaced by \(v^2\) because the mixed term vanishes,
+and the relative degree of \(u\) is two. This gives
+the asserted relation, including its sign.
+\label{cor:covolume-flag-test-5}
+
+\proofstep{The induced relation on a block polynomial.}
+Fix a block of rank \(n\), and let \(A\) be a polynomial
+that depends on its roots only through their sum
+\(e_1=\sum_a x_a\). Define two functionals in this block
+by \(\phi(M)=\mathcal A(P_2 A M)\) and
+\(\psi(M)=\mathcal G(A M)\). The degree in this block
+of \(m_n\) is \(h=\binom n2\). Indeed the alternating projection of a polynomial \(P\) is divisible by the Vandermonde, so
+\[
+ \prod_{i<j}(x_i-x_j)\mid\operatorname{Alt}(P),\qquad \deg P<\tbinom n2\quad\Longrightarrow\quad\operatorname{Alt}(P)=0.
+\]
+Write \(P_2=u^2/2+P_2|_{u=0}\).
+
+For a
+homogeneous term \(u^{2k}M\) of block degree \(h\),
+apply the rank-two formula to both terms of \(P_2\).
+The portion proportional to
+\(h_k\,\mathcal G(P_2 A u^{2k-1}M)\) vanishes. Its
+argument without \(P_2 A\) has block degree \(h-1\),
+and \(P_2 A\) is symmetric under every permutation of
+the block. The remaining coefficient is
+\((h_{k+1}-h_k)/2\). Thus on an even polynomial \(L\)
+of block degree \(h\), \(\phi(L)=\psi(J)\), where
+\(J\) is the odd polynomial with
+\[
+ (\partial_y-\partial_x)J=L.
+\]
+
+Indeed, this derivative equals \(2\partial_u\) with
+\(t\) fixed.
+
+\proofstep{An adjacent step on the monomial basis.}
+For \(\sigma\in S_n\) write \(m_\sigma=\sigma m_n\)
+and \(c=\psi(e_1m_n)\). For an adjacent exchange \(s\)
+of \(x_i,x_{i+1}\), the preceding identity gives
+\begin{equation}\label{eq:flag-adjacent-step}
+ \phi(m_\sigma+m_{s\sigma})=
+ \operatorname{sgn}(\sigma)\frac{2}{n}
+       \bigl(\sigma(0)-s\sigma(0)\bigr)c .
+\end{equation}
+To see the coefficient, take \(x,y\) in the exchanged pair
+so that their exponents in \(m_\sigma\) satisfy \(a>b\).
+
+For \(D=\partial_y-\partial_x\) a primitive of
+\(x^a y^b\) is
+\[
+ -\sum_{k=0}^{b}
+ \frac{b(b-1)\cdots(b-k+1)}
+ {(a+1)(a+2)\cdots(a+k+1)}x^{a+1+k}y^{b-k}.
+\]
+Multiply by the unchanged monomial and its sign to get a
+primitive \(J_1\) for \(m_\sigma\). The terms with
+\(k>0\) have repeated exponents among the \(n\) variables.
+Hence \(\psi(J_1)=-\psi(xm_\sigma)/(a+1)\). The
+primitive for \(m_\sigma+m_{s\sigma}\) is \(J_1-sJ_1\),
+whose \(\psi\)-value is \(2\psi(J_1)\). The value is
+zero unless \(a=n-1\). In the latter case
+\[
+ \psi(xm_\sigma)=\operatorname{sgn}(\sigma)c.
+\]
+
+If the higher exponent belongs to the second root in the
+original adjacent order, the two derivatives have the
+opposite sign. These are exactly the three values of the
+right side of \eqref{eq:flag-adjacent-step}.
+
+\proofstep{Averaging over the permutations and telescoping the blocks.}
+The adjacent exchanges generate \(S_n\), so
+\(\operatorname{sgn}(\sigma)\phi(m_\sigma)-
+2\sigma(0)c/n\) is independent of \(\sigma\), with value
+\(\phi(m_n)\). Average over the \(n!\) permutations.
+The average of \(\sigma(0)\) is \((n-1)/2\). Thus
+\[
+ \mathcal A\bigl(P_2 A(m_n-v_n)\bigr)
+     =-\frac{n-1}{n}\,\mathcal G(A e_1 m_n).
+\]
+The identity also holds for \(n=1\), where \(m_n=v_n=1\).
+Telescope the product \(F-W\) by changing its blocks one
+at a time. For the block being changed, the other block
+factors and \(\lambda^{d-1}\) have the required form \(A\).
+After its calculation the other \(v_n\) factors may be
+replaced by \(m_n\) under \(\mathcal G\), by geometric
+alternation. The component factors used in \(\mathcal A\)
+and \(\mathcal G\) are the same inverse degrees of the
+cover. Summing over the components and using opposite
+first-power degrees on the two blocks at an embedding
+therefore gives
+\begin{equation}\label{eq:flag-first-limit}
+ S(\varnothing,R)-W_R
+   =V\left(-\frac{j-1}{j}+\frac{N-j-1}{N-j}\right)I
+   =V B_{\rm fl}\qquad (R\ge2).
+\end{equation}
+\label{cor:covolume-flag-test-6}
+
+\end{proof}
+
+\begin{auxlemma}[A finite flag test on a vertical cycle]\label{lem:reduced-vertical-newton}
+Let \(Z\) be an integral cycle in the special fibre in residue
+characteristic \(p\). Write \(L_i\) for the restrictions of the whole
+Hodge--Tate graded lines to \(Z\), in the full flag order. Suppose some
+proper generically finite surjection \(\rho:Z'\to Z\) admits a cover
+\((U_a)\), matrices \(M_a\in\mathrm{GL}_n(\mathcal O(U_a))\)
+and a common integer \(b>0\) such that
+\[
+ M_a^{-1}M_{a'}\ \text{is upper triangular},\qquad
+ (M_a^{-1}M_{a'})_{ii}\ \text{is the frame transition of}\
+                      \rho^*L_i^{\otimes b}.
+\]
+Then every product needed to pair the whole square with a change
+of root metric vanishes. In particular, for each complementary
+root monomial \(G\),
+\begin{equation}\label{eq:flag-vertical-square-test}
+      \deg_Z\!\left(\sum_i c_1(L_i)^2\,G\right)=0 .
+\end{equation}
+\end{auxlemma}
+\begin{proof}
+The first \(i\) columns of \(M_a\) span direct summands because
+its determinant is a unit. Upper triangularity glues these summands
+to a filtration of the constant bundle on \(Z'\). Its successive
+quotients have the indicated diagonal transition functions. Thus
+Whitney's formula gives, with \(z_i=c_1(\rho^*L_i)\),
+\[
+        \prod_i(1+bz_i)=1,\qquad
+ b^2\sum_i z_i^2=\left(\sum_i bz_i\right)^2
+                      -2\sum_{i<j}b^2z_i z_j=0 .
+\]
+Multiply by \(\rho^*G\) and apply the projection formula. The resulting
+degree upstairs is \(\deg(\rho)b^2\) times the degree in
+\eqref{eq:flag-vertical-square-test}.
+\end{proof}
+
+On a marked chart one can split the generic \(p^2\)-torsion and adjoin
+a primitive \(p^2\)-th root of unity by a finite extension. Reducing
+integral frames of character differentials gives candidates for the
+matrices of Lemma~\ref{lem:reduced-vertical-newton}. Their determinants
+must be units on the charts of the vertical cycle and their diagonal
+transitions must agree with the specified root lines. A single
+finite level does not trivialize the full Tate local system on the
+generic fibre. Indeed a principal polarization induces surjections
+\[
+         A[p^j]\times A[p^j]\longrightarrow\mu_{p^j}
+                           \qquad (j\ge1)
+\]
+on geometric points. Trivializing all these torsion sheaves over a
+function field finitely generated over a number field would put
+arbitrarily high \(p\)-power roots of unity in its finite field of
+algebraic constants. The intersection calculation uses
+\eqref{eq:flag-vertical-square-test} on the supports of its metric
+differences.
+
+\begin{proposition}[The Vandermonde part of the de Rham test]\label{prop:flag-de-rham-limit}
+On the marked flag space of Definition~\ref{hyp:covolume-flag-degrees},
+use the finite-prime comparisons of
+Lemma~\ref{lem:flag-finite-frobenius-model} for \(p\mid\operatorname{disc}(E)\).
+The de Rham flag degree \(W_R\) defined with root factor \(Q_W\) satisfies
+\[
+ \lim_{R\to\infty}W_R=-2r_*VI.
+\]
+
+Here \(r_*\) is the coefficient of Theorem~\ref{thm:hodge-surface-degree}.
+\end{proposition}
+
+\begin{proof}
+\proofstep{The determinant replacement.}
+In \(W_R\), replacing \(\lambda^{d-1}\) by the
+\((d-1)\)-st power of the full Hodge determinant class
+gives the sum of evaluations on the de Rham base models.
+On the common model let \(c\) be the full determinant class.
+The signed root coordinates give the difference of the two
+power factors as
+\[
+ c^{d-1}-\lambda^{d-1}
+    =(c-\lambda)\sum_{i=0}^{d-2}c^{d-2-i}\lambda^i .
+\]
+At \(d=1\) no vertical term occurs because
+\[
+ c^{d-1}-\lambda^{d-1}=1-1=0.
+\]
+
+The comparison makes \(c-\lambda\) vertical on that model. The vertical pairing with the
+whole de Rham square sum vanishes after summing the
+components. First include all primes dividing the discriminant of \(E\) in \(T\). After reindexing at those primes,
+corresponding whole and eigenlines have the same label up to duality. Their vertical differences pair to zero
+with the whole Hodge--Tate squared sum by
+\eqref{eq:flag-vertical-square-test} on each supporting cycle.
+
+To remove one discriminant prime \(p\), use
+\eqref{eq:whole-flag-frobenius-square} to evaluate the difference of
+the two whole squares, paired with this same determinant difference.
+The computation of the relative square in Lemma~\ref{lem:flag-prime-change}
+applies before taking the complementary pairing.
+
+The local expression is a multiple
+of the first Lie power sum paired with the determinant
+difference. This pairing is zero. With \(D\) the vertical divisor, the local intersection has the factor
+\[
+ [D]\cdot[\operatorname{div}(p)]=0,
+\]
+since \(p\) defines a principal divisor. The Hodge--Tate sum of squares again
+annihilates the change in the root factors at \(p\).
+For fixed \(R\ge2\), let \(E(T)\) be the change in the intersection number when the power \(\lambda^{d-1}\) is replaced by \(c^{d-1}\) with marked prime set \(T\). List the prime divisors of the discriminant of \(E\) as \(p_1,\ldots,p_m\) and put
+\[
+ T_i=\{p_1,\ldots,p_i\}.
+\]
+The full-set calculation and the local pairing just computed give
+\[
+ E(T_m)=0,\qquad E(T_{i-1})-E(T_i)=0\quad(1\le i\le m).
+\]
+Their sum gives \(E(\varnothing)=0\), the required exact replacement.
+\label{cor:covolume-flag-test-7}
+
+On each de Rham base model \(Z\), the resulting term is
+the degree with the whole de Rham square class and
+\(d-1\) Hodge determinant factors, divided by the
+coefficient field degree. For an integral cycle \(Y=\overline{\{z\}}\),
+let \(v_R(z,e)\) denote the arithmetic intersection on \(Y\) of the
+regularized de Rham square class with \(e\) first Chern classes of the Hodge
+determinant. The codimensions specify the cycle:
+\begin{equation}\label{eq:flag-cut-cycle-dimension}
+ \dim Y=2+e,\qquad
+ \dim Y_F=e+1\quad\text{if }Y\text{ is horizontal}.
+\end{equation}
+Write \(D(z,e+1)\) for the degree of \(e+1\) geometric determinant
+classes on \(Y_F\), with the same field normalization throughout the
+recursion. For a vertical cycle \(Y_F\) is empty and \(D(z,e+1)=0\).
+The initial horizontal cycle \(Z\) has relative dimension \(d\);
+it corresponds to \(e=d-1\).
+A generated power of the Hodge determinant defines a
+map to projective space.
+
+For the map obtained in this way and the selected base, the required dimension bound is
+\[
+ \operatorname{codim}(\text{boundary image in the indicated space})\ge3.
+\]
+This bound is used on the images of the sections:
+at each cut, choose a section of a positive power of
+\(\mathcal O(1)\) nonzero at the images of the generic point
+of the current closure and of the generic points of all
+its boundary components. These are finitely many points
+of the projective scheme over the integer ring. A finite
+set in projective space is contained in a nonvanishing
+open of a section of a positive power of \(\mathcal O(1)\).
+This follows from the affine-open property of an ample
+line bundle applied to the finite set.
+
+For the map
+\[
+ f:Z\to\mathbf P^M
+\]
+defined by the generated power, choose
+such a section \(s\) and cut by \(f^*(s)\). If \(B_i\)
+is a boundary image component, the image after the cut
+lies in \(B_i\cap V(s)\), with
+\[
+                \dim(B_i\cap V(s))\le \dim B_i-1
+\]
+because \(s\) is nonzero at its generic point. On a
+horizontal closure no horizontal boundary divisor is
+contained in the cut. The induction
+ends on arithmetic surfaces whose closures
+are in the abelian locus whenever their generic field
+has characteristic zero. The divisor of the cutting
+section contains a finite list of integral closures with
+their intersection multiplicities.
+
+At \(e=0\) a horizontal cycle has arithmetic dimension two and
+generic fibre a curve. On this surface the de Rham sum of squares is
+twice the second arithmetic Chern character of the
+Hodge bundle with the smoothing metric. On a flag, if \(x_i\) are the Hodge roots, the two blocks have
+roots \(x_i\) and \(-x_i\). Their degree-two Chern characters add to
+\[
+ \tfrac12\sum_i x_i^2+\tfrac12\sum_i(-x_i)^2
+ =\sum_i x_i^2=2\,\operatorname{ch}_2(\omega).
+\]
+The arithmetic intersection includes the corresponding Bott--Chern correction. In the abelian locus the
+regularized metrics converge with their derivatives on
+this surface to the Hodge metric. The projection
+formula on a regular alteration and
+\eqref{eq:hodge-surface-degree} give
+\(v_R(z,0)\to r_*D(z,1)\). At a vertical surface the
+separate finite-characteristic vanishing in
+Section~\ref{sec:hodge-surface-degree} gives zero for
+the degree of the second Chern character. Its geometric
+degree \(D(z,1)\) is zero as well.
+
+For the induction, cut with a section \(s\) of the
+\(m\)-th power of the determinant line, for \(m>0\).
+By \eqref{eq:flag-cut-cycle-dimension}, in the step from \(e+1\) to \(e\) the parent has arithmetic
+dimension \(e+3\) and every divisor component has dimension \(e+2\).
+If \(n_w\) are the multiplicities in this cut,
+the arithmetic and geometric divisor formulas give
+\[
+ \begin{split}
+ m v_R(z,e+1)&=\sum_w n_w v_R(w,e)-a_R(z,s),\\
+ m D(z,e+2)&=\sum_w n_w D(w,e+1).
+ \end{split}
+\]
+The archimedean term \(a_R\) is the integral of
+\(\log\|s\|\) against the regularized second Chern density
+and the remaining curvature factors, with the fixed
+normalizations of the degree. On the abelian locus choose a
+holomorphic frame for each eigenbundle. Its regularized
+curvature matrices converge to the Hodge curvature matrices.
+The density is multilinear in the trace of the determinant
+curvature and the sum of the second Chern character forms.
+
+For the Hodge matrices the latter sum vanishes on every four
+tangent vectors. Indeed the orthogonal eigenframes assemble into
+one holomorphic frame for the inverse of \(Y=\Im Z\), where
+\(Z\) is the symmetric period matrix. The constant scale on
+each block preserves its curvature. Additivity on orthogonal
+blocks and duality for the second character reduce the sum to
+the second form of \(Y\). Put \(P=Y^{-1}\) and
+\[
+ A_i=\partial_{\xi_i}Y,\ B_j=\bar\partial_{\eta_j}Y.
+\]
+Since
+\(\partial\bar\partial Y=0\), the curvature entries in the
+chosen sign convention are \(P B_j P A_i\). For example, the direct and crossed traces in the alternating
+expression agree:
+\[
+\begin{aligned}
+ \operatorname{tr}(P B_1 P A_1 P B_2 P A_2)
+ &=\operatorname{tr}(A_2 P B_2 P A_1 P B_1 P)\\
+ &=\operatorname{tr}(P B_1 P A_2 P B_2 P A_1).
+\end{aligned}
+\]
+The first equality transposes the symmetric factors and the
+second cyclically permutes them. The alternating sum is
+therefore zero. This is the pointwise zero limit for the
+density.
+\label{cor:covolume-flag-test-8}
+
+Here is the domination needed on this particular cut. Let
+\(d\mu_P\) be the top density induced on its regular complex
+locus by the boundary Poincar\'e potential of the ambient
+model, restricted to the complement of the boundary. Write
+\(r\ge e\) for the regularizing radius there. The
+boundary curvature estimate, pulled back to a chart of the
+closure, bounds the absolute regularized density by
+\(C_2 d\mu_P\) for every \(R\ge2\). Indeed the eigenbundle
+curvatures are bounded as forms by the matrix of the pulled-back
+potential, and the alternating top product is bounded by a
+constant times its determinant. The determinant metric comparison
+for the cut section gives, with a fixed \(a>0\),
+\[
+ |\log\|s\|_R|
+ \le |\tfrac12\log(a\|s\|_2^2)|
+       +(C_1+|\log a|)\log r .
+\]
+
+For integrability of the right side, restrict the induced
+density off the boundary to the regular loci of the finitely
+many analytic pieces of the image of the closure. Away from
+a proper subset the closed immersion identifies the local
+charts with these pieces.
+On each piece the boundary potential has integrable
+log--log growth. The reference section is represented by a
+holomorphic section with a smooth norm, up to the constant
+in the displayed formula. It is nonzero at the generic point
+of each image piece and its zero divisor contains no boundary
+component there, by the choice of the cut and the
+component comparison under the map. Writing \(s\) for the reference section, the integrability estimate on each piece \(Y\) with its induced Poincar\'e density \(d\mu_Y\) is
+\[
+ \int_Y\big|\log\|s\|\big|\,d\mu_Y<\infty.
+\]
+
+In this estimate one resolves the section
+and the boundary jointly. An exceptional divisor carrying
+both multiplicities maps into a set of codimension at least
+two on the piece, so the restricted map drops rank there.
+The residue bound for this rank drop controls the integrals
+of the section logarithm for smooth plurisubharmonic
+exhaustions of the pulled-back potential. The Monge--Ampère
+exhaustion on the interior gives the asserted integrability.
+The restriction formula therefore
+bounds both integrals on the closure. The proper boundary
+subset is null for the original smooth densities. These
+bounds are uniform in \(R\) on this fixed cut, and dominated
+convergence gives
+\[
+ a_R(z,s)\to0.
+\]
+
+\label{cor:covolume-flag-test-9}
+The recursion on
+the finite cuts now gives
+\[
+ v_R(z,e)\to r_*D(z,e+1).
+\]
+
+
+The geometric determinant degree on the base, divided by
+the same coefficient field degree and summed over the
+components, is \(C(\lambda^d W)\).
+One may compute it on the smooth relative flag by
+integrating the normalized Vandermonde along the fibre.
+Using \eqref{eq:flag-test-degrees} gives the second
+limit and then the sum
+\begin{equation}\label{eq:flag-empty-limit}
+ W_R\longrightarrow -2r_*VI,\qquad
+ S(\varnothing,R)\longrightarrow VB_{\rm fl}-2r_*VI.
+\end{equation}
+\label{cor:covolume-flag-test-10}
+
+\end{proof}
+
+\begin{definition}[The relative square of the whole marked flag]\label{hyp:integral-flag-frobenius-chain}
+At each rational prime \(p\) inserted in the mixed intersection, use a common normal generically finite model of the extended flags, with the generic comparison of the whole Lie and dual Hodge lattices. Write \(A\) for their relative presentation in the order used for de Rham minus Hodge--Tate. Let \(D_p\) be multiplication by \(p\) on the Lie lattice, viewed as a relative presentation. Use rational coefficients and put
+\[
+               X=A+\frac{1}{p-1}D_p .
+\]
+For a difference of two graded line lattices with roots \(z,z'\) and relative divisor \(D=z-z'\), its relative square is \([D](z+z')\). Write \(N_2\) for the sum of these squares on a compatible flag and \(F\) for Frobenius pullback of the vertical presentations, with roots multiplied by \(p\).
+
+The whole-flag Frobenius comparison is the identity of relative degree-two classes
+\begin{equation}\label{eq:whole-flag-frobenius-square}
+            N_2(FX-X)=N_2(D_p).
+\end{equation}
+Lemma~\ref{lem:flag-finite-frobenius-model} proves this comparison for the whole lattice, including at ramified primes. The separate vanishing used when the root factors change is proved in
+Lemma~\ref{lem:flag-global-reduced-images}.
+\end{definition}
+
+The full integral chain gives a sufficient construction of \eqref{eq:whole-flag-frobenius-square}. On the whole lattice there is one Frobenius label. After adjoining \(\pi\) with \(\pi^{p-1}=p\), let \(Q\) be the initial cokernel for \(X\). Indeed filtration of the Lie lattice modulo \(p\) by its successive powers of \(\pi\) gives \((p-1)\) copies of its reduction modulo \(\pi\). If \(Q_1\) is the final cokernel and \(H\) the remaining piece of this single step, the full comparisons give
+\[
+ [Q]=[Q_1]+[H],\qquad [FQ_1]=[Q],\qquad [FH]=[D_p].
+\]
+In degree two, applying Frobenius to the roots in each of the last two comparisons multiplies its relative square by \(p^2\). Thus
+\[
+ (p^2-1)N_2(Q)=p^2N_2(H)=N_2(D_p).
+\]
+This uses additivity on the original exact sequence. The two Frobenius comparisons can be checked individually.
+
+\begin{auxlemma}[The two cyclotomic reductions of a framed lattice]\label{lem:flag-local-cyclotomic-chain}
+Let \(R\) be a \(p\)-torsion-free integral perfectoid algebra over the completed cyclotomic valuation ring containing compatible primitive roots \(\zeta_{p^j}\), with \(p\) a nonunit. Put \(W=W(R^\flat)\), let \(\varphi\) be Witt Frobenius and let \(\theta:W\to R\) be Fontaine's map. With \(\epsilon=(1,\zeta_p,\zeta_{p^2},\ldots)\), put
+\[
+ \mu=[\epsilon]-1,\qquad \xi=\mu/\varphi^{-1}(\mu),\qquad
+ \pi_j=\zeta_{p^j}-1,\qquad c=\pi_1/\pi_2 .
+\]
+Take a rank-\(h\) finite projective \(W\)-module \(M\), a \(\varphi\)-semilinear map \(\Phi:M\to M\) and a \(\theta\)-semilinear surjection \(\lambda:M\to L\) to a finite projective \(R\)-module. Write \(\mathrm{Fil}=\ker\lambda\). In a cyclotomic Tate frame the integral comparison data required here are
+\begin{equation}\label{eq:flag-cyclotomic-frame}
+ \begin{gathered}
+ i:M\longrightarrow W^h,\quad b:W^h\longrightarrow M,\quad
+ ib=\mu\operatorname{id},\quad i\Phi=\varphi i,\\
+ \varphi(\xi)M\subseteq\Phi(M),\qquad
+ \mathrm{Fil}=\{m:\Phi(m)\in\varphi(\xi)M\}.
+ \end{gathered}
+\end{equation}
+
+Here \(i,b\) are \(W\)-linear. For the contravariant Dieudonn\'e module of the dual group, \(L\) denotes the Lie algebra of the group. The kernel condition is the Hodge filtration in the minuscule convention. The factor \(\mu\) specifies the normalization of the paired comparison maps. \cite{prismatic-flag}
+
+Set \(t_j=\theta\varphi^{-j}\) and \(r_j=t_j\circ i\) coordinatewise. The lattices
+\[
+ B=\pi_1R^h,\qquad H_0=r_1(M),\qquad H_1=c\,r_2(M)
+\]
+satisfy \(B\subseteq H_1\subseteq H_0\subseteq R^h\). Write \(Q_j=H_j/B\) for \(j=0,1\), and \(H=H_0/H_1\). There is an exact sequence and there are two separate Frobenius comparisons
+\begin{equation}\label{eq:flag-two-frobenius-quotients}
+ 0\longrightarrow Q_1\longrightarrow Q_0\longrightarrow H\longrightarrow0,
+ \qquad F^*Q_1\simeq Q_0,\qquad F^*H\simeq L/pL ,
+\end{equation}
+where \(F^*\) is extension of scalars along \(R\to R/p,\ a\mapsto a^p\bmod p\).
+\end{auxlemma}
+\begin{proof}
+Since \(ib=\mu\operatorname{id}\), after inverting \(\mu\) the equal ranks give \(bi=\mu\operatorname{id}\) as well. This descends to \(W\) since \(M\) is projective and \(\mu\) is regular. Specializing at \(t_j\) gives the two composites \(\pi_j\operatorname{id}\). Thus \(M\otimes_{W,t_j}R\) embeds in \(R^h\) with image \(r_j(M)\) containing \(\pi_j R^h\). In particular \(H_0,H_1\) are projective lattices and both contain \(B\).
+
+The relation \(\Phi(\mathrm{Fil})=\varphi(\xi)M\) follows from the two conditions on \(\Phi\) in \eqref{eq:flag-cyclotomic-frame}. Applying \(t_2 i\) to \(\Phi(f)=\varphi(\xi)m\) gives
+\[
+ r_1(f)=t_2(\varphi\xi)r_2(m)=c\,r_2(m),\qquad
+ H_1=r_1(\mathrm{Fil}).
+\]
+This proves the lattice inclusions and exactness of the sequence.
+
+For the first comparison, divide \(H_1/B\) by \(c\) to identify it with the image of \(r_2(M)\) modulo \(\pi_2 R^h\). Frobenius on the perfectoid ring induces
+\[
+ R/(\pi_2)\xrightarrow{\ \sim\ } R/(\pi_1),\quad a\mapsto a^p,
+ \qquad r_2(m)^p\equiv r_1(m)\pmod p .
+\]
+Indeed \(\pi_2^p\) generates \((\pi_1)\); the perfectoid Frobenius isomorphism modulo a \(p\)-th root of \((p)\) and modulo \(p\) descends to these two quotients. The congruence follows by reduction of Witt Frobenius. Taking images in the respective free modules gives the first isomorphism of \eqref{eq:flag-two-frobenius-quotients}.
+
+For the second comparison, \(\ker t_1=(\varphi\xi)\), so injectivity of the specialized map gives \(\ker r_1=\varphi(\xi)M\). Since \(\theta(\varphi\xi)=p\), the two surjections from \(M\) have the same kernel:
+\[
+ \ker(M\longrightarrow H)=\mathrm{Fil}+\varphi(\xi)M
+          =\ker(M\xrightarrow{\lambda}L\longrightarrow L/pL).
+\]
+Hence \(r_1(m)\mapsto\lambda(m)\bmod p\) induces an additive isomorphism. The scalar rule is \(t_1(a)^p\equiv\theta(a)\pmod p\). Moreover \(\xi M\subseteq\mathrm{Fil}\) and \(t_1(\xi)=c\), so \(cH=0\). The cyclotomic identities give \((c^p)=(p)\), also at \(p=2\). Perfectoid Frobenius identifies \(R/(c)\) with \(R/p\), proving the claimed linear isomorphism after extension of scalars.
+\end{proof}
+
+\begin{auxlemma}[The two integral Hodge quotients on a framed chart]\label{lem:flag-local-hodge-quotients}
+In Lemma~\ref{lem:flag-local-cyclotomic-chain} take the contravariant prismatic module of \(G^\vee\) for a \(p\)-divisible group \(G/R\) of height \(h\). Use paired integral Tate frames of \(G\) and \(G^\vee\) evaluating to the chosen cyclotomic generator. Let \(L=\operatorname{Lie}G\) and \(U=\omega_{G^\vee}\). In these frames let \(\alpha:R^h\to U\) be the differential of the characters on \(G^\vee\), and \(\beta:L\to R^h\) the map obtained by differentiating the dual characters on \(G\). Then
+\[
+ 0\longrightarrow L\xrightarrow{\ \beta\ } H_0
+          \xrightarrow{\ d\ } U\longrightarrow0,\qquad
+ d(\pi_1 v)=\alpha(v)\quad(v\in R^h).
+\]
+Use the multiplicative basis giving \(d\log\) and its dual constant basis in the Lie comparison. A common unit change of these coordinates preserves the images and kernels.
+\end{auxlemma}
+\begin{proof}
+Write \(e_j\) for the coordinate vectors. Contravariance sends the \(j\)-th character of \(G^\vee\) to the element \(b(e_j)\in M\) obtained from the multiplicative generator. Evaluation at the dual Tate vector gives the \(j\)-th coordinate of \(i\). The composite of a vector and a character is zero off the diagonal. On the diagonal it is the map from \(\mathbb Q_p/\mathbb Z_p\) to \(\mu_{p^\infty}\) given by \(\epsilon\). In the cyclotomic bases the induced matrix and the Frobenius equations are
+\[
+  ib=\mu I_h,\qquad \Phi b(e_j)=\varphi(\xi)b(e_j),
+                       \qquad i\Phi=\varphi i .
+\]
+For the multiplicative module the basis is the cyclotomic twist generator, for which the comparison with the constant module is multiplication by \(\mu\). The Hodge filtration is functorial and fits into the sequence
+\[
+ 0\longrightarrow U=\mathrm{Fil}/\xi M\longrightarrow M/\xi M
+                         \xrightarrow{\lambda}L\longrightarrow0 .
+\]
+These are the minuscule and Hodge comparisons for integral prismatic Dieudonn\'e theory. \cite{prismatic-flag}
+
+The inclusion \(i\) and \(i\Phi=\varphi i\) make \(\Phi\) injective. There is consequently a unique \(\varphi^{-1}\)-semilinear operator \(V\) such that
+\[
+ \Phi(Vm)=\varphi(\xi)m,\qquad V(\Phi m)=\xi m,\qquad V(M)=\mathrm{Fil}.
+\]
+Define \(d(r_1(m))=Vm\bmod\xi M\). The kernel of \(r_1\) is \(\varphi(\xi)M\), so this defines an \(R\)-linear surjection. Its kernel equals \(r_1(\Phi M)=\theta i(M)\): if \(Vm=\xi n\), apply \(\Phi\) and cancel \(\varphi(\xi)\) to get \(m=\Phi n\). 
+
+By naturality of the Lie quotient, the coordinate functions of \(\theta i\) are the differentials of the characters on \(G\), pulled back by \(\lambda\). Their common kernel in \(M\) is exactly \(\mathrm{Fil}\), since
+\[
+ \theta i(m)=0\ \Longleftrightarrow\ r_1(\Phi m)=0
+        \ \Longleftrightarrow\ \Phi m\in\varphi(\xi)M .
+\]
+This gives the first map and its injectivity. Finally \(r_1(b(e_j))=\pi_1 e_j\) and \(Vb(e_j)=b(e_j)\). In the Hodge submodule the reduction of the multiplicative generator is \(d\log\) in the compatible basis. Its pullback is precisely \(\alpha(e_j)\). Linearity proves the asserted formula on \(B\).
+\end{proof}
+
+To see how this quotient contributes to the relative square, set \(J=\{v\in L:\beta(v)\in B\}\); then \(\pi_1L\subseteq J\subseteq L\). Dividing the last exact sequence by \(B\) yields
+\[
+ 0\longrightarrow L/J\longrightarrow Q_0
+          \longrightarrow U/\alpha(R^h)\longrightarrow0 .
+\]
+In the additive group of vertical presentations the result is
+\[
+ [Q_0]=[L/\pi_1L]-[J/\pi_1L]+[U/\alpha(R^h)] .
+\]
+Thus the two geometric comparisons to make on the model are quite specific. On the Lie side the lattice in the rescaled coordinates is \(\pi_1^{-1}J\); on the cotangent side it is \(\alpha(R^h)\subset U\). Multiplication by \(\pi_1\) identifies \((\pi_1^{-1}J)/L\) with \(J/\pi_1L\). Since \((p)=(\pi_1^{p-1})\), the remaining class \([L/\pi_1L]\) is \([D_p]/(p-1)\).
+
+\begin{construction}
+\begin{tabular}{@{}lll@{}}
+\toprule
+Filtration of \(Q_0\) & Submodule & Quotient \\
+\midrule
+By the second cyclotomic lattice & \(H_1/B\) & \(H_0/H_1\) \\
+After Frobenius on the pieces & \(Q_0\) & \(L/pL\) \\
+By the tangent map \(\beta\) & \(L/J\) & \(U/\alpha(R^h)\) \\
+\bottomrule
+\end{tabular}
+\caption{Two readings of the same integral quotient. The first two lines compute the Frobenius factor in its relative square. The last line determines the sign of the Lie correction.}\label{fig:local-cyclotomic-quotients}
+\end{construction}
+
+There is a second consequence on the same chart. Write \(T=R^h\) for the coordinate module, \(U_{\rm HT}=\alpha(T)\), and view \(\beta\) in \(T[1/p]\) after extension of scalars. For \(t\in T\), exactness in Lemma~\ref{lem:flag-local-hodge-quotients} gives
+\[
+ \alpha(t)=0
+ \quad\Longleftrightarrow\quad d(\pi_1t)=0
+ \quad\Longleftrightarrow\quad \pi_1 t\in\beta(J).
+\]
+Thus \(W_{\rm HT}=\pi_1^{-1}\beta(J)\) is the integral kernel in the coordinate module. On any model where these geometric subquotients form a locally split sequence with middle term trivial on the reduced vertical cycle \(Z\), Whitney's formula gives
+\[
+ 0\longrightarrow W_{\rm HT}\longrightarrow T
+             \xrightarrow{\alpha} U_{\rm HT}\longrightarrow0,\qquad
+ N_2(W_{\rm HT}|_Z)+N_2(U_{\rm HT}|_Z)=0 .
+\]
+Dualizing either block preserves its second Newton class. This explains why the finite flag condition in Lemma~\ref{lem:reduced-vertical-newton} is the relevant one when a root metric changes. To apply the calculation, both blocks in that lemma must be the actual integral subquotients on \(Z\).
+
+The finite information in this calculation can also be seen directly. Suppose \(S^+\) is the directed union of the integral normalizations of an affine chart in finite subextensions of its algebraic closure, and \(R=\widehat{S^+}\) is its \(p\)-adic completion. For each \(k\ge1\), torsion-freeness gives
+\[
+      R/p^kR=S^+/p^kS^+=\varinjlim_i S_i/p^kS_i .
+\]
+In the kernel, division of the compatible representatives modulo \(p^{n+k}\) by \(p^k\) produces compatible representatives modulo \(p^n\). A finite diagram of finitely presented modules, maps and specified inverses over this quotient descends: take one finite stage for their presenting matrices and another for the finitely many relations and inverse identities. Thus the two quotient isomorphisms can be recorded at finite precision.
+
+On the abelian locus one can also identify the finite maps used in this descent. Let \(A/S\) be the abelian scheme on a normal affine integral chart, let \(K\) be its function field of characteristic zero, and trivialize its \(p^2\)-torsion over a finite extension of \(K\). Let \(S'\) be the normalization of \(S\) in a common splitting field \(K'\) for the torsion, its dual and the Weil pairing. The finite flat groups give restriction maps
+\[
+ A[p^2](S')\longrightarrow A[p^2](K'),\qquad
+ A^\vee[p^2](S')\longrightarrow A^\vee[p^2](K').
+\]
+Both are bijective. Each marked point of \(A[p^2]\) extends over the normalization: its coordinates in the finite coordinate algebra are integral over the chart. This also extends its dual character. Changing charts restricts the same morphisms because the targets are separated and the generic sections agree.
+
+The differential of a torsion character \(t:A^\vee[p^2]\to\mu_{p^2}\) is read in invariant differentials at the identity. The conormal sequence for \([p^2]\) identifies the two modules involved:
+\[
+ \omega_{A^\vee[p^2]}=\omega_{A^\vee}/p^2\omega_{A^\vee},
+ \qquad \omega_{\mu_{p^2}}=(\mathcal O/p^2)\,d\log .
+\]
+Thus \(t^*(d\log)\) gives a column of \(\alpha\bmod p^2\). The identical calculation for the dual marking gives the rows of \(\beta\bmod p^2\). Pulling to the cyclotomic chart and taking these reductions gives precisely the differentials in Lemma~\ref{lem:flag-local-hodge-quotients}, by functoriality. Since \((p^2)\subseteq(\pi_1)\), this finite calculation determines both lattices there. At the boundary the initial finite flat model of the torsion is a separate matter.
+
+\begin{auxlemma}[Finite torsion at a normal crossings boundary]\label{lem:flag-kummer-boundary}
+Let \(S\) be a locally noetherian regular scheme, \(D\) a normal crossings divisor and \(A/S\) semiabelian, with abelian restriction to \(S-D\). Fix a prime \(p\) and a positive integer \(a\). On a quasi-compact chart of the divisorial log structure with fine saturated monoid \(P\), there is an integer \(e\ge1\) such that the full \(p^a\)-torsion of the interior has a finite flat model after the change of chart
+\[
+     P\hookrightarrow e^{-1}P,\qquad
+     S_e=S\times_{\operatorname{Spec}\mathbb Z[P]}
+                    \operatorname{Spec}\mathbb Z[e^{-1}P].
+\]
+One \(e\) works for any fixed finite list of exponents.
+\end{auxlemma}
+\begin{proof}
+Give \(S\) the log structure of \(D\). Inoue's extension theorem gives a log \(p\)-divisible group \(\mathcal G\) whose restriction is \(A[p^\infty]\) on the interior. For \(G_a=\mathcal G[p^a]\), Inoue's finite Kummer chart lemma makes \(G_a|_{S_e}\) a classical finite locally free group. Its rank agrees with the rank of the generic torsion on each component meeting the interior. A common multiple of finitely many such \(e\)'s preserves all the resulting finite flat models by base change. \cite{inoue-log-flag}
+\end{proof}
+
+In particular the boundary contribution cannot be computed by taking the scheme-theoretic kernel on an arbitrary semiabelian model. In dimension one a degeneration from an elliptic curve to a split torus already changes the fibre ranks:
+\[
+ \operatorname{rk} E[p^a]=p^{2a},\qquad
+ \operatorname{rk}\mathbb G_m[p^a]=p^a .
+\]
+
+On a completed degeneration chart let \([Y\to B_{\log}]\) be the polarized log \(1\)-motive, with \(B\) the Raynaud extension and \(Y\) its period lattice. Write \(G_a\) for its \(p^a\)-torsion. Inoue's Proposition~3.14 gives the filtration and its duality:
+\[
+ 0\longrightarrow B[p^a]\longrightarrow G_a
+       \longrightarrow Y/p^aY\longrightarrow0,\qquad
+ G_a^\vee\simeq ([Y\to B_{\log}]^\vee)[p^a].
+\]
+After the Kummer change above the kernel is the inverse image of the identity section of the finite \'etale quotient. It is an open and closed subgroup. Consequently an integral character \(t:G_a\to\mu_{p^a}\) has the same invariant differential at the identity as its restriction to \(B[p^a]\):
+\[
+ e^*\Omega^1_{G_a/S_e}=e^*\Omega^1_{B[p^a]/S_e}
+                =\omega_{B/S_e}/p^a\omega_{B/S_e}.
+\]
+The formula applies to the dual Raynaud extension as well, using the perfect Weil pairing. Thus one can compute both finite differentials on such a chart, including the torus directions. \cite{inoue-log-flag}
+
+The two Hodge lattices above require differentials in the prescribed geometric frames. Since \(d(B)=\alpha(R^h)\) and \(\pi_1H_0\subseteq B\), their finite precision is visible in
+\[
+ \pi_1 U\subseteq\alpha(R^h)\subseteq U,\qquad
+ J=\ker\bigl(L\xrightarrow{\beta} R^h/\pi_1 R^h\bigr).
+\]
+
+\begin{auxlemma}[The two marked lattices on a trait]\label{lem:flag-valuative-image-dual}
+On a good reduction trait, or on a completed Raynaud trait as in Lemma~\ref{lem:flag-kummer-boundary}, use the same finite Weil marking on the generic group and its Cartier dual. Pass to the completed ring of integers \(R\) of an algebraic closure of the trait's fraction field and choose compatible lifts of the marking to the Tate modules. In the coordinates of Lemma~\ref{lem:flag-local-hodge-quotients}, let
+\[
+ T=R^h,\qquad I_\alpha=\alpha(T)\subset U,\qquad
+ I_\beta=\beta^\vee(T^\vee)\subset L^\vee .
+\]
+The two marked cotangent images over \(R\) are \(I_\alpha\) and \(I_\beta\). The integral dual of the second image in the generic Lie algebra, and its image in the coordinate module, are
+\[
+ I_\beta^\vee=\pi_1^{-1}J\subset L[1/p],
+ \qquad \beta(I_\beta^\vee)=\ker(\alpha:T\to U).
+\]
+\end{auxlemma}
+\begin{proof}
+Take a finite marking of order \(p^a\), \(a\ge2\). In good reduction the marked characters extend uniquely to the finite flat torsion. On the Raynaud chart restrict the log torsion character to the inverse image of zero in \(Y/p^aY\). Its generic restriction is the prescribed Weil character on this finite subgroup. Two extensions of that character agree because the subgroup is flat and \(\mu_{p^a}\) is separated. The conormal calculation above therefore computes the same differential at the identity on both descriptions of the boundary chart. Apply this argument to each marking, including the dual one.
+
+The two finite differential maps are the reductions of \(\alpha\) and \(\beta^\vee\) modulo \(p^a\). Lemma~\ref{lem:flag-local-hodge-quotients}, applied also to the dual group with the paired cyclotomic basis, gives
+\[
+ \pi_1U\subseteq I_\alpha\subseteq U,\qquad
+ \pi_1L^\vee\subseteq I_\beta\subseteq L^\vee.
+\]
+Each image is thus the inverse image of its reduction modulo \(p^a\). In particular changing the compatible lifts of the same finite marking leaves the lattices fixed.
+
+For \(x\in L[1/p]\), evaluation against the generators of \(I_\beta\) gives
+\[
+ \langle x,I_\beta\rangle\subseteq R
+ \quad\Longleftrightarrow\quad
+ \langle\beta(x),T^\vee\rangle\subseteq R
+ \quad\Longleftrightarrow\quad \beta(x)\in T .
+\]
+The first condition forces \(\pi_1x\in L\) by the lower bound on \(I_\beta\). The last condition can then be written \(\beta(\pi_1x)\in\pi_1T\), or \(\pi_1x\in J\). This proves the first equality. The second follows from the formula \(\ker\alpha=\pi_1^{-1}\beta(J)\) above.
+\end{proof}
+
+We next pass from the traits to the special fibre. The finite character differentials suffice for this passage even where the toric rank changes.
+
+\begin{auxlemma}[The whole marked square on the reduced fibre]\label{lem:flag-global-reduced-images}
+Use the marked flags of Definition~\ref{hyp:covolume-flag-degrees} and the fixed order of their rational subspaces. At every prime \(p\), on a common proper generically finite model, the two whole Hodge--Tate blocks on the reduced \(p\)-fibre refine the two ends of a short exact sequence
+\[
+ 0\longrightarrow I_\beta^\vee|_Z\longrightarrow\mathcal O_Z^h
+                  \longrightarrow I_\alpha|_Z\longrightarrow0 ,
+ \qquad Z=(X_{\mathbb F_p})_{\rm red}.
+\]
+Here the lines of the dual flag are taken in reverse order when passing back to the original block. In particular \eqref{eq:flag-vertical-square-test} holds on every supporting vertical cycle, including those over the boundary.
+\end{auxlemma}
+\begin{proof}
+\proofstep{Construct the finite differentials on one model.}
+Normalize the given integral model in a common splitting field of the two \(n=p^2\) markings and their Weil pairing. Write \(\mathcal A\) for the semiabelian family. Multiplication by \(n\) is flat and quasi-finite by the fibrewise criterion: the source and target are smooth over the base, and each geometric fibre map is flat with finite kernel. Over a henselian local base \(S\), the open and closed factor \(H\) of \(\mathcal A[n]\) through the closed identity is finite flat. For the group operations it suffices to check
+\[
+ m(H\times_SH)\subset H,\qquad \iota(H)\subset H,\qquad \iota(x)=-x .
+\]
+Indeed the inverse image of the complement in each finite source is closed and misses the closed fibre. The henselian decomposition used here is given in \href{https://stacks.math.columbia.edu/tag/04GE}{The Stacks Project, Section~10.153}.
+
+A generic marked character restricts to \(H\) and extends uniquely over the normal local base since \(H^\vee\) is finite. Its differential is a section of \(\omega_{\mathcal A}/n\) by the conormal sequence at the identity. These constructions descend to \'etale neighbourhoods by finite presentation. On overlapping neighbourhoods the two characters agree on the intersection of their open identity neighbourhoods: that intersection is flat and their generic restrictions coincide. Thus the differentials glue. Applying this also to the dual family gives global maps
+\[
+ T/nT\longrightarrow U/nU,\qquad T^\vee/nT^\vee\longrightarrow L^\vee/nL^\vee
+\]
+in the dual Weil frames, where \(T=\mathcal O^h\).
+
+\proofstep{Extend the images and the rational flags.}
+Take the inverse images of the two finite images in \(U,L^\vee\). Make their strict transforms \(I_\alpha,I_\beta\) locally free by successive Fitting blowups and normalize. If \(f\) is a dominant modification and \(I\subset V\) either original image lattice in its ambient bundle, then
+\[
+       (f^*I)/\mathrm{torsion}=\operatorname{im}(f^*I\longrightarrow f^*V).
+\]
+Indeed this map is an isomorphism generically and \(f^*V\) is torsion-free. The finite columns together with \(nV\) therefore continue to generate the transformed image. \href{https://stacks.math.columbia.edu/tag/0ESN}{The Stacks Project, Tag~0ESN}.
+
+Take the closure of the graph of the given rational flags in the two flag bundles of these lattices and normalize. On a trait with generic flag \(V_\bullet\) in a lattice \(I\), the tautological quotient is locally free. Hence the submodule and its graded line have the descriptions
+\[
+ I_j=I\cap V_j,\qquad I_j/I_{j-1}\simeq\det(I_j)\otimes\det(I_{j-1})^\vee .
+\]
+The norm of this line is precisely the quotient of successive exterior-power norms prescribed in the marked root metric. For the conjugate block use the dual lattice and reverse the flag.
+
+\proofstep{Reduce the two maps in the same frames.}
+At each height-one point of residue characteristic \(p\), Lemma~\ref{lem:flag-valuative-image-dual} gives \(\pi_1U\subset I_\alpha\) and \(\pi_1L^\vee\subset I_\beta\). For a boundary specialization compute the same germ on its completed Raynaud trait as above. The inclusions descend from the completed algebraic-closure valuation ring by faithful flatness. Elsewhere \(p\) is a unit. Since the target lattices are locally free on a normal model, both inclusions hold everywhere. As \(p^2/\pi_1\in p\mathcal O\), the finite differentials induce surjections
+\[
+ T/pT\twoheadrightarrow I_\alpha/pI_\alpha,\qquad
+ T^\vee/pT^\vee\twoheadrightarrow I_\beta/pI_\beta .
+\]
+Dualize the second on \(Z\). Its composite with the first vanishes at the generic point of each component of \(Z\) by \(\beta(I_\beta^\vee)=\ker\alpha\) on the trait. It vanishes everywhere since \(Z\) is reduced. On each fibre the two maps have ranks
+\[
+ \operatorname{rk} I_\beta^\vee=\operatorname{rk} L,\qquad
+ \operatorname{rk} I_\alpha=\operatorname{rk} U=h-\operatorname{rk}L .
+\]
+Both maps are locally split, so the complementary ranks give the displayed short exact sequence on \(Z\).
+
+The second Newton class is additive in this sequence and is unchanged by duality. Splitting the two end bundles by their flags therefore gives \(\sum_i c_1(L_i)^2=0\) on \(Z\). Pulling back to any supporting cycle and applying the projection formula gives the asserted degrees, with the same normalizing model degree as before.
+\end{proof}
+
+There is also a finite algebraic reason for the exponent two in the relative comparison. Suppose \(Q\) is the cokernel of an inclusion of vector bundles of equal rank, invertible on inverting \(p\). Suppose \(\gamma Q=0\), where \((\gamma^p)=(p)\). Extend a common generic full flag on both bundles by graph closure. Each graded quotient of \(Q\) then has a line presentation \(A\xrightarrow{s}A'\) with relative divisor \(D\). In local bases \(s\) divides \(\gamma\); write \(t=\gamma/s\). Over \(R/(\gamma)\) the module \(R/(s)\) has the periodic free resolution with alternate maps \(s,t\). Under \(R/(\gamma)\to R/(p)\), \(a\mapsto a^p\), these maps become
+\[
+ \cdots\xrightarrow{\ s^p\ }R/(p)\xrightarrow{\ t^p\ }R/(p)
+                  \xrightarrow{\ s^p\ }R/(p).
+\]
+
+
+The complex stays exact in positive homological degrees because \((s^pt^p)=(p)\) and \(p\) is regular. Thus Frobenius preserves each successive short exact sequence with such a line quotient. On the graded pieces the new presentation is \(A^{\otimes p}\xrightarrow{s^p}(A')^{\otimes p}\). If \(z,z'\) are the original roots, its contribution to the relative square is
+\[
+                    [pD](pz+pz')=p^2[D](z+z').
+\]
+
+
+Adding the pieces proves the scaling for a finitely presented comparison of this kind. For \(Q_1\) in Lemma~\ref{lem:flag-local-cyclotomic-chain}, \(\pi_2Q_1=0\) and \(\pi_2\mid c\). For \(H\) we have \(cH=0\), with \((c^p)=(p)\). We now realize the two quotient comparisons and the Hodge filtration on one finite model.
+
+\begin{auxlemma}[A framed divisible group on the integral closure]\label{lem:flag-completed-closure-group}
+Fix a residue prime \(p\). After a common generically finite modification of the marked family, take a regular model with strict normal crossings boundary. On an affine chart \(S\) write \(S^+\) for its integral closure in one fixed algebraic closure of the function field, and \(R=\widehat{S^+}\) for the \(p\)-adic completion. The full interior \(p\)-power torsion gives a classical \(p\)-divisible group on each of these rings, compatible under restriction and carrying the chosen pair of generic Tate bases. Write \(G_R\) for the resulting group over \(R\), and \(A,A^\vee\) for the semiabelian extensions of the abelian family and its dual. On every chart meeting the special fibre the end terms in the Hodge comparison of Lemma~\ref{lem:flag-local-hodge-quotients} are
+\[
+ \operatorname{Lie}G_R=\operatorname{Lie}A\otimes_S R,\qquad
+ \omega_{G_R^\vee}=\omega_{A^\vee}\otimes_S R .
+\]
+\end{auxlemma}
+\begin{proof}
+On the abelian locus use the torsion of the abelian scheme. At the boundary add a prime-to-\(p\) full level \(n\ge3\) on the generic principally polarized family. Take the graph closure of its map to a proper Siegel toroidal compactification.
+The arithmetic base is excellent of dimension one. For the closure \(X\)
+and its boundary \(D\), Temkin's \href{https://annals.math.princeton.edu/2017/186-1/p03}{Theorem~1.2.5} gives a projective alteration
+\[
+       f:X'\longrightarrow X,\qquad X'\text{ regular},\qquad
+              f^{-1}(D)_{\rm red}\text{ a strict normal crossings divisor}.
+\]
+
+Pull back the universal polarized log abelian variety on this compactification. Its semiabelian part agrees with the original one: the generic isomorphism and its inverse extend uniquely between semiabelian schemes over a normal base by Faltings--Chai, I, Proposition~2.7. Apply this also to the dual. Inoue, Remark~1.2(2), identifies the universal log extension and its semiabelian part. \cite{inoue-log-flag}
+
+Write \(\mathcal G\) for this log abelian variety and \(A\) for its semiabelian part. Kajiwara--Kato--Nakayama, \href{https://doi.org/10.1017/S002776300000951X}{Definition~4.1.2 and Sections~4.4 and~9.2} give a canonical inclusion and a local description of its quotient:
+\[
+  0\longrightarrow A\longrightarrow\mathcal G
+       \longrightarrow \operatorname{Hom}(X,\overline M^{\rm gp})^{(Y)}/Y
+       \longrightarrow0.
+\]
+Here \(X,Y\) are the local character and period lattices, \(\overline M=M/\mathcal O^\times\) is the characteristic monoid, and the superscript selects the sections bounded by periods in its order. 
+
+The quotient is insensitive to a strict nilpotent thickening: the induced map of characteristic monoids is an isomorphism and its small \'etale sites are equivalent. Thus an infinitesimal section of \(\mathcal G\) reducing to the identity belongs to \(A\). The same holds for sections killed by \(p^a\). Once \(\mathcal G[p^a]\) is classical this identifies its identity germ and conormal:
+\[
+              \omega_{\mathcal G[p^a]}=\omega_A/p^a\omega_A .
+\]
+Here the period subgroup in the quotient denotes the image of the period lattice. The equality is functorial in the marked group, base change and the transition maps; the dual gives the other Hodge bundle.
+
+Fix compatible roots of local equations for the boundary components.
+For a finite list of levels, Lemma~\ref{lem:flag-kummer-boundary}
+gives one Kummer chart on which all its groups are classical finite
+flat groups. Each required root lies in \(S^+\). On two intersecting
+charts local equations for the same component differ by a unit:
+\[
+   t'=ut,\quad x^e=t,\quad (x')^e=t'
+   \quad\Longrightarrow\quad (x'/x)^{\pm e}=u^{\pm1}.
+\]
+Thus \((x'/x)^{\pm1}\) belong to the integral closure on the overlap.
+More generally the saturation of the two chart monoids maps into
+this closure by integrality. Both pullbacks there are the same log
+torsion groups. The identifications respect the transition maps and
+agree on triple overlaps.
+
+Write \(G_c=\mathcal G[p^c]\). For \(a,b\ge1\) take a chart on which
+\(G_a,G_b,G_{a+b}\) are classical. The fppf quotient \(G_{a+b}/G_a\)
+is finite flat. Its quotient map is faithfully flat, so it is an
+epimorphism also on the Kummer flat site and its kernel is the
+same strict subgroup. The exact log sequence gives
+\[
+        (G_{a+b}/G_a)_{\rm kfl}\simeq (G_b)_{\rm kfl},
+       \qquad 0\longrightarrow G_a\longrightarrow G_{a+b}
+                 \xrightarrow{[p^a]}G_b\longrightarrow0 .
+\]
+Full faithfulness for classical finite flat groups gives the
+displayed sequence of group schemes. Finite flat quotients commute
+with base change. These sequences make the system over \(S^+\)
+and its completion a classical \(p\)-divisible group. Each finite
+generic marking and dual marking extends by finiteness and normality.
+Their Weil pairings agree by density. Taking the inverse limit of
+the conormal identities gives the two Hodge bundles.
+
+\end{proof}
+
+\begin{auxlemma}[Finite presentations of the two Frobenius quotients]\label{lem:flag-finite-frobenius-model}
+For the full marked semiabelian family in Lemma~\ref{lem:flag-completed-closure-group}, at each inserted prime \(p\) there is a common normal generically finite flag model on which the relative class \(X\) of Definition~\ref{hyp:integral-flag-frobenius-chain} satisfies
+\[
+               N_2(FX-X)=N_2(D_p).
+\]
+Here both Frobenius quotients and the Hodge end maps are taken on that model.
+\end{auxlemma}
+\begin{proof}
+\proofstep{Construct the quotient diagrams on completed affine charts.}
+The ring \(R=\widehat{S^+}\) is \(p\)-torsion-free. It contains compatible roots of \(p\), and Frobenius induces an isomorphism \(R/(p^{1/p})\to R/(p)\): surjectivity follows by taking an integral \(p\)-th root in \(S^+\), and \(x^p/p\in S^+\) implies \(x/p^{1/p}\in S^+\) by integral closure. Reduction modulo these ideals commutes with completion. Thus \(R\) is integral perfectoid. Charts with \(p\) invertible have zero vertical quotients.
+
+The cyclotomic argument also works if \(R\) has several components. Indeed for \(u=(u_j)\in R^\flat\) one has
+\[
+   (\epsilon-1)u=0\quad\Longrightarrow\quad
+   u_j\in(p/\pi_j)\bmod p,\qquad u_{j-1}=u_j^p=0
+           \quad\text{for all sufficiently large }j.
+\]
+Here \(\pi_j\) is regular since it divides \(p\), and \((p/\pi_j)^p\in(p)\) for large \(j\) by the cyclotomic valuations. Compatibility forces \(u=0\). Hence \(\mu\bmod p=\epsilon-1\) is regular, and \(p\)-adic separation gives regularity of \(\mu\) on \(W(R^\flat)\). Its factor \(\xi\) and the Frobenius translates of \(\xi\) are regular as well.
+
+Apply the prismatic crystal to the group framed in Lemma~\ref{lem:flag-completed-closure-group}. Its base-change isomorphisms and the same Tate bases give compatible maps on overlaps of affine charts. In particular
+\[
+ \pi_1 T=B\subset H_1\subset H_0\subset T,\qquad
+ Q_j=H_j/B,\qquad H=H_0/H_1 .
+\]
+All the quotients in these flags are finitely presented: each lattice \(H_j\) is the image of a projective specialized module embedded in the constant \(T\), with generic inverse after division by a power of \(p\). The quotients have the two Frobenius isomorphisms \eqref{eq:flag-two-frobenius-quotients}; Lemma~\ref{lem:flag-local-hodge-quotients} gives the Hodge sequence
+\[
+  0\longrightarrow L/J\longrightarrow Q_0\longrightarrow U/I_\alpha\longrightarrow0,
+          \qquad J=\pi_1 I_\beta^\vee .
+\]
+The finite marked differentials of the group and its dual identify \(I_\alpha,I_\beta\) with the geometric images on these charts, since the images contain \(\pi_1 U,\pi_1 L^\vee\). The evaluation proof in Lemma~\ref{lem:flag-valuative-image-dual} holds for these projective modules over \(R\) as well.
+
+\proofstep{Descend the sublattices first.}
+For any finite normalization \(S_i\) of an affine chart, use
+\[
+   R/p^k=\varinjlim_i S_i/p^k .
+\]
+On overlaps the same identity holds after localizing before
+completion. For \(j=0,1\) choose finitely many generators \(v_{j,d}\)
+of \(H_j/B\). On intersections write each generating family in terms
+of the other, including the expressions for \(H_1/B\subset H_0/B\).
+These finite matrices descend to one normalization on a finite affine
+cover. Choose lifts \(\widetilde v_{j,d}\) in \(T\). The inverse images are
+\[
+        H_{j,\mathrm{fin}}=B+\sum_d\mathcal O\widetilde v_{j,d}
+                     \subseteq T,\qquad j=0,1 .
+\]
+Blow up their rank Fitting ideals and normalize to make the strict
+transforms locally free. Each transform is the image of the same
+list of generators. On completed charts this is the pullback of
+\(H_j\) by crystal base change: the specialized injection splits
+after division by a power of \(p\). For the two geometric differential
+images use Lemma~\ref{lem:flag-global-reduced-images}.
+
+Consider a further dominant base change on which \(p\) is regular.
+An inclusion \(f\) of the resulting locally free lattices containing
+\(B=\pi_1 T\) admits the reverse map
+\[
+                   h=\pi_1 f^{-1},\qquad hf=\pi_1\operatorname{id}.
+\]
+Thus \(f\) remains injective; its cokernel commutes with base change
+by right exactness. In particular the filtration sequence in
+\eqref{eq:flag-two-frobenius-quotients} is exact on the finite model.
+
+\proofstep{Descend the comparisons with their end maps.}
+The two Frobenius isomorphisms are isomorphisms of finitely presented sheaves killed by \(p\). Their arrows, inverses and overlap identities descend to one further finite normalization by the same limit argument; ordinary extension of scalars by Frobenius commutes with base change of the coefficient rings. 
+
+For the Hodge sequence let \(K=L/J\). Locally lift generators of the free bundle \(U\) through \(Q_0\twoheadrightarrow U/I_\alpha\). Their restriction to \(I_\alpha\) gives \(\eta:I_\alpha\to K\), and the resulting middle term is the pushout
+\[
+       (K\oplus U)/\{(\eta(v),-v):v\in I_\alpha\}.
+\]
+Descend \(\eta\), the two end maps of the sequence, and the isomorphism of this pushout with \(Q_0\) preserving its ends. The equations descend modulo \(p^2\): the pushout is killed by \(\pi_1^2\), which divides \(p^2\). The left inclusion of \(K\) in the descended pushout remains injective since \(I_\alpha\to U\) is an inclusion of vector bundles invertible generically. The quotient is \(U/I_\alpha\), so exactness holds on every chart of this single finite model. This construction does not require the normalization maps to be flat.
+
+The Hodge sequence gives \([Q_0]=X\) in the supported presentation
+group. Apply the periodic-resolution calculation to the two
+Frobenius identifications:
+\[
+      p^2 N_2(Q_1)=N_2(Q_0),\qquad p^2 N_2(H)=N_2(D_p).
+\]
+Now \(N_2(Q_0)=N_2(Q_1)+N_2(H)\). Substitution gives
+\eqref{eq:whole-flag-frobenius-square}.
+
+\end{proof}
+
+\begin{lemma}[Change at one finite prime]\label{lem:flag-prime-change}
+Let \(T\) be a finite set of rational primes and \(p\notin T\) a rational prime. Use Lemma~\ref{lem:flag-finite-frobenius-model} at \(p\). For the mixed degree \(S(T,R)\) with smoothing parameter \(R\), switching to Hodge--Tate metrics at \(p\) changes the degree by
+\[
+ S(T\cup\{p\},R)-S(T,R)=2VI\frac{p\log p}{p^2-1}.
+\]
+\end{lemma}
+
+\begin{proof}
+\proofstep{Compare the de Rham and Hodge--Tate intersections on one model.}
+Fix \(p\notin T\), \(p\) prime. To compute the change in
+\(S(T,R)\), keep all other fibres and the complex metrics
+fixed. In the mixed intersection, first change the squares
+from de Rham to Hodge--Tate and then change the flags in
+the root factor. The second change has zero contribution.
+Indeed, on a vertical cycle supporting a change of root metrics,
+the pairing with the whole squared sum is
+\eqref{eq:flag-vertical-square-test}.
+
+In the difference of the two evaluations of \(Q_F\), replace one line factor at a time. For a monomial \(x_{i_1}\cdots x_{i_d}\) the difference is
+\[
+ \sum_{b=1}^d
+ \left(\prod_{a<b}x'_{i_a}\right)(x_{i_b}-x'_{i_b})
+ \left(\prod_{a>b}x_{i_a}\right).
+\]
+Each difference is supported on its vertical divisor. On that divisor it is paired with the entire Hodge--Tate power sum of degree two, which has zero degree against the complementary factors by that identity. Linearity gives zero for \(Q_F\).
+This computation uses the full lattice at each rational prime \(p\), including primes ramified in \(E\). The split local
+condition refers to the two substitutions in the polynomial.
+\label{cor:covolume-flag-test-11}
+
+For the change in squares use the Lie and Hodge bundle
+models at the same \(p\). Their relative Chern
+evaluation \(c_k\) can be computed after a normal
+generically finite cover using presentations that are
+isomorphisms on the generic fibre. For graded-line
+presentations the local difference is the sum of the
+pairings
+\[
+  [D_\alpha]\sum_{a=0}^{k-1}
+               x_\alpha^a {x'_\alpha}^{\,k-1-a},
+\]
+where \(D_\alpha\) is the relative divisor of the two
+line lattices. The local degree pairs this class
+with the fixed root monomial. Composition adds the relative divisors. For three successive line lattices this reads
+\[
+ D(L_0,L_2)=D(L_0,L_1)+D(L_1,L_2).
+\]
+Pair with the fixed root monomial. For a compatible extension, choose common-model flags. Its list of graded differences is the concatenation of the
+lists for the subobject and quotient. Thus their evaluations add. Multiplication by \(p\) on the Lie
+bundle gives a common reference evaluation \(L_k\),
+namely the local fibre evaluation of its
+\((k-1)\)-st power sum multiplied by \(k\).
+
+Apply the degree-two comparison on the whole bundle. Under Frobenius the relative divisor and each first Chern root both acquire a factor \(p\). On the fixed flag,
+\[
+    (pD)(pz+pz')=p^2D(z+z'),\qquad N_2(FX)=p^2N_2(X).
+\]
+Pair with the same complementary monomial throughout. Write \(L_2\) for the resulting evaluation of \(N_2(D_p)\), with the factor \(\log p\) separated, and \(c_2\) for the relative square of \(A\) in this convention. Lemma~\ref{lem:flag-finite-frobenius-model} gives exactly
+\[
+  (p^2-1)\left(c_2+\frac{L_2}{p-1}\right)=L_2,\qquad
+  \frac{c_2}{2}=-\frac{p}{p^2-1}\frac{L_2}{2}.
+\]
+Here division by \(2!\) passes to the Chern character. The reference \(L_2/2\) pairs the first Lie Chern class with the marked monomial. No relative power sum of any other degree enters this calculation.
+\label{cor:covolume-flag-test-12}
+
+Divide the component contributions by their cover multiplicities
+and take their geometric average with the component weights, whose sum is one. For the Lie bundle \(\mathrm{Lie}\), the two root blocks have opposite signs. Thus \eqref{eq:flag-test-degrees} gives
+\[
+ \operatorname{ch}_1(\mathrm{Lie})=-\lambda,\qquad
+ C\bigl(\operatorname{ch}_1(\mathrm{Lie})Q_F\bigr)=2VI .
+\]
+The local degree of a \(p\)-vertical class carries
+\(\log p\). The mixed comparison computes de Rham
+minus Hodge--Tate, while insertion takes Hodge--Tate
+minus de Rham. Therefore
+\begin{equation}\label{eq:flag-prime-insertion}
+ S(T\cup\{p\},R)-S(T,R)
+        =2VI\frac{p\log p}{p^2-1}.
+\end{equation}
+The formula includes \(p=2\) since \(p^2-1>0\).
+\label{cor:covolume-flag-test-13}
+
+\end{proof}
+
+\paragraph{Integral lattices and the limit at the cutoff.}
+
+The block calculation identifies the polynomial correction. The value at a finite cutoff also includes the change of integral lattices at the primes retained in the arithmetic test.
+
+\begin{proposition}[The test value at the arithmetic cutoff]\label{prop:flag-cutoff-test}
+On the same marked flag model, use Lemma~\ref{lem:flag-finite-frobenius-model} at the primes of \(\mathcal P_B\). For \(B\ge2\) and the prescribed
+prime set \(\mathcal P_B\), one has
+\[
+ \Phi_B(T_F)=VB_{\rm fl}
+            -2VI\left(r_*-\sum_{p\in\mathcal P_B}
+                              \frac{p\log p}{p^2-1}\right).
+\]
+The arithmetic intersections for the full-rank and CM-type lattices agree at the
+marked discriminant primes, with the same smoothing metrics.
+The limit is taken at fixed \(B\).
+\end{proposition}
+
+\begin{proof}
+At the arithmetic cutoff \(B\ge2\), form \(\mathcal P_B\) by taking the union of
+\[
+ \{p:p\le B\}\ \cup\ \{p:p\mid 2\operatorname{disc} E\}
+\]
+with
+the level primes of the graded lattice. With the indicated metrics on the graded lattice the comparison to prove is 
+\[
+ \text{arithmetic evaluation of }T_F\text{ at cutoff }B=S(\mathcal P_B,R).
+\]
+At infinity the two expressions use the same isometries. At a
+finite prime we compare the eigenroot squares with half the square
+sum for the full flag. Away from the different the integral
+eigenspaces already split the Tate lattice.
+
+\proofstep{Identify the two lattices at a prime of the different.}
+Work over the integers \(C\) of a finite coefficient extension of
+\(\mathbb Q_p\) that contains all images of \(E\). Write \(\Lambda\)
+for the constant, polarized, self-dual Tate lattice over \(C\),
+\(T_\tau\) for the \(\tau\)-eigenspace of \(E\), and \(e_\tau\) for
+its rational projection. Write \(\delta_\tau\) for a generator of
+the image of the absolute different at \(\tau\). The two integral
+lattices on this axis satisfy
+\[
+   \Lambda_\tau:=\Lambda\cap T_\tau
+           =\delta_\tau e_\tau\Lambda,\qquad
+   (\Lambda_\tau)^\#=e_{\bar\tau}\Lambda .
+\]
+
+Here the dual in the second formula lies on the conjugate axis.
+Indeed the integral Tate module is locally free over
+\(\mathcal O_E\otimes\mathbb Z_p\), so for the first formula it suffices
+to consider that ring itself. For a local integral basis \(b_j\)
+and its trace-dual basis \(b_j^*\), the coefficients of \(c e_\tau\)
+are \(c\tau(b_j^*)\). They are all integral precisely when
+\(c\in\delta_\tau C\), since the \(b_j^*\) span the inverse different.
+For the second formula every integral functional on the saturated
+summand \(\Lambda_\tau\) extends to \(\Lambda\); projecting its
+polarization dual to \(T_{\bar\tau}\) gives the assertion.
+
+Let \(\Phi\) be the marked CM type on which the root norm carries
+the different factor. The lattice
+\[
+ \Lambda^{\rm eig}
+  =\bigoplus_{\tau\in\Phi}\delta_\tau^{-1}\Lambda_\tau
+      \;\oplus\!\bigoplus_{\tau\notin\Phi}\Lambda_\tau
+\]
+is self-dual by the two identities.
+
+To compute its metric,
+write \(v_i\) for the Hodge--Tate image of the \(i\)-th marked Lie
+vector and \(\tau_i\) for its embedding. For a prefix ending at \(i\)
+write \(u_{\tau,i}=\bigwedge_{j\le i,\ \tau_j=\tau}v_j\), with empty
+wedge \(1\). The norm of a wedge supported on one axis calculated
+using \(\Lambda\) equals its \(\Lambda_\tau\)-norm, since this lattice
+is a saturated direct summand. The maximum norm on exterior powers
+of the direct sum above therefore gives
+\[
+ \frac{\|v_1\wedge\cdots\wedge v_i\|_{\Lambda^{\rm eig}}}
+      {\|v_1\wedge\cdots\wedge v_{i-1}\|_{\Lambda^{\rm eig}}}
+ = |\delta_{\tau_i}|^{\mathbf 1_{\tau_i\in\Phi}}
+   \frac{\|u_{\tau_i,i}\|_{\Lambda}}
+        {\|u_{\tau_i,i-1}\|_{\Lambda}}.
+\]
+
+The quotient on the right is the ratio of the maximum norms of
+the minors on the indicated embedding. This gives the prescribed
+eigenroot metric, including the factor at a ramified embedding.
+The whole metric uses prefix quotients in \(\Lambda\).
+Under the principal polarization \(\alpha\) is adjoint to \(\beta\).
+Thus the Lie image is isotropic of half the total dimension:
+\[
+    \langle \beta v,\beta w\rangle
+      =\langle v,\alpha\beta w\rangle=0,\qquad
+    (\beta L[1/p])^\perp=\beta L[1/p].
+\]
+Complete the ordered Lie flag by the annihilators in reverse order.
+At both self-dual endpoints the last half of the graded lines
+consists of the duals of the first half in reverse order.
+
+\proofstep{Realize the flags for the intervening changes of lattice.}
+Smith reduction over \(C\), applied to the intersection of the two
+lattices inside each of them, reduces the comparison to pairs
+\(M'\subset M\) with \(M/M'\simeq C/(a)\). Intermediate lattices
+need not be self-dual. Use each such \(M\) and its dual \(M^\#\);
+choose \(b\) large enough that for the entire finite list
+\[
+                p^b\Lambda\subset M\subset p^{-b}\Lambda .
+\]
+
+On the completed charts of Lemma~\ref{lem:flag-completed-closure-group}
+the lattice in the rational Lie space induced by \(M\) is
+\[
+ W_M=\beta^{-1}(M)
+     =\bigl(\operatorname{im}(M^\vee\xrightarrow{\beta^\vee}
+                                       L^\vee[1/p])\bigr)^\vee .
+\]
+These image lattices are calculated at finite level. Indeed, after
+multiplying by \(p^b\), the image on the right lies in \(L^\vee\)
+and contains \(p^{2b}\pi_1L^\vee\) by
+Lemma~\ref{lem:flag-global-reduced-images}. Thus it is the inverse
+image of its reduction modulo \(p^k\) for \(k\ge 2b+2\). The same
+argument applies to \(\alpha(M)\) and to \(M^\#\). Use the finite
+marked differentials at a level high enough to compute these
+reductions, then make all the images locally free by a common
+modification. Extend the ordered rational Lie flags in the
+corresponding \(W_M\)'s by graph closure.
+
+On the completed charts the resulting subbundle has a split
+inclusion locally:
+\[
+   0\longrightarrow \beta(W_M)\longrightarrow M
+                       \xrightarrow{\alpha}\alpha(M)\longrightarrow0 .
+\]
+Indeed the kernel has the indicated rational span by the Hodge--Tate
+sequence, and intersection with \(M\) gives precisely \(\beta(W_M)\).
+The quotient is locally free. Let \(F_i(M)\), \(0\le i\le g\),
+be the ordered subbundles in \(\beta(W_M)\). The upper half is
+\[
+    F_{g+j}(M)=\operatorname{Ann}_M F_{g-j}(M^\#),
+                           \qquad 0\le j\le g .
+\]
+
+This full flag is locally split. Its graded lines are the algebraic
+Lie lines and their duals. To compute its image in the elementary
+quotient, choose \(k\) with \(p^k\in(a)\):
+\[
+       F_i(M)/p^k F_i(M)\longrightarrow M/p^kM
+                              \longrightarrow M/M'.
+\]
+The flag inclusions modulo \(p^k\), their local splittings, and the
+identifications of their graded lines and transition maps are finite
+matrix data. Only reductions of the constant lattice matrices are used here.
+They have algebraic representatives by density of a number field in
+its completion, simultaneously at the marked places by approximation.
+All these data descend on one finite normalization as in
+Lemma~\ref{lem:flag-finite-frobenius-model}.
+
+\proofstep{Compute the change on each graded line.}
+Let \(J_i\) be the inverse image in \(\mathcal O\) of the image of
+the \(i\)-th flag subbundle in \(M/M'\simeq\mathcal O/(a)\).
+Principalize these finitely many ideals on a common model and write
+\[
+    J_i=\mathcal O(-D_i),\qquad J_0=(a),\qquad J_{2g}=\mathcal O,
+          \qquad \Delta_i=D_{i-1}-D_i\ge0,
+\]
+where \(g\) is the dimension of the abelian fibre. The projection of
+the \(i\)-th subbundle onto its image induces a surjection from its
+graded line \(L_i\) to \(J_i/J_{i-1}\). Because both sides below are
+invertible on \(\Delta_i\), it restricts to an isomorphism
+\[
+                  L_i|_{\Delta_i}\simeq
+      J_i/J_{i-1}=\mathcal O(-D_i)|_{\Delta_i}.
+\]
+
+At each divisorial valuation the new flag is the intersection of the
+same rational flag with \(M'\). Filtering \(M/M'\) by the old flag
+therefore gives \(J_i/J_{i-1}\) as the cokernel on the \(i\)-th
+graded line. Hence the new line is \(L_i(-\Delta_i)\) under the common
+rational identification: the two lattices have that difference at
+every height-one point of the normal model.
+
+Write \(l_i=c_1(L_i)\) and pair throughout with the other fixed
+factors of the test. The displayed restriction gives
+\(l_i\Delta_i=-D_i\Delta_i\) in this pairing. Consequently
+\[
+ (l_i-\Delta_i)^2-l_i^2
+     =2D_i\Delta_i+\Delta_i^2=D_{i-1}^2-D_i^2 .
+\]
+The identity multiplies by \(m^2\) if the metrics are represented on
+the \(m\)-th powers. Summation over the full flag gives zero:
+\(D_0=\operatorname{div}(a)\) has trivial line bundle on its
+vertical support, and \(D_{2g}=0\). At the two self-dual endpoints
+the full sum is twice the sum of the eigenroot or whole Lie squares,
+respectively. Taking a common model for the finitely many marked
+primes and using the projection formula proves the required equality
+with the prescribed smoothing metrics.
+\label{cor:covolume-flag-test-14}
+
+\proofstep{The arithmetic value at the cutoff.}
+Let \(\Phi_B\) denote the limiting arithmetic evaluation
+at cutoff \(B\). Since \(\mathcal P_B\) is finite,
+induction on its size in \eqref{eq:flag-prime-insertion}
+and then \eqref{eq:flag-empty-limit} yield
+\begin{equation}\label{eq:flag-arithmetic-test}
+ \Phi_B(T_F)=VB_{\rm fl}
+          -2VI\left(r_*-\sum_{p\in\mathcal P_B}
+                              \frac{p\log p}{p^2-1}\right).
+\end{equation}
+In the canonical flag functional \(h_{\rm fl}\), the
+boundary form for \(P_{\tau,2}^-+P_{\tau,2}^+\) is
+the block correction less \(P_{\tau,1}^-\). Indeed
+the normalized block correction has coefficients
+\(-(j-1)/j\) and \(-(N-j-1)/(N-j)\) on the low and
+high block determinants. Its degree is the one
+in \eqref{eq:flag-first-limit}. Consequently
+\(h_{\rm fl}(T_F)=B_{\rm fl}-I\), and the same
+test is
+\[
+ \Phi_B(T_F)=V\left(h_{\rm fl}(T_F)
+            -2I\left(r_*-\tfrac12
+                      -\sum_{p\in\mathcal P_B}\frac{p\log p}{p^2-1}
+                \right)\right).
+\]
+This is the value that enters the flag height
+comparison. \label{cor:covolume-flag-test-15}
+
+\end{proof}
+
+\paragraph{The coefficient of the low-block shift.}
+
+Differentiating in the lower-block roots identifies the shift coefficient in the cutoff calculation.
+
+Define \(\mathsf S\) on homogeneous polynomials of degree
+\(D_{\rm fl}+1\) by taking \(\deg_{\rm fl}\) of the sum
+of their low-root partial derivatives. Define \(\mathsf T\)
+by using all root partial derivatives in this sum.
+When differentiating \(T_F\), the term in which a
+derivative hits \(Q_F\) vanishes after flag degree,
+since \(P_2\) is symmetric in each whole block of \(N\)
+roots and has positive degree. The other terms give
+\(\mathsf S(T_F)=2I\) and \(\mathsf T(T_F)=0\).
+Moreover \(I<0\) by \eqref{eq:flag-test-degrees}.
+The class \(\lambda\) is the positive Pl\"ucker class
+on the product of Grassmannians, with a factor of two
+in the root convention, and \(F\) integrates to one
+along the flag fibres. Thus
+\(\deg_{\rm fl}(\lambda^d F)>0\).
+
+\begin{construction}
+\[
+\begin{array}{lll}
+\text{direction}&\text{combination it determines}&\text{unknown recovered}\\ \hline
+\text{low-block derivative}&a\quad(\text{prime series})&a\\
+\text{determinant direction}&j a+N b_0=-V^{-1}\sum_c V_cH_{\tau,c}&b_0
+\end{array}
+\]
+\caption{The low-block derivative includes the contribution from the good primes. Once the first shift is known, the determinant direction determines the trace shift.}\label{fig:flag-calibration-equations}
+\end{construction}
+
+\begin{proposition}[Calibrating the two shifts]\label{prop:flag-shift-calibrations}
+For the marked flag object of Definition~\ref{hyp:covolume-flag-degrees} and the fixed-cutoff expansion of Section~\ref{sec:flag-wall-slope},
+the two coefficients \(a,b_0\) satisfy
+\eqref{eq:flag-shift-coefficient} and the trace relation
+\[
+ ja+Nb_0=-V^{-1}\sum_c V_c H_{\tau,c}.
+\]
+
+For \(B_0\ge48\) the low-block coefficient has
+\(-a\le C(r_*)(\log B_0+\log\operatorname{rd}_E)\)
+under the prescribed discriminant and at most fifteen
+level primes. The trace coefficient is bounded by the
+stated determinant-height bound.
+\end{proposition}
+
+\begin{proof}
+\proofstep{The low-root derivative and the prime remainder.}
+The comparison for general weights has an exact
+asymptotic of the following form. At a fixed cutoff
+\(B_0\), its difference of arithmetic evaluations can
+be expressed using \(\mathsf S\), the total derivatives
+at each embedding, and the sum of the terms of order at
+least two in the local prime comparison.
+If \(a,b_0\) are the two linear coefficients
+in this asymptotic, the sum of those remaining prime
+terms for a test \(P\) tends to
+\[
+ \Phi_{B_0}(P)-V\bigl(h_{\rm fl}(P)
+                   -a\mathsf S(P)-b_0\mathsf T(P)\bigr).
+\]
+Use this with the power-sum decomposition \(T_F=P_2Q_F\).
+
+At a new prime, the \(\mathsf S\)-term in the removal
+formula equals \(-2VI\log p/(p-1)\), and the \(\mathsf T\)-term
+is zero. Subtracting the first-order contribution from the
+negative of \eqref{eq:flag-prime-insertion} gives exactly
+\[
+ -2VI\,\frac{p\log p}{p^2-1}
+     +2VI\,\frac{\log p}{p-1}
+          =2VI\,\frac{\log p}{p^2-1}.
+\]
+The remaining prime series for this test converges
+absolutely. Dividing its limit by \(2VI\ne0\) gives
+\begin{equation}\label{eq:flag-shift-coefficient}
+ a=r_*-\tfrac12
+       -\sum_{p\in\mathcal P_{B_0}}\frac{p\log p}{p^2-1}
+       +\sum_{p\notin\mathcal P_{B_0}}\frac{\log p}{p^2-1}.
+\end{equation}
+The source uses the lower bound from this formula,
+which already follows from the sign of the remaining
+prime terms.
+
+\proofstep{The uniform bound in the level and cutoff.}
+Take \(n=\lfloor B_0\rfloor\). Counting multiples of each
+prime in \(n!\) and using \(n/p\le\lfloor n/p\rfloor+1\) gives
+\[
+ n\sum_{p\le n}\frac{\log p}{p}
+    \le \log(n!)+\sum_{p\le n}\log p \le n\log n+O(n)
+\]
+by Chebyshev's bound. After division by \(n\), replacing \(1/p\)
+by \(p/(p^2-1)\) adds at most
+\(\sum_p(\log p)/(p(p^2-1))<\infty\).
+
+At a ramified rational prime of the
+Galois auxiliary field \(E\), its root discriminant has
+valuation at least \(1-1/e_p\ge1/2\), by the different
+bound at every place above \(p\). Hence the sum over
+discriminant primes beyond \(B_0\ge48\) is at most
+\(\log\operatorname{rd}_E\), using \(p/(p^2-1)\le1/2\)
+there. The prescribed at most fifteen level primes
+cost an absolute constant. The prime \(2\) is already
+included. These estimates give the uniform inequality
+\[
+ -a\le C(r_*)\bigl(\log B_0+\log\operatorname{rd}_E\bigr),
+ \qquad B_0\ge48 .
+\]
+This controls the part of the general-weight lower
+bound multiplying the centered low-block weight sum.
+\proofstep{The trace direction.}
+For the trace part take the test \(P_{\tau,1}Q_0\),
+where \(P_{\tau,1}=P^-_{\tau,1}+P^+_{\tau,1}\) and
+\(Q_0=\prod_{\tau',i}(-x_{\tau'i})^{N-1-i}\) is
+the full flag point class of degree one.
+The two derivatives of the test are \(j,N\) and its
+remaining prime terms are zero, since it uses
+only the first power sum in the decomposition.
+The canonical height functional vanishes on this
+test. The arithmetic functional equals the weighted
+sum of determinant heights \(H_{\tau,c}\), with
+weights \(V_c>0\) summing to \(V\). Thus
+\[
+ ja+Nb_0=-V^{-1}\sum_c V_c H_{\tau,c}.
+\]
+
+If the determinant bound at this cutoff is
+\(|H_{\tau,c}|\le C_f N \mathcal L(B_0)\), where \(\mathcal L(B_0)=\log(B_0\operatorname{rd}_E)+|\RePart(L'/L)(1,\chi_K)|\) and \(\chi_K\) is the quadratic character used in the determinant comparison in Section~\ref{sec:flag-wall-slope},
+it gives \(|ja+Nb_0|\le C_f N\mathcal L(B_0)\).
+
+For a regular dominant weight array \(w\), set
+\(\bar w_\tau=N^{-1}\sum_i w_{\tau i}\) and
+\(A_\tau=\sum_{i<j}w_{\tau i}-j\bar w_\tau\).
+Dominance gives \(j^{-1}\sum_{i<j}w_{\tau i}\ge\bar w_\tau\).
+Also \(j|\bar w_\tau|\le(j/N)\sum_i|w_{\tau i}|\), so
+\[
+ 0\le A_\tau\le\sum_{i<j}|w_{\tau i}|
+      +\frac jN\sum_i|w_{\tau i}|\le2\sum_i|w_{\tau i}|.
+\] For
+\(F_w=(-\sum_{\tau,i}w_{\tau i}x_{\tau i})^{D_{\rm fl}+1}\),
+writing \(G_w=\deg_{\rm fl}((-\sum_{\tau,i}
+w_{\tau i}x_{\tau i})^{D_{\rm fl}})>0\), the
+linear correction in the height is
+\[
+ -V(a\mathsf S+b_0\mathsf T)(F_w)
+    =(D_{\rm fl}+1)VG_w
+           \sum_\tau\bigl(a A_\tau+(ja+Nb_0)\bar w_\tau\bigr).
+\]
+The bounds for \(-a\) and \(ja+Nb_0\) therefore give the
+lower bound
+\[
+ -C(D_{\rm fl}+1)VG_w\mathcal L(B_0)
+     \sum_{\tau,i}|w_{\tau i}|,
+\]
+with a constant uniform in \(N,\mathcal T\) and the
+flag model.
+
+For the full lower estimate add the
+nonnegative canonical height term and the negative
+absolute bound for the remaining prime terms of
+\(F_w\). The source bounds those terms by
+\[
+ (8\log4)(D_{\rm fl}+1)VG_w\min(j,N-j)
+\]
+times the
+sum of the weight oscillations at the embeddings,
+on its stipulated regular weight and cutoff range.
+Section~\ref{sec:flag-wall-slope} proves the fixed-cutoff
+asymptotic and the weight-uniform tail bound and applies
+them with the determinant height of the marked frame.
+\label{cor:covolume-flag-test-16}
+
+The wall estimate needs these identities at both levels. For each, use its own marked toroidal model, normalized graded metrics, local lattice comparisons and
+\(V,I,\mathcal P_B\). The same \(r_*\) works at both levels, at
+every scale in the window and in every rank. First take
+\(R\to\infty\) with the model and \(B\) fixed. At each fixed \(B\) this gives the arithmetic equality needed for the wall calculation. Only pointwise convergence in \(R\) is required before the bounds in \(B\) and the window scale are taken. The covolume estimate uses the full weight family for the
+height comparison, and the selected runs for positivity, measure and
+deep reduction.
+\end{proof}
+
+\begin{auxlemma}[Allowing errors at finitely many primes]\label{lem:flag-finite-defects}
+Fix the marked datum and the cutoff \(B_0\ge48\) of
+Proposition~\ref{prop:flag-shift-calibrations}; put \(P=\mathcal P_{B_0}\).
+Keep the empty-set limit, the comparison between the whole and typed
+lattices, the fixed-cutoff expansion and its determinant relation.
+Suppose \eqref{eq:flag-prime-insertion} holds outside a finite set
+\(D\subset P\). At the exceptional primes suppose the actual limiting
+changes, when inserted successively to form \(P\), are
+\[
+ 2VI\left(\frac{p\log p}{p^2-1}+d_p\right)\qquad(p\in D).
+\]
+Write \(a_0\) for the right side of \eqref{eq:flag-shift-coefficient}.
+The low-block shift is then \(a=a_0-\sum_{p\in D}d_p\). In particular,
+for the slope lower bound it suffices that
+\[
+  \sum_{p\in D}d_p\le C\bigl(1+\log B_0+\log\operatorname{rd}(E)\bigr)
+\]
+with a constant uniform on the marked family.
+\end{auxlemma}
+\begin{proof}
+In the finite telescope the actual value of \(\Phi_{B_0}(T_F)\)
+increases by the signed amount \(2VI\sum_{p\in D}d_p\) relative to
+\eqref{eq:flag-arithmetic-test}. Every subsequently inserted prime is
+outside \(D\), so the absolutely convergent remainder in the proof of
+Proposition~\ref{prop:flag-shift-calibrations} has its previous value.
+Let \(\Phi^0\) be the right side of \eqref{eq:flag-arithmetic-test}
+at this cutoff. Since \(\mathsf S(T_F)=2I\) and \(\mathsf T(T_F)=0\),
+the two expressions for that remainder give
+\[
+   \Phi^0 + 2VI\sum_{p\in D}d_p - Vh_{\rm fl}(T_F)+2VIa
+       =\Phi^0 -Vh_{\rm fl}(T_F)+2VIa_0 .
+\]
+Cancel and divide by \(2VI\ne0\). The displayed upper bound now
+controls \(-a=-a_0+\sum d_p\); the trace shift has its separate
+determinant bound. The resulting estimate on dominant weights follows
+from \(A_\tau\ge0\) as in that proposition.
+\end{proof}
+
+All ramified primes of the host belong to \(P\). Thus, even if the cycle
+identity is proved only away from those primes, a uniform upper bound on
+their total normalized error would suffice in this application. Obtaining
+such a bound requires information about the actual integral flag models.
+

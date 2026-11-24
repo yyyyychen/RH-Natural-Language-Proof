@@ -1,0 +1,195 @@
+The arithmetic application of the recursion uses a different parameter
+at each real place. We calculate their product before taking any
+supremum over rows. In this calculation \(r=m/2-1\) is the length of
+the isotropic flag. Write \(b=e^L\), \(d=|D_E|^{1/(2f)}\),
+\(\kappa=2\pi/d\), \(g=g_0g_1\), \(N=10m\), and
+\(I=(\Delta-5)/2\). Here \(I\) denotes a real interval length.
+For the cut used for two distinct words choose a position \(l\)
+at which their bits differ. This is the same position at all real
+places by Lemma~\ref{lem:window-parameter-choice}.
+
+\begin{auxlemma}[The frequency scale on two selected words]
+\label{lem:selected-frequency-size}
+For each block starting at \(i\ge1\) of length \(h\ge1\) with
+\(i+h\le r+2\), let \(\rho_{i,h,v}\) be the frequency threshold
+at the place \(v\) in the trace coordinate of
+Lemma~\ref{lem:period-lattice-normalization}. For the terminal
+inverse-coordinate comparison denote the threshold before doubling by
+\(\rho'_{i,v}\). Put \(\nu=2r+3-2i-h\). With \(\Theta=k\), for all
+sufficiently late selected rows one can take the thresholds to satisfy
+\[
+ \prod_v(gd^{\nu+1}\rho_{i,h,v})\le\Theta^{-f},\qquad
+ \prod_v(gd^{\nu}\rho'_{i,v})\le\Theta^{-f}
+       \quad(i+h=r+2).
+\]
+\end{auxlemma}
+\begin{proof}
+\proofstep{The cofactor on the interpolation interval.}
+Use the row parameters \(\lambda\) and the two column parameters
+\(u,u'\) of Definition~\ref{hyp:critical-level-weights} at one place.
+Let \(T,T'\) be their assigned primes. The positive size of the
+normalized cofactor is given by
+\[
+ \begin{aligned}
+ P(Y)&=\prod_a(Y+\lambda_a),\\
+ Q(Y)&=-TT'\prod_{a=1}^k
+                   (Y+\tfrac12+u_a)(Y+\tfrac12+u'_a),\\
+ B(Y)&=g^m\kappa^{1-m}\sqrt{|P(Y)P(Y+1)/Q(Y)|}.
+ \end{aligned}
+\]
+The numerator is the product of the two shifted ambient central
+polynomials. Each compact cofactor contributes one of the two compact
+polynomials in the denominator, as in
+Lemma~\ref{hyp:selected-orbital-coefficient-bounds}. Write \(z=v_l+Y\).
+Use \(5/2\le z\le\Delta/2\) and the shorter interval
+\(5/2\le z\le N^3\) for the first singleton. Their suprema of \(B(Y)\)
+are denoted by \(B_v,B_v^{(1)}\), respectively.
+
+The negative row coordinates contribute at most
+\(\prod_j b_j\exp(4mk\Delta/b_1)\).
+For the positive coordinate at position \(a\), put \(w=v_a+Y\).
+Except at a replaced endpoint its factor in the square root is
+\[
+ \sqrt{\frac{|w(w+1)|}
+ {|(w-d_a\Delta)(w-d'_a\Delta)|}}.
+\]
+At the differing bit this factor is
+\[
+    \sqrt{(z+1)/(\Delta-z)}\le\sqrt{(14/5)z/\Delta}.
+\]
+
+
+For \(a>l\) the factor is at most one. For \(a<l\), write
+\(j=l-a\). The factor is at most
+\(1+2/(4j-1)\), since \(w\ge4j\Delta\).
+For the product use
+\[
+ \log\prod_{j<k}\left(1+\frac{2}{4j-1}\right)
+ \le \sum_{j<k}\left(\frac1{2j}+O(j^{-2})\right)
+       \le \tfrac12\log k+O(1).
+\]
+
+
+The first endpoint costs at most \(1/(a_0-v_1)\), where \(a_0\)
+is the first definite coordinate. At a top place the replaced
+last factor costs at most \(4k\Delta/b_*\) up to an absolute
+factor. Indeed its numerator is \(O(k\Delta)\) and its denominator
+is at least \(b_*/2\) on the cut. In both cases the endpoint
+contribution is \(O(1/a_{\rm eff})\).
+
+Let \(t_v^2=T_{{\rm crit},u,v}T_{{\rm crit},u',v}/(TT')\).
+The critical-level calculation in Proposition~\ref{prop:critical-level-lower}
+retains the lower bound \(g^m\kappa^{1-m}\prod b_j/(8a_{\rm eff})\)
+for either word, with \(4mk\Delta/b_1\le1/10\). It follows that
+\[
+ B_v^{(1)}\ll t_v\sqrt{k N^3/\Delta},\qquad B_v\ll t_v\sqrt k .
+\]
+It is the product of the \(t_v\) that is bounded. Let \(Z\) be the
+sum of the logarithms of the Euler and finite-index corrections in
+Proposition~\ref{prop:prime-target-size}. Its displayed mass formula,
+compared with the defining product of the local critical levels, gives
+\[
+ \sum_v\log(T_{{\rm crit},u,v}/T)
+ =f\log(X_u/T)-Z/k
+ \le 2\log\Gamma/k+O(fm/k)=O(1).
+\]
+Here \(T\ge X_u\Gamma^{-2/(fk)}\) and
+\(8 C_\Gamma m^5 f L\le k\) by Lemma~\ref{lem:window-parameter-choice}.
+Taking the arithmetic mean of the two log estimates gives
+\(\prod_v t_v\ll1\).
+
+\proofstep{Frequencies in the trace coordinate.}
+For a singleton put \(d_0=2(i-1)\), and for a longer block put
+\(d_0=2(i-1)+h-1\). These are the degrees of the leading wave
+and lift coefficients in \eqref{eq:word-leading-wave} and
+\eqref{eq:word-leading-lift}, respectively. If \(P\) has degree
+at most \(d_0>0\), interpolation at the extrema of the rescaled
+Chebyshev polynomial on an interval of length \(a\) gives
+\[
+ |[Y^{d_0}]P|\le \tfrac12(4/a)^{d_0}
+                       \max_{Y}|P(Y)|.
+\]
+
+
+Indeed the leading-coefficient interpolation weights alternate in
+sign. Their absolute sum is the leading coefficient of the rescaled
+Chebyshev polynomial, which takes alternating values \(\pm1\)
+at the nodes. For degree zero use evaluation at one point.
+In a product of at most \(N\) letters use disjoint translated
+subintervals of length at least \(I/(2N)\). The unit shifts in the
+consecutive cofactor identities fit in the gaps since
+\(I\gg N^3\); the degree-zero first evaluations fit in the short cut.
+Thus one degree of interpolation costs at most \(C N/I\), with
+\(C\) absolute. The additive character in the unscaled frame
+contributes \(2\pi/g\); after reinstating the cofactor, its scale
+for an ordinary block is
+\[
+ \rho_{i,h,v}
+ =C(2\pi/g)^{1-m} A_v
+              \bigl(C(2\pi/g)N/I\bigr)^{d_0},\qquad
+ A_v=\frac{B_v}{g^m\kappa^{1-m}} ,
+\]
+with \(B_v^{(1)}\) in place of \(B_v\) at \((1,1)\).
+
+
+On the terminal block \(i+h=r+2\), the one-sided leading term is proportional to \(\tau^{-1}\) on a single compact type. Its interpolation degree is \(i-1\), by the first-component calculation before \eqref{eq:word-leading-lift}. To see the level dependence, put \(x_\rho(Y+1)=\prod_{a<k}(Y+1+\rho_a)\) for the interlacing type in \eqref{eq:word-type-interlacing}. At a node \(Y\) in the middle third of the cut, comparison of the factors on either side of the differing bit gives
+\[
+  |x_\rho(Y+1)|^2\le \frac{|Q(Y)|}{TT'},\qquad
+  |P(Y)|^2\le C A_v^2|Q(Y)|.
+\]
+
+
+For the first inequality each interlacing factor is bounded by the adjoining factor of each of the two words on its side of the cut. The omitted pair at the cut has product of moduli at least one. For the second, every root of \(P\) is outside the cut. For these nodes the definition of \(A_v\) applies since
+\[
+      |P(Y)/P(Y+1)|\le(1+O(1/I))^{k+m-1}=O(1).
+\]
+
+The terminal positive weight for adding a letter is the determinant factor divided by the signed interlacing polynomial at \(Y+1\), as in the conjugated form in Proposition~\ref{prop:real-node-positivity}. For an existing word these factors acquire rational corrections. Each shifted linear factor changes by \(1+O(N^{-2})\) on nodes separated from all earlier nodes and their unit shifts by at least \(N^2\). There are \(O(N)\) factors and \(I\gg N^3\) permits this separation on the same interpolation grids. Hence the ratio of the ambient coefficient to the terminal positive weight is bounded by
+\[
+        C\frac{|P(Y)|\,|x_\rho(Y+1)|}{|Q(Y)|}
+                         \le C A_v/\sqrt{TT'} .
+\]
+
+Write \(t\) for the unscaled terminal argument. The frame dilation gives \(|\tau|=(2\pi/g)^{-\nu}|t|\). Taking the squared norm of the one-sided interpolation contributes the square of the sum of the absolute interpolation weights, at most \((CN/I)^{2(i-1)}\) per added letter. Thus the diagonal estimate costs \(|t|^2(\rho'_{i,v})^2\) per letter, where
+\[
+ (\rho'_{i,v})^2
+  =C(2\pi/g)^{-2\nu}(C N/I)^{2(i-1)}A_v/\sqrt{TT'},
+ \qquad -2\nu=2i-m .
+\]
+Five letters give exponent ten on the diagonal. The square root in the positive block inequality gives exponent five for the difference of two inverse coordinates, with threshold \(2\rho'_{i,v}\) by the triangle inequality.
+
+Put \(z_0=C\kappa N/(gI)\). Cancellation of the different and level
+powers, using \(d\kappa=2\pi\), gives
+\[
+ \begin{aligned}
+ gd^{\nu+1}\rho_{i,h,v}&=CB_v z_0^{d_0},\\
+ (gd^{\nu}\rho'_{i,v})^2&=CB_v\kappa z_0^{2(i-1)}/\sqrt{TT'}
+                     \quad(i+h=r+2).
+ \end{aligned}
+\]
+The first line again uses the shorter cut at \((1,1)\).
+
+
+On the realized family \(m\le f\le k\), \(\kappa\le\pi\),
+and \(\sqrt{TT'}\ge b^{m/2}\) by Proposition~\ref{prop:assigned-prime}.
+Take the polynomial spacing threshold \(\Delta\ge(kfL)^{12}\)
+in Paragraph~\ref{par:window-successive-bounds}; the subsequent
+weight width absorbs this polynomial choice as in
+Lemma~\ref{hyp:height-section-weights}. Then \(N^3\le\Delta/2\),
+\(z_0\ll k/\Delta\), and the four products of normalized radii
+are bounded, up to a common constant, by
+\[
+ \left(C'\sqrt{kN^3/\Delta}\right)^f,\quad
+ \left(C'\sqrt k\,z_0^2\right)^f,\quad
+ \left(C'\sqrt k\,z_0\right)^f,\quad
+ \left(C' k^{1/4}(TT')^{-1/4}\right)^f .
+\]
+
+
+The second bound applies to later singletons, the third to
+\(h\ge2\), and the last to the terminal lift. Each base is at
+most \(k^{-2}\) eventually, since \(k\) is polynomial in \(x\)
+and \(b=\exp(x^\epsilon)\). The factor \(\prod_v t_v\), or its
+square root, is bounded independently of \(f\). Increasing the
+threshold once proves the assertion with \(\Theta=k\).
+\end{proof}

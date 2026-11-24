@@ -1,0 +1,493 @@
+\section{The scale of the arithmetic comparison}\label{sec:comparison}
+
+The analytic criterion leaves us with a precise arithmetic task. Its family of
+Dirichlet characters is fixed, whereas each auxiliary abelian extension brings its own
+characters into the prime sum. Averaging over a subgroup of
+translates projects onto characters that are trivial on that
+subgroup. We identify the resulting Fourier coefficients and
+separate the modes involving the two auxiliary quadratic
+characters. Once the estimate is divided by the total weight,
+the slope errors supplied by
+Section~\ref{subsec:fixed-weight-absorption} give an upper bound
+for \(G_{\mathcal K}\).
+
+\begin{definition}[Translate group and weight scale]\label{def:translate-scale}
+Fix \(x\ge2\), \(\epsilon>0\) and the primitive target \(\psi\) of
+order \(o\). Here \(q,d\) denote the two auxiliary primes of
+Section~\ref{sec:pair-selection}; the conductor of the target is \(f_\psi\).
+Let \(H\) be the Galois group of the auxiliary abelian field over \(\mathbb Q\)
+and \(\widehat H=\operatorname{Hom}(H,\mathbb C^\times)\) its character group.
+Order the two quadratic coordinates by \(d\) first and \(q\) second.
+For \(p\in\{d,q\}\) define \(\epsilon_p(h)\in\mathbb Z/2\mathbb Z\) by
+\(h(\sqrt{-p})=(-1)^{\epsilon_p(h)}\sqrt{-p}\).
+Let \(A\) be the joint image of \(\psi\) and the Galois action on the real
+cyclotomic field of \(2\)-power conductor in Definition~\ref{def:family-original-host}.
+Write \(\pi_\psi:A\twoheadrightarrow\psi(U_{f_\psi})\) for projection to the value of \(\psi\). Thus
+\[
+ H=(\mathbb Z/2\mathbb Z)^2\times A,\qquad
+ A_0=\ker\pi_\psi,\quad [A:A_0]=o,\qquad
+ \widehat H_0=\{\omega\in\widehat H:\omega|_{0\times A_0}=1\}.
+\]
+
+In the compositum \(E\) of \eqref{eq:host-character-compositum}, the two
+odd primes \(d,q\) are distinct and prime to the conductor of the joint
+factor. Ramification at each prime distinguishes its quadratic factor
+from the compositum of the others. In these product coordinates put
+\[
+ \begin{aligned}
+ P&=\operatorname{Gal}(E/\mathbb Q(\sqrt{-d}))
+       =\{0\}\times\mathbb Z/2\mathbb Z\times A,\\
+ \omega_P(h)&=(-1)^{\epsilon_d(h)},&
+ e_1(s)&=(1,0,s)\quad(s\in A).
+ \end{aligned}
+\]
+Inertia at \(d\) acts trivially on the other two factors and surjects
+onto the ramified quadratic factor. Hence
+\[
+ I_d=\{0,e_1(0)\},\qquad H\setminus P=e_1(0)+P.
+\]
+
+Put \(D=2^e\). The automorphism \(\zeta\mapsto\zeta^5\) identifies
+\(\operatorname{Gal}(C_e/\mathbb Q)\) with the additive group
+\(\mathbb Z/D\mathbb Z\). Indeed successive squaring gives
+\(v_2(5^{2^i}-1)=i+2\), and the powers of 5 represent the units
+modulo \(2^{e+2}\) up to sign. Write \(\rho:A\twoheadrightarrow
+\mathbb Z/D\mathbb Z\) for restriction. The joint image embeds in
+\(\psi(U_{f_\psi})\times\mathbb Z/D\mathbb Z\). On \(A_0\) its first
+coordinate is trivial. Thus \(\rho|_{A_0}\) is injective. If
+\(t_0=[\mathbb Z/D\mathbb Z:\rho(A_0)]\) and \(n_0=|A_0|\), then
+\begin{equation}\label{eq:dyadic-coordinate-orders}
+ \rho(A_0)=t_0\mathbb Z/D\mathbb Z,\qquad
+ n_0=D/t_0=n/o,\qquad
+ \mathbb Z/n_0\mathbb Z\xrightarrow{\ s\mapsto t_0s\ }\rho(A_0).
+\end{equation}
+
+The last map is an isomorphism. For \(\psi=1\), one has \(o=t_0=1\)
+and \(n=D\). In general \(n\) counts pairs of coordinates.
+Let \(T\subseteq A\) index the top weights and \(T_2\subseteq A_0\)
+the weights of size approximately \(b>0\) in the other levels.
+For \(m\) lifts use the normalization
+\[
+ n=|A|,\qquad n_T=|T|,\qquad n_2=|T_2|,\qquad
+ \delta_2=n_2/n,\qquad Q=n_Tmb.
+\]
+\end{definition}
+
+\begin{definition}[Centered contribution and omitted characters]\label{def:translate-errors}
+For \(1\le j\le m\), \(t\in T\), let \(\Delta_{j,t}:A_0\to\mathbb R\)
+be the local prime sum minus its centering at lift \(j\) and top index \(t\),
+both computed with the same integral weights. To specify the difference before
+Fourier expansion, use the quadratic subgroup \(P\), its character
+\(\omega_P\), the top weight \(a=a_t\) and the weights
+\(w_g=w_g(j,t,u)\) of Lemma~\ref{hyp:inertia-fourier}.
+
+For each rational prime \(p\) write \(I_p\subset H\) for inertia and
+\(F_p\in H\) for any lift of arithmetic Frobenius modulo \(I_p\).
+Put \((z)_+=\max(z,0)\) and \(f_P=|P|\). The prime sum is
+\[
+ V_{j,t}(u)=\sum_{g\notin P}\sum_{p,\nu\ge1}
+    \frac{2\log p}{|I_p|}\,\mathbf1_{g\in\nu F_p+I_p}
+               (a/p^\nu-w_g)_+ ,
+\]
+where the inner sum runs over primes \(p\) and integers \(\nu\ge1\).
+The positive part makes it finite. With \(\gamma\) as in
+Definition~\ref{def:smoothed-centering}, its centering and difference are
+\[
+ \begin{aligned}
+ C_{j,t}(u)&=a\left(\log a-1-\gamma
+   -f_P^{-1}\sum_{g\notin P}\log w_g
+   +\RePart\frac{L'(1,\chi_{\omega_P})}{L(1,\chi_{\omega_P})}\right),\\
+ \Delta_{j,t}(u)&=V_{j,t}(u)-C_{j,t}(u).
+ \end{aligned}
+\]
+Formula~\eqref{eq:color-balance} identifies this finite arithmetic
+expression with a sum over characters.
+
+Choose a modulus \(N\) for which the auxiliary field is contained in
+\(\mathbb Q(\mu_N)\). Let \(\operatorname{Art}_N:U_N\twoheadrightarrow H\)
+be restriction from the cyclotomic Galois group. For a prime \(p\nmid N\),
+\(\operatorname{Art}_N([p]_N)\) is arithmetic Frobenius, the restriction
+of \(\zeta\mapsto\zeta^p\) on \(N\)-th roots of unity.
+For a character \(\omega\in\widehat H\), the primitive Dirichlet character
+inducing \(\omega\circ\operatorname{Art}_N\) is
+\(\chi_\omega=(\omega\circ\operatorname{Art}_N)^*\), as in Lemma~\ref{hyp:inertia-fourier}.
+The absolute contribution from the omitted characters is
+\[
+ \Sigma(x;\operatorname{Art}_N,A_0,\psi)
+   =\sum_{\substack{\omega\in\widehat H_0\\
+              \chi_\omega\notin\mathcal K(\psi)}} |G_{\chi_\omega}(x)|.
+\]
+Write \(\Sigma(x)\) when the Artin quotient, subgroup and target character are fixed.
+\end{definition}
+
+For a translate \(u\in A_0\), let \(S_{\rm prime}(u)\) be the sum of the
+local prime sums over \(j,t\), and \(S_{\rm cent}(u)\) the sum of their
+centering terms. If \(E\) bounds their difference for every translate, then
+\[
+ \begin{aligned}
+ S_{\rm prime}(u)-S_{\rm cent}(u)
+   &=\sum_{j=1}^{m}\sum_{t\in T}\Delta_{j,t}(u)\le E
+       &&(u\in A_0),\\
+ |\widehat H_0|&=|H/(0\times A_0)|=4o .
+ \end{aligned}
+\]
+Take the pair \((q,d)\) supplied by Proposition~\ref{prop:quadratic-prime-pair}
+for \([Y,Y^K]\), with \(Y\) above its threshold for the fixed modulus, \(K\) and \(\epsilon\).
+For every \(x\) in this interval the proposition bounds each omitted twist by
+\(x^{1/2+\epsilon/2}\). In particular,
+\[
+ \Sigma(x)\le 4o\,x^{1/2+\epsilon}\qquad(Y\le x\le Y^K).
+\]
+The unwanted twists can now be charged to \(\Sigma(x)\). What remains is to read the
+fixed average \(G_{\mathcal K}\) of Definition~\ref{def:family-weights} from the local
+prime sums bounded by \(E\).
+
+\begin{construction}
+\begin{tabular}{@{}l@{\hspace{1.2em}}l@{}}
+\toprule
+\textit{Object} & \textit{Operation or estimate} \\
+\midrule
+\(\sum_{j,t}\Delta_{j,t}(u)\) & Bound by \(E\) for every \(u\in A_0\) \\
+Character \(\omega\) of \(H\) & Average over \(0\times A_0\) \\
+\(\omega|_{0\times A_0}\ne1\) & Translate average vanishes \\
+\(\omega|_{0\times A_0}=1\) & Keep \(\mathcal K\); bound the omitted sums by \(\Sigma(x)\) \\
+\bottomrule
+\end{tabular}
+\caption{The character projection at a fixed scale. The local prime sums use the same integral weights at every occurrence of a given translate.}\label{fig:analytic-projection}
+\end{construction}
+
+\input{character-projection}
+
+\begin{lemma}[Normalization of the comparison]\label{lem:comparison}
+Let \(x\ge2\) and \(\epsilon>0\). The parameters
+\(n,m,n_T,n_2,b,k\) are positive. Let \(a_E>0\) be a size parameter
+and let \(C\ge0\) be the exponent coefficient in the error bound.
+Assume
+\(\Sigma(x)\le4o\,x^{1/2+\epsilon}\). Suppose
+\eqref{eq:fourier-compare} holds and
+\[
+ E\le x^{C\epsilon}
+ \left[n_T a_E\left(1+\frac{m^2}{k}\right)
+      +m\left(2nmb x^\epsilon
+               +\frac{n_2 k b x^{2\epsilon}}{n^2}\right)\right],
+\]
+and that the sizes satisfy
+\[
+\begin{gathered}
+ a_E\le 2xb,\qquad n/n_T\le 2x^{\epsilon/8},\qquad
+ x^{-\epsilon}\le\delta_2\le1,\\
+ x^{1/2-\epsilon}\le m\le x^{1/2+\epsilon/2},\qquad
+ xm\le k\le n^2 x^{1/2-\epsilon}.
+\end{gathered}
+\]
+Then for \(x\) sufficiently large in terms of \(o,\epsilon\),
+\[
+ G_{\mathcal K}(x)\le x^{1/2+(C+4)\epsilon}.
+\]
+\end{lemma}
+
+\begin{proof}
+\proofstep{Normalize by total weight.}
+Divide each summand in the bracket by \(Q=n_Tmb\). The
+individual estimates are
+\[
+ \begin{aligned}
+ \frac{a_E}{mb}\left(1+\frac{m^2}{k}\right)
+    &\le\frac{2x}{m}+\frac{2xm}{k}
+      \le 2x^{1/2+\epsilon}+2,\\
+ 2\frac{n}{n_T}m x^\epsilon
+    &\le 4m x^{9\epsilon/8}\le4x^{1/2+13\epsilon/8},\\
+ \frac{n}{n_T}\,\delta_2\,\frac{k}{n^2}x^{2\epsilon}
+    &\le 2x^{1/2+9\epsilon/8}.
+ \end{aligned}
+\]
+The last line uses \(\delta_2\le1\) and the upper bound on \(k\).
+Their sum is at most \(10x^{1/2+13\epsilon/8}\).
+
+\proofstep{Divide by the density of the retained weights.}
+Divide \eqref{eq:fourier-compare} by \(Q\delta_2/2\).
+Using \(\delta_2\ge x^{-\epsilon}\), we get
+\[
+ G_{\mathcal K}(x)-\Sigma(x)
+ \le 4x^{1/2+\epsilon}
+     +20x^{1/2+(C+21/8)\epsilon}
+     +4x^{-1+\epsilon}.
+\]
+Since \(x\ge2\) and \(C\ge0\), the sum is at most
+\(26x^{1/2+(C+21/8)\epsilon}\). Once \(x^{3\epsilon/8}\ge26\),
+it is at most \(x^{1/2+(C+3)\epsilon}\). Restoring \(\Sigma(x)\)
+gives the result once \(x^\epsilon\ge1+4o\).
+\end{proof}
+
+The two terms \(x/m\) and \(m\) in the normalized bound explain the
+choice of \(m\) near \(\sqrt{x}\). The threshold in the lemma
+is independent of the auxiliary field and the dimensions of the lattices.
+Section~\ref{subsec:fixed-weight-absorption} obtains \(C=5\) when its divisibility and slope bounds hold in common at the selected points. This gives the exponent \(1/2+9\epsilon\).
+The arithmetic conclusion needed for the analytic argument is the following bound at every translate.
+
+\begin{windowtheorem}[Uniform arithmetic estimate for a primitive character]\label{hyp:uniform-arithmetic-data}
+Fix a primitive character \(\psi\) of order \(o\). The range of the interval assertion is
+\[
+ \exists\epsilon_0(\psi)\in(0,1/52)\quad
+ \forall\epsilon\in(0,\epsilon_0(\psi))\quad
+ \forall Z\ge1\quad\exists Y>Z .
+\]
+For these choices the following data exist. There is an outer interval \([U,U^J]\) containing \([Y,Y^{3/2}]\). Choose one auxiliary prime pair there as in Proposition~\ref{prop:quadratic-prime-pair}, with the prime sizes measured at \(U\). On the smaller interval the field and numerical data may vary:
+\[
+                  Y\le x\le Y^{3/2}\quad\longmapsto\quad E(x).
+\]
+At each such \(x\), choose the data of Lemmas~\ref{hyp:inertia-fourier} and~\ref{hyp:translate-weights} at that pair, satisfying the size inequalities of Lemma~\ref{lem:comparison} and its bound for \(\Sigma(x)\).
+
+With the notation of Definition~\ref{def:translate-errors} put
+\[
+ \mathcal B(x)=n_Ta_E(1+m^2/k)
+       +m\left(2nmbx^\epsilon+n_2kb x^{2\epsilon}/n^2\right).
+\]
+On these data the centered local contributions obey the simultaneous bound
+\begin{equation}\label{eq:uniform-raw-gap}
+ \max_{u\in A_0}\sum_{j=1}^{m}\sum_{t\in T}\Delta_{j,t}(u)
+       \le x^{5\epsilon}\mathcal B(x).
+\end{equation}
+All thresholds for the estimates used on the interval may depend on the fixed character and \(\epsilon\) and are uniform in its subsequent scale and translate choices.
+\end{windowtheorem}
+
+\begin{proof}
+Fix the weights of Definition~\ref{def:family-weights} before choosing
+\(\epsilon\). Take the minimum of \(1/53\) and the positive
+small-parameter bounds in Lemma~\ref{lem:window-parameter-choice}.
+Lemma~\ref{lem:disjoint-common-pair-windows} gives disjoint intervals
+with left endpoints tending to infinity. At each of their scales
+take the base data of Section~\ref{subsec:frobenius-selection}.
+With \(\delta=x^{-\epsilon/8}\), Proposition~\ref{prop:top-set-cycles}
+and Lemma~\ref{lem:second-set-progressions} give
+\[
+ n_T\ge\delta n/2,\qquad x^{-\epsilon}n\le n_2\le n .
+\]
+
+The coset proportions are those of \eqref{eq:coset-shares}.
+The host Artin map induces precisely the characters of
+Definition~\ref{def:translate-errors}. In the annihilator of
+\(A_0\) there are at most \(4o\) characters. Each omitted one is
+a primitive inducer of a power of \(\psi\) twisted by one of the
+three nontrivial quadratic characters of the prime pair. Thus
+Proposition~\ref{prop:quadratic-prime-pair} on the outer interval gives
+\[
+ \Sigma(x)\le4o\,x^{1/2+\epsilon/2}\le4o\,x^{1/2+\epsilon}.
+\]
+
+Take the common member for each translate from
+Proposition~\ref{prop:all-window-applications}. The size choices
+of Lemma~\ref{lem:rank-window} give the \(m\)-range after a fixed
+increase of the lower threshold. With the top size \(a_E\le2xb\),
+the other rank comparisons reduce to
+\[
+   xm\le k,\qquad k/n^2\le2x^{1/2-6\epsilon}
+                           \le x^{1/2-\epsilon}.
+\]
+Lemma~\ref{lem:uniform-numerical-application} bounds every translate
+on this family by the right side of \eqref{eq:uniform-raw-gap}.
+Choose a left endpoint beyond \(Z\) and these common thresholds.
+All the bounds then hold throughout the same closed interval.
+\end{proof}
+
+\begin{proof}[Deduction of Proposition~\ref{prop:arithmetic} from Theorem~\ref{hyp:uniform-arithmetic-data}]
+For the chosen \(\psi,\epsilon\), increase the prescribed lower endpoint beyond the thresholds in Proposition~\ref{prop:translate-fourier} and Lemma~\ref{lem:comparison}. For each scale take \(E=x^{5\epsilon}\mathcal B(x)\) in the former. Inequality~\eqref{eq:uniform-raw-gap} verifies its hypothesis for every translate with this one value of \(E\). The lemma now applies at \(C=5\), giving
+\[
+   G_{\mathcal K}(x)\le x^{1/2+(5+4)\epsilon}
+           \qquad(Y\le x\le Y^{3/2}).
+\]
+The lower endpoint could be chosen above any prescribed bound. This proves the quantified estimate \eqref{eq:arithmetic-window}.
+\end{proof}
+
+\begin{auxlemma}[A comparison at a maximizing translate]\label{lem:maximizing-translate}
+Fix the finite group, character data, top weights, scale and coset
+proportions of Proposition~\ref{prop:translate-fourier}. Keep these
+data fixed as \(u\) varies. Before choosing any of the smaller integral
+weights, form the real function on the finite group \(A_0\)
+\[
+ B_x(u)=\frac{mb}{f_P}\RePart\!
+       \sum_{t\in T}\sum_{s\in T_2}\sum_{\omega\in\widehat H}
+       \omega(-e_1(s+u-t))G_{\chi_\omega}(a_t/b).
+\]
+Choose any \(u_*\in\operatorname*{arg\,max}_{u\in A_0}B_x(u)\).
+Suppose the weight inequalities of Lemma~\ref{hyp:translate-weights}
+for the individual lifts, and the inertia data of Lemma~\ref{hyp:inertia-fourier},
+are realized at \(u_*\). Under the threshold and conductor conditions
+of Proposition~\ref{prop:translate-fourier}, it suffices for
+\eqref{eq:fourier-compare} that
+\[
+             \sum_{j,t}\Delta_{j,t}(u_*)\le E.
+\]
+\end{auxlemma}
+\begin{proof}
+Only the base data enter \(B_x\). Averaging its explicit sum over \(A_0\)
+kills exactly the characters nontrivial on \(0\times A_0\).
+The coset-proportion calculation in Proposition~\ref{prop:translate-fourier}
+therefore gives
+\[
+ \frac{Q\delta_2}{2}
+   \bigl(G_{\mathcal K}(x)-\Sigma(x)-4x^{1/2+\epsilon}\bigr)
+ \le |A_0|^{-1}\sum_u B_x(u) \le B_x(u_*).
+\]
+At \(u_*\), the large-weight replacement and the small-weight estimate
+in that proposition use only the weights of one lift and top label at
+a time. Each replacement costs at most \(2b/x\).
+Summing over the \(mn_T\) pairs yields
+\[
+ B_x(u_*)\le\sum_{j,t}\Delta_{j,t}(u_*)+2Q/x\le E+2Q/x.
+\]
+All terms are on the same scale. The maximizer is chosen from the
+Fourier sum; its location need not agree with a translate selected
+independently for geometric reasons.
+\end{proof}
+
+\begin{auxlemma}[Recovering the interval estimate from square arguments]\label{lem:square-window-transfer}
+Fix a primitive target \(\psi\). Write \(G=G_{\mathcal K(\psi),w_\psi}\)
+as in Definition~\ref{def:family-weights}. Suppose that for each
+sufficiently small \(\eta>0\) there are arbitrarily large \(Y\) such that
+\[
+       G(k^2)\le (k^2)^{1/2+9\eta}
+       \qquad(k\in\mathbb N,\ Y\le k^2\le Y^{3/2}).
+\]
+Then for every sufficiently small \(\epsilon>0\) and arbitrarily large \(Y\),
+\[
+           G(y)\le y^{1/2+9\epsilon}\qquad(Y\le y\le Y^{3/2}).
+\]
+\end{auxlemma}
+\begin{proof}
+Use the square bound with \(\eta=\epsilon/2\).
+Every \(y\) in such an interval has a square \(z\) in the same interval
+with \(|z-y|\le 3\sqrt y\) once \(Y\) is large. Indeed, one of
+\(\lfloor\sqrt y\rfloor^2\) and \(\lceil\sqrt y\rceil^2\) lies inside:
+if both were outside, the interval would contain no square. Yet
+\(\sqrt{Y^{3/2}}-\sqrt Y>1\) for all sufficiently large \(Y\).
+
+For \(y,z\ge2\), put \(v=\max(y,z)\). The function
+\(t\mapsto(t/n-1)_+\) is \(1/n\)-Lipschitz; it vanishes throughout
+the segment between \(y\) and \(z\) for \(n>v\).
+The factorial bound \eqref{eq:factorial-mangoldt-bound} and the derivative
+of the principal centering term give
+\[
+ |G(y)-G(z)|\ll_\psi |y-z|\log(2v).
+\]
+The nonprincipal centering coefficients are constants on this fixed
+finite family. Since \(z\le 2y\) for large \(Y\), we have uniformly
+\[
+ G(y)\le 2^{1/2+9\eta}y^{1/2+9\eta}
+              +O_\psi(\sqrt y\log(2y))\le y^{1/2+9\epsilon}.
+\]
+The last inequality follows after division by \(y^{1/2+9\epsilon}\),
+since \(\epsilon-\eta>0\).
+\end{proof}
+
+In particular one may fix the prime pair for a late interval at error
+parameter \(\eta\), and work only at the finitely many squares in it.
+At each square, fix the base data of Lemma~\ref{lem:maximizing-translate}
+first. It suffices to realize both divisions and their uniform numerical
+and Gram bounds on one completed member at the distinguished translate:
+\[
+ x=k^2\ \longmapsto\ B_x\ \longmapsto\ u_*(x)
+   \ \longmapsto\ P(x,u_*) .
+\]
+The calculation in the proof of Corollary~\ref{cor:raw-gap-completed-scale}
+on this member and the normalization in Lemma~\ref{lem:comparison} give
+\[
+ \sum_{j,t}\Delta_{j,t}(u_*)\le x^{5\eta}\mathcal B(x)
+       \quad\Longrightarrow\quad G_{\mathcal K}(k^2)\le(k^2)^{1/2+9\eta}.
+\]
+Lemma~\ref{lem:square-window-transfer} gives
+\eqref{eq:arithmetic-window}. A single list of allowed word primes at
+each such translate suffices if it supports all these comparisons.
+Showing that such a member exists with the required constants is still
+an arithmetic problem.
+
+\paragraph{What remains to construct on an interval.}\label{par:arithmetic-construction-inputs}
+The numerical argument is complete once the local prime sums satisfy
+\eqref{eq:uniform-raw-gap} or its square-argument variant. To reach it by
+theta lifting we have to interpret these sums as degrees of lattices.
+We follow the construction at one translate.
+
+At a fixed scale and translate, assign the split word primes. The two CM types induced from the quadratic subfield have principal rank-one sources by Lemma~\ref{lem:marked-principal-cm-sources}. Tensoring with the Hermitian lattice gives the definite points of Lemma~\ref{lem:marked-definite-cm-points}. At a positive-dimensional vertex the rational cusp sections also define the integral ball. If \(s=\sum_i z_i b_i\) in a basis of sections, then
+\[
+    z\in B_v\quad\Longleftrightarrow\quad
+    \left|\sum_i z_i b_i(y)\right|_v\le1
+           \quad\text{for every admissible integral test }y .
+\]
+This is the same norm in both presentations of the row (Lemma~\ref{lem:constructed-signed-coefficient-row}). A finite set of CM evaluations gives a weaker but quantitative assertion: if \(A\) is their invertible matrix and \(\pi^c A^{-1}\) is integral, then \(Ax\in\pi^{-b}R^d\) gives \(x\in\pi^{-(b+c)}R^d\). At good ordinary level Lemma~\ref{lem:ordinary-hecke-evaluations} gives detection modulo \(p\) on an entire prime-to-\(p\) Hecke orbit.
+
+The initial signed tests choose the characters. Only the reference system is copied coefficientwise. On a new tuple the specialized columns span the good row, so their adjoint detects each eigenspace for the transferred operators (Lemma~\ref{lem:new-ray-type-occurrence}). Thus Construction~\ref{hyp:family-prescribed-realization} gives the order of choice
+\[
+ (K_s,K_0,\text{reference row})\ \longmapsto\ (\varphi_i)_i
+     \ \longmapsto\ P'\ \longmapsto\
+        (\text{cover at }p_0,\text{cover at }p_1).
+\]
+For a copied character, \(\lambda_w(T)=j(\lambda_v(T))\) at every tested unramified Hecke operator. A newly occurring system satisfies its transferred equalities on the specified algebra. The two covers in the last step both belong to \(P'\).
+
+The height estimate starts with a period on that row.
+Lemma~\ref{lem:weighted-fitted-translate} provides a bounded translate
+with nonzero projection of controlled size. The resulting level and
+the lattice estimate \eqref{eq:fitted-auxiliary-depth} make the orbital
+tail strictly smaller than the stabilizer term. The core span and the
+successive Fourier restrictions in Lemmas~\ref{lem:fitted-core-span}
+and~\ref{lem:fitted-fixed-ascent} keep the same bottom row while choosing
+the tests above it. Consequently Lemma~\ref{lem:fitted-completed-nonvanishing}
+proves pointwise nonvanishing at the prescribed depth.
+
+The cohomological division uses the integral cyclotomic module
+of Proposition~\ref{prop:ramified-integral-wach-comparison} and the
+restricted cocycles of Lemma~\ref{lem:ramified-restricted-herr} over the
+same ramified field. For a crystalline lattice with jumps in \([-a,b]\)
+the two height bounds read
+\[
+             Q^a\varphi^*N\subset N,\qquad Q^b N\subset\varphi^*N .
+\]
+The scalar period at \(2\) can be computed on the cyclotomic tower. For
+\(F_0/\mathbb Q_2\) unramified and \(F_s=F_0(\mu_{2^s})\),
+Lemma~\ref{lem:dyadic-integral-period} constructs integral cohomology
+classes whose dual exponentials give
+\[
+ 2^{s-1-e-v_2((e-1)!)}\mathcal O_{F_s}
+     \subseteq 2^{1-e-v_2((e-1)!)}\mathcal O_{F_s}
+     \subseteq\exp^* H^1(F_s,\mathbb Z_2(-e))
+          \qquad(e>0,\ s\ge2).
+\]
+The restriction from \(E\) to \(E(i)\) in Lemma~\ref{lem:dyadic-host}
+is a different calculation. Its possible loss of one unit of length per twist
+is proved by inflation and restriction.
+
+On the geometric side only the degree-two part of the relative
+Frobenius comparison enters the mixed intersection:
+\[
+             N_2(FX-X)=N_2(D_p).
+\]
+On a framed chart Lemmas~\ref{lem:flag-local-cyclotomic-chain} and~\ref{lem:flag-local-hodge-quotients} identify the two Frobenius quotients and their Hodge end maps. Lemma~\ref{lem:flag-finite-frobenius-model} descends this diagram to one finite model, including its boundary. At a prime of the different, the integral eigenlattices need not split the original Tate lattice. Proposition~\ref{prop:flag-cutoff-test} compares their flag metrics by successive changes of lattice. The changes of the graded squares cancel in the full sum; polarization then identifies the contribution from the selected half. This gives the input at ramified primes for the slope calculation in Section~\ref{sec:flag-wall-slope}.
+
+At the definite endpoint,
+Lemma~\ref{lem:definite-schur-gram} bounds the Gram determinant and
+evaluation of the standard Schur lattice. The definite component has no boundary. Lemma~\ref{lem:terminal-valuative-realization} identifies the integral fibre on the geometric row and gives zero for the degree \(d_Z\) of the discrepancy in \eqref{eq:terminal-theta-frame-defect}. With \(g=fr\) and \(I_Z\) the index of the CM eigenlattices, this gives
+\[
+ \sum_\tau c_{\tau,Z}-2t_Z= I_Z-\tfrac g2\log(2\pi),\qquad
+                   n\Delta_Z\le2U .
+\]
+The separate displacement of the weights is bounded in Lemma~\ref{lem:terminal-centred-weights}.
+
+Finally the real integral must use the phases of the same finite and compact types. Lemma~\ref{lem:oriented-terminal-fibre} shows how the terminal frame determines the matrix test after integration along the two stabilizers. The cell calculation and the full Gram polynomial then give integrable bounds in Lemma~\ref{lem:empty-word-exhaustion}. Lemma~\ref{lem:residual-double-cofactor} identifies the double cofactor with the Gram determinant times a compact Capelli eigenvalue. For the two singly contracted cofactors,
+Lemma~\ref{hyp:selected-orbital-coefficient-bounds} computes the
+operators in the actual compact lines. Flattening the radial Haar
+measure and changing from the positive boost to the oriented frame
+give the phases in \eqref{eq:three-residual-cofactors}.
+
+At a completed scale Corollary~\ref{cor:raw-gap-completed-scale}
+combines the two index estimates. Passing from that scale to
+Theorem~\ref{hyp:uniform-arithmetic-data} uses the following order:
+\[
+ \text{fix the family on }S\ ;\quad
+ \text{take its common threshold }X_*\ ;\quad
+ Y_\nu>\max\{Z,X_*\}.
+\]
+The field may change with the dyadic index inside the chosen
+interval. Its prime pair, the weights on the target characters,
+and the comparison constants continue to serve all its scales.
+Lemma~\ref{lem:disjoint-common-pair-windows} proves the assertion
+about the pair. Lemma~\ref{lem:uniform-numerical-application}
+computes the last threshold from the estimates on this family.

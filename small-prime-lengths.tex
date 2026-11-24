@@ -1,0 +1,478 @@
+\subsection{The split local estimate at the conductor primes and at three}
+\label{subsec:split-local-length}
+\hypertarget{source-small-prime-lengths}{}
+
+At the small split primes, the depth of the cyclotomic level enters the colength of the marked lattice. We keep this depth in the cohomology estimates before normalizing the length. Let \(\ell\) be
+the coefficient prime at a retained localization and let
+\(O\) be its DVR, with fraction field \(K_\ell\).
+Write \(f,m,r,t,R\) for the host degree parameter, the number
+of lifts, the rank of the lower block, the rank of the
+character block, and the total rank. The parameter range is
+\[
+ 1\le m\le f,\qquad 0\le r\le t,\qquad t,R\ge1.
+\]
+
+The CM field has degree \(2f\) over \(\mathbb Q\).
+Use the level exponent \(s=\max(1,v_\ell(N))\) for the modulus defining the auxiliary field \(N=Q_Sqd\). At the small primes \(s\) is the
+local level exponent in the row comparison. The same is true
+at \(3\) when \(3\nmid Q_S\), with level exponent \(1\).
+
+The primes in this comparison are
+\[
+ \mathcal S_{\rm sp}=\{\ell:\ell\mid Q_S\}\cup\{3\},\qquad
+ Q_S=\operatorname{lcm}(2^{e+2},f_\psi).
+\]
+For \(\ell=2\), one has \(s\ge2\) and \(-d\equiv1\pmod8\).
+An odd \(\ell\in\mathcal S_{\rm sp}\) is either 3 or a divisor of
+the fixed conductor \(f_\psi\). Eventually every such prime is at
+most \(w\) in Proposition~\ref{prop:quadratic-prime-pair}. Hence
+\[
+     -d\equiv1\pmod\ell\quad(\ell\text{ odd}),\qquad
+     \mathbb Q(\sqrt{-d})\otimes\mathbb Q_\ell
+          \simeq\mathbb Q_\ell\times\mathbb Q_\ell
+                  \quad(\ell\in\mathcal S_{\rm sp}).
+\]
+Hensel's lemma gives the splitting at odd primes, and the dyadic
+unit-square criterion gives it at two. Thus the row and column lie at conjugate places
+even when \(K_\psi\) ramifies at \(\ell\). For each such completion
+\(L\), put \(N'=N/\ell^{v_\ell(N)}\). Equation~\eqref{eq:host-character-compositum} gives
+\[
+    L\subseteq F_s=F_0(\mu_{\ell^s}),\qquad
+    F_0=\mathbb Q_\ell(\mu_{N'}),\qquad
+    F_0/\mathbb Q_\ell\text{ unramified},
+\]
+since \(\ell\nmid N'\) \cite[Corollary~10.16]{sutherland-local-fields}.
+In particular \(s=1\) at three if \(3\nmid Q_S\).
+
+Use the cohomology conditions on these completions. They include the finite-class lifting criterion, the bound on invariants over the cyclotomic subfield and the finite character criterion. The
+split row and column constructions below invoke these
+criteria on the restricted original lattices. In the
+finite-class criterion the target class comes from
+integral finite cohomology and the map of crystalline
+lattices is surjective. In the character criterion of
+Proposition~\ref{prop:cyclotomic-scalar-finite-condition},
+the auxiliary extension is crystalline and has a
+trivial rank-one quotient with a chosen integral lift
+of its generator. \label{cor:small-prime-lengths-1}
+
+\begin{lemma}[Invariants on the character string]\label{lem:small-prime-scalar-invariants}
+At a place of \(E\) in the split case,
+for \(1\le a<t\) write \(F\) for this completion. The normalized length satisfies
+\[
+ \operatorname{len}\bigl((K_\ell/O)(-a)^{G_F}\bigr)\le s+v_\ell(a)\le s+\lfloor\log_\ell t\rfloor ,
+\]
+uniformly in the twist and place.
+\end{lemma}
+
+\begin{proof}
+For a place of \(E\) over \(\ell\), the prescribed cyclotomic
+inertia image contains \(1+\ell^s\). On
+\((K_\ell/O)(-a)\) with \(1\le a<t\), invariants lie in the
+kernel of multiplication by
+\((1+\ell^s)^a-1\). This kernel has normalized length
+\[
+     v_\ell((1+\ell^s)^a-1)=s+v_\ell(a).
+\]
+For the equality, the binomial formula gives
+\(v_\ell((1+u)^b-1)=v_\ell(u)\) if \(\ell\nmid b\).
+
+For a step of exponent \(\ell\), the first term \(\ell u\)
+has valuation \(1+v_\ell(u)\). Each later term has greater
+valuation when \(\ell\) is odd and \(v_\ell(u)\ge1\), or
+when \(\ell=2\) and \(v_\ell(u)\ge2\).
+Iterating through the \(\ell\)-part of \(a\) proves the
+formula. The maximum invariant length over the indicated
+twists and places is at most
+\(s+\lfloor\log_\ell t\rfloor\). In particular the loss at two depends on its actual local depth. We retain that depth in passing from these invariant lengths to the split local conditions.
+\end{proof}
+
+\subsubsection*{The split row and column local conditions}
+
+On the two sides of a conjugate split pair, the same good character supplies a column and a Tate-dual row. Their finite local conditions have different roles: the column provides classes to lift, and the row measures the colength of their images.
+
+\begin{lemma}[Finite-class rank and colength on the small split row]\label{lem:small-split-finite-colength}
+For every \(\ell\in\mathcal S_{\rm sp}\), with the split host
+completions and cyclotomic depth \(s=\max(1,v_\ell(N))\)
+of Section~\ref{subsec:split-local-length}, use the paired
+places \(u,w\) of the same good character \(\pi\), the rank-\(r\) complement
+\(W\) on the column and \(W^\vee(1)\) on the row.
+The rational finite dimensions are at most
+\([E_u:\mathbb Q_\ell]m\) on both sides. For the marked lattice
+surjection, if the finite lift uses \(\ell^{e'}\) and the row
+invariants are killed by \(\ell^{c_0(u)}\), the normalized row colength satisfies
+\[
+ \operatorname{colength}_{\rm row}\le [E_u:\mathbb Q_\ell]m e'+rc_0(u).
+\]
+\end{lemma}
+
+\begin{proof}
+\proofstep{Count the finite dimensions on the two signed jump lists.}
+Use the same good Hecke character \(\pi\) on the retained
+family. Write \(R_\pi^\circ\) for the full twisted
+representation and \(W\) for its rank \(r\) constituent
+after removing the direct sum of the \(t\) cyclotomic
+characters. Write
+\[
+ T_2=W^\vee(1),
+\]
+using the convention
+that the Tate twist by \(1\) has filtration jump \(-1\).
+The local crystalline data give the following jumps,
+with multiplicity one, for \(R_\pi^\circ\) at each
+embedding of the completion into a splitting coefficient
+field. The cyclotomic block has jumps \(0,\ldots,t-1\).
+
+Of the other \(r\) jumps, \(k-1\) are in an interval of
+strictly positive jumps at every embedding of a column
+place and in an interval of strictly negative jumps at
+every embedding of its conjugate row place. The remaining
+\(m\) jumps can have either sign. These sets are disjoint,
+and the two sets for \(W\) avoid both \(0\) and \(-1\).
+Conjugation of the embedding type gives the switch of
+sign on the row places. The local description of \(T_2\)
+uses the following two exclusions at the same embedding:
+\begin{equation}\label{eq:split-row-zero-jump}
+ J(T_2)=\{-a-1:a\in J(W)\},\qquad
+ 0\notin J(W),\qquad -1\notin J(W)\ \Longrightarrow\ 0\notin J(T_2).
+\end{equation}
+
+At a column place \(u\), \(W\) is crystalline and
+\(H^0(E_u,W)=0\), since a trivial subrepresentation
+would contribute a zero jump. For a crystalline representation
+\(V\) over a splitting coefficient field, the
+Bloch--Kato local dimension formula is
+\[
+ \dim H^1_f(E_u,V)=
+ \dim H^0(E_u,V)+
+ \sum_{\tau:E_u\hookrightarrow K_\ell}
+    \dim \bigl(D_{\mathrm{dR},\tau}(V)/
+                       \operatorname{Fil}^0 D_{\mathrm{dR},\tau}(V)\bigr).
+\]
+Here and below one may enlarge the coefficient field to
+contain all local embeddings. The filtration quotient
+counts the negative jumps. Additivity of the crystalline
+filtration under the split decomposition removes the
+cyclotomic jumps from the full list. Thus
+\(\dim H^1_f(E_u,W)\le [E_u:\mathbb Q_\ell]m\).
+
+On the conjugate row place \(w\), \(T_2\) also has zero
+rational invariants. Under the passage to the Tate dual the
+\(k-1\) negative integer jumps of \(W\) become
+nonnegative jumps of \(T_2\), by \(j\mapsto -j-1\).
+Thus at most \(m\) jumps on each row embedding contribute:
+\[
+ \dim H^1_f(E_w,T_2)
+   \le \sum_{\tau:E_w\hookrightarrow K_\ell} m
+   =[E_w:\mathbb Q_\ell]m=[E_u:\mathbb Q_\ell]m .
+\]
+The comparison uses the Tate-dual row and its actual conjugate
+column, even though their degrees agree.
+\cite[Corollary 3.8.4]{bloch-kato}
+
+\proofstep{Lift finite classes on the actual crystalline lattices and return by corestriction.}
+For the integral condition, Proposition~\ref{prop:full-cyclotomic-finite-lift} gives an exponent \(e'\). Its input at a
+column place is a surjection of stable lattices whose
+rational representations are subquotients of finite
+direct sums of the \(R_x^\circ\) in the family. At a row place the constituent family is instead obtained by the operation
+\[
+ R_x^\circ\longmapsto (R_x^\circ)^\vee(1).
+\]
+
+The family members are crystalline at these places,
+and the absolute jumps of both families lie in the
+bounded range used to choose \(e'\). Crystallinity and
+the jump window pass to rational subquotients by
+exactness and strictness of the crystalline filtration.
+The local field is inside the prescribed cyclotomic
+extension at level \(N\). The estimate says that the
+cokernel of the map on integral \(H^1_f\) is killed
+by \(\ell^{e'}\).
+
+For this use of the Wach lattice estimate, the local
+field \(L\) at a row or column is extended to
+\[
+ L'=\mathbb Q_\ell(\mu_{\operatorname{lcm}(\ell,N)}).
+\]
+
+The coefficients contain the corresponding roots of
+unity. The extension \(L'/L\) is Galois and has
+\(\ell\)-valuation of its degree at most
+\(\lfloor\log_\ell N\rfloor+1\). Indeed
+\[
+ \ell^{v_\ell([L':L])}\le[L':L]\le[L':\mathbb Q_\ell]\le\ell N
+ \quad\Longrightarrow\quad
+ v_\ell([L':L])\le1+\lfloor\log_\ell N\rfloor .
+\]
+Restriction of a crystalline representation preserves
+its jump window by base change at each embedding.
+On \(L'\) the full cyclotomic level is \(s\).
+The crystalline lattice comparison there gives the
+lifting loss \(32(2hs+1)\) for jumps in \([-h,h]\).
+The restriction--corestriction identity on the
+finite local groups adds at most
+\(\lfloor\log_\ell N\rfloor+1\) to the loss.
+
+For \(c\in H^1_f(L,T)\) choose a source class \(d\)
+over \(L'\) with \(f_*(d)=\ell^{32(2hs+1)}{\rm res}(c)\).
+Naturality and restriction--corestriction give
+\[
+ f_*{\rm cor}(d)
+   =\ell^{32(2hs+1)}{\rm cor}({\rm res}(c))
+   =\ell^{32(2hs+1)}[L':L]c .
+\] The prime-to-\(\ell\)
+factor of the degree is a unit in the coefficients.
+Thus the exponent \(e'\) in the conversion below
+suffices. An invariant over \(L\) is already invariant
+over \(L'\), so the invariant-killing argument uses
+restriction alone.
+
+\proofstep{Add the torsion length in the original coefficient normalization.}
+The free rank is known; the integral row still contributes torsion.
+
+Apply this at a row place to a lattice surjection
+onto the target lattice \(T\) in \(T_2\) in its tied
+matrix basis. The source sits rationally in a sum of the
+dual-twisted family, and the target is therefore a
+rational subquotient of that sum. The cokernel is a
+quotient of \(H^1_f(E_w,T)/\ell^{e'}H^1_f(E_w,T)\).
+This integral group is the preimage of the rational
+finite part in \(H^1(E_w,T)\); by local cohomology
+finiteness it is finitely generated. By the definition as an inverse image under rationalization,
+\[
+ \operatorname{rank}_O H^1_f(E_w,T)\le\dim_{K_\ell}H^1_f(E_w,T_2).
+\]
+The torsion lies in the image
+of \(H^0(E_w,T_2/T)\) by the cohomology sequence.
+
+If \(\ell^{c_0(u)}\) kills the torsion invariants, they embed into
+\[
+ \ell^{-c_0(u)}T/T\simeq T/\ell^{c_0(u)}T.
+\]
+The normalized length of the right side is \(r c_0(u)\).
+Dividing lengths by the ramification degree of the
+coefficient DVR gives the row colength bound
+\[
+       [E_u:\mathbb Q_\ell]m e' + r c_0(u).
+\]
+This computation gives the same bound on any of the
+tied extensions of the coefficient field. Apply the degree-zero conclusion of
+Lemma~\ref{lem:cyclotomic-invariant-loss} to \(W\) and \(T_2\).
+The two exclusions in \eqref{eq:split-row-zero-jump} persist
+under restriction to the full cyclotomic field, since a field
+extension repeats each labelled list at the embeddings above it. The union of lists over
+the embeddings of \(E_w\) has at most
+\([E_w:\mathbb Q_\ell]r\) entries, so the bound uses the
+degree of the base field and the rank, independently of
+the degree of the splitting coefficient field.
+
+The rank and colength comparison uses the crystalline lifts and invariant bounds for the specified local data.
+The global lattice-index argument now uses these
+local estimates on the same family.
+\label{cor:small-prime-lengths-2}
+\end{proof}
+
+\paragraph{How the distinct jumps enter the local exponents.}
+The two estimates involving the set of jumps use distinct
+jump values. For a window \(U\subset [-h,h]\) with
+\(|U|\le n\), put \(M=2s+n_0+1\), where \(n_0\) is least
+with \(2h\le(\ell-1)\ell^{n_0}\), and put
+\(\lambda=\lambda_N(h)=s+\lfloor\log_\ell(2h)\rfloor+
+\lfloor\log_\ell N\rfloor+1\). The degree term is
+\(D=v_\ell([F_M:F_s])=M-s\) on the full cyclotomic field.
+The jump contribution to the local length is the positive integer
+\begin{equation}\label{eq:local-jump-loss}
+ C(k)=D+\sum_{i=0}^{k-1}\left(2+\max\left(1,
+       \sum_{a\in U,\ a\ne i}(M+v_\ell(a-i))\right)\right),
+ \qquad 1\le k\le h+1.
+\end{equation}
+Indeed \(n_0\le\lfloor\log_\ell(2h)\rfloor+1\), and
+\(0<|a-i|\le2h\) in the inner sum. Hence
+\(C(k)\le 2\lambda+3k(n+1)\lambda\).
+
+For the invariant bound the fine loss is \(C(1)\),
+so \(20(n+1)\lambda\) suffices. For a character of
+jump \(e\), where \(0\le e<t\le h\), the full-field
+specialization uses \(C(e+1)\) plus
+\[
+ (e+2)s+v_\ell(e)+\left\lfloor\frac{e}{\ell-1}\right\rfloor
+       +1+s+v_\ell(e+1),
+\]
+with the zero term \(v_\ell(e)\) interpreted as \(0\) at
+\(e=0\). The restriction--corestriction loss at the smaller
+field is at most \(\lfloor\log_\ell N\rfloor+1\).
+Together these are bounded by \(40(t+1)(n+1)\lambda\),
+since \(e+1\le t\), \(s\le\lambda\) and each valuation
+at a positive integer is at most that integer.
+ It uses the
+fine lifting and invariant losses of the local lattice
+comparison. \label{cor:small-prime-lengths-3}
+
+\input{ramified-cyclotomic}
+\input{full-cyclotomic-lifting}
+\input{cyclotomic-character-lifting}
+
+\input{retained-galois}
+\input{congruence-determinant}
+\input{split-selmer}
+\input{retained-twist}
+\input{auxiliary-coordinates}
+\input{signature-selmer}
+\input{residual-twist}
+\input{positive-twist}
+\input{toric-twist}
+\input{twist-euler}
+\input{theta-cover-integrality}
+\input{theta-row-rank}
+\input{twist-row-lattices}
+
+\subsubsection*{Conversion of the split row bound}
+
+The auxiliary character and both row lattices are now fixed. We return to the small split primes and insert their local exponents into the normalized congruence length.
+
+\begin{proposition}[Weighted split loss at the small primes]\label{prop:small-split-loss}
+On these split row and column declarations, let
+\(H=b+S_c+\eta_c+t+2\), use the full cyclotomic depth \(s\) in Lemma~\ref{lem:small-split-finite-colength}, and
+put \(\Lambda=s+\log_\ell(2H)+1\).
+Let \(c_{\rm loc}\) denote the normalized local cost after subtracting the scalar and finite Selmer baseline. Then
+\[
+ c_{\rm loc}\le 6000 f m\,H s+30000 f^2t^2 R\Lambda.
+\]
+For the ranks and weights on the selected family this contributes
+\(O(fmbz^2)\) after summation over \(\mathcal S_{\rm sp}\)
+with weight \(\log\ell\). Constants and thresholds are uniform in
+the selected point and good eigencharacter.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Put the lifting exponents in the weight and depth ranges of the selected point.}
+Put \(H=b+S_c+\eta_c+t+2\), where \(S_c,\eta_c\) are the
+two shift and weight sizes in the selected parameter choice.
+Here \(b\le H\le6b\). Write
+\[
+                    \Lambda=s+\log_\ell(2H)+1 .
+\]
+The local lifting and invariant estimates before numerical
+conversion use
+\[
+ \lambda_N(h)=s+\lfloor\log_\ell(2h)\rfloor+ \lfloor\log_\ell N\rfloor+1,
+\]
+with \(h\) the absolute
+jump cutoff in each estimate. The selected level satisfies
+\(N\le8H\), and both jump cutoffs used here satisfy \(h\le4H\).
+Therefore \(\lambda_N(h)\le3\Lambda\), since
+\[
+ \log_\ell(8H)\le\log_\ell(2H)+2\le\Lambda.
+\]
+
+The local lift exponent is \(32(2hs+1)+\lambda_N(h)\).
+For the invariant and block estimates, the bounds are
+\(20(4nR+1)\lambda_N(h)\) and
+\(40(t+1)(4nR+1)\lambda_N(h)\), respectively.
+Using \(f=2n\), \(t\ge1\), and
+\[
+ \Lambda\le4Hs
+\]
+gives the coefficient \(1000\) below.
+
+\proofstep{Subtract the scalar and rank-complement terms on the same cut.}
+The split row inequality bounds the normalized localized
+congruence term for a good Hecke character by a sum of a
+baseline and the local row and column costs described below.
+In the bound used for the numerator, the baseline is
+\(s_\pi+V_\ell+v_\ell(h_E)+\ell^{-2}\).
+Here \(s_\pi\) is the relaxed global Selmer length,
+\(V_\ell\) is the sum of strict localization lengths through
+twist \(t-1\), and \(h_E\) is the class number of \(E\).
+The scalar and finite Selmer terms have been separated at this point. The remaining tame torsion term is controlled by the local killing condition, which bounds
+\[
+ t\sum_v v_\ell(\zeta_v-1)
+\]
+in this formula by \(\ell^{-2}\),
+where the \(\zeta_v\ne1\) are the indicated tame test values.
+
+Let \(D_c,D_r\) denote the sums of the local degrees of the
+column and row places, and let \(k_c,k_r\) be their numbers.
+All these places are over \(\ell\). The degree formula
+gives \(k_c\le D_c\le2f\) and \(k_r\le D_r\le2f\).
+
+Write \(e'\) for the lift exponent, \(c_B\) for the block
+bound, \(v_\Delta\) for the factorial denominator length
+and \(h_0\) for the scalar invariant bound above. The two
+column terms involving local weights have bounds
+\(r c_0(u)\) and \(h_W(u)\) at a column place \(u\).
+The cyclotomic exponent and local invariant estimates used
+in the split bound have the following size requirements
+with \(c=1000\):
+\[
+ \begin{gathered}
+  e'\le cHs,\qquad c_B\le ctfR\Lambda,\qquad
+  c_0(u)\le cfR\Lambda,\qquad h_W(u)\le crfR\Lambda,\qquad
+  h_0\le c\Lambda,\\
+  v_\Delta\le ts+v_\ell(t!)\le t(s+1)\le t\Lambda .
+ \end{gathered}
+\]
+The inequality for \(h_0\) follows from the scalar
+calculation above. The second inequality for \(v_\Delta\)
+uses \(v_\ell(t!)=\sum_{a\ge1}\lfloor t/\ell^a\rfloor\le t\).
+
+\proofstep{Sum the column and row terms with their respective local degrees.}
+The split row formula then has total cost above its
+baseline at most
+\begin{align*}
+ D_c m(2e'+v_\Delta)
+ &+k_c(e'+2v_\Delta+2crfR\Lambda)\
+ &+t(D_r+2k_r)c_B+4R(k_c+1)v_\Delta+tk_ch_0 .
+\end{align*}
+The terms containing \(e'\) contribute at most \(6 c f m\,H s\).
+In order, the six remaining terms contribute at most
+\(2,4,4,6,12,2\) times \(cf^2t^2R\Lambda\).
+For instance \(4R(k_c+1)v_\Delta\le12fRt\Lambda\),
+and \(f,t,c\ge1\). Hence the excess over the baseline is
+bounded by
+\begin{equation}\label{eq:split-row-cost}
+             6000 f m\,H s+30000 f^2t^2R\Lambda .
+\end{equation}
+This calculation uses the cohomological split row
+inequality on the same row-and-column declaration.
+
+\proofstep{Take the logarithmically weighted sum only after the local conversion.}
+For a uniform size comparison put \(z=x^\epsilon\), as in
+Section~\ref{sec:comparison}, and take a fixed \(C_0\ge1\)
+with \(f,t\le x^{C_0}\), \(R\le2x^{C_0}\),
+and \(Q_S\le n^2\) with \(n\le x^{C_0}\).
+For \(\ell\ne q,d\), \(v_\ell(N)=v_\ell(Q_S)\), so
+\(s\le3C_0\log x\) for \(\log x\ge1\).
+Also \(\log_\ell(2H)\le2z+6\), using \(H\le6b\)
+and \(\log\ell>1/2\).
+For \(z\ge1\), this gives \(\Lambda\le(3C_0+9)xz\).
+
+For any fixed nonnegative coefficients \(A,B\) we obtain
+\[
+ A f m\,H s+B f^2t^2R\Lambda
+ \le18AC_0 fmb\log x+
+             2B(3C_0+9)x^{5C_0+1}z .
+\]
+Thus \eqref{eq:split-row-cost} is bounded by
+\(C fmb\log x+Cx^Cz^2\) with a single \(C\) depending on
+\(C_0\). The second term is at most \(C fmb\) past one
+threshold since \(b=\exp(x^\epsilon)\). These constants
+and the threshold are independent of the point, the
+coefficient field and the particular good eigencharacter.
+The weights of all the primes just treated satisfy
+\[
+    \sum_{\ell\in\mathcal S_{\rm sp}}\log\ell
+    =\log\!\prod_{\ell\mid 3Q_S}\ell\le\log(3Q_S).
+\]
+The resulting weighted cost is \(O(fmbz^2)\) beyond the
+threshold, using \(\log x\le z\).
+
+ The normalized Galois algebra, tame tests and
+global restriction argument apply at the retained points.
+The character and finite-class estimates use the same local
+lattices as the invariant estimate.
+The simultaneous twist selection is given in
+Section~\ref{subsec:retained-twist}.
+The remaining prime ranges enter the same division numerator.
+\label{cor:small-prime-lengths-4}
+\end{proof}
+

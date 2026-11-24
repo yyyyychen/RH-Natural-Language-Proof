@@ -1,0 +1,792 @@
+\subsubsection{Patching at an absolutely irreducible ordinary arc}
+\label{par:ordinary-patching}
+
+The finite-level transfer controls the trace relations before passing to a limit. Patching uses that control to deduce ordinary support along an arc when its generic representation satisfies the stated irreducibility and local separation conditions.
+
+\begin{proposition}[Augmentation support below a marked arc]\label{prop:ordinary-one-point-patching}
+In one rank-four determinant link, take a characteristic-\(\ell\)
+ordinary arc through its ordinary support whose representation is
+absolutely irreducible on the cyclotomic kernel of \(G_L\).
+Assume the ordered characters separate on the prescribed inertia
+groups, regular elements are dense in the cyclotomic kernel, and
+the distinguished auxiliary place satisfies the local cyclotomic
+intertwining condition of Proposition~\ref{prop:tower-below-arc}.
+Assume \(\bar\epsilon(G_L)\ne\{1\}\), where \(\bar\epsilon\)
+is the mod-\(\ell\) cyclotomic character.
+With the finite-level modules and auxiliary comparisons of
+Propositions~\ref{prop:ordinary-level-modules}
+and \ref{prop:ordinary-integral-transfer}, if \(y\) denotes the arc and \(R_0\) the base ring of the Hecke ideal, then every generization satisfies 
+\[
+ P\subseteq\ker y\quad\Longrightarrow\quad J_0\subseteq P\cap R_0.
+\]
+
+\end{proposition}
+
+\begin{proof}
+\proofstep{One determinant link and its support condition.}
+
+Fix one of the two determinant links and write \(R_0\) for its
+universal ordinary determinant ring, \(J_0\) for its Hecke ideal,
+and \(p\) for the evaluation kernel of the characteristic-\(\ell\)
+arc. Write \(n=4\), \(d=[L^+:\Q]\), and
+\[
+ D=nd.
+\]
+We use the
+one-point case in which \(p\) contains \(J_0\) and the arc
+representation is absolutely irreducible on the cyclotomic kernel
+of \(G_L\). Use the ordered local characters and auxiliary condition
+of Proposition~\ref{prop:tower-below-arc}
+and the residual tests of Lemma~\ref{hyp:ordinary-arc-residual-tests}. We describe
+the passage from finite-level data to vanishing of \(J_0\) at the
+generizations of \(p\).
+
+Put
+\[
+ A=K[[t]]
+\]
+for the arc valuation ring after finite
+extensions and \(E=K((t))\). The finite field \(K\) can be taken
+to contain the coefficient residue field. Choose Taylor--Wiles
+elements \(\sigma_j\), \(1\le j\le q\), in the full cyclotomic
+kernel of \(G_L\) at which the characteristic polynomials are
+separable. Here \(q\) counts the Taylor--Wiles places and is
+fixed throughout the patching limit. The elements must detect
+dual adjoint classes, as follows. On the cyclotomic kernel the
+adjoint action twisted by the cyclotomic character becomes the
+ordinary adjoint action. Write
+\[
+ V(g)=z(g)\rho(g)
+\]
+for a dual
+cocycle \(z\) on that kernel. Its cocycle identity is
+\[
+ V(gh)=V(g)\rho(h)+\rho(g)V(h).
+\]
+Suppose \(\operatorname{tr} V(g)=0\) for every \(g\) in the
+kernel.
+
+If \(\sum_i a_i\rho(g_i)=0\), the lift identity
+\(V(gh)=V(g)\rho(h)+\rho(g)V(h)\) gives
+\[
+ \operatorname{tr}\left(\Bigl(\sum_i a_i V(g_i)\Bigr)\rho(h)\right)
+  = \sum_i a_i\operatorname{tr}V(g_i h)
+        -\operatorname{tr}\left(\Bigl(\sum_i a_i\rho(g_i)\Bigr)V(h)\right)
+  =0.
+\]
+Every \(g_i h\) here lies in the same cyclotomic kernel,
+where the traces are assumed zero.
+Absolute irreducibility gives the full span \(M_n(E)\).
+Its trace pairing is perfect, so \(\sum_i a_i V(g_i)=0\).
+Thus the proposed map on the spanning matrices is well-defined
+and obeys the Leibniz rule.
+
+Write \(D_\rho\) for this derivation and
+\(e_{ij}\) for the matrix units. The matrix
+\(Y=\sum_i D_\rho(e_{i1})e_{1i}\) implements the derivation.
+Indeed the Leibniz rule applied to \(e_{ab}e_{i1}=\delta_{bi}e_{a1}\) gives
+\[
+ Ye_{ab}=D_\rho(e_{a1})e_{1b},\qquad
+ e_{ab}Y=D_\rho(e_{a1})e_{1b}-D_\rho(e_{ab}).
+\]
+Hence \(V(g)=Y\rho(g)-\rho(g)Y\) on the cyclotomic kernel \(H\).
+Subtracting the associated coboundary makes \(z|_H=0\).
+
+For \(h\in H\) and \(g\in G_L\), apply the cocycle identity to
+\(hg=g(g^{-1}hg)\). Normality and \(z|_H=0\) give
+\[
+ \rho(h)z(g)\rho(h)^{-1}=z(hg)=z(g).
+\]
+The span of \(\rho(H)\) is the full matrix algebra.
+Its commutant is \(E\cdot I_n\), so \(z\) descends to a scalar
+cocycle on the abelian quotient \(G_L/H\), with the residual
+cyclotomic action \(\epsilon=\bar\epsilon\).
+For the fields used here a place with nontrivial residual cyclotomic
+value is provided by the marked-field constructions in
+Propositions~\ref{prop:count-ii-auxiliary-primes}
+and~\ref{prop:count-three-marked-elements}. Choose \(a\) in
+the quotient with \(\epsilon(a)\ne1\) and put
+\(u=z(a)/(\epsilon(a)-1)\). Since \(ab=ba\),
+\[
+ z(a)+\epsilon(a)z(b)=z(b)+\epsilon(b)z(a)
+ \quad\Longrightarrow\quad z(b)=(\epsilon(b)-1)u .
+\]
+This exhibits the coboundary.
+
+Passing from the real group to its index-two CM subgroup
+loses no classes, since \(2\) is invertible. The regular
+elements are dense in the kernel, so continuity suffices to
+test traces on that locus. The space of Laurent series classes
+is finite-dimensional by finite generation after passage to
+the pro-\(\ell\) quotient. Choose a finite set of its trace
+tests. After an extension of \(A\), each marked characteristic polynomial takes the form
+\[
+ P_{\sigma_j}(X)=\prod_{a=1}^n (X-\alpha_{ja}),\qquad
+ \alpha_{ja}\in A,\qquad \prod_{a<b}(\alpha_{ja}-\alpha_{jb})\ne0\text{ in }E .
+\]
+The differences need only be nonzero in the fraction field here.
+
+For every depth \(N\) choose distinct split places away from
+the initial level with Frobenius approaching \(\sigma_j\) and
+norm
+\[
+ Q_{j,N}\equiv1\pmod{\ell^N}.
+\]
+
+For precision \(m\), scale the fixed finite list of integral
+cocycles once and record their reductions alongside the residual
+matrix action modulo \(t^m\). For a cocycle \(z\), conjugation on its coefficient module gives the homomorphism
+\[
+ h\longmapsto (z(h),r(h))\bmod t^m,\qquad
+ (u,A)(v,B)=(u+\operatorname{Ad}(A)v,AB).
+\]
+
+The coefficient and matrix rings modulo \(t^m\) are finite. Intersect their open kernels
+with the kernel of the cyclotomic character modulo \(\ell^N\);
+take the normal core in the group over the totally real field,
+also recording its CM quotient. All these quotients are finite.
+Use \(m\ge N\) tending to infinity in the resulting sequence.
+Chebotarev gives infinitely many primes in each specified
+conjugacy class, so we may avoid all previous choices and the
+fixed bad primes.
+In the resulting finite quotient \(G_{m,N}\) the target class is
+\[
+          [\sigma_j]_{G_{m,N}},\qquad
+          \epsilon_\ell(\sigma_j)\equiv1\bmod\ell^N .
+\]
+The split condition comes from its membership in the CM
+subgroup. Use the inverse conjugacy class for geometric Frobenius.
+Choose the tame generators in the pro-\(\ell\) inertia factors. The open subgroup on which all
+residual characters and the mod-\(\ell\) cyclotomic character
+are trivial has pro-\(\ell\) image for the arc.
+
+In fact its
+residual matrices are unipotent, so the finite residual
+image is an \(\ell\)-group by Cauchy's theorem. At depth \(m\) the kernels are filtered by the groups
+\(1+t^aM_n(K[t]/(t^m))\), with successive quotients embedded in additive \(M_n(K)\) by
+\[
+ 1+t^aX\mapsto X\bmod t.
+\]
+Indeed
+\[
+ (1+t^aX)(1+t^aY)\equiv1+t^a(X+Y)\pmod{t^{a+1}}
+ \qquad (a\ge1).
+\] Thus each is an \(\ell\)-group. This justifies the use of the
+maximal pro-\(\ell\) quotient on this subgroup. The finite
+levels are compared on a common topologically finitely
+generated profinite group, with stable quotients in every
+fixed finite approximation along an ultrafilter
+\(\mathcal U\) containing the cofinite filter.
+Frobenius and tame inertia converge in these quotients.
+
+To obtain the common group,
+bound the generator ranks of the open pro-\(\ell\)
+subgroups uniformly. A homomorphism to \(\mathbf F_\ell\)
+which kills all lifts of the new tame generators descends
+to the base. If \(d_0\) is the base generator rank, \(q\) the number
+of new places, and \(I_0\) the fixed open subgroup index,
+the evaluations on at most \(qI_0\) such lifts give
+\[
+ \dim_{\mathbf F_\ell}\operatorname{Hom}_{\rm cont}
+      (U_N,\mathbf F_\ell)\le d_0+qI_0 .
+\]
+The Frattini quotient identifies the left side with the
+generator rank of the pro-\(\ell\) group \(U_N\).
+Use a free profinite group on this many generators
+together with lifts of the fixed finite quotient.
+
+In each finite quotient of the common group there are
+finitely many possibilities for the image of the level
+kernel. The ultrafilter selects compatible stabilized
+images. Their inverse limit is the kernel of the limiting
+quotient. The decomposition maps are carried along in
+this construction. The ring \(R\) below uses the
+determinant on the common group, and \(I\) imposes
+its descent to the limiting quotient.
+
+Use a coefficient DVR \(O\) with residue field \(K\) after
+finite unramified coefficient extension, and adjoin a variable
+\(s\) on the base, evaluated at \(t\). These extensions are
+flat. The completed ordinary weight algebra on the base is
+\[
+ \Lambda_0=O[[s,w_1,\ldots,w_D]].
+\]
+Its specialization to \(K[[t]]\) is onto because it sends
+\(s\) to \(t\). The completion of \(\Lambda_0\) at the
+kernel of this specialization is regular local of dimension
+\(1+D\). Indeed the quotient has dimension one, and
+\(\Lambda_0\) is regular local of dimension \(2+D\).
+
+At the finite levels retain one tame character variable
+\(y_{ji}\) for each Frobenius eigenline at each of the \(q\)
+auxiliary places. Put \(\mathfrak y=(y_{ji})\). The required
+finite-level ordinary module \(M_N\) is finite free over
+\[
+ \Lambda_0[[y_{ji}]]\Big/
+ \bigl((1+y_{ji})^{\ell^{a_{j,N}}}-1\bigr)_{j,i},
+ \qquad a_{j,N}\ge N .
+\]
+
+Adjoin the ordered roots of the characteristic polynomials at
+the \(\sigma_j\) over the extended base ring, using one monic
+polynomial and then its successive monic quotients. If \(P_0\) is the polynomial of degree \(n\) at one place, the successive extensions are
+\[
+ C_i=C_{i-1}[z_i]/P_{i-1}(z_i),\qquad
+ P_i(X)=P_{i-1}(X)/(X-z_i),\qquad
+ \operatorname{rank}_{C_{i-1}} C_i=n+1-i .
+\]
+
+Thus ordering the roots is finite free, including when the residual
+polynomial has repeated roots. If the residual labeling singles out a
+maximal ideal, take the corresponding direct factor \(R_0'\):
+over a complete local base the idempotents of the finite special
+fibre lift uniquely by Hensel's lemma. This summand is finite
+projective, hence free over the local base. If \(C\) is the
+finite splitting algebra and \(\bar e\) the residual projector, this
+construction gives
+\[
+             C=eC\oplus(1-e)C,\qquad e^2=e,\quad e\bmod\mathfrak m=\bar e .
+\]
+Evaluation at the
+chosen roots selects this summand and lifts the arc. Differences
+which vanish at its closed point can still be nonzero at the
+generic point of the arc. The base module \(X\) is the ordinary
+Hecke module after this base change. It is finite free
+over \(\Lambda_0\); its support is the inverse image of
+\(V(J_0)\).
+
+At a finite level use the roots \(U_{ji}\) of
+the corresponding Frobenius. The maps between the
+zero-\(\mathfrak y\) fibre of \(M_N\) and the base module
+with those ordered roots have both compositions equal to
+multiplication by
+\[
+ f_N=\prod_j\prod_{i}\prod_{i'\ne i}
+ (U_{ji}-U_{ji'})(U_{ji}-Q_{j,N}U_{ji'}).
+\]
+These are the Hecke-module freeness and level comparison
+inputs. The second factor is needed in the comparison
+at finite depth. At the limiting arc both factors become
+the same root difference, which is nonzero in \(E\).
+The integral construction at these levels is described
+in Paragraph~\ref{par:ordinary-level}. It gives the
+trace at the tame cover, the two comparisons and the
+uniform exponent for the local relations.
+
+Here is the algebraic form of the remaining finite-level
+compatibilities. One has one complete Noetherian local
+ring \(R\) acting on the modules, with coefficient map
+\[
+ \Lambda_0[[y_{ji}]]\to R.
+\]
+The coefficients of the determinant of the limiting group supply the action of \(R\).
+There is a surjection \(R\to R_0'\) killing \(\mathfrak y\),
+and an ideal \(I\) in its kernel which imposes the limiting
+ordinary, polarized, and prescribed inertia relations.
+The Frobenius and tame trace relations use the following
+elements in the group algebra or its Cayley--Hamilton quotient:
+\[
+       \prod_i(\sigma_j-U_{ji}),\qquad
+       \Big(\prod_{i'\ne i}(\sigma_j-U_{ji'})\Big)
+                       (\tau_j-1-y_{ji}).
+\]
+At the limiting point the marked Frobenius has simple spectrum. Its commutation with the tame element implies that each Frobenius line \(L_{ji}\) is tame-stable. The second relation then reads
+\[
+ \rho(\tau_j)|_{L_{ji}}=(1+y_{ji})\,\mathrm{id}_{L_{ji}}
+\]
+after the distinct-root differences have been inverted. Pairing these
+relations with the traces of all group elements gives
+coefficient relations.
+\proofstep{Comparison element and patching depth.}
+
+For the proof below the comparisons give an element
+\(f\in R\) specializing to the product of the squared
+root differences and the following two properties.
+\begin{itemize}
+\item For every fixed \(b\), for \(\mathcal U\)-almost
+all \(N\) there are \(R\)-linear maps in both directions
+between \(X/\mathfrak m_{\Lambda_0}^bX\) and
+\[
+ M_N/(\mathfrak y,\mathfrak m_{\Lambda_0}^b)M_N,
+\]
+
+with both composites multiplication by \(f\).
+\item For a generator \(r\) of \(I\), some fixed power
+\((fr)^e\) agrees modulo each fixed power of \(\mathfrak m_R\)
+with an element annihilating \(M_N\) for
+\(\mathcal U\)-almost all \(N\). The exponent is chosen
+before the accuracy and depth.
+\end{itemize}
+The second property permits congruences of the action at
+different finite levels. Here the generators of \(I\) are the trace relations for the group kernel,
+polarization, ordinarity, the prescribed inertia, and
+the two Frobenius and tame relations just described.
+
+We prove the patching comparison for these data.
+For \(k,b\ge1\) let \(V_{k,b}\) be the ultraproduct
+along \(\mathcal U\) of
+\[
+ M_N/(\mathfrak y^k,\mathfrak m_{\Lambda_0}^b)M_N.
+\]
+
+For fixed \(k,b\) the group-ring relations are in
+\((\mathfrak y^k,\mathfrak m_{\Lambda_0}^b)\) for all
+large \(N\). For \(1\le c<k\le\ell^a\), the identity
+\[
+ c\binom{\ell^a}{c}=\ell^a\binom{\ell^a-1}{c-1}
+ \quad\Longrightarrow\quad
+ v_\ell\binom{\ell^a}{c}\ge a-v_\ell(c)
+\]
+is uniform in these finitely many \(c\) as \(a\) tends to infinity.
+\proofstep{Compatible bases and the augmentation fibre.}
+
+Choose a free basis of \(M_N\) over its coefficient group
+ring at each \(N\). For fixed \(k,b\) the binomial valuation
+bound kills all relations of positive \(y\)-degree less than
+\(k\) modulo \(\mathfrak m_{\Lambda_0}^b\) for large \(N\).
+Writing \(d_N\) for the size of the chosen basis, the
+basis therefore gives the additive decomposition
+\[
+ M_N/(\mathfrak y^k,\mathfrak m_{\Lambda_0}^b)M_N
+   \simeq\bigoplus_{|\alpha|<k}
+       (\Lambda_0/\mathfrak m_{\Lambda_0}^b)^{d_N}y^\alpha .
+\]
+Reduction in \(b\) acts on the coefficients and reduction
+in \(k\) discards the extra monomials. Thus both commute with
+the identifications from the fixed bases. For fixed \(k\), take the inverse limit
+over \(b\), giving \(V_k\). Multiplication by the monomials
+identifies the successive graded pieces with copies of
+\(V_1\). These identifications are \(R\)-linear, because
+multiplication by each \(y_{ji}\) commutes with the
+\(R\)-action.
+
+At \(k=1\), the comparison maps give the ultraproduct and inverse
+limit maps
+\(X \xrightarrow{u} V_1\xrightarrow{v} X\).
+To arrange compatibility in \(b\), choose maps at a depth
+of truncation tending to infinity along the ultrafilter
+and use their reductions. Indeed, if \(S_j\in\mathcal U\) is the good set for truncation \(j\), then
+\[
+ T_b=\bigcap_{j=1}^b S_j\in\mathcal U,\qquad T_{b+1}\subseteq T_b .
+\]
+On \(T_b\) maps at depth \(b\) can be reduced compatibly to every smaller truncation. At level \(N\) select the largest
+available truncation up to \(N\), which gives the
+required cofinal choices. The
+ultraproduct of the constant finite module
+\(X/\mathfrak m_{\Lambda_0}^bX\) is that same module.
+Their composites satisfy
+\[
+      vu=f\,\mathrm{id}_X,\qquad uv=f\,\mathrm{id}_{V_1}.
+\]
+Inverting \(f\) gives \(V_1[1/f]\simeq X[1/f]\).
+
+Now form
+\[
+ P=\varprojlim_k V_k[1/f]
+\]
+over the \(\mathfrak y\)-adic completion of \(R[1/f]\).
+Flatness of localization preserves the transition kernels. The
+monomial expansions identify
+\[
+   \operatorname{gr}_{\mathfrak y}P\simeq X[1/f][y_{ji}],
+           \qquad P/\mathfrak yP\simeq X[1/f].
+\]
+The degree-\(a\) identification is multiplication by all monomials
+of total degree \(a\).
+For this assertion, a compatible sequence with zero
+constant term is a sum of the \(y_{ji}\) times compatible
+sequences. Solve this degree by degree with the
+monomial identifications. The same argument applies in
+each degree. Finite generators of \(X[1/f]\) lift to
+generators of \(P\) by lifting the coefficient at each
+successive degree and summing in the complete ring.
+
+The relations in \(I\) act nilpotently on \(P\). To see
+why congruences in the maximal ideal of \(R\) suffice,
+fix \(b,k\). Some \(\mathfrak m_R^c\) kills
+\(X/\mathfrak m_{\Lambda_0}^b X\), a finite module over
+the local ring \(R\). The comparison at this truncation
+therefore gives \(f\mathfrak m_R^cV_{1,b}=0\).
+Iterating on successive \(\mathfrak y\)-quotients gives
+\[
+ f^k\mathfrak m_R^{ck}V_{k,b}=0.
+\]
+Use the annihilator approximation modulo
+\(\mathfrak m_R^{ck}\). For every \(k,b\), the bound gives \(f^k(fr)^eV_{k,b}=0\).
+After taking the inverse limit in \(b\) and inverting \(f\),
+\[
+             r^e V_k[1/f]=0 .
+\]
+Since \(e\) is independent of \(k\), for each compatible sequence \(v=(v_k)_k\in P\) we have
+\[
+ r^e v=(r^ev_k)_k=(0)_k.
+\]
+This gives \(r^e P=0\) on the inverse limit.
+
+Let \(p_R\) be the inverse image in \(R\) of the lifted
+arc prime in \(R_0'\), and put
+\[
+ C=\widehat{R_{p_R}}.
+\]
+Its residue field is \(E\). At each quotient by \(p_R^m\), the
+inclusion \(\mathfrak y^m\subseteq p_R^m\) makes the preliminary
+\(\mathfrak y\)-completion redundant, and \(f\notin p_R\).
+Taking the localized inverse limit gives the same ring \(C\).
+This base change on the intermediate Noetherian ring is
+flat. Write \(P_C\) for the completed local base change
+of \(P\), and \(\Lambda_p\) for the regular completed
+localization of \(\Lambda_0\) above. The augmentation
+\(P_C/\mathfrak y P_C\) is finite free over
+\(\Lambda_p\).
+
+To see this, the action on \(X\) factors
+through a finite \(\Lambda_0\)-algebra inside
+\(\operatorname{End}_{\Lambda_0}(X)\). After base change to the complete local ring \(\Lambda_p\), write the finite algebra as \(\prod_{\mathfrak q}T_{\mathfrak q}\) and its idempotents as \(e_{\mathfrak q}\). Then
+\[
+ X\otimes\Lambda_p=\bigoplus_{\mathfrak q} e_{\mathfrak q}(X\otimes\Lambda_p).
+\]
+The summand for \(p_R\) is projective over the local ring \(\Lambda_p\), hence finite free. This factor is
+nonzero by \(J_0\subset p\). Flat base change preserves
+the monomial identifications.
+
+If \(P_C/\mathfrak yP_C\) has rank \(h\) over \(\Lambda_p\),
+lift a basis. Successive monomial coefficients give the surjection
+\(\Lambda_p[[y_{ji}]]^h\to P_C\). Indeed, put \(S=\Lambda_p[[y_{ji}]]\) and let \(e_i\) be the chosen lifts. A nonzero relation would have a least total degree \(a\). Thus its initial part would give
+\[
+ \sum_{i,\,|\alpha|=a} c_{i,\alpha}\,y^\alpha\bar e_i=0
+ \quad\text{in }\mathfrak y^aP_C/\mathfrak y^{a+1}P_C .
+\]
+The monomial identification makes these vectors a \(\Lambda_p\)-basis, so all the initial coefficients vanish. Hence \(S^h\simeq P_C\). Completeness of \(C\) and finiteness
+of \(P_C\) give completeness for the \(\mathfrak y\)-adic
+lifting.
+
+The support algebra \(C/\operatorname{Ann}_C P_C\)
+embeds into the endomorphism algebra of this finite free
+module over \(\Lambda_p[[y_{ji}]]\). It is finite and
+torsion-free over that regular local ring. Every minimal
+prime of the support algebra contracts to zero, since
+each nonzero element of the regular ring is a
+nonzerodivisor and minimal primes are associated.
+Dimension for the finite integral extension now shows
+that every minimal support prime \(Z\) has
+\[
+ \dim(C/Z)=1+D+nq .
+\]
+Each \(Z\) contains \(IC\), by the annihilator
+calculation above. For \(Q\supseteq\mathfrak y\), Nakayama at \(Q\) gives
+\[
+    (P_C)_Q\ne0\quad\Longleftrightarrow\quad
+                      (P_C/\mathfrak yP_C)_Q\ne0 .
+\] In terms of \(R_0'\) it is
+therefore equivalent to containment of \(J_0\) in
+the contraction.
+
+We explain the upper bound on the relative cotangent
+dimension of \(C/IC\) needed to use the support.
+The coefficient DVR at this point can be taken to be
+the completed localization of \(O[[s]]\) at the
+coefficient uniformizer. Its residue field is \(E\),
+because \(s\) specializes to \(t\).
+If \(T_{\rm rel}\) is the tangent space relative to this DVR, the first-order estimate to prove is
+\[
+ \dim_E T_{\rm rel}\le D+nq.
+\]
+Here the rank-four point has one
+absolutely irreducible matrix block. The localized
+Cayley--Hamilton algebra is the full matrix algebra
+\cite[Theorem 2.22(i)]{chenevier}, since its determinant
+over the residue field is that of the absolutely
+irreducible representation over \(E\).
+\proofstep{Recover matrices and flags from determinants.}
+
+Thus a relative tangent gives a matrix cocycle modulo
+infinitesimal conjugation. The polarization gives the transpose-inverse relation. For a fixed pairing matrix \(J\), an infinitesimal change \(1+\delta X\) with \(\delta^2=0\) preserves it exactly when
+\[
+ (1+\delta X)^{\mathsf T}J(1+\delta X)=J
+ \quad\Longleftrightarrow\quad X^{\mathsf T}J+JX=0 .
+\]
+Normalization of the pairing uses division by two. The ordinary flags and their
+character values are uniquely specified at first order
+by the ordered eigenlines of a separating local
+element. At each split \(\ell\)-place let \(\mu_v\) be the
+preimage in the local Galois group of the \(\ell\)-primary
+torsion in its topological abelianization. The ordered
+characters \(\psi_{v,i}\) have prescribed values on
+\(\mu_v\) from \(O^\times\). This is a condition in the
+universal ordinary determinant ring, so an \(O\)-linear
+tangent lift has the same values there, viewed as constants
+in \(E[\delta]/(\delta^2)\).
+
+For \(g\in\mu_v\) equality with the prescribed constant gives
+\[
+ \psi_{v,i}(g)(1+\delta c_{v,i}(g))=\psi_{v,i}(g)
+ \quad\Longrightarrow\quad c_{v,i}(g)=0 .
+\]
+Here \(c_{v,i}(g)\in E\) and \(\psi_{v,i}(g)\) is a unit.
+This condition survives reduction of an integral cocycle
+modulo \(t^m\).
+For the existence of the local flag, the trace relations and perfectness of the trace pairing give the ordered product identity
+\[
+ \prod_{i=1}^n\bigl(\rho(g_i)-\psi_i(g_i)I\bigr)=0\qquad(\text{all }g_1,\ldots,g_n).
+\]
+Take the same separating element at every
+slot. Its distinct roots give the ordered spectral
+projections, including over the dual numbers.
+Replace only the \(k\)-th slot by \(g\). The factors
+on the left kill the rows with index less than \(k\),
+and those on the right kill the columns with index
+greater than \(k\).
+
+On the remaining rows and columns
+they act by units. More explicitly, write \(L_k,R_k\) for the two products
+of spectral factors at the separating element. For the
+surviving rows and columns, the product equation reads
+\[
+ 0=\bigl(L_k(\rho(g)-\psi_k(g))R_k\bigr)_{rc}
+       =(L_k)_{rr}(\rho(g)-\psi_k(g))_{rc}(R_k)_{cc},
+             \qquad r\ge k,\quad c\le k .
+\]
+Both outer factors are units by the distinct spectral values.
+Taking \(k=c\) for each surviving column yields
+\[
+ \rho(g)_{rc}=0\ (r>c),\qquad \rho(g)_{cc}=\psi_c(g).
+\]
+Indeed the outer scalar factors are units, and the subtracted diagonal term occurs only when \(r=c\).
+At the \(q\) new places simple Frobenius roots likewise
+give the ordered lifts uniquely. The two tame and
+Frobenius relations determine the new character
+variables on those eigenlines. The determinant
+coefficients and these parameters generate the chart.
+
+Consequently the relative tangent injects into the
+ordinary first cohomology of the limiting group with
+its prescribed inertia conditions. For continuity of
+the derivative, the kernel of evaluation onto \(K[[t]]\)
+has a finite conormal module over \(K[[t]]\). The
+derivative on it is bounded after multiplication by a
+power of \(t\). It kills \(O[[s]]\), and if \(I\) denotes the evaluation kernel, the approximation by coefficient series reads
+\[
+ \mathfrak m_R^b\subseteq s^bO[[s]]+(I\cap\mathfrak m_R^b).
+\]
+Artin--Rees then gives a bound
+tending to zero with \(b\). This applies to the
+determinant coefficients and to the matrix coordinates
+recovered by the inverse trace Gram matrix.
+
+\proofstep{Local and global bound on relative tangents.}
+
+For the dimension bound on this cohomology use the
+first-order finite-level count. Over \(K[t]/(t^m)\)
+it has the form
+\[
+ \bigl|\mathrm{Sel}_1(N,m)/\mathrm{Bd}_1(N,m)\bigr|
+     \le |K|^{m(nd+nq)+c}.
+\]
+Here the bound holds for \(N\) sufficiently large for
+each \(m\), with \(c\) independent of \(m,N\).
+In the Euler-characteristic comparison let
+\(\nu=n(n-1)/2\). At a split \(\ell\)-place, with
+local degree \(d_v\) and principal-inertia rank
+\(d'_v\), ordinary upper triangular cocycles contribute
+at most
+\[
+ m\bigl(n(d'_v+1)+\nu(1+d_v)\bigr)+O(1)
+\]
+to the logarithmic count.
+
+For the diagonal characters,
+local class field theory identifies the free pro-\(\ell\)
+part of inertia after quotienting by its torsion with
+\(\mathbf Z_\ell^{d'_v}\). The vanishing on \(\mu_v\) leaves exactly \(d'_v\) inertia
+parameters and one unramified parameter per character. Thus the
+diagonals contribute logarithmic size at most \(mn(d'_v+1)\). For
+upper entries filter the triangular cocycle space by
+increasing distance from the diagonal. When all
+preceding entries vanish, the \((i,j)\)-entry is a
+cocycle with coefficients of character
+\[
+ \chi_{ij}=\psi_{v,i}/\psi_{v,j}.
+\]
+
+If \(\epsilon(g)/\chi_{ij}(g)-1\) has valuation \(b\)
+at one local element, the invariants of the dual twist in
+\(A/(t^m)\) lie in the kernel of multiplication by that scalar.
+Over \(A/(t^m)\) the scalar generates the same ideal as \(t^b\). Consequently
+\[
+ \ker(t^b:A/(t^m)\to A/(t^m))=t^{\max(m-b,0)}A/(t^m),\qquad
+ |\ker|=|K|^{\min(b,m)} .
+\]
+Writing \(D_{ij}\) for the rank-one coefficient module,
+local duality, the Euler formula and the boundary size give
+\[
+ \begin{aligned}
+ |Z^1(D_{ij})|
+  &= |H^1(D_{ij})|\,|D_{ij}|/|H^0(D_{ij})|\\
+  &= |D_{ij}|^{1+d_v}|H^0(D_{ij}^{\vee}(1))|
+   \le |K|^{m(1+d_v)+b}.
+ \end{aligned}
+\]
+Multiply these bounds at the successive strictly upper
+positions of the filtration.
+
+At the new places the unrestricted condition contributes
+the invariants of the dual twist by local duality and
+the tame Euler characteristic. For large \(N\) the
+Frobenius matrix and cyclotomic value modulo \(t^m\)
+are those of \(\sigma_j\). In the generic Frobenius eigenbasis the commutator has
+multipliers \(a_i-a_j\) on off-diagonal entries. Hence
+\[
+     \dim_E\ker\operatorname{ad}(\rho(\sigma_j))=n.
+\]
+Only the diagonal entries contribute to the kernel rank. Smith normal form bounds the
+size of the corresponding kernel modulo \(t^m\) by
+\(|K|^{mn+O(1)}\).
+
+The same argument bounds the term at
+the old distinguished place by \(O(1)\) in logarithmic
+size, using the vanishing local intertwining space.
+The fixed-inertia primes give the unramified Euler
+terms in the comparison. The global invariants
+over \(E\) vanish. Schur's lemma on \(G_L\) makes an invariant \(X=\lambda I\). Invariance under complex conjugation then gives
+\[
+ \lambda I=-{}^t(\lambda I)=-\lambda I,\qquad 2\lambda=0 .
+\]
+The characteristic is odd, so \(X=0\). Finitely
+many equations already have this kernel, so they
+give a bounded invariant count at every truncation.
+
+The dual auxiliary restrictions descend to the base
+group, since they impose zero on the new tame generators,
+and their Frobenius traces satisfy the chosen detection
+tests. To bound this count modulo \(t^m\), work on the
+topologically finitely generated group after the
+pro-\(\ell\) quotient. The reduction of a cocycle also
+factors through this quotient, by applying the
+pro-\(\ell\) image argument to the cocycle and its
+representation in their semidirect product.
+A cocycle on the free profinite group with generators \(g_1,\ldots,g_m\) is determined by the tuple
+\[
+ z\longmapsto\bigl(z(g_1),\ldots,z(g_m)\bigr).
+\]
+Descent imposes
+linear equations for relations. The rows of all these
+equations and the finite trace tests span a finite
+module of linear forms over \(A\), so finitely many
+rows suffice even modulo \(t^m\).
+
+Over \(E\) their
+kernel consists of coboundaries by detection. Smith
+normal form shows that the kernel modulo \(t^m\)
+has size at most
+\[
+ |K|^{mr+O(1)}
+\]
+when its rank
+over \(E\) is \(r\). For the coboundary map of the same generic rank \(r\), the
+image has size at least \(|K|^{mr-O(1)}\). Thus division gives
+\[
+              |K|^{mr+O(1)}/|K|^{mr-O(1)}=|K|^{O(1)}.
+\]
+This bound is uniform in the truncation depth. These losses depend
+on the fixed arc, the chosen local elements and the
+finite trace tests. They are independent of \(N\) and
+\(m\) in the indicated order of approximation.
+Greenberg--Wiles duality subtracts
+\[
+ m\bigl((n+\nu)\#\{v\mid\ell\}+\nu d\bigr).
+\]
+With \(B_v\) the upper triangular matrix module at this
+depth and \(A_v\) the full adjoint coefficient module, the
+triangular coboundaries have order
+\(|B_v|/|H^0(B_v)|\).
+
+The ordinary local condition \(L_v\)
+is an image of the triangular cocycle space, and dividing
+by these coboundaries gives
+\[
+ \frac{|L_v|}{|H^0(A_v)|}
+       \le \frac{|Z^1_{\rm ord}(B_v)|}{|B_v|}
+                       \frac{|H^0(B_v)|}{|H^0(A_v)|}
+       \le \frac{|Z^1_{\rm ord}(B_v)|}{|B_v|}.
+\]
+This is the subtraction of the triangular matrix size in
+the Euler count.
+At a real place the involution on the adjoint has
+the form \(X\mapsto -S X^{\mathsf T} S^{-1}\) with \(S\)
+symmetric and invertible. Since \(S^{\mathsf T}=S\), putting \(X=SY\) gives 
+\[
+ -SX^{\mathsf T}S^{-1}=X\quad\Longleftrightarrow\quad -Y^{\mathsf T}=Y.
+\]
+ This identifies the invariants with the skew matrices and accounts for \(\nu\) at each of the \(d\) real places.
+Both sums of local degrees equal \(d\). The coefficient of
+\(m\) after the global subtraction is
+\[
+ \sum_v\big(n(d'_v+1)+\nu(1+d_v)\big)
+          +nq-(n+\nu)\#\{v\mid\ell\}-\nu d=nd+nq .
+\]
+This is the coefficient of the depth \(m\) in the first-order bound for one block. The local-condition comparison uses
+the fixed torsion subgroup and the actual
+decomposition maps at the finite levels.
+
+For fixed \(m\), integral cocycles and the
+relations at the limiting group are read at finite
+levels on a set in \(\mathcal U\). Use finite generators and the
+stable finite quotients in the common profinite group.
+If \(a\) cocycles are independent over \(E\) modulo
+boundaries, scale them by powers of \(t\) to make them
+integral, and test their linear combinations against
+coboundaries at finitely many elements. Such a finite
+test suffices by Noetherianity of the module of linear
+forms in the coefficients and the boundary matrix.
+
+Smith normal form bounds the loss by a fixed power of
+\(t\): if \(z_1,\ldots,z_a\) are these integral cocycles, then for \(m\ge c_0\)
+\[
+ \sum_j u_jz_j\equiv\text{a boundary}\pmod{t^m}\quad\Longrightarrow\quad(u_1,\ldots,u_a)\in t^{m-c_0}A^a.
+\]
+Thus a fibre of the map from the \(a\) coefficient tuples modulo \(t^m\) has size at most \(|K|^{a c_0}\), and the image has at least
+\[
+ |K|^{am}/|K|^{a c_0}=|K|^{a(m-c_0)}
+\]
+elements. The boundary matrices,
+including their skew condition, lift from the finite
+quotients. The cardinality estimate gives
+\[
+        a(m-c_0)\le m(nd+nq)+c \qquad(m\ge c_0).
+\]
+Dividing by \(m\) and taking the limit proves \(a\le nd+nq\). In this one-block case
+the odd matrix module of the two-block comparison
+is zero. Its second-order obstruction equations have
+no odd entries. Only the first-order dimension bound
+enters the cotangent argument.
+
+By completeness and the relative cotangent bound,
+\(C/IC\) is a quotient of a power-series ring in
+\(D+nq\) variables over the coefficient DVR. Lift a
+spanning set of the relative cotangent and use
+successive approximation to obtain the surjection.
+The power-series ring is a domain of dimension
+\(1+D+nq\). Let \(S\) denote this power series ring and \(P\) the inverse image of \(Z/IC\). Its full-dimensional quotient forces
+\[
+ \operatorname{ht}P+\dim(S/P)\le\dim S=\dim(S/P),
+ \qquad \operatorname{ht}P=0.
+\]
+Since \(S\) is a domain, \(P=0\), and the kernel of \(S\to C/IC\) lies in \(P\). Hence \(C/IC\) itself is a domain and
+\(Z=IC\). Every prime containing \(IC\) now lies in
+the support of \(P_C\).
+
+\proofstep{Descend the vanishing to the original Hecke quotient.}
+
+The patched calculation supplies support after the auxiliary choices and coefficient extensions. The point on the original Hecke quotient is the one needed in the propagation argument.
+
+
+Finally, a prime below \(p\) lifts below the chosen
+arc prime of \(R_0'\) by flat going down. Its inverse
+image in \(R\) contains \(I\) and \(\mathfrak y\).
+Lift this prime to \(C\) by faithful flatness of
+completion of \(R_{p_R}\). The augmentation support
+comparison puts \(J_0\) in its contraction to \(R_0\).
+This proves the one-point implication from the
+finite-level module and cohomological inputs above.
+\label{cor:ordinary-ordinary-patching-1}
+\end{proof}

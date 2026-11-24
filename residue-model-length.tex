@@ -1,0 +1,512 @@
+\paragraph{Putting the residue extensions on one model.}
+In the residue calculation write \(k'\) for the residue field and
+use \(X\) for the characteristic-\(\ell\) cyclotomic parameter
+throughout this calculation. Let \(D_i\) be the corresponding
+étale \((\varphi,\Gamma)\)-module at letter \(i\), with Frobenius
+\(\Phi_i\) coming from letter \(i-1\) and a principal cyclotomic
+generator \(\gamma_i\) acting on letter \(i\).
+Write \(\Phi_i N_{i-1}\) for the \(k'[[X]]\)-span of the
+Frobenius images of a lattice. The convention for the residue
+models after untwisting by \(\chi_1\) is
+\[
+ X^{w_i^*}N_i\subseteq \Phi_i N_{i-1}
+       \subseteq X^{-w_i}N_i,\qquad
+ (\gamma_i-1)N_i\subseteq XN_i,\qquad w_i^*=h_i-w_i.
+\]
+The model of the untwisted trivial quotient is the standard
+rank-one lattice in its invariant basis. Its uniqueness among
+the admissible models follows from the scalar comparison below.
+
+\input{residue-wach-realization}
+
+\paragraph{A common lattice for the extension classes.}
+\begin{lemma}[A largest compatible residue model]
+\label{lem:largest-compatible-residue-model}
+For two models \(N^0,N\) of the same residual representation,
+each component is bounded by \(N_i\subseteq X^{-\sigma_i}N_i^0\). For the fixed residual representation the largest model is
+\[
+ N^{\max}=\sum_{N\ {\rm admissible}}N;
+\]
+the sum is itself admissible.
+\end{lemma}
+
+\begin{proof}
+If \(N^0,N\) are two models of the same representation, let \(a_i\)
+be the least nonnegative \(a\) with \(X^a N_i\subseteq N_i^0\).
+The height inclusions give
+\[
+ \Phi_i N_{i-1}\subseteq X^{-a_i-w_i-w_i^*}\Phi_i N^0_{i-1}.
+\]
+In a Frobenius basis, the images of the coefficients have orders
+multiplied by \(\ell\). Hence this inclusion implies
+\(\ell a_{i-1}\le a_i+h_i\).
+After \(m\) iterations this reads
+\[
+        a_i\le \ell^{-m}a_{i+m}
+                 +\sum_{j=1}^m h_{i+j}/\ell^j .
+\]
+The first term tends to zero because the \(a_i\) form a
+finite cyclic list. This gives \(a_i\le\sum_{j\ge1}h_{i+j}/\ell^j\).
+Thus every model lies in \(X^{-\sigma_i}N_i^0\) in each letter.
+The sum of two models is a model.
+
+The sum model arises by direct sum
+followed by the addition map of the common target. Exactness
+and stability of the admissible subquotients give the induced
+image lattice. The finite product of the containing lattices
+is Noetherian over \(k'[[X]]\), so the sum of all models is
+already a finite sum and is a largest model \(N^{\max}\).
+This argument applies with the standard model as \(N^0\).
+\label{cor:residue-model-length-1}
+\end{proof}
+
+In a residue extension, use the preimage lattice of the target
+under the inclusion into the extension's model. Choose at each
+letter a vector \(e_i\) mapping to \(1\) in the standard quotient.
+The Herr pair on the target model is
+\[
+ b_i=\Phi_i e_{i-1}-e_i,\qquad g_i=(\gamma_i-1)e_i.
+\]
+Write \(P_i=\langle\Phi_i N_{i-1}\rangle\) for the target
+Frobenius span. The cocycle equation and the two height tests
+give
+\[
+ \begin{aligned}
+ (\gamma_i-1)b_i&=\Phi_i g_{i-1}-g_i, &g_i&\in XN_i,\\
+ X^{w_i}b_i&\in N_i &&\text{at a lower end},\\
+ X^{w_i^*}b_i&\in P_i &&\text{at an upper end}.
+ \end{aligned}
+\]
+Indeed \(\gamma_i\) acts trivially modulo \(X\) on the extension
+lattice and \(N_i\) is the kernel there of the trivial quotient.
+At the upper end apply the height inclusion to \(X^{w_i^*}e_i\).
+Its image in the trivial line is \(X^{w_i^*}\), the coefficient
+of \(\Phi_i e_{i-1}\) in the Frobenius span. Subtracting this
+term leaves a vector in \(P_i\), by exactness on the induced
+spans.
+
+For the extra test at the upper end set \(s=w_i^*+1\).
+Use the polynomial of Lemma~\ref{lem:residue-high-end-polynomial}
+on the extension model, and put
+\[
+    e_i'=P(0)^{-1}P(\nabla)e_i,\qquad x_i=e_i-e_i'.
+\]
+The quotient map intertwines \(\nabla\) with zero, so \(e_i'\)
+has the same quotient coordinate as \(e_i\), and \(x_i\in N_i\).
+The identity \(\nabla P(\nabla)e_i\in X^s N_i^{\rm ext}\)
+therefore yields
+\[
+     g_i-(\gamma_i-1)x_i=(\gamma_i-1)e_i'
+                          \in X^{w_i^*+2}N_i .
+\]
+Here \(N_i^{\rm ext}\) denotes the extension lattice, and the
+last containment uses its intersection with the target. Passing
+to \(N^{\max}\) preserves the tested inclusions.
+The exact functor on residue modules preserves addition of
+extension classes and split extensions. A linear combination of
+their Herr pairs that is a boundary on the common model thus
+gives a coboundary for the original Galois classes.
+\label{cor:residue-model-length-2}
+
+\begin{auxlemma}[Sen multiplicities at the two ends]\label{lem:end-sen-multiplicities}
+Use the residue positions and exclusions of Lemma~\ref{hyp:offwindow-local}.
+Let \(s_i(y)\) be the generalized multiplicity of the residue Sen
+operator at \(y\) on \(N_i^{\max}/XN_i^{\max}\) for the model of
+Lemma~\ref{lem:largest-compatible-residue-model}.
+Put \(d_i=\#\{u\in U_i:u<w_i\}\), with the labelled jumps counted
+with multiplicity. At the indicated end letters one has
+\[
+ \begin{array}{ll}
+ \displaystyle\sum_{y=-w_i}^{-1}s_i(y)=d_i &\text{at a lower end},\\[4pt]
+ \displaystyle\sum_{y=0}^{w_i^*}s_i(y)=r-d_i &\text{at an upper end}.
+ \end{array}
+\]
+\end{auxlemma}
+\begin{proof}
+Write \(N=N^{\max}\), and let \(N^0\) be the standard target
+model. At letter \(i\), \(\nabla\) induces endomorphisms on
+\(N_i/XN_i\) and \(N_i^0/XN_i^0\), with generalized
+eigenvalue multiplicities \(s_i(y)\), \(s_i^0(y)\) at
+\(y\in k'\). These are the Sen multiplicities in the
+chosen normalization. For the standard target,
+\(s_i^0(y)\) counts \(u\in U_i\) with
+\[
+ u-w_i\equiv y.
+\]
+
+The residue model comparison gives the same support condition
+for the Sen weights of any target model, without a prescribed
+multiplicity. Here is the support argument, which also works
+for a subquotient of the marked rank block. The model induced on
+that subquotient by \(N^0\) has Sen eigenvalues among \(u-w_i\)
+for \(u\in U_i\). Indeed the subobject lattice is saturated and
+the image lattice in the quotient is free. Exactness modulo \(X\)
+and stability under \(\nabla\) give the weight inclusion.
+For two models \(L,L'\) of that subquotient the carry bound
+in both directions places \(L'/XL'\) as a subquotient of
+\(X^{-\sigma_i}L/X^{\sigma_i+1}L\).
+
+In particular each eigenvalue on \(L'/XL'\) lies in the set
+\[
+ \{b+a:b\text{ an eigenvalue on }L/XL,\ a\in\mathbb Z,\ |a|\le\sigma_i\}
+\]
+in the residue field.
+On the other hand, any admissible model is induced from a
+full crystalline sum, so its Sen weights are in the union of
+the shifted rank-block jumps and the scalar residues
+\(0,\ldots,t-1\). If an eigenvalue belongs to the scalar
+block, the comparison with the induced model of \(N^0\)
+would put a rank-block residue within \(\sigma_i\) of
+that block. This is exactly the forbidden congruence from
+the position tests. Hence all the model's Sen eigenvalues
+come from the rank-block residues.
+\label{cor:residue-model-length-3}
+
+Let \(q_i(y)\) count generalized eigenvalues on \(N_i/N_i^0\).
+On \(X^a N_i^0/X^{a+1}N_i^0\) the eigenvalues shift by \(-a\),
+since the scalar action is normalized by
+\[
+ \gamma(X)=X-X^2\bmod X^3.
+\]
+
+In particular \(XN_i/XN_i^0\) has multiplicity \(q_i(y+1)\)
+at \(y\). To compute the multiplicities in \(H=N_i/XN_i^0\), compare its
+two filtrations. Their short exact sequences are
+\[
+ \begin{aligned}
+ 0&\longrightarrow XN_i/XN_i^0\longrightarrow H
+        \longrightarrow N_i/XN_i\longrightarrow0,\\
+ 0&\longrightarrow N_i^0/XN_i^0\longrightarrow H
+        \longrightarrow N_i/N_i^0\longrightarrow0 .
+ \end{aligned}
+\]
+Adding generalized multiplicities along the two rows gives
+\[
+ s_i(y)+q_i(y+1)=s_i^0(y)+q_i(y).
+\]
+The filtration of \(X^{-\sigma_i}N_i^0/N_i^0\) shows that
+if \(q_i(y)\ne0\), then \(y\equiv u-w_i+j\) for
+some \(u\in U_i\) and \(1\le j\le\sigma_i\).
+This step counts generalized eigenspaces, which have additive
+dimensions in exact sequences even for nonsemisimple operators.
+
+Let \(d_i\) count \(u\in U_i\) with \(u<w_i\).
+The position tests give \(s_i(y)=0\) for
+\[
+ 0\le y\le\sigma_i+1,
+\]
+and \(q_i(0)=0\).
+Indeed a residue in these ranges would require \(u\)
+congruent to \(w_i+y\) or \(w_i-j\) with distance
+at most \(\sigma_i+2\) from the scalar block after checking
+the end interval. For an outer jump the corresponding
+congruence is precisely forbidden by the end-window test.
+
+For a lower end letter sum the displayed identity for
+\(-w_i\le y<0\). At the lower endpoint \(q_i(-w_i)=0\),
+since any residue would require \(u\equiv -j\) with
+\(1\le j\le\sigma_i\). For a central jump \(1\le u\le\eta'_i\), the end-width bound of
+Lemma~\ref{hyp:offwindow-local} gives
+\[
+  0<u+j\le\eta'_i+\sigma_i<\ell ,
+\]
+which excludes \(u+j\equiv0\pmod\ell\). For an outer jump it contradicts
+the residue exclusion. In the interval \([-w_i,0)\), the
+standard multiplicities count exactly the central jumps below
+\(w_i\). An outer jump cannot contribute, since its residue
+would lie in the excluded lower end window. The endpoint vanishings \(q_i(0)=q_i(-w_i)=0\)
+eliminate the correction in the telescoping identity:
+\[
+ \sum_{y=-w_i}^{-1}s_i(y)=
+   \sum_{y=-w_i}^{-1}s_i^0(y)+q_i(-w_i)-q_i(0)=d_i.
+\]
+
+For an upper end letter sum from \(0\) through
+\(w_i^*+\sigma_i+1\). At the upper endpoint after telescoping,
+\(q_i(w_i^*+\sigma_i+2)=0\): a contributing \(u\) would
+be congruent to \(h_i+\sigma_i+2-j\), \(1\le j\le\sigma_i\).
+For an outer jump this is precisely the residue exclusion.
+
+At this end a central jump satisfies \(h_i-\eta'_i\le u\le h_i-1\), so
+\[
+ 0<h_i+\sigma_i+2-j-u\le\eta'_i+\sigma_i+1<\ell .
+\]
+This excludes the congruence also for a central jump. The same test gives
+\(s_i(y)=0\) for \(w_i^*<y\le w_i^*+\sigma_i+1\).
+Throughout the summation range the standard multiplicities
+count exactly the jumps \(u\ge w_i\), all of which are in
+the upper end interval. Put \(B=w_i^*+\sigma_i+1\). The vanishing of
+\(s_i(y)\) for \(w_i^*<y\le B\) gives
+\[
+ \sum_{y=0}^{w_i^*}s_i(y)=\sum_{y=0}^{B}s_i(y)
+     =\sum_{y=0}^{B}s_i^0(y)+q_i(0)-q_i(B+1)=r-d_i .
+\]
+All the interval counts include multiplicities and use bounds
+strictly shorter than \(\ell\) at the relevant end. The number
+\(d_f\) in the local comparison is \(\sum_i d_i\).
+\label{cor:residue-model-length-4}
+\end{proof}
+
+\paragraph{From the polar parts to the residue rank.}
+The filtration of \(N_i/X^{\sigma_i+2}N_i\) has successive
+eigenvalues shifted by \(0,-1,\ldots,-(\sigma_i+1)\).
+The Sen vanishing in the proof of Lemma~\ref{lem:end-sen-multiplicities}
+makes \(\nabla\) invertible on this quotient.
+For each pair choose \(y_i\in N_i\) so that
+\[
+ g'_i=g_i-(\gamma_i-1)y_i\in X^{\sigma_i+3}N_i,\qquad
+ b'_i=b_i-\Phi_i y_{i-1}+y_i .
+\]
+This is a change by a Herr boundary.
+Set \(c_i=b_i-\Phi_i y_{i-1}+x_i\), using \(x_i=y_i\)
+at a lower end letter and the deeper cyclotomic correction
+at an upper end letter.
+
+The corrected vector \(c_i\) has the same image as \(b'_i\)
+modulo \(N_i\).
+The relation \(\ell(\sigma_{i-1}+1)\ge h_i+\sigma_i+1\)
+follows by shifting the carry series. Consequently
+\(\Phi_i g'_{i-1}\in X^{w_i^*+2}N_i\).
+The height inclusions and the cocycle equation give
+\[
+\begin{array}{ll}
+c_i\in X^{-w_i}N_i,&(\gamma_i-1)c_i\in XN_i
+       \quad\text{at a lower end letter},\\
+c_i\in X^{-w_i^*}\Phi_i N_{i-1},&
+(\gamma_i-1)c_i\in X^{w_i^*+2}N_i
+       \quad\text{at an upper end letter}.
+\end{array}
+\]
+If a linear combination of the \(c_i\) is integral at
+every letter, the combination of the \(b'_i\) is integral.
+Its cyclotomic difference belongs to \(X^{\sigma_i+3}N_i\),
+using the deeper \(g'_i\) and the same carry inequality.
+Invertibility modulo \(X^{\sigma_i+2}\) places \(b'_i\) in
+\(X^{\sigma_i+2}N_i\).
+
+On the product of these deep lattices
+\(\Phi\) strictly increases the order at each step by the
+height and carry inequalities. Solve \((\Phi-1)v=b'\) there
+by \(-\sum_{a\ge0}\Phi^a b'\). Commutation with \(\gamma\)
+and injectivity of \(\Phi-1\) on the deep product give
+\[
+ (\gamma-1)v=g'.
+\]
+Thus the original combination is a
+Herr boundary. In particular the dimension of a space of
+independent pairs is at most the sum of the bounds for the
+images of their \(c_i\)'s modulo \(N_i\).
+
+At a lower end letter the possible images lie in the kernel
+of \(\nabla\) on \(X^{-w_i}N_i/N_i\).
+On its graded piece of degree \(a\) the generalized zero
+multiplicity is \(s_i(a)\). The sum for \(-w_i\le a<0\)
+is \(d_i\), so the kernel has dimension at most \(d_i\).
+
+At an upper end letter put \(M=\Phi_i N_{i-1}\),
+\[
+ V=X^{-w_i^*}M
+\]
+and \(J=X^{w_i^*+1}N_i\).
+Then \(J\subseteq N_i\subseteq V\), and \(V/J\) is finite
+dimensional over \(k'\). The required image is that of
+\[
+ \ker(\nabla:V/J\longrightarrow D_i/J)
+\]
+in \(D_i/N_i\).
+The codimension estimate for \(\nabla\) on \(V/J\)
+uses the cyclotomic Frobenius left inverse \(\psi_i\).
+In the range \(1\le w_i^*\le\ell-7\), its scalar companion
+maps \(X^{1-w_i^*}k'[[X]]\) into \(k'[[X]]\), and
+\(\psi_i\Phi_i=1\). On the part of \(X^{1-w_i^*}M\) killed
+by \(\psi_i\), the operator \(\gamma_i-1\) can be inverted
+in \(X^{-w_i^*}M\).
+
+\input{residue-frobenius-inverse}
+
+By Lemma~\ref{lem:residue-frobenius-left-inverse}, for \(u\in V\) apply \(\psi_i\) to \(Xu\), obtaining
+\(y\in N_{i-1}\). Subtract \(\Phi_i y\) from \(Xu\)
+and use the inverse on the \(\psi_i=0\) part.
+Divide by \(X\) to express \(u\) as
+\(X^{-1}\Phi_i y+\nabla v\), with \(v\in V\).
+In a basis of \(N_{i-1}\), write \(y=y_0+Xy_1\)
+with \(y_0\) in the span of the constant basis vectors.
+The preceding letter's Sen vanishing solves
+\[
+ \nabla z\equiv y_1\bmod X^{\sigma_{i-1}+2}N_{i-1}.
+\]
+
+Then \(X^{-1}\Phi_i(Xy_1)\) differs from
+\(\nabla\Phi_i z\) by an element of \(J\), by commutation
+and the carry inequality. It follows that \(V\) is covered
+by \(\nabla V+J\) and the span of the \(r\) vectors
+\(X^{-1}\Phi_i\) of the preceding basis.
+Rank-nullity gives dimension at most \(r\) to
+\(\ker(\nabla:V/J\to D_i/J)\), since \(V/J\) lies in the
+sum of that \(r\)-dimensional contribution and the image
+of this map.
+
+The zero generalized eigenspace on \(N_i/J\) has dimension
+\[
+ \sum_{a=0}^{w_i^*}s_i(a)=r-d_i
+\]
+by its graded pieces.
+The polynomial with \(P(0)\ne0\) gives
+\(\nabla P(\nabla)=0\) on \(N_i/J\). Hence on the generalized
+zero eigenspace \(\nabla=0\), since \(P(\nabla)\) is invertible
+there. These \(r-d_i\) directions of the kernel have zero
+image modulo \(N_i\). The image has dimension at most \(d_i\).
+This proves the rank bound \(\sum_i d_i=d_f\) on the
+common residue model.
+\label{cor:residue-model-length-5}
+
+\paragraph{The residue invariants and the scalar lines.}
+\begin{proposition}[The scalar lines on the residue model]
+\label{prop:offwindow-scalar-residue-model}
+In the residue model of Lemma~\ref{lem:largest-compatible-residue-model},
+with heights and exclusions of Lemma~\ref{hyp:offwindow-local}, none of \(C_e=\bar\epsilon^{-e}\) for
+\(-1\le e<t\) occurs as a subquotient of the marked rank block.
+The marked rank block therefore has zero local cohomology in
+degrees zero and two. For \(0\le e<t\), the induced lattice on a scalar
+subquotient \(C_e\) is its standard model. If \(A_e\) is the space of admissible residue extension classes with trivial quotient and target \(C_e\), then
+\[
+ \dim A_0\le1,\qquad A_e=0\quad(1\le e<t).
+\]
+\end{proposition}
+
+\begin{proof}
+\proofstep{The carry estimate and the excluded scalar residues.}
+Let \(\bar\epsilon\) be the residue cyclotomic character and
+write \(C_e\) for the rank-one representation
+\(\bar\epsilon^{-e}\). The standard model \(L_i^{(e)}\) has
+Sen eigenvalue \(e\) and its Frobenius span is \(X^eL_i^{(e)}\).
+For \(-1\le e<t\) these lattices satisfy the two height
+inclusions. Throughout this range the endpoints satisfy
+\[
+ w_i\ge1,\qquad w_i+e\le h_i-1.
+\]
+The standard models can therefore
+serve as comparison lattices whether or not the line
+is a subquotient under study.
+
+Suppose \(C_e\) were a subquotient of the marked rank block
+for such an \(e\). The induced lattice on that subquotient
+has a Sen eigenvalue congruent to \(e+a\) with
+\(|a|\le\sigma_i\), by the two-direction carry comparison
+with the standard line. Its eigenvalue comes from the
+Sen weights of \(N_i^0\) by exactness.
+The residue exclusion near the scalar block forbids
+\[
+ u\equiv w_i+e+a
+\]
+for \(u\in U_i\), since this point
+is within \(\sigma_i+2\) of the scalar interval.
+For \(e=0\) this rules out invariants. For \(e=-1\)
+it rules out a quotient of cyclotomic character,
+and local Tate duality gives vanishing in degree two.
+\label{cor:residue-model-length-6}
+
+\proofstep{Uniqueness of the induced scalar lattice.}
+For \(0\le e<t\) the standard line is the unique
+model of \(C_e\) induced from the full crystalline sums.
+To see this, refine the subquotient presentation of
+the line to a composition series of the full residue
+representation. Use the induced lattices at each step.
+At the level of semisimplifications, one full copy has the same factors as
+\[
+ \bar W^{\rm ss}\ \oplus\ \bigoplus_{e=0}^{t-1} C_e,\qquad C_e=\bar\epsilon^{-e},
+\]
+where \(\bar W\) denotes the marked residual rank block after twisting by \(\bar\chi_1^{-1}\). Direct sums repeat this list with multiplicity.
+The preceding exclusion keeps the two lists disjoint, and
+the scalar characters are distinct since \(t<\ell-1\).
+The Sen weights of a factor from the rank block are among
+its shifted jump residues by the support argument above.
+
+A lattice on a scalar factor \(C_a\) is \(X^{\kappa_i}L_i^{(a)}\)
+for an integer \(\kappa_i\). The two-direction bound gives
+\[
+ |\kappa_i|\le\sigma_i.
+\]
+Its height conditions read
+\[
+ -w_i+\kappa_i\le \ell\kappa_{i-1}+a
+                      \le w_i^*+\kappa_i .
+\]
+The end-width bound of Lemma~\ref{hyp:offwindow-local}
+gives \(\eta'_i+\sigma_i<\ell\). Use the left height inequality
+at a lower end, and the right one at an upper end, to obtain
+\begin{equation}\label{eq:scalar-end-signs}
+ \begin{array}{ll}
+ \ell\kappa_{i-1}\ge -(w_i+a)+\kappa_i
+          \ge-\eta'_i-\sigma_i>-\ell
+     &\text{at a lower end},\\
+ \ell\kappa_{i-1}\le (w_i^*-a)+\kappa_i
+          \le\eta'_i+\sigma_i<\ell
+     &\text{at an upper end}.
+ \end{array}
+\end{equation}
+
+At a fixed letter \(i\), index the scalar composition factors by
+\(a_\nu\), with repetitions. Every shift \(\kappa_{i,\nu}\)
+is therefore nonnegative if the next letter is a lower end and
+nonpositive if it is an upper end. All shifted weights
+\(a_\nu-\kappa_{i,\nu}\) belong to
+\([-\sigma_i,t-1+\sigma_i]\). This interval has length less than
+\(\ell\), contains the nominal scalar weights and excludes the
+rank-block weights. Additivity of generalized Sen multiplicities
+therefore gives equality of integer multisets in this interval.
+In particular
+\[
+ \sum_\nu (a_\nu-\kappa_{i,\nu})=\sum_\nu a_\nu
+ \quad\Longrightarrow\quad\sum_\nu \kappa_{i,\nu}=0 .
+\]
+The sign from \eqref{eq:scalar-end-signs} forces each shift to vanish. This also applies to the line in
+the original subquotient presentation.
+\label{cor:residue-model-length-7}
+
+\proofstep{Removing pole terms in an admissible Herr pair.}
+Now take an admissible extension with target \(C_e\),
+\(0\le e<t\), and trivial quotient. Its Herr pair \(b_i,g_i\)
+is on these standard lattices. We have \(g_i\in XL_i^{(e)}\).
+At a lower end letter \(b_i\in X^{-w_i}L_i^{(e)}\), and
+at an upper end letter
+\[
+ b_i\in X^{e-w_i^*}L_i^{(e)}.
+\]
+
+In either case the permitted pole degrees \(j>0\)
+satisfy \(e+j<\ell\), by the short end width:
+\(w_i+e\le\eta'_i\) on the lower side and
+\(w_i^*\le\eta'_i\) on the upper side.
+The cocycle equation implies \(\nabla b_i\in L_i^{(e)}\),
+since Frobenius takes \(XL_{i-1}^{(e)}\) to
+\(X^{\ell+e}L_i^{(e)}\). On the negative degree \(-j\)
+the leading eigenvalue of \(\nabla\) is \(e+j\ne0\).
+Inductively eliminating the negative coefficients shows
+\[
+ b_i\in L_i^{(e)}.
+\]
+For \(e>0\), \(\Phi\) is contracting
+on \(\prod_iL_i^{(e)}\). Inverting \(\Phi-1\) there kills
+the pair by the same cochain argument as above.
+
+\proofstep{The constant class on the cycle.}
+For \(e=0\), reduce \(b_i\) modulo \(X\) to a constant
+\(c_i\) in the invariant basis. Invert \(\Phi-1\)
+on \(\prod_i XL_i^{(0)}\) for \(b_i-c_i\).
+The cocycle equation again identifies the other
+coordinate as the cyclotomic difference of the resulting
+vector, since \(\gamma_i\) fixes the \(c_i\).
+Let \(q\) be the number of letters and \(k\) the residue
+field. The last coordinate space is a subquotient of
+\[
+ k^q/\{(d_{i-1}-d_i)_i : d\in k^q\}.
+\]
+On the cycle every difference vector has zero sum. Conversely
+if \(\sum_i c_i=0\), start with \(d_0=0\) and solve
+\(d_i=d_{i-1}-c_i\) successively. The last equation closes
+because the sum is zero. Thus summation identifies the displayed
+quotient with \(k\). This calculation uses no division by \(q\)
+and gives a dimension bound of one in every residue characteristic.
+\label{cor:residue-model-length-8}
+\end{proof}

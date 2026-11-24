@@ -1,0 +1,347 @@
+\subsubsection*{Ordinary split primes and the short band}
+\label{subsec:ordinary-split-length}
+\hypertarget{source-unramified-split-length}{}
+
+After removing the type and ramified primes, the auxiliary field is unramified at the remaining primes in this range. At split primes the signed jumps lead to a short exceptional band; its placement must be compatible with the previously selected top positions.
+
+\begin{established}[Unramified split range and signed jump window]\label{hyp:unramified-split-row}
+Let \(\ell\) be outside the prime divisors of \(Q_S\), the primes
+\(3,q,d\), and the two type primes. Consider first the range
+\(\ell\le\ell_*\) together with the exceptional primes above
+\(\ell_*\). At a prime split in the distinguished quadratic field, each column \(u\) is paired with its conjugate row, the column degrees sum to \(f\), and every completion is unramified. Put \(z=\log b\) and \(a=\lfloor b+S_c+\eta_c+t+2\rfloor\). For each column \(u\), both signed crystalline maps have jumps in \([-a,a]\), and their respective targets obey
+\[
+ \max\left\{\operatorname{rk}_O H^1_f(E_u,T_{2,u}),
+          \operatorname{rk}_O H^1_f(E_{\bar u},T_{2,\bar u})\right\}
+               \le [E_u:\mathbb Q_\ell]m .
+\]
+\end{established}
+\begin{proof}
+The excluded list contains every prime dividing the conductor of the host. Let \(U\) index the places on the selected side and \(D_u=[E_u:\mathbb Q_\ell]\). Conjugation gives the other side, so
+\[
+ 2\sum_{u\in U}D_u=[E:\mathbb Q]=2f,\qquad |U|\le f .
+\]
+
+Lemmas~\ref{lem:marked-row-column-lattices} and~\ref{lem:marked-signed-jumps} identify the maps and the labelled jumps on this cut. At a good point use the direct normalized family on a column and
+the Tate dual family on its conjugate row. Their jumps are in
+\([-a,a]\) at every embedding by the jump boxes for the common
+twist. Taking rational subquotients of finite direct sums preserves
+crystallinity and this bound. For \(W\) on the column and
+\(W^\vee(1)\) on the row, the free ranks of integral finite
+cohomology are at most \(D_um\). Indeed the respective target
+jumps avoid zero.
+
+Among them \(k-1\) are positive on the column
+and arise from negative jumps of \(W\) under \(j\mapsto-j-1\)
+on the row. Write \(h_\tau^-\) for the number of negative target jumps at \(\tau\), including multiplicities. The split finite-rank formula in Section~\ref{subsec:split-local-length} gives, on either side,
+\[
+ \operatorname{rk}_O H^1_f(E_u,T_{2,u})=\sum_{\tau\mid u}h_\tau^-
+                        \le D_um .
+\] The column and row surjections in the congruence determinant
+are on lattices in these subquotients. \label{cor:unramified-split-length-1}
+\end{proof}
+
+\begin{proposition}[Uniform finite lifting over the unramified completion]\label{prop:unramified-split-finite-lift}
+For a crystalline lattice surjection in the signed window
+\([-a,a]\) of Lemma~\ref{hyp:unramified-split-row}, the cokernel on integral finite cohomology
+is killed by \(\ell^{e_A}\), where
+\[
+ e_A=\left\lceil23\bigl(2+2a/\ell+\log_\ell(2a+1)\bigr)\right\rceil .
+\]
+The allowance is independent of the degree of the coefficient
+extension and the number of embeddings of the unramified field.
+\end{proposition}
+
+\begin{proof}
+We show why the exponent on these surjections can be taken to be
+\[
+ e_A=\left\lceil23\bigl(2+2a/\ell+\log_\ell(2a+1)\bigr)\right\rceil .
+\]
+The estimate applies to a surjection of crystalline lattices with
+the indicated window over any of these unramified fields. Use an
+admitted coefficient extension containing the local embeddings and
+the first cyclotomic level as in Section~\ref{subsec:cut-wach-models}.
+The invariance of normalized length there returns the result on the
+row or column surjection to its original coefficient ring. Use the
+integral Wach--Herr comparison over the unramified field, with
+Wach parameter \(\pi\) and height width \(h_1=2a\).
+The Frobenius coefficient extraction of
+Section~\ref{subsec:ramified-lift}, here with \(X=\pi\), puts
+\(\pi^{h_1}N_2\) in the image of \(N_1\). On the full Wach
+lattice the cyclotomic action is trivial modulo \(\pi\).
+Choose a cyclotomic operator with character \(v\) generating
+\(\mathbb Z_\ell^\times\), so its reduction has order
+\(\ell-1\) and
+\[
+ v_\ell(v^{\ell-1}-1)=1.
+\]
+
+It acts on degree \(j\) by \(v^j\). Use the two interpolation
+intervals \([0,h_1-1]\) and \([h_1,2h_1-1]\).
+For a root \(v^i\) the only other roots giving nonunit
+differences have indices congruent to \(i\) modulo \(\ell-1\).
+On the two sides of \(i\) their numbers are
+\[
+ d_1=\lfloor i/(\ell-1)\rfloor,\qquad
+ d_2=\lfloor(2h_1-1-i)/(\ell-1)\rfloor.
+\]
+The total valuation of the interpolation denominators satisfies
+\[
+ d_1+d_2+v_\ell(d_1!d_2!)\le \frac{2h_1\ell}{(\ell-1)^2}.
+\]
+The integral polynomial identity from the two intervals therefore puts \(\ell^{E_W}N_2\) in the image, for
+\(E_W=\lfloor2h_1\ell/(\ell-1)^2\rfloor\).
+For \(a=0\) the parameter-power inclusion already gives the lift.
+Averaging over the subgroup \(\Delta\) of order \(\ell-1\)
+preserves this bound on the invariant lattices. This elementary
+interpolation bound suffices at the split caller.
+
+Write \(N=N_0^\Delta\) for the invariant Wach lattice of the
+kernel. The invariant coordinate \(P\) is a unit times
+\(\pi^{\ell-1}\). Put \(Q'=P+\ell\), and let \(u\) be the
+character of the principal cyclotomic generator \(\gamma\), with
+\(v_\ell(u-1)=1\). The comparison gives the restricted coordinates
+\((Q')^{-a}N\oplus PN\) for pairs and differential
+\[
+ d(y,z')=(\gamma-1)y-(\varphi-1)z'.
+\]
+
+It gives the following two facts on the kernel. First,
+\(N\) is \(\ell\)-saturated in \((Q')^{-a}N\), and
+\(\partial=(\gamma-1)/P\) preserves \(N\).
+Second, if \(U\) is the set of source jumps, put
+\[
+ J=\big((U+\{1,\ldots,a\})\setminus\{0\}\big)
+                \cup\{1,\ldots,a\},\qquad
+ R_0(Z)=\prod_{j\in J}(Z-c_j),\quad c_j=(1-u^{-j})/\ell .
+\]
+Then \(\partial R_0(\partial)y\in N\) for \(y\in(Q')^{-a}N\).
+The latter is the cyclotomic semisimplicity input on the
+bounded-pole quotient. The comparison at the cyclotomic roots
+reads the jumps shifted by the pole degrees \(1,\ldots,a\).
+In the divided operator the eigenvalue for shift \(j\) is
+\(c_j\), since the invariant coordinate at the root is
+\(-\ell\). The extra factor \(Z\) accounts for shift zero.
+Strictness puts the kernel jumps among the source jumps.
+\label{cor:unramified-split-length-2}
+
+Here is the correction of a defect in lifting a pair. Put
+\(d_0=\lfloor a/(\ell-1)\rfloor\) and
+\(G=\prod_{i=1}^{d_0}(1-u^{(\ell-1)i})\). On
+\(P^iN/P^{i+1}N\), \(\gamma\) acts by \(u^{(\ell-1)i}\).
+Successive subtraction through the graded factors gives
+\[
+ GPN\subseteq(\gamma-1)PN+P^{d_0+1}N.
+\]
+
+The height inclusion and the factor \((Q')^{\ell-1}\) in
+\(\varphi(P)/P\) make Frobenius contracting on
+\(P^{d_0+1}N\), since \((\ell-1)(d_0+1)>a\).
+In this complete submodule the geometric series solves the inhomogeneous equation:
+\[
+ (1-\varphi)\sum_{n\ge0}\varphi^n x=x\qquad(x\in P^{d_0+1}N).
+\] The integral restricted Herr
+correction applied with these data kills every rationally
+trivial defect by \(G R_0(0)\). To see the role of division
+by \(P\), write the defect as \(P\beta\).
+
+In the equation
+for a multiple which is a boundary, use the graded correction
+on the second coordinate. Dividing by \(P\) leaves
+\(\partial\) on the first coordinate and an integral term
+on the other side. Applying \(R_0(\partial)\) makes this
+first-coordinate difference integral, by the bounded-pole
+identity. More explicitly this gives \(\ell^j G R_0(\partial)\beta\in N\)
+when the original boundary equation holds after multiplication by \(\ell^j\). Saturation in the
+bounded-pole lattice and \(G\mid\ell^{v_\ell(G)}\) up to a unit
+give
+\[
+ R_0(\partial)\beta\in N.
+\]
+
+Using \(R_0(Z)=R_0(0)+Z S_0(Z)\) and
+\(P\partial=\gamma-1\), the corrected defect satisfies
+\[
+  R_0(0)P\beta
+       =P R_0(\partial)\beta-(\gamma-1)S_0(\partial)\beta .
+\]
+Here \(P R_0(\partial)\beta\in PN\). The second summand is
+the indicated cyclotomic difference. The positive-degree
+correction by \(G\) and the deep correction by \(1-\varphi\)
+apply to the first summand in \(PN\).
+
+\label{cor:unramified-split-length-3}
+
+An integral finite class is represented by a crystalline extension
+of the trivial lattice. Lifting its quotient generator on the
+invariant Wach module costs \(E_W\) and gives a restricted pair.
+Lifting the two coordinates through the given surjection costs
+a second \(E_W\). The defect lies in the kernel coordinates
+by exactness. It is rationally trivial by surjectivity on rational
+finite classes for crystalline quotients and the rational Herr
+comparison. The integral correction gives a finite source class.
+The resulting exponent is at most
+\[
+  2E_W+\sum_{j\in J}v_\ell(j)
+       +(d_0+1)+v_\ell((d_0+1)!).
+\]
+Indeed \(v_\ell(c_j)=v_\ell(j)\) and
+\(v_\ell(G)=d_0+v_\ell(d_0!)\).
+The distinct indices lie in \([-a,2a]\setminus\{0\}\), so their
+sum of valuations is at most \(3a/(\ell-1)\).
+
+For \(\ell\ge3\), the three displayed contributions are at most
+\(9h_1/\ell\), \(9h_1/(4\ell)\), and
+\(3(a/(\ell-1)+1)/2\), respectively. Their sum is at most
+\(13h_1/\ell+2\le e_A\). In particular the exponent has no
+factor depending on the number of embeddings or the coefficient
+ramification. \label{cor:unramified-split-length-4}
+\end{proof}
+
+\paragraph{The determinant on the split family.}
+\begin{lemma}[Split determinant bound at the same lift]
+\label{lem:unramified-split-determinant-total}
+Use the unramified split range and the maps of
+Lemma~\ref{hyp:unramified-split-row}, with \(z\ge1\). If \(L\) denotes the total lifting term and \(D\) the sum of the remaining local determinant terms, then
+\[
+ L\le (2fm+f)e_A,\qquad D\le7200fnt^2Rz^2.
+\]
+The separate global and signature allowances are unchanged.
+For the inert declaration only \(B_0\) from this calculation
+is used.
+\end{lemma}
+
+\begin{proof}
+Use Proposition~\ref{prop:unramified-split-finite-lift} on the
+row and column surjections specified by the same lift.
+Normalize every length by \(\operatorname{length}_O(O/\ell O)\).
+Write \(R=r+t\), \(h=\lfloor2b\rfloor\),
+\(N_0=4nR\), \(K_0'=\lfloor\log_\ell(2h)\rfloor\) and
+\(K_1'=\lfloor\log_\ell(2(h+1))\rfloor\).
+There are at most \(D_wR\le N_0\) distinct jumps in the
+character calculation. Passing to \(E_w(\mu_\ell)\) has
+prime-to-\(\ell\) degree. Thus the character calculation giving
+\eqref{eq:tag-r2} applies, with depth at most \(4+K_0'\), and gives exponent
+\[
+ c_B=6+K_0'+7t+tN_0(4+2K_0').
+\]
+For the column and dual row torsion comparison the window lies in
+\([-h-1,h+1]\) with zero absent.
+
+In the invariant formula in
+Section~\ref{subsec:split-local-length}, take one truncation
+degree and full cyclotomic depth one. The depth term is at most
+\(3+K_1'\), the sum over jumps is at most \(N_0(4+2K_1')\),
+and the two integral comparison losses in this degree add two.
+The bound for the invariant-killing exponent is therefore
+\[
+ c_0=5+K_1'+N_0(4+2K_1').
+\]
+If the jump sum is empty, the extra unit allowance in the
+maximum is also covered by this bound since \(N_0\ge1\).
+Consequently \(h_W(u)\le rc_0\).
+The free and torsion parts of the dual row give colength at
+most \(D_um e_A+rc_0\). The torsion bound follows from the
+invariant subgroup of the divisible target modulo its lattice.
+These are estimates on the given lattices. \label{cor:unramified-split-length-5}
+
+Write \(k_c\) for the number of columns. At depth one the
+marked scalar satisfies \(v_\Delta\le 2t\) by the cyclotomic
+difference valuations. On the nontrivial scalar twists
+\((K_\ell/O)(-j)\) with \(1\le j<t\), the unramified base has
+an inertia element of character \(1+\ell\), so its invariants are killed by \((1+\ell)^{-j}-1\). Their
+normalized length is bounded by
+\[
+ v_\ell((1+\ell)^{-j}-1)=v_\ell((1+\ell)^j-1)
+                         =1+v_\ell(j)\le t .
+\] Use \(h_0\le t\) for
+their maximum, or zero for an empty set.
+
+Summing the three
+blocks of the determinant gives a common local term
+\[
+ B_0=t\sum_{w\ {\rm row}}(D_w+2)c_B
+       +4R(k_c+1)v_\Delta+tk_ch_0 .
+\]
+The column and conjugate row at \(u\) add
+\((2D_um+1)e_A\) and the error
+\(D_umv_\Delta+2v_\Delta+h_W(u)+rc_0\).
+In fact the column contributes \(j_u(e_A+v_\Delta)+e_A\)
+and the row contributes \(D_um e_A\) before adding their
+torsion costs. The other column and coboundary denominators
+are those of Section~\ref{subsec:split-local-length}.
+
+Using \(z\ge1\), \(K_0'\le2+2z\) and \(K_1'\le3+2z\), the two scalar losses are
+\[
+ c_B\le120t n\,R z,\qquad c_0\le120 n\,R z.
+\]
+Put
+\(U_0=120fnt^2Rz\). The sum of row degrees plus twice their
+number is at most \(6f\), and \(k_c\le2f\). Thus the three
+terms of \(B_0\) are at most \(6U_0,24U_0,2U_0\).
+The additional split errors are at most \(4U_0,8U_0,4U_0\)
+for the degree term, the scalar term, and the two invariant
+terms, using \(m\le r\le t\).
+
+Adding the six errors bounds their sum by
+\[
+        (6+24+2+4+8+4)U_0
+           \le 7200 fnt^2Rz^2 ,
+\]
+since \(z\ge1\). The sum of the lifting terms is at most
+\((2fm+f)e_A\). Together these give the split and boundary
+entries in Section~\ref{subsec:prime-cost-sums}, since
+\(e_A\ll 1+H/\ell+\log_\ell H\). The global kernels, the
+signature bound and the tame character costs retain their
+separate allowances. In the inert case \(k_c=0\) and the
+same calculation bounds \(B_0\) alone. The rank-\(r\) row
+colengths there depend on the inert jump word.
+\label{cor:unramified-split-length-6}
+\end{proof}
+
+\paragraph{Transport of the band at an inert place.}
+\begin{lemma}[Passage from the row band to the place bound]
+\label{lem:inert-place-band}
+In the last two inert ranges let \(b_{\rm row}\) be the marked row band indicator and \(b_\ell\) the place indicator used in the weighted sum at its rational prime. Then
+\[
+ b_{\rm row}\le b_\ell\qquad(b_{\rm row},b_\ell\in\{0,1\}).
+\]
+\end{lemma}
+
+\begin{proof}
+On a row in either of the last two inert ranges, suppose the
+local band indicator is one. In the canonical data this gives
+a good point, a row word at a place over \(\ell\ge11\), and
+a position with smaller jumps of local weight \(a_0\) with
+\[
+ |\ell a_0-b_0|\le K\{\ell\eta+\ell S+b_0/\ell+a_0+
+                                          \ell\log_\ell(2h_b)\}.
+\]
+Here \(h_b\) is the height of the word, and \(b_0\) its large
+weight. The weight box on the same word supplies a place weight
+\(s\) between \(\omega\) and the upper place-weight size with
+\[
+ |a_0-s|\le T,\qquad b-T\le b_0\le b-T+1,\qquad T=(t+1)/2 .
+\]
+The prime beneath this row equals the table prime, as the
+contraction of its maximal ideal contains a unique rational
+prime.
+
+We have \(\eta\le\eta_3=\eta_c+t+2\),
+\(S\le S_c\), \(h_b\le b_0+\eta+S\le 2b\) on the
+selected range, and \(\log_\ell(4b)\le z\) since \(z\ge1\)
+and \(4e<11\). Put \(A_s=\ell(\eta_3+S_c+z)+b/\ell+s\).
+
+The braces in the local inequality are at most
+\(A_s+\ell\eta_3\), since \(a_0\le s+T\) and
+\(b_0/\ell\le b/\ell+1/\ell\).
+The two changes on the left cost at most
+\(\ell T+T\le\ell\eta_3\). Hence
+\[
+                 |\ell s-b|\le(2K+1)A_s .
+\]
+The table constant dominates \(6K+1\), and therefore the
+indicator in the weighted sum dominates every local band
+indicator. Hence the global harmonic sum bounds the frequency of the band on each of these rows. Its contribution per occurrence still requires an inert-row colength estimate.
+\label{cor:unramified-split-length-7}
+\end{proof}
+

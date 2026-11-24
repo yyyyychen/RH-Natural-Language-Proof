@@ -1,0 +1,564 @@
+\paragraph{The theta maps on this row.}
+Fix one specialization and its levels at the primes assigned to the sequences. Denote the
+unitary spaces in its chain by \(Y_0,\ldots,Y_m\), identifying
+the definite top with \(Y_m\) by its given isometry. For a used tuple \(\mu\), take the multiplicity space \(M_j\) in the row at the refined level on \(Y_j\). The downward maps form the chain
+\[
+ M_m\xrightarrow{D_{m-1}}M_{m-1}\longrightarrow\cdots\longrightarrow M_1\xrightarrow{D_0}M_0 .
+\] We need a simultaneous realization of the \(D_j\) by theta
+integrals with the Petersson pairings on these very spaces.
+This is stronger than existence of each local intertwiner.
+
+\begin{proposition}[Isometric realization of the theta chain]\label{prop:isometric-refined-theta-chain}
+At the fixed specialization and assigned levels, choose
+isometric readings \(R_j\) of every multiplicity space on
+a used tuple. With the stated Petersson measures and chosen
+Weil and level characters, write \(\Theta_j^{\downarrow}\) for the downward theta integral transported back to the multiplicity rows by these isometries. On every edge of the chain, including the last,
+\[
+ \Theta_j^{\downarrow}=D_j.
+\] On unused tuples the zero row realizes the
+prescribed zero maps.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Fix the inner product multiplier at each stage.}
+Use the identifications of the row spaces at the refined level for both the multiplicity
+pairing and the downward integral. At zero these include \(M_0\)
+in the base row, at intermediate indices in the cuspidal
+multiplicity spaces, and at the last index in the definite one.
+For the sharp index \(n_P\), the stage-zero measure is
+\(n_P^{-1}\nu_0\) with pairing multiplier \(c_0=1\).
+At the intervening stages the original quotient measures
+have \(c_j=n_P^{-1}\). At the top the local definite factors \(M_{X,\tau}\) from the row enter with the common level divisor:
+\[
+ c_m=\frac{\prod_\tau \dim M_{X,\tau}}{n_P}.
+\] The latter
+identity is Schur orthogonality at the definite factors.
+The same lower multiplier \(c_j\) occurs when the downward
+model integral is paired against a vector of \(M_j\).
+\label{cor:level-four-core-1}
+
+\proofstep{Choose a common evaluation tensor serving both edges at each interior stage.}
+For each edge its nonzero real intertwiner has a nonzero
+matrix coefficient on a polynomial test and a pair of pure
+smooth tensors, since such tensors span the algebraic tensor
+product and separate its elements by the inner product. Fix
+one such polynomial and a pair of tensors giving a nonzero coefficient
+on each edge, including the last. Vary each tensor factor in the
+finite real span of the corresponding chosen factors.
+
+Let \(P_j(\mathbf t)\) be the resulting coefficient on edge \(j\) in the
+common real coordinate space. At the pair chosen for edge \(j\) its coefficient is nonzero, so
+\(P_j\not\equiv0\), even with the unused coordinates adjoined.
+The polynomial ring has no zero divisors, so
+\[
+ \prod_j P_j(\mathbf t)\overline{P_j(\mathbf t)}\not\equiv0 .
+\] At a point where the product is nonzero,
+normalize each factor to unit norm and scale the test on each
+edge to make its coefficient one. Thus both occurrences of a
+stage use one and the same evaluation tensor. The resulting
+polynomial test has nonzero Schwartz function by the model
+intertwining identity.
+
+\proofstep{Scale each row isometrically and then normalize its edge integral.}
+Write \(\kappa_j>0\) for the required quotient multiplier on
+\(Y_j\), including its finite and real Petersson factors.
+Let \(r_j>0\) be the quotient-measure ratio. In the convention of this comparison the two pairings are related by
+\[
+ \langle\ ,\ \rangle_{Y_j,\kappa_j}=(\kappa_j/r_j)\,\langle\ ,\ \rangle_{\rm transported\ model}.
+\] The Haar ratios include transport from the definite
+top. Evaluate the multiplicity map on the chosen tensor and
+multiply the transported cusp function by
+\(s_j=(c_jr_j/\kappa_j)^{1/2}\). Schur orthogonality and rapid
+decay give the original \(M_j\) inner product, because the multiplier for two readings is
+\[
+ \frac{\kappa_j}{r_j}s_j^2
+ =\frac{\kappa_j}{r_j}\frac{c_jr_j}{\kappa_j}=c_j .
+\] Denote this isometric reading by \(R_j\).
+
+On the edge with upper space \(W=Y_{j+1}\), let \(r_W^I\)
+be the transported quotient ratio for its integration variable.
+Use the oriented Weil kernel from \(W\) to \(Y_j\), with its
+recorded splitting characters. Multiply its test by
+\[
+ a_j=\frac{c_jr_j r_W^I}{\kappa_j\kappa_{j+1}s_js_{j+1}} .
+\]
+The integral against \(R_{j+1}y\), followed by the lower
+Petersson pairing against \(R_jx\), gives the model pairing
+with scalar
+\[
+ (\kappa_{j+1}/r_W^I)\, a_js_{j+1}s_j\,(\kappa_j/r_j)=c_j .
+\]
+The real intertwiner coefficient in this pairing is one.
+The model chain identity now gives \(\langle D_jy,x\rangle\)
+for all \(x,y\). This argument uses the convergent upper
+theta integral of the marked cuspidal chain. It includes the
+last edge by transporting its Weil action as well as its Haar.
+
+Use the unique marked infinity data, the standard character of
+sign \(-1\), and a unitary Weil realization for that character.
+For a finite tuple character \(\chi\) there is an integer \(n\ge1\) such that, writing \(F\) for the totally real subfield of the auxiliary CM field,
+\[
+ \chi^n=1,\qquad \chi|_{\mathbb A_F^\times}=1 .
+\] Their splitting characters
+agree with the marked ones by the character identities on
+ideles. On unused tuples the specified \(D_j\) are zero, so zero
+row functions and the original nonzero tests give both required
+edge integrals. The row isometry is required on used tuples.
+In the theta realization the quotients and their Petersson
+multipliers are exactly the ones just used. Equality of these
+integrals therefore gives the required downward maps under
+pairing, and the construction has the prescribed Weil
+equivariance and finite characters on the same realization.
+\label{cor:level-four-core-2}
+\end{proof}
+
+\begin{proposition}[Divisor with the marked row and finite support]\label{prop:core-divisor-support}
+Use the refined theta chain of
+Proposition~\ref{prop:isometric-refined-theta-chain} with
+its sharp and bottom row comparisons at the same specialization.
+The finite prime support of the divisor, denoted \(S_D\), is
+\[
+ S_D=\{p:\text{some component of }\xi_\mu\text{ above }p\text{ is ramified}\},
+\]
+where the character is the actual tuple character of the divisor. It has the same marked
+coefficient-place valuations and row norm at the
+initial flag datum.
+\end{proposition}
+
+\begin{proof}
+Use the simultaneous theta kernels of
+Proposition~\ref{prop:isometric-refined-theta-chain}.
+Let \(E/F\) be the marked CM extension, \(P(v)\) the chosen prime
+of \(E\) over each \(v\) of \(F\), and \(\xi_\mu\) the
+original character of the column tuple. Use the rational lift
+spaces, bases, integral modules and Gram matrices of the fitted
+row. The sharp scalar is fixed before the finite type is chosen. For each type \(\sigma\) used here it is
+\[
+ \kappa(\sigma)=\kappa_{\rm sharp}.
+\]
+
+For each spectral label choose a reference finite type
+above it if one occurs. A fallback type exists by positivity
+of the reference primitive block. At the distinguished embedding
+the logarithmic value is \(\log\lambda_{\mu_0,j,\sigma}\) from
+the row. At another embedding the value at a tested lift is zero
+on a zero isotypic component and is the logarithm of the chosen
+type's reference reading otherwise. One choice of type for each
+label works at every lift.
+
+\proofstep{Identify finite support by contracting the same ramification places.}
+Put \(S_\mu=\{v:\xi_\mu\text{ ramifies at some }P\mid v\}\).
+The character pins give ramification at the chosen \(P(v)\) if
+\(v\in S_\mu\), so the rational set is
+\[
+ Q_\mu=\{v\cap\mathbb Z:v\in S_\mu\}
+      =\{P(v)\cap\mathbb Z:v\in S_\mu\}.
+\]
+For the reference \(\mu\) it is empty. For every tuple it
+excludes the two type primes, and for \(\mu(w)\) it excludes
+the residue characteristic at \(w\), by the local twist choice
+on the support and the trivial tuple elsewhere.
+
+If \(p=P(v)\cap\mathbb Z\) is a ramified character place,
+the pin there gives \({\rm N}P(v)=p\) and
+\(p\in P(v)\setminus P(v)^2\). The norm determines the residue degree, while \(p\notin P(v)^2\) determines the ramification index:
+\[
+ f(P(v)/p)=1,\qquad e(P(v)/p)=v_{P(v)}(p)=1 .
+\]
+Both indices are multiplicative in the tower, so the norm
+downstairs is the same rational prime. This gives the
+degree-one local field used for the tame determinant character
+\(\delta\) and the unramified unitary quotient characters \(\nu_i\).
+
+\label{cor:level-four-core-3}
+
+Here is the local normalization. Write \(q\) for the residue
+cardinality, \(A\) for the local ring of integers, and
+\(\varpi\) for its uniformizer. On the edge out of stage \(j\)
+use the Levi with blocks \(r,jt\). Write \(P\) for the parabolic in the second block with \(j\) blocks of size \(t\). Its spherical representation is obtained from normalized induction of the ordered determinant characters, whose inducing representation is
+\[
+ (g_1,\ldots,g_j)\longmapsto\prod_{i=1}^j\nu_i(\det g_i).
+\] Take the algebraic cyclic span of its smooth spherical unit vector
+\(v_0\). The maximal compact \(K\) has a one-dimensional fixed space
+\(\mathbb C v_0\) by Iwasawa decomposition.
+
+If a nonzero invariant
+subspace contains \(u\ne0\), there is a translate \(gu\) with
+\(\langle gu,v_0\rangle\ne0\), since the translates of \(v_0\)
+span. With probability measure on \(K\),
+\[
+  \int_K \pi(k)\pi(g)u\,dk=\langle \pi(g)u,v_0\rangle v_0 ,
+\]
+using the linear-first Hermitian convention and \(\|v_0\|=1\).
+Smoothness makes the average a finite linear combination, so
+the invariant subspace contains \(v_0\) and equals its cyclic span.
+For a diagonal entry \(z\) in block \(a=0,\ldots,j-1\) the
+Borel law has factor
+\(\nu_{a+1}(z)|z|^{(jt-t)/2-at}\) by the half modulus of
+this parabolic. The first Levi block acts trivially in this
+spherical model. For \(j=0\) the second block is trivial.
+\label{cor:level-four-core-4}
+
+Let \(J\) be the parahoric reducing to the stated upper block
+parabolic \(P\) modulo \(\varpi\). For \(g\in J\) let \(d(g)\) be its lower diagonal block. Multiplication respects this block modulo \(\varpi\), so for the character of \(J\) one obtains
+\[
+ \chi_J(gg')=\delta(\det d(g))\delta(\det d(g'))=\chi_J(g)\chi_J(g').
+\]
+On \(P\cap J\) it agrees on the fixed unit vector with the
+inducing law, since the diagonal blocks have unit determinant
+norm. Extend this vector to a section on \(PJ\) by the two
+transformation laws and set it to zero elsewhere. On the
+maximal compact \(K\) its squared norm is the indicator of
+\(K\cap PJ\). Give \(J\) volume one and scale the section by
+\(\operatorname{vol}(K\cap PJ)^{-1/2}\). The matrix coefficient
+at the identity is then one.
+
+Use the dimension of this type
+space and the doubling integral of the section in the divisor
+data. The first-edge value can be read directly. The two-block test in these coordinates is supported on integral invertible \(X\) and \(\varpi\)-divisible \(Y\). There it has the value
+\[
+ (X,Y)\longmapsto\delta(\det X)^{-1},\qquad X\in\mathrm{GL}_r(A),\quad Y\in\varpi M_{t,r}(A).
+\] Testing also \((Xg,Yg)\) forces
+\(g\in{\rm GL}_r(A)\). On this compact group the ratio of the
+tests cancels \(\delta(\det g)\) in the Weil action, and the
+norm and unramified factors equal one. With the two full
+integral matrix boxes of additive volume one, the first
+value is therefore
+\[
+                q^{-tr}\prod_{i=1}^{r}(1-q^{-i}).
+\]
+If the residue field has cardinality \(q\) and the block has size \(d\), this product is the invertible-matrix density. Counting linearly independent columns gives
+\[
+ \frac{|\mathrm{GL}_d(\mathbb F_q)|}{q^{d^2}}=\prod_{a=0}^{d-1}\frac{q^d-q^a}{q^d}=\prod_{j=1}^d(1-q^{-j}).
+\] All of these values refer to the primes of
+\(Q_\mu\) just selected. \label{cor:level-four-core-5}
+
+\proofstep{Realize the original coefficient valuations at the constant-field flag.}
+For the initial flag datum use the constant function field equal
+to the row field, with full section space there, one auxiliary
+level supported on the two type primes, zero curve degrees and
+zero maps from the row to sections. At each marked place it is the actual coefficient valuation that has to be recovered. For an embedding \(e\) into a valued field with valuation ring \(O\), the test is
+\[
+ a\in\mathcal O_{\rm coeff,\,w}\quad\Longleftrightarrow\quad e(a)\in O
+\]
+on the coefficient field. Embed the Witt fraction
+field for each place in \(\C\) using a transcendence basis and
+extend its valuation ring. The Witt field has at most continuum
+cardinality. Conjugacy of the extensions of the \(p\)-adic place
+to \(\overline{\Q}\) permits an embedding of the coefficient
+number field inducing the prescribed place on restriction.
+A complex field automorphism taking that embedding to the
+distinguished one transports the Witt embedding and its
+extended valuation ring together.
+
+If \(e\) denotes one of the transported embeddings and \(O\) its chosen extended valuation ring, the local reading on the coefficient field is recovered by inverse image:
+\[
+ e^{-1}(O)=\{a:e(a)\in O\}.
+\] Adjoin
+this flag datum to the divisor, retaining its original row
+basis, lattice, norm, logarithmic values, sharp factor and
+quotient-prime readings. This is the base case of the geometric
+condition closed under changing division lattices and heights.
+The later geometric degree estimates use the parameter models
+constructed on a completed point.
+\label{cor:level-four-core-6}
+\end{proof}
+
+\begin{proposition}[The integral kernel on the selected divisor]\label{prop:level-four-integral-kernel}
+On the selected divisor of Proposition~\ref{prop:core-divisor-support}
+and the prescribed stage lattices,
+let \(C_j\) be evaluation on the class charts, \(\Lambda_j\) the integral row, \(O\) the upper valuation ring and \(M_j^{\rm int}\) the module of equivariant functions with integral tensor Weyl values. At each valid positive stage, \eqref{eq:core-upper-image} reads
+\[
+ O\,C_j(\Lambda_j)=M_j^{\rm int}.
+\] At each selected pair of
+class representatives the transported Taylor kernel is
+the prescribed entry series in the adapted bases.
+The first maps and all these entries use the same divisor
+and the ramified word lattice.
+\end{proposition}
+
+\begin{proof}
+Fix a word \(u\) and a coefficient place \(w\) satisfying the
+local orbit condition of Section~\ref{subsec:column-orbit-length}.
+Use its marked column and the tuple \(\mu(w)\). Write \(k\) for
+the starting column rank, \(t\) for the block size added on each
+edge, and \(\Delta=\lceil x^{c_D}\rceil\). The bound
+\(c=16k\Delta\) works for the column entries and the first
+filling weight simultaneously on all sequences. The interior Harish--Chandra entries \(u\) and the two extreme entries off the top have the respective bounds and values
+\[
+ 3\Delta-\tfrac12\le u\le4k\Delta,\qquad u_{\max}=4(k-2)\Delta+4k\Delta+\tfrac12,\qquad u_{\min}=-\tfrac12 .
+\]
+The rank shift in passing to column entries has absolute value
+at most \(k\).
+
+At the first edge the gap above the lower
+endpoint \(b_1\) is at least \((t+3)/2\). The prescribed
+top floor, lower bound for the larger weights \(b_1\ge\lceil b\rceil\), and thin
+choice \(b_1=\lceil w''\rceil\) each give \(b_1+1\ge w''\),
+where \(w''=b'/(xn)\). Uniformly in \(k\le x^5\), \(n\le x^3\),
+we have eventually
+\[
+ c+k+2\le35x^{c_D+5}\le x^{c_D+6}\le w''\le b.
+\]
+Thus even after subtracting the shift \((k+t+1)/2\) the first
+edge weight is at least \(c\). The size conditions give
+\(c\le c_G(L)\) on every compatible size record \(L\).
+This is a single bound chosen before those records.
+
+In each orbit of the local step \(h\), take the residue of
+least numerical label. If \(b\) is the initial label in an orbit and \(d\) the order of the step, the arithmetic and geometric rules both take the minimum of the same finite set:
+\[
+ \min_{0\le s<d}\,\operatorname{label}(b+sh),\qquad d=\operatorname{ord}(h).
+\] Send its translate by \(sh\) to the
+corresponding marked embedding \(\tau\) at slot \(s\).
+
+At top slots the endpoints are the first and the negative of
+the last column entry. Put zero in these two positions off
+the top. After subtracting the rank shift \(a_j\), the added weight at lift \(j\) and embedding \(\tau\) is
+\[
+ w_j(\tau)-a_j .
+\] These are the
+negatives of the first entries of the successive added blocks
+of a dominant column. They increase weakly, and the first
+dominates the negative last entry of the original block.
+For every compatible canonical completion the orbit, the
+positions, the top endpoints and the shifted weights just
+computed are therefore exactly its prescribed filling. This
+comparison concerns the columns and weights alone, so it
+persists for each choice of the subsequent level and maps.
+\label{cor:level-four-core-7}
+
+Take the standard primitive lift chain at the \emph{actual}
+\(Q_\mu\). Use its nonzero unfolding factors, integral jet
+identities and adapted bases. In the basis of an entry place one
+rescales the stage \(j\) frame at \(\tau\) by the prescribed unit
+\(a_\tau^j\). A product of minors of shape \(\lambda\) has total degree \(|\lambda|\). Thus stage-\(j\) scaling by the unit \(a_\tau^j\) gives the multiplier
+\[
+ (a_\tau^j)^{|\lambda|}=a_\tau^{j|\lambda|}.
+\] The scalar substitution in the kernel polynomial contributes a further
+\(a_\tau^{|\lambda|}\). The homogeneous factors on the edge are therefore
+\[
+ a_\tau^{j|\lambda|}a_\tau^{|\lambda|}
+        =a_\tau^{(j+1)|\lambda|},
+\]
+the factor for the target frame. The source and target determinant
+normalizations occur in the unfolding scalar with the
+corresponding powers. Dividing by this nonzero scalar cancels
+them. The unit preserves both integral tests and the local norms.
+Thus the entry coefficient in the adapted bases is the Taylor
+coefficient of the kernel for these lift objects.
+\label{cor:level-four-core-8}
+
+For each marked local component \(v\) let \(A_v\) be its ring
+of integers and \(L_v\) the prescribed full lattice at one
+stage. The first split embedding \(\iota_v:E\to F_v\) on \(F\)
+is its completion at \(v\), and these places of \(F\) are
+distinct. Put
+\[
+ \Lambda=\{z\in E^d:\ \iota_v(z)\in L_v\text{ for all marked }v\}.
+\]
+It is an \(\mathcal O_E\)-module. Its image spans \(L_v\) over
+\(A_v\): approximate a basis matrix for \(L_v\) within its
+open integral basis coset at \(v\), and zero within the other
+lattices at all the other marked places, by a matrix over \(F\).
+Its columns belong to \(\Lambda\) and are a local basis at \(v\).
+This weak approximation argument asserts a span at the specified
+places. The global finite lattice with all its other localizations
+prescribed was constructed separately above.
+
+For the local class map first fix an away-place representative
+\(a\), then a local matrix carrying the reference lattice to
+a tuple \(L'\). Every admissible adelic class is obtained in
+this manner. For a fixed away class \(a\), let \(\Gamma_a\) denote its rational stabilizer. Two presentations with local tuples \(L'_1,L'_2\) give the same class exactly when
+\[
+ L'_2\in\Gamma_a\cdot L'_1 .
+\] This is the double
+coset equivalence after fixing \(a\). Stage zero uses the given
+word-column identification. At a positive stage the reference
+tuple uses its member charts, with just the end chart at stage
+\(m\).
+
+For a nonreference tuple use the symmetric chain of its
+own character. For the frame matrix \(J=C^*C\), the reference basis \(B=C^{-1}\) therefore satisfies
+\[
+ B^*JB=(CB)^*(CB)=1.
+\] Its lattice and the
+level lattice agree upon completion at \(v\), since the latter
+is between the lattice and its multiple by the word modulus.
+In the nonreference frame \(J=B=1\) the last-coordinate
+condition disappears there since \(\pi_T\bar\pi_T=T\) is a
+unit. Moreover the quotient-prime set for \(\mu(w)\)
+excludes its own characteristic. Thus on both kinds of charts
+the local level is the stabilizer of the indicated lattice.
+\label{cor:level-four-core-9}
+
+Here is the integral image assertion needed for the upper maps.
+Let \(e:H\to K_w\) be the coefficient embedding, \(O\) the upper valuation ring and \(A\) the valuation ring of \(H\) at \(w\). The compatibility of the two integrality tests is
+\[
+ e^{-1}(O)=A,\qquad h\in A\ \Longleftrightarrow\ e(h)\in O .
+\]
+Let \(V_j,\Lambda_j\) be the rational row and its integral
+lattice at a valid positive stage. Let \(M_j^{\rm int}\) be
+the local module of equivariant functions on the class
+presentations, taking values in the tensor Weyl lattices of
+the filled weights. Then the chart reading \(C_j\) satisfies
+\[
+                O\,C_j(\Lambda_j)=M_j^{\rm int}.
+                \tag{*}\label{eq:core-upper-image}
+\]
+
+To see the two integral tests involved, write
+\(d=\lfloor j(t+1)/2\rfloor\) for the determinant shift. At
+a class \(y\), the normalized evaluation multiplies the
+original frame evaluation by
+\[
+             \chi_D(\det y)^d\prod_\tau
+                   \det\bigl(\tau(B)^{-1}z_\tau\bigr)^d .
+\]
+In a rational basis \(B'\) of the local dual lattice the change
+of determinant weight multiplies the coefficient polynomial by
+\[
+             s=\chi_D(\det y)^d
+                \prod_\tau\tau(\det B'/\det B)^d.
+\]
+The finite determinant-character values are rational over the
+coefficient field by the marked character reading and its
+values on uniformizers. The projections of the bases are
+the marked embeddings of the host. To check the valuation of
+\(s\), use finiteness of the class set to write
+\(y^{b+l}=\gamma y^b k'\) with \(l>0\), \(\gamma\) rational
+unitary, and \(k'\) in the level.
+
+On each first split component,
+both \(B'^{-1}yB\) and \(B'^{-1}yk'B\) have unit determinant
+by the local basis equality and self-duality. Taking determinants
+in the power relation shows that
+\(z=(\det B'/\det B)^l/\det\gamma\) is a unit there.
+Also \(z\bar z=\det(B'^*JB')^l\) is a unit by self-duality,
+so the second split component gives a unit. Applying the character law at \(\gamma\) and \(k'\) now yields
+\[
+ s^l=\prod_\tau\tau(z)^d .
+\] Hence \(s\) and its inverse are
+integral. This calculation uses both projections even when the
+slot reads the conjugate embedding. \label{cor:level-four-core-10}
+
+The coefficient change at a translated lattice uses
+\((B^{-1}\gamma B')^{-1}B^{-1}=B'^{-1}\gamma^{-1}\).
+On an ordinary block this substitutes the translated bases
+in products of minors. On a dual block the complementary-minor
+identity for the inverse transpose, with the column order
+reversed, gives integral signs and the determinant correction.
+The inverse substitutions give both directions. Tensor over
+the slots. The level character multiplies by a root of unity,
+and descent along \(e^{-1}O=A\) tests coefficients on a basis
+of the rational Weyl lattice. Thus for \(x\in V_j\)
+\[
+             C_jx\in M_j^{\rm int}\quad\Longleftrightarrow\quad
+             x\in A\Lambda_j .
+\]
+For surjectivity after taking the span, read a local function
+at representatives of the finitely many class orbits.
+
+At each
+representative its values obey the stabilizer equations with
+the inverse character of the glued away-level element. These
+are linear equations on a finite-dimensional rational Weyl
+space, hence finitely many equations suffice over every scalar
+extension. Conversely each rational solution gives a complex
+form on that adelic class. Indeed if \(y=\gamma yk'\) the
+determinant shift contributes one to the stabilizer equation
+by the character law. At the chosen orbit representative the stabilizer is conjugate at level to \(k'^{-1}\). Since its character is constant on conjugacy classes, inverting the glued character recovers
+\[
+ \chi(k'^{-1})^{-1}=\chi(k').
+\] Ordinary positions use the
+marked entry of \(\gamma\), dual positions its conjugate in
+the reversed dual frame. The resulting frame polynomials are
+independent whenever their restrictions to invertible blocks
+are independent, since these blocks are Zariski dense and the
+frame changes are invertible there. Extend by equivariance and
+by zero on other classes.
+
+Independence after restriction to the open set of invertible blocks therefore bounds the integral rank by
+\[
+ \operatorname{rank} M_j^{\rm int}\le \dim_{\mathbb C}(\text{complex row at }j).
+\] In the other direction, the original
+frame evaluations separate \(V_j\). A nonzero minor of finitely
+many rational coefficient readings remains nonzero over \(K_w\),
+giving the opposite bound. Equal rank and that same minor give
+a rational preimage for every rational target in the span.
+\proofstep{Obtain the integral generators after imposing the stabilizer equations.}
+Finally choose bases of all marked local lattices by simultaneous
+weak approximation at the distinct places of \(F\). Their local
+Weyl lattices extend rational \(A\)-lattices. Intersecting with
+the stabilizer equations commutes with extension to \(O\) by
+flatness over the DVR \(A\). The resulting rational integral
+generators extend by equivariance to the finitely many orbits.
+Their rational preimages pass the two-way integral test. This
+proves \eqref{eq:core-upper-image} with the original lattice at
+each stage. \cite{companion-selected-core}\label{cor:level-four-core-11}
+
+\proofstep{Pull the entry back by the inverse of the exact coordinate substitution.}
+For a pair of adjacent chosen bases with image matrices \(A_j\)
+and \(A_{j+1}\), the forward substitution of a kernel block is
+\[
+ X\longmapsto A_{j+1}XA_j^{-1}
+ \quad\hbox{or}\quad
+ X\longmapsto A_{j+1}^{-\mathsf T}X A_j^{\mathsf T}
+\]
+according to the marked ordinary or dual position. Pull the
+fixed entry series for the pair of global classes back by the
+inverse linear substitution. Composing with the forward map
+returns it coefficient by coefficient, since the matrices
+cancel and all substitutions preserve the degree filtration.
+The split idempotents identify the embeddings with those of
+the chosen column, and the orbit-position equality identifies
+the variables. Attach these series, the local class maps and
+the image lattices \eqref{eq:core-upper-image} to the fixed
+filling. Use their first comparison maps and the ramified
+submodule specified by the word column. This gives the kernel
+at every selected pair with the adapted entry identity and the
+same divisor throughout. \label{cor:level-four-core-12}
+\end{proof}
+
+\paragraph{Assembling the theta maps at the specified level.}
+Use the section and kernel of Proposition~\ref{prop:level-four-integral-kernel}
+with the theta maps of Proposition~\ref{prop:isometric-refined-theta-chain}.
+The two ambient identifications, the quotient primes and the
+theta realization were obtained for the same level-four data.
+Form the object whose sharp and bottom ambient modules are those
+just identified, whose divisor has those primes, and whose
+kernel and lattice comparisons are those just constructed for
+that divisor. Include its original degree-zero column and
+level, normalized character, signed row, and a CM gauge for the
+host. The divisor comparison applies to every object with
+this divisor, base row and row reading. All three equalities
+hold here by construction. Thus the logarithmic type choice,
+the rational roots on the base row, the stable multiplicity
+reading and the sharp normalization belong to the assembled
+object.
+
+In particular, writing \(S\) for the selected twist support, nontriviality on \(S\) gives
+\[
+ \mu(w)=\mu_0\quad\Longrightarrow\quad w\notin S .
+\] At its conjugate the reference tuple is again
+assigned. The untwisted identities therefore give zero for the
+signed twisting order on this tuple. For any admissible size record of the same scale, a nonzero forced content would itself put the place in the support. Thus for each such record
+\[
+ v\notin\operatorname{supp}\quad\Longrightarrow\quad\text{forced content at }v=0 .
+\] The comparison of
+the local first maps and the orbit weights above holds for
+each such record with its canonical coordinates. This gives
+the required row and column data at this level.
+\label{cor:level-four-core-13}
+
+Perform this construction first on the initial member. Its
+signed export below uses the rational and integral theta
+readings of this member. After transporting its auxiliary
+character, index and series to the new field, construct the
+second member using its own measured row and columns by this
+same argument. On that member the transported norm choice
+gives both the original norm condition and the condition on
+all twist places. The signed tests descend along the kept
+identifications. The second member consequently supplies a
+single row, kernel and divisor over the chosen levels.
+\label{cor:level-four-core-14}

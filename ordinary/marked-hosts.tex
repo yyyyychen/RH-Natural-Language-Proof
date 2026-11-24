@@ -1,0 +1,503 @@
+\section{The finite algebra at the marked point}
+\label{sec:marked-hosts}
+
+The support comparison in Section~\ref{sec:linked-components} took us to an abelian CM
+extension \(L\). We now need a point there that will contribute to a length computed
+over the original coefficient DVR \(\mathcal O\).
+Two base changes intervene. The residual curve
+points have to descend from the enlarged frame, and a point of
+the graded algebra in characteristic zero has to give an integral
+representation to which the automorphy comparison applies.
+The marked point algebra gives the integral model used for the
+descent and for the length bound in the next two appendices. The separated frame of Proposition~\ref{prop:separated-marked-host} carries the mark \eqref{eq:tag-h1}. Its degree-zero algebra over the original coefficient DVR is the object of Proposition~\ref{prop:marked-invariant-algebra}.
+
+\paragraph{The fields and the mark.}
+The field and its mark are specified by characters. With
+\(e\ge1\) and \(\psi\) of even modulus \(N\) satisfying \(\psi(-1)=(-1)^e\), form the characters
+\[
+ \Psi=\epsilon^e\psi,\qquad P=\bar\Psi,\qquad \Psi(c)=1 .
+\] Here \(c\) denotes complex conjugation.
+Let \(\eta\) cut out the imaginary quadratic field \(K\). The
+linking cutoff is \(\ell N|D_K|\) in the general-data case and
+\(\ell N\) for \(K=\Q(i)\). Indeed an inertia group on which
+\(\eta\) is nontrivial lies over a divisor of \(D_K\), and the
+Gaussian character has conductor four. Let \(B\) be the chosen
+place over \(\ell\). The marking uses
+\[
+       g_*\in D_B\cap G_L,\qquad P(g_*)^2\ne1 .
+       \tag{H1}\label{eq:tag-h1}
+\]
+The level of the final packet will be read from the inertia of
+the original representation.
+
+\begin{proposition}[A separated marked frame]\label{prop:separated-marked-host}
+Under the general-data or Gaussian host hypotheses, the
+construction yields a totally real abelian \(L^+\) and its
+CM extension \(L=L^+K\). The extension \(L/L^+\) splits
+at the places above the primes dividing \(M\) and is unramified
+at every finite place. At every place \(v\mid\ell\) of \(L^+\),
+\[
+                     [L_v^+:\mathbb Q_\ell]>3C_0+7.
+\]
+The distinguished mark satisfies
+\textup{\eqref{eq:tag-h1}}. Both signed residual extension classes with
+characters \(\eta P^{-a}\), \(a=1,2\), restrict nontrivially
+to the marked frame with its prescribed inertia conditions.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Matching the quadratic characters locally.}
+Here are the choices in the construction of the frame underlying
+\eqref{eq:tag-h1}. Write \(K=\Q(\sqrt{-D})\), \(D>0\), and denote the linking
+cutoff by \(M\). Choose a prime \(p>4D+M\) congruent to \(-1\)
+modulo \(4M\). The real quadratic field
+\(\Q(\sqrt{Dp})\) has the same local character as \(K\) on
+decomposition groups above \(M\). Their defining square classes have ratio \(Dp/(-D)=-p\). For an odd prime \(v\mid M\), the congruence \(-p\equiv1\pmod v\) lifts the simple root \(1\) of \(X^2+p\) to \(\mathbb Z_v\). If \(2\mid M\), then \(8\mid4M\). Put \(u=-p\equiv1\pmod8\) and start with \(x_3=1\).
+
+For \(n\ge3\),
+\[
+ (x_n+e2^{n-1})^2\equiv x_n^2+e2^n x_n\pmod {2^{n+1}} .
+\]
+If \(x_n^2\equiv u\pmod {2^n}\), exactly one of \(e=0,1\) corrects the next bit because \(x_n\) is odd. The resulting sequence converges to a square root in \(\mathbb Z_2^\times\).
+This real quadratic field also ramifies at \(p\), where \(K\)
+is unramified. Denote its fixing group by \(H_0\). The general
+frame data include an abelian quotient of \(\ell\)-power order
+with kernel \(H_b\) on which the away-from-\(\ell\) inertia
+character has the same kernel as its reduction. On the Gaussian
+branch \(H_b\) kills the \(\ell\)-power part of the character
+after removing the factor at the place \(\ell\).
+
+On inertia at \(\ell\), the condition \(P=\bar\epsilon^j\) determines the reduction of the finite factor. Use the Teichm\"uller lift
+\[
+ \chi'=[P\bar\epsilon^{-j}],\qquad\bar\epsilon^j\bar\chi'=P .
+\]
+The finite characters \(\chi'\) and \(\eta\) factor through
+roots of unity of order dividing some \(M^a\ell\). Both are
+unramified at \(\ell\), so its \(\ell\)-power factor can be
+removed from that modulus by cyclotomic inertia. Choose a
+second prime \(w\) congruent to one modulo both the resulting
+modulus and \(M^{a+1}\ell\), outside the divisors of those
+integers. The degree-\(\ell\) subfield of \(\Q(\mu_w)\) gives
+the order-\(\ell\) character \(\theta\) of the seed construction.
+
+For \(m\ge1\), let \(H_w\) fix that subfield, and \(H_m\) fix the
+degree-\(\ell^m\) layer in \(\Q(\mu_{\ell^{m+1}})\). Put
+\[
+       U_m=H_0\cap H_w\cap H_b\cap H_m,\qquad
+       G_L=U_m\cap\ker\eta .
+       \tag{H2}\label{eq:tag-h2}
+\]
+All quotients defining \(U_m\) are abelian and complex conjugation
+lies in each kernel. Thus \(U_m=G_{L^+}\), \(L=L^+K\). The
+local comparison for \(H_0\) gives splitting of \(L/L^+\) over
+\(M\). Outside \(M\), \(\eta\) is unramified, so \(L/L^+\) is
+everywhere unramified at finite places. The layer at \(w\)
+kills \(\theta\) on \(G_L\).
+
+\proofstep{Selecting the real abelian layers.}
+For the order of the choices in \eqref{eq:tag-h2}, let \(E\) be fixed by
+\[
+       H_0\cap H_w\cap H_b\cap\ker\eta\cap\ker P
+                    \cap\ker\bar\epsilon .
+\]
+It is abelian over \(\Q\) and contains \(\mu_\ell\). On adjoining
+the \(m\)-th layer the corresponding intersection fixes
+\(E(\mu_{\ell^{m+1}})\). The bounded \(\ell\)-rank of the class
+groups in this tower follows from Ferrero--Washington for the
+cyclotomic tower of an abelian field and the Iwasawa module
+structure theorem \cite[Chapter~13]{washington-cyclo}. Let \(E_\infty\) be their union and \(X\) its unramified abelian pro-\(\ell\) Galois module. The vanishing of \(\mu\) makes \(X\) finitely generated
+over \(\mathbb Z_\ell\). Above a sufficiently deep layer \(E_m\),
+one of the primes over \(\ell\) is totally ramified in
+\(E_\infty/E_m\), since cyclotomic inertia has open image.
+
+Write \(H_m^{\rm ur}\) for the unramified abelian
+\(\ell\)-class field of \(E_m\). Every nontrivial finite intermediate extension in this part of the tower is ramified at the totally ramified prime over \(\ell\). Since \(H_m^{\rm ur}\) is unramified there,
+\[
+ H_m^{\rm ur}\cap E_\infty=E_m .
+\] Unramifiedness survives base
+change, so restriction gives
+\[
+ X\twoheadrightarrow\operatorname{Gal}
+            (H_m^{\rm ur}E_\infty/E_\infty)
+      \simeq\operatorname{Gal}(H_m^{\rm ur}/E_m).
+\]
+The \(\ell\)-rank is bounded by the number of
+\(\mathbb Z_\ell\)-generators of \(X\). The finite
+set of earlier layers can be included in the same bound.
+By unramified class field theory this bounds
+the dimension of the unramified mod-\(\ell\) character space by
+a single \(C_0\) for all \(m\). Only now take
+\(\ell^m>3C_0+7\). Inertia at \(\ell\) surjects onto the
+degree-\(\ell^m\) layer, so every relevant local degree is at
+least \(\ell^m\).
+
+To construct the element in \eqref{eq:tag-h1}, choose \(x\in D_B\cap\ker\eta\) with \(P(x)^2\ne1\) as in the local separation hypothesis.
+It fixes \(\sqrt{Dp}\) by the local comparison. Raise \(x\)
+to a common \(\ell\)-power killing the three remaining finite
+quotients in \(U_m\). Write \(d=\operatorname{ord}(P(x)^2)>1\). Since \(\gcd(d,\ell)=1\),
+\[
+ \operatorname{ord}\bigl(P(x)^{2\ell^a}\bigr)=d.
+\]
+Thus the resulting power \(x_*=x^{\ell^a}\) satisfies
+\[
+ x_*\in D_B\cap G_L,\qquad
+ P(x_*)^2=(P(x)^2)^{\ell^a}\ne1 .
+\]
+The second equality uses the prime-to-\(\ell\) order of \(P(x)^2\),
+on whose cyclic subgroup the indicated power is an automorphism.
+
+\proofstep{Local separation by inertia and Frobenius in the general and Gaussian cases.}
+Here are the two separation tests used above. For the General case of the rank-three trace estimate, inertia at the ramified prime of \(K\) away from
+\(\ell N\) gives an element \(s\) with
+\(P(s)=\bar\epsilon(s)=1\), \(\eta(s)=-1\). On inertia at \(\ell\) the residual finite factor has square one and \(\eta=1\). Thus here
+\[
+ P^2=\bar\epsilon^{2e}\ne1,\qquad \ell-1\nmid 2e .
+\]
+
+On the Gaussian branch let \(2^c\) be the
+conductor of the dyadic component \(\psi_2\). Here \(c\ge4\).
+Its image on units congruent to one modulo four is a nontrivial
+cyclic 2-group. Some such unit maps to \(-1\). Multiplying
+\(-1\) by that unit if \(\psi_2(-1)=-1\) gives a unit
+congruent to \(-1\) modulo four in the kernel of \(\psi_2\).
+Its image under dyadic reciprocity gives the required \(s\).
+In either case \(\chi'(s)=1\) and \(\eta(s)=-1\).
+
+For the other Gaussian test, the base data give an integer
+\(o\ge1\) such that the odd-prime components of the
+prime-to-\(\ell\) part of \(\psi\) have order dividing \(2o\).
+For each exceptional prime and for \(p=\ell\) the dyadic conductor bound reads
+\[
+ 8op^2<2^c .
+\] These primes are odd. Choose a
+Frobenius lift \(h\) acting by \(p\) on prime-to-\(p\) roots
+and with \(\bar\epsilon(h)=1\). At \(p=\ell\) use cyclotomic
+inertia to arrange the latter condition. At the other primes
+it follows from \(p\equiv1\pmod\ell\). If \(P(h)^4=1\),
+reduction is faithful on prime-to-\(\ell\) roots of unity,
+so raising to the power \(4o\) gives
+\(\psi_2(p)^{4o}=1\).
+
+Let \(s_2\) and \(d\) be the two valuations that determine the effect of raising the odd prime \(p\) to successively doubled exponents:
+\[
+ s_2=v_2(p^2-1),\qquad d=v_2(o).
+\]
+For \(a\in1+4\mathbb Z_2\) one has \(v_2(a+1)=1\), so
+\[
+ v_2(a^2-1)=v_2(a-1)+v_2(a+1)=v_2(a-1)+1 .
+\]
+The geometric sum for an odd power is a unit. Starting
+from \(a=p^2\) and using \(4o=2\cdot2^{d+1}(o/2^d)\)
+therefore gives
+\[
+               v_2(p^{4o}-1)=v_2(p^2-1)+1+d .
+\]
+The same order formula in the finite dyadic quotients
+shows that \(p^{4o}\) generates the subgroup congruent to
+one modulo \(2^{s_2+1+d}\) in each such quotient. This forces
+\[
+ 2^c\le2^{s_2+1+d}\le 2o(p^2-1),
+\] a contradiction.
+Since \(x=h^2\), multiplicativity of all three characters gives
+\[
+ \eta(x)=1,\qquad P(x)^2=P(h)^4\ne1,\qquad\bar\epsilon(x)=1 .
+\] At \(p=\ell\) this is the starting
+element for \eqref{eq:tag-h1}.
+
+\proofstep{The signed residual cocycles on the marked frame.}
+One use of these tests is the construction of the two
+residual extension classes on the marked frame. For
+\(a=1,2\) put \(\kappa=\eta P^{-a}\). This character is
+odd, and differs from \(\bar\epsilon\) on \(s\) above.
+It is nontrivial on \(U_m\cap D_B\) by \eqref{eq:tag-h1}. Let \(S\)
+consist of \(\ell,w\) and the ramified primes of \(\kappa\).
+For the Selmer group of \(k(\kappa)\), the local subspace in \(H^1(\mathbb Q_v,k(\kappa))\) is 
+\[
+ L_v=\begin{cases}H^1(\mathbb Q_v,k(\kappa)),&v=w,\\ 0,&v\in S\setminus\{w\},\\ H^1_{\rm unr}(\mathbb Q_v,k(\kappa)),&v\notin S.\end{cases}
+\]
+ The dimension difference
+with the dual Selmer group is one by the Greenberg--Wiles
+formula. Indeed both global invariant spaces vanish, and
+the real invariant space vanishes. At \(w\) both \(\kappa\) and \(\bar\epsilon\) are trivial. The local contribution of the full condition is therefore
+\[
+ \dim L_w-\dim H^0_w=2-1=1 .
+\]
+
+At every other prime of \(S\) the
+invariant space is zero. A nonzero resulting class remains
+nonzero on \(U_m\) by inflation--restriction, since the
+coefficient module has no \(U_m\)-invariants. On inertia
+away from \(\ell,w\) in \(\ker\eta\cap\ker P\) its cocycle
+is zero, either by the unramified condition or by local
+triviality and \(\kappa=1\) on that inertia. At \(w\) the
+restriction to inertia is additive. Its \(\ell\)-primary
+tame quotient is procyclic and the degree-\(\ell\) field
+fixed by \(H_w\) is totally ramified there. Thus it vanishes
+on the inertia in \(U_m\) at \(w\) as well. Its restriction
+at \(B\) is a coboundary. These are exactly the local
+conditions needed to descend the two classes to the frame
+quotient.
+
+\end{proof}
+
+\input{fitted-arithmetic}
+
+\paragraph{A characteristic polynomial on every test curve.}
+To control points of the degree-zero algebra we first examine the characteristic
+polynomial along a curve in characteristic \(\ell\). Let \(A\) be a complete DVR of
+characteristic \(\ell\) with finite residue field and a local map from \(\mathcal O\) through
+its residue field \(k\). Take a marked ordinary representation
+over \(A\) reducing in the given basis to the diagonal model
+\((P,1,P^{-1})\) on \(\ker\eta\). On \(G_{L^+}\) it factors
+through the marked quotient. Indeed the killed inertia elements
+away from \(\ell\) have \(\eta=P=1\), and the inertia condition
+on the point kills these elements. Continuity kills the closed
+normal subgroup they generate. Above \(\ell\) the ordered
+inertial characters on the frame are \(\Psi^{w_i}\), now
+viewed in \(A\), where \(w=(1,0,-1)\). They are one on the
+kernel of \(P\) in the marked inertia.
+
+\begin{proposition}[Characteristic polynomials on marked ordinary curves]\label{prop:marked-residual-polynomial}
+Let \(A\) be a complete DVR of characteristic \(\ell\) with
+finite residue field, with \(\mathcal O\to A\) factoring through
+\(k\). Take a marked ordinary curve over \(A\) with residual diagonal
+\((P,1,P^{-1})\) on \(\ker\eta\) and ordered ordinary characters
+\((\Psi,1,\Psi^{-1})\) on the marked inertia. On the entire quadratic kernel the identity \eqref{eq:tag-h3} reads
+\[
+ \det(X-r(g))=(X-P(g))(X-1)(X-P(g)^{-1})\qquad(g\in\ker\eta).
+\] In the
+fixed marked basis the curve is upper or lower triangular,
+and its diagonal on the positive component is prescribed
+by the residual characters.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Applying the rank-three support result to the residual curve.}
+On the rank-three frame let \(J\) be the image of the Hecke
+ideal and \(I_E\) the ideal pulled back from the outer corner
+on the exceptional locus. The intersection \(I=J\cap I_E\)
+lies below every prime off the two triangular loci. This follows
+from propagation on the type-I locus and the rank-two comparison
+on the exceptional locus. Write \(\lambda\) for the ideal
+generated by the maximal ideal of the coefficients and the
+weight differences \(\psi_{vi}(s)-1\) on inertia with \(P(s)=1\).
+Both \(J+\lambda\) and \(I_E+\lambda\) have radical the
+degree-zero maximal ideal.
+
+For a prime \(\mathfrak p\) the inclusion \(JI_E\subseteq I\) implies
+\[
+ I+\lambda\subseteq\mathfrak p\quad\Longrightarrow\quad J+\lambda\subseteq\mathfrak p\ \text{ or }\ I_E+\lambda\subseteq\mathfrak p .
+\]
+Both force the same degree-zero maximal ideal.
+The curve kills \(\lambda\). If its kernel is off both triangular
+loci, its degree-zero evaluations consequently equal their
+residual constants. In the expansion of a characteristic
+polynomial each cycle of off-diagonal entries has total weight
+zero and vanishes at the residual point. Only products of the
+prescribed diagonal entries survive.
+
+\proofstep{The split characteristic polynomial on the fixed subgroup.}
+On a triangular curve the diagonal entries are characters.
+Divide each by the corresponding residual character. The
+quotient takes values in \(1+\mathfrak m_A\). On marked inertia with \(P=1\), any character value \(u\) of the quotient satisfies its ordinary polynomial. Since the coefficient ring here is a domain,
+\[
+ (u-1)^3=0\quad\Longrightarrow\quad u=1 .
+\]
+This kills the local abelian generators and, by polarization, their conjugates. At each truncation it is a
+character into a finite \(\ell\)-group, and the abelian
+class-field condition of the frame gives a single nonzero
+exponent \(h\) for all these quotients. Passing through
+all truncations gives \(z^h=1\) in \(1+\mathfrak m_A\).
+
+In an equal-characteristic DVR that group is torsion-free.
+The prime-to-\(\ell\) part follows by factoring a difference
+of powers and the \(\ell\)-part by Frobenius. Thus the three
+diagonal characters are fixed in this case as well. If the
+comparison was made with enlarged residue coefficients, extend
+the test DVR by the corresponding finite residue field
+extension, apply the result there and use injectivity on
+coefficients. Pulling the polynomial back along the map from
+\(G_L\) to the positive component of the frame gives
+\[
+       \det(X-r(g))=(X-P(g))(X-1)(X-P(g)^{-1})
+                        \quad(g\in G_L).
+       \tag{H3}\label{eq:tag-h3}
+\]
+Here and below \(r(g)\) denotes the matrix part on the positive
+component. The subgroup \(G_L\) in \eqref{eq:tag-h3} is independent of \(A,r\).
+
+\proofstep{Extend the polynomial identity to the original quadratic kernel.}
+For \(g\in\ker\eta\), take \(d\ge1\) with \(g^d\in G_L\).
+Let \(\lambda_i\) be the eigenvalues of \(T=r(g)\) in an
+algebraic closure of the fraction field, counted with multiplicity.
+Triangularizing \(T\) gives the factorization
+\[
+ \det(X^d-T^d)
+   =\prod_i (X^d-\lambda_i^d)
+   =\det(X-T)
+       \prod_i\left(\sum_{a=0}^{d-1}X^{d-1-a}\lambda_i^a\right).
+\]
+The first polynomial belongs to \(k[X]\) by \eqref{eq:tag-h3} on \(g^d\),
+so all \(\lambda_i\), and hence the coefficients of \(\det(X-T)\),
+are algebraic over \(k\). This factorization needs no separability
+of \(X^d-\lambda_i^d\). An algebraic element of the domain \(A\)
+congruent to \(a\in k\) must equal \(a\), since the field it
+generates over \(k\) embeds into the residue field under
+reduction. This proves \eqref{eq:tag-h3} on all of \(\ker\eta\), even when
+\(\ell\mid d\).
+
+\proofstep{Triangularity in the marked basis.}
+We need triangularity in the \emph{marked basis}. Put
+\(g^*=cg^{-1}c\). The marked difference in the frame is the diagonal matrix
+\[
+ r(g_*)-r(g_*^*)=\operatorname{diag}(z,0,-z).
+\]
+The reduction of \(z\) is \(P(g_*)-P(g_*)^{-1}\ne0\).
+Work over the fraction field. An invariant subspace is stable under the marked difference \(D\). The three eigenvalues are distinct, so their coordinate projectors are polynomials in \(D\):
+\[
+ e_\lambda=\prod_{\nu\ne\lambda}\frac{D-\nu I}{\lambda-\nu},\qquad \lambda,\nu\in\{z,0,-z\}.
+\]
+
+Let \(L_1,L_2,L_3\) be the marked coordinate lines, in that order.
+A stable subspace is a sum of its images under the three projectors.
+Polarization makes its orthogonal complement for the reversed pairing
+stable as well, and the complementary planes of the coordinate lines are
+\[
+ L_1^\perp=L_1\oplus L_2,\qquad L_2^\perp=L_1\oplus L_3,\qquad
+ L_3^\perp=L_2\oplus L_3 .
+\]
+Thus a stable outer line gives a full flag. A stable middle line or
+outer plane gives the decomposition \(L_2\oplus(L_1\oplus L_3)\).
+If the outer plane is reducible, its two coordinate projectors again
+give a stable outer line and a flag. The other possibilities are an irreducible triple
+and a block decomposition with irreducible outer pair.
+
+In
+the former case Brauer--Nesbitt applied to \eqref{eq:tag-h3} would identify
+the irreducible triple with a sum of characters. In the
+latter case the middle diagonal entry is an eigenvalue,
+algebraic over \(k\) and congruent to one, so it is one.
+Since the middle eigenvalue is one, divide the characteristic polynomial in \eqref{eq:tag-h3} by its common factor:
+\[
+ P_{\rm outer}(X)=\frac{P_{\rm triple}(X)}{X-1}.
+\]
+The resulting character polynomials identify the semisimplification of the outer pair by Brauer--Nesbitt. Thus every curve is upper or lower triangular.
+The equalities of entries descend to \(A\) by injectivity.
+Each diagonal entry is then an eigenvalue congruent to its
+prescribed value, so equals it on \(\ker\eta\). Multiplication
+by \(c\), whose matrix part is one, extends the diagonal
+identity to the other coset.
+
+\end{proof}
+
+\paragraph{Finiteness and an integral point in the same orbit.}
+The identities on curves can now be used on the original Galois quotient. For the
+auxiliary field over \(\mathbb Q(i)\) put \(\Gamma=G_{\Q,S}\), the quotient
+by the closed normal subgroup generated by inertia away
+from the specified finite set. The surjection
+\(G_\Q\to\Gamma\) identifies the image of \(G_K\) with
+\(\ker\eta_\Gamma\). The preceding triangularity and diagonal
+identities therefore hold on the host. In the criterion for a triangular point the diagonal identity is also
+obtained by dividing diagonal characters on \(G_K\).
+The inertia conditions make their quotients unramified at
+each truncation, and \(\Z[i]\) has class number one.
+
+\begin{construction}
+\[
+\begin{array}{ll}
+\text{monomial on the curve}&\text{reason it vanishes}\\ \hline
+\text{contains a weight-zero variable}&\text{the diagonal is the fixed residue diagonal}\\
+\text{uses only nonzero weights}&\text{both signs occur to sum to zero}\\
+ &\text{one strict sign vanishes by triangularity}
+\end{array}
+\]
+\caption{The closed-fibre test for a nonconstant monomial of weight zero at the Gaussian host. Triangularity is available on each marked residual curve.}\label{fig:marked-host-zero-invariants}
+\end{construction}
+
+\begin{proposition}[The integral invariant algebra]\label{prop:marked-invariant-algebra}
+Let \(R\) be the complete normalized graded ring of the
+Gaussian host just described, with the triangularity and
+diagonal identities on all its residual test curves.
+The degree-zero subalgebra \(R_0\) is a finite \(\mathcal O\)-module.
+For each characteristic-zero point extending the coefficient embedding,
+let \(a_i\) be its values on homogeneous generators of the maximal ideal,
+of degrees \(d_i\). There exist a finite extension \(O'\) of the coefficient DVR and a grading-torus scalar
+\(t\in\operatorname{Frac}(O')^\times\) for which
+\[
+                  t^{d_i}a_i\in\mathfrak m_{O'}\qquad(\text{every }i).
+\]
+\end{proposition}
+
+\begin{proof}
+\proofstep{Finiteness by testing curves in the closed fibre.}
+In an adapted power series
+presentation over \(\mathcal O\) take variables \(z_i\) from
+entries of \(r-r_0\) on the positive component, with their
+entry weights \(w_i\), where \(r_0\) is the split point. They
+belong to the maximal ideal. On every residual test curve
+the zero-weight variables vanish, as do all variables of one
+strict sign. Indeed, if a nonconstant monomial of weight zero has a factor of weight zero it vanishes on the curve. Otherwise its exponents \(a_i\) satisfy
+\[
+ \sum_i a_iw_i=0,\qquad \sum_i a_i>0 ,
+\]
+so at least one variable of each strict sign occurs. The variables of one of those signs all vanish on the curve.
+
+Write \(\varpi\) for the coefficient uniformizer. Suppose that a prime ideal
+\(\mathfrak p\) contains \(\varpi R\) but does not contain one of these
+monomials \(b\). In the complete local domain \(R/\mathfrak p\) we have
+\[
+ \bar b=b+\mathfrak p\ne0 .
+\]
+We claim that a further prime
+quotient of dimension one can be chosen in which the image of \(b\)
+is still nonzero.
+
+This follows by choosing parameters
+with \(b\) as the last parameter in the domain, cutting by
+the others and taking a minimal prime avoiding \(b\).
+Normalization of the resulting complete one-dimensional
+local domain gives a complete DVR with finite residue field.
+This would be a test curve with \(b\ne0\), contrary to the vanishing on every test curve. Thus some power \(b^m\) belongs to \(\varpi R\) in the ambient graded ring. Extract its degree-zero component:
+\[
+ b^m\in\varpi R\quad\Longrightarrow\quad b^m\in(\varpi R)_0=\varpi R_0 .
+\] The degree-zero monomials topologically generate \(R_0\), since their semigroup is finitely generated. The radical test on these generators thus gives
+\[
+ \sqrt{\varpi R_0}=\mathfrak m_{R_0}.
+\] Noetherianity
+gives a power containment. The special fiber has finite
+length and the two adic topologies agree. Lifting a basis
+of that fiber successively through powers of \(\varpi\)
+shows that \(R_0\) is finite over \(\mathcal O\).
+
+\proofstep{An interval of allowable rescalings.}
+The characteristic-zero point is initially an evaluation of
+the algebra spanned by homogeneous pieces. Write \(a_i\)
+for the values of the \(z_i\), with valuation \(v\). Finiteness
+of the local algebra \(R_0\) implies \(v>0\) for the values
+of its maximal ideal, with \(v(0)=+\infty\). Thus \(v(a_i)>0\)
+for weight zero. For \(w_i>0>w_j\), the monomial
+\(z_i^{|w_j|}z_j^{w_i}\) has strictly positive valuation.
+Consequently the finitely many strict constraints
+\[
+             -v(a_i)/w_i < b < v(a_j)/|w_j|
+                \qquad(w_i>0>w_j,\ a_ia_j\ne0)
+\]
+have a common rational solution, also when only one sign
+occurs by keeping the corresponding one-sided constraints.
+Choose \(t\in\overline{\Q}_\ell^\times\) with \(v(t)=b\).
+All the \(t^{w_i}a_i\) lie in the maximal ideal of one finite
+coefficient DVR. Evaluation of power series converges there.
+
+\proofstep{Evaluation of homogeneous series.}
+To check agreement with the given point on a homogeneous
+series, decompose it into finitely many monomials of its weight
+times series of weight zero. Such generators exist by the
+coordinatewise minimal exponent vectors and Dickson's lemma.
+Evaluation is continuous on \(R_0\) by finiteness and the
+adic power containment. The two evaluations on weight \(j\)
+therefore differ exactly by \(t^j\). In matrix terms the
+integral representation and the given point are conjugate
+by \(\operatorname{diag}(t,1,t^{-1})\), with the semidirect
+conjugation law on the negative coset. Both use the image of
+the \emph{same} \(g_*\).
+\end{proof}

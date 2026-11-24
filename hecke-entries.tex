@@ -1,0 +1,205 @@
+\subsection{The jet estimate in an incident frame}
+\label{subsec:hecke-entries}
+
+Commuting the Hecke operator reduces the local gain in \eqref{eq:tag-p7} to an entry in a pair of incident lattice frames. The jet estimate must therefore retain the same phase across that pair. They apply when the
+theta series in the frame of the incident pair has the form of
+Proposition~\ref{prop:cyclic-jet}, with the same phase at each
+matrix entry and any integral factor in the formal parameters.
+No separation condition on the selected letters is needed here.
+
+Write \(d=2h\) for the length of the cycle and \(N,N'\) for the
+two matrix sizes. Let \(T\) be the set of tops. If \(h(C)\) is the height of a column, define the extracted count by
+\[
+  a_s=\begin{cases}\#\{C\text{ at }s:h(C)=1\}&s\in T,\\0&s\notin T.\end{cases}
+\]
+ Write \(c_s,l_s\) for the number
+and total height of the remaining columns at \(s\).
+In the weight diagram for stage \(j\) the row lengths are the
+dominant integers \(\lambda_{s,b}+w_j(s)\) for \(b\le k\)
+followed by blocks of length \(t+1\) with entries
+\(w_j(s)-w_i(s)\), \(1\le i\le j\).
+
+In particular
+\(a_s=\alpha_s\) on \(T\), \(c_s\) is the length of the
+second row there and of the first row elsewhere, and
+\(l_s\) is the size of the diagram less \(a_s\).
+The base-\(p\) digit length used in the error terms is
+\[
+  d_p(n)=\begin{cases}1+\lfloor\log_p n\rfloor&n>0,\\0&n=0.\end{cases}
+\]
+Define the error
+\[
+ D=\sum_s\{N'd_p(a_s)+NN'd_p(l_s)\}+\sum_{s\in T}d_p(a_s)^2 .
+\]
+For \(s\in T\) write \(D_s\) for the set of least positive distances
+from \(s\) to tops of opposite parity in the forward cyclic order.
+With all letter indices cyclic, define
+\[
+\begin{split}
+ A={}&\sum_{s\in T}\sum_{\substack{q>0\ {\rm odd}\\q\notin D_s}}
+                 (a_s p^{-q}-c_{s+q})_+-D,\\
+ G={}&\gamma\sum_{s\in T}a_s-
+       \sum_{s\in T\ {\rm odd}}\sum_{q>0\ {\rm odd}}
+                 \min(a_sp^{-q},c_{s+q})-D .
+\end{split}                                                     \tag{J1}\label{eq:tag-j1}
+\]
+Both series converge by geometric domination.
+
+\begin{proposition}[Zero and positive index estimates on one orbit]\label{prop:incident-jet-indices}
+For a theta series with the common entry phase and integral remainder
+of Proposition~\ref{prop:cyclic-jet} in the incident frame, write \(b_0\) for any frame coefficient at index zero and \(b_i\) for the coefficient of the normalized incident operator at positive index \(i\). Then
+\[
+ v_p(b_0)\ge\max\left\{0,A,G-\sum_{s\ {\rm even}}a_s\right\},\qquad v_p(b_i)\ge G\quad(1\le i\le r).
+\]
+ Both
+estimates use \eqref{eq:tag-j1} on the same orbit.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Control the factorial denominators before normalizing the incident operator.}
+First, ordinary derivatives of the unscaled series at zero are
+integral. A formal series has this property if its coefficients
+times the corresponding multi-index factorials are integral.
+These series are closed under products and composition with
+zero-constant series of this kind. Indeed the chain rule
+assigns the labeled differentiations to a partition into
+nonempty blocks for each inner derivative, with integral
+multiplicities. A series map with identity linear part
+therefore also has an inverse of this kind, by solving for each
+homogeneous part. The coefficients of \({\cal L}\) have the
+property since \((p^{2b})!/p^b\) is integral; thus \(g\) has it.
+The logarithm contributes integral derivatives, since
+\[
+  \left.\frac{d^a}{dz^a}\log(1+z)\right|_{z=0}=(-1)^{a-1}(a-1)!\qquad(a\ge1).
+\]
+
+Compose the integral units for the two differences with \(g\)
+and take their logarithms. All derivatives of both differences
+of \(B\) are integral. Every monomial of \(B\) admits a nontrivial
+split in at least one of its parity blocks by the excluded
+bidegrees. The derivative at the split index of the corresponding
+difference is the original derivative, since the binomial
+coefficient cancels exactly the change of factorials.
+For a split \(n=r+(n-r)\) in one coordinate the factorial cancellation is
+\[
+  r!\,(n-r)!\binom nr=n!.
+\]
+ This gives
+the property for \(B\). The exponential has all derivatives equal to
+one at zero, so the same composition rule gives the property for
+the full series. Integral frame changes and
+minor operators preserve it.
+
+We now keep the additional divisibility. Choose \(\varpi\) of
+valuation \(\rho\) with \(\varpi^{p^2-1}=p\). At the variables
+\(\varpi Z\), the factor \(U(g)\) is integral. By
+Lemma~\ref{lem:two-differences}, all terms of the phase except
+the listed pairs have valuation at least \(\theta\). Their
+exponential is integral by \(v_p(n!)\le n\theta\).
+
+The remaining phase is \((\varpi^{p+1}/p)H\) for an integral
+series \(H\) supported on the pairs
+\[
+       Z_{sab}^{p^u} Z_{tab}^{p^v},\quad
+        s+u=t+v\pmod d,\qquad s,t\text{ of opposite parity}.
+                                                                 \tag{J2}\label{eq:tag-j2}
+\]
+Here \(a,b\) are a matrix row and column, and the coefficient of a
+given letter pair and its exponents is common across the matrix.
+Its sign may be included in that coefficient. Since
+\(v_p(\varpi^{p+1})=\theta\), expansion of the exponential
+writes the scaled series as \(\sum_{n\ge0}(H/p)^n U_n\)
+with integral \(U_n\). To compute a finite jet only
+finitely many powers and monomials enter.
+
+At each top \(s\) let \(\xi_s\) be the first frame row, with
+independent integral indeterminates as in the Gauss valuation
+argument. Substitute
+\[
+  Z_{sab}=X_{sab}+\xi_{sa}y_{sb}\quad(s\in T),\qquad
+  Z_{sab}=X_{sab}\quad(s\notin T).
+\]
+If \(e_{sb}\) counts the extracted columns at target column \(b\),
+the required jet applies \(\partial_y^e Q(\partial_X)\)
+at zero, where \(Q\) is the product of the remaining framed
+minors. This follows from the chain rule and the fact that the
+extracted columns were of height one. Modulo \(p\), a power
+\(p^u\) of each sum splits into its two pure powers. Hence we
+can group the contributions to \(H\) after substitution as follows.
+\begin{enumerate}
+\item A term in \(y\) alone uses \(p^u,p^v\) units at
+two opposite-parity tops in the same matrix column, as in \eqref{eq:tag-j2}.
+\item A term of degree one in \(X\) is a scalar times
+\[
+     y_{sb}^{p^q}\sum_a \xi_{sa}^{p^q}X_{s+q,a,b},
+          \qquad s\in T,\quad q>0\text{ odd}.
+\]
+Indeed the exponent on the \(X\) factor must be \(p^0\), and
+\eqref{eq:tag-j2} gives the indicated destination. The common coefficient
+across the rows produces one direction \(\xi_s^{p^q}\).
+\item The other pure choices have degree at least \(p\) in \(X\).
+The error of the congruences is \(p\) times an integral series.
+\end{enumerate}
+Here all congruences use the ideal generated by \(p\) in the
+extended valuation ring. In particular a mixed binomial term
+pays the full denominator in \(H/p\).
+
+In one summand of \((H/p)^n U_n\) let \(P,M,Z\) count choices
+of the first, second and third kinds, with \(Z\) counting only
+the terms of \(X\)-degree at least \(p\). The multiples of \(p\)
+are absorbed into the integral factor. Write \(m_{sqb}\) for
+the multiplicity of the second kind and 
+\[
+  m_{sq}=\sum_bm_{sqb}.
+\]
+Thus \(M=\sum_{s,q}m_{sq}\). First expand by these three kinds,
+then expand the \(M\)-th power of the sum of the linear forms.
+The multinomial factor for this term is
+\(M!/\prod_{s,q,b}m_{sqb}!\). Put \(L_\nu(X)\) for its
+linear form in direction \(v_\nu\), with \(\nu=(s,q,b)\).
+
+For the differential pairing \([Q,F]=Q(\partial)F(0)\),
+the identity 
+\[
+  [Q,L_\nu F]=[\partial_{v_\nu}Q,F]
+\]
+follows on monomials from \(a!=a(a-1)!\). Combining the
+factor with all the directional derivatives gives the symbol
+\[
+ \frac{M!}{\prod_\nu m_\nu!}
+   \prod_\nu\partial_{v_\nu}^{\,m_\nu}Q(X)
+ =M!\,[T^m]Q\Bigl(X+\sum_\nu T_\nu v_\nu\Bigr).
+\]
+The coefficient on the right is integral, also when the
+directions belong to different columns.
+
+A surviving monomial \(X^n\) in the resulting differential
+symbol has \(\sum n=\sum l_s-M\) and block degree at most \(l_s\)
+at \(s\). Every term in the differentiated series has enough
+\(X\)-degree to accommodate the \(Z\) factors, so
+\(p Z\le \sum n\le\sum l_s\) in a nonzero pairing.
+The multi-index factorials for the \(y\)-derivative and the
+remaining \(X\)-derivative are respectively \(e!\) and \(n!\).
+The total cost from the powers of \(p\) is at most \(P+M+Z\).
+
+\proofstep{Use the three factorial estimates after expanding a nonzero contribution.}
+For an integer \(b\ge0\), the digit formula gives
+\(v_p(b!)\ge\theta b-d_p(b)\). Each \(e_{sb}\le a_s\),
+and each \(n_{sab}\le l_s\). Also 
+\[
+  \prod_{s,q}m_{sq}!\mid M!.
+\]
+If \(m_{sq}>0\) then \(p^qm_{sq}\le a_s\), so there are at
+most \(d_p(a_s)\) nonzero indices \(q\) at \(s\), each with
+\(d_p(m_{sq})\le d_p(a_s)\).
+Adding the three factorial valuations gives at least
+\(\theta\sum_s(a_s+l_s)-D\). Undoing the change
+\(Z\mapsto\varpi Z\) costs \(\rho\sum_s(a_s+l_s)\) by
+homogeneity of the differential operator. Since
+\(\theta-\rho=\gamma\ge1/p\), the residual degree pays for
+\(Z\). We have obtained, for each nonzero contribution before the
+incident normalization, the lower bound
+\[
+                 \gamma\sum_s a_s -P-M-D.                         \tag{J3}\label{eq:tag-j3}
+\]
+\input{hecke-entry-capacities}

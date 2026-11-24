@@ -1,0 +1,191 @@
+\paragraph{The number of exceptional coordinates.}
+\label{par:row-restricted}
+At component \(c\) of the target, use the lattice
+\(L=N_{c-1}/XN_{c-1}\) of Section~\ref{par:row-metric}.
+Identify \(L\otimes_O{\rm Frac}(O)\)
+with the crystalline constant space and pull every labeled filtration
+back to it. At a plus embedding, \(C_\tau={\rm Fil}^{b_\tau}_\tau\)
+has codimension at most \(m\). At a minus embedding,
+\(B_\tau={\rm Fil}^{1-b_\tau}_\tau\) has dimension at most \(m\).
+These inequalities follow by counting the central jumps, including
+their multiplicities, on the two sides of the respective cuts.
+The filtered spaces for distinct roots belonging to the same embedding
+give the same test on the crystalline constants.
+
+\begin{proposition}[A bounded set of exceptional coordinates]\label{prop:row-exceptional-coordinates}
+Assume \(\operatorname{codim} C_\tau\le m\) at the plus
+embeddings and \(\dim B_\tau\le m\) at the minus embeddings,
+with at most \(e\) embeddings in total. There is a direct summand \(B\) with complement \(L_{\rm main}\) such that
+\[
+ L=L_{\rm main}\oplus B,\quad L_{\rm main}\subseteq\bigcap_\tau C_\tau,\quad B_\tau\subseteq B\otimes K\quad(\tau\text{ minus}),\quad \operatorname{rk}_O B\le em,
+\]
+where \(K\) is the fraction field and the intersection is over the plus embeddings.
+The image \(I_B\) of the invariant residual coordinates defined
+below is free of rank at most \((e+1)\operatorname{rk}_O B\).
+\end{proposition}
+
+\begin{proof}
+\proofstep{Splitting off the exceptional directions.}
+There is an integral splitting \(L=L_{\rm main}\oplus L_{\rm err}\)
+such that \(L_{\rm main}\) lies in every \(C_\tau\) and
+\(L_{\rm err}\otimes{\rm Frac}(O)\) contains every \(B_\tau\), with
+\({\rm rank}\,L_{\rm err}\le em\). Let \(K=\operatorname{Frac}(O)\), \(C=\bigcap_{\tau,+}C_\tau\),
+and write \(L=(C\cap L)\oplus D\) using saturation. Define
+\[
+  L_{\rm err}=L\cap\Big(D_K+\sum_{\tau,-}B_\tau\Big),
+  \qquad
+  \operatorname{rk}L_{\rm err}\le \operatorname{codim} C
+                          +\sum_{\tau,-}\dim B_\tau\le em .
+\]
+Choose \(L_{\rm main}\) complementary to \(L_{\rm err}\cap C\)
+in \(C\cap L\). Then \(L=L_{\rm main}\oplus L_{\rm err}\)
+since \(D\subseteq L_{\rm err}\). All splittings used here exist over the DVR because
+a saturated submodule of a finite free module has free quotient.
+In particular the projection to \(L_{\rm main}\) has integral entries
+and kills all the \(B_\tau\).
+
+\proofstep{The polynomial that separates the main coordinates.}
+Consider a model coordinate \(z\in E^{-H}A\otimes L\) with
+\[
+ (\gamma-1)z\in XN^{\rm mod},
+\]
+for example \(\beta(w)\) with \((\gamma-1)w\in XN_c\). At a primitive root the coefficient of
+\(t^i\) in \(z\), for \(i\ne0\), belongs to \({\rm Fil}^{-i}_\tau\).
+Indeed the coefficient of its difference is multiplied by \(u^i-1\),
+nonzero in the fraction field, and multiplication by \(X\), a unit
+at this root, preserves the filtration inequalities. On projecting
+to \(L_{\rm main}\) it follows that the coefficients vanish in degrees
+\(i<-b_\tau-S\) at plus embeddings, and in nonzero degrees
+\(i<b_\tau\) at minus embeddings. In the latter case the coefficient
+is in \(B_\tau\), which the projection kills.
+
+Let \(\Omega\) be the union over these embeddings of the integer
+intervals \([-b_\tau-S,-b_\tau)\) at plus and
+\([b_\tau,b_\tau+S)\) at minus. The exceptional degrees determine the polynomial
+\[
+ P(Z)=\prod_{i\in\Omega}(Z-u^i).
+\]
+The operator \(P(\gamma)\) preserves \(E^{-H}A\) since \(\gamma E/E\)
+is a unit. In the Laurent parameter at that root, write the projection
+to the main summand as \({\rm pr}_{\rm main}z=\sum_i z_i t^i\).
+Since this projection commutes with \(\gamma\),
+\[
+ [t^i]{\rm pr}_{\rm main}P(\gamma)z=P(u^i)z_i,\qquad
+ P(u^i)=0\quad(i\in\Omega).
+\]
+Below the indicated intervals the projected coefficients already vanish,
+with the possible exception of the constant at a minus embedding.
+The polynomial removes the degrees inside the intervals. Write the main part of \(P(\gamma)z\) in the integral
+basis obtained above as \(\sum f_j\otimes l_j\).
+
+At plus points \(f_j\) has order at least \(-b_\tau\); at minus
+points
+\[
+ f_j=x_{\tau,j}+O(t^{b_\tau+S})
+\]
+for a constant
+\(x_{\tau,j}\) in the coefficient field (with the value at the
+chosen root understood). Also \((\gamma-1)f_j\in X E^{-H}A\).
+The latter inclusion follows by commuting projection and the polynomial
+with \(\gamma\) and using the stability of \(XE^{-H}A\).
+Each simple tensor is invariant modulo \(XN^{\rm mod}\).
+For its difference divided by \(X\), the required filtration at
+plus points follows from \(l_j\in{\rm Fil}^{b_\tau}\) and the lower
+order just proved. At minus points the constant cancels and all
+of \(L\) is in \({\rm Fil}^{-b_\tau-S}\).
+Thus the residual part is also invariant modulo \(XN^{\rm mod}\).
+
+Finally
+\[
+ P(\gamma)z\equiv P(1)z\bmod XN^{\rm mod},
+\]
+by stability
+and \((Z-1)\mid(P(Z)-P(1))\).
+The scalar cost to replace \(P(1)\) by a power of \(p\) is at most
+\[
+             \kappa=e\{S+v_p(S!)+\lfloor\log_p H\rfloor\}.
+\]
+Each interval has \(S\) nonzero integers of magnitude at most \(H\).
+For one interval \(I\), the principal-unit formula therefore gives
+\[
+ \sum_{i\in I}v(1-u^i)
+ = |I|+\sum_{a=1}^{\lfloor\log_p H\rfloor}
+                  \#\{i\in I:p^a\mid i\}
+ \le S+v_p(S!)+\lfloor\log_p H\rfloor .
+\]
+There are at most \(e\) intervals; overlaps can only reduce
+the sum over their union. An empty union has cost zero.
+
+\proofstep{Counting the residual directions.}
+We need the number of integral residual classes, including the
+coefficient from the ring variable. For \(B=L_{\rm err}\), consider
+the image \(I_B\) in \((E^{-H}A\otimes L)/XN^{\rm mod}\) of those
+\(z\in E^{-H}A\otimes B\) with \((\gamma-1)z\in XN^{\rm mod}\).
+The two assertions to prove are torsion-freeness and the bound
+\[
+ \operatorname{rank}_O I_B\le(e+1)\operatorname{rank}_O B.
+\]
+Over the coefficient DVR they imply the asserted freeness once finiteness is known.
+The ambient quotient is finite over \(O\): \(N^{\rm mod}\) contains
+\(E^HA\otimes L\) by the jump bounds, and \(XE^{2H}\) is a unit times
+a distinguished polynomial.
+
+The ambient quotient is also torsion-free. If \(a z\in
+XN^{\rm mod}\) for \(0\ne a\in O\), the constant coefficient of the
+integral numerator of \(a z\) at \(X=0\) vanishes. Thus \(z/X\) still
+has an integral numerator. At every primitive root the coefficient test for \(az/X\) lies in a
+filtration space over \(K=\operatorname{Frac}(O)\). For each degree \(i\),
+\[
+  a[t^i](z/X)\in {\rm Fil}^{-i}_\tau
+      \quad\Longrightarrow\quad [t^i](z/X)\in {\rm Fil}^{-i}_\tau .
+\]
+Together with integrality at zero this gives \(z/X\in N^{\rm mod}\).
+The ambient quotient is consequently finite torsion-free over the DVR.
+Its submodule \(I_B\) is free.
+
+For the rank, use the finite filtration starting with \(E^{-H}A\otimes B\).
+Multiply successively by \(X-r_j\), \(2H\) times for each of the
+\(e\) roots \(r_j\) of \(E\), and finally by \(X\). The last term
+is contained in \(XN^{\rm mod}\). Every grade has rank at most
+\({\rm rank}\,B\), by division with remainder at its root, including
+the last root zero. The filtration is \(\gamma\)-stable. At \(r_j\)
+the local parameter is a unit times the cyclotomic logarithm. To see
+this, write
+\[
+ X=\pi^s v(\pi)
+\]
+with \(v\) a unit.
+
+At
+\(\pi=\zeta-1\) its derivative is
+\(\pi^{s-1}(sv(\pi)+\pi v'(\pi))\ne0\), since \(s\) is a \(p\)-adic
+unit. The \(p-1\) simple roots in the ordinary parameter give \(e\)
+simple roots in the invariant ring: the tame orbits have size \(s\)
+and \(E(X(\pi))\) is a unit times the cyclotomic polynomial at
+\(1+\pi\). The identical multiplicity calculation also shows that
+different orbits give distinct roots. Alternatively \(E\) has
+degree \(e\) and its derivative is nonzero at each image, and division
+over each fibre of \(X-r_j\) in the ordinary disc has degree \(s\).
+
+On the grade with preceding multiplicity \(a\) at \(r_j\), \(\gamma\)
+acts by \(u^{a-H}\); factors coming from other roots are units there.
+Since \(u\) has infinite order, the invariant-grade test at this root is
+\[
+ u^{a-H}=1\quad\Longleftrightarrow\quad a=H.
+\]
+The
+grade at zero contributes at most one more copy of \(B\).
+Over the fraction field filter the image in the quotient by
+\(XN^{\rm mod}\). Its graded pieces are quotients of the original
+grades, and a fixed vector has a fixed leading term. The action in the graded factors at \(r_j\) gives
+\[
+ \operatorname{rk}_O I_B
+ \le \sum_{j=1}^{e}\sum_{\substack{0\le a<2H\\u^{a-H}=1}}
+           \operatorname{rk}_O B+\operatorname{rk}_O B
+ \le (e+1)\operatorname{rk}_O B\le e(e+1)m .
+\]
+Thus an \(O\)-basis of \(I_B\) furnishes a single choice of
+representatives at this component for all target classes. Taking a different basis for each input
+would give no bound on the number of exceptional generators.
+\label{cor:row-coordinates-1}
+\end{proof}

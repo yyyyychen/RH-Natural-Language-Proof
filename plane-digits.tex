@@ -1,0 +1,178 @@
+The pairing of two lifted symbols is computed from the unit parts of factorials in the prescribed digit classes. The identities below give the
+precision for that pairing in the proof of
+Proposition~\ref{prop:residue-plane-neighbor-test}.
+\paragraph{Factorials and divided derivatives in a digit class.}
+\label{par:plane-digits}
+\hypertarget{source-plane-digits}{}
+We record two uniform identities used in constructing the signed-chain
+pairing. Write \(P=p^g\) and \(0\le\rho<P\), and use the residue
+class \(\rho+P\beta\) for integers \(\beta\ge0\). Congruences in
+this paragraph are coefficientwise over \(\mathbb Z_{(p)}\) and
+therefore hold over the coefficient DVR as well.
+
+For \(M\ge0\), let \(U(M)=\prod_{1\le v\le M,\,p\nmid v}v\),
+with \(U(0)=1\). Removing the multiples of \(p\) from a factorial
+and repeating \(g\) times gives
+\begin{align*}
+ (\rho+P\beta)!&=\beta!\,p^{A_\rho+\beta B_g}
+       \prod_{h=0}^{g-1} U(b_h+P_h\beta),\\
+ b_h&=\left\lfloor\frac\rho{p^h}\right\rfloor,\quad
+ P_h=p^{g-h},\quad A_\rho=\sum_{h=0}^{g-1}\left\lfloor\frac{b_h}{p}\right\rfloor,
+ \quad B_g=\frac{P-1}{p-1}.
+\end{align*}
+For each \(h\) put \(C_h=U(P_h)\). Since \(b_h<P_h\), splitting
+into full blocks followed by the last partial block gives
+\begin{align*}
+ U(b_h+P_h\beta)={}&U(b_h)C_h^\beta\,
+ \prod_{j=0}^{\beta-1}\prod_{\substack{1\le v\le P_h\\p\nmid v}}
+                (1+P_hj/v)\,
+ \prod_{\substack{1\le v\le b_h\\p\nmid v}}(1+P_h\beta/v).
+\end{align*}
+The two products on the right together form a unit. In a group
+of coordinates with the same \(g\), the powers of \(p\) and \(C_h\)
+contribute a constant depending on the total \(\sum_a\beta_a\)
+and the fixed residues. The remaining unit is the product of
+the displayed products of \(1\) plus a multiple of \(p\).
+This gives the factorial factorization with the exact degree
+of the quotient monomials as the argument of the constant.
+
+\begin{lemma}[Factorial units and divided derivatives at fixed digits]\label{lem:plane-digit-units-and-cuts}
+On a fixed digit class \(\rho+P\beta\), with \(P=p^g\),
+\(g\ge0\), \(0\le\rho<P\), \(\beta\ge0\), and \(c\ge1\), either
+sign of the variable unit factor in the factorial is congruent
+modulo \(p^c\) to a product-binomial polynomial of total degree
+at most \(2(c-1)\). A system of divided derivatives of
+orders \(M_a\) admits the quotient expansion
+\eqref{eq:plane-digit-derivative-expansion} with the following bound when the common radix is \(P\),
+\[
+ \sum_a\kappa_a\le\frac1P\sum_a M_a+c-1.
+\]
+ In a signed cut a divided derivative of order
+\(|M|\) loses at most \(|M|\) on a vector letter and zero
+on a covector letter. The factorial formula and expansions
+include the radix-one case.
+\end{lemma}
+
+\begin{proof}
+\proofstep{Uniform polynomial descriptions of units and inverse units.}
+For \(c\ge1\), the remaining unit and its inverse both have binomial
+polynomial approximations to precision \(p^c\) of total
+degree at most \(2(c-1)\). To prove it, replace the leading
+factor \(p\) in each \(P_hj/v\) and \(P_h\beta/v\) by a variable
+\(z\). For either sign, expand the factors to degree \(c-1\)
+as polynomials in \(z\) modulo \(z^c\).
+
+In a full block at \(j\)
+the coefficient of \(z^d\) is a scalar in \(\mathbb Z_{(p)}\)
+times \(j^d\). Multiplying over \(j\) expresses the coefficient
+of \(z^d\) as a combination of sums
+\[
+ \sum_{0\le j_1<\cdots<j_l<\beta}j_1^{d_1}\cdots j_l^{d_l},
+ \qquad d_i\ge1,\quad \sum_i d_i=d.
+\]
+Induct on the number \(l\) of indices. For the induction step,
+fix the last index \(j_l\). The sum over its predecessors is
+an integer-valued polynomial in \(j_l\) of degree at most
+\((d-d_l)+(l-1)\). Multiplication by \(j_l^{d_l}\) gives
+degree at most \(d+l-1\). Summing from zero to \(\beta-1\)
+raises the degree by at most one, since
+\[
+ \sum_{j<\beta}\binom jt=\binom{\beta}{t+1}.
+\]
+
+This proves the degree bound \(d+l\) and integrality of
+the values at nonnegative integers. A partial block contributes an ordinary
+polynomial of degree \(d\) in \(\beta\) at \(z^d\). The coefficient
+at total order \(d\) over all blocks and coordinates is thus a
+polynomial of total degree at most \(2d\), taking values in
+\(\mathbb Z_{(p)}\) at nonnegative integer tuples. Write \(P(\boldsymbol\beta)\) for this coefficient polynomial and
+\(\Delta_i\) for forward difference in coordinate \(i\). Its Newton
+expansion is
+\[
+ P(\boldsymbol\beta)=\sum_{|\mathbf h|\le2d}
+    (\Delta_1^{h_1}\cdots\Delta_m^{h_m}P)(0)
+    \prod_{i=1}^{m}\binom{\beta_i}{h_i},
+\]
+where \(m\) is the number of coordinates. Each coefficient is an
+integral linear combination of values of \(P\), hence lies in
+\(\mathbb Z_{(p)}\). Now
+put \(z=p\). This proves the approximation uniformly in the
+number of coordinates and quotient exponents, also when the
+fixed residues and powers \(g\) differ by group. If \(g=0\)
+its product is empty and the same formulas give unit one.
+
+\proofstep{Divided derivatives and their factorial exponents.}
+For the divided derivative, write \(\partial^{[M]}X^n=\binom nM
+X^{n-M}\), with the derivative zero for \(n<M\). Use
+\[
+ (1+T)^P=1+T^P+pE(T),\qquad \deg E\le P-1,
+ \qquad E\in\mathbb Z[T].
+\]
+Then \(\binom{\rho+P\beta}{M}\) is the coefficient of \(T^M\) in
+\((1+T)^\rho(1+T^P+pE(T))^\beta\). At order \(\ell<c\) in \(pE\),
+the part with \(T^{Pj}\) from the other factor has coefficient
+\[
+ p^\ell[T^{M-Pj}](1+T)^\rho E(T)^\ell\,
+       \binom{\ell+j}{\ell}\binom\beta{\ell+j}.
+\]
+This uses the binomial identity for selecting \(\ell\) marked
+factors and then \(j\) others. The support of this expression
+requires \(j\le M/P\) and \(M-Pj\le\rho+\ell(P-1)\).
+
+Put \(t=\lceil(M-\rho)/P\rceil\) and \(\rho'=\rho-M+Pt\), so
+\(0\le\rho'<P\). With \(\kappa=\ell+j\), the support condition
+gives \(\kappa\ge t\). Therefore the corresponding divided
+derivative term has the form
+\begin{equation}\label{eq:plane-digit-derivative-expansion}
+ \begin{aligned}
+ &c_{\ell,j}X^{\rho'}
+       \left(X^{\kappa-t}\partial^{[\kappa]}X^\beta\right)(X^P),\\
+ &c_{\ell,j}=p^\ell[T^{M-Pj}](1+T)^\rho E(T)^\ell
+                                      \binom{\ell+j}{\ell}.
+ \end{aligned}
+\end{equation}
+All constants are integral and independent of \(\beta\).
+Terms with \(\beta<\kappa\) vanish. For multiple coordinates
+multiply these expansions and keep \(\sum_a\ell_a<c\), so
+\[
+ \sum_a\kappa_a\le\sum_a M_a/P+c-1.
+\]
+The discarded coefficients
+are divisible by \(p^c\), also after grouping equal monomials.
+This is the required derivative expansion inside the old residue
+class, with the new residues \(\rho'_a\) fixed by \(M_a\).
+The case \(P=1\) has \(E=0\) and gives the ordinary divided
+monomial derivative exactly.
+
+\proofstep{Effect of a derivative on a signed cut.}
+In the same argument a prefix lower bound is the least Laurent
+exponent for the conjugates of \(\operatorname{diag}(T,1,\ldots,1)\)
+acting on the letters in the cut. For any rank-one projection
+\(P_1\), write this matrix as
+\[
+ A_T=1+(T-1)P_1.
+\]
+
+The inverse is \(1+(T^{-1}-1)P_1\). A vector coordinate in the
+cut has least order at least zero and a covector coordinate
+has least order at least \(-1\). A divided derivative of
+order \(|M|\) in one letter loses at most \(|M|\) in the vector
+case and zero in the covector case. To see this, write the
+substitution of that letter as \(x\mapsto B_Tx\). Expand the
+polynomial after substitution at \(x+B_T^{-1}h\) and take the
+coefficient of \(h^M\). Thus the Laurent orders of the entries satisfy
+\[
+ \operatorname{ord}_T\!\big((B_T^{-1})_{ij}\big)\ge\begin{cases}-1,&B_T^{-1}=A_T^{-1}\quad(\text{vector}),\\0,&B_T^{-1}=A_T^t\quad(\text{covector}).\end{cases}
+\]
+For a letter
+outside the cut the Jacobian is the identity. The coefficient
+estimate holds for each conjugate and hence for the cut bound.
+
+Adjoining vector letters to a cut composes its substitution
+with polynomial substitutions on those separate letters.
+It can only increase the least order. Removing them composes
+with inverse substitutions and loses at most the sum of their
+degrees by homogeneity in each removed letter.  They give the local cutoff losses
+when the binomial approximation is implemented by divided
+derivatives and multiplication by monomials of the same degree.
+\end{proof}

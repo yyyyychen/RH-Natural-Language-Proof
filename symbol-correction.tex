@@ -1,0 +1,368 @@
+\subsection{Completing and correcting the polynomial}
+\label{sec:symbol-correction}
+\hypertarget{source-symbol-correction}{}
+
+The lifted columns prescribe the initial part of a polynomial. Completing it at the shared endpoints introduces error terms whose orders must be estimated before the edge tests are combined.
+
+Use \(x\) at an even start, \(v,y\) at an odd top, and let
+\(H_i=p^{d_i}\), so \(H_iP_i=q_j\). The other factors are
+formed from the integral polynomials
+\[
+ K_i=\sum_{a=0}^{k-1}x_a^{H_i}y_a,\qquad
+ W_{ih}=v_hx_0^{H_i}-v_0x_h^{H_i}\quad(1\le h<k),\qquad
+ D_i=\sum_a v_a y_a .
+\]
+Here \(K_i\) denotes a polynomial only in this paragraph and the
+factor table below. The capacities elsewhere are those of
+Section~\ref{sec:segment-window}.
+
+\begin{lemma}[Initial symbols on an adapted line]
+At the identity line \(w^{-1}S_1K_i\) and \(w^{-1}S_1W_{ih}\)
+have leading terms \(x_0^{H_i}y_0\) and \(v_h x_0^{H_i}\),
+respectively, with remainders divisible by \(w^{H_i-1}\).
+Both unnormalized polynomials vanish modulo \(w\) on every
+adapted line. For the same-position pairing one has
+\[
+ S_gD_i=wD_i.
+\]
+
+\end{lemma}
+\begin{proof}
+At the identity, ordinary vector and scalar covector coordinates
+acquire a factor \(w\). Term by term,
+\[
+  S_1K_i\equiv w x_0^{H_i}y_0,\qquad
+  S_1W_{ih}\equiv w v_hx_0^{H_i}\pmod {w^{H_i}} .
+\]
+At another adapted line the vector modulo \(w\) is proportional
+to the Frobenius twist of the first inverse row. Raising the
+start row to \(H_i\) gives the twist at the odd top, since the
+residue frame has the cycle period. This kills the minor \(W_{ih}\).
+The ordinary covector columns of the forward frame, with indices
+other than zero, annihilate that row, killing \(K_i\). In the
+same-position pairing the frame matrices cancel exactly, giving
+the asserted formula for \(D_i\).
+\end{proof}
+
+At a tie of level \(j_i\) use \(D_i^{P_i}\) a total of \(j_i\)
+times. Its normalized symbol is \(\sum_a(v_ay_a)^{P_i}\) by
+Frobenius modulo \(w\). The last even pairing \(D_+^{j_+}\) has
+exact normalized symbol \(D_+^{j_+}\).
+
+\begin{lemma}[Raw polynomial tail at a distinguished line]
+\label{lem:raw-tail-correction}
+For \(1\le n\le c\) and a product generator \(b\) of
+\(\mathcal S(n,o)\) of actual order \(o_b\le o\), there is a clean
+polynomial \(F_0\) of that order for which
+\[
+ S_1 F_0-b\equiv\sum_{e=1}^{n-1}w^e b_e\pmod{w^nO[X]},
+ \qquad b_e\in\mathcal S(n-e,o_b+e).
+\]
+The assertion uses the bounds and margins in
+Section~\ref{sec:block-pairing}.
+\end{lemma}
+
+\begin{proof}
+\proofstep{The missing exponents in the true weights.}
+Writing \(\rho_{ih},\tau_{ih}\) for the vector and covector
+digits, the remaining order-bearing factors are
+\[
+\begin{array}{c|c|c}
+ \text{factor}&\text{multiplicity}&\text{order per factor}\\ \hline
+ K_i^{P_i}&h_i\ (i<\sigma)&P_i\\
+ W_{ih}&\rho_{ih}\ (h>0)&1\\
+ K_i&\tau_{i0}&1 .
+\end{array}
+\]
+Set \(h_i=0\) at ties when using this table.
+The free digits \(v_0^{\rho_{i0}}\prod_{h>0}y_h^{\tau_{ih}}\)
+and the endpoint covector monomial of degree \(b_+-j_+\) are
+unchanged in the identity substitution and integral at all lines.
+
+Choose one even start \(j_0\). Using the vector letters \(x_j\)
+at all starts, put
+\[
+ C_h=\prod_j x_{j0}^{q_j-1}-\prod_j x_{jh}^{q_j-1},
+ \qquad R=x_{j_0,0}\prod_{h=1}^{k-1} C_h ,
+\]
+where the subscripts denote the start and coordinate.
+At the identity \(C_h\) has order zero and its symbol is the
+first monomial. At another line write \((a_h)_h\) for the first
+inverse row over the residue field and \(s_j\) for the start indices.
+Each substituted \(x_{jh}\) reduces to \(x_{j0}a_h^{p^{s_j}}\).
+
+For \(a_h\ne0\) we have
+\[
+ \prod_j(a_h^{p^{s_j}})^{q_j-1}=1,
+\]
+since the factors are
+successive conjugate ratios around the cycle. If \(a_0=0\)
+the initial factor in \(R\) vanishes. If \(a_0\ne0\) there is
+some \(h>0\) with \(a_h\ne0\), since this is a different line.
+Then \(C_h\) vanishes. Thus \(R^c\) supplies the extra \(c\)
+orders at all competitors. In counting perturbations regard
+each \(C_h\) as a separate factor repeated \(c\) times and
+put the pure power at \(j_0\) with the exact monomial factors.
+
+\paragraph{An endpoint shared by adjacent segments.}
+
+An endpoint shared by two segments has only one degree to spend. The contributions from both adjacent paths must be included when that degree is restored.
+
+The starting scalar degree spent at \(j\) is
+\[
+ U_j=q_j\Big(b_0+\sum_i h_i\Big)
+ +\sum_i H_i\Big(\sum_{h>0}\rho_{ih}+\tau_{i0}\Big)
+ + c\big((k-1)(q_j-1)+{\bf1}_{j=j_0}\big).
+\]
+Here \(b_0\) belongs to segment \(j\). The available degree
+is \(a_{+,j-1}-o_{+,j-1}\), the decoration at the end of
+the preceding segment, with cyclic indices. The first term is
+at most \(a-E_0\) by the definition of \(b_0\). Each summand
+in the second term is at most \(kq_j\), since each digit is
+less than \(P_i\). The last term is at most \(ckQ\).
+
+For the relaxed bounds of Section~\ref{sec:block-pairing} we have
+\(o_{+,j-1}\le C_{\rm end}+c A_1\). The reserve
+\[
+ E_0=C_{E1}\left(a/p^2+b'/p+
+     \mathcal L N_1a/(pk)+\mathcal L b'/k\right)
+      + C_{E2} k^2 N_1 Q^2 c
+\]
+with both constants at least 17 covers
+\(C_{\rm end}+cA_1+N_1 kQ+ckQ\).
+Indeed the terms of \(C_{\rm end}\) have respective coefficients
+at most \(5,3,4,2\) in the first parentheses for \(p\ge5\).
+The other three terms satisfy
+\[
+ cA_1+N_1kQ+ckQ\le15kN_1Qc.
+\]
+
+Since \(a_{+,j-1}\ge a\), the unused scalar degree is nonnegative.
+Fill it by the pure power of \(x_{j0}\).
+
+\proofstep{The common degrees at the endpoint.}
+The product \(F\) now has exactly the true multidegrees. This can
+also be checked directly on its leading symbol. The columns give
+the chain word with its radix substitutions and the odd powers
+\(v_0^{P_i z_i}\). The factors in the table give the remaining
+digits and the initial covector scalar powers. The tied and final
+pairings give the powers of \(E_i,E_+\), and filling at all starts
+gives exactly the final decorations. Every factor and its symbol
+have identical letter degrees. The sum of the orders in the
+columns counts the reduced vector degrees with their radix
+multipliers. Restoring the levels and adding the normal digits and
+the initial scalar covector powers gives
+\[
+ o_b=\sum_{\text{segments}}\left\{
+ \sum_i\left[P_i u_i+\sum_{h>0}\rho_{ih}+\tau_{i0}\right]+o_+
+ \right\},
+\]
+the order of the generator.
+
+We have proved that \(F_0=w^{-o_b}F\)
+is clean, has integral substitution at the chosen line, and that
+its normalized symbol there is the generator modulo \(w\).
+The extra \(c\) at another line is added to the full \(o_b\)
+because the universal orders of all the factors are still available there.
+
+\paragraph{The error of a product.}
+Consider a variable factor of the construction, of order \(d\)
+and leading symbol \(s\). Its normalized error is
+\(w^{-d}S_1 f-s\). For a monomial of normal degree \(a\) its
+coefficient is divisible by
+\[
+ w^{\max(1,a-d)}.
+\]
+Indeed
+the symbol is homogeneous of normal degree \(d\), and the
+diagonal substitution on the integral polynomial supplies
+\(w^a\) on this monomial. The exact factors, including the final
+pairing and its residual covector, have zero error. Every variable
+factor has degree at most \(Q\) in each true letter, and degree
+zero in the endpoint covector. The three degree bounds used here are
+\[
+ H_i P_i=q_j\le Q\quad(K_i^{P_i}),\qquad P_i\le Q\quad(D_i^{P_i}),\qquad q_j-1\le Q\quad(C_h).
+\]
+
+
+\proofstep{Terms indexed by the error factors.}
+Expand the product of normalized factors, choosing errors in a
+nonempty multiset of factors. Expand those errors in monomials.
+A term modulo \(w^n\) may be written \(w^e\) times an integral
+scalar times the product of the remaining symbols and one monomial,
+where \(1\le e<n\). Take \(e\) to be the sum of the displayed
+lower bounds on its individual coefficient orders, ignoring terms
+with this sum at least \(n\). At most \(e\) factors have been
+replaced. The monomial replacing them has their total
+multidegrees and normal degree at most their total order plus
+\(e\). The entire term consequently has normal degree at most
+\(o_b+e\).
+
+In each segment separate the remaining reduced column product
+\(G'\), of degrees \(d_{vi},d_{yi},d_{v+}\), and the surviving
+pairing powers \(E_i^{j'_i},E_+^{j_+}\). Here
+\[
+ 0\le j'_i\le j_i
+\]
+
+at the ties, and both are zero in the initial list. In the
+true letters all remaining pieces comprise a single monomial
+\(X^A\). Before the replacements its exponents at an odd top were
+\[
+ (\rho_{i0}+P_i z_i,\ (\rho_{ih})_{h>0}),\qquad
+ (\tau_{i0}+P_i h_i,\ (\tau_{ih})_{h>0}).
+\]
+At the endpoint these were the scalar vector decoration
+\(a_+-o_+\) and the residual ordinary covector exponents
+\(\gamma_h\). Write \(\Delta_h\) for the signed change in the exponent of coordinate \(h\) of a given true letter. The two directional bounds are
+\[
+ \sum_h(\Delta_h)_+\le Qe,\qquad \sum_h(-\Delta_h)_+\le Qe,\qquad q=Qe.
+\]
+For each replacement one removes its monomial
+part, possibly only the pure scalar part of a column, and inserts
+a monomial of degree at most \(Q\). If part of the factor was kept
+separate in \(G'\) or the \(E_i\)'s, it is only the former loss
+which becomes smaller. All endpoint covector exponents remain
+exactly as before.
+
+\proofstep{The additional order from deleted columns.}
+There is a second effect of deleting columns. The largest
+first-coordinate weight in a generic prefix frame is additive on
+products of nonzero polynomials. Apply the generic change of
+basis to the prefix and then its diagonal torus at the first
+coordinate. Over the resulting coefficient domain, Laurent degree satisfies
+\[
+ \deg_T(FG)=\deg_T F+\deg_T G\qquad(FG\ne0).
+\]
+Indeed the product of the two leading coefficients is nonzero. Each deleted reduced column
+has degree at most one in each of the at most \(N_1\) covectors.
+Its largest weight is at least \(-N_1\), a lower bound even
+for each of its monomials. Thus \(G'\) has every prefix cutoff
+of the full word relaxed by at most \(N_1 e\).
+
+\paragraph{Recovering a block from the error.}
+Divide each odd-top exponent of \(A\) by \(P_i\), using its
+remainders as the new digits. Write \(Z,Y\) for the quotients
+in coordinate zero of the vector and covector, and
+\(V_h,T_h\) for the ordinary quotients, at the top under
+consideration. Write \(V=\sum_{h>0}V_h\) and \(V_+\)
+for the total ordinary vector exponent at the endpoint of
+radix one. The unchanged true degrees give new coarse totals
+\[
+ A'_i=j'_i+d_{vi}+Z+V,\qquad
+ C'_i=j'_i+d_{yi}+Y+\sum_{h>0}T_h .
+\]
+
+In particular the new digit class is compatible and
+\(A_i-A'_i\le k\), since two sums of \(k\) remainders
+differ by less than \(kP_i\). We have \(V,V_+\le q\),
+\(Y\le h_i+q\), and \(Z\ge z_i-q\). For example, each
+positive unit of an ordinary vector quotient costs at least
+one unit of positive variation from a digit less than \(P_i\).
+The other assertions follow by the same division with remainder.
+
+At an initial top set \(w'_i=d_{vi}+V\), \(h'_i=Y\).
+Then \(w'_i\le w_i+q\), \(h'_i\le h_i+q\), and the two
+new labels are bounded by \(A'_i,C'_i\), respectively. At a
+tie set
+\[
+              o'_i=j'_i+d_{vi}+Y+V .
+\]
+Here \(j'_i+d_{vi}\le o_i\) and \(Y\le q\). In order to
+have \(o'_i\le A'_i\) we need \(Y\le Z\). This uses the
+excluded band quantitatively. For any compatible digits,
+\(A_i\ge(11/12)b'/Q-k\), since \(b_i\ge(11/12)b'\).
+Using \(b'\ge2k^3Q^4c\), \(\Delta\ge40/k\),
+\(2N_1+3\le k\) and \(k\ge5\), we obtain
+\[
+ \Delta A_i/4\ge (55/3) k^2 Q^3 c-10
+              \ge c(A_1+2Q+3k)+4 .
+\]
+
+\proofstep{The degree reserves for the reconstructed block.}
+In the second inequality use \(A_1\le13k^2Q\),
+\(Q,c\ge1\). The tied cutoff
+\(o_i\le(1-\Delta/4)A_i+(c-n)A_1\) therefore gives
+\(z_i=A_i-o_i\ge 1+2q\). Thus \[
+ \begin{gathered}
+ Y\le Z, \\ o'_i\le A'_i, \\ o'_i\le o_i+2q.
+\end{gathered}
+\]
+Set the unused labels to zero. Finally put
+\(o'_+=j_++d_{v+}+V_+\). It is bounded by \(a_+\)
+by homogeneity and by \(o_++q\) by the reduced final degree.
+The relaxed block inequalities now all hold at precision
+\(n-e\). In particular the old tied upper bound loses at
+most \(k+2q\) on changing \(A_i,o_i\), and the extra
+allowance is \(eA_1\).
+
+To realize the term in this block, multiply \(G'\) by all the
+ordinary quotient monomials in the corresponding coarse letters,
+including those at the endpoint. At an initial top the scalar
+quotients already agree with the required decorations. At a
+tie factor the scalar powers as
+\[
+ Z_i^{Z}S_i^{Y}
+       = Z_i^{Z-Y}(E_i-v_i\cdot y_i)^Y ,
+\]
+now writing \(v_i,y_i\) for the ordinary coarse letters and
+\(Z_i,S_i\) for their extra scalar coordinates.
+Here
+\[
+ Z-Y=A'_i-o'_i.
+\]
+
+Binomial expansion gives new levels
+\(j'_i+m_i\), \(0\le m_i\le Y\), and
+\(Y-m_i\) new ordinary pairings. The identities for
+\(A'_i,C'_i\) prove that both letter degrees at each such level
+are exact and that its level is allowed. They also check the
+degrees in the initial list. At the endpoint the scalar vector
+power is exactly \(a_+-o'_+\), and the residual covector still
+has degree \(b_+-j_+\).
+
+\proofstep{The order of the reconstructed top term.}
+An ordinary covector monomial cannot increase the top weight
+of a prefix, and the inserted ordinary vector degrees cost at
+most \(s q\) up to the odd tops. A new ordinary pairing costs
+nothing unless the prefix stops between its two letters, where
+it costs at most its power
+\[
+ Y-m_i\le q.
+\]
+Only one such pair
+can straddle a prefix. If the endpoint vector is included, no
+interior pair straddles the cut and the endpoint costs at most
+\(q\). The total added prefix weight is therefore at most
+\((s+1)q\), in addition to the deletion cost \(N_1e\).
+Meanwhile each increment \(A_i-u_i\) in the capacity decreases
+by at most \(k+2q\). The capacity can fall by at most
+\(s(k+2q)\) at any prefix.
+
+All three losses fit inside the
+margin \(eA_1\), since
+\[
+    N_1e+(s+1)q+s(k+2q)\le13kN_1Qe=eA_1 .
+\]
+All costs here are integers, so taking floors after subtracting
+the margin preserves the inequality. This proves membership in
+the required integral chain lattice at the reduced precision.
+The order of the new block equals the normal degree of the
+term. Each occurrence of a coarse ordinary vector contributes its radix
+and every pairing contributes that radix once. The digits supply
+the remaining ordinary vector and scalar covector exponents.
+Alternatively this follows by inserting the reconstructed labels
+in the displayed formula for \(o_b\). The global monomial
+decomposes by its odd tops and the endpoint of each segment,
+each true letter being included exactly once. Thus an error term \(T_e\) of order \(e\) satisfies
+\[
+ w^{-e}T_e\in\mathcal S(n-e,o_b+e).
+\]
+This proves
+\eqref{eq:raw-tail-required} and completes the simultaneous lift
+by the induction in Section~\ref{sec:block-pairing}.
+
+The constants in these inequalities are absolute under the stated local size bounds.
+Neither the number of columns nor the number of competing
+lines appears in the loss at one precision step.
+\end{proof}

@@ -1,0 +1,583 @@
+\subsubsection*{A determinant supported on the theta points}
+\label{subsec:congruence-determinant}
+\hypertarget{source-congruence-determinant}{}
+
+The projections and inertia relations describe the relevant blocks of the integral Galois matrix algebra. A determinant in the Hecke algebra will convert their cohomology lengths into a congruence estimate supported on the theta points. Fix one coefficient DVR \(O\) with
+fraction field \(F\). In this calculation write
+\(\operatorname{len}\) for the unnormalized \(O\)-length.
+Use a finite parameter set \(X\), the theta subset \(Z\), a
+Hecke algebra \(\mathcal T\subset O^X\) and a good point
+\(\pi\in Z\). Write \(I_Z\) for the ideal of elements of
+\(\mathcal T\) vanishing outside \(Z\). The congruence
+length before normalization is
+\(\operatorname{len}(O/I_Z(\pi))\).
+
+\begin{established}[Ordered corner and block evaluation]\label{hyp:theta-marked-corner}
+The auxiliary parameter set \(X'\) records an ordering of
+the eigenvalues of a marked \(t\)-dimensional corner. Its
+coefficient algebra \(\mathcal T'\subset O^{X'}\) has a
+basis \(b_j\) over the pullback of \(\mathcal T\) along
+\(p:X'\to X\). For each \(x\in X\setminus Z\), evaluation gives an injection
+\[
+ O^{t!}\lhook\joinrel\longrightarrow O^{p^{-1}(x)},\qquad
+ (c_j)_j\longmapsto\bigg(\sum_j c_j b_j(x')\bigg)_{x'\in p^{-1}(x)} .
+\] At the chosen
+point of \(X'\) above \(\pi\) the matrix algebra
+\(\mathcal A\) has a specialization into matrices over
+\(O\). Its image is block triangular with one block of
+size \(r\) and \(t\) blocks of size one, and each block
+map \(\rho_k:\mathcal A\to M_{d_k}(O)\) is surjective.
+The determinants of square matrices over \(\mathcal A\),
+computed on the full matrix spaces at all points of
+\(X'\), belong to \(\mathcal T'\).
+\end{established}
+\begin{proof}
+\proofstep{Integral coefficients of the matrix determinants.}
+These integral properties can be seen from the marked
+corner construction. Let \(\mathcal A_0\) be the
+\(\mathcal T\)-span of the Galois matrices \(r(g)\),
+which is an algebra since products of Galois matrices
+are Galois matrices. The coefficients of the
+characteristic polynomials of \(r(g)\) are in
+\(\mathcal T\). For any finite number of block rows,
+expand a matrix over \(\mathcal A_0\) as a scalar linear
+combination of \(e_{ij}\otimes r(g)\), with \(e_{ij}\)
+the elementary matrices on the block rows. To see that
+its characteristic coefficients are in \(\mathcal T\),
+give each summand \(A_i=e_{ij}\otimes r(g)\) an
+indeterminate \(X_i\). For a primitive cyclic word \(w\), let
+\(A_w\) be its ordered matrix product and \(X_w\) its monomial.
+
+In the completed polynomial ring in characteristic zero,
+\[
+ \log\det(1-\textstyle\sum_iX_iA_i)
+ =-\sum_{a\ge1}\frac{\operatorname{tr}((\sum_iX_iA_i)^a)}a
+ =-\sum_{w\ {\rm primitive}}\sum_{b\ge1}
+                    \frac{X_w^b\operatorname{tr}(A_w^b)}b .
+\]
+Indeed \(w^b\) contributes \(|w|\) rotations at length \(b|w|\).
+Exponentiating gives \(\prod_w\det(1-X_w A_w)\), with only
+finitely many factors in each degree.
+A product \(A_w\) is zero, has one off-diagonal
+block, or has a single diagonal block carrying a
+Galois matrix. The individual factors are therefore
+\[
+ \det(1-X_w A_w)\in\mathcal T[X_w].
+\]
+For the zero and off-diagonal cases the determinant equals one. After the identity has been
+proved in the fraction fields, its coefficient
+expression is integral and uses no division in
+\(\mathcal T\). Substitution of the scalar coefficients
+proves the assertion, also over any \(\mathcal T\)-algebra
+of scalar functions.
+
+\proofstep{The ordered corner roots and their splitting algebra.}
+The corner operator in \(\mathcal A_0\) is
+\(e_Br(g_0)e_B+s\), where \(e_B\) is the marked
+rank-\(t\) idempotent and \(s=e_Bse_B\) is the
+perturbation with \(s(\pi)=0\). It is zero on the
+complement of the corner. The previous argument
+places its corner characteristic polynomial in
+\(\mathcal T[X]\), with \(X\) here a polynomial
+indeterminate. The marked perturbation gives distinct
+roots at every fibre in the tied splitting field.
+The successive monic quotients adjoining the ordered roots have degrees \(t,t-1,\ldots,1\). Freeness at each step gives
+\[
+ \operatorname{rank}_{\mathcal T}(\text{splitting algebra})=\prod_{a=1}^{t}a=t!.
+\]
+
+Over each rational fibre this algebra is the
+product of \(t!\) copies of the coefficient field,
+by the Chinese remainder theorem. The free basis
+therefore stays independent when evaluated at all
+orderings in each fibre. This also gives an embedding
+of the splitting algebra into \(O^{X'}\), since the
+roots of integral monic polynomials are integral.
+Take \(\mathcal A\) to be the span of the Galois
+matrices over this splitting algebra. The determinant
+argument applies with these coefficients. All
+matrices are integral, so \(\mathcal A\) is finite
+over \(O\). At the chosen fibre the marked
+decomposition gives the triangular blocks, and
+the residual full matrix span of the rank-\(r\)
+constituent gives surjectivity on that block by
+Nakayama's lemma. The scalar blocks have surjectivity
+from the coefficient ring. These algebraic steps
+use the marked idempotents and the perturbation
+on the given family, constructed in Proposition~\ref{prop:retained-integral-projections}.
+\end{proof}
+
+\begin{proposition}[The congruence ideal on the theta locus]
+\label{prop:theta-determinant-length}
+Take the ordered corner and block maps of Lemma~\ref{hyp:theta-marked-corner}. Let \(M\) be the finite
+presentation with the column relations in the proof. If these
+relations have the prescribed finite column dimensions away from
+\(Z\), then
+\[
+ \operatorname{len}(O/I_Z(\pi))\le
+       \sum_k\operatorname{len}\operatorname{Hom}_{\mathcal A}
+                          (M,(F/O)^{d_k}).
+\]
+The \(k\)-th action is via \(\rho_k\), with the same coefficient
+ring and chosen point in all the summands.
+\end{proposition}
+
+\begin{proof}
+Lemma~\ref{hyp:theta-marked-corner} supplies the splitting algebra, its fibre basis and the full block evaluations.
+
+Write
+\[
+ B=e_Br(g_0)e_B+s
+\]
+on the corner, and let its ordered
+roots be \(\alpha_0,\ldots,\alpha_{t-1}\). The operator separating
+the first eigenline is
+\[
+ E=\prod_{i>0}(B-\alpha_i e_B),\qquad
+ E|_{V_{\alpha_i}}=
+ \begin{cases}\Delta\,{\rm id},&i=0,\\0,&i>0,\end{cases}
+ \qquad\Delta=\prod_{i>0}(\alpha_0-\alpha_i).
+\]
+Distinctness of the roots gives \(E^2=\Delta E\) on every fibre.
+At \(\pi\) the roots are \(\chi(g_0)\varepsilon(g_0)^{-i}\), where
+\(\varepsilon\) is the cyclotomic character. The
+marked value is \(\varepsilon(g_0)=1+\ell^s v\)
+with \(v\in\mathbb Z_\ell^\times\), at \(s\ge2\) for
+\(\ell=2\) and \(s\ge1\) for \(\ell=3\).
+The binomial calculation gives
+\[
+     v_\ell(\Delta_\pi)=(t-1)s+v_\ell((t-1)!).
+\]
+\label{cor:congruence-determinant-1}
+
+\proofstep{The column relations in a finite presentation.}
+Here is the module used in the proof. Write \(U_g\) for the
+Galois operator after dividing by the first character.
+Use \(E,E_1\in\mathcal A\) with \(E^2=\Delta E\) and
+\(E_1^2=E_1\), with \(\Delta\in\mathcal T'\) central.
+The two operators have rank one over \(F\) at each
+point of \(X'\) above \(X\setminus Z\), and
+\(\Delta\) is then nonzero. Put
+\(Y=\sum_g\mathcal A (U_g-1)E\subset\mathcal A\).
+
+At each column place \(u\) with decomposition subgroup
+\(D_u\), adjoin a generator \(n_u\), \(j_u\) generators
+\(s_{u,a}\) and a generator \(s_{u,0}'\) to \(Y\).
+Impose the relations
+\[
+ \begin{gathered}
+ E n_u=0,\qquad (E_1-1)s_{u,a}=0,\qquad
+ (E-\Delta)s_{u,0}'=0,\\
+ (U_g-1)E+(U_g-1)n_u
+     =\Delta\left(\sum_{a=1}^{j_u}K_{u,a}(g)s_{u,a}
+                  +K_{u,0}(g)s_{u,0}'\right)\qquad(g\in D_u).
+ \end{gathered}
+\]
+Here the first term in the last relation is the
+element of \(Y\). The functions \(K_{u,a},K_{u,0}\)
+are the matrix cocycles in the column data. Denote the
+quotient by \(M\). Since \(\mathcal A\) is left
+Noetherian, \(Y\) is finitely generated and \(M\)
+has a finite presentation.
+
+\proofstep{A kernel vector on each complementary fibre.}
+The candidate determinant has integral coefficients. To lie in the theta congruence ideal it must vanish when evaluated on a complementary fibre, which can be tested by producing a vector in its kernel there.
+
+Consider a rational evaluation space \(V\) at \(x'\)
+over \(X\setminus Z\). Fix a nonzero vector \(\eta=Ew\)
+in the image of \(E\) and a nonzero \(s\) in the image
+of \(E_1\). The two conditions on a vector in the first image are incompatible:
+\[
+ \operatorname{im}E\ \cap\ \bigcap_g\ker(U_g-1)=0.
+\]
+At \(u\), the
+column condition says that the functions
+\(K_{u,a}(\cdot)s\) and \(K_{u,0}(\cdot)\eta\)
+lie in a space containing the coboundaries and of
+dimension at most \(j_u+\dim V^{D_u}\) modulo
+coboundaries. Here invariants and coboundaries use \(U\).
+If \(V^{D_u}\ne0\), take \(v_u\ne0\) invariant there
+and all scalars zero. Otherwise \(V^{D_u}=0\). Let \(L_u\) be the span of the classes of the \(j_u+1\) functions in the quotient by coboundaries. The column bound gives
+\[
+ \dim L_u\le j_u<j_u+1.
+\]
+
+A nontrivial linear dependence in this quotient gives a nonzero tuple \((v_u,(a_{u,a})_a,a_{u,0})\)
+such that
+\[
+ (U_g-1)v_u
+      =\sum_a a_{u,a}K_{u,a}(g)s+a_{u,0}K_{u,0}(g)\eta
+           \qquad(g\in D_u).
+\]
+If at some \(u\) we can take \(Ev_u=0\), map \(Y\)
+and all other places to zero and map the generators
+at \(u\) to \(\Delta v_u,a_{u,a}s,a_{u,0}\eta\).
+This satisfies the relations and gives a nonzero map
+\(M\to V\). In the other case rescale each tuple so
+that \(Ev_u=\eta\). Map \(y\in Y\) to \(yw\) and
+the local generators to
+\(\Delta v_u-\eta,a_{u,a}s,a_{u,0}\eta\).
+The relations follow from \(E\eta=\Delta\eta\)
+and the equation at \(D_u\). The map is nonzero
+on \(Y\) because \(\eta\) is moved by some \(U_g\).
+Thus
+\[
+ \operatorname{Hom}_{\mathcal A}(M,V)\ne0
+\]
+at every evaluation point over \(X\setminus Z\).
+
+\proofstep{Blockwise Smith lengths at the chosen theta point.}
+Present \(M\) with \(g\) generators and a finite
+matrix of relations \(P\), written so that applying
+\(\operatorname{Hom}_{\mathcal A}(-,V)\) identifies it
+with the kernel of \(P\) acting on \(V^g\). At the
+chosen point above \(\pi\), use the block targets
+\[
+ H_k=(F/O)^{d_k}
+\]
+with action via \(\rho_k\).
+If their Hom lengths are finite, the expanded relation
+matrix \(P_k\) in each block has full column rank.
+Let \(\varpi^{a_{k,i}}\) be its elementary divisors, with
+\(1\le i\le gd_k\). Since
+\[
+ (F/O)[\varpi^a]\simeq O/(\varpi^a),
+\]
+the kernel on the divisible target and its determinantal ideal satisfy
+\[
+ \begin{aligned}
+ \operatorname{len}\operatorname{Hom}_{\mathcal A}(M,H_k)
+     &=\sum_{i=1}^{gd_k}a_{k,i}=:s_k,\\
+ I_{gd_k}(P_k)&=(\varpi^{s_k}),
+ \end{aligned}
+\]
+where \(I_{gd_k}\) is generated by the maximal minors. Thus one such
+minor attains valuation \(s_k\).
+
+For each \(k\), there exists a contraction of the rows
+giving a square \(gd_k\)-matrix with determinant
+valuation \(s_k\). Surjectivity of \(\rho_k\) lifts
+such a contraction to a rectangular matrix \(C_k\)
+over \(\mathcal A\). Use the matrix
+\(C(\mathbf u)=\sum_j u_j C_j\) over a polynomial
+ring with indeterminates \(u_j\).
+In block \(k\), the determinant of \(CP\), divided
+by a uniformizer to the power \(s_k\), is a polynomial
+over \(O\). Indeed Cauchy--Binet expresses the numerator as
+\[
+ \det(C(\mathbf u)_kP_k)=
+   \sum_{|J|=gd_k}\det(C(\mathbf u)_{k,*,J})\det(P_{k,J,*}).
+\]
+Each term is divisible by \(\varpi^{s_k}\) in \(O[\mathbf u]\).
+Its reduction is nonzero since setting \(u_k=1\)
+and the other \(u_j=0\) gives a unit. Therefore the
+product of the reductions is a nonzero polynomial,
+and some coefficient is a unit.
+
+\proofstep{A determinant coefficient in the original congruence ideal.}
+The same characteristic coefficient argument applied
+over \(\mathcal T'[\mathbf u]\) puts the determinant of
+\(C(\mathbf u)P\) in \(\mathcal T'[\mathbf u]\). At every
+point above \(X\setminus Z\) the nonzero maps \(M\to V\)
+give a kernel vector, so the determinant vanishes
+as a polynomial at those points. At the data at
+\(\pi\) the determinant is the product of the block
+determinants by triangularity. Take a coefficient
+\(f'\in\mathcal T'\) corresponding to a unit coefficient
+of the reduced product. Its valuation at this point
+is \(\sum_k s_k\), and it vanishes off the theta subset.
+Write
+\[
+ f'=\sum_j(f_j\circ p)b_j.
+\]
+
+For every
+\(x\notin Z\), its evaluations give a vanishing vector:
+\[
+ 0=(f'(\xi))_{\xi\in p^{-1}(x)}
+   =\sum_j f_j(x)(b_j(\xi))_{\xi\in p^{-1}(x)} .
+\]
+Independence on that fibre forces \(f_j(x)=0\) for
+all \(j\). Thus \(f_j\in I_Z\), and the values \(b_j(\pi')\)
+are integral in the common coefficient ring, so \(f'(\pi')\)
+lies in \(I_Z(\pi)\). Its valuation gives
+\[
+ \operatorname{len}(O/I_Z(\pi))
+ \le \sum_k\operatorname{len}\operatorname{Hom}_{\mathcal A}(M,H_k).
+\]
+If a Hom length is infinite this inequality already
+holds in extended lengths. The empty generator case
+has determinant one. Division by the ramification
+index of \(O/\mathbb Z_\ell\) gives the normalized
+inequality.  Choose a residue field
+of size greater than \(g\sum_k d_k\) to specialize the
+contraction simultaneously. Coefficient extraction gives
+the same ideal bound over any residue field. \label{cor:congruence-determinant-2}
+
+\end{proof}
+
+\subsubsection*{Choosing the column cocycles}
+
+The determinant argument requires actual columns in the integral presentation. A finite quotient specifies their evaluations only up to torsion, so we choose lifts and bound the exponent of a relation among them.
+
+\begin{lemma}[Column lifts and their torsion tests]
+\label{lem:congruence-column-cocycles}
+Under the finite-class lift bound \(e'\) on the designated local
+lattices, write \(c_a\) for a lift of the \(a\)-th finite quotient basis class and \(c_*\) for the extra column. Their evaluations are
+\[
+ c_a\longmapsto\ell^{e'}\beta_a\ (1\le a\le j_u),\qquad c_*\longmapsto\ell^{e'}\Delta_\pi\quad\text{in the unramified trivial block}.
+\] These columns
+satisfy the finite-class dimension bound away from \(Z\) and their
+torsion dependences in the \(W\)-block are killed by \(\ell^{e'}\).
+\end{lemma}
+
+\begin{proof}
+\proofstep{Integral finite bases at a column place.}
+At the selected point let \(T\) be the integral lattice
+in the \(W\)-block. Choose a basis \((\beta_a)_a\) of
+the free quotient of \(H^1_f(E_u,T)\). This quotient
+is the lattice of integral finite classes in
+\(H^1_f(E_u,W)\). It spans the rational finite group
+since a continuous cocycle on the compact local Galois
+group has bounded image and can be scaled into \(T\).
+Thus its rank is determined on the rational finite part:
+\[
+ \operatorname{rank}_O\bigl(H^1_f(E_u,T)/\mathrm{tors}\bigr)=\dim H^1_f(E_u,W)=j_u.
+\]
+
+
+Use the left ideals \(\mathcal A E_1,\mathcal A E\)
+with local action by \(U_g\). Rationally these are
+subrepresentations of finite direct sums of the full
+twisted family, by embedding matrices as columns in
+the evaluation spaces. In block \(0\), choose a
+generator \(v_1\) of the image of \(E_1\) on \(T\).
+Evaluation on \(v_1\) maps \(\mathcal A E_1\) onto
+\(T\), because the block image is the full matrix
+algebra. Evaluation of \(\mathcal A E\) on the
+trivial block has image \(\Delta_\pi O\), on which
+the twisted action is trivial. The two block evaluations are thus surjections of stable lattices
+\[
+ \mathcal A E_1\twoheadrightarrow T,\qquad \mathcal A E\twoheadrightarrow\Delta_\pi O.
+\]
+
+The twisted Galois action on the second target is trivial.
+The first column lift produces finite cocycles in
+\(\mathcal A E_1\) with images representing
+\(\ell^{e'}\beta_a\), using lifts of the \(\beta_a\)
+to integral finite classes. Use these as \(K_{u,a}\).
+The second lift uses the unramified class in
+\(H^1_f(E_u,\Delta_\pi O)\) with value \(\Delta_\pi\)
+on arithmetic Frobenius. This class is finite since
+the trivial representation's rational finite part
+is the unramified line. Its lift \(K_{u,0}\) has image
+with Frobenius value \(\ell^{e'}\Delta_\pi\). This
+value holds on every lift of that Frobenius because
+coboundaries of the trivial module vanish.
+
+\proofstep{The local dimension at every evaluation.}
+At an evaluation point \(x'\), a vector fixed by \(E_1\)
+and an eigenvector \(E\eta=\Delta\eta\) give the equivariant
+evaluation maps \(a\mapsto as\) on \(\mathcal A E_1\) and
+\[
+ a\mapsto a\eta
+\]
+on \(\mathcal A E\), respectively
+(\(E_1s=s\)). Functoriality sends their finite cohomology
+classes to finite classes. The negative Hodge jumps of the full
+twisted family are constant at the column points. Removing the
+cyclotomic characters at \(\pi\) removes no negative jumps.
+As \(H^0(E_u,W)=0\), their common total over embeddings is
+\(j_u\). The finite-part dimension formula at \(x'\) is therefore
+\[
+        \dim H^1_f(E_u,V)=j_u+\dim V^{D_u}.
+\]
+This is the local dimension used for the finite column cocycles.
+
+\proofstep{Torsion relations in the chosen basis.}
+The rational dimension leaves the exponent of integral torsion relations undetermined.
+
+Test a torsion relation on the \(W\)-block. Write a linear combination
+of the evaluated column cocycles with coefficients
+in \(F/O\), and lift those coefficients to \(F\).
+If the combination is a coboundary modulo \(T\),
+the rational finite class \(\sum_a y_a\ell^{e'}\beta_a\)
+comes from \(H^1(E_u,T)\) by exactness for
+\(0\to T\to W\to W/T\to0\).
+It therefore comes from \(H^1_f(E_u,T)\) by the
+definition of the integral finite part. Because
+the \(\beta_a\) form its free basis, each
+\(y_a\ell^{e'}\) belongs to \(O\). This proves the
+killing exponent for such a dependence.   \label{cor:congruence-determinant-3}
+
+\end{proof}
+
+\subsubsection*{The Selmer length comparison for this presentation}
+\label{subsec:congruence-selmer}
+
+We can now evaluate the presentation at the chosen theta point. Each block contributes a Selmer length, while the valuation of the specialized determinant records the cost of imposing the integral conditions.
+
+At the chosen point let \(\Delta_\pi\ne0\) be the
+specialization of \(\Delta\) and put \(v_\Delta
+=v_\ell(\Delta_\pi)\). From now on lengths are
+normalized by \(v_\ell(\ell)=1\).
+The block targets are \(H_0=(F/O)^r\) with the
+action of \(W\), \(H_1=F/O\) with trivial action,
+and \(H_k=(F/O)(1-k)\) for \(2\le k\le t\).
+Write \(P_k=\operatorname{Hom}_{\mathcal A}(M,H_k)\).
+\begin{proposition}[From block lengths to Selmer kernels]
+\label{prop:congruence-block-selmer-length}
+With the integral presentation and column lifts of
+Lemma~\ref{lem:congruence-column-cocycles}, the normalized sum of
+block Hom lengths in Proposition~\ref{prop:theta-determinant-length}
+is bounded by the global kernel lengths and the local and
+presentation costs below. The three global kernels are
+the rank-\(r\) finite kernel, the unramified first character and
+the strict classes in twists \(1-k\) for \(2\le k\le t\).
+If \(c_k\) is the normalized contribution charged to coboundaries in block \(k\), then
+\[
+ c_1=0,\qquad c_k\le2d_kv_\Delta\quad(k\ne1).
+\]
+\end{proposition}
+
+\begin{proof}
+\proofstep{The map to continuous cocycles.}
+A homomorphism \(\varphi\) supplies the cocycle
+\[
+    c_\varphi(g)=\varphi((U_g-1)E).
+\]
+The cocycle identity follows by multiplying \(U_g U_h\).
+In the integral presentation all the matrix functions
+are continuous, and the orders and their modules are
+finite over \(O\). A map to \(H_k\) kills a common
+power of the uniformizer times the module because the
+images of a finite set of generators are torsion.
+Thus \(c_\varphi\) is continuous.
+
+\proofstep{Its kernel on the local generators.}
+First consider the map from \(P_k\) to cocycles before
+taking cohomology. Its kernel consists of maps vanishing
+on \(Y\). They are determined by the images of the local
+generators, subject to the relations of \(M\).
+The specializations on the target blocks satisfy
+\[
+ E|_{H_0}=0,\qquad E|_{H_1}=\Delta_\pi,\qquad E|_{H_k}=0\quad(k\ge2).
+\]
+The idempotent \(E_1\) has rank one
+in block \(0\) and is zero on the character blocks.
+The extra column cocycle \(K_{u,0}(g)\) lies in the
+left ideal generated by \(E\).
+
+\begin{itemize}
+\item In block \(0\) the column lift input says that
+a linear combination \(\sum_a K_{u,a}(g)s_a\) with
+\(s_a\in E_1H_0\) which is a coboundary on \(D_u\)
+forces \(\ell^{e'}s_a=0\) for every \(a\).
+For a map vanishing on \(Y\) the combination with
+coefficients \(\Delta_\pi\varphi(s_{u,a})\) is a
+coboundary by the relation for \(D_u\). The tuple of images of the \(s_{u,a}\) lies in
+\[
+   (E_1 H_0)[\ell^{e'}\Delta_\pi]^{\,j_u},
+\]
+of normalized length at most \(j_u(e'+v_\Delta)\).
+
+For a fixed tuple, differences of choices of \(n_u\) lie in
+\(H_0^{D_u}\), of length \(h_W(u)\), and the remaining
+image of \(s'_{u,0}\) lies in \(H_0[\Delta_\pi]\), of length
+at most \(rv_\Delta\). Kernel plus image for projection onto
+the tuple therefore gives
+\(j_u(e'+v_\Delta)+h_W(u)+rv_\Delta\).
+
+\item In block \(1\) the matrix \(K_{u,0}\) has some
+value on \(D_u\) acting by
+\(\ell^{e'}\Delta_\pi\) times a unit, the first-character
+column input. The relation for that element gives
+\[
+ \ell^{e'}\Delta_\pi^2\varphi(s_{u,0}')=0
+\]
+for a
+map vanishing on \(Y\). The image of \(n_u\) is killed
+by \(\Delta_\pi\) and that of \(s_{u,a}\) is zero.
+The resulting cost is at most \(e'+3v_\Delta\).
+
+\item In block \(k\ge2\) the \(s_{u,a}\) vanish and
+\(\Delta_\pi\varphi(s_{u,0}')=0\). The relation for
+\(D_u\) forces \(\varphi(n_u)\in H_k^{D_u}\), since
+\(K_{u,0}\) acts by zero. With the scalar invariant
+bound \(h_0\) the cost is \(h_0+v_\Delta\).
+\end{itemize}
+
+\proofstep{The cost of quotienting by coboundaries.}
+Coboundaries change the length differently on each block.
+
+Pass next to cohomology. In block \(1\) the coboundaries
+are zero. In the other blocks the central scalars \(a_g\) of the marked corner satisfy
+\[ E=\sum_g a_g U_g,\qquad \sum_g a_g=\Delta_\pi\quad\text{at the chosen point}. \]
+If \(c_\varphi(g)=(U_g-1)v\), the element
+\[
+    y=\sum_g a_g (U_g-1)E=(E-\textstyle\sum_g a_g)E
+\]
+has image \(-\Delta_\pi v\) in \(H_k\), since \(E\)
+acts by zero on \(H_k\). The algebra identity
+\(Ey=\Delta y\) then forces \(\Delta_\pi^2 v=0\).
+The space of image cocycles that are coboundaries
+has length at most \(2d_k v_\Delta\).
+
+\proofstep{Relative Selmer kernels and local correction terms.}
+Finally let \(C_k\) be the image of \(P_k\) in
+\(H^1(E,H_k)\). At each local place impose a target
+subgroup \(F_{k,u}\) of local cohomology. Suppose
+the restrictions of \(C_k\) are in subgroups
+\(B_{k,u}\supset F_{k,u}\) and that the classes also
+lie in a global subgroup \(Q_k\). The kernel of
+\[
+   C_k\longrightarrow\bigoplus_u B_{k,u}/F_{k,u}
+\]
+lies in the subgroup of \(Q_k\) satisfying all the
+local conditions. Thus its global length bound and
+the sum of the local colength bounds give a length
+bound for \(C_k\). In the split comparison, the
+column images already satisfy \(F_{k,u}\).
+
+In
+block \(0\) the row quotient has the colength
+bound proved above, and the global kernel has length
+at most \(s_\pi\). In the character blocks the row and
+tame quotients have bounds \(([E_w:\mathbb Q_\ell]+2)c_B\)
+and \(v_\ell(\zeta_v-1)\). If \(K_1\) is the global kernel in block one, unramified class field theory gives
+\[
+ K_1\hookrightarrow\operatorname{Hom}(\operatorname{Cl}(E),F/O),\qquad \operatorname{len}_{\rm norm} K_1\le v_\ell(h_E).
+\]
+In the higher blocks the local
+conditions defining this kernel are strict at \(\ell\)
+and unramified elsewhere. Its length is bounded by the
+strict group \(\operatorname{Sha}^1(E,(F/O)(1-k))\).
+The normalization and the row and tame restriction arguments
+follow below.
+
+\proofstep{The sum of the normalized block costs.}
+Let \(k_c\) be the number of columns. Summing these
+bounds over all blocks gives the expression used in
+the split-row estimate. The terms from the rank-\(r\)
+and character blocks contribute
+\[
+ \sum_u\{j_u(e'+v_\Delta)+h_W(u)+e'\},
+\]
+and the \(t-1\) higher blocks contribute at most
+\(tk_ch_0\). The remaining denominator terms from
+the presentation and the coboundaries are bounded by
+\(2k_cv_\Delta+4R(k_c+1)v_\Delta\). Indeed the dimensions \(d_k\) of the blocks sum to \(R\), so their contribution is
+\[
+ \sum_k d_k k_c v_\Delta=R k_c v_\Delta,
+\]
+and the coboundaries cost at most \(2Rv_\Delta\).
+
+The row and tame costs of the
+character blocks occur at most \(t\) times. Adding the
+global kernels accounts for \(s_\pi\), the class
+number and the strict cohomology sum. Pairing the row
+cost for \(W\) at \(w\) with its conjugate column
+\(u\) and using \(j_u\le [E_u:\mathbb Q_\ell]m\)
+gives the formula below.
+\label{cor:congruence-determinant-4}
+\end{proof}

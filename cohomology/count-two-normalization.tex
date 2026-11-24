@@ -1,0 +1,372 @@
+\paragraph{The initial symplectic labels and flags.}
+\label{par:count-two-labels}
+We now change endpoints. At the rational target we again start in the marked
+eigenbasis, so that later changes of lattice can be read on the same root spaces.
+
+\begin{lemma}[The rational flag in the marked eigenbasis]
+\label{lem:rational-rank-four-marking}
+For the rational datum, there is an integral symplectic
+eigenbasis diagonalizing the normalizing element \(\tau\).
+In this basis the ordinary flag admits a lower unipotent
+symplectic frame \(N\). Denote its four independent lower entries by
+\(N_{10},N_{20},N_{30},N_{21}\). Let \(S_K\) consist of the degrees
+of nonzero off-diagonal entries of the global matrices \(r(g)\),
+\(g\in G\), over the fraction field \(K\). Write \(S^{(0)}\)
+for the degrees of the global and independent frame entries
+that are units on this initial lattice. Then
+\[
+ -w_\Psi\in S_K,\qquad
+ S_K\cap\{w_\beta,-w_\alpha,-w_\vartheta\}\ne\varnothing,
+ \qquad S^{(0)}\subseteq\{-w_\Psi\}.
+\]
+The initial residual global matrices are diagonal. Only a frame
+entry can contribute to \(S^{(0)}\).
+\end{lemma}
+
+\begin{proof}
+\proofstep{Place the ordinary flag in a chart with unit leading minors.}
+For the rational point use the residual order
+\((\bar\vartheta,\bar\Psi,\bar\alpha,1)\).
+The designated Frobenius at \(\ell\) separates the
+characters of the two spaces on the indices
+\(\{0,2\}\) and \(\{1,3\}\). The residue of the
+ordinary line has its character from the first
+space and lies in that space. The two-dimensional
+step of the Lagrangian flag splits across the two
+spaces, by the Frobenius projectors, with a line in
+each. The two spaces are paired by the alternating
+form. If the first line has nonzero coordinate zero,
+the Lagrangian plane projects isomorphically to the
+first two coordinates. Indeed if its other line had
+coordinate one zero it would be spanned by the
+vector of index three, which pairs nontrivially
+with the first line.
+
+If instead coordinate zero vanishes, choose the signed symplectic permutation inducing the exchanges
+\[
+ (0\ 2)(1\ 3).
+\]
+This is allowed because the original first line
+then has character both \(\bar\vartheta\) and
+\(\bar\alpha\) on the marked decomposition group.
+Their equality says \(\bar\Psi=1\) on the whole group,
+and the other two characters coincide there as well.
+The permutation acts on the global basis, with the
+order of the given local inertia characters retained.
+In either order the flag has unit first two leading
+minors. The third is a unit by the relation between
+the inverse matrix and its symplectic adjoint.
+
+\proofstep{Diagonalize the marked global matrix without changing the residual flag.}
+Let \(\lambda_i\) be the four Hensel lifts of the distinct
+eigenvalues of the matrix \(R(\tau)\) in the complete
+coefficient ring. The projectors
+\[
+ e_i=\prod_{j\ne i}\frac{R(\tau)-\lambda_j I}
+                              {\lambda_i-\lambda_j}
+\]
+are integral because every denominator is a unit.
+Applying \(e_i\) to the corresponding standard basis vector
+gives an eigenvector reducing to that vector. For the
+alternating form \(\langle\, , \,\rangle\) and the similitude
+\(s(\tau)\), the eigenvector identity is
+\[
+  (\lambda_i\lambda_j-s(\tau))\langle v_i,v_j\rangle=0 .
+\]
+Only the paired indices \(0,3\) and \(1,2\) can have a nonzero
+pairing, by their distinct residual eigenvalues. Each of
+those pairings is a unit, congruent to the old pairing.
+Rescale one vector of each pair to recover the symplectic
+form with a change of basis congruent to the identity.
+
+In this basis the unit leading minors give Gaussian
+factorization of the flag frame as \(N U\), with \(N\) lower
+unipotent and \(U\) upper triangular. Write \(J\) for the antidiagonal matrix of the form and \(\mu\) for the similitude of the frame \(A=NU\). The group automorphism \(\iota(X)=J^{-1}X^{-t}J\) preserves the lower unipotent and the upper triangular subgroups.
+
+Since \(A^t J A=\mu J\), it gives a second factorization:
+\[
+ NU=A=\mu\iota(A)=\iota(N)\bigl(\mu\iota(U)\bigr).
+\]
+Consequently \(N^{-1}\iota(N)=U(\mu\iota(U))^{-1}\) is both lower unipotent and upper triangular. It is the identity, so \(\iota(N)=N\), equivalently \(N^tJN=J\). The upper factor preserves the ordinary flag
+and its characters. Modulo the uniformizer the first two
+columns follow their separate Frobenius spaces, and the
+perpendicular conditions determine the two later steps.
+Thus the only possible residual entries of \(N-I\) have
+degree \(-w_\Psi\).
+
+\proofstep{Locate the needed roots over the fraction field.}
+If the rational representation is irreducible, the
+algebra spanned by its matrices has all matrix-unit
+positions in this eigenbasis. Let \(P_i\) be the diagonal projectors in this eigenbasis.
+An arrow \(j\to i\) means that some action matrix \(r(g)\)
+has \(r(g)_{ij}\ne0\). Then
+\[
+ P_i r(g)P_j=r(g)_{ij}E_{ij}.
+\]
+A proper terminal component of the directed graph would span
+a proper stable coordinate subspace, so irreducibility gives
+a path between each ordered pair of vertices. Repeated multiplication along a path removes each intermediate index:
+\[
+ E_{i_k i_{k-1}}\cdots E_{i_1 i_0}=E_{i_k i_0}.
+\]
+The projectors are polynomials in \(r(\tau)\). Hence every
+product just obtained is in the \(K\)-linear span of the \(r(g)\):
+products of group matrices are again group matrices. A nonzero
+\((i,j)\)-coordinate in this span forces \(r(g)_{ij}\ne0\)
+for some \(g\), with no assertion about its valuation.
+
+In the block-extension case, the original matrices
+preserve the space on indices \(1,3\), and the
+diagonalizing eigenvectors in that block lie in the
+same space. The change of basis is block triangular
+and this block still spans the full matrix algebra.
+On this block the matrix-unit calculation gives
+\[
+    (1,3),(3,1)\text{ in the matrix support over }K
+       \quad\Longrightarrow\quad \{w_\Psi,-w_\Psi\}\subset S_K .
+\]
+ The nonsplit extension has a
+nonzero cross-block entry. Otherwise the other
+coordinate block gives a stable complement and
+conjugating it back gives a stable complement
+which is the graph of a map to the first block.
+Such a graph is exactly the split extension
+excluded in the rational datum. With rows \(1,3\) and columns \(0,2\), the four degrees are
+\[
+  \deg(1,2)=w_\beta,\quad \deg(3,0)=-w_\vartheta,\quad
+  \deg(1,0)=\deg(3,2)=-w_\alpha .
+\]
+
+These entries give the two assertions about \(S_K\).
+The initial global reduction is the given diagonal model and the
+change by Hensel projectors is the identity on its reduction,
+up to the preceding simultaneous permutation. The flag calculation
+gives the asserted inclusion for \(S^{(0)}\).
+\label{cor:cohomology-count-two-normalization-1}
+\end{proof}
+
+\paragraph{The torus normalization of the target.}
+\label{par:count-two-normalization}
+The rational eigenbasis fixes the labels but leaves a diagonal freedom. We use it to
+reduce the target lattice to the shapes needed for interpolation.
+
+\begin{proposition}[The two rational lattice shapes]
+\label{prop:rational-rank-four-torus}
+Assume the odd-root localization vanishing for the marked rational
+datum and the basis of Lemma~\ref{lem:rational-rank-four-marking}.
+There is a diagonal symplectic similitude, after adjoining
+a square root of the uniformizer, giving an integral model
+whose reduced global matrices \(r\) and reduced lower frame \(N\)
+satisfy the following bounds. Here \(S\) counts the degrees of
+nonzero reduced global entries off the diagonal and of the nonzero entries among the four
+independent frame coordinates after the change of lattice:
+
+\[
+ S\subseteq\{w_\beta,-w_\Psi,-w_\alpha,-w_\vartheta\},
+       \qquad r_{12}\not\equiv0,\qquad N_{21}=0.
+\] Either degree \(-w_\Psi\) occurs in the residual
+global matrices or it occurs only through \(N_{20}\ne0\),
+in which case \(r_{12}\) cannot have the form
+\(c(d_2-d_1)\) on the marked decomposition group.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Maximize the two torus coordinates subject to integrality.}
+Use the normalized rational datum above in its small
+coefficient model over a complete
+discrete valuation ring with uniformizer \(\varpi\).
+Use additive valuation normalized by
+\(v(\varpi)=1\). Retain the four independent lower frame entries
+\((1,0),(2,0),(3,0),(2,1)\); the symplectic equations
+express the other lower entries in these. For each degree \(w=(w_1,w_2)\) occurring in a nonzero global or retained frame entry, define the minimum
+\[
+ k_w=\min\{v(a):a\ne0\text{ a global or retained frame entry of degree }w\}.
+\] The given integral model makes
+this a minimum of nonnegative integers. All global
+off-diagonal entries, and the frame entries other than the
+possible degree \(-w_\Psi\), have positive valuation.
+
+Conjugation by the proposed diagonal with weights
+\((a+b,b,a,0)\) changes a degree-\(w\) coefficient of
+valuation \(k\) into one of valuation \(k+(w_1a+w_2b)/2\).
+Thus integrality of every entry to be checked is equivalent
+to requiring
+\[
+             w_1a+w_2b+2k_w\ge0
+                    \qquad\text{for each degree }w\text{ with }k_w<\infty .
+\]
+The initial lattice makes \((0,0)\) feasible. Put \(k_w=+\infty\)
+if there is no entry of degree \(w\). The two assertions about
+\(S_K\) in Lemma~\ref{lem:rational-rank-four-marking} give
+\[
+ b\le 2k_{-w_\Psi},\qquad
+ a\le e b+2k_{(-1,e)}\quad\text{for some }e\in\{-1,0,1\}.
+\]
+Each right side for its indicated degree is finite. Thus the feasible
+integer pairs attain a maximum in \(b\), and on that slice in \(a\).
+
+Take \(p^2=\varpi\) and use
+the diagonal symplectic similitude with entries
+\((p^{a+b},p^b,p^a,1)\). Subscripts of the
+four ordered positions correspond to
+\(((1,1),(0,1),(1,0),(0,0))\).
+
+For the diagonal matrix \(D\) just defined, let \(w\) be the difference
+of the two position degrees at an entry \(x_{ij}\). With \(v_\varpi(\varpi)=1\),
+\[
+ (DxD^{-1})_{ij}=p^{w_1a+w_2b}x_{ij},\qquad
+ v_\varpi((DxD^{-1})_{ij})=v_\varpi(x_{ij})+(w_1a+w_2b)/2.
+\]
+The defining inequalities are exactly nonnegativity of these valuations
+for the matrix and frame coordinates. For an original unit \(u\) and
+a nonzero coordinate \(x=u\varpi^h\), this gives the integral element
+\[
+           p^{w_1a+w_2b}x=u p^{2h+w_1a+w_2b}
+                     \in\mathcal O_{K(p)}.
+\] Conjugation
+preserves the diagonal, the ordinary flag equations
+and the normalizing matrix at \(\tau\). This also
+preserves the small-model condition and continuity.
+Multiplication by finitely many fixed powers of \(p\)
+only shifts the adic indices by fixed amounts.
+
+\proofstep{Find the roots that prevent an increase in the maximizer.}
+Reduction after conjugation gives the exact identity
+\[
+ S=\{w:k_w<\infty,\ w_1a+w_2b+2k_w=0\}.
+\]
+Indeed the minimum is attained in the discrete valuation ring,
+and precisely entries of new valuation zero survive. Call these
+degrees tight. In all subsequent root and flag equations, \(r\)
+and \(N\) denote the reductions on this new lattice. For any tight root other
+than \(-w_\Psi\), the value of \(w_1a+w_2b\)
+is strictly negative. For \(-w_\Psi\) tight it gives
+\(b\ge0\). The failed moves \((1,0)\) and \((0,1)\)
+at the maximum require a tight root in each of
+\[
+ \{-w_\alpha,w_\beta,-w_\vartheta\},\qquad
+ \{-w_\Psi,-w_\beta,-w_\vartheta\}.
+\]
+For either move the slack \(w_1a+w_2b+2k_w\) decreases
+by at most one, so a failed move must meet a tight constraint.
+
+At a tight root the integer \(w_1a+w_2b\) is even. The two
+diagonal weights have linear forms \(a-b\) and \(a+b\)
+up to sign. Tightness of either makes \(a+b\) even.
+If neither blocking root is diagonal, the first gives
+\(a\equiv0\pmod2\) and the second gives \(b\equiv0\pmod2\).
+In either case the slack of a diagonal constraint is even. The failed moves \((-1,1)\) and \((1,1)\)
+therefore require a tight root in each of
+\[
+ \{-w_\Psi,w_\alpha,-w_\beta\},\qquad
+ \{-w_\Psi,-w_\alpha,-w_\vartheta\}.
+\]
+The only inequalities that drop by two in these moves
+are diagonal roots, for which the preceding slack is
+even. Hence slack one cannot block one of these moves.
+
+For brevity put \(A=w_\alpha\), \(B=w_\beta\),
+\(P=w_\Psi\), \(T=w_\vartheta\) in the following
+table. The tight set is contained in one of the
+listed sets and contains the two marked roots in its
+row.
+\[
+\begin{array}{c|l}
+\text{two tight roots}&\text{containing set}\\ \hline
+B,-P & \{B,-P,-A,-T\}\\
+-A,-P & \{-A,-P,-T\}\\
+-T,-P & \{-T,-P\}\\
+-A,-B & \{-A,-B,-P,-T\}\\
+-T,-B & \{-T,-B,-P\}\\
+-T,A & \{-T,A,-B,-P\}
+\end{array}
+\]
+To check the table, suppose first that \(B\) is
+tight, so \(b<a\) and \(-B\) is excluded.
+The third failed move forces \(-P\) or \(A\).
+If \(-P\) is absent, \(A\) gives \(b<a<0\), excluding
+every root for the second move. Thus \(-P\) is
+tight and \(a>b\ge0\), giving the first row.
+If \(B\) is absent and \(-B\) is present, the first
+move forces \(-A\) or \(-T\).
+
+With \(-A\) tight
+one has \(b>a>0\), giving row four. Otherwise the inequalities supplied by \(-T\) and \(-B\) give
+\[
+ 0<a+b<2b\quad\Longrightarrow\quad b>0,
+\]
+where the strict upper bound uses \(a<b\).
+According as \(A\) is absent or present one obtains
+row five or six. If neither \(B\) nor \(-B\) is tight,
+the second and third moves require either \(-P\) or
+both \(-T,A\). These last two exclude \(-A,T,P\)
+by their signs, giving row six. With \(-P\) tight,
+\(b\ge0\) and the first move requires \(-A\) or \(-T\).
+If \(-A\) is present, the signs exclude \(A,T,P\),
+giving row two. In the case where \(-P\) is tight and \(-A\) is absent, \(-T\) must be present. The remaining test reads
+\[
+ A\text{ present}\ \Longrightarrow\ \text{row six},\qquad A\text{ absent}\ \Longrightarrow\ \text{row three}.
+\]
+
+\proofstep{Use localization to exclude unsupported root cocycles.}
+Use the odd-root localization vanishing for this marked
+rational datum from the rank-four cohomology calculation.
+If \(r_{ij}\) has degree in \(\{\pm A,\pm B,\pm T\}\) and
+only the diagonal terms in its multiplication law, then
+\(c_{ij}=r_{ij}/d_j\) satisfies
+\[
+    c_{ij}(gh)=c_{ij}(g)+
+                  (d_i/d_j)(g)c_{ij}(h).
+\]
+If its local restriction is a coboundary, the localization
+statement makes it a global coboundary. In the marked
+eigenbasis, \(c_{ij}(\tau)=0\), while \(d_i(\tau)/d_j(\tau)\ne1\).
+This forces the global coboundary constant to be zero.
+The same reasoning on the designated local Frobenius
+forces a local constant to vanish whenever its root
+character is nontrivial there.
+
+If \(-A\) is absent, \(r_{10}=r_{32}=0\). Hence the two
+intermediate terms of the \((3,0)\) entry vanish:
+\[
+ r_{31}(g)r_{10}(h)+r_{32}(g)r_{20}(h)=0.
+\]
+In the first-column flag equation the intermediate term involving \(N_{10}\) vanishes. The remaining identity is
+\[
+ r_{30}=(d_0-d_3)N_{30}\qquad(N_{10}=0).
+\]
+Thus the odd-root argument kills \(r_{30}\) and \(N_{30}\)
+and excludes \(-T\) from the tight set.
+
+If both \(B,P\)
+are absent, \(r_{12}=r_{13}=0\); similarly the \((1,0)\)
+entry has no intermediate terms, and its local equation
+is \(r_{10}=(d_0-d_1)N_{10}\). Hence \(r_{10}=N_{10}=0\).
+In this two-term situation \((r^{-1})_{10}=0\) as well,
+since \(r(g^{-1})=r(g)^{-1}\). The symplectic adjoint formula
+then gives \(r_{32}=0\). This excludes \(-A\) when \(B,P\)
+are absent. The two exclusions leave only the first row
+of the tight-root table.
+
+\proofstep{Distinguish a global entry from an ordinary frame entry.}
+The remaining off-diagonal degrees of the reduced matrices form a subset of
+\[
+ \{B,-P,-A,-T\}.
+\] The frame has \(N_{21}=0\), since
+its degree \(-B\) is absent. Tightness in degree \(B\)
+comes from the global \((1,2)\) entry, since the frame
+is lower triangular. The first lattice shape occurs
+when degree \(-P\) appears in the global matrices.
+
+In the second shape degree \(-P\) is tight only
+through \(N_{20}\ne0\). Row two of the first-column
+equation forces \(d_2=d_0\) on the marked decomposition
+group. The global \((1,2)\) entry has the two-term
+multiplication law. If it satisfied
+\[
+                      r_{12}=c(d_2-d_1)
+\]
+on this group for a scalar \(c\), normalized odd-root
+vanishing would make it zero everywhere. Its nonzero
+entry gives the required second lattice shape. \label{cor:cohomology-count-two-normalization-2}
+\end{proof}

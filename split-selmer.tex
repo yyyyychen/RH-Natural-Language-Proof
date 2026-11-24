@@ -1,0 +1,446 @@
+\subsubsection*{Changing the frame at the selected point}
+\label{subsec:split-selmer}
+\hypertarget{source-split-selmer}{}
+
+To identify those abstract block lengths with the prescribed local conditions, choose integral coordinates adapted to the decomposition at the good point. The surrounding family still includes the points off the theta locus that enter its congruence ideal.
+
+Use the integral family \(R_x\) at the fixed Hecke
+localization, including the points outside the theta subset.
+At the good theta point \(\pi\) the given rational decomposition
+is an isomorphism with \(\rho_\pi\oplus\bigoplus_{k=1}^t\chi_k\).
+Here \(\rho_\pi\) is the specified integral rank-\(r\) representation
+and \(\chi_k/\chi_1=\epsilon^{1-k}\) for the cyclotomic character
+\(\epsilon\). Replace \(R_\pi\) by the direct sum in these
+integral bases and keep all other matrices at their own points.
+\begin{lemma}[Change of frame in the family algebra]
+The rational change of basis identifies the two integral matrix
+spans, their marked corners and congruence ideals. At the chosen point \(\pi\), evaluation on the complement gives
+\[
+ \operatorname{ev}_{\pi,W}(\mathcal A)=M_r(O),
+\]
+where \(\mathcal A\) is the normalized integral span.
+\end{lemma}
+\begin{proof}
+If \(C_x\) changes the frame at \(x\), conjugation sends each generator
+\(R_x(g)\) to \(R'_x(g)\). Thus it carries
+\[
+ \left(\sum_j a_j(x)R_x(g_j)\right)_x
+ \longmapsto\left(\sum_j a_j(x)R'_x(g_j)\right)_x .
+\]
+The coefficients are the very same Hecke functions. Applying
+inverse conjugation proves equality of the integral spans.
+Characteristic coefficients are unchanged. Row embeddings and
+column quotients transport by rational conjugation, with the
+specified lattices of \(\rho_\pi\) and its twisted dual as targets.
+The resulting finite family is continuous at each point.
+\label{cor:split-selmer-1}
+The marked data before the change of frame consist of
+orthogonal summand projections at \(\pi\), extended as integral
+idempotents in the family span, and a corner matrix \(X_0\) with
+distinct roots in every fibre. The fibrewise ranks and the two specializations are
+\[
+ \operatorname{rank}e_B=t,\qquad \operatorname{rank}e_1=1.
+\]
+
+At \(\pi\) the first projects onto the character block and the second onto a line of \(\rho_\pi\). These data can be
+transported from an integral marked model on the same coefficient
+localization. Write \(R_x^{\rm m}\) for the marked model at \(x\).
+The shared Hecke character gives
+\[
+ \det(1-TR_x(\operatorname{Frob}_v))
+   =\det(1-TR_x^{\rm m}(\operatorname{Frob}_v))
+\]
+at the unramified Frobenius classes. Taking traces, then using
+continuity and Chebotarev density, gives equality of the trace
+functions on the entire Galois group. Brauer--Nesbitt applied
+to the two semisimple rational representations gives an
+intertwiner at every \(x\). At \(\pi\), cancelling the specified
+character summands identifies the rank-\(r\) complements.
+Write \(C\) for the resulting tuple of changes of frame and
+\(\mathcal A^{\rm m},\mathcal A'\) for the two integral spans.
+The generator identity above gives
+\begin{equation}\label{eq:selmer-transport-corner}
+ C\mathcal A^{\rm m} C^{-1}=\mathcal A',\qquad
+ C(e\mathcal A^{\rm m}e)C^{-1}
+      =(CeC^{-1})\mathcal A'(CeC^{-1})
+      \quad(e=e_B,e_1).
+\end{equation}
+By \eqref{eq:selmer-transport-corner} the corner matrix is conjugated in every fibre. Its
+characteristic roots, the two idempotent ranks and their
+orthogonality are preserved.  \label{cor:split-selmer-2}
+
+The cyclotomic test
+\(g_0\) lies in the prescribed inertia and has
+\[
+ \epsilon(g_0)=1+\ell^s u,
+\]
+with \(u\) a unit. In the new basis
+\(X_0(\pi)\) is \(e_B R_\pi(g_0)e_B\). This identification follows
+because both models of the direct sum transport the action of
+every sum \(\sum_j a_j(\pi)R_\pi(g_j)\) to the same block action.
+Thus the perturbation \(X_0-e_B R(g_0)e_B\) lies in the new span,
+is supported on the corner, and vanishes at \(\pi\). The ranks,
+corner characteristic polynomials and orthogonality relations
+are unchanged by conjugation. The matrix-span and ordered-root
+construction consequently applies with the same Hecke localization
+and the same marked point.
+
+Let
+\[
+ B_\pi\subseteq M_r(O)
+\]
+be the image of the normalized algebra
+on the specified rank-\(r\) lattice. Absolute irreducibility of its
+reduction gives the full matrix algebra over the residue field by
+the density theorem. Writing \(\varpi\) for a uniformizer, this says
+\[
+ B_\pi+\varpi M_r(O)=M_r(O),\qquad
+ M_r(O)/B_\pi=\varpi\bigl(M_r(O)/B_\pi\bigr).
+\]
+Nakayama's lemma applies to this finite \(O\)-module. Thus \(B_\pi=M_r(O)\): the localized order contains every integral endomorphism of the complementary lattice used in the row calculation.
+Section~\ref{subsec:retained-galois} constructs the marked model.
+Proposition~\ref{prop:retained-rank-complement} proves residual
+absolute irreducibility at this localization.
+
+\end{proof}
+\subsubsection*{The lattice used in the rank-\(r\) row quotient}
+
+The new coordinates identify the residual complementary block. Computing its row quotient requires the particular lattice on which its normalized Galois action operates, together with the dual action at the conjugate place.
+
+Write \(U_g=\chi_1(g)^{-1}R(g)\), \(Y=\sum_g\mathcal A(U_g-1)E\),
+and \(y(g)=(U_g-1)E\) in the normalized algebra. Let \(T\) be
+the specified lattice of the \(U\)-action on the rank-\(r\) block,
+so \(W=T[1/\ell]\). Write \(T^*=\operatorname{Hom}_O(T,O)(1)\)
+and \(W^*=T^*[1/\ell]\). At a row place the dual finite-class map uses the source lattice and right action
+\[
+ P=e_1\mathcal A,\qquad g\cdot b=\epsilon(g)bU_g^{-1}.
+\]
+To see its target, write
+\(e_1(\pi)=v\lambda\) with \(\lambda(v)=1\) over \(O\) in the
+rank-\(r\) block. An element \(b\in P\) has evaluation \(v\lambda_b\)
+on this block. The map \(b\mapsto\lambda_b\) onto \(T^*\) is
+surjective because the normalized algebra maps onto \(M_r(O)\).
+\begin{lemma}[The local row quotient]
+Evaluation \(p:P\to T^*\), \(b\mapsto\lambda_b\), is an integral
+surjection for the twisted dual action. With
+\(A=W/T,\ L_w=H^1_f(E_w,T^*)\) and
+\(J_w=p_*H^1_f(E_w,P)\), put
+\(F_w=\operatorname{im}(H^1_f(E_w,W)\to H^1(E_w,A))\).
+Local Tate duality induces
+\[
+ J_w^\perp/F_w\simeq\operatorname{Hom}_O(L_w/J_w,F/O).
+\]
+\end{lemma}
+\begin{proof}
+Since the block maps onto \(M_r(O)\), every row \(\lambda_b\) occurs.
+If \(\lambda_b\) is a row functional, transposition converts its right action into the column-coordinate action
+\[
+ \lambda_b^{\mathsf T}\longmapsto\epsilon(g)W(g)^{-\mathsf T}\lambda_b^{\mathsf T}.
+\]
+This is precisely the action on \(W^*\). For the standard basis \(e_i\), integrality is the coordinate test
+\[
+ u(O^r)\subseteq O\quad\Longleftrightarrow\quad
+ (u(e_1),\ldots,u(e_r))\in O^r
+ \qquad(u\in\operatorname{Hom}_F(F^r,F)).
+\] Restriction through the
+chosen completion identifies the decomposition group with the
+local absolute Galois group. The coefficient isomorphism there
+carries the fraction field and DVR simultaneously, so it transports
+continuous cocycles, coboundaries and the finite conditions with
+the lattice. Recording matrix rows at the ordered points embeds the rational source in a finite sum of the evaluated twisted duals. This is the row-colength map.  \label{cor:split-selmer-3}
+
+Use local Tate duality in its \(F/O\)-valued form, obtained from
+the usual \(\mathbb Q_\ell/\mathbb Z_\ell\)-valued pairing by the
+trace and a generator of the inverse different. An integral class
+annihilates \(F_w\) precisely when its rational image pairs to zero
+with \(H^1_f(E_w,W)\): any nonzero rational value can be scaled to
+a nonintegral one. By Bloch--Kato orthogonality this condition
+cuts out \(L_w\). Double annihilation gives
+\[
+ F_w=L_w^\perp.
+\]
+
+The restriction
+\[
+ J_w^\perp\to\operatorname{Hom}_O(L_w/J_w,F/O)
+\]
+has this kernel and is onto by injectivity of \(F/O\) over the DVR.
+The extension is continuous on the finitely generated integral
+cohomology group. Thus the normalized length equals that of
+\(L_w/J_w\), bounded by the row index at this same place.
+\cite{bloch-kato}
+\end{proof}
+
+\begin{lemma}[Annihilation of the integral row classes]
+For an \(\mathcal A\)-linear \(\varphi:Y\to A\), put \(c(g)=\varphi(y(g))\). Local Tate duality gives
+\[
+ \operatorname{res}_w[c]\in J_w^\perp.
+\]
+\end{lemma}
+\begin{proof}
+To prove annihilation of \(J_w\), let \(a\) be a continuous
+row cocycle with values in \(P\), and let \(c(g)=\varphi(y(g))\)
+with values in \(A\). The multiplication cochain
+\[ z(g,h)=a(g)U_g y(h) \]
+takes values in \(e_1Y\), with the action on this lattice
+given by the scalar \(\epsilon\).
+
+The contraction \(z\) is a continuous two-cocycle. This follows by the cocycle identity for \(a\)
+with action \(b\mapsto\epsilon(g)bU_g^{-1}\) and the
+identity \(y(gh)=y(g)+U_g y(h)\). Its image in
+\(e_1\mathcal A E(1)\) is a coboundary. Indeed the
+one-cochain \(d(g)=a(g)U_g E\) satisfies
+\[
+ \epsilon(g)d(h)-d(gh)+d(g)=-a(g)U_g(U_h-1)E=-z(g,h).
+\]
+The inclusion \(e_1Y\subseteq e_1\mathcal A E\) induces an
+injection on continuous \(H^2\) after the Tate twist. Both
+lattices are finite free over \(O\), and the local invariant
+map
+\[
+ H^2(E_w,\mathbb Z_\ell(1))\simeq\mathbb Z_\ell,
+\]
+extended to finite free coefficient modules, identifies the
+induced map with the original lattice inclusion. This works
+also for a nonsaturated inclusion. Therefore the cochain
+\(z\) is already a coboundary in \(e_1Y(1)\).
+
+Apply to that smaller lattice the map \(m\mapsto\lambda(\varphi(m))\).
+The pairing is well defined modulo \(O\), and is equivariant
+for the scalar Tate action. Since \(\varphi\) is
+\(\mathcal A\)-linear, the image of \(z(g,h)\) is
+\(\langle p(a(g)),U_g c(h)\rangle\), with
+\[
+ p:P\to T^*
+\]
+the row quotient.
+
+This is the cup pairing in the reversed
+order, which differs from the desired order by the sign
+for two degree-one classes. It follows that \([c]|_{E_w}\)
+annihilates the image of every such \([a]\), in particular
+\(J_w\). The local class of \(c\) is continuous, as the
+universal cocycle is continuous in its finite integral
+lattice and a linear map from that lattice into \(A\) has
+finite image and is continuous. Consequently the integral index \(\operatorname{len}(L_w/J_w)\) bounds the excess over the finite condition on the complementary row. The character rows require their own local conditions. \label{cor:split-selmer-4}
+\end{proof}
+\subsubsection*{Character row and column conditions}
+
+The complementary row has now been accounted for. On the remaining rank-one blocks the cyclotomic twists distinguish the finite conditions, and the row and column impose different restrictions even at the same coefficient prime.
+
+\begin{proposition}[Local conditions on the character blocks]
+At a column the specialization is finite on block \(0\),
+unramified on block \(1\), and zero on blocks \(k\ge2\).
+At a row above \(\ell\), for \(1\le k\le t\) let \(L_k\) be the normalized length of the excess over the finite subgroup on block \(k\). Then
+\[
+ L_k\le([E_w:\mathbb Q_\ell]+2)c_B,\qquad c_B=40(t+1)(n+1)\lambda_N(h).
+\]
+\end{proposition}
+\begin{proof}
+At a column, the last defining relation of \(M\) reads in local
+cohomology as a combination of the classes \(K_{u,a}\) and
+\(K_{u,0}\) after evaluation. In block \(0\) the first classes
+are finite and the last term vanishes because \(K_{u,0}\) has a
+right factor \(E\). In block \(1\) the first terms vanish because
+\(E_1\) acts by zero, and the last class is unramified. In
+blocks \(k\ge2\) both sets of terms vanish. The generator
+\(n_u\) contributes a coboundary in each case. These conclusions
+hold at the normalized point and use the specific column lifts
+of the determinant construction.
+
+For the character rows, form the stable lattice \(Y\oplus O\)
+with action
+\[
+  (z,a)\longmapsto (U_g z+a\,y(g),a).
+\]
+With \(e=(0,1)\), the quotient is the trivial line, and
+\(ge-e=(y(g),0)\). Put \(i(z,a)=(z+aE,a)\).
+The cocycle is \(y(g)=(U_g-1)E\), so
+\[
+    i(U_g z+a\,y(g),a)=(U_g(z+aE),a)=g\,i(z,a).
+\]
+The map \(i\) is injective, with the left \(U_g\)-action
+on matrices and the trivial action on the second factor.
+
+Evaluation
+on the matrix columns embeds the rational space of this lattice
+into a finite sum of the twisted family \(R_x^\circ\) and one
+trivial line. The trivial character occurs in \(R_\pi^\circ\). The target of
+the embedding is therefore crystalline, and so is its rational
+subrepresentation \(V=(Y\oplus O)\otimes_O F\). For each
+embedding \(\tau\), strictness of the crystalline filtration gives
+\[
+ \operatorname{Jumps}_\tau(V)
+     \subseteq \bigcup_x \operatorname{Jumps}_\tau(R_x^\circ)
+     \subseteq [-h,h].
+\]
+The union on the right over all embeddings has cardinality at
+most \(n\) by the common row bound, with \(t\le h\).
+
+The character lifting bound is used with that lattice, the
+surjection onto the trivial line and the lift \(e\) just given.
+It applies to an equivariant map of the kernel \(Y\) into the
+divisible quotient of a rank-one lattice acted on by
+\(\epsilon^{1-k}\), for \(1\le k\le t\). Extend this integral
+map \(O\)-linearly to the full rational source using injectivity
+of \(F/O\) over \(O\). The comparison only requires equivariance
+on the kernel lattice.
+
+Indeed, if \(\phi\) is the equivariant map on \(Y\) and
+\(\widetilde\phi\) any such extension, then
+\begin{equation}\label{eq:selmer-row-kernel-cocycle}
+ c(g)=\widetilde\phi(ge-e)=\phi(y(g)),\qquad
+ c(gh)=c(g)+\epsilon^{1-k}(g)c(h).
+\end{equation}
+Both identities in \eqref{eq:selmer-row-kernel-cocycle} use only the restriction to \(Y\). The completion lies in
+the local level-\(\operatorname{lcm}(\ell,N)\) cyclotomic field,
+the coefficients contain those roots of unity, and \(4\mid N\)
+at \(\ell=2\). With
+\[
+ c_B=40(t+1)(n+1)\lambda_N(h),
+\]
+the
+comparison places \(\ell^{c_B}[c]\) in the finite subgroup of
+the target. For \(k=1\) this subgroup is unramified. For \(k>1\)
+it is zero, by the rank-one jump \(k-1>0\) and the absence of
+rational invariants in the Bloch--Kato dimension formula.
+\cite{bloch-kato}\label{cor:split-selmer-5}
+
+For the length allowance, let \(F_{k,w}\) be this finite
+subgroup. It is divisible, as the image of a vector space.
+Choose \(b\in F_{k,w}\) with \(\ell^{c_B}b=\ell^{c_B}[c]\).
+Then \([c]-b\) represents the same class modulo \(F_{k,w}\) and
+belongs to
+\[
+ H^1(E_w,A_k)[\ell^{c_B}]
+   =\operatorname{im}\bigl(H^1(E_w,A_k[\ell^{c_B}])
+                          \longrightarrow H^1(E_w,A_k)\bigr),
+\]
+by the cohomology sequence for multiplication by \(\ell^{c_B}\). For \(M_k=A_k[\ell^{c_B}]\), local Tate duality and the bound on
+the coefficient module give \(\operatorname{len}H^i(E_w,M_k)\le c_B\)
+for \(i=0,2\). The local Euler characteristic gives
+\[
+ \operatorname{len}H^1(E_w,M_k)
+ = [E_w:\mathbb Q_\ell]c_B+
+   \operatorname{len}H^0(E_w,M_k)+\operatorname{len}H^2(E_w,M_k).
+\]
+This gives an allowance for each character row even when a sharper row estimate is available. It leaves the inertia conditions away from the coefficient prime to be imposed.
+\end{proof}
+\subsubsection*{Tame tests on the character blocks}
+
+It remains to control ramification away from the split row and column places. The tame inertia relations on each character block bound the quotient by unramified classes at the auxiliary level primes.
+
+For a character block let \(A_k=(F/O)(1-k)\) and let
+\(c(g)=\varphi(y(g))\) for an \(\mathcal A\)-linear map
+from the column presentation into \(A_k\).
+
+\begin{lemma}[Tame inertia and the remaining global condition]
+Away from the split row and column places the character class is
+unramified outside \(Q\); at \(v\in Q\) the ramified quotient \(D_v\) satisfies
+\[
+ \operatorname{len}(D_v)\le v_\ell(\zeta_v-1).
+\] After imposing
+the row, column and unramified conditions the residual length is at
+most \(v_\ell(h_E)\) for \(k=1\); for \(k\ge2\) it is bounded by
+the strict length with exponent \(k-1\) over the same field.
+\end{lemma}
+\begin{proof}
+At a place
+outside the split row and column places and the auxiliary
+sets \(S,Q\), the family inertia acts trivially on every
+fibre and \(\chi_1\) is trivial there. The last assertion
+can be checked on its summand at \(\pi\). Thus \(y(g)=0\)
+on this inertia.
+
+At \(v\in Q\), the chosen inertial element
+\(\gamma_v\) maps every fibre into the two eigenspaces for
+\(1\) and \(\zeta_v=\chi_1(\gamma_v)\). The defining conditions on the tame generator give \(\zeta_v\ne1\), equality of all
+\(\chi_k\) on inertia, and a common power \(n(g)\) of
+\(R(\gamma_v)\) and of \(\chi_1(\gamma_v)\) for the actions
+of each \(g\) on this inertia. The common power comes from
+the finite image of the chosen tame character. In the family
+algebra we have
+\[
+ (R(\gamma_v)-1)y(\gamma_v)
+ =\zeta_v^{-1}(R(\gamma_v)-1)(R(\gamma_v)-\zeta_v)E=0.
+\]
+
+Evaluating under \(\varphi\) gives
+\((\zeta_v-1)c(\gamma_v)=0\). On the target \(U_{\gamma_v}\) acts trivially. On ordinary powers the
+cocycle therefore satisfies
+\[
+ c(\gamma_v^a)=\sum_{i=0}^{a-1}U_{\gamma_v}^ic(\gamma_v)=a\,c(\gamma_v)
+ \qquad(a\ge1).
+\]
+Continuity on the procyclic quotient gives \(c(g)=n(g)c(\gamma_v)\).
+Coboundaries vanish on inertia here. Therefore the quotient
+by the unramified condition injects, by evaluation at
+\(\gamma_v\), into \(A_k[\zeta_v-1]\), of normalized length
+\(v_\ell(\zeta_v-1)\). This bound uses only \(\zeta_v-1\ne0\).
+
+At \(v\in S\), there is an integral family operator \(a\)
+such that
+\[
+ a(R(g)-\chi_1(g))E=0
+\]
+on this inertia and
+\(a\) acts invertibly on \(A_k\). At the two type primes,
+\(a=P_v(R(\gamma_v))\), where the coefficients of \(P_v\)
+are in the localized Hecke algebra. The tame polynomial
+condition asserts that on each fibre this polynomial kills
+\(R(g)-\chi_1(g)\) and that \(P_v(\chi_1(\gamma_v))\) is
+a unit upon evaluation at \(\pi\). Since all the scalar
+characters agree on the chosen inertia, the second property
+is exactly invertibility on \(A_k\).
+
+At the remaining
+\(S\)-places the family is simultaneously diagonal on inertia
+with values \(1\) or \(\chi_1\) on the corresponding
+summands. The factors kill the trivial and the \(\chi_1\) summands respectively. Hence on this inertia
+\[
+ (R(\gamma_v)-1)(R(g)-\chi_1(g))=0.
+\]
+At these places
+\(\zeta_v-1\) is a unit, so the former operator is invertible
+on the character target. Consequently \(c\) vanishes on
+inertia at every \(S\)-place. These restriction bounds apply under their respective tame hypotheses.
+\label{cor:split-selmer-6}
+
+Subtract the row and \(Q\)-local allowance by taking the
+kernel of restriction to the corresponding quotients. The
+strict conditions for \(k\ge2\) at the coefficient prime
+are zero on row and column decomposition groups. For \(k=1\)
+the local finite condition for the trivial character at those
+places is unramified. The declared rows and columns partition
+the places over \(\ell\), and the remaining inertia groups
+are among \(S,Q\) or the places with trivial family inertia.
+In block \(k=1\), global class field theory therefore gives
+\[
+ \ker(\text{restriction to the local quotients})\hookrightarrow\operatorname{Hom}(\operatorname{Cl}(E),F/O).
+\]
+Its normalized length is at
+most \(v_\ell(h_E)\).
+
+For \(k\ge2\), let \(S_\ell\) consist of
+the places over \(\ell\) and the infinite places. Put
+\(A=(\mathbb Q_\ell/\mathbb Z_\ell)(1-k)\). The strict group is
+\[
+ S_{k-1}=\ker\!\left(H^1(G_{E,S_\ell},A)
+        \longrightarrow\prod_{w\mid\ell}H^1(E_w,A)\right).
+\]
+The restriction kernel maps into \(S_{k-1}\otimes O\).
+Indeed the local class vanishes at \(\ell\), all other places
+are unramified, and finite freeness over \(\mathbb Z_\ell\) lets
+tensoring by \(O\) commute with cochains and localization kernels.
+Each \(\mathbb Z_\ell\)-length-one factor becomes \(O/\ell O\),
+so the normalized length is \(\operatorname{length}_{\mathbb Z_\ell} S_{k-1}\). The strict
+cohomology bound below applies with this exponent and on
+this same auxiliary field. \label{cor:split-selmer-7}
+
+\end{proof}
+For block \(0\), the same vanishing at the places with trivial
+family inertia follows directly from \(y(g)=0\). The row and
+column conditions in the restriction kernel lie in the finite
+condition on \(W/T\) at all places over \(\ell\). These are
+the unramified and finite conditions of the relaxed Selmer
+group at \(\pi\) used for \(s_\pi\). The length at this fixed point can therefore be compared with the signature Selmer length, provided the auxiliary character is the one used in its theta lattices.

@@ -1,0 +1,235 @@
+\paragraph{Wach coordinates and the initial finite classes.}
+\label{par:thick-initial-classes}
+Use the tame-invariant parameter \(X\) and \(q=X+\ell\) of
+Paragraph~\ref{par:wach-cut-correction}, and put \(p_j=\phi^j(q)\).
+Write \(N_i(T)\) for the tame-invariant lattice, \(N(T)\) for their
+product, and \(P_i^{(j)}(T)=\langle\Phi^jN_i(T)\rangle\) for its
+integral Frobenius span at \(i+j\). Let \(a=A_0\),
+\(B_i=b_i+S\) and \(H=H_{\rm loc}\). The two signed height bounds
+at a destination \(i\) are
+\[
+ q^{M_i}P_{i-1}^{(1)}(T)\subset N_i(T),\qquad
+ q^{H_i}N_i(T)\subset P_{i-1}^{(1)}(T),\qquad
+ (M_i,H_i)=
+ \begin{cases}(B_i,\eta)&i\text{ even},\\
+ (\eta,B_i)&i\text{ odd}.\end{cases}
+\]
+Use the cyclotomic lattice comparison over the unramified field
+and the filtered comparisons at the primitive roots
+\cite[Proposition III.2.1 and Corollary III.4.5]{berger-wach}.
+\begin{lemma}[Annihilators at the initial letters]
+For the given surjection, and for the crystalline extension of
+the trivial lattice by the target with its quotient map, let \(C_i\) be the cokernel on the \(i\)-th tame-invariant letter. Then
+\[
+ q^a C_i=\ell^R C_i=0,\qquad R=\left\lfloor\frac{\ell H}{(\ell-1)^2}+3+\log_\ell(H+1)\right\rfloor.
+\]
+\end{lemma}
+\begin{proof}
+The following image bound uses the maximum \emph{letter width}
+\(H=\max_i(M_i+H_i)\). Do the calculation before tame invariants
+in the ordinary parameter \(\pi\).
+The common character with labelled filtration jump \(+M_i\) shifts both lattices by
+\[
+ [-M_i,H_i]+M_i=[0,M_i+H_i]\subseteq[0,H].
+\]
+
+The jumps of the decreasing filtration are now in \([0,H]\),
+as required in Berger's positive comparison. Such a character is a product
+of powers of the labeled Lubin--Tate characters of the
+unramified field, with values in the coefficient field.
+\cite[Proposition 2.3]{berger-lubin-tate}
+Tensoring by this rank-one lattice preserves the annihilator
+of the Wach cokernel. Rational Wach comparison is tensor
+compatible. Integrally, multiplication by a generator of the
+rank-one Wach lattice identifies the integral \'etale modules,
+since the generator is a basis after \'etale scalar extension.
+Taking their intersections with the rational Wach modules gives
+the tensor identification on integral Wach lattices.
+\cite[Proposition III.4.2]{berger-wach}
+
+Apply Berger's positive comparison and the faithfully flat
+descent in Paragraph~\ref{par:wach-cut-colength} after the common
+twist. For the untwisted Wach cokernel \(C\), the common rank-one twist preserves the annihilator and hence gives
+\[
+ \pi^H C=0.
+\]
+
+The argument of that paragraph which lowers the \(\pi\)-degree
+by the divided cyclotomic action gives a scalar exponent at most
+\(\lfloor\ell H/(\ell-1)^2\rfloor\). The two input lattices also
+occur as the extension of the trivial lattice by the target
+and its trivial quotient. The jumps of the extension are those
+of the target together with zero, so the same boxes apply.
+
+After tame averaging the annihilators on each letter include
+\(X^{\lfloor H/(\ell-1)\rfloor+1}\) and \(\ell^R\), with the following integer exponent
+\[
+ R=\left\lfloor \frac{\ell H}{(\ell-1)^2}
+                 +3+\log_\ell(H+1)\right\rfloor .
+\]
+Set \(d=\lfloor H/(\ell-1)\rfloor\), so the two annihilators are
+\(X^{d+1}\) and \(\ell^R\). In the expansion of \((X+\ell)^a\),
+each term with \(X\)-degree \(k\le d\) has \(\ell\)-exponent
+\(a-k\ge R\); every other term is divisible by \(X^{d+1}\).
+Thus \(q^a\) annihilates the same cokernel.
+
+The bounds are uniform in the number of letters,
+the rank and the ramification of the coefficient ring.
+\label{cor:inert-thick-initial-1}
+
+\end{proof}
+
+\begin{lemma}[Integral Herr representatives for the basis extensions]
+For every basis cocycle \(y\) the two annihilators give vectors \(\mu_i(y),\nu_i(y)\) satisfying \eqref{eq:thick-extension-data} on each letter. On the free span, the choice is extended by
+\[
+ (\mu_i,\nu_i)\!\left(\sum_j b_j y_j\right)=\sum_j b_j\big(\mu_i(y_j),\nu_i(y_j)\big).
+\]
+\end{lemma}
+\begin{proof}
+For each basis cocycle in the free family take its extension
+\(0\to T_2\to Y\to O\to0\). Its rational extension is crystalline
+by the definition of the finite group. Use exactness of the
+integral \((\varphi,\Gamma)\)-module functor and the Wach
+intersection with the kernel. Tame averaging, of order
+\(\ell-1\), preserves integral lifts.
+
+Choose a tame-invariant
+lift \(E\) of the trivial generator in the \'etale module of
+\(Y\), and take the Herr pair \(y=(\Phi-1)E\),
+\(z=(\gamma-1)E\) in that of \(T_2\). Denote their letter
+components by \(y_i,z_i\), and use the convention
+\((\gamma-1)y=(\Phi-1)z\).
+The two annihilators provide Wach lifts \(E_i,E_i'\) of
+\(\ell^R\) and \(q^a\) times the trivial generator in letter \(i\).
+Set
+\[
+ \mu_i=E_i-\ell^RE|_i,\qquad \nu_i=E_i'-q^a E|_i,\qquad
+ A_i=\ell^R y_i+\Phi\mu_{i-1}-\mu_i .
+\]
+Both differences defining \(\mu_i,\nu_i\) belong to the target
+\'etale module. The Wach intersection and the first signed height
+bound give
+\begin{equation}\label{eq:thick-extension-data}
+\begin{gathered}
+ \ell^R z_i+(\gamma-1)\mu_i\in XN_i(T_2),\qquad
+ q^{M_i} A_i\in N_i(T_2),\\
+ \ell^R q^{H_i} A_i\in P_{i-1}^{(1)}(T_2),\qquad
+ \ell^R\nu_i-q^a\mu_i\in N_i(T_2).
+\end{gathered}
+\end{equation}
+
+For the third inclusion, \(A_i=\Phi E_{i-1}-E_i\) in the
+extension, so \(q^{H_i}A_i\) belongs to its Frobenius span.
+Expand in a free basis of \(O[[X]]\) over \(\phi(O[[X]])\),
+as in the proof of the arc estimate. Each quotient coefficient
+of the resulting Wach vectors vanishes by independence.
+Thus the Frobenius span meets the target in the target span.
+This even gives the inclusion before multiplication by \(\ell^R\).
+The data in \eqref{eq:thick-extension-data} now extend linearly in the free family,
+even though the individual extensions \(Y\) were chosen only
+on its basis.
+
+\end{proof}
+\paragraph{First restriction at an even letter.}
+\begin{lemma}[The first restriction on the even letters]
+At each even letter one can impose a single kernel condition \(z\in\ker\pi_i\) for which
+\[
+ \operatorname{im}\pi_i\text{ is generated by at most }m\text{ elements},\qquad z\in\ker\pi_i\ \Longrightarrow\ u_i(z)\in N_i(T_2),
+\]
+where \(u_i(z)\) is the corrected vector constructed in the proof. If \(m=0\) the assertion holds on
+the full free family.
+\end{lemma}
+\begin{proof}
+For \(x\in q^{-a}N_i(T_2)\), let
+\(\partial x=X^{-1}(\gamma-1)x\) in the \'etale module.
+It preserves \(q^{-a}N_i(T_2)\) and \(N_i(T_2)\).
+Indeed the action on the invariant Wach lattice modulo \(X\)
+is trivial, and \(\gamma(q)/q\) is a unit congruent to one
+modulo \(X\). At a primitive root, put
+\[
+             c_j=\frac{1-\chi(\gamma)^{-j}}{\ell}.
+\]
+On the associated Laurent coefficient of degree \(-j\) the
+divided operator acts by \(c_j\) since \(X=-\ell\) there.
+For a Hodge jump \(u\), the quotient of the allowed pole lattice
+by the unshifted lattice has degrees \(-u-k\), \(1\le k\le a\).
+
+To see why one factor per distinct shift suffices, choose a basis
+of the crystalline space adapted to the filtration. In each
+direction the Laurent action is triangular, with distinct
+diagonal entries indexed by the degrees in that direction.
+The action of \(1/X(t)\) is scalar and the cyclotomic action
+in the crystalline basis is substitution
+\[
+ t\mapsto\chi(\gamma)t.
+\]
+
+Thus the product vanishes separately on each direction even
+when a shift repeats in another direction. This is a computation
+over the coefficient field. The Hodge criterion at the cyclotomic
+roots and saturation for \(\ell\) in \(q^{-a}N_i(T_2)/N_i(T_2)\)
+give the same inclusion integrally.
+
+Let \(J_i\) be the nonzero shifts that occur. They belong to
+\([1-B_i,a-b_i]\cup[1-\eta,a+\eta]\).
+By the valuation of powers of a principal unit,
+\[
+ v_\ell(c_j)=v_\ell(j)
+\]
+for \(j\ne0\). In the first
+interval there are at most \((a+S)/\ell^k+1\) multiples of
+\(\ell^k\), and no such nonzero multiples for
+\(k>\log_\ell(2H)\). For the central interval split at zero
+and apply the factorial bound on both sides.
+
+Taking the maximum
+over even letters, choose \(s_1\) and polynomials \(R_i(U)\)
+proportional over \(O\) to \(\prod_{j\in J_i}(U-c_j)\) with
+\[
+ R_i(0)=\ell^{s_1},\qquad
+ s_1\le(2a+2\eta+S)/(\ell-1)+L_0,\qquad
+ \partial R_i(\partial)q^{-a}N_i(T_2)\subset N_i(T_2).
+\]
+Including \(\partial\) kills degree zero if that shift occurs.
+The scaling of each polynomial is integral by the choice of the
+maximum. Write \(R_i(U)=\ell^{s_1}+U R_i^*(U)\), and set
+\[
+ m_i=R_i(\partial)(q^{-a}\nu_i)+R_i^*(\partial)(z_i/X),
+ \qquad u_i=\ell^R m_i-\ell^{s_1}\mu_i .
+\]
+Put \(v_i=\ell^R q^{-a}\nu_i-\mu_i\) and
+\(d_i=\ell^R z_i/X+\partial\mu_i\).
+
+By \eqref{eq:thick-extension-data},
+\(q^a v_i,d_i\in N_i(T_2)\). The polynomial identity gives
+\(u_i=R_i(\partial)v_i+R_i^*(\partial)d_i\). Thus
+\(q^a u_i\in N_i(T_2)\) and \((\gamma-1)u_i\in XN_i(T_2)\).
+Also
+\[
+ \ell^R\bigl(\ell^{s_1}z_i+(\gamma-1)m_i\bigr)
+       =X\ell^{s_1}d_i+(\gamma-1)u_i .
+\]
+The bracket belongs to \(XN_i(T_2)\) by cancellation
+of \(\ell^R\) in the integral \'etale module, where the Wach
+lattice and its \(X\)-multiple are \(\ell\)-saturated. In coordinates this follows from the
+description of the \'etale module as the completed localization
+of the lattice, with injective reduction of the lattice modulo
+the coefficient uniformizer.
+
+At a primitive root, the only Laurent coefficient of \(u_i\)
+that can obstruct membership in the Wach lattice is degree zero.
+Writing \([t^j]\) for coefficient extraction at the root gives
+\[
+ [t^j](\gamma-1)u_i=(\chi(\gamma)^j-1)[t^j]u_i\qquad(j\ne0).
+\]
+The scalar on the right is nonzero. The degree-zero obstruction is therefore
+the class in \(\mathrm{Fil}^{-a}D_i/\mathrm{Fil}^{0}D_i\).
+All jumps in \([-a,0)\) are central since \(a<b_i\).
+The quotient has dimension at most \(m\). Each obstruction
+map is linear in the free family and its image is an
+\(O\)-module generated by at most \(m\) elements.
+Successively take these kernels for even \(i\). This leaves
+a family on which every \(u_i\) belongs to \(N_i(T_2)\), using
+one rank restriction per even letter. When \(m=0\) the entire
+family survives.
+\end{proof}

@@ -1,0 +1,366 @@
+\paragraph{From the discriminant to a height.}
+\hypertarget{source-slice-heights}{}
+We give the height calculation before the final lift. Use block
+sphere probability measure on the rows of complex coefficients
+and the Gauss norm at the finite places. For a polynomial \(q\)
+let \(h_0(q)\) denote the sum of its finite log Gauss norms and
+the integrals of \(\log|q|\) on the product of spheres, with the
+number-field normalization on both sums. On constants the sum
+is zero. The height is additive on products, so extends to
+rational functions. Let \(N\) be the number of light columns
+and \(\ell_N=\log N+1/2\).
+
+\begin{lemma}[The coefficient-sphere height]
+\label{lem:coefficient-sphere-height}
+If \(q\ne0\) has degrees \(m_i\)
+homogeneously in the respective rows, then
+\begin{equation}\label{eq:slice-sphere-lower}
+ h_0(q)\ge-\ell_N\sum_i m_i .
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Indeed fix a lexicographic order on its monomials. Condition
+at each sphere on the absolute values of its coordinates.
+Their phases are independent uniform angles. Successive use
+of Jensen's inequality for a univariate polynomial on the
+circle bounds the phase integral below by the logarithm of
+the absolute value of the lexicographically leading term.
+For a uniform complex unit vector the mean log absolute
+value of one coordinate is \(-H_{N-1}/2\).
+
+For \(N>1\)
+its squared absolute value has density
+\((N-1)(1-t)^{N-2}\) on \((0,1)\). Integrating \(\log t\)
+gives this formula, including the value zero when \(N=1\).
+For \(N>1\) the one-coordinate expectation is
+\[
+  \mathbb E\log|z_1|=\frac{N-1}{2}\int_0^1(1-t)^{N-2}\log t\,dt=-\frac{H_{N-1}}2 .
+\]
+The same leading coefficient is available in every Gauss
+norm, so the product formula cancels its logarithms.
+Finally \(H_{N-1}/2\le\ell_N\). The conditional Jensen
+calculation proves integrability because the positive part on
+the spheres is bounded and the lower integral is finite.
+
+\end{proof}
+
+\begin{proposition}[The discriminant of the selected slice]
+\label{prop:slice-height-discriminant}
+For the selected finite reduced slice, the weighted discriminant term satisfies \eqref{eq:slice-height-disc},
+\[
+ 2\langle I\rangle\le\delta\log\delta+2\sum_i H(t'_i)+2s a_F\ell_N+2H_F.
+\]
+ An integral auxiliary section
+on those same branches contributes through its normalized height and
+its mean logarithmic supremum, with the same weight line and branch
+multiplicities.
+\end{proposition}
+
+\begin{proof}
+\proofstep{The discriminant in a trivialization of the weight line.}
+For a section \(\tau\) nonzero on each component let
+\(n_q(\tau)\) be the sum of its integral frame orders over
+places of the incidence fields above the divisor \(q=0\)
+of \(K[X]\), with residue degrees. A place trivial on the
+component field contributes zero in the constant generic
+frame. Define \(J_\tau=\prod_q q^{n_q(\tau)}\), and
+\(a_\tau=\sum_q n_q(\tau)\deg_1 q\) where row 1 is one
+of the \(s\) cut rows. These horizontal divisors have finite support, are independent
+of row zero and have equal degree in each cut row for each
+contributing irreducible \(q\).
+
+We prove these properties
+below by extension of the incidence point to its divisorial
+valuation rings and symmetry of the cut. The height of a framed
+weight is
+\[
+ H_\tau=\langle N(\tau)\rangle
+       +\operatorname{mean}_{\sigma}\int
+            \sum_{P}-\log\|\tau(P)\|_\sigma
+       +h_0(J_\tau),\qquad
+ N_\lambda(\tau)=\sum_{Z,w\mid\lambda} f_w n_w(\tau).
+\]
+Here \(P\) runs over complex points of the generic slice
+at the coefficient tuple being integrated. Discriminants
+and exceptional denominator loci are null sets. The integrability argument below applies to each of the
+metric terms on this family.
+Changing the frame within a weight adds the orders and
+log norms of the field norm of its componentwise ratio.
+The product identity for that rational function cancels
+the change in the three terms. Likewise heights and
+horizontal degrees add upon multiplication of weights
+and sections. \label{cor:slice-heights-1}
+
+\proofstep{Horizontal orders and the incidence divisor.}
+Form 
+\[
+  U=\Delta J_\tau^2.
+\]
+ At a horizontal prime apply
+the trace calculation of \eqref{eq:slice-discriminant-order}
+in the corresponding DVR. At the contributing places the
+short sections have nonnegative orders in the integral
+frame. At the other places a nonzero constant component
+reading has order zero. Hence the local order of \(U\)
+is nonnegative at every irreducible of \(K[X]\). Unique
+factorization makes \(U\) a polynomial.
+In reduced form \(U=A/B\) any irreducible \(q\mid B\) would have
+\[
+  \operatorname{ord}_q U=\operatorname{ord}_q A-\operatorname{ord}_q B=-\operatorname{ord}_q B<0 .
+\]
+ Its row degrees
+are \((0,2a_\tau,\ldots,2a_\tau)\) because the equal-weight
+coordinates of \(b_i\) depend only on the cut points, so \(\Delta\) is invariant under
+independent scalar changes of the rows. For example the
+corresponding substitutions on the incidence fields fix the
+\(b_i\) and intertwine the traces. All the degree therefore
+comes from the horizontal factor.
+
+\proofstep{The trace determinant in the archimedean average.}
+For almost every tuple the trace discriminant is the square
+of the determinant of the matrix \(b_i(P)\). Multiply each
+row by the reading of \(\tau(P)\) in a unit norm frame.
+Hadamard on columns bounds the squared absolute determinant
+of this new matrix by \(\delta^\delta
+\prod_i\|t'_i\|_{\sup,\sigma}^2\).
+In the finite height of \(\Delta\) the log Gauss norm has the
+opposite sign to \(v_\lambda(\Delta)\log\mathrm N\lambda\).
+Additivity of \(h_0\) gives the exact identity
+\[
+ \langle v(\Delta)+2N(\tau)\rangle
+ = 2H_\tau-h_0(U)
+  +\operatorname{mean}_{\sigma}\int
+       \left(\log|\Delta|+2\sum_P\log\|\tau(P)\|_\sigma\right).
+\]
+Combining the preceding inequalities yields
+\begin{equation}\label{eq:slice-height-disc}
+ 2\langle I\rangle\le \delta\log\delta+2\sum_i H(t'_i)
+                     +2s a_F\ell_N+2H_F .
+\end{equation}
+Here the subscript \(F\) means the weight \(w_F\).
+For an integral section \(g\) with nonnegative horizontal
+orders and bounded norm the same height formula gives
+\[
+ 0\le\langle N(g)\rangle\le H_g+
+    \delta\operatorname{mean}_\sigma\log\|g\|_{\sup,\sigma}
+                       +s a_g\ell_N .
+\]
+Apply this to \(\eta\) and divide by \(i_\eta\).
+Thus both vertical prices in \eqref{eq:geometric-four-terms}
+are bounded by heights of the same global family.
+
+\end{proof}
+
+\paragraph{The degree and the auxiliary height.}
+
+The preceding height contains contributions of different degrees. Divide by the incidence degree before estimating the auxiliary term.
+
+For the following comparisons set \(n_1=i_\eta g_0^*\).
+Write \(H_e=H_\eta/n_1\), \(a_e=a_\eta/n_1\).
+Use the integral sections \(t_1,t_2\) of weights
+\(2(w_L-w_\eta/n_1)\) and \((s+4)w_L-w_F\).
+\(H_1,a_1\) denote the corresponding quantities for
+\(t_1\) divided by two. Choose a constant light combination
+nonzero on every component. Such combinations form the
+complement of finitely many proper subspaces over an infinite
+field. Let \(a_L,H_L\) be its degree and height.
+By the weight identities,
+\[
+ a_L=a_1+a_e,\qquad (s+4)a_L=a_F+a_2 .
+\]
+All degrees on the right are nonnegative by the integral
+section comparison. For \(a_F\) one can take a short
+section nonzero on each particular component and use frame
+independence.
+
+The normalized moving part of the light
+system has degree \(\delta\) because adding a general zeroth
+hyperplane to the \(s\) cutting hyperplanes yields the
+incidence form of the light image, with its generic field
+multiplicity on each component. Equivalently the norm of
+the ratio of two such hyperplanes is the ratio of their
+products over the \(\delta\) slice points. After removing
+the minimum order of the light columns at each place, its
+specialization gives the divisor of that moving system.
+The actual degree is 
+\[
+  a_L=\delta+\sum_q E_q\deg_1 q,
+\]
+where \(E_q\) is the sum of the removed minima with residue
+degrees. On the horizontal depth estimate
+\(0\le E_q\le c\,n_q(\eta)/(2i_\eta)\) we get
+\[
+ a_L\le\delta+\tfrac12 c g_0^* a_e
+      \le\delta+\tfrac14 a_L .
+\]
+In particular \(a_L\le4\delta/3\) and
+\(a_F\le4(s+4)\delta/3\).
+
+\begin{proposition}[Heights of the chosen incidence sections]
+\label{prop:slice-normalized-heights}
+Under the degree, metric and Chow bounds used below, for \(s\ge3\) and
+\(D_0=\delta S_L\) the pre-final heights satisfy
+\[
+ H_e\le(s+1)D_0(2G_c+6P_H),\qquad
+ H_F\le(s+4)(s+1)D_0(2G_c+6P_H).
+\]
+The definite lift satisfies the same upper bound for \(H_F\), using
+the baseline finite depths alone.
+\end{proposition}
+
+\begin{proof}
+\proofstep{The normalized height of the moving incidence divisor.}
+For precision, let \(H_{\rm mov}\) be the height of the
+moving light system, computed at finite places by subtracting the minimum of the
+light orders, and at a complex point divide light norms by
+\((\sum_l\|w_l\|^2)^{1/2}\). Its incidence height expression
+is
+\[
+ H_{\rm mov}=\sum_Z h_0(F_Z)+\delta H_{N-1}/2 ,
+\]
+where \(F_Z\) is the Chow form of the light image raised to
+the generic covering degree. In fact the zeroth row in
+\(F_Z\), with the other rows generic, factors up to scalar
+as the product of the light linear forms at the slice
+points.
+
+At a Gauss place each factor has the minimum
+column order. The mean log absolute value of each factor
+on the complex unit sphere is the log norm of its vector
+minus \(H_{N-1}/2\), by unitary invariance.
+For a nonzero coefficient vector \(v\), the sphere average is therefore
+\[
+  \int_{\|z\|=1}\log|\langle z,v\rangle|\,d\sigma(z)=\log\|v\|-\tfrac12 H_{N-1}.
+\]
+ Comparing
+with a fixed zeroth row at which the product is nonzero
+gives the displayed formula by additivity of the sphere
+and Gauss heights. This calculation uses the specialization
+of the horizontal divisor at that row.
+
+\proofstep{Using the same integral sections in the height comparison.}
+To get the height bounds, form \(H_{\rm mov}\) using exactly the
+light-weight columns retained in the new choice of sections. Write \(L=S_L\) and
+\(\beta=cg_0^*\le1/2\).
+Let \(P_0,P_N,P_5,P_2,P_4\ge1\) bound respectively
+the integral-section price in the Chow estimate, the
+finite depths, the two terms comparing the archimedean light
+metrics, and the norms of the two complementary sections.
+Put 
+\[
+  p=P_0+P_N+P_5+P_2+P_4+P_{rw},
+\]
+and take \(P_H\ge 2p+G_c\). Use the following inputs in the normalized height calculation.\begin{align*}
+ \sum_Z h_0(F_Z)&\le (s+2)\delta
+              (P_0L+G_cL+\log N+1),\\
+ H_L&\le H_{\rm mov}
+    +\delta(P_N+P_5+P_2)L
+    +s\beta a_e\ell_N+\beta H_e,\\
+ H_e&\le H_L+\delta P_4s L+s a_1\ell_N,\\
+ H_F&\le(s+4)H_L+\delta P_4s L+s a_2\ell_N .
+\end{align*}
+
+\proofstep{The finite contribution of the auxiliary section.}
+For the second inequality, let \(B_\lambda\) be the sum of the
+minimum light orders with residue degrees at a finite place
+\(\lambda\). At each branch its baseline is
+\(e_w\nu_\lambda\). The decomposition identity
+\(\sum_{Z,w\mid\lambda}e_w f_w=\delta\) gives
+\[
+ B_\lambda\le\delta\nu_\lambda+
+                   \frac{c}{2i_\eta}N_\lambda(\eta).
+\]
+Use the weighted baseline bound
+\(\langle\nu\rangle\le P_N L\) on the run. Since the
+auxiliary orders are nonnegative, one can use the larger
+coefficient \(c/i_\eta\) for this finite contribution.
+At a complex slice point the change from the moving metric
+contributes \(-\log(\sum_l\|w_l\|^2)^{1/2}\). The paired light
+and auxiliary metric bound pays \(P_5D_F+cP_2\) and the same
+coefficient of \(-\log\|\eta\|\).
+
+Horizontally, let
+\(J_{\min}=\prod_q q^{E_q}\) in the frame of the light system.
+The effective difference with coefficients
+\((c/i_\eta)n_q(\eta)-E_q\) has sphere height at least
+\(-s(c/i_\eta)a_\eta\ell_N\), by
+\eqref{eq:slice-sphere-lower}. This also holds for rational
+or real exponents by summing the individual bounds with
+nonnegative multipliers. Therefore
+\[
+ h_0(J_{\min})\le (c/i_\eta)h_0(J_\eta)+s\beta a_e\ell_N .
+\]
+In the three terms of \(H_L-H_{\rm mov}\) the resulting
+auxiliary coefficient is exactly \(c/i_\eta=\beta/n_1\).
+The last two height inequalities follow by weight additivity
+and the lower bound for the height of an integral section.
+Use the bound \(P_4sL\) for the two log suprema in
+Paragraph~\ref{par:selected-height-sections}, with the factor
+one half for \(t_1\).
+
+\proofstep{Bounding the coefficient-sphere integrals.}
+For example put \(D_0=\delta L\) in this calculation.
+Use \(\log N+1,\ell_N,H_{N-1}/2\le P_{rw}L\).
+The first two inequalities imply
+\[
+ H_L\le D_0\{(s+2)(p+G_c)+p
+                   +\tfrac23sP_{rw}\}+\beta H_e .
+\]
+Indeed the harmonic and depth terms not in the first
+parenthesis are paid by \(p\). The light-count term in
+the first parenthesis leaves further slack. Since
+\(H_e\le H_L+D_0 s(P_4+\tfrac43P_{rw})\),
+substitution and division by \(1-\beta\) give
+\[
+ H_L\le D_0\{2(s+2)(p+G_c)+2p+
+                            s(P_4+\tfrac83P_{rw})\}.
+\]
+If \(H_L\) is negative the same upper bound follows
+directly. Adding \(D_0s(P_4+\tfrac43P_{rw})\)
+costs at most \(D_0s(2P_4+4P_{rw})\) in total
+in the last \(s\)-term. Hence, for \(s\ge3\),
+\[
+ H_e\le(s+1)D_0(2G_c+6P_H),\qquad
+ H_F\le(s+4)(s+1)D_0(2G_c+6P_H).
+\]
+The second inequality uses \(a_2\le (s+4)4\delta/3\).
+
+At the definite final lift use the baseline depth bound alone.
+The light minimum has zero horizontal contribution, so
+\(a_L=\delta\) and \(a_F\le(s+4)\delta\). The first-minimum
+function is zero and the lower bound for the light vector is
+uniform over the complex frames. In the height comparison this
+gives
+\[
+ H_L\le H_{\rm mov}+\delta(P_N+P_5)S_L .
+\]
+The complementary section \(t_2\) gives
+\(H_F\le(s+4)H_L+\delta P_4sS_L+s a_2\ell_N\). With \(a_2\le(s+4)\delta\), the Chow bound and
+\(\ell_N\le P_{rw}S_L\) give
+\[
+ H_F\le(s+4)(s+1)\delta S_L(2G_c+6P_H).
+\]
+Indeed \(H_{\rm mov}\) contributes at most
+\(\delta S_L((s+2)(P_0+G_c+P_{rw})+P_{rw})\).
+
+The other terms after dividing by \((s+4)\delta S_L\)
+are at most \(P_N+P_5+P_4s/(s+4)+sP_{rw}\).
+Their sum is within the stated bound by \(P_H\ge2p+G_c\).
+The light and complementary section norms at this lift are
+integrable using the same rational ratios and the bounded light
+vector above and below. Thus the discriminant argument uses
+the same upper bound at \(j=m\) with no auxiliary order term.
+\label{cor:slice-heights-2}
+
+Together with \eqref{eq:slice-height-disc} and
+
+\[
+  \operatorname{mean}\log\|\eta\|_{\sup}/i_\eta\le P_\eta
+\]
+these are the two slice-height estimates displayed above.
+We next derive the Chow bound and transfer the metric estimates
+to the places used here. We then justify horizontal specialization and
+integrability on this incidence correspondence.
+\label{cor:slice-heights-3}
+\end{proof}

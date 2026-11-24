@@ -1,0 +1,938 @@
+\section{Relations among periods on a theta chain}\label{sec:transport}
+
+In the slope estimate a period contributes both a complex norm and finite-place divisibilities. To compare them, follow the same period as the finite data in its theta kernels vary. We fix the archimedean data for the chain and vary the admissible finite
+tuples, including the reference tuple. Unfolding expresses the
+resulting pairings through common class sums. The finite
+valuation chapter uses this identity to estimate the same
+period maps at the places where their lattices differ.
+Lemma~\ref{hyp:joint-period-towers} identifies the fixed tower and its
+Haar measures. In the descending theta integral \eqref{eq:down-theta},
+the subscript \(t\) records the finite tuple on this fixed tower.
+
+\begin{established}[Common period data along a word]\label{hyp:joint-period-towers}
+For one word \(u\), fix its reference tuple \(0\) and write \(m=2s+2\)
+for the even chain length. Write \(V_j,M_j^\infty\) for the descending
+space and its smooth representation at infinity, \(X_j\) for its
+ascending definite companion, \(F\) for the maximal totally real
+subfield, and \([U]=U(F)\backslash U(\mathbb A_F)\). At all tuples
+with this word the measures, additive character and real Weil actions agree,
+and the last pair of spaces is
+\[
+ V_m=T,\qquad X_m=T\perp L_z,\qquad [U(T)]\text{ compact}.
+\]
+\end{established}
+\begin{proof}
+The tuple construction in Proposition~\ref{prop:translate-completion}
+changes the indicated finite characters and test vectors on a fixed
+Hermitian tower. The real spaces, orthogonal complement, additive character
+and Haar normalizations are fixed before that change.
+For \(G=U(T)\) take the integral compact open \(K_f\subset G(\mathbb A_{F,f})\).
+The class-number theorem gives a finite double quotient
+\(G(F)\backslash G(\mathbb A_F)/(G(F_\infty)K_f)\)
+\cite[Theorem~5.1]{platonov-rapinchuk-class}. Since \(T\) is a subspace
+of the definite terminal companion, \(G(F_\infty)\) is compact.
+The adelic quotient is a finite union of continuous images of
+the compact group \(G(F_\infty)K_f\).
+\end{proof}
+
+A column \(\varphi\) at level \(j\) gives scalar automorphic
+functions \(r_{t,j,\alpha}(\varphi,y)\) on \(U(X_j)\), one for
+each finite chart \(\alpha\) and frame \(y\) at infinity. A row
+\(G\) gives a cusp form \(G(v)\) on \(U(V_j)\) for each
+\(v\in M_j^\infty\). If \(e=\sum e_g[g]\) has finite support at
+the finite adeles, set \(R(e)f(x)=\sum_g e_g f(xg)\). Write
+\(B_{t,j}(\varphi,G;y,v)\) for
+\[
+ \sum_\alpha {\cal B}_{j,\rho}
+   \bigl(r_{t,j,\alpha}(\varphi,y),R(e_{t,j,\alpha})G(v)\bigr),
+ \qquad j+2\rho+2=m .
+\]
+Here \({\cal B}_{j,\rho}\) integrates on the rational quotient
+of the Bessel group, the semidirect product of the flag
+unipotent by \(U(X_j)\), with its specified character on the
+unipotent. The top functional is the compact period
+\[
+ \sum_\beta\int_{[U(T)]}
+    R(e_{t,m,\beta})G(v)(h)\,r_{t,m,\beta}(\varphi,y)(h\oplus 1)\,dh .
+\]
+The finite pairing remaining after the archimedean branching map is
+denoted by \(b_t(\varphi,G)\).
+
+Denote the one-step column map by \(K_{t,j}\), the level
+endomorphism by \(S_{t,j}\), and the descending row map by
+\(D_{t,j}\), with terminal argument on \(T\) for \(j=m-1\).
+Write \(I_j(P,v)\in M_j^\infty\) for the common archimedean
+intertwiner, where \(P\) is a Fock polynomial of the appropriate
+matrix size. With the theta kernel \(\Theta_{t,j,P}\) and a
+descending form \(G\) the normalization of \(D_{t,j}\) is
+\begin{equation}\label{eq:down-theta}
+ \int_{[U(V_{j+1})]} \Theta_{t,j,P}(g,h)G(v)(h)\,dh
+     = i_{t,j}\,(D_{t,j}G)(I_j(P,v))(g).
+\end{equation}
+The last integral uses \([U(T)]\). Each \(i_{t,j}\) is nonzero.
+On the designated, ramified column subspaces both \(K\) and \(S\)
+preserve the required level and type. Define the double step and
+the two scalar products by
+\begin{align}
+ A_{t,j}&=K_{t,j+1}K_{t,j}S_{t,j}, \qquad
+ U_t=A_{t,m-2}\cdots A_{t,0} \quad(j\ {\rm even}
+                       \text{ in the product}),\nonumber\\
+ h_t&=p_t\prod_{a=0}^s v_{t,2a}\,k_{t,2a}\,k_{t,2a+1},
+ &d_t&=\prod_{j=0}^{m-1}i_{t,j}. \label{eq:top-bottom}
+\end{align}
+Here \(k\) normalizes a single definite lift, \(v\) the two-step
+period unfolding, and \(p\) the terminal compact pairing.
+
+\subsection{An identity for definite lifts}
+
+To descend a relation involving several tuples, expand the compact real average in frames that work simultaneously for every term of the relation.
+At each real place the ranks \(a,b\) of consecutive definite
+spaces satisfy \(0<a\le b\). At a fixed finite lattice class, the column is represented by a polynomial \(F\) of the prescribed
+determinant-twisted highest weight in an \(a\)-frame, evaluated
+at \(y\), with its prescribed determinant factor. The compact
+real group in this basis maps onto \(\prod_\tau U(a)\). The
+lifting kernel at a pair of finite classes defines a linear
+functional \(\Lambda\) on the Fock polynomials on rectangular
+matrices. Both \(F\) and \(\Lambda\) may depend on the tuple. Write
+\(\Theta^X\) for the integral operator on the definite quotient.
+
+\begin{lemma}[A common frame expansion]\label{lem:common-definite-expansion}
+For the stated determinant-twisted polynomial type and a fixed
+real test \((P,y)\), there are finitely many frames \(y_\ell\) and
+coefficients \(a_\ell\) independent of the tuple, the finite target
+chart and the column such that
+\begin{equation}\label{eq:uniform-frame}
+ \sum_\alpha \Theta^{X}_{t,j,\alpha\gamma,P}
+                   r_{t,j,\alpha}(\varphi,y)
+   = k_{t,j}\sum_\ell a_\ell\,
+                r_{t,j+1,\gamma}(K_{t,j}\varphi,y_\ell)
+\end{equation}
+for every \(t,\gamma,\varphi\) of this type. For a two-step lift the
+expansion can be iterated with coefficients common to the tuples
+and with the remaining scalar \(k_{t,j}k_{t,j+1}\).
+\end{lemma}
+
+\begin{proof}
+\proofstep{Isolate the compact frame average.}
+The average to be computed, apart from determinant factors, is
+\[
+ \int_{\prod_\tau U(a)}
+  \Lambda(u^{-1}\cdot P)\,F(uy)\,du ,
+ \qquad \int du=1.
+\]
+Split the definite quotient into its finite compact-level classes.
+Each integral is its compact real average times the finite level
+mass divided by the order of its rational stabilizer (with the
+real Haar mass restored if a probability is used).
+The two compact-level characters in the integrand cancel.
+These are precisely the weights of the finite class lift.
+
+\proofstep{Identify the equivariant multiplicity space.}
+Before applying \(\Lambda\), take the compact-group average
+\[
+ Q(F)=\int F(uy)(u^{-1}\cdot P)\,du .
+\]
+The polynomial orbit has bounded multidegree, so this integral
+is defined coefficient by coefficient. Left translation in Haar
+measure makes \(Q\) equivariant for the small compact group.
+To determine its image, first
+work at one place. The polynomial algebra on \(b\)-by-\(a\)
+matrices has the Cauchy decomposition into
+\(S_\lambda(\C^a)\otimes S_\lambda(\C^b)\), with the duals
+determined by the action on variables. The multiplicity space
+of the specified irreducible \(U(a)\) polynomial type is thus
+irreducible for \(\mathrm{GL}_b(\C)\). Substitution of the first
+\(a\) rows defines a nonzero intertwiner, since arbitrary square
+matrices occur there. Its translates by
+\(z\in\mathrm{GL}_b(\C)\) span the multiplicity space.
+
+For a product of places the equivariant homomorphism space on
+each homogeneous component is the tensor product of these
+multiplicity spaces, by applying the decomposition at each
+place in turn. Consequently
+\[
+ Q(F)=\sum_{\ell=1}^h s_\ell\,\operatorname{sub}_{z_\ell}F .
+\]
+Each \(z_\ell\) is an invertible frame at every place. The list
+depends on \(P,y\) and the common representations. It works
+simultaneously for all \(\Lambda,F\). Restoring the determinant
+factors multiplies \(s_\ell\) by the source factor at \(y\) and
+the target factor at the scaled frame \(y_\ell\). This scaling is
+common to all finite classes. The defining finite class matrix
+therefore turns the frame expansion into \eqref{eq:uniform-frame}.
+Independence from the finite chart lets one expand the whole linear relation in the same frames.
+
+\proofstep{Expand the two oscillator variables.}
+A two-step unfolding gives a smooth function \(C(x,x')\) on
+two successive oscillator spaces with the finite self-dual lattice
+vacuum in each variable. It suffices to make a finite polynomial
+expansion after projection to the central characters occurring in
+the definite lifts. For a compact centre \(Z\), with Haar probability measure and
+character \(\omega\), this projector acts on a function \(F\) by
+\[
+        P_\omega F=\int_Z\omega(z)^{-1}\rho(z)F\,dz ,
+\]
+where \(\rho\) is the given central action.
+Moving the central variable around the integral shows that
+inserting this projection preserves the lift. The centre acting
+on the intermediate group acts on both kernels, so its matching
+character on the second factor is obtained by this same change
+of integration variable. These projections work for the whole
+family because the real Weil actions and the central characters
+of the readings agree.
+
+In the definite Fock space a central circle
+acts on each polynomial degree by that degree shifted by the
+vacuum character (with sign from the polarization). More explicitly, if the vacuum has central exponent \(b\) and
+the polarization has sign \(\varepsilon\in\{1,-1\}\), a homogeneous
+slice of degree \(d\) and the projection onto exponent \(a\) contribute
+\[
+ \int_{|z|=1} z^{b+\varepsilon d-a}\,dz
+   =\mathbf1_{\{a=b+\varepsilon d\}},
+\]
+with probability Haar measure. At each place only the prescribed
+nonnegative degree can survive. The
+slices thus lie in fixed finite-dimensional polynomial spaces
+times their vacua. Denote the projected function again by \(C\).
+
+For the first space choose evaluations at \(x_1,\ldots,x_h\)
+forming a dual basis: their joint annihilator is zero. Let
+\(L_a\) be the interpolation basis, so \(L_a(x_b)=\delta_{ab}\).
+For every \(x,x'\),
+\[
+ C(x,x')=\sum_{a=1}^h L_a(x)\,C(x_a,x').
+\]
+Each \(C(x_a,\cdot)\) belongs to the second slice space.
+Apply \eqref{eq:uniform-frame} in the first and then the second
+variable of each summand. At a fixed final frame the coefficient
+is the sum of products of the two transition coefficients over
+intermediate frames. Only \(k_{t,j}k_{t,j+1}\) varies with the
+tuple outside the final column reading.
+\end{proof}
+
+\subsection{Unfolding and the finite measures}
+
+The common frame expansion leaves a scalar at each tuple. Its finite factors come from the orbit surviving unfolding and the measures of its level cosets. At the terminal step
+it uses the compact branching projection.
+
+\begin{lemma}[The orbit surviving the flag period]\label{lem:joint-flag-orbit}
+In the mixed Schr\"odinger model with fixed frame \(x_0\), the surviving rational frames \(x\) form a single orbit characterized by
+\[
+ \operatorname{rank}x=\operatorname{rank}x_0,\qquad x^*Hx=x_0^*Hx_0.
+\]
+ The remaining integral is over
+the stabilizer quotient and converges absolutely.
+\end{lemma}
+\begin{proof}
+Expand the theta kernel in rational matrices \(x\) with \(\rho\)
+columns. On the rational quotient of the flag centre the normalized
+integral of the character with parameter \(x^*Hx-x_0^*Hx_0\) is
+\[
+ \begin{cases}1,&x^*Hx=x_0^*Hx_0,\\0,&\text{otherwise}.\end{cases}
+\]
+For a dependent surviving matrix choose \(a\) with \(xa=0\), its
+last nonzero entry \(a_j=1\). The flag relation supplies a
+transvection fixing this term on the first \(j\) columns, with
+nontrivial flag character \(\xi(u)\). Translation invariance of the mean gives
+\[
+ (1-\xi(u))I_x=0,\qquad \xi(u)\ne1 .
+\]
+Thus the dependent term has zero integral. This exclusion also applies
+when the prescribed Gram matrix is zero.
+
+For full-rank \(x\), the map sending the columns of \(x_0\) to
+those of \(x\) is an isometry on their span. Witt extension makes
+it the restriction of a rational unitary transformation. In the
+product with the rational flag group the stabilizer consists of
+pairs satisfying \(g x_0=x_0u\), with \(u\) upper unitriangular.
+The sum over its rational cosets unfolds to the stabilizer quotient.
+The absolute theta sum for a fixed Schwartz function grows at most
+as a power of the height. The flag unipotent quotient is compact,
+and rapid decay of the cusp form makes this majorant integrable.
+\end{proof}
+
+\begin{lemma}[Reduction to the next period]
+After the two stabilizer integrations, the integrand is the translated period at \(j+2\); its two remaining variables range over
+\[
+ R_1(\mathbb A_F)\backslash U(V_{j+1})(\mathbb A_F)\quad\text{and}\quad R_2(\mathbb A_F)\backslash U(V_{j+2})(\mathbb A_F).
+\]
+
+\end{lemma}
+\begin{proof}
+For the Bessel-to-Fourier--Jacobi step the intermediate stabilizer
+is the Jacobi group \(R_1\). The mixed-model function evaluated
+on its base frame is the lower theta function, with the prescribed
+Bessel line in the last coordinate. In the Fourier--Jacobi-to-Bessel
+step it is paired along the line coordinate before restriction
+to the next Bessel stabilizer \(R_2\). In each step write the
+stabilizer as \(N\rtimes U_0\). The measure is the image of
+\(dn\,du_0\) under \((n,u_0)\mapsto n u_0\), with the rational
+unipotent quotient of mass one.
+
+Since the rational points split as \(N(F)\rtimes U_0(F)\), the
+quotient formula for an integrable pairing \(F_0\) is
+\[
+ \int_{[N\rtimes U_0]} F_0(h)\,dh
+    =\int_{[U_0]}\int_{[N]}F_0(nu)\,dn\,du .
+\] The former integral evaluates the flag character; the
+latter is the remaining Bessel or Jacobi pairing. Apply the quotient
+formula at \(R_1\) and \(R_2\) successively. Absolute convergence
+from Lemma~\ref{lem:joint-flag-orbit}, uniformly on compact representatives for the definite
+factor, permits both integrations.
+\end{proof}
+
+\begin{lemma}[Mass away from the twist places]
+Assume the fixed-level support conditions of
+Section~\ref{subsec:fixed-level-support}. Off the twist places \(Q_t\) let \(K_i^*\) be the product of the
+prescribed fixed levels and the full lattice stabilizers elsewhere.
+The two integrations contribute a common scalar \(\kappa_j=v_1^*v_2^*\),
+where
+\[
+ v_i^*=\frac{\mu_i(K_i^*)}{\rho_i(R_i\cap K_i^*)}.
+\]
+Here \(\mu_i,\rho_i\) are the ambient and stabilizer measures.
+\end{lemma}
+\begin{proof}
+Outside the twist and fixed level places the vectors are the unramified lattice vacua.
+The test for the unfolded function to be nonzero places the
+group variable in \(R_iK_i\). At the fixed level places the
+corresponding test after the prescribed Heisenberg translates
+places it in \(R_iJ_i\), with \(J_i\) the specified compact
+level. The transformed integrand is left invariant by \(R_i\)
+and right invariant by these levels. In the first variable the
+two intermediate level characters cancel each other. In the
+second the row has the indicated level character. The second
+support test is used after the first variable has been reduced.
+
+For the indicator of \(K_i^*\) the fibre integral equals
+\(\rho_i(R_i\cap K_i^*)\) on the image of \(K_i^*\) in the quotient,
+and is zero elsewhere. Hence the quotient formula reads
+\[
+            \mu_i(K_i^*)=v_i^*\,\rho_i(R_i\cap K_i^*),
+\]
+which gives the asserted mass. At \(Q_t\) normalize the
+maximal compact and its intersection with \(R_i\) to mass one.
+Factor the finite adele and stabilizer measures at \(Q_t\) and
+its complement. The factors outside \(Q_t\) contribute the two
+masses just computed, leaving the twist integrals.
+\end{proof}
+
+\paragraph{Test functions at a split twist place.}
+
+The two finite test functions determine the cell weights in the unfolding. Let \(k_0\) be the local field and
+\(K_i^0\) the full integral general linear group in the two
+intermediate variables. In the local matrix model the additive
+character has conductor \(\mathcal O_{k_0}\) and the additive
+measure of \(\mathcal O_{k_0}\) is one. For a lattice \(L\) in the variables being transformed let
+\(L^\perp\) be its annihilator for the given pairing and character.
+Translation by any \(a\in L\) multiplies the Fourier integral by
+\(\psi(\langle a,y\rangle)\). Hence
+\[
+ \widehat{\mathbf1_L}(y)=\int_L\psi(\langle x,y\rangle)\,dx
+       =\operatorname{vol}(L)\mathbf1_{L^\perp}(y).
+\]
+The standard integral coordinate lattice has volume one. The two local vacua can be read as these
+indicators, followed by the finite Heisenberg combinations
+defining the test functions \(P_1,P_2\). Transform each to
+position one (the flag coordinate carrying the additive
+character).
+
+In the source this operation on a level vector
+at a representative \(\alpha\) is expressed as a finite
+combination \(e_\alpha\) of group translations. For every equivariant functional \(l\) on \(\tau\) and
+level-character vector \(w\), the finite expansion gives
+\[
+ l\big(\tau(e_\alpha)w\big)=\sum_a e_\alpha(a)\,l\big(\tau(a)w\big).
+\]
+Thus the weights used on each cell can be evaluated before summation. The same formula applies
+to the target vector.
+
+Choose representatives \(\gamma,\beta\) for the successive
+nonzero cells of the two transformed functions. The test-data
+conditions here are that the representatives cover the support
+and give distinct \(R_i\)-level double cosets in each variable.
+Let \(\xi_1(\alpha,\gamma)\) and \(\xi_2(\gamma,\beta)\) be the Schwartz
+functions on these cells given by partial Fourier restriction and
+unipotent averaging. At compact open level \(J_i\subset K_i^0\) the
+stabilizer in the position-one group \(R_i\) is
+\[
+                      C_i(x)=R_i\cap xJ_ix^{-1}.
+\] Write
+\(\pi_i\) for projection onto the smaller general linear factor
+and \(\nu_i\) for Haar measure on it.
+
+\begin{lemma}[The contribution of the twist cells]\label{lem:joint-twist-cells}
+At a split twist place, use the two position-one test functions.
+Assume their nonzero cells exhaust the support and the representatives
+\(\gamma,\beta\) give distinct stabilizer--level double cosets in
+each variable.
+If \(\mathcal T\) is the remaining period, trilinear in the two
+Schwartz functions and the row, the local integral is
+\begin{multline}\label{eq:twist-cell}
+ \frac{1}{[K_1^0:J_1][K_2^0:J_2]}
+ \sum_{\gamma,\beta}
+ \frac{1}{\nu_1(\pi_1 C_1(\gamma))\nu_2(\pi_2 C_2(\beta))}
+ \\ {}\times
+ \sum_b e_\beta(b)\,
+ \mathcal T\bigl(\xi_1(\alpha,\gamma),\xi_2(\gamma,\beta),
+                           \tau(b)w\bigr).
+\end{multline}
+\end{lemma}
+\begin{proof}
+Disintegrate over \(R_i\backslash R_i xJ_i\).
+The numerator of the cell mass is \(\mu_i(J_i)=1/[K_i^0:J_i]\).
+In the stabilizer integral first integrate
+in the radical coordinates with the self-dual additive measure.
+More explicitly, write \(N_i\) for the radical and \(m_{N_i}\)
+for its measure in position one. With \({\rm flat}_i\) the
+position-one partial Fourier restriction of the translated
+test function, the entry used here is
+\[
+ \xi_i(x',x)= {\rm flat}_i(x',x)\,
+   \frac{m_{N_i}(N_i\cap K_i^0)}
+        {m_{N_i}(N_i\cap C_i(x))}.
+\]
+
+The denominator records the actual radical volume at the cell
+and the numerator uses the reference lattice. The remaining
+stabilizer measure is \(\nu_i(\pi_i C_i(x))\). Right
+translation by a level element multiplies \(P_i\) and the
+vector or adjacent kernel by cancelling characters, so the
+cell integral has the displayed value for any representative.
+Applying this identity in the inner and then the outer variable
+gives the product of the two cell masses. Substitution of the
+finite translate \(e_\beta\) and trilinearity give \eqref{eq:twist-cell}.
+\end{proof}
+
+\begin{proposition}[Scalar of the two-step period integral]\label{prop:joint-scalar-descent}
+For the data of Lemma~\ref{hyp:joint-period-towers}, with the local cell
+decomposition of Lemma~\ref{lem:joint-twist-cells}, the scalar of
+the unfolded integral at a nonterminal step is
+\[
+ v_{t,j}=\kappa_j\,s_{t,j}s_{t,j+1}c_{Q,t,j}c_{G,j}c_{T,t,j}.
+\]
+The terminal step has \(\kappa_j=1\) and its compact pairing
+contributes \(p_tb_t\).
+\end{proposition}
+\begin{proof}
+At several twist places use product representatives in \eqref{eq:twist-cell}.
+Distinct places act on distinct local
+matrix coordinates. For distinct places \(v,w\) the local operators \(A_v,A_w\)
+commute on the tensor product. If \(b_v(t_v)\) denotes a local
+weighted cell entry in \eqref{eq:twist-cell}, the corresponding
+global sum consequently factors as
+\[
+ \sum_{(t_v)_v}\prod_v b_v(t_v)=\prod_v\sum_{t_v} b_v(t_v).
+\]
+The same commutation holds with modifications at disjoint fixed
+level places. Thus the full twist-place sum gives precisely the chart
+sum of the two definite lifts, with their entry weights in
+\eqref{eq:twist-cell}, and an overall scalar \(c_{Q,t,j}\).
+The real datum after contraction can be read at any reference
+tuple. Restriction to the frame and Fourier integration use only
+the common splitting and measures after the finite translates have
+been removed.
+
+By bilinearity, replacing the two test functions by their
+multiples changes their contraction \(B\) by
+\[
+ B(s_{t,j}\phi_1,s_{t,j+1}\phi_2)
+                 =s_{t,j}s_{t,j+1}B(\phi_1,\phi_2).
+\]
+\(c_{G,j}\) is the common fixed-level factor and \(c_{T,t,j}\)
+the twist of the other prescribed local factors. At the last
+step the compact terminal period is already an integral on
+\([U(T)]\), and the same formula uses \(\kappa_j=1\).
+
+For that compact period write \(U(T)\) in finite level classes.
+Its real integral is the equivariant projection for the
+restriction from \(U(X_m)\) to \(U(T)\) along \(h\mapsto
+h\oplus1\). Let \(V\) and \(W\) be the selected terminal types on \(U(X_m)\)
+and \(U(T)\), respectively. Their highest weights interlace, so
+unitary branching gives
+\[
+ \dim\operatorname{Hom}_{U(T)}(V|_{U(T)},W)=1 .
+\]
+For fixed \(y,v\) the real integral is therefore a scalar multiple
+of the prescribed branching map. The scalar is common for all \(t\),
+and summing the finite classes leaves \(p_tb_t\).
+\end{proof}
+
+\input{period-level-support}
+
+\subsection{Descent of a linear relation}
+
+The common frames and the finite measure factors now enter the same induction. With the indicated coefficient change, a relation at the higher level descends through the two lifts.
+
+\begin{construction}
+\[
+ \begin{array}{rcccl}
+  &\text{level }j&&\text{level }j+2&\\[2pt]
+ \text{column}&\varphi^{(j)}&\xrightarrow{\ A_{t,j}\ }&
+                           \varphi^{(j+2)}&\\[2pt]
+ \text{row}&G^{(j)}&\xleftarrow{\ D_{t,j}D_{t,j+1}\ }&
+                           G^{(j+2)}&\\[3pt]
+ \text{coefficient}&a_{i,j}v_{t,j}k_{t,j}k_{t,j+1}
+          &=&a_{i,j+2}i_{t,j}i_{t,j+1}.&
+ \end{array}
+\]
+\caption{One even step in Lemma~\ref{lem:joint-period}, with \(t=t_i\). The column moves up and the row moves down. The bottom equality permits the weighted relation at level \(j+2\) to descend.}\label{fig:even-period-step}
+\end{construction}
+
+\begin{auxlemma}[The real tests and the period on each marked arrow]
+\label{lem:word-real-tests-period}
+At stage \(j\) of the word tower of Lemma~\ref{hyp:joint-period-towers},
+let \(K_j\) be the product of real maximal compact subgroups on
+\(V_j\), and \(H_j=(M_j^\infty)_{K_j\text{-finite}}\).
+Let \(\mathcal F_j\) denote the polynomial Fock space on the rectangular
+matrices for \((V_j,V_{j+1})\), with the word's real Weil action.
+On each used tuple and at every arrow, including the definite last one,
+\[
+ H_j=\operatorname{span}_{\mathbb C}
+         \{I_j(P,v):P\in\mathcal F_j,\ v\in H_{j+1}\}
+             \qquad(0\le j<m).
+\]
+For fixed column and frame the period at every even stage is a
+continuous functional on \(M_j^\infty\). The bound is valid separately
+in each real factor of a pure tensor.
+\end{auxlemma}
+\begin{proof}
+Realize the descending spaces \(V_j\) as the marked \(Y_j\) of
+Proposition~\ref{prop:isometric-refined-theta-chain}, with \(Y_m=T\).
+At each stage write the selected isotypic row, at fixed finite level, as
+\[
+       \mathcal A_{t,j}^{\rm sel}
+          =L_{t,j}\otimes M_j^\infty .
+\]
+Here \(L_{t,j}\) is the finite-dimensional multiplicity space. In
+Proposition~\ref{prop:isometric-refined-theta-chain} the symbol \(M_j\)
+denotes this multiplicity space. The real factor here is the exterior
+tensor product of the specified irreducible discrete series, with
+the finite-dimensional compact representation at \(T\).
+
+The common evaluation tensors in that proposition give a nonzero
+coefficient of the real intertwiner on each edge, with the same
+tensor for both occurrences of each interior stage. In the row integral \eqref{eq:down-theta}, for \(G\in L_{t,j+1}\)
+and \(v\in M_{j+1}^\infty\), the two factors are
+\[
+ G\otimes v\ \longmapsto\ i_{t,j}\, D_{t,j}G\otimes I_j(P,v).
+\]
+A change of Haar normalization multiplies the former
+identity by the scalar \(i_{t,j}\ne0\). The finite chart index and
+the finite twist do not enter \(I_j\).
+
+Write \(W_j\) for the span of real images in the statement.
+Polynomials have finite compact orbit span, so their images with
+compact-finite upper vectors lie in \(H_j\).
+The nonzero evaluation can be taken on compact-finite inputs. The pairs are all unitary dual pairs over
+\(\mathbb C/\mathbb R\), including the pair with compact upper member.
+For these pairs the smooth occurrence of the two factors is also an
+algebraic occurrence in the Fock space. In terms of the upper and
+lower compact subgroups, this gives
+\[
+ I_j\bigl(\mathcal F_j,(M_{j+1}^\infty)_{K_{j+1}\text{-finite}}\bigr)
+                  \ne 0 .
+\]
+
+This is the unitary case of Bao and Sun's Proposition~5.1.
+\cite{bao-sun-unitary}
+To see the density inside the selected row, fix its multiplicity
+vector \(G\) and convolve the upper smooth vector \(v\) on
+\(K_{j+1}\). Smooth approximate identities converge in every
+smooth seminorm. By the smooth Peter--Weyl expansion on the
+compact group, the convolution kernels can themselves be approximated
+in these seminorms by finite sums of matrix coefficients. Thus there
+are compact-finite \(v_n\) with
+\[
+       G\otimes v_n\ \longrightarrow\ G\otimes v
+               \quad\text{in the selected smooth row}.
+\]
+
+Every translate in this construction belongs to the same selected
+representation. The real intertwining pairing is continuous on the
+smooth oscillator and representation spaces.
+
+Equivariance gives, for a lower compact element \(k\) and a
+lower Lie algebra element \(X\),
+\[
+ k I_j(P,v)=I_j(\omega_j(k)P,v),\qquad
+ dM_j(X)I_j(P,v)=I_j(d\omega_j(X)P,v).
+\]
+The infinitesimal Fock action is a sum of products of polynomial
+multiplications and differentiations of order at most two, including
+the scalar splitting character. Thus \(W_j\) is a nonzero
+Harish--Chandra submodule. Each real factor has irreducible
+Harish--Chandra module, and their exterior tensor product is
+irreducible for the product group. Consequently
+\[
+  0\ne W_j\subseteq H_j,\quad
+  (\mathfrak g_j,K_j)W_j\subseteq W_j
+        \quad\Longrightarrow\quad W_j=H_j .
+\]
+The same algebraic argument on the core arrows occurs in
+Lemma~\ref{lem:fitted-core-span}.
+
+For an even \(j<m\) the integrated group is
+\(R_j=N_j\rtimes U(X_j)\). The quotient of \(N_j(\mathbb A_F)\)
+by \(N_j(F)\) is compact by its filtration with additive quotients.
+The group at infinity of \(U(X_j)\) is compact and the finite
+class quotient is finite, as in Lemma~\ref{hyp:joint-period-towers}.
+Taking compact representatives successively in the two groups
+gives compact representatives for \([R_j]\). At the terminal stage
+use \([U(T)]\) directly. Each finite translate in the chart sum
+therefore restricts the row to a compact set \(C\) in its automorphic
+quotient. With the finitely many translates included, integration gives
+\[
+ |B_{t,j}(\varphi,G;y,v)|\le C_{t,j,\varphi,y}\,
+                \sup_{h\in C}|G(v)(h)|.
+\]
+
+On a finite cover of that set by real coordinate charts, local
+Sobolev embedding for an integer \(d>\dim_{\mathbb R} U(V_j)(F_\infty)/2\)
+bounds the supremum by a finite sum of \(L^2\)-norms of right
+derivatives of order at most \(d\). Derivatives commute with
+the realization of the row, whose Hilbert norm is fixed by its
+Petersson normalization. Boundedness of the column on this compact
+set and the finite sum thus give
+\[
+ |B_{t,j}(\varphi,G;y,v)|
+    \le C_{t,j,\varphi,G,y}
+       \sum_{|\alpha|\le d}\|dM_j(X^{\alpha})v\|_2 .
+\]
+Here \(X^\alpha\) ranges over ordered monomials in a real Lie
+algebra basis. Fixing all but one tensor factor gives the asserted
+separate continuity. Compact convolution also proves the density
+used when the two-step identity is extended to smooth rows.
+\end{proof}
+
+\begin{lemma}\label{lem:joint-period}
+Use the word and tuples of Lemma~\ref{hyp:joint-period-towers}. Use the scalar
+identity of Proposition~\ref{prop:joint-scalar-descent} with the
+same real actions and frames throughout the tuples. Lemma~\ref{lem:word-real-tests-period} identifies the real images and the
+continuous periods at each stage. Given finitely
+many tuples \(t_i\), coefficients \(\alpha_i\), columns
+\(\varphi_i\) of the selected type and terminal rows \(G_i\), one
+has the implication
+\begin{align*}
+ \sum_i\alpha_i h_{t_i} b_{t_i}(U_{t_i}\varphi_i,G_i)=0
+ \quad\Longrightarrow\quad
+  \sum_i\alpha_i d_{t_i}\,
+  B_{t_i,0}\bigl(\varphi_i,D_{t_i,0}\cdots
+       D_{t_i,m-1}G_i;y,v\bigr)=0
+\end{align*}
+for every base frame \(y\) and smooth tensor \(v\).
+\end{lemma}
+
+\begin{proof}
+Fix \(i\) and write \(t=t_i,\ \alpha=\alpha_i\). At even level \(j\)
+use the column \(A_{t,j-2}\cdots A_{t,0}\varphi_i\) and the row
+\(D_{t,j}\cdots D_{t,m-1}G_i\), with empty products equal
+to the identity. Give this term coefficient
+\[
+ a_{i,j}=\alpha
+ \prod_{0\le b<j/2}(v_{t,2b}k_{t,2b}k_{t,2b+1})
+ \prod_{n=j}^{m-1}i_{t,n}.
+\]
+Thus \(p_ta_{i,m}=\alpha h_t,\ a_{i,0}=\alpha d_t\). Consecutive
+coefficients satisfy
+\[
+ a_{i,j}v_{t,j}k_{t,j}k_{t,j+1}
+    =a_{i,j+2}i_{t,j}i_{t,j+1}.
+\]
+
+Start with the given relation at \(m\), where the compact pairing
+is \(p_tb_t\) times the common real branching map. Assume the
+relation at \(j+2\) on every frame and every smooth tensor.
+Test at \(j\) on \(I_j(P_1,I_{j+1}(P_2,v'))\).
+Equation~\eqref{eq:down-theta} twice expresses the lower period
+times \(i_{t,j}i_{t,j+1}\) as a double theta integral. Unfolding
+and \eqref{eq:uniform-frame} give a finite sum of upper periods
+times \(v_{t,j}k_{t,j}k_{t,j+1}\), integrated on the remaining
+archimedean quotients. The frames, the real translates of \(v'\), and their expansion coefficients are common to all indices.
+
+For each such frame and tensor, let \(P_{i,j+2}\) be the corresponding upper period for index \(i\). The induction hypothesis applies pointwise:
+\[
+ \sum_i a_{i,j+2}P_{i,j+2}=0 .
+\]
+By the coefficient identity this is the upper-period relation that appears in the unfolded integral. Integration and summation over the common frames both preserve its vanishing.
+
+Two applications of Lemma~\ref{lem:word-real-tests-period} give the relation on \(K_\infty\)-finite
+pure tensors. Fix the frame and all factors but one, and denote the resulting
+weighted period by \(\mathcal P\). For smooth-topology approximants
+\(v_n\) that are \(K_\infty\)-finite, the Sobolev bound on compact
+translates gives a continuous seminorm \(p\) with
+\[
+ |\mathcal P(v)-\mathcal P(v_n)|\le C p(v-v_n)\longrightarrow0 .
+\] In each factor
+\(K_\infty\)-finite vectors are dense. Extend by continuity one
+factor at a time, and descend through \(j=m-2,m-4,\ldots,0\).
+\end{proof}
+
+\paragraph{Comparison of two tuples.}
+
+Apply the descended relation to two tuples. To convert that relation into a comparison of their periods, retain the norm ratios of the terminal row and column.
+
+Fix the column similarity \(S\) and its nonzero comparison scalar
+\(s_{\rm col}\) for this word. Both are common to the tuples. Apply \(S^{-1}\)
+to the initial columns. Lift a specified reference row through the
+surjective descent at tuple \(0\) and keep this lift fixed. For the
+second input lift its matched row at tuple \(t\), which may itself
+be \(0\). The scalars from \eqref{eq:top-bottom} give
+\[
+   \eta_t=\frac{h_t}{d_t},\qquad c_t=s_{\rm col}\eta_t
+   \quad\text{for every tuple }t,\qquad
+   \frac{c_t}{c_0}=\frac{h_t d_0}{d_t h_0}.
+\]
+The terminal reference pairing is evaluated directly on the fixed
+lift. The second terminal pairing is read in the comparison
+coordinates, where the column map contributes the factor \(s_{\rm col}\).
+This distinction persists when the second tuple is \(0\).
+
+\begin{lemma}[Transfer to the bottom pairing]\label{lem:word-two-tuple-transfer}
+Let \(A_{\rm ref}\) be the raw finite pairing on the fixed reference
+lift and \(B_{\rm ref}\) its bottom pairing. For an input at tuple
+\(t\), let \(A_t\) be its finite entry in comparison coordinates
+and \(B_t\) its bottom pairing. Then, for \(\alpha,\beta\in\mathbb C\),
+\[
+ \alpha\eta_0 A_{\rm ref}+\beta c_t A_t=0
+       \quad\Longrightarrow\quad \alpha B_{\rm ref}+\beta B_t=0 .
+\]
+\end{lemma}
+\begin{proof}
+In Lemma~\ref{lem:joint-period} use the two coefficients
+\(\alpha/d_0,\beta/d_t\). On the reference input the top value
+before weighting is \(A_{\rm ref}\); on the comparison input the
+column similarity and terminal identification give \(s_{\rm col}A_t\).
+The top and bottom sums are consequently
+\[
+ \begin{aligned}
+  (\alpha/d_0)h_0 A_{\rm ref}+(\beta/d_t)h_t s_{\rm col} A_t
+        &=\alpha\eta_0 A_{\rm ref}+\beta c_t A_t,\\
+  (\alpha/d_0)d_0 B_{\rm ref}+(\beta/d_t)d_t B_t
+        &=\alpha B_{\rm ref}+\beta B_t .
+ \end{aligned}
+\]
+The descended identity holds for every \(y,v\) and their common
+translates. Multiplying by the common conjugate test vector and
+integrating in the Poincar\'e formula gives the second equality
+as a relation of bottom automorphic pairings. The two translates
+have the same level character and use the same column isometry.
+\end{proof}
+
+\begin{lemma}[Support of the period ratio]
+Let \(S_t\) be the rational primes beneath the twist places.
+For some \(N>0\),
+\[
+ (c_t/c_0)^N\in\mathbb Z[S_t^{-1}]^\times .
+\]
+For every assigned \(w\mid\ell\), one has \(\ell\notin S_{\mu(w)}\).
+\end{lemma}
+\begin{proof}
+In the quotient of the two products in \eqref{eq:top-bottom},
+the fixed level factors and the common masses cancel. In particular,
+the common \(s_{\rm col}\) cancels in \(c_t/c_0\), even if \(s_{\rm col}\ne1\).
+The stage comparisons are for the ratios of
+\(s_{t,j}\), \(k_{t,j}\), \(c_{T,t,j}\), and
+\(c_{Q,t,j}/(i_{t,j}i_{t,j+1})\) between the two tuples,
+together with the top \(p_t\). Roots of unity from Weil
+splittings disappear upon taking powers. The local index and
+uniformizer factors left in these ratios are supported on
+\(S_t\). Write the remaining factors of \(c_t/c_0\), including any
+inverses, as \(u_1,\ldots,u_a\).
+
+For local exponents \(n_j>0\)
+with \(u_j^{n_j}\in\mathbb Z[S_t^{-1}]^\times\), take
+\(N=\operatorname{lcm}_j n_j\). Equation~\eqref{eq:top-bottom} gives
+\[
+ (c_t/c_0)^N=\prod_j(u_j^{n_j})^{N/n_j}
+                       \in\mathbb Z[S_t^{-1}]^\times.
+\] The
+row scalars may first be read at a
+provisional column system. They are \(s_j\zeta_{t,j}\) with
+\(s_j\ne0\) common and \(\zeta_{t,j}\) roots of unity. The
+column construction allows these constants as parameters. Its
+fixed row data, finite places and level translates agree after
+inserting these values, so the same factors occur in the final
+calculation.
+
+Fix \(w\mid\ell\) and put \(t=\mu(w)\). At the base tuple the
+character is trivial. At a twisted tuple take any host place
+\(P\mid\ell\). Its character on inertia is
+\[
+ \chi_t|_{I_P}=\delta_\ell|_{I_P}\,\psi_w|_{I_P}=1 .
+\]
+Indeed \(\psi_w\) is unramified at all \(P\mid\ell\). The
+support prime of \(\delta_\ell\) is \(p_\delta\) if
+\(\ell\ne p_\delta\), and \(p'_\delta\ne p_\delta\) otherwise.
+A prime in the extra level of \(t\) must be ramified for
+\(\chi_t\), so none lies above \(\ell\). This proves
+\(\ell\notin S_{\mu(w)}\) even when several assignments use
+the same tuple. \label{cor:period-transport-1}
+\end{proof}
+
+\begin{lemma}[Unit at an assigned place]\label{lem:period-unit-at-assigned-place}
+Let \(\sigma:L\hookrightarrow\C\) be the selected coefficient
+embedding, and let \(w\) lie over a prime outside \(S_t\). If an
+identity of period entries has the form
+\(\sigma(b)=(c_t/c_0)\sigma(b')\), with \(b,b'\in L\), then their valuations agree whenever the entries are nonzero. More precisely,
+\[
+ b=b'=0\quad\hbox{or}\quad bb'\ne0,\qquad b/b'\in{\cal O}_{L,w}^{\times}\ \ (bb'\ne0).
+\]
+
+\end{lemma}
+
+\begin{proof}
+If \(b'=0\), the identity gives \(b=0\). Otherwise set \(a=b/b'\)
+and choose \(N>0\) as in the preceding lemma. Writing
+\(r=(c_t/c_0)^N\in\mathbb Z[S_t^{-1}]^\times\),
+injectivity of \(\sigma\) gives \(a^N=r\), hence
+\(N v_w(a)=v_w(r)=0\).
+\end{proof}
+
+\begin{lemma}[A nonzero reference entry]\label{lem:nonzero-word-reference-entry}
+Suppose the period matrix \(P\) on a \(d\)-dimensional column space,
+\(d>0\), satisfies \(\|P^*P-1\|_{\rm HS}^2\le ed\).
+If the ramified columns have dimension at least \((1-\delta)d\)
+and \(e<1-\delta\), one can choose a reference column and row
+with bottom pairing \(b_*\ne0\). Let \(A_*\) be the raw finite
+pairing on their fixed lift and put \(p_*=(h_0/d_0)A_*\).
+For every finite comparison entry \(d'\) at tuple \(t\) and its
+matched bottom pairing \(b'\),
+\[
+    p_*\ne0,\qquad p_*b'=c_t d' b_* .
+\]
+\end{lemma}
+\begin{proof}
+On \(\ker P\) the operator \(P^*P-1\) is minus the identity. Extending
+an orthonormal basis of the kernel to the whole column space gives
+\[
+ \dim\ker P\le\|P^*P-1\|_{\rm HS}^2\le ed<(1-\delta)d.
+\]
+Choose a ramified column outside that kernel, a row on which it
+pairs to \(b_*\ne0\), and a preimage under the column similarity.
+Apply Lemma~\ref{lem:word-two-tuple-transfer} with
+\((\alpha,\beta)=(1,0)\). If \(p_*=0\), its conclusion forces
+\(b_*=0\). Thus both \(p_*\) and \(A_*\) are nonzero.
+
+For the fixed reference entry and any comparison entry \(d'\) take
+\((\alpha,\beta)=(c_t d',-p_*)\) in the same lemma. The finite
+relation and the resulting bottom relation are
+\[
+ \begin{aligned}
+  (c_t d')\eta_0 A_*-p_*c_t d'&=0,\\
+  (c_t d')b_*-p_*b'&=0 .
+ \end{aligned}
+\]
+Restoring the raw finite reference entry gives
+\begin{equation}\label{eq:raw-word-reference}
+       (h_0/d_0)A_* b'=c_t d' b_* .
+\end{equation}
+In particular \(d'=0\)
+forces \(b'=0\).
+\end{proof}
+
+To isolate the scalar used at finite places, put \(K_u=b_*/p_*\)
+for the chosen reference entry of the word \(u\). Apply
+Lemma~\ref{lem:nonzero-word-reference-entry} twice, keeping that entry
+fixed and using comparison inputs at \(t\) and at \(0\), respectively.
+For their finite and bottom entries \((A_t,B_t)\), \((A_0,B_0)\) this gives
+\begin{equation}\label{eq:word-period-cross-product}
+ B_t=K_u c_t A_t,\qquad B_0=K_u c_0 A_0,\qquad
+ B_t A_0=(c_t/c_0)B_0 A_t .
+\end{equation}
+The last equality also holds when either comparison entry vanishes.
+Dividing the column similarity by its positive norm ratio gives a column
+isometry. Central right translation gives a common row isometry. These
+operations use the same scalars at \(t\) and \(0\). Thus the tuple
+ratio in Lemma~\ref{lem:period-unit-at-assigned-place} has the indicated
+orientation after passing to the isometric coordinates.
+
+\subsection{The integral condition on this comparison}
+
+Descent identifies the complex periods. A divisibility statement requires identifying the integral rows inside that common complex space and retaining the metric at every embedding. First identify the
+rational lattice whose image in the complex row space occurs in the period, then
+check the coefficient lattice on the negative line.
+
+\paragraph{Rational and integral row coordinates.}
+In the rational realization of a row let \(L_0\)
+be the \(\mathcal O_L\)-lattice in \(L^d\), \(H\) its Gram
+matrix at \(\sigma\), and \(E_0\) the rational matrix of the
+good-part projector. Use the same construction at each other
+infinite place with its specified Gram matrix. In the selected
+complex row space choose the embedding \(j\) on columns
+satisfying
+\[
+ \langle jx,jy\rangle=\sigma(x^*Hy),\qquad
+ P_{\rm good}\,jx=j(E_0x),\qquad
+           \operatorname{span}_{\C} jL^d=W .
+\]
+
+
+These identifications preserve every local determinant index once the integral generators on both sides have been matched. Indeed, if \(M,M'\) are two local lattices with basis matrices \(A,B\) and the common coordinate change is \(U\), then
+\[
+ v_w\det((UA)^{-1}(UB))=v_w\det(A^{-1}B).
+\]
+For a coefficient-field linear isometry \(J\) of the rational Hermitian spaces, \(\langle Jx,JM\rangle=\langle x,M\rangle\) over the coefficient field. Requiring these pairings to lie in its integer ring gives \((JM)^\#=J(M^\#)\). This last calculation uses the rational identification with the integral generators at all places. The first displayed metric identity forces injectivity.
+In coordinates it is realized by a square root of the positive
+Hermitian matrix \(\sigma H\), followed by an isometry
+to \(W\). The identification of the projector is a further
+condition verified on a basis in the automorphic model.
+\begin{lemma}[Integral row and negative-line lattices]
+If \(g_1,\ldots,g_l\) generate \(L_0\), then
+
+\[
+ j^{-1}\!\left(\sum_i\sigma(\mathcal O_L)jg_i\right)=L_0.
+\]
+ If the integral
+Witt identification sends the descent line to \(\mu z_u\), where
+\(z_u\) is the primitive last vector of squared norm \(-T_u\),
+its coefficient lattice and squared norm are respectively
+\(\mu^{-1}\mathcal O_{E_{\rm CM}}\) and \(-\mu\bar\mu T_u\).
+\end{lemma}
+\begin{proof}
+The integral row in these coordinates is generated over \(\sigma(\mathcal O_L)\)
+by \(jg_i\). Consequently its inverse image under \(j\) is
+exactly \(L_0\). Subtract the same integral combination in
+\(L^d\) and use injectivity. This works for projective
+lattices with any finite generating set. The rational
+identification with the division lattice requires equality of
+this module and of the Hermitian metrics at \emph{all} infinite
+places. In particular, an arbitrary rescaling of a complex
+model can change the application to slopes.
+
+For the integral primitive flag at word \(u\), the class of \(z_u\)
+in the orthogonal quotient generates a primitive rank-one summand.
+Thus \(a\mu z_u\) integral implies \(a\mu\in\mathcal O_{E_{\rm CM}}\)
+by passage to this summand. The converse follows from integrality
+of \(z_u\). Hermitian homogeneity gives the asserted squared norm.
+\end{proof}
+
+\begin{lemma}[Comparison on the rational good part]
+Write \(B_{\rm ch}\) and \(B_{\rm per}\) for the pairings on the selected base rows in chart and period coordinates, respectively. On the image of \(E_0\), evaluation on pairs of basis vectors determines the matrix after scalar extension. In corresponding field bases \(e_i,f_k\) it is the entrywise identity
+\[
+ B_{\rm ch}(e_i,f_k)=B_{\rm per}(e_i,f_k)\qquad\text{for all }i,k.
+\]
+
+\end{lemma}
+\begin{proof}
+The row test functions and arithmetic maps are compared
+on the exact range of \(E_0\). The tensor evaluation used for
+the automorphic realization is injective on the base row model.
+On the field basis the two realizations give the same
+evaluations by the chart identities. They therefore give the
+same images on this range after scalar extension. Schur
+uniqueness on the irreducible archimedean type allows one scalar
+in the conjugate evaluation; it cancels in the similarity ratio.
+For field bases \(e_i,f_k\) of the two ranges, every complex
+bilinear extension satisfies
+\[
+ B\left(\sum_i x_ie_i,\sum_k y_k f_k\right)=\sum_{i,k}x_iy_k B(e_i,f_k).
+\]
+Hence the basis identities give equality on all pairs. The map
+onto the selected base rows is surjective, yielding their period
+matrices. The fixed-level support used in
+the comparison is proved in Section~\ref{subsec:fixed-level-support}.
+The arithmetic application uses the integral frame and tuple
+identifications of Section~\ref{subsec:division-level-pins},
+and their geometric and division bounds at the selected weights.
+\end{proof}

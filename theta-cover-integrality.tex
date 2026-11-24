@@ -1,0 +1,823 @@
+\subsubsection*{Uniform integrality on the ray covers}
+\label{subsec:theta-cover-integrality}
+\hypertarget{source-theta-cover-integrality}{}
+
+The polynomial argument requires an integral bound on the row coefficients as the squarefree ray level varies. We obtain it first on the cover, using its prescribed frames, and then descend to the level on which the determinant is evaluated.
+
+\begin{paramdefinition}[Admitted levels and coefficient place]\label{hyp:ray-cover-integrality}
+We prove the coefficient bound on the ray covers used in the
+row determinant. Fix the vacuum pair, the base weight and
+coefficient map, the pinned orthonormal frame, and the finite
+source translate \(s\). The base level and the varying ray level are
+\[
+ M_0=g_0g_1,\qquad M=M_0d,
+\]
+where \(d\) is odd,
+squarefree, prime to \(M_0\ell\) and to the conductor and
+discriminant exclusions of the host. We use the uniformized
+cover with its compatible moduli and adelic frames. Its
+coefficient field contains the ray field of level \(M\), the
+harmonic coefficients under consideration, and the normalized
+values of the splitting characters. A cover with these levels and frames is called admissible for the row at the chosen coefficient place.
+\end{paramdefinition}
+
+At the fixed place over \(\ell\), the exponent of \(\ell\) in the level is unchanged. The new marking is a basis of prime-to-\(\ell\) torsion. This torsion is finite étale on the good model, and the compatible bases form a finite étale cover there. Pullback to that cover therefore preserves the good-model condition used in the coefficient bound.
+
+\begin{auxlemma}[Integral finite Fourier expansion]\label{lem:cover-vacuum-fourier}
+For a level \(M=M_0d\) of Definition~\ref{hyp:ray-cover-integrality},
+let \(\Phi\) be an integral level function on the selected half
+lattice, periodic modulo \(M\). If \(k\) generators suffice for
+the reduction of the tensor lattice, the vacuum \(v\) and its Heisenberg translates \(W(y)v\) satisfy
+\[
+ M^k f_\Phi\in\sum_y O\,W(y)v,
+\]
+with \(O\) the coefficient valuation ring.
+The clearing cost at \(\ell\) is at most \(k v_\ell(M_0)\).
+\end{auxlemma}
+\begin{proof}
+Let \(\Lambda\) be the adelic tensor lattice of the vacuum
+and write \(\Lambda_e\) and \(\Lambda_{\bar e}\) for its
+two projected half lattices. Here \(e\) is the sum of the
+idempotents at the places of the level selected by the finite
+test vector. A level function \(\Phi\) is supported on
+\(\Lambda_{\bar e}\) and is periodic modulo
+\(M\Lambda_{\bar e}\). Its values belong to the chosen
+valuation ring. Fix a list of \(k\) generators for the
+reduction of \(\Lambda\) modulo any positive integer, using
+generators for the fixed source and target lattices.
+Project these to \(\Lambda_e\) and divide them by \(M\), giving
+\(y_i\). The character of \(t\) paired with
+\[
+ y(\alpha)=\sum_i\alpha_i y_i,
+\]
+for
+\(\alpha\in(\mathbb Z/M\mathbb Z)^k\), is a product of
+\(M\)-th roots of unity.
+
+By vacuum self-duality the two half lattices pair perfectly.
+For \(t\in\Lambda_{\bar e}\), put \(z_i=\psi(\langle t,y_i\rangle)\).
+Then \(z_i^M=1\) and
+\[
+ \sum_{\alpha}\psi(\langle t,y(\alpha)\rangle)
+ =\prod_{i=1}^{k}\sum_{a=0}^{M-1}z_i^a
+ =M^k\mathbf 1_{t\in M\Lambda_{\bar e}} .
+\]
+Indeed, a factor vanishes unless \(z_i=1\); all the \(z_i\) equal one
+precisely when \(t\) pairs trivially with the generators. This argument
+allows repetitions among the generators. Let \(W(y)\) be
+Heisenberg translation by \(y\). Fourier inversion
+writes the finite theta vector \(f_\Phi\) as
+\[
+ M^k f_\Phi
+   =\sum_{\alpha}
+       \left(\sum_{t\in\Lambda_{\bar e}/M\Lambda_{\bar e}}
+             \Phi(t)\,\psi(-\langle t,y(\alpha)\rangle)\right)
+             W(y(\alpha))f_0 ,
+\]
+The coefficients are integral, including at a prime dividing
+\(M\). Since \(d\) is prime to \(\ell\), the clearing
+exponent in this step is \(k v_\ell(M_0)\).
+\end{proof}
+
+\paragraph{Moving to the geometric half lattice.}
+The moduli level selects a half lattice at each split
+place. Switch the halves that differ from this choice by
+the central finite Weil operators. A switch exchanges a
+place with its conjugate in the idempotent and carries
+each translated vacuum to a translated vacuum in that half,
+times the splitting-character scalar. At primes of \(d\)
+these switches have identity component at \(\ell\). The
+scalar there is integral at \(\ell\) because the local norm factors
+are powers of rational residue cardinalities prime to \(\ell\),
+and the character uses the norm-normalized values in the
+cover field. At primes of \(M_0\) there are finitely many
+subsets of places to switch. If \(a_J\) denotes the scalar for such a subset \(J\), a common nonnegative clearing exponent satisfies
+\[
+ c_{\rm flip}\ge\max_J\{-v_\ell(a_J),0\},
+\]
+and the associated source
+translations form a fixed finite set \(Z\).
+
+For each translate \(sz\), \(z\in Z\), use the split
+class representatives away from \(2\ell M\). Concretely
+the finite adelic point, after the auxiliary switches, is
+the product of a rational isometry \(\gamma\), a finite
+point \(h\) supported at split primes away from \(2\ell M\),
+and a compact element fixing both the standard lattice and
+the level translates of the vacuum. Such a factorization
+comes from split-place approximation in the open
+stabilizer of the lattice and level vectors. The archimedean
+factor is the unique correction to the finite adelic
+identity. Write the finite factorization as \(sz=\gamma h k\), with \(k\) the compact factor. At \(\ell\) it gives
+\[
+ \gamma=(sz)k^{-1}h^{-1},\qquad \gamma^{-1}=hk(sz)^{-1},
+\]
+with \(h,k\) and their inverses integral there. Thus the
+entries of \(\gamma\) and its inverse have a bound on the
+\(\ell\)-part of their denominators from \(sz\), even though
+the rational isometry varies.
+
+When the Weil kernel is
+evaluated at zero, rational automorphy removes \(\gamma\)
+and the compact element acts trivially. At infinity this is
+a linear substitution in each block of the harmonic
+polynomial. It preserves the defining harmonic relations
+and weights. In each degree \(h\) its coefficients are
+sums of products of \(h\) substitution entries. The finitely
+many degrees and the finite set \(Z\) therefore give a
+common additional clearing exponent \(c_{\rm sub}\).
+The rational source space here is the standard one and
+the local entries are tested at all embeddings used in
+the cover. These conditions are needed in the split
+factorization and the bound on both matrices.
+
+\begin{lemma}[The clearing exponent for the short sections]
+\label{lem:theta-short-clearing}
+Use the cover and fixed data in Definition~\ref{hyp:ray-cover-integrality}
+and the split representative away from \(2\ell M\). At a good frame, the short section for an integral
+translate mean and harmonic data of total derivative degree \(h\)
+is integral after multiplication by \(\ell^{c_{\rm jet}}\), where
+\[
+ c_{\rm jet}=v_\ell\!\left(
+     M_0^{[E:\mathbb Q]nr+n k_W}(2D_E M_0)^h\right).
+\]
+Here \(n,r\) are the source and target ranks and \(k_W\) is the
+\(\mathbb Z\)-rank of the target marking lattice. The section and
+its pinned reading use the same harmonic polynomial and
+coefficients of the translate mean.
+\end{lemma}
+
+\begin{proof}
+Let \(\mathcal T\) be the tuple set of torsion translates of the
+source letters at level \(M\). A half-level translate has the
+same reading as its representative in \(\mathcal T\): their
+difference belongs to the integral lattice of that half, and
+their Heisenberg pairing vanishes. The reading of a single
+translate at \(t_0\) is the normalized mean with coefficients
+\[
+ u(t)=|\mathcal T|\,\mathbf 1_{t=t_0}.
+\]
+In particular its value
+in the mean does not acquire a factor of \(|\mathcal T|^{-1}\)
+at \(\ell\). Lemma~\ref{lem:cover-vacuum-fourier}, after its indicated
+clearing, gives integral linear combinations of these coefficient
+arrays.
+
+Let \(R\) be the cover valuation ring and \(P\) the polynomial
+in the matrix letters of the moduli frame. The finite module over
+\(R\) generated by the coefficients of the array \((u(t)P)_t\)
+is torsion-free in the coefficient extension. Choose a basis
+\((b_j)_j\) and write the array as \(\sum_j b_j P_j\) with
+\(P_j\) arrays over \(R\). Write \(D_\lambda\) for any of the linear operators cutting out
+the prescribed harmonic weight over the fraction field of \(R\).
+Coordinate extraction in the basis \((b_j)\) gives
+\[
+ D_\lambda\big((u(t)P)_t\big)
+        =\sum_j b_jD_\lambda(P_j)=0
+        \quad\Longrightarrow\quad D_\lambda(P_j)=0\quad\text{for all \(j\)}.
+\]
+Each \(P_j\) has the prescribed weight and derivative degree. By linearity of the jet construction \(J\),
+\[
+ J\big((u(t)P)_t\big)=\sum_j b_j J(P_j).
+\]
+
+The short-section construction on the split representative lattice
+supplies the algebraic section and its evaluation by that Weil
+kernel average, with the fixed Lie, component, and splitting-character
+factors. The hypotheses are the full level marking, the standard
+source lattice at \(2\ell M\) with self-duality at \(\ell\), the
+integral torsion indicators and constant section, and the prescribed
+row degrees. Cuspidality uses the dominant weight and strictly
+positive last exponent. In the scalar on this class, the determinant
+idele has an ideal representative away from \(2\ell M\).
+The normalized unramified character times the square root of its
+norm is a local unit at the test place. The remaining inverse
+norms and lattice indices, including the index from the split
+lattice sandwich, are prime to \(\ell\).
+
+Let
+\[
+ N=Mu_0
+\]
+clear the lattice displacement, where \((u_0,2\ell)=1\).
+The level index divides \(N^{[E:\mathbb Q]nr}\) and the translate
+normalization divides \(M^{n k_W}\) by the standard-lattice and
+marking conditions. The latter denominator is harmless for the
+indicator array computed above, and may still be included in a
+common bound. The good-germ calculation of
+Lemma~\ref{lem:regular-theta-jets} costs \((2D_E)^h\).
+The additional cost of pullback by \([N]\) is \(N^h\) since
+\[
+ d[N]=N\,\mathrm{id}
+\]
+and every derivative monomial has total
+degree \(h\). Thus the possible denominator divides
+\[
+      N^{[E:\mathbb Q]nr} M^{n k_W}(2D_E N)^h.
+\]
+Its \(\ell\)-valuation is \(c_{\rm jet}\), since \(M/M_0\) and
+\(N/M\) are prime to \(\ell\). Its prime-to-\(\ell\) part is a
+unit at the frame. This proves the bound there. Compatibility
+with degenerating integral frames is proved separately below.
+\end{proof}
+
+\paragraph{Good-reduction germs and the connection.}
+
+\begin{lemma}[Denominators of derivatives at a good frame]\label{lem:regular-theta-jets}
+For an integral regular germ in the specified theta
+trivialization at a good frame, let \(h\) be the order of a jet
+in integral tangent directions. If \(a_h\) is its value in the modified polarization gauge and \(R\) is the valuation ring of the frame, then
+\[
+ (2D_E)^h a_h\in R.
+\] The bound descends from a finite extension carrying
+the required torsion points.
+\end{lemma}
+
+\begin{proof}
+Work over a complete valuation ring \(R\) for a good
+frame. Use the compatible abelian scheme and the rigidified
+symmetric theta bundle. A finite extension carries all
+\(N^2\)-torsion used in the short sum and the chart with the
+pulled-back frame. Multiplication by \(M\) kills the
+level sections. Thus if \([N]t\) is a level section and
+\(M\mid N\), then \([N^2]t=0\).
+The degree-one section is the integral generator specified
+by the frame. The cubical isomorphism
+\[
+ [N]^*\mathcal L\simeq\mathcal L^{N^2}
+\]
+preserves the
+rigidification and extends over \(R\). It is the normalized
+pullback in the short-section formula. After this pullback
+the two moves are symmetric theta group translates at
+\(N^2\)-torsion. The oddness of \(N\) allows the symmetric
+lifts to be chosen of finite order. Each torsion section
+extends to the abelian scheme by properness.
+
+The extended torsion section lies in the kernel of the polarization of \(\mathcal L^{N^2}\)
+over \(R\), because this equality holds on the generic
+fiber and the dual abelian scheme is separated. The
+theta group over this section is a multiplicative-group
+torsor over the local base, so it has an integral lift.
+Write
+\[
+ g_{\rm fin}=c g_R,
+\]
+where \(g_{\rm fin}\) is the
+finite-order generic lift and \(g_R\) is the integral lift.
+Take \(m\) divisible by the order of \(g_{\rm fin}\) and the
+order of the underlying torsion section. Then \(g_R^m\) is
+a scalar in \(R^\times\), and
+\[
+  1=g_{\rm fin}^m=c^m g_R^m,\qquad m v(c)=-v(g_R^m)=0 .
+\]
+Thus \(c\in R^\times\) and both translates extend in the
+prescribed normalization. This argument permits
+torsion of order divisible by the residue characteristic.
+Completing in the integral rigidified trivialization
+gives power series over \(R\) for these germs.
+
+\proofstep{Changing the biextension trivialization.}
+Write \(B(X,Y)\) for the formal biextension in an integral
+chart and \(g(X,Y)\) for a logarithmic gauge over the
+fraction field. It vanishes on the axes. The identities
+for its two addition defects, transpose defect and CM
+balance defect are the logarithms of the corresponding
+integral units with constant term one. In particular
+their constant first derivatives and their mixed
+quadratic coefficients are integral. Write \(\beta\)
+for the bilinear coefficient matrix of \(g\), and
+\(A(a)\) for the action of \(a\in\mathcal O_E\) on the tangent
+space. If the tangent rank is \(m\), integrality of the rigidified mixed coefficients gives
+\[
+ A(a),\quad \beta^t-\beta,\quad A(a)^t\beta-\beta A(\bar a)\ \in M_m(R).
+\]
+
+Choose integral pairs \(x_i,y_i\) giving the separability
+element times \(D_E\) in \(E\otimes_{\mathbb Q}E\).
+One can take a basis and its trace-dual basis with
+the latter multiplied by \(D_E\). They satisfy
+\[
+ \sum_i x_iy_i=D_E,\qquad \sum_i ax_i\otimes y_i=\sum_i x_i\otimes ay_i\quad(a\in E).
+\]
+Put
+\[
+  \gamma=\sum_i A(x_i)^t\beta A(\bar y_i),\qquad
+  \beta_0=(\gamma+\gamma^t)/(2D_E).
+\]
+The latter is symmetric and \(A(a)^t\beta_0=\beta_0 A(\bar a)\).
+Put \(T=\gamma-D_E\beta\). The balance defect makes \(T\) integral.
+Symmetrizing now gives
+\[
+ 2D_E(\beta-\beta_0)=D_E(\beta-\beta^t)-T-T^t .
+\]
+Each term on the right is integral in the prescribed frame.
+
+Subtract the symmetric balanced bilinear form \(\beta_0\)
+in the logarithmic coordinates of the formal group.
+The resulting gauge still satisfies the required identities.
+In taking the harmonic value this change contributes
+contractions of opposite CM types. These are zero
+because the polynomial is in the joint harmonic kernel.
+The same contraction rule gives the invariance of the
+harmonic value under change of chart with the fixed
+tangent and theta frames.
+
+\proofstep{Integral derivatives in the modified gauge.}
+Let \(D_u\) be the invariant derivation on the formal group
+in an integral tangent vector \(u\), and let \(q(X)\)
+be the logarithmic correction obtained by evaluating the
+gauge at \((X,[w_0]X)\), with \(w_0\) the fixed integral
+polarizing element. Let \(d_0=2D_E\). We have
+\(q(0)=D_uq(0)=0\) and
+\[
+ d_0 D_uD_v q\in R[[X]].
+\]
+
+For the last statement, differentiate the two addition
+identities at the two identity arguments. The
+nonconstant terms are derivatives of the logarithms of
+the integral units in the addition defects. Such first
+derivatives are integral by \(d\log B=B^{-1}dB\).
+The remaining terms are the bilinear coefficient
+evaluated on \(u,[w_0]v\) and \(v,[w_0]u\), cleared by \(d_0\).
+The algebra generated by \(R[[X]]\) and all
+\(d_0D_uq\) for the finitely many tangent directions
+has integral constant coefficients. It is stable under
+each \(d_0D_u\).
+
+For a regular germ \(f\) and integer
+bundle power \(j\), applying \(d_0D_u\) to
+\(a\exp(jq)\) acts on the coefficient by
+\[
+  a\longmapsto d_0D_ua+j(d_0D_uq)a .
+\]
+Starting from \(a=f\) proves integrality of every
+degree-\(h\) derivative after multiplication by \(d_0^h\).
+The exponential contributes constant term one, so
+no bound on its higher coefficients is used. Apply this
+letter by letter and use the integral polynomial
+coefficients. A finite extension multiplies normalized
+discrete valuations by a positive ramification index,
+so the resulting inequality descends to the original
+good frame.
+\end{proof}
+
+\paragraph{Integral tests at degenerating frames.}\label{par:theta-degenerate-arc}
+We use the good-at-\(\ell\) level condition of the
+admitted cover and the toroidal moduli model over the
+selected coefficient place. The degeneration description
+uses the split Raynaud extension and polarized period
+lattice after finite extension. The relative toroidal
+construction over the complete base turns these data
+back into a semiabelian family. \cite{faltings-chai}
+For a definite signature
+all the test frames have good reduction. In the other
+signature consider any integral test frame. By the
+valuative criterion on the compactification it extends
+to a trait.
+
+If the trait lies in the abelian locus, the
+preceding estimate applies. Otherwise, after a finite
+extension, split the degeneration data and write its
+period pairing as
+\(\varpi^{Q(\lambda,\mu)}u_{\lambda,\mu}\) with
+unit factors and the integral degeneration form \(Q\).
+The period pairing on the arc and its specialization are
+\[
+ X^{Q(\lambda,\mu)}u_{\lambda,\mu}\ \;\longmapsto\;\ \varpi^{Q(\lambda,\mu)}u_{\lambda,\mu}.
+\]
+The linear
+period and polarization data use the same rescaling.
+The integral frame lifts on this arc with constant
+tangent coefficients and the same degree-one
+theta generator. This uses the derivative
+identification for the semiabelian uniformization
+and the integral generator at the base point.
+Inverting \(\varpi X\) puts the family in the
+generic abelian locus. Compatibility of algebraic
+evaluation with the arc and its specialization
+expresses the value of a scaled section as
+\(H(X)/(\varpi X)^b\), where \(H\in R[[X]]\)
+and \(b\ge0\).
+
+\begin{lemma}[Integrality after specialization of the toroidal arc]\label{lem:theta-arc-integrality}
+On the framed toroidal arc of Paragraph~\ref{par:theta-degenerate-arc},
+specializing at \(X=\varpi\), let a scaled section be
+\(H(X)/(\varpi X)^b\), with \(H\in R[[X]]\) and \(b\ge0\).
+Suppose the section is bounded on the normalized complex frame
+and integral at the algebraic good-point tests with the same
+clearing power. On the arc and the original trait, respectively, one has
+\[
+ H\in \varpi^b X^b R[[X]],\qquad H(\varpi)/\varpi^{2b}\in R.
+\]
+\end{lemma}
+
+\begin{proof}
+\proofstep{Test the order at \(X=0\) on the complex frame.} For the complex test,
+embed the coefficient fraction field abstractly into
+\(\mathbb C\) over the specified coefficient embedding.
+Use the holomorphic uniformization of the arc with
+\(X=\exp(2\pi i z)\) near the puncture. To compare
+the two evaluations, take an affine open chart of the
+generic moduli scheme containing the Laurent-series point
+and use its algebraic frame. The chart-coordinate
+comparison for the holomorphic uniformization of the
+split degeneration gives convergent Laurent series for
+the arc's chart coordinates. The framed comparison uses
+the constant tangent periods and the nonzero degree-one
+theta generator of this same arc.
+
+The frame comparison gives convergent Laurent series for the entries of the change-of-frame
+matrices and for the ratio of theta generators, with
+values equal to the corresponding analytic quantities.
+The determinants of the frame matrices and the theta
+ratio are invertible formally. Each such denominator germ can be written
+\[
+ d(X)=X^a u(X),\qquad u(0)\ne0,\qquad d(X)^{-1}=X^{-a}u(X)^{-1}.
+\]
+After shrinking the punctured disk the last germ converges. In the chart, evaluation
+of a regular section is evaluation in the chart frame
+followed by its algebraic weight factor. The latter uses
+just the entries of the frame change, inverse
+determinants and inverse theta ratio. Sums and products
+of the convergent readings therefore give the analytic
+value with Laurent coefficients equal to the transported
+formal coefficients.  \label{cor:theta-cover-integrality-1}
+
+To bound its value, normalize the complex
+frame by a Borel change to unit Gram frame.
+The cusp section is bounded there in its invariant
+norm. Along the arc the diagonal tangent ratios
+and the generator ratio in the weight character are
+bounded as follows. In the symplectic normalization of
+the arc the imaginary period matrix is
+\[
+ A+\operatorname{Im}(z)Q.
+\]
+
+Positivity for all sufficiently large \(\operatorname{Im}(z)\)
+implies \(Q\ge0\). For a fixed \(z_0\) in that region the
+matrix dominates its positive value at \(z_0\). More explicitly, writing
+\[
+ Y(z)=A+\operatorname{Im}(z)Q,
+\]
+the order inequalities for \(\operatorname{Im}z\ge\operatorname{Im}z_0\)
+are
+\[
+ Y(z)\succeq Y(z_0)>0,
+ \qquad Y(z)^{-1}\preceq Y(z_0)^{-1},
+ \qquad \det Y(z)\ge\det Y(z_0).
+\]
+The inverse bound controls the tangent ratios and the determinant
+bound controls the generator norm in the same period frame. The squared Hermitian length of each constant
+tangent vector is computed using the inverse imaginary
+period matrix. The squared diagonal ratios from
+Gram orthogonalization are bounded by these lengths
+times the fixed block scalars.
+
+For the theta generator \(e\), the Gaussian integral over a symplectic period parallelepiped is
+\[
+ \|e\|^2=\frac{|\kappa|^2}{\sqrt{\det(2\operatorname{Im}\tau)}} ,
+\]
+where \(\kappa\) is the arc's constant generator scalar. The unit frame uses a generator of squared norm
+one. Thus the generator ratio is bounded as well.
+The dominant weight uses these ratios only with
+nonnegative exponents. Thus the complex Laurent
+function is bounded as \(\operatorname{Im}z\to\infty\).
+Its negative coefficients vanish by Cauchy's formula.
+Injectivity of the coefficient embedding gives
+\(X^b\mid H\) in \(R[[X]]\).
+
+\proofstep{The nonarchimedean valuation.}
+Holomorphic testing on complex frames bounds the order of vanishing. To use this information in division, we still need the valuation of the coefficient in the nonarchimedean frame.
+
+Write
+\[
+ H=X^b H_1.
+\]
+For the second test use the
+valuation at \((\varpi)\) in \(R[[X]]\), extended to the
+completion of its fraction field. The coefficient formula for this valuation is
+\[
+ v(\varpi)=1,\qquad v(X)=0,\qquad
+ v\!\left(\sum_i a_iX^i\right)=\min_i v(a_i)\quad(a_i\in R).
+\]
+The arc is now in the abelian locus. The frame still
+gives an integral point there, since its tangent and
+theta generators lift on the arc. The good-point
+bound extends to this valuation by the smooth
+integral flag charts. Concretely, on an open
+abelian chart the section is a rational function
+in integral chart coordinates. If it had a pole
+at an integral test with arbitrary residue extension,
+one can retain its finite pole order on a point with
+algebraic coefficients by smooth lifting of the
+finite congruences in that chart. The condition to
+stay in the open locus is one of these congruences.
+Such a pole contradicts the algebraic good-point tests.
+
+Since \(X\) is a unit in this valuation, the valuation of the
+section is \(\min_i v([X^i]H_1)-b\). The good-point tests give
+\[
+ \min_i v([X^i]H_1)\ge b.
+\]
+Thus \(H=\varpi^bX^b H_2\)
+with \(H_2\in R[[X]]\). The value on the original framed trait
+is \(H_2(\varpi)\in R\). Both tests used the section after its
+fixed multiplication by a power of \(\ell\).
+\label{cor:theta-cover-integrality-2}
+\end{proof}
+
+Lemma~\ref{lem:theta-arc-integrality} thus extends the good-point
+bound to the degenerating frames of the same cover.
+
+\begin{proposition}[One phase and one denominator on the admitted covers]
+\label{prop:theta-uniform-cover-clearing}
+Fix the data at the start of this subsection and a finitely generated
+integral lattice of input polynomials. There is a phase \(\eta\) from the
+base frames and a clearing power \(\ell^c\) such that the comparison
+with the algebraic reading of each admitted coefficient is integral
+at every prescribed place above \(\ell\), after scaling by
+\(\eta\ell^c\). One can take
+\[
+    c=k v_\ell(M_0)+c_{\rm flip}+c_{\rm sub}+c_{\rm jet}+c_P,
+\]
+with a common maximum over the degrees of the finitely many
+polynomial generators when needed. The varying cover, level function,
+twist, places and class label do not enter this choice.
+\end{proposition}
+
+\begin{proof}
+The source frame in the norm comparison changes by a unitary map
+preserving the vacuum lattice. On each component compare the
+vacuum identities on a nonzero theta value. If \(c_1,c_2\)
+are the two component constants, and \(A\) is the product of
+that value, the Gaussian and the nonzero character factor, the
+comparison of phases is the comparison of \(c_1 A\) and \(c_2 A\).
+The common nonzero factor cancels in the phase ratio:
+\[
+ \frac{c_1 A}{c_2 A}=\frac{c_1}{c_2}.
+\]
+This reads the base vacuum phase. The dominant pins
+on the cover read these same constants after pullback. Multiplying
+its inverse by the inverse phase of the fixed lowest weight vector
+in the archimedean harmonic map gives \(\eta\).
+
+The matrix coefficients of that harmonic map on a fixed set of
+lattice generators form a finite set of algebraic numbers in each
+admitted coefficient field. For each coefficient \(a\), take a
+positive integer \(d_a\) for which \(d_a a\) is integral. Then
+\[
+ c_P=\max_a v_\ell(d_a)
+\]
+works at all places above \(\ell\),
+since \(d_a/\ell^{v_\ell(d_a)}\) is a unit there. The short-section
+construction over the field gives the rational section. The local
+construction of Lemma~\ref{lem:theta-short-clearing}, extended
+by Lemma~\ref{lem:theta-arc-integrality}, gives integral comparison
+sections. They have the same pinned adelic reading after the indicated
+scaling, so injectivity identifies each with the rational section
+at that place.
+
+The determinant twist is a finite-order character on the
+norm-one determinant quotient, trivial on the rational points
+and the cover congruence subgroup. The indicated ray field gives
+its values on the components. Each such value is a root of unity,
+so multiplication by it preserves the integral section lattice.
+It costs no clearing power. Summing the exponents from Fourier
+inversion, the half switch, the change of variables, the short
+section and the fixed harmonic map gives the displayed value of
+\(c\). \label{cor:theta-cover-integrality-3}
+\end{proof}
+
+\subsubsection*{Descent to the original row}
+\label{subsec:theta-cover-descent}
+
+The preceding coefficient bounds were obtained in frames on the covers. To measure a coordinate in the original cusp lattice we must also account for the different of the coefficient extension in which those frames were evaluated.
+
+\begin{proposition}[Uniform descent from ray covers]\label{prop:ray-cover-descent}
+Suppose a section on the prescribed ray cover descends as a
+holomorphic form and is integral at all good frames above
+\(\mathfrak q\mid\mathfrak p\mid\ell\) of its coefficient
+extension \(L/K_0\). Each coordinate \(c\) in an integral cusp basis at \(\mathfrak p\) satisfies
+\[
+ c\in\mathfrak D_{L_{\mathfrak q}/(K_0)_{\mathfrak p}}^{-1}
+\]
+under the chosen local embedding.
+Unramified descent preserves integrality. For the universal row
+covers contained in the fraction field of the fixed coefficient
+DVR \(O\), multiplication by \(\ell^{e_O^2}\) suffices at the
+chosen place, where \(e_O=v_O(\ell)\).
+\end{proposition}
+
+\begin{proof}
+\proofstep{Descent of the holomorphic span.}
+Let a form on the cover be invariant under the base level group.
+The character relating its adelic and holomorphic realizations is invariant
+under that group by the level condition on the splitting
+character. Hence the weighted holomorphic form factors
+through the base quotient. The bounded cuspidal holomorphic
+space of the base is spanned by the complex realizations of its algebraic
+cuspidal sections in the prescribed dominant weight with
+positive last exponent.
+
+In the application its degree is
+at least \(8fr+4\), where \(r\) is the target rank and
+\(f\) is the base degree parameter.
+Pull the sections back to the cover. Linear independence persists under
+extension to \(\mathbb C\). Among the cover pullbacks,
+choose a basis over the cover field \(L\). If \(s_L\) lay outside the \(L\)-span of independent pullbacks \(F_1,\ldots,F_t\), then
+\[
+ \dim_L\langle F_1,\ldots,F_t,s_L\rangle=t+1.
+\]
+Their complexifications would remain independent, contradicting complex descent. Thus the rational
+descent expresses the section in the \(L\)-span of the
+original base sections, over the base field \(K_0\).
+
+For the integral statement used on the ray coefficients,
+let \(\mathfrak q\mid\ell\) be the selected place of \(L\)
+and \(\mathfrak p\) its restriction to \(K_0\).
+The base cusp sections integral at \(\mathfrak p\) form a
+full lattice over \({\cal O}_{K_0,\mathfrak p}\). The
+lattice is defined by the valuation bounds at all good
+algebraic frames. It is finite over the localized base ring
+by the unit ball bound on the finite-dimensional space.
+For any section \(v\) in the base-field space, a common scalar clears its finitely many coordinates, so
+\[
+ \exists\,a\in\mathcal O_{K_0,\mathfrak p}\setminus\{0\}:\quad av\ \text{lies in the integral section lattice}.
+\]
+Thus one can use a
+free lattice basis \(F_1,\ldots,F_t\). Write the descended
+cover section as \(\sum_i y_i F_i\) with \(y_i\in L\),
+using the pullbacks for this equality.
+
+\proofstep{Testing the dual lattice by local traces.}
+Write
+\[
+ s_L=\sum_i y_iF_i.
+\]
+For a base frame \(x\),
+pullback commutes with evaluating each \(F_i\). At a place
+\(\mathfrak q\) where \(s_L\) is integral, this is true
+in every local embedding of \(L_\mathfrak q\) into a common
+valued field. At the other places over \(\mathfrak p\), choose
+\(b\in\mathcal O_L\) with \(v_{\mathfrak q'}(b)\) large
+enough to clear the finitely many \(y_i\). Then every local
+evaluation of \(b\,s_L\) on the lift of \(x\) is integral.
+The trace section is
+\[
+    \operatorname{Tr}_{L/K_0}(b\,s_L)
+       =\sum_i\operatorname{Tr}_{L/K_0}(by_i)F_i .
+\]
+Its evaluation at \(x\) is the sum over the embeddings
+of \(b\,s_L\), so the base lattice test applies to it.
+Since the \(F_i\) form an integral basis, each coefficient
+of this trace section is integral at \(\mathfrak p\).
+
+By weak approximation take \(b\)'s approaching any fixed
+\(b_\mathfrak q\in\mathcal O_{L_\mathfrak q}\) at \(\mathfrak q\)
+and approaching zero at the other local factors. Local
+trace and the closedness of the integral base ring give
+\[
+   \operatorname{Tr}_{L_\mathfrak q/K_{0,\mathfrak p}}
+             (b_\mathfrak q y_i)\in
+                   \mathcal O_{K_{0,\mathfrak p}}^{\wedge}
+      \quad(b_\mathfrak q\in\mathcal O_{L_\mathfrak q}).
+\]
+This is precisely
+\[
+ y_i\in\mathfrak D_{\mathfrak q/\mathfrak p}^{-1},
+\]
+with \(\mathfrak D\) the local different. The test used
+all frames at the chosen place, as needed for the full trace.
+For an unramified extension the different is the unit ideal.
+
+For a finite prescribed set of unramified places, take one such
+local decomposition \(s_L=\sum_i y_{v,i}F_{v,i}\) per place \(v\).
+Rescale each \(F_{v,i}\) by a base scalar that is a unit
+at the place where it was selected and clears its poles at
+the other base places, and rescale \(y_{v,i}\) inversely.
+The Chinese remainder theorem gives \(\rho_v\in L\) with
+\[
+ \sum_v\rho_v=1,
+\]
+\(\rho_v\) a unit at its place and
+divisible by sufficient powers at all the others. Indeed one
+may choose all but one by their local congruences and set
+the last to one minus their sum.
+
+At a prescribed place \(w\), the choice of powers is
+\[
+ v_w(\rho_v)\ \ge\
+      \max_i\max\{0,-v_w(y_{v,i})\}\quad (v\ne w).
+\]
+The \(F_{v,i}\) are integral there by the initial rescaling.
+For \(v=w\), both \(F_{w,i}\) and \(y_{w,i}\) are integral by
+local descent and the triviality of the unramified different.
+It follows term by term that the section
+\[
+ \sum_{v,i}\rho_v y_{v,i}F_{v,i}=s_L
+\]
+is integral at \(w\).
+
+\proofstep{A uniform bound on the different.}
+The descent formula expresses the new denominator through a local different. It remains to bound that different uniformly as the allowed ray levels change.
+
+In the application to the universal row coefficients the
+cover can have ramification at \(\ell\). The actual cover
+field embeds in the fixed fraction field of the row DVR
+\(O\). Take \(e_O=v_{\!O}(\ell)\) with \(v_{\!O}(O^\times)=0\)
+and a uniformizer of value one. The restriction of \(v_{\!O}\)
+to \(L\) is a positive integral multiple of the discrete
+valuation at \(\mathfrak q\). Writing \(a\ge1\) for the integer multiplying the valuation at \(\mathfrak q\), evaluation on \(\ell\) gives
+\[
+ e_O=a\,v_{\mathfrak q}(\ell)\ge v_{\mathfrak q}(\ell).
+\]
+A bound of
+\(e_O^2\) suffices for the relative different exponent.
+
+For instance, over the maximal unramified subextension
+of \(L_{\mathfrak q}/\mathbb Q_\ell\), a uniformizer has
+an Eisenstein polynomial of degree \(a\), the absolute
+ramification index. The different has the valuation of
+its derivative. The nonzero terms of the derivative
+have distinct valuation residues modulo \(a\), so its
+valuation is at most that of its leading term,
+\[
+ a-1+a v_\ell(a)<a^2,
+\]
+including \(a=1\).
+Transitivity of the different then bounds the relative
+exponent by the same number. Multiplying by
+ \(\ell^{e_O^2}\) makes the inverse-different coordinates
+integral. In fact, writing \(e_{\rm abs}=v_{\mathfrak q}(\ell)\)
+and \(d_{\rm rel}=v_{\mathfrak q}(\mathfrak D_{\mathfrak q/\mathfrak p})\),
+\[
+ v_{\mathfrak q}(\ell^{e_O^2}y_i)
+       \ge e_O^2 e_{\rm abs}-d_{\rm rel}\ge0
+\]
+by \(d_{\rm rel}<e_{\rm abs}^2\) and \(e_{\rm abs}\le e_O\). These two numerical inequalities give the uniform estimate
+\[
+ d_{\rm rel}<e_{\rm abs}^2\le e_O^2.
+\]
+Its role is important even
+when the additional level is prime to \(\ell\), since
+the coefficient field also contains finite-order values.
+
+\proofstep{The fields used before specialization.}
+To see which covers this argument serves, let \(Q\) and
+\(m_{\rm ray}\) be the auxiliary places and the depth
+for the universal coefficient. The construction takes
+the split rational primes below the selected conjugate
+half of \(Q\), with the designated prime of the row twist.
+The avoidance conditions make their product a squarefree
+auxiliary level, prime to \(\ell\), the base level and the
+host exclusions.
+
+Write \(K_{\rm ray}\) for the ray class field at the joint level, \(A\) for the finite set of character values of the finite type and distinguished twists, and \(K_{\rm row}\) for the row coefficient field under the fixed embedding. The ray-field condition and coefficient choice give
+\[
+ K_{\rm ray}\subseteq K_{\rm ray}(A)\subseteq K_{\rm row}.
+\]
+The uniformized, dominantly
+pinned cover is formed over the resulting number
+field. Thus both the field conditions for integrality
+on the cover and the ramification bound for descent
+hold for these choices. In particular this construction
+uses the cover field before specializing a character of
+the variable depth.
+
+The finite universal data on this cover are indicators
+times finite-character values. Let \(A_Q\) be the class-label
+group, \(b(g)=\operatorname{detchar}_Q(g)\) the determinant
+label and \(S_{a'}\) the section for label \(a'\). Then the
+assembled section is
+\[
+              \Xi_a(g)=\sum_{b\in A_Q}
+                     \mathbf1_{b(g)=b}\,S_{a-b}(g).
+\]
+Each determinant fibre is a union of components by the
+ray-field comparison. The indicators preserve the section
+lattice, and the finite-character values are integral. Thus
+the sum uses the same integrality bound without a denominator
+\(|A_Q|\). The prescribed finite type and the trivial
+upper-left reductions make \(\Xi_a\) invariant under the
+original level group, so the trace descent applies.
+
+The resulting base sections are still bounded at their
+chosen base place. Under the faithful row realization,
+their coordinate vectors lie in the localization of the
+supremum lattice at that place. For a coefficient vector \(x\), localization gives \(x=y/s\) with \(y\) a bounded global vector and \(s\) a base scalar of valuation zero. Under the chosen embedding,
+\[
+ v_\ell(s)=0\quad\Longrightarrow\quad s^{-1}\in O^\times.
+\]
+Thus passing from \(y\) to \(x\) costs no further denominator. Taking the additional clearing power to be
+\(e_O^2\), the descent yields a bounded row for every
+coefficient, with the complex phase and the fixed
+harmonic comparison scalar supplied by the pinned
+coefficient map. The clearance depends on the datum
+and on the fixed \(O\), independently of the level,
+depth and class label. The passage from this complex
+reading to the actual rational row lattice is given next.
+\label{cor:theta-cover-integrality-4}
+\end{proof}

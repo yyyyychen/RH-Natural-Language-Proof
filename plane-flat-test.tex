@@ -1,0 +1,265 @@
+The preceding order and Gram results first give a test at
+the flat weight. We use them to select a nonzero plane
+component, realize its symbol, and restore the weight. This
+supplies the detecting value used in
+Proposition~\ref{prop:residue-plane-neighbor-test}.
+\paragraph{Choosing the plane component.}
+\label{par:plane-flat-test}
+\hypertarget{source-plane-flat-test}{}
+Let a flat source polynomial \(H\) in the full \(k\) coordinates
+in the exact operator span of Section~\ref{par:plane-orbit} have
+integral coefficients in the chosen edge frame after scaling.
+Take \(H\) primitive there. At each letter use the radix
+specified by its frame position. Fix the labels \(\rho\)
+and the degrees of the plane and complement quotients using a
+monomial of \(H\) with unit coefficient. In this class, write
+\(H_{\alpha,\beta}\) for the coefficient at plane quotient
+\(\alpha\) and complement quotient \(\beta\). Write
+\((\alpha_0,\beta_0)\) for the two quotients of the selected
+monomial. All the letter positions are distinct. Coordinatewise, radix \(P\), digit \(\rho\), and quotient \(q\) give
+\[
+ m=\rho+Pq,\qquad 0\le\rho<P.
+\]
+
+Taking \(q\) from the plane or complement quotient as appropriate therefore recovers every true exponent. Denote the assembly of a plane polynomial
+\(A\) and a complement polynomial \(N\) by
+\(\operatorname{Asm}_\rho(A,N)\): multiply the fixed label
+monomial by the two polynomials with variables raised to
+their letter radices. Their degrees are fixed by the chosen
+class. The factorial identity of Section~\ref{par:plane-digits}
+gives the exact formula
+\begin{equation}\label{eq:plane-slice-factor}
+ \begin{split}
+ [H,\operatorname{Asm}_\rho(A,N)]
+ &= b_\rho
+     \sum_{\alpha,\beta} H_{\alpha,\beta}\,
+       A_\alpha\,u_{\rm pl}(\alpha)\alpha!\,
+       N_\beta\,u_{\rm no}(\beta)\beta!.
+ \end{split}
+\end{equation}
+Here \(b_\rho\) depends on the labels and the quotient
+multidegrees, and \(u_{\rm pl},u_{\rm no}\) are the products
+of the factorial units in the two sets of coordinates.
+The unit \(u_{\rm pl}\) is the twist \(\gamma\) in the
+plane Gram estimate. Both signs have the required uniform
+approximations. The formula is obtained monomial by
+monomial, so it holds for the whole class.
+
+\begin{lemma}[A nonzero plane polynomial and a complementary test]\label{lem:plane-split-polynomial}
+Let \(H\) be an integral primitive flat polynomial in the
+operator span of Proposition~\ref{prop:plane-operator-prefix-orders}.
+Use the digits and quotient degrees of one unit-coefficient
+monomial to determine the label class in \eqref{eq:plane-slice-factor}.
+Then there
+are a nonzero plane polynomial \(F\), an integral complementary
+test \(N_0\), and a scalar \(k_0\ne0\) such that
+\eqref{eq:plane-slice-value} and \eqref{eq:plane-slice-depth}
+hold for every integral plane polynomial \(A\) at the selected
+quotient degrees. In particular the scalar in \eqref{eq:plane-slice-depth} satisfies
+\[
+ v(k_0)\le V_d-n_0+D_n.
+\]
+The indices of the complementary types and their order losses are chosen before \(A\).
+\end{lemma}
+
+\begin{proof}
+\proofstep{The projections onto the complementary factors.}
+On the complement take the product projections onto one
+isotypic type at each of its chain cuts. These cuts are
+nested within a frame and disjoint across frames.
+The products over all choices of types sum to the identity.
+For \(Y=\sum_\beta H_{\alpha_0,\beta}x^\beta\), there is a
+product \(E\) with \(\nu(EY)\le\nu(Y)\). Otherwise
+\(\nu(\sum_E EY)>\nu(Y)\) by the ultrametric inequality,
+contrary to the sum being \(Y\). In particular \(EY\ne0\).
+For this \(E\), choose an exponent \(\tau\) attaining
+\(\nu(EY)=q_1\), and put \(u=v(\tau!)/2\). The plane
+polynomial \(P\) has coefficients
+\[
+ P_\alpha=\left(E\sum_\beta H_{\alpha,\beta}x^\beta\right)_\tau .
+\]
+
+The selected plane coefficient has \(v(P_{\alpha_0})=q_1-u\), and
+\[
+ q_1\le\nu(Y)\le v(\beta_0!)/2,\qquad
+ q_3:=\nu(P)\le q_1-u+v(\alpha_0!)/2 .
+\]
+The second bound for \(q_1\) uses the unit coefficient.
+Choose \(z\) with \(v(z)=q_3\), possible because the
+coefficients have valuations in \(\frac12\mathbb Z\)
+and \(w^2=p\). The normalized plane polynomial \(F=P/z\)
+then has \(\nu(F)=0\). The orbit calculation gives the signed chain and link
+orders for precisely this coefficient \(P\) of the projected
+complement. Scalar multiplication by \(z^{-1}\) preserves them.
+
+\proofstep{Scalar orders in the selected plane.}
+Let
+\[
+ n_{0,{\rm no}}=\tfrac12v(\prod_i d_{{\rm no},i}!)
+\]
+
+for the complement degrees, and let \(D_{\rm no}\) be an
+integer loss bound in the factorial norm for \(E\).
+It is the sum of the cut projector losses, rounded up.
+There is a scalar \(s\) of valuation
+\[
+ n_{0,{\rm no}}+D_{\rm no}-u.
+\]
+
+The complement polynomial \(s E x^\tau\) is integral
+by the weighted projection bound. It has the upper torus
+weight bound of the chosen type at each cut. Apply a binomial
+approximation to \(u_{\rm no}^{-1}\) with integral coefficients
+of degree \(\le 2(c_P-1)\) modulo \(p^{c_P}\).
+This gives an integral complement test \(N_0\). In the upper
+weight convention a diagonal binomial of degree \(a\) raises
+the bound by at most \(a\), by applying the Laurent estimate
+with the reciprocal torus variable. Thus the upper bounds of the chosen types increase by at most the permitted allowance \(4c_P\).
+
+If one uses the exact inverse twist in place of the
+approximation, Fock self-adjointness of \(E\) in
+\eqref{eq:plane-slice-factor} gives exactly
+\(k_0[F,\gamma A]\) with
+\[
+ k_0=b_\rho s\,\tau!z.
+\]
+
+Let \(V_d=v(\prod_i d_i!)\) be the full factorial valuation.
+For each exponent in full multidegree let \(\kappa_{\rm fl}\)
+bound its factorial deficiency from \(V_d\).
+For example \(\sum_i k\lfloor\log_p d_i\rfloor\) works,
+with a zero term if \(d_i=0\), by counting carries.
+When \(A\) is integral the complement approximation gives
+\begin{align}
+ v\bigl([H,\operatorname{Asm}_\rho(A,N_0)]-k_0[F,\gamma A]\bigr)
+       &\ge c_P+V_d-\kappa_{\rm fl}, \label{eq:plane-slice-value}\\
+ v(k_0)&\le V_d-n_0+D_n, \label{eq:plane-slice-depth}
+\end{align}
+where \(n_0\) belongs to the selected plane degrees and
+\[
+ D_n=D_{\rm no}+
+        n_0-\tfrac12v(\alpha_0!)+
+        n_{0,{\rm no}}-\tfrac12v(\beta_0!).
+\]
+Indeed the factorial of the selected monomial has
+valuation \(v(b_\rho)+v(\alpha_0!)+v(\beta_0!)\le V_d\).
+Using \(v(z)=q_3\le v(\alpha_0!)/2+v(\beta_0!)/2-u\)
+in the expression for \(v(k_0)\) gives
+\eqref{eq:plane-slice-depth}. Assembly preserves coefficient
+valuation bounds, giving \eqref{eq:plane-slice-value}
+from the full factorial lower bound.
+
+\end{proof}
+
+\paragraph{Using a realised flat symbol.}
+Apply the plane Gram estimate with conductor \(c_P\), which
+is an integer here. Its chain and link losses \(12c_P\) and
+\(30c_P\) also satisfy the looser allowances \(24c_P\) and
+\(60c_P\) of the flat construction. In the signed-chain
+hypothesis the slack \(26rc_P\) suffices for the \(13rc_P\)
+in \eqref{eq:plane-gram-reserves}. Let \(A=\phi Z_*\)
+and write \(D_b=D_m+D_l+3K_d\). The construction before
+the last simplification in the Gram estimate gives
+\[
+ v([F,\gamma A])\le n_0+D_l+1+\lceil D_m+K_d/2\rceil
+                 \le n_0+D_b .
+\]
+Here the integral conductor data have \(K_d\ge1\).
+
+If \(c_P>D_n+D_b+\kappa_{\rm fl}\), the error in
+\eqref{eq:plane-slice-value} is above the depth of the
+main term. We therefore obtain
+\[
+ 0\ \le\
+ v\left(\frac{p^{\kappa_{\rm fl}}}
+              {\prod_i d_i!}[H,\operatorname{Asm}_\rho(A,N_0)]\right)
+ \ \le\ D_n+D_b+\kappa_{\rm fl}.
+\]
+The left inequality uses coefficient integrality and the
+factorial deficiency termwise. No error polynomial is
+needed for this application of the Gram estimate. The bounds and decomposition below apply uniformly
+to all choices of the primitive source.
+
+\input{plane-return}
+
+Since the evaluation on the sum has valuation at most \(D_X\),
+one of its realizable summands of order \(o\le t_F\) has
+valuation at most \(D_X\).
+
+\paragraph{Returning to the restored weight.}
+
+The flat symbol has now been lifted with uniform depth. We must compare its detecting covector with one for the original highest weight.
+
+Write \(\lambda\) for the full weight, \(\mu\) for its
+flat part and \(A_\eta=A_r(\eta)\) for the normalisation
+exponent of a weight \(\eta\). In the notation of the
+edge pairing, \(R^\eta_e=w^{-A_\eta}H^\eta_e\),
+\(R^{\prime\eta}_e=w^{-A_\eta}(H^\eta_e)^*\), and the
+normalised evaluation is \(b^\eta_e(u,T)=w^{2A_\eta}T(u)\).
+\begin{established}[Transport maps and the uniform primitive-vector bound]\label{hyp:plane-full-weight-transport}
+The operator construction needed for transport has the
+following properties. Its maps \(\rho_\beta:V_\lambda\to
+V_\mu\) send \(R^\lambda_e\) to \(R^\mu_e\). At every
+other edge into the same target they lose at most
+\[
+ s=rNc_0+2rn'\mathrm{cpp}
+\]
+powers of \(w\) on the corresponding lattices. On the
+target vertex lattices they map \(H^\lambda_+\) into
+\(w^{2(A_\lambda-A_\mu)-s}H^\mu_+\). They send products
+of a flat generator and a remaining-weight vector into
+the allowed span of operator words on that generator.
+Finally, for every primitive \(u\in R^\lambda_e\), some
+\(\rho_\beta u\) lies outside \(w^{2\kappa+1}R^\mu_e\),
+where \(\kappa\) is bounded uniformly before \(u\) is chosen.
+\end{established}
+\begin{proof}
+Take the maps in Proposition~\ref{prop:plane-bounded-weight-operators}. Its divided-power construction at each tensor position preserves the selected edge lattice. The sum of the losses from the other positions is \(rNc_0+2rn'\mathrm{cpp}\). The integral dual estimate there finds an image of a primitive vector outside \(w^{2\kappa+1}R_e^\mu\); its bound on \(\kappa\) depends only on the weight spreads. The construction acts by words on the remaining tensor factors and hence has the required action on the span.
+\end{proof}
+
+\begin{proposition}[A flat covector transported to the full weight]\label{prop:plane-restore-covector}
+Assume the lattice maps and primitive-vector bound of
+Lemma~\ref{hyp:plane-full-weight-transport}. Suppose every
+primitive flat vector in the prescribed operator span has a
+flat covector of depth \(D_F\), endpoint order \(t_F\), and
+competitor conductor \(c_P=c_\star+s\). Then every primitive
+\(u\in R^\lambda_e\) in the span of the restored model family
+has a full-weight covector whose depth \(D\), endpoint order \(o\) and competitor conductor \(c\) satisfy
+\[
+ D\le\kappa+D_F,\qquad o\le t_F+s,\qquad c=c_\star.
+\]
+
+\end{proposition}
+
+\begin{proof}
+\proofstep{Testing a primitive combination in the restored lattice.}
+For a chosen primitive combination \(u\), select such a
+\(\beta\) and write \(\rho_\beta u=w^a u_1\) with \(u_1\)
+primitive and \(0\le a\le2\kappa\). The operator-word
+span is over the fraction field, so it contains \(u_1\).
+Transport a flat covector \(T\) by
+\(\Lambda T=w^{2(A_\mu-A_\lambda)}\rho_\beta^* T\).
+For example \(H^\lambda_e\) maps by \(\rho_\beta\)
+into \(w^{A_\lambda-A_\mu}H^\mu_e\). Pulling back the
+flat lattice \(w^{-A_\mu}(H^\mu_e)^*\) and inserting
+the scalar \(w^{2(A_\mu-A_\lambda)}\) gives precisely
+the required inclusion in \(R^{\prime\lambda}_e\).
+
+The calculation on the competing edge lattices loses \(s\)
+powers of \(w\); the stated vertex inclusion also gives
+loss \(s\) at the target vertex. The normalised pairings obey
+\[
+       b^\lambda_e(u,\Lambda T)=w^a b^\mu_e(u_1,T).
+\]
+The pairing gains valuation \(a/2\le\kappa\), since
+\(w^2=p\). At the vertex and the competing edges the lattice
+bounds lose at most \(s\) powers of \(w\), while the chosen
+edge retains integrality. Thus the transported test has
+depth at most \(\kappa+D_F\), order at most \(t_F+s\)
+and conductor at least \(c_P-s=c_\star\).  The model-to-clean
+congruence at these depths was checked in
+Section~\ref{par:plane-middle-weights}.
+
+\end{proof}
+
+\input{plane-edge-covector}

@@ -1,0 +1,520 @@
+\section{Lean declaration concordance}
+\label{sec:lean-concordance}
+
+The first table pairs the zero statements with their Lean declarations. The subsequent
+entries identify the declarations for the arithmetic estimate and for its analytic
+application.
+
+\subsection{The zero statements}
+\label{sec:lean-zero-statements}
+
+The three conclusions of Theorem~\ref{thm:claims} correspond to five declarations
+in Levent Alp\"oge's \code{Main.lean}. Read across a row to pass from the mathematical assertion, including its domain, to
+the corresponding declaration. The proposition types are defined in \code{Statements.lean}
+and, for \code{RiemannHypothesis}, in Mathlib. The modulus and conductor correspond to Definition~\ref{def:dirichlet-modulus}.
+The formal functions are
+total on \(\C\), so the pole exception appears explicitly. For Dirichlet
+characters \code{[NeZero q]} means \(q\ge 1\), and \code{1} denotes the
+principal character modulo \(q\).
+\cite{release-claim-files,mathlib-rh-definition,sutherland-exports}
+
+\begin{center}
+\small
+\renewcommand{\arraystretch}{1.20}
+\begin{tabular}{@{}p{.45\linewidth}@{\hspace{.035\linewidth}}p{.51\linewidth}@{}}
+\textbf{Theorem~\ref{thm:claims}} & \textbf{Lean declaration} \\ \hline
+(1) Every zero of \(\zeta(s)\) with \(s\ne1\) outside the negative even
+integers has \(\RePart s=1/2\).
+& \href{https://github.com/Deicyde/riemann-hypothesis/blob/a172c464fd4bcfc4f53e394dcba45d742b1409a6/src/Main.lean\#L4}{\code{riemannHypothesis}} (Mathlib formulation)\newline
+\href{https://github.com/Deicyde/riemann-hypothesis/blob/a172c464fd4bcfc4f53e394dcba45d742b1409a6/src/Main.lean\#L6}{\code{riemannZeta\_eq\_zero\_re}} (explicit hypotheses). \\[.5em]
+(2) For each \(q\ge1\) and \(\chi\bmod q\), \(L(s,\chi)\ne0\) if
+\(\RePart s>1/2\) and either \(\chi\ne\chi_{0,q}\) or \(s\ne1\).
+& \href{https://github.com/Deicyde/riemann-hypothesis/blob/a172c464fd4bcfc4f53e394dcba45d742b1409a6/src/Main.lean\#L8}{\code{LFunction\_ne\_zero\_of\_half\_lt\_re}}. \\[.5em]
+(3) For each \(q\ge1\) and \(\chi\bmod q\), every zero in
+\(0<\RePart s<1\) has \(\RePart s=1/2\).
+& \href{https://github.com/Deicyde/riemann-hypothesis/blob/a172c464fd4bcfc4f53e394dcba45d742b1409a6/src/Main.lean\#L10}{\code{LFunction\_eq\_zero\_re}}. \\[.5em]
+(3) The same assertion for a character of conductor \(q\).
+& \href{https://github.com/Deicyde/riemann-hypothesis/blob/a172c464fd4bcfc4f53e394dcba45d742b1409a6/src/Main.lean\#L12}{\code{LFunction\_eq\_zero\_re\_of\_isPrimitive}}.
+\end{tabular}
+\end{center}
+
+\subsection{Arithmetic and analytic dependencies}
+\label{sec:lean-dependencies}
+
+The correspondence begins with the passage from local cohomology lengths to the
+analytic criterion. The subsequent groups give the declarations for the intermediate
+geometric and arithmetic constructions.
+
+\subsubsection{From local lengths to a prime-sum bound}
+For the fields, coefficient twist and range of
+Lemma~\ref{lem:dyadic-host}, restriction of strict classes goes
+from \(E\) to \(L_m=E(i)\). Accordingly the local bound \eqref{eq:dyadic-host} used by \code{partA} has the length
+over the larger field on the right:
+\[
+ V(E,2,j)\le 1+V(L_m,2,j).
+\]
+The relevant declarations are \code{compIndex}, \code{kerTwo}
+and \code{shaTwo}. The bound applies separately at each twist
+before summation over the original field. \cite{release-host-dyadic}
+
+The local parameter and global compatibility in Appendix~\ref{sec:local-global}
+correspond to \code{recTExists} and
+\code{galoisLocalGlobalStrong\_recParameter}. \cite{release-local-map-laws}
+
+The two applications of the character construction in
+Lemma~\ref{lem:split-deletion-characters} correspond to
+\href{https://github.com/Deicyde/riemann-hypothesis/blob/a172c464fd4bcfc4f53e394dcba45d742b1409a6/src/Development/AbelianVarietyTheory/Proofs/IwasawaDecomposition/HostDeltaCharacterInertialOrderFifteenExists.lean\#L76}{the character with inertia of order fifteen}.
+The occurring lower signatures in Lemma~\ref{lem:initial-row-signature-tests}
+correspond to \href{https://github.com/Deicyde/riemann-hypothesis/blob/a172c464fd4bcfc4f53e394dcba45d742b1409a6/src/Formalism/SharpRestriction/LevelLetterCocycles/BlochKatoPhases.lean\#L100-L116}{\code{goodS}}.
+The local conditions used at a nonreference index are assembled in
+\href{https://github.com/Deicyde/riemann-hypothesis/blob/a172c464fd4bcfc4f53e394dcba45d742b1409a6/src/Development/AutomorphicArithmetic/ThetaCorrespondence/ThetaPairLifts/ThirdPlaceSeries/GaloisInputs.lean\#L19-L29}{\code{galois\_inputs\_alt}}.
+
+The two adjacent-rank identities in Proposition~\ref{prop:fitted-square-ratio-identity}
+are \href{https://github.com/Deicyde/riemann-hypothesis/blob/a172c464fd4bcfc4f53e394dcba45d742b1409a6/src/Development/AbelianVarietyTheory/BlockTheory/DivisorBase/WeilTensorModels.lean\#L559-L581}{\code{StepBeta} and \code{StepAlpha}}.
+Their product is \eqref{eq:fitted-square-tower}. The one-step minor identity
+in Lemma~\ref{lem:minor-orbital-shift} corresponds to
+\href{https://github.com/Deicyde/riemann-hypothesis/blob/a172c464fd4bcfc4f53e394dcba45d742b1409a6/src/Development/AbelianVarietyTheory/Proofs/FlagMeasures/LeadingMinorLineUnitAmplitudesLargeGaps.lean\#L359}{\code{minor\_line}}.
+
+The plane and character comparison enters \code{core\_gm}.
+The paired integral estimate is \code{onto\_path\_alt}, and
+\code{row\_rRows\_stage0\_alt} places it on the common family.
+\cite{release-joint-record,release-joint-selection}
+
+The common analytic input for the five exports is the nonvanishing
+of the primitive \(L\)-function on the range
+\[
+                \RePart s>1/2,\qquad (\chi,s)\ne(1,1).
+\]
+The five statements share the nonvanishing term \code{allChi}, supplied by
+\begin{quote}
+\code{UpperTheory.FinalTheorems.everyCharacter}.
+\end{quote}
+The reductions in Section~\ref{sec:deduction} use \code{rh\_of\_right},
+\code{Claim.strip}, and \code{critLine}. \cite{release}
+
+The family \(\mathcal K\) is \code{Level.cyc} applied to \(\psi\).
+The passage to a positively weighted real sum is \code{level\_family}.
+In \code{core\_gm} the exponent depends on the two error
+parameters. The specialization in \code{topDesWin} gives the exponent
+of \eqref{eq:arithmetic-window} in Proposition~\ref{prop:arithmetic}:
+\[
+ (e_D,e_L)=(2,0)\quad\Longrightarrow\quad
+ \tfrac12+(e_D+e_L+7)\epsilon=\tfrac12+9\epsilon .
+\]
+For each fixed primitive \(\psi\), the family and its positive weights
+are fixed before choosing \(0<\epsilon<\epsilon_0(\psi)\).
+The interval statement retains the quantifier order
+\[
+   \forall Z\ge1\quad\exists Y>Z\quad\forall y\in[Y,Y^{3/2}],
+       \qquad G_{\mathcal K(\psi),w_\psi}(y)\le y^{1/2+9\epsilon}.
+\]
+The localization argument in Section~\ref{sec:window}
+corresponds to \code{WindowHypUOfWindowHyp} and
+\code{landauWindow}. \cite{release}
+
+The prime-pair choice in Lemma~\ref{lem:disjoint-common-pair-windows}
+corresponds to \href{https://github.com/Deicyde/riemann-hypothesis/blob/a172c464fd4bcfc4f53e394dcba45d742b1409a6/src/Development/AutomorphicArithmetic/CharacterBoxes/WinPairs.lean}{\code{winPairs}}.
+The use of one family in Proposition~\ref{prop:all-window-applications}
+corresponds to \href{https://github.com/Deicyde/riemann-hypothesis/blob/a172c464fd4bcfc4f53e394dcba45d742b1409a6/src/Development/AutomorphicArithmetic/CharacterBoxes/DesWin.lean}{\code{topDesWin}}.
+The last numerical substitution appears in Lemma~\ref{lem:uniform-numerical-application}.
+
+The original cohomology window is \code{VWinAt}. The rescaling in
+\code{winPairs} supplies the cutoff \(\lfloor x^{400}\rfloor\).
+The rank chosen over the original auxiliary field is constructed by
+\code{exists\_ranks\_rankVal\_frame} and satisfies \code{RankVal}.
+Lemma~\ref{lem:rank-window} proves the comparison used by
+\code{supplyOfAdmOf} to restrict the strict lengths to that rank.
+Those lengths enter the cohomological contribution to the divisibility bound on every member in
+Section~\ref{subsec:window-points}. \cite{release-host-to-numerator}
+
+\subsubsection{Flag counts and the arithmetic degree}
+Section~\ref{sec:flag-counts}, in particular Propositions~\ref{prop:flag-row-mass} and~\ref{prop:primitive-flag-means}, supplies the counts used in the arithmetic degree. The row mass, primitive means and
+flag-class counts occur in \code{RowsRawMass.main},
+\code{PrimMeanOne.main}, \code{PairMean.main},
+\code{GenericMean.main} and \code{Partner.partners\_le}. The root
+covolume bound corresponds to \code{covolume\_term}.
+The Hodge degree in the geometric covolume calculation is
+\code{Ch2Const} in Theorem~\ref{thm:hodge-surface-degree} of Section~\ref{sec:hodge-surface-degree}.
+\cite{release,release-surface-uniform}
+Section~\ref{sec:covolume-flag-test} computes the two
+de Rham limits in \code{tendsto\_sieg\_sub\_vdmVal} and
+\code{vdmVal\_tendsto} and the prime increments in
+\code{Whole4.main}. The degree at the arithmetic cutoff is
+\code{testVal\_of\_hhTest}. \cite{release-flag-difference,
+release-flag-vandermonde,release-flag-finite,release-flag-test}
+
+\subsubsection{Heights at the wall and on the selected cover}
+Sections~\ref{subsec:flag-point-heights} and
+\ref{subsec:flag-wall-positivity} supply the point heights and the positivity used at a wall. The entries below follow
+these quantities from the jet calculation to the selected cover. The integral jets are \code{secJets4}.
+The three heights are \code{htIntSt\_of\_hypotheses},
+\code{BdHtProof.main} and \code{htUpSt}. The primewise degree
+bound is \code{nefAt\_onObj}.
+\cite{release-wall-jets,release-wall-lie-points,
+release-wall-boundary,release-wall-dense,release-wall-dr-nef}
+
+Sections~\ref{sec:flag-wall-slope} and
+\ref{sec:flag-component-transfer} derive the fixed-cutoff
+shape, its component mean, and the lower bound transferred
+to the selected cover. The source comparison
+is \code{srcSt\_of\_slopeSt}. Its transfer is
+\code{deepSt\_of\_srcSt}, and the component height bound
+is \code{heightAt\_of}. The separate Haar multiplier is the
+\code{ratio} in \code{OneMeasureSizes}.
+\cite{release-wall-shape,release-wall-volume,
+release-wall-transfer,release-wall-height,release-wall-ratio}
+Sections~\ref{subsec:component-rank-comparison} and
+\ref{subsec:deep-arithmetic-degree} use one image degree
+in the rank and height comparisons. Its position between the
+two volume degrees in Proposition~\ref{prop:deep-moving-degree} corresponds to
+\[
+     V_Z(u')\le D_Z\le V_Z(u_1)
+               \qquad\text{(\code{compDeg\_between}).}
+\]
+The rank and height declarations are \code{rkC\_le},
+\code{share\_of\_toroidal}, \code{rk\_le} in the small-scale
+rank comparison, and \code{deg\_bound\_of\_claim\_numbers}.
+\cite{release-component-rank,release-component-hs}
+The two bounds on the determinant columns of Proposition~\ref{prop:component-arithmetic-degree}
+enter the same
+\href{https://github.com/TomasOrtega/RH/blob/a6ac91a412dcbaab31801355ec5707024a71bf65/extracted/lean/src/Development/AbelianVarietyTheory/Proofs/DivisorProofs/SlopeLowerBoundTopLatticeOffHypersurface.lean\#L160-L165}{determinant-line degree estimate}.
+Its finite-place input is coefficient integrality after the linear substitution.
+Its infinite-place input is the bound on the unit spheres in \eqref{eq:hs-unit-sphere-beta}.
+
+For the weight shift in Lemma~\ref{hyp:covolume-shift-costs},
+the component evaluation norm is compared with the same theta product
+in the following declarations:
+\[
+\begin{array}{ll}
+ M_Z\lambda^2<b\quad\text{(Lemma~\ref{lem:deep-thin-evaluation})}&\href{https://github.com/Deicyde/riemann-hypothesis/blob/a172c464fd4bcfc4f53e394dcba45d742b1409a6/src/Development/AbelianVarietyTheory/Proofs/DivisorProofs/FrameExponentialVolumeLarge.lean#L67}{\code{thin\_bergOn}}\\
+ M_Z\lambda^2\ge b\quad\text{(Lemma~\ref{lem:deep-thick-evaluation})}&\href{https://github.com/Deicyde/riemann-hypothesis/blob/a172c464fd4bcfc4f53e394dcba45d742b1409a6/src/Development/AbelianVarietyTheory/Proofs/DivisorProofs/FrameExponentialVolumeSmall.lean#L127}{\code{thick\_bound}}\\
+ a(y)^3\le e^\beta\mathcal B_{u_1,Z}(y)&\href{https://github.com/Deicyde/riemann-hypothesis/blob/a172c464fd4bcfc4f53e394dcba45d742b1409a6/src/Development/AbelianVarietyTheory/Proofs/DivisorProofs/ExistsCarryingSectionOrders.lean#L268}{\code{theta\_le\_bergman}}
+\end{array}
+\]
+
+\begin{center}
+\begin{tabular}{@{}ll@{}}
+Lemma~\ref{lem:adjoint-etale-fibre} &
+\href{https://github.com/TomasOrtega/RH/blob/a6ac91a412dcbaab31801355ec5707024a71bf65/extracted/lean/src/Development/AbelianVarietyTheory/Proofs/DivisorProofs/SectionsSeparateQuotientGenericFibreDescends.lean\#L282}{\code{separate\_numberField}}\\
+Lemma~\ref{lem:deep-short-orbit-section} &
+\href{https://github.com/TomasOrtega/RH/blob/a6ac91a412dcbaab31801355ec5707024a71bf65/extracted/lean/src/Development/AbelianVarietyTheory/Proofs/DivisorProofs/SectionsSeparateQuotientGenericFibreDescends.lean\#L405}{\code{sections\_separate\_quotient\_fibre}}
+\end{tabular}
+\end{center}
+
+\subsubsection{Local densities, amplitudes and row sums}
+The complex orbital calculation in Section~\ref{sec:orbital-germ}
+corresponds to \code{germ\_core}. For the passage from local densities to a word pairing in
+Section~\ref{sec:word-pairing}, the corresponding declarations are grouped by the
+quantity computed. \cite{release}
+\begin{itemize}
+\item Terminal density positivity in \code{topDensNonnegOfKappa}
+\item Signed derivatives in \code{one\_letter\_density\_estimate}
+\item Compact radial identities in \code{actual\_compact\_theorem}
+\item Capelli recurrences in \code{residue\_first\_move\_holds}
+  and \code{residue\_second\_move\_holds}
+\end{itemize}
+
+Section~\ref{sec:local-amplitudes} follows the Schur and
+Weil identities in \code{AmpKF0} and the critical-level estimate
+\begin{quote}
+\code{critical\_threshold\_lower\_bound}.
+\end{quote}
+The uniform Bessel scale of Section~\ref{sec:bessel-periods}
+corresponds to \code{BesselSettingUniformConstant} and
+\code{BesselFormalDegreePairing}. The three row sums in
+Section~\ref{sec:row-sums} follow \code{rows\_ND\_record},
+\code{rows\_Deg\_record} and \code{corank\_one\_bound\_of\_fibres}.
+
+For the first length in Proposition~\ref{prop:paired-frame-moments},
+the scalar for a single shift and the sum of the squared projection
+norms have separate counterparts:
+\[
+\begin{array}{ll}
+ |\kappa_s|^2 d_\mu/d_{\mu-e_s}\le T_zB_0^4
+     &\href{https://github.com/Deicyde/riemann-hypothesis/blob/a172c464fd4bcfc4f53e394dcba45d742b1409a6/src/Development/AbelianVarietyTheory/Proofs/JetHarmonics/FamilySetupMomentGrowth.lean#L38}{\code{dual\_step\_bound}}\\
+ \sum_s\|\mathrm{pr}_s(e_c\otimes w)\|^2
+       \le(6B_v)^{2m}\|w\|^2 &\href{https://github.com/Deicyde/riemann-hypothesis/blob/a172c464fd4bcfc4f53e394dcba45d742b1409a6/src/Development/AbelianVarietyTheory/Proofs/JetHarmonics/UnitaryGlProjectionLevelSumSqLe.lean#L10}{\code{lev\_proj\_and\_sum\_sq\_le}}
+\end{array}
+\]
+Lemma~\ref{lem:equal-word-generic-corank-one} obtains the
+same-word bound from the
+\href{https://github.com/Deicyde/riemann-hypothesis/blob/a172c464fd4bcfc4f53e394dcba45d742b1409a6/src/Formalism/SharpRestriction/CuspSpanNormBounds/CayleyDegreeNondegeneracy/RowsCnt.lean\#L273-L391}{two orientations of the flag count}.
+The same-word generic bound in the fixed development is assembled in
+\href{https://github.com/Deicyde/riemann-hypothesis/blob/a172c464fd4bcfc4f53e394dcba45d742b1409a6/src/Formalism/LocalToGlobal/SiegelLatticeTheory/CokernelGLCounts/RankPointCounts/MainEqCut.lean\#L259}{\code{rowGenJoint\_of}}.
+
+The common integral lattice in Lemma~\ref{lem:nonprimitive-diagonal}
+corresponds to the
+\href{https://github.com/Deicyde/riemann-hypothesis/blob/a172c464fd4bcfc4f53e394dcba45d742b1409a6/src/Formalism/SharpRestriction/CuspSpanNormBounds/LatticeGluingRadicals.lean\#L2254-L2275}{equality of the projected congruence lattices}.
+
+For the single-word zero-Gram calculation in
+Section~\ref{subsec:zero-gram-diagonal}, the fixed-label and
+operator estimates correspond to
+\href{https://github.com/leanprover-community/riemann-hypothesis/blob/a172c464fd4bcfc4f53e394dcba45d742b1409a6/src/Development/AbelianVarietyTheory/Proofs/DecoratedLatticeProofs/PairsAmplitudeBoundOfTypeBound.lean\#L20}{\code{pairsDegOfType\_holds}}
+and
+\href{https://github.com/leanprover-community/riemann-hypothesis/blob/a172c464fd4bcfc4f53e394dcba45d742b1409a6/src/Development/AbelianVarietyTheory/Proofs/DecoratedLatticeProofs/TermSumBoundOfPairsAmplitude.lean\#L11}{\code{termSumBound\_of\_pairsAmplitude}}.
+The estimate on the selected parameters occurs in
+\href{https://github.com/leanprover-community/riemann-hypothesis/blob/a172c464fd4bcfc4f53e394dcba45d742b1409a6/src/Development/AbelianVarietyTheory/Proofs/DecoratedLatticeProofs/DegenerateTermsAndCollisionBoundsUniformWidths.lean\#L57}{\code{degenerate\_and\_collisions\_uncond}}.
+
+\subsubsection{From the projector trace to the fitted row}
+Sections~\ref{sec:count} and \ref{sec:selected-row-gram}
+take the projector trace to the selected row. Its transport occurs in
+\code{count\_\allowbreak{}rows\_\allowbreak{}class\_\allowbreak{}of\_\allowbreak{}count\_\allowbreak{}class}, the preliminary diagonal occurs in \code{puNZ\_\allowbreak{}of\_\allowbreak{}sDiag}, and the selected Gram estimates occur in
+\code{theoremS\_\allowbreak{}transport\_\allowbreak{}link\_\allowbreak{}zero}. The numerical range for the
+projection in Proposition~\ref{prop:lowest-type-polar-decay}
+corresponds to \code{formulaGap} in the released proof.
+\cite{release-selected-row-gram}
+
+The lattice slope in Section~\ref{subsec:fitted-test-slope}
+(Proposition~\ref{prop:fitted-coefficient-slope}) and the matched square
+in Section~\ref{subsec:fitted-square-ratios}
+(Proposition~\ref{prop:fitted-square-ratio-identity}) correspond to \code{gridTestLattice\_\allowbreak{}largestSlope\_\allowbreak{}bound},
+\code{sqRatio\_\allowbreak{}mem\_\allowbreak{}of} and \code{square\_\allowbreak{}ratio\_\allowbreak{}valuation\_\allowbreak{}without\_\allowbreak{}norm\_\allowbreak{}formula}.
+\cite{release-fitted-test-slope,release-fitted-square,release-fitted-square-height}
+
+Section~\ref{subsec:fitted-row-height} follows
+\code{rowFun\_\allowbreak{}at\_\allowbreak{}gridA\_\allowbreak{}alt} for the field and row choice.
+The grid matrix in \eqref{eq:fitted-common-fourier} satisfies
+a simultaneous identity for the selected tuples,
+\[
+ \Psi\iota_t P_t=r_t^{-1}V'(t).
+\]
+The signed slope estimate for this single descended map uses
+\code{grid\_function\_bound}.
+\cite{release-fitted-row-grid,release-fitted-row-height}
+The marked signature and integral presentations of
+Paragraph~\ref{subsec:marked-localization} follow
+\code{exists\_desc\_of\_isKsForm}, \code{pre\_cut\_alt},
+\code{conclusion\_split\_alt} and the local table in
+\begin{quote}
+\code{linkN\_of\_twGood\_galoisPreconditions}.
+\end{quote}
+Paragraph~\ref{par:marked-height-limit} uses \code{funSharp\_pt\_alt}
+at the row space at the refined level and the weighted height bound
+\begin{quote}
+\code{height\_bound\_of\_component\_bounds}.
+\end{quote}
+\cite{release-marked-family,release-marked-rows,release-marked-sharp,release-frame-height}
+
+\subsubsection{Translates, length moments and periods}
+The scale and translate construction in
+Section~\ref{subsec:window-points} follows \code{kitS} and
+\code{designS}. For the data at one point, the single-translate input enters through
+\code{objCP\_and\_of\_recExP}. The two coefficient-field
+choices follow \code{recAtG\_of\_two\_passes}.
+\cite{release-window-design,release-window-objects,release-window-two-pass}
+
+The group majorant of Section~\ref{sec:xi} is
+\code{xiExists}, with the two inductions
+\code{aStepSucc\_of} and \code{bStepSucc\_of}.
+\cite{release}
+
+For the two length moments see \code{amplitude\_moments\_gap}
+and \code{momBd\_both}. For the quotient integral see
+\code{fibre\_bound} and \code{abs\_core}.
+The adelic normalization in Section~\ref{sec:absolute} uses
+\code{pinned\_root}, \code{amp\_lift} and
+\code{hsNormSq\_amp\_loc}. \cite{release}
+
+Section~\ref{sec:transport} uses \code{kerX\_of\_clsPinD},
+\code{comb\_eq\_sum\_cells}, \code{valX} and the joint relation
+\code{MainX}. Lemma~\ref{lem:nonzero-word-reference-entry} uses the reference
+functional and the tuple coefficients in
+\href{https://github.com/Deicyde/riemann-hypothesis/blob/a172c464fd4bcfc4f53e394dcba45d742b1409a6/src/Development/AutomorphicArithmetic/ThetaCorrespondence/ThetaPairLifts/ThirdPlaceSeries/RelOfLinks.lean\#L30-L51}{\code{rel\_of\_links\_alt}}.
+In the notation of the two pairings this correspondence is
+\[
+     p_*=(h_0/d_0) A_*,\qquad c_t=s_{\rm col}\,h_t/d_t .
+\]
+
+The fixed-level support in Section~\ref{subsec:fixed-level-support}
+uses the declarations below. \cite{release-fixed-level-support}
+\begin{quote}
+\code{oneIndexAt\_of\_classAt\_supportAt}\\
+\code{doubleStep\_of\_pureCol\_pureRow}\\
+\code{gsupp\_of\_local}
+\end{quote}
+For the valuation see
+\begin{quote}
+\code{vw\_eq\_zero\_of\_unitRatio}.
+\end{quote}
+\cite{release}
+
+\subsubsection{Point selection and the local maps}
+
+The common top set in Section~\ref{subsec:frobenius-selection}
+is \code{topsChoiceH}, with the prescribed proportions in the cosets of \(A_0\) from
+\code{topsGroup}. The choice of the top set is followed by a second choice of translates. This set and
+its progression bounds are \code{hostThickExists} and \code{HostThickOrbit}.
+\cite{release}
+
+The finite-place analysis in Section~\ref{sec:finite-valuations}
+uses the formal exponent estimates \code{ThmAGauss7}, the CM
+identities \code{CM2}--\code{CM4} and the prime-to-\(p\)
+translation estimate \code{TransUnit}. The determinant and
+finite Gauss factors of Section~\ref{subsec:theta-normalization}
+give \code{KappaExists}, \code{LocalStandard} and
+\code{KernelRatio}. \cite{release}
+
+\subsubsection{Determinants, segment ranks and integral column maps}
+
+To locate the two rank estimates, start with the bound for the graded determinant from
+integral restriction in
+\begin{quote}
+\code{GramBoundUnconditionalPos}.
+\end{quote}
+Proposition~\ref{prop:mean-tied-rank} gives the segment estimate \eqref{eq:ties}, corresponding to \code{TheoremMC7}.
+The mean on the actual segment lattice is \code{segment\_mean\_kappa\_bound} and the product of retained ranks is \code{rank\_alternative\_lower}.
+The integral column factors and the correction of their symbols
+in Sections~\ref{sec:column-lifts} and \ref{sec:symbol-correction}
+give \code{lemma44\_identity\_of\_raw\_tail} and the paired edge test
+\code{PairLiftAt}. The two harmonic
+lattice maps are constructed in
+\begin{quote}
+\code{lattice\_maps\_of\_functor\_comparison}.
+\end{quote}
+{\raggedright
+The rank sum is \code{rho\_sum\_bound\_of\_maps\_splitting}.
+The bounded middle weights use \code{RestCloudMaps}.
+The weighted sum and the box mean are \code{keyIneq\_of},
+\code{avg\_of} and \code{midMean\_of}.
+The target rank uses the neighbor pairing and
+\code{KapIDef.mem}. \cite{release}\par}
+
+\subsubsection{Edge tests and lifts from residue planes}
+Section~\ref{sec:host-edge-tests} uses the finite map in
+\code{StdSubAt} and the size hypotheses \code{HypIAt} and
+\code{HypIIAt}. Propositions~\ref{prop:host-large-prime-test}
+and~\ref{prop:host-small-prime-test} separate the two prime ranges. For the passage from the primewise tests to planes, Section~\ref{sec:plane-lifts}
+gives the separating polynomial
+\code{Rloc}, the normal-coordinate identities of \code{PointsLemma},
+and the precision induction. The paired-path and digit lifts in
+\code{classMap\_estimate\_of\_admissible} give the full order and the
+true multidegrees. The target-rank implication
+\code{goodRank\_of\_prim} uses the primitive tests on each plane.
+The segment count, with the measure and box of
+\eqref{eq:plane-coarse-rank}, is the rank estimate
+\[
+ \dim\overline\Lambda\ge q^{-rK}(1-Nr^2 k/Y)\prod_x D_k(b_x).
+\]
+
+The corresponding declarations are \code{good\_path\_weight}
+and \code{restSum}. The return to the
+original radices uses the degree and order comparisons in
+\code{generator\_\allowbreak{}modulo\_\allowbreak{}uniformiser\_\allowbreak{}of\_adm}.
+The source weight restoration uses \code{primStep\_of} and
+\code{count\_of\_exact}.
+The factorial and divided-derivative analyses give the local
+inputs \code{DIG} and \code{DER} of \code{LiftBoundOfHypotheses}.
+The corrected integral Gram polynomial gives \code{LiftBoundUniform}.
+Section~\ref{par:plane-orbit} proves \code{RestMEM} on the exact
+model. Sections~\ref{par:plane-uniform} and~\ref{par:plane-reassembly}
+give the uniform choice of depth and \code{RestMemb}. Passing to
+the dual plane gives \code{realAt\_gen}. The maps of
+Section~\ref{par:plane-rho} and the normalized adjunction give
+\code{RhoAt} and the restored \code{TestAt}. \cite{release}
+
+\subsubsection{Index and discriminant at the selected point}
+The integral type cut of Section~\ref{subsec:selected-cut}
+is built in \code{CFacts} and \code{ExistsGood}.
+At the next stage the family carrying this same cut occurs in \code{LinkNFam}. The local
+congruence estimate and its weighted passage to the
+division numerator use \code{EndomorphismIndexBound}
+and \code{ExportBoundOfAdmissible}. \cite{release}
+
+The branch comparison in \eqref{eq:slice-order-comparison} uses
+the integral point realization in the module on curve lifting.
+For the shifted trace lattice of \eqref{eq:slice-discriminant-order},
+the identity corresponding to \code{HDiscAG} reads
+\[
+ v_\lambda(\Delta)+2\sum_{Z,w\mid\lambda} f_w n_w(\tau)
+       =2I^{\mathrm{ff}}_\lambda+t_\lambda .
+\]
+The weighted index \eqref{eq:geometric-four-terms} is
+\code{sumGP4}; the bounds for both runs are \code{conclAtM\_of\_atMInputs}. The baseline and auxiliary
+comparison use \code{nusOf\_eq\_ram\_mul\_nuStarAt} and
+\code{combBound\_alg}. The common order and precision come from
+\code{pageRun\_record}. \cite{release-selected-points,release-slice-orders,release-run-remainder,release-finite-point-depth,release-slice-scale-record}
+The finite norm and dimension bound on those same weights come
+from \code{net\_at\_run}. The arithmetic chart and generator
+family with that norm passes through \code{inputsNet\_recPlus}
+and \code{inputsR\_of\_inputsNet}. \cite{release-slice-net-evaluation,release-slice-net-index}
+
+\subsubsection{The split frame and the common twist}
+At a split point, \code{Norm.rN} and \code{design\_normalized}
+give the frame. With the frame so normalized, the row comparison uses \code{clause4GK},
+\code{clause5Row} and \code{rowTie\_disp}.
+The character tests use \code{locQ}, \code{locS\_g}
+and \code{locS\_pde}. For the supported determinant see
+\code{GlobalConcreteOf}. The initial marks and tame polynomial
+are constructed in \code{Exists}\allowbreak\code{Decomposition}\allowbreak\code{Setting} and
+\code{Exists}\allowbreak\code{Inertia}\allowbreak\code{Charpoly}\allowbreak\code{Factor}\allowbreak\code{Of}\allowbreak\code{Tame}\allowbreak\code{Type}. The common twist
+uses the two theta determinant calculations in
+\code{PropE}\allowbreak\code{Of}\allowbreak\code{Admissible} and \code{Aeval}\allowbreak\code{One}\allowbreak\code{Sub}\allowbreak\code{One}, the
+Selmer presentation, and the simultaneous torsion specialization
+in \code{IsAuxiliary}\allowbreak\code{Place}\allowbreak\code{Family}\allowbreak\code{AtLevel}\allowbreak\code{Mono}. Its passage to the
+retained point is \code{twist\_kills\_selmer}. The same character
+is used in both comparisons in Proposition~\ref{prop:one-retained-character}.
+\subsubsection{Selmer orders and integral period transfers}
+For the Selmer order bound, the construction of the ray characters uses \code{delOf}. The signature obstruction
+count gives the square presentation. The residual pencil and
+the one-pair extension give the coefficient bounds in
+\code{ResidualSelmer}\allowbreak\code{DeterminantOrderBound}
+and \code{AntiOfKer}, assembled in
+\code{bound\_mod\_two\_of\_hypothesis}. \cite{release}
+
+Sections~\ref{subsec:incident-sections} and~\ref{subsec:second-period}
+identify the geometric input to \eqref{eq:tag-p7} and sum its remaining places.
+The comparison at all used pairs is \code{site\_cmpLite\_siteAdm}.
+The maps on the indicated fibers are \code{site\_law\_xiIn}
+and \code{xiEx\_theta\_general}. The calculations at the prime assigned to the sequence
+in Sections~\ref{subsec:word-period}--\ref{subsec:word-projection},
+including the transfer in Proposition~\ref{prop:word-prime-transfer}, use \code{ukTerm\_of\_moveStep}, the measure and finite projections
+in \code{jetMoments} and the sharp transfer
+\code{levelChainSharpColumnValuation}\allowbreak\code{\_of\_stability}.
+\cite{release-site-reading,release-second-period,release-word-measure,release-word-transfer}
+
+\paragraph{The two level realizations.}
+The indices of the correspondences have the order
+\[
+ (K_s,K_0,K;\,1,\delta,\delta')\ \longmapsto\ (\varphi_i)_i
+      \ \longmapsto\ (K_s,K_0,K';\,P')
+      \ \longmapsto\ (P'_{p_0},P'_{p_1}).
+\]
+The ordered choice in Construction~\ref{hyp:family-prescribed-realization} corresponds to
+\href{https://github.com/Deicyde/riemann-hypothesis/blob/a172c464fd4bcfc4f53e394dcba45d742b1409a6/src/Development/AutomorphicArithmetic/CharacterBoxes/KitS.lean\#L14}{\code{kitS}}, which takes the object-existence predicate \code{ObjCP} as an argument. For a specified row the comparison of forms, including its lattice, is
+\href{https://github.com/Deicyde/riemann-hypothesis/blob/a172c464fd4bcfc4f53e394dcba45d742b1409a6/src/Development/AbelianVarietyTheory/Proofs/SatakeParameters/RowFormsMatchPeriodMapOfFurtherProperties.lean\#L131}{\code{rowPin\_of\_rx}}.
+
+The coordinate cusp space and its full set of norm tests in Lemma~\ref{lem:constructed-signed-coefficient-row} correspond to \href{https://github.com/Deicyde/riemann-hypothesis/blob/a172c464fd4bcfc4f53e394dcba45d742b1409a6/src/Formalism/LocalToGlobal/IndefiniteReal/FWExist.lean\#L466}{\code{formsN}} and \href{https://github.com/Deicyde/riemann-hypothesis/blob/a172c464fd4bcfc4f53e394dcba45d742b1409a6/src/Formalism/LocalToGlobal/IndefiniteReal/FWExist.lean\#L600}{\code{tieN}}. Its full integral span corresponds to \href{https://github.com/Deicyde/riemann-hypothesis/blob/a172c464fd4bcfc4f53e394dcba45d742b1409a6/src/Development/AbelianVarietyTheory/Proofs/DivisorProofs/IntegralCuspFormsFullLattice.lean\#L17}{the full-lattice argument}. The simultaneous component normalization of Lemma~\ref{lem:placed-row-reading-phase} and the measured lattice are given by \href{https://github.com/Deicyde/riemann-hypothesis/blob/a172c464fd4bcfc4f53e394dcba45d742b1409a6/src/Development/AbelianVarietyTheory/Proofs/IwasawaDecomposition/ExistsGeometricHalfPhaseOneOverLawfulCore.lean\#L29}{the phase-one construction} and \href{https://github.com/Deicyde/riemann-hypothesis/blob/a172c464fd4bcfc4f53e394dcba45d742b1409a6/src/Development/AbelianVarietyTheory/Proofs/IwasawaDecomposition/ExistsLiftSpacesOverDefiniteForms.lean\#L128}{the measured multiplicity coordinates}. The two scalar conventions for the split Hecke action occur in \href{https://github.com/Deicyde/riemann-hypothesis/blob/a172c464fd4bcfc4f53e394dcba45d742b1409a6/src/Development/AbelianVarietyTheory/Proofs/TwistedOperators/HeckeReadTie.lean\#L51}{the Hecke reading formula}.
+
+On the copied coordinates the correspondences satisfy
+\[
+        N'_{v,y}(jz)=N_{v,y}(z),\qquad
+          T'(jz)=j(Tz) .
+\]
+The copy of the reference row, including its norms, appears in \href{https://github.com/Deicyde/riemann-hypothesis/blob/a172c464fd4bcfc4f53e394dcba45d742b1409a6/src/Development/AbelianVarietyTheory/Proofs/IwasawaDecomposition/FormsLExistsBaseChangeCoordinates.lean\#L11}{the scalar extension of the coefficient coordinates}. The construction with a new tuple and the assembly of the final member appear in \href{https://github.com/Deicyde/riemann-hypothesis/blob/a172c464fd4bcfc4f53e394dcba45d742b1409a6/src/Development/AutomorphicArithmetic/ThetaCorrespondence/ThetaPairLifts/ThirdPlaceSeries/FiniteLevelAndSecond.lean\#L72}{the second specialization} and \href{https://github.com/Deicyde/riemann-hypothesis/blob/a172c464fd4bcfc4f53e394dcba45d742b1409a6/src/Development/AbelianVarietyTheory/Proofs/IwasawaDecomposition/LayeredAutomorphicDataExistsOfTwoPasses.lean\#L29}{the two-pass construction}. Both auxiliary covers of that member occur in \href{https://github.com/Deicyde/riemann-hypothesis/blob/a172c464fd4bcfc4f53e394dcba45d742b1409a6/src/Development/AutomorphicArithmetic/ThetaCorrespondence/ThetaPairLifts/ThirdPlaceSeries/ExistsRunsAt.lean\#L18}{the choice of the two runs}.
+
+\subsubsection{Integral frames and residual operators}
+The declarations below correspond to the prescribed depth, the integral frames and the operators used in the polynomial lift. Lemma~\ref{lem:fitted-completed-nonvanishing} gives the period at that depth. Lemma~\ref{hyp:selected-orbital-coefficient-bounds} derives the operator normal form on the realized row.
+
+The common finite model in Lemma~\ref{lem:flag-finite-frobenius-model} corresponds to
+\href{https://github.com/Deicyde/riemann-hypothesis/blob/a172c464fd4bcfc4f53e394dcba45d742b1409a6/src/Development/AbelianVarietyTheory/Proofs/DivisorProofs/ChainCoverOfHyp.lean\#L240}{\code{chainCoverSt}}. The local eigenline metric in Proposition~\ref{prop:flag-cutoff-test} corresponds to
+\href{https://github.com/Deicyde/riemann-hypothesis/blob/a172c464fd4bcfc4f53e394dcba45d742b1409a6/src/Development/AbelianVarietyTheory/Proofs/DivisorProofs/LocalHeightPrimeComparison.lean\#L418}{\code{lg\_eigA}}.
+
+\begin{construction}
+\begin{tabular}{@{}p{.46\linewidth}@{\hspace{.035\linewidth}}p{.49\linewidth}@{}}
+\toprule
+Mathematical comparison & Fixed source \\
+\midrule
+Depth of the companion level in Lemma~\ref{lem:fitted-depth-allowance}
+& \href{https://github.com/Deicyde/riemann-hypothesis/blob/a172c464fd4bcfc4f53e394dcba45d742b1409a6/src/Development/AbelianVarietyTheory/Proofs/TwistedOperators/GridDepthPaysEveryLoss.lean\#L148}{\code{depth\_pays}} (cost after the auxiliary prime and level have been chosen). \\
+Lie quotient in Lemma~\ref{lem:flag-local-cyclotomic-chain}
+& \href{https://github.com/Deicyde/riemann-hypothesis/blob/a172c464fd4bcfc4f53e394dcba45d742b1409a6/src/Development/AbelianVarietyTheory/Proofs/DivisorProofs/LLEquivLieTwist.lean\#L109}{\code{LL\_equiv\_lie\_twist}} (Frobenius on the quotient). \\
+Maps from the Lie and differential lattices in Lemma~\ref{lem:flag-local-hodge-quotients}
+& \href{https://github.com/Deicyde/riemann-hypothesis/blob/a172c464fd4bcfc4f53e394dcba45d742b1409a6/src/Development/AbelianVarietyTheory/Proofs/DivisorProofs/RingChainExists.lean\#L239}{\code{exists\_j\_rho\_lat}} (maps in the ring-level chain). \\
+Integral and complex frames in Definition~\ref{hyp:terminal-cm-fibre-comparison}
+& \href{https://github.com/Deicyde/riemann-hypothesis/blob/a172c464fd4bcfc4f53e394dcba45d742b1409a6/src/Development/AbelianVarietyTheory/Definitions/CMLattices/IntegralOf.lean\#L103}{\code{IsMetricAt}}, \href{https://github.com/Deicyde/riemann-hypothesis/blob/a172c464fd4bcfc4f53e394dcba45d742b1409a6/src/Development/AbelianVarietyTheory/Definitions/CMLattices/IntegralOf.lean\#L120}{\code{LieInt}} and \href{https://github.com/Deicyde/riemann-hypothesis/blob/a172c464fd4bcfc4f53e394dcba45d742b1409a6/src/Development/AbelianVarietyTheory/Definitions/CMLattices/IntegralOf.lean\#L130}{\code{SecInt}}. \\
+Integration on the terminal matrix fibre and the dual polynomial lift
+& \href{https://github.com/Deicyde/riemann-hypothesis/blob/a172c464fd4bcfc4f53e394dcba45d742b1409a6/src/Formalism/HermitianCurvature/HermitianCurvatureProofs/FibreIntegralCells.lean\#L61}{\code{fibre\_integral\_cells}} and \href{https://github.com/Deicyde/riemann-hypothesis/blob/a172c464fd4bcfc4f53e394dcba45d742b1409a6/src/Development/AbelianVarietyTheory/Proofs/JetHarmonics/PolynomialLiftDualOperatorCombination.lean\#L537}{\code{polyLift\_rhv}} (the latter takes the operator data and its normal form as inputs). \\
+\bottomrule
+\end{tabular}
+\caption{Corresponding declarations for the level, integral frames and orbital actions.}\label{fig:integral-orbital-concordance}
+\end{construction}

@@ -1,0 +1,763 @@
+\section{A complex orbital germ}\label{sec:orbital-germ}
+\hypertarget{source-orbital-germ}{}
+
+When the last one-dimensional block approaches the preceding block, the two-block orbital integral develops an oscillatory leading term. Computing its phases with one choice of additive character makes it possible to compare different histories in the same Hilbert space. The estimates
+here are local at a fixed place and enter the spectral pairing
+and the scalar recursion for the Gram form. The germ expansion \eqref{eq:orbital-germ} relates the integrals \(O_{n,1}\) and \(O_{n+1}\) defined below. Its proof rewrites \(O_{n,1}\) in determinant coordinates in \eqref{eq:orbital-reduced}. Both use the additive character \(\psi_\beta\) and its self-dual measure.
+
+Let \(s=n+1\ge 2\), let \(w_j\) reverse \(j\) coordinates, and let
+\(U_j\) be the group of upper unitriangular complex matrices. The phase and Haar normalization on a single complex coordinate are
+\[
+   \psi_\beta(z)=e^{i\RePart(\beta z)},\qquad
+   d\mu(z)=\frac{|\beta|}{2\pi}\,d^2z\qquad (\beta\ne0).
+\]
+Let \(\Phi\) be a Banach-valued function of an \(s\)-by-\(s\) complex matrix. Its derivative bounds on the relevant determinant levels are given in Lemma~\ref{lem:orbital-germ}. In the first integral \(a\in\mathbb C^{1\times n}\), \(b\in\mathbb C^{n\times1}\) and \(U\in U_n\). Write \(\operatorname{ss}\) for the sum on the first superdiagonal. For \(t,c,z\in\mathbb C^\times\) the two integrals are
+\[
+\begin{aligned}
+ O_{n,1}(t,c)&=\int \psi_\beta(a_n+\operatorname{ss}(U)+b_n)
+   \Phi\left(\begin{pmatrix}1&0\\a&1\end{pmatrix}
+             \begin{pmatrix}tw_n&0\\0&c\end{pmatrix}
+             \begin{pmatrix}U&b\\0&1\end{pmatrix}\right)d\mu(a,U,b),\\
+ O_s(z)&=\int_{U_s}\psi_\beta(\operatorname{ss}(U))\Phi(zw_sU)\,d\mu(U).
+\end{aligned}
+\]
+The measure on each unipotent group uses its strict upper entries.
+
+\begin{lemma}\label{lem:orbital-germ}
+Fix a compact set \(K\subset\C^\times\) and let \(D=ct^n\in K\),
+with \(t\ne0\). Suppose that the derivatives of the Banach-valued
+function \(\Phi\) through order \(B_2 s^2\) are bounded by
+\(M_0(1+\|Z\|)^{-B_1s^2}\) on the determinant levels
+\(\det Z=\det(w_n)D\). For sufficiently large absolute constants
+\(B_1,B_2\),
+\begin{equation}\label{eq:orbital-germ}
+ |t|^{n^2}O_{n,1}(t,c)=
+ \frac{1}{s}\sum_{z^s=(-1)^n D}
+ |z|^{n^2}\psi_\beta(sz/t)O_s(z)+O_{s,\beta,K}(M_0|t|).
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+\proofstep{Reduction to the determinant level.}
+Set \(X=t(U-I)\), \(B=tb\), \(\rho=a w_n(tI+X)\), and
+\(\sigma=c+a w_nB\). The matrix in the short orbit becomes
+\(Z=\left(\begin{smallmatrix}w_n(tI+X)&w_nB\\\rho&\sigma\end{smallmatrix}\right)\).
+The substitution has measure factor \(|t|^{-n(n+3)}\) because
+\((\rho,X,B)\) has \(2n+n(n-1)/2\) complex coordinates. Write
+\(r=\rho_1\). Reversing the rows puts the matrix into the form
+\[
+ w_s Z=tJ+\operatorname{diag}(r,x_1,\ldots,x_n)+Y,
+\]
+where \(J\) has ones on the first subdiagonal and zeros elsewhere,
+\(Y\) is strictly upper triangular, and \((x,Y)\) permutes the
+entries of \((\sigma,\rho_2,\ldots,\rho_n,X,B)\). The phase is
+\((r+\sum_j x_j)/t\).
+
+Let \(d=(-1)^nD\). Write the determinant equation of this matrix
+as \(rP_t(x,Y)+Q_t(x,Y)=d\). At zero, \(P_0=p=\prod_j x_j\)
+and \(Q_0=0\). With the other bottom-row entries fixed, the determinant
+is linear in \((r,\sigma)\).
+
+In this determinant equation the
+coefficient of \(\sigma\) is \((-1)^n t^n\). Along the fixed determinant,
+\[
+ P_t\,dr+(-1)^n t^n\,d\sigma=0.
+\]
+The complex derivative \(dr/d\sigma\) therefore contributes
+the real area factor \(|t|^{2n}|P_t|^{-2}\). The zero sets of \(P_t\) and \(p\) are
+null, since these are nonzero polynomials and \(P_t\) is independent
+of the variable \(\sigma\) being exchanged. Set \(r_t=(d-Q_t)/P_t\)
+and write \(Z_t\) for the resulting determinant-level matrix. With
+\(g(x)=\sum_j x_j+d/p\), the integral becomes
+\begin{equation}\label{eq:orbital-reduced}
+ |t|^{n(n+1)}O_{n,1}(t,c)
+ =\int\psi_\beta\bigl(g(x)/t\bigr)
+ \psi_\beta\bigl((r_t-d/p)/t\bigr)|P_t|^{-2}\Phi(Z_t)
+ \,d\mu(x,Y).
+\end{equation}
+
+\proofstep{Critical points and their leading amplitudes.}
+
+At a critical point the derivative equations give
+\[
+ 0=\partial_jg=1-\frac{d}{px_j},\qquad
+ x_1=\cdots=x_n=z=\frac{d}{p},\qquad z^s=d,\quad g(z\mathbf 1)=sz .
+\]
+The diagonal second derivatives are \(2/z\), and the off-diagonal
+ones are \(1/z\). Consequently
+\[
+ g''(z\mathbf 1)=z^{-1}(I+\mathbf 1\mathbf 1^T),\qquad
+ \det g''(z\mathbf 1)=sz^{-n}.
+\]
+This uses the sum-zero subspace and the constant line, on which the
+eigenvalues are respectively \(1/z\) and \(s/z\).
+In the derivative in \(t\), a determinant term using one subdiagonal
+entry must use the adjacent superdiagonal entry and all remaining
+diagonal entries. Its sign is negative. Since the determinant stays
+fixed, at this critical point
+\[
+ 0=z^n r'_0-z^{n-1}\operatorname{ss}(Y),\qquad
+ Z_0=w_s(zI+Y),\qquad |P_0|^{-2}=|z|^{-2n}.
+\]
+The slow phase at zero is therefore \(\psi_\beta(\operatorname{ss}(Y)/z)\).
+Rescaling \(Y=z(U-I)\) gives the phase of \(O_s(z)\) and
+multiplies the transverse measure by \(|z|^{s(s-1)}\).
+
+\proofstep{Cutting off the matrix entries.}
+
+We bound the remainder uniformly for \(d\in (-1)^nK\). Put
+\(\tau=|t|\) and \(R=\tau^{-\varepsilon}\), where
+\(\varepsilon=c_*/s\) for a small absolute \(c_*>0\). For
+\(\tau\le1\), cut off \(\Phi\) smoothly at matrix norm \(2R\),
+leaving it unchanged up to norm \(R\). Use the sup norm on entries.
+On the discarded part, \(\|Z\|\) dominates both \(R\) and the
+norm of \((\rho,X,B)\).
+
+Write \(d_*=n(n+3)\) for the real dimension of \((\rho,X,B)\).
+The rescaled discarded integral is bounded by a constant times
+\[
+ M_0\tau^{-3n}
+  \left(R^{d_*}R^{-B_1s^2}+\int_R^\infty u^{d_*-1-B_1s^2}\,du\right)
+   \ll M_0\tau .
+\]
+The first term integrates over the coordinate ball of radius \(R\).
+The second uses the decay in the coordinates outside it.
+The same absolute estimate without a cutoff handles \(\tau\)
+bounded away from zero, together with the bounded long integrals
+on the compact root set.
+
+On the cutoff support all entries are \(O(R)\), and
+\(P_t-p,Q_t=O_s(\tau(1+R)^s)\) by the determinant polynomial.
+Since \(d\) ranges over a compact set away from zero and
+\(\tau(1+R)^s=o(R^{-1})\), for small \(\tau\) we have
+\[
+ |rP_t|=|d-Q_t|\gg1,\qquad
+ |P_t|\gg R^{-1},\qquad |p|\ge |P_t|-|p-P_t|\gg R^{-1}.
+\]
+Here \(|r|\ll R\). Dividing \(|p|=\prod_j|x_j|\) by the other
+\(n-1\) factors, each \(O(R)\), gives \(|x_j|\gg R^{-n}\). The cutoff amplitude in \eqref{eq:orbital-reduced}
+therefore extends smoothly by zero across the excluded loci.
+
+For a derivative of order \(j\), an inverse of \(D=P_t\) or
+\(D=p\) contributes terms of the form
+\[
+ D^{-h-1}\prod_{a=1}^{h}\partial^{\alpha_a}D,
+ \qquad \sum_a|\alpha_a|=j,\quad 1\le|\alpha_a|,\quad h\le j .
+\]
+The polynomial factors are \(O_{s,j}((1+R)^s)\), while
+\(|D|^{-1}\ll R\). The amplitude derivatives thus cost at most
+\(O_{s,j,\beta,K}(M_0R^{Cs(j+1)})\) for an absolute \(C\). The slow phase
+can be differentiated using
+\[
+ \frac{r_t-d/p}{t}=-\frac{Q_t/t}{P_t}
+                    -d\frac{(P_t-p)/t}{pP_t}.
+\]
+In the chain rule the number of derivative factors and the sum
+of their orders together stay at most \(2j\).
+
+\proofstep{Integration off the critical points.}
+
+Away from disjoint fixed small balls around the roots, the
+gradient of \(g\) is bounded below. To see uniformity, put
+\(v=d/p\). If \(dg\) is small, its components give
+\[
+ x_j=\frac{v}{1-\partial_jg},\qquad v^s=d\prod_j(1-\partial_jg).
+\]
+As \(d\) ranges over its compact set, this forces \(x\) into the
+chosen critical balls. One derivative of \(d/p\) has size at most
+\(1+\|dg\|\). Each further derivative adds at most one inverse
+coordinate, of size \(O(R^n)\), so the derivatives of order \(j+1\)
+of \(g\) are \(O_{s,j}((1+\|dg\|)R^{nj})\). The real phase
+\(\varphi=\RePart(\beta e^{-i\arg t}g)\) has gradient norm
+comparable to \(\|dg\|\).
+
+Differentiating
+\(\nabla\varphi/\|\nabla\varphi\|^2\) costs \(O_{s,j,\beta,K}(R^{nj})\)
+at order \(j\). Set \(L=(\tau/i)\nabla\varphi\cdot\nabla/\|\nabla\varphi\|^2\).
+Since \(L(e^{i\varphi/\tau})=e^{i\varphi/\tau}\), integration
+by parts replaces the noncritical amplitude \(a\) by
+\[
+ (L^*)^q a,\qquad
+ L^*a=-\frac{\tau}{i}\operatorname{div}
+             \left(a\,\frac{\nabla\varphi}{\|\nabla\varphi\|^2}\right).
+\]
+In each term the number of derivatives on \(a\) and the
+coefficients together is at most \(q\). Taking \(q=2s\) and the
+displayed derivative and support bounds gives
+a contribution in \eqref{eq:orbital-reduced} of size
+\[
+ O\!\left(M_0\tau^{q-\varepsilon(Cs(q+1)+n(n+3))}\right)
+       =O(M_0\tau^s)
+\]
+when \(c_*\) is sufficiently small. Here the exponent lost to the
+support volume and derivatives is at most \(s\). The
+constants in this argument are independent of the direction of \(t\).
+
+\proofstep{Integrating the amplitude in the transverse variables.}
+
+In a critical ball \(p\) stays away from zero. For \(\|Y\|\le2R\)
+and \(u\) on the straight segment from \(0\) to \(t\), the polynomial
+estimates likewise keep \(P_u\) away from zero. The cutoff amplitude
+and its derivatives through order \(2n+4\) in \(x\), as well as
+its first derivative in \(u\), admit the common majorant
+\[
+ C_{s,j,\beta,K}M_0(1+\|Y\|)^{Cs(j+2)-B_1s^2},
+ \qquad 0\le j\le 2n+4 .
+\]
+
+Taking \(B_1s^2-Cs(2n+6)\) larger than the real dimension of the transverse space makes the majorant integrable at infinity. The denominators stay bounded below and \(\|Z_u\|\ge\|Y\|\)
+throughout the determinant level. Let \(A_u(x,Y)\) denote the
+cutoff amplitude. For the critical point \(x_0\), integration along
+the segment and the integrable majorant give
+\[
+ \int \|A_t(x_0,Y)-A_0(x_0,Y)\|\,d\mu(Y)
+ \le \tau\sup_{0\le a\le1}\int
+        \|\partial_u A_{at}(x_0,Y)\|\,d\mu(Y)
+ \ll M_0\tau .
+\]
+The derivative here is taken in the unit direction of the segment. The cutoff at zero can be removed with
+the same bound by polynomial decay in \(Y\).
+
+\proofstep{Stationary phase uniformly in the argument of \(t\).}
+
+After the cutoff, the relevant critical points stay in a bounded region. Uniformity in the complex direction of the parameter is needed when the result is used inside a Gram pairing.
+
+
+In a small critical ball take
+\[
+ H(h)=2\int_0^1(1-u)\,g''(x_0+uh)\,du .
+\]
+Taylor's formula gives the quadratic expression with matrix \(H(h)\).
+The matrix \(H(0)^{-1}H(h)\) is self-adjoint for the symmetric
+bilinear form \(H(0)\), as is its power-series square root \(B(h)\)
+near the identity. Put \(y=B(h)h\); then
+\[
+ g(x_0+h)-g(x_0)=\tfrac12 h^TH(h)h
+                =\tfrac12 y^TH(0)y,
+ \qquad B(h)^TH(0)B(h)=H(h).
+\]
+As \(B(0)=I\), the change has derivative the identity at zero. The
+real Hessian \(H_{\mathbb R}\) has signature \((n,n)\), since
+multiplication by \(i\) reverses its quadratic form. With the product
+measure in \eqref{eq:orbital-reduced}, the damped Gaussian tends to
+\[
+ \left(\frac{|\beta|}{2\pi}\right)^n
+       \frac{(2\pi\tau)^n}{|\det H_{\mathbb R}|^{1/2}}
+       =\frac{\tau^n}{|\det H(0)|}.
+\]
+Here \(|\det H_{\mathbb R}|^{1/2}=|\beta|^n|\det H(0)|\).
+The balanced signature gives phase factor one.
+
+The error after
+factoring out \(\tau^n\) is bounded by a constant times
+\(\tau\int(1+\|\xi\|^2)\|\widehat a(\xi)\|d\xi\) for the transformed
+compact amplitude \(a\). This follows from \(|e^{iv}-1|\le|v|\)
+for the dual quadratic form. The integral is bounded by the
+derivatives through order \(2n+4\) using the Laplacian. The
+changes of coordinates and Gaussian bounds are uniform on the
+compact critical set and in \(\arg t\). Thus the integrated
+stationary error in \eqref{eq:orbital-reduced} is \(O(M_0\tau^{n+1})\).
+The stationary, amplitude and transverse measure factors
+multiply to
+\[
+ \frac{|z|^n}{s}\,|z|^{-2n}\,|z|^{s(s-1)}
+      =\frac{|z|^{n^2}}{s}
+ \qquad(s=n+1).
+\]
+This gives the leading coefficient in \eqref{eq:orbital-germ}.
+\end{proof}
+
+\begin{auxlemma}[The amplitude at a fixed prefix]\label{lem:compact-prefix-amplitude}
+Fix a prefix of size \(p\) with nonzero pivots and a following block of size \(s\). Let \(K\subset\mathbb C^\times\) be compact. Let \(P_\sigma\) be the prefix permutation matrix, \(D\) its fixed invertible diagonal of pivots, and write \(H=P_\sigma LDU\) in the prefix cell. Here \(L,U\) are respectively lower and upper unitriangular, with the lower entries restricted to the roots of this cell. Set
+\[
+ W=\begin{pmatrix}H&HB\\ AH&AHB+Z\end{pmatrix},\qquad
+ A\in M_{s,p}(\mathbb C),\quad B\in M_{p,s}(\mathbb C).
+\]
+For any smooth compactly supported matrix test \(\Phi_0\), integrate \(\Phi_0(W)\) against the prefix character and Lebesgue measure in \((A,B,L,U)\). The resulting test \(\Phi(Z)\) satisfies, for all \(i,b\ge0\) with \(i\) integral,
+\[
+ \sup_{\det Z\in K}(1+\|Z\|)^b\|\partial^i\Phi(Z)\|<\infty .
+\]
+The same bound holds for a smooth compactly supported group test integrated in the two outer unipotent radicals of the lower-level slice, with all fixed derivatives in the residual group variable.
+\end{auxlemma}
+\begin{proof}
+If \(W\) lies in the support of the test, its blocks are bounded. All leading pivots of \(P_\sigma^{-1}H=LDU\) are fixed and nonzero. Gaussian elimination therefore bounds \(L,U\) and \(H^{-1}\). Denoting the four blocks of \(W\) by \(W_{ij}\), recover the remaining variables by
+\[
+ B=H^{-1}W_{12},\qquad A=W_{21}H^{-1},\qquad
+ Z=W_{22}-W_{21}H^{-1}W_{12}.
+\]
+The integration variables and the output variable \(Z\) are consequently bounded on the support. The prefix character has modulus one and is independent of \(Z\). Differentiating in \(Z\) acts only in the lower right block. The same compact set works for all fixed derivatives, proving the first bound. For \(p=0\) the displayed matrix is simply \(Z\).
+
+For the lower-level slice let \(j=p+s\), let \(w_j\) reverse the coordinates and let the asterisk denote conjugate transpose. Pair the two outer ordered frames by \(w_j\). If the residual dimension is \(d\), the group argument in block sizes \((j,d,j)\) is
+\[
+ g=u_L^{-1}
+ \begin{pmatrix}0&0&(W^*)^{-1}w_j\\0&\gamma&0\\w_jW&0&0\end{pmatrix}
+ u_R ,
+\]
+where \(u_L,u_R\) are upper block unitriangular in the unitary group and \(\gamma\) belongs to the residual unitary group. The two unipotent factors and the prefix factors carry their additive characters and product Haar measures. Put \(V=g_{31}=w_jW\). For \(g\) in a compact set and \(\det Z\in K\), the entries of \(V^{-1}\) are bounded by cofactors since \(|\det V|=|\det H\det Z|\) is bounded below.
+
+Multiplying the three block matrices gives the following coordinates for the radical parameters and the residual group element.
+\[
+\begin{aligned}
+ (u_R)_{12}&=V^{-1}g_{32},& (u_R)_{13}&=V^{-1}g_{33},\\
+ (u_L^{-1})_{23}&=g_{21}V^{-1},&
+ (u_L^{-1})_{13}&=g_{11}V^{-1},\\
+ \gamma&=g_{22}-g_{21}V^{-1}g_{32}.
+\end{aligned}
+\]
+Unitarity determines the opposite off-diagonal blocks by conjugate transpose against the fixed form. The independent radical entries are the rectangular coordinates and the skew-Hermitian part of the top right block after subtraction of their quadratic term. All these quantities are bounded. Thus \(\gamma\) and the integration coordinates belong to a common compact set on each such shell.
+
+Enlarge \(K\) slightly inside \(\mathbb C^\times\). On the resulting compact support the map under the integral, its derivatives and the fixed characters are bounded. Differentiation in \(Z\) and in the residual variable now commutes with integration. This proves the stated bounds in every fixed compact-support derivative norm there, in particular for \(i\le B_2s^2\) and \(b=B_1s^2\) of Lemma~\ref{lem:orbital-germ}. The constants may depend on the fixed pivots, shell and group test.
+\end{proof}
+
+At a terminal block the compact matrix test comes from the cross matrix itself. To see its regularity, write \(X(g)_{ij}=h(v_i,gv'_j)\) for the cross matrix of the two frames of length \(R=r+1\), with the positive vector last in each frame. Each frame has zero Gram matrix except for its final diagonal entry, respectively \(T,T'>0\). The determinant of the Gram matrix of their union is
+\[
+ \det\begin{pmatrix}
+ T e_Re_R^*&X(g)\\ X(g)^*&T'e_Re_R^*
+ \end{pmatrix}
+ =(-1)^R\bigl(|\det X(g)|^2-TT'|\det X(g)_{[R-1]}|^2\bigr)
+ =(-1)^R G_f(g).
+\]
+
+Expanding in the two exceptional diagonal entries gives the formula. Thus on \(G_f>0\) the two spans form a direct sum with nondegenerate restriction. Any prescribed complex matrix of variations of the mixed pairings extends to a skew-Hermitian form on this sum by assigning the negative conjugate transpose in the reversed slots and zero on each individual span. Extend it by zero on the orthogonal complement. Nondegeneracy of \(h\) identifies it with an infinitesimal unitary transformation. This proves that \(g\mapsto X(g)\) is a submersion there.
+
+For a smooth density with compact support in \(G_f\ge\delta>0\), submersion coordinates \((X,y)\) give its pushforward as a finite sum of integrals
+\[
+                    \Phi_0(X)=\sum_j\int b_j(X,y)\,dy
+\]
+with smooth compactly supported \(b_j\). Since \(|\det X|^2\ge\delta\) on its support, extension by zero is smooth. The coefficient of the orbital integral carries two compact actions. We now compute its fibre integral in the prescribed frames.
+
+\begin{auxlemma}[Change of frame in the orbital integral]\label{lem:orbital-frame-transport}
+Fix a represented real point \(\gamma\), its two ordered word frames
+and their unipotent groups \(N,N'\). Equip the intersection
+\(R_\gamma=N\cap\gamma N'\gamma^{-1}\) with the specified root
+measure. Let \(Q\) be the isometry taking the standard Witt frame
+to the rescaled signature frame and \(y\) the right translation in
+the chosen lowest vector. For \(x\) in the signature group and
+\(s\in R_\gamma\), put
+\[
+ S(x)=Q^{-1}\gamma^{-1}xQy^{-1},\qquad
+ c(s)=Q^{-1}\gamma^{-1}s\gamma Q .
+\]
+With transported coefficient frames, the change \(x\mapsto S(x)\)
+preserves the quotient integral of a compactly supported test on
+\(R_\gamma\backslash G\) at unit stabilizer scale. Multiplying
+the stabilizer Haar by \(\vartheta>0\), with ambient Haar fixed,
+multiplies the quotient integral by \(\vartheta^{-1}\).
+\end{auxlemma}
+
+\begin{proof}
+We have \(S(sx)=c(s)S(x)\). Left and right translation preserve
+ambient Haar on the unimodular unitary group. It remains to track
+the measure and characters under \(c\). In the signature frame each
+nonzero cross block has the form \(tJ_sD\), where \(J_s\) is reversal
+and \(D\) is diagonal with alternating signs. Upper unitriangular
+actions \(U,V\) of a stabilizing pair satisfy
+\[
+ U^* A V=A,\qquad
+ V=A^{-1}(U^*)^{-1}A,\qquad A=\operatorname{diag}(tJ_sD).
+\]
+This last expression is block lower triangular before imposing that
+\(V\) is upper triangular by blocks. Hence both actions are block
+diagonal. In a block of size \(s\), the scalar \(t\) cancels:
+\[
+                 V_j=D_j^{-1}J_s(U_j^*)^{-1}J_sD_j.
+\]
+
+The strictly
+upper entries in the right block give coordinates on the
+intersection: the two specified frame actions determine its action
+on their nondegenerate joint span, and its orthogonal complement
+embeds in the middle quotient on which the flag radical acts
+trivially. Conversely the indicated actions preserve the joint Gram
+matrix, and their extension by the identity is in both radicals.
+Indeed, after dividing out the null flag the distinguished
+nonisotropic vector is fixed, and the induced action on its definite
+orthogonal complement is both unitary and unipotent, hence trivial.
+
+In the rescaled signature frame one reads each right entry by
+pairing against its dual vector. The isometry \(Q\) takes each
+standard dual vector to precisely this dual, so all coordinate
+factors of the prescribed root measure agree. Within a block,
+reversal exchanges indices and complex conjugation preserves real
+area. More explicitly, writing \(U_j=1+Z\) gives
+\[
+      U_j^{-1}=1-Z+Z^2-\cdots+(-Z)^{s-1},\qquad
+      |\det_{\mathbb R}D(Z\mapsto U_j^{-1}-1)|=1 .
+\]
+Each nonlinear term in an entry uses entries closer to the diagonal. On the first superdiagonal the alternating
+signs cancel the minus sign. Consequently the real parts of the
+two simple-root sums agree, including zeros between blocks. The
+two character factors in the product of one Bessel coefficient and
+the conjugate of the other cancel on \(R_\gamma\).
+
+For a compactly supported ambient test \(H\), Weil's formula now
+reads, in the two frames,
+\[
+ \int_G H(x)\,dx
+ =\int_{R_\gamma\backslash G}\int_{R_\gamma}H(sx)\,ds\,d\dot x
+ =\int_{c(R_\gamma)\backslash G_{\rm Witt}}
+     \int_{c(R_\gamma)} (H\circ S^{-1})(ut)\,du\,d\dot t .
+\]
+Uniqueness of the quotient measure proves the assertion, including
+the inverse factor on rescaling \(ds\).
+\end{proof}
+
+\begin{auxlemma}[The coefficient on a terminal matrix fibre]\label{lem:oriented-terminal-fibre}
+Use the convention that \(h\) is conjugate-linear in its first variable,
+with \(T,T'>0\) and the perpendicular middle spaces negative definite.
+For the pointwise fixer \(H\) of a short frame and the compact middle group \(K\), write
+\[
+ H=K N_0,\qquad N_0=\ker\bigl(N\longrightarrow U_R\bigr)
+\]
+using the action of the flag radical on this frame. Use primes on the right. Write \(p,p'\) for the maps from
+the respective orthogonal complements of the null flags to their
+middle quotients followed by projection off \(z,z'\). Fix a unitary
+identification \(m_0\) of the right perpendicular middle space with
+the left one and a unit vector \(\nu'\) on the right, with respect to
+\(-h\). Let \(F\) be a smooth compactly supported operator-valued test with
+\(\operatorname{supp}F\subset\{G_f\ge\delta\}\), \(\delta>0\).
+
+There is a smooth compactly supported matrix test
+\(\Phi_0:M_R(\mathbb C)\longrightarrow\operatorname{Hom}(V',V)\)
+such that on each matched permutation cell
+\[
+ J_XF=\int\chi_L(L^*)\overline{\chi_R(U)}\,
+             \Phi_0(LXU)\,dL\,dU,\qquad
+ \operatorname{supp}\Phi_0\subset\{|\det X|^2\ge\delta\}.
+\]
+Here \(L,U\) range over the free lower and upper entries of the cell
+and \(\chi_L,\chi_R\) are the two short-frame characters.
+\end{auxlemma}
+
+\begin{proof}
+Write \(v_i,v'_j\) for the short frames, with last index \(R\), and
+put \(D=\det X\), \(d=\det X_{[R-1]}\), \(G=|D|^2-TT'|d|^2\).
+For \(X=X(g)\) define the two cofactor vectors
+\[
+ b=\sum_j(\operatorname{adj} X)_{jR}g v'_j,\qquad
+ b'=\sum_i\overline{(\operatorname{adj} X)_{Ri}}v_i .
+\]
+The identity \(X\operatorname{adj}X=D I\) gives
+\(h(v_i,b)=D\delta_{iR}\); also \(h(b,b)=T'|d|^2\).
+The two vectors are perpendicular to the respective null flags after
+pulling \(b'\) back by \(g^{-1}\). Consequently
+\[
+ -h(pb,pb)=G/T,\qquad
+ -h(p'g^{-1}b',p'g^{-1}b')=G/T'.
+\]
+
+The unit vectors specified by these formulas have a phase as well as
+a length. Require the directions of \(pb/D\) and
+\(p'g^{-1}b'/\bar D\) to be \(m_0\nu'\) and \(\nu'\), respectively,
+with positive real proportionality factors. On the common
+perpendicular space \(E=(\langle v_i,g v'_j\rangle)^{\perp_h}\)
+require in addition
+\[
+                         pe=m_0p'g^{-1}e\qquad(e\in E).
+\]
+These requirements can be imposed smoothly locally in \(X\).
+Indeed, the preceding submersion provides an initial section.
+Projection of \(E\) into each perpendicular middle space is an
+isometry since the null flag is the radical of its own orthogonal
+complement. The relations \(e\perp b,z\) and their right-hand
+counterparts, together with \(\dim E=k-1\), give
+\[
+ pE=(pb)^\perp\subset z^\perp_{\rm mid},\qquad
+ p'g^{-1}E=(p'g^{-1}b')^\perp\subset (z')^\perp_{\rm mid}.
+\]
+
+Choose a unitary rotation on the right taking the
+specified right direction to \(\nu'\); locally one may complete each
+unit vector smoothly to an orthonormal basis. On the left send its
+direction to \(m_0\nu'\) and prescribe the rotation on its complement
+by the displayed isometry. Applying these two compact rotations to
+the initial representative gives the required local section.
+
+At such a representative \(g_X\) let \(k(s)\) denote the compact
+action of \(s\in H\) on its perpendicular middle quotient, and use
+\(k'(t)\) on the right. With the two compact representations
+\(\pi,\pi'\), put
+\begin{equation}\label{eq:oriented-terminal-fibre}
+ \Phi_0(X)=a_La_R\int_{H\times H'}
+       \pi(k(s)) F(s^{-1}g_Xt)\pi'(k'(t))^{-1}\,ds\,dt .
+\end{equation}
+The constants compare the given Haar measures with entry measure
+on the action of each radical on its short frame:
+\[
+ 1\longrightarrow N_0\longrightarrow N\longrightarrow U_R\longrightarrow1,
+ \qquad dn=a_L\,dn_0\,dU,\qquad dn'=a_R\,dn'_0\,dU'.
+\]
+
+To lift an element of \(U_R\), let its upper left null block act on
+the dual null block by inverse conjugate transpose. In Witt coordinates
+pairing the outer blocks by the identity, let \(H_m\) be the middle
+Gram matrix. The remaining last column is supplied by
+\[
+ \begin{pmatrix}1&B&BC/2\\0&1&C\\0&0&1\end{pmatrix},
+ \qquad C=-H_m^{-1}B^* .
+\]
+This matrix preserves the form, and \(Bz\) may be any null-flag vector.
+Thus the quotient Haar is a constant multiple of entry Haar, since
+both groups are unipotent. Rescaling either kernel measure rescales
+the corresponding constant inversely:
+\[
+    dn_0\mapsto t\,dn_0 \quad\Longrightarrow\quad a_L\mapsto a_L/t .
+\]
+
+Two representatives with the same \(X\) differ by the two
+pointwise fixers. Indeed the isometry fixing the first frame and
+taking the second to the other one extends from their nondegenerate
+span by an isometry of its perpendicular complement. At representatives
+satisfying the three frame requirements, the induced compact
+maps fix the two distinguished unit vectors and agree via \(m_0\)
+on their complements. Every such simultaneous rotation arises from
+the stabilizer of \(g_X\): act on \(E\) by the prescribed rotation
+and by the identity on its orthogonal complement. Changing variables
+in \eqref{eq:oriented-terminal-fibre} shows that the integral
+intertwines these two stabilizer actions. The formula therefore
+has the same value on overlapping sections. More explicitly, for
+the common rotation \(v\in U(E)\) the value \(M\) satisfies
+\[
+             \pi(m_0 v m_0^{-1})M=M\pi'(v),
+\]
+where \(v\) acts as the identity on the distinguished unit direction.
+
+The fibre action has compact stabilizer \(U(E)\), and the map
+\((s,t)\mapsto s^{-1}g_Xt\) identifies its quotient with the
+fibre. To differentiate locally, use smooth lifts in this quotient:
+the tangent to a fibre consists of infinitesimal isometries of the
+two frames with all mixed pairings fixed, which extend by
+skew-Hermitian operators on the complement. The orbit map is thus a
+submersion along each fibre. Over the compact support of the test,
+finitely many such local lifts and their compact stabilizers suffice.
+Equivalently, if \(H_X\) is the stabilizer of \(g_X\), then
+\[
+ H_X\simeq U(E),\qquad H_X\backslash(H\times H')\simeq\{g:X(g)=X\}.
+\]
+Differentiation under the integral gives smoothness. Its support
+lies in the compact image under \(X\) of \(\operatorname{supp}F\);
+extension by zero is smooth at \(G=0\).
+
+Finally choose representatives of the two short-frame actions
+\(U_L,U_R\). The cross matrix becomes \(L X U\), with
+\(L=U_L^*\) and \(U=U_R\). Both triangular factors have determinant
+one, preserve the leading \((R-1)\)-minor, and satisfy
+the adjugate identities
+\[
+ \operatorname{adj}(LXU)=U^{-1}(\operatorname{adj}X)L^{-1},
+ \qquad L^{-1}e_R=e_R,\quad e_R^t U^{-1}=e_R^t .
+\]
+
+The two cofactor vectors and the common perpendicular space
+therefore transform by the outer flag actions. Their induced action
+in each middle quotient is trivial, so the chosen orientations agree.
+Apply Weil integration to both kernels and divide by the common
+root stabilizer. Identifying it with its projection to the left
+triangular group gives
+\[
+         R_X^L=U_R^{\rm lower}\cap X U_R X^{-1},
+         \qquad R_X^L\backslash U_R^{\rm lower}\ \times\ U_R .
+\]
+The second expression denotes the free left and right coordinates
+after the simultaneous stabilizer action has been eliminated.
+In increasing distance from the diagonal, eliminating an entry
+adds a polynomial in earlier entries, with diagonal multiplier one
+in the left root coordinates. The surviving entries carry their
+product Haar and the character is the left simple-root character
+times the conjugate of the right one.
+
+In the Witt coordinates choose the common simple-root coefficient
+\(c_*\in i\mathbb R^\times\); a rotation of each complex root
+coordinate carries the character and its self-dual measure together.
+If \(l\) is the first-subdiagonal sum in \(L\) and \(u\) the
+first-superdiagonal sum in \(U\), the phase in these frames is
+\[
+ e^{i\RePart(c_*\bar l)}\,e^{-i\RePart(c_*u)}
+        =\psi_{-c_*}(l+u).
+\]
+Thus the parameter \(\beta\) in the matrix germ for this normalization
+is \(-c_*\). This gives the asserted
+matrix integral with \eqref{eq:oriented-terminal-fibre}; scaling
+the relative stabilizer has the effect computed in
+Lemma~\ref{lem:orbital-frame-transport}.
+\end{proof}
+
+For comparison, a nonterminal block still has a residual group
+variable \(\gamma\). The two outer radicals in
+Lemma~\ref{lem:compact-prefix-amplitude} give the integrand
+\[
+ \psi_L(u_L)\overline{\psi_R(u_R)}\,
+ \psi_{\rm pre}(A,B,L,U)\,
+ F\!\left(u_L^{-1}
+ \begin{pmatrix}0&0&(W^*)^{-1}w_j\\0&\gamma&0\\w_jW&0&0\end{pmatrix}
+ u_R\right).
+\]
+Here \(\psi_{\rm pre}\) is the character in the prefix variables of
+that lemma, including the two adjacent corner entries when both
+blocks are nonempty. To split two successive blocks, order the
+strictly triangular entries within the first block, between the
+blocks and within the second. Multiplication of unitriangular
+matrices in these coordinates preserves product entry measure:
+each higher entry is translated by a polynomial in lower entries.
+If \(j=p+s\) and \(p,s>0\), the character factorization follows from
+\[
+ \operatorname{ss}\!\begin{pmatrix}U_1&B\\0&U_2\end{pmatrix}
+   =\operatorname{ss}(U_1)+B_{p,1}+\operatorname{ss}(U_2).
+\]
+For an empty block the boundary summand is absent. Fubini for the compact cut test
+now gives exactly the iterated integral, at fixed \(\gamma\).
+
+Compactness on a fixed determinant range follows from the block
+inverse formulas in Lemma~\ref{lem:compact-prefix-amplitude}.
+This proves the identification at each prefix by induction, starting
+at the terminal integral of Lemma~\ref{lem:oriented-terminal-fibre}
+or at the indicated residual group integral.
+
+   To apply the formula to a two-block coefficient put \(t=x^{-1}\), \(c=x^n D\) and \(s=n+1\). The critical roots then satisfy \(z^s=(-1)^nD\). Use the oriented parameter \((-1)^nD\) for the power map in the next calculation. At such a root the leading contribution has phase \(\psi_\beta(sxz)\). Its factor \(s^{-1}|z|^{n^2}\) belongs to the coefficient of the merged block. The square Jacobian of this power map is
+\[
+                d^2(z^s)=s^2|z|^{2(s-1)}\,d^2z .
+\]
+It accounts for the factor \(s|z|^{s-1}\) in the Gram vectors below. Lemma~\ref{lem:compact-prefix-amplitude} applies once the partially integrated coefficient has been identified with that compact matrix or group test. Its estimate is local in the preceding variables and the cutoffs.
+\label{cor:orbital-germ-1}
+
+\subsection{The Gram limit under a power map}
+
+The germ controls a vector for each history. The period estimate compares inner products between histories, so one must examine what happens when the oscillatory leading terms are paired and integrated.
+Fix a finite set of histories \(h\), a Hilbert space \(\mathcal H\)
+and a size \(s\ge2\). Write \(V_{h,x}(c)\) for the
+size-one vectors, with preceding parameter \(x^{-1}\) of
+size \(s-1\), in the common Hilbert space \(L^2(\C,dc;\mathcal H)\).
+Assume these vectors have uniformly bounded \(L^2\) norms.
+The norm estimate needed below, for each compact
+\(K\subset\C^\times\), is
+\begin{equation}\label{eq:gram-rate}
+ |x|^{s-1}V_{h,x}(x^{s-1}D)
+ =A_{h,x}(D)+O_K(|x|^{-1}),\qquad
+ A_{h,x}(D)=\sum_{z^s=D}\psi_\beta(sxz)b_h(z).
+\end{equation}
+The \(b_h\) are locally square-integrable off zero.
+In the submitted normalization the higher diagonal kernel is
+the Gram of the vectors \(B_h(z)=s|z|^{s-1}b_h(z)\),
+times its size-dependent normalization.
+
+\begin{construction}
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth]
+\node (z) at (0,0) {\(z\)};
+\node (zp) at (5.4,0) {\(z'\)};
+\node (c) at (2.7,-1.25) {\(c\)};
+\draw[->] (z)--node[above]{\(z'=\zeta\rho z,\quad \zeta^s=1\)}(zp);
+\draw[->] (z)--node[below left]{\(x^{s-1}z^s\)}(c);
+\draw[->] (zp)--node[below right]{\((x')^{s-1}(z')^s\)}(c);
+\end{tikzpicture}
+\caption{The two inverse coordinates above a common determinant parameter. The branch \(\rho^s=(x/x')^{s-1}\) tending to one singles out \(\zeta=1\) in the limiting Gram integral.}\label{fig:power-map-branches}
+\end{construction}
+
+\begin{lemma}\label{lem:gram-limit}
+Under \eqref{eq:gram-rate}, let
+\(\widetilde A_{h,x}(c)=|x|^{-(s-1)}A_{h,x}(c/x^{s-1})\).
+The block Gram matrix of \(V\) and \(\widetilde A\) is positive
+semidefinite on every finite set of indices. As \(|x|\to\infty\)
+and \(x'=x+\sigma\) for fixed \(\sigma\), both the
+\((\widetilde A_{h,x},\widetilde A_{h',x'})\) and
+\((V_{h,x},\widetilde A_{h',x'})\) Gram entries tend to
+\[
+ \int_{\C}\psi_\beta(\sigma z)
+             \langle B_h(z),B_{h'}(z)\rangle\,d^2z .
+\]
+Here the inner product is conjugate-linear in the first
+variable, and \(dc\) denotes complex area measure.
+\end{lemma}
+
+\begin{proof}
+\proofstep{Square integrability under the power map.}
+
+Set \(W_{h,x}(D)=|x|^{s-1}V_{h,x}(x^{s-1}D)\).
+The dilation preserves its \(L^2\) norm. On a compact annulus
+in \(D\), open the square of \(A_{h,x}\) and change variables
+by \(D=z^s\), with real Jacobian \(s^2|z|^{2s-2}\).
+The terms involving two distinct roots tend to zero by
+Riemann--Lebesgue, since their amplitudes are integrable on
+the compact preimage and their frequencies tend to infinity.
+
+The equal-root terms give the squared \(L^2\) norm of \(B_h\)
+on the preimage \(A^{1/s}=\{z:z^s\in A\}\) of the annulus \(A\).
+The error in \eqref{eq:gram-rate} tends to zero in \(L^2(A)\),
+so the uniform bound on \(W\) gives
+\[
+ \|\mathbf 1_{A^{1/s}}B_h\|_2^2
+    =\lim_{|x|\longrightarrow\infty}\|\mathbf 1_A A_{h,x}\|_2^2
+    \le \sup_x\|W_{h,x}\|_2^2 .
+\]
+Exhaust the punctured plane. Pointwise Cauchy--Schwarz on the
+\(s\) roots now gives \(\|A_{h,x}\|_2^2\le s\|B_h\|_2^2\).
+The positive block is the Gram matrix of the resulting
+vectors at every index in the common \(c\) variable.
+
+\proofstep{The Gram entry of the two approximants.}
+
+Pairing the two leading terms introduces products of phases. Equal roots give the diagonal contribution, while distinct roots must be separated by oscillation.
+
+
+In the common \(c\) variable, the two power equations read
+\[
+ x^{s-1}z^s=c=(x')^{s-1}(z')^s .
+\]
+Let \(\rho\) be the \(s\)th root of \((x/x')^{s-1}\) tending
+to one. Then \(z'=\zeta\rho z\) for \(\zeta^s=1\).
+The area formula expresses the approximant entry as the sum over
+\(\zeta\) of
+\[
+ \int_{\C}\psi_\beta\bigl(s(\zeta\rho x'-x)z\bigr)
+     \langle B_h(z),|\rho|B_{h'}(\zeta\rho z)\rangle\,d^2z .
+\]
+The factor \(|\rho|\) is the ratio of the area dilation
+factor \(|\rho|^s\) and the normalization
+\(|\rho|^{s-1}\) of the second \(B\) vector.
+
+By density of
+compactly supported continuous vectors, these dilations
+are strongly continuous in \(L^2\). Thus the moving amplitude
+can be replaced by the one with \(\rho=1\) at \(o(1)\)
+cost in \(L^1\). For the unrotated root, \(x'=x+\sigma\) and the chosen
+branch near one give
+\[
+ \rho x'=x(1+\sigma/x)^{1/s}
+       =x+\sigma/s+O(|x|^{-1})
+\]
+for fixed \(\sigma\). The limiting phase is then
+\(\psi_\beta(\sigma z)\).
+For the other roots,
+\[
+ s(\zeta\rho x'-x)=s(\zeta-1)x+\zeta\sigma+O(|x|^{-1}),
+ \qquad \zeta\ne1 .
+\]
+Those frequencies tend to infinity. Dominated convergence at
+\(\zeta=1\) and Riemann--Lebesgue at the other roots give the limit.
+
+\proofstep{The Gram entry with the original vector.}
+
+For the cross entry, write the difference from this
+approximant entry in the first \(D\) variable. The error
+\(W_{h,x}-A_{h,x}\) is uniformly bounded in \(L^2\) and
+tends to zero on compact annuli. The other factor is
+dominated by an \(L^2\) dilation of the fixed function
+\(D\mapsto\sum_{z^s=D}\|b_{h'}(z)\|\). This function belongs to
+\(L^2\) by the same area formula.
+
+Write \(E_x=W_{h,x}-A_{h,x}\), and let \(F_x\) be the moving
+dilation of the fixed dominator \(F\). Strong continuity of the dilation gives
+\[
+ \int |E_x|\,|F_x-F|\le \|E_x\|_2\|F_x-F\|_2=o(1).
+\] For a compact annulus \(A\), the integral there tends to zero.
+If \(F(D)=\sum_{z^s=D}\|b_{h'}(z)\|\) is the fixed dominator,
+the limsup of the absolute cross-entry error is at most
+\[
+  \sup_x\|W_{h,x}-A_{h,x}\|_2\,\|\mathbf 1_{\mathbb C\setminus A}F\|_2 .
+\]
+Exhausting the punctured plane proves the second limit.
+\end{proof}
+
+ The area formula and the moving-dilation argument give the limits for the local germ. These limits hold for fixed local
+data and each finite history set. The uniform bound as
+the dimensions grow is supplied by the period majorants in
+Section~\ref{sec:block-recursion}. \label{cor:orbital-germ-2}

@@ -1,0 +1,515 @@
+\subsection{The arithmetic degree at the selected length}
+\label{subsec:deep-arithmetic-degree}
+
+We now estimate the determinant of the component lattice at the selected length.
+
+For the Hilbert--Samuel comparison keep the moving system
+of \S\ref{subsec:component-rank-comparison}. Use the two
+generating cusp frames at \(u_1,u_2\) and the canonical
+section maps at \(v(j)\). The two frames are integral and
+their section ratios generate the function field of the flag
+component. The \(u_1\) frame gives the hyperplane sections \(x_i\);
+the \(u_2\) frame supplies the auxiliary line for the residue and
+vanishing tests. At \(j=0,d,T\) the short integral sections span after extension of scalars.
+In particular the \(T\)-lattice is full in the determinant
+space.
+
+Let \(V\) be the component cusp system at \(u_1\), with integral
+lattice \(L\) and Petersson norm at each embedding \(\sigma:F\hookrightarrow\mathbb C\).
+A hyperplane block is a vector in \(V\). Choose \(\beta\ge1\) so that
+\begin{equation}\label{eq:hs-unit-sphere-beta}
+ \sup_\sigma\ \sup_{\substack{X\in V_\sigma\\\|X\|_{\mathrm P,\sigma}=1}}
+                      \|X\|_{\sup,\sigma}^2\le\beta .
+\end{equation}
+For a hyperplane \(X\) and a section \(G\) in a compatible weight,
+\[
+ \|XG\|_{\mathrm P,\sigma}^2
+ \le\|X\|_{\sup,\sigma}^2\|G\|_{\mathrm P,\sigma}^2
+ \le\beta\,\|X\|_{\mathrm P,\sigma}^2\|G\|_{\mathrm P,\sigma}^2.
+\]
+Thus a unit hyperplane costs at most \(\sqrt\beta\) in ordinary length.
+An integral generator \(x_i\) of length at most \(\Lambda\) instead
+satisfies \(\|x_i\|_{\sup,\sigma}^2\le\beta\Lambda^2\).
+
+Let \(H_Z\) be the normalized Chow height of the moving image in
+\(\mathbf P(V^\vee)\), with the lattice \(L\) at finite places and
+the Fubini--Study metric induced by the Petersson norm at infinity.
+Its Chow form takes \(d+1\) hyperplane blocks, of degree \(D_Z\) each.
+A generic line frame \(e\) gives values \(x_i/e\).
+Replacing \(e\) by \(a e\) with \(a\ne0\) gives
+\[
+ [x_0/e:\cdots:x_m/e]=
+          [a^{-1}x_0/e:\cdots:a^{-1}x_m/e] .
+\]
+Thus this common division leaves the projective image and
+its normalized Chow height unchanged.
+
+\paragraph{Short generators in the Petersson metric.}
+Put \(Z_0=fr\ell\), where \(f\) counts the weight labels,
+\(r\) is the rank and \(\ell\) is the logarithmic scale of
+the selected model. For a dominant weight \(v\) let
+\(S(v)=\sum_{\tau,k}|v_{\tau,k}|\).
+The wall gap needed for the short family is
+\(8fr+10\), which is available at \(u_1\) and every \(v(j)\)
+used here. With coordinates numbered from zero use
+\[
+         m_0=fr+1,\qquad
+         n_{0,\tau}=1+4m_0-v_{\tau,p-1}.
+\]
+Start at even theta degree \(8m_0\). Adding \(n_{0,\tau}\) makes the last coordinate of the positive block
+equal to \(1+4m_0\) before restoring the weight. The wall gap
+leaves the required \(4m_0\) interior margin on each
+half of the theta exponents.
+
+If \(U\) is the key unit and \(F_{-n_0}\) is the
+parallel flat section with shifts \(-n_{0,\tau}\), the
+map from the theta family to weight \(v\) is
+\[
+                  g\longmapsto g\,U^{m_0}F_{-n_0}.
+\]
+The key unit corrects the central degree. The last
+factor subtracts \(n_{0,\tau}\) at each label \(\tau\). Both sections
+are nonzero on the component and have nonnegative
+orders in its integral rule model. Their flat
+identifications over \(F\) carry the full theta span
+to the component cusp space at \(v\). The even-degree
+theta spanning and norm estimates are applied at the
+deep level with the unramified marking used by the
+cusp system.
+
+\input{deep-short-readings}
+
+For each member the stable theta norm costs at most
+\(C_g Z_0^2 K_{\theta}\) in logarithmic length, where
+\(K_{\theta}\) is the absolute sum of the theta weight
+coordinates. The shift of each coordinate by \(n_{0,\tau}\)
+and the theta degree gives
+\(K_{\theta}=O(rS(v)+fr(fr+1))\). The sum of the absolute
+flat exponents is bounded by \(S(v)+f(1+4m_0)\).
+The key unit costs \(2fr m_0\log(2\pi)\).
+
+Write \(\operatorname{rd}\) for the root discriminant, and
+let \(c_1\) be the logarithmic flat period.
+The flat
+section costs at most
+\[
+ (|c_1|+q\,\log\operatorname{rd}(E))
+     \sum_\tau |n_{0,\tau}|
+ +\sum_{l\ {\rm bad}}\log l
+ +\tfrac12\log\operatorname{rd}(F)+1 .
+\]
+The selected
+bounds are \(|c_1|\le9r\ell\),
+\(\log\operatorname{rd}(E)\le3\ell\) and
+\(\log[F:\Q],\log\operatorname{rd}(F)\le391Z_0^2\).
+The bad-prime sum on this level is \(O(Z_0^2)\).
+Together these give a spanning family of integral
+vectors of log length at most
+\(C(Z_0^3S(v)+Z_0^5)\) with an absolute constant \(C\).
+\label{cor:covolume-hilbert-samuel-1}
+
+\begin{lemma}[Short integral generators at the selected weights]
+\label{lem:deep-integral-generators}
+On the component of Lemma~\ref{hyp:deep-short-span}, use
+the integral span of Proposition~\ref{prop:deep-short-integral-span}
+over the same coefficient field as the determinant. For
+\(\kappa\ge1\), \(P\ge Z_0^{12}\) and sufficiently large \(Z_0\),
+let \(h(\lambda)\) be the largest log Petersson norm among the chosen generators of the full integral lattice at \(\lambda\). One can choose them so that
+\[
+ \begin{aligned}h(u_1)&\le P(\kappa/T+1),& h(v(j))&\le P\kappa\quad(0\le j\le T),\\h(v(0))&\le dP(\kappa/T+1).\end{aligned}
+\]
+
+\end{lemma}
+
+\begin{proof}
+\proofstep{Passing from a short span to integral generators.}
+To obtain generators of the integral lattice, choose
+an \(F\)-basis from this short span. If \(h=[F:\Q]\)
+and its size is \(a_0\), tensor it with \(h\) independent
+integers of \(F\) of conjugate absolute values at most
+\(h^3\operatorname{rd}(F)\). Such integers follow from
+the successive-minima bound for a number field.
+This is a \(\Q\)-basis contained in the integral lattice.
+Call the \(ha_0\) vectors of the resulting basis \(v_i\).
+
+For each vector \(z=\sum_i c_iv_i\) in an integral basis of the lattice,
+retain the remainder
+\[
+ z'=z-\sum_i\lfloor c_i\rfloor v_i
+   =\sum_i(c_i-\lfloor c_i\rfloor)v_i,\qquad
+ \|z'\|\le ha_0\max_i\|v_i\|.
+\]
+The \(v_i\) and the remainders together recover every original \(z\). The new list of at most \(2ha_0\)
+vectors generates the lattice and increases the length
+bound by at most \(\max(1,h^4a_0\operatorname{rd}(F))\).
+This also proves the claim when the chosen \(F\)-basis
+generates a sublattice of large index.
+
+The selected size hypotheses also give
+\[
+ \log\max(1,S(v))\le20\ell,
+\]
+the range of the uniform
+point estimate. The point evaluation bound in the normalized Petersson
+model with summed spread at most
+\(1+2[E:\Q]S(v)\) gives a Bergman bound with logarithm
+at most \(4000Z_0^3\). Its integral over a component,
+with its mass bound, controls the log rank by
+\(O(Z_0^3)\). The resulting generator count has log
+bounded by \(O(Z_0^3)\), and the cost of passing from
+spanning vectors to integral generators is absorbed in
+\(C(Z_0^3S(v)+Z_0^5)\). At \(u_1\) this is precisely the unit-ball estimate \eqref{eq:hs-unit-sphere-beta}. Thus
+one may take \(\log\beta\le4000Z_0^3\le P\) after increasing the fixed
+threshold on \(Z_0\). The lengths of the integral generators enter separately.
+
+\proofstep{The size and norm at the actual weights.}
+The weight estimates are
+\[
+ S(u_1)\le Z_0^2(\kappa/T+1),
+\]
+
+\(S(v(j))\le Z_0^2\kappa\) for \(0\le j\le T\), and
+\(S(v(0))\le 3d Z_0^2(\kappa/T+1)\).
+The last bound follows by summing the three terms
+\(\kappa_{\rm can},u_2,d u_1\) at \(j=0\).
+With \(\kappa\ge1\), \(P\ge Z_0^{12}\), and \(Z_0\)
+eventually larger than the fixed constants,
+the log generator bounds at \(u_1\) and \(v(j)\)
+are respectively \(P(\kappa/T+1)\) and \(P\kappa\).
+At \(v(0)\) the separate bound is \(dP(\kappa/T+1)\).
+For example the latter cost is at most
+\[
+ 4Cd Z_0^5(\kappa/T+1)\le dP(\kappa/T+1).
+\]
+
+The log rank bound at \(v(T)\), combined with
+\(D_Z\le J_Z\le r_Z\), gives \(\log D_Z\le P\).
+All these are estimates on the same component with its
+prescribed determinant frame. \label{cor:covolume-hilbert-samuel-2}
+
+\end{proof}
+
+\paragraph{Chow form and determinant.}
+
+The short sections determine a projective frame. The height term in the arithmetic degree is obtained by comparing its Chow form with a determinant on the same component.
+
+The determinant estimate uses a short generating family
+of the \(u_1\) frame, with number \(n_1\) and length bound
+\(\Lambda\). It uses ordinary length bounds
+\(\Lambda_0,\Lambda_d,\Lambda_T\) at \(0,d,T\). Put
+\(I_0=\log\Lambda_0\le dP(\kappa/T+1)\).
+The length and squared norm bounds are at least one.
+Lemma~\ref{lem:deep-integral-generators} supplies the following
+bounds on the selected component
+\begin{align*}
+ &\log n_1,\ \,\log\beta,\ \,\log D_Z\le P,
+ \qquad \log\Lambda\le P(\kappa/T+1),\\
+ &\log\Lambda_d,\ \,\log\Lambda_T\le P\kappa,\\
+ &I_0\le4\{dP(\kappa/T+1)+TP\}+2dP\kappa/T.
+\end{align*}
+The radius and the volume correction use
+\[
+ \log R=\log\Lambda+26\log\big(n_1 d D_Z
+                 (2+|H_Z|+\log\Lambda)\big),
+ \qquad
+ g=\frac{(d+1)(\log n_1+1)}{2}+1 .
+\]
+
+\begin{proposition}[The selected-length Hilbert--Samuel lower bound]
+\label{prop:component-arithmetic-degree}
+For the moving system at the selected length \(T\), the normalized
+ordinary degree of the component lattice satisfies
+\eqref{eq:deep-hs-raw}; in particular, writing \(d_{\rm cusp}\) for this normalized degree, \eqref{eq:deep-hs-budget} gives
+\[
+ d_{\rm cusp}\ge J_Z\{T H_Z-3(d+1)|H_Z|-A\log(2+|H_Z|)-R_0\},\qquad R_0=4000b+2c_{\rm flat}.
+\]
+
+Both estimates use the same \(D_Z\) and \(J_Z\) as the
+component rank calculation.
+\end{proposition}
+
+\begin{proof}
+\proofstep{The determinant of the integral moving system.}
+Here is the determinant estimate on this integral
+system. Use generic \(d\) hyperplane cuts of the
+moving system. On the open set where the cut is reduced
+and meets the flag locus, its residue algebra has rank
+\(D_Z\). After a splitting extension the specialized
+Chow form in the last hyperplane block is, up to a
+nonzero scalar, the product of the \(D_Z\) linear
+evaluation forms. The filtration by powers of the cut
+ideal has monomial symbols in its \(d\) generators.
+The residue-surjectivity test uses the second frame
+and the nef and big adjoint lines. The cohomology
+vanishing test identifies the last filtration piece
+with the products from degree \(d\).
+
+In particular
+the lower symbol columns have \(D_Z\) residue columns
+for each multi-index of total degree less than \(T-d\).
+Counting weak compositions in \(d\) variables gives the number of lower columns,
+\[
+ J_Z=D_Z\sum_{j=0}^{T-d-1}\binom{j+d-1}{d-1}=D_Z\binom{T-1}{d}.
+\]
+Take a cut maximizing
+the deepest filtration rank \(k\) on this open set. Complete
+the symbol columns first from the degree-\(d\) family
+and then from the degree-\(T\) family, using the full
+spans at these degrees. The result is a nonzero
+polynomial determinant with columns integral over the
+coefficient lattice. Over every good specialization
+the symbol of order \(|\alpha|\) has \(T-|\alpha|\)
+factors of the last hyperplane. Its determinant over the
+residue algebra gives the specialized Chow form to that
+power.
+
+Summing over \(|\alpha|<T-d\) gives the exponent
+\[
+ T\binom{T-1}{d}-d\binom{T-1}{d+1}
+   =\binom{T}{d+1}+d\binom{T-1}{d}.
+\]
+The generic rank choice bounds every specialized last
+piece by the number of chosen degree-\(d\) columns.
+The Chow polynomial is irreducible and has positive degree
+in the last block, so it is primitive over the polynomial
+ring in the first \(d\) blocks. Gauss's lemma descends the
+divisibility over the fraction field of that ring to the
+original determinant. This uses the dimension of the original
+residue algebra, which is \(D_Z\) before as well as
+after splitting.
+\label{cor:covolume-hilbert-samuel-3}
+
+\proofstep{The Chow form on a component.}
+Write \(f_Z\) for the Chow form and factor out
+\(f_Z^{\binom{T}{d+1}}\), which suffices for the degree bound.
+Write \(Q\) for the resulting cofactor.
+The three column counts are
+\[
+ J_Z,k,r_Z-J_Z-k.
+\]
+
+Their degrees in the hyperplane variables, summed over
+blocks, are \(T,T-d,0\), respectively. The extracted
+power \(f_Z^{\binom{T}{d+1}}\) has total degree
+\[
+ (d+1)D_Z\binom{T}{d+1}=TJ_Z.
+\]
+Therefore the total
+degree of \(Q\) is \(k(T-d)\).
+
+For a scalar multiform \(B\) on \(V^{d+1}\), use the mean of
+\(\log|B|\) over the product of Petersson unit spheres at infinity.
+At a finite prime \(\mathfrak p\), write
+\[
+ q_{\mathfrak p}:\mathcal O_{F,\mathfrak p}^{\,n_1}\twoheadrightarrow L_{\mathfrak p},
+ \qquad (z_i)_i\longmapsto\sum_i z_i x_i .
+\]
+Use the maximum absolute coefficient of \(B\circ(q_{\mathfrak p},\ldots,q_{\mathfrak p})\).
+This agrees with its Gauss norm in a local lattice basis. Each set of generators
+is an integral linear combination of the other, and neither substitution
+increases the maximum. The normalized sum of the finite logarithms
+and the infinite means is \(h_{\rm Mahler}(B)\).
+
+Let \(n_{\rm im}\le n_1\) be the dimension of the
+hyperplane coefficient space before this substitution.
+The geometric Chow height uses the same finite Gauss
+norms and adds the harmonic correction per homogeneous
+degree to the sphere mean. Dividing by \((d+1)D_Z\) gives
+\[
+ h_*:=\frac{h_{\rm Mahler}(f_Z)}{(d+1)D_Z}
+ = H_Z-\frac12\sum_{a=1}^{n_{\rm im}-1}a^{-1}
+ \ge H_Z-\frac{\log n_1+1}{2}.
+\]
+The lower bound for a nonzero multiform of total degree \(a\)
+in this frame is \(-c_Ha\), where
+\[
+ c_H=\log n_1+\log\Lambda+(\log n_1+1)/2.
+\]
+Here the two norm comparisons use the full integral frame,
+its spanning evaluations and the bound \(\Lambda\).
+The unit-sphere log integral has a loss at most
+\((\log n_1+1)/2\) per homogeneous degree.
+
+To see the
+sphere bound, rotate a point of maximum modulus to the
+first coordinate axis and average in the phase of that
+coordinate, using Jensen's inequality on the polynomial
+in that phase. The leading coefficient is the value at
+the first axis multiplied by the corresponding power of
+the coordinate modulus. For a uniform point \(z\) on the unit
+sphere in \(\mathbb C^{n_{\rm im}}\) the mean of \(\log|z_1|\) is
+\[
+ -\frac12\sum_{a=1}^{n_{\rm im}-1}a^{-1},
+\]
+at least
+\(-(\log n_1+1)/2\). Apply the bound in each block.
+
+For the cofactor lower bound choose any nonzero coefficient
+after the spanning-family substitution. Such a coefficient
+exists because the family spans over the field. The finite
+Gauss norms bound the coefficient locally. At infinity
+Cauchy's formula on the coordinate unit torus bounds it by
+the supremum over linear combinations of the generators
+with coefficients of modulus one. Each combination has
+frame norm at most \(n_1\Lambda\). Homogeneity and the
+sphere estimate bound that supremum by the exponential
+of the sphere mean plus \(c_H a\). The product formula
+for the coefficient gives
+\[
+ h_{\rm Mahler}(Q)\ge-c_Ha.
+\]
+
+
+\proofstep{Multiplicativity of the height.}
+Mahler height is additive on products. Thus the determinant
+has height at least \(TJ_Zh_*-c_H k(T-d)\).
+Let \(L_T\) be the full lattice at \(v(T)\) and choose an \(F\)-basis
+\(\xi\) of its determinant line. Write
+\[
+  \det L_T=\mathfrak a\,\xi,\qquad
+  \bigwedge_{i=1}^{r_Z} C_i(X)=\delta(X)\,\xi ,
+\]
+where \(C_i(X)\) are the three families of polynomial columns just constructed.
+At every finite prime each column coefficient after the substitution
+\(q_{\mathfrak p}\) is a sum of integral products of sections and lies in
+\(L_{T,\mathfrak p}\). Multilinearity puts each coefficient of the wedge
+in \(\mathfrak a_{\mathfrak p}\xi\), so the finite Gauss norm of \(\delta\)
+is at most the absolute value of a local generator of \(\mathfrak a\).
+
+At an infinite place evaluate this same wedge on
+\(\|X_0\|_{\mathrm P}=\cdots=\|X_d\|_{\mathrm P}=1\).
+A column starting at degree \(j=0,d,T\) is a product of \(T-j\)
+hyperplanes and a section of length at most \(\Lambda_j\).
+Repeated multiplication gives
+\[
+ \|C_i(X)\|_{\mathrm P}\le\beta^{(T-j_i)/2}\Lambda_{j_i},
+ \qquad j_i\in\{0,d,T\}.
+\]
+Here \(j_i\) is the starting degree of column \(i\). Hadamard bounds
+\(\log|\delta(X)|+\log\|\xi\|_\sigma\) by the sum of the log column
+bounds, with multiplicities \(J_Z,k,r_Z-J_Z-k\). Average on the spheres
+and add the finite bounds. The terms containing the fractional ideal
+and the basis vector combine to give
+\[
+ \widehat{\deg}_Z(v(T))=
+ \frac{-\log N_{F/\mathbb Q}\mathfrak a-\sum_{\sigma:F\hookrightarrow\mathbb C}
+                \log\|\xi\|_\sigma}{[F:\mathbb Q]} .
+\]
+Combining this upper estimate for \(h_{\rm Mahler}(\delta)\) with its
+Chow-factor lower estimate gives
+\begin{align*}
+\widehat{\deg}_Z(v(T))\ \ge\
+ &J_Z\bigl(T h_*-I_0-\tfrac T2\log\beta\bigr)\\
+ &-k\bigl((T-d)c_H+\log\Lambda_d
+                        +\tfrac{T-d}{2}\log\beta\bigr)\\
+ &-(r_Z-J_Z-k)\log\Lambda_T .
+\end{align*}
+
+\proofstep{The contribution per lower column.}
+For each of the \(J_Z\) lower columns the ordinary length loss from
+the hyperplanes is at most
+\[
+             \tfrac T2\log\beta\le TP/2\le\sqrt b/2.
+\]
+The factor \(\log\Lambda\) from substituting the integral generators
+in the cofactor bound has coefficient \(k(T-d)\). Using the rank
+share \(k\le r_Z-J_Z\le2zJ_Z\), we get
+\[
+ \frac{k(T-d)}{J_Z}\log\Lambda
+ \le 2zTP(\kappa/T+1)\le 3b
+\]
+by \(zP\kappa\le b,\ z\le1/2,\ TP\le\sqrt b\le b\).
+Since \(c_H\le\log R\), the complementary bracket below
+dominates the costs per column in both remaining families.
+The loss \(T(\log n_1+1)/2\) on the first line is at most
+\((T+d^2)(g+2)\). Adding the other nonnegative error bounds gives
+\begin{align}
+ \widehat{\deg}_Z(v(T))
+ &\ge J_Z\big\{T H_Z-3(d+1)|H_Z|-I_0
+       -26d^2(\log R+\log T)\notag\\
+ &\hspace{41mm}{}-(T+d+1)\log\beta
+       -(T+d^2)(g+2)\big\}\notag\\
+ &\quad -(r_Z-J_Z)
+       \big\{T(\log 2+\log R+\tfrac12\log\beta)
+                        +\log\Lambda_d+\log\Lambda_T\big\}.
+ \label{eq:deep-hs-raw}
+\end{align}
+The last bracket is
+nonnegative and controls the entire complement to the
+symbol columns. The degree is in the ordinary norm
+convention, before passing to the squared-norm slope.
+\label{cor:covolume-hilbert-samuel-4}
+
+\paragraph{Bounding the error on one component.}
+Write \(X=\log(2+|H_Z|)\) and \(Q=\kappa/T\).
+The parameter bounds include \(1\le P\), \(1\le b\),
+\(\log b\le P\), \(TP\le\sqrt b\) and
+\(zP\kappa\le b\). From the radius formula and
+\(\log(1+\log\Lambda)\le\log\Lambda\) we obtain
+\[
+ 0\le\log R\le 26X+27P(Q+1)+65P .
+\]
+Here \(\log d\le\log T\le P/2\) and
+\(2+|H_Z|+\log\Lambda\le(2+|H_Z|)(1+\log\Lambda)\).
+We have \(r_Z\le2J_Z\) and
+\(r_Z-J_Z\le 2zJ_Z\) from the rank shares.
+Thus the coefficient of \(X\), after factoring out
+\(J_Z\), is at most
+\[
+ A=26(26d^2+2zT).
+\]
+
+\proofstep{Uniform bounds for the other terms.}
+For the other terms use
+\(d^2P Q\le b/7\) by \(7d^2/T\le z\),
+\(d^2P\le b/14\) by \(z\le1/2\), and
+\(TdP\le(TP)^2\le b\).
+In particular \(I_0\le9b\) and the radius term
+with coefficient \(26d^2\), after removing \(A\)'s
+share of \(X\), costs at most \(300b\).
+The two main terms with \(\log\beta\) and \(g+2\)
+cost at most \(2b\) and \(10b\) respectively.
+For the complementary columns use
+\[
+ zTPQ=zP\kappa \le b,
+\]
+\(zTP\le b/2\), and \(\log2\le1\le P\).
+The sum of their constant terms is at most \(200b\).
+These error terms are bounded by \(4000b\).
+
+\proofstep{The degree loss from the flat line.}
+Let \(c_{\rm flat}\ge0\) bound the degree lost per unit of rank
+when twisting by the flat determinant line to pass from weight \(v(T)\)
+to weight \(u_M\) on this component.
+The geometric cusp ranks at \(v(T)\) and \(u_M\) agree by
+the flat weight comparison.
+Twisting back decreases the degree by at most \(r_Z c_{\rm flat}\le
+2J_Z c_{\rm flat}\). Thus the lower ordinary degree on the
+deep geometric cusp lattice at \(u_M=u_W-c_0\omega_{\rm H}\) is
+\begin{equation}
+  J_Z\big\{T H_Z-3(d+1)|H_Z|
+       -A\log(2+|H_Z|)-R_0\big\},
+  \qquad R_0=4000b+2c_{\rm flat}.
+  \label{eq:deep-hs-budget}
+\end{equation}
+In this calculation \(A\le702T^2\),
+\(\log\max(1,A)\le8P\) and \(T^2P\le b\),
+so
+\[
+ A\log\max(1,A)\le6000b.
+\]
+
+In this twist from \(v(T)\) to \(u_M\), the sum of the absolute
+values of the exponents is at most \(6fr\).
+In each component the common flat period and the
+relative different cost at most
+\((9r\ell+3q\ell)6fr\). The bad-prime and discriminant
+allowance for this shift is at most \(1+6\ell+6f\ell+30\ell\).
+These are bounded together by \(120 Z_0^2\).
+Thus \(c_{\rm flat}\le C_p Z_0^2\) with \(C_p=120\),
+and \(Z_0^2\le b\) on the chosen scales.
+Consequently the cost \(A\log\max(1,A)+R_0\)
+is at most \((10000+2C_p)b\), with the same \(D_Z\)
+and \(J_Z\) as in the rank calculation.
+\label{cor:covolume-hilbert-samuel-5}
+\end{proof}

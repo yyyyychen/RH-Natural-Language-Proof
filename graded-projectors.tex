@@ -1,0 +1,397 @@
+\subsection{Denominators of the projections on types}
+\hypertarget{source-graded-projectors}{}
+
+The preceding Gram calculation gives a rational decomposition. Its use in integral interpolation also requires the denominators of the projections to the graded types. In the
+first, let \(E_{ij}\) be the matrix units acting on a
+finite-dimensional rational \(\mathrm{GL}_r\)-module in
+characteristic zero. Suppose an integral lattice respects the
+weight decomposition and is stable under
+\(E_{ij}^{a}/a!\) for all \(a\) and \(i\ne j\). We use complete reducibility, highest weights and the Pieri
+and branching rules for split general linear groups in
+characteristic zero. Their Schur-module constructions
+commute with extension of the ground field to
+\(\mathbb Q_p\). \cite{fulton-harris}
+The polynomial
+lattices in the letters have this property by taking the
+coefficients of the actions of elementary unipotent matrices.
+The lattice of homomorphisms between two such modules has it
+as well, by expanding the left and inverse right unipotent
+actions.
+
+\begin{lemma}[Denominators for invariant and isotypic projections]
+\label{lem:integral-type-projection}
+If the weights in the module are in \([-l,l]\) in each coordinate and
+\(l+r-1\ge1\), write \(P\) for projection onto the invariants and \(M_0\) for the zero-weight lattice. The denominator bound is
+\[
+ p^{\binom r2\lfloor\log_p(l+r-1)\rfloor}\,P(M_0)\subseteq M_0.
+\]
+ The same multiplier
+works for an isotypic projector when \(l\) bounds the coordinate weights
+of the corresponding Hom representation.
+\end{lemma}
+
+\begin{proof}
+\proofstep{Projecting onto invariants by the integral trace.}
+On the zero weight space one can project onto the invariant
+vectors with denominator at most
+\[
+                  p^{\binom r2\lfloor\log_p(l+r-1)\rfloor},
+\]
+when all coordinate weights in the module lie in \([-l,l]\).
+Take \(l+r-1\ge1\). To see this, inductively suppose that
+the input \(v\) is invariant in a set \(I\) of \(s\) coordinates.
+Adjoin coordinate \(z\). Put \(\Omega_0=1\),
+\(\Omega_{q+1}=\sum_{i\in I}E_{zi}\Omega_q E_{iz}\),
+and apply
+\[
+   P_{I,z}=\sum_{q=0}^l c_q\Omega_q,\qquad
+   c_q=\frac{(-1)^q s!}{(q+s)!q!}.
+\]
+Each \(\Omega_q\) commutes with \(\mathfrak{gl}_I\) by contracting
+the two indices in the recursion, and preserves weights.
+For \(j\in I\), commuting the matrix units gives
+\[
+ E_{jz}\Omega_q v=\Omega_q E_{jz}v+
+                       q(q+s)\Omega_{q-1}E_{jz}v
+                 \qquad(q\ge1).
+\]
+For example expand \(\Omega_q\) as the sum of all products of
+\(q\) factors \(E_{zi}\) followed in reverse order by the
+corresponding \(E_{iz}\).
+
+In moving \(E_{jz}\) through the
+first \(q\) factors each commutator is
+\(E_{ji}-\delta_{ij}E_{zz}\). Moving these through the remaining
+factors and using \(E_{ii'}v=E_{zz}v=0\) for \(i,i'\in I\)
+gives the stated recurrence. Substituting the coefficient at the next index gives, for \(0\le q<l\),
+\[
+ (q+1)(q+s+1)c_{q+1}
+ =(q+1)(q+s+1)\frac{(-1)^{q+1}s!}{(q+s+1)!(q+1)!}=-c_q .
+\]
+Thus the two contributions at each interior index cancel.
+Its endpoint \(\Omega_l E_{jz}v\) vanishes, because the inner
+\(l+1\) raising factors move the \(z\)-weight below \(-l\).
+Thus every \(E_{jz}\) kills the result. On its zero weight
+the opposite \(E_{zj}\) also kills it, by the finite-dimensional
+\(\mathfrak{sl}_2\) string for \((j,z)\). Vectors already
+invariant are fixed. All terms beyond the identity are in the
+span of images of off-diagonal generators.
+
+For a multi-index \(a=(a_i)_{i\in I}\) with \(\sum a_i=q\), expand
+\(c_q\Omega_q\) using commutation within each of the two groups
+of root operators. The coefficient of the product of their
+\emph{divided} powers has absolute rational value
+\(s!\prod_i a_i!/(s+q)!\).
+Number the \(s\) indices in order. Cancelling successive factorials gives
+\[
+ \frac{(s+q)!}{s!\prod_i a_i!}=\prod_{j=1}^s\binom{s+a_1+\cdots+a_j}{a_j}.
+\]
+Each has valuation at most \(\lfloor\log_p(l+s)\rfloor\)
+by the carry bound. Summing the denominator exponents for
+\(s=0,\ldots,r-1\) proves the claim. The construction commutes
+with intertwiners, since it uses only weight projection and the
+matrix units. On an endomorphism space it preserves the trace.
+Projection onto weight zero retains all diagonal entries, and
+every subsequent correction is a sum of commutators.
+
+\proofstep{Denominators on a highest-weight summand.}
+In particular take an irreducible summand \(U\) and the module
+\(\operatorname{Hom}(U,V)\), with action
+\(E\phi=E_V\phi-\phi E_U\). Use the coordinate weight
+bound \(l\) on differences of weights. Denote the invariant
+projection just proved, preceded by weight-zero projection,
+by \(P\). With an integral basis \(u_j\) of a divided-power
+stable weight lattice in \(U\) the operator
+\[
+     Q_U(v)=(\dim U)\sum_j P(u_j^*\otimes v)(u_j)
+\]
+is the isotypic projector. Such a lattice is obtained by
+intersecting a copy of the summand defined over \(\mathbb Q_p\) with the ambient integral
+lattice. Its preservation under the divided powers follows by
+intersection. On an inequivalent irreducible the invariant Hom
+space is zero.
+
+For an embedding \(i:U\to V\), naturality and
+Schur's lemma give
+\[
+ P(u_j^*\otimes i(u))=i\circ(u_j^*(u)/\dim U)\operatorname{id}_U,
+\]
+since the invariant projection preserves trace on endomorphisms.
+This gives \(Q_U(i(u))=i(u)\). Hence the same denominator bound
+works for a sum of any chosen types. For letters of fixed total
+degree \(S\), the span of coordinate weights in the full module
+is at most \(S\): a vector of degree \(d\) contributes in \([0,d]\), and a covector of degree \(d\) in \([-d,0]\). The width of the total interval is therefore bounded by
+\[
+ \sum_{\rm vectors} d+\sum_{\rm covectors} d=S.
+\]
+Thus one may use \(l=S\) also for the relevant Hom spaces.
+In the Fock metric \(E_{ij}\) is adjoint to \(E_{ji}\), including
+the contragredient action on covectors, so distinct types are
+orthogonal.
+
+For the second estimate, fix an order \(e\) and let \(M_e\) be
+the lattice of initial terms \(I_e f\). Here the integral \(f\)
+are in a fixed full weight, highest for the coordinates other
+than \(\rho\), and satisfy the prefix bounds on first coordinates
+of the generated modules. Put \(H_e=\mathbb Q_pM_e\) and
+\[
+ L_e=H_e\cap\mathbb Z_p[\mathbf x].
+\]
+Suppose a self-adjoint
+projection onto \(H_e\) has denominator at most \(p^d\) on
+the monomials of the required multidegree and that
+\(p^c L_e\subseteq M_e\). The graded determinant allowance
+is then \(v_*=d+2c\). Indeed a primitive \(f\in M_e\) has a
+coefficient of valuation \(\le c\). Otherwise
+\[
+ f\in p^{c+1}L_e\quad\Longrightarrow\quad f/p\in p^cL_e\subseteq M_e,
+\]
+contradicting primitivity.
+
+If its exponent is \(\alpha\),
+the normalized Fock pairing with \(\mathbf x^\alpha\) has valuation
+at most \(c\), because the reciprocal of the monomial norm is a
+product of integral multinomial coefficients. Multiply the
+projected monomial by \(p^{d+c}\) to obtain an integral partner
+in \(M_e\) with pairing of valuation \(\le d+2c\).
+Using the row corresponding to a deepest invariant factor in
+a Smith decomposition, this primitive-vector test bounds every
+invariant factor by \(d+2c\), and thus the determinant valuation
+by \((d+2c)\operatorname{rank}M_e\). The zero-rank convention has
+determinant one.
+
+\end{proof}
+
+\subsection{Lifting integral initial terms}
+
+Clearing a projector controls its image. We also need to lift prescribed leading terms into that image while keeping the prefix bounds.
+Assume \(r\ge2\), take \(\rho\) last, and let \(K\) be the number
+of letters preceding the final vector \(w\). A cutoff on a prefix
+means that every irreducible type of that prefix occurring in
+the vector has first highest-weight coordinate at most the specified
+integer. If \(C\) is the cutoff and \(G\) the prefix group, the test on a nonzero polynomial \(g\) is
+\[
+ \max\{\mu_1:(xg)_\mu\ne0\text{ for some }x\in G\}\le C,
+\]
+where the subscript denotes a weight component. An infinite cutoff imposes
+no condition. If \(f=w_\rho^e h\), a prefix containing \(w\)
+satisfies its cutoff precisely when \(h\) satisfies the cutoff
+lowered by \(e\). Indeed for a generic group translate the top
+first coordinate in the translated linear form \(w_\rho\) is one.
+
+Let \(m_1(f)\) be the largest first coordinate weight among
+prefix translates of \(f\), and similarly for \(h\). On a common
+Zariski-open set the highest first weight of the translated
+\(w_\rho\) is one, and the component of \(h\) realizing \(m_1(h)\)
+is nonzero. Their top components multiply to a nonzero polynomial,
+so
+\[
+                  m_1(w_\rho^e h)=e+m_1(h).
+\] For shorter prefixes the
+factor is fixed. The group on the coordinates other than \(\rho\)
+also fixes it. We may therefore divide out this power, subtract
+\(e\) from the last degree and the \(\rho\)-weight, and take
+restriction \(R\) at \(w_\rho=0\). Multiplication back by
+\(w_\rho^e\) recovers the graded term. It scales the Fock
+form on the restricted monomials by a common factor.
+
+\begin{lemma}[Saturation of the restricted coefficient map]
+\label{lem:graded-coefficient-lift}
+For \(r\ge2\), with the prefix-first-weight cutoffs and
+restriction at \(w_\rho=0\), the image of restriction
+on the integral polynomial lattice contains the integral restricted
+lattice after the multiplier in \eqref{eq:res-sat} before the highest
+weight equations. After the weight and type projectors let \(d_{\rm gr}\) be the normalized valuation per rank of the graded determinant. With \(K\) the number of earlier letters,
+\[
+ d_{\rm gr}\le(K+3)r^2(1+\log_p(8a+r))\qquad(S\le2a).
+\]
+
+\end{lemma}
+
+\begin{proof}
+\proofstep{The lowered last degree.}
+Keep the shortened prefix cutoffs fixed and vary the reduced last
+degree \(t\). Write \(Y_t\) for the space satisfying these cutoffs
+before restriction, with no highest-vector or weight requirements.
+In the restricted space define \(X_t\) by the same earlier prefix
+conditions. If there is a finite full-prefix cutoff, let \(C\) be
+the least one. Impose in addition the bound \(C\) on the first
+\(K\) letters under \(\mathrm{GL}_r\) and on the entire restricted
+word under \(\mathrm{GL}_{r-1}\).
+
+We have \(RY_t\subset X_t\).
+Indeed, taking a prefix type and tensoring it by the last symmetric
+power adds a horizontal strip, by the Pieri rule (twist by a
+determinant to reduce integral highest weights to partitions).
+If \(\alpha\) is the earlier type and \(\lambda\) a resulting type, the strip condition gives
+\[
+ \lambda_1\ge\alpha_1\ge\lambda_2.
+\]
+In particular a cutoff on \(\lambda_1\) also bounds \(\alpha_1\). Restriction commutes with the earlier
+group, and with \(\mathrm{GL}_{r-1}\) on the whole word.
+Interlacing bounds the first coordinate of the latter subgroup
+types by that of the full type.
+
+Let \(S\) be the total degree before the shortening, and set
+\[
+ A_0=\binom r2\lfloor\log_p(S+r-1)\rfloor,\qquad
+ A_1=\binom r2\lfloor\log_p(4S+r-1)\rfloor .
+\]
+We claim that at the required last degree \(t\)
+\begin{equation}\label{eq:res-sat}
+  p^{2A_1}(X_t\cap\mathbb Z_p[\mathbf x])
+                  \subset R(Y_t\cap\mathbb Z_p[\mathbf x]).
+\end{equation}
+With no full cutoff, or with \(C\) at least the total reduced
+degree at this \(t\), the polynomial independent of \(w_\rho\)
+lifts itself. For the other case use an auxiliary Lie algebra action.
+Denote the surviving coordinates by \(I\), put \(E_w=\sum w_i
+\partial_{w_i}\), and write \(B_{ab}\) for the matrix units on
+the first \(K\) letters. Use an extra index \(*\) preceding all
+of \(I\). The following operators act on \(\bigoplus_t X_t\):
+\begin{align*}
+ G_{ab}&=B_{ab}+w_a\partial_{w_b},&
+ G_{**}&=C-E_w,\\
+ G_{*a}&=\partial_{w_a},&
+ G_{a*}&=w_a(C-E_w)-\sum_{b\in I} w_b B_{ab}.
+\end{align*}
+The relations \([\partial_i,w_j]=\delta_{ij}\) and the matrix-unit brackets for \(B\) give
+\[
+ \begin{aligned} {}[G_{ab},G_{c*}]&=\delta_{bc}G_{a*},\\ {}[G_{*b},G_{a*}]&=\delta_{ab}G_{**}-G_{ab},\\ {}[G_{a*},G_{b*}]&=0.\end{aligned}
+\]
+Together with the degrees these give the
+\(\mathfrak{gl}_r\) brackets.
+
+\proofstep{Preservation of the endpoint cutoff.}
+We check the cutoff at the endpoint, where raising could otherwise
+leave the space. The same formulas apply on all coordinates before
+restriction, with the sum over all \(b\); restriction intertwines
+them for \(a,b\in I\), since every omitted summand has a factor
+\(w_\rho\). At an earlier prefix each \(B_{ab}\) splits into an
+operator of the prefix group and one on disjoint letters.
+Both preserve its type condition. At the full prefix the raises
+transform as a vector under the coordinate group and the derivatives
+as a covector. A derivative never increases first coordinate
+weight. A raise with index different from the first has first
+weight zero.
+
+For the first index, denoted by 1, the identity
+\[
+                   G_{1*}=C w_1-\sum_b w_bG_{1b}
+\]
+shows that it kills the component of first weight \(C\).
+On this component \(G_{11}=C\) and each \(G_{1b}\) with
+\(b\ne1\) vanishes because it raises the first weight beyond
+the cutoff. On lower weights the result stays below or at \(C\).
+Applying this argument after every group translate proves the
+stable type bound for all the raises, upstairs and downstairs.
+
+The divided powers also preserve integral coefficients. This
+is immediate for differentiation. For the raise with index \(a\),
+let \(w\) be the column of variables, and let \(\mathcal B\)
+be the representation on the earlier letters. On a polynomial
+\(h\) valued in that representation the generating series is
+\[
+ (1+u w_a)^C\,
+ \mathcal B\!\left(I-\frac{u e_a w^{\mathsf T}}{1+u w_a}\right)
+                 h\!\left(\frac{w}{1+u w_a}\right).
+\]
+Let \(T(u)\) denote this substitution. The rank-one matrix product
+gives \(T(u+v)=T(u)T(v)\), and \(T(0)=1,\ T'(0)=G_{a*}\).
+
+Differentiate in \(v\) at zero and compare coefficients in \(u\):
+\[
+ T'(u)=T(u)G_{a*},\qquad
+ (j+1)[u^{j+1}]T=([u^j]T)G_{a*},\qquad
+ [u^j]T=G_{a*}^j/j! .
+\] The displayed matrix and its inverse
+\(I+u e_aw^{\mathsf T}\) have integral series entries, so this
+also works for covectors and negative \(C\). For the operators on
+\(I\) the ordinary elementary matrices give integral divided
+powers. Thus the integral lattice in the direct sum of the \(X_t\),
+and the sum of the images of the integral \(Y_t\), are stable
+under divided powers and their integral weight decompositions.
+
+\proofstep{Lifting the initial forms over the coefficient ring.}
+For completeness this is a finite-dimensional calculation. Let
+\(A\) be the total earlier degree. In a nonzero \(X_t\) a generic
+\(\mathrm{GL}_{r-1}\) translate has a nonzero coefficient of the
+\(t\)-th power of the first \(w\)-coordinate. Indeed a nonzero
+homogeneous vector-valued polynomial is nonzero at some point,
+and the simultaneous change of the earlier letters is invertible.
+Its earlier letters have first weight at least \(-A\). The cutoff at \(C\) therefore gives
+\[
+ t-A\le C,\qquad t\le C+A,\qquad C-t\ge -A.
+\]
+All coordinate weights lie between \(-A\) and \(C<S\). In particular the coordinate weight differences
+in the Hom construction are bounded by \(4S\). Highest vectors
+for this auxiliary ordering are killed by every \(G_{*a}\).
+In characteristic zero they are independent of \(w\). At degree
+zero the early cutoff \(C\) is already the full cutoff, so all
+integral highest vectors lift identically.
+
+To see the index conclusion, first apply the type projectors to
+an integral element of the direct sum, multiplying by \(p^{A_1}\)
+to make each component integral. For a component of type \(U\)
+use in \(U\) the lattice generated by divided powers from an
+integral highest vector. This is a lattice: it spans by highest
+weight theory and lies in a fixed stable lattice after scaling
+the highest vector. Let \(L_{\rm im}\) be the integral image of the lift
+and
+\[
+ T_j=p^{A_1}P(u_j^*\otimes v).
+\]
+These integral
+intertwiners send the highest generator into \(L_{\rm im}\).
+Every \(u_j\) is generated from that highest vector by
+divided powers, which also preserve \(L_{\rm im}\).
+Hence \(T_j(u_j)\in L_{\rm im}\) for every \(j\), and
+the isotypic projector formula reads
+\[
+       p^{A_1}v=(\dim U)\sum_j T_j(u_j)\in L_{\rm im}
+\]
+on the component of type \(U\). Sum over the components and retain the required
+homogeneous last degree of a lift to obtain \eqref{eq:res-sat}.
+
+\proofstep{Imposing the highest-weight equations.}
+It remains to impose the weight and highest-vector conditions.
+Full weight projection is integral. Within that weight the
+highest vectors for \(I\) are precisely the copies of the
+isotypic summand with highest weight equal to the specified
+\(I\)-weight, intersected with the weight space. This projector
+costs at most \(A_0\), commutes with restriction and preserves
+every upstairs prefix condition. Indeed those conditions are
+stable under the total action on \(I\) and the full torus.
+Thus the saturation exponent in the primitive-vector test is
+at most
+\[
+ c=2A_1+A_0.
+\]
+For its self-adjoint projector first
+retain monomials of the required \(w_\rho\)-order and weight.
+On the restricted polynomials impose the early prefix type
+projectors including the cutoff at \(K\). They commute: a
+projector on an earlier prefix commutes with its group action
+and with all operators on later letters, hence with the action
+on the longer prefix.
+
+The prefix projectors also commute with the total \(I\)-type projector. That projector selects the required
+highest type, giving zero if it violates the full cutoff.
+Repeated bounds on the same prefix take their minimum. The
+zero-letter and one-letter prefix tests are scalar on a fixed
+multidegree. For \(K\ge1\) at most \(K+1\) projectors with
+denominator \(A_0\) suffice. These self-adjoint projections have
+the required rational image by \eqref{eq:res-sat}; putting back
+\(w_\rho^e\) preserves self-adjointness. We obtain
+\[
+             v_*\le (K+3)A_0+4A_1
+             \le (K+3)r^2(1+\log_p(8a+r))
+                        \qquad(S\le2a,\ K\ge1).
+\]
+The last inequality uses \(K+7\le2(K+3)\). For \(K=0\) the
+original single symmetric power is irreducible, so the cutoff
+is scalar and every allowed restricted polynomial lifts.
+The weight and highest tests alone suffice and obey the same
+final bound. For \(e\) greater than the last degree the graded
+piece is zero.
+\end{proof}

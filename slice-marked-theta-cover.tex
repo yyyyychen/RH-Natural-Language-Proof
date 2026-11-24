@@ -1,0 +1,196 @@
+\paragraph{The marked cover and the free lower rows.}
+Write \(\mathfrak M\) for the conjugate of the marked half level
+and \(\mathfrak J\) for the auxiliary type ideal. The level used
+for theta spanning is 
+\[
+  \mathfrak m=\mathfrak M\mathfrak J,
+\]
+ with
+\((\mathfrak M,\mathfrak J)=1\) and
+\(\mathfrak J\overline{\mathfrak J}=(p_d)\).
+In the group of invertible \(r\)-frames modulo \(\mathfrak m\)
+take the kernel of reduction modulo \(\mathfrak M\). Chinese
+remaindering identifies it with the general linear group on the
+auxiliary factor. The finite test is supported where the upper
+\(r\) rows reduce to the prescribed frame orbit. Its value there
+is the auxiliary character in that frame.
+
+The character is
+trivial on the special linear subgroup. Indeed the finite ring
+is a product of local rings whose residue fields have more than
+three elements. Row reduction generates the special linear group
+by elementary matrices, and conjugation by a diagonal unit whose
+difference from one is a unit expresses each elementary matrix
+as a commutator. In rank one the determinant is the identity.
+
+\begin{proposition}[Theta evaluations at the marked level]
+\label{prop:marked-theta-family}
+For the prescribed half-level marking, the free lower rows at
+\(\mathfrak m=\mathfrak M\mathfrak J\) realize the component evaluations at the shifted weights of Paragraph~\ref{par:shifted-theta}.
+On component \(k\) write \(a_k(T),b_k(T)\) for the two complex evaluations of the rule \(T\) in the respective component coordinates. They are proportional by one factor on the component,
+\[
+ \exists C_k\in\mathbb C^\times\quad\forall T,\qquad a_k(T)=C_k b_k(T).
+\]
+This also applies when the desired family has different sections on its components.
+\end{proposition}
+
+\begin{proof}
+\proofstep{The perfect pairing at the marked level.}
+The principal polarization gives a perfect level pairing, with
+the chosen primitive root of unity specifying its values. Write \(\delta_k\) for the dual half marking on component
+\(k\), and choose generators \(b_i\) modulo \(\mathfrak M\)
+on the reference module. At a split place a matrix \(A\)
+on one half of a level pairing determines the matrix on the
+opposite half by
+\[
+                  A^{\mathsf T}B=1,\qquad B=A^{-\mathsf T}.
+\]
+Thus one chooses a local basis on one half and the dual basis
+on the other. Complete these frames on the auxiliary factor.
+The resulting open level conditions can be satisfied by one
+rational unitary move.
+
+For this approximation use the Cayley transform
+\(C(X)=(1-X)(1+X)^{-1}\) on the open set of skew-Hermitian
+matrices with \(1+X\) invertible. One checks from \(X^*=-X\)
+that 
+\[
+  C(X)^*C(X)=1.
+\]
+ This is the open chart of unitary
+matrices with \(1+C(X)\) invertible. Its intersection with
+each of the prescribed local open sets is dense by the chart
+and its translates. Approximate the local parameters
+simultaneously in the rational vector space of skew-Hermitian
+matrices. The resulting rational unitary move satisfies the
+same open level conditions.
+The resulting moves take the period lattices into the indicated
+genus with the same prescribed residues of \(p_d\delta_k(b_i)\)
+modulo \(\mathfrak M\).
+
+If \(gL_k=L_{k'}\) with \(g\) in the indicated level
+group, the marking congruences read
+\[
+        p_d\,g\delta_k(b_i)
+                \equiv p_d\,\delta_{k'}(b_i)\pmod{\mathfrak M}
+                       \qquad(1\le i\le r).
+\]
+Cancel \(p_d\) and use the generating property of the \(b_i\).
+The two dual markings agree on the entire module modulo
+\(\mathfrak M\). The perfect pairing recovers the original
+markings modulo the full rational level. Conjugating back by
+the two moves gives an isomorphism of the marked polarized
+period data. The uniformization identifies their moduli components.
+This proves the orbit separation used above.
+
+For a stabilizing move the same comparison puts its pullback in
+the marked component group. Its determinant is an integral
+norm-one unit and hence a root of unity. The principal congruence
+of rational level at least three forces this torsion determinant
+to be one.
+Writing \(N\ge3\) for the rational principal level, the stabilizer element \(g\) satisfies
+\[
+  \det g\in\mu(E),\quad \det g\equiv1\pmod{N}\quad\Longrightarrow\quad\det g=1 .
+\]
+ For the signed vacuum, choose a symplectic basis
+adapted to the split lattice and its half level.
+
+In these
+coordinates the off-diagonal blocks of the period change vanish
+modulo eight and the determinant of its lower right block is
+one modulo eight. These congruences are the adapted-basis
+comparison for a principal-level isometry of determinant one.
+For the lower right block \(D\), the comparison gives
+\[
+       \det D\equiv1\pmod8,\qquad \chi_4(\det D)=1 .
+\]
+In the squared half-characteristic transformation the
+Gaussian factor is exactly the signed-vacuum coordinate change.
+After taking the \(n/2\)-th power, the resulting determinant
+factor cancels the one in the frame change. Here \(n\) is even. Evaluate the transformation
+at a point where the theta function is nonzero. The remaining
+vacuum scalar is one.
+\label{cor:slice-marked-theta-cover-1}
+
+\proofstep{Stable-range and full-level comparisons.}
+There is one further level comparison in applying the stable
+expansion. Its test requires zero lower rows modulo
+\(\mathfrak m\), whereas the arithmetic rule tests lower rows
+only modulo \(\mathfrak M\). Choose \(\alpha\) with
+
+\[
+  (\alpha)=\mathfrak J\mathfrak a
+\]
+ where \(\mathfrak a\) avoids
+the levels and the bad primes. Multiply the lower rows by
+\(\overline\alpha/\alpha\) and leave the upper rows fixed.
+This is a unitary column change in the polynomial coordinates.
+Let \(A\) be the transformed source lattice and \(S=\mathcal O_E^n\).
+Take an integer \(M\) divisible by twice the bad and level
+moduli. The construction gives \(t\) prime to \(M\) with
+\(t\mathfrak J A\subseteq S\) and \(t\overline{\mathfrak J}S
+\subseteq A\). Patch the lattice as
+\[
+              \Lambda'=\{v: Mv\in A,\ tv\in S\}.
+\]
+At the primes of \(M\) it equals \(S\), and at the other primes
+it equals \(A\), by the two inclusions. Thus it is self-dual
+and has an admissible level. On a target with shifted lattice
+\(L^\sharp\), expand the moved vacuum into translates for
+\(\Lambda'\). Its translation classes are indexed by
+
+\[
+  (A\otimes L^\sharp)/[(A\otimes L^\sharp)\cap
+(\Lambda'\otimes L^\sharp)].
+\]
+ Choose representatives by
+Chinese remaindering with upper corrections zero modulo
+\(\mathfrak m\) and lower corrections zero modulo
+\(\mathfrak M\). The upper rows still select the original
+character. Conversely, keep the upper rows of any admissible
+free-row argument and set the other rows to zero. This determines
+its strict-test class. Subtract its moved representative from
+the argument. The difference is in \(A\otimes L^\sharp\) and
+determines the translation class uniquely. The even representatives
+give trivial composition phase. This proves equality of the
+two finite sums up to vacuum normalization. The positive factor
+from projection is
+
+\[
+  [A:A\cap\Lambda']^r[\Lambda':A\cap\Lambda']^{-r/2}.
+\]
+The column change also multiplies the normalized vacuum by
+a scalar of modulus one. Both factors are common to the targets,
+so the harmonic polynomial, transformed by the same unitary
+change, absorbs their ratio.
+\label{cor:slice-marked-theta-cover-2}
+
+\proofstep{A common scalar relating the two theta normalizations on each component.}
+Finally, on a unit frame of component \(k\), the two normalized
+vacua at the source of a short rule differ by one scalar. The
+finite translate and derivative formulas therefore agree up to
+this scalar for every rule simultaneously, after removing
+\(u_{\Lambda,N_\Lambda}\) from each arithmetic reading. Its
+modulus is fixed on that component. Write \(A_R\) for the normalized arithmetic reading of
+a rule \(R\) after removal of \(u_{\Lambda,N_\Lambda}\), and
+\(T_R\) for its classical reading. The vacuum comparison gives
+
+\[
+  A_R T_S=A_S T_R
+\]
+ for any two rules, in their common flag
+character. If some \(T_S\) is nonzero, work first on its
+nonvanishing locus. There \(A_S/T_S\) is holomorphic with fixed
+positive modulus, so it equals a constant \(C_k\) on an open
+set. The identity theorem on the connected frame domain gives
+\(A_S=C_kT_S\) everywhere. For each \(R\) the cross-product identity now gives
+\[
+ (A_R-C_kT_R)T_S=A_R T_S-A_S T_R=0 .
+\]
+Cancel \(T_S\) on its nonvanishing locus; the identity theorem extends
+the resulting equality over the connected frame domain. If all classical readings vanish, the vacuum
+comparison makes the arithmetic readings zero too and any
+scalar of the prescribed modulus serves. This is the common
+\(C_k\) used in extending an arbitrary component family.
+\label{cor:slice-marked-theta-cover-3}
+\end{proof}

@@ -1,0 +1,1591 @@
+\subsection{The deformation calculation for even- and odd-order characters}
+\label{sec:rank-four-deformation}
+\hypertarget{source-ordinary-symplectic-cohomology}{}
+
+The rank-three count covers only part of the character range. For the remaining cases the length of a localization kernel is read from the homogeneous directions of a symplectic deformation ring.
+
+Write \(O\) for the coefficient discrete valuation ring, \(\varpi\)
+for its uniformizer and \(e_O=v_\varpi(\ell)\). In this subsection
+valuations in the algebraic closure of its fraction field extend
+\(v_\varpi\). Let \(\epsilon_\ell\) be the cyclotomic character,
+and set \(\Psi=\xi\epsilon_\ell^j\) for the character \(\xi\in\mathcal X_{\ell,j}\) defined on the abelian quotient \(U/H\) in Section~\ref{sec:odd-prime-cases}, inflated to the absolute Galois group of \(\mathbb Q\). The symplectic data use a finite odd
+auxiliary character \(\eta\) of order prime to \(\ell\), and
+the Teichm\"uller character \(\omega\). Put
+\[
+ \alpha=\epsilon_\ell\omega^{-1}\eta,\qquad
+ \beta=\Psi/\alpha,\qquad \vartheta=\alpha\Psi,\qquad
+ r_0=\operatorname{diag}(\vartheta,\Psi,\alpha,1).
+\]
+
+
+The alternating form pairs indices \(0,3\) and \(1,2\).
+The two paired products of diagonal characters equal \(\vartheta\),
+the fixed similitude. The first torus coordinate separates the two blocks
+\(\{0,2\}\) and \(\{1,3\}\). More precisely,
+the bidegree of a matrix entry is the difference of the
+corresponding entries of
+\[
+              \big((1,1),(0,1),(1,0),(0,0)\big).
+\]
+Taking the differences for the ordinary order gives
+\[
+    w_\alpha=(1,0),\quad w_\beta=(-1,1),\quad
+    w_\Psi=(0,1),\quad w_\vartheta=(1,1).
+\]
+
+\begin{paramdefinition}[The marked symplectic deformation chart]\label{hyp:ordinary-symplectic-chart}
+Let \(S\) be the rational primes dividing \(2\ell\mathcal N b\),
+where \(b=1\) in the even-order case and \(b=p_1\) in the rank-four case.
+Let \(S_b\) consist of \(v\in S\setminus\{\ell\}\)
+where the inertia image of \(\xi\) has order divisible by
+\(\ell\), and let
+\[
+ T=\{\ell\}\cup S_b.
+\]
+
+The chart parametrizes framed lifts with the following conditions. A lift is unramified on the residual kernel on
+inertia away from \(T\). At \(\ell\) use the ordinary framed
+condition with the displayed diagonal characters on inertia
+and the ordered eigenlines of a selected inertia element.
+This element has pairwise distinct characteristic-zero eigenvalues.
+At \(v\in S_b\) kill the kernel of \(\xi\) on inertia.
+Use the local components through \(r_0\) at all these places.
+
+Take the frame at \(\ell\) as the global frame. The normalization
+sets the six independent entries between the first torus blocks
+to zero on the frame changes at \(S_b\) and on the global
+matrix at the fixed element \(\phi\). It also sets the
+\((0,2)\) and \((2,0)\) entries of
+\[
+                   r(g_0)+\vartheta(g_0)r(g_0)^{-1}
+\]
+equal to zero. The element \(\phi\) is the limit of powers of the
+chosen Frobenius above \(\ell\). At \(g_0\), both
+\(\alpha-1\) and \(\Psi-1\) are coefficient units. The choices
+of \(\eta\), the Frobenius and normalization elements, and the
+residual cohomology conditions are those of
+Lemma~\ref{lem:marked-dyadic-character} and
+Proposition~\ref{prop:six-odd-roots}.
+\end{paramdefinition}
+\label{cor:ordinary-symplectic-cohomology-1}
+
+\input{residual-characters}
+
+\subsubsection{The graded chart}
+
+With the six odd-root cocycles removed, the other root spaces and their equations determine the graded presentation at the diagonal point. The grading keeps track of which tangent directions the subsequent length argument can use.
+
+\begin{proposition}[Graded presentation at the diagonal point]\label{prop:marked-graded-presentation}
+At \(r_0\) with the data of Definition~\ref{hyp:ordinary-symplectic-chart},
+the local root dimensions are those of
+\eqref{eq:ordinary-symplectic-local-dims}. After taking first-degree-zero series, the
+characteristic-zero chart has multiplicities \(r,m,r'+1,1\)
+in degrees \(-1,0,1,2\). Its homogeneous equations have degrees 
+\[
+ \deg F_i=-1,\qquad \deg E_i=1,\qquad \deg Z_i=0.
+\]
+
+\end{proposition}
+
+\begin{proof}
+\proofstep{Local dimensions in the graded frame.}
+
+Over the fraction field, a local frame contributes one direction
+in each of the eight root degrees and two at degree zero
+before imposing the local condition modulo conjugacy. At a
+place of \(S_b\), inertia factors through the finite abelian
+image of \(\xi\). Its eigencharacters stay fixed, and the
+Frobenius commutes with this inertia image. At \(r_0\) its
+eigenvalues have distinct cyclotomic sizes. Diagonalizing
+Frobenius in a formal neighborhood therefore leaves the two
+unramified diagonal directions and the eight changes of
+eigenlines. At \(\ell\), take the ordered eigenbasis of the selected
+inertia element. Before restoring its frame changes, the local
+tangent is
+\[
+    \text{two diagonal directions}\ \oplus\
+          \bigoplus_{w>0}H^1(G_{\Q_\ell},E_\ell(w)),
+\]
+where \(E_\ell(w)\) is the root line over the fraction field with
+its root character.
+
+For each of those roots the coefficient character is nontrivial
+and differs from \(\epsilon_\ell\). For \(\Psi\) and \(\vartheta\)
+this follows from \(j\ge 2\). For \(\alpha\) and the exponent-one
+case of \(\beta\) the Frobenius condition on
+\(\eta\Psi^i\) gives the distinction. For such a positive root line \(W\), local duality and
+the Euler characteristic give
+\[
+   h^0(W)=h^2(W)=0,\qquad h^1(W)=h^0(W)+h^2(W)+\dim W=1 .
+\] This gives the
+formal parameters by lifting the ordinary upper triangular
+group in order of increasing root height. Restoring the
+eight changes of frame gives
+\begin{equation}\label{eq:ordinary-symplectic-local-dims}
+\begin{array}{c|ccc}
+ &0& w_\alpha,w_\beta,w_\Psi,w_\vartheta&
+              -w_\alpha,-w_\beta,-w_\Psi,-w_\vartheta\\ \hline
+\ell&2&2&1\\
+v\in S_b&2&1&1 .
+\end{array}
+\end{equation}
+The local component presentation uses these charts at the
+specialization \(r_0\).
+\label{cor:ordinary-symplectic-cohomology-2}
+
+\proofstep{Global tangent and obstruction terms.}
+
+The local root dimensions count variables before the global conditions are imposed. Tangent and obstruction groups determine the corresponding numbers of global parameters and relations.
+
+
+The relative global presentation uses the residual tangent and obstruction groups with the local frames. Its dimension input is the following calculation.
+For a residual weight space \(V\) write \(g_i\) for the
+dimension of global \(H^i\) and \(h_{v,i}\) for that of
+local \(H^i\). At \(v\in S\setminus T\), the allowed
+local \(H^1\) space \(U_v\) kills the residual kernel
+on inertia. Its dimension is \(h_{v,0}\), since the
+residual image of inertia has order prime to \(\ell\).
+Let \(\lambda\) be the rank of global \(H^1\) in
+\[
+ \bigoplus_{v\in T}H^1(G_v,V)\ \oplus\
+              \bigoplus_{v\in S\setminus T}H^1(G_v,V)/U_v .
+\]
+The framed tangent has dimension \(g_1-\lambda+
+\sum_{v\in T}h_{v,0}-g_0\). The last two terms count
+the local trivializing vectors modulo the common global
+coboundary, or equivalently with the vector at \(\ell\)
+normalized to zero. The relative obstruction space has
+dimension
+\[
+  \sum_{v\in T}h_{v,1}
+  +\sum_{v\in S\setminus T}(h_{v,1}-\dim U_v)-\lambda
+  +g_2-\sum_{v\in S}h_{v,2}
+  +\dim H^0(G_\Q,V^\vee(1)).
+\]
+
+The first three terms are the localization cokernel in
+degree one. The rest is the kernel of localization in
+degree two, by the Poitou--Tate end sequence.
+The local Euler characteristic cancels the terms at
+\(v\ne\ell\) and contributes \(\dim V\) at \(\ell\).
+The global Euler characteristic then gives the relative
+obstruction dimension minus the relative tangent dimension as
+\[
+         \dim V^{c=1}+\dim H^0(G_\Q,V^\vee(1)).
+\]
+The last dimension is zero. For \(0,\pm w_\Psi\) this is
+the sign test at complex conjugation. For a between-block
+root \(\gamma\), use the marked Frobenius \(\phi\):
+\[
+        \bar\epsilon_\ell(\phi)=1,\qquad\gamma(\phi)\ne1 .
+\]
+The dual twist has no invariants at \(\phi\). The between-block
+spaces are odd, and their relative tangent is zero
+by the residual localization vanishing. Indeed the
+vanishing makes the global cocycle a coboundary, and
+the nontrivial local Frobenius values determine its
+trivializing vectors uniquely, including the one
+normalized to zero above \(\ell\).
+
+This gives additional variables only at degrees
+\(-w_\Psi,w_\Psi,0\), with multiplicities \(a_-,a_+,a_0\).
+The positive conjugation eigenspace has dimension one on
+each of the degrees \(\pm w_\Psi\) and two at zero.
+The relative relation bounds, padded by zero where needed, are
+\[
+  -w_\Psi:\ a_-+1,\qquad
+    w_\Psi:\ a_++1,\qquad 0:\ a_0+2 .
+\] The groups here are computed with the local
+restrictions at \(T\) and the residual-kernel inertia restrictions
+elsewhere. In the six root degrees between the two blocks, use residual localization vanishing and the nontrivial Frobenius values.
+
+To obtain the relative presentation, lift a basis of the
+relative tangent space to homogeneous matrix or frame entries.
+In the power series algebra on these lifts, the kernel of the
+map to the deformation ring, modulo the local relation ideal
+and the maximal ideal times the kernel, has a dual obstruction
+map into the weight spaces of the relative \(H^2\). For the
+injectivity used here, push out the square-zero extension of the
+presentation by a functional on that kernel.
+
+For a functional \(\ell\) on that space of relations the test is
+\[
+ \operatorname{ob}(\ell)=0\quad\Longrightarrow\quad\ell=0.
+\]
+Indeed the universal lift splits the pushout while fixing the chosen first-order parameters.
+Concretely, if \(I\) is the kernel in the power series ring with maximal ideal \(\mathfrak m\) and \(I_{\rm loc}\subset I\) denotes the imposed local relations, write
+\[
+ Q=I/(I_{\rm loc}+\mathfrak m I).
+\]
+The pushout construction gives an injective equivariant map
+\[
+ Q^\vee\lhook\joinrel\longrightarrow H^2_{\rm rel}.
+\]
+In particular the dimension of each weight space of the dual relation module is bounded by the corresponding obstruction dimension. Nakayama's lemma lifts a homogeneous basis of \(Q\) to relative relations.
+\label{cor:ordinary-symplectic-cohomology-3}
+
+With \(b_0=|S_b|\) the three counts are
+\[
+ r=1+b_0+a_-,\qquad r'=2+b_0+a_+,\qquad m=2+2b_0+a_0.
+\]
+
+In each of the six between-block degrees the conditions on the
+frame changes eliminate \(b_0+1\) tangent directions. At the
+split point the derivatives of these equations on frame changes
+are independent. At each \(v\in S_b\) vary just the frame
+change by a root direction. At \(\ell\) conjugate the global
+representation in that root direction, leaving the frame-change
+matrices fixed. For a root vector \(X\), the derivative at \(\phi\) is
+\([X,r_0(\phi)]\). At a permitted off-block coordinate \((a,b)\)
+its entry is
+\[
+      (\lambda_b-\lambda_a)X_{ab},
+         \qquad\lambda_i=r_{0,ii}(\phi).
+\]
+The two eigenvalues are distinct in each of these six root degrees.
+The equations can thus be included in the characteristic-zero
+formal coordinates. The remaining ambient bidegrees are
+\[
+ \begin{array}{c|rrrrrr}
+  \text{degree}&-w_\Psi&0&w_\Psi&w_\alpha&w_\beta&w_\vartheta\\ \hline
+  \text{multiplicity}&r&m&r'&1&1&1 .
+ \end{array}
+\]
+
+For each \(v\in S_b\) the further requirement that the block
+frame be the identity gives one equation in each of \(-w_\Psi\)
+and \(w_\Psi\) and two at zero. The two equations at \(g_0\)
+give one at each of \(-w_\Psi,w_\Psi\).
+Adding these frame constraints to the equation counts at bidegrees \(-w_\Psi,w_\Psi,0\) gives
+\[
+   (a_-+1)+b_0+1=r+1,\qquad
+   (a_++1)+b_0+1=r',\qquad
+   (a_0+2)+2b_0=m .
+\]
+They give \(F_i,E_i,Z_i\) in degrees \(-w_\Psi,w_\Psi,0\),
+respectively. \label{cor:ordinary-symplectic-cohomology-4}
+
+Pass to the algebra \(A=\bigoplus_n A_n\) of finite sums of
+elements of bidegree \((0,n)\) in the ambient presentation.
+For generation over \(A_0\), write a monomial of first degree zero as
+\[
+ M=M_0\prod_{a=1}^h X_a^+\prod_{b=1}^h X_b^-
+   =M_0\prod_{a=1}^h(X_a^+X_a^-),
+\]
+where \(M_0\) contains its first-degree-zero variables. Balance gives equal numbers of variables of degrees \(1\) and \(-1\), counted with multiplicities. On any fixed bidegree the finitely many minimal
+monomials for divisibility generate the homogeneous power
+series over the degree-zero series. The degree-zero monomial
+monoid is finitely generated, so \(A_0\) is a quotient of a
+power series algebra on finitely many generators over \(O\).
+This explains why the
+finite sums form a Noetherian algebra generated over \(A_0\)
+in degrees \(-2,-1,1,2\).
+
+In the characteristic-zero formal
+chart there is a unique variable \(z\) of first degree \(-1\),
+in bidegree \(w_\beta\). The coordinates of first degree \(1\) have weights
+\(w_\alpha,w_\vartheta\). In first degree zero they occur
+through their products with \(z\):
+\[
+      w_\beta+w_\alpha=(0,1),\qquad
+      w_\beta+w_\vartheta=(0,2).
+\]
+Retain the original coordinates of first degree zero. The resulting multiplicities
+at \(-1,0,1,2\) are \(r,m,r'+1,1\). The equations all lie
+in \(A\). Their ideal \(I\) in \(A\) is the intersection of
+the full equation ideal with \(A\), by homogeneous projection
+on the coefficients of the equations. In particular, the
+weight-zero quotient is the one at this normalization.
+\label{cor:ordinary-symplectic-cohomology-5}
+
+\end{proof}
+
+\subsubsection{Finiteness and vanishing for the negative twist}
+
+The negative-degree direction in the presentation corresponds to a class with prescribed local coboundaries. Controlling these classes both integrally and over the fraction field distinguishes finite torsion from a genuine deformation parameter.
+
+\begin{proposition}[Finiteness and rigidity of the negative twist]\label{prop:negative-twist-finite}
+In the marked chart of Definition~\ref{hyp:ordinary-symplectic-chart},
+let \(E_\ell=\operatorname{Frac}O\) and \(A_\Psi=(E_\ell/O)(\Psi^{-1})\).
+The classes in \(H^1(\mathbb Q,A_\Psi)\) that are coboundaries on
+inertia at every \(p\ne\ell\) and on the decomposition group at
+\(\ell\) form a finite group. For coefficients \(E_\ell(\Psi^{-1})\), every cocycle \(z\) with those restrictions satisfies 
+\[
+ z(g)=(\Psi(g)^{-1}-1)b\qquad\text{for some }b\in E_\ell\text{ and every }g.
+\]
+ Equivalently it
+vanishes after coboundary normalization at \(g_0\). For algebraic
+coefficients the cocycle and its local trivializations are defined
+over one finite extension of the coefficient field.
+\end{proposition}
+
+\begin{proof}
+\proofstep{The negative twist condition.}
+
+Let \(E_\ell\) be the fraction field of \(O\) and put
+\(A_\Psi=(E_\ell/O)(\Psi^{-1})\). Consider the classes over
+\(\Q\) which are locally coboundaries on inertia away from
+\(\ell\) and on the decomposition group at \(\ell\). The
+field \(L\) cut out by \(\xi\) and the mod-\(\ell\)
+cyclotomic character is finite abelian and contains
+\(\mu_\ell\). It is totally complex since \(\ell\) is odd.
+On \(G_L\) the coefficient is \((E_\ell/O)(-j)\).
+Restriction preserves the two conditions, so its image lies in
+\[
+   \ker\!\left[
+      H^1(G_{L,S_\ell},(E_\ell/O)(-j))
+       \longrightarrow\prod_{v\mid\ell}H^1(L_v,(E_\ell/O)(-j))
+       \right],
+\]
+where \(S_\ell\) consists of the \(\ell\)-adic and infinite places.
+
+The degree-two bound \eqref{eq:height} and
+Poitou--Tate duality therefore give a finite group containing
+the image of restriction. Here \(E_\ell/O\), as a
+\(\Z_\ell\)-module, is a direct sum of \([E_\ell:\Q_\ell]\)
+copies of \(\Q_\ell/\Z_\ell\), each with the same scalar
+cyclotomic twist. The kernel of restriction is contained in the
+inflation of
+\(H^1(\operatorname{Gal}(L/\Q),A_\Psi^{G_L})\).
+The cyclotomic image of \(G_L\) is open and \(j>0\), so some
+\(g\in G_L\) has \(d=\epsilon_\ell(g)^{-j}-1\ne0\).
+Every fixed vector \(x\) satisfies
+\[
+ dx=(\epsilon_\ell(g)^{-j}-1)x=0,\qquad
+ A_\Psi^{G_L}\subseteq A_\Psi[d]\simeq O/dO
+\]
+as additive modules on the right. This is finite since \(d\ne0\).
+
+Local triviality on inertia away from \(\ell\) and on \(G_{\mathbb Q_\ell}\) gives vanishing for continuous cocycles with coefficients in \(E_\ell(\Psi^{-1})\). Subtract a
+coboundary to make \(z(g_0)=0\). For every \(n\geq0\), the
+reduction of \(\varpi^{-n}z\) modulo \(O\) gives a class in
+the finite group just proved. For the reductions \(c_n=[\varpi^{-n}z\bmod O]\) this is
+\[
+               c_n=\varpi^a c_{n+a}\quad(a\ge0).
+\]
+
+For an exponent \(a\) that annihilates the group by \(\varpi^a\), compatibility of the reductions gives
+\[
+ c_n=\varpi^a c_{n+a}=0\quad(n\ge0).
+\] The coboundary for each reduction
+has value zero at \(g_0\), so its trivializing vector is zero
+because \(\Psi^{-1}(g_0)-1\) is a unit. Thus \(z\) takes
+values in \(\varpi^n O\) for every \(n\), and is zero. If
+the normalizing value has positive valuation \(h\), each
+trivializing vector has a representative in
+\(\varpi^{-h}O\). In that case the same argument places \(z\)
+in every ideal \(\varpi^{n-h}O\). Consequently
+\[
+ z\in\bigcap_{n\ge h}\varpi^{n-h}O=0.
+\]
+
+The argument works over finite coefficient extensions.
+For algebraic coefficients, include the character values in a finite extension. Cover the profinite Galois group by the closed subgroups on which the cocycle values lie in a specified finite extension of it.
+The cocycle identity gives the subgroup property. There are
+only countably many finite subextensions of
+\(\overline{\Q}_\ell\), so Baire's theorem gives an open one of
+these subgroups. If \(H\) is this open subgroup and \(x_i\) are coset
+representatives, the cocycle formula gives
+\[
+        z(x_i h)=z(x_i)+\Psi^{-1}(x_i)z(h)\qquad(h\in H).
+\]
+Adjoining the finitely many \(z(x_i)\) therefore gives a common
+finite coefficient field. Local trivializing vectors descend to it, since either
+the local action is trivial and the cocycle vanishes there, or
+one nonzero value of \(\Psi^{-1}-1\) determines the vector.
+\label{cor:ordinary-symplectic-cohomology-6}
+
+\end{proof}
+
+\subsubsection{Cotangent directions and the localization kernel}
+
+The rational rigidity just obtained still permits integral torsion. To quantify it, compare the negative cotangent direction of the graded chart with the strict localization kernel via its elementary divisors.
+
+\begin{proposition}[The localization kernel in the negative cotangent degree]\label{prop:marked-cotangent-kernel}
+Under Proposition~\ref{prop:marked-graded-presentation} and
+Definition~\ref{hyp:ordinary-symplectic-chart}, the degree-zero conormal is spanned over the fraction field by
+the \(Z_i\). Write \(L_-\) for the strict localization kernel in the negative degree and \(d_i\) for the Smith exponents of the corresponding \(F_i\). In valuation-ring normalization, 
+\[
+ \operatorname{length}_{O}(L_-)\le\sum_i d_i.
+\]
+
+\end{proposition}
+
+\begin{proof}
+\proofstep{Identify the conormal directions.}
+
+The \(Z_i\) span the degree-zero conormal over the fraction
+field. A first-order deformation in degree zero that kills
+them would change the four diagonal characters by additive
+characters unramified at every prime. The fixed inertia
+characters include those at \(\ell\). An additive character
+unramified everywhere over \(\Q\) is zero by class field theory.
+The \(F_i\) likewise span the degree-\(-1\) conormal over the
+fraction field. In that weight a first-order deformation is
+\(r(g)=(1+\delta z(g)X_-)r_0(g)\), with \(\delta^2=0\) and
+\(X_-=e_{20}+e_{31}\). Its multiplication gives
+\[
+       z(gh)=z(g)+\Psi^{-1}(g)z(h),
+\]
+since \(r_0(g)X_-r_0(g)^{-1}=\Psi(g)^{-1}X_-\).
+
+At \(\ell\) the lower-weight direction
+of the ordinary condition is an infinitesimal conjugation,
+so its class vanishes there. Elsewhere its inertia class is
+zero, by averaging the finite quotient of inertia on which
+the deformation may ramify. The characteristic-zero vanishing
+just proved makes \(z\) a
+coboundary. For a coboundary with scalar coefficient \(c\), the
+normalization at \(g_0\) imposes
+\[
+    c(\alpha(g_0)-1)(\Psi(g_0)-1)=0 .
+\]
+Both factors are units, so \(c=0\). These tests apply first in the
+full bidegree chart, by clearing denominators in a tangent
+functional. The map from the relevant conormal of \(A\) onto
+the conormal of the full chart in each of these degrees has
+equal ranks, since the new coordinates have positive second
+degrees. Thus the tests also give spanning in \(A\).
+\label{cor:ordinary-symplectic-cohomology-7}
+
+Write \(J_0=\ker(x_0:A\to O)\) for the origin ideal.
+Let \(C_-\) be the weight-\(-1\) part of
+\(J_0/\operatorname{sat}_O(J_0^2)\), where saturation
+is in \(J_0\). This is a free \(O\)-lattice of rank \(r\).
+If \(d_i\) are the elementary divisor exponents of the images of the \(F_i\), Smith normal form gives
+\[
+ C_-/\sum_i OF_i\simeq\bigoplus_i O/(\varpi^{d_i}),\qquad
+ \operatorname{length}_O(C_-/\sum_i OF_i)=\sum_i d_i .
+\] The rank-one localization group
+at level \(S\) has length at most \(\sum_i d_i\).
+Here is the injection that gives this inequality.
+Use the qualitative finiteness above to take an annihilator
+\(c_0\) of the localization group.
+
+If \(z\) is any cocycle representative, subtract the
+coboundary
+\[
+ g\longmapsto(\Psi(g)^{-1}-1)
+                         \frac{z(g_0)}{\Psi(g_0)^{-1}-1}.
+\]
+The denominator is a unit, so the new representative
+has \(z(g_0)=0\), uniquely in its class. The construction is
+additive. The
+normalized cocycle is killed by \(c_0\).
+Enlarge \(c_0\) by the product of one nonzero value
+\(\Psi^{-1}(g_v)-1\) for each local group at \(v\in T\).
+If \(y_v\) is the trivializing scalar at \(v\), then
+\[
+   (\Psi^{-1}(g_v)-1)y_v=z(g_v),\qquad
+   c_0(\Psi^{-1}(g_v)-1)y_v=0 .
+\]
+Thus the common enlarged annihilator \(c_1\) kills every \(y_v\).
+Identify the coefficient subgroup killed by \(c_1\) with
+\(O/(c_1)\).
+
+Write the square-zero direction as \(e\), with \(e^2=c_1e=0\). The global lift is
+\[
+ g\longmapsto (1+e z(g)X_-)r_0(g).
+\]
+Multiplication has linear term \(z(g)X_-+\operatorname{Ad}(r_0(g))(z(h)X_-)\) at \(gh\), which is \(z(gh)X_-\) by the cocycle law. Locally a vector
+trivializing \(z\) lifts to a scalar over \(O\), giving an
+integral point derivation by conjugating \(r_0\) in the
+direction \(X_-\). Those derivations lift the restriction of
+the global point derivation to the local bases. Its other
+coordinates lift in the relative power series presentation
+by lifting their values individually. The six removed
+frame directions are in different weights and the remaining
+normalization equations evaluate to zero modulo \(c_1\).
+For the equations at \(g_0\) this uses
+\(z(g_0)=z(g_0^{-1})=0\).
+
+The integral derivation factors through the saturated origin
+cotangent lattice. After reduction modulo \(c_1\), the equations
+\(F_i\) vanish. Thus the induced functional is
+\[
+              C_-/(F_i)\longrightarrow O/(c_1).
+\] Two reductions with the same values
+on matrix entries agree because those entries generate the
+representation algebra in the universal property. The
+\((2,0)\) entry recovers \(z(g)\) by division by the unit
+\(\vartheta(g)\). This realizes the localization group as a
+submodule of
+\(\operatorname{Hom}_O(C_-/(F_i),O/(c_1))\).
+By the elementary divisors its target bounds the length by
+\[
+  \sum_i\operatorname{length}_O\bigl((O/(c_1))[\varpi^{d_i}]\bigr)
+     =\sum_i\min\{v_\varpi(c_1),d_i\}\le\sum_i d_i .
+\] An extra unramified prime in \(S\) gives the comparison with the localization group over the original field. At an extra prime away from
+\(\ell\) the unramified class of this negative-twist
+coefficient vanishes because Frobenius minus one is surjective
+on the divisible coefficient module.
+\label{cor:ordinary-symplectic-cohomology-8}
+
+\end{proof}
+
+\subsubsection{Counting mixed-sign orbits}
+
+A numerical length bound will come from counting deformation points up to the grading action. The points supported in just one sign have different trace behavior from those with nonzero coordinates of both signs.
+
+For each \(g\), the trace difference \(a_g\in A_0\) has
+value \(\operatorname{tr}r(g)-\operatorname{tr}r_0(g)\)
+at a deformation point \(r\). Call a point one-sided if
+it kills every component of strictly positive degree or
+every component of strictly negative degree. A mixed-sign
+point is nonzero on a homogeneous component of each sign. The orbit count
+uses finiteness of the degree-zero image, exclusion of opposed
+one-sided specializations and irreducibility of mixed-sign points
+from Proposition~\ref{prop:marked-finite-and-blocks}.
+Proposition~\ref{prop:marked-invariant-rigidity} gives
+the torus tangent assertion and injectivity of normalized
+mixed-sign orbits on isomorphism classes. The constructions of
+the points and of their attachments follow below.
+\label{cor:ordinary-symplectic-cohomology-9}
+
+\input{promodularity}
+
+\input{cohomology/full-block-extension}
+
+\subsubsection{Finiteness and exclusion of full blocks}
+
+The support argument and the nonsplit comparison were made on the fitted towers. On returning to the graded chart they rule out full blocks in characteristic zero and constrain the degree-zero coordinates of the remaining points.
+
+\begin{proposition}[Finiteness and exclusion on the normalized chart]\label{prop:marked-finite-and-blocks}
+In the even-order and rank-four cases of the chart with their
+specified fitted towers, the image of the invariant ring satisfies 
+\[
+ \operatorname{im}(A_0\longrightarrow A/I)\simeq A_0/(A_0\cap I)\quad\text{is finite over }O.
+\]
+ The characteristic-zero full-block case
+is excluded. There are no opposed one-sided points over a
+degree-zero point distinct from the origin, and the mixed-sign
+points define irreducible Galois representations.
+\end{proposition}
+
+\begin{proof}
+\proofstep{The modularity outputs for irreducible and full-block points.}
+
+Use Proposition~\ref{prop:full-block-extension} for a full block.
+The finiteness, block exclusion and automorphic attachment
+come from the same potential-modularity construction. It takes
+an irreducible point or a nonsplit extension with a full block.
+Paragraph~\ref{par:full-block-extension} supplies the latter from
+the block projection or from a split full-block point. In
+characteristic \(\ell\) the relevant output
+is that on a finite-index subgroup the characteristic polynomials
+are those of the four distinguished characters. In characteristic
+zero the full-block output is the strict Frobenius ratio bound
+of Paragraph~\ref{par:count-two-purity}.
+The irreducible output gives a cuspidal automorphic attachment.
+Here is how the first two outputs give the algebraic conditions
+in the orbit argument.
+
+If the weight-zero image is infinite over \(O\), pass to its
+special fiber. For a finite set of balanced monomials \(m_i\) in maximal ideal generators one has
+\[
+ \mathfrak m=(\varpi,m_1,\ldots,m_s),\qquad \mathfrak m/(\varpi)=(\bar m_1,\ldots,\bar m_s).
+\]
+If the generators \(m_i\) in the special fibre satisfied \(m_i^{a_i}=0\), the pigeonhole principle would give
+\[
+ (m_1,\ldots,m_s)^{1+\sum_i(a_i-1)}=0 .
+\]
+The special fibre would be Artinian. Lifting its finite residue-field basis by completeness would then make the algebra finite over \(O\). Choose a non-nilpotent monomial and a local valued
+point on which it remains nonzero and belongs to the maximal
+ideal. Lift the valued point from the invariant ring to the presentation by rescaling the homogeneous coordinates. The chosen monomial \(m\) is transcendental over the finite
+residue field: at this valued point \(m\ne0\) and \(v(m)>0\).
+
+If \(m\) were algebraic over \(\mathbb F_\ell\), some \(a>0\) would
+give \(m^a=1\), contradicting
+\[
+                      0=v(1)=a\,v(m)>0 .
+\]
+On any point of diagonal type, each diagonal entry is a
+character and has finite inertia image. Away from \(T\) this
+follows from the residual-kernel condition, on \(S_b\) from
+the imposed inertia quotient, and at \(\ell\) from the
+ordinary inertia characters. Raising to a common exponent
+gives an everywhere unramified character, which is trivial
+over \(\Q\). Thus the diagonal entries take values algebraic
+over the residue field. A balanced monomial can only use
+diagonal entries in this case.
+
+To see this, order the indices
+by a linear extension of the acyclic arrow relation, assigning
+numbers \(h_i\) that increase along its arrows. Put \(\widetilde h_i=(h_i-h_{3-i})/2\). For an arrow \(i\to k\), its reverse partner is \(3-k\to3-i\), so
+\[
+ 2(\widetilde h_k-\widetilde h_i)
+ =(h_k-h_i)+(h_{3-i}-h_{3-k})>0 .
+\] The replacement satisfies
+\(\widetilde h_i+\widetilde h_{3-i}=0\), so it is an affine linear
+function of the four bidegrees of the eigenlines.
+For an arrow \(i\to k\), its value on the weight of the entry is
+\[
+   \widetilde h_k-\widetilde h_i
+     =\tfrac12(h_k-h_i+h_{3-i}-h_{3-k})>0 .
+\]
+No nonconstant product of such weights can have degree zero. This contradicts the transcendental
+monomial.
+
+For the remaining special-fiber types, use the finite-index
+characteristic-polynomial comparison on the irreducible point or
+on the nonsplit extension. In the block case transfer the
+comparison to the original point by the polynomial equality.
+For any \(g\), a positive power \(g^a\)
+lies in the subgroup of comparison. All eigenvalues of \(r(g)\)
+are algebraic over the finite field, since those of \(r(g)^a\)
+are. Reduction on the algebraic elements is injective, so their
+multiset is determined by the split residual polynomial at \(g\).
+In particular
+\[
+             \operatorname{tr}r(g)=\sum_i\overline{r_{0,ii}(g)}.
+\]
+The right side is a sum of characters, so the difference of
+traces at \(xgh\) and \(xhg\) gives
+\[
+      \operatorname{tr}\big(r(x)[r(g),r(h)]\big)=0\qquad(x,g,h).
+\]
+
+If the matrices span the full algebra, the commutator \(C=[r(g),r(h)]\) pairs to zero with every matrix unit. Thus
+\[
+ C_{ij}=\operatorname{tr}(C E_{ji})=0
+ \qquad\text{for all }i,j.
+\]
+The linear span of a commuting family is commutative. In matrix dimension at least two,
+\[
+ [e_{11},e_{12}]=e_{12}\ne0,
+\]
+so this span cannot be the full matrix algebra.
+For a block point use the projectors at the distinguished
+element with distinct eigenvalues to isolate its two-dimensional
+block in the trace identity. The same contradiction applies to
+the full matrix algebra there. This excludes the valued point
+and gives finiteness over \(O\).
+\label{cor:ordinary-symplectic-cohomology-10}
+
+For a characteristic-zero block point, the residual Frobenius
+separates the \(\{0,2\}\) block from the \(\{1,3\}\) block.
+Writing \(\chi_i\) for the ordered inertia characters, the two blocks thus have character multisets
+\[
+ \{\chi_0,\chi_2\},\qquad\{\chi_1,\chi_3\}.
+\]
+One can check the
+assignment by the coprime factors of the residual Frobenius
+polynomial. The diagonal characters of the triangular flag
+belong to the two Frobenius factors according to their residual
+labels. Since each factor is supported on its indicated block,
+the inertia determinant is the product of the two assigned
+characters. After removing the finite factors on local inertia the
+two determinant characters there are
+\[
+    (\alpha\Psi)\alpha=\alpha^2\Psi\ \leadsto\ \epsilon_\ell^{j+2},
+     \qquad \Psi\cdot1=\Psi\ \leadsto\ \epsilon_\ell^j .
+\]
+Away from \(\ell\) both have finite inertia images. Thus the
+quotients by the two indicated cyclotomic powers have finite
+inertia everywhere. The ratios of the determinants
+to the designated cyclotomic powers have finite inertia image
+everywhere, hence are of finite order over \(\Q\).
+
+Choose a test prime splitting in the finite field cut out by
+these ratios and in \(L\), outside the exceptional set for
+the Frobenius comparison. The ratio bound applies to the
+split point by equality of its Frobenius polynomials with those
+of the nonsplit point.
+Write \(\lambda_1,\lambda_2\) for the roots of the first
+block at this Frobenius and \(\mu_1,\mu_2\) for those of the
+second. The determinant exponents give
+\[
+       p^2=\frac{|\lambda_1\lambda_2|}{|\mu_1\mu_2|}
+           =\frac{|\lambda_1|}{|\mu_1|}
+              \frac{|\lambda_2|}{|\mu_2|}<p^2.
+\]
+The strict inequality is the ratio bound for the same polynomial
+at the nonsplit point. This excludes the full block in
+characteristic zero. \label{cor:ordinary-symplectic-cohomology-11}
+
+Here are the passages from the Galois properties to the
+three orbit conditions. Finiteness of the algebra of
+weight-zero matrix monomials gives finiteness for the
+image of \(A_0\), since its image is spanned by those
+monomials. A geometric point on \(A/I\) lifts to the full
+bigraded algebra. If \(\mathfrak m\) is the point ideal in the first-degree-zero
+algebra and \(A_{\rm full}\) the full algebra, homogeneous projection gives
+\[
+              \mathfrak m A_{\rm full}\cap A =\mathfrak m .
+\]
+Thus the fibre is nonzero. A maximal ideal in the fibre gives
+the lift over the algebraic closure.
+
+At geometric points use the homogeneous polynomial
+subalgebra of the complete deformation algebra. Finiteness
+of its weight-zero part over \(O\) enables torus rescaling
+so that the homogeneous parameters have strictly positive
+valuation and the resulting specialization extends to the
+complete algebra. Every nonconstant balanced monomial lies
+in the maximal ideal of the finite local weight-zero image, so
+its value at the specialization has strictly positive valuation.
+For each nonzero homogeneous coordinate of weight \(w_i\) and
+valuation \(v_i\), the required torus parameter \(\lambda\) obeys
+\[
+                      v_i+\langle w_i,\lambda\rangle>0 .
+\]
+The strict linear inequality criterion reduces feasibility to
+nonnegative weight dependences. Explicitly, for a nonzero integral dependence with coefficients \(a_i\ge0\),
+\[
+ \sum_i a_iw_i=0\quad\Longrightarrow\quad
+ \sum_i a_i v_i=v\!\left(\prod_i x_i^{a_i}\right)>0 .
+\]
+The product is a nonconstant balanced monomial in the specialized nonzero coordinates \(x_i\). Rational weights and valuations allow the
+rescaling in the algebraic closure.
+
+For such a specialization, an arrow from index \(i\) to
+\(k\) means that entry \((k,i)\) occurs in the matrix span.
+The span is an algebra containing the four diagonal
+idempotents, obtained by using the normalizing elements
+with distinct eigenvalues. By multiplying on the left and right by diagonal idempotents one isolates each nonzero entry. Transitivity now follows from
+\[
+ e_{lk}e_{ki}=e_{li}.
+\]
+The alternating form pairs the arrows by reversing indices. A bidirectional pair across the two blocks must
+have a third index in its strongly connected class, by
+the following residual argument. If the class contains just
+the two indices, their block is a two-dimensional subquotient.
+Write its entries as \(A_g,B_g,C_g,D_g\). Both off-diagonal
+entries vanish in the residual diagonal representation.
+
+Choose
+a nonzero generator \(b\) of the coefficient ideal generated
+by all \(B_g\). The block multiplication gives the residual
+cocycle
+\[
+                      \frac{\overline{B_g/b}}{\overline{D_g}}
+\]
+for the ratio of the two diagonal residual characters.
+It cannot be a coboundary. If
+\(\overline{B_g/b}=c(\overline{A_g}-\overline{D_g})\)
+for all \(g\), write the first projection of the subquotient
+as an integral linear combination of representation matrices.
+Write \(P_1=\sum_i a_i r(g_i)\) for the first projection in
+the subquotient. Multiply by \(r(h)\), take the \((1,2)\) entry
+and divide by \(b\). The assumed coboundary formula gives
+\[
+   \overline{B_h/b}
+     =\sum_i \bar a_i c\bigl(\overline{A_{g_ih}}
+                                 -\overline{D_{g_ih}}\bigr)
+     = c\,\overline{A_h}.
+\]
+Here the projection keeps the first diagonal entry and kills the
+second. Taking \(h=1\) gives \(c=0\), contrary to the choice of \(b\).
+The integral projections here are obtained by polynomial
+interpolation at the normalizing elements using the unit
+differences of the residual eigenvalues.
+
+The cocycle vanishes on residual-kernel inertia away from \(T\).
+At \(\ell\), the flag induces an invariant line in the
+subquotient. Interchange the indices if necessary so that
+the line is spanned by \((u,1)\) with \(|u|_\ell\le1\),
+and use the corresponding off-diagonal entry in the cocycle.
+The eigenvector equation on \((u,1)\) eliminates its
+eigenvalue and gives
+\[
+ B_g=u(D_g-A_g+C_gu).
+\]
+
+At the selected Frobenius, \(D_g-A_g\) is a unit for this
+between-block pair and \(C_gu\) belongs to the maximal ideal.
+At this Frobenius \(g\), the reduced difference makes \(D_g-A_g+C_gu\) a unit and \(b\mid B_g\). Therefore
+\[
+ \frac{u}{b}=\frac{B_g/b}{D_g-A_g+C_gu}\in\mathcal O
+\]
+in the coefficient valuation ring.
+For any \(g\) in the decomposition group, reducing the equation gives
+\[
+ \frac{\overline{B_g/b}}{\overline{D_g}}
+    =-\overline{u/b}\left(\frac{\overline{A_g}}{\overline{D_g}}-1\right).
+\]
+This proves the local coboundary condition at \(\ell\).
+At \(v\in S_b\) pass to the decomposition quotient with cyclic
+inertia group \(I_\xi\), the image of \(\xi\). Frobenius centralizes
+that image. If the residual coefficient character acts
+nontrivially on it, its cyclic cohomology vanishes.
+
+If the root coefficient \(\gamma\) is trivial on inertia,
+Frobenius centralizes \(I_\xi\) and multiplies its \(H^1\) by
+\(\gamma(\phi_v)\ne1\). The inflation--restriction terms are
+therefore
+\[
+    H^1_{\rm unr}(G_v,k(\gamma))=0,\qquad
+               H^1(I_\xi,k(\gamma))^{\phi_v}=0 .
+\]
+For nontrivial inertia coefficient the second term vanishes by
+cyclic cohomology. The first vanishes by the Frobenius unit
+on the inertia invariants in either case. These are the local conditions on the six root characters between the two blocks. Their residual localization vanishing
+contradicts the nontrivial class. A strongly connected class of three indices
+and its reverse intersect and together contain all four,
+so the representation is irreducible. Without such a pair
+there are either no bidirectional arrows, or a bidirectional
+pair within the \(\{0,2\}\) block and its dual pair.
+
+In the
+latter case all arrows between the blocks point one way, by
+transitivity. Taking the torus limit that removes those
+arrows preserves the bidirectional pair. On a bidirectional pair \(i,k\), the limiting image therefore contains
+\[
+ E_{ii},\ E_{kk},\ E_{ik},\ E_{ki}.
+\]
+These four units span the full two-by-two matrix block, contrary to the preceding exclusion on the limit. In the case without bidirectional
+arrows the diagonal-character calculation gives only two
+orders, the ordinary order and its block exchange
+\((0,1,2,3)\mapsto(2,3,0,1)\).
+They allow only one sign each. Their \((0,0)\) entries
+at the selected inertia element are \(\vartheta\) and
+\(\alpha\), respectively, with distinct values. That entry
+has degree zero, so two opposed one-sided points cannot
+have the same degree-zero specialization.
+\label{cor:ordinary-symplectic-cohomology-12}
+
+\end{proof}
+
+\subsubsection{Rigidity at the attached point}\label{par:rigid-point}
+
+Finiteness of the invariant image leaves a multiplicity question. A separating local element constrains the ordinary flag of an attached representation and thereby limits the ambiguity of its normalized point.
+
+\begin{proposition}[Rigidity in the degree-zero quotient]\label{prop:marked-invariant-rigidity}
+Use the irreducible cuspidal attachments and split local data of
+Propositions~\ref{prop:count-two-cuspidal-attachment},
+\ref{prop:count-two-rational-level} and \ref{prop:count-three-host-output}.
+Use a local element in the cyclotomic kernel whose eigenvalue ratios
+have infinite order, as constructed in those local tests. At an attached mixed-sign point \(x\) in characteristic zero, the infinitesimal action of the remaining torus spans the tangent to \(A/I\). If \(x\) has coefficient field \(K_x\), its grading derivation \(D_x\) satisfies 
+\[
+ D_x(b)=j\,x(b)\quad\bigl(b\in(A/I)_j\bigr),\qquad T_x=K_xD_x.
+\]
+ Distinct normalized mixed-sign orbits define
+distinct isomorphism classes.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Rigidity after the fitted CM restriction.}
+
+In the even-order case use the fitted CM layer and glued cuspidal point
+of Paragraph~\ref{par:count-two-glue}. Its restriction to
+\(G_L\) is absolutely irreducible. We need irreducibility
+also on \(H=G_{L(\mu_{\ell^\infty})}\). A positive power of
+the local element \(s\) in Paragraph~\ref{par:count-two-host-level}
+belongs to \(H\), and every positive power of its matrix has
+simple spectrum. This holds for the untwisted representation
+and for its scalar twist on the CM link.
+
+If the irreducible \(G_L\)-space decomposes on \(H\), the
+translates of a minimal \(H\)-subspace span the whole space.
+An \(H\)-constituent of multiplicity \(a\) repeats every
+eigenvalue of the simple-spectrum element at least \(a\) times,
+so every multiplicity is one. Transitivity of the \(G_L/H\)-action
+and total dimension four give
+\[
+         [G_L:\operatorname{Stab}(V_0)]\dim V_0=4.
+\]
+In the reducible case the index is \(2\) or \(4\). Let \(\eta_H\) be a nontrivial quadratic character of this
+permutation quotient. If \(V_0\) is one constituent and
+\(V_i=r(g_i)V_0\), define \(D|_{V_i}=\eta_H(g_i)\).
+It is well defined because \(\eta_H\) is trivial on the
+stabilizer of \(V_0\). When \(r(g)\) maps \(V_i\) to \(V_j\),
+we have \(\eta_H(g_j)=\eta_H(g)\eta_H(g_i)\), giving
+\[
+                   D r(g)=\eta_H(g)r(g)D .
+\]
+This is the self-twist.
+
+It is continuous since the stabilizer
+is closed of finite index. As \(\ell\) is odd, the pro-\(\ell\) kernel of reduction of the
+cyclotomic image has trivial image under a sign. The self-twist
+therefore reduces to the multiset identity
+\[
+             \{\overline{r_{0,ii}}\}_i
+                =\{\bar\eta_H\,\overline{r_{0,ii}}\}_i .
+\]
+This uses equality of the characteristic polynomials in the
+integral model. The fitted tower excludes every
+such nontrivial permutation. Thus \(r|_H\) is absolutely irreducible.
+Thorne's Theorem~6.1 now gives
+\(H^1_f(L^+,\operatorname{ad} r|_{G_L})=0\) for the
+polarized adjoint of the attached representation.
+At the chosen ordinary determinant point, the same vanishing follows from the adjoint lifting argument. The
+representation obtained by gluing in the even-order case over the fitted \(L\) is
+regular algebraic, polarized and cuspidal, and the scalar
+twist leaves the adjoint action unchanged.
+\hfill\mbox{\cite{thorne-adjoint}}\label{cor:ordinary-symplectic-cohomology-13}
+
+Write a first-order deformation at an
+irreducible point as \((1+\delta z(g))r(g)\).
+For a fixed alternating form \(J\), the dual-number perturbation preserving the similitude satisfies
+\[
+ (I+\delta z(g))^{\mathsf T}J(I+\delta z(g))
+ =J+\delta\bigl(z(g)^{\mathsf T}J+Jz(g)\bigr)=J .
+\]
+Thus the cocycle takes values in the symplectic Lie algebra. The local tangent above \(\ell\) is crystalline
+after restriction to a finite extension. In the ordinary
+frame the finite inertia factors can be killed on an open
+subgroup, and a power of the element \(s\) just constructed
+belongs to its decomposition group. The positive-root ratios
+on this power differ from the cyclotomic character. For each of the positive cyclotomic differences \(W\), the
+local Euler and de Rham dimension formulas give
+\[
+                         \dim H^1_f(W)=\dim H^1(W).
+\]
+The successive extensions therefore lie in the finite subspace. Applying this to the original flag and
+to its first-order enlargement gives the finite condition for
+the adjoint class.
+
+The extension of the adjoint defined by
+the finite condition is crystalline there because the
+enlarged representation and its dual are crystalline. In
+the enlarged flag, the two occurrences of each individual
+weight form a two-dimensional subquotient with an
+unramified self-extension after twisting by its diagonal
+character. This is because the diagonal characters of the
+deformation are fixed on the chosen open inertia subgroup.
+Away from \(\ell\) the cocycle vanishes on an open subgroup of inertia. Pass to its open normal core and denote the finite quotient by \(H\). For the induced cocycle on \(H\), put \(v=-|H|^{-1}\sum_{h\in H}z(h)\) in the invariant coefficient space. Then
+\[
+ g v-v=-|H|^{-1}\sum_{h\in H}(z(gh)-z(g)-z(h))=z(g).
+\]
+Thus the restriction is a coboundary on full inertia. This gives the Bloch--Kato conditions.
+
+On an imaginary quadratic restriction let \(\eta_K\) be
+its quadratic sign. For the alternating matrix \(J\) the
+projection \(P(X)=(X-J^{-1}X^{\mathsf t}J)/2\) commutes with
+conjugation by \(r(g)\). The polarized adjoint action over
+\(\Q\) is
+\[
+        X\longmapsto
+        \operatorname{Ad}(r(g))\big(P(X)+\eta_K(g)(1-P)X\big).
+\]
+This acts on \(\mathfrak{sp}_4\) by the usual conjugation and
+at complex conjugation is negative transpose relative to the
+polarizing pairing.
+
+For the finite CM restriction at which the adjoint group
+vanishes, the composite
+\[
+                 \operatorname{cor}\circ\operatorname{res}
+                    =[L':L]\,1
+\]
+is invertible on characteristic-zero cohomology. Thus the
+vanishing transfers to the original class. Here \(L'/L\)
+denotes the field extension of the adjoint restriction. A scalar twist on
+the Galois representation leaves the adjoint unchanged.
+Projecting the resulting adjoint coboundary by \(P\) makes
+\(z\) a symplectic infinitesimal conjugation. In particular
+this rigidity applies with weight gaps of one at the rational
+point. The non-torsion ratios at \(s\) supply the local
+condition for these gaps.
+\hfill\mbox{\cite{thorne-adjoint}}\label{cor:ordinary-symplectic-cohomology-14}
+
+The normalized diagonal blocks of \(\phi\) and the two
+normalizing entries at \(g_0\) force an allowed infinitesimal
+conjugation into the diagonal symplectic torus. The two blocks of
+\(r(\phi)\) have disjoint spectra, as can be checked on their
+residual eigenvalues. Write \(R_-,R_+\) for the two blocks of \(r(\phi)\). The
+off-block derivative equations include
+\[
+ R_-X-XR_+=0.
+\]
+
+Over an algebraic closure, triangularizing the two blocks gives the eigenvalues of the Sylvester operator:
+\[
+ \det(X\mapsto R_-X-XR_+)
+ =\prod_{\lambda\in\operatorname{Spec}(R_-)}
+   \prod_{\mu\in\operatorname{Spec}(R_+)}(\lambda-\mu)\ne0 ,
+\]
+with algebraic multiplicities. Thus the off-block solution is zero. Use the reversed
+operator on the other off-block entries. Inside a block the normalization
+compares it with the diagonal part of
+\(r(g_0)+\vartheta(g_0)r(g_0)^{-1}\). The two values in
+each block differ modulo the maximal ideal by a unit, up to
+sign, equal to
+\[
+ (\alpha(g_0)-1)(\Psi(g_0)-1).
+\]
+
+The remaining off-diagonal entries of the conjugating matrix
+must therefore vanish. For an actual conjugacy the same
+spectral separation identifies the blocks at \(\phi\)
+and then the eigenlines in each block. The residual labels
+identify the order of the eigenlines. The conjugating matrix
+preserves the symplectic form up to a scalar, by irreducibility
+and uniqueness of the pairing.
+
+To apply the tangent argument to the invariant algebra,
+choose a nonzero matrix entry of first degree \(1\) at the
+lift and one of first degree \(-1\). Both exist because
+the representation is irreducible. Invert their product.
+If \(x,y\) are the chosen entries of first degrees \(1,-1\),
+then \(x\) is a degree-one unit in \(A_{\rm full}[(xy)^{-1}]\).
+Multiplication by powers of \(x\) identifies each degree with
+degree zero:
+\[
+       A_{\rm full}[(xy)^{-1}]=A[(xy)^{-1}][x,x^{-1}].
+\] Tangents of \(A/I\) lift
+there by giving the Laurent generator constant value.
+Only the second torus coordinate of the infinitesimal
+conjugation acts on \(A\). This gives the tangent condition
+and the passage from a minimal orbit cover to distinct
+representation classes.
+\label{cor:ordinary-symplectic-cohomology-15}
+
+\end{proof}
+
+\subsubsection{The factor two}
+
+Even after rigidity, the localization length is an integral quantity and counting distinct characteristic-zero points alone gives no bound for it. A separating trace converts their congruences into a bound for the negative cotangent length.
+
+\begin{proposition}[Length from the separating trace]\label{prop:marked-trace-length}
+Use the chart of Proposition~\ref{prop:marked-graded-presentation}
+and the negative cotangent comparison of
+Proposition~\ref{prop:marked-cotangent-kernel}. Let \(\mathcal X\) contain
+one representative of each mixed-sign orbit in the quotient of
+Propositions~\ref{prop:marked-finite-and-blocks} and
+\ref{prop:marked-invariant-rigidity}. If \(g\) separates their traces
+from the trace at \(r_0\), the localization length in \eqref{eq:rankfour-length} satisfies 
+\[
+ s_\ell(\xi,j)\le2\sum_{\rho\in\mathcal X} v_\ell\!\left(\operatorname{tr}\rho(g)-\operatorname{tr}r_0(g)\right).
+\]
+
+The factor \(2\) is independent of the number of local frames and of
+the coefficient ramification degree.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Put the linear relations in Smith form.}
+
+Replace the \(F_i\) by a Smith basis, with linear parts
+\(\varpi^{d_i}y_i\) for \(1\le i\le r\) and zero for the
+remaining equation \(F_*\). The \(Z_i\) determine the
+weight-zero coordinates in the formal chart by the implicit
+function theorem. The resulting chart has variables with
+negative total degree contribution \(1\), \(r\) of them,
+and positive contribution \(1,2\), with multiplicities
+\(r'+1,1\). If \(a_g\) is zero on this chart one can add the
+product of one of the \(F_i\) and an element of degree \(1\)
+with nonzero chart image. This makes its chart image
+nonzero and leaves all evaluations on \(A/I\) unchanged.
+
+Over \(A_0\) take the multigraded Rees algebra of the three
+modules
+\[
+                   A_{-2},\qquad A_2,\qquad A_0F_*^2+A_{-2}^2A_2.
+\]
+Quotient by the homogeneous coefficient ideal of
+elements vanishing on the formal chart. Denote the quotient
+by \(R\). Use \(F_i^2\) in Rees degree \((1,0,0)\),
+\(E_i^2\) in \((0,1,0)\), and \(F_*^2\) in \((0,0,1)\).
+Call this list \(\mathbf t\). Since the chart image of
+\(a_g\) is nonzero in a domain, multiplication by \(a_g\)
+on \(R\) is injective. In sufficiently large multidegree
+\(d\), the Koszul comparison gives
+\[
+   \chi(\mathbf t,R/a_g;d)\ \le\
+               \chi(a_g,R/(\mathbf t);d),
+\]
+with \(\chi\) the alternating sum of \(O\)-lengths.
+For the integral support assertion, let \(R_{+}\) be the
+product of the ideals generated by the three unit-degree
+pieces of the multigraded Rees ring.
+
+At a prime outside
+\(V(R_+)\), a section of each of those three degrees lies
+outside the prime. To compute the degree-zero contraction,
+write the invariant part of the equation ideal using
+homogeneous multipliers of opposite weights. For \(h\in A_1\), let \(s_1,s_2\) be the formal Rees variables
+of multidegrees \((1,0,0),(0,1,0)\). Choose sections
+\(g_1s_1,g_2s_2\) outside the prime. The following identity is
+in the Rees ring:
+\[
+    (F_i h)^2(g_1s_1)(g_2s_2)=(F_i^2s_1)(h^2s_2)\,g_1g_2.
+\]
+Since the right side belongs to the prime and the two sections
+stay outside it, the contraction contains \(F_i h\). For \(F_*\)
+replace \(s_1\) by the third variable \(s_3\) and \(g_1s_1\)
+by a section \(g_3s_3\) outside the prime.
+
+For \(E_i\) use \(h\in A_{-1}\)
+and interchange the first two degrees. The three identities have
+degree-zero coefficients because \(g_1,g_3\) have weight \(-2\)
+and \(g_2\) has weight \(2\). The \(Z_i\) already vanish on the
+chart. Thus every prime of \(R\) containing \((\mathbf t)\) outside
+\(V(R_+)\) contains \(J=I\cap A_0\), including primes over the
+residue characteristic of the fixed mixed-characteristic DVR \(O\).
+Apply Lemma~\ref{lem:rees-multidegree-annihilation} to this Noetherian Rees algebra with its three generating unit-degree pieces, the two ideals
+\[
+ H=(\mathbf t),\qquad J=I\cap A_0.
+\]
+The integral contraction just proved supplies the prime condition of the lemma. It gives one exponent \(a\ge1\) such that
+\[
+ J^a(R/(\mathbf t))_{(d_0,d_1,d_2)}=0
+ \qquad(\min(d_0,d_1,d_2)\ge a).
+\]
+Noetherianity and finiteness of \(A_0/J\) over \(O\) imply
+the same finiteness for \(A_0/J^a\) by its \(J\)-adic filtration.
+Thus the resulting graded pieces are finite over \(O\).
+
+If \(A_{-2}A_2\) vanishes at a characteristic-zero point,
+the two nonzero Rees directions produce opposed one-sided
+points over its degree-zero specialization. Away from the
+origin Proposition~\ref{prop:marked-finite-and-blocks} excludes
+this pair. At the origin, spanning by the \(F_i\) and the absence
+of degree-\(-2\) conormal directions exclude the negative point.
+Thus after restricting away from the irrelevant locus the remaining
+characteristic-zero support lies over mixed-sign orbits. If \(a_g\)
+is nonzero on these orbits, the last equation forces
+\[
+ \operatorname{Supp}(R/(\mathbf t,a_g))
+   \ \subset\
+       V(\varpi)\ \cup\ \text{the irrelevant locus}.
+\]
+Both the equation and this support test are on the same Rees algebra. Taking powers of the finitely
+generated ideals gives finite lengths in large degree.
+\label{cor:ordinary-symplectic-cohomology-16}
+
+For the lower bound use the lowest possible total negative
+degree on the formal chart in multidegree \(d\). The two totals to retain in the leading space are
+\[
+               (2d_0+4d_2,\ 2d_1+2d_2).
+\] For a monomial of \(F_*\), let \(a,b\) count its negative and positive weighted totals. Its weight condition is \(a-b=1\). The case \((a,b)=(1,0)\) would give the excluded linear term in the formal chart, so
+\[
+ a\ge2,\qquad b=a-1\ge1 .
+\]
+The square therefore has negative and positive totals at least \(4\) and \(2\), respectively, as required for the third direction.
+
+Products of chart monomials fill the indicated leading
+coefficient space after inverting \(\varpi\). Partition the
+negative and positive totals into blocks of degree two
+on their respective sides, using two negative blocks and
+one positive block for each of the \(d_2\) factors.
+The leading modules are torsion-free finite \(O\)-modules
+and the action of \(A_0\) on them is through \(x_0\).
+In particular, \(a_g\) acts by zero there and they are a
+graded quotient of \(R/a_g\).
+
+Successively extracting the factor
+\[
+ \varpi^{2d_i}
+\]
+from
+each first equation contributes \(2d_i\) times the Euler
+characteristic on the reduction modulo \(\varpi\) with
+that equation omitted. This is additivity for multiplication
+by a product followed by the uniformizer filtration.
+The remaining Euler characteristics are eventually
+nonnegative, by a graded prime filtration and the
+Hilbert polynomial for the finite differences of the
+degree lengths. Equivalently one can successively replace
+a section on each prime quotient by a regular section of
+the same degree, which preserves those differences.
+
+In the leading space the generating function in the two
+totals is
+\[
+  \frac{1}{(1-X)^r(1-Y)^{r'+1}(1-Y^2)}.
+\]
+Omitting one first equation leaves the factors
+\((1-X^2)^{r-1}(1-Y^2)^{r'}(1-X^4Y^2)\)
+for the other differences. Their product with the generating
+function is
+\[
+  \frac{(1+X)^{r-1}(1+Y)^{r'}(1-X^4Y^2)}
+       {(1-X)(1-Y)(1-Y^2)}.
+\]
+Split the numerator by
+\(1-X^4Y^2=(1-Y^2)+Y^2(1-X^4)\). The second part has
+bounded \(X\)-degree after cancellation. For the first part the
+large-degree coefficient is
+\[
+ [X^aY^b]\,\frac{(1+X)^{r-1}(1+Y)^{r'}}{(1-X)(1-Y)}
+           =2^{r+r'-1}\qquad(a\ge r-1,\ b\ge r').
+\]
+Thus the uniformizer filtration contributes at least
+\[
+ 2^{r+r'}\sum_i d_i.
+\]
+
+
+For the upper bound at each characteristic-zero point in the
+support choose \(f\in A_{-2},g'\in A_2\) with \(fg'\ne0\)
+there. Inverting \(fg'\) turns \(f,g'\) into homogeneous
+units, so the Rees degrees become the corresponding
+weight pieces of the ordinary equation quotient. Over an
+algebraic closure the slice \(f=1\) is finite, since its
+even weights reduce to degree zero by powers of \(f\) and
+the squares of its odd generators are even. It is reduced
+because the torus tangents disappear on the slice.
+The \(\mu_2\)-orbits in the slice are the fibers over the
+invariant points. Each character of \(\mu_2\) occurs at most
+once in functions on such an orbit.
+
+For the \(r+1+r'\) squared equations, the filtration uses
+only zero and first powers of the corresponding unsquared
+equations. Writing
+\[
+ m=r+1+r',
+\]
+each successive quotient is indexed by a binary exponent vector. Thus for a fixed orbit and fixed character the total multiplicity is bounded by
+\[
+ \sum_{e\in\{0,1\}^m}1=2^m=2^{r+1+r'} .
+\]
+There is a finite orbit cover because the invariant quotient
+is finite and finitely many choices of \(f,g'\) cover its
+mixed-sign locus. A nonzero value of an element of degree
+\(\pm1\) also gives a nonzero element of degree \(\pm2\)
+by squaring.
+\proofstep{Carry out the determinant length comparison.}
+
+The Smith form expresses the length through elementary divisors. The determinant comparison translates those same valuations into the separating trace bound used in the character sum.
+
+
+The length difference for multiplication by \(a_g\) in
+each large degree equals its determinant valuation on the
+generic fiber. Indeed any endomorphism of a finite-length torsion module has kernel and cokernel of equal length. On the free quotient, Smith exponents \(b_1,\ldots,b_h\) of multiplication by \(a_g\) give
+\[
+ \operatorname{length}\operatorname{coker}(a_g)-
+ \operatorname{length}\ker(a_g)=\sum_{i=1}^h b_i
+ =v_\varpi(\det(a_g)).
+\]
+The equality on the full module follows by the kernel--cokernel exact sequence. With a single \(r\) per mixed-sign orbit the
+upper bound is at most
+\(2^{r+1+r'}\sum_r v_\varpi(\operatorname{tr}r(g)-
+\operatorname{tr}r_0(g))\).
+The ratio of the two powers of two gives the desired
+cohomology estimate.
+
+In the host normalization, for such a
+finite set \(\mathcal X\) and a separating element \(g\),
+\begin{equation}\label{eq:rankfour-length}
+s_\ell(\xi,j)\ \le\
+2\sum_{\rho\in\mathcal X}v_\ell\bigl(
+           \operatorname{tr}\rho(g)-\operatorname{tr}r_0(g)\bigr).
+\end{equation}
+Here \(v_\ell=v_\varpi/e_O\) and \(s_\ell\) is the normalized
+length at the original level. In particular the factor is
+independent of the number of local frames and of the sizes
+of the coefficient ring and the relation matrix.
+\label{cor:ordinary-symplectic-cohomology-17}
+
+\end{proof}
+
+\subsubsection{From CM eigensystems to rational packets}
+
+The trace estimate runs over representations over a residual prime, but the length sum ranges over many primes. Descent to a finite list at fixed rational level allows the same records to be used for different coefficient primes.
+
+\begin{proposition}[A finite list at the rational level]\label{prop:marked-rational-packets}
+For the admitted irreducible systems with fixed original level
+and algebraic weights, the quadratic packet records below form
+a finite list of polynomial size in the level and weight
+parameter. The list can be chosen independently of the coefficient
+prime. For each coefficient prime \(\ell\), writing \(\mathcal A_\ell\) for its admitted systems and \(\mathcal P\) for this fixed packet list, there is an injection 
+\[
+ \mathcal A_\ell/{\simeq}\ \hookrightarrow\ \mathcal P
+\]
+ retaining the two labels of rational descent.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Select a quadratic restriction and retain packet indices.}
+
+The spectral comparison needs a finite list independent of
+\(\ell\) once the level and weights are fixed, and an injection
+of the admitted representations at each \(\ell\) into that
+list up to isomorphism. To obtain the list over \(\Q\), take
+eighteen fixed imaginary quadratic fields with pairwise coprime
+discriminants. For instance, take discriminants \(-p_i\) for
+distinct primes \(p_i\equiv 3\bmod4\). At a test prime \(p\)
+at least seventeen of these fields are unramified.
+An irreducible four-dimensional representation has at most
+sixteen self-twist characters.
+
+If it is isomorphic to its
+twist by \(\delta\), the intertwiner spans a
+\(\delta\)-eigenspace for conjugation on endomorphisms.
+Eigenspaces of distinct characters are linearly independent,
+and the endomorphism space has dimension sixteen.
+Choose a field on the list whose quadratic character
+does not give a self-twist. Frobenius reciprocity and
+\[
+\operatorname{Ind}_{G_K}^{G_\Q}\operatorname{Res}_{G_K}r
+          \simeq r\oplus(r\otimes\delta_K)
+\]
+give
+\[
+ \dim\operatorname{End}_{G_K}(r|_{G_K})
+   =\dim\operatorname{Hom}_{G_\Q}\big(r,r\oplus(r\otimes\delta_K)\big)=1.
+\]
+The restriction is semisimple: the translates of a simple
+\(G_K\)-subrepresentation are simple and span \(r\) by
+normality and irreducibility on \(G_\Q\). Thus the
+endomorphism identity proves irreducibility on \(G_K\).
+
+We compute the level of the packet belonging to such a
+restriction. At the rational point put \(M=\ell\,2^n\mathcal N b\)
+with \(n,b\) as in the two cases of the valuation estimate below. The host character \(\xi\)
+has modulus \(\mathcal N\). The auxiliary character \(\eta\) is
+a product of characters of moduli \(2^n\) and \(b\), the second
+of order dividing \(o\). The Teichm\"uller character has modulus
+\(\ell\). All three take the value one on elements fixing
+\(\mu_M\). To see the uniform order bound, let
+\[
+ k=(\ell-1)2^n(2o).
+\]
+
+The orders of the odd local factors, the dyadic factors and
+the Teichm\"uller factor divide \(2o,2^n,\ell-1\), respectively.
+Consequently the joint exponent divides
+\[
+ \operatorname{lcm}(2o,2^n,\ell-1)\mid (\ell-1)2^n(2o)=k .
+\]
+The three conductors divide \(M\).
+At a rational place away from \(\ell\), an inertia element
+killing all three characters has trivial matrix at the point.
+Outside \(T\) this follows from the diagonal residual kernel
+relation and the triviality of the cyclotomic character on
+inertia.
+
+At the remaining places it is the prescribed local
+kernel of \(\xi\). The resulting finite abelian inertia action
+diagonalizes, and its characters extend from the image of
+inertia in \(\operatorname{Gal}(\Q(\mu_M)/\Q)\) to this
+finite abelian group. At \(\ell\) the rational ordinary flag has inertia data
+\[
+   m=(j+1,j,1,0),\qquad
+   (\omega^{-1}\eta\xi,\xi,\omega^{-1}\eta,1)
+\]
+for the cyclotomic exponents and the finite factors, respectively. Its alternating pairing gives multiplier
+\(\epsilon_\ell^{j+1}\omega^{-1}\eta\xi\).
+These statements restrict to every chosen quadratic field,
+by conjugating the place before restricting the flag.
+
+For a quadratic field on which the restriction is irreducible,
+the attachment and pairing give a regular algebraic polarized
+cuspidal representation with the local comparison of
+Section~\ref{sec:local-global}. Above \(\ell\) the local
+parameter has finite inertia with the displayed finite factors
+and zero monodromy. Indeed the finite inertia factors are removed
+on an open subgroup, and the cyclotomic-kernel element of
+Paragraph~\ref{par:rigid-point} has a power in each local
+restriction. The argument with the ordinary flag there gives
+potential crystallinity. At each embedding the Hodge jump \(h_i=-m_i\) contributes the automorphic infinitesimal parameter
+\[
+ \frac{4-1}{2}-h_i=\frac32+m_i .
+\]
+Taking all four values gives the required multiset.
+Away from \(\ell\) the finite inertia image already gives
+zero monodromy. At a place \(v\nmid M\) the parameter is
+unramified, giving a spherical vector.
+
+At \(v\mid M\) write \(a=v(M)>0\). Every irreducible Weil
+constituent is trivial on inertia fixing \(\mu_M\). Its inertia
+image is central since the cyclotomic quotient is abelian,
+and therefore scalar by Schur's lemma. Over the algebraic closure let \(v\) be a Frobenius eigenvector, and let \(\chi_I\) be the inertia scalar. Writing \(\Phi\) for Frobenius gives
+\[
+ r(i\Phi^a)v=\chi_I(i)\lambda^a v\quad (i\in I,\ a\in\Z),
+ \qquad r(\Phi)v=\lambda v .
+\]
+Thus the eigenline is invariant under the whole Weil group. Irreducibility gives a one-dimensional constituent.
+
+For a local unit \(u\in1+M\mathcal O_v\), the
+\(\mathbf Z_p\)-matrix of multiplication by \(u\) is
+\(I+MA\). Hence
+\[
+ N_{K_v/\Q_p}(u)=\det(I+MA)\in1+M\mathbf Z_p.
+\]
+The norm therefore acts trivially on \(\mu_M\).
+Hence for each of the characters \(\chi\) under consideration local norm compatibility gives
+\[
+ \chi(u)=1\qquad(u\in1+M\mathcal O_v).
+\]
+The local representation
+has Borel cuspidal support given by these characters up to
+unramified twists. Its Borel Jacquet module is nonzero and
+has a vector fixed by the diagonal congruence subgroup.
+For this last assertion use the geometric lemma for principal
+series and exactness of invariants under the compact diagonal
+subgroup.
+
+Write \(K_v(M)\) for the principal congruence group and
+\(K_+,K_T,K_-\) for its upper unipotent, diagonal and lower
+unipotent parts. Let \(J\) be the upper Jacquet map. Lift the
+fixed Jacquet vector to \(f\) and average over \(K_T\), so
+\(J(f)\ne0\) and \(f\) is \(K_T\)-fixed. Take a diagonal translate \(a\) large enough that \(a^{-1}K_-a\) fixes the smooth vector \(f\). For \(u\in K_-\),
+\[
+ \pi(u)\pi(a)f=\pi(a)\pi(a^{-1}ua)f=\pi(a)f.
+\]
+It is also fixed by \(K_T\), since that group centralizes \(a\).
+For the upper Jacquet map, using its normalization,
+\[
+                J(\pi(a)f)\ \in\ \overline{\Q}_\ell^\times
+                                      \pi_{N}(a)J(f)
+\]
+when working in an \(\ell\)-adic coefficient field, or the
+corresponding complex line. This is nonzero because the torus
+action on the Jacquet module is invertible.
+
+In the decomposition of the principal
+congruence group into upper unipotent, diagonal and lower
+unipotent factors, averaging over the upper group preserves
+the Jacquet image. Writing \(e_H\) for normalized Haar averaging over \(H\), triangular elimination in the finite congruence quotients gives
+\[
+ e_{K_v(M)}=e_{K_+}e_{K_T}e_{K_-},\qquad
+ e_{K_v(M)}\pi(a)f=e_{K_+}\pi(a)f .
+\]
+The identities pass to smooth vectors by working at a sufficiently deep finite quotient.
+This gives a nonzero principal-congruence invariant at \(v\).
+Taking the restricted tensor product of these vectors gives
+the required fixed vector at \(K_K(M)\). Every level and
+weight in this calculation belongs to the rational point,
+including when a much higher mixed weight was used at the seed.
+\label{cor:ordinary-symplectic-cohomology-18}
+
+Here is the count at a fixed field \(K\) and rank \(n\).
+Use the principal congruence subgroup \(K_K(3M)\), which is
+contained in \(K_K(M)\). The locally symmetric adelic
+quotient at this level is a finite cover of the one at
+\(K_K(3)\), with degree at most
+\[
+   [K_K(3):K_K(3M)]
+      \le \big|\mathrm{GL}_n(\mathcal O_K/3M\mathcal O_K)\big|
+      \le (3M)^{[K:\Q]n^2}.
+\]
+In the quotients remove the real split center. The level-three
+subgroup is torsion-free on the arithmetic components.
+
+In a
+completion above \(3\), a matrix in \(1+3M_n(\mathcal O_{K,v})\)
+of finite order has logarithm zero and is the identity,
+since logarithm and exponential are inverse on this subgroup.
+Thus each arithmetic stabilizer has this property after
+conjugating at the finite place. The Borel--Serre compactification
+at level three provides a finite cell complex on its finitely many
+components. Each cell has at most \((3M)^{[K:\Q]n^2}\) lifts. For a
+local system of rank \(d\), its contribution to the cochain count
+is therefore bounded by \(d\) times that cover degree. Summing
+over the fixed cell complex gives
+\[
+        \dim C^\bullet\ll_{K,n} M^{[K:\Q]n^2}d .
+\]
+\hfill\mbox{\cite{borel-serre}}
+
+For ordered algebraic weights \(m_0>\dots>m_{n-1}\) with \(\max |m_i|\le H\), use a coefficient representation of highest weight \(\nu_i=i+1+H-m_{n-1-i}\) for \(0\le i<n\), up to a determinant twist and with a factor at each embedding.
+The integers \(\nu_i\) are weakly decreasing and belong to
+\([0,n+2H]\). At each embedding the Weyl dimension formula gives
+\[
+     \prod_{i<i'}\frac{\nu_i-\nu_{i'}+i'-i}{i'-i}
+                             \ll_n(H+1)^{n(n-1)/2}.
+\]
+The determinant twist has dimension one.
+
+At the given
+infinitesimal character, the regular algebraic cuspidal
+representation contributes to relative Lie algebra cohomology
+with the corresponding coefficient system. Borel's cuspidal
+cohomology injection takes the direct sum of these contributions
+into the cohomology of the quotient. A representation with
+vectors fixed by \(K_K(M)\) has a nonzero contribution at
+\(K_K(3M)\). Consequently the number of pairwise inequivalent
+systems is bounded by \(c_K(M(H+1))^{A_K}\). In rank four
+\(H=j+1\) suffices. Both constants depend on the fixed field
+and rank, so one can take maxima over the quadratic list.
+\hfill\mbox{\cite{clozel-motifs,borel-cuspidal}}\label{cor:ordinary-symplectic-cohomology-19}
+
+For clarity, let \(\sigma_v\) induce \(x\mapsto x^q\) on the
+residue field at a spherical place, \(q=Nv\). If \(\alpha_i\)
+are its Satake parameters in normalized induction, then
+\[
+       \{q^{(n-1)/2}\alpha_i\}_i
+          =\operatorname{Spec}\iota r(\sigma_v^{-1}),\qquad
+       \{b_i\}_i=\{(q^{(n-1)/2}\alpha_i)^{-1}\}_i .
+\]
+The first multiset is the system used in the Galois comparison.
+The second is the record denoted by \(\beta\) in the packet
+count. Its sum in rank four is the arithmetic Frobenius trace.
+
+If \(m_i+m_{n-1-i}=w_0\), the mean of the infinitesimal
+character is \(t=(n-1+w_0)/2\). The twist \(|\det|^{-t}\) makes the central character
+unitary. Its Satake roots are \(\alpha_i^{\rm un}=q^t\alpha_i\),
+so the arithmetic Frobenius roots satisfy
+\[
+                b_i=q^{w_0/2}(\alpha_i^{\rm un})^{-1}.
+\] For the resulting
+unitary generic spherical representation the absolute values
+of the roots lie between \(q^{-1/2}\) and \(q^{1/2}\), and
+their product has absolute value one by the central character.
+Inverting these roots and undoing the normalization gives
+\[
+ q^{(w_0-1)/2}\le |b_i|\le q^{(w_0+1)/2},\qquad\prod_{i=1}^n|b_i|=q^{nw_0/2}.
+\]
+
+
+For the integrality assertion use the compatible representations
+of each regular algebraic polarized cuspidal pair, including
+at residue characteristic \(p\) of \(v\). The algebraically
+normalized Hecke polynomials have coefficients in a number
+field by rationality. At an embedding into
+\(\overline{\Q}_{\lambda}\) for \(\lambda\ne p\), geometric
+Frobenius has unit eigenvalues in the \(\lambda\)-adic norm
+since a continuous Galois representation preserves a lattice.
+At an embedding into \(\overline{\Q}_p\), sphericity gives a
+crystalline representation, with filtration jumps \(-m_i\)
+at every embedding over \(v\). The eigenvalues of the appropriate
+residue-degree power of crystalline Frobenius are \(b_i^{-1}\)
+under this embedding by the spherical local comparison.
+Weak admissibility puts every normalized Newton slope between
+\(\min_i(-m_i)\) and \(\max_i(-m_i)\).
+
+Let \(D_{\min}\) be the smallest-slope submodule, with normalized slope \(s_{\min}\). Weak admissibility for the submodule gives
+\[
+ s_{\min}=\frac{t_N(D_{\min})}{\dim D_{\min}}
+ \ge \frac{t_H(D_{\min})}{\dim D_{\min}}
+ \ge \min_i(-m_i),
+\]
+using normalized degrees. Applying the lower bound to the dual gives the upper bound on the largest slope. Consequently
+\[
+      \min_i m_i\ \le\ v_p(b_i)/v_p(q)\ \le\ \max_i m_i .
+\]
+The slopes give the two sufficient denominator clearings
+\[
+     q^a b_i \text{ integral if }a+\min_i m_i\ge0,\qquad
+     q^a b_i^{-1}\text{ integral if }a\ge\max_i m_i.
+\]
+The other finite places have unit roots.
+In rank four all \(b_i\) themselves are integral. This
+argument uses the spherical comparison of
+Section~\ref{sec:local-global} at the unramified test place.
+\hfill\mbox{\cite{tadic,clozel-motifs,blggt,blggt-lg}}\label{cor:ordinary-symplectic-cohomology-20}
+
+The conjugation theorem for the algebraic normalization makes the
+systems stable under all field automorphisms. Two admissible
+restrictions with the same system are isomorphic by agreement of
+almost all Frobenius polynomials and semisimplicity.
+
+Fix a place above \(p\) in each field. If its residue
+degree is \(f\in\{1,2\}\), its arithmetic Frobenius spectrum
+is the multiset of \(f\)-th powers of the rational
+spectrum. Enumerating at most \(2^4\) inverse images
+of each multiset includes all possibilities.
+If \(b^f\) is integral, \(b\) satisfies the monic equation
+\[
+ X^f-b^f=0\quad\text{at }X=b .
+\]
+Transitivity of integrality therefore gives integrality of \(b\). The root norms and their product descend
+by taking \(f\)-th roots of the corresponding inequalities
+and equality. The union of the multisets is stable under
+field automorphisms.
+
+For each restriction type there
+are at most two rational isomorphism classes, again by
+Frobenius reciprocity. Index a record by the quadratic field,
+the CM eigensystem, its chosen inverse-image multiset and one
+of two labels for the rational descents. Distinct eigensystems
+can have identical spectra at the test prime. Their records
+retain separate indices in the integer product. The number of
+quadratic fields and the factors \(2^4\) and \(2\) are
+fixed. Thus the polynomial dependence on \(M(j+2)\) and
+the independence from \(\ell\) for fixed \(M,j\) in the
+rational packet count follow from the CM input. \label{cor:ordinary-symplectic-cohomology-21}
+\end{proof}

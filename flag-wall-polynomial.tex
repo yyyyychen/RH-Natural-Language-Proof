@@ -1,0 +1,299 @@
+\paragraph{The polynomial on the same component.}
+Let \(d=d_F\), and write \(\theta(w)\) for the smooth reference
+curvature of the root combination. For a weight \(w\) and real
+parameter \(s\) define \(I_R(w,s)\) by taking the arithmetic
+\((d+1)\)-st power of the root line at \(Q_B\) with its original
+truncated metric at \(R\), plus \(sA\), on the component \(c\).
+Take the section and field degree normalizations used for
+\(\Phi_B\). Since the logarithms of the determinant norms at fixed \(R\)
+are linear in the weight, multilinearity gives the degree bound
+\[
+                      \deg_{w,s} I_R(w,s)\le d+1 .
+\] The
+cutoff \(R\) in the archimedean metric is independent of the
+finite cutoff \(B\).
+
+To bound this polynomial, compare its metric with the perturbation already controlled on horizontal and vertical curves. In a toroidal
+chart let \(r\) again denote the logarithmic boundary radius.
+The truncated matrix on the first block is the interpolation
+\[
+ (1-a_R)H_0+a_R H
+\]
+of the smooth and Hodge Gram matrices.
+The same formula on the other block uses the reversed dual
+matrices. For \(r\le R^2\) one has
+\[
+ a_R=(1+(r/R)^\kappa)^{-1}.
+\]
+The interpolation agrees with
+the smooth reference at \(r\ge R^3\). Choose the exponent as
+in the chart, \(\kappa>2\mu+2\), where each original form lies
+between \(r^{-\mu}\) and \(r^\mu\) times the other. For
+\(r\le\sqrt R\), the relative error in the interpolation is at
+most \(R^{-1}\), since
+\[
+ (1-a_R)r^\mu\le R^{(\mu-\kappa)/2}.
+\]
+
+The log of each graded norm differs by \(O(1/R)\), by comparing
+successive principal determinants. Everywhere its change from
+the smooth reference is \(O(\log r)\). Both estimates are
+uniform for bounded weights. \label{cor:flag-wall-polynomial-1}
+
+\begin{proposition}[Componentwise arithmetic comparison at the weight wall]
+\label{prop:arithmetic-wall-polynomial}
+On the fixed component \(c\), the arithmetic power of the
+perturbed metric is approximated by the limiting weight polynomial
+from \(I_R\). Its logarithmic boundary mass satisfies
+\eqref{eq:flag-wall-tail}. The difference of the finite-cutoff
+powers satisfies \eqref{eq:flag-wall-finite-cutoff}. Writing \(g_c(v)\) for the geometric degree on the same component, the component measures enter as
+\[
+ g_c(v)=w_cG(v),\qquad w_c>0,\qquad \sum_c w_c=V.
+\]
+
+\end{proposition}
+
+\begin{proof}
+\proofstep{Comparing with the intersection in the perturbed metric.}
+For the regularized potentials of Section~\ref{subsec:flag-wall-positivity}
+write \(\ell=s^{-2}\). On \(r\le\ell\) their distance from the
+Hodge potentials is \(O(s)\). Indeed on a ball of radius
+\(c e^{-r/2}\) in a crossing chart the new boundary radius is
+at most \(r+C\). Differentiating the Hodge Gram ratios bounds
+the gradient there by
+\[
+ C(r+C)^\nu e^{r/2}.
+\]
+
+In a logarithmic
+coordinate the derivative of a period brings down a factor
+\(1/z_i\), bounded by \(Ce^{r/2}\), and the Gram matrices,
+their inverses in the eigenframes, and the smooth changes of
+frame have polynomial bounds in \(r\). The smoothing radius
+\(e^{-\ell}\) times this gradient is \(O(e^{-\ell/3})\).
+The bounded regularization corrections of size
+\(O((1+\log\ell)/\ell)\) there are also \(O(s)\).
+For \(r\ge\ell\) the upper and lower value bounds give a
+difference \(O(\log r)\). \label{cor:flag-wall-polynomial-2}
+
+\proofstep{Controlling the logarithmic boundary growth.}
+Here is the boundary estimate that permits use of these comparisons
+under the intersection integral. A positive curvature of the form
+\(\theta+dd^c u\) off the divisor, with
+\[
+ -C\log r\le u\le0
+\]
+and \(-C\Omega\le\theta\le C\Omega\),
+will be used with \(u\) smooth or tending to \(-\infty\) at the
+boundary. Each curvature in the interpolation can be written
+as a bounded combination of such forms. More explicitly, for
+the truncated Gram metric one adds a fixed multiple of a positive
+Poincar\'e form, then subtracts it.
+
+In crossing coordinates the
+latter dominates the smooth directions and the forms
+\[
+ \frac{i\,dz_a\wedge d\bar z_a}
+ {|z_a|^2(1+|\log |z_a||)^2}
+\]
+in the boundary directions. Its potential is a sum of negative
+logarithms of the branch radii, comparable to \(-\log r\)
+up to fixed factors. The lower curvature bound for the interpolated
+metric uses the blockwise decreasing weights. In the chart curvature
+formula the two end metrics have bounded normalized curvature
+and their connection difference is bounded in the Poincar\'e
+metric. Inserting the interpolated Gram matrix in
+\(\bar\partial(H^{-1}\partial H)\), the terms with a derivative
+of \(a_R\) are controlled by the logarithmic derivatives of the
+cutoff.
+
+On \(r\le R^2\) these are obtained from
+\[
+ da_R=-\kappa a_R(1-a_R)\,dr/r.
+\]
+On the terminal transition the
+squared smooth cutoff and \(\kappa>2\mu+2\) bound the terms
+involving the inverse Gram matrix. The flag restriction adds
+the nonnegative second fundamental form for each proper step.
+This is the interpolation curvature estimate on the adapted
+toroidal charts. The positive correction can be enlarged so its
+potential dominates the absolute log growth. For the \(s\)-metric
+use its semipositivity and uniform upper bound. Majorization of the
+Hodge potential gives the same logarithmic lower bound off the
+divisor, uniformly in \(s\). Constant changes in potentials leave
+their curvatures unchanged. \label{cor:flag-wall-polynomial-3}
+
+For a product \(d\mu\) of \(d\) of the indicated positive forms,
+the mass is bounded, and for \(D\ge e\)
+\begin{equation}\label{eq:flag-wall-tail}
+ \int_{\{r\ge D\}}\log r\,d\mu
+       \ \ll\ \frac{(1+\log D)^{d+1}}{D}.
+\end{equation}
+To verify the bound on a shell \(D\le r\le 2D\), truncate
+each \(u\) from below by a smooth convex maximum with
+\(-C\log(2D)-2\), agreeing with \(u\) on the shell.
+
+Adding
+\(C\Omega\) makes the truncated curvatures positive everywhere.
+They are smooth through the divisor, since a potential tending
+to \(-\infty\) is then constant near it. Their mixed masses
+against powers of \(\Omega\) are uniformly bounded by Stokes'
+theorem applied to the fixed smooth parts. Represent each
+truncated potential up to a constant by
+\(0\le v\le C'(1+\log D)\). Take a smooth increasing concave
+truncation \(r_D\) of \(r\), equal to \(r\) up to \(2D\) and
+constant beyond \(3D\), with derivative at most one.
+The logarithmic divisor formula gives \(dd^c r_D\le C\Omega\).
+Also
+\[
+ \int r_D\Omega^d\le\int r\Omega^d=O(1).
+\]
+
+Write one truncated curvature as \(dd^c v+\alpha\) where
+\(\alpha\) is smooth and uniformly bounded above by \(C\Omega\).
+For a closed mixed positive product \(P\) of complementary
+degree, Stokes gives
+\[
+ \int r_D(dd^c v+\alpha)\wedge P
+   =\int v\,dd^c r_D\wedge P+\int r_D\alpha\wedge P
+   \le C'(1+\log D)\int\Omega\wedge P+
+                              C\int r_D\Omega\wedge P.
+\]
+The first integral on the right is a uniformly bounded mass.
+The second replaces one truncated curvature by \(\Omega\).
+Iteration terminates at \(\int r_D\Omega^d=O(1)\), so for a mixed
+product \(P_d\) of \(d\) such curvatures the shell bound is
+\[
+ \int_{\{D\le r<2D\}}P_d
+  \ \le\ D^{-1}\int r_D P_d
+  \ \ll\ (1+\log D)/D \qquad (d\ge1).
+\]
+Summing with weight \(\log(2D)\) on dyadic shells gives
+\eqref{eq:flag-wall-tail}.
+The mass on the part of bounded radius follows by the same
+truncation and ordinary mixed-mass bound. This applies also
+to absolute values of integrals of the bounded combinations,
+by expanding their products. \label{cor:flag-wall-polynomial-4}
+
+\proofstep{The difference of arithmetic powers.}
+Changing just the archimedean metric in the arithmetic power
+telescopes into \(d+1\) integrals of the potential difference
+against mixed curvatures, with the common component
+normalization. Write \(\varphi_{R'},\varphi_R\) for the normalized root
+potentials in the two readings and \(\mathcal M_i\) for the products
+of \(i\) curvatures from \(R'\) and \(d-i\) from \(R\).
+Use the \(O(1/R)\) bound on \(r\le\sqrt R\) and the weighted
+tail \eqref{eq:flag-wall-tail} on its complement:
+\[
+ \sum_{i=0}^d\left|\int (\varphi_{R'}-\varphi_R)\,\mathcal M_i\right|
+   \ll R^{-1}+\frac{(1+\log R)^{d+1}}{\sqrt R}.
+\]
+The same component normalization is used in the two degrees,
+and the bound is uniform in \(R'\ge R\), \(B\), the bounded
+dominant weights and \(0\le s\le1\). Thus they converge on an
+open set of strictly decreasing weights and \(0<s<1\).
+Evaluation on that open set separates polynomials of bounded
+degree.
+
+A finite subset of evaluations forms a basis of their
+dual, so that all the coefficients converge. Call the limiting
+polynomial \(P_{B,c}\). At \(s=0\) its component sum is
+\(\Phi_B(L_w^{d+1})\) by the defining limit, first on the open
+chamber and then identically. Compare the \(s\)-metric to the
+truncated metric at \(R\ge\ell^2\). Their difference is \(O(s)\)
+on \(r\le\ell\) and \(O(\log r)\) elsewhere. Putting \(\ell=s^{-2}\) in the tail estimate gives
+\[
+ \ell^{-1}(1+\log\ell)^{d+1}
+ =s^2(1+2\log(1/s))^{d+1}=O(s)
+\]
+as \(s\downarrow0\), for the fixed dimension \(d\). Taking \(R\to\infty\)
+proves that the actual component intersection for \(M_B(v,s)\)
+differs from
+\[
+ P_{B,c}(v-sd_0,s)
+\]
+by \(O(s)\), uniform in
+\(B\) on the fixed model. \label{cor:flag-wall-polynomial-5}
+
+\paragraph{Dependence on the finite cutoff.}
+
+For wall estimates obtained by varying the cutoff to determine the functional at a fixed cutoff, the difference of the two arithmetic degrees must be tracked prime by prime.
+
+Compare \(B\) with \(2\) on a common refinement and divide by
+the corresponding generic cover degrees. The changed primes
+are good and their root log norms differ by at most
+\(\log p/(p-1)\) in the normalization at \(p\). For a combination
+\(x\) at \(B\) and \(y\) at \(2\) with the same bounded weights
+and ample summand, the generic and archimedean lines coincide.
+The vertical log bound for \(x-y\) is at most the sum of the
+absolute weight coefficients times the root bound. On a list
+of \(d\) lines nef over the changed primes its mixed intersection
+is therefore bounded in absolute value by
+\[
+ C\sum_{p\le B}\log p/(p-1)
+\]
+times their generic mixed degree.
+Indeed the local vertical divisor is between the two corresponding
+multiples of the whole fibre. Restrict the nef lines to the
+components and sum their nonnegative mixed degrees with these
+multiplicities.
+
+For clarity, \(y\) itself need not be nef at the newly changed
+primes. On the model at \(2\) take a fixed relatively ample
+\(H\) large enough that \(H\pm x_i\) are relatively nef for
+every reference root \(x_i\). For \(\|w\|_\infty\le1\) and
+\(s\ge0\), \(y+h\) is in the nef cone, where \(h\) is the
+number of roots times \(H\). This follows by expanding each
+\(H-w_i x_i\) with coefficients \((1\pm w_i)/2\).
+
+At the changed primes \(x\) is nef by the Hodge--Tate step
+comparison. Use
+\[
+ x^{d+1}-y^{d+1}=\sum_{i=0}^d(x-y)x^i y^{d-i},\qquad
+ y^{d-i}=\sum_{j=0}^{d-i}\binom{d-i}{j}(-1)^j
+                                 (y+h)^{d-i-j}h^j .
+\]
+After taking absolute values of these coefficients, every
+local mixed degree uses only the nef lines \(x,y+h,h\).
+In the bound by generic degrees replace \(x\) by \(y\),
+whose generic class agrees. The sum over \(j\) is
+\(\deg_{\mathrm{geom}}(y^i(y+2h)^{d-i})\). It is bounded on the
+fixed compact coefficient range independently of the refinement,
+after division by the cover degree. This yields
+\begin{equation}\label{eq:flag-wall-finite-cutoff}
+ \lvert I_R(w,s;B)-I_R(w,s;2)\rvert\ll\log B .
+\end{equation}
+The same inequality holds in the limit. Applying the same finite matrix of evaluations on the open
+chamber now bounds every coefficient of \(P_{B,c}\) by \(O(\log B)\).
+\label{cor:flag-wall-polynomial-6}
+
+\paragraph{The geometric degree.}
+The canonical root class \(L_v\) is nef for dominant \(v\).
+Indeed the regularizations above approximate it by smooth forms
+with curvature at least \(-\varepsilon\Omega\), with
+\(\varepsilon\downarrow0\). The shifted geometric class
+\(M=L_{v-sd_0}+s A\) is nef for dominant \(v-sd_0\). In the
+polarization of the toroidal model \(L_{d_0}-A\) has the class
+of an effective boundary divisor \(D_0\), with the multiplicities
+of its local boundary section. The telescoping formula gives
+\[
+  \deg L_v^d-\deg M^d
+     =s\sum_{i=0}^{d-1} D_0\cdot L_v^i M^{d-1-i}\ge0 .
+\]
+Each summand is nonnegative by restriction to the effective
+components and approximation by positive forms. Polynomial
+continuity gives convergence to \(\deg L_v^d\) as \(s\downarrow0\).
+
+For the canonical extension of the homogeneous bundles over a
+smooth toroidal compactification of a neat arithmetic quotient,
+Mumford's proportionality theorem identifies the Chern evaluation
+with the compact-dual evaluation times the component volume in
+the proportionality normalization. Passing to the flags uses the
+flag-bundle pushforward on both sides, so the weighted root
+powers have the same factor. Dividing by the degree of a common
+neat cover gives the same formula on the selected component.
+It holds first at integral weights and then identically by
+multilinearity. The resulting upper degree is \(w_cG(v)\),
+where \(w_c>0\) and \(\sum_c w_c=V\).
+\cite{mumford-flag-wall}\label{cor:flag-wall-polynomial-7}
+\end{proof}

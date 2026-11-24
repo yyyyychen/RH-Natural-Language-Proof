@@ -1,0 +1,158 @@
+\begin{established}[The split refinement of the marked core]\label{hyp:split-section-refinement}
+In the local construction write \(p=\ell\), \(M=g_0g_1\) for
+the original full level and \(I=P\mathcal O_E\), where \(P\)
+is the chosen prime above \(p\) in the marked imaginary
+quadratic field. If \(J\) denotes the old half, then the new level data are
+\[
+ (\text{level},\text{chosen half},\text{auxiliary level},\text{field})
+                       =(Mp,JI,1,F),
+\]
+with the same coefficient field \(F\). For each \(\sigma\in\operatorname{Aut}(\mathbb C/F)\), the marked CM curve and its pullback are isomorphic by an isomorphism respecting every torsion label at level \(Mp\) and at each divisor of \(Mp\).
+\end{established}
+\begin{proof}
+We have \(I+\overline I=\mathcal O_E\) and
+\(I\overline I=(p)\), by splitting. Use at each lift the
+polarization and moduli problem of the core \(J\) just constructed.
+At each \(j\) refine the split level by \(I,\overline I\).
+Writing \(J\) for the old chosen half, the updated parameters are
+\[
+ (\text{integer},\text{chosen half},\text{auxiliary level})=(Mp,JI,1).
+\] The two complementary halves exist by the displayed
+factorization and coprimality. Use the moduli space with this
+refined marking and the map forgetting its new level.
+The coefficient field stays fixed. The field contains the specified roots of the coprime orders \(M\) and \(p\); their product has order
+\[
+ \operatorname{ord}(\zeta_M\zeta_p)=\operatorname{lcm}(M,p)=Mp .
+\]
+
+Write \(F_{\rm rec}\) for the embedded record field and \(F\) for
+the cover coefficient field. The pin on the coefficient field
+sends the generators of \(F_{\rm rec}\) to their prescribed complex
+values in \(F\), so \(F_{\rm rec}\subseteq F\).
+For the marked CM lattice \(\Lambda\) the field conditions read
+\[
+ k\big(j(\Lambda), W(P):P\in (Mp)^{-1}\Lambda/\Lambda\big)\subseteq F .
+\]
+Here \(k\) denotes the marked imaginary quadratic field and \(W\) its Weber function. 
+
+For each automorphism
+\(\sigma\) of \(\C\) fixing \(F\), these values are fixed. By the main theorem of complex multiplication in its ray-class form \cite{cm-reciprocity}, the Weber values at level \(Mp\) lie in its ray field, contained in \(F\) by Lemma~\ref{lem:marked-original-geometric-field}. The equality of \(j\)-invariants gives an isomorphism to the pullback. Since \(F\) contains the CM field, it respects the specified CM action. Let \(P_0\) generate the free rank-one \(\mathcal O_k/(Mp)\)-module of torsion. Write \(f\) for the isomorphism to the pullback and \(W\) for its Weber quotient. Since \(W\) is the quotient by the CM units, the equality of the two readings gives
+\[
+ W(f(P_0))=W(P_0^\sigma)
+ \quad\Longrightarrow\quad f(P_0)=uP_0^\sigma
+                  \quad(u\in\mathcal O_k^\times).
+\]
+
+The map \(u^{-1}f\) now matches \(aP_0\) for every \(a\in\mathcal O_k/(Mp)\) by CM-linearity. This isomorphism may depend on \(\sigma\). For any \(m\mid Mp\) the
+same isomorphism works at level \(m\), since the point with
+label \(a/m\) has label \(((Mp/m)a)/(Mp)\) at the original
+level.
+\label{cor:split-level-sections-1}
+\end{proof}
+
+\begin{proposition}[A fixed split refinement for the short theta rules]\label{prop:split-level-sections}
+For the split prime and the marked core \(J\) of Lemma~\ref{hyp:split-section-refinement},
+one can choose the same cover, coefficient field and weight-zero
+determinant character for every number \(n\) of torsion arguments.
+For \(n\ge r_j=p_j+q_j\) the Fourier coefficient is obtained from
+the basis test below, with the inverse character under a change of
+marking. If \(h_n\) denotes the coefficient attached to \(n\) torsion arguments, the rank obstruction gives
+\[
+ n<r_j\quad\Longrightarrow\quad h_n=0.
+\]
+\end{proposition}
+
+\begin{proof}
+For the component comparison the refined auxiliary level is
+one, the rank is positive, and the marked lattice supplies a
+rank-one definite datum for the same host. In indefinite
+signature the rank is at least three. Under these hypotheses
+the CM comparison for the unitary period spaces says that the
+pullback isomorphism fixing the torsion labels and the host
+root induces the identity permutation of the period
+components. Consequently an algebraic constant in the
+function field of a component is fixed by every
+\(\sigma\in\operatorname{Aut}(\C/F)\) under its generic
+embedding. Indeed, if an algebraic constant \(a\) had degree greater than one, separability and extension of embeddings to \(\mathbb C\) would give
+\[
+ \sigma\in\operatorname{Aut}(\mathbb C/F),\qquad \sigma(a)\ne a,
+\]
+contrary to the asserted invariance. Thus \(F\) is relatively algebraically closed in
+each component function field. The component idempotents and
+the prescribed values in \(F\) now give the componentwise
+weight-zero algebraic rules.
+\label{cor:split-level-sections-2}
+
+\proofstep{The determinant character.}
+Here one must put a nontrivial character on that refinement.
+Let \(\mathbb A_{E,f}^1\) be the norm-one subgroup of the
+finite ideles. Hilbert 90 gives
+\[
+ 1\longrightarrow\mathbb A_{F,f}^\times
+ \longrightarrow\mathbb A_{E,f}^\times
+ \xrightarrow{\,h:y\mapsto y/\bar y\,}\mathbb A_{E,f}^1
+ \longrightarrow1 .
+\]
+The finite character \(d_p\) read from \(\delta_p\) is trivial on
+the left-hand subgroup. In taking the finite part its
+archimedean kernel is also trivial, by divisibility of the
+connected complex idele factors and finite order of the
+character. Hence \(\xi_p(h(y))=d_p(y)\) is independent of the
+lift \(y\). A field-valued complex character on this
+subgroup extends as a \(\C^\times\)-valued character of the
+abelian group, by divisibility of \(\C^\times\). Only its values
+on norm-one determinants will be used. A rational norm-one
+determinant has a rational lift by Hilbert 90, so \(\xi_p\)
+is trivial there.
+
+At principal level the local congruence
+version provides an integral lift congruent to one at \(p\).
+At the odd split special prime the componentwise involution interchanges factors, so the lift \(z=(u,1)\) gives
+\[
+ z/\bar z=(u,1)/(1,u)=(u,u^{-1}).
+\] The tame
+character therefore gives one on the required level kernel,
+and its nontrivial residue value at \(p\) survives on the
+determinant quotient. Its values on norm-one determinants are
+the original finite-order values in the coefficient field.
+The function \(g\mapsto\xi_p(\det g)\) is constant on the
+corresponding marked components, by the rational and level
+invariance. The preceding component comparison gives a
+weight-zero rule with these values, whose same positive power
+is one on every component.
+\label{cor:split-level-sections-3}
+
+\proofstep{The finite Fourier coefficient.}
+The finite Fourier expansion must retain the character just obtained on the determinant.
+
+Write \(r_j=p_j+q_j\) and consider \(n\) torsion arguments on
+this cover. For \(n\ge r_j\) fix a basis \(y\) of its second
+split half module of rank \(r_j\). On an \(n\)-tuple \(x\)
+whose first \(r_j\) entries form a basis \(g y\), set
+\[
+              h_n(x)=\psi(g^\dagger)^{-1}.
+\]
+Here \(\psi\) is the character on automorphisms of the first
+half induced by the nontrivial determinant character, and
+\(g^\dagger\) is the adjoint between the two dual halves.
+Set \(h_n=0\) elsewhere. Over the finite residue quotient these
+modules are free and a spanning \(r_j\)-tuple is a basis,
+as can be checked at every local factor by its determinant.
+The basis change \(g\) is unique. Thus \(h_n(y,0)=1\). The inverse character under change of marking follows from reversal of composition by adjunction:
+\[
+ (g'g)^\dagger=g^\dagger(g')^\dagger .
+\]
+
+Take the finite Fourier
+sum of \(h_n\) against the additive character of the level
+pairing in the \(n\) arguments. Its coefficients lie in the
+field just specified. This is the finite coefficient of the
+short theta rule at this order. When \(n<r_j\) its spanning
+condition has empty hypothesis and we take the zero coefficient.
+The weight-zero twist section, the underlying cover and its
+coefficient field were fixed before \(n\). Only the coefficient
+of the theta rule changes. Finite Fourier evaluation and the
+harmonic chart transformation compute these short rules on the
+same cover at all orders, with the same determinant twist.
+\label{cor:split-level-sections-4}
+\end{proof}

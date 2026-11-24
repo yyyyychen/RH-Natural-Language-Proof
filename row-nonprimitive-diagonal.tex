@@ -1,0 +1,236 @@
+\subsection{The diagonal pairs with a nonprimitive frame span}
+
+The partner count used for a generic term fixes its full integral
+orthogonal lattice. A nonprimitive pair of frames can have different
+integral orthogonal lattices even when the rational orthogonal spaces
+agree modulo the flag. Retaining the two indices in the common
+congruence lattice gives the required bound at corank one.
+
+\begin{auxlemma}[Corank one with a nonprimitive frame span]\label{lem:nonprimitive-diagonal}
+Fix a marked word \(u\) on the row and use the moment order of
+Lemma~\ref{lem:row-moment-budget}. In the matching ordered pairs on
+the block \((u,u)\), let \(\mathcal S\) be any subset whose two
+single-term Gram invariants are positive and whose common rank is
+\(k-1\). With the weights, finite norm and coefficient norms of
+Lemma~\ref{lem:equal-word-generic-corank-one},
+\begin{equation}\label{eq:nonprimitive-diagonal}
+  \Gamma_1\sum_{(t,t')\in\mathcal S}w_{t,t'}|a_t a_{t'}|
+       \le \exp(C_N m^5f\log b)\,\theta_{uu}.
+\end{equation}
+Here \(C_N\) depends only on the fixed counting, level and local
+amplitude constants and can be chosen before \(C_\Gamma\).
+In particular the bound applies to the pairs in the nongeneric
+term group on the diagonal.
+\end{auxlemma}
+
+\begin{proof}
+\proofstep{The indices of one marked pair of frames.}
+Write \(R=\mathcal O_E\), \(g=g_0g_1\), \(p=r+1\), and
+\(N=T_u^f\). In an integral unimodular row lattice \(\Lambda\)
+denote the fixed flag by \((X,z)\) and its two partners by
+\((X_j,z_j)\), \(j=1,2\). Here \(X,X_j\) are the isotropic spaces
+and \(z,z_j\) the distinguished vectors. Put
+\[
+ \begin{aligned}
+ S_j&=(\Lambda\cap X)+Rz+(\Lambda\cap X_j)+Rz_j,&
+ W_j&=E S_j,\\
+ B_j&=(\Lambda\cap W_j)/S_j,&
+ U_j&=\Lambda\cap W_j^\perp,\qquad
+ \beta_j=|B_j|/g^{mf}.
+ \end{aligned}
+\]
+The two augmented flag spaces in \(W_j\) form a direct sum by
+positivity of the single-term Gram invariant. Let \(G_j\) be the
+normalized determinant \(G_Z\) of the corresponding reduced label.
+The determinant calculation in Proposition~\ref{prop:flag-pair-counts}
+before taking the primitive hull gives \(d(S_j)=g^{mf}G_j\).
+The saturated lattice \(\Lambda\cap W_j\) and \(U_j\) have
+opposite discriminant pairings of equal order by unimodularity.
+Thus in the determinant convention \(d(L)=\sqrt{|L^\#/L|}\),
+\[
+   d(U_j)=d(\Lambda\cap W_j)
+          =\frac{d(S_j)}{|B_j|}=\frac{G_j}{\beta_j}.
+\]
+
+At primes over \(g\), the marked flags have unit integral bases and
+their level comparison is upper unitriangular. Dividing the \(p\)
+corresponding frame differences by \(g\) gives integral classes
+in \(B_j[g]\). If a combination is in \(S_j\), projection onto the
+first augmented flag in the rational direct sum puts its coefficients,
+after the unitriangular change of basis, in \(gR\) locally.
+The distinguished negative vector is primitive in the middle
+quotient \((\Lambda\cap X^\perp)/(\Lambda\cap X)\), so its
+coordinate obeys the same condition.
+Conversely multiples of \(g\) give zero classes. Hence the subgroup
+generated locally has the size of \((R/gR)^p\) globally. Equivalently,
+adjoining these marked divisions to \(S_j\) gives an intermediate
+lattice of index \(g^{2fp}=g^{mf}\). In particular \(\beta_j\) is
+the residual absolute saturation index and
+\[
+       |gB_j|=|B_j|/|B_j[g]|\le\beta_j .
+\]
+
+For \(V=X\) or \(X_j\), write \(L(V)=\Lambda\cap V^\perp\) and
+\(V_R=\Lambda\cap V\). Define the enlarged orthogonal lattice
+\(A_j\subset W_j^\perp\) by the existence of representatives
+\[
+ \ell\in L(X),\qquad \ell_j\in L(X_j),\qquad
+ x-\ell\in X,\quad x-\ell_j\in X_j,\quad
+ \ell-\ell_j\in g\Lambda+X_R+(X_j)_R .
+\]
+These conditions are \(R\)-linear. The map
+\(x\mapsto[\ell-\ell_j]\in B_j\) is independent of representatives,
+since two choices on each side differ by an integral flag vector.
+Its image belongs to \(gB_j\): subtract the two integral flag
+vectors in the congruence and divide by \(g\). The resulting vector
+lies in \(\Lambda\cap W_j\).
+
+To identify the kernel, write \(\ell-\ell_j=v+v_j\) in \(S_j\),
+with \(v,v_j\) integral in their respective augmented flag spans.
+Then
+\[
+       x-\ell+v=x-\ell_j-v_j
+        \ \in\ (X+Ez)\cap(X_j+Ez_j)=0 .
+\]
+It follows that \(x=\ell-v\in U_j\). Conversely an integral
+\(x\in W_j^\perp\) permits the representatives \(\ell=\ell_j=x\).
+We have proved
+\begin{equation}\label{eq:nonprimitive-one-index}
+ I_j=[A_j:U_j]\le\beta_j,\qquad
+ d(A_j)I_j^2=d(U_j)I_j\le G_j .
+\end{equation}
+
+\proofstep{The integral lattice shared by a matching pair.}
+Write \(\eta\) for its integral comparison isometry, carrying the
+second flag of the first term to that of the second. The joint
+rank is the dimension of the correspondence
+\[
+ x\in W_1^\perp,\quad y\in W_2^\perp,\qquad
+ x-y\in X,\quad \eta x-y\in X_2 .
+\]
+Each projection is injective since \(W_j^\perp\cap X=0\).
+Both target spaces have dimension \(k-1\), so the correspondence
+gives a unique \(y\) for each \(x\), and conversely. Projection
+modulo \(X\) identifies these rational spaces isometrically.
+
+The marking at the common finite index requires, for every
+\(\ell\in L(X)\) and \(\ell_1\in L(X_1)\),
+\[
+ \ell-\ell_1\in g\Lambda+X_R+(X_1)_R
+ \quad\Longleftrightarrow\quad
+ \ell-\eta\ell_1\in g\Lambda+X_R+(X_2)_R .
+\]
+For \(x\in A_1\), keep its first representative \(\ell\) and
+use \(\eta\ell_1\) as the second representative of \(y\).
+Indeed \(y-\ell\in X\) and
+\(y-\eta\ell_1=(y-\eta x)+\eta(x-\ell_1)\in X_2\).
+The displayed congruence gives \(y\in A_2\).
+The reverse implication and \(\eta^{-1}\) give the converse.
+Thus \(A_1,A_2\) have the same projection \(A\) in the
+positive definite subspace \(z^\perp\) of \(X^\perp/X\).
+
+In that quotient let \(P_0\) be the intersection of the
+projections of \(U_1,U_2\). These are integral sublattices of
+the definite middle lattice of the row. The residue map into
+\(A/U_1\oplus A/U_2\), with the lattices understood by projection,
+now gives
+\[
+ \begin{aligned}
+  {}[A:P_0]&\le I_1I_2,\\
+  d(P_0)&\le d(A)I_1I_2
+      =\sqrt{d(A_1)I_1^2\,d(A_2)I_2^2}
+      \le \sqrt{G_1G_2}.
+ \end{aligned}
+\]
+This uses the level equivalence in both directions. It does not
+require either individual frame span to be primitive.
+
+\proofstep{Counting the common sublattices in the row measure.}
+Fix reduced labels \(Z_1,Z_2\), write \(H_j=H_{Z_j}\),
+\(H=H_1H_2\), \(D=\sqrt{G_1G_2}\), and set \(\lambda=\log_2(2f)\).
+The selected prime satisfies \(N=T_u^f\le b^{C_T mf}\le H\),
+and Lemma~\ref{lem:reduced-flag-heights} gives \(D\le H\). We may take \(D\ge1\)
+whenever there is a pair. For a fixed \(P_0\) with \(d(P_0)\le D\),
+Proposition~\ref{prop:integral-flag-frames} applies separately to
+the two frames with \(s=1\) and \(Q_j=H_j^2\).
+Their classes determine the marked pair class by the uniqueness
+argument of Proposition~\ref{prop:flag-pair-counts} (the difference
+is a finite-order isometry congruent to the identity modulo \(g\)).
+The two bounds in \eqref{eq:flag-over-P} therefore cost together
+at most
+\[
+             9^{2f}H^{8r^2+18r+12}.
+\]
+
+If \(P_0\) saturates to determinant \(d_0\), then
+\([\overline P_0:P_0]\le D/d_0\). The index count in
+Proposition~\ref{prop:primitive-flag-means} bounds all possibilities
+over this saturation by \((D/d_0)^{k+\lambda+1}\).
+The corank-one part of the same proposition gives the mean count
+of saturations under the reciprocal row stabilizer measure.
+The two large powers combine as
+\[
+ (d_0/N)^{k-1}(D/d_0)^{k+\lambda+1}
+    =(D/N)^k(N/D)(D/d_0)^{\lambda+2}.
+\]
+
+There are at most \(1+D^2\) determinant values since \(d_0^2\)
+is an integer. The remaining factors in this average are bounded by
+\[
+  h_E(4k\sqrt{\mathrm{rd}(E)})^f
+        H^{11+3\log_2 f}(1+D^2)(N/D)D^{\lambda+2}.
+\]
+On the marked range, \((kb)^8\le g\le b^{C_g}\),
+\(\mathrm{rd}(E)\le b\), and
+\(h_E\le\mathrm{rd}(E)^{f(1+\lambda)}\).
+Since \(H_j\ge b^{c^2m^3 f}\) and \(2+\log_2 f\le m\), these
+factors and the two frame counts cost at most \(H^{e_0}\) for
+\(e_0=C_0m^2\) with \(C_0\) fixed independently of \(C_\Gamma\).
+
+Restoring the remaining corank-one mean factor yields
+\[
+ \frac{1}{M_u}\sum_{\substack{(t,t')\in\mathcal S\\
+                     (t,t')\mapsto(Z_1,Z_2)}}w_{t,t'}
+ \le H^{e_0}\left(\frac{e\pi}{k\upsilon}\right)^{kf}
+                  (D/N)^k
+     = H^{e_0}\sqrt{n_{Z_1}n_{Z_2}},
+\]
+where \(M_u=m_k(T_u^k-1)^f\)
+is the total mass from Proposition~\ref{prop:flag-row-mass}.
+The same weighted mean includes every finite coarse row class
+of the specified pair subset.
+
+\proofstep{Restoring the archimedean coefficient and the finite norm.}
+Use the squared-norm bound with \(D_L=C+6CC_h\) from the proof of
+Lemma~\ref{lem:equal-word-generic-corank-one}. Its proof applies to
+every positive single-term Gram invariant. For \(d=\dim\pi_u\) it reads
+\[
+ |a_t|/\sqrt d
+ \le H_j^h\,b^{D_Lm^4 f/2}\sqrt{\tau/n_{Z_j}}\,
+                         \sigma_{Z_j}^{C_2m^2/2-a}.
+\]
+
+Thus the square roots of the two \(n_{Z_j}\) cancel on this very
+fibre. After \(H_j\le P\sigma_{Z_j}^4\), the exponent of each
+\(\sigma_{Z_j}\) is \(4(e_0+h)+C_2m^2/2-a\).
+The actual order \(a=\lceil pa_0\rceil/p\) of
+Lemma~\ref{lem:row-moment-budget} satisfies \(a\ge4ck\).
+Since \(k\ge m^5(\log b)x^2\), eventually
+\[
+        a\ge4(e_0+h)+|C_2|m^2/2+12p^2 .
+\]
+
+Lemma~\ref{lem:gram-label-sum} now bounds the two independent
+label sums by \(\Phi^2\). With
+\(\Gamma_1M_ud=d_u\) and \(\tau=(1+\delta)d_u/D_*\),
+the resulting bound is
+\[
+     (1+\delta)P^{2(e_0+h)}\Phi^2 b^{D_Lm^4f}\,\frac{d_u^2}{D_*}.
+\]
+Indeed the weights just counted are the finite row weights, while
+the two coefficient norms use the real orbital Haar of
+Proposition~\ref{prop:two-row-amplitude-bounds}.
+Their only remaining finite multiplier is \(\Gamma_1\).
+Here \(\log P=O(m^3f\log b)\), \(e_0+h=O(m^2)\), and
+\(\Phi=(C_*^fP^3)^{p^2}\), proving \eqref{eq:nonprimitive-diagonal}.
+\end{proof}

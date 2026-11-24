@@ -1,0 +1,273 @@
+\section{Detection of zeros from interval bounds}\label{sec:window}
+
+The estimate in Proposition~\ref{prop:arithmetic} is one-sided
+and is available only on selected intervals. Why can these intervals exclude a zero even when nothing comparable is known in the
+gaps? For a finite family with positive weights the answer comes from choosing the
+order of differentiation after the interval is known. Taking many derivatives of a Laplace
+transform concentrates its integral on one of the intervals where the bound holds.
+Comparing a real derivative with one at a complex point makes
+the kernel in the upper bound nonnegative. The deduction in
+Section~\ref{sec:deduction} applies the criterion with
+intervals \([Y,Y^{3/2}]\) and an exponent chosen below the real part of the
+proposed zero.
+
+\begin{definition}[The transforms of a weighted family]\label{def:window-transforms}
+Let \((F,w)\) be a finite positively weighted family as in
+Definition~\ref{def:family-weights}. In logarithmic coordinates set
+\(g_{F,w}(u)=G_{F,w}(e^u)\) for \(u\ge0\).
+For a primitive character \(\chi\), let \(H_\chi\) be the Mellin
+transform of its centered sum. Let \(\Phi_{F,w}\) be the Laplace
+transform of the real-valued function \(g_{F,w}\). Explicitly,
+\[
+ H_\chi(s)=\int_1^\infty G_\chi(y)y^{-s-1}\,dy,\qquad
+ \Phi_{F,w}(s)=\int_0^\infty g_{F,w}(u)e^{-su}\,du
+                       \qquad(\RePart s>1).
+\]
+Absolute convergence follows from the growth estimate at the start
+of the proof below. With the family fixed, write \(g=g_{F,w}\),
+\(\Phi=\Phi_{F,w}\), and \(w_\chi=w(\chi)\).
+\end{definition}
+
+\begin{theorem}[A zero-free half-plane from bounds on intervals]\label{thm:window}
+Let \((F,w)\) be as in Definition~\ref{def:window-transforms},
+with \(G_\chi\) as in \eqref{eq:centered-sum}.
+Suppose that \(0<\theta<1\), \(\delta>0\), \(C>0\), and
+\[
+ \forall Z\ge1\quad\exists Y>Z\quad\forall y\in[Y,Y^{1+\delta}],
+             \qquad G_{F,w}(y)\le Cy^\theta .
+\]
+Then each \(\chi\in F\) satisfies
+\[
+ \RePart s>\theta,\quad (\chi,s)\ne(1,1)
+         \quad\Longrightarrow\quad L_{f_\chi}(s,\chi)\ne0.
+\]
+\end{theorem}
+
+\begin{proof}
+\proofstep{The poles of the transform.}
+For every \(y\ge1\), absolute values in the defining sum give
+\[
+ |S_\chi(y)|\le y\sum_{n\le y}\frac{\log n}{n}
+             \ll y(1+\log^2 y).
+\]
+The centering terms satisfy the same bound for each fixed character.
+Thus the real function \(g(u)=G_{F,w}(e^u)\) satisfies \(|g(u)|\le B e^{2u}\) on
+\(u\ge0\), for a constant \(B\) depending on the weighted family.
+
+For \(\RePart s>1\) the Mellin transform of \(S_\chi\) is
+\[
+ \int_1^\infty S_\chi(y)y^{-s-1}\,dy
+    =-\frac{L'(s,\chi)}{s(s-1)L(s,\chi)} .
+\]
+To justify the exchange with the Dirichlet series, first integrate
+a single summand over \(y\in[n,\infty)\).
+\[
+ \int_n^\infty(y/n-1)y^{-s-1}\,dy
+   = n^{-s}\left(\frac1{s-1}-\frac1s\right).
+\]
+
+The same calculation with \(s\) replaced by \(\RePart s>1\)
+majorizes the absolute integrals, since
+\(\sum_n\Lambda(n)n^{-\RePart s}<\infty\).
+Transforming the two centering terms of \eqref{eq:centered-sum} therefore gives
+\begin{align*}
+ H_\chi(s)&=-\frac{L'(s,\chi)}{s(s-1)L(s,\chi)}
+        +\frac{L'(1,\chi)}{(s-1)L(1,\chi)} \qquad(\chi\ne 1),\\
+ H_1(s)&=-\frac{\zeta'(s)}{s(s-1)\zeta(s)}
+        -\frac{1}{(s-1)^2}+\frac{1+\gamma}{s-1}.
+\end{align*}
+These formulas continue meromorphically to \(\RePart s>0\).
+By Lemma~\ref{lem:boundary}, for \(\chi\ne1\) the coefficient of
+\((s-1)^{-1}\) in the first term of \(H_\chi\) is
+\(-L'(1,\chi)/L(1,\chi)\), and the second term cancels it.
+
+For the conductor-one character one writes
+\[
+ \zeta(s)-\frac1{s-1}
+   =\sum_{n\ge1}\left(n^{-s}-\int_n^{n+1}v^{-s}\,dv\right).
+\]
+On a compact subset of \(\RePart s>0\) each summand is bounded
+by \(\sup_{s}|s|\,n^{-1-\inf_s\RePart s}\) by integration of
+the derivative of \(v^{-s}\). At \(s=1\) the partial sums are
+\(\sum_{n\le M}1/n-\log(M+1)\to\gamma\). Consequently, with
+\(h=s-1\),
+\[
+ -\frac{\zeta'(1+h)}{(1+h)h\,\zeta(1+h)}
+      =\frac{1}{h^2}-\frac{1+\gamma}{h}+O(1).
+\]
+These two terms cancel the two explicit centering terms in \(H_1\).
+
+Substituting \(y=e^u\) in Definition~\ref{def:window-transforms} gives the
+following continuation of \(\Phi\) from \(\RePart s>1\) to \(\RePart s>0\):
+\[
+ \Phi(s)=\tfrac12\sum_{\chi\in F}w_\chi
+                         (H_\chi(s)+H_{\bar\chi}(s)).
+\]
+Here \(G_{\bar\chi}(y)=\overline{G_\chi(y)}\) on the real axis.
+For \(0<\RePart\rho<1\) let \(m_\chi(\rho)\) be the order of
+vanishing of \(L(s,\chi)\) at \(\rho\), with value zero if
+\(L(\rho,\chi)\ne0\). Factoring out \((s-\rho)^{m_\chi(\rho)}\)
+gives
+\[
+ \operatorname{Res}_{s=\rho}\Phi(s)=
+ -\frac{1}{2\rho(\rho-1)}
+       \sum_{\chi\in F}w_\chi
+                \bigl(m_\chi(\rho)+m_{\bar\chi}(\rho)\bigr).
+\]
+If any order on the right is positive, the positive weights
+make this a nonzero residue. The residue is real and positive
+at a real zero, since \(\rho(1-\rho)>0\) there. The Euler products and Lemma~\ref{lem:boundary}
+exclude all other poles in \(\RePart s\ge 1\), and the centering
+has removed the singularity at \(1\).
+
+\proofstep{Concentrating the derivative integrals.}
+The residue calculation identifies what a zero contributes. To test for that
+contribution using bounds on only one interval at a time, fix a real \(\sigma>2\), to
+be chosen below. For a nonnegative
+integer \(k\) and a complex point \(z\) with \(\RePart z=\sigma\),
+put \(T_k(z)=(-1)^k\Phi^{(k)}(z)/k!\).
+With the growth constant \(B\) fixed at the start of the proof, differentiation
+under the integral is justified by
+\[
+  |u^kg(u)e^{-zu}|\le B u^k e^{-(\sigma-2)u},\qquad
+  \int_0^\infty u^k e^{-(\sigma-2)u}\,du
+       =\frac{k!}{(\sigma-2)^{k+1}} .
+\] Write \(g^+=\max(g,0)\) for the positive part.
+For a real \(\tau\), choose \(c\in\C\) with \(|c|=1\) and
+\(\RePart(cT_k(\sigma+i\tau))=|T_k(\sigma+i\tau)|\).
+Since \(g\) is real, the normalized derivatives at \(\sigma\) and \(\sigma+i\tau\) satisfy
+\[
+ |T_k(\sigma+i\tau)|+\RePart T_k(\sigma)
+  =\int_0^\infty g(u)\frac{u^k e^{-\sigma u}}{k!}
+                        (1+\RePart(ce^{-i\tau u}))\,du .
+\]
+This kernel lies between zero and twice the real exponential kernel,
+which gives
+\begin{equation}\label{eq:two-centers}
+ |T_k(\sigma+i\tau)|+\RePart T_k(\sigma)
+ \leq 2\int_0^\infty g^+(u)\frac{u^k}{k!}e^{-\sigma u}\,du
+ \qquad (\tau\in\R).
+\end{equation}
+
+Writing \(U=\log Y\), set \(W=[U,(1+\delta)U]\).
+On \(W\), \(g^+(u)\leq C e^{\theta u}\). The integral over \(W\)
+is at most \(C\delta U/(\sigma-\theta)^k\) because
+\(v^k e^{-v}/k!\leq 1\) for \(v\geq 0\).
+
+Set \(a=\sigma-2\), \(b=1+\delta/2\), and \(k=\lceil ab U\rceil\).
+Let \(X\) have the gamma distribution with density \(v^ke^{-v}/k!\)
+for \(v>0\). On the complement of \(W\), the substitution \(v=au\)
+and the bound \(|g(u)|\le B e^{2u}\) give the upper bound
+\[
+ B a^{-k-1}\Pr\{X\notin[aU,(1+\delta)aU]\},
+ \qquad X\sim\operatorname{Gamma}(k+1,1).
+\]
+
+Fix \(q_-,q_+\) with \(1/b<q_-<1<q_+<(1+\delta)/b\).
+As \(U\to\infty\), \(aU/(k+1)\to1/b\) and
+\((1+\delta)aU/(k+1)\to(1+\delta)/b\). Hence the event
+in the probability is contained in
+\[
+ \{X\le q_-(k+1)\}\cup\{X\ge q_+(k+1)\}
+\]
+for all large \(U\). 
+In the first event take \(t=1-1/q_-<0\),
+and in the second take \(t=1-1/q_+>0\). In both cases
+Markov's inequality applied to \(e^{tX}\), whose mean is
+\((1-t)^{-k-1}\), gives the bound
+\[
+ e^{-tq(k+1)}(1-t)^{-k-1}
+          =e^{-(k+1)(q-1-\log q)} .
+\]
+
+Put \(c_\delta=\min_{q\in\{q_-,q_+\}}(q-1-\log q)>0\), and
+choose \(a\) so that \(ab>1\) and \(\log((a+2)/a)<c_\delta\).
+Thus \(a^{-k-1}e^{-c_\delta k}\le a^{-1}\sigma^{-k}\).
+With \(D=\sigma-\theta\), \eqref{eq:two-centers} gives
+\begin{equation}\label{eq:derivative-upper}
+ |T_k(\sigma+i\tau)|+\RePart T_k(\sigma)
+       \ll (1+U)D^{-k}.
+\end{equation}
+The constant is uniform in \(\tau,k,U\) along the chosen sequence of intervals.
+
+\begin{construction}
+\begin{tabular}{@{}l@{\hspace{1.2em}}l@{}}
+\toprule
+\textit{Part of the integral} & \textit{Bound used} \\
+\midrule
+\(u\in[U,(1+\delta)U]\) & \(g^+(u)\le Ce^{\theta u}\) \\
+\(u\notin[U,(1+\delta)U]\) & \(|g(u)|\le Be^{2u}\), gamma tail in \(au\) \\
+Both centers \(\sigma,\sigma+i\tau\) & \(0\le 1+\RePart(ce^{-i\tau u})\le2\) \\
+\bottomrule
+\end{tabular}
+\caption{Where the derivative estimate comes from in the proof of Theorem~\ref{thm:window}. Here \(U=\log Y\), \(a=\sigma-2\) and \(k=\lceil a(1+\delta/2)U\rceil\).}\label{fig:analytic-kernel}
+\end{construction}
+
+\proofstep{Derivatives forced by a pole.}
+We now have an upper bound at the derivative orders supplied by each interval. To
+obtain a lower bound at those same orders, suppose that \(\Phi\) has a pole with real
+part greater than \(\theta\).
+First consider the case in which the pole \(\beta\) nearest to \(\sigma\)
+is unique, real and at distance \(d=\sigma-\beta<D\).
+Its residue \(r\) is positive. Choose \(d<R<D\) so that the closed disk
+\(|s-\sigma|\le R\) contains no other pole. Subtract the principal part
+and set \(H(s)=\Phi(s)-r/(s-\beta)\). With \(M=\max_{|s-\sigma|=R}|H(s)|\),
+Cauchy's estimate gives \(|H^{(k)}(\sigma)|/k!\le M/R^k\). Consequently
+\[
+       2\RePart T_k(\sigma)\ge 2r d^{-k-1}-2M/R^k.
+\]
+
+At \(\tau=0\), \(T_k(\sigma)\) is real since \(g\) is real.
+The left side in \eqref{eq:derivative-upper} dominates
+\(2\RePart T_k(\sigma)\). Multiplying both estimates by \(d^k\)
+gives a positive limit inferior on the lower side and an upper side
+bounded by a constant times \((1+U)(d/D)^{\lceil abU\rceil}\to0\).
+
+For the remaining cases write
+\(d_\sigma=\inf_\rho|\sigma-\rho|\), the distance from the
+real center to the pole set. We seek a \(z=\sigma+i\tau\)
+with a unique nearest pole at distance \(d<\min(D,d_\sigma)\).
+
+If the open disk of
+radius \(D\) at \(\sigma\) contains no pole, align \(\tau\) with
+the imaginary part of any pole whose real part is above \(\theta\).
+Otherwise a nearest pole \(\rho\) is nonreal. Setting
+\(\tau=\operatorname{Im}\rho\) gives
+\[
+        |z-\rho|=\sigma-\RePart\rho
+        <\sqrt{(\sigma-\RePart\rho)^2+(\operatorname{Im}\rho)^2}
+        =d_\sigma<D .
+\]
+
+In either case the inequalities are strict and persist
+under small perturbations of \(\tau\). On a small closed vertical segment of possible centers, all such
+disks lie in a compact subset of \(\RePart s\ge\theta>0\).
+They can meet only finitely many poles. For distinct poles
+\(a_1+ib_1,a_2+ib_2\), equality of squared distances is the equation
+\[
+    (\sigma-a_1)^2-(\sigma-a_2)^2
+       +b_1^2-b_2^2-2\tau(b_1-b_2)=0 .
+\]
+If \(b_1=b_2\), the constant is nonzero because both \(a_i<\sigma\)
+and \(a_1\ne a_2\). Thus finitely many values of \(\tau\) exhaust
+all ties. Choosing \(\tau\) off this set preserves the strict
+distance bounds and gives a unique nearest pole.
+
+Write \(\rho\) for the closest pole to \(z\), with residue \(r\ne 0\).
+Choose a radius \(R\in(d,D)\) below the distance from \(z\) to any other
+pole and below the distance from \(\sigma\) to every pole.
+Both closed disks of radius \(R\) lie in \(\RePart s>\theta\).
+Cauchy's estimate for the regular part at \(z\) and for \(\Phi\)
+at \(\sigma\) gives, for a constant \(M\) independent of \(k\),
+\[
+ |T_k(z)|+\RePart T_k(\sigma)\geq |r|d^{-k-1}-M/R^k .
+\]
+Multiplying the lower and upper bounds by \(d^k\) gives
+\[
+ \frac{|r|}{d}-M(d/R)^k
+         \ll (1+U)(d/D)^k .
+\]
+The left side tends to \(|r|/d>0\). Since \(d/D<1\) and
+\(k\ge abU\), the right side tends to zero.
+This excludes the pole and hence the zero.
+\end{proof}

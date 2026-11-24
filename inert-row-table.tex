@@ -1,0 +1,284 @@
+\subsubsection{Smaller jumps and the two estimates at ordinary inert primes}
+\label{sec:inert-row-table}
+\hypertarget{source-inert-row-table}{}
+
+When smaller jumps occur, the uniform restriction used for the larger jumps does not cover the whole sequence. Decomposing it into short arcs gives the missing estimate; it can then be combined with the larger-jump case at the same inert place.
+
+Here \(\ell\ge11\) and \(n=n_\lambda\) is the local unramified degree. In the
+case with some smaller jumps, let \(s_i\) be the sizes in the local word.
+Use \(b_0,w,S,\eta\) for its threshold for the larger jumps, bound for the smaller jumps,
+spread and central width. Each
+\[
+ s_i>\eta.
+\]
+A size in the larger range is
+in \([b_0,b_0+\eta]\), and a size in the smaller range is at most \(w\).
+Use the signed jump intervals of Section~\ref{subsec:inert-rows}.
+
+At every letter at most \(m\)
+target jumps, counted with multiplicity, lie in \([-\eta,\eta]\).
+On the marked row the signed windows come from the source lattice
+in the sum of twisted duals. The bound on the central multiplicity
+comes from the twisted dual target at each labeled embedding,
+applied with the same enumeration of the embeddings as the word.
+Both statements therefore apply to a size in the smaller range.
+\label{cor:inert-row-table-1}
+There is a position with smaller jumps, the signs alternate cyclically,
+and there are at most two consecutive positions with larger jumps.
+The numerical hypotheses are
+\[
+ 20w,20S,20\eta\le b_0.
+\]
+
+Put \(h=b_0+\eta+S\) if there is a position with larger jumps and \(h=w+S\)
+otherwise, and put
+\[
+ \gamma_h=\log_\ell(2h),\qquad
+ S_g=h/\ell^2+(w+S+\eta)/\ell+1+\gamma_h .
+\]
+Let \(B\) be the indicator that some position with smaller jumps \(i\)
+has a neighbor with larger jumps and satisfies
+\[
+ \abs{\ell s_i-b_0}\le 320
+              (\ell\eta+\ell S+b_0/\ell+s_i+\ell\gamma_h).
+\]
+The common place indicator in \(F_{\ell,\lambda}\) is the
+existence of such a word on the marked data, over all good
+characters and compatible local coefficient data. Therefore every
+local \(B\) is at most this place indicator.
+
+Cut before each position with smaller jumps, numbering the cut by
+its preceding letter. Begin the enumeration at one such position, so
+the construction includes the arc that crosses the end of the cycle.
+Let \(\mathcal C\) be the set of cuts. The arc ending at \(c\)
+consists of one smaller letter followed by \(k_c\) larger letters.
+Consequently
+\[
+ a_c=1+k_c,\qquad 0\le k_c\le2,\qquad
+ \sum_{c\in\mathcal C}a_c=n .
+\]
+
+Suppose first that a larger letter occurs and \(40S_g>b_0/4\).
+The two jump bounds of the coarse lift are at most \(h\); its
+maximum width is at most \(h+\eta\). The coarse exponent calculation
+in the proof of Proposition~\ref{prop:ordinary-inert-place-entry}
+therefore bounds the exponent \(e'\) of a full finite lift by
+\(7.1 h/\ell+7.1+2\gamma_h\). Since \(h\le1.1b_0\),
+\(b_0<160S_g\), and \(\ell\ge11\),
+\[
+ 7.1 h/\ell <113.6 S_g,\qquad
+ 7.1+2\gamma_h\le7.1S_g,\qquad e'<160 S_g .
+\]
+
+In the remaining range, use Lemmas~\ref{lem:two-letter-wach-lift},
+\ref{lem:three-letter-negative-lift} and~\ref{lem:three-letter-positive-lift}
+on arcs of length two and three. To compare the arc lift with the cut
+decomposition we need the exponents \(R+2\sigma\) and \(R+3\sigma\).
+Put \(g=w+S+\eta\), \(q_0=\ell-1\), and
+\(M=\lfloor2h/q_0\rfloor+1\). There is one smaller letter
+immediately after the cut. The corresponding correction satisfies
+\[
+ \begin{aligned}
+ \sigma
+ &=\left\lceil1+\frac{\ell(2(w+S)+M)}{q_0^2}\right\rceil\\
+ &\le 2+\frac{\ell}{q_0^2}
+       +\frac{2\ell g}{q_0^2}+\frac{2\ell h}{q_0^3}
+ \le 3\left(1+\frac{g}{\ell}+\frac{h}{\ell^2}\right).
+ \end{aligned}
+\]
+Indeed \(\ell/q_0\le11/10\) bounds the two variable coefficients
+after normalization by \(2(11/10)^2\) and \(2(11/10)^3\).
+For the recurrence of Section~\ref{sec:inert-long-orbit}, take
+symmetric widths at most \(2h\) throughout and at most \(2g\)
+at the first letter after the cut. With
+\(c_H=\lceil1+\log_\ell(1+\max_i H_i)\rceil\) one has
+\[
+ R\le c_H + \frac{\ell}{q_0(q_0-1)}
+                    (2g+c_H+3+2h/q_0).
+\]
+
+Here \(c_H\le 2+\tfrac15+\gamma_h\) by
+\(1+2h\le3h\) and \((3/2)^5<11\).
+The coefficients of \(g/\ell\) and \(h/\ell^2\) in the bound
+are at most \(2\cdot11^2/(10\cdot9)<3\) and
+\(2\cdot11^3/(10^2\cdot9)<3\), respectively. Since
+\(\ell/(q_0(q_0-1))\le11/90\), the remaining terms
+are at most \(3(1+\gamma_h)\). Combining these estimates gives
+\begin{equation}\label{eq:inert-short-cut-budget}
+ R\le3S_g,\qquad \sigma\le3S_g,\qquad
+ R+2\sigma\le9S_g,\quad R+3\sigma\le12S_g .
+\end{equation}
+With the cut costs of \eqref{eq:inert-short-cut-budget}, the arc lift at \(c\) itself has exponent at most
+\[
+ \sigma+\kappa_c+\lfloor 40S_g+\eta B\rfloor ,
+ \qquad
+ \kappa_c\le 13S+3(1+\gamma_h).
+\]
+It lands in the finite image modulo a span of at most
+\(m r_c(a_c+1)\) target finite classes, with \(r_c\le a_c\).
+We derive the coordinate lift and the fixed exceptional span below.
+
+\input{inert-short-frame}
+\input{inert-short-two}
+\input{inert-short-three}
+\input{inert-short-positive}
+\input{inert-short-exceptions}
+
+\paragraph{Adding the short-arc colengths.}
+\begin{lemma}[The common colength from the short cuts]
+\label{lem:ordinary-inert-short-cuts}
+In either ordinary inert range with a position having smaller jumps, use its
+marked arcs. The normalized finite-class colength is bounded by
+\eqref{eq:nonthick-colength}; in the range requiring exceptional representatives, there is one set \(Z\) for all the comparisons such that
+\[
+ \#Z\le4nm.
+\]
+\end{lemma}
+
+\begin{proof}
+Apply Lemma~\ref{lem:short-arc-exceptional-span} with \(p=\ell\) and \(a=a_c\).
+On the finite jets at levels \(t<a_c\), the action of \(\gamma^{\ell^{a_c}}\)
+on a Laurent coefficient \(c_k\) of degree \(k\) is multiplication by
+\(\chi(\gamma)^{k\ell^{a_c}}\). For each specified nonzero degree
+the corresponding factor of \(K(\gamma)\) therefore satisfies
+\[
+ \bigl(\gamma^{\ell^{a_c}}-\chi(\gamma)^{k\ell^{a_c}}\bigr)c_k=0 .
+\]
+
+To estimate \(\kappa_c\), count these degrees with their signs. For a positive
+jump window these degrees lie in \([-s_i-S,-s_i)\) and for a
+negative window in \([s_i,s_i+S)\). Thus there are at most
+\(a_c S\) degrees, each nonzero with absolute value at most \(h\).
+In any one of these intervals of \(S\) integers the count of
+multiples of \(\ell^j\) is at most \(S/\ell^j+1\).
+For such an interval \(I\) excluding zero the resulting valuation bound is
+\[
+ \sum_{k\in I}v_\ell(k)=\sum_{j=1}^{\lfloor\log_\ell h\rfloor}\#\{k\in I:\ell^j\mid k\}\le S/(\ell-1)+\log_\ell h.
+\]
+
+The principal trace contributes at most \(a_c\), and the
+nonzero degrees \(k\) contribute at most \(a_c+1+v_\ell(k)\) each,
+by the principal-unit valuation used in
+Section~\ref{sec:inert-long-orbit}. Hence
+\[
+ \kappa_c\le a_c+(a_c+1)a_c S
+                +a_c(S/(\ell-1)+\log_\ell h)
+            \le13 S+3(1+\gamma_h).
+\]
+Given the cut decomposition and the arc lift, pad the powers to
+their common maximum and sum the lifted cut classes.
+The set \(Z\) of exceptional classes
+is contained in the union of the sets from the cuts, so
+\[
+ |Z|\le\sum_c m r_c(a_c+1)\le4m\sum_c a_c=4nm .
+\]
+The cost of the scaling on the original class is at most
+\(55S_g+13S+\eta B\), since \(1+\gamma_h\le S_g\).
+Thus the length argument of Section~\ref{sec:inert-thick-word}
+applies to the same integral finite group.
+
+In the larger range
+one uses the full lift and takes \(Z\) empty. In both ranges the
+normalized colength is at most
+\begin{equation}\label{eq:nonthick-colength}
+ 320(n+1)r\bigl(h/\ell^2+(w+\eta)/\ell+
+                      S+1+\gamma_h+\eta B\bigr)+320nm e' .
+\end{equation}
+Indeed \(S/\ell\le S\), all the terms in the parentheses
+are nonnegative, and \(55+13\le320\). Lemma~\ref{lem:short-arc-exceptional-span}
+supplies the fixed representatives for this estimate. The coarse exponent
+\(e'\) is for the actual marked surjection and is used only on the
+image of the span of the exceptional finite classes.
+\end{proof}
+
+\begin{proposition}[One normalized entry for all ordinary inert rows]\label{prop:ordinary-inert-place-entry}
+In the ordinary inert range, with the marked word data and
+\(U_H,U_F,U_M\) defined in Section~\ref{sec:cut-length-rows},
+there is one rational place entry \(c_w\) for every good character at the place. Its range is
+\[
+ 0\le c_w-(368U_H+2082U_F+22365U_M)\le U_F.
+\]
+Here the indicator entering \(U_F\) is the common place indicator,
+and every normalized length uses the same coefficient valuation.
+\end{proposition}
+
+\begin{proof}
+The common unramified coarse finite-class lifting theorem uses the
+negative and positive bounds \(M_i,H_i^+\) at each embedding.
+Put \(M_*=\max_i M_i\), \(H'=\max_i(M_i+H_i^+)\)
+and \(a_*=\lfloor M_*/(\ell-1)\rfloor+1\).
+If \(J\) is the set of nonzero degrees formed by adding
+\(1,\ldots,M_*\) to jumps and also including \(1,\ldots,M_*\),
+the exponent for this theorem is
+\[
+  2\left\lfloor\frac{H'\ell}{(\ell-1)^2}+3+
+                        \log_\ell(H'+1)\right\rfloor
+       + a_*+v_\ell(a_*!) +\sum_{j\in J}v_\ell(j).
+\]
+The theorem supplies a finite lift for every target class after
+multiplication by this power of \(\ell\).
+
+In the general boxes \(J\subset[-H',2H']\setminus\{0\}\).
+Legendre's formula bounds the valuation sum by \(3H'/(\ell-1)\).
+Also
+\(a_*+v_\ell(a_*!)\le(\ell/(\ell-1))(H'/(\ell-1)+1)\).
+Using \(\ell/(\ell-1)\le11/10\) gives
+\[
+ e'\le23\bigl(2+H'/\ell+\log_\ell(H'+1)\bigr).
+\]
+For the large-\(S_g\) boxes above, substitute \(J\subset[-h,2h]\),
+\(M_*\le h\), and \(H'\le h+\eta\le21h/20\) into the same
+expression. Adding the coefficients of \(h/\ell\) from the three terms gives
+\[
+ 2(21/20)(11/10)^2+(11/10)^2+33/10<7.1.
+\]
+
+The constants other than the logarithm total at most \(7.1\),
+and \(H'+1\le2h\) since \(H'\) is integral and \(h\ge1\).
+This proves the exponent estimate used in that range.
+
+Use the global \(H,w_P,S_c,\eta_3,z\) and the quantities
+\(U_H,U_F,U_M,\mathcal P_\ell\) of
+Section~\ref{sec:cut-length-rows}. The local transport gives
+\(S\le S_c\), \(\eta\le\eta_3\), \(w\le w_P\), and \(h\le H\)
+in both branches. In the case in which every position has larger jumps this last inequality
+means \(\max_i b_i+S\le H\). The polynomial size bounds give
+\(1\le H\le2e^z\), \(z\ge1\) and \(\eta_3\le H\).
+When some jumps are in the smaller range, \(H'\le2H\). In the
+case in which all jumps are in the larger range
+\[
+ H'\le H_{\rm loc}\le H+\eta_3\le2H.
+\]
+
+As \(H'+1\le3H\le\ell H\) for the logarithm's argument, it follows
+that \(e'\le69\mathcal P_\ell\).
+
+For \eqref{eq:nonthick-colength}, \(\gamma_h\le3+z\) follows from
+\(2h\le4e^z\) and \(\log\ell\ge1\).
+Consequently \(1+\gamma_h\le5z\). The row length is at most
+\(320U_H+1600U_F+22080U_M\).
+
+For Proposition~\ref{prop:thick-inert-colength},
+\(L_0\le8+z\le9z\), since
+\(2H_{\rm loc}\le8e^z\). Further,
+\[
+ 32H_{\rm loc}/\ell^2\le32H/\ell^2+3\eta_3/\ell,\qquad
+ 10\eta/(\ell-1)\le11\eta_3/\ell .
+\]
+The exponent \(e\) is therefore at most
+\(32H/\ell^2+225F_{\ell,\lambda}\).
+Also \(H_{\rm loc}+1\le3H\), which gives
+\(c_D\le4\mathcal P_\ell\).
+Substituting in \eqref{eq:thick-chain-mass} bounds the colength
+by \(32U_H+227U_F+288U_M\).
+Both branches thus have common majorant
+\[
+                       368U_H+2082U_F+22365U_M .
+\]
+The place entry is a rational number between this value and its
+sum with \(U_F\). Here \(U_F>0\) by \(z\ge1\) and \(r>0\).
+All comparisons use the same place indicator and coefficient
+normalization. Hence the entry bounds the row for every
+good character at once.
+\end{proof}
+

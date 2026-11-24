@@ -1,0 +1,521 @@
+\subsubsection{The lift-adjoint scalar in the selected row metric}
+\label{subsec:selected-lift-scalar}
+
+With the kernel norms and terminal evaluation in hand, the remaining normalization is the scalar of a lift followed by its adjoint in the actual row metric.
+
+Fix a lift \(j\) at the reference tuple. In the adelic
+calculation write \(F^+\) for the real field, \(E\) for
+its CM extension, and \(f=[F^+:\Q]\). The row rank \(r\), definite rank \(n_V\) and stable-range gap satisfy
+\[
+             r=k+m-1,\qquad n_V=r+t,\qquad t\ge r+5 .
+\] The definite source has the
+standard self-dual lattice with an integral orthonormal
+frame. The local level and Weil vectors use the specified
+split half places, with at most one place above each prime
+of \(F^+\). The characters intertwine the same local
+level actions on the vectors and the forms, and the
+Schwartz vector is spherical away from those places.
+We use the level, weight, rational Gram and character
+identifications of the selected primitive rows. These
+conditions apply at the reference tuple, including its
+conjugate coefficient realizations.
+\label{cor:selected-lift-scalar-1}
+
+\begin{proposition}[Scalar bounds and reference height]\label{prop:selected-reference-height}
+For a selected reference sequence \(u\), let \(B_u\) be
+the comparison operator in the framed spectral row. With
+the common row metric and the period shift
+\(\bar\kappa=\overline{\log\kappa}\), its height satisfies
+\[
+ \operatorname{ht}(B_u)\le h_A(u)+
+       \sum_{j=1}^m\bigl(h_B(j)-h_X(j)\bigr)-\bar\kappa .
+\]
+Here \(h_A\) is the terminal bound, \(h_B(j)\) bounds the
+kernel height at lift \(j\), and \(h_X(j)\) bounds the
+logarithm of the adjoint scalar \eqref{eq:selected-adelic-scalar}
+on the occurring primitive rows. The estimates are uniform on the reference
+sequence data, including the coupled end steps.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Unfold the adjoint in the weighted form and multiplicity metrics.}
+Let \(T\) be the full theta lift from the definite form
+space with its weighted class metric to the cusp
+multiplicity space \(H_W\). This space has the row
+metric, which is \(\prod_z d_z\) times the Petersson
+multiplicity product, where \(d_z\) is the dimension
+of the lowest compact type at \(z\). This metric can
+be computed with a unit vector of that type at each
+real place by Schur orthogonality. For the finite level group \(P\), the normalized and
+unnormalized adjoints on the stated metrics are related by
+\[
+ T^\dagger=|P|^{-1}T^*,\qquad
+ \langle T^\dagger U,T^\dagger U'\rangle
+    = |P|^{-2}\langle T^*U,T^*U'\rangle .
+\]
+For the reference scalar \(|P|=1\).
+
+Let \(U\) lie in a nonzero simultaneous off-level Hecke
+part and let \(U'\in H_W\). Let \(C\) be the \(d_C\)-dimensional coefficient module
+on the definite side, with orthonormal basis \((e_\nu)\).
+Write \(\mathcal R_\nu(U)\) for the scalar reverse
+theta integral against \(e_\nu\) in the Petersson
+normalization. The source-level transformation law makes
+\((\mathcal R_\nu(U))_\nu\) a definite form of the required
+character. Put \(D_\infty=\prod_z d_z\). The row metric
+contributes \(D_\infty\) to each adjoint, so the weighted
+class pairing is
+\[
+ \langle T^*U,T^*U'\rangle
+   =D_\infty^2\sum_{\nu=1}^{d_C}
+      \langle\mathcal R_\nu(U),\mathcal R_\nu(U')\rangle_{\rm Pet,def}.
+\]
+Here the definite Petersson pairing is the sum over its
+classes weighted by reciprocal stabilizer orders. The definite quotient is compact,
+and cuspidal rapid decay gives the integrability on
+the other side.
+
+The convergent Rallis inner-product identity for these
+reverse integrals unfolds the product into the finite
+oscillator matrix coefficient and the real Fock and
+discrete-series coefficients. This is the unitary
+doubling identity for cuspidal forms, with the
+anisotropic definite member and with the matching
+flat section given by the two Schwartz vectors. The
+shift is \(s_0=t/2\). In Yamana's Theorem 2, the
+doubled skew-Hermitian space has dimension \(2r\),
+the definite Hermitian space has dimension \(n_V\),
+and its rational Witt index is zero. The range in Yamana's theorem puts the special point in absolute convergence for the Eisenstein series, since
+\[
+ n_V>2r\quad\Longrightarrow\quad (n_V-r)/2>r/2 .
+\] The
+Eisenstein series equals the theta integral with
+coefficient one for the quotient measure of mass one.
+
+Write \(d\mu_1\) for the definite probability measure and
+\(d\mu\) for the definite class-sum measure on the quotient \(Y\).
+The conversion in the theta integral is
+\[
+   \int_Y \theta\,d\mu=\mu(Y)\int_Y\theta\,d\mu_1 .
+\] Unfolding and factoring the spherical zeta
+integrals gives the partial standard factor at
+\(s_0+1/2\). The retained local integral is absolutely
+convergent there. The finite zeta evaluation and the two
+real evaluations below use the same covolume-one
+oscillator measure and real group measures.
+\cite{yamana-siegel-weil}\label{cor:selected-lift-scalar-2}
+
+Let \(v_z\) be a unit lowest-type vector and \(H_z^+,H_z^-\) the hook products of the positive and negative partitions of the actual Fock vector at \(z\). Its matrix-coefficient factor is
+\[
+ J_z=\int |\langle v_z,\pi_z(g)v_z\rangle|^2\,dg .
+\] Let \(I_V\) be the index of the source
+level in its self-dual stabilizer, \(M_V\) the mass at
+that stabilizer, and \(N_\Phi\) the squared norm of
+the finite Weil vector.
+
+Write \(S\) for the finite
+places omitted in the spherical product, \(D_S\)
+and \(D^S\) for the two parts of the normalizing
+Euler product, and \(L^S\) for the standard factor
+including its unitary character twist. The unfolding
+of one reverse integral yields the factor
+\[
+ I_VM_V\Bigl(\prod_z H_z^+H_z^-J_z\Bigr)
+       |P|\,N_\Phi\, L^S/D^S
+\]
+times the Petersson multiplicity product. The
+level factor \(|P|\) counts the classes in the
+finite sum that differ by the level group, on which
+the two characters cancel. The type determines
+\(L^S\) through the spherical eigenvalues of the
+first argument. Taking its diagonal entry for a
+nonzero \(U\) shows that the resulting scalar is
+real and nonnegative. The positive lower estimates
+below show it is positive.
+
+In particular the
+absolute value of the standard factor equals its
+value in that diagonal formula. Let \(A_{\rm rev}\)
+denote the displayed factor for one normalized coefficient
+basis vector. The reverse products carry \(D_\infty^2\)
+from the two adjoints. Since
+\(\langle U,U'\rangle_{\rm row}
+      =D_\infty\langle U,U'\rangle_{\rm Pet}\),
+the sum over the orthonormal coefficient basis is
+\[
+ \langle T^*U,T^*U'\rangle
+     =D_\infty\,d_C A_{\rm rev}\langle U,U'\rangle_{\rm row}.
+\]
+Here \(A_{\rm rev}\) includes the counted factor \(|P|\). Dividing by \(|P|\)
+gives, for every \(U'\),
+\(\langle TT^\dagger U,U'\rangle=\lambda\langle U,U'\rangle\),
+where
+\begin{equation}\label{eq:selected-adelic-scalar}
+ \lambda=\Bigl(\prod_z d_z\Bigr)d_C M_V
+       \Bigl(\prod_z H_z^+H_z^-J_z\Bigr)
+       \frac{|L^S|}{D_SD^S}.
+\end{equation}
+Here the exact finite-level identity used in the last
+line is \(I_V N_\Phi=D_S^{-1}\).
+\label{cor:selected-lift-scalar-3}
+
+\proofstep{Bound the finite Euler, level, and stabilizer factors.}
+
+At a split place of residue size \(q\), reducing the
+source level gives a parabolic fixing the specified
+first \(r\) columns up to a subgroup \(P_q\) of
+\(\mathrm{GL}_r(\mathbf F_q)\). Its last \(t\times t\)
+block is arbitrary invertible, with \(rt\) free
+off-diagonal entries. The relative index and
+the squared oscillator norm there are
+\[
+ \frac{|\mathrm{GL}_{r+t}(\mathbf F_q)|}
+      {|\mathrm{GL}_t(\mathbf F_q)|q^{rt}|P_q|},
+ \qquad |P_q|q^{-r(r+t)}.
+\]
+The second equality counts admissible \(r\)-column
+matrices, each with a unit-modulus coefficient, in
+the integral matrix ball. Of \(r\) columns in dimension \(t+r\), the choices for column
+\(j+1\) after \(j\) independent choices are \(q^{t+r}-q^j\).
+Their proportion in the full residue matrix space is
+\[
+ \prod_{j=0}^{r-1}\frac{q^{t+r}-q^j}{q^{t+r}}
+       =\prod_{a=1}^r(1-q^{-t-a}),
+\]
+the reciprocal local normalizer.
+
+At the other places the vector is the
+vacuum of squared norm one and the source has its
+self-dual level. The split half-place condition allows
+multiplication over distinct \(F^+\)-places. This
+proves the finite-level identity, also with prescribed
+local character factors. The stabilizer index and mass use
+the same measure, so the quotient volume at the level
+is \(I_VM_V\).
+
+For \(w\) over a spherical place let \(q_w=\mathrm Nw\).
+The unramified zeta integral gives an inverse Euler
+polynomial whose \(r\) parameters have modulus at most
+\(q_w^{(r-1)/2}\) in the normalization before evaluating
+at \(s_0+1/2\). This bound uses the spherical part of the
+unitarizable cuspidal representation. Consequently
+each factor of \(L^S\) is \((1-x_{wa})^{-1}\) with
+\[
+ |x_{wa}|\le q_w^{(r-1)/2-(1+t)/2}\le q_w^{-3}.
+\]
+There are at most \(2f\) primes over a rational
+prime and \(\sum_{n\ge2}n^{-3}<1\). Thus the Euler
+product converges absolutely, and
+\(-\log|1-x|\ge-|x|\) gives
+\[
+ \log|L^S|\ge-\sum_{w\notin S}\sum_{a=1}^r q_w^{-3}
+           \ge-2fr\sum_{n\ge2}n^{-3}\ge-2fr .
+\]
+
+At a base place of norm \(q\)
+the normalizer is
+\(\prod_{a=t+1}^{t+r}(1-\epsilon_q^a q^{-a})^{-1}\)
+with \(\epsilon_q\) the local quadratic sign in the
+doubling normalization. The \(r\) arguments have
+absolute value at most \(q^{-2}\). The inequality \(-\log(1-q^{-2})\le2q^{-2}\) and the bound of \(f\) places over each rational prime give, for either positive product \(D\in\{D_S,D^S\}\),
+\[
+ \log D\le 2fr\sum_p p^{-2}\le4fr .
+\] These inequalities are independent of
+the finite set omitted and of the occurring Hecke type.
+
+Let \(w_E\) be the number of roots of unity of \(E\).
+The identity class alone gives
+\(M_V\ge(w_E^{n_V}n_V!)^{-1}\). Indeed an integral
+unitary matrix in the standard frame has one
+nonzero entry in each column. For a nonzero integral
+entry, the mean squared modulus over the complex
+embeddings is at least one by the norm and the
+arithmetic--geometric mean inequality. Indeed for a column \((a_i)_i\) the relation and positivity give
+\[
+ 1=\sum_i\frac1{[E:\Q]}\sum_\sigma|\sigma(a_i)|^2
+   \ge\sum_{i:a_i\ne0}|N_{E/\Q}(a_i)|^{2/[E:\Q]}
+   \ge\#\{i:a_i\ne0\}.
+\]
+
+The unit length forces exactly one nonzero entry, and equality in
+the mean inequality forces all of its conjugates to have the same
+absolute value. Thus the one entry has
+modulus one at every embedding, so it is a root
+of unity. The same argument applies to all columns,
+and invertibility forces the positions to form a
+permutation. Euler's totient bound \(\varphi(a)^2\ge a/2\), applied to
+the roots of unity in \(E\), now gives
+\[
+              w_E\le 2\varphi(w_E)^2\le 8f^2,\qquad
+              M_V\ge\frac{1}{(8f^2)^{n_V}n_V!}.
+\]
+\label{cor:selected-lift-scalar-4}
+
+\proofstep{Retain the compact hook factors in the lower bound.}
+
+The lowest polynomial is a product of initial minors
+in the positive block and reverse initial minors in
+the negative block, with exponents successive
+differences of the two partitions. The two blocks
+use disjoint sets of variables. In covolume-one
+Gaussian coordinates the squared Fock norm is
+therefore the product of the two hook products.
+Each block uses \eqref{eq:selected-fock-matrix}
+on its highest matrix coefficient. A determinant
+character changes neither its compact normalization
+nor the invariant coefficient pairing. This gives
+the \(H_z^+H_z^-\) factor in
+\eqref{eq:selected-adelic-scalar}.
+
+For the regular half-integral Harish--Chandra
+parameter \(\gamma_{z,1}>\cdots>\gamma_{z,r}\)
+of the selected discrete series, Schur orthogonality
+and the formal-degree formula give
+\[
+ J_z^{-1}=\frac{1}{V_r}
+       \prod_{a<b}\frac{|\gamma_{z,a}-\gamma_{z,b}|}{b-a},
+ \qquad
+ V_r=\prod_{\ell=1}^r\frac{2\pi^\ell}{(\ell-1)!}.
+\]
+For compact probability measure the density at the
+identity, in the comparison Lie algebra coordinates,
+is \(2^{-r(r-1)/2}/V_r\). Indeed the quotient of
+\(U(\ell)\) by \(U(\ell-1)\) contributes the unit
+sphere of real dimension \(2\ell-1\), with volume
+\(2\pi^\ell/(\ell-1)!\) in the column coordinates.
+The paired off-diagonal coordinates in the chosen
+Lie algebra volume supply the factor \(2^{-r(r-1)/2}\)
+in the probability density.
+
+The compact-dual measure
+matches that density on \(U(p_z,q_z)\). Its inverse
+coefficient integral is the displayed root product
+without \(V_r^{-1}\). The density ratio at the identity is
+\[
+ \frac{2^{-r(r-1)/2}}{2^{-r(r-1)/2}/V_r}=V_r .
+\]
+Multiplication by this constant converts the compact-dual
+coefficient integral to the real measure in the unfolding. The
+strict parameter inequalities give integrability and
+positivity of \(J_z\). If \(d\) is the degree of the
+local Fock polynomial, the parameter width is at
+most \(d+n_V+3\), by the lowest-type shift. Each
+denominator \(b-a\) is at least one. The volume
+formula gives \(V_r\ge r^{-r^2}\), so
+\(\log J_z^{-1}\le r^2\log(r(d+n_V+3))\).
+\cite{harish-chandra-degree}\label{cor:selected-lift-scalar-5}
+
+Put \(L'=\log(b\,\mathrm{rd}(E)\,g_0g_1 n_V)\).
+At the selected sizes,
+\(L'\ge5.5\), \(\log n_V\le L'\), and the degree
+bound \(d\le3rb\) gives \(\log(d+2)\le2L'\).
+Because \(n_V\ge2r\) and \(n_V\ge8\),
+\[
+ \log\big(r(d+n_V+3)\big)\le\log r+\log n_V+\log(d+2)
+    \le4L' .
+\]
+Summing the real loss over the \(f\) places costs at most
+\(4fr^2L'\). The mass loss is at most
+\[
+ n_V\bigl(4f+\log 2+L'\bigr)
+\]
+by \(\log w_E\le4f+\log 2\).
+The finite loss from the Euler, level and stabilizer factors
+of \eqref{eq:selected-adelic-scalar} is at most \(10fr\).
+Both dimension factors in \eqref{eq:selected-adelic-scalar}
+are positive integers. Adding the losses gives
+\begin{equation}\label{eq:selected-hook-lower}
+       \log\lambda\ge
+        \sum_z\log(H_z^+ H_z^-)-8 f n_V^2 L'.
+\end{equation}
+In particular the error bound is the same for every
+occurring type, unit vector and embedding at a lift.
+
+\proofstep{Descend the scalar at each conjugate embedding of an occurring part.}
+
+At the base embedding the untwisted principal-level
+parts span the type decomposition of the full multiplicity
+space. They are orthogonal for the row product. The good
+type projector \(Q\) is orthogonal and commutes with
+this decomposition. The actual lift is \(S_0=QT\).
+On a type on which \(TT^*=\lambda I\), the compressed operator
+satisfies
+\[
+ S_0S_0^*=QTT^*Q=\lambda Q .
+\]
+Thus \eqref{eq:selected-hook-lower} holds on every nonzero
+type in the projected image.
+
+At another inducing embedding, use the rational lift
+with the selected phase one, its conjugate splitting
+characters and its conjugate finite vector. The
+conjugate Gram identification gives an isometry of the
+definite source forms for the form obtained by applying
+that embedding to the rational source pairing. For an
+embedding fixing the inducing quadratic field, express the rational form on the definite classes as a sum of geometric theta evaluations with algebraic coefficients.
+The same class sum with embedded coefficients evaluates
+the new integral, by the conjugate coefficient map and
+the covariance of theta evaluation.
+
+Let \({\rm ev}\) denote evaluation on the chosen extremal vector. Equality after this evaluation suffices in the multiplicity space because
+\[
+ {\rm ev}(v)={\rm ev}(v')\quad\Longrightarrow\quad v-v'\in\ker({\rm ev})=0 .
+\] This identifies
+the good projection of the new lift with its rational realization up to the unitary change of row coordinates, the action of
+a central level element, and a unit-modulus scalar.
+The last factor is a product of central character
+values, a root of unity, and the unit phase of the
+theta comparison. For this unitary map and the central action write their
+product as \(U\) and the remaining scalar as \(c\). Relative to
+the normalized row Gram matrix \(G\) this gives
+\[
+ (cU)^*G(cU)=|c|^2 U^*GU=G .
+\] At the remaining embeddings
+use complex conjugation of both Gram pairings. The
+Petersson product is computed anew in the conjugate
+model.
+
+For a retained type, take the source vector \(x\)
+in the tied rational adjoint image. At the base
+embedding its Gram pairing with the rational kernel
+is zero. This vanishing is a rational class-sum identity,
+so holds at the other embeddings as well. The conjugate
+source realization is an isometry, and the rational kernel
+spans the Hilbert-model kernel after scalar extension.
+Thus the realized source vector is in the orthogonal
+complement of the conjugate lift's kernel. The primitive
+type and lift identifications give, in its metrics,
+\[
+ \|S_v x\|_v^2=\lambda_{j,p}(v)\,M_v(x,x).
+\]
+Here \(M_v\) is the source Gram majorant and the
+conjugate realization of the target uses the same
+row basis as in the period identity. Both products
+carry the reciprocal level index.
+
+In the definite
+Hilbert model the majorant is the full coefficient
+product divided by that index. The conjugate
+target norm is divided by the same index. To obtain
+the scalar relation one uses the conjugate
+class-sum eigenspace identity on the rational lift and
+the conjugate Gram identity on the source. This
+identifies the spectral labels before comparing
+norms. On \((\ker S_v)^\perp\) the squared singular
+values of \(S_v\) are the positive eigenvalues
+of \(S_v S_v^*=QTT^*Q\). If \(s_{\min}\) is the smallest positive singular value on the
+occurring part, expand a vector \(x\) in its orthonormal right
+singular basis. This gives
+\[
+ \|S_vx\|_v^2=\sum_a s_a^2|x_a|^2
+       \ge s_{\min}^2\sum_a|x_a|^2=s_{\min}^2 M_v(x,x).
+\] A type present in the
+coefficient comparison has some \(x\) with
+\(M_v(x,x)>0\), which allows cancellation in the
+scalar relation.
+
+Conjugation permutes the labelled weight data in the
+hook sum. The negative hooks are positive integers
+and may be dropped. The remaining hooks are
+\(H_{jz}\) of the fixed positive row partitions.
+Consequently for \(C_{\rm sz}\ge8\) a uniform logarithmic lower bound is
+\begin{equation}\label{eq:selected-hX}
+ h_X(j)=\sum_z\log H_{jz}-C_{\rm sz} f n_V^2 L',
+ \qquad \log\lambda_{j,p}(v)\ge h_X(j)
+\end{equation}
+on all occurring types and at all inducing embeddings.
+A type with zero part makes no contribution to the
+norm comparison. If a scalar is assigned to that
+label in the numerical record, it is assigned the
+exponential of the stipulated logarithmic lower bound, as in the
+absent-part clause of the scalar record.
+\label{cor:selected-lift-scalar-6}
+
+\proofstep{Divide by the lift scalars and add the terminal cost.}
+
+The terminal pairing first uses the weighted class metrics
+of Proposition~\ref{prop:terminal-evaluation-height}. At the
+same reference level \(P_0\), let \(V\) be the inclusion of
+the good row basis and let \(H\) be the Gram matrix of the
+principal class sum. With all matrices evaluated at the place in question, the framed norm of a test \(F\) is given by
+\[
+ \|F\|^2=\frac{\bar F^{t}V^*HV F}{|P_0|}.
+\] The principal-level
+restriction of the theta evaluation has coordinates \(VF\).
+In fact this restriction on full-level forms is the level
+idempotent. It cancels the section and cutoff in the
+evaluation, since \(V\) already lies in the good level
+image. The matrices on both sides are evaluated in the
+same basis. The finite-level companion compares the two evaluations on one framed representative of each class. They coincide by equivariance on the remaining points.
+
+The full-level class sum of that evaluation is \(1/|P_0|\)
+times its principal-level class sum. For each full-level
+orbit, with stabilizer \(S\), its principal-level classes
+are the orbits of \(S\) on the finite level quotient
+of size \(|P_0|\). Let \(X\) be this finite quotient. Orbit--stabilizer gives
+\[
+ \sum_{[x]\in S\backslash X}\frac1{|S_x|}
+    =\frac1{|S|}\sum_{[x]\in S\backslash X}|Sx|
+    =\frac{|P_0|}{|S|}.
+\]
+The Hermitian squared values are constant on this set
+of classes because the level characters have modulus
+one. The principal-level sum is \(\|VF\|_H^2\), so
+the full-level evaluation has squared norm \(\|F\|^2\).
+This gives the norm-nonincreasing evaluation required
+in the terminal bound at every infinite place.
+\label{cor:selected-lift-scalar-7}
+
+Now use the quotient of this framed test space by the
+kernel of its map \(q_0\) to the primitive rows. Its
+metric is the norm of the orthogonal representative.
+By \eqref{eq:selected-pairing} the terminal pairing
+is constant on the fibres of \(q_0\), so it has the
+same norm bound in the quotient metric. In the period
+comparison the row isomorphism \(\iota\) from this
+quotient to the spectral row multiplies its Hermitian
+pairing with first argument of type \(p\) by
+\[
+             \kappa(v)\prod_{j=1}^m\lambda_{j,p}(v).
+\]
+This is the scalar identity for the same reference
+row and word. The other argument is unrestricted.
+Thus the type spaces lie in eigenspaces of the
+positive self-adjoint comparison of the two metrics.
+They span, and the least scalar is a lower bound for
+the squared norm ratio on the whole quotient.
+
+Passing to the spectral row dual divides the squared
+operator bound by this least scalar. If \(H_j(v)\)
+is the logarithmic squared kernel bound including
+class sums, the resulting logarithmic squared bound
+for a nonzero period map for the sequence \(B_u\) at \(v\) is
+\[
+ h_A(u)+\sum_{j=1}^m H_j(v)-\log\kappa(v)
+                       -\min_p\sum_{j=1}^m\log\lambda_{j,p}(v).
+\]
+Here the two terminal kernel factors in the coupled
+map are counted at their separate lift indices.
+Average over the infinite places. The kernel bounds
+of Section~\ref{subsec:selected-kernel-jets} and their
+CM means give the prices \(h_B(j)\). Using
+\eqref{eq:selected-hX} gives
+\begin{equation}\label{eq:selected-reference-height}
+ \operatorname{ht}(B_u)
+    \le h_{\rm num}(u)-\bar\kappa,\qquad
+ h_{\rm num}(u)=h_A(u)+\sum_{j=1}^m\bigl(h_B(j)-h_X(j)\bigr).
+\end{equation}
+The same numerical upper bound may be assigned to a zero period map for the sequence since its operator norm is zero.
+The ranks give \(n_V\le N_m\), and \(L'=O(L_a+L)\)
+by the selected type-prime and discriminant bounds.
+
+Consequently the allowance in \(h_X(j)\) costs at
+most \(O(fN_m^2(L_a+L))\) per lift, uniformly in the
+word, place and type. Its hook main term is common
+to all sequences on this family. Equation
+\eqref{eq:selected-reference-height} uses the exact
+numerical prices of the selected comparison after
+increasing their one common absolute constant.
+\label{cor:selected-lift-scalar-8}
+\end{proof}
+

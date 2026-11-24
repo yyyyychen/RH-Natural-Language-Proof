@@ -1,0 +1,563 @@
+\section{The common family and its cohomology bound}
+\label{sec:family-window}
+\hypertarget{source-family-window}{}
+
+The average in \eqref{eq:fourier-compare} uses every retained translate at one scale. Its upper bound must therefore come from arithmetic estimates valid throughout that set of translates. We construct an interval of
+scales on which the quadratic-twist estimates and the scalar
+cohomology budget hold for the same auxiliary field. We then fix
+the ranks and weights before choosing the translate. Construction~\ref{hyp:family-prescribed-realization} forms the signed rows at the admissible word levels. It copies the reference tuple when adjoining the chosen character values. In Section~\ref{sec:word-division} the signed transport indices and the Hermitian-dual index enter one slope identity. Its two estimates must therefore refer to the same lattices.
+
+\subsection{Order of the choices}
+
+Fix a primitive Dirichlet character \(\psi\) of conductor \(N_\psi=f_\psi\) in the notation of Definition~\ref{def:dirichlet-modulus}.
+Two choices determine the auxiliary field once \(\psi\) is fixed. The primes \(q,d\) are chosen for an interval; the dyadic index \(e=e(z)\) can vary with the original cohomology scale \(z\) inside it.
+
+\begin{definition}[The original auxiliary field]\label{def:family-original-host}
+Put \(M=\operatorname{lcm}(2^{e+2},N_\psi,q,d)\) and identify
+\(\operatorname{Gal}(\mathbb Q(\mu_M)/\mathbb Q)\) with
+\((\mathbb Z/M\mathbb Z)^\times\) by the action on a primitive root of unity. Write \(U_M=(\mathbb Z/M\mathbb Z)^\times\) as in Definition~\ref{def:dirichlet-modulus} and put
+\[
+ U_{\psi,e;q,d}=\left\{a\in U_M:
+ a\equiv\pm1\pmod{2^{e+2}},\ \psi(a)=1, \left(\frac aq\right)=\left(\frac ad\right)=1\right\}.
+\]
+The original auxiliary field and its Galois group are
+\[
+ E_{\psi,e;q,d}=\mathbb Q(\mu_M)^{U_{\psi,e;q,d}},\qquad
+ \operatorname{Gal}(E_{\psi,e;q,d}/\mathbb Q)
+       \simeq(\mathbb Z/M\mathbb Z)^\times/U_{\psi,e;q,d}.
+\]
+Write \(E=E_{\psi,e;q,d}\) when these parameters are fixed.
+
+Let \(K_\psi\subset\mathbb Q(\mu_{f_\psi})\) be the field fixed by
+\(\ker\psi\), and set \(C_e=\mathbb Q(\mu_{2^{e+2}})^+\).
+The four kernel conditions are the stabilizers of the four factors
+in the compositum
+\begin{equation}\label{eq:host-character-compositum}
+ E=K_\psi C_e(\sqrt{-q},\sqrt{-d}),\qquad
+ Q_S=\operatorname{lcm}(f_\psi,2^{e+2}).
+\end{equation}
+
+Indeed \(q,d\equiv3\pmod4\), so the two quadratic characters
+cut out the fields of the displayed negative square roots. The
+intersection of the four stabilizers fixes their compositum.
+On sufficiently late selected intervals \(q,d\nmid Q_S\) and \(M=Q_Sqd\).
+This is the field in \eqref{eq:cohom-host-field}.
+\end{definition}
+
+The family uses this same \(E\) for the strict lengths in
+Definition~\ref{def:strict-length} and for all translates at
+the corresponding rescaled point. Its late intervals satisfy
+Propositions~\ref{prop:original-window-budget}
+and~\ref{prop:common-host-prime-pair}.
+Fix a sufficiently small
+\(\epsilon>0\). Each estimate will hold once the family parameters
+exceed specified lower bounds. The bounds may depend on
+\(\epsilon\) and on the parameters chosen earlier. For estimate \(i\), write \(T_{ij}\) for its lower threshold on the \(j\)-th parameter, with dependencies taken in the order of choice. Intersect the finitely many ranges for \(\epsilon\), and at step \(j\) impose
+\[
+ t_j>\max_i T_{ij}(\epsilon,t_1,\ldots,t_{j-1}).
+\]
+The existence theorem in the construction then
+supplies a family satisfying all these inequalities with one
+choice of weights. In particular the cohomology, rank and lattice
+estimates apply to the same family.
+
+The final comparison uses local length and prime-count
+bounds, dimension and Hilbert--Schmidt estimates for the
+row spaces, irreducibility with controlled multiplicities,
+and divisibility and slope estimates for the lattices.
+In their final bounds, let \(e_D\) be the exponent of
+\(x^\epsilon\) from the divisibility estimate and let \(e_L\)
+be the corresponding exponent from the remaining losses.
+Section~\ref{subsec:fixed-weight-absorption} uses the values
+\(e_D=2\) and \(e_L=0\). The prime pair is chosen first. Its associated field will then be the field of definition of the strict cohomology groups in the divisibility estimate.
+
+\input{prime-selection}
+
+\input{level-primes}
+
+\input{frobenius-selection}
+
+\subsection{The cohomology input to the window}
+
+The bounds for the selected positions do not account for division in the integral lattices. A second input is the length of a global Galois cohomology group with vanishing localizations. We need that length over the field already chosen and for all twists below the eventual rank.
+
+\begin{definition}[Strict localization length]\label{def:strict-length}
+Let \(E\) be the auxiliary abelian field chosen at the scale in
+question, let \(\ell\) be a rational prime, and let \(j\ge1\)
+be an integer. The prime \(\ell\) varies independently of the
+auxiliary primes \(q,d\). Let \(S_\ell\) consist of the places
+of \(E\) above \(\ell\) and the infinite places. Write
+\(G_{E,S_\ell}\) for the Galois group of the maximal extension
+of \(E\) unramified outside \(S_\ell\).
+Use the Tate-twisted modules
+\(A=(\mathbb Q_\ell/\mathbb Z_\ell)(-j)\) and
+\(T=\mathbb Z_\ell(j+1)\). Write \(H^i(E,A)\) and \(H^i(E,T)\)
+for cohomology of \(G_{E,S_\ell}\) with these coefficients.
+Write \(\operatorname{len}\) for \(\mathbb Z_\ell\)-length. The strict group and its length over \(\mathbb Z_\ell\) are
+\[
+ \operatorname{Sha}^1(E,A)=
+ \ker\!\left(H^1(G_{E,S_\ell},A)\longrightarrow
+        \prod_{v\mid\ell}H^1(E_v,A)\right),\qquad
+ V(E,\ell,j)=\operatorname{length}_{\mathbb Z_\ell}\operatorname{Sha}^1(E,A).
+\]
+\end{definition}
+The places at infinity are included in the allowed ramification set \(S_\ell\).
+For this abelian host, \(q\equiv3\pmod8\) gives
+\(\bigl(\frac{-1}{q}\bigr)=-1\), so complex conjugation acts nontrivially on \(E\). All its archimedean completions are therefore complex. Their degree-one local cohomology is zero, also when \(\ell=2\); the displayed kernel agrees with the localization kernel of Appendix~\ref{sec:cohomology}.
+
+\begin{lemma}[The Poitou--Tate length identity]\label{lem:pt-length-identity}
+Use \(A,T,S_\ell\) of Definition~\ref{def:strict-length}.
+For odd \(\ell\), or when \(E\) has no real places, Poitou--Tate duality \cite{milne-duality} gives the following identity when the
+lengths are finite. In the sum, \(v\) runs over the places of
+\(E\) above \(\ell\), and \(E_v\) is the completion at \(v\).
+\[
+ \operatorname{len}H^2(E,T)+\operatorname{len}H^0(E,A)
+ =
+ \operatorname{len}\operatorname{Sha}^1(E,A)+
+ \sum_{v\mid\ell}\operatorname{len}H^0(E_v,A).
+\]
+\end{lemma}
+\begin{proof}
+Write \(D^\vee\) for the Pontryagin dual. The final terms of
+Poitou--Tate and local Tate duality give the exact sequence
+\[
+ 0\longrightarrow\operatorname{Sha}^1(E,A)^\vee
+ \longrightarrow H^2(E,T)\longrightarrow
+ \bigoplus_{v\mid\ell}H^0(E_v,A)^\vee
+ \longrightarrow H^0(E,A)^\vee\longrightarrow0 .
+\]
+In the stated range the infinite places contribute no modified
+local terms. Additivity of length and invariance under finite
+Pontryagin duality give the identity. When \(\ell\) is odd it
+also splits under the two idempotents \((1\pm c)/2\) for complex
+conjugation \(c\). The real \(2\)-primary terms are treated separately.
+\end{proof}
+
+\begin{paramdefinition}[Cyclotomic tower for strict coinvariants]\label{hyp:strict-tower}
+Write \(\mu_r\) for the group of \(r\)-th roots of unity, for
+integers \(r\ge1\), and let \(\chi_\ell\) be the \(\ell\)-adic
+cyclotomic character. Choose a base field \(L_0\) containing
+\(\mu_\ell\) for odd \(\ell\) or \(\mu_4\) for \(\ell=2\).
+Let \(L_\infty\) be its cyclotomic \(\mathbb Z_\ell\)-extension,
+\(\gamma\) a topological generator of its Galois group, and
+\(u=\chi_\ell(\gamma)\). Let \(X_\ell\) be the Galois group over \(L_\infty\) of
+the maximal abelian pro-\(\ell\) extension of \(L_\infty\)
+unramified away from \(\ell\) in which every place above \(\ell\)
+splits completely. For a nonnegative integer \(m\), let \(L_m\)
+be the layer of degree \(\ell^m\).
+\end{paramdefinition}
+
+\begin{lemma}[Coinvariants for the strict kernel]\label{lem:tower-coinvariants}
+For the tower of Definition~\ref{hyp:strict-tower} and any
+\(j\ge1\), the Pontryagin dual of the strict kernel over \(L_m\) is
+\[
+ X_\ell/\bigl((u^j\gamma)^{\ell^m}-1\bigr)X_\ell .
+\]
+\end{lemma}
+\begin{proof}
+Write \(\Gamma_m=\langle\gamma^{\ell^m}\rangle_{\rm top}\).
+The module \(A\) is trivial on the absolute Galois group over
+\(L_\infty\). For the quotient acting on \(A\),
+\[
+ H^1(\Gamma_m,A)=A/(u^{-j\ell^m}-1)A=0,\qquad
+ H^2(\Gamma_m,A)=0 .
+\]
+The first equality uses divisibility and \(u^{-j\ell^m}\ne1\);
+the second uses \(\operatorname{cd}_\ell\Gamma_m=1\).
+The same calculation with an open decomposition subgroup gives
+the local inflation--restriction isomorphism. A class trivial
+at all places above \(\ell\) thus corresponds to a continuous
+equivariant homomorphism \(f:X_\ell\to A\). Writing the action
+on \(X_\ell\) additively, equivariance is exactly
+\[
+ f(\gamma^{\ell^m}h)=u^{-j\ell^m}f(h)
+ \quad\Longleftrightarrow\quad
+ f\bigl(((u^j\gamma)^{\ell^m}-1)h\bigr)=0
+ \qquad(h\in X_\ell).
+\]
+These homomorphisms form the Pontryagin dual of the displayed
+compact quotient, after identifying the underlying group of
+\(A\) with \(\mathbb Q_\ell/\mathbb Z_\ell\).
+\end{proof}
+
+Lemma~\ref{lem:tower-length-centres} uses this presentation to
+bound the lengths outside finitely many exceptional twists.
+
+Let \(z\) be the original scale for the cohomology estimates,
+let \(C_t=401\), and put \(T_{C_t}(z)=\lfloor z^{C_t}\rfloor\).
+This cutoff is the
+upper endpoint of the strict range \(1\le j<T_{C_t}(z)\).
+The auxiliary field has a \(2\)-power cyclotomic factor.
+Its exponent \(e\) satisfies
+\(z^{2+8\epsilon}\le2^e\le2z^{2+8\epsilon}\).
+\begin{lemma}[Conductor bound at the strict cutoff]
+Let \(C_t=401\), \(T_{C_t}(z)=\lfloor z^{C_t}\rfloor\), and take
+the auxiliary field \(E\subseteq\mathbb Q(\mu_N)\) with
+\[
+ N\le2^{e+2}\operatorname{cond}(\psi)qd,\qquad
+ 2^e\le2z^{2+8\epsilon},\qquad \log(qd)\le z^{\epsilon/4}.
+\]
+Then \([E:\mathbb Q]\le N\) and
+\(\log(NT_{C_t}(z))\le2z^{\epsilon/4}\) for sufficiently large
+\(z\) depending on \(\psi,\epsilon,C_t\).
+\end{lemma}
+\begin{proof}
+The fixed field lies in the cyclotomic field of conductor
+\(N\le2^{e+2}m_\psi qd\), where \(m_\psi=\operatorname{cond}(\psi)\).
+In particular \([E:\mathbb Q]\le\varphi(N)\le N\). The upper
+bound on \(2^e\) and the range of \(T_{C_t}\) give
+\[
+ \log(NT_{C_t}(z))
+ \le \log(qd)+\log(8m_\psi)+(2+8\epsilon+C_t)\log z .
+\]
+The first term is at most \(z^{\epsilon/4}\), and the remaining
+terms together are at most \(z^{\epsilon/4}\) past the claimed threshold.
+\end{proof}
+
+\begin{proposition}[A bound for strict cohomology at the original scale]
+\label{prop:original-window-budget}
+Fix the primitive character \(\psi\), \(0<\epsilon<1/52\), and the
+dyadic index function \(e=e(z)\) satisfying
+\[
+                z^{2+8\epsilon}\le2^{e(z)}\le2z^{2+8\epsilon}.
+\]
+There is \(J\ge1\) such that, for all sufficiently large \(X\) and a
+prime pair satisfying Proposition~\ref{prop:common-host-prime-pair} on
+\([X^{1/J},X]\), there is an interval
+\([W,W^2]\subseteq[X^{1/J},X]\) with the following property.
+At every \(z\) in this interval all strict lengths in the range
+\(1\le j<T_{C_t}(z)\) are finite, and for every finite set \(P\)
+of rational primes
+\begin{equation}\label{eq:cohomwin}
+ \sum_{\ell\in P}(\log\ell)
+       \sum_{1\le j<T_{C_t}(z)} V(E,\ell,j)
+       \le \exp(z^\epsilon/2).
+\end{equation}
+\end{proposition}
+\begin{proof}
+The window is constructed in Lemma~\ref{lem:exceptional-twist-window}.
+The position of the window may depend on the prime pair. Its exponent
+\(J\) is fixed before that pair is chosen.
+For the bounds entering this estimate, put
+\(B=\exp(z^{4\epsilon/5})\) and let \(K_0,C>0\) be fixed
+constants. The three contributions are
+\begin{center}
+\begin{tabular}{@{}lll@{}}
+Contribution & Upper bound & Proof \\
+\hline
+Prime \(2\) & \(B\log 2\) & Prop.~\ref{prop:dyadic-window-total} \\
+Odd primes, negative component & \(K_0(NT_{C_t}(z))^4\) &
+  \S\ref{subsec:odd-prime-negative} \\
+Odd primes, positive component & \((NT_{C_t}(z))^C+CB\) &
+  \S\ref{subsec:odd-prime-sum}
+\end{tabular}
+\end{center}
+Since \(\log(NT_{C_t}(z))\le2z^{\epsilon/4}\), the three contributions sum to at most
+\[
+ B\log2+ K_0(NT_{C_t}(z))^4+(NT_{C_t}(z))^C+CB\ll \exp(Dz^{4\epsilon/5})
+\]
+for a fixed \(D>0\). The inequality
+\(4\epsilon/5<\epsilon\) gives \eqref{eq:cohomwin} for all
+sufficiently large \(z\) in the chosen interval. The lower
+threshold is uniform in the field, the twist indices and \(P\).
+\end{proof}
+
+\begin{lemma}[Rescaling the interval and its strict cutoff]\label{lem:rescale-host-budget}
+Let \(c\ge1\) be the constant in the frame order \(n=c2^e\),
+set \(\kappa_{\rm sc}=c^{1/(2+8\epsilon)}\), the positive rescaling constant, and take a window of
+Proposition~\ref{prop:original-window-budget} with
+\(W\ge\max(\kappa_{\rm sc}^3,\kappa_{\rm sc}^{400})\). Set \(Y=\kappa_{\rm sc}W\).
+For each \(Y\le x\le Y^{3/2}\), use the field and dyadic index
+at \(x'=x/\kappa_{\rm sc}\). Then both scales lie in \([W,W^2]\), and
+\[
+ x^{2+8\epsilon}\le n\le 2x^{2+8\epsilon},\qquad
+ \lfloor x^{400}\rfloor\le \lfloor(x')^{401}\rfloor .
+\]
+For every finite set of primes the budget in \eqref{eq:cohomwin},
+restricted to \(1\le j<\lfloor x^{400}\rfloor\), is at most
+\(\sqrt b\), where \(b=\exp(x^\epsilon)\).
+\end{lemma}
+
+\begin{proof}
+The index \(t_0\) in \eqref{eq:dyadic-coordinate-orders} is the degree
+of \(K_\psi\cap C_e\) over \(\mathbb Q\). Indeed restriction
+identifies the subgroup fixing \(K_\psi\) with
+\(\operatorname{Gal}(C_e/(K_\psi\cap C_e))\). The intersections
+increase with \(e\) inside the fixed finite extension \(K_\psi\),
+so they stabilize. Thus eventually
+\[
+           n=oD/t_0=c2^e,\qquad c=o/t_0\ge1 .
+\]
+For \(\psi=1\) this gives \(c=1\). Lemma~\ref{lem:host-rescaling}
+places both scales in \([W,W^2]\).
+Multiplying the bounds for \(2^{e(x')}\) by \(c=\kappa_{\rm sc}^{2+8\epsilon}\)
+gives the asserted frame order. As \(x'\ge \kappa_{\rm sc}^{400}\),
+\((x')^{401}\ge \kappa_{\rm sc}^{400}(x')^{400}=x^{400}\); this includes equality.
+All summands of \eqref{eq:cohomwin} are nonnegative, so restricting
+its strict cutoff costs nothing, and \(\exp((x')^\epsilon/2)\le\sqrt b\).
+
+\end{proof}
+
+\begin{lemma}[The selected rank lies in the cohomology range]
+\label{lem:rank-window}
+Fix \(0<\epsilon<1/52\). Let \(x\ge 2^{100}\),
+\(\delta_1=x^{-\epsilon/8}\) and \(L=x^\epsilon\). Suppose
+the frame order \(n\) and the positive even ranks \(m,k\)
+satisfy the family bounds
+\[
+ x^{2+8\epsilon}\le n\le 2x^{2+8\epsilon},\qquad
+ \sqrt{x\delta_1}\le m\le 2\sqrt{x\delta_1},\qquad
+ x^{9/2+10\epsilon}\le k\le 2x^{9/2+10\epsilon},\qquad m+3\le k.
+\]
+Set \(f=2n\) and \(r=k+m-1\). The rank datum of the host
+chooses the positive integer \(t\) by the equality
+\[
+ T_0=\lceil x^{377}\rceil,\qquad
+ N_W=8\left\lceil\frac{10r}{8}
+           \left(f+\frac{f^2(k-1)^3L^2}{m}\right)\right\rceil,
+ \qquad r+t=8fr+4+T_0N_W .
+\]
+Then \(t\le\lfloor x^{400}\rfloor\).
+\end{lemma}
+
+\begin{proof}
+Put \(y=x^{1/100}\ge2\). The exponents in the family
+bounds give
+\[
+ f\le4y^{216},\quad k\le2y^{470},\quad m\ge y^{49},\quad
+ L^2\le y^4,\quad r\le2k\le4y^{470}.
+\]
+Here \(2+8\epsilon\le216/100\), \(9/2+10\epsilon\le470/100\),
+\((1-\epsilon/8)/2\ge49/100\), and \(2\epsilon\le4/100\).
+Thus the parenthesis in \(N_W\) is at most
+\[
+ 4y^{216}+\frac{(4y^{216})^2(2y^{470})^3y^4}{y^{49}}
+ \le 132y^{1797}.
+\]
+The ceiling contributes at most \(8\) to \(N_W\), so
+\(N_W\le5288y^{2267}\); also \(T_0\le2y^{37700}\).
+It follows that
+\[
+ t\le128y^{686}+4+10576y^{39967}
+   \le10708y^{39967}\le y^{40000}=x^{400},
+\]
+since \(y^{33}\ge 2^{33}\ge 10708\). The rank \(t\) is integral.
+\end{proof}
+\begin{construction}
+\begin{tabular}{@{}l@{\hspace{1.2em}}l@{}}
+\toprule
+\textit{Datum fixed in the construction} & \textit{Range of the twist index} \\
+\midrule
+Original scale \(x'\) & \(1\le a<T_{C_t}(x')\) \\
+Rescaled point \(x=\kappa_{\rm sc}x'\) & \(\lfloor x^{400}\rfloor\le \lfloor(x')^{401}\rfloor\le T_{C_t}(x')\) \\
+Selected integer \(t\le\lfloor x^{400}\rfloor\) & \(1\le a<t\) \\
+\bottomrule
+\end{tabular}
+\caption{The increasing scale and the restriction to a smaller summation range in Lemmas~\ref{lem:rescale-host-budget} and~\ref{lem:rank-window}. The field in the budget is the original field at \(x'\).}\label{fig:analytic-cutoff}
+\end{construction}
+
+\begin{proposition}[A bound for strict cohomology at the selected rank]\label{prop:actual-rank-budget}
+On the eventual windows of Lemma~\ref{lem:rescale-host-budget},
+the frame at \(x\) may be chosen with the ranks of
+Lemma~\ref{lem:rank-window}. With the original field \(E\) at
+\(x'=x/\kappa_{\rm sc}\) and the actual chosen rank \(t\), put
+\[
+ V_\ell=\sum_{a=1}^{t-1}
+   \operatorname{len}_{\Z_\ell}\operatorname{Sha}^1
+     (E,(\Q_\ell/\Z_\ell)(-a)).
+\]
+Each \(V_\ell\) is finite and
+\(\sum_{\ell\in P}(\log\ell)V_\ell\le\sqrt b\)
+for every finite set \(P\) of primes.
+\end{proposition}
+
+\begin{proof}
+Identify the field at \(x\) using the fixed kernel conditions
+for \(\psi,q,d,e(x')\). To extend its order-\(n\) frame to
+Lemma~\ref{lem:rank-window}, use \(2\lceil A/2\rceil\) at the
+lower endpoints \(A\) of the \(m,k\) intervals. This even
+integer lies in \([A,2A]\) for \(A\ge2\), as holds for \(x\ge16\).
+The rank tests follow in this order:
+\[
+ \begin{aligned}
+ m\le2x,\quad 2x^2\le f\le4x^3,\quad k\ge x^4
+   &\ \Longrightarrow\ m+3\le k,\quad m\le f\le k,\\
+ t\ge7r+4 &\ \Longrightarrow\ t\ge r+5,\quad t>3m,\quad
+                                 m^2\le k+m(t+1).
+ \end{aligned}
+\]
+The formula for \(t\) gives the second lower bound using \(f\ge1\)
+and gives odd parity using odd \(r\) and \(8\mid N_W\). Adjoining
+type primes, local choices and lift data preserves the field and
+rank. Choose the interval with lower endpoint exceeding \(2^{100}\).
+The preceding lemmas give precisely the range needed in \eqref{eq:cohomwin},
+\[
+             1\le a<t\le\lfloor x^{400}\rfloor
+                          \le\lfloor(x')^{401}\rfloor .
+\]
+
+At \(2\), let \(K_\psi\) be the fixed
+field of the kernel of \(\psi\) in the cyclotomic field of its
+conductor. Set \(L_0=K_\psi(i,\sqrt{-q},\sqrt{-d})\) and let
+\(L_m=E(i)\) be the layer of degree \(2^m\) over \(L_0\) in
+its cyclotomic \(\mathbb Z_2\)-extension. The restriction
+estimate \(V(E,2,j)\le 1+V(L_m,2,j)\) holds for each
+\(j\ge1\), as proved in Lemma~\ref{lem:dyadic-host}.
+At odd primes both eigenspaces for complex conjugation
+enter the sum. This proves the bound for the actual field
+and rank at every selected point of the interval.
+\label{cor:family-window-1}
+
+\end{proof}
+
+\begin{lemma}[Character components of strict cohomology]\label{lem:strict-character-budget}
+Use the field \(E\), translate \(x\) and rank \(t\) of
+Proposition~\ref{prop:actual-rank-budget}. At each odd prime \(\ell\) and each \(1\le a<t\), the positive component is indexed by
+\[
+ \{\xi\in\operatorname{Gal}(E/\mathbb Q)^\wedge:\xi(-1)=(-1)^a\}.
+\]
+The localization kernel over \(\mathbb Q\) indexed by \(\xi\) has coefficient character \(\epsilon_\ell^{-a}\xi^{-1}\).
+The character estimates in Sections~\ref{subsec:odd-prime-trace}
+and~\ref{subsec:odd-prime-pointwise}, with the exceptional cases
+specified in the proof, give the positive part of the budget in
+\eqref{eq:cohomwin} on the strict range.
+\end{lemma}
+\begin{proof}
+Write \(x'=x/\kappa_{\rm sc}\) for the scale used to choose the field, and
+\(T'=\lfloor(x')^{401}\rfloor\). Let \(a\) be the positive Tate
+index, so that the scalar module has twist \(-a\).
+The positive sign at an odd prime \(\ell\) is the eigenspace
+of complex conjugation with eigenvalue \((-1)^a\) on the
+twisted group. Put \(\mathcal N=\operatorname{lcm}(2^{e+2},
+\operatorname{cond}\psi)qd\) and let \(H\) be the subgroup
+fixing \(E\) inside \(\mathbb Q(\mu_{\mathcal N})\). Write
+\(\epsilon_\ell\) for the \(\ell\)-adic cyclotomic character.
+Decomposition by the quotient cutting out \(E\) gives
+\[
+ \xi\colon (\mathbb Z/\mathcal N\mathbb Z)^\times/H\longrightarrow
+ \overline{\mathbb Q}_\ell^\times,\qquad
+ \xi(-1)=(-1)^a,\qquad
+ \text{coefficient character}=\epsilon_\ell^{-a}\xi^{-1}.
+\]
+Only the field and the twist enter these conditions. They therefore
+give the same sum after a change of automorphic type at a level prime.
+
+Fix the primes \(p_K,p_1\) used in the auxiliary construction
+for \(\psi\) in Section~\ref{sec:odd-prime-cases}. The first
+specifies the imaginary quadratic field \(K_*=\mathbb Q(\sqrt{-p_K})\)
+of discriminant \(-p_K\). Write \(h_*\) for its class number.
+The finite exceptional set is
+\[
+ B_\psi=\{3\}\cup\{\ell>2:\ell\text{ prime},\
+                \ell\mid \operatorname{ord}(\psi)\operatorname{cond}(\psi)p_Kh_*p_1\}.
+\]
+For \(\ell\notin B_\psi\) the character quotient has order
+prime to \(\ell\). If moreover \(\ell-1\mid2a\), the principal term vanishes. Neither auxiliary prime occurs as a residual prime in this case:
+\[
+ 1\le a<T',\quad \ell-1\mid2a\quad\Longrightarrow\quad
+ \ell\le 2a+1\le2T'<\min(q,d).
+\]
+
+At \(\ell\in B_\psi\) the character comparison has polynomial error. For \(a\ge2\), the parity test first removes the \(\ell\)-conductor factor and takes the prime-to-\(\ell\) part. In terms of the factors by conductor prime and their prime-to-\(\ell\) components,
+\[
+ \xi=\prod_{p\mid\operatorname{cond}\xi}\xi_p,\qquad
+ \xi_P=\prod_{\substack{p\mid\operatorname{cond}\xi\\p\ne\ell}}(\xi_p)_{\ell'} .
+\]
+Let \(c_2=c_2(\xi)\) be the exponent of the dyadic conductor. With \(n_0\) as in \eqref{eq:ordinary-dyadic-exponents}, Section~\ref{sec:odd-prime-cases} uses the threshold
+\[
+ R_1=R_1(\ell,\xi)=16\operatorname{ord}(\psi)
+            (\ell\operatorname{cond}\psi)^2\,4^{n_0}.
+\]
+\begin{center}
+\begin{tabular}{@{}p{0.52\linewidth}p{0.43\linewidth}@{}}
+Hypothesis & Estimate and proof \\
+\hline
+\(\ell\notin B_\psi\), \(\ell-1\nmid2a\) &
+  Rank-three trace sum over primes and characters (\S\ref{subsec:odd-prime-trace}) \\
+\(\ell\notin B_\psi\), \(\ell-1\mid2a\), \(2\mid\operatorname{ord}\xi\), or
+\(\ell\in B_\psi\), \(a\ge2\), \(2\mid\operatorname{ord}\xi_P\) &
+  Even-order estimate (\S\ref{subsec:odd-prime-pointwise}) \\
+\(\ell\notin B_\psi\), \(\ell-1\mid2a\), \(2\nmid\operatorname{ord}\xi\) &
+  Rank-four construction (\S\ref{sec:count-three-target}) \\
+\(\ell\in B_\psi\), \(a\ge2\), \(2\nmid\operatorname{ord}\xi_P\) &
+  Fixed cyclotomic layer (\S\ref{subsec:odd-prime-pointwise}) \\
+\(\ell\in B_\psi\), \(a=1\), \(2^{c_2}\ge R_1\) &
+  Gaussian estimate (\S\ref{subsec:odd-prime-pointwise}) \\
+\(\ell\in B_\psi\), \(a=1\), \(2^{c_2}<R_1\) &
+  Bounded-degree height (\S\ref{sec:cohom-height})
+\end{tabular}
+\end{center}
+Descent gives these bounds over the original character fields. \label{cor:family-window-2}
+For the fixed layer, conductor divisibility bounds the primitive characters by
+\[
+ \#\{\xi:\operatorname{cond}\xi\mid\operatorname{cond}\psi\}
+ \le\varphi(\operatorname{cond}\psi).
+\]
+After summation over \(a<T'\), each character charges the reference tower once,
+and its coefficient after summing over the exceptional primes
+is at most
+\[
+ \varphi(\operatorname{cond}\psi) \sum_{\ell\in B_\psi}\log\ell.
+\]
+
+All the other contributions on the positive component are bounded by a
+fixed power of \(\mathcal NT'\) on the counting estimates.
+Together with the negative component and the full length at
+\(2\), these estimates give the weighted bound \(\sqrt b\).
+\end{proof}
+
+\begin{lemma}[The cohomology bound after restriction to the good types]\label{lem:strict-budget-after-cut}
+At each retained translate and localization \(i\) under consideration,
+let \(S_i\) be the support of Definition~\ref{def:good-projector-support}.
+Write \(\operatorname{pr}_{S_i}\) for the rational projection onto the sum of
+the eigenspaces indexed by \(S_i\). Use the image lattice
+\(\operatorname{pr}_{S_i}(M_i)\) of Proposition~\ref{prop:cut-selector}.
+The scalar cohomology
+lengths are computed over the same field \(E\) and at the same rank \(t\)
+as in Proposition~\ref{prop:actual-rank-budget}.
+At that translate the lengths satisfy
+\[
+ V_\ell\ge0,\qquad \sum_\ell(\log\ell)V_\ell\le\sqrt b.
+\]
+\end{lemma}
+\begin{proof}
+The realization at a translate preserves the field \(E\), the
+rank \(t\), and the indices of the larger weights.
+Changing the algebraic closure transports the coefficient module.
+Changing the prime over a place conjugates the restriction map.
+Neither operation changes the length of its localization kernel.
+The restriction to good types concerns the Hecke eigenspaces.
+The coefficient module for the scalar lengths remains
+\((\Q_\ell/\Z_\ell)(-a)\) over \(E\).
+
+By Lemmas~\ref{lem:rescale-host-budget} and~\ref{lem:rank-window},
+the cutoff at the selected rank satisfies
+\[
+ \{a\in\mathbb Z:1\le a<t\}\subseteq\{a\in\mathbb Z:1\le a<T'\}
+                   \qquad(t\le T').
+\]
+This includes \(t=T'\).
+All the lengths are finite, so they may be summed as ordinary
+nonnegative numbers. Proposition~\ref{prop:actual-rank-budget}
+bounds every finite subsum of \(\sum_\ell(\log\ell)V_\ell\).
+Taking the supremum over finite sets of primes gives the full sum at this translate, with the field and rank still fixed.
+In the marked row and column estimates the good multiplicities at
+\((j,w)\) enter separately, with weights \(e_w\omega_w\).
+\label{cor:family-window-3}
+\end{proof}
+
+\input{selected-cut}
+\input{marked-localization}
+\input{small-prime-lengths}
+\input{cut-wach-models}
+\input{special-prime-lengths}
+\input{unramified-split-length}
+\input{inert-row-lengths}
+\input{large-prime-length}
+\input{division-length}
+
+\input{window-points}
+
+For the interval construction, Section~\ref{sec:absolute} normalizes the row amplitudes and Section~\ref{sec:transport} identifies the integral periods under the level and type conditions. The jet estimates give a fractional ideal of local divisibilities (Section~\ref{sec:finite-valuations}). The index and slopes of the trace-zero column at its assigned prime and the other places are calculated in Sections~\ref{sec:ramified-hecke-index} and~\ref{subsec:column-orbit-length}.
+
+At the assigned prime, Sections~\ref{subsec:hecke-period} and~\ref{subsec:hecke-entries} bound the split kernel in an incident frame. Sections~\ref{subsec:incident-sections} and~\ref{subsec:second-period} identify the series and sum the complementary cycles on the same pairs. Section~\ref{subsec:word-period} transports both bounds along the column, using the measure and projections of Sections~\ref{subsec:word-moments}--\ref{subsec:word-projection}. The entry and period errors for the reference and twisted tuples (Sections~\ref{subsec:baseline-jets}--\ref{subsec:division-shift}) then enter the upper comparison together with the cohomology, lift, row-index and geometric bounds at the same scale. \label{cor:family-window-4}

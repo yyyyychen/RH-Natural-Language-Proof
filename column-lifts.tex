@@ -1,0 +1,349 @@
+\subsection{Lifting the columns of a path}
+\label{sec:column-lifts}
+\hypertarget{source-column-lifts}{}
+
+To obtain \eqref{eq:raw-tail-required}, one needs integral polynomials realizing the retained columns with control of the terms beyond their initial symbols. Fix a level of
+a block as in Section~\ref{sec:segment-window}. The chain at this
+level consists of the reduced vector and covector degrees in
+dimension \(r=k-1\). Its prefixes have the first-row bounds
+\(\lfloor K_l-\mu\rfloor\), where
+\(\mu=M_0+nA_1\). We allow \(M_0=0\) or \(12c\).
+Powers of the pairings \(E_i,E_+\), scalar decorations, and the
+remaining endpoint covector monomials multiply this chain space.
+
+\begin{paramdefinition}[Standard words of a Pieri path]\label{hyp:standard-path-words}
+For the chain alone take a Pieri path as in
+Section~\ref{sec:retained-rank}, with successive dominant weights
+\(\lambda(t)\) starting at zero. For each integer column \(b\)
+put
+\[
+ h_b(t)=\#\{j:\lambda_j(t)\ge b\}.
+\]
+
+In a positive column keep an exterior tensor of degree \(h_b\)
+in the vector representation. For \(b\le0\) use the dual
+representation and degree \(r-h_b\). Begin with 1. When the degree
+rises, wedge on the right with the letter, and when it falls,
+contract on the right with the letter. Monotonicity and interlacing
+give only changes by one. In the dual exterior tensor a covector is
+wedged and a vector contracted. When the height stays fixed, do
+nothing. In the ordered subset basis, inserting or deleting index
+\(j\) contributes the sign
+\[
+ (-1)^{\#\{u\in J:u>j\}},
+\]
+with \(J\)
+the subset after omitting the inserted or deleted index.
+
+Choose an output subset in each column. Complement these subsets
+in the nonpositive columns, then require the resulting columns,
+sorted increasingly, to form a weakly increasing tableau along
+each row. Only finitely many columns act, since far to the left
+the complemented column is full and far to the right it is empty.
+The product of the selected exterior coordinates is the standard
+word of the path and tableau. It is integral and of exactly the
+specified multidegree, since a strip uses as many distinct columns
+as its size.
+\end{paramdefinition}
+
+\begin{lemma}[Integral Pieri path words]
+\label{lem:integral-path-basis}
+The words of Definition~\ref{hyp:standard-path-words}
+form an integral basis in the specified multidegree. If \(\mathcal W_{\rm pre}\) is the subset of words satisfying the prefix conditions and \(U_{\rm pre}\) the corresponding rational subspace of the lattice \(L\) tensored with \(\mathbb Q\), then
+\[
+ L\cap U_{\rm pre}=\bigoplus_{w\in\mathcal W_{\rm pre}}\mathbb Z w.
+\]
+
+\end{lemma}
+
+\begin{proof}
+\proofstep{The triangularity of the path basis.}
+Here is a basis proof which also explains the importance of using
+integral words. In a putative linear relation over a field insert
+after each letter \(t\) an independent formal diagonal matrix
+\[
+ D_t=\operatorname{diag}(T_{t1},\ldots,T_{tr})
+\]
+acting on every
+live exterior tensor, and after all letters insert one generic
+invertible matrix \(g\). The relation still holds over the field
+of rational functions. Indeed wedge and contraction commute with
+a simultaneous change of basis, using its contragredient on dual
+tensors. Moving the matrices past the subsequent operations to
+the inputs changes each letter by the product of matrices following
+it. This is one substitution, common to all paths.
+
+To find the largest exponent vector of \(D_t\) on a fixed
+path, take the initial \(h_b\) indices in a positive column \(b\)
+and the last \(r-h_b\) indices in a dual column. If \(I_b(t)\)
+is the chosen set and \(\varepsilon_b=1,-1\) for the two column
+signs, the exponent of \(T_{ti}\) in the product is
+\[
+ \lambda_i(t)=\sum_b \varepsilon_b\,\mathbf1_{i\in I_b(t)} .
+\]
+Each chosen exponent vector is lexicographically maximal in its
+column, and a strict decrease in any column strictly decreases
+the sum in that order. Thus the maximal term forces every
+choice \(I_b(t)\). These choices are compatible at consecutive
+steps.
+
+In the one changing column the old and new sets differ
+by adding or deleting a single index \(i\); the corresponding
+matrix entry of wedge or contraction by the input letter is
+its \(i\)-th coordinate times a sign. Hence the coefficient
+at the tuple of all these maxima is a signed monomial in the
+inputs times the terminal matrix coefficient in \(g\). Index the insertions and deletions in the selected columns by \(a\), and let \(v_{a,i_a}\) be the input coordinate at occurrence \(a\). Their path factor is
+\[
+ \varepsilon\prod_a v_{a,i_a},\qquad \varepsilon\in\{1,-1\}.
+\]
+All dependence on the terminal tableau lies in the matrix coefficient. The matrix coefficient is a
+product of minors with initial rows.
+
+For a dual column, the
+complementary minor identity introduces a sign and one inverse
+determinant. After a common determinant power clears these for a
+fixed path, the result consists of ordinary flag minors with
+the tableau columns. In lexicographic order on the matrix entries,
+row by row with smaller column index preferred, a flag minor with sorted column indices \(i_1<\cdots<i_h\) has leading monomial
+\[
+ \operatorname{in}\det(g_{a,i_b})_{a,b=1}^h=\prod_{a=1}^h g_{a,i_a}.
+\]
+The determinant signs from the dual columns change only the overall sign. The diagonal
+monomial recovers each sorted tableau row. Consequently these
+matrix coefficients are independent for each path, in every
+characteristic. Choose the lexicographically largest sequence of
+weights in the relation, comparing the diagonal matrices in
+temporal order. The coefficient just computed forces all the
+coefficients for that sequence to vanish. This proves independence.
+
+\proofstep{The rank and prefix operators.}
+Let \(p_\lambda\) count paths ending at \(\lambda\), and let
+\(d_\lambda\) count its semistandard tableaux. For integer weights
+the tableau can be shifted by a whole determinant power, which
+does not change \(d_\lambda\). Pieri gives
+\[
+ \sum_\lambda p_\lambda d_\lambda
+       =\prod_j\binom{r+o_j-1}{r-1},
+\]
+the monomial rank for the prescribed letter degrees \(o_j\).
+The integer coefficient matrix is therefore square. Write \(A\) for this matrix. Independence in each residue characteristic gives
+\[
+ \det A\not\equiv0\pmod p\quad(\text{every prime }p),\qquad \det A\in\mathbb Z^\times=\{1,-1\}.
+\]
+
+
+At a prefix \(t\), varying the first \(t\) letters by a common
+matrix factors their contribution through the tensor of the exterior
+powers at that cut. In each torus coordinate its largest possible
+weight is at most \(\lambda_1(t)\), by the same signed subset
+calculation. The word therefore belongs to the first-row filtered
+space at that bound. Over characteristic zero the multiplicity-one Pieri decompositions give
+\[
+ \dim\bigcap_t\{\text{prefix cutoff at }t\}=\#\{\text{basis words whose paths satisfy every cutoff}\}.
+\]
+Indeed one
+may first split a prefix tensor into irreducibles and then tensor
+each summand with the next letter. The later isotypic projections
+preserve these summands. The independent allowed words consequently
+span that intersection. Since they form a subset of an integral
+basis, they also span its intersection with the coefficient lattice.
+Expanding at each level and using the monomial basis for the
+endpoint covector gives the desired generators of the integral
+symbol space.
+
+\end{proof}
+
+\paragraph{Putting back the first row.}
+Write \(q_j=p^{G_j}\) for the radix at the start of segment \(j\),
+\(B=\lfloor(a-E_0)/q_j\rfloor\), and \(z_i=A_i-w_i\) or
+\(A_i-o_i\) according as \(i<\sigma\) or \(i\ge\sigma\).
+Prepend an even vector letter. Enlarge the path by a new first
+row, initially zero, which at that first letter rises to
+\[
+             b_0=\lfloor B-\mu\rfloor-\sum_{i<\sigma} h_i .
+\]
+Increase this row by \(z_i\) at the odd vector \(i\). Keep it
+fixed at the covectors and at the final vector. The reduced
+path is unchanged in the other rows, delayed by the prepended
+step.
+
+For every vector the first reduced row after the addition
+must be at most the enlarged first row \emph{before} the addition.
+At a tied vector and the final vector this first row before
+addition is exactly \(\lfloor K_i-\mu\rfloor\) and
+\(\lfloor K_s-\mu\rfloor\), respectively. The initial \(h_i\)
+are all accounted for in \(b_0\).
+
+For the initial vectors the reduced first row is at most
+\(\sum_{l\le i}w_l\). Put \(\epsilon_0=N_1\mathcal L/k\) and
+\[
+ e_0=(c-n)A_1.
+\]
+In the local size range
+\(b'\ge k^3NQ^4cY,\; kb'\le a,\;N\ge2,\;Y\ge1\).
+The floor estimate
+\[
+ B\ge a/(2Q)
+\]
+gives
+\[
+ \epsilon_0B\ge k^3Q^3 c,
+\]
+using \(\epsilon_0\ge1/k\).
+Since \(2N_1+3\le k\) and \(k\ge5\),
+\[
+ \mu+N_1e_0\le12c+13kN_1^2Qc\le4\epsilon_0 B,\qquad
+ \sum_{i<\sigma}h_i\le 2\epsilon_0B+N_1e_0 .
+\]
+In particular \(b_0\ge0\).
+
+By \eqref{eq:coarse-prefix},
+\(\sum_{l\le i} w_l\le(1+4/p^2)A_i\).
+Using \((1+\Delta)A_i<B\), \(4/p^2\le\epsilon_0\),
+\(40\epsilon_0\le\Delta<1/6\), we get
+\[
+ (1+4/p^2)A_i+6\epsilon_0 B\le B.
+\]
+Thus the required interlacing holds at every initial vector too.
+The first row stays fixed at a removal, for which old dominance
+and reduced interlacing suffice. This constructs a valid path in
+dimension \(1+r\), including for an empty odd list.
+
+\paragraph{Frobenius powers in exterior coordinates.}
+For a column of the enlarged path perform the same exterior
+recursion on the true letters, with the following insertions.
+For successive used Frobenius indices \(s,s'\), the intervening operation on an exterior coordinate \(c_I\) is
+\[
+ c_I\longmapsto c_I^{\,p^{s'-s}}.
+\]
+Use the terminal index of the segment for the last such operation. Use increasing integer lifts of
+the positions through wrap-around. The vector and covector at
+one odd position have the same index. The result is integral.
+At a used position \(s\) its degree in that letter is
+\(p^{s_{\rm end}-s}\), and zero at unused positions. Positions
+of the same orientation in a segment are distinct, including
+the start and end by the two-segment hypothesis. Each true
+letter degree in this column is therefore at most \(Q\).
+
+Use coordinate 0 for the added line and the remaining coordinates
+for the reduced tensor. We claim that the new column has order
+at least
+\begin{equation}\label{eq:lifted-path-column-order}
+ d_b=\sum_{s:\,\text{reduced column height rises at }s}
+                         p^{s_{\rm end}-s}.
+\end{equation}
+at every residue line. Its symbol after division by \(w^{d_b}\)
+at the identity is the reduced column with every letter raised
+coordinatewise to its radix, times the pure first-coordinate
+power at the step at which the new first row crosses \(b\),
+if it crosses at all. For a positive column include coordinate
+0 in the output subset exactly when the first row reaches \(b\).
+For a nonpositive column keep the dual output subset in the
+remaining coordinates. Use the ordering already specified, so
+right wedge and right contraction on ordinary coordinates have
+the reduced signs.
+
+\begin{lemma}[Order of a lifted path column]
+\label{lem:column-graded-lift}
+For the enlarged path at this block level, let \(C_\ell\) be its column at a residue line \(\ell\), with integral coefficient lattice \(L_\ell\). The order \(d_b\) in \eqref{eq:lifted-path-column-order} satisfies
+\[
+ C_\ell\in w^{d_b}L_\ell\qquad(\text{each residue line }\ell).
+\]
+
+At the identity line its symbol modulo \(w\) after this division is
+the reduced column evaluated on the coordinatewise radix powers,
+multiplied by the crossing scalar when the first row is crossed. The
+symbol is homogeneous of normal degree \(d_b\).
+\end{lemma}
+
+\begin{proof}
+\proofstep{The orders after the Frobenius powers are lifted.}
+We give the order proof since taking Frobenius powers in a
+moving frame requires two orders of precision. Call a subset
+allowed in a positive column of positive height when it contains
+0 and has that height, and at height zero when it is empty.
+In a dual column the allowed subsets omit 0 and have the
+complementary height. Measure the entries in the adapted frame
+of the tested line after each step.
+
+The induction asserts that
+all are divisible by \(w^d\) and the entries outside the allowed
+subsets by \(w^{d+1}\). Initially this holds for the scalar 1.
+Between indices let \(P=p^{s'-s}\) and let \(L_s\) convert actual
+exterior coordinates into adapted coordinates, using the
+appropriate twisted exterior matrix. Write the adapted row as
+\(w^d U\). After entrywise powering and conversion at \(s'\) it is
+\[
+         w^{Pd}\big(U^{[P]}+pV\big)
+\]
+for an integral polynomial row \(V\). Indeed expand
+\((U L_s^{-1})^{[P]} L_{s'}\) modulo \(p\), where powering is
+additive and
+\[
+ (L_s^{-1})^{[P]}\equiv L_{s'}^{-1}.
+\]
+
+The last congruence holds in the unramified Witt ring before
+extension to \(O\), for inverse minors as well as minors.
+At \(s'=s\) the identity is exact. If the index strictly
+increases, the extra \(w\) in a disallowed entry becomes at least
+\(w^2\) after the common factor is removed, since
+\[
+ p=w^2
+\]
+
+and \(P\ge2\).
+
+In a positive column a first-row crossing wedges the free
+vector coordinate 0 into an empty exterior tensor. For a reduced height increase the tensor already contains \(e_0\). Since
+\[
+ e_0\wedge(e_0\wedge v)=0,
+\]
+a surviving insertion must use an ordinary coordinate carrying \(w\).
+A height decrease contracts an ordinary covector at no cost.
+Contracting coordinate zero costs an extra \(w\) and is disallowed.
+For a nonpositive column the complemented tableau always contains
+the new first row. A decrease wedges an ordinary covector. An
+increase contracts an ordinary vector at cost \(w\). These exhaust
+the possible degree changes.
+
+At either costly step a free coordinate acting on a disallowed entry could consume the spare power of \(w\). Every costly step is a vector
+at a strictly later index than all preceding used steps, as the
+vector precedes the covector at an equal index. After the common factor is removed, the disallowed term has order at least two. Paying the one power for a costly step therefore still leaves the required extra order:
+\[
+ \operatorname{ord}_w(\text{disallowed term})-1\ge2-1=1 .
+\] If it is the first used step,
+all the disallowed entries are zero. At a free step the extra
+order is preserved directly. If \(d_{\rm old}\) is the common order before a step and
+\(P\) is its intervening Frobenius radix, we have proved
+\[
+ d_{\rm new}=P d_{\rm old}+
+       \mathbf1_{\{\text{reduced height rises at this step}\}} .
+\]
+Iterating from order zero weights each costly step by its
+remaining radix \(p^{s_{\rm end}-s}\), exactly
+\eqref{eq:lifted-path-column-order}. Inverting the final
+integral frame change preserves this common divisibility.
+
+\proofstep{Returning to the identity frame.}
+At the identity the frame matrices are identities. In the
+normalized leading part the steps just described act on the
+ordinary exterior coordinates exactly as in the reduced word.
+Crossing the first row occurs while the ordinary positive
+column is empty, and contributes its scalar vector entry.
+If \(P\) is the intervening Frobenius power, then in the residue field
+\[
+ \Big(\sum_I\varepsilon_I a_I b_I\Big)^P=\sum_I\varepsilon_I a_I^P b_I^P\qquad(\varepsilon_I\in\{1,-1\}).
+\]
+Thus applying Frobenius before the exterior operation gives the same residue. The resulting ordinary column is thus evaluated
+on the stated radix powers.
+
+The leading expression in
+characteristic zero lifted this way is homogeneous of normal
+degree \(d_b\), counting ordinary vector coordinates and scalar
+covector coordinates with weight one. The argument proves a
+congruence modulo \(w\) after normalization, as required.
+Taking the product of the columns reproduces all the reduced
+words and spends \(q_j b_0\) at the start and \(P_i z_i\)
+in vector coordinate zero at each odd top.
+\end{proof}

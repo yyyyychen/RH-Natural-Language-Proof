@@ -1,0 +1,276 @@
+\subsection{Local norms and level traces on the selected chain}
+\label{subsec:selected-norms}
+
+The reference projection fixes the row and its rank. Its height also depends on the local change of Schwartz vector and on the trace from one level to the other.
+
+\begin{established}[Norm of the reference vector at a split place]\label{hyp:split-twist-norm}
+At a split twist place \(v\) of a used tuple let \(q_v\) be the residue
+cardinality, \(r\) the smaller block rank and \(b_v\) the larger rank.
+Let \(L_0\) be the integral matrix lattice in the marked Schr\"odinger
+model. With the unit reference vacuum, the local measure is
+\[
+ d\mu_v=dx/\operatorname{vol}_{dx}(L_0),\qquad
+             \|\mathbf1_{L_0}\|_{L^2(d\mu_v)}^2=1 .
+\]
+\end{established}
+\begin{proof}
+The split places in the tuple construction avoid the dyadic
+conductor, the marked auxiliary prime and the auxiliary ideal.
+The chosen split projection identifies their residue field with the
+one on the marked CM factor, and the hom-lattice ideal is a unit.
+Thus the reference vacuum is the indicator of the integral lattice
+in the split frames. Its squared norm for any Haar measure \(dx\) is
+\(\int_{L_0}1\,dx=\operatorname{vol}_{dx}(L_0)\). Normalizing this norm
+fixes the stated measure. All other level factors and all real data
+agree by Lemma~\ref{hyp:joint-period-towers}.
+\end{proof}
+
+\begin{lemma}[Local norm of the split twist]\label{lem:split-twist-norm}
+With the split model and measure of
+Lemma~\ref{hyp:split-twist-norm}, the normalized local squared norm at a new split
+twist place \(v\) is
+\[
+ q_v^{-r(b_v-r)}\prod_{j=1}^r(1-q_v^{-j}).
+\]
+\end{lemma}
+
+\begin{proof}
+In these coordinates the squared absolute value of the
+twist vector is an indicator. All matrix entries are
+integral. The first \(r\times r\) block is invertible
+modulo \(v\), and the \(r\) entries of each of the
+remaining \(b_v-r\) rows in those first columns are zero
+modulo \(v\). There is a unit-modulus character of the
+determinant on the invertible block. Counting independent
+ordered columns in the \(r\)-dimensional residue vector
+space shows that the invertible fraction among \(r\times r\)
+matrices is
+\[
+             \prod_{j=1}^r(1-q_v^{-j}).
+\]
+The zero block contributes \(q_v^{-r(b_v-r)}\).
+The other matrix coordinates contribute one in the
+normalized measure. Thus the norm-square factor of the
+twist at \(v\) is
+\begin{equation}\label{eq:selected-twist-norm}
+         q_v^{-r(b_v-r)}\prod_{j=1}^r(1-q_v^{-j}).
+\end{equation}
+\end{proof}
+
+\begin{lemma}[Norm ratio and integral character trace]\label{lem:twist-norm-trace}
+Let \(A\) denote the squared norm of a twisted step divided by that of its reference vector. With both sums over the new twist places,
+\[
+ \left|\log A+\sum_v r(b_v-r)\log q_v\right|\le2\sum_v(q_v-1)^{-1}.
+\]
+ At the prescribed finite level \(P\) the
+full theta series is the character-weighted trace of the principal
+series. At a coefficient place away from the tuple primes this trace
+acts integrally with the chosen normalization.
+\end{lemma}
+
+\begin{proof}
+The norm square of the global step is the product of
+norm squares of the local factors. For the reference step
+one uses the same factors at the common level primes and the
+same real factors, and replaces each new twist factor by
+the unit vacuum. For the common and twist prime sets
+\(P_{\rm c},P_{\rm tw}\), the sum
+\(e=\sum_{v\in P_{\rm c}\cup P_{\rm tw}} e_v\) of the chosen
+split idempotents satisfies \(e\bar e=0\).
+At a split real-field place the two primes above it give the
+two complementary local idempotents. Indeed the local factor is a product of two fields and conjugation
+exchanges the factors.
+
+If the selected components there are marked
+by \(a,b\in\{0,1\}\), then
+\[
+ e=(a,b),\qquad\bar e=(b,a),\qquad e\bar e=(ab,ab).
+\]
+Their product vanishes only when at most one component is selected. Thus
+distinct primes in the union lie over distinct real-field places.
+The ratio of squared norms is the product of
+\eqref{eq:selected-twist-norm} over the new places. Taking
+logarithms, the scalar correction beyond
+\(-\sum_v r(b_v-r)\log q_v\) is bounded by
+\[
+ \sum_v\sum_{j=1}^r -\log(1-q_v^{-j})
+  \le2\sum_v\sum_{j=1}^\infty q_v^{-j}
+  =2\sum_v (q_v-1)^{-1}.
+\]
+The inequality uses \(q_v^{-j}\le1/2\) for every new place.
+\label{cor:selected-norms-1}
+
+\proofstep{The trace before division by the group order.}
+The finite character trace uses the same level and tuple.
+If \(P\) is the finite row level, \(\xi\) the character
+on the lift, and \(a_g\) local integral representatives of
+its elements, the prescribed full Schwartz vector is
+\[
+          \Phi=\sum_{g\in P}\xi(g)^{-1}
+                         \omega(1,a_g)\Phi_{\rm pr}.
+\]
+Here \(\Phi_{\rm pr}\) is the principal vector. The character
+of the full level on the lift is \(\psi_0^{-1}\). The
+coefficient in the sum is its inverse. At a product of
+places the trace is the product of the corresponding sums,
+or equivalently a sum over tuples of local representatives
+with the product character. This follows by expanding the
+finite sums, since operators at distinct places commute.
+The level lifts have the same residue entries as the
+chosen finite group and the groups are identified by that
+reduction at every selected place.
+
+Write \(\Theta(\Phi)\) for the series with input \(\Phi\), and \(R(a_g)\) for right translation of its automorphic argument. Covariance at an individual level lift gives
+\[
+ \Theta\bigl(\omega(1,a_g)\Phi_{\rm pr}\bigr)=R(a_g)\Theta(\Phi_{\rm pr}).
+\]
+Linearity of the theta summation now gives the equality
+of the full-vector series with the character-weighted
+trace of the principal series, for each finite class and
+real polynomial. There is no group-order denominator in
+this equality. For the unnormalized character trace \(T_\xi\), translating the
+summation variable gives
+\[
+ T_\xi=\sum_{g\in P}\xi(g)^{-1}R(g),\qquad
+ T_\xi^2=|P|T_\xi .
+\]
+Here \(R(g)\) is right translation. Unitarity makes \(T_\xi\) self-adjoint, and group averaging makes the normalized operator an orthogonal projector:
+\[
+ T_\xi^*=T_\xi,\qquad P_\xi=T_\xi/|P|,\qquad P_\xi^2=P_\xi .
+\] The integral
+calculation uses the sum \(T_\xi\), including at primes dividing
+\(|P|\).
+\label{cor:selected-norms-2}
+
+\proofstep{The scalar at the coefficient prime.}
+For the chosen twist the comparison of principal vectors
+is by a translation at the prescribed split places and a
+scalar. The translated class is admitted because those
+places are coprime to the excluded coefficient prime.
+The factor that converts the principal vector and the
+polynomial reading to the normalized row has valuation
+zero there. In the chosen norm comparison a positive
+power of the ratio of the two scalars is one. The separate
+translation scalar has a positive power supported on the
+tuple primes, which are coprime to the coefficient prime.
+
+For either scalar \(z\) in the comparison take a positive power
+whose prime support is contained in the tuple primes. At a coefficient
+place \(w\) away from these primes,
+\[
+ n\operatorname{ord}_w(z)=\operatorname{ord}_w(z^n)=0.
+\]
+If the scalar ratio is read initially in \(\C\), a nonzero
+coefficient in the faithful rational row comparison
+realizes it over the enlarged coefficient field. The
+vanishing case requires no scalar division. Hence, at the
+finite places used in the twisted row lattice, the trace
+calculation acts on the measured integral coefficients.
+This is the trace input to the containment in
+Section~\ref{subsec:twist-row-lattices}. It keeps the
+reference normalization of the previous subsection.
+\label{cor:selected-norms-3}
+\end{proof}
+
+\begin{proposition}[Norm cost of the ordinary and coupled chain steps]\label{prop:selected-step-cost}
+Use the finite class, index and coupling bounds of
+Proposition~\ref{prop:reference-class-data} and the single-kernel
+logarithmic squared bounds \(k_j(v)\) at one embedding \(v\).
+Put \(U_u=fm^2N_m^2\log(g_0g_1T_u)\). At each step the logarithmic squared-norm bound available for composition is
+\[
+ k^{\rm chain}_j(v)=k_j(v)+2(C_{\rm cl}+C_{\rm idx}+C_{\rm cos})U_u.
+\]
+This prescription includes both final lifts when \(m=2\).
+\end{proposition}
+
+\begin{proof}
+The norm identity for the input Schwartz vectors is used
+alongside an operator bound for the column chain. For the
+latter, each matrix entry in the finite level model is a sum
+over class and coupling labels. At an embedding the value
+metrics are positive semidefinite. In the quotient by the null space, the contribution of \(h\)
+images \(z_b\) to one value satisfies
+\[
+ \Big\|\sum_{b=1}^h z_b\Big\|^2\le
+ \Big(\sum_b\|z_b\|\Big)^2\le h\sum_b\|z_b\|^2 .
+\] Applying this at the output
+class and then summing with the class weights bounds the
+squared operator norm by the largest squared local
+kernel bound times the two class counts and the two
+index counts in the input and output. Replacing the
+counts by their exponential bounds adds their logarithms
+to the logarithmic kernel bound.
+
+\proofstep{A single coupling coset for the last two steps.}
+At the end the two steps share a coupling coset.
+Fix an embedding and let \(i\) run over the input indices,
+\(a\) over the classes at \(i\), \(b\) over the intermediate
+classes, and \(c\) over the output classes. Write \(Y(b)\)
+for the admissible coupling cosets at \(b\). With the
+reciprocal stabilizer weights \(\alpha_{ia},\beta_b,\gamma_c\),
+the terminal value at \(c\) is
+\[
+ \sum_{i,a}\alpha_{ia}\sum_b\beta_b
+             \sum_{Y\in Y(b)} K^2_{i,b,Y,c} K^1_{i,a,b,Y} x_{ia}.
+\]
+Both kernels are read on the same coset \(Y\). Suppose the
+squared bounds of their individual operator norms are
+\(t_1,t_2\), and the class counts for the three spaces are
+bounded by \(H_0,H,H_1\). Put \(I=\#\{i\}\) and
+\(N_Y=\max_b |Y(b)|\), taking \(N_Y=0\) for an empty
+intermediate set. The weights are at most one.
+
+Taking
+the norm in the output fibre at \(c\), the triangle
+inequality and the kernel bounds give the upper bound
+\(\sqrt{t_1t_2}\,H N_Y\sum_{i,a}\alpha_{ia}\|x_{ia}\|\).
+Cauchy--Schwarz bounds the square of the last sum by
+\(I H_0\sum_{i,a}\alpha_{ia}\|x_{ia}\|^2\).
+Summing over \(c\) with weights \(\gamma_c\) therefore bounds
+the squared norm of the coupled operator by
+\begin{equation}\label{eq:selected-coupled-norm}
+       I H_0 H^2 H_1 N_Y^2 t_1t_2.
+\end{equation}
+Each calculation holds for the semidefinite metrics by passing
+to their null quotients. The factor \(N_Y^2\) accounts for the
+sum over the single shared coset in the terminal value.
+
+\proofstep{Insertion of the class counts.}
+On a selected sequence with prime \(T_u\), let \(N_m\) be the
+last unitary rank, \(f\) the number of real-field places
+and \(g_0,g_1\) the type primes. Use the common unit
+\[
+        U_u=fm^2N_m^2\log(g_0g_1T_u).
+\]
+Proposition~\ref{prop:reference-class-data} gives the class,
+index and coupling counts on the chosen frames, with
+upper bounds \(e^{C_{\rm cl}U_u},e^{C_{\rm idx}U_u}\) and
+\(e^{C_{\rm cos}U_u}\), respectively.
+
+Write \(k_j(v)\) for
+the logarithmic bound for a single kernel of lift \(j\)
+at the embedding \(v\). The ordinary step then has
+logarithmic squared bound
+\(k_j(v)+2(C_{\rm cl}+C_{\rm idx})U_u\).
+The coupled bound \eqref{eq:selected-coupled-norm} has
+logarithm at most
+\[
+ k_{m-1}(v)+k_m(v)
+        +(4C_{\rm cl}+C_{\rm idx}+2C_{\rm cos})U_u .
+\]
+Both estimates are covered by enlarging each single-kernel
+bound by \(2(C_{\rm cl}+C_{\rm idx}+C_{\rm cos})U_u\).
+The admissible terminal data supply the two kernel bounds
+with these indices through the first coupled entry and the
+last padded entry. Composition adds these logarithmic bounds at
+the same embedding, including both end lifts even when \(m=2\).
+This estimates the operator in the reference-chain coordinates
+of \eqref{eq:selected-pairing}.
+\label{cor:selected-norms-4}
+\end{proof}
+
+\input{selected-class-counts}
+\input{selected-kernel-jets}
+\input{selected-period-means}
+\input{selected-terminal-height}
+\input{selected-lift-scalar}

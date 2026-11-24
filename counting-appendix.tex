@@ -1,0 +1,111 @@
+\clearpage
+\appendix
+\begingroup
+\makeatletter
+\def\input@path{{ordinary/}{cohomology/}}
+\makeatother
+\newcommand{\G}{G_{\mathcal F}}
+\newcommand{\Ima}{\operatorname{Im}}
+\setlength{\emergencystretch}{2em}
+
+\part*{Technical appendices}
+\phantomsection
+\addcontentsline{toc}{part}{Technical appendices}
+
+The first appendices construct the prime pair and prove the
+strict cohomology bound over the original field. The later
+ones supply the ordinary automorphic and deformation-theoretic
+inputs to the odd-prime count. In the selection of the two auxiliary primes, \(N\) denotes the conductor of the fixed primitive Dirichlet character \(\psi\) and \(q,d\) are the two auxiliary primes. The later
+counting arguments specify their own moduli and let the
+coefficient prime vary. Section~\ref{sec:family-window}
+restricts the resulting bound to the rank used in the numerator.
+
+\input{cohomology/host-windows}
+\input{cohomology/local-global}
+\input{cohomology/cohomology}
+\input{ordinary/level-data}
+\input{ordinary/level-attachments}
+\input{ordinary/seed-specialization}
+\input{ordinary/rank-three-multiplicity}
+\input{ordinary/linked-seeds}
+\input{ordinary/marked-patching}
+\input{ordinary/linked-components}
+\input{ordinary/marked-hosts}
+\input{ordinary/host-descent}
+\input{ordinary/rank-three-length}
+
+\section{Integral symplectic bases and transport of ordinary flags in rank four}
+\label{sec:additional-rank-four}
+In the even-order argument we must connect a mixed Hilbert seed to a rational target
+in rank four. A comparison of their residual representations alone would lose the
+positions of their integral ordinary flags. We choose the frame using a marked element
+with distinct residual eigenvalues. The cup calculation and
+the transport of flags give the three-link path from the
+rational target to the mixed Hilbert seed used in
+Paragraph~\ref{par:count-two-propagation}. The target normalization
+and cup lift also enter the four-link construction of
+Appendix~\ref{sec:count-three-chain}.
+
+For the mixed Hilbert seed of Appendix~\ref{par:count-ii-tower},
+write \(r_2\) for its rank-two representation and \(k_0\)
+for the real quadratic inducing field. Lemma~\ref{lem:rank-four-seed-diagonalization} fixes a symplectic eigenbasis on the induced seed. Proposition~\ref{prop:rational-rank-four-torus} treats the target lattice separately before their two sets of local flags are compared.
+
+\begin{lemma}[Integral diagonalization of the mixed seed]
+\label{lem:rank-four-seed-diagonalization}
+In odd residual characteristic, with the marked element and
+determinant identity of the mixed seed, one can choose an
+integral eigenbasis at \(\tau^2\) in which the residual
+rank-two representation is a nonsplit upper triangular
+extension. In an integral eigenbasis of the induced lattice at \(\tau\), its symplectic form has matrix 
+\[
+ J_{\rm ind}=uJ_{\rm std},\qquad u\in O^\times,
+\]
+ over the coefficient DVR \(O\).
+\end{lemma}
+
+\begin{proof}
+\proofstep{Use the two rank-two eigenprojectors to choose the extension orientation.}
+At the normalizing element
+\(\tau^2\) the two residual eigenvalues are distinct.
+The eigenprojectors therefore preserve an integral lattice.
+The residual trace is the sum of the two characters, so
+\(\operatorname{tr}(E_{00}r_2(g)E_{11}r_2(h))\) reduces to zero
+for all \(g,h\) on the inducing subgroup. Thus the minima of the
+valuations of the two off-diagonal entries sum to a positive
+integer. Irreducibility makes both minima finite. Scale the
+two basis vectors relatively so the upper-right minimum is
+zero. After the relative scaling, the sum of the two minimum valuations is the same positive integer as before. If \(m_{12},m_{21}\) denote the scaled minima,
+\[
+ m_{12}=0,\qquad m_{12}+m_{21}>0\quad\Longrightarrow\quad m_{21}>0,
+\]
+so the lower-left entry vanishes residually. The
+upper-right entry survives on some element, and diagonalization
+at \(\tau^2\) gives a nonsplit residual extension.
+
+\proofstep{Induce the basis and compute the alternating form.}
+Denote the
+eigenvalues there by \(a^2,b^2\), choosing signs to match the
+residual labels and \(ab=\mu(\tau)\) for the similitude
+character \(\mu\). This is possible at the odd residual prime
+by the determinant identity. On induction across the two cosets
+the matrix of \(\tau\) is
+\(\left(\begin{smallmatrix}0&\operatorname{diag}(a^2,b^2)\\
+I_2&0\end{smallmatrix}\right)\). The columns of
+\[
+ P=\begin{pmatrix}0&a&0&a\\ b&0&-b&0\\0&-1&0&1\\1&0&1&0\end{pmatrix}
+\]
+are integral eigenvectors of eigenvalues \(b,-a,-b,a\).
+Its determinant is a unit. For the alternating block form
+\(\operatorname{diag}(J_2,abJ_2)\), with
+\(J_2=\left(\begin{smallmatrix}0&1\\-1&0\end{smallmatrix}\right)\),
+the new frame is symplectic up to the unit \(-2ab\).
+\end{proof}
+
+We now use this frame to compute the entries and flags of the
+seed. We then normalize the rational target and join the two
+sets of residual data.
+
+\input{cohomology/count-two-seed}
+\input{cohomology/count-two-normalization}
+\input{cohomology/count-two-chain}
+\endgroup

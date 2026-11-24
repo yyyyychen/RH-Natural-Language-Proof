@@ -1,0 +1,414 @@
+\paragraph{The tests on the three level rings.}
+\label{par:fitted-arc}
+\hypertarget{source-ordinary-marked-points}{}
+The curves lie in a frame. Their specializations at the three levels must pass the
+tests of Section~\ref{sec:marked-patching}. In this
+paragraph \(P=\bar\Psi\) denotes the character of the fitted field
+construction in Section~\ref{sec:marked-hosts}. The residual characters
+on the CM group at the level are
+\(\bar\kappa_n P^{w_i}\), with \(w=(1,-1)\) or \((1,0,-1)\).
+The point on the level is the pullback of the chart representation
+by the surjection to the frame group, multiplied by \(\kappa_n\).
+Its ordinary characters are multiplied by the same scalar. Thus the
+specialized determinant and ordered characters evaluate by the map
+from the actual level ring to the chart followed by the map to the
+curve DVR. In particular its kernel is the required contracted prime.
+The finite scalar and the cyclotomic twist have the prescribed
+polarization, as in Section~\ref{sec:linked-seeds}.
+
+\begin{auxlemma}[Multiplicity of residue characters]\label{lem:residue-character-multiplicities}
+Let \(k\) be a field of characteristic \(\ell>0\), and let \(\chi\) range over a finite set of distinct characters \(H\to k^\times\). If two lists of nonnegative integer multiplicities satisfy
+\[
+ \prod_\chi (T-\chi(h))^{a_\chi}
+       =\prod_\chi (T-\chi(h))^{b_\chi}\quad\text{in }k[T]
+       \qquad(h\in H),
+\]
+then \(a_\chi=b_\chi\) for every \(\chi\).
+\end{auxlemma}
+\begin{proof}
+The coefficient below the leading term gives \(\sum_\chi (a_\chi-b_\chi)\chi=0\) as functions on \(H\), with the differences read in \(k\). Distinct characters are linearly independent, so \(a_\chi-b_\chi\in\ell\mathbb Z\). Cancel the \(\min(a_\chi,b_\chi)\) common factors for each \(\chi\). The remaining multiplicities on both sides are multiples of \(\ell\), giving
+\[
+ \left(\prod_\chi(T-\chi(h))^{(a_\chi-b_\chi)_+/\ell}\right)^\ell
+ =
+ \left(\prod_\chi(T-\chi(h))^{(b_\chi-a_\chi)_+/\ell}\right)^\ell ,
+ \qquad u_+=\max(u,0).
+\]
+Frobenius is injective on \(k[T]\), so the two inner polynomials agree at each \(h\). The remaining total degree strictly decreases at every iteration that starts in positive degree. It reaches zero, proving equality of all original multiplicities.
+\end{proof}
+
+\begin{proposition}[Local labels and spans at a fitted point]
+\label{prop:fitted-points-three-tests}
+At the indicated points of the three level rings the ordered labels
+remain distinct on the specified local groups after restriction
+to an open subgroup. Write \(H\) for the full cyclotomic kernel on the positive component.
+Over an algebraic closure of the coefficient field the two block spans are
+\[
+ \operatorname{span}r(H)=
+ \begin{cases}
+   \operatorname{End}(V),&\text{type I},\\
+   \operatorname{End}(V_{\rm out})\oplus\operatorname{End}(V_{\rm mid}),&\text{type E},
+ \end{cases}
+\]
+where \(V_{\rm out}\) is the outer plane and \(V_{\rm mid}\) the middle line. In the
+open-coset test the element with separate eigenvalues is chosen
+in that coset.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Testing the ordered local labels.}
+At each \(v\mid\ell\), on the preimage of the distinguished local
+subgroup \(N_v\) the residual character ratios are one and the full
+cyclotomic character is one. The former follows from \(P|_{N_v}=1\),
+and the latter is part of the definition of \(N_v\).
+The nice curve avoids every local coincidence ideal, so each
+distinct pair of labels has a nonidentity ratio somewhere on this
+subgroup. This persists under the scalar twist. The group
+\(1+t k[[t]]\) is torsion-free in characteristic \(\ell\):
+raising to \(\ell^a\) raises the degree of the leading nonconstant
+term by that factor, and raising to a power prime to \(\ell\)
+multiplies its coefficient by a unit.
+
+For a ratio \(\alpha\) nontrivial on an element \(n\) in
+the preimage of \(N_v\), choose \(m>0\) with \(n^m\) in any
+prescribed open subgroup of the global group. Then
+\[
+    \alpha(n^m)=\alpha(n)^m\ne1,\qquad
+    \epsilon(n^m)=1 .
+\]
+Thus the same pair of labels is distinct on the restricted
+cyclotomic kernel. We can choose a single element there on which
+all ratios have infinite order. To see this, successively multiply by
+powers of elements on which the individual ratios are nontrivial. A previously nontrivial
+ratio can become one for at most one exponent if it is nontrivial
+on the new element, and otherwise stays unchanged. The new ratio
+can also be made nontrivial by avoiding one exponent. This supplies
+an element of the local group in the chosen open subgroup and the
+full cyclotomic kernel with pairwise distinct eigenvalues at
+\emph{every} positive power. At each marked place the ordering must pass both tests simultaneously:
+\[
+ \psi_i\ne\psi_j,\qquad \psi_i/\psi_j\ne\epsilon\qquad(i<j).
+\]
+
+\proofstep{Full spans on the cyclotomic kernel.}
+We next check absolute irreducibility on small subgroups of the
+cyclotomic kernel. Write \(G\) for the level CM group and
+\(H=\ker(\epsilon|_G)\). Work over an algebraic closure of the
+fraction field of the curve. In type I the marked representation is
+irreducible on the frame group, hence on \(G\) after pullback and
+scalar twist. In type E apply this assertion to its outer plane,
+irreducible since neither outer triangular ideal vanishes. Its two
+residual character labels are the outer labels above. Indeed on the
+residual triangular chart the diagonal entries give those characters
+and the product of the two opposite outer entries is zero.
+
+On the outer plane the ordinary labels are obtained by removing the middle character with multiplicity one. If \(S\) denotes the multiset for the full flag, then
+\[
+ S=S_{\rm outer}\sqcup\{\chi_{\rm middle}\}.
+\] One way to see the deletion
+is to take a local element with three distinct eigenvalues. Both
+summands and all flag steps are sums of its eigenlines, so their
+intersections give the induced flags.
+
+In either irreducible block the dimension \(b\) is a prime, two or
+three. Let \(U\) be any open subgroup of \(G\) and take
+\(H'=H\cap\operatorname{core}_G(U)\), normal in \(G\).
+If \(W_0\) is a simple \(H'\)-submodule, every \(gW_0\)
+is again simple for \(H'\) by normality. Their sum is a
+nonzero \(G\)-submodule, hence the full irreducible block.
+This proves semisimplicity. Irreducibility for \(G\) makes
+the action on \(H'\)-isotypic pieces transitive. If \(t\)
+counts the pieces, \(d_1\) is the dimension of a simple
+piece's constituent and \(m_1\) its multiplicity, then
+\[
+                             b=t\,d_1\,m_1 .
+\]
+Since \(b\) is prime, reducibility forces either \(t=d_1=1\)
+(scalar action) or \(d_1=m_1=1\) and \(t=b\) (distinct
+character lines permuted transitively).
+The separating local element in \(H'\) excludes scalars.
+
+In the
+second case let \(G_1\) be the kernel of the permutation action.
+On the intersection of the local decomposition group with \(H'\),
+the characters of the lines agree up to permutation with the
+restrictions of the ordinary labels. This follows by comparing
+the semisimplification of the flag with the direct sum of the lines.
+Write \(D\) for the local decomposition group, and \(\lambda_i\) for the distinct characters on \(D\cap H'\). Each is the restriction of a character \(\widetilde\lambda_i\) of \(D\); hence for \(d\in D\) and \(h\in D\cap H'\),
+\[
+ \lambda_i(dhd^{-1})=\widetilde\lambda_i(d)\lambda_i(h)\widetilde\lambda_i(d)^{-1}
+ =\lambda_i(h).
+\]
+The corresponding eigenspaces are distinct lines. Every \(d\) preserves each line, so \(D\subseteq G_1\).
+
+On \(G_1\) the line characters are units of the valuation ring of the
+algebraic closure: their values and inverses are roots of monic
+characteristic polynomials over the curve DVR. Reducing gives
+characters whose product characteristic polynomial at each element
+is that of the prescribed global residual labels restricted to
+\(G_1\). The values of the reduced line characters belong to the finite image of the residual diagonal characters. The two lists consequently factor through a common finite abelian quotient of order prime to \(\ell\). Applying Lemma~\ref{lem:residue-character-multiplicities} on \(G_1\) identifies their multisets with their full integer multiplicities. Write \(\chi\) for a reduced character on \(G_1\) and \(\tilde\chi\) for a global extension. Then conjugation fixes \(\chi\), since
+\[
+ \chi(ghg^{-1})=\tilde\chi(g)\chi(h)\tilde\chi(g)^{-1}=\chi(h)\qquad(h\in G_1).
+\] Transitivity of the original lines forces their
+reductions to agree on \(G_1\), including the local group.
+
+The local
+mark with \(P(g_*)^2\ne1\) distinguishes the outer residual labels
+there. This contradiction proves irreducibility on \(H'\), hence on
+\(U\cap H\). The local mark exists at each place by conjugating
+the mark of \eqref{eq:tag-h1} in the abelian fitted field and using the
+global character \(P\). Equivalently one place suffices for this
+contradiction. In type E the two simple \(H\)-constituents are inequivalent
+because their dimensions are different. The semisimple image
+algebra of the group ring acts as the product of their full
+endomorphism algebras by density. In the two cases the spans
+over the algebraic coefficient field are therefore
+\[
+  \operatorname{span}r(H)=
+   \begin{cases}
+      \operatorname{End}(V),&\text{type I},\\
+      \operatorname{End}(V_{\rm out})\oplus\operatorname{End}(V_{\rm mid}),
+          &\text{type E}.
+   \end{cases}
+\]
+The equality follows over the original coefficient field by
+extension of scalars, since the absolute dimensions are the
+displayed block dimensions.
+
+\paragraph{Regular elements in each open coset.} Both block patterns now require the same density statement, with the group element
+constrained to a given open coset. In an open coset meeting \(H\)
+choose \(s\in H\) and an open subgroup \(U\) with
+\(s(U\cap H)\) inside the coset. Let \(C\) be the Zariski closure
+of the image of \(U\cap H\) and \(C^\circ\) its identity component
+over the algebraic closure. The preimage of \(C^\circ\) is open in
+\(U\cap H\). Indeed each of finitely many components is closed for
+the adic topology on matrix entries: individual polynomial equations
+over the algebraic closure already have coefficients in a finite
+extension. Choose an open subgroup \(V\subset U\) of \(G\) small enough that 
+\[
+ V\cap H\subseteq r^{-1}(C^\circ),\qquad r(V\cap H)\subseteq C^\circ.
+\]
+ The irreducible blocks just proved
+are irreducible for \(C^\circ\).
+
+\proofstep{A diagonal torus in the connected image.}
+Take the separating local element in \(V\cap H\) and diagonalize its
+matrix. The identity component of the closure of its powers is a
+torus inside the diagonal torus of \(C^\circ\). Let \(x\) be the matrix of this element and let \(T\) be the identity component of the closure of its powers. For distinct eigencharacters \(\lambda_i,\lambda_j\), coincidence on \(T\) would yield 
+\[
+ (\lambda_i/\lambda_j)(x)^m=1,\qquad m=[\overline{\langle x\rangle}^{\rm Zar}:T],
+\]
+ contrary to the separating property. In the rational cocharacter space the equal-coordinate loci are finitely many proper hyperplanes. Choose a rational point in their complement and clear denominators to obtain the integral cocharacter
+\[
+ d=(d_i),\qquad \prod_{i<j}(d_i-d_j)\ne0 .
+\]
+
+In this eigenbasis there is \(h\in C^\circ\) such that all principal
+minors of \(A=r(s)h\) are nonzero. For one block of dimension at
+most three the first and the next-to-last exterior powers are
+irreducible: the latter is the dual of the first tensored by the
+determinant. The other nonempty exterior power is the determinant
+itself. For each principal minor, the orbit of its basis wedge
+therefore spans the corresponding exterior power.
+
+For a wedge \(e_I\) and its coordinate functional \(e_I^*\), the principal minor equals 
+\[
+ \det (r(s)h)_{I,I}=e_I^*\!\left(\bigl(\textstyle\bigwedge^{|I|}(r(s)h)\bigr)e_I\right).
+\]
+ The orbit spans and the functional composed with \(\bigwedge^{|I|}r(s)\) is nonzero, so this minor is nonzero somewhere on \(C^\circ\).
+For the outer plane plus line, a principal minor is the product of
+a principal minor on the plane and, when the line is included, its
+nonzero scalar. The same argument on the plane works. The simultaneous
+choice follows from irreducibility of the connected algebraic group.
+
+\proofstep{A separable characteristic polynomial in the desired coset.}
+Consider \(A\operatorname{diag}(z^{d_i})\) over the Laurent
+series field in \(z\). Its characteristic coefficient at \(X^{n-j}\)
+is
+\[
+ (-1)^j\sum_{|I|=j}\det A_{I,I}\,z^{\sum_{i\in I} d_i}.
+\]
+The subset of the \(j\) smallest exponents uniquely minimizes
+the order and its principal minor is nonzero. Number the ordered
+exponents \(d_{(1)}<\cdots<d_{(n)}\). The consecutive coefficient
+orders, read from the leading term, differ by the successive
+\(d_{(i)}\). The Newton polygon therefore has \(n\) segments of
+horizontal length one with distinct slopes. Its roots
+over the algebraic closure have distinct valuations. Hence the
+discriminant on \(r(s)C^\circ\) is a nonzero regular function, since
+its pullback along this cocharacter translate is nonzero.
+The image of \(U\cap H\) is Zariski dense in \(C\), so some actual
+element of \(s(U\cap H)\) has nonzero discriminant. This proves the
+required density in the profinite topology, including cosets outside
+the identity component.
+
+\end{proof}
+
+\paragraph{Integral normalization and the distinguished place.}
+To apply the tests at the distinguished place we need integral representatives of the
+blocks. After a finite coefficient extension use coordinates on the blocks
+defined over the fraction field of the new DVR. In type E their
+dimensions differ, so polarization pairs each block with itself:
+a cross pairing would intertwine inequivalent simple modules after
+conjugation and duality. The form on each block is nondegenerate
+and symmetric.
+
+In a block \(V_i\) over a coefficient extension \(E'/E\), intersect the extended lattice with that subspace: 
+\[
+ L_i=(L\otimes_{O_E}O_{E'})\cap V_i,\qquad r(g)L_i=L_i.
+\]
+ Here \(L\) is the original stable lattice and \(O_{E'}\) the extended coefficient DVR. The dual is stable as well. Indeed, the polarized action transports integral pairings to integral pairings, since its multiplier is a unit and conjugation preserves the group. Applying the same argument to the inverse gives, for the dual lattice \(\Lambda^\vee\),
+\[
+ r(g)\Lambda^\vee\subseteq\Lambda^\vee,\quad r(g^{-1})\Lambda^\vee\subseteq\Lambda^\vee\quad\Longrightarrow\quad r(g)\Lambda^\vee=\Lambda^\vee .
+\] Diagonalize the Gram matrix over the DVR,
+allowing fractional entries. One may first scale to an integral
+matrix and choose a primitive vector with self-pairing of smallest
+valuation among the entries. When a mixed entry has that valuation
+and both diagonal entries have greater valuation, take the sum of
+the two basis vectors, using \(2\) invertible. Split off this
+vector by integral row and column operations and continue.
+
+Write the diagonal entries as \(t^{a_i}u_i\) with \(u_i\) units.
+In this basis preservation of the lattice and its dual requires
+\[
+       v_t(r_{ij})\ \ge\ \max(0,a_j-a_i).
+\]
+After adjoining \(\sqrt t\), use the basis \(e'_i=t^{-a_i/2}e_i\).
+In the extended valuation with \(v_t(t)=1\), the new entries satisfy
+\[
+  v_t(r'_{ij})=v_t(r_{ij})+\tfrac12(a_i-a_j)
+                 \ \ge\ \tfrac12|a_i-a_j|.
+\]
+The same calculation applies to inverse matrices, so the new lattice
+is stable. Its Gram matrix is \(\operatorname{diag}(u_i)\).
+Adjoin square roots of the reductions of the \(u_i\) by a finite
+residue extension and lift them by Hensel's lemma. Put \(e_i=u_i^{-1/2}e'_i\). Since the chosen square roots are units, this preserves the lattice and normalizes each diagonal Gram entry:
+\[
+ (u_i^{-1/2})^2u_i=1 .
+\]
+
+In each ordinary flag a local matrix with distinct
+eigenvalues splits its steps into eigenlines over the fraction
+field. These eigenlines lie in the separate blocks.
+Intersect the resulting flags in each block with its lattice.
+The steps are saturated, and successive free quotients over the
+DVR give an integral basis compatible with their order. Interleave
+the block bases in the prescribed local order. The original and new
+coordinates are related over a finite extension by fixed matrices,
+so adic continuity, the two character inequalities, and the span
+and separability tests persist. The coefficient maps are injective
+and local, hence keep the evaluation kernels and determinant
+identities. This supplies the normalized points used for the
+simultaneous prime choice.
+
+\begin{lemma}[The marked support tests on the chosen curves]
+\label{lem:fitted-marked-support-test}
+In the integral normalization the distinguished-place test agrees
+with the auxiliary level maps of the three rings. Let \(b\) be the trace Gram minor nonzero at the type-I point \(Q\).
+The same minor detects the full matrix span at its generizations since
+\[
+           P\subseteq Q,\quad b\notin Q\quad\Longrightarrow\quad b\notin P.
+\]
+The support test therefore applies at the indicated type-I generizations;
+the two-block and augmentation comparisons give support at the
+indicated stable or thick type-E target from the stable start.
+\end{lemma}
+
+\begin{proof}
+\proofstep{The distinguished-place vanishing test.}
+There is a split distinguished place for which the twisted dual
+test holds for \emph{all} these curves. On the field \eqref{eq:tag-h2} choose
+a CM element with \(P=1\) and \(\bar\epsilon\ne1\). Explicitly
+multiply complex conjugation by the element with \(P=\bar\epsilon=1\),
+\(\eta=-1\) in Section~\ref{sec:marked-hosts}. If necessary multiply
+by inertia at the new prime ramified in \(\Q(\sqrt{Dp})\) to enter
+\(H_0\); the three characters \(P,\bar\epsilon,\eta\) are unramified
+there. Raise to a common \(\ell\)-power to enter the three
+\(\ell\)-power kernels of \eqref{eq:tag-h2}.
+
+If \(g\) is the adjusted element, the common \(\ell\)-power preserves its cyclotomic residue because \(\ell\) is odd: 
+\[
+ \bar\epsilon(g^{\ell^a})=\bar\epsilon(g)^{\ell^a}=(-1)^{\ell^a}=-1.
+\]
+ Chebotarev over \(L^+\) for the finite quotient recording
+\(P,\bar\epsilon,\eta\) gives places \(v_0\) split in \(L\) with
+such Frobenius, away from the cutoff and the discriminant. One can require residue degree one over \(\mathbb Q\). Indeed the higher-degree primes of a fixed number field \(F\) contribute a bounded sum as \(s\downarrow1\), since
+\[
+ \sum_{\mathfrak p:\ f(\mathfrak p/p)>1}(N\mathfrak p)^{-s}\le [F:\mathbb Q]\sum_p p^{-2s}=O_F(1).
+\] Choose the second omitted place away from
+the first. At each chosen decomposition group all the twisted
+residual characters have the common value \(\bar\kappa_n\).
+
+For a Frobenius matrix \(T\) at an arc and cyclotomic value \(e_0\),
+the reductions of \(T\) and \(e_0 T\) have single, distinct,
+nonzero eigenvalues. Their characteristic polynomials have unit
+resultant over the curve DVR. Let \(P,Q\) be the characteristic polynomials of
+\(e_0 T,T\) over the curve DVR. Since the resultant is a unit, the two polynomials generate the unit ideal, giving a B\'ezout identity over the coefficient ring:
+\[
+ AP+BQ=1 .
+\]
+If \(e_0TY=YT\), then \(f(e_0T)Y=Yf(T)\) for every
+polynomial \(f\). Applying the Bézout relation on the
+left gives
+\[
+  Y=A(e_0T)P(e_0T)Y+B(e_0T)YQ(T)=0
+\]
+by Cayley--Hamilton. This only needs the reduced
+characteristic polynomials, so it covers nonsemisimple
+reduction. This gives the distinguished-place vanishing test and the nonidentity cyclotomic scalar used in the paired detector.
+
+At each of the three levels take the finite set consisting of all
+places above \(\ell\), the tame places above the cutoff away from
+\(\ell\), and its own distinguished \(v_0\). All split in the CM
+extension, which is unramified at finite places. The base Galois
+level has exactly this set of allowed ramification. At the
+distinguished place use the first principal congruence subgroup,
+at the fixed tame places the coefficient type for the residual
+inertia characters, and at \(\ell\) the ordered ordinary torus
+character, with the twists of Section~\ref{sec:linked-seeds}.
+
+If \(u\) has order dividing \(\ell^a\), its value under a local character \(\theta\) into the curve DVR satisfies
+\[
+ (\theta(u)-1)^{\ell^a}=\theta(u)^{\ell^a}-1=0.
+\]
+The DVR is reduced, so \(\theta(u)=1\). Under local reciprocity at a split place \(w\mid\ell\), the free pro-\(\ell\) unit rank is \([L_w:\Q_\ell]\); a uniformizer supplies the independent unramified generator.
+The base evaluation kernel on the empty-auxiliary Hecke action is
+precisely \(J_2,J_3\) or \(J_0\) according to the chosen ring.
+
+\proofstep{Compatibility with the auxiliary level maps.}
+For each selected system of \(q\) further places use the two maps
+of Section~\ref{par:ordinary-level} for that same ordinary module.
+Their composites are the same split-root factor, the tame
+augmentation is given by the trace, and the relation bound there is
+\(n!\) at every auxiliary depth. The proofs use rank \(n\) compact
+and Iwahori fixed vectors, regular ordinary specialization and the
+fixed tame type. At the two marked levels the relation bound \(n!\) reads
+\[
+ 2!=2\quad(n=2),\qquad 3!=6\quad(n=3)
+\] Choose one split completion \(w\) above each \(v\mid\ell\) of \(L^+\), so \(L_w\simeq L^+_v\). The \(n\) ordinary unit characters therefore give
+\[
+ n\sum_{v\mid\ell}[L^+_v:\Q_\ell]=n[L^+:\Q]
+ \quad(n=2\text{ or }3).
+\]
+The two rank-three actions are compared to their own base ideals before transporting either to the common frame.
+
+The ordinary deformation and the ordered characters of each curve
+are defined by the same pullback and scalar as the map \(\Phi_n\).
+Let \(Q\) be the type-I curve kernel and \(b\) its nonzero trace Gram minor. Every generization \(P\) satisfies 
+\[
+ P\subseteq Q,\quad b\notin Q\quad\Longrightarrow\quad b\notin P.
+\]
+ Starting at that point in the Hecke support,
+the one-block local comparison and augmentation put every such
+generization in the support.
+
+At a chain of type-E points the two
+blocks above give the hypotheses of the two-block local comparison.
+Sections~\ref{subsec:closed-link} and~\ref{subsec:marked-augmentation}
+then give support on the stable or thick target from a stable
+start in the support. These are the prime conditions at the three
+marked ideals under the ordinary level construction of this
+supplement. Constants for curve normalization, cohomology and the
+number of tests may depend on the fitted field, level and finite
+list of curves. The patching conclusion is ideal containment and
+introduces no such factor in the length estimate on the original field. \label{cor:ordinary-marked-points-1}
+\end{proof}

@@ -1,0 +1,556 @@
+\subsection{The two tensor factors and their integral flags}
+\label{sec:count-three-tensor}
+
+With the base field fixed, the four residual labels prescribe ratios for the two tensor factors. The integral structures on those factors will determine which extensions occur on reduction.
+
+Use \(F_0,K,K',g_0\) from Section~\ref{sec:count-three-tower}.
+Write \(\sigma=1\) for the original order and \(\sigma=-1\)
+for the exchanged order. Let \(D_i\) denote the ordered
+characteristic-zero characters of the diagonal rational datum,
+and let \(d_i\) be their reductions. Their quotient
+\(d_0/d_1\) on \(G_{F_0}\) is \(\lambda_0\).
+This is the character of \(K'/\Q\), and it is nontrivial
+at \(g_0\). In particular \(K'\) is contained in neither
+\(F_0\) nor \(F_0K\), and both exclusions persist on the
+\(\ell\)-power layers by taking an appropriate \(\ell\)-power of \(g_0\).
+
+\subsubsection{The quadratic factor}
+
+The first factor must distinguish the two orders of the tensor labels. Inducing an algebraic Hecke character from the auxiliary quadratic field prescribes both its inertia weights and its action at the chosen normalizer.
+
+\begin{proposition}[The quadratic integral factor]\label{prop:count-three-quadratic-factor}
+The algebraic Hecke character of \(K'\) given by the
+class-number construction yields the integral rank-two
+quadratic factor, with the specified diagonal action at \(g_0\). Its two inertia exponents at the chosen place above \(\ell\) are 
+\[
+ (m,-m).
+\]
+
+\end{proposition}
+
+\begin{proof}
+Let \(h'\) be the class number of \(K'\). For each fractional
+ideal \(\mathfrak a\), choose a generator \(a\) for
+\(\mathfrak a^{h'}\). For a positive multiple \(r\) of
+the number of roots of unity of \(K'\), the character
+\[
+                 \mathfrak a\longmapsto (a/\bar a)^r
+\]
+is independent of the generator because changing \(a\) by a
+root of unity multiplies this value by an \(r\)-th power equal
+to one. Multiplication of the ideals multiplies the generators
+up to such a unit. On a principal ideal \((x)\) its value is
+\[
+                       (x/\bar x)^{rh'}.
+\]
+These exponents are its infinity type.
+
+It is unramified at every finite prime as a Hecke character
+and conjugation inverts it. Its \(\ell\)-adic avatar
+\(\kappa'\) is unramified away from \(\ell\).
+Above \(\ell\), the two places are split, and on their
+inertia groups the exponents are \(m_0,-m_0\), where
+\(m_0=rh'\), up to choosing the first place.
+The avatar takes values in the finite local coefficient
+field given by the chosen embedding of \(K'\).
+Its values are units by continuity and compactness.
+Raise this character to a positive power to make its
+reduction one and keep \(m_0\) for the resulting
+positive exponent. The inertia exponents are then
+still opposite, and conjugation still inverts the
+character.
+
+For any positive integer \(a\), take
+\[
+ \tau=\operatorname{Ind}_{G_{K'}}^{G_{\Q}} (\kappa')^a
+\]
+
+and write \(m=am_0\). Since \(g_0\notin G_{K'}\), conjugation by it inverts
+\(\kappa'\) and fixes \(g_0^2\). Thus
+\[
+ \kappa'(g_0^2)=\kappa'(g_0^2)^{-1}.
+\]
+This value reduces
+to one, so it is one because \(\ell\) is odd.
+Consequently in the two induced basis vectors the action
+of \(g_0\) interchanges the vectors. The change of basis to their sum and difference has matrix
+\[
+ S=\begin{pmatrix}1&1\\1&-1\end{pmatrix},\qquad
+ \det S=-2\in O^\times,\qquad
+ S^{-1}\begin{pmatrix}0&1\\1&0\end{pmatrix}S=\operatorname{diag}(1,-1).
+\]
+The new eigenbasis is therefore integral.
+In this basis, on \(G_{K'}\) the matrices have the form
+\[
+                    \begin{pmatrix}u&v\\v&u\end{pmatrix},
+       \qquad u^2-v^2=1.
+\]
+They preserve \(\operatorname{diag}(1,-1)\), and the
+other coset acts by multiplying a matrix of this form by
+\(\operatorname{diag}(1,-1)\).
+
+In the residue field
+the matrices are \(\operatorname{diag}(1,\lambda_0)\)
+on the whole rational group. At a place above \(\ell\),
+the two eigenvectors are \((1,s)\) and \((1,-s)\)
+with \(s=1\) or \(-1\), chosen so that the first inertia
+exponent is \(m\). Under conjugation of the place,
+the sign is preserved on \(G_{K'}\) and is exchanged
+on its other coset. These choices can all be made
+over one finite coefficient DVR.
+
+\end{proof}
+
+\subsubsection{Determinant twist for the other factor}
+
+The other rank-two factor will come from an ordinary form. Its determinant is constrained by the four target characters, which fixes the finite twist before the weight is chosen.
+
+Put
+\[
+             \phi=\eta\xi^\sigma,\qquad
+             \Phi=\epsilon_\ell^{k-1}\phi .
+\]
+The finite character \(\phi\) is odd and is unramified
+at \(\ell\). First take a rational prime \(w\) split in \(F_0K\), with
+\(w\equiv1\pmod{\ell\operatorname{cond}(\phi)}\) and trivial
+residual diagonal. Such primes follow by Chebotarev at the
+identity of the compositum. A character \(\theta\) of order
+\(\ell\) modulo \(w\) is available and reduces to one.
+It is killed on inertia by adjoining the degree-\(\ell\)
+subfield of \(\Q(\zeta_w)\).
+After fixing this level, take \(k\) odd with
+\(k-1\equiv j\pmod{\ell-1}\).
+This congruence has odd solutions because \(\xi(-1)=1\)
+forces \(j\) even. The Chinese remainder theorem
+also lets us impose \(\ell\nmid k\) and any lower
+bound determined by the chosen level and \(m_0\).
+
+\subsubsection{Divisibility of the Eisenstein constant}
+
+A cuspidal eigenform with the desired residual system will be obtained by congruence with an Eisenstein series. The constant term must therefore vanish in the residue field of the chosen coefficient ring.
+
+\begin{proposition}[Small Eisenstein constant at the auxiliary conductor]\label{prop:count-three-small-constant}
+For \(\chi=\phi\theta\) at the selected prime \(w\), let \(a_0\) denote the constant of the weight-\(k\) Eisenstein series. In the coefficient DVR \(O\), Proposition~\ref{prop:count-three-cusp-congruence} uses the divisibility 
+\[
+ a_0=\tfrac12 L(1-k,\chi)\in\mathfrak m_O.
+\]
+ The calculation
+uses the original fixed weight, before the final choice of a deep
+tower layer.
+\end{proposition}
+
+\begin{proof}
+Let \(M=\operatorname{cond}(\phi)\) and
+\(\chi=\phi\theta\), primitive of conductor \(N=Mw\).
+For the Eisenstein series with positive Fourier
+coefficients \(\sum_{d\mid n}\chi(d)d^{k-1}\), the
+constant term is \(L(1-k,\chi)/2\).
+Denote by \(\chi_0\) the character on the same
+modulus induced by \(\phi\), so the two characters
+have the same reduction. We check that their
+special values are integral and congruent.
+
+For any of the characters \(\gamma\) of modulus \(N\)
+or \(M\), grouping the Hurwitz zeta series gives
+\[
+ -k L(1-k,\gamma)=
+  (\ell N_\gamma)^{k-1}
+       \sum_{a=1}^{\ell N_\gamma}
+          \gamma(a) B_k\bigl(a/(\ell N_\gamma)\bigr),
+\]
+where \(N_\gamma=N\) or \(M\) is the modulus used
+in the grouping and \(B_k(X)\) is the Bernoulli
+polynomial. Here \(\gamma(a)\) is taken modulo
+\(N_\gamma\), even when \(\ell\mid a\).
+Expand the polynomial in Bernoulli numbers and
+group by \(a\bmod N_\gamma\).
+For \(i\ge1\), the coefficient
+\((\ell N_\gamma)^{i-1}B_i\) is \(\ell\)-integral by
+the von Staudt--Clausen denominator bound and
+the integrality of \(B_1=-1/2\) at odd \(\ell\).
+
+For \(i=0\), the coefficient of \(\gamma(b)\)
+is the sum of the \(k\)-th powers of all
+\(\ell\) representatives of the class of \(b\),
+divided by \(\ell N_\gamma\).
+The representatives give each residue modulo \(\ell\) once.
+Because \(k\) is odd,
+\[
+          \sum_{r\in\mathbf F_\ell}r^k=0
+\]
+by pairing \(r\) with \(-r\). This cancels the remaining
+factor \(\ell\) in the denominator.
+Dividing by \(k\) is allowed as \(\ell\nmid k\),
+and at the common modulus \(N\) each coefficient
+in this linear expression is independent of
+the character. This proves the congruence
+of the two special values and integrality of
+the special value for \(\phi\).
+Finally,
+\[
+ L(1-k,\chi_0)
+     =(1-\phi(w)w^{k-1})L(1-k,\phi)
+\]
+has positive \(\ell\)-adic valuation. The first
+factor is zero modulo \(\ell\) by the choice of
+\(w\). Hence the Eisenstein constant belongs to
+the maximal ideal of the coefficient DVR.
+The weight congruence and this additional choice
+of \(k\) leave the eventual lower bound on \(k\) free.
+\hfill\mbox{\cite{washington-cyclo,bernoulli-values}}\label{cor:ordinary-count-iii-seed-1}
+
+\end{proof}
+
+\input{count-iii-eigenform}
+
+\subsubsection{The integral lattice and its ordinary line}
+
+The lift and twist fix the rational determinant. The residual endpoint depends also on the lattice in this representation, in particular on which ordinary line survives in its reduction.
+
+\begin{proposition}[The ordinary lattice of the rank-two factor]\label{prop:count-three-ordinary-lattice}
+The cuspidal lift and determinant twist give an integral rank-two representation \(r\) with 
+\[
+ \det r(g)=\Phi(g)\qquad(g\in\ker\theta).
+\]
+
+One can choose its lattice and the marked eigenbasis so that
+the ordinary local line has the reduction and ordered
+character required for the tensor.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Choose the ordinary integral lattice.}
+
+The integral rank-two datum we now construct is
+\(\rho_1\) with the following properties. Its determinant
+is \(\Phi\) on \(\ker\theta\). At \(g_0\) it is diagonal,
+and its reduction on \(G_{\Q}\) is
+\[
+                  \begin{pmatrix}\bar\Phi&0\\b&1\end{pmatrix}
+\]
+with \(b\ne0\). Away from \(\ell\) it is the identity on
+inertia where both \(\phi\) and \(\theta\) are trivial.
+At each chosen place \(A\) above \(\ell\), it has an
+integral invariant line generated by \((1,x_A)\),
+with ordered inertia characters \(\epsilon_\ell^{k-1},1\).
+Start with the cuspidal attachment just constructed. Its
+ordinary invariant line is the character \(D\nu^{-1}\), with
+residue \(\bar\Phi\) on the entire decomposition group.
+
+Choose a stable lattice and use the two eigenprojectors
+of \(\rho(g_0)\). If the two eigenvalues are \(\lambda_1,\lambda_2\), the projectors are
+\[
+ e_i=\frac{\rho(g_0)-\lambda_j I}{\lambda_i-\lambda_j}
+ \qquad(\{i,j\}=\{1,2\}).
+\]
+The denominator is a unit by residual separation, so both preserve the lattice. Order the basis
+with the \(\bar\Phi(g_0)\)-eigenvalue first. The traces
+of \(\rho(g)\) and of \(\rho(g_0g)\) determine its
+two reduced diagonal entries as \(\bar\Phi(g),1\).
+The first diagonal entry in a product is
+\(a_ga_h+b_gc_h\) if \(b_g,c_h\) are the off-diagonal
+entries. Comparing with the reduced diagonal character gives
+\[
+                  \overline{b_gc_h}=0\qquad(g,h\in G_\Q).
+\]
+
+The two sets of off-diagonal entries have finite
+minimum valuations \(v_+,v_-\), by irreducibility,
+and \(v_++v_->0\). Multiplying the second basis vector by \(\varpi^{v_-}\)
+changes the minima to
+\[
+           v'_-=v_--v_-=0,\qquad v'_+=v_++v_->0.
+\]
+Thus a lower-left entry survives and the upper-right ones all
+vanish after reduction.
+At each place over \(\ell\), a rational Frobenius
+lift with trivial cyclotomic value separates \(\bar\Phi\)
+from one, by Paragraph~\ref{par:dyadic-residual}.
+The reduced ordinary line is the first, \(\bar\Phi\)-eigenline there. A generator \((u,v)\) of the lifted line has \(u\) a unit and admits the normalization
+\[
+ u^{-1}(u,v)=(1,x_A),\qquad x_A=v/u.
+\]
+
+
+The cuspidal rank-two representation is irreducible
+on every open subgroup. Indeed, a reducible
+restriction to an open normal subgroup that contains
+a power of an inertia element with distinct eigenvalues
+has at most two invariant lines. Such an element
+exists here since the local cyclotomic exponents are
+distinct. By irreducibility on the rational group
+there must be two lines, exchanged by the other
+coset of their stabilizer. On the stabilizer,
+the two reduced line characters are \(1,\bar\Phi\).
+Conjugation exchanges them and fixes \(\bar\Phi\),
+so \(\bar\Phi\) is one on the stabilizer. Writing \(H\) for the index-two stabilizer, each square belongs to \(H\). Thus
+\[
+ \bar\Phi(g)^2=\bar\Phi(g^2)=1\qquad(g\in G_\Q).
+\] At the mark this contradicts
+\(\bar\Phi(g_0)^2=z^2\ne1\). The latter follows from
+\(\bar\Phi(g_0)=-z\), with \(z\) of nontrivial odd
+order. The argument for arbitrary open subgroups
+follows by passing to the normal core.
+
+Put \(u=(\epsilon_\ell/\omega)^{1/2}\), the root with
+values in \(1+\ell\Z_\ell\), and define
+\[
+ \delta =
+ \begin{cases}
+ u^{j+2-k} & \sigma=1,\\
+ \omega^j\xi\,u^{j+2-k} & \sigma=-1 .
+ \end{cases}
+\]
+The identities \(\omega^{k-1}=\omega^j\) and
+\(\omega^{2j}=1\) give
+\(\delta^2\Phi=\vartheta\).
+For the original order, \(\bar\delta=1=d_3\) and
+\(\bar\delta\bar\Phi=d_0=\bar\vartheta\).
+
+For the exchanged order, \(\bar\delta=\bar\Psi=d_3\)
+and \(\bar\delta\bar\Phi=d_0=\bar\alpha\).
+Together with \(d_0/d_1=\lambda_0\) and
+\(d_0d_3=d_1d_2\), this identifies all four reductions.
+On any inertia group away from \(\ell\) where the
+residual diagonal is trivial, \(\omega=1\) and the
+values of both finite characters \(\eta,\xi\) are
+one by prime-to-\(\ell\) injectivity. Thus
+\(\delta=\phi=1\) there.
+The same conclusions hold on the part of inertia
+above \(\ell\) in the cyclotomic kernel, since
+\(\eta,\xi\) are unramified above \(\ell\).
+
+\end{proof}
+
+\subsubsection{Tensor representation and residual endpoint}
+
+We can now tensor the two integral bases in the marked order. This realizes the endpoint as an actual residual representation with a flag, data that a list of four characters alone would not specify.
+
+\begin{proposition}[Integral tensor and its marked endpoint]\label{prop:count-three-tensor-endpoint}
+With the ordinary bases of the two factors, their twisted tensor
+is symplectic and has the required ordered flag on the fitted
+field. Its reduction gives the designated endpoint and the local diagonal characters of the rank-four chain. Write \(b_i\) for the inertia exponent on the \(i\)th ordered line after the scalar twist. Then 
+\[
+ 2(b_1,b_2,b_3,b_4)=2(k-1+m,k-1-m,m,-m)+(j+2-k)(1,1,1,1).
+\]
+
+\end{proposition}
+
+\begin{proof}
+Let \(E\) be the free rank-two module of \(\rho_1\), with
+the standard alternating form, and \(H\) that of \(\tau\)
+with symmetric form \(\operatorname{diag}(1,-1)\).
+For bases \((e_0,e_1)\), \((f_0,f_1)\), take the tensor
+basis
+\[
+               (e_0 f_0,e_0 f_1,-e_1 f_1,e_1 f_0).
+\]
+The tensor form is alternating and has the prescribed
+pairings in indices \(0,3\) and \(1,2\). In this basis,
+\(\delta(\rho_1\otimes\tau)\) has similitude
+\(\delta^2\det\rho_1\). Thus after killing \(\theta\)
+on the deep layer its similitude is exactly
+\(\vartheta\). On the tame layer the same equality
+holds after reduction, since \(\theta\) reduces to one.
+Both factors are diagonal at the normalizer and all
+its powers.
+
+\proofstep{Compute the tensor flag in the ordered basis.}
+
+For the local flag let \(L_x=\begin{pmatrix}1&0\\x&1\end{pmatrix}\).
+Conjugate the tensor first by \(L_{x_A}\otimes1\) in
+the displayed basis. Then conjugate by
+\[
+             1+s_A E_{10}-s_A E_{32},
+\]
+where \(s_A\) is the sign of the chosen eigenline of
+\(\tau\) at \(A\). Both are lower unipotent symplectic
+matrices. Their product is the flag matrix, with
+\((1,0)\) entry \(s_A\).
+Over characteristic zero the local conjugate is upper
+triangular, since the first step triangularizes the
+rank-two factor and the second orders the two lines
+of the symmetric factor in each block. Its inertia
+characters, in order, are
+\[
+       \delta\epsilon_\ell^{k-1+m},\quad
+       \delta\epsilon_\ell^{k-1-m},\quad
+       \delta\epsilon_\ell^m,\quad
+       \delta\epsilon_\ell^{-m}.
+\]
+
+On the cyclotomic kernel the characters are all one.
+They reduce to the required characters on the full
+marked decomposition groups. To see the last point,
+the marked place splits in \(K'\), so \(d_0=d_1\)
+and \(d_2=d_3\) there. Conjugation by \(L_{x_A}\) preserves the residual lower
+triangular order. Invariance of the first line then forces its
+lower-left entry to vanish, so its reduction remains
+\[
+                          \operatorname{diag}(\bar\Phi,1).
+\]
+This proves the local diagonal conditions.
+
+Outside \(\ell,w\), the residual tensor kills the
+required inertia. Indeed where the original
+residual diagonal is trivial, \(\lambda_0=1\) on
+the restricted group. There \(\tau\) is unramified,
+and \(\phi=\delta=\theta=1\) on the indicated inertia.
+On the deep layer the corresponding integral claim
+follows because the extra inertia has been killed.
+The construction gives the tame scout \(S\) and
+the compatible integral matrices on every such
+layer, since they all come by restriction from the
+same rational tensor. The chosen frames over
+different layers transport as the lower factors
+for this same ordinary flag. In the quadratic
+factor the place sign changes by \(\lambda_0\)
+on conjugation, and the rank-two line transports
+by \(\rho_1\). These two actions give the flag
+transport simultaneously on both factors.
+
+In the residue field, the matrix is
+\[
+       \bar\delta\,
+       \begin{pmatrix}
+        \bar\Phi&0&0&0\\
+        0&\lambda_0\bar\Phi&0&0\\
+        0&-\lambda_0 b&\lambda_0&0\\
+        b&0&0&1
+       \end{pmatrix}.
+\]
+Thus only \(-w_\beta,-w_\vartheta\) can occur
+globally off the diagonal. The lower frame entry
+\(s_A\) stays nonzero. If \(b\) became zero on
+\(G_F\), then conjugating the powered normalizer
+by any rational Galois element would give
+\[
+           0=b(g)\bigl(\bar\Phi(g_0^{\ell^r})-1\bigr).
+\]
+This uses the product rule
+\(b(gh)=b(g)\bar\Phi(h)+b(h)\), and the powered
+normalizer still lies in \(G_F\) with
+\(\bar\Phi\ne1\). Indeed \(\bar\Phi\) at the normalizer
+is the ratio \(d_0/d_3\). Hence \(b\) is nonzero
+on \(G_F\), and both indicated global roots occur.
+The tensor supplies exactly the sign and support
+conditions of Section~\ref{sec:count-three-chain}.
+
+Finally, the doubled inertia exponents of this
+tensor are the four integers
+\[
+ (2(k-1+m),2(k-1-m),2m,-2m)+(j+2-k)(1,1,1,1).
+\]
+Their adjacent differences are
+\(4m,2(k-1-2m),4m\).
+They are positive even integers at least four if
+\(k\ge2m+3\). Removing the scalar by twisting
+by \(\delta^{-1}\) changes the doubled inertial
+exponent by \(-(j+2-k)\). Its sum with the first
+doubled weight is even, as needed for the
+ordinary seed comparison.
+\hfill\mbox{\cite{ray-class}}\label{cor:ordinary-count-iii-seed-2}
+
+\end{proof}
+
+\subsubsection{Irreducibility after cyclotomic restriction}
+
+To obtain an automorphic starting point we still need irreducibility after cyclotomic restriction and regularity of the weights after opposite shifts of the quadratic factor.
+
+\begin{proposition}[Irreducibility and separation of infinity exponents]\label{prop:count-three-tensor-irreducible}
+If the rank-two cuspidal factor is absolutely irreducible on all
+open subgroups, the tensor restricted to the fitted CM layer
+remains absolutely irreducible after killing the cyclotomic
+character. For \(k\ge18m_0+3\) there is \(1\le a\le9\) for which the
+opposite shifts \(\pm am_0\) give four distinct infinity parameters
+and 
+\[
+ k-1-2am_0\ge2.
+\]
+
+\end{proposition}
+
+\begin{proof}
+Suppose the rank-two cuspidal input is absolutely
+irreducible on all open subgroups of \(G_{\Q}\).
+Put \(L=FK\) and \(M=LK'\).
+Let \(H=G_M\cap\ker\epsilon_\ell\). If \(H\) contains a
+nonscalar matrix, an invariant line for \(H\) belongs to the
+at most two eigendirections of that matrix. For an invariant line \(l\), normality of \(H\) makes every \(G_M\)-translate an \(H\)-invariant line. Hence
+\[
+ [G_M:\operatorname{Stab}(l)]=|G_M l|\le2 .
+\]
+Continuity makes the stabilizer closed, so this finite-index subgroup is open and preserves \(l\).
+If the subgroup acts by scalars, the projective
+action factors through the procyclic compact
+cyclotomic image of \(G_M\). A lift of a
+topological generator preserves an eigenline,
+and so does the closure of its projective cyclic
+group. In both cases this contradicts the assumed
+strong irreducibility.
+
+The character of \(M/L\) is nontrivial on
+\(G_L\cap\ker\epsilon_\ell\). Otherwise this quadratic
+character would factor through \(\epsilon_\ell(G_L)\)
+and kill its pro-\(\ell\) part. The powered normalizer
+lies in \(G_L\) with \(\omega=1\) and
+\[
+ \lambda_0=-1,
+\]
+a contradiction.
+Over \(G_M\cap\ker\epsilon_\ell\), the tensor without
+its scalar is the sum of the two irreducibles
+\(\rho\otimes(\kappa')^a\) and
+\(\rho\otimes(\kappa')^{-a}\).
+They are inequivalent. Choose an inertia element
+\(i\in G_M\) above \(\ell\) with infinite cyclotomic
+order, and let \(g\in G_L\) be the powered
+normalizer outside \(G_M\). The commutator belongs to \(G_M\) by normality and to \(\ker\epsilon_\ell\) by abelianity. Since conjugation by \(g\) inverts \(\kappa'\), its value is
+\[
+ \kappa'(igi^{-1}g^{-1})
+ =\kappa'(i)\kappa'(gi^{-1}g^{-1})
+ =\kappa'(i)^2 ,
+\]
+of infinite order. On this commutator the ratio of the determinants of
+the two rank-two summands is
+\[
+ \frac{\det(\rho\otimes(\kappa')^a)}
+           {\det(\rho\otimes(\kappa')^{-a})}
+       =(\kappa')^{4a},
+\]
+whose value there is
+\[
+ \kappa'(i)^{8a}\ne1.
+\]
+
+Thus the summands are inequivalent. The restriction to
+\(G_M\cap\ker\epsilon_\ell\) is a direct sum with two
+inequivalent simple summands, so a nonzero proper
+invariant subspace for that subgroup must be one summand.
+The other coset in \(G_L\cap\ker\epsilon_\ell\) exchanges
+them, so neither is invariant for the whole group.
+This also proves irreducibility on \(G_L\).
+Scalar twisting has no effect on these conclusions.
+
+For the infinity exponents in the induction
+argument, the two conjugate places of \(K'\)
+have two rank-two parameters each. Twisting
+by \((\kappa')^a\) shifts these two parameter sets
+by opposite integers \(am_0\) and \(-am_0\).
+Only differences of the original parameters
+in the two sets can equal \(2am_0\).
+Writing the unshifted entries as \(b_1,b_2\) and \(c_1,c_2\), an overlap in either orientation requires
+\[
+  2am_0\in\{\pm(c_j-b_i):1\le i,j\le2\}.
+\]
+This set has at most eight elements, whereas \(2am_0\) takes nine distinct values in the indicated range. One of \(a=1,\ldots,9\)
+therefore separates the four parameters. For the adjacent gaps,
+\[
+                       k-1-2am_0\ge2
+\]
+follows from the earlier choice \(k\ge18m_0+3\).
+\label{cor:ordinary-count-iii-seed-3}
+
+\end{proof}
+
+\input{count-iii-admission}

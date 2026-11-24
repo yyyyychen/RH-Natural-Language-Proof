@@ -1,0 +1,257 @@
+\section{Integral interpolation on a Frobenius cycle}
+\label{sec:interpolation}
+\hypertarget{source-interpolation}{}
+
+Section~\ref{sec:word-division} requires bounds on the directions lost in integral local tests. On a Frobenius cycle the losses come both from specializing a weight and from evaluating at neighboring lattices. We first bound the exceptional
+evaluations over an interval of integer weights by bounding the
+average number of Smith exponents at or above a given cutoff. We then examine simultaneous
+evaluation on the neighboring lattices. These are the two
+rank tests for the exceptional directions mentioned in
+Section~\ref{sec:family-window}. For the first test, fix a prime \(p\) and a square matrix polynomial \(A(T)\) over a valued extension of \(\mathbb Q_p\). Lemma~\ref{lem:smith-average} varies the integral
+argument \(t_j\) and counts, with multiplicity, the invariant factors
+of \(A(t_j)\) whose normalized \(p\)-adic order reaches a prescribed threshold \(E\ge1\); a zero
+diagonal entry has order \(+\infty\).
+
+\subsection{Counting Smith factors of large valuation}
+
+At an individual weight even the determinant may vanish. Averaging the number of large Smith factors over the sampled weights gives a rank estimate that allows these singular specializations.
+
+\begin{lemma}[Average number of large Smith exponents]\label{lem:smith-average}
+Let \(A(T)\) be an \(l\)-by-\(l\) matrix over a valued extension
+of \(\mathbb Q_p\), with the valuation normalized by \(v(p)=1\).
+Suppose its entries are linear combinations
+of \(\binom{T}{i}\), \(0\le i\le\delta\), with integral
+coefficients. Suppose its determinant is nonzero and write
+\[
+ \det A(T)=C\prod_{i=1}^d(T-\zeta_i),\qquad
+ v(C)+d/(p-1)\le l L .
+\]
+Measure the roots in a splitting field with its extended valuation.
+Take \(H\ge1\) points \(t_j=t_0+j b\), \(0\le j<H\), where
+\(t_0,b\in\mathbb Z\) and \(p\nmid b\). Choose an integer
+\(h\ge0\) such that \(H\le p^h\) and \(\delta<p^h\).
+For \(E\ge1\) let \(b_j\) be the number of Smith diagonal
+entries of \(A(t_j)\) of valuation at least \(E\), including
+zeros. Then
+\begin{equation}\label{eq:smith-average}
+ \frac1H\sum_j b_j\le
+ l\left(\frac{\delta}{H}+
+        \frac{L+\delta h/H}{E}\right).
+\end{equation}
+
+\end{lemma}
+
+\begin{proof}
+\proofstep{Integral translation of the binomial basis.}
+For a polynomial expanded at \(t\), write
+\(v_u(\sum a_i(T-t)^i)=\min_i(v(a_i)+iu)\).
+It is multiplicative. In each factor take the smallest index
+attaining the minimum. At the sum of the two smallest indices
+the product has exactly one least-valuation contribution.
+For any \(t\in\mathbb Z\), the coefficients in \(Z\) of
+\(A(t+p^hZ)\) are integral. Indeed the binomial addition
+identity reduces this to integrality of \(\binom ti\) and
+of the polynomials
+\[
+ \binom{p^hZ}{i}
+ =(-1)^{i-1}\frac{p^hZ}{i}
+                \prod_{j=1}^{i-1}(1-p^hZ/j)
+                  \qquad(1\le i\le\delta).
+\]
+Each denominator has valuation at most \(h\).
+\proofstep{A determinant valuation at each evaluation.}
+A finite matrix over the valuation ring admits the diagonal reduction used here even if the value group is nondiscrete. If the matrix is nonzero, choose a nonzero entry of least valuation among its entries. Permute it to the upper left. It divides every entry, so integral row and column additions clear its column and row. The new smaller matrix still has every entry divisible by the first pivot. Iteration yields
+\[
+  P A(t_j)Q=\operatorname{diag}(a_1,\ldots,a_r,0,\ldots,0),
+  \qquad a_1\mid\cdots\mid a_r ,
+\]
+where \(P,Q\) have unit determinants. Use the same constant \(P,Q\) on \(A(t_j+p^hZ)\).
+These preserve coefficient integrality and determinant valuation.
+
+
+Every column corresponding to one of the \(b_j\) entries has
+constant term of valuation at least \(E\). In the expansion in
+\(Z\) its nonconstant terms have weighted valuation at least
+\(E\) at weight \(E\). All other columns have nonnegative
+weighted valuation. The determinant expansion now gives
+\[
+ E b_j \le v_{h+E}(\det A)
+       =v(C)+\sum_{i=1}^d\min(h+E,v(t_j-\zeta_i)).
+\]
+This inequality also applies when \(t_j=\zeta_i\).
+
+\proofstep{Counting close evaluations.}
+For each root and each real \(0<u\le h\), the indices with
+\(v(t_j-\zeta_i)\ge u\) lie in one residue class modulo
+\(p^{\lceil u\rceil}\), since differences of two points have
+valuation \(v(j-j')\). There are at most
+\(Hp^{-\lceil u\rceil}+1\) such indices. For \(h<u\le h+E\)
+there is at most one. Integrating these counts on the two
+ranges shows that the sum over \(j\) of each truncated root
+valuation is at most \(H/(p-1)+h+E\). Negative valuations only
+decrease this sum. Thus
+\[
+ E\sum_j b_j\le
+ H\big(v(C)+d/(p-1)\big)+d(h+E).
+\]
+The degree bound \(d\le l\delta\) proves
+\eqref{eq:smith-average}.
+\end{proof}
+
+In the segment Gram calculation the
+parameter \(T\) is the degree of the appended covector. If the
+binomial degree of its Gram matrix is \(2S\), the length
+is \(H\), \(h\le\log_p(8a+r)+1\), and the leading coefficient
+bound gives \(L\le2\kappa\), the resulting discarded fraction
+is bounded by
+\[
+ \frac{2S}{H}+
+ \frac{2\kappa+2S(\log_p(8a+r)+1)/H}{E}.
+\] The following calculation identifies the polynomial and
+its leading coefficient for the segment form.
+
+\input{tied-gram}
+\input{graded-projectors}
+\input{tied-segments}
+\input{segment-window}
+\input{retained-rank}
+\input{block-pairing}
+\input{column-lifts}
+\input{symbol-correction}
+
+\subsection{What the neighboring lattices measure}
+
+The polynomial construction supplies vectors and covectors on individual edges. To convert them into a rank at a lattice, distinguish edges entering that lattice from edges leaving it.
+
+Let \(W\) be the ring of integers in the unramified degree
+\(f\) extension of \(\mathbb Q_p\), with residue cardinality
+\(q_f=p^f\), and let \(O\) be the coefficient DVR in the local
+setting with uniformizer \(w\) satisfying \(w^2=p\).
+The selected cycles under consideration have even \(f\).
+For a rank-\(k\) lattice \(L\) over \(W\), an edge
+\(e=(L_-,L_+)\) satisfies \(pL_+\subset L_-\subset L_+\)
+with \(L_+/L_-\) one-dimensional over the residue field.
+For fixed \(L_+=L\) these edges are the hyperplanes of \(L/pL\).
+For fixed \(L_-=L\) they are the lines of \(p^{-1}L/L\).
+Both numbers are
+\[
+                       g=(q_f^k-1)/(q_f-1).
+\]
+
+At selected positions \(s\) the dominant weights have endpoints
+\(a_s,-b_s\), with bounded intermediate entries. All entries
+are bounded at the remaining positions. At odd positions replace
+the weight by its negative reversal. Denote the resulting weights
+by \(\mu_s\) and put
+\[
+ A_1=\sum_s\mu_{s,1},
+\]
+using first
+coordinate index one. Let \(V\) be the tensor product of the
+characteristic-zero dual Weyl spaces for the partitions
+\(\mu_s-\mu_{s,k}{\bf1}\). For \(L\) write \(H(L)\) for the
+tensor of their integral lattices in the Frobenius-twisted
+component frames, including the determinant twist \(\mu_{s,k}\).
+Equivalently in each component take the integral polynomial
+lattice in every basis of the given module.
+
+In the component at
+\(s\), write \(L^{(s)}\) for the \(O\)-span of its image under
+the \(s\)-th Frobenius embedding. Define \(H(e)\) by applying
+the same construction to the intermediate component lattices
+\(L_-^{(s)}+w L_+^{(s)}\). The two normalized modules and their
+pairing are
+\[
+ R_e=w^{-A_1}H(e),\qquad R'_e=w^{-A_1}H(e)^\vee,\qquad
+ B(x,y)=p^{A_1}y(x).
+\]
+They pair integrally, since \(p^{A_1}=w^{2A_1}\).
+Write \(e^-,e^+\) for the source and target of a directed edge
+\(e\). At a chosen order \(t\), use the source and target modules
+\[
+ N_-(L)=w^{-t}H(L)\cap\!\bigcap_{e^-=L}R_e,\qquad
+ N_+(L)=w^{-t}H(L)^\vee\cap\!\bigcap_{e^+=L}R'_e .
+\]
+For an edge \(e\) put \(C_e\subset N_-(e^-)\) equal to the
+submodule satisfying in addition \(x\in w^cR_{e'}\) at every
+other outgoing edge. Define \(C'_e\subset N_+(e^+)\) by the
+analogous condition at every other incoming edge.
+
+\begin{construction}
+\[
+\begin{array}{ccccc}
+L_-&\lhook\joinrel\longrightarrow& L &\lhook\joinrel\longrightarrow &L_+\\
+\multicolumn{2}{c}{pL\subset L_-\subset L}&&\multicolumn{2}{c}{L\subset L_+\subset p^{-1}L}\\
+\multicolumn{2}{c}{\text{hyperplanes in }L/pL}&&\multicolumn{2}{c}{\text{lines in }p^{-1}L/L}\\
+\multicolumn{5}{c}{g=1+q_f+\cdots+q_f^{k-1}\quad\text{choices on each side}}
+\end{array}
+\]
+\caption{The incoming and outgoing families of a vertex have the same cardinality. Incoming tests are combined at a common target, whereas the outgoing rank bound counts directions at a common source.}\label{fig:incident-lattice-edges}
+\end{construction}
+
+\begin{proposition}[Combining tests on incident edges]\label{prop:incident-edge-tests}
+Suppose that for each edge there are \(m_e\) vectors in
+\(C_e\) and \(m_e\) covectors in \(C'_e\) whose pairing matrix
+has an integral right multiple equal to \(z_e I_{m_e}\), with
+\(z_e\ne0\) and \(v(z_e)\le D\). Here \(D\ge0\), \(c>2D\), and zero values of \(m_e\) are permitted. If
+\[
+                m_e\ge (1-\kappa)\dim(V)/g
+\]
+at every incoming edge, then the tests at target \(L\) recover
+at least \((1-\kappa)\dim(V)\) directions with an integral
+inverse after multiplication by \(w^{\lfloor 2D\rfloor}\). A uniform number \(m\) of directions
+recovered on every outgoing edge at a fixed source also satisfies
+\(gm\le\dim V\).
+\end{proposition}
+
+\begin{proof}
+\proofstep{Block normalization at a target.}
+Apply the indicated integral column operations within
+each block and multiply the covectors of that block by
+\(w^{\lfloor 2D\rfloor}/z_e\in O\). The diagonal blocks of the
+combined pairing matrix become \(w^{\lfloor 2D\rfloor} I\).
+At distinct edges with the same target
+the covector from the second block belongs to \(w^cR'_e\) at
+the first. Every off-block entry therefore belongs to \(w^c O\).
+For the combined matrix \(M\), the remaining divisibility is
+\[
+ w^{-\lfloor2D\rfloor}M=I+w^{c-\lfloor2D\rfloor}E\equiv I\pmod w,\qquad E\in M_{\sum m_e}(O).
+\]
+Its inverse is integral by the adjugate formula.
+Combining the covectors using this inverse gives covectors in
+\(N_+(L)\) evaluating to \(w^{\lfloor 2D\rfloor}\) times the coordinate vectors.
+There are \(\sum_{e^+=L}m_e\ge(1-\kappa)\dim(V)\) such
+coordinates. All source vectors retain their required extra
+vanishing on the other outgoing edges. \proofstep{Independence at a source.}
+The same proof at a fixed source uses the extra source vanishing to put the
+off-block entries in \(w^cO\). Its combined matrix has full
+rank over the fraction field, so a uniform number \(m\) that
+can be recovered at every outgoing edge satisfies
+\(gm\le\dim(V)\). This explains the divisor \(g\) in the
+single-edge rank estimate, even when \(q_f\) grows with the
+cycle.
+
+\end{proof}
+
+For the final integer depth \(D\), take \(c=8(D+1)\). This meets
+the lower bound \(4(D+1)\) imposed on the neighbor test.
+
+\paragraph{Attaining the discarded fraction.}
+The source takes the infimum of the admissible discarded
+fractions over the inequality parameter, with the required
+rank test quantified over all targets, coefficient settings,
+and allowed bounded modifications of the weights. This infimum
+is attained. The fraction one is admissible by taking zero
+directions. For each fixed test, if \(d_V=\dim V>0\) and the
+infimum is \(u\), take an admissible \(u'\) sufficiently close
+to \(u\) that
+\[
+ (1-u')d_V>\lceil(1-u)d_V\rceil-1.
+\]
+
+Integrality of the rank gives the test at \(u\). The zero-rank
+case is immediate. The vectors realizing the required rank may be chosen separately for each test. Thus for \(p\ge p_0\) the same \(\kappa_v\) which bounds the local loss actually supplies the test dimensions used in the column index.
+
+\input{edge-transfer}
+\input{host-edge-tests}
+\input{plane-lifts}

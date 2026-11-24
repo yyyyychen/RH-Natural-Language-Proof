@@ -1,0 +1,69 @@
+\paragraph{The lattice estimate for the CM approximations.}
+
+The lower bound for the Chow estimate uses an integral section evaluated near a CM frame. Hermitian transference controls how closely the required directions can be approximated.
+
+\begin{lemma}[Hermitian lattice transference]
+\label{lem:cm-lattice-transference}
+Let \(E\) be the CM field, \(r_0\ge1\) an integer, and \(L\subset E^{r_0}\) a full \(\mathcal O_E\)-lattice
+self-dual for a Hermitian form \(H\). Take one embedding from
+each conjugate pair and write \(f=[E:\mathbb Q]/2\).
+At these embeddings let \(Q_\tau\) take \(H_\tau\) to its
+diagonal signature matrix \(J_\tau\). Write
+\(q_\tau(z)=\|Q_\tau\tau(z)\|^2\) for the corresponding
+positive definite majorants. Suppose
+
+\[
+  \max_\tau q_\tau(z)\ge\lambda^2>0
+\]
+ for every nonzero
+\(z\in L\). Put \(d_E=|\operatorname{disc}E|\),
+\(t_*=fr_0\), and use the real Euclidean space
+\(\prod_\tau\mathbb C^{r_0}\) of dimension \(2t_*\).
+Then the image lattice under \(z\mapsto(Q_\tau\tau(z))_\tau\)
+has covering radius at most \(4t_*^3d_E/\lambda\). There is
+an \(E\)-basis of \(E^{r_0}\) in \(L\) with all Euclidean
+image norms at most the same bound.
+
+\end{lemma}
+
+\begin{proof}
+\proofstep{Comparing the rational and Hermitian duals.}
+Indeed let \(L^\dagger\) be the rational dual of \(L\) for
+the pairing \(\operatorname{Tr}_{E/\mathbb Q}H\). For
+\(z\in L^\dagger\), pairing with all \(\mathcal O_E\)-multiples
+of a vector of \(L\) puts each \(H(z,y)\) in the inverse different.
+Thus \(d_E z\in L\) by Hermitian self-duality. Combining a CM type
+with its conjugate shows that the image of \(L^\dagger\) under
+\(z\mapsto(2J_\tau Q_\tau\tau(z))_\tau\) is the Euclidean dual.
+
+In fact the Euclidean pairing of these two images is
+\(2\sum_\tau\operatorname{Re}\tau H(z,y)=\operatorname{Tr}H(z,y)\).
+The factor two identifies a real dual basis with the image of the
+rational trace dual basis. For \(0\ne z\in L^\dagger\), the element
+\(d_Ez\) is a nonzero vector of \(L\), whence
+\[
+ \Big(\sum_\tau\|2J_\tau Q_\tau\tau(z)\|^2\Big)^{1/2}
+ \ \ge\ \frac{2}{d_E}\max_\tau\sqrt{q_\tau(d_Ez)}
+ \ \ge\ \frac{2\lambda}{d_E}.
+\] Euclidean transference gives \(2t_*\)
+independent primal vectors of norm at most
+\((2t_*)^2/(2\lambda/d_E)=2t_*^2 d_E/\lambda\).
+Their integer span is a sublattice.
+
+For an arbitrary point write \(x=\sum_{j=1}^{2t_*}a_j v_j\) in
+this real basis, and choose \(n_j\in\mathbb Z\) with
+\(|a_j-n_j|\le1/2\). Then
+\[
+ \Big\|x-\sum_j n_jv_j\Big\|
+ \le\tfrac12\sum_j\|v_j\|
+ \le \tfrac12(2t_*)\,2t_*^2d_E/\lambda=2t_*^3 d_E/\lambda .
+\]
+The rounded point belongs to the original lattice. The same family spans \(E^{r_0}\)
+over \(\mathbb Q\) after pulling back, so an \(E\)-basis can be
+selected from it. Both conclusions fit the stated bound.
+This argument is used in the full dimension and on the
+complementary lattice when it has the same self-duality and
+majorant hypotheses. The quantitative choice of the frame
+uses the resulting covering radius at that frame's cusp times.
+\cite{banaszczyk}\label{cor:slice-cm-transference-1}
+\end{proof}

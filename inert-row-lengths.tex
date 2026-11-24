@@ -1,0 +1,133 @@
+\subsection{Ordinary inert primes on the retained cut}
+\label{subsec:inert-rows}
+
+At the ordinary inert primes the split column condition disappears. The row calculation must instead follow the signed jumps around a complete Frobenius orbit in the unramified local field.
+
+Use the ordinary prime range of Section~\ref{subsec:ordinary-split-length}.
+An inert prime in this range has \(\ell\ge11\) once the family scale exceeds its lower threshold. Every place \(\lambda\mid\ell\) is a row. Its completion
+\(F=E_\lambda\) is unramified over \(\Q_\ell\), with degree \(d_\lambda\).
+The cyclic index at \(\lambda\) runs over
+\[
+ \operatorname{Hom}_{\mathbb Q_\ell}(E_\lambda,\overline{\mathbb Q}_\ell),\qquad \#\operatorname{Hom}_{\mathbb Q_\ell}(E_\lambda,\overline{\mathbb Q}_\ell)=d_\lambda.
+\]
+The ordering comes from Frobenius on the actual host, including its quadratic factors.
+
+We describe the Wach levels and compare the arcs at these
+inert primes.
+
+Use the marked row surjection \(T_1\twoheadrightarrow T_2\) of
+Section~\ref{subsec:split-local-length}. The target is the rank-\(r\)
+Tate dual at the selected point and \(T_1\) is a lattice in a
+subrepresentation of a finite sum of the Tate duals of the normalized
+retained representations. The rational comparison is crystalline.
+The local jump windows hold on all of the summands on this cut.
+Strictness for the rational crystalline filtration passes them to
+\(T_1\) and to \(T_2\). For the marked rank-\(r\) target the central multiplicity bound is pointwise in the letter:
+\[
+ \#\{\text{central target jumps at }i\}\le m\qquad(\text{every }i),
+\]
+where multiplicities are counted.
+Section~\ref{subsec:cut-wach-models} gives the signed integral
+Wach inclusions on these same two lattices and their local finite
+extensions, at the labeled places of the retained tuple.
+
+The common word is obtained by restricting the host weight chart
+to the Frobenius cycle of \(\lambda\). Its signs are the two CM
+signs for the Tate dual. At an inert prime Frobenius exchanges
+these signs, which accounts for the alternating words and the
+even local degree. Rounding the upper interval and its width
+gives local bounds \(b_0,w,S,\eta\) as below, within the common bounds
+\[
+ w\le w_P,\qquad S\le S_c,\qquad \eta\le\eta_3,\qquad b_0+S+\eta\le H.
+\]
+The shifted place weights obey the same
+central gap at every retained point. These comparisons concern
+the surjection and jump data used by the congruence determinant,
+including the case of a ramified extension of the coefficient DVR.
+\label{cor:inert-row-lengths-1}
+
+\paragraph{The inert contributions to the weighted prime sum.}
+\label{sec:cut-length-rows}
+Use \(H,G_P,w_P,\eta_3,z\) from
+Section~\ref{subsec:prime-cost-sums}. Write \(A_{\rm sec}\) for
+the secondary threshold denoted \(A\) there and \(o_\ell\) for
+the order in the host's real cyclotomic quotient. Case B has
+\(\ell<A_{\rm sec}\) and \(o_\ell>4L_w\). Set
+\[
+ j_\ell=\max(1,\lceil\log_{\ell-1}A_{\rm sec}\rceil),\qquad
+ U_B=(d_\lambda+1)r
+     \left(\frac{H}{(\ell-1)^{j_\ell+1}}+
+          (G_P+1)(j_\ell+1)+z\right).
+\]
+The remaining ordinary inert primes are case C if
+\(\ell\ge A_{\rm sec}\), and case D if \(\ell<A_{\rm sec}\) and
+\(o_\ell\le4L_w\). The local comparison distinguishes two
+cases. Larger jumps occur at every position precisely when
+Frobenius acts as complex conjugation and the starting
+position has larger jumps.
+
+To see both alternatives, first consider \(o_\ell\le4L_w\).
+Two visits to the large set with labels \(s_1,s_2\) satisfy
+\[
+ D\mid o_\ell t_0(s_2-s_1),\qquad
+ n_0\mid o_\ell(s_2-s_1),\qquad
+ |o_\ell(s_2-s_1)|<n_0 .
+\]
+
+The first relation follows from \eqref{eq:translated-dyadic-visits},
+whose coordinate formula holds at every order. Thus \(s_1=s_2\).
+Each label specifies a single real place, represented by the two
+conjugate embeddings of \(E\). Consecutive larger positions would
+then give the same real place, so Frobenius fixes an embedding of
+\(E^+\). Since \(E/\mathbb Q\) is abelian, it belongs to
+\(\operatorname{Gal}(E/E^+)=\{1,c\}\). Inertness in
+\(\mathbb Q(\sqrt{-d})\) rules out 1. For Frobenius \(c\),
+a larger starting place remains larger throughout its cycle.
+In the long-order case the three-visit argument of
+Lemma~\ref{lem:long-orbit-spacing} applies for any ordinary inert
+prime, since it uses only \(o_\ell>4L_w\) and the designated
+labels. As \(L_w\ge3\), at most two consecutive positions are larger.
+
+Use the place indicator \(B_\lambda\)
+that a good point over this place exhibits the short band of
+Section~\ref{subsec:ordinary-split-length}. Define
+\[
+\begin{aligned}
+ \mathcal P_\ell&=1+H/\ell+\log_\ell H,&
+ F_{\ell,\lambda}&=(w_P+\eta_3)/\ell+S_c+z+\eta_3B_\lambda,\\
+ U_H&=(d_\lambda+1)rH/\ell^2,&
+ U_F&=(d_\lambda+1)r F_{\ell,\lambda},&
+ U_M&=d_\lambda m\mathcal P_\ell .
+\end{aligned}
+\]
+The following estimates yield one rational bound at each place,
+valid simultaneously for its good points and coefficient lattices.
+The case B entry is \(O(U_B)\), and the common case C and D
+entry is \(O(U_H+U_F+U_M)\). Their constants are absolute once
+the host constants are fixed. In particular they are independent of
+the degree of the coefficient field and the jump heights.
+\label{cor:inert-row-lengths-2}
+
+Every \(d_\lambda\ge1\), so the sum over all row places satisfies
+\[
+ \sum_{\lambda\mid\ell}(d_\lambda+1)\le2\sum_{\lambda\mid\ell} d_\lambda=4f.
+\]
+The global indicator \(I_\ell\) in
+Section~\ref{subsec:prime-cost-sums} bounds every \(B_\lambda\)
+by the band transport there. Thus the \(U_B\), \(U_H\) and \(U_F\)
+terms give the three inert costs in that section, after
+enlarging the fixed common constant. The \(U_M\) terms contribute
+at most \(2fm\mathcal P_\ell\) before that constant and go into
+the same sum as the split lifting term. The factor in the
+global determinant is absorbed by the common constant.
+At these inert primes the column set is empty, so the remainder
+is the boundary term with \(k_c=0\) in the split calculation.
+
+For case B, it remains to obtain the required row colength from the length of the Frobenius orbit; this is Proposition~\ref{prop:inert-long-colength}.
+
+\input{inert-long-orbit}
+\input{inert-thick-word}
+The common entry in cases C and D is
+Proposition~\ref{prop:ordinary-inert-place-entry}.
+
+\input{inert-row-table}

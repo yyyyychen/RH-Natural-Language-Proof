@@ -1,0 +1,144 @@
+\begin{established}[One order and precision for the two orientations]
+\label{hyp:common-slice-scales}\label{par:slice-scales}
+\hypertarget{source-slice-scales}{}
+Take the selected rank of Lemma~\ref{lem:rank-window}. Write
+\(L=x^\epsilon,\ b=e^L,\ z_0=frL,\ D_*=f\binom r2\).
+With the exponents \(A_2=12,\ C_p=1\) of
+Lemma~\ref{lem:window-parameter-choice}, put \(P=C_2z_0^{A_2}\)
+for the fixed precision constant \(C_2\). On both runs, at every lift
+and all sufficiently large selected scales, the order \(T=\lceil
+x^{377}\rceil\) satisfies
+\[
+ \frac{P^4D_*^3kf\,x^{C_p}}{m\delta_2}\le T,\qquad
+ P^3T^2\le\sqrt b,\qquad
+ (D_*+2)n_W+2r\le T,\qquad 40(D_*+2),\,11D_*^2\le T .
+\]
+The cut has dimension parameter \(s=D_*\), and
+\(n_P=8fr+4\le n_W\).
+\label{cor:slice-scales-1}
+\end{established}
+\begin{proof}
+For \(p+q=r\) the unitary base has dimension \(fpq\); the flags in
+the two summands contribute \(f\binom p2+f\binom q2\).
+Their sum is \(D_*\), including at \(q=0\).
+Lemma~\ref{lem:rank-window} chooses
+\[
+ n_W=8\left\lceil\frac{10r}8
+         \left(f+\frac{f^2(k-1)^3L^2}{m}\right)\right\rceil,
+ \qquad r+t=n_P+Tn_W .
+\]
+In particular \(n_W\ge10fr\ge n_P\). No order is chosen anew after
+the rank \(t\) has been fixed.
+
+For an explicit comparison put \(y=x^{1/100}\). The bounds in that
+lemma give \(f\ll y^{216}\), \(k,r\ll y^{470}\), \(m\ge y^{49}\),
+\(L\le y^2\), and \(n_W\ll y^{2267}\). The nonempty set of larger
+indices has density \(\delta_2\ge 1/n\), where \(2n=f\). Thus
+\(z_0\ll y^{688}\), \(D_*\ll y^{1156}\), and
+\[
+ \frac{P^4D_*^3kf\,x}{m\delta_2}
+ \ll_{C_2} y^{48\cdot688+3\cdot1156+470+216+100-49+216}
+ =y^{37445}\ll x^{377}.
+\]
+The remaining lower bounds for \(T\) have still smaller exponents.
+Finally \(\log(P^3T^2)=O_{C_2}(\log x)\), whereas
+\(\log\sqrt b=x^\epsilon/2\). All quantities in this comparison are
+fixed before the orientation and lift are chosen.
+\end{proof}
+
+\begin{lemma}[Size bounds in both orientations]
+\label{lem:common-slice-scales}
+For the data of Lemma~\ref{hyp:common-slice-scales}, both orientations satisfy the finite boundary estimate, the allowance conditions in \eqref{eq:slice-remainder-scales}, and the inclusion at every weight coordinate
+\[
+ T(w_L)_{\tau,i}\le\kappa_{\tau,i}\qquad\text{for all }\tau,i.
+\]
+
+For fixed choices of the constants in the polynomial \(P\), the
+threshold on \(x\) is common to all lifts in the two runs.
+\end{lemma}
+
+\begin{proof}
+\proofstep{Compatibility of the weight inclusions.}
+The weight inclusion is coordinatewise:
+\(T\) times the light rows is bounded by the selected
+\(\kappa\) rows, so \(TD_L\le D_\kappa\).
+The weight size has the differential degree, a central term
+\(fr\mu_j n\), and a constant one, with \(1\le\mu_j\le r\).
+The three central parameters at \(w_L,w_F,\kappa\) are
+\(n_W,n_P,Tn_W+n_P\). The constant term in the weight size gives \(TS_L\le S_\kappa+T\).
+Using \(T\le b\) and the head-weight bounds \(b\le S_\kappa\le7kfb\),
+\[
+ TS_L\le S_\kappa+T\le S_\kappa+b\le2S_\kappa .
+\]
+
+For the short weight, the row-gap
+remainder after subtracting \(T w_L\) is at most
+\((s+2)\) times the light gap plus \(3T\). For the
+terminal gap of the large block the adjustment
+\((s+2)n_W+2r\) is at most \(T\), giving that same remainder
+bound. Summing the gap comparisons from the last row in
+each block bounds the differential degree by
+\((s+2)D_L+3fr^2T\). The short central term is at most
+\(fr^2 n_P\le fr^2T\). Including the constant term gives
+\(|w_F|\le(s+2)S_L+5fr^2T\).
+\label{cor:slice-scales-2}
+
+\proofstep{Room for the finite boundary term.}
+For the finite boundary cost write \(Q=\min(g_0,g_1)\),
+\(R_7=(\operatorname{rd}E)^7\). The record uses
+\[
+             c=R_7P D_L^2/Q,
+             \qquad g_0^*=1250r .
+\]
+The level-size input is \(Q\ge(kb)^8\).
+To see the large margin in this comparison, let
+\(B=\sqrt b\). The rank and weight data give
+\(r\le2k^2\), \(f,m\le k\) and \(D_L\le2frb\le4k^2B^2\),
+where \(f\le k\) and \(r\le2k\) give the second bound.
+Also \(R_7\le B\), \(P^3T^2\le B\), \(TP\le B\)
+and \(B\ge10^{100}\). Thus
+\[
+\begin{split}
+ R_7^4P^3D_L^2 &\le16 k^4 B^9,\\
+ Tg_0^*R_7PD_L^2 &\le40000 k^6 B^6,\\
+ 2fm^3 R_7^3 P D_L^2 &\le32 k^8 B^8 .
+\end{split}
+\]
+Each is at most \(k^8 B^{16}\le Q\).
+
+The middle bound
+gives \(Tc g_0^*\le1\), and the last pays the auxiliary
+cusp allowance at the same order. The short-basis
+comparison for the \hyperref[par:slice-finite-depth]{finite readings} uses
+\(R_0\le R_7\) and \(N_0^4n_W+2N_0^3\le P\).
+These give its two pointwise inequalities for \(c\).
+Also \[
+ J_0\le2\sqrt{N_0}\le3k,\qquad D_LJ_0\le12k^3 b<Q.
+\] The degree estimate
+\(2D_\kappa+2<g_i\), \(TD_L\le D_\kappa\) and
+\(T\ge40(D_*+2)\) give the level conditions for the
+Hodge--Tate comparison. The inequality \(4D_L+4\le g_i\)
+also follows directly from \(D_L\le4k^2b\) and
+\(g_i\ge(kb)^8\).
+\label{cor:slice-scales-3}
+
+\proofstep{Checking the four coefficient allowances.}
+The coefficient bounds for the four prices use the
+polynomial domination at this same \(z_0\), including
+the auxiliary, height and quotient constants at their
+fixed exponents. Its threshold is chosen once after
+those constants have been chosen. The record supplies
+\(z_0\ge x\) from \(x\le fr\) and \(L\ge1\), so a
+single lower bound on \(x\) ensures the required
+polynomial domination for every place and for all
+lifts on either run.
+In particular the single threshold \(x_*\) chosen for the comparison has the implication
+\[
+  x\ge x_*\quad\Longrightarrow\quad z_0\ge x_*.
+\]
+ We use the construction in the specified data on the common family, including the
+level interval and positive density of the indices with larger weights, as a
+size input here. This argument derives the two-run
+inequalities used by the index on that record.
+\label{cor:slice-scales-4}
+\end{proof}

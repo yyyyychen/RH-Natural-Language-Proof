@@ -1,0 +1,346 @@
+\section{Local Weil--Deligne parameters and their Galois realizations}
+\label{sec:local-global}
+
+The lift construction specifies a finite type on the automorphic side. Later we will
+need to recognize that same local datum in the Galois representation of an ordinary
+constituent. We match the local cuspidal
+and principal series data to Weil--Deligne parameters and
+specify the global attachment and its hypotheses. The
+ordinary-level arguments below use these compatibilities
+at both the split ramified places and the coefficient prime. Proposition~\ref{prop:prescribed-local-cuspidal-types} gives the local parameter on the specified cuspidal types. Definition~\ref{hyp:local-global-ranges} specifies the places and twists at which a global representation must recover that parameter.
+
+Let \(v\) be a finite place of a CM field \(E\).
+The local assignment constructed here associates a Weil--Deligne parameter to each irreducible smooth representation of \(\mathrm{GL}_n(E_v)\). In rank one it is given by Artin reciprocity.
+\begin{proposition}[Local parameters on the prescribed cuspidal types]\label{prop:prescribed-local-cuspidal-types}
+At a finite place \(v\) the local assignment sends a smooth irreducible representation of \(\mathrm{GL}_n(E_v)\) to an \(n\)-dimensional Weil--Deligne parameter. On characters of \(E_v^\times\), use Artin reciprocity.
+At \(E_v=\Q_p\), use induction from the degree-\(n\) unramified extension on each depth-zero cuspidal, with determinant fixed by its central character. For the regular residue character \(\theta\), the inertia representation is 
+\[
+ \bigoplus_{j=0}^{n-1}\theta^{p^j}.
+\]
+ Extend by the Artin twist to its smooth
+twists, independently of the presentation. On the remaining
+cuspidals use irreducible induced parameters with nonscalar
+wild inertia, constructed using the first principal unit group. The full assignment extends by
+the Langlands segment rule.
+\end{proposition}
+
+\begin{proof}
+\proofstep{The rank-one and depth-zero normalizations.}
+
+At a rational split completion \(E_v=\Q_p\) the other specified
+cuspidals are twists of depth-zero cuspidals. The latter
+are compact inductions from the finite cuspidal types of
+\(\mathrm{GL}_n(\mathbf F_p)\), extended to the group generated
+by the maximal compact and the center. Their finite types are
+indexed by Frobenius orbits of regular characters \(\theta\) of
+\(\mathbf F_{p^n}^{\times}\). The parameter is induced from the
+Weil group of the degree-\(n\) unramified extension. On inertia
+it is the direct sum of the characters \(\theta^{p^j}\) for
+\(0\le j<n\).
+
+Write \(F\) for the chosen Frobenius lift and \(\gamma\)
+for the value of the inducing character at \(F^n\).
+In a cyclic basis \(F e_j=e_{j+1}\) for \(j<n-1\)
+and \(F e_{n-1}=\gamma e_0\). Thus
+\[
+        \det(F)=(-1)^{n-1}\gamma .
+\]
+For central value \(b\) at the uniformizer in the reciprocity
+convention, choose \(\gamma=(-1)^{n-1}b\). This is the
+depth-zero normalization of the local Langlands correspondence.
+\hfill\mbox{\cite{adrian-roe}}
+
+\proofstep{Independence of twisting presentations and segments.}
+
+Twisting by a smooth character of \(E_v^{\times}\) twists the
+parameter by its Artin image. Suppose two depth-zero cuspidals differ by a twist \(\alpha\circ\det\). Their usual Weil parameters are tame. For wild inertia \(P_v\), compatibility of the usual correspondence with twists gives
+\[
+ I_n=\operatorname{rec}(\pi\otimes(\alpha\circ\det))(g)
+   =\operatorname{rec}_1(\alpha)(g)I_n\qquad(g\in P_v).
+\]
+Thus the relative character is trivial on \(1+p\mathbb Z_p\) by local reciprocity. \cite{henniart-local,adrian-roe} The corresponding
+finite cuspidal types differ by the determinant character
+modulo \(p\).
+
+On the elliptic torus of the finite group, multiplication
+by \(u\in\mathbf F_{p^n}^\times\) has determinant equal to
+its field norm. Consequently the finite twist on the torus is
+\[
+       (\alpha\circ\det)(u)
+          =\alpha\bigl(N_{\mathbf F_{p^n}/\mathbf F_p}(u)\bigr).
+\]
+Functoriality of local reciprocity gives the same pullback
+on the degree-\(n\) Weil group. Thus the inertial orbits
+agree in the two presentations. The central determinant gives
+the same last Frobenius coefficient in the cyclic basis, which
+identifies the two induced parameters.
+For a general irreducible based on these cuspidals, use the unique multisegment of its Langlands quotient. For segment lengths \(s_i\) and cuspidal parameters \(W_i\) the contribution is
+\[
+ \bigoplus_i\bigl(W_i\otimes\operatorname{Sp}(s_i)\bigr)\otimes|\cdot|^{u_i},
+\]
+where \(u_i\) is the central exponent of the segment in the chosen normalization. The multisegment classification ensures independence of their order. \cite[\S9]{zelevinsky} This preserves the
+dimension and determines the monodromy lengths.
+
+\proofstep{Auxiliary parameters on the remaining cuspidals.}
+
+For the remaining cuspidals of dimension
+\(n\ge2\), choose auxiliary parameters as follows. Over the unramified extension
+of degree \(n\), the first principal unit quotient gives
+the additive group of its residue field. Write \(k_v\) for the residue field of \(E_v\),
+and \(k_n/k_v\) for the degree-\(n\) extension. Choose \(b\in k_n\)
+of degree \(n\) and use the additive character
+\[
+    x\longmapsto
+       \exp(2\pi i\,\operatorname{Tr}_{k_n/\mathbf F_p}(bx)/p)
+\]
+on the first principal unit quotient. Identify \(\mathbf F_p\)
+with residues in the exponent.
+
+To extend this character to the multiplicative group, write \(F_n/E_v\) for the unramified extension, \(\varpi\) for a uniformizer in \(E_v\), and \(U_n^i=1+\varpi^i\mathcal O_{F_n}\). Reduction and Teichm\"uller lifts give
+\[
+ F_n^\times/U_n^2
+   =\varpi^{\mathbb Z}\times [k_n^\times]\times (U_n^1/U_n^2),
+ \qquad 1+\varpi x\longmapsto\bar x\quad\text{on }U_n^1/U_n^2.
+\]
+
+Extend trivially across the first two factors. Local reciprocity then gives the inducing character of the Weil group. Write \(q_v=|k_v|\) and \(\lambda_c(x)=\exp(2\pi i\operatorname{Tr}(cx)/p)\).
+Nondegeneracy of the trace pairing and the degree of \(b\) give
+\[
+ \lambda_{b^{q_v^i}}=\lambda_{b^{q_v^j}}
+ \quad\Longleftrightarrow\quad b^{q_v^i}=b^{q_v^j}
+ \quad\Longleftrightarrow\quad i\equiv j\pmod n .
+\]
+The inducing character thus gives \(n\) distinct inertia lines. Every invariant subspace for inertia
+is a sum of these lines, and Frobenius permutes them transitively,
+so the induced parameter is irreducible. By local reciprocity their
+restriction to wild inertia has a nonscalar element, since
+the additive quotient is a \(p\)-group and the tame quotient
+has prime-to-\(p\) finite quotients. 
+
+For a cuspidal \(\tau\) of rank \(n\), write \(W_0\) for this induction. In the convention \(|\varpi|_v=q_v^{-1}\) there is a unique \(t\in\mathbb R\) such that
+\[
+ q_v^{-nt}|\det W_0(\operatorname{Art}_v(\varpi))|
+       =|\omega_\tau(\varpi)|.
+\]
+Use \(W_0\otimes |\cdot|^t\). Twisting \(\tau\) by \(|\det|^u\) changes \(t\) to \(t+u\), leaving its wild inertia action unchanged.
+
+It remains to check that this auxiliary choice cannot obscure the parameters on the specified class. On a character, or on a twist of a depth-zero cuspidal, wild inertia acts by scalars on the irreducible Weil factor. For the auxiliary induction it acts by at least two distinct characters. The uniqueness of the decomposition of a Frobenius-semisimple parameter into indecomposable summands therefore separates the two cases:
+\[
+ W\otimes\operatorname{Sp}(s)\simeq W'\otimes\operatorname{Sp}(s')
+       \ \Longrightarrow\ s=s',\quad W\simeq W'.
+\]
+Indeed \(s\) is the common Jordan block length and the action on the kernel of monodromy recovers \(W\) up to the prescribed norm twist. When every constituent belongs to the specified class, the construction coincides with the ordinary local correspondence by the depth-zero formula and compatibility with twists and segments. Injectivity there follows from the local Langlands bijection. This proves the separation property used below. \cite{henniart-local,adrian-roe,zelevinsky}
+
+\end{proof}
+
+\subsection{Agreement for every admissible map}
+
+It remains to see why the later local calculations do not depend on a choice among
+parameter maps satisfying the comparison properties. We call a local parameter map \(R\) admissible when it preserves
+dimension, satisfies the rank-one Artin formula, assigns
+irreducible parameters to cuspidals, and extends by the segment
+rule above. It respects real norm twists and gives the absolute
+value of the central character as the absolute determinant
+under reciprocity.
+
+On representations whose cuspidal support consists of
+characters and, at rational completions, twists of depth-zero
+cuspidals, it also respects smooth twists and contragredients and gives
+\[
+        \det R(\sigma)\circ\operatorname{Art}_v
+            =\omega_\sigma ,
+\]
+where \(\omega_\sigma\) is the central character in the fixed
+reciprocity convention. It gives tame parameters on this class
+when there are first congruence invariants. If one representation belongs to this class,
+equality of its parameter with that of any irreducible
+implies equality of the representations. At a rational completion, if the restriction to
+\(\mathrm{GL}_n(\mathbb Z_p)\) contains the inflation of the
+regular finite cuspidal type, the parameter satisfies the
+zero-monodromy and inertia-polynomial conditions of Proposition~\ref{prop:prescribed-local-cuspidal-types}.
+
+For the inertia formula use reciprocity on the unramified extension that realizes the residue character. The determinant identity, the separation of cuspidal parameters by wild inertia and the segment construction in Proposition~\ref{prop:prescribed-local-cuspidal-types} exhibit such a map. On the specified class contragredients and smooth twists agree with those of the ordinary correspondence. \cite{henniart-local,adrian-roe}
+
+\begin{proposition}[Agreement in the two local comparison ranges]
+Let \(R\) be an admissible map. If \(R(\sigma)\) has zero monodromy
+and is a sum of lines, the rank-one Artin formula and the segment
+rule determine it. At a rational split completion, if \(R(\sigma)\)
+is tame with zero monodromy, the cuspidal support of \(\sigma\)
+consists of characters and depth-zero cuspidals. In each of these two ranges, writing \(\operatorname{rec}_{\rm norm}\) for the usual normalized correspondence, 
+\[
+ R(\sigma)\simeq\operatorname{rec}_{\rm norm}(\sigma).
+\]
+
+\end{proposition}
+
+\begin{proof}
+\proofstep{Singleton segments and toral parameters.}
+
+The global comparison is required for every admissible map.
+Let \(R\) be one such map. The special parameter of a segment with cuspidal
+parameter \(W\) and length \(s\) has \(\dim W\) monodromy
+blocks of size \(s\). Thus in the toral comparison
+\[
+ N_{R(\sigma)}=0\ \Longrightarrow\ s=1\text{ on each segment},
+ \qquad R(\sigma)\text{ a sum of lines}\ \Longrightarrow\ \dim W=1.
+\]
+The dimension law and rank-one Artin formula then determine the parameter.
+
+\proofstep{Count tame cuspidal parameters of fixed determinant.}
+
+At a rational split completion, suppose instead that
+\(R(\sigma)\) is tame with zero monodromy. We first show
+that an irreducible rank-\(r\) cuspidal \(\tau\) with tame
+\(R(\tau)\) has depth zero. Fix a lift of Frobenius and
+write \(b\ne0\) for its determinant on \(R(\tau)\).
+In a tame irreducible Weil representation the inertia
+characters form one Frobenius orbit. Each occurs once:
+on one inertia eigenspace choose an eigenvector for the
+Frobenius power that stabilizes it, and take the span of its
+Frobenius translates. Irreducibility makes this span the
+entire space. Thus the orbit has length \(r\) and is
+labelled by a regular character of
+\(\mathbf F_{p^r}^{\times}\), up to Frobenius.
+
+In a cyclic basis the determinant calculation above gives
+\[
+      \det(XI-F)=X^r-\gamma,\qquad \gamma=(-1)^{r-1}b .
+\] For each regular orbit, the
+diagonal inertia action together with this cyclic Frobenius
+matrix defines an irreducible tame parameter. Two such
+parameters are isomorphic exactly when the inertia orbits
+coincide, since rotating a cyclic basis keeps the same last
+coefficient. This gives the claimed bijection at fixed \(b\).
+
+\proofstep{Use admissible injectivity on the specified class.}
+
+For each label there is a distinct depth-zero cuspidal
+type, and compact induction with the indicated central
+value gives a depth-zero cuspidal with central character
+of value \(b\) at the image of the chosen Frobenius.
+Let \(\mathcal D_b\) be the resulting depth-zero cuspidals
+with determinant value \(b\), and \(\mathcal W_b\) the tame
+irreducible parameters with that value. Their two constructions
+use the same finite set of regular Frobenius orbits. The depth,
+dimension and central character laws give
+\[
+          R:\mathcal D_b\lhook\joinrel\longrightarrow\mathcal W_b,
+          \qquad |\mathcal D_b|=|\mathcal W_b|.
+\]
+The arrow is injective by the admissible injectivity law.
+It is therefore onto.
+
+Since \(R(\tau)\in\mathcal W_b\),
+the same law, now with the other representation in
+\(\mathcal D_b\), gives \(\tau\in\mathcal D_b\). Applying
+this to each singleton segment puts the entire support of
+\(\sigma\) in the specified class. On each of these cuspidals
+the finite type law gives the inertia orbit and the central
+character law fixes the Frobenius determinant. Hence the
+parameter of \(\sigma\) agrees with the usual normalized
+correspondence. This argument applies in particular when the
+tame inertia polynomial is squarefree, as required by the
+global row. The spherical condition above \(\ell\) is a
+condition on the smooth local representation itself.
+\hfill\mbox{\cite{adrian-roe}}\label{cor:cohomology-local-global-1}
+
+\end{proof}
+
+\begin{construction}
+\begin{tabular}{@{}ll@{}}\toprule
+Restriction on \(R(\sigma)\) & Consequence for cuspidal support\\\midrule
+\(N=0\) & every segment has length one\\
+\(N=0\), sum of lines & every cuspidal has rank one\\
+\(N=0\), tame, at a rational split place &
+characters and depth-zero cuspidals\\\bottomrule
+\end{tabular}
+\caption{The two local comparison ranges. The segment rule detects monodromy block sizes. For a tame irreducible factor the Frobenius orbit of its inertia character identifies its depth-zero type.}\label{fig:two-local-comparison-ranges}
+\end{construction}
+
+\begin{paramdefinition}[Local comparisons required of a single representation]\label{hyp:local-global-ranges}
+Let \((\pi,\chi)\) be a regular algebraic, polarized cuspidal
+pair of degree \(n\) over \(E\), and fix a prime \(\ell\) and
+an identification \(\iota:\overline{\Q}_\ell\simeq\C\).
+For a continuous semisimple representation
+\(r\) of dimension \(n\), define the following comparison with the normalized local parameters \(W_v\) of \(\pi_v\). Away from \(\ell\) require equality of dimensions, and in
+the zero-monodromy toral case compare the full parameter after
+Frobenius semisimplification. The second comparison concerns
+squarefree tame inertia:
+\[
+  E_v=\Q_p,\qquad p>16n^2\ \text{if }n>1,
+  \qquad
+  \det(1-X\operatorname{WD}(r|_{G_{E_v}})(i))
+     =\det(1-XW_v(i))\quad(i\in I_v),
+\]
+with zero monodromy. Above \(\ell\), a spherical local
+representation requires crystallinity and the prescribed
+Hodge--Tate weights. The same toral and tame cases above \(\ell\)
+require potential semistability, the Hodge--Tate weights
+and the indicated Weil--Deligne comparisons. The comparison holds for \(r\) if these conditions hold at every place in the indicated ranges.
+\end{paramdefinition}
+
+The agreement just proved transfers the comparisons
+for the usual correspondence to every admissible map at
+the places where these comparisons are requested.
+
+\begin{proposition}[Simultaneous Galois attachment]\label{prop:simultaneous-local-global-attachment}
+For any pair and coefficient prime in
+Definition~\ref{hyp:local-global-ranges}, there exists one continuous semisimple representation 
+\[
+ r:G_E\longrightarrow\mathrm{GL}_n(\overline{\mathbb Q}_\ell)
+\]
+ with the prescribed Hodge--Tate and crystallinity properties. For every admissible local map, this same representation satisfies the stated Weil--Deligne comparison at every place in its range.
+\end{proposition}
+
+\begin{proof}
+\proofstep{The usual correspondence and the algebraic weights.}
+
+Barnet-Lamb, Gee, Geraghty and Taylor give the representation
+with the prescribed Hodge--Tate weights and compare its
+Frobenius-semisimplified parameter away from
+\(\ell\) with
+\[
+             \operatorname{rec}(\pi_v\otimes
+                              |\det|_v^{(1-n)/2}).
+\]
+For a highest algebraic weight \((a_{\tau,1},\ldots,a_{\tau,n})\)
+the entries of the infinitesimal character of the dual
+algebraic representation, and the resulting Hodge--Tate
+jumps, are
+\[
+ z_{\tau,j}=-a_{\tau,j}-\frac{n+1-2j}{2},
+ \qquad
+ \frac{n-1}{2}-z_{\tau,j}=a_{\tau,j}+n-j .
+\] Purity at the two conjugate embeddings
+makes their multisets complementary with respect to the
+purity weight. Their Theorem~2.1.1 gives de Rhamness and
+crystallinity at spherical places over \(\ell\).
+\hfill\mbox{\cite{blggt}}
+
+\proofstep{Potential semistability and the monodromy partition.}
+
+At other places over \(\ell\) the de Rham representation is
+potentially semistable by the \(p\)-adic monodromy theorem.
+Theorem~1.1 of the local-global compatibility theorem gives
+the semisimple Weil action and bounds the monodromy
+partition by that of the normalized local parameter in
+each inertial class. In a nonempty inertial class, let \(\lambda_1\) be the largest
+actual Jordan block and \(\mu_1\) the largest block of the bounding
+parameter. The first dominance inequality gives
+\[
+    \lambda_1\le\mu_1=1
+      \qquad\text{if the bounding monodromy vanishes}.
+\]
+Thus every block has size one, and monodromy is zero. Therefore in the toral and
+tame situations just described the comparison gives the
+required zero monodromy even at a regular weight with no
+additional regularity condition. The rank-one case also
+follows from the Galois character associated to the
+algebraic Hecke character by global reciprocity.
+\hfill\mbox{\cite{blggt-lg}}
+
+\end{proof}
+
+This identifies the local Galois data that enter the cohomology calculation.
+Uniformity as the level, weights and rank vary will come from the length estimates
+there.

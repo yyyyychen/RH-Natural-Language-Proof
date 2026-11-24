@@ -1,0 +1,150 @@
+\paragraph{Reduction of the marked Wach lattices.}
+\label{par:residue-wach-realization}
+Use the field, coefficient extension and reduced cyclotomic
+realization of Section~\ref{subsec:cut-wach-models} with
+\(p=\ell\), \(u=1+p\), and \(X\) the reduction of the integral
+parameter \(X_0=-Z\). The residue field is \(k'\).
+All crystalline and residual factors use the terminal Hodge
+labels of that section.
+The residual parameter actions, with Frobenius from the preceding letter, are
+\[
+ \varphi(X)=X^p,\qquad \gamma(X)\equiv X-X^2\pmod{X^3}.
+\]
+
+
+The first scalar character \(\chi_1\) has jump \(w_i\);
+the scalar characters are \(\chi_c=\chi_1\epsilon^{1-c}\)
+for \(1\le c\le t\), with \(\epsilon\) the cyclotomic character.
+A full representation is crystalline with the labeled jumps
+of the marked rank block together with those of the scalar
+characters. Its residual characteristic polynomials agree with
+those of that direct sum on the Galois group.
+
+For a stable lattice
+in such a full sum, take the Wach lattice after twisting by
+\(\chi_1^{-1}\). With \(U_i\) the multiset of rank-block jumps before the twist, the full twisted multiset is
+\[
+ B_i=(U_i-w_i)\sqcup\{0,\ldots,t-1\}.
+\]
+Both parts retain their multiplicities. The separate rank and line lattices
+are treated by the same twist. Their labeled height bounds,
+after reduction by the coefficient uniformizer, give
+\[
+      X^{w_i^*}N_i\ \subset\ \Phi_i N_{i-1}
+                    \ \subset\ X^{-w_i}N_i,
+              \qquad (\gamma_i-1)N_i\subset XN_i .
+\]
+Here \(N_i\) is the reduction of the tame-invariant Wach lattice
+inside the residual 'etale module on the corresponding letter.
+A scalar line of sole jump \(e\) has Frobenius ideal \(X^e\).
+For the trivial quotient line the invariant basis is \(1\).
+\cite{berger-wach}\label{cor:residue-wach-realization-1}
+
+\paragraph{The polynomial on a high-end letter.}
+\begin{lemma}[Simple zero factor on a high-end letter]
+\label{lem:residue-high-end-polynomial}
+For the upper-end letter and \(s=w_i^*+1\), write \(D\) for the divided action on \(N_i/X^sN_i\). For \(P\) as in the proof the minimal polynomial satisfies
+\[
+ m_D(T)\mid TP(T),\qquad P(0)\ne0,\qquad \ker(D^j)=\ker(D)\quad(j\ge1).
+\] Modulo \(X\)
+the characteristic polynomial still records every jump residue
+with its multiplicity.
+\end{lemma}
+
+\begin{proof}
+In the integral tame parameter \(X_0\), with reduction \(X\),
+put \(q=X_0+p\) and \(\nu=(\gamma-1)/X_0\). This is
+\(O'\)-linear and preserves the invariant Wach lattice, since
+\(X_0\) generates the invariant augmentation ideal and the
+action is trivial on constants. For \(s\ge1\) define
+\[
+ I_s=\{a-b:\ 0\le a<s,\ b\in B_i\},\qquad
+ d(m)=\frac{1-(1+p)^m}{p}\in\mathbb Z_p .
+\]
+On the characteristic-zero quotient by \(q^s\), the operator
+is killed by
+\[
+ \prod_{m\in I_s}(T-d(m)),
+\]
+using each distinct
+integer once. At the primitive level choose crystalline directions
+adapted to the filtration. In a direction of jump \(b\) the
+quotient has Laurent degrees \(-b,\ldots,s-1-b\) in the
+local logarithmic parameter. The scalar substitution multiplies
+this parameter by \(1+p\), and \(X_0=-p\) at the root.
+
+In a direction of jump \(b\) the triangular operator \(T\) has distinct diagonal entries \(d(a-b)\), hence
+\[
+ \prod_{a=0}^{s-1}\big(T-d(a-b)\big)=0
+ \quad\text{on this direction}.
+\]
+The product over the union of the eigenvalues thus kills every direction, including repeated jumps.
+This is the finite-level filtration comparison of
+Paragraph~\ref{par:wach-level-models}. The quotient of the
+free invariant Wach lattice by \(q^s\) is free over \(O'\)
+by monic division. The polynomial identity therefore holds
+integrally. For \(s=1\) the characteristic polynomial has each
+\(d(-b)\) with its multiplicity in \(B_i\), by the same
+calculation and injectivity on coefficients.
+\label{cor:residue-wach-realization-2}
+
+Reduction gives \(q=X\), \(\bar d(m)=-m\), and operator
+\[
+ \nabla=(\gamma_i-1)/X.
+\]
+For negative \(m\) the congruence
+for \(d(m)\) follows by inverting \((1+p)^{-m}\) modulo \(p^2\)
+before division. The characteristic polynomial modulo \(X\)
+therefore counts the residues of \(B_i\) with multiplicity.
+At the upper end take \(s=w_i^*+1\). If \(0\le a<s\) and
+\(a\equiv b\bmod p\), then \(a=b\). For a scalar or central
+jump, writing \(b=u-w_i\), both \(u\) and \(w_i+a\) are in
+the interval of width \(\eta'_i\) next to \(h_i\), including
+the endpoint \(h_i\) for the latter.
+
+For an outer jump the
+congruence would give \(h_i-u\equiv w_i^*-a\bmod p\) in the
+forbidden end window. It follows that
+\[
+   P(T)=\prod_{m\in I_s\setminus\{0\}}(T+m)\in k'[T],
+   \qquad P(0)\ne0,\qquad
+   \nabla P(\nabla)N_i\subset X^sN_i .
+\]
+If zero is absent from \(I_s\), \(P(\nabla)\) already has
+image in \(X^sN_i\); applying \(\nabla\) gives the
+displayed identity since the divided action preserves that
+lattice. In the finite quotient, \(P(\nabla)\) is invertible
+on the generalized zero space, since \(P(0)\ne0\). Thus
+\(\nabla P(\nabla)=0\) there forces \(\nabla=0\). Using
+the characteristic polynomial with all multiplicities would
+lose this conclusion. \label{cor:residue-wach-realization-3}
+\end{proof}
+
+Finally an admissible residual representation is a quotient
+of the reduction of its presenting full lattice. Its presenting
+map is onto and kills \(\lambda T\), and untwisting preserves
+that map. More generally take the intersection with a vector
+subspace for a subrepresentation and the image for a quotient.
+The intersection lattice is saturated. In a basis adapted to it,
+Frobenius base change is exact, since the series ring is free
+over its Frobenius image on \(1,X,\ldots,X^{p-1}\). Intersecting
+the height inclusions or taking images gives both inclusions
+for the induced lattices. The divided cyclotomic differences
+intertwine the maps, so their polynomials restrict and descend:
+for a stable vector subspace \(W\) one has
+\[
+ (X^sN_i)\cap W=X^s(N_i\cap W).
+\]
+The induced lattice sequence stays
+exact modulo \(X\). The integral Wach intersection gives the
+direct sum for a sum of lattices.
+
+For the standard reference
+use the split sum of the chosen rank lattice and the character
+lines. Its reductions give the required models on those
+summands, with their original labels. The prescribed residual
+characteristic polynomials fix the composition factors of
+each full sum, and untwisting multiplies them all by the
+same character. This supplies the models used below with
+their two heights, polynomials and target Sen counts.
+\label{cor:residue-wach-realization-4}

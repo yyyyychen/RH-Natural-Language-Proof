@@ -1,0 +1,237 @@
+\paragraph{Weight of paths at the segment cutoffs.}
+\label{par:plane-typical}
+\begin{lemma}[Weight of the paths obeying the cutoffs]
+\label{lem:good-plane-path-count}
+For segment \(j\) of Definition~\ref{hyp:coarsened-plane-frames}, let \(\mathcal T_j\) be the paths satisfying the degree cutoffs, with a choice of standard terminal tableau for the complement weight \(\kappa\). With \(D_k(b)=\binom{b+k-1}{k-1}\), their number satisfies
+\begin{equation}\label{eq:plane-good-path-count}
+ |\mathcal T_j|\ \ge\ (1-a^{-N_s^2})
+    \prod_{x\text{ between frames}}D_k(n_x)
+    \prod_{x\text{ incoming}}D_k(W_{j,x}-m_0).
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+We prove this at the simultaneous cutoffs above. Let \(m\le N_s\)
+be the number of letters in the segment and number the first
+\(m-r\) steps before the outgoing frame. Use the hypotheses
+\(k,\mathcal L\ge1088N_s^2\log a\). From the degree-loss bound
+\(E'_x+E_x\le5b_x/(kY)\) we have \(a'_x\ge9b_x/10\).
+For either kind of pre-outgoing row,
+\[
+ \frac{4a}{5P_{j,x}}\le B_x\le\frac{2a}{P_{j,x}},\qquad B_x\ge k.
+\]
+In fact the floor and padding lose at most
+\[
+ 4kN_s\le b_x/(10P_{j,x}),
+\]
+
+since \(b_x/P_{j,x}\ge8Yk^2N_s\). Thus degrees of successive
+rows of the same parity grow by at least
+\[
+ \rho=p^2/5>13.
+\]
+
+For any letter \(x\), each preceding pre-outgoing degree is at
+most \(4\beta_x/p\), where \(\beta_x=a/P_{j,x}\), by strict
+increase of the top positions.
+
+First count all paths with the outgoing head conditions,
+weighted by the number of tableaux of the terminal complement.
+Before the outgoing frame the signed Pieri rules decompose the
+tensor product of the indicated symmetric powers of the standard
+module and its dual. Each path to a weight \(\lambda\) has weight
+\(\dim V_\lambda\). After \(t\) outgoing steps remove the first \(t\)
+entries, all equal to \(S\), and call the remaining row list the
+tail.
+
+At the next step its old and new tails \(\eta,\eta'\) obey
+\[
+ \eta_i\ge\eta'_i\ge\eta_{i+1}.
+\]
+Conversely every such
+interlacing tail reinstates a vector strip on inserting the
+extra head equal to \(S\), because all entries were at most
+\(S\). Thus at the outgoing steps the ordinary branching rule
+from \(\mathrm{GL}_{k-t}\) to \(\mathrm{GL}_{k-t-1}\) preserves the
+total weight. These multiplicity-one rules and the Weyl dimension
+formula apply to rational weights by a determinant twist and
+duality. \cite{fulton-harris}
+The last tail is the complement, whose tableau count is its
+Weyl dimension. The total count before imposing the good path
+inequalities is exactly
+\[
+ R=\prod_{x\text{ pre-outgoing}}D_k(B_x).
+\]
+
+
+\proofstep{The constraints on a path and its two signs.}
+For a given path and sign \(\epsilon\in\{+,-\}\), let
+\(\alpha^\epsilon\) be the nonincreasing list of positive parts
+or of absolute negative parts of its tail. Up to the outgoing
+frame the tail is the full list of \(k\) rows. Let \(\mathcal B^\epsilon\)
+be the list of previously used pre-outgoing degrees of the
+corresponding sign, with vectors positive and covectors negative.
+For every \(T\ge0\) put
+\[
+ \delta_\epsilon(T)=\sum_{B\in\mathcal B^\epsilon}\min(B,T)
+                    -\sum_h\min(\alpha^\epsilon_h,T).
+\]
+Each of these deficits starts at zero and is nondecreasing along
+the path.
+
+At a pre-outgoing step of the corresponding sign let
+\(b\) be the strip size and \(\alpha,\alpha'\) the old and
+new lists for this sign. Monotonicity and interlacing give
+\[
+ 0\le\sum_h\bigl(\min(\alpha'_h,T)-\min(\alpha_h,T)\bigr)
+           \le \min(b,T).
+\]
+The \(b\) bound sums the coordinate increments. For the
+\(T\) bound use \(\alpha'_{h+1}\le\alpha_h\) and telescope. At a step of the opposite sign the
+second sum can only decrease. During the outgoing frame both
+lists of parts decrease entry by entry by the tail interlacing,
+and the reference lists stay fixed.
+
+Write
+\[
+ \Xi_x=\mathcal L\beta_x/(pk).
+\]
+We bound the weight of
+paths violating any of the following conditions at a late top
+\(x\): a covector decreases positive mass by at most \(\Xi_x\),
+a vector decreases negative mass by at most \(\Xi_x\), and the
+last plane entry before either step is at least \(2B_u/3\).
+Here \(u\) is the earliest of the preceding \(r\) vectors, which
+is before the outgoing frame. These conditions imply the good
+path inequalities. At a covector all plane entries are
+nonnegative, and the complement's positive mass cannot
+increase, so the plane loss is at most the positive mass loss.
+
+For a complement weight \(\kappa\), denote the positive and negative masses by \(m^+=\sum_i(\kappa_i)_+\) and \(m^-=\sum_i(-\kappa_i)_+\). At a vector step the change in the sum of the entries is 
+\[
+ \Delta\!\sum_i\kappa_i=\Delta m^+-\Delta m^-,
+\]
+ the positive mass gain plus the negative mass loss. Interlacing bounds its
+positive mass gain by the last plane entry before the step.
+Reading that entry backwards through the last \(r-1\) vector
+steps bounds it by the first entry just after \(u\). Geometric growth of the vector degrees gives
+\[
+ \text{first entry just after }u\ \le\!\sum_{x\le u,\ x\text{ a vector}} B_x\le 2B_u.
+\]
+Using the bound
+\[
+ 2B_u\le4a/P_{j,u},
+\]
+the complement
+gain is at most
+\[
+       \text{negative mass loss}+2B_u
+                      \le \Xi_x+4a/P_{j,u}.
+\]
+
+\proofstep{The loss from the mass test.}
+For a violation of the mass condition let \(U\) be the sum
+of preceding degrees of the opposite sign. If there is any
+mass of that sign, at least one such pre-outgoing degree has
+appeared. Its largest degree is at least \(k\) and at most
+\(4\beta_x/p\). The geometric sum gives
+\[
+ U\le5\beta_x/p.
+\]
+
+The total mass of the sign before this step is at most \(U\)
+by the deficit inequality at \(T\ge S\). Hence for \(T\ge U\)
+the deficit of that sign grows by more than \(\Xi_x\). This
+includes negative mass losses at outgoing steps, since removing
+an entry equal to \(S\) preserves the negative mass.
+
+\proofstep{The loss from the last-entry test.}
+For a violation of the last-plane-entry condition, put \(B=B_u\).
+If \(t\) outgoing steps have passed at this cut, \(u\) is the
+oldest of the
+\[
+ h=r-t
+\]
+most recent pre-outgoing vectors.
+The sum of positive rows after the first \(h\) in the tail is
+at most the sum of all vector degrees strictly before \(u\).
+At each of those \(h\) vector additions, interlacing bounds the
+positive sum below row \(i+1\) after the addition by the sum
+below row \(i\) just before. Covectors and the later outgoing
+trims can only decrease these sums. Thus the positive sum after
+row \(h\) is at most \(B/(\rho-1)\). Row \(h\) has positive part
+less than \(2B/3\).
+
+For
+\[
+ B\le T\le13B,
+\]
+the \(h\) latest pre-outgoing
+vectors contribute at least \((h-1)T+B\) to the reference sum.
+In the clipped tail, the first \(h-1\) rows contribute at
+most \((h-1)T\), row \(h\) at most \(2B/3\), and the rest at
+most \(B/(\rho-1)\). Subtracting gives
+\[
+ \delta_+(T)\ge \big((h-1)T+B\big)
+                 -\big((h-1)T+2B/3+B/(\rho-1)\big)\ge B/4
+\]
+by the stipulated growth of the vector degrees.
+
+\proofstep{Converting exceptional events into lost weight.}
+To convert these deficits into a weight loss, set
+\(J_k(T)=\sum_{l=1}^{k-1}(T+l)^{-2}\). For \(b\ge0\),
+\[
+ \log D_k(b)=\int_0^\infty\min(b,T)J_k(T)\,dT,
+\]
+where the left side for real \(b\) denotes the logarithm of the
+binomial product. The equality follows by integrating each
+\((T+l)^{-2}\) separately.
+
+At the terminal complement weight
+\(\lambda\) in dimension \(K\), the positive and negative lists
+bound its dimension by
+\[
+ \dim V_\lambda\le\prod_h D_k(\alpha_h^+)D_k(\alpha_h^-).
+\]
+Indeed each Weyl factor is bounded by
+\[
+ 1+\frac{\lambda_i-\lambda_j}{j-i}
+ \le\left(1+\frac{\max(\lambda_i,0)}{j-i}\right)
+     \left(1+\frac{\max(-\lambda_j,0)}{j-i}\right).
+\]
+Multiplying gives the bound with \(D_K\), which is at most
+\(D_k\) for each nonnegative argument. Therefore
+\(\log(R/\dim V_\lambda)\) is at least the integral of
+\((\delta_++\delta_-)J_k\) at the last cut. If the mass bound
+fails, this integral is at least
+\[
+ \Xi_x\sum_{l=1}^{k-1}\frac1{U+l}
+ \ge \frac{\mathcal L(k-1)}{9k}\ge\frac{\mathcal L}{16},
+\]
+using \(k\le4\beta_x/p\). If the plane cutoff fails, it is at
+least
+\[
+ \frac B4\sum_{l=1}^{k-1}
+     \left(\frac1{B+l}-\frac1{13B+l}\right)
+ \ge\frac{11(k-1)}{104}\ge\frac{k}{16}.
+\]
+Here \(B\ge k\), and both estimates are independent of the
+remaining path and its strip degrees.
+
+At each cut the two lists of nonzero parts have lengths at
+most \(m\), since each pre-outgoing strip introduces at most
+one new part of its sign. The outgoing interlacing keeps that
+bound after removing the heads. Each part is an integer in
+\([0,S]\). The lists padded to length \(m\), and the time of
+the cut, determine the whole shape. There are at most
+\((1+S)^{2m^2}\) shape paths because the zero start is fixed.
+Thus the exceptional weight is at most
+\[
+ R\exp\bigl(2m^2\log(1+2aN_s)-\min(k,\mathcal L)/16\bigr)
+ \le R a^{-N_s^2}.
+\]
+The last inequality uses \(1+2aN_s\le a^2\), supplied by
+\eqref{eq:plane-count-size}, and the bounds on \(k,\mathcal L\).
+This proves \eqref{eq:plane-good-path-count} for each choice
+of intervening digits with the same constants.
+\end{proof}

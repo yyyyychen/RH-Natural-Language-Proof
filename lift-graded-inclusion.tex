@@ -1,0 +1,100 @@
+\paragraph{The localized tensor inclusion.}
+For each embedding \(\tau\), let \(V_\tau=\nabla(\lambda_\tau)\)
+be the dual Weyl module of highest weight \(\lambda_\tau\) over \(O\).
+Write \(B_\tau=\Delta(\lambda_\tau)\subset V_\tau\) for its Weyl lattice.
+Write \(V=\bigotimes_\tau V_\tau\).
+
+\input{lift-pieri-cost}
+
+\begin{lemma}[Descent from projected Weyl values]
+\label{lem:localized-projected-weyl-values}
+With the integral weights of the tensor \(\bigotimes_\tau
+\nabla(\lambda_\tau)\), use the projected inclusions of
+Lemmas~\ref{lem:rectangular-pieri-denominator}
+and~\ref{lem:selected-pieri-depth}. The Weyl inclusion on the actual forms at
+a selected residual ideal is obtained by clearing each factor
+by its full exponent, or by the smaller allowable depth cost
+at a larger-weight factor. Write \(d_\tau\) for the charge so chosen at each label, \(V\) for the unrestricted tensor lattice and \(D_\varnothing\) for the lattice using the Weyl factor at every label. After passing to the forms at the selected residual ideal \(\mathfrak m\), the inclusion is
+\[
+ p^{\sum_\tau d_\tau}\,\mathcal F(V)_{\mathfrak m}
+ \subseteq \mathcal F(D_\varnothing)_{\mathfrak m},
+\]
+where \(\mathcal F(L)\) denotes the module of forms with values in \(L\).
+\end{lemma}
+
+\begin{proof}
+For a set \(S\) of
+unrestricted labels, let \(D_S\) be the image of the tensor
+using \(V_\tau\) on \(S\) and \(B_\tau\) elsewhere. Each
+\(D_S\) is stable under the coefficient algebra and its forms
+are stable under the Hecke translations. The exact exponents
+\(e_\tau\) give \(p^{\sum e_\tau}V\subset D_\varnothing\)
+by multiplication on pure tensors. Thus \(V/D_\varnothing\)
+has finite length. Every simple factor of a subquotient of
+this quotient occurs in the reduction of \(V\) modulo the
+uniformizer \(\varpi\). Indeed, multiplication by a power of \(\varpi\) gives the surjection onto each successive quotient:
+\[
+ V/\varpi V\ \twoheadrightarrow\ \varpi^a V/\varpi^{a+1}V,\qquad [v]\longmapsto[\varpi^a v]\quad(a\ge0).
+\]
+
+Write \(P_{\tau,w}\) for the integral weight projector,
+\(i_\tau\) for the depth allowance and \(c_\tau\) for the
+integral bounded-depth cost just obtained. For
+\(a\notin S\), set \(D=D_S\) and \(D'=D_{S\cup\{a\}}\).
+If the full exponent is used at \(a\), then
+\(p^{e_a}D'\subset D\) on pure tensors. At an index with a larger weight
+where \(c_a<e_a\), form the actual intermediate lattice
+\[
+                          E=D+p^{c_a}D'.
+\]
+For any weight \(w\) at depth at most \(i_a\) we have
+\(p^{c_a}P_{a,w}V_a\subset B_a\). Applying that projector
+in just factor \(a\) shows \(P_{a,w} E\subset D\).
+
+In a simple factor \(L\) of \(E/D\), the projector at its
+highest weight \(\mu_a\) has nonzero image. This follows
+from the highest-weight line in the coefficient classification.
+If the highest weight had depth at most \(i_a\), the integral inclusion would give
+\[
+ P_{a,\mu_a}E\subseteq D\quad\Longrightarrow\quad P_{a,\mu_a}(E/D)=0,
+\]
+contradicting the nonzero image on \(L\). Thus all simple factors here have
+excess depth. By the preceding crystalline estimate their
+localized forms vanish. This argument requires stability of
+the intermediate lattices and the integral action of the
+projector on the full tensor.
+
+Take a composition series for \(E/D\). At each successive
+quotient map a form to the form obtained by projecting its
+values to the simple factor. This map is Hecke-equivariant.
+Filter \(E\) by its series \(D=D_0\subset\cdots\subset D_b=E\), and denote the projection at the last step by \(\pi_b\). The vanishing for the simple factor reads
+\[
+ (\pi_b\phi_b)_{\mathfrak m}=0,\qquad \pi_b:D_b\to D_b/D_{b-1}.
+\]
+There is \(s_b\notin\mathfrak m\) killing that image before
+localization, so \(\phi_{b-1}=s_b\phi_b\) takes values in
+\(D_{b-1}\). Composing the successive denominator clearings gives
+\[
+ (s_1\cdots s_b)\phi_b\ \text{with values in }D_0=D .
+\]
+Multiplying these denominators down the series proves the
+localized inclusion of the forms with values in \(E\) into
+those with values in \(D\).
+
+In particular \(p^{c_a}\) moves
+the forms on \(D'\) into the forms on \(D\) after localization.
+Inducting over the unrestricted labels gives
+\[
+ p^{\sum_{a\ {\rm thick}}\min(e_a,c_a)+
+       \sum_{a\ {\rm other}}e_a}
+            M_{\mathfrak m}\ \subset\ (M_{\rm W})_{\mathfrak m}.
+\]
+All denominators used are units in this localization.
+The simple-factor argument works separately at each integral
+joint character over the ideal. The surviving bound is the
+same for every such character in the prime range under
+consideration. This proves the passage from the projected
+coefficient inequalities to the lattice of actual forms.
+\label{cor:lift-graded-inclusion-1}
+\end{proof}
+

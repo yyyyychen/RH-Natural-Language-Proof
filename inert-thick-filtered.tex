@@ -1,0 +1,139 @@
+\paragraph{Filtered comparison at a positive letter.}
+\label{par:thick-filtered-comparison}
+Write \(i\) for an odd letter, \(b=b_i\) and \(A=B_{i-1}\).
+Suppose \(y\in N_{i-2}(T_2)\) has
+\(z=\Phi^2\operatorname{sp}_{i-2}(y)\in\mathrm{Fil}^bD_i\).
+\begin{proposition}[Integral preimage of the positive filtered class]
+In the two-step height and jump range at \(i-2,i-1,i\), put
+\[
+ E'=\left\lfloor\frac{3a+S+2\eta-1}{\ell-1}
+                         +\log_\ell H\right\rfloor .
+\]
+There exists a vector of the source Wach lattice at \(i\) whose
+specialization maps to \(\ell^{E'+\sigma_*+A-b}z\).
+The exponent \(E'\le E_G\) is independent of \(y\).
+\end{proposition}
+\begin{proof}
+
+Use the two-step correction
+of Paragraph~\ref{par:thick-integral-correction} to form
+\[
+ \lambda=\ell^{\sigma_*}\Phi^2 y-
+                      \tau((\gamma-1)y)\in P_{i-2}^{(2)}(T_2).
+\]
+It has cyclotomic defect in \(Xq^{2H}P_{i-2}^{(2)}(T_2)\).
+At a primitive root the span is regular in \(t\) and the
+constant of \(\lambda\) is \(\ell^{\sigma_*}z\).
+The correction has zero constant there because each transported
+positive \(X\)-power vanishes at the root and its division modulo
+\(Xq^{2H}\) preserves this. By the cyclotomic defect all
+positive coefficients below \(2H\) vanish. The correction
+likewise has zero specialization at \(X=0\).
+These conclusions hold for the same integral representative
+at every primitive root.
+
+The signed height at \(i-1\) puts \(p_1^A\lambda\) in
+\(P_{i-1}^{(1)}(T_2)\). Set \(x=q^{-b}p_1^A\lambda\).
+Then
+\[
+ q^{b+\eta}x\in N_i(T_2)
+\]
+by the height at \(i\).
+At a primitive root, the coefficients of \(x\) of degree
+\(k<-b\) vanish. In degrees \(-b\le k<2H-b\) they lie
+in the span of \(z\), hence in \(\mathrm{Fil}^{-k}D_i\).
+The filtration is full for \(k\ge 2H-b\ge\eta\), since
+all jumps at the odd letter are at least \(-\eta\).
+The Hodge lattice test therefore gives \(x\in N_i(T_2)\).
+The same signed height at \(i\) applied to the defect
+gives
+\[
+           p_1^A(\gamma-1)\lambda\in Xq^{a+b}N_i(T_2),
+\]
+because \(2H\ge a+b+\eta\).
+In particular
+\(\operatorname{sp}_i(x)=\ell^{\sigma_*+A-b}z\).
+
+It remains to lift a controlled multiple of \(x\) in the
+integral Wach lattice. Let \(V_q=\gamma(q)/q\),
+\(V_1=\gamma(p_1)/p_1=\phi(V_q)\).
+Then \(V_q\) is one modulo \(X\) and \(\chi(\gamma)\) modulo \(q\).
+The last equality follows by expanding at a primitive root
+in the parameter \(t\) of degree one. Also
+\(V_1\equiv1\pmod{Xq}\) by the formula for \(\phi(X)\).
+The preceding defect equation implies
+\[
+ \gamma x=V_q^{-b}V_1^A x
+                    \pmod{Xq^aN_i(T_2)}.
+\]
+Thus \(\partial x=d x\bmod q^aN_i(T_2)\) with
+\(d=(V_q^{-b}V_1^A-1)/X\) integral and \(d\equiv c_b\bmod q\).
+
+For \(g\in O[[X]]\), \(\gamma(g)\equiv g\bmod q\), and
+the divided operator preserves \(q^aN_i(T_2)\).
+Applying it to \(q^k g x\) shows that
+\[
+    (\partial-c_{b-k})q^k g x
+           \in q^{k+1}O[[X]]x+q^aN_i(T_2)\qquad(0\le k<a).
+\]
+Indeed the multiplier on the surviving degree is
+\(\chi(\gamma)^k c_b+(\chi(\gamma)^k-1)/(-\ell)=c_{b-k}\).
+It follows that \(P_-(\partial)x\in q^aN_i(T_2)\), where
+\(P_-(U)=\prod_{j=b-a+1}^{b}(U-c_j)\).
+The image input of Paragraph~\ref{par:thick-initial-classes}
+gives an integral source preimage of this vector.
+
+For a second filter, first lift \(q^a x\) integrally and divide
+the lift by \(q^a\) in the source \'etale module.
+The resulting vector \(v\in q^{-a}N_i(T_1)\) maps to \(x\).
+The shifted-jump calculation of the first restriction, now
+on the odd source, shows that \(P_+(\partial)v\in N_i(T_1)\),
+where
+\[
+ P_+(U)=\prod_{j\in[b+1,b+S+a]\,\cup\,[1-\eta,\eta+a]}(U-c_j).
+\]
+The two sets of indices for \(P_-\) and \(P_+\) are disjoint
+because \(b\ge 2a+\eta\). This integer inequality follows
+from \(b\ge 2A_0^{\rm real}+\eta+1\) and
+\(a<A_0^{\rm real}+1\), with equality of \(a\) and the
+real bound allowed when the latter is integral.
+
+For a root index \(j\) of \(P_-\), the valuation of
+\(P_+(c_j)P_-'(c_j)\) is the sum of \(v_\ell(j-j')\)
+over the other indices. Indeed, if \(I_-\) and \(I_+\) denote the two index sets, factoring
+the polynomials at the root gives
+\[
+ v_\ell(P_+(c_j)P_-'(c_j))
+ =\sum_{j'\in(I_-\cup I_+)\setminus\{j\}} v_\ell(c_j-c_{j'})
+ =\sum_{j'\in(I_-\cup I_+)\setminus\{j\}} v_\ell(j-j') .
+\]
+The indices in or above the first interval give factorials
+with total weight \(2a+S-1\). In the central interval the
+differences form an interval of length \(a+2\eta\) with
+largest absolute value at most \(H\).
+Thus the valuation is at most
+\[
+           \frac{3a+S+2\eta-1}{\ell-1}+\log_\ell H .
+\]
+Let \(E'\) be the floor of the displayed bound.
+
+For the index set \(J_-\) of \(P_-\) take
+\[
+ B(U)=\sum_{j\in J_-}
+ \frac{\ell^{E'}}{P_+(c_j)P_-'(c_j)}\,\frac{P_-(U)}{U-c_j}.
+\]
+The valuation bound gives \(B\in O[U]\). Since \(P_-\) is monic
+and the numerator vanishes at every \(c_j\), there is \(C\in O[U]\)
+with \(BP_++CP_-=\ell^{E'}\). Choose integral source preimages
+\(v_+,v_-\) of \(P_+(\partial)x,P_-(\partial)x\), respectively,
+as above. Stability under \(\partial\) then gives an integral vector
+\(B(\partial)v_++C(\partial)v_-\). By commutation with \(f\), its
+image is \(\ell^{E'}x\) and its specialization maps to
+\(\ell^{E'+\sigma_*+A-b}z\).
+
+The exponent \(E'\le E_G\) is independent of \(y\)
+and of any choice of an integral splitting. This is the
+filtered estimate used at each odd letter in the two
+even-letter comparisons.
+\label{cor:inert-thick-filtered-1}
+\end{proof}

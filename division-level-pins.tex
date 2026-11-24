@@ -1,0 +1,293 @@
+\subsection{The integral lattices used in the determinant}
+\label{subsec:division-level-pins}
+
+The determinant compares the integral structures at both levels.
+
+Fix the scale, point index and its chosen twist family. Denote
+the division field by \(K\), and use the chosen embedding for
+the complex comparison. Let \(S_0,S_1\) be the data at the
+base and refined levels of this point, respectively. They come from one realization, so both traces act on the same cut in the ambient representation. Each level
+has a separate coefficient lattice \(\Lambda_i\), a Gram
+matrix \(X_{i,v}\) at every infinite place \(v\), and a
+field-linear coordinate isomorphism \(e_i\). The base map
+\(e_0\) takes values in the base row and the refined-level map
+\(e_1\) takes values in the row for the period indexed by the
+sequence. For \(i=0,1\), write \(\Lambda_i^{\mathrm{div}}\)
+for the row lattice in the divisibility calculation.
+
+\begin{proposition}[Level and rank compatibility]\label{prop:division-level-compatibility}
+For the compatible level realizations just fixed,
+\[
+    e_i(\Lambda_i)=\Lambda_i^{\mathrm{div}},\qquad
+    \langle e_i z,e_i z'\rangle_v=\langle z,z'\rangle_{X_{i,v}}.
+\]
+The first equality is over \(\mathcal O_K\) and the metric equality
+holds at every infinite place. The base coordinate rank is
+the dimension \(D_0\) of the base complex period row and equals
+the small-level rank at the base tuple on the specified cut.
+\end{proposition}
+
+\begin{proof}
+\proofstep{The integral and metric identifications.}
+The level character acts by pullback
+through the common form map of
+Section~\ref{par:selected-form-coordinates}. The identities
+come from its inverse image of the integral form lattice
+and the Gram of those same basis forms. Applying the
+inverse coefficient map recovers the integral lattice
+at each level. The metric identity extends from basis
+pairs by sesquilinearity. The cut projector is conjugated
+by this isomorphism, so its range uses the same integral
+intersection under either reading.
+Indeed, for a lattice \(L\), a projector \(P\) and the coordinate isomorphism \(T\),
+\[
+  T(L\cap\operatorname{im}P)=T(L)\cap\operatorname{im}(TPT^{-1}).
+\]
+ These statements use
+the arithmetic form comparison on the selected level,
+together with the isometric period comparison at the
+chosen complex place. The latter alone would allow any
+lattice in the complex span.
+
+\proofstep{The base rank.}
+The map \(e_0\) identifies the
+base coordinate space with the rational base row, and
+its chosen basis becomes a complex basis of the base
+period row by the frame comparison. The dimension of
+the small-level space at the base tuple on the same cut
+therefore equals \(D_0\). The small-level equality across
+lifts is the theta adjoint and multiplicity calculation
+of Section~\ref{subsec:selected-period}. Its rank is the
+dimension before replacing the integral congruence module
+by the cut quotient. In the determinant below, both
+the base-level geometric covolume and the bound that
+divides by \(D_0\) read this same rank. The count of the
+analytic retained row and the ramified column comparison
+use their own projectors and dimensions.
+\label{cor:division-level-pins-1}
+
+\end{proof}
+
+\paragraph{Which tuples occur.}
+
+Which tuples occur?
+
+Let \(W_{\mathrm{tw}}\) be the finite set of twisted places
+of the base level and \(\mu(w)\) the tuple assigned there.
+The finite character construction covers its tuples by
+the base tuple and the images of actual places. The
+level realization identifies this place map with the
+map \(\mu\) used in the base row, under the fixed
+bijection of place indices with the places of \(K\).
+For an occurring tuple equal to the base tuple use that tuple. Otherwise take a used twisted
+place giving the tuple and send this place through the inverse bijection. Under the fixed bijection of places, the two maps give the same tuple.
+
+In particular, with \(t_0\) the base tuple and \(W_{\rm tw}\) the set of used twisted places, every tuple tested in division belongs to
+\[
+  \{t_0\}\cup\{\mu(w):w\in W_{\rm tw}\}.
+\]
+ Therefore the rational span of the lift,
+its theta-map identity, and the point-period identity,
+which are proved on the used tuples, apply to every
+tuple of the division package. In particular, for
+a tuple assigned to two places each place keeps its
+own valuation and its numerator. Only its rational
+period coordinates are shared.
+
+\begin{lemma}[The period on a used tuple]\label{lem:common-division-period}
+For each sequence and used tuple of the division package, write \(P_{\rm ar}\) for the bilinear period in the restricted column and row coordinates and \(P_{\rm an}\) for its analytic realization at the chosen complex embedding \(\sigma\). On corresponding vectors \(v,w\),
+\[
+ \sigma(P_{\rm ar}(v,w))=P_{\rm an}(v_\sigma,w_\sigma).
+\]
+ The comparison between the base and
+sharp levels uses this common period with each level's lattice
+and rank.
+\end{lemma}
+
+\begin{proof}
+Use the restricted column identification and the row map of
+Section~\ref{par:selected-form-coordinates}. In bases \((c_i)\)
+and \((r_a)\) over the coefficient field, the two period
+matrices have the same \((i,a)\)-entry by the equality of the
+basis readings. Write \(B\) and \(B'\) for the two period maps in these coordinates. Their agreement extends to arbitrary column and row vectors by
+\[
+  B\!\left(\sum_i x_i c_i,\sum_a y_a r_a\right)=\sum_{i,a}x_i y_a B(c_i,r_a)=\sum_{i,a}x_i y_a B'(c_i,r_a).
+\]
+ The coefficient field for this
+step is the field of the actual reference kernels.
+
+The word shift and its finite valuations use the
+isomorphism on the unshifted column lattice before
+multiplying by its fractional ideal. Thus one period map for the sequence,
+with that shifted column and the row lattice with the prescribed local conditions,
+occurs both in the period comparison and in the
+Hermitian slope estimate. The level passage compares the
+base and sharp slope using the shared tuple map and the
+same period and block scalars at every infinite place.
+Each slope uses the lattice and rank at its own level.
+\label{cor:division-level-pins-2}
+
+\end{proof}
+
+\paragraph{Transport of the weighted length.}
+For a fixed lift \(j\), write \(\eta_j(w)\) for the
+normalized length appearing in the uncut record and
+\(\eta^{\rm int}_{j,\mu(w)}(w)\) for the integer length in
+the base-lattice calculation. With the above place and
+tuple comparison one has, at \(w\in W_{\mathrm{tw}}\),
+\[
+     \eta^{\rm int}_{j,\mu(w)}(w)=e_w\eta_j(w).
+\]
+Indeed the two coefficient modules agree through the
+form and twist maps, and the definition of the normalized
+length divides by the absolute ramification index of
+that place. Both the finite level condition and the
+coefficient comparison are used here. In particular
+twisted places are in the support and have \(\mu(w)\ne\mu_0\).
+Their nonnegative contribution is bounded by \(H_j\)
+of Section~\ref{subsec:division-length}.
+
+The local numerator calculation uses the marked
+representation at each surviving character and the
+multiplicity of that character on this cut. The comparison
+back to the original module uses the original level
+operator and its order. The positive local length table
+is uniform over the retained character components at a fixed
+point. Its use on the original row needs the separate
+rank and character conditions of Sections
+\ref{subsec:selected-cut} and~\ref{subsec:division-length}.
+On these inputs the bound there gives
+\[
+  \frac{1}{D_0}
+    \sum_{w\in W_{\mathrm{tw}}}\omega_w
+                          \eta^{\rm int}_{j,\mu(w)}(w)
+        \le (|C_N|+1)\,\mathcal E ,
+       \qquad \mathcal E=z(B_0+N_c),\quad z=x^\epsilon .
+\]
+Here \(C_N\) is the constant of the uncut length bound.
+The strict cohomology contributes at most \(\sqrt b\)
+per unit of rank. Extension to a local splitting field
+multiplies unnormalized length and absolute ramification
+by the same factor. The sum over coefficient places
+therefore charges each rational prime at most \(\log\ell\)
+times its normalized bound. This keeps the strict budget
+on the same host and within the same rank cutoff.
+
+The determinant comparison has a further finite cost.
+Let \(d_{j,t}\) be the class denominator of the block at
+lift \(j\) and tuple \(t\), including the level index in the
+class form. Choose its common multiple \(d_*\) over
+all lifts and tuples, and let \(s\) be the value-lattice
+multiplier. The preceding bound for the uncut numerator gives the
+following estimate including the dual-inclusion correction.
+
+\begin{auxlemma}[A common multiple of all stabilizer orders]
+\label{lem:uniform-stabilizer-denominator}
+For every \(d\ge1\) there is an integer \(M(d)\) divisible by the
+order of every finite subgroup of \(\mathrm{GL}_d(\mathbb Z)\), with the absolute bound
+\[
+                    \log M(d)\ll d\log(2d).
+\] In particular
+the l.c.m. \(D_\Gamma\) of the finite class stabilizer orders in the
+definite row satisfies \(\log D_\Gamma\ll A\log A\) for \(A=fN_m\ge2\).
+\end{auxlemma}
+\begin{proof}
+A finite subgroup injects under reduction modulo an odd prime \(q\).
+Indeed, if a nonidentity element in the kernel has prime order \(p\),
+write it as \(1+q^h U\), where \(h\ge1\) and \(U\not\equiv0\pmod q\).
+The first nonconstant term of its \(p\)-th power has exact order
+\(h\) if \(p\ne q\), and \(h+1\) if \(p=q\). All higher terms
+have greater order, a contradiction.
+
+Fix an odd prime \(p\). By Dirichlet's theorem choose an odd prime
+\(q\) in a primitive root class modulo \(p^2\). Counting ordered bases gives
+\[
+       |\mathrm{GL}_d(\mathbb F_q)|=q^{d(d-1)/2}\prod_{i=1}^d(q^i-1).
+\]
+Only the factors \(q^i-1\) contribute to the \(p\)-part. Their orders vanish
+unless \(p-1\mid i\), and at \(i=(p-1)j\) are \(1+v_p(j)\) by the
+binomial theorem. With \(b_p=\lfloor d/(p-1)\rfloor\), the
+\(p\)-valuation of every subgroup order is therefore at most
+\[
+    b_p+v_p(b_p!)\le 2b_p .
+\]
+
+For \(p=2\) take \(q=3\). The estimate
+\(v_2(3^i-1)\le2+v_2(i)\) gives a total at most \(3d\).
+Thus one may use
+\[
+ M(d)=2^{3d}\prod_{\substack{3\le p\le d+1\\p\ {\rm prime}}}p^{2b_p},
+ \qquad \log M(d)\ll d+d\sum_{p\le d+1}\frac{\log p}{p}
+                   \ll d\log(2d).
+\]
+For the last bound each dyadic interval \((m,2m]\) contributes
+\(O(1)\) to the prime sum, since its primes divide
+\(\binom{2m}{m}\le4^m\).
+
+Each class stabilizer acts faithfully on its positive definite
+Hermitian lattice. Forgetting its \(\mathcal O_E\)-action gives
+an integral lattice of rank at most \([E:\mathbb Q]N_m=2A\).
+Adjoining a trivial summand embeds each such stabilizer in
+\(\mathrm{GL}_{2A}(\mathbb Z)\), so their l.c.m. divides \(M(2A)\).
+\end{proof}
+
+\begin{proposition}[Weighted dual-lattice cost]\label{prop:weighted-dual-cost}
+For the common level realization of
+Proposition~\ref{prop:division-level-compatibility}, each lift \(j\),
+and a positive
+integer value-lattice multiplier \(s\),
+\begin{align*}
+ &\frac{1}{D_0}
+     \sum_{w\in W_{\mathrm{tw}}}\omega_w
+        \bigl(\eta^{\rm int}_{j,\mu(w)}(w)
+                      +D_0 v_w(d_{j,\mu(w)}s)\bigr) \\
+ &\hspace{40pt}\le (|C_N|+1)\mathcal E+\log d_*+\log s .
+\end{align*}
+At \(s=1\), the least common multiple \(d_*\) satisfies
+\(\log d_*\le(2+9C_\Gamma)\mathcal E\) on the reference size range \(fN_m\le3\sqrt b\), \(\log(fN_m)\le3z\) of \eqref{eq:weighted-dual-reference-classes}.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Valuations of the common denominator.}
+For the correction, divisibility bounds the valuation
+at each individual place by \(v_w(d_*s)\).
+The sum of the latter over all finite places with
+weights \(\omega_w\) is \(\log(d_*s)\) by the rational
+norm formula. This argument allows \(t=\mu(w)\) to vary
+with \(w\). The sum of the least exponents is handled
+in the first error separately.
+
+\proofstep{Size of the denominator in the fixed comparison.}
+In the fixed comparison \(s=1\), and \(d_*\) can be the
+least common multiple of the block denominators.
+Thus for the list of block denominators the integral choice is
+\[
+  s=1,\qquad d_*=\operatorname{lcm}_b d_b .
+\]
+Each block denominator divides \(|G|\,D_{\Gamma}\)
+for one reference member, where \(G\) is the finite row
+group and \(D_{\Gamma}\) is the common multiple of its
+class stabilizer orders. Indeed the block level subgroup
+order divides \(|G|\) and its class stabilizer orders
+divide \(D_{\Gamma}\) by the class correspondence.
+Consequently \(d_*\) also divides this product.
+
+In valuations, for block denominators \(d_b\), this is
+\[
+  v_p(d_*)=\max_b v_p(d_b)\le v_p(|G|)+v_p(D_\Gamma)\qquad\text{for every prime }p.
+\]
+ The
+group-size comparison gives \(\log|G|\le2\mathcal E\).
+Each class stabilizer acts faithfully on an integral lattice of rank at most \(2fN_m\). Lemma~\ref{lem:uniform-stabilizer-denominator} gives the first inequality below. The other two are the size bounds for the marked definite row:
+\begin{equation}\label{eq:weighted-dual-reference-classes}
+ \log D_{\Gamma}\le C_\Gamma A\log A,\qquad
+ 1\le A=fN_m\le3\sqrt b,\qquad \log A\le3z .
+\end{equation} Thus
+\(A\log A\le9bz\le9\mathcal E\), and
+\(\log d_*\le(2+9C_\Gamma)\mathcal E\). These two
+logarithms come from the class dual inclusion and the
+value multiplier. The passage from the cut to the
+uncut numerator has already been taken before this
+comparison.
+\label{cor:division-level-pins-3}
+\end{proof}

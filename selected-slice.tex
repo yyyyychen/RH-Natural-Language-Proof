@@ -1,0 +1,419 @@
+\input{slice-light}
+
+\paragraph{The slice for the chosen sections.}
+Write \(K=K_0\). A component \(Z\) of the moduli space over \(K\)
+has a field \(\Omega_Z\) obtained by adjoining the coordinates of the
+two open flag cells to its function field. If the signatures at a lift
+are \((p,q)\), their dimensions and that of the underlying unitary
+moduli space give
+\[
+ s=f\left(pq+\tbinom p2+\tbinom q2\right).
+\]
+Thus \(\Omega_Z/K\) is finitely generated of transcendence degree
+\(s\). Evaluation in the generic flag frame sends a section to an
+element of this field.
+
+The components are finite in number and
+open and closed. Indeed the generic fibre is smooth of finite type
+over a field, and each of its local rings is regular and a domain.
+Multiplying by the idempotent of one component extends a section
+on it by zero.
+If \(e_Z\) denotes this idempotent, its restrictions are
+\[
+  e_Z|_Z=1,\qquad e_Z|_{Z'}=0\quad(Z'\ne Z).
+\]
+ This preserves the weight and cuspidality, since the
+indicator is locally constant on the analytic uniformization.
+Vanishing on every generic flag cell detects the zero section by
+density on the reduced charts.
+
+Use the generators and the common first-minimum penalty from
+the preceding calculation. The selected light generators span the scaled light lattice
+and have no common zero on the framed generic fibre. Before the last
+lift the first-minimum estimates on a good complex uniformization give
+a function \(P\) and constants \(K_1,K_2>0\) such that
+\[
+ e^{-2cP}\le K_1 S,\qquad \|\eta\|^2\le K_2 e^{-2i_\eta P},
+ \qquad S=\sum_l\|w_l\|^2.
+\]
+At sufficiently small first minimum \(\lambda_1\) we have
+\(P\ge c_0/\lambda_1^2\), with \(c_0>0\).
+The scalar section \(\eta\) is nonzero on each component.
+With \(a=i_\eta g_0^*\), the run has \(ac<i_\eta\) and
+\(a w_L-w_\eta\) strictly dominant in the flag and domain
+directions. At the definite last lift use \(\eta=1\), \(a=1\)
+and strict dominance of \(w_L\). We explain how these inputs
+supply the generic dimension needed for the section calculation.
+\label{cor:selected-slice-1}
+
+\begin{proposition}[The reduced generic intersection and evaluation on its branches]
+\label{prop:selected-generic-cut}
+The generic cut defined by the chosen light rows is finite and reduced.
+It is computed from the product of the component fields by the
+equal-weight ratios of the light sections. At every branch where
+the reference section is nonzero, the independent zeroth row attains
+the minimum of the light-column orders. If \(v\) is the branch order,
+\(e\) its relative ramification and \(c_\zeta=v(g_0(y_\zeta))\), then
+for weight \(w_F+Tw_L\)
+\[
+ v\big((F/(g_0L_0^T))|_\zeta\big)+c_\zeta
+      =e\big(v_{y_\zeta}(F)-T\nu_\zeta\big),
+ \qquad \nu_\zeta=v(L_0(y_\zeta))/e.
+\]
+\end{proposition}
+
+\begin{proof}
+\proofstep{Finding a generic slice with the chosen sections.}
+At a point with \(\|\eta\|^2/S^a\ge d>0\), substitute the bounds for
+\(S^{-1}\) and \(\|\eta\|^2\):
+\[
+ d\le \|\eta\|^2S^{-a}\le K_2 e^{-2i_\eta P}K_1^ae^{2acP},
+ \qquad
+ P\le\frac{\log(K_1^aK_2/d)}{2(i_\eta-ac)} .
+\]
+Here the strict margin \(ac<i_\eta\) permits division.
+There the first minimum is bounded below. Reduction theory gives
+compact representatives up to the arithmetic group and changes
+of flag frame. The definite space already has compact representatives.
+The invariant ratio therefore attains a positive maximum.
+Writing \(\Phi=\|\eta\|^2/S^a\), the maximizing point \(x_0\) thus satisfies
+\[
+  \Phi(x_0)=\max_x\Phi(x)>0,\qquad S(x_0)>0 .
+\]
+ Choose a
+nonvanishing column there.
+
+In holomorphic frames the Levi form of
+the logarithm of the invariant ratio is the curvature of
+\(a w_L-w_\eta\) minus \(a\) times the pullback of the
+Fubini--Study form under \(x\mapsto[w_l(x)]\). This follows by
+writing the logarithm as the sum of \(\log|\eta|^2\), the weight
+potential, and \(-a\log\sum_l|w_l|^2\). The first summand is
+pluriharmonic near the maximum. The invariant metric on a strictly
+dominant weight has positive Levi form on these tangent directions
+(the coefficients on the flag roots are the adjacent weight
+differences).
+
+Write \(\Phi\) for the invariant ratio. Along a nonzero vector \(v\) killed by the projective differential, the pulled-back projective form vanishes. The remaining strictly positive term would give
+\[
+  {\cal L}\log\Phi(v,\bar v)>0,
+\]
+contradicting negative semidefiniteness at the maximum. The projective differential is therefore injective. Some \(s\) ratios
+to the nonvanishing column then have an open set of complex values.
+A polynomial relation over \(K\) on \(Z\), homogenized using this
+column, would vanish on the corresponding analytic component.
+It follows that the field of the light ratios has transcendence
+degree \(s\). The compact set and the maximizing point here may
+depend on the component and weight. Only the dimension conclusion
+is used.
+
+\paragraph{Constant-coefficient ratios.}
+
+Before eliminating the slice variables, we need to know the field generated by the ratios of the chosen light sections on each component.
+
+Fix a column \(w_b\) nonzero at the generic frame of \(Z\).
+The light ratios and the component field have the same transcendence degree. Additivity therefore gives
+\[
+  \operatorname{trdeg}_{K(w_l/w_b)}\Omega_Z=s-s=0.
+\]
+Since \(\Omega_Z\) is finitely generated over the field of ratios, this algebraic extension is finite. Let \(u\in\Omega_Z\)
+have a monic equation of degree \(n\) over the ratio field. Each
+coefficient \(a_i\) for \(0\le i<n\) is a quotient
+\(A_i(w)/B_i(w)\) of homogeneous polynomials of the same degree.
+Put 
+\[
+  P(w)=w_b\prod_{i<n} B_i(w),
+\]
+ of degree \(k>0\).
+Then \(z=uP(w)\) satisfies
+\[
+ z^n+\sum_{i<n} C_i(w)z^i=0,\qquad
+ C_i=P^{n-i}A_i/B_i,\qquad \deg C_i=(n-i)k .
+\]
+All \(C_i\) are polynomials.
+
+In each flag chart the weight
+transition of \(z\) is the \(k\)-th power of that of the light
+weight. The transformed equation is monic with regular coefficients.
+The chart ring is smooth and integrally closed in its fraction field.
+Thus the transformed rational function is regular on the chart.
+These sections agree on overlaps by agreement at the generic point.
+Extend by zero to the other components.
+
+\proofstep{Returning the ratio to a cusp section.}
+The resulting weight-\(k w_L\) section \(g\) is cuspidal. For an
+explicit check the homogeneous root bound in a normalized frame
+gives \(\|g\|\le C(\max_l\|w_l\|)^k\): divide the equation by
+the corresponding power of this maximum and apply the bound for
+roots of a monic polynomial with bounded coefficients. Where all
+coefficients vanish the root is zero. Multiplying the monic relation by \(g\) gives
+\[
+               g^{n+1}=-\sum_{i=0}^{n-1} C_i(w)g^{i+1}
+\]
+on all components, including the components where \(g=0\).
+Each coefficient \(C_i(w)\) has positive degree \((n-i)k\)
+in cusp forms, so every summand on the right is cuspidal.
+
+On a rational boundary face, the allowable Fourier indices
+are in the positive semidefinite cone. A sum of indices lies
+in the face only if each index lies in it. Let \(\operatorname{CT}_{\mathfrak f}\) denote restriction to
+the indices of this face \(\mathfrak f\). A product can contribute
+there only through factors whose indices all lie on the face.
+Consequently
+\[
+ \bigl(\operatorname{CT}_{\mathfrak f}g\bigr)^{n+1}
+   =\operatorname{CT}_{\mathfrak f}(g^{n+1})
+   =-\sum_{i=0}^{n-1}
+     \operatorname{CT}_{\mathfrak f}(C_i(w))\,
+           \bigl(\operatorname{CT}_{\mathfrak f}g\bigr)^{i+1}
+   =0.
+\]
+Every \(C_i(w)\) is cuspidal. The boundary reading is over a reduced
+complex chart, so \(\operatorname{CT}_{\mathfrak f}g=0\). We have obtained
+\(u=g/P(w)\) at the generic frame. Both numerator and denominator
+may be padded to any larger degree using \(w_b\); on a finite set
+of components take the largest degree and extend by zero before
+summing. No degree bound from this auxiliary ratio calculation
+enters the index. \label{cor:selected-slice-2}
+
+\paragraph{The algebra of the generic intersection.}
+
+With these ratios fixed, the slice equations eliminate one coefficient in every row. This gives the algebra on which branch orders and trace discriminants will be computed.
+
+Let \(F=K(X)\), with all \((s+1)N\) coefficients independent.
+On a component put \(x_l=w_l/w_b\) and eliminate \(X_{ib}\) for
+\(1\le i\le s\) using 
+\[
+  X_{ib}=-\sum_{l\ne b}X_{il}x_l.
+\]
+Denote the other variables by \(X'\), including every variable of
+row zero. The substitution embeds \(F\) in \(L_Z=\Omega_Z(X')\).
+Indeed the differentials of \(s\) of the \(x_l\) are independent
+in characteristic zero.
+
+Let \(l_1,\dots,l_s\) index such a set. Modulo \(dX'\) the
+determinant test is
+\[
+ \left[\prod_{i=1}^s X_{i l_i}\right]
+      \bigwedge_{i=1}^s\!\left(-\sum_{l\ne b}X_{il}\,dx_l\right)
+       =(-1)^s dx_{l_1}\wedge\cdots\wedge dx_{l_s}\ne0 .
+\]
+The variables of different cut rows are independent. Hence the
+full substituted coefficient family is algebraically independent.
+The field \(L_Z\) is finitely generated, and its transcendence
+degree over \(K\) is 
+\[
+  s+((s+1)N-s)=(s+1)N.
+\]
+ Thus \(L_Z/F\)
+is finite, and separability follows from characteristic zero.
+More precisely in \(\Omega_Z[X]\) the kernel of substitution is
+the ideal of the \(s\) row equations, by division by their pivot
+variables. After localizing by \(K[X]\setminus\{0\}\) the quotient
+is a domain algebraic over \(F\), hence a field with fraction field
+\(L_Z\). The independent zeroth row has nonzero value there.
+After the coefficient extension to \(F'=K_{0,\lambda}(X)\) the
+component algebra is 
+\[
+  F'\otimes_F L_Z,
+\]
+ finite and reduced.
+
+\proofstep{Passing from fields to the actual cut.}
+We verify why this calculation in function fields applies to the
+weight-zero chart of the original forms. Evaluation embeds the chart
+before cutting in the product of the component chart rings
+\((F'\otimes_K\Omega_Z)[1/L_0]\); injectivity follows by putting
+the fractions over a common power of \(L_0\), using independence
+of scalar coefficients and detection of a homogeneous numerator at
+the generic frames. For each component its indicator is in the chart:
+replace each \(w_l\) in the zeroth row by its extension by zero from
+that component and divide the result by \(L_0\).
+If \(w_{l,Z}\) is the extension by zero of \(w_l|_Z\), the component indicator is
+\[
+  e_Z=\frac{\sum_lX_{0l}w_{l,Z}}{L_0},\qquad e_Z|_{Z'}=\begin{cases}1&Z'=Z,\\0&Z'\ne Z.\end{cases}
+\]
+ These orthogonal
+idempotents split the chart.
+
+On one summand let \(Q\) be any prime containing the cut equations,
+and read the light columns as \(w_l/L_0\) in its residue field. Some
+\(w_b/L_0\) is nonzero there by the zeroth-row identity. Invert it.
+The algebra of constant homogeneous numerator ratios with pivot
+denominator \(w_b^k\) lies in \(\Omega_Z\) and specializes at \(Q\).
+Let \(R\subset\Omega_Z\) be that algebra of ratios and
+\(\bar R\) its image at \(Q\). The original independent
+coefficients are recovered from \(\bar R\) and the free
+coefficients by the pivot equations. Therefore
+\[
+ (s+1)N
+ \le \operatorname{trdeg}_K\operatorname{Frac}(\bar R)
+                            +((s+1)N-s),
+\]
+while \(\operatorname{trdeg}_K\Omega_Z=s\). The two bounds
+force the residue transcendence degree to be \(s\).
+The specialization is then injective, as follows.
+
+To see this, choose \(s\) ratios with
+algebraically independent residues (the same dimension count applies
+to the algebra generated just by the light ratios). Invert all
+nonzero polynomials in them. The localized domain is algebraic over
+the resulting rational function field and hence a field.
+Indeed a nonzero element \(a\) algebraic over the rational function field has a monic minimal polynomial with \(c_0\ne0\), so
+\[
+  a^{-1}=-c_0^{-1}\big(a^{d-1}+c_{d-1}a^{d-2}+\cdots+c_1\big).
+\]
+ Its map to
+the residue field has zero kernel. Thus every nonzero homogeneous
+denominator of the constant-coefficient ratio construction is
+invertible in the local ring at \(Q\), after dividing by a power of
+\(L_0\).
+
+\proofstep{Checking that the two localizations agree.}
+Consequently the component chart, localized near \(Q\), already
+contains all functions of \(\Omega_Z\) as ratios in weight zero.
+It also recovers the inverse of the generic zeroth row in the
+chosen generic frame: write \(1/w_b\) as a component function
+and multiply by \(w_b/L_0\).
+In the chosen frame the equality used here is
+\[
+  (1/w_b)(w_b/L_0)=1/L_0 .
+\]
+ Conversely evaluation embeds this
+localization in the corresponding localization of the component
+chart ring. More explicitly, localize at the elements of the
+weight-zero chart which are nonzero at every prime of its slice.
+The same denominator argument gives \(\Omega_Z\) there, using a
+fixed generically nonzero \(w_b\), which stays nonzero at every
+such prime by the specialization just proved. The constants, the
+coefficients and \(1/L_0\) generate the component chart ring.
+Upon cutting, all the inverted denominators were already units.
+
+In the other direction these denominators stay units on the cut
+of the component chart ring, since a prime there contracts to a
+prime containing the cuts. This identifies the actual slice with
+\[
+                   \prod_Z (F'\otimes_F L_Z).
+\]
+In this description \(L_0\) in the component chart ring denotes
+its generic-frame reading. The independent frame scalings disappear
+in its weight-zero fractions.
+
+\paragraph{Integral frames and the order at a branch.}
+
+A local order is an order of a section in a chosen frame. The cusp form and its complementary section furnish such frames for the branches of the slice.
+
+For the weight-\(w_F\) sheaf the run uses a cusp form \(g_0\)
+nonzero on every component and a form \(t_2\) of complementary
+weight \((s+4)w_L-w_F\), also generically nonzero on each.
+For \(g_0\), nonzero values of the theta sections of weight \(w_F\) provide
+a proper vanishing subspace on each of the finitely many analytic
+components. Their union cannot cover a vector space over the
+infinite coefficient field. The level test here uses the positive
+last weights and 
+\[
+  3\operatorname{DF}(w_F)+2\le M
+\]
+ where \(M\)
+is the full level. Multiplication by \(g_0\) is injective by generic
+evaluation. The degree-zero element
+\(b=g_0t_2/L_0^{s+4}\) is invertible on the slice just identified.
+Indeed it is a unit on each incidence field and stays a unit after
+extension of scalars.
+
+Take a chart element \(b'\) with 
+\[
+  b'b=1\pmod J.
+\]
+ For
+\(a\ge1\), an inverse on the thickened chart is
+\[
+    b^{-1}\equiv b'\sum_{k=0}^{a-1}(1-b'b)^k\pmod{J^a},
+ \qquad
+ \frac{h}{g_0}
+  =b^{-1}\frac{h t_2}{L_0^{s+4}}\pmod{J^a}
+       \quad(h\text{ of weight }w_F).
+\]
+Indeed \((1-b'b)^a\in J^a\), and the numerator in the second
+formula has weight zero after division by the indicated power.
+This gives the asserted trivialization by \(g_0\) on the cut
+and its positive-order thickenings.
+
+\proofstep{The branch order in the reference frame.}
+At a branch \(\zeta\) take the completion of its normalization
+DVR. Write \(U\) for the fraction field, \(v\) for its order
+and \(e=v(\pi)\). The embeddings 
+\[
+  \Omega_Z\to L_Z\to U
+\]
+and \(F'\to U\) evaluate the original rows. Over \(U\) pull
+the generic framed point on \(Z\) through the first embedding.
+The integral model used for this operation is the proper
+compactification with its semiabelian family and invertible
+pushforward of the theta line. Its good-level condition at a
+residue prime is that the prime-to-residue-characteristic part
+of the level is at least three. The two different odd level
+primes ensure it even in their own residue characteristics.
+The valuation ring of the coefficient model maps into the
+branch DVR since the branch order restricts to \(e v_\lambda\).
+
+In particular nonnegative coefficient orders stay nonnegative at the branch:
+\[
+  v_\lambda(a)\ge0\quad\Longrightarrow\quad v(a)=e\,v_\lambda(a)\ge0.
+\]
+The valuative criterion extends the underlying point to that DVR.
+In the pulled-back Lie lattices the intersections with the
+successive generic flag subspaces are saturated. Their successive
+quotients are free over the DVR, so choose compatible integral
+bases. Choose also a generator of the pulled-back invertible
+theta module. These choices reframe the original field point
+by an upper triangular change in each flag and a scalar in the
+theta line. If \(A\) denotes the block triangular and theta change,
+a section \(g\) of weight \(u\) has reading
+
+\[
+  g(y_\zeta)=\chi_u(A)g|_\zeta.
+\]
+ The multiplier is the
+same for every section of that weight. A second integral
+basis for the same pulled-back flag and theta line changes
+it by a unit, since its diagonal entries and theta scalar
+are units. Hence for equal-weight \(g,h\) with nonzero
+denominator,
+\[
+   v\big(g(y_\zeta)/h(y_\zeta)\big)
+         =v\big((g/h)|_\zeta\big).
+\]
+This places the branch calculation in the extended set
+of integral tests. It gives nonzero
+evaluations of \(g_0\) and, before the final lift, \(\eta\).
+
+\proofstep{The minimum from the independent zeroth row.}
+The independent zeroth row also computes the minimum on the
+light lattice. Choose a column \(b\) of smallest finite order
+on \(Z\) at this branch. In the pivot elimination in the next
+paragraph the free variables have Gauss valuation over the valued
+component field, including all the variables of row zero.
+It follows that
+\[
+ v\left(\sum_l X_{0l}w_l/w_b\right)=
+ \min_l v(w_l/w_b)=0 .
+\]
+
+For clarity, this uses only the residue transcendence-degree
+calculation below, which needs no minimum assertion about \(L_0\).
+The light columns span the scaled light lattice over the integers.
+The ultrametric inequality and attainment at \(b\) identify its
+depth at \(y_\zeta\) with \(\nu_\zeta=v(L_0(y_\zeta))/e\).
+Similarly \(c_\zeta=v(g_0(y_\zeta))\). Writing
+\(v_y=v/e\), we have for weight \(w_F+Tw_L\)
+\[
+ v\big((F/(g_0 L_0^T))|_\zeta\big)+c_\zeta
+                   = e\big(v_{y_\zeta}(F)-T\nu_\zeta\big).
+\]
+All entries on the left are integer orders or infinity. In particular
+each integral source section has nonnegative unshifted point valuation
+by the definition of the cusp lattice on integral frames. These are
+the same points for the branch length, the depth test and the lifting
+through \(J\). \label{cor:selected-slice-3}
+\end{proof}

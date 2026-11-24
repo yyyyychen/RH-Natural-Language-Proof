@@ -1,0 +1,791 @@
+\subsubsection*{Choosing one twist for the Selmer group and the theta lattices}
+\label{subsec:retained-twist}
+\hypertarget{source-retained-twist}{}
+
+The same localization supplies a Selmer length and theta denominators. A single character must therefore control every signature and theta value occurring there.
+
+Fix a twisted coefficient place of residue characteristic \(\ell\).
+Write \(v(\ell)=1\) in every coefficient field. If \(O\) is a
+coefficient DVR, normalized length means \(\operatorname{length}_O/e_O\),
+where \(e_O=\operatorname{ord}_O(\ell)\). There are finitely many
+good signatures \(s\) for the lower cusp at this place, finitely
+many abelian theta values indexed by \(\lambda\), and two sides
+for each of the \(m\) theta rows. The sign of the twist on each
+of these objects is fixed by its side. A choice for each object
+separately would leave the congruence comparison on different
+Hecke modules. We describe the simultaneous specialization and
+its passage to the retained module.
+
+\begin{established}[Common character data and coefficient tests]\label{hyp:simultaneous-retained-twist}
+At each nonreference coefficient place of the initial signed row, both theta comparisons use the same ray coordinates. For each occurring good signature the integral conjugate-duality isomorphism and the isotypic and valuation tests hold. Its jumps and type primes satisfy
+\[
+ \operatorname{HT}_\tau(T_s)\cap[-1,t]=\varnothing
+ \quad(\tau\mid\ell),\qquad
+ r\ge100,\quad\min(g_0,g_1)\ge2r .
+\] The abelian values have nonzero untwisted specialization and an allowed critical integer. The two Hecke-stable integral rows admit commuting projected theta bases with uniformly bounded denominators and the required residual eigensystems.
+\end{established}
+\begin{proof}
+Fix the row and both signs before selecting a ray character. Lemma~\ref{lem:initial-row-signature-tests} applies to the signatures in the images of the two initial type projectors. It proves the assertions on their lattices, jumps and residual valuations. The simultaneous numerical choices are those of Lemma~\ref{lem:window-parameter-choice} and Proposition~\ref{prop:two-type-primes}. The nonzero abelian specialization is the value in \ref{cor:toric-twist-5}, with the critical range and common denominator of Lemma~\ref{lem:toric-common-denominator}. On either signed row Proposition~\ref{prop:signed-theta-data} gives the commuting action on the integral class sums, their universal denominator and the residual character. Proposition~\ref{prop:retwisting-row-basis} extracts a basis from their projected span before specialization. Both signs are functions of the same class coordinates: they apply their respective coefficient maps to the same finite translations. These are precisely the spaces over which the subsequent character is chosen.
+\end{proof}
+
+\begin{auxlemma}[A bound for spherical parameters]
+\label{lem:initial-spherical-bound}
+Let \(q\) be the residue cardinality of a nonarchimedean local field
+and \(\beta_1,\ldots,\beta_r\) the Satake parameters of an unramified
+unitarizable representation of \(\mathrm{GL}_r\), in the normalized
+Satake convention. For \(r\ge1\),
+\[
+             \max_i|\beta_i|\le4q^{(r-1)/2}\le q^{(r+3)/2}.
+\]
+\end{auxlemma}
+\begin{proof}
+Normalize Haar measure so that the maximal compact subgroup has volume one.
+The Hecke operator of \(\operatorname{diag}(\varpi I_j,I_{r-j})\)
+is a sum over \(\genfrac{[}{]}{0pt}{}{r}{j}_{\!q}\) residue subspaces of dimension \(j\), each giving
+one unitary translate of a spherical vector of norm one. The Gaussian
+binomial coefficient counts these subspaces by the number of ordered
+independent \(j\)-tuples divided by \(|\mathrm{GL}_j(\mathbb F_q)|\). The normalized Satake formula gives
+\[
+ |e_j(\beta)|\le q^{-j(r-j)/2}\genfrac{[}{]}{0pt}{}{r}{j}_{\!q}
+ \le q^{j(r-j)/2}\prod_{h=1}^j(1-q^{-h})^{-1}.
+\]
+The last product is at most \(2\) for \(j=1\) and less than \(4\)
+for \(j\ge2\), since \(\prod_{h\ge3}(1-2^{-h})\ge3/4\).
+Thus \(|e_j(\beta)|^{1/j}\le2q^{(r-1)/2}\).
+
+If a root \(z\) of
+the Satake polynomial satisfied \(|z|>4q^{(r-1)/2}\), division by
+\(z^r\) would give
+\[
+      1\le\sum_{j=1}^r|e_j(\beta)/z^j|
+                   < \sum_{j=1}^r2^{-j}<1 .
+\]
+Consequently \(|\beta|\le4q^{(r-1)/2}\le q^{(r+3)/2}\).
+\end{proof}
+
+\begin{auxlemma}[The signatures on the initial signed rows]
+\label{lem:initial-row-signature-tests}
+Fix a coefficient index \(i\) at which the marked character differs
+from the reference character. Write \(O_i\) for its coefficient DVR and \(\ell\) for its residue characteristic. Use the initial rows and the two type markings of Proposition~\ref{prop:signed-theta-data}. A candidate signature \(s\) records a lift \(j\), a side \(b\) and
+split Hecke eigenvalues \(a_{s,k,P}\) of the lower cuspidal row. Write
+\(e_b\) for its assigned finite type projector and \(V_{i,j,b}\) for
+the rational space of that lower row. Use precisely the signatures with
+\[
+ \begin{gathered}
+ \exists v_s\in V_{i,j,b}\setminus\{0\},\qquad e_bv_s=v_s,\\
+ T_{k,P}v_s=a_{s,k,P}v_s\quad(1\le k\le r),\qquad
+ P\text{ split outside the excluded set}.
+ \end{gathered}
+\]
+
+Let \(\rho_s\) denote the integral Galois representation of this
+lower cusp, \(\xi_s\) the first character of its prescribed string,
+and \(W=\rho_s\otimes\xi_s^{-1}\) on its chosen coefficient lattice.
+Write \(c_E\) for complex conjugation. Then
+\[
+ (W^\vee(1))^{c_E}\simeq W(t),\qquad
+ \operatorname{gr}^a D_{\rm dR}(W)_\tau=0
+       \quad(-1\le a\le t,\ \tau\mid\ell).
+\]
+The isomorphism is integral. Both \(W\) and its Tate dual have
+zero decomposition invariants over the coefficient field at every
+finite place of the host.
+\end{auxlemma}
+\begin{proof}
+The finite-dimensional projected Hecke spaces are sums of their
+simultaneous eigenspaces, by Proposition~\ref{prop:rational-row-isotypic-span}.
+Taking the nonzero summands thus gives a finite list on both sides and
+at all lifts. Each summand has the cohomological cuspidal attachment
+of Proposition~\ref{prop:signed-theta-data}. The two selected types
+satisfy the divisor-degree and separation tests of
+Definition~\ref{hyp:retained-type-tests}. The inertia argument of
+Proposition~\ref{prop:retained-rank-complement} gives absolute
+residual irreducibility for \(\bar\rho_s\). These assertions concern
+the marked type polynomials on the lower row. On the upper theta
+locus Proposition~\ref{prop:cut-selector} identifies the matching
+points by
+\[
+                    Z_i\cap S_i=Z_i^+.
+\]
+
+Let \(k_i\) be the residue field of the signature. Absolute
+irreducibility and the matrix algebra theorem give the first equality
+below after extension to \(\overline{k_i}\), hence also over \(k_i\).
+The span is already an algebra because \(\bar\rho_s\) is a
+group representation. For \(v\mid g_d\) with \(g_d\ne\ell\), the
+depth-zero action is trivial on wild inertia \(P_v\). The tame labels
+are separated from the first string character by the tests in
+Definition~\ref{hyp:retained-type-tests}. Reading them on a marked
+tame inertia generator \(u_v\) gives
+\[
+ \begin{gathered}
+ \operatorname{span}_{k_i}\bar\rho_s(G_E)=M_r(k_i),\qquad
+ \bar\rho_s(P_v)=1,\\
+ \det\bigl(\bar\rho_s(u_v)-\bar\xi_s(u_v)I_r\bigr)\ne0 .
+ \end{gathered}
+\]
+These are the residual tests on the coefficient ring. Multiplication
+by the scalar character \(\bar\xi_s^{-1}\) preserves absolute
+irreducibility.
+
+Put \(h=(t-1)/2\). By the weight calculation of
+Lemma~\ref{lem:marked-signed-jumps}, the labelled jumps in the
+complement have the form \(a=h\pm z\), where the interlacing
+inequalities give \(|z|\ge h+2\). Consequently
+\[
+ a\le h-(h+2)=-2\quad\text{or}\quad
+ a\ge h+(h+2)=t+1.
+\]
+At the conjugate embedding the corresponding jump is \(t-1-a\).
+The displayed ranges therefore give exactly one negative jump for
+each pair of corresponding entries. With multiplicities this yields
+\[
+ \dim(D_{\rm dR}(W)_\tau/\operatorname{Fil}^{0})+
+ \dim(D_{\rm dR}(W)_{\bar\tau}/\operatorname{Fil}^{0})=r.
+\]
+The untwisted lower cusp is unramified outside \(\ell,g_0,g_1\).
+At \(v\mid\ell\) the two attachments \(\rho_s,W\) are de Rham.
+They are crystalline if \(\ell\notin\{g_0,g_1\}\), and potentially
+crystalline in the marked type case because their local monodromy
+vanishes, as in Proposition~\ref{prop:signed-theta-data}.
+
+At a split unramified Frobenius the polarized attachment, with the
+same character normalization on both sides, identifies the
+characteristic polynomials of \((W^\vee(1))^{c_E}\) and \(W(t)\).
+Chebotarev and Brauer--Nesbitt give an intertwiner over the fraction
+field. Multiply it by a scalar to make its entries integral with at
+least one unit. For its reduction \(\bar U\), residual
+irreducibility gives
+\[
+ \bar U\ne0\quad\Longrightarrow\quad\ker\bar U=0
+ \quad\Longrightarrow\quad \det U\in O_i^\times .
+\]
+This proves
+the required isomorphism on the given lattices.
+
+At \(v\mid\ell\), a nonzero fixed vector would give a jump zero.
+For the Tate dual the jumps are \(-1-a\). Thus
+\[
+        H^0(E_v,W\otimes_{O_i}\operatorname{Frac}(O_i))=
+        H^0(E_v,W^\vee(1)\otimes_{O_i}\operatorname{Frac}(O_i))=0 .
+\] 
+At a type prime of residue characteristic different from
+\(\ell\), the separated tame labels give a generator with no
+eigenvalue one on the normalized complement. Its inverse transpose
+has the same property. At the distinguished auxiliary places the
+normalized inertia action includes a nonidentity scalar, with its
+inverse on the Tate dual. 
+At any remaining place \(v\), put \(q_v=\mathrm Nv\). An arithmetic Frobenius
+root is \(\alpha=\beta q_v^{(1-t)/2}\), where \(\beta\) is an
+unramified Satake parameter of the unitary lower cusp. Lemma~\ref{lem:initial-spherical-bound} gives
+\(|\beta|\le q_v^{(r+3)/2}\). Since \(t\ge r+5\), this gives
+\[
+ |\alpha|\le q_v^{(r+4-t)/2}\le q_v^{-1/2}<1<q_v .
+\]
+
+A fixed vector in the representation or its Tate dual would force
+\(\alpha=1\) or \(\alpha=\mathrm Nv\), respectively. This covers
+type primes above \(\ell\) by the first case.
+\cite{blggt-attachment,caraiani-monodromy}
+\end{proof}
+
+\begin{proposition}[One character for the Selmer and theta comparisons]\label{prop:one-retained-character}
+For the signatures, abelian values and rows of
+Lemma~\ref{hyp:simultaneous-retained-twist}, one finite-order anticyclotomic character
+with the prescribed coordinate readings gives all the
+following bounds on the original local models, with \(\nu_\ell\) as in
+\eqref{eq:signature-cyclotomic-minimum}:
+\begin{itemize}
+\item for the normalized length \(L_s(\chi)\) at signature \(s\) after applying this character \(\chi\), there are errors \(e_s\) with
+\[
+ L_s(\chi)\le\nu_\ell+e_s<\infty,\qquad e_s\ge0,\qquad\sum_s e_s\le\ell^{-2};
+\]
+\item the abelian theta values are nonzero and have valuation
+  between \(-N_0\) and \(v(\theta_\lambda(1))+\ell^{-2}\),
+  with \(N_0\) the common integral denominator bound;
+\item the nonnegative row-index excesses over the untwisted
+  indices have sum at most \(\ell^{-2}\);
+\item the sum of the valuations of the nontrivial marked
+  inertia readings, multiplied by \(t\), is at most \(\ell^{-2}\).
+\end{itemize}
+The twist may avoid a prescribed finite set and can be
+transported at conjugate coefficient places with the
+prescribed inversion.
+\end{proposition}
+
+\begin{proof}
+\proofstep{A common parameter space for the three tests.}
+Proposition~\ref{prop:ray-coordinate-pairs} supplies the two
+groups of pairs. For the fixed finite family there exist integers \(R_*,D_*,M_0\).
+Use \(2R_*\) variables, grouped as \(X_i,Y_i\). At every
+\(M\ge M_0\), enlarged to be at least one, there are \(2R_*\)
+distinct conjugate pairs of split degree-one places, unramified
+over \(\mathbb Q\), of norms \(1\bmod 2\ell^M\). Their union
+\(Q\) avoids the level and any prescribed finite set.
+
+There are
+continuous anticyclotomic coordinate characters \(d_i\) to
+\(\mathbb Z/\ell^M\), each surjective on inertia at both places
+of its pair, unramified away from the pair and trivial on all
+decomposition groups above \(\ell\). The first half of the
+selected Frobenius elements are conjugate to a prescribed tame element
+modulo an open normal subgroup. If \(v_j\) denotes the selected representative of the
+\(j\)-th second-half pair, the first-half characters satisfy
+\[
+ \bigl(d_i(\operatorname{Frob}_{v_j})\bigr)_{1\le i,j\le R_*}
+       =I_{R_*}\quad\text{over }\mathbb Z/\ell^M\mathbb Z .
+\] The
+open subgroup may be shrunk and the avoidance set enlarged to
+satisfy the finitely many abelian and row conditions.
+
+\begin{enumerate}
+\item For each good \(s\) there is an integral polynomial
+\(F_{s,M}\) in these variables over a fixed coefficient DVR.
+One coefficient of total degree at most \(D_*\) has valuation
+at most \(\nu_\ell\). For coordinates \(u_i^{\ell^M}=1\), put
+\[
+ \psi(g)=\prod_i u_i^{d_i(g)},
+\]
+over both halves of the
+coordinates. The signature Selmer length for \(\psi\) equals
+\(v(F_{s,M}(u-1))\), with value infinity at zero. To see
+the determinant step in this description, take the square
+matrix over \(O[(\mathbb Z/\ell^M)^{2R_*}]\) whose kernel on
+discrete \(\ell\)-primary modules computes the Selmer functor
+with inverse universal twist. Lift its determinant by sending
+each variable to the corresponding group element minus one.
+
+Let \(A(u)\) be the specialized matrix, \(O_u\) the
+valuation ring at this specialization and \(K_u\) its fraction
+field. Write \(a\) for the size of this square presentation. Its Smith entries
+\(c_j\) give the kernel on \((K_u/O_u)^a\), one summand at a time:
+\[
+ \ker(c_j:K_u/O_u\to K_u/O_u)=
+ \begin{cases}
+    c_j^{-1}O_u/O_u,&c_j\ne0,\\
+    K_u/O_u,&c_j=0 .
+ \end{cases}
+\]
+The normalized length of the first summand is \(v(c_j)\).
+Hence, with \(v(0)=+\infty\), specialization yields
+\begin{equation}\label{eq:selmer-twist-smith-specialization}
+ \operatorname{len}_{\rm norm}\ker A(u)
+       =\sum_j v(c_j)=v(\det A(u))=v(F_{s,M}(u-1)).
+\end{equation}
+For the opposite side, evaluate \eqref{eq:selmer-twist-smith-specialization} at \(u^{-1}\).
+\item For each abelian value and each row there is an integral
+polynomial \(f_M\) satisfying the following condition, over a
+fixed DVR for that object. There are integral polynomials
+\(B_M,g_M\), an integer \(b\ge0\) independent of \(M\), and a
+bound \(n_*\) independent of \(M\) such that
+\[
+ f_M\equiv B_M g_M\pmod{(Y_i,(1+X_i)^{\ell^M}-1)_i},
+ \qquad \operatorname{ord}_O(g_M(0))\le b.
+\]
+Modulo the uniformizer and the powers \(X_i^{\ell^M},Y_i^{\ell^M}\),
+\(B_M\) is a monomial \(\prod_i X_i^{n_i}\), \(n_i\le n_*\),
+times a polynomial with nonzero constant term.
+
+For an abelian
+label the value of \(f_M(u-1)\) is \(\ell^{N_0}\theta_\lambda(\psi)\),
+where
+\[
+ b/e_O=N_0+v(\theta_\lambda(1))
+\]
+and the last value
+is taken at empty auxiliary level. For a row, at any specialization
+with nonzero value, the relative index of any lattice containing
+the specified projected twisted generators, in their prescribed
+rational span, is at most the untwisted index plus
+\(v(f_M(u-1))-b/e_O\). These two formulas are used
+with the sign appropriate to the label or row.
+\end{enumerate}
+
+We prove that for any \(\delta>0\) the valuations of all these
+polynomials at one signed tuple are bounded by their respective
+baselines \(\nu_\ell,b/e_O\) plus \(\delta\). The tuple can
+also be required to have
+\[
+ 2t\sum_i v(u_i-1)\le\delta,
+\]
+where \(i\) runs over both
+halves and all orders are nontrivial. We give a limiting argument using discrete valuations.
+The theta coefficient DVR has algebraically closed residue field,
+so compactness of its coefficients is unavailable.
+
+Choose data at a sequence of levels tending to infinity. There
+are finitely many choices of the distinguished monomials of the bounded-degree signature and theta coefficient tests in the three families of polynomials. Fix them on a subsequence. In each fixed
+coefficient DVR take the sequences of all coefficients of the
+polynomials, including \(B_M,g_M\), and the constant sequence
+of a uniformizer. The subring of the ring of sequences that
+they generate over \(\mathbb Z\) is countable. Enumerate the countably many coefficient sequences as \(a_1,a_2,\ldots\). A diagonal subsequence \(M_j\) then satisfies
+\[
+ \lim_{j\to\infty}\operatorname{ord}(a_i(M_j))\in\mathbb N\cup\{\infty\}\qquad(\text{each }i).
+\]
+
+This is possible because any sequence of nonnegative orders
+has a constant subsequence or one tending to infinity.
+For such a sequence ring \(R\), put
+\[
+       I_\infty=\{a\in R:\operatorname{ord}(a_M)\to+\infty\},
+       \qquad v_\infty(\bar a)=\lim_M\operatorname{ord}(a_M).
+\]
+The valuation inequality and nonnegative orders show that
+\(I_\infty\) is an ideal. If \(\bar a\ne0\), its order is
+finite (hence eventually constant), and adding an element
+of \(I_\infty\) does not change it. For nonzero classes
+\[
+ v_\infty(\bar a\bar b)=v_\infty(\bar a)+v_\infty(\bar b),
+ \qquad v_\infty(\bar a+\bar b)\ge
+                   \min(v_\infty(\bar a),v_\infty(\bar b)).
+\]
+In particular \(R/I_\infty\) is a domain. Extend the order
+to its fraction field by subtracting orders. The constant
+uniformizer sequence has order one, and the order
+of \(\ell\) is unchanged. Use the valuation ring of this field
+for the limit series. Every fixed expression in finitely many
+coefficients has its limiting order by the definition of the
+quotient.
+
+In particular each limit series \(F_s\) has a coefficient
+of valuation at most \(\nu_\ell\).
+
+For the second condition, set all \(Y_i=0\). In each fixed
+total degree the coefficients of \((1+X_i)^{\ell^M}-1\) tend
+to zero, including its zero constant term, by the binomial
+formula. Multiplication by arbitrary integral ideal multipliers
+preserves this convergence in each bounded degree. The limits
+thus satisfy
+\[
+ f(X,0)=B(X,0)g(X,0).
+\]
+The selected monomial
+coefficient of \(B(X,0)\) is a unit, and
+\(\operatorname{ord}_O(g(0))\le b\). For an integral nonzero
+formal series let its content valuation be the minimum of the
+valuations of its coefficients. This minimum is attained by
+discreteness. Write \(c(A)\) for this content valuation. After scaling each nonzero series to have content zero, the residue series are nonzero in a domain. Consequently
+\[
+ c(AB)=c(A)+c(B).
+\]
+
+Consequently the content valuation of \(f\) is at most
+\(b/e_O\). This proof permits every \(B_M(0)\) to vanish.
+For a negative side first substitute \((1+Z_i)^{-1}-1\) for
+each variable \(Z_i\) of the limit and its approximants.
+This integral formal automorphism preserves content and is
+continuous coefficientwise.
+
+Normalize each resulting limit series by its content so that
+its reduction is nonzero. For all of these reductions at once,
+choose nonnegative integers \(h_i\) so that substitution
+\[
+ Z_i=T^{\ell^{h_i}}
+\]
+leaves a nonzero series. Indeed, for
+each series take the lexicographically first monomial of its
+support. Starting with the last coordinate, choose each earlier
+weight \(\ell^{h_i}\) greater than the total contribution of
+the later coordinates in every one of the finitely many chosen
+monomials. At the first coordinate where a competing monomial
+differs, its increase costs more than can be saved at later
+coordinates. Thus the chosen term remains uniquely lowest.
+In characteristic zero now substitute
+\[
+          Z_i=(1+T)^{\ell^{h_i}}-1 .
+\]
+This reduces to the substitution just considered. Let \(d\)
+be the degree of the first unit coefficient in a normalized
+one-variable series.
+
+For a primitive \(\ell^a\)-th root
+\(\xi\), \(w=v(\xi-1)=1/(\ell^{a-1}(\ell-1))\).
+Write \(\sum_k a_k T^k\) for the normalized series.
+At \(T=\xi-1\) the difference from the valuation \(dw\)
+of its degree-\(d\) term satisfies
+\[
+ v(a_kT^k)-dw\ge
+ \begin{cases}
+       1/e_O-(d-k)w,&k<d,\\
+       (k-d)w,&k>d.
+ \end{cases}
+\]
+Both bounds are positive when \(dw<1/e_O\). The unique
+least term gives valuation \(dw\) for the normalized
+series. Take \(a>\max h_i\) so large that
+each \(dw<\delta\), all preceding strict inequalities hold,
+and \(2t\sum_i\ell^{h_i}w\le\delta\).
+Set \(u_i=\xi^{\ell^{h_i}}\), for which
+\[
+ v(u_i-1)=\ell^{h_i}w.
+\]
+For zero variables there is simply a
+finite list of constants and the empty tuple has zero tame cost.
+
+Fix this \(a\). The preceding single-variable computation uses
+only orders of coefficients and the value \(w\). It transfers to
+the original polynomials as follows. Write \(m\) for the
+normalized content valuation of a limit before dividing by its
+uniformizer power. Take \(N\) so large that
+\[
+ (N+1)w>m+dw
+\]
+for all series, and \(N\ge d\) for all of
+them.
+
+The coefficients of the original one-variable substitutions
+through degree \(N\) are fixed integral polynomial expressions
+in finitely many input coefficients, including for inverse
+coordinates. Their orders therefore converge to the orders in
+the limit. Write \(b_j\) for the coefficients at one such level and take
+\(T=\xi-1\), so \(v(T)=w\).
+
+For all sufficiently large levels on
+the subsequence, finite coefficient convergence and integrality
+of the tail give
+\[
+ \begin{aligned}
+ v(b_dT^d)&=m+dw,\\
+ \min_{\substack{0\le j\le N\\j\ne d}}v(b_jT^j)&>m+dw,\\
+ \inf_{j>N}v(b_jT^j)&\ge (N+1)w>m+dw .
+ \end{aligned}
+\]
+An empty minimum has value \(+\infty\). The ultrametric inequality is
+therefore an equality on the full series:
+\[
+ v(\sum_{j\ge0}b_jT^j)=m+dw.
+\]
+Inverse-coordinate series may be evaluated in the
+completion of the coefficient field, where the substitution
+agrees with inversion at the root of unity. The test works
+for every primitive root of that order because it uses only
+the valuation \(w\) and a unique minimal term. Thus the same
+level gives the bounds for every power of the character prime
+to \(\ell\).
+
+At such a level \(M\ge a\) use its selected primes and its
+characters \(d_i\). The ray class character at the chosen level is read on the same coordinates by
+\[
+ \psi(g)=\prod_i u_i^{d_i(g)}.
+\]
+Each coordinate is abelian, unramified off its selected pair and tamely ramified there, so the Artin map gives the desired ray character. The universal theta coordinates at the chosen primes agree with the characters \(d_i\) by the restriction property for the chosen coordinate characters. Ramification is exact because each \(u_i\ne1\)
+and no other coordinate ramifies at that pair. The image on either inertia group at pair \(i\) is
+\(\langle u_i\rangle\), with \(u_i\) or \(u_i^{-1}\) realized
+on a generator.
+
+For any integer \(n\),
+\(u_i^n-1\in(u_i-1)O'\) in the coefficient valuation ring
+\(O'\); for negative \(n\), use
+\[
+ u_i^{-n}-1=-u_i^{-n}(u_i^n-1).
+\]
+Thus the two places in
+each pair have the same minimum, and the weighted cost is
+\[
+  t\sum_i 2\min_{\psi(g)\ne1}v(\psi(g)-1)
+      =2t\sum_i v(u_i-1)
+      =2t\sum_i\ell^{h_i}w \le \delta ,
+\]
+where the minimum at each \(i\) is restricted to its inertia
+group.
+
+\proofstep{Choose one specialization that fits all four allowances.}
+All evaluations now use a common auxiliary parameter. Distributing the permitted error among the finitely many signatures and abelian values allows one specialization to satisfy all of the length and index bounds.
+
+Take \(\delta\) smaller than \(\ell^{-2}/(1+2m+\#\{s\})\).
+Writing \(L_s\) for each specialized signature length, the common choice gives
+\[
+ L_s\le\nu_\ell+e_s,\qquad e_s\ge0,\qquad \sum_s e_s\le\ell^{-2}.
+\]
+In particular every \(L_s\) is finite. The abelian
+theta values are nonzero with valuations between \(-N_0\) and
+\(v(\theta_\lambda(1))+\ell^{-2}\), the lower bound following
+from integrality of \(f_M\). The nonnegative excesses over the
+untwisted row indices sum to at most \(\ell^{-2}\).
+
+The tame
+cost multiplied by \(t\) is at most \(\ell^{-2}\) as well.
+The number of primes, the depth, the coefficient extension and
+the coordinate orders may depend on the host and the given
+finite family. Only the four displayed allowances are used at
+subsequent places. At conjugate coefficient places transport
+the character with the prescribed inversion. For finitely many
+other choices add all rational primes already used to the
+avoidance set, taking all places over them. This gives the
+disjoint auxiliary levels of the norm data. \label{cor:retained-twist-1}
+\end{proof}
+
+\subsubsection*{The relaxed global length at the chosen point}
+
+Enlarging the coefficient field can realize the chosen character and its values. The Selmer cost in the determinant must still be measured in the original units of normalized length.
+
+\begin{auxlemma}[Normalized torsion length under a DVR extension]
+\label{lem:retained-dvr-normalized-length}
+Let \(A\to C\) be a local inclusion of discrete valuation rings of mixed
+characteristic \((0,\ell)\), let \(v_A,v_C\) give value one to the respective
+uniformizers, and let \(D\) be a torsion \(A\)-module. Then
+\[
+ \frac{\operatorname{len}_C(C\otimes_A D)}{v_C(\ell)}
+   =\frac{\operatorname{len}_A D}{v_A(\ell)}
+\]
+with infinite length allowed.
+\end{auxlemma}
+
+\begin{proof}
+For a uniformizer \(\pi_A\), put \(e=v_C(\pi_A)\). The extension is flat
+because \(C\) is torsion-free over the DVR. Tensoring a composition series
+for a finite-length module replaces each simple factor by
+\(C/\pi_A C\), of length \(e\). Also \(v_C(\ell)=e v_A(\ell)\).
+An infinite-length torsion module has finite-length submodules of arbitrarily
+large length. Flatness preserves their inclusions, proving the assertion
+in that case.
+\end{proof}
+
+\begin{lemma}[Specialization on the actual retained lattice]\label{lem:retained-signature-specialization}
+At a good retained point of the marked localization, the
+selected lower complement on the prescribed lattice identifies
+after coefficient extension with its good signature. The
+relaxed Selmer group injects into that of the specialized
+signature in the normalized comparison. In particular its
+finite length satisfies
+\[
+ s_\pi\le\nu_\ell+\ell^{-2},\qquad
+ t\sum_{v\in Q}v(\zeta_v-1)\le \ell^{-2}.
+\]
+\end{lemma}
+
+\begin{proof}
+\proofstep{Descend the rational intertwiner and use its nonzero integral reduction.}
+At a good retained point \(\pi\), take the signature \(s\)
+with the same lower cusp, tuple and side. Cancelling the
+prescribed character factors in the row parameter
+identifies the traces at split unramified Frobenius elements.
+Chebotarev and continuity give
+\[
+ \operatorname{tr}\rho_\pi(g)=\operatorname{tr}\rho_s(g)
+\]
+for every \(g\), after scalar extension. Absolute irreducibility
+of the reduction implies absolute irreducibility in characteristic
+zero: a proper invariant subspace would have a proper saturated
+intersection with a stable lattice after finite coefficient
+extension, and reduction would give a proper nonzero invariant
+subspace of the residual lattice. Brauer--Nesbitt gives
+a fraction-field intertwiner, which descends because the
+intertwiner equations are linear. Multiply it by a scalar so
+that its entries are integral with at least one unit.
+
+If \(A\) is the scaled intertwiner, its nonzero reduction has proper stable kernel. Residual irreducibility and equality of ranks give
+\[
+ \ker\bar A=0\quad\Longrightarrow\quad\det\bar A\ne0\quad\Longrightarrow\quad\det A\in O^\times.
+\]
+Thus \(A\) is an integral isomorphism. Twisting by
+\(\chi_1^{-1}\) identifies \(W=\rho_\pi\chi_1^{-1}\)
+with the signature lattice twisted by the inverse auxiliary
+character of the chosen side. The signature lattice already
+contains the inverse untwisted rank-one factor.
+
+The two character evaluations identify their generated
+orders by equality of kernels on the base group algebra.
+Take the integral closure in their common fraction field.
+Let \(A\to C\) denote either of the two local torsion-free
+DVR extensions from this common base and \(\pi_A\) a
+uniformizer. Fix lifts \((c_i)_i\) of a basis of \(C/\pi_A C\)
+over \(A/\pi_A A\). They give, compatibly for every \(n\ge1\),
+\[
+ (A/\pi_A^n A)^{(i)}
+     \xrightarrow{\ (x_i)\mapsto\sum_i c_i x_i\ }
+                         C/\pi_A^n C ,
+\]
+where the superscript denotes the direct sum on the index set.
+For surjectivity lift residues successively through order \(n-1\),
+using finitely many terms at each order.
+
+For injectivity, suppose \(\sum c_i x_i\in\pi_A^n C\) and some
+\(x_i\notin\pi_A^n A\). For \(m=\min_i v_A(x_i)<n\), torsion-freeness
+permits division by \(\pi_A^m\) in \(C\). Reduction gives
+\[
+ \sum_i\overline c_i\,\overline{x_i/\pi_A^m}=0\quad\text{in }C/\pi_A C.
+\]
+At least one coefficient is nonzero in \(A/\pi_A A\), contrary to the
+choice of the residue basis. The same lifts work on all bounded torsion
+submodules. Also \(C[1/\pi_A]=K_C\) since \(\pi_A\) has positive
+\(C\)-valuation, so flatness gives
+\[
+ C\otimes_A(K_A/A)=K_C/C.
+\]
+
+
+If \(D\) is a discrete torsion coefficient module with this
+action, continuous cochains commute with the indicated direct
+sum. Each cochain has finite image on a finite power of the
+compact Galois group, and consequently uses finitely many
+copies. Differentials and restrictions act coordinatewise.
+The auxiliary character is trivial on each decomposition group
+over \(\ell\). The signature finite condition is the scalar span
+of the base images, which is the direct sum of the base
+conditions under this decomposition. For the finite local
+coefficient fields the crystalline condition commutes with
+extension by the finite basis decomposition of the rational
+period comparison, and taking the image in the torsion quotient
+commutes with it as well. Conjugate embeddings over the same
+place transport this condition. Writing \(S_A\) for the Selmer module over the common base and \(S_C\) for either extension, compatibility of all local kernels gives
+\[
+ C\otimes_A S_A\simeq S_C.
+\]
+
+Lemma~\ref{lem:retained-dvr-normalized-length}, applied to the common
+base Selmer group, identifies both normalized lengths, including the
+criterion for finiteness.
+
+Finally identify \(K^r/O^r\) with \((K/O)^r\) coordinatewise.
+This carries the global Selmer group defining \(s_\pi\) into
+the signature group defining the specialized determinant.
+Unramified restrictions and unrestricted conditions at
+\(S\cup Q\) away from \(\ell\) are preserved. At
+\(v\mid\ell\) a generator of the local finite condition
+comes from the reduction of a rational crystalline finite
+cocycle. Write \(c\) for the chosen torsion cocycle and \(z\) for a rational finite cocycle. If \(c-\bar z=d a\), lift \(a\) to \(\tilde a\in K^r\); then
+\[
+ \overline{z+d\tilde a}=\bar z+d a=c .
+\] Its coordinates then give the lifts in
+the definition of the signature local condition, and taking
+the integral span preserves membership. Coordinatewise
+identification induces an isomorphism on ambient cohomology,
+so the map on these Selmer subgroups is injective. In
+particular finiteness of the specialized signature length
+gives finiteness at \(\pi\) and
+\[
+          s_\pi\le \nu_\ell+\ell^{-2},
+       \qquad t\sum_{v\in Q} v(\zeta_v-1)\le\ell^{-2}.
+\]
+
+\proofstep{Read the norm and signature characters on the same generator of inertia.}
+Passing to a larger coefficient field preserves normalized length. We must further check that the character used to define the relaxed condition there is the one selected by the local norm data.
+
+For the second inequality, the generator selected in the
+marked model has full inertia image. The character of the
+norm data and the twisted signature have the same character
+values up to coefficient embedding and inversion, both of
+which preserve the valuation of the difference from one.
+These are the two global allowances in the local congruence
+table. The pair-removal calculation derives the two theta polynomial assertions from their integral level and Euler relations. \label{cor:retained-twist-2}
+\end{proof}
+
+\subsubsection*{The square Selmer presentation}
+
+The character choice used a polynomial coming from the Selmer group. Its construction begins with a square presentation over the group ring, so specialization gives a determinant on the prescribed auxiliary coordinates.
+
+\begin{established}[Coefficient algebra and Selmer functor]\label{hyp:signature-presentation}
+Put \(\Lambda=O_0[(\mathbb Z/\ell^M)^{2R_*}]\), with \(O_0\) the coefficient DVR of the signature, and let \(k\) denote the residue field. This algebra is finite free, local and complete. For the signature Selmer functor \(S\), with inverse universal character and relaxed conditions at the selected pairs, \(S\) is additive, \(\Lambda\)-linear and left exact. Every class is defined over a finitely generated torsion submodule, and \(S(k)\) is finite. For \(0\to k\to B\to C\to0\) one has
+\[
+ \#\operatorname{coker}(S(B)\longrightarrow S(C))\le\# S(k).
+\]
+\end{established}
+\begin{proof}
+The group elements form an \(O_0\)-basis. Indeed every maximal ideal lies
+over the maximal ideal of \(O_0\), and after reduction one has
+\[
+ k[(\mathbb Z/\ell^M)^{2R_*}]\simeq k[X_1,\ldots,X_{2R_*}]/(X_1^{\ell^M},\ldots,X_{2R_*}^{\ell^M}).
+\]
+Here \(X_i\) is the \(i\)-th generator minus one, so the augmentation ideal is nilpotent.
+Thus the maximal-ideal and base uniformizer topologies agree.
+Its residue field \(k\) is finite.
+
+ Additivity and linearity follow from the cocycle maps. Lemma~\ref{lem:signature-left-exact} proves left exactness and finite generation for individual classes. Finiteness over \(k\) follows from global cohomological finiteness for the finite module \(T(k)\). In \eqref{eq:sig-obstruction} a global connecting class and a tuple of local corrections give obstruction groups of orders \(|A|\) and \(|C|\), with product \(|S(k)|\). The fibre count following that identity gives the required bound, before the construction of the square presentation.
+\end{proof}
+
+\begin{lemma}[Square presentation of the signature functor]
+\label{lem:signature-square-presentation}
+For the ring and functor of Lemma~\ref{hyp:signature-presentation}, put
+\(a=\dim_k S(k)\). There is one matrix \(D\) over the maximal ideal such that for every discrete torsion coefficient module \(B\) one has, naturally in \(B\),
+\[
+ D\in M_a(\mathfrak m),\qquad S(B)\simeq\ker(D:B^a\longrightarrow B^a).
+\]
+\end{lemma}
+
+\begin{proof}
+On finite modules use the exact duality
+\(D(-)=\operatorname{Hom}_{\mathbb Z_\ell}(-,
+\mathbb Q_\ell/\mathbb Z_\ell)\). The modules \(S(B)\) are
+finite for finite \(B\) by a composition series and left
+exactness. Hence \(J(B)=D S(D B)\) is a right exact linear
+functor on finite modules.
+
+For \(A_n=\Lambda/\mathfrak m^n\)
+put \(P_n=J(A_n)\). If \(B\) is an \(A_n\)-module of finite
+length then \(J(B)\simeq B\otimes_{A_n}P_n\) naturally.
+For \(b\in B\) let \(\lambda_b:A_n\to B\) send \(1\) to
+\(b\). The map \(b\otimes p\mapsto J(\lambda_b)(p)\)
+is balanced and is the identity on \(A_n\). Additivity makes
+it an isomorphism on finite free modules.
+
+For a presentation \(A_n^q\xrightarrow{U}A_n^d\to B\to0\),
+applying \(J\) gives
+\[
+       J(B)\cong \operatorname{coker}
+                    (P_n^q\xrightarrow{U}P_n^d)
+                \cong B\otimes_{A_n}P_n .
+\]
+The maps are induced by \(b\otimes p\mapsto J(\lambda_b)p\),
+so the construction is natural in \(B\). In particular, view \(A_n\)
+as an \(A_m\)-module when \(m\ge n\). This gives
+\[
+      P_n=J(A_n)\simeq A_n\otimes_{A_m}P_m
+                       =P_m/\mathfrak m^nP_m .
+\]
+Write \(a=\dim_k S(k)=\dim_k P_1\), using \(Dk\simeq k\).
+Lift a basis of \(P_1\) compatibly in the surjections \(P_m\to P_n\).
+
+By Nakayama this gives surjections \(\Lambda^a\to P_n\) with
+descending kernels \(K_n\). For \(m\ge n\),
+\(K_n=K_m+\mathfrak m^n\Lambda^a\).
+These kernels are compact in the finite base coefficient
+topology.
+
+For each \(x\in K_n\) the compact sets
+\(K_m\cap(x+\mathfrak m^n\Lambda^a)\) are nested and
+nonempty for \(m\ge n\). Consequently for \(K=\bigcap K_n\)
+one has
+\[
+ K_n=K+\mathfrak m^n\Lambda^a.
+\]
+It follows that
+\(P=\Lambda^a/K\) represents the original functor:
+on a finite module killed by \(\mathfrak m^n\), dualizing the
+tensor description gives
+\[
+ S(B)=\operatorname{Hom}_\Lambda(P,B)
+\]
+naturally. Every finite torsion module is killed by such a
+power. The finite-generation condition on classes and left
+exactness extend this equality to arbitrary discrete torsion
+modules, since \(P\) is finitely generated and every finitely
+generated torsion submodule is finite.
+
+For the relations set
+\(I=\operatorname{Hom}_{\mathbb Z_\ell}(\Lambda,
+\mathbb Q_\ell/\mathbb Z_\ell)\). It is injective over
+\(\Lambda\) by adjunction and divisibility over \(\mathbb Z_\ell\).
+Finiteness of \(\Lambda\) over \(\mathbb Z_\ell\) makes \(I\)
+torsion, and dualizing \(\Lambda\to k\) embeds \(Dk\simeq k\)
+in it. Apply \(\operatorname{Hom}_\Lambda(P,-)\) to
+\(0\to k\to I\to I/k\to0\). The connecting map is surjective
+because \(I\) is injective, so the arithmetic cokernel is
+\[
+ \operatorname{coker}\bigl(S(I)\longrightarrow S(I/k)\bigr)
+          =\operatorname{Ext}^1_\Lambda(P,k).
+\]
+Applying \(\operatorname{Hom}_\Lambda(-,k)\) to
+\(0\to K\to\Lambda^a\to P\to0\) identifies this group
+with \(\operatorname{Hom}_k(K/\mathfrak mK,k)\) because restriction
+from \(\Lambda^a\) is zero when
+\(K\subseteq\mathfrak m\Lambda^a\).
+Its size bound implies \(\dim_k K/\mathfrak m K\le a\).
+
+The ring is Noetherian, so at most \(a\) generators suffice
+for \(K\). Use them as relations and pad by zero relations
+to get an \(a\)-square matrix with entries in \(\mathfrak m\).
+The kernel of its action on \(B^a\), taking the relations
+as rows, is \(S(B)\) naturally in \(B\). The square matrix now represents the Selmer functor. Detecting its determinant in bounded degree is an arithmetic step: the auxiliary Frobenius elements must be realized by primes with prescribed ray coordinates. \label{cor:retained-twist-3}
+\end{proof}
+

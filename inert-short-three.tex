@@ -1,0 +1,262 @@
+\begin{lemma}[Three-letter lifting with negative outer signs]\label{lem:three-letter-negative-lift}
+With \(L=S_g\) and \(B\) the short-band indicator of Section~\ref{sec:inert-row-table},
+for the chronological signs \(-,+,-\), one can choose a three-letter correction in the short-arc frames with exponent \(e_3\) satisfying
+\[
+ e_3\le22L+1+\eta B
+\]
+in the given DVR normalization.
+\end{lemma}
+
+\begin{proof}
+\label{par:short-three-levels}
+Put
+\[
+ u=s_{c-2},\ v=s_{c-1},\ z=s_c,
+\]
+so \(u\le w\)
+and \(v,z\in[b_0,b_0+\eta]\). Here \(40L\le b_0/4\).
+At a partial arc use level numbers relative to its own endpoint.
+
+\proofstep{Start with the middle positive letter and retain the two negative neighbors.}
+First consider signs \(-,+,-\) in chronological order.
+If \(p(u+S+\eta)\le v\), work at the middle letter and
+write \(A=A_{c-1}\), \(y=u+S+\eta\).
+As in the two-letter coefficient extraction use the coordinate
+\(P_1^{u+S}/q^v\) in direction \(d\). At this intermediate
+point the scalar image bound at a cut is unavailable. Instead
+lift \(X^A\) times the realized vector. After the two horizontal
+comparisons and multiplication by \(q^{v+S}P_1^\eta\), the
+scalar on the target, in the variable \(q\), is
+\[
+ F=p^{2\sigma}(q-p)^A q^S P_1^y .
+\]
+Below degree \(v+S-\eta\) every source coefficient lies in
+\(\mathcal F^v\) by the gap. To recover an integral direction
+it suffices that some such coefficient of \(F\) divides a small
+power \(p^t\) in \(O\).
+
+Take
+\[
+ t=1+\left\lfloor\tfrac{11}{10}
+ (2\sigma+(\eta+A)/p+2+\gamma_h)\right\rfloor .
+\]
+Then \(2\sigma<t\le10L\), \(A+t+\eta\le v\).
+For the first bound use \(\sigma\le3L\) and
+\(A\le (h+\eta)/(p-1)+1\), giving
+\[
+ (\eta+A)/p\le 1.1(h+\eta)/p^2+(\eta+1)/p.
+\]
+
+Substitution in the floor bound gives \(t\le10L\).
+For the second, \(A\le (b_0+2\eta+S)/(p-1)+1\),
+\(10L\le b_0/16\) and \(20\eta,20S\le b_0\).
+If all the indicated coefficients were divisible by \(p^t\),
+put \(k=t-2\sigma\). Modulo \(p^k\) one has
+\(q^{A+k-1}\in((q-p)^A)\) by the binomial expansion.
+Cancel \(p^{2\sigma}\), remove the initial power of \(q\),
+and use this divisibility. The result would be
+\[
+ P_1^y\in(p^k,q^{v-\eta-(A+t-1)}).
+\]
+The second content calculation, before rounding, gives
+\[
+ k\le\max\{0,\ y-(v-\eta-A-t+1)/p+2+\log_p y\}.
+\]
+Indeed using the index \(\min(y,\lfloor(C-1)/p\rfloor)\)
+costs at most \(y-C/p+1+1/p+\log_p y\) when positive.
+
+Since \(py\le v\) and \(p/(p-1)\le11/10\), the definition
+of \(t\) contradicts the last display. Choose a coefficient
+of valuation less than \(t\), and multiply its source vector by
+the integral quotient of \(p^t\) by that coefficient.
+Moving one step forward gives the positive-level preimage.
+The sole pole of \(f\) is at this level, so the second lifting
+rule gives cost
+\[
+ t+\sigma\le13L.
+\]
+
+
+Suppose next that \(v<p(u+S+\eta)\). The down-level constants
+in \eqref{eq:short-scalar} can be different. Eliminate the one
+at level two first. The denominator there is \(P_1^v\), the
+modulus is \(P_2^{u+S}\). Put \(y=u+S\). Since
+\(P_2=p\varepsilon_1+U_1P_1^p\) with unit coefficients, the
+first content calculation (using \(P_1,P_2\) in place of
+\(q,P_1\)) gives a splitting
+\[
+ t_2f=x_2+f_2,\quad D f_2\in P_2^{y}\mathcal R,\quad
+ D(p^{k_0}f_2-x_0)\in q^{z+S}\mathcal R,\qquad D=P_1^v .
+\]
+
+If \(v<py\), the content of \(P_1^v\) modulo \(P_2^y\)
+is zero by reduction and comparison of orders. Otherwise use
+the ceiling multiple \(p\lceil v/p\rceil\) in its place.
+For \(py\le v<p(y+\eta)\), the expansion in \(p,P_1^p\) of \(P_2^y\) costs
+at most \(\eta+2+\gamma_h\), and the small letter belongs to
+the band. Thus \(v_p(t_2)\le(\eta+2+\gamma_h)B\).
+
+Write \(C=z+S\). For \(x_0\ne0\), the second congruence gives
+\begin{equation}\label{eq:short-last-constant}
+ v_p(x_0)-k_0\ge y-v+C/p-C/p^2-2-\gamma_h .
+\end{equation}
+Indeed \(P_2^y\) has content at least \(y-C/p^2\) modulo
+\(q^C\). Expand first in \(p,P_1^p\), then in \(p,q^p\):
+a term with less scalar valuation has \(q\)-degree at least
+\(C\). The content of \(P_1^v\) modulo \(q^C\) is at most
+\(v-C/p+2+\gamma_h\) by the second calculation, since
+\(C\le pv\). Comparing contents of
+\[
+ x_0P_1^v\equiv p^{k_0}P_2^y U\bmod q^C
+\]
+proves the claim.
+
+Here is how to use this scalar inequality with the middle
+filtered lattice. Transport the truncated horizontal column to
+the middle point, paying \(\sigma\) at the first small letter,
+and denote its integral representative by \(\lambda\). It
+represents \(p^\sigma d\) there.
+
+Set \(s=P_1^y/q^v\) at this
+point. The vector \(s\lambda\) lies in the target Wach lattice.
+The level test uses \(d\in\mathcal F^v\) at the middle and
+the zero of order \(y\) at the initial negative letter.
+In addition
+\[
+ \gamma(s)(\gamma-1)\lambda\in Xq^{a_*}N_{c-1}(T_2)
+\]
+where \(a_*=A_{c-1}+r_{c-1}\) and \(r_i\) is the least
+scalar Wach image exponent at \(i\). Indeed the one-step
+horizontal correction has defect in \(X^M q^{2G}\) in the
+first Frobenius span. The next transport gives factors
+\(X^M q^{(p-1)M}P_1^{2G}\); after multiplication by
+\(\gamma(s)\) these pay \(Xq^{a_*}\) and the signed height losses
+\(q^\eta P_1^{u+S}\), since \((p-1)M\ge v+a_*+\eta\).
+
+The powers required in the ordinary parameter and the scalar
+give the \(q^{a_*}\) image by the binomial theorem.
+The two-filter argument of Paragraph~\ref{par:thick-filtered-comparison}
+therefore lifts \(p^E s\lambda\) integrally, where
+\[
+ E=\left\lfloor\frac{3a_*+S+2\eta-2}{p-1}
+               +\log_p(v+\eta-1)\right\rfloor_{\!+}\le8L .
+\]
+For this application the lower filter has indices \([v-a_*+1,v]\)
+and the other has indices in \([v+1,v+S+a_*]\cup[1-\eta,\eta+a_*]\).
+The factors adjacent to \(j\) in the first two intervals
+give factorials of combined length \(2a_*+S-1\).
+
+In the remaining
+interval of length \(2\eta+a_*\), isolate a term of largest
+valuation; the others are bounded by factorials of combined
+length \(2\eta+a_*-1\). The isolated valuation is at most
+\(\log_p(v+\eta-1)\). If \(a_*=0\) the map is already onto
+at this letter. The global ordinary width bound \(H\le h+\eta\)
+and degree lowering give
+\[
+ a_*\le H(2p-1)/(p-1)^2+\lceil1+\log_p(1+H)\rceil+1.
+\]
+
+These imply \(2a_*+\eta+1\le v\) under \(40L\le b_0/4\)
+and give the displayed estimate for \(E\), by \(p\ge11\) and
+\(H\le b_0+2\eta+S\). In particular
+\[
+ v+a_*+\eta\le2v\le2h<(p-1)M,
+\]
+as used in the defect estimate. The separation gives the
+disjointness required by interpolation. \label{cor:inert-short-three-1}
+
+Let \(n_1\) be this lift. Take its constant in a horizontal
+basis at \(c-1\) and transport it to \(c\) with precision
+\(Xq^C\). This gives \(y_1\) in the last Frobenius span,
+with \((\gamma-1)y_1\in XN_c(T_1)\) and \(q^C y_1\in N_c(T_1)\).
+Use the truncation order
+\[
+ R_0=\lceil C/(p-1)\rceil
+\]
+and
+take \(\sigma_1=R_0\). In positive degree \(r<R_0\) the
+denominator costs \(r+v_p(r!)\). The transported monomial is
+a unit times \(X^r q^{(p-1)r}\). Keep one \(X\) and expand
+the others as \((q-p)^{r-1}\).
+
+Modulo \(Xq^C\) the surviving
+terms contain at least \(\max(0,pr-C)\) powers of \(p\):
+a term of extra degree \(j\) must satisfy \(j+(p-1)r<C\).
+The loss is therefore at most
+\[
+ pr/(p-1)-\max(0,pr-C)\le C/(p-1);
+\]
+the maximum occurs at the crossing \(pr=C\). The transported
+tail is zero to this precision. The last-level jet of \(y_1\)
+is horizontal in the last Frobenius span: its difference is
+zero modulo \(Xq^C\) there, by the truncation and the integral
+correction. Over the coefficient field use the local logarithmic
+parameter at the primitive level. On a horizontal column the
+action on degree \(k\) has eigenvalue \(\chi(\gamma)^k\), so
+an invariant jet has only its constant coefficient. This gives
+the jet of \(F(y_1)\) from the transported constant of \(n_1\)
+with multiplier \(p^{\sigma_1}\).
+
+To compare with \(f_2\Phi\lambda\), use the common horizontal
+column at the last level. At this level the transported multiplier
+\(\phi(s)=P_2^y/P_1^v\) has constant term
+\[
+ (P_2^y/P_1^v)(0)=p^{y-v},
+\]
+since \(P_j(0)=p\) for \(j\ge1\) in the \(q\)-coordinate.
+Thus the two scalar constants to be matched, after multiplying
+by \(p^{k_0+v}\), are \(x_0p^v\) and
+\(p^{k_0+\sigma_1+E+y}\). In the second expression the
+common horizontal normalization cancels; its \(p^\sigma\) is
+present in both comparisons.
+
+Choose \(t_3,B'\in O\) with
+\[
+ t_3 x_0p^v=B' p^{k_0+\sigma_1+E+y},\qquad v_p(t_3)\le14L .
+\]
+For \(x_0=0\) use \((1,0)\). Otherwise take \(t_3=1\) if
+\(v_p(x_0)+v\ge k_0+\sigma_1+E+y+\sigma\). In the other
+case choose equality with \(B'=p^\sigma\). Equation
+\eqref{eq:short-last-constant} bounds \(v_p(t_3)\) by
+\[
+ \sigma+E+\sigma_1-C/p+C/p^2+2+\gamma_h\le14L .
+\]
+In fact \(\sigma_1\le C/(p-1)+1\), \(C\le h\), and
+\(1/(p(p-1))+1/p^2\le 2.1/p^2\).
+
+For the marked map \(F\), the required Frobenius-span congruence is
+\[
+ t_3 f_2\Phi\lambda-B' F(y_1)\in q^C\langle\Phi N_{c-1}(T_2)\rangle.
+\]
+
+For the first term the numerator at level two supplies the
+height loss from the first negative letter; equivalently
+\(f_2\Phi\lambda\) is an integral multiple of
+\(\Phi(s\lambda)\). For the divisibility assertion compare
+the two horizontal jets after inverting \(p\) and the higher
+level factors. Modulo \(q^C\) the first has constant multiplier
+\(x_0/p^{k_0}\) on \(\Phi\lambda\), by the last congruence;
+the horizontal jet of the second has constant multiplier
+\(p^{\sigma_1+E+y-v}\). Higher level factors are units at
+\(q=0\) over the fraction field, and the bounded integral
+Frobenius span is free.
+
+For the free bounded integral Frobenius span \(P\), monic division yields
+\[
+ P\cap q^C P[1/p]=q^C P.
+\]
+Thus the congruence of rational horizontal jets is integral. The negative terminal
+height puts this difference in \(N_c(T_2)\). Lift \(p^R\)
+times the difference there and add \(p^R B' y_1\).
+The result is admissible and maps to \(p^Rt_3 f_2\Phi\lambda\);
+its denominators in \(N_c(T_1)\) are cleared by \(q^C\).
+Since \(\Phi\lambda\) represents \(p^\sigma d\), this
+lifts \(t_3f_2\) at cost \(R+\sigma\). The summand \(t_3x_2\)
+admits the constant lift at the same cost. The scalar clearing cost is
+\[
+ \lceil v_p(t_3t_2)\rceil=\lceil v_p(t_3)+v_p(t_2)\rceil.
+\]
+Adding the lifting costs gives the bound \(22L+1+\eta B\).
+\end{proof}
+

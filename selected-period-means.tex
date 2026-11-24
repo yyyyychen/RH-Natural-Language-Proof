@@ -1,0 +1,363 @@
+\subsubsection{The archimedean mean on the reference chain}
+\label{subsec:selected-period-means}
+
+The single-entry estimate involves both the CM period and the norm of a theta vector. The squared kernel height uses their means over the same embeddings. Write \(K=\mathbb Q(\sqrt{-d})\) for the CM curve field,
+\(r_E\) for the root discriminant of the CM field \(E\), and
+\(\ell_K=(L'/L)(1,\chi_{-d})\). The discriminant of \(K\) is
+\(-d\), since \(d\equiv7\bmod8\) is prime. In this paragraph an
+overline on a real quantity means its average over the embeddings
+of a number field defining the curve, its differentials, the
+finite class data and the coefficients of the selected base
+sections.
+
+The field of definition can be enlarged to contain the torsion points used
+in a calculation. If \(F'/F\) is such an enlargement and \(a_\rho\) is a quantity
+attached to an embedding of \(F\), then
+\[
+ \frac{1}{[F':\Q]}\sum_{\rho':F'\hookrightarrow\C}a_{\rho'|_F}
+    =\frac{[F':F]}{[F':\Q]}\sum_{\rho:F\hookrightarrow\C}a_\rho .
+\] In particular one may first average
+above the infinite place of the period matrix. Every embedding
+there bounds the same squared operator norm, and the two
+conjugate embeddings of its totally imaginary coefficient field
+give that place with the same multiplicity.
+
+\begin{proposition}[Mean normalized differential area]\label{prop:mean-differential-area}
+For the full-order CM models of \(K=\mathbb Q(\sqrt{-d})\)
+with discriminant-one period lattice as in
+Proposition~\ref{prop:level-free-theta-jets}, the mean normalized
+area of the axis
+generator \(d_\tau\) is
+\[
+ \overline{\log\frac{A_\rho}{\pi|\rho(d_\tau)|^2}}
+   =\gamma+\log(2\pi/r_E)-\ell_K .
+\]
+The mean is unchanged by adjoining the finite class or
+coefficient data of the selected test.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Average the discriminant-one area over the full ideal class group.}
+Let \(A_\rho\) be the area of the period lattice at embedding
+\(\rho\), with its discriminant normalized to one. The main
+theorem of complex multiplication for the full order of \(K\)
+makes its ideal classes equidistributed over these embeddings.
+Indeed over \(K\) the Galois action on the singular moduli is
+the ideal class action on the lattices, simply transitive. Complex
+conjugation permutes the same classes, and adjoining the
+coefficients of a discriminant-one equation gives equal
+multiplicities. A homothety \(\Lambda\mapsto c\Lambda\) changes the
+discriminant by \(c^{-12}\) and the area by \(|c|^2\). For two
+discriminant-one representatives in the same class,
+\[
+ c^{-12}=1\quad\Longrightarrow\quad
+ \operatorname{area}(c\Lambda)=\operatorname{area}(\Lambda).
+\] \cite{cm-reciprocity}
+
+\proofstep{Compute the average using the first limit formula.}
+Choose a positively oriented basis \(\omega,\omega\tau\) in a
+class, write \(y=\Im\tau\), and put
+\(Z(\tau,s)=\sum' y^s/|m+n\tau|^{2s}\). Kronecker's first
+limit formula gives residue \(\pi\) at one and constant term
+\(2\pi(\gamma-\log 2-\log(\sqrt y\,|\eta(\tau)|^2))\).
+
+For an ideal \(I\), its unscaled covolume is
+\(\mathrm{N}(I)\sqrt d/2\). The sum over its nonzero elements
+counts each integral ideal in the inverse class once for each
+unit, by \(a\mapsto(a)I^{-1}\). Hence, for \(\Re s>1\),
+the sum of the \(Z\)'s over the classes is
+\[
+       |\mathcal O_K^\times|(\sqrt d/2)^s\zeta(s)L(s,\chi_{-d}).
+\]
+This also identifies their Laurent coefficients at one. Divide the
+constant term by the residue on both sides. The result is
+\[
+  2\,\overline{\log(\sqrt y\,|\eta(\tau)|^2)}
+       =\gamma-\log(2\sqrt d)-\ell_K .
+\]
+The analytic discriminant is
+\((2\pi/\omega)^{12}\eta(\tau)^{24}=1\), so
+\(A_\rho=(2\pi)^2y|\eta(\tau)|^4\). We obtain
+\begin{equation}\label{eq:selected-curve-area}
+        \overline{\log(A_\rho/\pi)}
+             =\gamma+\log(2\pi/\sqrt d)-\ell_K .
+\end{equation}
+\cite{kronecker-period-mean}\label{cor:selected-period-means-1}
+
+There is a second factor from the host. With
+\(\mathfrak D=\mathfrak D_{E/K}\) and the inverse half different
+\(I=\mathfrak b^{-1}\), equation~\eqref{eq:host-different-factors}
+gives \(\mathfrak D=\mathfrak b\bar{\mathfrak b}\) for the fixed target
+character, including the primes of its conductor. Its relative
+trace dual for the bilinear pairing is
+\(I^*=\mathfrak D^{-1}I^{-1}=\bar{\mathfrak b}^{-1}\). In the split coordinates of
+\(E\otimes_K M\), for a field \(M\) containing its embeddings,
+the pairing is the sum of coordinate products. Tensor the
+perfect pairing of \(I\) and \(I^*\) with \(\mathcal O_M\)
+over \(\mathcal O_K\). These are projective modules, so the
+pairing stays perfect.
+
+If \(e_\tau\) is the coordinate vector on the \(\tau\)-axis,
+then pairing \(ce_\tau\) with \(y\in I^*\) gives \(c\tau(y)\).
+Perfectness thus identifies the ideal of allowed values as
+\[
+ \{c:c\tau(I^*)\subseteq\mathcal O_M\}
+      =(\tau(I^*)\mathcal O_M)^{-1}
+      =\tau(\bar{\mathfrak b})\mathcal O_M .
+\]
+It is principal for the defining field of the selected
+generators \(d_\tau\). This interpretation persists after
+enlargement, and descends to any defining field by faithful flatness.
+Since the two conjugate factors have equal absolute ideal norm,
+the ideal norm formula and the tower formula for discriminants give
+\[
+  \overline{\log |\rho(d_\tau)|^2}
+   =\frac{\log\mathrm N_{E/\mathbb Q}\mathfrak D}{[E:\mathbb Q]}
+   =\log r_E-\log\sqrt d .
+\]
+Subtracting from \eqref{eq:selected-curve-area} gives the
+differential term with its metric and its sign,
+\begin{equation}\label{eq:selected-generator-mean}
+  \overline{\log\frac{A_\rho}{\pi|\rho(d_\tau)|^2}}
+     =\gamma+\log(2\pi/r_E)-\ell_K=\log\Omega .
+\end{equation}
+This holds at each individual type label. The same calculation
+at the enhanced finite primes explains why the axis generator
+there has valuation zero.
+\end{proof}
+
+\paragraph{The squared norm of the theta vector.}
+\begin{proposition}[Mean squared theta norm on the reference chain]\label{prop:mean-reference-theta-norm}
+For the discriminant-normalized curve with its marked
+nonzero two-torsion point, \(N_\rho\) is the normalized
+Gaussian squared norm of its even theta section. Its mean satisfies
+\[
+ \overline{\log N_\rho}\le\tfrac12(\log\sqrt d-\gamma+\ell_K).
+\]
+The positive-part mean has the additional allowance
+\(\tfrac14\log d+2\log C_0\), with \(C_0\) an absolute bound
+for the even theta constants of the reduced ideal bases.
+The squared norm on the standard Hom pair at step \(j\)
+is \(N_\rho^{D_j}\) over each conjugate model.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Evaluate the Gaussian integral in the marked characteristic.}
+
+Let \(h_\rho\) be the distinguished nonzero two-torsion point,
+and let \(\theta_\rho\) be the even theta function with this
+zero, normalized at the origin. In the basis above let
+\(\vartheta\) denote the corresponding even Jacobi theta
+constant. Its Gaussian squared norm, using normalized Haar
+average, is
+\[
+      N_\rho=(2y)^{-1/2}|\vartheta(0,\tau)|^{-2}.
+\]
+Indeed integrate the squares of its Fourier series terms over
+one real period. Distinct frequencies are orthogonal. For the characteristic shift \(a\in\{0,1/2\}\), integration
+in the imaginary period leaves
+\[
+ \sum_{n\in\mathbb Z}\int_0^1e^{-2\pi y(n+a+t)^2}\,dt
+    =\int_{\mathbb R}e^{-2\pi y u^2}\,du=(2y)^{-1/2}.
+\] Normalization at the
+origin divides by the squared theta constant.
+
+\proofstep{Use the algebraic integer from the half-period.}
+
+The quotient \(|\vartheta/\eta|^{12}\) is the absolute value
+of a conjugate of a single nonzero algebraic integer. To verify
+the assertion with this half-period, put \(e=\wp(h)\) and
+\(Y=(12e^2-g_2)/4\). For the other roots \(e',e''\) of the Weierstrass cubic,
+differentiating \(4(X-e)(X-e')(X-e'')=4X^3-g_2X-g_3\) at \(e\)
+gives
+\[
+ (e-e')(e-e'')=(12e^2-g_2)/4=Y .
+\] The three half-period difference formulas and
+\(\theta_2\theta_3\theta_4=2\eta^3\), together with
+discriminant one, give
+\(
+        |\rho(Y^{-3})|=|\vartheta(0,\tau)/\eta(\tau)|^{12}.
+\)
+For instance at \(h=\omega/2\) the two differences are
+\((\pi/\omega)^2\theta_3^4,(\pi/\omega)^2\theta_4^4\)
+and the characteristic is that of \(\theta_2\).
+
+The permutations
+of the roots give the other two cases with signs. In the
+identity \(u=-Y^{-3}=s_i(\theta_i/\eta)^{12}\), the multipliers
+are \((s_2,s_3,s_4)=(-1,1,-1)\). These are multipliers of
+the complex ratios at the chosen half-periods. Each conjugate satisfies the monic integral equation over
+\(\mathbb Z[j]\)
+\[
+ (u-16)^3-ju=u^3-48u^2+(768-j)u-4096=0 .
+\] This follows on substituting
+\(\lambda=\theta_2^4/\theta_3^4\) in
+\(j=256(1-\lambda+\lambda^2)^3/(\lambda^2(1-\lambda)^2)\).
+Thus \(Y^{-3}\) is integral since \(j\) is an algebraic integer.
+Both \(e\) and the discriminant-one model conjugate with the
+specified two-torsion datum. The product formula gives
+\(\overline{\log|\vartheta|}\ge\overline{\log|\eta|}\).
+
+Combining the Gaussian identity with the area formula yields
+\[
+        \overline{\log N_\rho}
+        \le\tfrac12(\log\sqrt d-\gamma+\ell_K).
+\]
+A reduced ideal basis gives \(1/2\le y\le\sqrt d/2\)
+by the reduced binary quadratic form of discriminant \(-d\).
+The defining Gaussian series bounds each even theta constant
+at zero by an absolute \(C_0\ge1\) on this range. Thus the negative part obeys the pointwise estimate
+\[
+ (-\log N_\rho)_+
+ =\big(\tfrac12\log(2y)+2\log|\vartheta(0,\tau)|\big)_+
+ \le \tfrac14\log d+2\log C_0 .
+\]
+Adding its mean to \(\overline{\log N_\rho}\) bounds the mean
+of \((\log N_\rho)_+\). This permits a coefficient whose
+sign can vary elsewhere in the height comparison.
+\cite{elliptic-constants}\label{cor:selected-period-means-2}
+
+\proofstep{Transport the normalized one-variable section.}
+
+For the standard source and target the rank of the quadratic
+CM Hom space is \(D_j=f N_{j-1}N_j\). We spell out the use of
+the theta normalization under conjugation. On its fourfold sum
+the normalized vector of Section~\ref{subsec:theta-normalization}
+is a normalized finite sum of Heisenberg translates of the
+product of \(4D_j\) one-variable sections. At the conjugate
+curve the one-variable factor is again the even section
+normalized at the origin with zero \(h_\rho\). Let \(s\) denote this normalized section in its local coordinate. Evenness and the logarithmic derivative formula give
+\[
+ s'(0)=0,\qquad (\log s)''(z)=-\wp(z+h_\rho)-s_2 .
+\]
+Formula~\eqref{eq:cm-isogeny} computes \(s_2\) algebraically from the nonzero points of a CM isogeny with \(a^2\ne a\bar a\). These identities conjugate
+coefficientwise and determine the entire Taylor series.
+
+\proofstep{Compare translated sections and the fourth tensor.}
+
+Write \(s\) for the unshifted section and \(s_t\) for its
+translate by a point \(t\) of order \(m\). The quotient has rational
+\(m\)-th power, and
+\[
+            \operatorname{div}\bigl((s_t/s)^m\bigr)
+                      =m([h-t]-[h]).
+\] After conjugation it is a scalar times the
+corresponding rational function on the conjugate curve, by
+equality of divisors. More precisely the functions can be taken
+over the algebraic coefficients. Their local Laurent series is
+algebraic coefficientwise, and the space of rational functions
+with that divisor is a line defined over the field of the torsion
+points. The product of this rational quotient over the \(m\)
+translations by \(jt\) is a root of unity by the period and
+commutator laws, as in Section~\ref{subsec:baseline-jets}.
+
+If \(f_1=c f_2\) are the two rational quotients with the
+same divisor after conjugation, their translated products differ by
+\[
+ \prod_{j=0}^{m-1} f_1(z+jt)
+     =c^m\prod_{j=0}^{m-1} f_2(z+jt).
+\]
+Both products are roots of unity in this normalization, hence
+\(|c|^m=1\) at every embedding.
+Taking the formal \(m\)-th root gives the translated conjugate
+section up to a unit of complex modulus, including a translate
+vanishing at zero. On the finite quotient, let \(\kappa(x,a)\) be the commutator
+character of the translated summand \(G_a\) under the unitary
+translation \(W_x\), with \(a\) the corresponding torsion class.
+For \(a\ne b\), perfection of the pairing gives \(x\) such that
+\(\kappa(x,a)\ne\kappa(x,b)\). Thus
+\[
+ \langle G_a,G_b\rangle
+  = \kappa(x,a)\overline{\kappa(x,b)}
+       \langle G_a,G_b\rangle=0 .
+\]
+The transported classes remain distinct and their commutator
+pairing is the conjugate Weil pairing. The same calculation
+therefore gives orthogonality after conjugation.
+
+Changing the
+phases of the individual summands preserves the norm. The rational CM isometry conjugates to an
+isometry, since its adjoint equations are algebraic over the
+CM fields, on which conjugation commutes with the embeddings.
+Its change of variables preserves normalized averages.
+For the index \(I\) of this theta-line transfer the conjugate
+section is, up to the determinant scalar of modulus one in
+\eqref{eq:kappa-determinant}, \(I^{-1/2}\sum_{a=1}^I\zeta_a G_a\).
+Each \(|\zeta_a|=1\), and the \(G_a\) are orthogonal with
+squared norm \(N_\rho^{4D_j}\) since each is a unitary translate
+of that one product section. Hence
+\[
+      \left\| I^{-1/2}\sum_{a=1}^I\zeta_a G_a\right\|^2
+               = I^{-1}\sum_{a=1}^I\|G_a\|^2
+               = N_\rho^{4D_j}.
+\] Taking fourth roots of squared
+tensor norms now gives \(N_\rho^{D_j}\) for the squared norm
+of the standard vector. The ideal-character multiplier on the
+standard pair is one.
+
+\end{proof}
+
+\paragraph{Averaging the selected error from the kernel.}
+\begin{proposition}[A uniform bound for the mean logarithmic lift norm]\label{prop:mean-reference-lift-price}
+For the selected word and reference chain, write \(q_{jz}=\sum_i\nu_{jzi}\) for the size of the partition at lift \(j\) and real place \(z\). Set \(\varphi(u)=u(\log u-1)\) for \(u>0\) and \(\varphi(0)=0\). The mean logarithmic lift bound \(h_B(j)\) satisfies
+\[
+ h_B(j)\le
+ \sum_z\left(\sum_i\varphi(\nu_{jzi})-q_{jz}\log\Omega\right)
+       +C fN_m^2(L_a+m^3L).
+\]
+The constant is independent of the CM field, word, embedding and lift index \(j\)
+for fixed \(C_1\), and the estimate applies at both coupled
+indices with the given normalization.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Start from the squared entry bound.}
+
+Put \(n=N_{j-1}, n'=N_j, v=r_E/2\), \(L_a=\log(a r_E)\),
+\(q_{jz}=\sum_{i=1}^n\nu_{jzi}\) and
+\(\varphi(s)=s(\log s-1)\), with \(\varphi(0)=0\).
+For each embedding inducing a given infinite place of the
+coefficient field, the single entry in that place has the
+logarithmic squared bound
+\begin{align*}
+ k_j(\rho)={}&\sum_z\left(\sum_i\varphi(\nu_{jzi})
+       -q_{jz}\log\frac{A_\rho}{\pi|\rho(d_z)|^2}\right)
+      + D_j\log N_\rho + D_j\log(8+32D_jv)\\
+ &\quad +2C_1 U_u+
+           \sum_z\bigl(1+2nn'\log(2q_{jz}+2)\bigr).
+\end{align*}
+Here \(C_1=C+4\) by the pointwise estimate in
+Section~\ref{subsec:selected-kernel-jets}.
+The ordinary and coupled sums now use the multiplicities just
+proved. Equivalently one may put \(C_1+58\) in the last bound
+for each lift. The upper bound for each lift also includes the
+nonnegative logarithms of its two class and two index counts.
+These add at most \(112U_u\) per lift if retained explicitly.
+
+\proofstep{Insert the parameter bounds and the two archimedean means.}
+
+Since \(\log g_i\le9L+1\), \(\log T_u\le25mL\) and
+\(L,m\ge1\), we have \(U_u\le45fm^3N_m^2 L\).
+Indeed,
+\[
+ \log(g_0g_1T_u)\le18L+2+25mL\le45mL .
+\]
+Moreover \(fN_m\le b\), \(q_{jz}\le3aN_m\),
+\(4x\le b\), \(a=xb\) and \(r_E\ge1\). These give
+\(\log(8+32D_jv)=O(L_a)\) and
+\(\log(2q_{jz}+2)=O(L_a)\) with absolute constants.
+
+The selected bounds on \(\log d\) and \(|\ell_K|\) are at
+most \(L\). Applying the two archimedean means above shows
+that the averaged lift price is at most
+\[
+  \sum_z\left(\sum_i\varphi(\nu_{jzi})-q_{jz}\log\Omega\right)
+       +C fN_m^2(L_a+m^3L).
+\]
+This is the numerical height contribution \(h_B(j)\) on the
+same word and at both coupled indices, with \(C\) independent
+of the host, word, embedding, and \(j\), for fixed \(C_1\).
+The terminal evaluation follows in the next subsection. The
+row scalar enters the comparison with the word height.
+\label{cor:selected-period-means-3}
+\end{proof}

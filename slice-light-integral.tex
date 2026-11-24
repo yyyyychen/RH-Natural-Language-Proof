@@ -1,0 +1,155 @@
+\paragraph{The integral light lattice in the marked chart.}
+\label{par:slice-light-integral}
+Fix a lift and either of the two runs, with construction field
+\(K_0\), half-level ideal \(\mathfrak m_b\), and full level
+\(M=g_0g_1\). Write \(a_{\tau,i}\) for the entries of a weight
+\(w\) on the \(\tau\)-eigenspace and \(d_\tau=\sum_i a_{\tau,i}\).
+Use \(\mathcal T_w\) for the theta rules with these entries and
+the prescribed number of copies. A rule uses an integral harmonic
+polynomial \(P\), of the specified flag weight, and marked level
+points on the copies.
+
+For each marked point take an \(M\)-division
+point killed by \(\mathfrak m_b^2\). The normalized multiplication
+isomorphism and the symmetric theta lift give a translated section
+\(H_b\) of the \(M^2\)-th power of the rigidified theta line on
+copy \(b\). The rule reads
+\begin{equation}\label{eq:light-rule-value}
+ M^{-\deg P}\sum_{\boldsymbol\mu} P_{\boldsymbol\mu}
+        \prod_b \nabla^{\boldsymbol\mu_b} H_b(0).
+\end{equation}
+Here \(\boldsymbol\mu_b\) uses the weight-labelled tangent
+directions on copy \(b\), and \(\nabla\) is the covariant
+derivative in the given frame. The translation and trivialization
+laws give this expression after a faithfully flat cover carrying
+the marked sections. The harmonic and theta transformation laws
+identify it with the extension of the original rule value for
+any admissible choice of the \(H_b\). The power of \(M\) in
+\eqref{eq:light-rule-value} is part of the rule throughout the
+comparison. \label{cor:slice-light-integral-1}
+
+\begin{proposition}[Integral evaluation of the scaled lattice of theta rules]
+\label{prop:scaled-integral-light-reading}
+After scalar multiplication by \(a_W\) in \eqref{eq:light-global-scalar},
+the chosen light family generates the image of the integral span
+of \(\mathcal T_{w_L}\). Let \(w_l\) be the scaled light generators and \(b_T\) the scaled value of a rule \(T\). At every allowed integral framed point \(y\), in the fixed orientation and coefficient embedding,
+\[
+ \min_l\operatorname{ord}w_l(y)=\inf_{T\in\mathcal T_{w_L}}\operatorname{ord}b_T(y).
+\]
+
+\end{proposition}
+
+\begin{proof}
+\proofstep{Integral frames and division by the level scalar.}
+Take an algebraic integral framed point \(y\) over a complete
+DVR \(V\) above \(\lambda\), with relative ramification \(e\).
+Its residue field is finite. Choose one of its integral models,
+with polarized semiabelian group \(G\). The split base-change
+theorem for the semiabelian model over this complete DVR gives
+a finite local extension \(V'/V\) with finite residue field and a
+split uniformization over \(V'\). The integral-model comparison
+transports that uniformization and its torsion identification to
+every integral model of the extended point.
+
+Choose the
+integral formal-group chart at the pulled-back frame. Its
+polarization generators are compatible under jet truncation
+over \(V'\).
+For example, for jet orders \(a\le b\), the compatible reductions of the chosen formal parameters give
+\[
+  V'[\![X]\!]/(X)^{b+1}\longrightarrow V'[\![X]\!]/(X)^{a+1}.
+\]
+ The framed base-change map pulls back the
+underlying point, all the labelled tangent vectors and the
+theta-line generator. The incidence map respects this frame
+extension, so the new point lies over the same point in the
+boundary comparison. \label{cor:slice-light-integral-2}
+
+Let \(\iota:\operatorname{Frac}V\hookrightarrow\operatorname{Frac}V'\)
+be the extension. The normalized reading commutes with \(\iota\).
+Indeed, for a rule at the new frame choose a field over
+\(\operatorname{Frac}V'\) carrying the translated sections. Such
+a field is obtained by taking a residue field at a maximal ideal of
+the faithfully flat coefficient algebra and pulling back its
+sections. Over this field, the composite frame map from the old
+point and the frame map from the new point give the same
+expression \eqref{eq:light-rule-value} using the same sections.
+Injectivity of the field map proves
+
+\[
+  f(y')=\iota(f(y)).
+\]
+ This works for each rule and each weight
+on the same \(V'\). The auxiliary field used to test the equality
+can vary with the rule. If \(r\) is the ramification of
+\(V'/V\), then
+\begin{equation}\label{eq:light-frame-order}
+ \frac{\operatorname{ord}_{V'} f(y')}{re}
+        =\frac{\operatorname{ord}_{V} f(y)}{e}.
+\end{equation}
+Both sides are infinite when the reading is zero. All the
+integral germs and the local interpolation estimates below may
+thus be taken on the split chart, with its own ramification.
+\label{cor:slice-light-integral-3}
+
+\proofstep{Using the half-ideal of the selected orientation.}
+For the actual orientation choose the elements \(\pi_i\) of
+the fixed imaginary quadratic subfield used by the run, with
+\(\pi_i\bar\pi_i=g_i\), and put \(\alpha=\pi_0\pi_1\).
+The oriented markings give
+\(\mathfrak m_b=(\bar\alpha)\) and 
+\[
+  \alpha\bar\alpha=M.
+\]
+In fact each \(\bar\pi_i\) divides a generator of the half
+level. Their ideals are coprime because \(g_0,g_1\) are distinct,
+so their product divides that generator. The relative norm of the
+quotient is one, since the generator and \(\bar\alpha\) have the
+same relative norm \(M\). Thus the quotient is a unit. Away
+from the level one can equivalently use any generator with this
+relative norm.
+
+At the level use \(\alpha\) with the indicated
+orientation. Let \(\iota_0\) denote the coefficient embedding of
+the fixed imaginary quadratic field defining the plus type.
+Each plus embedding agrees with \(\iota_0\) there and each
+minus embedding is its conjugate. Put
+\(D^\pm(w)=\sum_{\tau\text{ of type }\pm}d_\tau\). The weight
+determinant of the action of \(\alpha\) on the labelled frame is
+\begin{align}
+ \mathcal D_w(\alpha)
+     &=\prod_\tau\tau_K(\alpha)^{d_\tau} \notag\\
+     &=\prod_{i=0}^1
+         \iota_0(\pi_i)^{D^+(w)}\,
+         \iota_0(\bar\pi_i)^{D^-(w)},
+   \label{eq:light-oriented-determinant}
+\end{align}
+where \(\tau_K\) are the embeddings used in the coefficient
+field. The first formula is the action on each row degree of
+\(P\). The second follows by summing those degrees in the two
+signature blocks. In particular \(D_F=D^+(w_L)+D^-(w_L)\).
+\label{cor:slice-light-integral-4}
+
+\proofstep{The minimum valuation at the smaller weight.}
+At the smaller weight, the scalar multiplying the lattice is
+\begin{equation}\label{eq:light-global-scalar}
+ a_W=\mathcal D_{w_L}(\alpha)\,
+       Q_S^{D_F}q^{\lceil D_F/2\rceil}d^{\lceil D_F/2\rceil}.
+\end{equation}
+The local value of \(a_W\) is obtained from this coefficient
+scalar by the same embedding as the rule. The light lattice is
+\(a_W\operatorname{span}_{\mathcal O_{K_0}}\mathcal T_{w_L}\),
+using the cusp inclusion at this weight. This equality follows
+by taking the integral span of the rules and applying the scalar
+map to the span. The chosen family \((w_l)\) generates exactly
+this image, and the new choice of short sections retains it.
+
+In the fixed integral frame, an integral combination has
+valuation at least the least valuation of its terms. Hence the
+least valuation of the scaled evaluations is attained on a generator \(w_l\). Equations \eqref{eq:light-frame-order}
+and \eqref{eq:light-oriented-determinant} apply at every allowed
+weight, including the two weights in the full and truncated
+evaluation comparisons. The choice of chart depends on the
+point and marking. It introduces no weight-dependent scaling
+into these evaluations. \label{cor:slice-light-integral-5}
+\end{proof}

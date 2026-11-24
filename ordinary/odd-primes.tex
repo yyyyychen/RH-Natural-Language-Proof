@@ -1,0 +1,1107 @@
+\subsection{Character components at odd primes}\label{sec:odd-prime-cases}
+\hypertarget{source-ordinary-odd-primes}{}
+
+The remaining odd-prime terms depend on the character through which the abelian group acts. Working in a common cyclotomic field makes it possible to sort these terms simultaneously by character and twist.
+
+Fix the target primitive character \(\psi\) of conductor \(N\)
+and order \(o\). At a scale \(x\), write
+\[
+\begin{aligned}
+ \mathcal N&=\operatorname{lcm}(2^{e(x)+2},N)\,qd,&
+ U&=(\Z/\mathcal N\Z)^\times,\\
+ H&=\operatorname{Gal}(\Q(\mu_{\mathcal N})/E),&
+ t&=\lfloor x^{401}\rfloor .
+\end{aligned}
+\]
+The subgroup \(H\) is defined by the three congruence and character
+conditions in Section~\ref{sec:cohomology}. The index \([U:H]\)
+divides \(2^{e(x)+2}o\). Indeed, \([U:H]\) is the order of the
+image in the product of the real cyclotomic quotient at \(2\),
+the image of \(\psi\), and two groups of order two. The two auxiliary
+primes \(q,d\) exceed \(2t+1\) and any fixed threshold depending on
+\(\psi\) when \(Y_0\) is sufficiently large.
+
+For odd \(\ell\), write \(V^{+}(E,\ell,j)\) and
+\(V^{-}(E,\ell,j)\) for the lengths on which complex conjugation,
+acting on the localization kernel with the twist included, acts
+by \((-1)^j\) and \((-1)^{j+1}\), respectively. The projectors exist
+over \(\Z_\ell\), so \(V=V^++V^-\).
+For a sufficiently large coefficient ring \(\mathcal O\), let
+\[
+ \mathcal X_{\ell,j}
+  =\{\xi:U/H\longrightarrow\mathcal O^\times:
+                     \xi(-1)=(-1)^j\}.
+\]
+
+We write \(s_\ell(\xi,j)\) for the normalized length of the
+rank-one localization kernel over \(\Q\) with coefficient action
+\(\epsilon_\ell^{-j}\xi^{-1}\). Here the local condition is zero
+restriction to decomposition groups at primes dividing \(\ell\mathcal N\)
+and to inertia groups elsewhere. A length over \(\mathcal O\) is
+normalized by dividing by its ramification index over \(\Z_\ell\).
+This division removes the change of length under finite coefficient
+extension. The action of complex conjugation on
+\(\epsilon_\ell^{-j}\xi^{-1}\) for these characters is trivial.
+
+\begin{proposition}[Reduction to rank-one localization kernels]
+When
+\(\ell\nmid [U:H]\),
+\[
+ V^+(E,\ell,j)\ \le \sum_{\xi\in\mathcal X_{\ell,j}}s_\ell(\xi,j).
+ \tag{P}\label{eq:local-odd-p}
+\]
+For \(\ell\le\mathcal N\) the integral version gives
+\[
+ \sum_{\xi\in\mathcal X_{\ell,j}}s_\ell(\xi,j)
+     +O\bigl((1+|\mathcal X_{\ell,j}|)(\mathcal N j)^6\bigr)
+ \tag{I}\label{eq:local-odd-i}
+\]
+as an upper bound on \(V^+(E,\ell,j)\). Here and below an
+inequality for lengths includes finiteness when the right
+side is finite.
+
+\end{proposition}
+
+\begin{proof}
+\proofstep{Fourier projection and its integral kernel.}
+
+Put \(G=U/H\) and extend the
+coefficients to \(\mathcal O\). For the sign \((-1)^j\),
+the maps
+\[
+                x\longmapsto \sum_{g\in G}\xi(g)^{-1}gx
+\]
+take values in the \(\xi\)-eigenspaces. Write \(c\in G\) for the conjugation element and
+\(s=(-1)^j\). If \(c\ne1\), orthogonality gives
+\[
+ \sum_{\xi(c)=s}\xi(g)^{-1}
+   = \frac{|G|}{2}\bigl(\mathbf1_{g=1}
+                              +s\mathbf1_{g=c}\bigr).
+\]
+Thus on the sign-\(s\) space, summing the projection maps
+gives \(|G|\) times the identity. If \(c=1\), the same
+identity holds by summing over all characters for \(s=1\),
+and the sign-\((-1)\) space is zero.
+
+Let \(K_0\) be the kernel of the direct sum of the projections.
+The preceding identity gives \(|G|K_0=0\), so on its \(\ell\)-primary
+coefficients
+\[
+ \operatorname{length}(K_0)\le v_\ell(|G|)
+                  \operatorname{length}(K_0[\ell]).
+\]
+Indeed the successive \(\ell\)-torsion layers inject into the first by
+multiplication by a power of \(\ell\). Use the ambient \(\ell\)-torsion
+to bound the last length. The Kummer calculation below gives
+dimension \(O(\ell [E:\Q]\log(F\ell))\), with \(F\mid\mathcal N\)
+the conductor of \(E\).
+
+\proofstep{Global lifting and the local obstructions.}
+
+For a fixed eigenspace twist the coefficients by \(\xi^{-1}\)
+over \(\Q\), so the corresponding classes on \(E\) are
+invariant under \(G\). The obstruction to lifting such a class
+to \(\Q\) is in \(H^2(G,A^{G_E})\), with \(A\) the divisible
+twisted coefficient module. On that eigenspace the global inflation--restriction
+sequence has the segment
+\[
+ H^1(\Q,A)\longrightarrow H^1(E,A)^G
+                       \longrightarrow H^2(G,A^{G_E}).
+\]
+Thus the liftable part has quotient of length at most that of
+the degree-two group. Take all lifts of the liftable classes.
+At \(p\nmid\ell\mathcal N\) they are unramified since the
+inertia group is unchanged in \(E\).
+
+At every
+\(p\mid\ell\mathcal N\) the restricted class vanishes in
+the decomposition group of \(E_w\). Above \(\ell\) this is
+the definition of the kernel. Away from \(\ell\) the class is unramified. On the coefficient
+inertia invariants over \(E_w\) the scalar \((Nw)^{-j}-1\) is
+nonzero and acts surjectively. Consequently
+\[
+       H^1_{\rm unr}(E_w,A)=A^{I_w}/(\operatorname{Frob}_w-1)A^{I_w}=0
+         \quad (p\ne\ell).
+\] The local
+obstructions for the lifts over \(\Q\) are therefore in
+\(H^1(G_w,A^{G_{E_w}})\) for \(p\mid\ell\mathcal N\),
+where \(G_w\le G\) is the decomposition subgroup.
+The lifts with all local obstructions zero are precisely
+the classes counted by \(s_\ell(\xi,j)\) in this preimage.
+
+\proofstep{Bound the finite coefficient groups.}
+
+At \(p\ne\ell\) the invariant length is bounded by
+\[
+     v_\ell((Nw)^j-1)\le j[E:\Q]\log p/\log\ell.
+\]
+Above \(\ell\) the cyclotomic image bounds the length by
+\(1+v_\ell([E:\Q])+v_\ell(j)\). The latter also bounds the global
+invariant length. The cohomology on finite groups of
+order at most \([E:\Q]\) is bounded by the lengths of the
+corresponding cochain groups in degrees one and two.
+Together with the bound for \(\ell\)-torsion this gives
+the error in \eqref{eq:local-odd-i}, using \([E:\Q]\le\mathcal N\) and
+\(\ell\le\mathcal N\). If \(\ell\nmid |G|\), the
+Fourier kernel vanishes and all the finite-group
+obstructions vanish by averaging. This gives \eqref{eq:local-odd-p}.
+Alp\"oge's numerical version of \eqref{eq:local-odd-i} bounds the additive error by
+\(|\mathcal X_{\ell,j}|(\mathcal Nj)^6\). \label{cor:ordinary-odd-primes-1}
+
+\end{proof}
+
+To give the prime and character conditions in the bounds, let
+\(p_K,p_1\) be the two fixed primes of the construction for
+\(\psi\). The first defines the imaginary quadratic field
+\(K_*=\Q(\sqrt{-p_K})\), with discriminant \(-p_K\).
+Write \(h_*\) for its class number. The set \(B_\psi\) consists
+of \(3\) and the odd prime divisors of \(oNp_Kh_*p_1\).
+The reduction gives localization kernels for rank-one characters. Their local and parity conditions now determine which of the trace, deformation and exceptional-prime bounds can be applied.
+
+\begin{lemma}[Prime and character ranges for the odd-prime bounds]
+\label{lem:odd-prime-positive-ranges}
+Fix \(0<j<t\). For odd \(\ell\notin B_\psi\), the index
+\([U:H]\) and all character orders are prime to \(\ell\).
+The positive-component bounds at these primes use the following cases.
+\begin{enumerate}
+\item If \(\ell-1\nmid2j\), one uses the rank-three trace estimate, a sum over residue
+      primes and characters.
+\item If \(\ell-1\mid2j\), then \(j\ge2\),
+\[
+ \ell\le2t-1,
+\]
+and
+      \(\ell\nmid\mathcal N\). The principal term vanishes by Lemma~\ref{lem:principal-odd-strict-zero}. A nonprincipal character of even order
+      uses the even-order case and one of odd order uses the rank-four case.
+\end{enumerate}
+At \(\ell\in B_\psi\), put \(\xi_P\) equal to the prime-to-\(\ell\)
+part of \(\xi\) with its \(\ell\)-conductor factor removed.
+For \(j\ge2\), the even-order case is used if its order is even and the fixed cyclotomic-layer case
+if it is odd. At \(j=1\), the two cases separated by
+\[
+ R_1(\ell,\xi)\le 2^{c_2(\xi)}
+\]
+use the case over the Gaussian field and the height
+bound for the reverse inequality. Here \(c_2(\xi)\) is the
+exponent of 2 in the conductor of the 2-component.
+\end{lemma}
+
+\begin{proof}
+The congruence and character maps defining \(H\) give an injection
+\[
+ U/H\ \lhook\joinrel\longrightarrow\
+  (\Z/2^{e(x)+2}\Z)^\times/\{\pm1\}
+      \ \times\operatorname{im}\psi\times\{\pm1\}^2 .
+\]
+The right side has order \(2^{e(x)+2}o\) and exponent dividing
+\(2^{e(x)+1}o\). Thus for odd \(\ell\notin B_\psi\) both the index
+and all character orders are prime to \(\ell\). If \(\ell-1\mid2j\),
+then \(j=1\) would force \(\ell=3\), excluded by \(B_\psi\), and
+\(\ell\le 2j+1\le2t-1\). In particular \(\ell\) is distinct from
+\(q,d>2t+1\). Nor can it divide \(N\), since \(\ell\notin B_\psi\).
+Consequently \(\ell\nmid\mathcal N\) and \(\xi_P=\xi\) in the second
+case. The principal character calculation is
+Lemma~\ref{lem:principal-odd-strict-zero}. The remaining assignments
+are the case hypotheses in the indicated length estimates, including
+the fixed-prime tests at \(j=1\).
+\label{cor:ordinary-odd-primes-2}
+\end{proof}
+
+\subsection{Summing the rank-three trace bounds}
+\label{subsec:odd-prime-trace}
+
+A separate trace bound for each residual prime would accumulate with the number of primes. At fixed twist the rank-three contributions are controlled together by the divisibility of a common trace count.
+
+\begin{proposition}[Simultaneous rank-three trace bound]
+At each \(0<j<t\), sum the rank-three cases outside \(B_\psi\)
+over a finite set of odd residue primes with \(\ell-1\nmid2j\)
+and the characters \(\xi\in\mathcal X_{\ell,j}\) assigned to rank three by Lemma~\ref{lem:odd-prime-positive-ranges}. If \(\mathcal I_j\) is the set of these pairs \((\ell,\xi)\), their normalized lengths satisfy 
+\[
+ \sum_{(\ell,\xi)\in\mathcal I_j}(\log\ell)\,s_\ell(\xi,j)\le(\mathcal N t)^{C_1},
+\]
+ with \(C_1\) fixed independently of
+the auxiliary primes, the scale and the finite set.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Group the trace factors by the character kernel.}
+
+The underlying estimate is simultaneous in the residue primes.
+Fix \(j\), a subgroup \(J_0\le U\) which is the kernel of a
+character, and \(p\ge7\) prime to \(30\mathcal N p_K\).
+Fix a place \(w\mid p\) in \(K_*\) and put \(u=Nw\).
+There are \(\varphi([U:J_0])\) complex characters with
+kernel \(J_0\); these are the faithful characters of the cyclic
+quotient \(U/J_0\).
+
+For a character \(\xi\) in this orbit the trace of the reducible
+point at inverse Frobenius is
+\[
+                T^0_\xi=u^{-j}\xi(u)^{-1}+1+u^j\xi(u).
+ \tag{T}\label{eq:local-odd-t}
+\]
+The two packet counts give a finite list of traces \(T_s\)
+permuted, with their indices, by field automorphisms. A
+degree-three system over \(K_*\) is counted with weights
+\((j-1,-1,-j-1)\) after a cyclotomic twist. If its roots
+at the chosen place are \(b_i\), the roots for the trace
+in this calculation are \((ub_i)^{-1}\).
+Their norms are in \([u^{-1/2},u^{1/2}]\) and their
+product has norm one by the spectral and determinant bounds.
+
+\proofstep{Spectral bounds on the trace differences.}
+
+For the other count use degree-two systems over \(\Q\)
+with weights \((j,-j)\) at level \(\mathcal N |D_{K_*}|\).
+For \(u=p^f\), putting \(z_i=b_i^{-f}\) gives
+\[
+ T_s=1+z_1+z_2,\qquad u^{-1/2}\le |z_i|\le u^{1/2},\qquad
+ |z_1||z_2|=1 .
+\] In either case
+\[
+                  |T_s|\le \sqrt u+2.
+\]
+To see this, set \(x_i=\log|b_i'|\) for the normalized
+roots. In rank three \(\sum_i x_i=0\) and
+\(-\tfrac12\log u\le x_i\le\tfrac12\log u\).
+At a vertex two coordinates are endpoints and their signs are
+opposite, so the third is zero.
+
+In rank two the vertices are
+the two opposite endpoints. By convexity of the sum of the
+exponentials, the maximal sums of root norms are thus
+\[
+          \sqrt u+1+1/\sqrt u
+      \quad\text{and}\quad \sqrt u+1/\sqrt u
+\]
+respectively. Adding the scalar term in rank two gives the
+same bound \(\sqrt u+2\). The separate integrality condition on the inverse roots gives
+\(u^{j-1}b_i^{-1}\) integral in degree three and \(p^j b_i^{-1}\)
+integral in degree two. It follows that \(u^jT_s\) is integral
+in both cases.
+
+For \(u\ge7\), the reducible trace \eqref{eq:local-odd-t} and the packet trace
+are distinct, since
+\[
+ |T^0_\xi|-|T_s|\ge u^j-\sqrt u-3-u^{-j}
+                  \ge u/2-3-u^{-1}>0 .
+\]
+Every factor \(u^j(T_s-T^0_\xi)\) is a nonzero algebraic
+integer, of norm at most \(2u^{2j}\). Take their product over the
+packet list and over the entire character orbit. Writing \(A\) for this product, every field automorphism permutes its factors. Thus
+\[
+ A\in\overline{\mathbf Z},\qquad \sigma A=A\ (\sigma\in G_\Q),
+ \qquad A\in\overline{\mathbf Z}\cap\Q=\Z .
+\] Every factor has \(\ell\)-adic norm at most one by integrality.
+Select one point from each grading-torus orbit in the fibre. To bind
+its contribution by the packet product, we identify which records can
+receive those representatives.
+\proofstep{Distinguish the marked packet records.}
+
+The restrictions of these representatives to \(G_{K_*}\)
+are pairwise nonisomorphic. Indeed, an intertwiner on
+\(G_{K_*}\) commutes with the diagonal marked difference,
+whose three eigenvalues are distinct. It is diagonal,
+say \(D=\operatorname{diag}(d_0,d_1,d_2)\).
+The two polarizations imply that
+\(D^{-1}JD^{-\mathsf T}J\) commutes with the first
+restriction, where \(J\) reverses the three coordinates.
+For an irreducible restriction the commutant is scalar. Comparing
+the diagonal entries of the commuting matrix gives
+\[
+ (d_0d_2)^{-1}=d_1^{-2} .
+\]
+
+For an outer plane plus a middle line, change the middle scalar
+to a square root of \(d_0d_2\) without changing the intertwining.
+With the resulting choice \(d_1^2=d_0d_2\), put \(s=d_0/d_1\). The scalar-normalized intertwiner is
+\[
+ d_1^{-1}D=\operatorname{diag}(s,1,d_2/d_1)
+           =\operatorname{diag}(s,1,s^{-1}).
+\]
+The marked point maps are determined by their matrix
+entries on the quadratic kernel. Their matrices on the
+other coset follow from the fixed value at complex
+conjugation. Hence an isomorphism of restrictions gives
+a grading-torus equivalence of the point maps.
+
+The chosen representatives inject into the packet indices,
+since a complete system determines the isomorphism class
+of its attached semisimple restriction. The corresponding
+factor has norm equal to that of its trace difference since
+\(u\) is an \(\ell\)-adic unit. The whole product is a nonzero
+integer \(A_{J_0}(p)\), independent of \(\ell\). The product of
+the \(\ell\)-adic norms of the selected trace differences
+in all fibers is at least \(|A_{J_0}(p)|_\ell\). Its size satisfies
+\[
+ \log |A_{J_0}(p)|
+    \ll_{\psi}\varphi([U:J_0])\bigl(\mathcal N(j+1)\bigr)^a
+         \log p
+ \tag{D}\label{eq:local-odd-d}
+\]
+with a fixed exponent \(a\). This uses \(\log u\le2\log p\)
+and the packet counts polynomial in \(\mathcal N(j+1)\)
+and \(\mathcal N |D_{K_*}|(j+1)\), respectively. The
+construction and admissibility of those packets are the inputs
+to this product calculation.
+\label{cor:ordinary-odd-primes-3}
+
+Here is the valuation argument once the admitted points have been
+constructed. For \(\ell\ne p\), fix a coefficient embedding into
+\(\C\). Existence of one coefficient-field character of kernel
+\(J_0\) supplies all the faithful characters of \(U/J_0\) by
+taking powers. Its embedding identifies this orbit bijectively
+with the complex orbit in the packet bound, since an embedding
+preserves the kernel. The one-character deformation estimate
+gives a finite set \(X_\xi\) of admitted points, distinct up
+to isomorphism in each fiber, with
+\[
+ s_\ell(\xi,j)\ \le\
+ 2\sum_{\rho\in X_\xi}
+ v_\ell\!\left(\operatorname{tr}\rho(\operatorname{Frob}_{w}^{-1})
+                 -(u^{-j}\xi(u)^{-1}+1+u^j\xi(u))\right).
+ \tag{L}\label{eq:local-odd-l}
+\]
+\proofstep{Apply the one-character deformation inequality.}
+
+The nonvanishing for each point follows by applying the packet
+bound to a singleton. Since the character order is prime to
+\(\ell\), one can carry out the deformation calculation over the
+unramified ring containing its values. Scalar extension to
+the chosen coefficient ring preserves the normalized lengths
+and valuations. The residual hypotheses of that calculation
+hold for these hosts: \(\mathcal N\) is even,
+\(\ell\nmid D_{K_*}h_*\operatorname{ord}(\xi)\),
+the \(\ell\)-component of \(\xi\) has order dividing two, and
+the residual quadratic character of \(K_*\) is nontrivial on the
+intersection of the kernels of the residual cyclotomic character
+and the character \(\xi_P\). For the last assertion use the ramified place \(p_K\nmid\ell\mathcal N\).
+On its inertia group one has
+\[
+ \bar\epsilon_\ell=1,\qquad\bar\xi_P=1,\qquad
+            \bar\chi_{K_*}\ne1
+\]
+as characters. This is the required kernel test. These are the field conditions for \eqref{eq:local-odd-l}, whose other inputs are deformation theory and automorphy. \label{cor:ordinary-odd-primes-4}
+
+\proofstep{Use the same nonzero integers across residue primes.}
+
+The trace comparison gives divisibility by powers of each residual prime. To sum their logarithms, these powers must divide the same nonzero integers with size bounded independently of that prime.
+
+
+Applying the comparison to all the \(X_\xi\) at once gives
+\(\sum_{\ker\xi=J_0}s_\ell(\xi,j)\le2v_\ell(A_{J_0}(p))\).
+Choose two distinct test primes above a threshold depending only
+on \(\psi\), and require \(q,d\) to exceed both. They avoid
+\(30\mathcal N p_K\) since the only prime factors of \(\mathcal N\)
+are those of \(2Nqd\). Use the second prime if \(\ell\) equals
+the first.
+
+For every finite residue-prime set the weighted
+sum for \(J_0\) is at most
+\[
+ 2\log|A_{J_0}(p)|+2\log|A_{J_0}(p')|,
+\]
+by prime factorization of the two integers. Only kernels realized
+in the chosen character sets need be included. The sum of
+\(\varphi([U:J_0])\) over these kernels is at most \(|U|\),
+since each character of \(U\) has a unique kernel. Summing \eqref{eq:local-odd-d}
+therefore proves the bound \((\mathcal Nt)^{C_1}\) in the rank-three trace estimate
+for each \(j\), with \(C_1\) fixed before the auxiliary primes and
+\(x\) are chosen.
+\label{cor:ordinary-odd-primes-5}
+
+\end{proof}
+
+\input{symplectic-cohomology}
+
+\subsection{Pointwise bounds for the other positive components}
+\label{subsec:odd-prime-pointwise}
+
+The rank-three trace sum already treats the main range of positive components. For the other cases the deformation estimate and the bounds at fixed exceptional primes must be matched to the original character decomposition.
+
+\begin{proposition}[Pointwise and fixed-layer bounds in the remaining cases]\label{prop:other-positive-cohomology}
+Use the cases of Lemma~\ref{lem:odd-prime-positive-ranges}.
+The two nonprincipal cases covered by the rank-four deformation
+theory have 
+\[
+ \log\ell\,s_\ell(\xi,j)\le(\ell\mathcal Nj)^C.
+\]
+
+At the fixed exceptional primes use the Gaussian bound or the
+height estimate in their respective \(j=1\) ranges, and use the
+fixed-layer estimate \textup{\eqref{eq:local-odd-w}} for the corresponding odd-order
+case with conductor dividing \(N\). The constants in these bounds
+precede variation of the selected auxiliary primes and scale.
+\end{proposition}
+
+\begin{proof}
+\proofstep{The even-order and rank-four ranges.}
+
+The inputs for these bounds are the length estimate
+\eqref{eq:rankfour-length} and the packet conditions of
+Propositions~\ref{prop:count-two-quadratic-packets}
+and \ref{prop:count-three-host-output}.
+For the two cases distinguished by the parity of the character order,
+the data of Section~\ref{sec:rank-four-deformation}
+are built after adjoining \(2^{n_{\rm II}}\)-th and
+\(2^{n_{\rm III}}\)-th roots of unity to the coefficient field.
+Let \(m\) be the least common multiple of \(4\) and the order
+of the prime-to-\(\ell\) part of the odd-conductor factor of
+\(\xi\). Put \(f=\operatorname{ord}_{(\Z/m\Z)^\times}(\ell)\)
+and \(n_0=v_2(\ell^f-1)\).
+
+In terms of these numbers the two
+exponents used are
+\begin{equation}\label{eq:ordinary-dyadic-exponents}
+\begin{split}
+ n_{\rm II}&=\left\lceil\log_2\max\{\ell\mathcal N4^{n_0},
+             2^{c_2(\xi)+6}o\ell^3N^2\}\right\rceil,\\
+ n_{\rm III}&=\left\lceil\log_2\max\{\ell Np_14^{n_0},
+             8\ell^2\}\right\rceil .
+\end{split}
+\end{equation}
+The corresponding rational levels are \(M=\ell\,2^n\mathcal N b\),
+where \((n,b)=(n_{\rm II},1)\) or \((n_{\rm III},p_1)\).
+The odd-conductor factor of \(\xi\) has order dividing \(2o\);
+thus \(m\mid4o\) and \(f\le4o\). For odd \(\ell\), the
+factorization of \(\ell^f-1\) gives
+\[
+ 2^{v_2(\ell^f-1)}\le 2^{v_2(f)}(\ell^2-1).
+\]
+For odd \(f\) the quotient by \(\ell-1\) is odd.
+For even \(f\) write \(f=2^af_0\) with \(f_0\) odd. Factoring
+successive squares gives
+\[
+ v_2(\ell^f-1)=v_2(\ell-1)+v_2(\ell+1)+a-1.
+\]
+The additional factors after \(\ell+1\) are \(2\bmod8\).
+In both cases \(f\le4o\) gives
+\[
+ 4^{n_0}\le(4o)^2\ell^4.
+\]
+
+Since
+\(2^{c_2(\xi)}\le\mathcal N\) and the ceiling in the
+definition of \(n\) changes \(2^n\) by a factor less than two,
+each term inside the maximum is bounded by a fixed
+power of \(\ell\mathcal N\). The same holds for
+\(M=\ell\,2^n\mathcal N b\), as \(b=1\) or \(p_1\) is fixed. The same
+holds for \(k=(\ell-1)2^n(2o)\), which bounds the orders of the
+roots of unity in the reducible trace. Injectivity of the
+coefficient embedding preserves kernels, local orders,
+conductors and parity. For a finite extension of coefficient DVRs \(O'/O\) of ramification index \(e'\), each Smith cyclic summand \(O/(\varpi^a)\) acquires length \(e'a\). Hence for the finite module \(M_0\)
+\[
+ \frac{\operatorname{length}_{O'}(M_0\otimes_O O')}{e(O'/\Z_\ell)}
+ =\frac{e'\operatorname{length}_O(M_0)}{e' e(O/\Z_\ell)}
+ =\frac{\operatorname{length}_O(M_0)}{e(O/\Z_\ell)} .
+\]
+
+Select a prime \(p\ge5\) not dividing \(\ell\mathcal N b\).
+One can take \(p\le 6\ell\mathcal N b+1\) by taking a prime
+divisor of \(6\ell\mathcal N b+1\). Such a prime is also
+prime to \(2^n\). The reducible arithmetic Frobenius trace is
+\[
+                    p^{j+1}z_1+p^jz_2+pz_3+1,\qquad z_i^k=1 .
+\]
+In the even-order and odd-order cases the admitted points are the irreducible
+points on their respective rational charts. In the even-order case,
+Paragraphs~\ref{par:count-two-descent} and~\ref{par:rigid-point}
+supply the irreducible quadratic restrictions at level \(M\)
+and the tangent condition. The corresponding Inputs for the rank-four construction
+are in Section~\ref{sec:count-three-target}. The ordinary
+construction gives the degree-zero finiteness and block
+exclusion on each chart. Thus \eqref{eq:rankfour-length} applies
+once the competing traces are separated from the reducible trace.
+
+\proofstep{Nonvanishing and integrality of the trace differences.}
+
+For a competing packet, let \(P=p^{(j+1)/2}\).
+Write \(z'_1,\ldots,z'_4\) for its roots. The symplectic
+determinant and the local unitary bound give
+\[
+          \prod_i|z'_i|=P^4,\qquad \max_i|z'_i|\le\sqrt p\,P .
+\]
+At the chosen place of a quadratic restriction of residue
+degree \(f\), the determinant of the symplectic representation
+is the square of its similitude. The latter is a finite
+character times \(\epsilon_\ell^{j+1}\), giving product
+of norms \(p^{2f(j+1)}\). The cuspidal local representation
+is generic and essentially unitary. At this spherical place
+the generic unitary classification bounds each exponent
+after the common unitary normalization by \(1/2\) in
+absolute value. Taking \(f\)-th roots gives the asserted
+bound at the rational prime. The eigensystem count retains
+these norm conditions at every complex conjugate of the
+normalized parameters, since conjugation preserves the
+algebraic weight and conjugates the finite characters.
+
+If \(T\) denotes the competing trace, at least one root
+has norm at most \(P\), since the four norms multiply to
+\(P^4\). Using \(j\ge2\) and \(p\ge5\), we get
+\[
+ \begin{aligned}
+ |T-p^jz_2-pz_3-1|
+    &\le 3\sqrt p\,P+P+p^j+p+1\\
+    &<3p^j+\tfrac12p^j+p^j+\tfrac12p^j=5p^j.
+ \end{aligned}
+\]
+Here \(\sqrt p\,P\le p^j\), \(2P\le p^j\) and
+\(p+1<p^j/2\). The remaining term has norm \(p^{j+1}\ge5p^j\). Thus the
+trace difference \(D=T-(p^{j+1}z_1+p^jz_2+pz_3+1)\) satisfies
+\[
+        0<p^{j+1}-|T-p^jz_2-pz_3-1|\le|D|<2p^{j+1}.
+\]
+For integrality of the inverse geometric Frobenius roots,
+use the Galois attachments of the regular algebraic polarized
+cuspidal eigensystem at every coefficient prime. At a
+coefficient prime away from \(p\) the roots are units,
+by compactness of the Galois image.
+
+At a coefficient prime
+above \(p\), use local--global compatibility for the unramified
+parameter. The representation there is potentially crystalline:
+its Weil--Deligne monodromy is bounded by the zero monodromy
+of the spherical parameter. The dual crystalline filtered
+module after finite extension has filtration jumps \(0,1,j,j+1\)
+at each embedding. If \(D_0\) is the smallest-slope submodule, its induced filtration has only nonnegative jumps. Thus
+\[
+ t_N(D_0)\ge t_H(D_0)\ge0 .
+\]
+The first Newton slope is nonnegative, and all remaining slopes are at least as large. Its Frobenius
+eigenvalues are powers of the inverse geometric Frobenius
+roots in the normalization under consideration. Thus for a rational packet root \(\alpha\) whose \(f\)-th power occurs in this list,
+\[
+ v_p(\alpha)=f^{-1}v_p(\alpha^f)\ge0.
+\]
+
+\hfill\mbox{\cite{tadic,blggt,blggt-lg,colmez-fontaine}}\label{cor:ordinary-odd-primes-6}
+
+Multiply these trace differences over the packet records and
+over the action of \((\Z/k\Z)^\times\) on the \(z_i\), retaining
+the record and the action index even when numerical values
+coincide. The records consist of a quadratic field, a full
+cuspidal eigensystem, an inverse-image multiset of its roots
+at the test prime and one of two copies for the rational
+descents. By the packet comparison, distinct isomorphism
+classes admit distinct records. Field automorphisms permute
+the eigensystems, the inverse-image multisets and the actions
+on the \(z_i\), keeping the two copies. Thus the product \(D_p\)
+is a nonzero rational integer.
+
+If there are at most
+\(c(M(j+1))^a\) records, then
+\[
+ \log|D_p|\le c\varphi(k)(M(j+1))^a
+                  \bigl(\log 2+(j+1)\log p\bigr).
+\]
+Each point of \eqref{eq:rankfour-length} contributes a distinct
+factor in the identity slice of \((\Z/k\Z)^\times\).
+All factors have nonnegative \(\ell\)-adic valuation by
+integrality. Dividing the length comparison by the coefficient
+ramification index gives
+\[
+ \log\ell\,s_\ell(\xi,j)
+   \ \le\ 2v_\ell(D_p)\log\ell
+   \ \le\ 2\log|D_p|
+   \ \le\ (\ell\mathcal N j)^C .
+\]
+The constants depend on the fixed primitive target and
+the fixed quadratic list. The size estimates are uniform in
+\(\ell,\xi,j\) and the conductor of the auxiliary field, since
+\(p\le6\ell\mathcal N b+1\), the factor \(b\) is fixed
+in each case, and \(k,M\) are bounded by fixed powers of
+\(\ell\mathcal N\). The fitted fields, their exceptional
+places and the coefficient extensions do not enter the
+bound. This proves the positive-component estimates in the
+even-order and rank-four cases on the given fields.
+\label{cor:ordinary-odd-primes-7}
+
+\proofstep{The Gaussian case and complementary height bound.}
+
+For the Gaussian case, take \(K=\Q(i)\) and \(j=1\).
+The two-power conductor satisfies
+\[
+ 2^{c_2(\xi)}\ge R_1(\ell,\xi)
+       =16o(\ell N)^2\,4^{n_0}.
+\]
+At an inert prime \(p\) of \(K\) the residue size is \(u=p^2\).
+At the reducible point the trace is the value of \eqref{eq:local-odd-t} there:
+\[
+          T^0_\xi=p^{-2}\xi(p^2)^{-1}+1+p^2\xi(p^2).
+\]
+Such a prime can be chosen with \(7\le p\le12\ell\mathcal N\)
+and \(p\nmid\ell\mathcal N\). Take a prime divisor congruent
+to \(3\pmod4\) of \(12\ell\mathcal N-1\), which is coprime
+to \(3\ell\mathcal N\).
+In the rank-three packet product use the entire
+\(\varphi(\mathcal N)\)-th root group in place of the orbit
+of one character. This includes \(\xi(u)\) and is permuted
+by every field automorphism. Restrict to \(G_K\) in the
+packet injection.
+
+The image of \(G_K\) in the host quotient
+is the kernel of its quadratic character. Thus points
+distinct on that subgroup remain distinct on restriction
+to \(G_K\). If automorphy is given with different
+embeddings of \(K\), partition the points by the two
+embeddings before applying the product comparison. The
+sum of their valuations times \(\log\ell\) is bounded by
+\[
+      O\!\left(2\varphi(\mathcal N)
+                  (\mathcal N(j+1))^a\log p\right).
+\]
+The abstract deformation count gives a length at most
+twice this sum of valuations times the coefficient
+ramification index, and bounds the rank-one kernel by
+that length. Dividing by the ramification index cancels that coefficient price.
+Together with \(p\le12\ell\mathcal N\) the product bound gives
+\[
+       (\log\ell)s_\ell(\xi,1)\le(\ell\mathcal N)^C
+\]
+for fixed \(C\). The two embeddings contribute a
+constant because the same Gaussian field is used at every
+scale. The inputs here are the reduced unitary lift and rigidity on its field and frame. \label{cor:ordinary-odd-primes-8}
+
+For \(j=1\) and \(2^{c_2(\xi)}< R_1(\ell,\xi)\),
+one uses the height estimate instead. Here \(\ell\) belongs
+to the fixed set \(B_\psi\). The odd-conductor character
+factor has order dividing \(2o\) and the 2-component
+has order at most \(2^{c_2(\xi)}\), so \(\operatorname{ord}(\xi)\)
+is bounded in terms of \(\psi\). The field \(L\) cut out
+by \(\xi\) and \(\mu_\ell\) has degree at most a constant
+\(n_\psi\) and
+\[
+ \log |D_L|\le n_\psi\log(\ell\mathcal N)
+\]
+
+by the conductor--discriminant formula. Restrict the
+rank-one kernel to \(L\) to remove the character.
+Inflation--restriction bounds the kernel of this restriction
+by degree-one cohomology on the finite Galois group
+with invariant coefficients. Writing \(G=\operatorname{Gal}(L/\Q)\) and \(A\) for its invariant coefficient module in inflation--restriction gives
+\[
+ |H^1(G,A)|\le |Z^1(G,A)|\le |A|^{|G|},\qquad |G|=[L:\Q] .
+\]
+The second bound counts all functions \(G\to A\). Local invariant
+orders in this calculation have normalized length at most
+\(2\mathcal N j\) at twist \(j\), and the same bound
+applies to the global invariants by restriction to one
+decomposition group. At \(j=1\) the finite-group lifting cost is bounded by
+\[
+            [L:\Q](2\mathcal N)\le2n_\psi\mathcal N.
+\] The height estimate
+of Section~\ref{sec:cohomology} for the dual kernel on \(L\),
+with \(j=1\) and bounded degree, is polynomial in
+\(\ell\mathcal N\). This proves the required pointwise
+bound in the small-conductor branch.
+\label{cor:ordinary-odd-primes-9}
+
+\proofstep{Sum first over twists on the fixed layer.}
+
+The exceptional-prime bounds use one reference layer for several twists. Summing on that fixed layer first keeps the cost of the common window from being repeated.
+
+
+Finally, in the fixed cyclotomic-layer case, odd order of \(\xi_P\) forces the
+conductor of \(\xi\) to divide \(N\). Its 2-component is
+trivial. For \(v\in\{q,d\}\) the defining subgroup gives a local factor of order dividing two. Its prime-to-\(\ell\) part is a factor of the odd-order \(\xi_P\), so
+\[
+ \operatorname{ord}(\xi_v)\mid\gcd(2,\operatorname{ord}(\xi_P))=1 .
+\]
+Here \(\ell\) is odd, so passage to the prime-to-\(\ell\) part preserves any sign.
+Removing the \(\ell\)-power part of the character
+cannot affect their 2-primary components.
+As \(\ell\ne q,d\), this argument is independent of the
+\(\ell\)-conductor part.
+
+Choose the reference layer \(L_\ell\)
+for the cyclotomic \(\Z_\ell\)-extension of
+\(\Q(\mu_{\ell N})\). Its depth is fixed by the tower rank
+bound, before choosing \(q,d,x\). It contains the field of
+every character of conductor dividing \(N\). At each \(1\le j<t\), restriction to \(L_\ell\) has
+finite-group kernel of normalized length at most
+\(2[L_\ell:\mathbb Q]\mathcal N j\) by inflation--restriction.
+Summing gives
+\[
+         \sum_{1\le j<t}s_\ell(\xi,j)\le B+(\mathcal Nt)^C ,
+         \qquad B=\exp(x^{4\varepsilon/5}),
+ \tag{W}\label{eq:local-odd-w}
+\]
+where \(B\) bounds the sum of the kernels over \(L_\ell\)
+on this window. Summing the finite-group restriction loss gives
+\[
+        2[L_\ell:\Q]\mathcal N \sum_{1\le j<t}j
+             =[L_\ell:\Q]\mathcal N t(t-1).
+\] The degree \([L_\ell:\mathbb Q]\) depends only on \(\psi,\ell\), and the estimate \eqref{eq:local-odd-w}
+is uniform in the host and in \(\xi\). Every kernel in
+\eqref{eq:local-odd-w} is finite by the same restriction.
+\label{cor:ordinary-odd-primes-10}
+
+\end{proof}
+
+\subsection{Summation over a finite set of odd primes}
+\label{subsec:odd-prime-sum}
+
+The bounds so far apply to different sets of characters and primes. When they are added, the exceptional contribution from the common window must be counted only once, independently of the finite prime set.
+
+\begin{proposition}[Total positive length on a finite prime set]
+On the chosen window, for each finite set \(S\) of odd primes the positive sum in \textup{\eqref{eq:local-odd-splus}} satisfies 
+\[
+ \sum_{\ell\in S}(\log\ell)\sum_{1\le j<t}V^+(E,\ell,j)\le A^C+CB,
+\]
+ where \(A=\mathcal Nt\), \(B=\exp(x^{4\varepsilon/5})\), and \(C\)
+is independent of \(S,x,q,d\).
+\end{proposition}
+
+\begin{proof}
+\proofstep{Primes outside the fixed exceptional set.}
+
+Put \(A=\mathcal Nt\) and let \(S\) be any finite set of odd
+primes. For \(\ell\notin B_\psi\), apply \eqref{eq:local-odd-p}.
+At each \(j\), the rank-three trace estimate contributes at most \(A^{C_1}\).
+The other cases have \(\ell\le2t\) and
+\(\ell\mathcal Nj\le A^3\). There are at most \(2t\) such primes and at most
+\(|U|\le\mathcal N\) characters per prime. Their pointwise
+bounds contribute at most
+\[
+       t(2t)\mathcal N(A^3)^C
+\]
+to the sum over \(j\), where \(C\) covers the two nonprincipal
+cases. The principal terms vanish.
+Singleton prime sets give finiteness for all the component
+lengths used in this sum.
+
+\proofstep{Fixed exceptional primes and the single tower allowance.}
+
+At fixed primes one tower contribution covers all twists.
+
+
+For each \(\ell\in B_\psi\), apply \eqref{eq:local-odd-i}. The error summed
+over all characters and twists is
+\(O(\mathcal N t A^6\log\ell)\). The remaining polynomial terms
+from the even-order case, the Gaussian case and the height
+estimate are at most a fixed
+power of \(A\), since now \(\ell<q\le\mathcal N\) and hence
+\(\ell\mathcal Nj\le A^2\). In the tower case sum over all
+twists for each character first. The characters subject to \eqref{eq:local-odd-w}
+have conductor dividing \(N\), so at most \(\varphi(N)\)
+distinct characters occur in this sum even as the twist
+changes. After including the weight \(\log\ell\) the tower term is at most
+\[
+        B\,\varphi(N)\sum_{\ell\in B_\psi}\log\ell .
+\]
+The coefficient of \(B\) is fixed by the target character. In particular,
+\[
+ \sum_{\ell\in S}\log\ell\sum_{1\le j<t}V^+(E,\ell,j)
+       \le A^C+C B
+ \tag{S+}\label{eq:local-odd-splus}
+\]
+for a constant \(C\) independent of \(S,x,q,d\).
+The order of summation in the tower term is needed to
+retain the single allowance from the common window.
+\label{cor:ordinary-odd-primes-11}
+
+\end{proof}
+
+\subsection{Negative components and the joint bound}
+\label{subsec:odd-prime-negative}
+
+The positive-character sum still omits the negative components and the prime two. A polynomial bound for the negative sum leaves enough room for the dyadic contribution on the same interval.
+
+\begin{proposition}[Negative lengths and the joint bound on the window]\label{prop:cohomology-joint-window}
+For the chosen field and interval, there exists a fixed \(C\) such that every finite set \(S\) of odd primes satisfies 
+\[
+ \sum_{\ell\in S}(\log\ell)\sum_{1\le j<t}V^-(E,\ell,j)\le(\mathcal N t)^C.
+\]
+ Together with the positive sum and
+Proposition~\ref{prop:dyadic-window-total}, the joint finite-set
+bound is \eqref{eq:cohomwin}, with the same field and the strict
+range \(1\le j<t=\lfloor x^{401}\rfloor\).
+\end{proposition}
+
+\begin{proof}
+\proofstep{Critical-parity Bernoulli numbers.}
+
+The negative components use the critical parity
+\(\xi(-1)=(-1)^{j+1}\), with Bernoulli index \(k=j+1\).
+Write \(F\) for the conductor of \(E\) and \(n_E=[E:\Q]\).
+For a Dirichlet character \(\eta\) of modulus \(F\) let
+\[
+    a_{F,k}(\eta)=F\!\prod_{p\le k+1}p\ B_{k,\eta^\circ},
+\]
+where \(\eta^\circ\) is its primitive character and
+\(B_{k,\eta^\circ}\) denotes the generalized Bernoulli number.
+The addition formula for Bernoulli polynomials and the
+von Staudt--Clausen denominators show that \(a_{F,k}(\eta)\)
+is an algebraic integer. In fact, if \(f\mid F\) is the
+conductor of \(\eta^\circ\), the coefficient of \(\eta^\circ(a)\)
+in \(B_{k,\eta^\circ}\) is
+\[
+   f^{k-1}B_k(a/f)=\sum_{r=0}^k\binom{k}{r}
+                      B_r\,a^{k-r}f^{r-1}.
+\]
+Its denominators divide \(F\prod_{p\le k+1}p\).
+
+The functional equation relates \(B_{k,\eta^\circ}\) in the
+stated parity to the nonzero value of the conjugate
+\(L\)-function at \(k\ge2\), so this number is nonzero.
+The Fourier expansion gives
+\(\sup_{[0,1]}|B_k|\le2k!\zeta(k)/(2\pi)^k\).
+Since \(\prod_{p\le h}p\le4^h\), this gives
+\[
+       |a_{F,k}(\eta)|\le16 F^{k+1}k! .
+ \tag{B}\label{eq:local-odd-b}
+\]
+For \(P(x)=\prod_{p\le x}p\), the primes in the upper interval
+divide the corresponding binomial coefficient, so
+\[
+      P(2h)\le P(h)\binom{2h}{h},\qquad
+      P(2h+1)\le P(h+1)\binom{2h+1}{h}.
+\]
+The even central binomial coefficient is bounded by its row sum \(2^{2h}\). For the odd row, the two central entries agree, giving
+\[
+ 2\binom{2h+1}{h}\le\sum_{i=0}^{2h+1}\binom{2h+1}{i}=2^{2h+1}.
+\]
+Both central coefficients used in the induction are therefore at most \(2^{2h}\). This
+proves \(P(x)\le4^x\) by induction.
+
+We give the negative-component estimate using Greither and
+Popescu's theorem on the higher Stickelberger ideal. The primitive-character bound uses reciprocity. The annihilator uses an integral smoothed Stickelberger element. The published Fitting ideal
+formula gives the two estimates needed here from the same input.
+\hfill\mbox{\cite{greither-popescu}}\label{cor:ordinary-odd-primes-12}
+
+\proofstep{Fitting ideals on the critical sign.}
+
+Let \(G=\operatorname{Gal}(E/\Q)\), and let \(c\in G\) be complex
+conjugation. For every odd \(\ell\), let \(S_\ell\) consist of the
+archimedean place and the primes dividing \(\ell F\).
+Write
+\[
+ M_\ell^i=H^i_{\rm et}(\mathcal O_{E,S_\ell},\Z_\ell(k)),
+\]
+
+where the primes inverted in \(E\) lie over \(S_\ell\).
+Poitou--Tate identifies the original localization kernel with
+the dual of a submodule of \(H^2_{\rm et}(\mathcal O_E[1/\ell],
+\Z_\ell(k))\). The map from this \(H^2\) to \(M_\ell^2\)
+is injective. For each newly inverted prime with residue field \(\kappa\), its
+local \(H^0\) is the kernel of
+\[
+      (|\kappa|^{k-1}-1):\Z_\ell(k-1)\longrightarrow \Z_\ell(k-1).
+\]
+This vanishes for \(k\ge2\), giving injectivity in the localization
+sequence.
+All maps commute with \(G\). In particular, for
+\(e_k=(1+(-1)^k c)/2\), the length \(V^-(E,\ell,j)\) is
+bounded by the length of \(e_k M_\ell^2\).
+
+Theorem~6.11 of Greither and Popescu applies to the abelian
+CM extension \(E/\Q\), the set \(S_\ell\) containing the
+ramified and \(\ell\)-adic places, and \(k\ge2\).
+The required cyclotomic \(\mu\)-invariant for \(E(\mu_\ell)\)
+vanishes by Ferrero--Washington because that field is abelian
+over \(\Q\). Put \(\Theta_\ell=\Theta_{S_\ell,E/\Q}(1-k)\).
+The theorem states
+\[
+ e_k\,\operatorname{Fitt}_{\Z_\ell[G]}(M_\ell^2)
+   = \operatorname{Ann}_{\Z_\ell[G]}((M_\ell^1)_{\rm tors})
+       \,\Theta_\ell .
+ \tag{F}\label{eq:local-odd-f}
+\]
+The evaluation of \(\Theta_\ell\) at a character of \(G\) is
+the corresponding \(S_\ell\)-incomplete \(L\)-value at \(1-k\),
+with inversion of the character in the group-ring convention.
+
+We index the evaluations by that inverted character \(\eta\).
+This preserves the parity and the full character set. Up to
+sign this evaluation is
+\[
+ \frac{B_{k,\eta^\circ}}{k}\,
+     \prod_{p\mid F\ell}(1-\eta^\circ(p)p^{k-1}).
+\]
+A missing Euler factor at a ramified place is interpreted as
+one. When \(\ell\nmid F\), the only factor in the displayed
+product which depends on \(\ell\) is an \(\ell\)-adic unit.
+\hfill\mbox{\cite{greither-popescu}}
+
+\proofstep{The cyclotomic degree-one term.}
+
+The torsion in \(M_\ell^1\) is \(H^0(E,\Q_\ell/\Z_\ell(k))\),
+by the coefficient exact sequence and the vanishing of
+\(H^0(E,\Q_\ell(k))\). Let \(\ell^{r_\ell}\) kill this group.
+The cyclotomic image of \(G_E\) has index dividing \(n_E\)
+in \(\Z_\ell^\times\). Its intersection with
+\(1+\ell\Z_\ell\) contains \(1+\ell^{1+v_\ell(n_E)}\Z_\ell\).
+
+For a generator of that subgroup, the valuation of its \(k\)-th
+power minus one is \(1+v_\ell(n_E)+v_\ell(k)\), so we can take
+\[
+                 r_\ell=1+v_\ell(n_E)+v_\ell(k).
+\]
+If \(\ell\nmid F\) and \(\ell-1\nmid k\), the whole cyclotomic
+image on \(\mu_\ell\) is realized over \(E\). Indeed every
+nontrivial subfield of \(\Q(\mu_\ell)\) is ramified at
+\(\ell\), whereas \(E\) is unramified there. A generator of the
+residual image then acts with \(k\)-th power different from
+one, and we can use \(r_\ell=0\).
+
+Define the nonzero integer
+\[
+ J_{F,k}=
+   \prod_{\substack{\eta\in\widehat G\\ \eta(c)=(-1)^k}}
+    \left(a_{F,k}(\eta)
+                 \prod_{p\mid F}(1-\eta^\circ(p)p^{k-1})\right).
+\]
+The factors are algebraic integers permuted by field
+automorphisms. All the Euler factors are nonzero since
+\(k-1>0\). The use of \(\eta^\circ\) makes the Euler factors
+correct even when \(\eta\) is imprimitive at level \(F\).
+The bound \eqref{eq:local-odd-b} and
+\(\prod_{p\mid F}(1+p^{k-1})\le 2^{\omega(F)}F^{k-1}\le F^k\)
+give
+\[
+                   \log |J_{F,k}|\ll n_E k\log(Fk).
+\]
+
+\proofstep{Integral lengths in the prime-to-degree case.}
+
+For \(\ell\nmid n_E\), extend \(\Z_\ell\) to a ring of
+integers containing all \(G\)-character values. Its integral idempotents are
+\[
+     e_\eta=\frac1{n_E}\sum_{g\in G}\eta(g)^{-1}g
+          \quad(\eta\in\widehat G).
+\]
+They split its group ring as a product of coefficient rings. The Fitting ideal of a finite module
+over a discrete valuation ring has valuation equal to its length,
+by the elementary divisor theorem. Thus \eqref{eq:local-odd-f} bounds the normalized
+length of the \(\eta\) component by the valuation of
+\(\ell^{r_\ell}\eta^{-1}(\Theta_\ell)\).
+Here \(r_\ell-v_\ell(k)\le 1\). The allowance of one is
+needed only when \(\ell\mid F\) or \(\ell-1\mid k\); the latter
+implies \(\ell\le k+1\).
+
+In both cases the denominator-clearing
+factor \(F\prod_{p\le k+1}p\) supplies it. The sum of the
+component lengths is therefore at most \(v_\ell(J_{F,k})\).
+Consequently for every finite set of odd primes prime to \(n_E\),
+\[
+ \sum_{\ell\in S,\ \ell\nmid n_E}\log\ell\ V^-(E,\ell,j)
+       \le \log |J_{F,k}|\ll n_E k\log(Fk).
+\]
+With \(k=j+1\le t\), summation uses
+\[
+ \sum_{1\le j<t}n_E(j+1)\log(F(j+1))\ll n_Et^2\log(Ft).
+\]
+
+If an odd \(\ell\) divides \(n_E\), it divides \(o\) by
+the bound for the index of the Galois subgroup. Work on the lattice \(e_k\Z_\ell[G]\).
+\proofstep{The degree-dividing primes.}
+
+The element \(\ell^{r_\ell}\Theta_\ell\) is integral by
+\eqref{eq:local-odd-f}, belongs to the Fitting ideal on this sign, and hence
+annihilates \(e_k M_\ell^2\). Multiplication by the element
+has nonzero determinant on the lattice. If \(T\) is its multiplication operator on \(e_k\Z_\ell[G]\),
+Cayley--Hamilton gives its adjugate as a polynomial in \(T\).
+Then
+\[
+        T\operatorname{adj}(T)=\det(T)\,I
+\]
+implies that the determinant scalar annihilates the sign module.
+Its valuation is the sum over the sign characters of the
+valuations of \(\ell^{r_\ell}\eta^{-1}(\Theta_\ell)\).
+Using the above denominator clearing, it is at most
+\(n_E r_\ell+v_\ell(J_{F,k})\).
+Thus the \(\ell\)-power annihilator on the kernel can be
+chosen with exponent \(r\) satisfying
+\[
+   r\log\ell\ll_\psi n_E(j+1)\log(j\ell F).
+ \tag{K}\label{eq:local-odd-k}
+\]
+The constant is uniform since \(v_\ell(n_E)\le v_\ell(o)\)
+at odd \(\ell\) and \(k=j+1\).
+\hfill\mbox{\cite{greither-popescu}}
+
+\proofstep{The Kummer generator bound.}
+
+For completeness, the number of generators needed with
+\eqref{eq:local-odd-k} can be bounded directly. Let \(L=E(\mu_\ell)\), of
+degree \(n_L\le\ell n_E\). The \(\ell\)-torsion of the
+global \(H^1\) with coefficient \(\Q_\ell/\Z_\ell(-j)\)
+is a quotient of the corresponding mod-\(\ell\) \(H^1\).
+On the mod-\(\ell\) cohomology the identity
+\[
+ \operatorname{cor}_{L/E}\operatorname{res}_{L/E}=[L:E]\,\mathrm{id}
+\]
+exhibits a left inverse to restriction after division by the prime-to-\(\ell\) degree. Over \(L\) the residual
+action is trivial, and Kummer theory bounds its dimension
+by \(n_L+|S_L|+\log h_L/\log\ell\), where \(S_L\) is the
+set of primes over \(\ell\) and \(h_L\) is the ordinary
+ideal class number. Each ideal class has a representative of norm at most
+\(\sqrt{|D_L|}\) by Minkowski. Weighting its count by the
+square of the norm bound gives
+\[
+ h_L\le |D_L|\sum_{\mathfrak a\ne0}
+                         (\operatorname N\mathfrak a)^{-2}
+       \le |D_L|\zeta(2)^{n_L} .
+\]
+
+The abelian discriminant estimate is \(\log |D_L|\le n_L\log(F\ell)\).
+With \(|S_L|\le n_L\) and \(n_L=[L:E]n_E\le(\ell-1)n_E\),
+the mod-\(\ell\) generator bound becomes
+\[
+ n_L+|S_L|+\frac{\log h_L}{\log\ell}
+     \le 2n_L+
+             \frac{n_L(\log(F\ell)+\log\zeta(2))}{\log\ell}
+     \ll \ell n_E\log(F\ell).
+\]
+The implied constant is independent of \(j\) in this case.
+The \(\ell^r\)-torsion has length at most \(r\) times
+the length of the \(\ell\)-torsion. This follows from
+the filtration by the powers of \(\ell\), since multiplication
+by \(\ell^{i-1}\) injects the \(i\)-th quotient of the
+torsion filtration into the \(\ell\)-torsion.
+Applying \eqref{eq:local-odd-k} gives
+\[
+  \log\ell\, V^-(E,\ell,j)
+       \ll \ell n_E^2(j+1)\log^2(j\ell F).
+\]
+For each fixed odd divisor \(\ell\) the sum over \(j\) is at most
+\(O_\psi(n_E^2t^2\log^2(t\ell F))\). The number of such primes is
+fixed, so the total is polynomial in \(\mathcal Nt\).
+Finiteness holds in each of the two negative-component
+cases.
+\label{cor:ordinary-odd-primes-13}
+
+\proofstep{Assembly on the common scale.}
+
+The negative sum can now be added to the positive and dyadic sums on the very same interval. Their common twist cutoff is what permits a single bound for arbitrary finite prime sets.
+
+
+At this point the bounds have the following scale dependence.
+On the common tower window the prime-two contribution
+is at most \(\log 2\,B\), where \(B=\exp(x^{4\varepsilon/5})\).
+The positive and negative bounds have total size
+\(O_\psi(A^C+B)\) for a fixed exponent \(C\), including
+the fixed reference-layer depths. By the prime selection,
+\[
+ \log(qd)\le Y_0^{\varepsilon/4}
+\]
+for sufficiently large
+\(Y_0\), and \(x\ge Y_0\) on the window.
+The factors from \(2^{e(x)+2},N,t\) have logarithm \(O(\log x)\).
+
+Combining the prime-selection term with these polynomial factors yields, uniformly on this window,
+\[
+ \log A\le Y_0^{\varepsilon/4}+O(\log x)
+ \le x^{\varepsilon/4}+O(\log x)\le2x^{\varepsilon/4}
+\]
+once \(Y_0\) exceeds the fixed threshold. For
+each fixed exponent \(C\), the two exponential scales to absorb are
+\[
+         A^C\le \exp(2Cx^{\varepsilon/4}),\qquad
+         B=\exp(x^{4\varepsilon/5}).
+\]
+Their exponents are \(o(x^\varepsilon)\), so the three prime
+contributions fit in \(\exp(x^\varepsilon/2)\) eventually. This proves the
+assembly of \eqref{eq:cohomwin} from the stated cohomology
+and automorphic inputs on the chosen auxiliary primes.
+\end{proof}

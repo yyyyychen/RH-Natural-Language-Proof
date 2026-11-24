@@ -1,0 +1,185 @@
+For the two root tests, let \(g\) be the chosen level prime, let \(r\) be the rank, and put \(N=r\). For a degree-\(j\) label, the order of its multiplicative group and its \(\ell\)-primary part are
+\[
+  A_j=g^j-1,\qquad A_{j,\ell}=\ell^{v_\ell(g^j-1)}.
+\]
+ The
+squarefree mass of labels that contain specified distinct
+irreducibles of degrees $j_1,\ldots,j_u$ is at most
+$\prod_i A_{j_i}^{-1}$.
+
+Strip off the specified factors and sum
+the remaining weights, which have total at most one in the
+remaining degree. This last assertion also follows without the
+character formula: if $I_j$ is the number of irreducibles of
+degree $j$ with nonzero constant term, then $jI_j\le A_j$ by
+counting their distinct roots in $\mathbb F_{g^j}^\times$.
+Thus the mass of polynomials with factor counts $m_j$ is at
+most $\prod_j(j^{m_j}m_j!)^{-1}$, the probability of that cycle
+count under a uniform permutation. This proves domination for
+any event specified by the factor degrees.
+
+\begin{lemma}[Mass of the four excluded finite types]
+\label{lem:finite-type-event-bounds}
+Use the squarefree subprobability measure and the hypotheses of
+\eqref{eq:row-bad-types}. Write \(m_{\rm pair},m_{\rm scal},m_{\rm div},m_{\rm cyc}\)
+for the probabilities of a repeated prime-to-\(\ell\) root part, a match
+with a prescribed scalar or its inverse, a common proper divisor degree,
+and absence of the prescribed large prime degree, respectively. Then
+\[
+ \begin{aligned}
+ m_{\rm pair}&\le 23f\log(g)/\sqrt g,&
+ m_{\rm scal}&\le2fm\left(\frac1{4\min(q,d')}+\frac{1+\log r}{g-1}\right),\\
+ m_{\rm div}&\le\tfrac r2(7/8)^f,&
+ m_{\rm cyc}&\le\exp\!\left(-\frac f{5\log r}\right).
+ \end{aligned}
+\]
+The pair test ranges over the nonexcluded \(\ell\), and the last two
+bounds use the product over the \(f\) residue factors. The separate
+summand \(3f/g\) in \eqref{eq:row-bad-types} allows for the missing
+squarefree mass.
+\end{lemma}
+
+\begin{proof}
+\proofstep{Repeated roots in the squarefree mass.}
+When two different roots of a single irreducible of degree $j$
+have the same prime-to-$\ell$ part, they are $z,z^{g^a}$ with
+$1\le a<j$. Their equality requires $z^{g^a-1}$ to lie in the
+$\ell$-primary group. In the cyclic group of order $A_j$, this
+allows at most $(g^{\gcd(a,j)}-1)A_{j,\ell}$ choices of $z$.
+For a nonexcluded prime, $A_{j,\ell}\le g^{j/4}$ by its
+exclusion test.
+
+Since \(\gcd(a,j)\le j/2\), the root count is bounded by
+\[
+  (g^{\gcd(a,j)}-1)A_{j,\ell}\le g^{j/2}g^{j/4}=g^{3j/4}.
+\]
+ An equality between distinct roots can occur only
+for $\ell\mid A_j$. There are at most $j\log_2 g$ such primes.
+Every represented irreducible has at least $j$ winning roots,
+because the test is invariant under Frobenius. Dividing the root
+count by $j$ and then by $A_j$ bounds the mass for one factor by
+\[
+ \frac{4096}{4095}\log_2 g
+       \sum_{j\ge2}(j-1)u^j,
+ \qquad u=g^{-1/4}\le1/8.
+\]
+
+For a pair of distinct irreducibles of degrees $i,j$ use the
+cyclic groups on the two roots. The common prime-to-$\ell$
+part lies in the group of order $g^{\gcd(i,j)}-1$, and the two
+primary parts give at most $A_{i,\ell}A_{j,\ell}$ possibilities.
+Thus the number of ordered root pairs is at most $g^{3(i+j)/4}$.
+The union over the prime factors of $A_i A_j$, followed by
+stripping the two factors from the label, bounds the mass by
+\[
+ \left(\frac{4096}{4095}\right)^2\log_2 g
+                \sum_{i,j\ge1}(i+j)u^{i+j}.
+\]
+The sums are $u^2/(1-u)^2$ and $2u^2/(1-u)^3$. Together they
+fit $23\log g/\sqrt g$, with a constant independent of $N$.
+This also bounds the whole-place failure by the union over places.
+\label{cor:paired-type-mass-1}
+
+\proofstep{A fixed scalar and its root count.}
+For a fixed scalar in $\mathbb F_g^\times$, the number of
+roots in $\mathbb F_{g^j}^\times$ with matching prime-to-$\ell$
+part is at most $A_{j,\ell}$. It suffices to take the union over
+primes dividing $A_j$. If a match occurs at another prime the
+root is the scalar itself, which is already counted. Divide by
+$j$ for the number of roots of each irreducible, and by $A_j$
+for the mass of labels containing it.
+For fixed \(j,\ell\), these two divisions bound the mass from a fixed scalar by
+\[
+  \frac{1}{A_j}\,\frac{A_{j,\ell}}{j} .
+\]
+ At $j=1$, the sum of the
+primary parts of $g-1$, divided by $g-1$, is at most
+$3/(16\min(q,d'))$. Indeed the three parts for $2,q,d'$ have
+size at least $16,q,d'$, and the product of any two is at least
+$16\min(q,d')$.
+
+For previous sum \(S\ge2\) and product \(P\), adjoining a primary part
+\(c\ge2\) gives
+\[
+ \frac{S+c}{cP}\le\frac S P,
+ \qquad cS-(S+c)=(c-1)(S-1)-1\ge0 .
+\] At $j\ge2$, the product of the parts of
+$A_j$ supported on $g-1$ is at most $j(g-1)$ by the lifting
+formula for powers, also at two since $g\equiv1\pmod4$.
+The product of the other parts is at most $A_j/(g-1)$.
+In each group the sum of its primary parts is at most the
+product. Thus the degree $j$ contribution is at most
+$(g-1)/A_j+1/(j(g-1))$. Summing the resulting estimate uses both
+\[
+  \frac{g-1}{g^j-1}=\frac{1}{1+g+\cdots+g^{j-1}}\le g^{1-j},\qquad \sum_{j=2}^N\frac1j\le\log N.
+\]
+ This proves the scalar term
+in \eqref{eq:row-bad-types} after summing over the $2fm$
+scalars and inverse scalars.
+\label{cor:paired-type-mass-2}
+
+\proofstep{The divisor-degree and cycle tests.}
+A divisor of degree $a$ for a squarefree label corresponds to
+an invariant $a$-subset of a permutation in the degree-count
+bound. For $0<a<N$, count stable $a$-subsets with weight eight,
+except give weight four when the permutation fixes a point on
+each side. For a fixed subset \(A\), let \(E_A\) be the event that
+it is stable and \(F_A\) the event of a fixed point on
+each side. Given \(E_A\), the two restrictions are
+independent uniform permutations. The derangement formula
+gives probability at least \(1/2\) of a fixed point on
+each side, including a side of size one. Thus the mean
+contribution from this subset is
+\[
+ \mathbb P(E_A)(8-4\mathbb P(F_A\mid E_A))\le7\mathbb P(E_A).
+\]
+
+When some subset is
+stable the total weight is at least eight. In the weight-four
+case, swap a fixed point on each side to obtain a different
+stable subset of the same size. Summing the stabilization
+probability over subsets gives one. Hence the chance of a
+stable $a$-subset is at most $7/8$. Independence of the places
+and a union over $1\le a\le N/2$ give the fourth term of
+\eqref{eq:row-bad-types}.
+
+A permutation can have at most one cycle of prime length in
+$(N/2,N-3]$. For each such \(p\), the choice of its support, its cyclic ordering and the permutation on the complement gives
+\[
+  \Pr(\text{a cycle of length }p)=\binom Np\frac{(p-1)!(N-p)!}{N!}=\frac1p.
+\]
+ The sum of these reciprocals is at least
+$1/(5\log N)$ for $N\ge100$. For $100\le N<16900$ use the sieve to count primes through
+$16899$, and sum the lower bounds $10^{-12}\lfloor10^{12}/p\rfloor$.
+Multiplying by $5\lfloor\log_2 N\rfloor\cdot0.6931471803$ gives
+at least one for every such $N$, using only integer arithmetic.
+
+For larger
+$N$, write $n_1=\lfloor N/2\rfloor$, $s_1=\lfloor\sqrt N\rfloor$
+and $t=\#\{p:N/2<p\le N-3\}$. The central binomial lower
+bound $4^{n_1}/n_1$ and its prime factorization give
+\[
+ \frac{N-1}{6}\log 4 \le
+                 \big(\pi(\sqrt{2n_1})+t+4\big)\log N.
+\]
+Indeed the primes at most $\sqrt{2n_1}$ cost at most $2n_1$
+each, those between $\sqrt{2n_1}$ and $2n_1/3$ cost at most
+the primorial up to $2n_1/3$, bounded by $4^{\lfloor2n_1/3\rfloor}$,
+and those between $2n_1/3$ and $n_1$ do not divide the binomial.
+At most three primes near the upper endpoint were omitted from
+the list for $t$.
+
+Now $\pi(\sqrt{2n_1})\le(s_1+9)/3$ by counting
+classes coprime to $6$, and $\log N\le(s_1+1)/64+7.70407$ by
+$\log u\le u-1$ applied to $u=(s_1+1)/128$. With $s_1\ge130$,
+expanding the two sides gives
+\[
+ (s_1+21)((s_1+1)/64+7.70407)+0.693148\le0.093147s_1^2.
+\]
+Since $\log 2>0.69314718$, substitution gives $5t\log N\ge N$.
+Each reciprocal in the sum is at least $1/N$. The cycle-count domination gives
+$1-1/(5\log N)$ as an upper bound for the single-place mass
+without one of the prescribed factors. Raising to the $f$th
+power bounds the final event in \eqref{eq:row-bad-types}.
+\label{cor:paired-type-mass-3}
+\end{proof}

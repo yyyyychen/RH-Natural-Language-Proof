@@ -1,0 +1,314 @@
+\subsubsection*{The theta polynomials from pair removal}
+\hypertarget{source-twist-euler}{}
+
+The toric distribution relation describes the effect of adding a split prime. To use it in the simultaneous choice of Section~\ref{subsec:retained-twist}, encode pair removal by specialization in the group ring before evaluating any character.
+The first and second halves use the multiplicative group-ring coordinates
+\[
+ U_i=1+X_i,\qquad V_i=1+Y_i,\qquad U_i^L=V_i^L=1,\qquad L=\ell^M.
+\]
+
+The group ring of the coordinates is the quotient by
+\(U_i^L-1,V_i^L-1\). In an integral coefficient polynomial one
+can use the exponent \(L-1\) for the inverse of a group
+coordinate. Equality at all \(L\)-torsion tuples after setting
+\(V_i=1\) gives equality modulo \((Y_i,U_i^L-1)_i\) over the
+original integers. Indeed division in each variable by the
+monic polynomial leaves a remainder of degree less than \(L\)
+in each variable. In a characteristic-zero splitting field
+successive univariate interpolation kills that remainder.
+This proof involves no division by a group order in the
+coefficient ring.
+
+\begin{lemma}[Removal of pairs for abelian theta values]\label{lem:abelian-pair-removal}
+For an abelian label at an admissible critical integer \(s\ge0\),
+use the uniform denominator \(\ell^{N_0}\) and the two halves of the
+chosen auxiliary pairs. The cleared full and first-half theta values
+have integral polynomial representatives \(f_M,g_M\) such that
+\[
+ f_M\equiv B_Mg_M\pmod{(Y_i,U_i^L-1)_i},\qquad
+ v(g_M(0))=N_0+v(\theta_\lambda(1)).
+\]
+Each second-half factor of \(B_M\) reduces to a polynomial in
+\(X_i\) of order zero or two at zero.
+\end{lemma}
+
+\begin{proof}
+First consider an abelian label at an admissible critical
+integer \(s\ge0\). The input denominator \(\ell^{N_0}\)
+makes each coefficient of its ray-class theta element integral,
+uniformly in the auxiliary level. Push this element to the
+coordinate group ring by the chosen characters and choose a
+polynomial lift \(f_M\). More explicitly, lift each ray class
+to an Artin element, use its character coordinates as exponents
+in \([0,L-1]\), and sum the resulting monomials in \(U_i,V_i\)
+with the cleared coefficients. The characters factor through
+the ray group. Evaluating gives exactly
+\(\ell^{N_0}\theta_\lambda(\psi)\). Use \(g_M\) for the
+same construction at the union of the first half of the pairs,
+using just the first-half characters.
+
+\proofstep{The second-half factors.}
+The pair-removal identity of the theta input at a pair of
+norm \(q\) and at a character unramified on that pair gives
+the factor
+\[
+ E_q(A)=(1-Aq^{-s})(1-A^{-1}q^{-s})+(q-1)q^{-2s},
+ \qquad A=\lambda(\mathrm{Frob})\psi(\mathrm{Frob}).
+\]
+All these coefficients are integral at \(\ell\) because
+\(q\equiv1\bmod 2L\). Remove the second half of the pairs
+with all \(V_i=1\). At pair \(i\) the Frobenius character
+value is exactly \(U_i\) on evaluating, by the identity
+matrix condition on the first-half characters. Thus \(B_M\)
+is the product over the second half of the integral polynomial
+representatives of \(E_q(\lambda(\mathrm{Frob})U_i)\).
+Successive removal and the interpolation argument above give
+\[
+ f_M\equiv B_Mg_M\bmod(Y_i,U_i^L-1)_i.
+\]
+
+
+\proofstep{The first-half unit test.}
+To compute \(g_M(0)\), remove the first half at the trivial
+character. Choose the open normal subgroup inside the kernel
+of the residue character \(\bar\lambda\). On the prescribed
+tame element \(z\), \(\bar\lambda(z)\ne1\). Indeed at the
+distinguished place of norm \(q_0\) the character label there
+agrees with \(\delta^{\pm1}\) after taking a \(q_0\)-power
+iterate (power \(q_0^n\) for some \(n\)). The finite
+quotient values of \(z\) have order prime to \(q_0\ell\).
+Writing a bar for reduction at \(\ell\), the choice of \(z\) gives
+\[
+ (\overline{\delta(z)}-1)(\overline{\delta(z)}+1)=\overline{\delta(z)}^2-1\ne0.
+\]
+These are the tests on \(z\): take the
+prime-to-\(q_0\ell\) part of a generator at the distinguished
+order-15 place. Its value retains the prime-to-\(\ell\)
+part of a primitive fifteenth root, of order divisible by
+three or five and prime to \(q_0\). It follows that
+\(\bar\lambda(z)^{q_0^n}\ne1\).
+
+By the first Frobenius test, the factors at the first-half
+places reduce at the trivial character to
+\((1-\bar\lambda(z))(1-\bar\lambda(z)^{-1})\), a unit.
+Consequently
+\[
+ v(g_M(0))=N_0+v(\theta_\lambda(1)).
+\]
+Here the value on the right is at empty auxiliary level.
+For a second-half factor write \(x=\bar\lambda(\mathrm{Frob})\).
+Its reduction is \((1-xU_i)(1-x^{-1}U_i^{L-1})\).
+For \(x\ne1\) it has unit constant term. For \(x=1\)
+it equals \(X_i^2\sum_{j=0}^{L-2}(1+X_i)^j\), whose last
+factor has constant \(L-1\ne0\) in the residue field.
+The denominator bound and the pair relation prove the abelian coefficient condition with \(n_*=2\). The distinction between the
+two halves of the primes is essential to the constant
+coefficient estimate. \label{cor:twist-euler-1}
+\end{proof}
+
+\begin{proposition}[Determinant and signed index for the row theta values]\label{prop:row-pair-removal}
+Let \(B\) be the prescribed row lattice of rank \(n\), with its
+\(n\) independent projected vectors at empty level and the uniform
+clearing scalar \(x\). Write \(C_Q\) for their cleared coordinate
+matrix at level \(Q\), \(Q_1\) for the first half of the auxiliary
+pairs, and \(b=\operatorname{ord}_O(\det C_0)\). Then
+\(f_M=\det C_Q\) and \(g_M=\det C_{Q_1}\) satisfy the same
+pair-removal congruence as in Lemma~\ref{lem:abelian-pair-removal},
+with the second-half determinant factors displayed below, of residual
+order at most \(rn\) in each variable. For any lattice containing the specialized columns, let \(\Delta\) denote its excess signed index over the original column index. Then
+\[
+ \operatorname{ord}_O g_M(0)=b,\qquad f_M(u-1)\ne0\ \Longrightarrow\ \Delta\le v(f_M(u-1))-b/e_O.
+\]
+\end{proposition}
+
+\begin{proof}
+\proofstep{Clearing the columns on both sides.}
+For a row, let \(B\) be the prescribed free lattice of rank
+\(n\), \(A\) the commuting central operator of the row
+calculation, and \(\theta_1,\ldots,\theta_n\) the selected
+projected vectors at empty level. They are independent and
+span the rational space. Choose a basis of \(B\).
+There is a single denominator
+\[
+ x=\ell^c\ne0
+\]
+for the
+universal lifts of this finite list, valid at every \(M,Q\)
+disjoint from their levels. Projection takes the lattice
+containing these cleared lifts into \(B\).
+
+Take their basis
+coordinates, with the universal characters still present,
+and push the group coordinates to the polynomial presentation
+above. This gives an integral square matrix \(C_Q\) such
+that at every torsion character its columns are the coordinates
+of \(x\) times the projected specializations. At empty level
+it gives the constant matrix \(C_0\) of the \(x\theta_j\).
+In particular \(\det C_0\ne0\). With \(Q_1\) the first-half set, the two determinant polynomials and the base valuation are
+\[
+ f_M=\det C_Q,\qquad g_M=\det C_{Q_1},\qquad b=\operatorname{ord}_O(\det C_0).
+\]
+
+This choice cancels the denominator in the signed index.
+Indeed, if \(\det C_Q(u-1)\ne0\), those specialized columns
+before clearing span a lattice of normalized relative index
+\(v(\det C_Q(u-1))-n v(x)\) in \(B\). Every lattice in
+the same rational space that contains them has relative
+index at most this, by elementary divisors. Subtract the
+corresponding index for the original \(\theta_j\) to get
+exactly \(v(f_M(u-1))-b/e_O\). The formula also holds for
+fractional lattices extending beyond \(B\).
+
+\proofstep{The primitive local function.}
+For a place \(P\) of norm \(q\), with integral Hecke matrices
+\(T_{a,P}\) in the basis of \(B\), put
+\[
+ H_P(Y)=I+\sum_{a=1}^r(-1)^a q^{a(a-1)/2}Y^aT_{a,P}.
+\]
+Work in the split local model at the chosen member \(P\).
+To distinguish the matrix variable from the rank of the row
+lattice, denote its number of columns by \(n_{\rm loc}\).
+It has \(r\) rows. The split base frames
+identify the vacuum with the characteristic function of
+integral matrices. Sum over the character coordinate at a
+deleted pair. If the reduced rows span an \(r\)-plane, its
+complements are the graphs of maps from a fixed complement
+to that plane. For a matrix \(z\) the normalized count is
+\[
+ q^{-r(n_{\rm loc}-r)}
+ \#\{\text{complements of dimension } n_{\rm loc}-r\}
+ =
+ \begin{cases}1,&\operatorname{rk}\bar z=r,\\0,&\operatorname{rk}\bar z<r.\end{cases}
+\]
+For smaller rank the dimension condition prevents complementarity.
+This is the primitive local function on the integral vacuum.
+
+Let \(z\) be integral and \(c=\dim\ker(\bar z^{\mathsf T})\).
+The right cosets of the index-\(a\) minuscule Hecke double
+coset parameterize the lattices \(D\) between
+\(\varpi O_P^r\) and \(O_P^r\) of residual codimension \(a\):
+send a representative \(\gamma\) to \(\gamma O_P^r\), and
+use elementary divisors for surjectivity. The condition
+\(\gamma^{-1}z\) integral means that each column is in
+\(D\). Equivalently the annihilator of \(D/\varpi O_P^r\)
+is an \(a\)-plane in \(\ker(\bar z^{\mathsf T})\).
+Thus there are \(\genfrac{[}{]}{0pt}{}{c}{a}_q\) translates.
+The subspace recursion obtained by intersection with a hyperplane
+gives the polynomial identity
+\[
+ \sum_{a=0}^c (-1)^a q^{a(a-1)/2}
+    \genfrac{[}{]}{0pt}{}{c}{a}_q Z^a
+   =\prod_{j=0}^{c-1}(1-q^jZ).
+\]
+At \(Z=1\) the product is one for \(c=0\) and zero for \(c>0\).
+Hence the alternating Hecke sum is precisely the primitive
+indicator. Off the integral vacuum every term vanishes since
+\(D\subset O_P^r\).
+
+\proofstep{The normalized Hecke translates.}
+In the split Weil action the right translate of the vacuum
+by an index-\(a\) representative has the indicator just
+counted with modulus and splitting-character multiplier
+\[
+ q^{a n_{\rm loc}/2}\mu(\varpi)^a.
+\]
+Here \(n_{\rm loc}\) is even. This is
+the change-of-variables factor \(|\det\gamma|^{-n_{\rm loc}/2}\)
+on the matrix argument and the unramified splitting
+character on its determinant. Dividing the sum of translates
+by this same multiplier is the normalized \(T_{a,P}\) on the
+row.
+
+The other local components carry the shorter coordinate
+datum: the coordinates agree by restriction, and replacing
+the deleted test by the constant one on its integral support
+restores the vacuum. The identity of local functions passes
+to theta series by linearity and right translation. If \(b\) is the remaining Artin label, the determinant of a representative in degree \(a\) changes it by
+\[
+ b\longmapsto b+a\delta,
+\]
+where \(\delta\) is the Artin-coordinate vector of the uniformizer at \(P\). This follows
+by taking determinants of the representatives, all of which
+are \(\varpi^a\) times a local unit and all remaining
+characters are unramified at \(P\). With the inverse Artin map of Lemma~\ref{lem:toric-split-distribution} \(\delta\) is minus the vector of
+their arithmetic Frobenius values.
+
+For a character descending to the shorter set, write \(Y\) for its Frobenius value. Translating the index back by \(-a\delta\) supplies the factor
+\[
+ \chi(-a\delta)=\chi(-\delta)^a=Y^a.
+\]
+Injectivity of
+the row realization transfers this equality to the prescribed
+Hecke matrices. This gives \(H_P(Y)\) at the signed character
+value on the representative selected by the row.
+
+Projection commutes with the
+Hecke operators. Each of the \(n\) columns therefore changes
+by the very same matrix. Applying the relation successively
+and taking determinants gives
+\[
+ B_M=\prod_{i=1}^{R_*} \det H_{P'_i}(U_i^{c_i}),
+       \qquad c_i\in\{1,L-1\},
+\]
+with \(P'_i\) in the second half. The identity-matrix
+Frobenius test gives \(U_i\) on the specified representative,
+conjugating the place inverts the value by anticyclotomicity,
+and the sign of the row can invert it once more. This proves
+the formula at torsion tuples with trivial second half and
+hence the required ideal congruence by interpolation.
+
+Over the residue field
+\[
+ h(Y)=\det H_{P'_i}(Y)
+\]
+satisfies
+\[
+ h(0)=1,\qquad\deg h\le rn.
+\] The order of
+\(h((1+X)^{c_i})\) at \(X=0\) is the multiplicity of the
+root \(Y=1\) of \(h\), including multiplicity zero. Indeed
+\((1+X)^{c_i}-1\) has nonzero linear coefficient there.
+Each factor is therefore \(X_i^{n_i}\) times a polynomial
+with unit constant, \(n_i\le rn\), uniformly in \(M\).
+
+\proofstep{Units at the first half of the pairs.}
+The factors from the second set of auxiliary primes have already been identified. The determinant coefficient also depends on what survives when the coordinates from the first set are specialized.
+
+It remains to check the first-half determinant units at the
+trivial character. For each signature \(s\), write \(H_{P,s}\) for its unramified Hecke polynomial with the prescribed character \(\eta_s\). Evaluation at one gives
+\[
+ H_{P,s}(1)=\det(1-\eta_s\rho_s(\mathrm{Frob}^{-1})).
+\]
+
+At the distinguished place the twist \(\eta_s\rho_s\)
+acts by the scalar \(\delta\) or \(\delta^{-1}\) on inertia.
+Intersect the kernels of all the reduced twisted matrices and
+the conjugate of this intersection. This is an open normal
+subgroup because there are finitely many continuous residual
+actions. At either place of a first-half pair the inverse residual Frobenius is scalar. Its two possible values are
+\[
+ \overline{\delta(z)},\qquad \overline{\delta(z)}^{-1},
+\]
+since conjugation transports inertia and inverts \(\delta\). Thus the displayed determinant is a
+unit for every signature.
+
+Suppose \(\bar H_P(1)\) is singular over the algebraically
+closed residue field. Its kernel is nonzero and stable under
+all commuting Hecke operators. Restrict successively to a
+nonzero eigenspace of a nonscalar operator. This gives a common
+eigenvector \(w\) in the kernel. Its residual signature \(s\)
+therefore satisfies
+\[
+       0=\bar H_P(1)w=\overline{H_{P,s}(1)}\,w .
+\]
+The first-half test just proved makes \(H_{P,s}(1)\) a unit,
+a contradiction. Thus \(\det H_P(1)\) is a unit on the row.
+Deleting the first-half pairs at the trivial character gives
+\[
+                   g_M(0)=\det C_0\prod_P\det H_P(1).
+\]
+This proves the coefficient and index bounds for every allowed
+lattice. The following comparison identifies the integral lattice,
+residual signature and the common geometric denominator.
+\label{cor:twist-euler-2}
+\end{proof}

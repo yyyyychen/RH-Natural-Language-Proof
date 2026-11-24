@@ -1,0 +1,664 @@
+\subsection{The period entries without a neighbor operator}
+\label{subsec:unserved-period}
+\hypertarget{source-unserved-period}{}
+
+We first apply the jet and normalization estimates to entries for which no neighboring lattice is inserted. These orders provide the comparison for the entries modified by Hecke operators later in the chapter.
+
+\begin{established}[Places and diagram sizes for the period estimate]\label{hyp:unserved-level-free}
+At stage \(j\) use the valuation \(v=v_w/e_w\) for \(w\mid p\),
+and let \(H_z\) be the number of boxes at the real label \(z\) with
+positive stage weight \(w_z\). Set \(\kappa=k-1\), \(M=N_m\).
+For the reference row and the row assigned to \(w\),
+\[
+ \begin{gathered}
+ N_{j-1},N_j\le M,\quad 2\mid N_{j-1},N_j,\quad X''\le a,\quad
+ \kappa w_z\le H_z\le a^2,\\
+ 0\le H_z-\kappa w_z\le4w_z\quad (z\text{ outside the tops}).
+ \end{gathered}
+\]
+Call the place level free for \(\mu\) if
+\(p\notin\{T_u,g_0,g_1\}\cup Q(\mu)\), with \(Q(\mu)\) the underlying
+twist primes. The ordinary calculation here is restricted to
+\(p\nmid N_{\rm host}g_0g_1\) and \(p\le X''\).
+\end{established}
+\begin{proof}
+In \(N_i=k+i(t+1)\) the integer \(k\) is even and \(t\) is odd.
+Also \(X''/a=nX'/b\to0\). The real labels are the \(f\) pairs
+\((\pm,t)\) of the weight construction. Write \(e=w_z\) and \(N=N_m\). The head coordinates and rank shifts
+are those calculated before the integral-kernel comparison in
+Proposition~\ref{prop:level-four-integral-kernel}. Off the tops, if \(u\) ranges over the interior Harish--Chandra entries, then
+\[
+ u_{\max}=4(k-2)\Delta+4k\Delta+\tfrac12,\qquad
+ u_{\min}=-\tfrac12,\qquad |u|\le4k\Delta .
+\] Thus each of the \(k\)
+head rows differs from \(e\) by at most \(S_c+2N\), where one may take
+\(S_c=16k\Delta\). Each of the at most \(m(t+1)\) tail rows lies
+between zero and \(2\eta\). With the common error
+\[
+ U=k(S_c+2N)+2m(t+1)\eta,\qquad |H_z-ke|\le U
+          \quad(z\text{ off the tops}) .
+\]
+
+Here the signed stage offsets and appended rows use the same weight
+coordinates as the explicit degree sum in Section~\ref{subsec:selected-exponent}.
+On the selected range \(e\ge w''=b/(nX')\), while
+\(U\le x^{O(1)}\exp(x^{\epsilon/4})\). Therefore
+\[
+ U/e\le x^{O(1)}
+       \exp(x^{\epsilon/4}+x^{\epsilon/3}-x^\epsilon)\longrightarrow0 .
+\]
+
+This proves \((k-1)e\le H_z\le(k+1)e\) off the tops. At a top, delete
+the exceptional first row. The \(k-2\) interior head rows have the same
+bound as above and all the remaining rows are nonnegative. The deleted
+row has at least \(a_t+e-N\) boxes. Since \(a_t\ge xb\) and \(e\le3b\),
+for large \(x\)
+\[
+ H_z-\operatorname{row}_1\ge(k-2)e-U\ge(k-3)e,\qquad
+ \operatorname{row}_1\ge2e .
+\]
+
+The weights are \(O(a)\) and the number of rows grows polynomially
+in \(x\), so their total is at most \(a^2\) beyond one common threshold.
+The assigned tuple avoids its coefficient prime when its twist places
+are chosen; this is the prime avoidance in the construction of
+Proposition~\ref{prop:translate-completion}. The two type primes are
+distinct from the discriminant prime.
+\end{proof}
+
+\input{unserved-kernel-charts}
+
+\subsubsection{Even cycles and signal primes}
+
+On an even cycle the cyclic jet estimate gives a contribution from its paired positions. For a signal prime the same accounting must count each selected cycle only once.
+
+\begin{proposition}[Entries on the even cycles]\label{prop:unserved-even-entries}
+In the ordinary cutoff range of Lemma~\ref{hyp:unserved-level-free} with \(p\ge5\), suppose the
+inert step has positive even order or the \(p\)-cycles are signal
+cycles. In the latter case the cycles are counted once, with \(A\)
+empty. For the full entry \(b\), using the even-cycle allowances below,
+\[
+ v_p(b)\ge\sum_r g_r+F_{\rm in}-E_{\rm I}.
+\]
+The estimate includes a signal cycle of length two.
+\end{proposition}
+
+\begin{proof}
+\proofstep{The zero-index estimate on the first cycles.}
+
+A positive even order of the inert Frobenius step gives one
+set \(A\) of cycles on the first embedding and one set
+\(BC\) on the second. At a signal prime Frobenius changes the
+real embedding and the cycles are counted once, with
+representatives on the first embedding. Then \(A\) is empty.
+In both cases the cycle length \(d_p\) is even and at least
+two, and \(p\ge5\). On a cycle in \(A\) the estimate with
+index zero in \eqref{eq:tag-j1} implies the gain \(\max(g_0(r),0)\) at its
+representative \(r\). In detail, the exclusion at a top
+omits each least forward odd distance to a top, hence
+the remaining terms in \(g_0(r)\) occur in the first sum of
+\eqref{eq:tag-j1}. Its numerator \(\alpha_s\) is at most the diagram's
+number of height-one columns and its recipient width
+bound is at least the actual remaining width. With
+
+\[
+  \Lambda=\log_p(2a)\ge1,\qquad 1+\log_p(2a)\le 2\Lambda,\qquad 1+\log_p(a^2)\le3\Lambda,
+\]
+ the digit counts for a
+height-one count at most \(2a\) and a remaining size at
+most \(a^2\) are at most \(2\Lambda\) and \(3\Lambda\).
+The error in \eqref{eq:tag-j1} is thus at most
+\[
+   5d_p M^2\Lambda+4\,\#\{\text{tops on }r\}\Lambda^2 .
+\]
+This is covered by the digit terms in \(g_0(r)\).
+The nonnegative alternative in \eqref{eq:tag-j1} gives the maximum
+with zero. This argument uses the zero-index coefficient
+of the same homogeneous jet and is independent of the
+choice of the neighbor summands on any other cycles.
+
+\proofstep{Cyclic flow and the top capacity.}
+
+For \(BC\) use the cyclic bound of
+Proposition~\ref{prop:cyclic-jet} with the stage weights.
+The capacity comparison \eqref{eq:flow-comparison} gives
+the cyclic flow term 
+\[
+  F_r={\cal F}_p((\kappa w_z)_{z\in r})
+\]
+and the top contribution. At the second embedding there
+are no tops and the top contribution is zero. On a signal
+cycle the top contribution pays \(\max(g_0(r),0)\) after
+the top error. Denote the resulting error by
+\(\operatorname{err}_r\). Put \(n_r=\#\{\text{tops on }r\}\)
+and \(W_*=b+\eta_{\rm sz}+1+3S_{\rm sz}\), the uniform
+upper bound for the remaining width at a top. The error is
+\[
+ \begin{split}
+ \operatorname{err}_r={}&\gamma n_r W_*+
+  \frac{c_6}{p}\sum_{z\in r}w_z+
+  d_p N_{j-1}N_j\bigl(1+\log_p(4d_p M a)\bigr)\\
+ &+K_1d_p M^2\log_p(2a)+K_2 n_r\log_p^2(2a).
+ \end{split}
+\]
+The constants satisfy \(c_6\ge12\), \(K_1\ge5\),
+\(K_2\ge4\). The first two terms dominate
+the top width and the loss \(11\sum w_z/p\) in
+\eqref{eq:flow-comparison}.
+
+The third and fourth terms cover
+\(d_p N_{j-1}N_j(1+\log_p(a^2))\), since \(4d_pM\ge1\)
+and \(K_1 M^2\log_p(2a)\ge N_{j-1}N_j\log_p a\).
+We obtain the bound
+\[
+  \begin{cases}
+    g_r, &r\in A,\\
+    g_r+F_r-\operatorname{err}_r, &r\in BC,
+  \end{cases}
+\]
+where \(g_r=\max(g_0(r),0)\) on first-embedding representatives
+and is zero on second-embedding representatives. On the signal
+cycles each odd step goes to the second embedding, which has
+no tops. The distance in \(T_s\) is therefore infinite.
+More explicitly, for any first-embedding top \(s\) on a signal cycle one has
+\[
+  \{j>0:j\ {\rm odd},\ s+j\text{ is a top}\}=\varnothing .
+\]
+The recipient width bound and the lower bound on the top's
+height-one count show that \(T_s\) dominates the positive-part
+sum in \(g_0\) term by term. That sum before the digit correction
+is nonnegative. This pays \(g_r\) before the other errors in
+\(\operatorname{err}_r\).
+
+\proofstep{Add the bounds over the actual orbits.}
+
+The logarithm and its inverse preserve disjoint sets of orbit
+variables. The integral factor of the full theta series can
+depend on all orbits. Expand it in monomials before inverting
+the logarithm. Each monomial gives a product of admissible
+single-orbit factors, and only finitely many meet a specified
+jet. The derivative polynomial is a product over the orbits
+on such a term.
+For a monomial product \(\prod_r H_r(Z_r)\) in disjoint orbit variables the jet factors as
+\[
+  \partial^\alpha\!\left(\prod_r H_r\right)(0)=\prod_r\partial^{\alpha_r}H_r(0),\qquad\alpha=(\alpha_r)_r.
+\]
+ The valuation bounds therefore add. This
+also explains the restrictions to a single orbit: setting the
+other variables equal to zero commutes with their logarithms
+and deletes their phase, whose constant is zero. The common
+scaling of logarithmic coordinates is by a unit.
+
+Each orbit term \(F_r\) is invariant under rotation, so
+\(F_{\rm in}=\sum_r F_r\) is also the sum over all labels of
+the same orbit terms divided by \(d_p\). The error
+\(E_{\rm I}\) includes \(\sum_{BC}\operatorname{err}_r+
+\max(0,\sum_A F_r)\). The summed entry estimate is therefore
+at least \(\sum_r g_r+F_{\rm in}-E_{\rm I}\). In particular
+the real-embedding count here is also valid for a signal
+orbit of length two.
+
+\end{proof}
+
+\subsubsection{Odd cycle lengths}
+
+An odd cycle has no alternating pairing of all its positions. Its contribution is estimated from the forced exponent and the ordinary error for this orbit.
+
+\begin{proposition}[Entries on the odd cycles]\label{prop:unserved-odd-entries}
+For \(p\ge5\) in the ordinary cutoff range of Lemma~\ref{hyp:unserved-level-free}, let \(b\) be the entry at a positive odd inert step of order \(d_p\ge3\). Then
+\[
+ v_p(b)\ge F_{\rm in}-E_{\rm I}.
+\]
+ There is no additional \(g_0\) gain
+in this case. The phase comparison uses the doubled even cycle,
+and the flow error includes \(\kappa\sum_{BC}w_z/p^3\).
+\end{proposition}
+
+\begin{proof}
+\proofstep{Realize the phase on the doubled cycle.}
+
+Here \(d_p\ge3\) is odd and the two sets of cycles again lie
+over separate real embeddings. In the standard lattice
+bases the local chart has an integral factor in the group
+coordinates and an exponential of the sum of orbit phases
+in additive coordinates. We explain the chart comparison
+because the actual orbit has odd order and the parity in the
+phase calculation is on a different set of letters.
+
+Write \(\sigma\) for Frobenius on the unramified local
+coefficients. Take an integral basis \(\omega_\rho\) of the
+unramified extension of degree \(d_p\) over the unramified
+quadratic field, orthonormal for the trace Hermitian form
+whose conjugation is \(\sigma^{d_p}\).
+The two parities belong to the doubled indexing set: reducing positions to the actual odd cycle identifies
+\[
+  s,\ s+d_p\ \in\mathbb Z/(2d_p)\quad\longmapsto\quad s\bmod d_p,\qquad (-1)^{s+d_p}=-(-1)^s.
+\]
+ This form is
+unimodular by the unramified trace pairing. Reduction,
+orthogonal splitting and surjectivity of the norm on
+quadratic units give the basis, as in
+Section~\ref{subsec:theta-normalization}. Its trace-dual basis
+is \(\omega_\rho^*=\sigma^{d_p}\omega_\rho\).
+In these coordinates trace orthogonality is
+\[
+  \operatorname{Tr}\big(\omega_\rho^*\omega_{\rho'}\big)=\delta_{\rho\rho'}.
+\]
+
+On a cycle with representative \(r\) and fixed matrix entry,
+the trace-coordinate linear variables are
+\[
+ L_{r,\rho}(Z)=\sum_{\substack{0\le s<2d_p\\s\ {\rm even}}}
+              \sigma^s(\omega_\rho^*) Z_{r+s}.
+\]
+Here \(r+s\) refers to the actual orbit of size \(d_p\).
+The even labels give every position once. Integral standard
+bases for the two incident lattices give integral Frobenius
+coordinates \(g_s\) with 
+\[
+  \sigma^2 g_s=g_{s+2}.
+\]
+ Their
+conjugate components give the paired evaluations. The
+coefficients 
+\[
+  \sum_{s\ {\rm even}}\sigma^s(\omega_\rho)g_s
+\]
+are fixed by \(\sigma^2\), and the trace-dual identity gives
+the inverse expansion of \(g_s\) in the displayed linear
+variables. In the orthonormal kernel frame the source and
+target evaluations are in perfect duality, entry by entry.
+Expanding the Hermitian Gram matrix of this change of
+variables and using trace duality thus gives identity:
+it is zero between distinct orbits or entries, and is
+\(\delta_{\rho\rho'}\) in each such block. It follows that
+this linear change preserves the integral exponential
+comparison in the orthogonal chart.
+
+In group coordinates the backward steps of length \(2e\)
+in the generalized logarithm give the same \(L_{r,\rho}\)
+after applying the one-dimensional logarithm to the
+integral formal sum with the indicated coefficients.
+Write \(\mathcal G_{r,\rho}\) for that logarithm in the group coordinates. For the even representative \(s\), its coefficient is
+\[
+  [Z_{r+s}^{p^{2e}}]\,\mathcal G_{r,\rho}=p^{-e}\sigma^{s+2e}(\omega_\rho^*).
+\]
+ This is the Frobenius-twisted
+logarithm of the formal sum by \eqref{eq:integral-log}.
+
+The even and odd
+linear forms in the doubled cycle agree on the two
+identified copies when the odd form uses \(\omega_\rho\):
+translation by \(d_p\) swaps their parity and applies
+\(\sigma^{d_p}\) to the coefficient. The norm relation
+therefore takes the sum of the diagonal phases to one
+half of the averaged two-slot phase, modulo a phase
+whose exponential is integral in group coordinates.
+Here division by two comes from polarization, and
+preserves this congruence because \(p\) is odd. In the
+doubled cycle the averaged phase has the hypotheses of
+Lemma~\ref{lem:two-differences}.
+
+\proofstep{Pay the exceptional weights by the odd-step inequalities.}
+
+For a nonnegative family \(b_z\) satisfying
+\[
+              p^q b_z+b_{z+q}\ge1\qquad(q>0\text{ odd})
+\]
+the phase at weights \(\rho+b_z\) has weight at least
+\(\theta\). The exceptional monomials in the doubled
+cycle project to two entries related by an odd step,
+possibly to the same label. The displayed inequality pays
+their missing unit of weight.
+
+If both exponents are powers
+of \(p\) with a common positive power, removing that
+common power reduces the constraint to one of the displayed
+inequalities. The odd step is measured before reducing labels
+modulo \(d_p\). The inverse logarithm has weight at least
+\(\rho\) in every coordinate, by the same induction as for
+the even logarithm. It follows that the full rescaled
+series has weight at least zero. Thus, including the
+factorials, the valuation of a derivative of diagram size
+\(H_z\) at every label is bounded below by
+\[
+          \sum_z H_z(\gamma-b_z)-
+                    f N_{j-1}N_j(1+\log_p(a^2)).
+\]
+One can use this monomial estimate before applying the
+integral coefficients of the framed minors.
+
+\proofstep{Choose the dual weights on the two embeddings.}
+
+On first-embedding cycles use \(b_z=1/(p+1)\). This is
+admissible and gives a nonnegative contribution to the first
+sum. On the second embedding choose an optimum dual for
+the finite program with capacities \(\kappa w_z\) and
+positive odd steps strictly less than \(d_p\).
+
+Choose it in
+\([0,1]\) and raise each coordinate to at least \(p^{-3}\).
+This adds all omitted constraints, since any omitted odd
+step is at least three. The cost on the original capacities
+is at most \(\kappa\sum w_z/p^3\).
+Writing \(b'_z=\max(b_z,p^{-3})\) for this modification, one obtains
+\[
+  \sum_z\kappa w_z(b'_z-b_z)\le p^{-3}\kappa\sum_z w_z .
+\]
+ A vertex at which the
+original dual is at least \(2/p\) has saturated capacity
+and no outgoing flow, by complementary slackness.
+The sum of its weights over these vertices is at most
+\(\sum w_z/p\), by the total source capacity of the flow.
+
+The increase from \(\kappa w_z\) to \(H_z\) can therefore
+reduce the lower bound by at most \(8\sum w_z/p\).
+Indeed use \(b_z\le1\) on those vertices and
+\(\gamma-b_z\ge-1/p\) elsewhere. The digit term is at most
+\(3fM^2\log_p a\) since \(p\le a\). The resulting bound is
+\[
+ \sum_{r\in BC}F_r-
+     \frac{\kappa}{p^3}\sum_{BC}w_z-
+     \frac8p\sum_{BC}w_z-3fM^2\log_p a .
+\]
+Here \(E_{\rm I}\) contains the additional term
+\(\kappa\sum_{BC}w_z/p^3\), as well as the other
+allowances for these losses. There are no tops in \(BC\).
+Subtracting \(\max(0,\sum_A F_r)\) covers the entire
+first-embedding flow term. Thus this bound is at least
+\(F_{\rm in}-E_{\rm I}\). The operator-free gain \(g_0\)
+is zero in the assembled estimate at these primes.
+
+\end{proof}
+
+\subsubsection{The one-letter and ramified cases}
+
+A zero inert step leaves one letter at each real label. This reduces its contribution to the one-letter derivative estimate and leaves the ramified primes to be treated separately.
+
+\begin{proposition}[Entries at a zero inert step]\label{prop:unserved-zero-entries}
+At a zero inert step with \(p\ge5\) and the ordinary prime range
+and diagram sizes of Lemma~\ref{hyp:unserved-level-free}, there
+is one letter on each real label. By the jet estimate of
+Lemma~\ref{lem:one-letter-derivatives}, the entry \(b\) satisfies
+\[
+ v_p(b)\ge F_{\rm in}-E_{\rm C}.
+\]
+
+\end{proposition}
+
+\begin{proof}
+A zero inert step gives one letter at each real place.
+Its local phase is the two-slot phase evaluated on
+\((Z,\eta_z Z)\) and divided by two, with \(\eta_z\)
+a unit. The one-letter calculation
+\eqref{eq:one-letter-jet} applies separately to each label.
+Expanding the common integral factor in group coordinates
+as for the even orbits gives the estimate
+\[
+          \rho\sum_z H_z-f N_{j-1}N_j(1+\log_p(a^2)).
+\]
+In this case \(F_{\rm in}=\rho\kappa\sum_z w_z\).
+The digit allowance in \(E_{\rm C}\) is
+\(3 fM^2\log_p a\), and its remaining
+\(\rho\sum_z w_z\) is nonnegative. This proves the
+needed comparison with \(F_{\rm in}-E_{\rm C}\).
+
+\end{proof}
+
+\begin{proposition}[Entries at the discriminant prime]\label{prop:unserved-discriminant-entries}
+At the discriminant prime \(p=d\), use the paired embeddings at
+each real label, the level-free test and the normalized frame
+\eqref{eq:unserved-normalized-frame}. Write \(b\) for the entry of the word \(u\). The counts below and the common budget give
+\[
+ v_p(b)\ge-\tfrac12\sum_t c_t(u)\ge F_{\rm D}-E_{\rm D}.
+\]
+ This comparison has no \(X''\) cutoff.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Apply the paired jet bound to the diagram.}
+
+At the discriminant, let \(A_t^\pm\) count columns and
+let \(a_t^-=A_t^--(A_t^-)'\) count columns of height one
+on the first embedding. For the paired quadratic form of Section~\ref{subsec:cycle-jets}, the bound at the ramified prime is \[ -\frac12\sum_t c_t(u),\qquad c_t(u)=H_{(-,t)}-\mathbf1_{t\ {\rm top}}a_t^- +\mathbf1_{t\ {\rm top}}A_t^+ . \] The \(t\)-pairs are the two embeddings of the same real label, including at a top. On a generic
+minus-frame change the plus directions change by its
+inverse transpose. On the first row use the plus
+column count, and on the other rows use the minus
+degree, as in the ramified calculation following
+Proposition~\ref{prop:cyclic-jet}. The quantity subtracted
+from the first-row count is only the number of
+height-one columns. The budget defines
+
+\[
+  E_{\rm D}=F_{\rm D}+\tfrac12\max_u\sum_t c_t(u).
+\]
+It follows that each word's entry has valuation at
+least \(F_{\rm D}-E_{\rm D}\), with no use of \(X''\).
+
+\proofstep{Transport the curve phase in the ramified formal coordinates.}
+
+Here is the source of the paired shape used at the
+discriminant. In the good curve model write \(Z=l(t)\) for
+the formal logarithm and \(\phi(Z)=\mathrm{ph}(l^{-1}(Z))\)
+for the one-variable phase in additive coordinates. The
+formal group law and \(l'(t)\), with \(l'(0)=1\), are
+integral. To see the curve congruences at this particular prime,
+use the discriminant-one model as in
+Proposition~\ref{prop:level-free-theta-jets}; \(d\equiv7\pmod8\) and
+
+\[
+  p=d\ge7,
+\]
+ so a good short equation is available over a finite
+extension. The sigma addition calculation of
+Section~\ref{subsec:curve-exponents} gives the parallelogram
+identity modulo logarithms of principal integral units in the
+curve parameter. Its proof cancels the entire \(s_2\) quadratic
+and uses only good reduction. Polarization by the integral formal
+half therefore gives biadditivity modulo these logarithms. For
+\(a=1+\sqrt{-d}\), \(n=a\bar a=1+d\) is a unit. The isogeny
+identity \eqref{eq:cm-isogeny} gives
+
+\[
+  q_E([a]t)\sim n q_E(t):
+\]
+ each nonzero kernel point has
+prime-to-\(p\) order and integral affine coordinates, and the
+leading factor \([a]t/(at)\) is a principal integral unit.
+Polarize this identity, substitute \([a]^{-1}\) in the second
+argument and use \(n[a]^{-1}=[\bar a]\). Subtract the adjoint
+identity for the scalar one by biadditivity to obtain the
+adjoint identity for \(\sqrt{-d}\). In particular this computation
+does not require the inert unramified formal module at the
+discriminant.
+
+Let \(B(Z,W)=\phi(Z+W)-\phi(Z)-\phi(W)\), put
+\(Z_i=l(t_i)\), and write
+\[
+  C=B(Z_1+Z_2,Z_3)-B(Z_1,Z_3)-B(Z_2,Z_3).
+\]
+The first-level congruence gives \(U=\exp(C)\) an integral
+unit. Therefore
+\[
+ \partial_{t_1} C=U^{-1}\partial_{t_1}U
+    \quad\text{in the integral formal series ring}.
+\]
+The other two derivatives of this series are integral.
+In the expansion of \(C\), every summand other than
+\(\phi(Z_1+Z_2+Z_3)\) omits at least one variable, so
+\[
+ \left.\partial_{t_1}\partial_{t_2}\partial_{t_3}C
+             \right|_{t_2=t_3=0}
+     =l'(t_1)\phi'''(l(t_1)).
+\]
+Here \(l'(0)=1\), and \(l'\) is an integral unit.
+It follows that \(\phi'''(l(t))\) is integral.
+Applying \(l'(t)^{-1}d/dt\) repeatedly and evaluating at zero
+shows integrality of \(\phi^{(j)}(0)\) for every \(j\ge3\).
+The congruence at multiplication by \(-1\) gives
+\(2\phi'(0)\) integral.
+
+Apply the same logarithmic-derivative argument in two
+variables to the adjoint congruence for
+\(B(\alpha Z,W)-B(Z,\bar\alpha W)\) with \(\alpha=\sqrt{-d}\)
+and \(p=d\). Its mixed derivative at the origin is
+\[
+  (\alpha-\bar\alpha)\phi''(0)=2\sqrt{-d}\,S ,
+              \qquad S=\phi''(0).
+\]
+This is integral, and 
+\[
+  v(2\sqrt{-d})=1/2
+\]
+ in the normalized
+valuation. Hence 
+\[
+  v(S)\ge-1/2.
+\]
+
+\proofstep{Compute the quadratic phase in the orthogonal model.}
+
+In the normalized orthogonal coordinates separate
+\(\tfrac12 SZ^2\) from \(\phi(Z)\). The remaining series
+has integral derivatives. So does the inverse logarithm.
+Write \(l\) for the group logarithm and \(g=l^{-1}\). Its invariant differential has integral coefficient series with constant one, and differentiation gives
+\[
+  l'(g(Z))\,g'(Z)=1,\qquad g'(Z)=\big(l'(g(Z))\big)^{-1}.
+\]
+Differentiating the first identity at zero determines each next derivative of \(g\) from the lower derivatives, derivatives of \(l'\) and integer multiplicities, since \(l'(0)=1\).
+The integral factor of the orthogonal chart therefore
+retains integral derivatives in additive coordinates.
+To compute its quadratic part on the selected matrices, use
+the standardizing fourfold isometry of
+Section~\ref{subsec:theta-normalization}. In the one-dimensional
+coordinates the translated integral factor is supplied by
+\eqref{eq:torsion-difference}. For \(Q\) modulo the period lattice the one-dimensional factor used in that calculation has the form
+\[
+  G_{jQ}(t)=e^{q_E(t)}(U_{jQ}\varsigma_*)(l(t)).
+\]
+
+The proof by reduction of the multiples \(jQ\) works also on the good curve at \(d\); the same gauge \(e^{q_E(t)}\) occurs for every \(j\). For a rational Hom direction
+\(v\) with \(v\Gamma\) in the period lattice, the argument matrix
+of the fourfold isometry has entries in the quadratic integers
+localized at \(p\), by the multiplier-ring calculation of
+Section~\ref{subsec:baseline-jets}. Thus the bilinear contraction
+of two such argument columns is congruent modulo
+\(\pi=\sqrt{-d}\) to their Hermitian contraction. Conjugating
+one factor changes an integral quadratic-field entry by a
+multiple of \(\pi\). Equivalently for two columns \(u,v\) in the orthogonal
+coordinates,
+\[
+       u^{\mathsf T}v-u^*v=(u-\bar u)^{\mathsf T}v
+                                 \equiv0\pmod{\pi}.
+\]
+The Hermitian contraction \(u^*v\) is the original trace
+Hermitian value because the fourfold map is an isometry.
+This computation also gives zero cross contractions modulo
+\(\pi\) between disjoint copies. It remains to evaluate the
+trace form on the directional tests in
+\eqref{eq:unserved-normalized-frame}.
+
+\proofstep{Separate the paired labels by integral selectors.}
+
+Take a row of \(P_i^{-1}\) and a column of \(P_{i+1}\).
+At label \(z\) multiply each by an integer of \(E\) that is
+a unit there and clears the functional into the source dual
+and the vector into the target. For a lattice \(M\), membership after localization gives exactly the clearing operation:
+\[
+  u\in M_{\mathfrak p}\quad\Longrightarrow\quad su\in M\text{ for some }s\in{\cal O}_E\setminus\mathfrak p.
+\]
+ This works on
+any admissible pair agreeing with the selected pair locally.
+
+If \(R,C\) denote the cleared row and column, \(a_l C R\) is a
+global direction in the period module for every \(a_l\) from the
+axis expression above. Evaluate that expression with coefficients
+\(r_l/d_z\), then divide by the two clearing units in the
+chosen embedding.
+In fact the clearing factors \(s_1,s_2\) and the selected \(d_z\) are units, so
+\[
+  v_w\!\left(\frac{r_l}{s_1s_2d_z}\right)=v_w(r_l)\ge0 .
+\]
+ This is an integral combination giving exactly
+one column of \eqref{eq:unserved-normalized-frame} and zero at
+the other labels. All higher derivative remainders remain
+integral after this linear substitution and products, by the
+chain rule. Here and below \(d_z\) denotes the axis generator
+at the type label of \(z\).
+
+Expand the Hermitian trace on the two rank-one directions.
+Each embedding contributes its row pairing times its column
+pairing times \(a_l\overline{a}_{l'}\). The selector in the
+first direction isolates the chosen embedding. For the second
+direction the needed comparison is
+\[
+ \rho_{-,t}(\bar s)\equiv\rho_{+,t}(s)\pmod{\pi}
+                  \qquad(s\in\mathcal O_E).
+\]
+Indeed the inertia involution at \(d\) has product labels
+\(((1,-1),1)\). Composing the minus label with this involution
+and complex conjugation gives the plus label at the same real
+index \(t\). Inertia acts trivially on the residue field.
+Its fixed part is unramified and the remaining quadratic field
+is generated by \(\sqrt{-d}\). The extension over \(K\) is
+unramified, so \(\pi\) remains a uniformizer.
+Consequently the second selector kills all other partners
+modulo \(\pi\). The source and target contractions on the surviving
+pair give identity matrices modulo \(\pi\).
+
+For instance if the
+two row-clearing scalars are \(s_-,s_+\), the unspecialized
+pairing is \(s_-\bar s_+\delta_{aa'}\), by the inverse-adjoint
+identity for the two bases. After the two divisions the diagonal
+entry is 
+\[
+  \rho_-(\bar s_+)/\rho_+(s_+)\equiv1\pmod\pi.
+\]
+The column contraction has the same calculation. Thus the
+coefficient \(u_t\) in the surviving block is the scalar sum
+of the products
+\[
+ \frac{r_{-,l}}{d_{-,t}}\,
+ \rho_{-,t}(a_{-,l}\bar a_{+,l'})\,
+ \frac{r_{+,l'}}{d_{+,t}},
+\]
+with the selectors for this pair of labels. Its terms are
+integral because the inverse half different is integral here.
+\proofstep{Extract the common quadratic phase from the fourth tensor.}
+
+The opposite pairing gives the same coefficient modulo \(\pi\)
+by symmetry of the original quadratic contraction. In particular
+\(u_t\) can be fixed before the translates and their denominator
+clearings. The quadratic sum on the four copies is therefore
+the sum on each copy of
+\[
+        2\sum_{t,a,b}u_t X_{tab}Y_{tab}
+\]
+up to \(\pi\) times an integral quadratic polynomial. Because
+\(v(S\pi)\ge0\) and two is a unit, the exponential of the error
+multiplied by \(S/2\) has integral ordinary derivatives. This
+follows also by the exponential product rule for derivatives
+at zero.
+
+Removing the common quadratic phase on the four
+copies and taking the derivative at four equal indices bounds
+the corresponding derivative on a single copy. Thus each
+translate in \eqref{eq:unserved-reader} in its actual frame
+is \(\exp(-S\sum u_tX_{tab}Y_{tab})\) times a series with
+integral ordinary derivatives. The common exponential factors
+out of the finite sum, including for the selected twist with
+\(p\notin Q(\mu)\). This supplies the paired shape used in the
+ramified bound. \label{cor:unserved-period-1}
+
+\end{proof}
+
+The base entry bound is zero at a level-free place away
+from the discriminant whenever only integral jets are
+used. This applies beyond the cutoff and at primes
+with no applicable ordinary forced contribution. Section~\ref{subsec:baseline-jets} proves it in the actual
+local bases, including at two and three. The stage bounds above are
+uniform in the two classes of the entry, the word, and
+each allowed tuple. Their inputs are the standard
+theta charts of the same kernel datum, not charts
+chosen separately for different coefficients of a jet.
+\label{cor:unserved-period-2}

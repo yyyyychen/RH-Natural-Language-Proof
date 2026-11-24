@@ -1,0 +1,706 @@
+\subsection{The column index away from the prime assigned to the sequence}
+\label{subsec:column-orbit-length}
+
+Fix the word and its level-zero class model. At a coefficient place over \(p\ne T_u\), the neighbor tests on the selected Frobenius orbits determine a bound for the length on the trace-zero column.
+The set \(I\) of selected Frobenius orbits, their orders \(t_v\), the
+common test depth \(D\), and their deficient fractions \(\kappa_v\)
+are those of Sections~\ref{subsec:frobenius-selection}
+and~\ref{sec:host-edge-tests}. Here \(t_v\) denotes the nonnegative
+integer order cutoff, rounded up at each orbit. On the primes with selected orbits
+the weight selection gives \(\sigma=m\sum_{v\in I}\kappa_v\le1/2\).
+
+For each \(v\) the nonnegative integer \(S_v\) is the ceiling of the
+sum over the \(m\) stages of the additional gain at \(v\) obtained
+by using that orbit. More explicitly, if \(g^U_{jv}\) is the up
+gain, \(P_{jv}\) its price and \(g^0_{jv}\) the base gain, then
+\[
+ S_v=\left\lceil\sum_{j=1}^m
+       \big(g^U_{jv}-P_{jv}-\max(0,g^0_{jv})\big)_+\right\rceil .
+\]
+Write \(S_*=\max_{v\in I}S_v\), with value zero on the empty set.
+
+Temporarily work over the common local coefficient ring \(O\) of
+Section~\ref{sec:host-edge-tests}; write \(\omega^2=p\),
+\(c_p=\operatorname{length}_O(O/pO)\).
+At a vertex in one orbit the three value lattices are
+\[
+ A_v=N_-,\qquad H_v=H(L),\qquad C_v=(N_+)^\vee.
+\]
+The dual in the last expression is taken in the common polynomial
+space with its evaluation pairing. They satisfy
+\[
+ C_v\subseteq H_v\subseteq A_v,\qquad
+ \omega^{t_v}A_v\subseteq H_v,\qquad
+ \omega^{t_v}H_v\subseteq C_v .
+ \tag{C1}\label{eq:tag-c1}
+\]
+\begin{proposition}[Neighbor images in the orbit value lattices]\label{prop:orbit-value-lattice-neighbors}
+With the selected level-zero orbit lattices, the normalized
+incoming sums preserve \(M_0\), send \(A_v\) into \(C_v\) at
+the chosen factor and commute at distinct \(v\). The actual
+lattice \(M\) has the comparison \textup{\eqref{eq:tag-c2}}. For every
+nonempty \(B\subseteq I\) there is a fixed exceptional set in
+\(M_B\) satisfying \textup{\eqref{eq:tag-c3}}, and its cardinality satisfies
+\[
+ \#\mathcal C_B\le d\prod_{v\in B}\kappa_v.
+\]
+
+\end{proposition}
+
+\begin{proof}
+\proofstep{Use the diagonal models for the edge and its dual.}
+
+Indeed \(N_-\) lies in \(\omega^{-t_v}H_v\) and contains \(H_v\).
+The dual statements follow from
+
+\[
+  H_v^\vee\subseteq N_+\subseteq\omega^{-t_v}H_v^\vee.
+\]
+For the edge constraints in these containments choose the diagonal
+basis adapted to a neighbor. In a component the one-parameter
+diagonal weight on its first \(r\) entries is at most the sum of
+the first \(r\) entries of the dominant weight, by the weight
+inequalities; on the last lattice take the dual inequalities in
+the inverse transpose frame.
+Thus for a torus weight \(\nu\) occurring in the component of highest weight \(\lambda\), the bound on the selected diagonal direction is
+\[
+  \sum_{i=1}^r\nu_i\le\sum_{i=1}^r\lambda_i .
+\]
+ Summing over the Frobenius components
+is exactly the normalizing exponent \(A_r\) in \(R_e,R'_e\).
+Thus the two incident ordinary lattices lie in the indicated
+normalized edge and dual edge. These inclusions include the
+determinant powers for signed weights.
+
+\proofstep{Normalize each incoming sum on the class values.}
+
+On the lattice of functions on the level classes let \(Y_v\) be
+\(p^{A_r}\) times the incoming-neighbor sum at \(v\). The unnormalized
+sum leaves every other vertex and coefficient factor fixed.
+The operators commute, since the two finite choices at distinct
+places are independent.
+For distinct places the double sum is over a Cartesian product, hence
+\[
+  Y_vY_{v'}=Y_{v'}Y_v\qquad(v\ne v').
+\]
+
+For any mixture of value lattices at other
+places, \(Y_v\) sends the choice \(A_v\) into \(C_v\). Indeed a source
+value belongs to \(R_e\) and the target test belongs to \(R'_e\);
+their pairing times \(p^{A_r}\) is integral on every edge.
+It also preserves the all-ordinary lattice: in the same diagonal
+bases the map from source to target involves powers with denominator
+at most \(p^{A_r}\). On the divided-power Weyl sublattice this
+follows in a weight basis, since the basis changes are integral
+automorphisms and the torus acts by its weights.
+
+\proofstep{Compare the standard and divided-power Weyl lattices.}
+
+Let \(M_0\) be the class lattice with the value lattices \(H_v\) at
+all places and let \(M\) be the actual level-zero Weyl lattice.
+At sufficiently large \(x\) its defining integer \(e_0\) satisfies
+\[
+ p^{e_0}M_0\subseteq M\subseteq M_0,\qquad
+      e_0\ll f k^2\log_p a\quad (p\le a).
+ \tag{C2}\label{eq:tag-c2}
+\]
+For a spread \(l\) on one embedding the trace comparison in
+Section~\ref{sec:edge-contraction} puts \(p^{\binom k2
+\lfloor\log_p(l+k-1)\rfloor}\) times the Schur lattice in the
+divided-power span, which lies in the Schur lattice. Tensor these
+inclusions over the \(f\) positions. The host bounds give
+
+\[
+  l+k-1\le a^2,
+\]
+ and \(e_0\) is the chosen exponent dominating
+this sum. Taking a ceiling with fixed coefficient changes the bound
+by at most one, absorbed since \(\log_p a\ge1\). Conjugating a
+frame acts on both lattices; the comparison therefore holds for all
+class values. Both lattices have rank \(d=d_S\).
+
+\proofstep{Tensor the retained Smith bases at the selected vertices.}
+
+For \(B\subseteq I\), put \(M_B\) equal to the class lattice with
+values \(C_v\) at \(v\in B\) and \(H_v\) elsewhere. Write
+\(M_{B,v}^{+}\) for the same choice with \(C_v\) replaced by
+\(A_v\) at \(v\in B\). For each nonempty \(B\) there is a fixed
+set \(\mathcal C_B\subset M_B\) with
+\[
+ \begin{split}
+ |\mathcal C_B|&\le d\prod_{v\in B}\kappa_v,\\
+ p^{D+1}M_B&\subset
+       \sum_{v\in B}Y_v M_{B,v}^{+}+O\mathcal C_B .
+ \end{split}                                                     \tag{C3}\label{eq:tag-c3}
+\]
+Here and below the \(O\)-multiple of a set denotes its linear span.
+
+To prove this, take orbit representatives for the finite class set.
+Their arithmetic stabilizers are trivial by the type level argument
+at the beginning of Proposition~\ref{prop:trace-zero-column}. An elementary
+value at a representative defines a section supported on its orbit:
+extend it by the representation action and the unit level character.
+The extension is well defined by freeness, recovers the value at the
+representative, and gives independent sections from distinct classes.
+In particular, if \(s_a\) is supported on the orbit of representative \(a\), the evaluation at representatives is diagonal:
+\[
+  s_a(b)=\begin{cases}s_a(a)&b=a,\\0&b\ne a.\end{cases}
+\]
+
+At a vertex, take the Smith basis of the target \(C_v\) given by
+the rank computation in Section~\ref{sec:host-edge-tests}.
+In more detail, the normalized incoming columns \(p^{A_r}F_e\)
+are integral in \(C_v\), and their evaluations against elements of
+\(N_+\) contain a \(p^D\)-scaled identity of the retained size.
+A Smith form for the columns in \(C_v\) therefore has at least
+that many elementary exponents at most \(v_O(p^D)\).
+Indeed a map with this scaled right inverse surjects onto that
+many coordinates after allowing the factor \(p^D\); elementary
+divisors over the DVR give the assertion.
+
+For any retained Smith coordinate of exponent \(e\), the required divisibility is
+\[
+  e\le v_O(p^D)\quad\Longrightarrow\quad p^DO\subseteq\mathfrak m_O^e .
+\]
+ Multiplication by
+\(p^D\) on each such basis vector is consequently an integral
+combination of these incoming columns. The remaining indices form
+at most the fraction \(\kappa_v\) of the basis. At other factors
+use full ordinary bases.
+
+Tensor the local bases at each class representative \(c\). Write
+\(d_c\) for its full tensor rank and let \(\mathcal C_{B,c}\)
+contain the products with a remaining Smith index at every
+\(v\in B\). Independence of the factors gives
+\[
+ |\mathcal C_B|=\sum_c|\mathcal C_{B,c}|
+          \le \sum_c d_c\prod_{v\in B}\kappa_v
+          =d\prod_{v\in B}\kappa_v .
+\]
+Every other product has a retained factor at some \(v\in B\).
+Put its incoming source values in orbit sections with all other tensor factors
+unchanged, and apply \(Y_v\).
+
+At the target this gives the normalized
+column. Every other contribution is a transport from a competing
+edge and is divisible by \(p^{D+1}\) in the target lattice.
+Indeed the source test gives order \(c_*=8(D+1)\) in the competing
+normalized edge lattice. Pair it against \(N_+\) to get the same
+order in the predual, using 
+\[
+  \omega^2=p.
+\]
+This also treats distinct incoming terms landing in the same class.
+Only a transport carrying the source and its distinguished target
+to the prescribed pair can supply the distinguished term. Two such
+transports would differ by a stabilizer of the target. The other
+terms each use a competing edge after transport back to the source.
+
+\proofstep{Remove the higher-order residual terms.}
+
+Let \(J_B=\sum_{v\in B}Y_vM_{B,v}^{+}+O\mathcal C_B\).
+We have shown 
+\[
+  p^D M_B\subset J_B+p^{D+1}M_B.
+\]
+The image of \(p^D M_B\) in \(M_B/J_B\) is a finite \(O\)-module
+in the sense of finite generation, since there are finitely many
+class representatives and all value lattices are finite free.
+Put \(D_B=(p^DM_B+J_B)/J_B\). The inclusion above gives
+\[
+ D_B\subseteq(p^{D+1}M_B+J_B)/J_B=pD_B\subseteq D_B .
+\]
+Nakayama's lemma therefore gives \(D_B=0\), giving
+\eqref{eq:tag-c3}, including the stated allowance of one additional power.
+
+\end{proof}
+
+\subsubsection{Large elementary divisors}
+
+A bound in the full rational span must survive passage to the trace-zero lattice. This requires estimating the elementary divisors beyond the selected depth.
+
+For either lattice \(L=M_0,M\) define
+\[
+ P(L)=\sum_{J\subseteq I}
+       p^{\sum_{v\notin J} S_v}
+              \left(\prod_{v\in J}Y_v^m\right)L,\qquad
+ \tau_0=m\sum_{v\in I}(t_v+D+1).
+\]
+\begin{proposition}[Tail count for the elementary divisors]\label{prop:orbit-smith-tail}
+For each integer \(\beta\ge0\), \(p^{\tau_0+\beta S_*}M_0\)
+is contained in \(P(M_0)\) plus the span of the number of fixed
+elements in \textup{\eqref{eq:tag-c4}}. If \(I\ne\varnothing\) and
+\(\tau=e_0+\tau_0\), this also bounds the number of elementary
+exponents of \(P(M)\subseteq M\) strictly above
+\(c_p(\tau+\beta S_*)\). Writing \(\alpha_i\) for these elementary exponents with multiplicities, one has
+\[
+ \#\{i:\alpha_i>c_p(\tau+\beta S_*)\}\le \frac{d\,\sigma^{\beta+1}}{(\beta+1)!}.
+\]
+
+\end{proposition}
+
+\begin{proof}
+The power notation on \(Y_v\) means iteration. Write \(S_*=0\) if
+\(I\) is empty. We prove that for every \(\beta\ge0\),
+\(p^{\tau_0+\beta S_*}M_0\) lies in \(P(M_0)\) plus the span of
+at most
+\[
+             d\,m^{\beta+1}
+               \sum_{\substack{B\subset I\\|B|=\beta+1}}
+                     \prod_{v\in B}\kappa_v                      \tag{C4}\label{eq:tag-c4}
+\]
+fixed elements of \(M_0\). In this sum \(B=I\) is allowed.
+
+\proofstep{Iterate with the first unfinished coordinates.}
+
+Order \(I\), and attach to a term the exponents \(0\le a_v\le m\)
+of the operators \(Y_v\) already applied outside its argument.
+A coordinate is finished when \(a_v=m\). If there are at least
+\(\beta+1\) unfinished coordinates, use their first \(\beta+1\)
+as \(B\) and apply Proposition~\ref{prop:orbit-value-lattice-neighbors}
+to the argument using \textup{\eqref{eq:tag-c3}}. In the summand indexed
+by \(v\), one more \(Y_v\) moves outside the argument and \(a_v\)
+increases by one.
+Thus the exponent vector attached to that summand changes by
+\[
+  (a_i)_{i\in I}\longmapsto(a_i+\mathbf1_{\{i=v\}})_{i\in I}.
+\]
+ The new argument is at \(A_v\); it is at \(C\)
+at all the other coordinates of \(B\).
+
+If \(v\) is unfinished
+and the procedure continues, multiply by \(\omega^{2t_v}\) to
+return that coordinate to \(C_v\). If \(v\) is finished, return it
+to \(H_v\) by \(\omega^{t_v}\) and introduce the next unfinished
+coordinate, if needed, by the move \(H_i\to C_i\) costing
+\(\omega^{t_i}\). Use the latter move also at the first entry of
+each coordinate. Other coordinates of \(B\) keep their lattices.
+
+\proofstep{Bound the cost along each branch.}
+
+Work along a branch with the fixed initial scalar
+\(p^{\tau_0+\beta S_*}\), distributing the unused part to
+every summand. Each coordinate enters \(B\) at most once.
+Its transport costs, in powers of \(\omega\), are bounded by
+\[
+ \begin{cases}
+ t_v+2(m-1)t_v+t_v=2mt_v,&\text{after all \(m\) increments},\\
+ (1+2j)t_v\le2mt_v,&\text{if stopped after \(j<m\) increments}.
+ \end{cases}
+\]
+The second bound includes any final return from \(A_v\) to
+\(H_v\); the other open lattices \(C_i\) are already in \(H_i\).
+There are at most \(m|I|\) applications of \eqref{eq:tag-c3}: an exceptional
+term at the last application uses up a possible increment.
+The budget for increments comes from
+\[
+  0\le a_i\le m,\qquad \sum_{i\in I}a_i\le m|I| .
+\]
+Thus \(p^{\tau_0}\) pays all costs from \eqref{eq:tag-c1} and \eqref{eq:tag-c3}.
+
+\proofstep{Finish inside the product module.}
+
+Once at most \(\beta\) coordinates remain unfinished, use the
+scalar \(p^{S_i}\) at each unfinished coordinate. The product
+costs at most \(p^{\beta S_*}\) in the sense of divisibility.
+Let \(F\subset I\) be the finished coordinates. Commutativity separates the completed factors from the operators at the unfinished coordinates
+\[
+  \prod_{i\in I}Y_i^{a_i}=\left(\prod_{i\in F}Y_i^m\right)\left(\prod_{i\in I\setminus F}Y_i^{a_i}\right),\qquad \left(\prod_{i\in I\setminus F}Y_i^{a_i}\right)M_0\subseteq M_0.
+\]
+ The resulting term belongs
+to \(P(M_0)\). This covers the initial case \(|I|\le\beta\).
+
+\proofstep{Count the exceptional rank and descend to \(M\).}
+
+It remains to count exceptional terms. For a fixed active set \(B\)
+of size \(\beta+1\), every coordinate before its last member and
+outside \(B\) is finished. Every coordinate after its last member
+has exponent zero, since it could never have belonged to an earlier
+active set. The outside factors are thus determined by \(B\).
+Inside \(B\) there are just \(m^{\beta+1}\) possible exponent lists.
+Equivalently the number of exponent choices on the active set is
+\[
+  \prod_{v\in B}m=m^{|B|}=m^{\beta+1}.
+\]
+The exceptional generators are those products of commuting \(Y_i\)
+applied to \(\mathcal C_B\); any unused scalar multiplies them
+integrally. They belong to \(M_0\). Counting them proves \eqref{eq:tag-c4}.
+This argument needs simultaneous tests at the different places:
+the product of deficiencies comes from the tensor values in \eqref{eq:tag-c3}.
+
+Let \(I\ne\varnothing\) and put \(\tau=e_0+\tau_0\). By \eqref{eq:tag-c2},
+
+\[
+  p^{e_0}P(M_0)\subset P(M);
+\]
+ multiplying all the exceptional
+vectors by \(p^{e_0}\) puts them in \(M\). Consequently \eqref{eq:tag-c4}
+also bounds the number of elementary divisors of \(P(M)\) in
+\(M\) with exponent larger than \(c_p(\tau+\beta S_*)\).
+In fact \(p^{\tau+\beta S_*}(M/P(M))\) lies in a submodule with
+at most the displayed number of generators; a submodule over a DVR
+of a module with that many generators also has at most that many.
+The empty subset in \(P(M)\) gives \(p^{\sum S_v}M\subset P(M)\),
+so all exponents are finite. Each squarefree monomial appears \(s!\) times in the power sum
+expansion. Since all \(\kappa_v\ge0\),
+\[
+ s!\sum_{\substack{B\subset I\\|B|=s}}\prod_{v\in B}\kappa_v
+              \le \left(\sum_{v\in I}\kappa_v\right)^s
+                  \qquad(s\ge1).
+\]
+Taking \(s=\beta+1\) bounds \eqref{eq:tag-c4} by
+\(d\,\sigma^{\beta+1}/(\beta+1)!\).
+
+\end{proof}
+
+Write \(V_{\rm ram}\) for the local trace-zero vector space and
+\(M_{\rm ram}=M\cap V_{\rm ram}\). The local unshifted column is
+\[
+ N_w=P(M)\cap p^\tau M\cap V_{\rm ram}.
+\]
+Saturation of the intersection with a vector space gives
+\(N_w\subset p^\tau M_{\rm ram}\). Moreover \(M_{\rm ram}/N_w\)
+injects into \(M/(P(M)\cap p^\tau M)\).
+
+\begin{lemma}[Length on the local trace-zero intersection]\label{lem:orbit-trace-zero-colength}
+Set \(M_{\rm ram}=M\cap V_{\rm ram}\) and
+\(N_w=P(M)\cap p^\tau M\cap V_{\rm ram}\) for the local trace-zero
+space \(V_{\rm ram}\). The elementary divisor bound of
+Proposition~\ref{prop:orbit-smith-tail} gives
+\(N_w\subset p^\tau M_{\rm ram}\) and
+\[
+ \operatorname{length}_O(M_{\rm ram}/N_w)/c_p
+   \le d(\tau+2 S_*\sigma).
+\]
+When the set of orbits is empty, \(N_w=M_{\rm ram}\) and
+the length is zero.
+\end{lemma}
+
+\begin{proof}
+In a Smith basis let
+\(d_i\) denote the elementary exponents of \(P(M)\) in \(M\).
+The latter length is \(\sum_i\max(d_i,c_p\tau)\).
+Count its excess over \(dc_p\tau\) in intervals of width \(c_p S_*\)
+using \eqref{eq:tag-c4}. When \(S_*=0\), the empty subset already gives \(P(M)=M\).
+For \(S_*>0\) the sum is bounded by
+\(dc_pS_*\sum_{h\ge1}\sigma^h/h!\le 2dc_p S_*\sigma\), since
+\(0\le\sigma\le1/2\). Hence
+\[
+  N_w\subset p^\tau M_{\rm ram},\qquad
+  \frac{\operatorname{length}_O(M_{\rm ram}/N_w)}{c_p}
+        \le d(\tau+2S_*\sigma).                                  \tag{C5}\label{eq:tag-c5}
+\]
+For \(I=\varnothing\) the selected convention is \(\tau=0\),
+\(P(M)=M\), \(N_w=M_{\rm ram}\); \eqref{eq:tag-c5} then holds with equality
+in its length bound. In particular the length vanishes at every
+place without the local orbit condition away from \(T_u\).
+\end{proof}
+
+\subsubsection{The local index on the selected lattice}
+
+The preceding tail estimate can now be applied to the actual level-zero lattice. The level trace and the prescribed orbit cuts determine which local index enters the column slope.
+
+\begin{proposition}[Normalized index and excess in the original column]\label{prop:orbit-local-descent}
+The local trace-zero lattice in Lemma~\ref{lem:orbit-trace-zero-colength}
+descends with the same normalized colength to the actual
+coefficient place. On the selected family its excess cost
+satisfies \textup{\eqref{eq:tag-c6}} on every subset of served rational primes,
+and beyond the family threshold the baseline satisfies
+\[
+ 2\sum_p\tau(p)\log p\le b^2.
+\]
+
+\end{proposition}
+
+\begin{proof}
+\proofstep{Descend the operators, intersections and normalized lengths.}
+
+Apply Lemma~\ref{lem:orbit-trace-zero-colength} with the
+trace-zero intersection obtained after base change.
+The local coefficient extension does not change the normalized
+length in \eqref{eq:tag-c5}. Here is why the module being compared descends.
+The level-zero basis maps identify the rational class values with
+polynomials over the coefficient field \(K\), evaluated in the
+chosen local frames via their coefficient embedding. On a valid tuple
+the identification follows by writing the algebraic section on the
+translated rational representative, with its rational level character;
+off the set of valid tuples it is zero. One may recover the rational
+subspace inside its extension from this test on all coefficients:
+choose a nonzero square minor of the array of coefficient evaluations
+of the basis functions.
+
+Such a minor exists by their independent
+images. With \(A\) the chosen invertible coordinate minor of size \(n\) and \(y\) the restricted vector of rational values, the coefficient vector is
+\[
+  c=A^{-1}y\in K^n,
+\]
+since both \(A\) and \(y\) have entries in \(K\).
+The neighbor sum has finitely many terms and scalar \(p^{A_r}\in K\)
+at every tuple. It preserves the generic span, since it preserves
+the integral value lattice, and the coefficient test shows that its
+action descends as a \(K\)-linear operator. The trace condition
+likewise comes from the rational diamond operators. The local model
+of \(M\) is the \(O\)-span of the level-zero lattice in these
+coordinates. This descent uses the class-value identification for the
+\emph{same} word and level as the trace condition.
+
+It follows that \(P(M)\) is obtained by base change: each summand
+in its definition is the image of an integral scalar times a
+descending rational operator on the level-zero lattice.
+Flat scalar extension preserves each image in the sum, by the exact identity
+\[
+  \operatorname{im}(A)\otimes O=\operatorname{im}(A\otimes O).
+\]
+Intersection with \(p^\tau M\) and with the rational trace-zero
+space commutes with this flat extension, since each intersection
+is a kernel. Let \(O_0\) be the original coefficient DVR. Completion
+and extension to \(O\) are faithfully flat, and each length-one
+factor gains the relative ramification index \(e\). Thus, for the
+finite quotient \(Q\) in \eqref{eq:tag-c5},
+\[
+ \frac{\operatorname{length}_O(Q\otimes_{O_0}O)}
+      {\operatorname{length}_O(O/pO)}
+ =\frac{e\,\operatorname{length}_{O_0}Q}
+       {e\,\operatorname{length}_{O_0}(O_0/pO_0)} .
+\]
+This gives the normalized length in the original degree; faithful
+flatness also descends the inclusion.
+
+\proofstep{Sum the excess on the selected weights.}
+
+The excess \(2S_*\sigma\) in \eqref{eq:tag-c5} has the small total cost used
+in Section~\ref{subsec:frobenius-selection}. The adjusted degrees at the tops satisfy
+\[
+  0\le a_s-2c_G\le6a/5.
+\]
+ The up gain is their
+sum times \(p/(p^2-1)\) minus a sum of nonnegative minima and a
+nonnegative logarithmic error. The price at a smaller prime is a
+nonnegative multiple of a sum of the width and height bounds.
+
+At
+a larger prime its variable terms are the top filling minus the
+base second weight, nonnegative by the chosen offsets and the
+upper auxiliary allowance in the filling. Thus each term in \(S_v\)
+before rounding is at most \(8N_va/(5p)\), by
+\(p/(p^2-1)\le4/(3p)\). For \(N_v=0\) the ceiling is zero.
+Otherwise 
+\[
+  a/p\ge b'\to\infty
+\]
+ on \(p<X'\), so rounding the
+sum still gives \(S_v\le2mN_va/p\). With the selected weights,
+\[
+    \sum_{p\ {\rm served}}(2 S_*\sigma)\log p
+             \le m\,|T|\,a\, x^{-9}.
+                                                               \tag{C6}\label{eq:tag-c6}
+\]
+The set \(T\) here is the set of top positions. The estimate applies
+on every subset of the primes and does not include a factor for the
+number of words or coefficient places.
+
+\proofstep{Bound the full baseline for the change of rank.}
+
+It is useful to keep the larger term \(\tau\) in both the index
+and the divisibility in \eqref{eq:tag-c5}. The crude bound
+
+\[
+  2\sum_p\tau(p)\log p\le b^2
+\]
+ suffices for the change in rank.
+Indeed only \(p<X'=\exp(x^{\epsilon/3})\) can enter. Both order
+formulas are at most \(x^{O(1)}a\) uniformly there. For the large
+primes the sum of the truncated endpoint minima is at most \(2Na\);
+the other terms consist of polynomial factors times \(a/p^2\),
+\(\Lambda a/(pk)\) or \(Q(c_6+k)\), and a polynomial times \(c_G\).
+
+Here \(Q^4(c_6+k)=o(b')\) up to polynomial factors by the
+large-prime comparison in Section~\ref{sec:host-edge-tests},
+since \(\log Q=o(x^\epsilon)\) and
+\(\log(1+c_6)=o(x^\epsilon)\). The smaller-prime orders and both
+depths obey the same crude bound by that section. The number of
+orbits, \(m,f,k\) and \(\log a\) grow polynomially in \(x\). Thus
+the sum is at most 
+\[
+  x^{O(1)}a X'\log(2X')=o(b^2),
+\]
+ since
+\(a=xb\) and \(\log b=x^\epsilon\).
+
+\end{proof}
+
+\subsubsection{Mean and maximal slopes of the selected column}
+
+The local indices give the change of determinant at all finite places. Combining them with the fixed shift compares the slopes of the resulting sublattice and its ambient column.
+
+\begin{proposition}[Slope comparison on the shifted trace-zero column]\label{prop:shifted-column-slopes}
+On the chosen word and its common division row, the local
+conditions give the full unshifted sublattice \(N^{(0)}\) of
+\(S_R\). The shift by \(b_w=\lfloor e_ws_u(w)\rfloor\) gives
+\(N_u\) with the mean and maximal slope comparisons
+\textup{\eqref{eq:tag-c7}} and \textup{\eqref{eq:tag-c8}} in the same induced metric.
+Writing \(E_{\rm fl}\) for the floor correction in the common shift, its absolute size satisfies
+\[
+ |E_{\rm fl}|\le2(\log4+5+C_\Gamma)X_*.
+\]
+
+\end{proposition}
+
+\begin{proof}
+\proofstep{Assemble the full column from its completed lattices.}
+
+Return to \(M_{\rm ram}=S_R\) over \(K\). At each place away from
+\(T_u\) prescribe the lattice just computed, and use the image of
+the product of the normalized up operators over \(T_u\) from
+Proposition~\ref{prop:ramified-selected-hecke-colength}. These are sublattices of
+the localization of \(S_R\), equal to it outside finitely many
+places. They define a full global sublattice \(N^{(0)}\): take the
+kernel of the map from \(S_R\) to the sum of all these finite
+local quotients. Its localization is the prescribed kernel, since
+localizing kills the quotients at the other primes and gives a
+surjection at the given prime. A nonzero product of the local
+annihilator ideals times \(S_R\) lies in the kernel.
+Equivalently, if \(Q_w\) is the prescribed quotient at \(w\), localization gives
+\[
+  (S_R/N^{(0)})_w\simeq Q_w,\qquad \operatorname{rank}N^{(0)}=\operatorname{rank}S_R .
+\]
+ This also
+proves full rank when some of the local kernels have positive
+colength.
+
+Let \(n_w\) be the length of the quotient in this
+localization and \(d_R=d_{\rm ram}\). Set
+\(\ell_w=\log {\rm N}w/[K:\mathbb Q]\), \(e_w=v_w(p)\). Denote the
+total period valuation allowance in \(p\)-normalized units by
+\(s_u(w)\). At a used place this is
+\[
+ s_u(w)=\sum_{j=1}^m
+ \bigl(\mathrm{gain}^{\mathrm{keep}}_j(w)+F_j(w)-E_{u,j}(w)\bigr),
+\]
+where the first term is zero at a dropped prime. Use \(s_u(w)=0\)
+off the finite support of these data. Its integral shift is
+
+\[
+  b_w=\lfloor e_ws_u(w)\rfloor.
+\]
+
+\proofstep{Identify the local tests in the period realization.}
+
+The inclusion from the selected column space into \(M_u\)
+has image the trace-zero summand. Its metric is the
+restriction of \eqref{eq:selected-column-gram}. This follows
+by evaluating along the same word inclusion both in the
+complex period and in the Hermitian column form. In that
+inclusion the initial integral lattice is the preimage
+of \(M_u\), so it is \(S_R\) with the stated metric.
+
+The prescribed local tests for \(\mathrm{NuLat}(u)\) are
+the normalized up-operator image at \(T_u\), the orbit
+image in the integral frame at a prime with a selected orbit, and the
+initial integral condition at an prime without a selected orbit. They
+are tests on the image under the same inclusion.
+These give equality with \(N^{(0)}\) by localization.
+For full lattices in the same rational space the local tests suffice by
+\[
+  L=\bigcap_{w\ {\rm finite}} L_w .
+\]
+In particular the evidence for the equality is the local
+membership conditions, in addition to the quotient lengths.
+
+The division package uses the pullback along its word-coordinate
+isomorphism \(e_u\). The period identity on this isomorphism
+uses its same assigned tuple and row evaluation on both
+sides. The shifted column in the family is
+\(\bigl(\prod_w\mathfrak p_w^{-b_w}\bigr)\mathrm{NuLat}(u)\).
+Because \(e_u\) is \(K\)-linear, multiplication by this
+fractional ideal commutes with the pullback. Thus the
+column on which the period is tested is the shift of
+\(N^{(0)}\), with the same metrics as the global slope.
+\label{cor:column-orbit-length-1}
+
+\proofstep{Compute the determinant degree and bound the maximal slope.}
+
+The shifted lattice \(N_u\) of Section~\ref{subsec:division-shift}
+then has the two comparisons
+\[
+ \begin{split}
+ \mu(N_u)&=\mu(S_R)+2\sum_w\ell_w b_w-
+                           \frac{2}{d_R}\sum_w\ell_w n_w,\\
+ \mu_{\max}(N_u)&\le\mu_{\max}(S_R)
+                     +2\sum_w\ell_w\bigl(b_w-e_w\tau(p)\bigr).
+ \end{split}                                                     \tag{C7}\label{eq:tag-c7}
+\]
+Use \(\tau(T_u)=0\). The first line follows by the index on determinant
+lattices and the degree of the shift ideal. For the second,
+\eqref{eq:tag-c5} gives an inclusion of \(N_u\) into the ideal multiple
+\(\prod_w\mathfrak p_w^{e_w\tau(p)-b_w}S_R\).
+Every sublattice has its induced metric there; tensoring by an
+invertible ideal adds the same constant to every slope.
+
+\proofstep{Keep the full baseline in the common shift.}
+
+To see the size of the difference, put \(B=\sum_w2\ell_we_w\tau(p)\)
+and \(I_0=\sum_w2\ell_we_w(2S_*\sigma)\), setting the summands to zero
+over \(T_u\). Let \(B_T=2\sum_{w\mid T_u}\ell_wn_w/d_R\).
+With \(H=2\sum_w\ell_w b_w-B\), \eqref{eq:tag-c5} and \eqref{eq:tag-c7} give
+\[
+ \begin{split}
+ \mu(N_u)&\ge\mu(S)+H-
+  \left\{ \frac{f\log(T_u-1)}{T_u-2}
+       +(d/d_R-1)B+(d/d_R)I_0+B_T\right\},\\
+ \mu_{\max}(N_u)&\le\mu_{\max}(S)+H.
+ \end{split}                                                     \tag{C8}\label{eq:tag-c8}
+\]
+The common term includes the subtraction of the \emph{full} baseline
+index. Here \(\sum_{w\mid p}\ell_w e_w=\log p\) gives \(B\le b^2\)
+and \(I_0\le2m|T|a x^{-9}\) by \eqref{eq:tag-c6}. The exact product rank gives
+
+\[
+  d/d_R\le 1+4f/T_u
+\]
+ for \(2f/T_u\le1/2\). Since \(T_u\ge b^{m/2}\),
+\(m\ge6\) at late points, and \(f\) grows polynomially in \(x\), the
+first two errors in braces together are eventually at most one.
+The bound at the assigned prime gives
+\(B_T\ll m |T|(a/k+b')\log T_u\) for the prescribed top weight
+widths. All these bounds persist over the growing coefficient fields.
+
+\proofstep{Bound the finite-support rounding correction.}
+
+Above \(X_*=X''(n)\) the gain vanishes off the exceptional
+prime set of the division estimate. There the forced term
+is supported on \(g_0,g_1,d\).
+Writing \(F_{\rm forced}(p)\) for this forced term, its support beyond the cutoff satisfies
+\[
+  p>X_*,\quad F_{\rm forced}(p)\ne0\quad\Longrightarrow\quad p\mid g_0g_1d.
+\]
+ The remaining exceptional
+sets are contained in these primes, the prime assigned to the sequence and the
+prime divisors of \(D_{\Gamma,u}\). Thus replacing
+\(2\sum_w\ell_w b_w\) by \(2\sum_w\ell_we_ws_u(w)\) has absolute
+error at most
+\[
+ 2\big(X_*\log4+\log(g_0g_1dT_uD_{\Gamma,u})\big).
+\]
+We used \(\sum_{w\mid p}\ell_w\le\log p\), because \(e_w\ge1\),
+and \(\prod_{p\le y}p\le4^y\), which follows by induction from the
+middle binomial coefficients at \(2j\) and \(2j+1\).
+
+The word size gives \(\log T_u\le2X_*\) and the denominator
+estimate gives \(\log D_{\Gamma,u}\le C_\Gamma X_*\)
+uniformly in the word. Each of \(\log g_0,\log g_1,\log d\)
+is at most \(X_*\).
+The bound for the three auxiliary logarithms is
+\[
+  \log(g_0g_1d)=\log g_0+\log g_1+\log d\le 3X_* .
+\]
+ Thus the absolute rounding error is at
+most \(2(\log4+5+C_\Gamma)X_*\). The shift and this rounding
+bound give the mean-slope comparison between \(N^{(0)}\)
+and \(N_u\). The maximal slope in \eqref{eq:tag-c8} uses the full
+baseline index before the bounded loss in the mean.
+The valuation of the period on the generators of this
+column gives its map to the dual of the row lattice with the prescribed local conditions by
+Sections~\ref{subsec:hecke-period} and~\ref{subsec:division-shift}.
+\label{cor:column-orbit-length-2}
+\end{proof}

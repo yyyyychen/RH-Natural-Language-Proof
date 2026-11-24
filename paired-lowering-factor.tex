@@ -1,0 +1,153 @@
+\begin{auxlemma}[A single dual-standard translation of a Bessel period]
+\label{lem:paired-lowering-factor}
+Let \(\lambda_1>\cdots>\lambda_n\) be a marked ambient
+Harish--Chandra parameter, \(u_1>\cdots>u_k\) the compact
+parameter, and \(\mu=\lambda+\nu\) with
+\(\|\nu\|_1+1\le q_0\). Take a nonzero Bessel model at \(\mu\)
+and its normalized period maps as in
+Proposition~\ref{prop:real-period-norm}. Let \(\kappa_s\) be the scalar
+obtained by inserting the distinguished covector in the dual standard
+tensor, projecting to the discrete series of parameter \(\mu-e_s\)
+and applying its period map. In the same Haar measure at both parameters,
+\[
+ |\kappa_s|^2\frac{d_\mu}{d_{\mu-e_s}}
+   =T_z R_s\le T_z B_0^4,\qquad
+ R_s=\frac{\prod_{i=1}^k|\mu_s-\tfrac12-u_i|}
+              {\prod_{t\ne s}|\mu_s-1-\mu_t|}.
+\]
+Here \(d_\mu\) is the formal degree and \(-T_z\) the squared
+Hermitian norm of the distinguished negative vector.
+\end{auxlemma}
+
+\begin{proof}
+\proofstep{Compute the projected period.}
+The shifted summands in the dual Pieri rule have multiplicity one.
+On the \(s\)-summand the split Casimir has eigenvalue
+\(-\mu_s+(1-n)/2\), by subtracting the two factor Casimirs from
+the tensor Casimir. Let \(P_s\) denote its spectral projection. In the
+Capelli column determinant use the central polynomial \(Q(Y)\)
+and its signed comatrix \(C(Y)\), with argument \(Y+(n-1)/2\).
+The quantum comatrix identity gives
+\[
+ Q(Y)=\prod_t(Y+\mu_t),\qquad
+ C(Y)P_t=\prod_{j\ne t}(Y+\mu_j)P_t .
+\]
+Indeed multiplication by the shifted split Casimir in the comatrix
+identity multiplies the \(t\)-summand by \(Y+\mu_t\); polynomial
+division gives the second equality, including at the roots.
+In particular \(C(-\mu_s)=\prod_{t\ne s}(\mu_t-\mu_s)P_s\).
+The determinant and minor conventions are those of
+\cite[Proposition~2.7(4) and Remarks~2.8(1), 2.11]{mno-yangians}.
+
+Use the ordered Witt basis consisting of the two null flags and
+the middle block. In the Bessel functional the comatrix entry
+between the outer frame vectors reduces to the compact \(k\)-row
+minor. To see the factors, number the basis positions from
+\(0\) to \(2r+k\). For \(r>0\) the cofactor deletes the last row
+and the first column. Expand first in the first remaining row,
+then in the last remaining column, successively down the two flags.
+The nonzero root character entries outside the middle are
+\[
+ (a,a+1)\quad(a+1<r\text{ or }a>r+k),\qquad
+ (r-1,r+k),\quad(r+k,r+k+1).
+\]
+
+The ordinary flag entries have modulus one and the two joining
+entries each have modulus \(\sqrt{T_z}\). At each outer expansion
+the displayed entry is the only one on which the functional survives.
+In a column expansion the argument drops by one, from commuting
+the last matrix unit to the left using
+\([E_{ij},E_{ab}]=\delta_{ja}E_{ib}-\delta_{ib}E_{aj}\).
+After the \(r\) column removals the compact argument at the root is
+\[
+ -\mu_s+\tfrac{n-1}{2}-r=-\mu_s+\tfrac k2,\qquad
+ Q_{\rm compact}(-\mu_s+\tfrac k2)
+       =\prod_{i=1}^k(-\mu_s+\tfrac12+u_i).
+\]
+The latter equality is the compact Capelli central character. For
+\(r=0\) the cofactor is already the compact block, and insertion
+and contraction of the negative vector give \(T_z\) directly.
+
+The tensor Hermitian form restricts on the summand to its unitary
+form times a sign \(\epsilon_s\). Thus the period of the reverse
+contraction is \(\epsilon_s\overline{\kappa_s}\) times the shifted
+period. Indeed pairing the two contractions on smooth vectors in
+the period integral moves the adjoint across the Hermitian form,
+and the inserted covector is fixed by the period subgroup.
+On a vector with nonzero original period, the composite therefore
+has modulus \(|\kappa_s|^2\). The cofactor evaluation gives
+\[
+ |\kappa_s|^2
+ =T_z\frac{\prod_i|\mu_s-\tfrac12-u_i|}
+              {\prod_{t\ne s}|\mu_s-\mu_t|},\qquad
+ \frac{d_\mu}{d_{\mu-e_s}}
+ =\prod_{t\ne s}\frac{|\mu_s-\mu_t|}{|\mu_s-1-\mu_t|}.
+\]
+The second identity follows by cancelling unchanged factors in
+Harish--Chandra's Vandermonde formula at fixed Haar measure.
+The admissible shifts remain regular, so all the denominators
+are nonzero. Multiplication gives the asserted equality.
+
+\proofstep{Pair the factors before estimating the quotient.}
+In Definition~\ref{hyp:critical-level-weights} the upper entries
+are \(v_1,\ldots,v_{k-1}\) and the remaining entries are
+\(-b_1,\ldots,-b_m\). Use \(B_v=b_1\), \(q_0=km^5\) and the
+spacing bound \(\gamma=nm^{10}\) from
+Lemma~\ref{lem:marked-paired-moment-range}. Its selected row bounds give
+\[
+ \begin{gathered}
+  0\le\lambda_i\le B_v/8\ (i<k),\qquad
+  -2B_v\le\lambda_i\le-B_v\ (i\ge k),\\
+  |u_i|,|\lambda_t|\le B_0,\qquad
+  q_0\le\min(\gamma/8,B_v/4,B_0).
+ \end{gathered}
+\]
+Strict interlacing and opposite parity at the compact and ambient
+parameters give \(\lambda_i+\tfrac12\le u_i\) for \(i\le k\)
+and \(u_i+\tfrac12\le\lambda_{i-1}\) for \(2\le i\le k\).
+Put \(N_i=|\mu_s-\tfrac12-u_i|\),
+\(D_t=|\mu_s-1-\mu_t|\) and \(\delta_t=|\nu_t|\).
+Each \(N_i\le4B_0\), while \(D_t\) for \(t\ne s\) is a positive
+integer and hence at least one.
+
+If \(s<k\), assign a distinct denominator to each indicated numerator:
+\[
+ \begin{array}{c|c|c}
+   i&t&A\rule{0pt}{2.5ex}\\ \hline
+   2\le i<s&i-1&\lambda_t+1-\mu_s\\
+   s+2\le i\le k&i&\mu_s-1-\lambda_t
+ \end{array}
+\]
+In the first line \(u_i\le\lambda_{i-1}-1/2\) and
+\(u_i\ge\lambda_i+1/2>\mu_s-1/2\).
+In the second, \(u_i\ge\lambda_i+1/2\) and
+\(u_i\le\lambda_{i-1}-1/2\le\mu_s-1/2\).
+The separation of \(\lambda_s\) from \(\lambda_i\) in the first
+line and from \(\lambda_{i-1}\) in the second is at least
+\(\gamma\), so in both lines
+\[
+ N_i\le A,\qquad D_t\ge A-\delta_t,\qquad
+ A\ge\gamma/2,\qquad 2\delta_t\le A .
+\]
+
+If \(s\ge k\), pair every \(2\le i<k\) with \(t=i-1\), and put
+\(A=\lambda_t+1-\mu_s\). Here \(\lambda_t,\lambda_i\ge0\) and
+\(\mu_s\le-B_v+q_0\), so \(N_i\le A\), \(D_t\ge A-\delta_t\),
+\(A\ge B_v/2\) and \(2\delta_t\le A\).
+For each paired factor, taking \(c=\gamma/2\) or \(B_v/2\)
+according to the case gives
+\[
+ \frac{N_i}{D_t}\le\frac{A}{A-\delta_t}
+      \le 1+\frac{2\delta_t}{A}
+      \le e^{2\delta_t/c},\qquad
+ \prod_{i\,\mathrm{paired}}\frac{N_i}{D_{t(i)}}\le e^{2q_0/c}\le e .
+\]
+The upper case omits at most \(1,s,s+1\), the lower case at most
+\(1,k\). Unused denominators are at least one. Consequently
+\[
+ R_s\le
+ \begin{cases}64e B_0^3&s<k,\\16e B_0^2&s\ge k.\end{cases}
+ \qquad R_s\le B_0^4\quad(B_0\ge64e).
+\]
+The last threshold holds uniformly at the selected family scale.
+\end{proof}

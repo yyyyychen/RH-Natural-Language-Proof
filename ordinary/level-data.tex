@@ -1,0 +1,273 @@
+\section{The coefficient data at the two ordinary levels}
+\label{sec:count-two-level-data}
+\hypertarget{source-ordinary-level-data}{}
+
+The odd-prime count uses ordinary eigensystems at two levels. We specify their common residual data, the ordered characters above \(\ell\), and the tame and exceptional coefficient types defining each level. At each level these choices determine the
+integral spaces of forms and the Hecke localization. The next two appendices construct the Galois representations of the ordinary constituents and realize the rank-four eigenpoint in these spaces. At a tame place the coefficient type is the integral compact representation of Proposition~\ref{prop:ordinary-zero-monodromy-type}. Lemma~\ref{lem:ordinary-residual-data} gives the distinct Frobenius and ordinary inertia prescriptions at the other marked places.
+
+Use the CM field \(L\), the coefficient DVR \(O\) with fraction
+field \(E\) and residue field \(k\), and the common twist of the
+fitted tower. At each selected split place \(v\) fix one of its two lifts. The local factor used by the level is then specified by
+\[
+ L\otimes_{L^+}L^+_v=L_w\times L_{\bar w},\qquad w\mid v\text{ chosen}.
+\] Write \(S_{\mathrm t}\)
+for the selected places with a compact coefficient type away from
+\(\ell\), and \(S_\ell\) for the selected places over \(\ell\).
+There is a separate principal congruence condition at the
+exceptional place of the level. The residual datum on the level
+quotient consists of global labels \(\bar d_0,\ldots,\bar d_{n-1}\)
+and ordered local labels \(\bar\psi_{w,0},\ldots,\bar\psi_{w,n-1}\)
+at \(S_\ell\), with \(n=4\) in the even-order case. At either level the local coefficient type must realize these labels after restriction and the common twist, on that level's quotient.
+
+\subsection{An integral type that detects zero monodromy}
+
+The prescribed residual characters determine the inertial labels at a tame place. To impose those labels on forms one needs an integral type whose occurrence in characteristic zero also controls the monodromy operator.
+
+\begin{proposition}[The tame integral coefficient type]
+\label{prop:ordinary-zero-monodromy-type}
+For each tame place \(w\) of either actual level the Teichmüller
+lifts of its prescribed characters define a type \(\tau\) with
+monodromy zero. Its compact type has an integral coefficient
+model with the following detection property in characteristic zero:
+write \((r,N)\) for the parameter of an irreducible smooth \(\pi_w\),
+and \(\sigma_\tau\) for the compact type in characteristic zero. Then
+\[
+ \operatorname{Hom}_{K_w}(\sigma_\tau,\pi_w)\ne0
+       \quad\Longleftrightarrow\quad N=0\ \text{ and }\
+                                  (r|_{I_w})^{\rm ss}\simeq\tau .
+\]
+The criterion allows repeated characters. It holds for every
+admissible local parameter map of Section~\ref{sec:local-global}
+and is invariant under unramified normalization twists.
+\end{proposition}
+
+\begin{proof}
+\proofstep{The inertial type and its rational realization.}
+At \(w\in S_{\mathrm t}\), lift each \(\bar d_i\) by the
+multiplicative Teichmüller section \(k^\times\to O^\times\) and
+restrict to inertia at \(w\). Denote the resulting characters by
+\(\eta_i\). Each \(\bar u\in k^\times\) has a unique lift \([\bar u]\)
+in the prime-to-\(\ell\) roots of unity of \(O\), by Hensel's lemma.
+Uniqueness gives \([\bar u\bar v]=[\bar u][\bar v]\). Thus the type is
+\[
+  \eta_i=[\bar d_i]|_{I_w},\qquad
+  \tau=\bigoplus_i\eta_i,\qquad N=0 .
+\]
+Each \(\eta_i\) extends to the decomposition group, with values
+in the finite subgroup of \(E^\times\) given by the lifts.
+
+It has the least
+nilpotent orbit for its semisimple inertia representation. Each
+partition of a multiplicity space is a column of ones. There is
+an irreducible smooth type \(\sigma_\tau\) on
+\(K_w=\mathrm{GL}_n(\mathcal O_{L_w})\) with the following property.
+For an irreducible smooth \(\pi_w\) the detection property is the equivalence
+\[
+ \operatorname{Hom}_{K_w}(\sigma_\tau,\pi_w)\ne0\quad\Longleftrightarrow\quad \operatorname{WD}(\pi_w)\text{ has inertial type }\tau
+\]
+in the algebraic normalization. This follows from the
+Schneider--Zink type theorem \cite[Theorem 3.7(1)--(2)]{shotton-types}.
+Its inequality of types compares nilpotent partitions with the
+semisimple inertia fixed, so for this \(\tau\) the inequality is
+equality. Both implications allow repeated \(\eta_i\) and
+nongeneric \(\pi_w\).
+
+The criterion is the same for every admissible local map in the
+formal chain. A parameter with monodromy zero has only length-one
+segments. Write \(V_\eta\) for the space on which inertia acts through
+\(\eta\). If \(\Phi_w\) is a Frobenius element, then
+\[
+ r(i)r(\Phi_w)v
+  =r(\Phi_w)r(\Phi_w^{-1}i\Phi_w)v
+  =\eta(i)\,r(\Phi_w)v
+       \qquad(i\in I_w,\ v\in V_\eta).
+\]
+The last equality uses the extension of \(\eta\) to the Weil
+group. Diagonalize Frobenius on each \(V_\eta\). Its eigenlines
+are Weil lines, so the cuspidal data have rank one. The segment
+rule and rank-one reciprocity give the usual local Langlands
+parameter. Conversely, a usual parameter of
+this inertial type also comes from singleton rank-one segments,
+for which every admissible map gives the same parameter. The
+criterion can be expressed by requiring \(N=0\) and, for every
+inertia element \(g\),
+\[
+   \det(X-r(g))=\prod_{i=0}^{n-1}(X-\eta_i(g)).
+\]
+Equality of traces at every element of the finite common inertia
+quotient determines the semisimple representation there.
+An unramified normalization twist preserves both tests.
+
+We construct an \(O\)-model that detects this condition. Work over
+\(\overline E\) via the coefficient identification with \(\C\),
+and let \(H=K_w/\ker(\sigma_\tau)\). The kernel is open by
+intersection of the stabilizers of a finite basis. The quotient is
+finite by compactness. The criterion is invariant under every
+\(\gamma\in\operatorname{Gal}(\overline E/E)\). In fact, a
+representation satisfying it has a Langlands quotient presentation
+by singleton rank-one segments. The possible change of square root under coefficient conjugation is measured by a sign:
+\[
+ \gamma((\#k_w)^{1/2})=\delta(\#k_w)^{1/2},\qquad \delta\in\{1,-1\}.
+\]
+Hence normalized induction is carried to the normalized induction of the conjugate characters up to a common unramified quadratic character. Here \(k_w\) is the residue field of \(L_w\). Indeed the \(i\)-th diagonal coordinate of the half modulus has
+exponent \((n+1-2i)/2\), \(1\le i\le n\).
+
+If
+\(\gamma(q_w^{1/2})=\delta q_w^{1/2}\) with \(\delta\in\{1,-1\}\), its
+value on a uniformizer changes in that slot by
+\[
+ \delta^{\,n+1-2i}=\delta^{\,n-1}\qquad(1\le i\le n),
+\]
+so the change is the same unramified character in every slot.
+The order for the unique quotient depends on precedence of
+linked segments. For singleton segments the precedence relations
+depend on ratios equal to powers of the absolute value, and are
+preserved because the absolute value takes rational values and
+the common character cancels in a ratio. Thus the quotient
+still has singleton rank-one segments with the conjugate
+inertia characters. All \(\eta_i\) are fixed. The inverse
+conjugation proves the reverse implication.
+\cite[Theorem 6.1 and the segment classification]{zelevinsky}
+
+For each member \(\xi\) of the finite Galois orbit of
+\(\sigma_\tau\), let \(e_\xi\) be its central character idempotent
+in \(\overline E[H]\), given by
+\[
+   e_\xi=\frac{\dim\xi}{|H|}
+                 \sum_{h\in H}\operatorname{tr}\xi(h^{-1})\,h.
+\]
+The orbit sum \(e\) belongs to \(E[H]\). Let
+\[
+   M=eE[H]\cap O[H].
+\]
+This is a free \(O\)-module spanning \(eE[H]\), since each element
+of an \(E\)-basis can be scaled into \(O[H]\).
+
+It is stable under
+left multiplication by \(H\). Its dual
+\(M^\vee=\operatorname{Hom}_O(M,O)\) is the integral coefficient
+representation at \(w\). The fixed space of
+\((M^\vee\otimes_O\overline E)\otimes_{\overline E}\pi_w\)
+under the diagonal \(K_w\)-action identifies with
+\(\operatorname{Hom}_{K_w}(M\otimes_O\overline E,\pi_w)\).
+Over \(\overline E\) the constituents of \(eE[H]\) are the
+members of the orbit. The regular representation block of \(\xi\) contains
+\(\dim\xi\) copies of \(\xi\). For \(\xi=\gamma\sigma_\tau\),
+\[
+ \operatorname{Hom}_{K_w}(\xi,\pi_w)\ne0
+ \quad\Longleftrightarrow\quad
+ \operatorname{Hom}_{K_w}(\sigma_\tau,\gamma^{-1}\pi_w)\ne0.
+\]
+The condition on the right is the criterion for the
+inverse-conjugate parameter. It has type \(\tau\) exactly
+when the original parameter does. This proves detection for
+\(M^\vee\). The characteristic-zero orbit block and the
+intersection lattice allow a Schur index over \(E\) and allow
+\(\ell\) to divide \(|H|\).
+
+\proofstep{The integral coefficient test at all tame places.}
+The full level imposes the integral types at all tame places simultaneously.
+
+Its coefficient module is the tensor product
+\[ \bigotimes_{w\in S_{\mathrm t}} M_w^\vee ,\]
+where \(M_w^\vee\) is the local lattice just constructed at \(w\). The kernel contains the product of
+the local open kernels. For a representation that is isotypic
+with specified local factor \(\pi_w\) under each coordinate
+group, the coefficient fixed space is nonzero if and only if
+each local criterion holds. Take fixed vectors in the local
+factors successively. The other local groups commute with each
+projection, so a nonzero image is still isotypic for each
+remaining group. In an \(O\)-basis, the fixed-vector equation
+is the matrix equation for the tensor product on the coefficient
+index.
+\label{cor:ordinary-level-data-1}
+
+\end{proof}
+
+\subsection{The weight character and the residual Hecke values}
+
+Ordinary localization also uses the residual spherical eigenvalues and the ordered characters on local units.
+
+Let \(\Lambda\) be the complete local weight algebra for the level,
+with finite residue field. At \(w\in S_\ell\) its specified inertia
+characters are restrictions of adically continuous characters
+\(\psi_{w,i}\) of the decomposition group with values in
+\(\Lambda^\times\). Use the local Artin map from the abelian
+Weil group to \(L_w^\times\) taking geometric Frobenius to a
+uniformizer modulo units. A continuous \(\Lambda^\times\)-valued
+character of the decomposition group induces a character of
+\(L_w^\times\). Modulo each power of the maximal ideal this
+follows from local reciprocity for finite abelian characters.
+The compatible characters give the result by completeness.
+Each reduced character is smooth on \(\mathcal O_{L_w}^\times\).
+Write \(\epsilon_\ell\) for the \(\ell\)-adic cyclotomic character
+with values mapped to \(\Lambda^\times\). On diagonal units, use
+\[
+   \theta((y_{w,i})_{w,i})
+   =\prod_{w\in S_\ell}\prod_{i=0}^{n-1}
+          (\psi_{w,i}\epsilon_\ell^{\,i})
+                  (\operatorname{Art}_w^{-1} y_{w,i})^{-1},
+\]
+At each coefficient precision a single sufficiently deep
+diagonal congruence subgroup works for all the factors.
+
+The stabilizer proof in Paragraph~\ref{par:ordinary-functions}
+applies at each exceptional prime and gives the freeness condition
+for this type and weight at the auxiliary levels.
+
+\begin{construction}
+\[
+\begin{array}{ll}
+\text{place}&\text{coefficient datum}\\ \hline
+w\in S_{\rm t}&\eta_i=[\bar d_i]|_{I_w},\quad N_{\rm mon}=0\\
+w\text{ split spherical}&P_w(X)=\prod_i(X-\bar d_i(f_w))\\
+w\mid\ell&\text{ordered character products and the weight character}
+\end{array}
+\]
+\caption{The residue labels enter the ordinary level in different ways at the three kinds of place. The spherical normalization uses geometric Frobenius.}\label{fig:ordinary-coefficient-places}
+\end{construction}
+
+\begin{lemma}[The two residual coefficient prescriptions]
+\label{lem:ordinary-residual-data}
+At each level the residual data consist of the spherical polynomials at the unmarked split spherical places and the partial products above \(\ell\):
+\[
+ P_w(X)=\prod_{i=0}^{n-1}(X-\bar d_i(f_w)),\qquad
+ \prod_{i=0}^{j}(\bar\psi_{w,i}\bar\epsilon_\ell^{\,i})
+                 (\operatorname{Art}_w^{-1}\varpi_w)\quad(0\le j<n),
+\]
+respectively, with \(f_w\) the geometric Frobenius at a split spherical place. Both sets of data lift to the ordinary coefficient data, with the given weight character
+and the fixed reciprocity normalization. This defines the localized
+modules even when one of them is zero.
+\end{lemma}
+
+\begin{proof}
+\proofstep{The spherical residual polynomial.}
+At a split prime outside the allowed ramification, put
+\(q_w=\# k_w\) and let \(f_w\) be geometric Frobenius on the
+level quotient. Set \(P_w(X)=\prod_i(X-\bar d_i(f_w))\).
+For \(1\le j\le n\) choose a lift in \(O\) of
+\[
+   (-1)^j q_w^{-j(j-1)/2}[X^{n-j}]P_w(X).
+\]
+The denominator is a unit in \(k\) since the level contains
+every prime above \(\ell\). The reduction of the normalized
+Hecke polynomial with these lifted values is \(P_w\).
+Choices of Frobenius lift and decomposition group give the same
+coefficients by unramifiedness and conjugation invariance.
+\proofstep{The ordered residual values above the coefficient prime.}
+The unramified spherical polynomials fix the residual Hecke values away from the coefficient prime. At the places over that prime, localization also uses the order of the diagonal characters.
+
+At \(w\in S_\ell\) write \(\varpi_w\) for the fixed uniformizer.
+The value to lift for the product through
+ordered index \(j\), with \(0\le j<n\), is
+\[
+   \prod_{i=0}^{j}(\bar\psi_{w,i}\bar\epsilon_\ell^{\,i})
+                         (\operatorname{Art}_w^{-1}\varpi_w),
+\]
+Local reciprocity
+gives independence of the lift of \(\varpi_w\) to the Weil group.
+ At each level the weight character \(\theta\) and integral
+type, together with these equations, determine the ordinary data. Their
+existence suffices to define the localized modules, including
+the case in which a localized module vanishes. \label{cor:ordinary-level-data-2}
+\end{proof}

@@ -1,0 +1,330 @@
+\section{Formal-degree normalization and the critical level}
+\label{sec:local-amplitudes}
+
+The Gram integrand contains a Bessel coefficient from each of two definite stabilizers. Integrating their product in the ambient discrete series introduces the reciprocal formal degree from Schur orthogonality, in the Haar measure used for the quotient. The stabilizer calculation identifies
+the level at which the critical term has that normalization.
+The next chapter bounds the absolute size of the other
+orbital operators on the same scale. The two maps below are the Bessel maps of Proposition~\ref{prop:real-period-norm}, for the two definite stabilizers at the same real place. Proposition~\ref{prop:local-operator-normalization} gives the normalization of their orbital amplitude.
+
+Fix a real place with unitary group \(G\), flag unipotent \(N\)
+and definite stabilizers \(W,W'\). Let \(\sigma\) be a
+discrete series of formal degree \(d\) for the chosen Haar
+measure. Write \(\ell,\ell'\) for its two Bessel maps. For the first Bessel map the rank-one normalization is
+\[
+ \int_{W\times N} \langle v,\sigma(w_1^{-1}n_1^{-1})u\rangle
+          \psi(n_1)\pi(w_1)\xi\,dw_1\,dn_1
+   =\langle\ell v,\xi\rangle\ell u .
+\]
+The primed data satisfy the corresponding identity. The inner product in this
+formula is linear in the second variable. Proposition~\ref{prop:real-period-norm} supplies the quotient
+isometry, with the large-gap decay required for both periods.
+
+At a cell representative \(\gamma\) with compatible left and
+right unipotent characters, let \(R_\gamma\) be the relative
+stabilizer. Its conjugate by \(\gamma^{-1}\) lies in the right
+unipotent. Put \(p=((w_1,n_1),(w_2,n_2))\) and
+\[
+ A(p)=w_1^{-1}n_1^{-1}\gamma,\qquad B(p)=w_2^{-1}n_2^{-1}.
+\]
+Let \(O(p)\) be the rank-one operator on the two definite types
+with the two compact actions and the two unitary phase factors.
+\begin{proposition}[Normalization of the orbital operator]\label{prop:local-operator-normalization}
+Assume the large-gap decay of Proposition~\ref{prop:real-period-norm} for both periods. Let \(\gamma\) be a cell representative whose two unipotent characters agree on \(R_\gamma\) after transport by \(a\mapsto\gamma^{-1}a\gamma\). Write \(J_A\) for the orbital amplitude of its two Bessel periods and \(d_A\) for the formal degree in the transported Haar measure. With the weighted big-cell norm, 
+\[
+ \|J_A\|_{\rm cell}^2=C/d_A.
+\]
+ The constant is uniform over
+spectral parameters in the same interpolation window.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Weil integration and absolute convergence.}
+
+Use a unit vector \(w\) and integrate
+\[
+ \langle v,\sigma(A(p)g)w\rangle
+ \overline{\langle v',\sigma(B(p)g)w\rangle}\,O(p).
+\]
+The \(R_\gamma\) action on \(p\) simultaneously
+replaces \(g\) by \(\gamma^{-1}a^{-1}\gamma g\) for
+\(a\in R_\gamma\). The characters cancel in \(O(p)\).
+Weil integration in either variable therefore identifies
+the integral over all \(p\) and the group quotient with the
+integral over the \(p\)-quotient and \(G\). For convergence, take a symmetric submultiplicative
+majorant \(a_0\ge1\). Set \(s=a_0(A(p)g)\),
+\(t=a_0(B(p)g)\), and \(u=a_0(A(p)B(p)^{-1})\le st\).
+
+Since \(s\ge1\), splitting the decay exponent gives
+\[
+       s^{-e}t^{-e}\le u^{-h}t^{-(e-h)}
+       \qquad(0\le h\le e).
+\]
+In the order integrating over \(G\) first, translate the
+inner variable by \(B(p)\). This bounds the double integral by a
+constant times
+\[
+ \left(\int_{R_\gamma\backslash\mathcal P}
+       a_0(A(p)B(p)^{-1})^{-h}\,dp\right)
+ \left(\int_G a_0(g)^{-(e-h)}\,dg\right),
+\]
+with \(\mathcal P\) the product period variables above.
+Use the pair majorant in the first factor and group
+integrability in the second. The spectral gap permits
+both exponents, and the compact factors are bounded.
+
+\proofstep{Formal degree and transported measures.}
+
+The quotient integration has put both coefficients in one integral over the group. This is where their two Bessel normalizations can be compared by Schur orthogonality.
+
+
+Integration over \(p\) uses the two rank-one Bessel formulas.
+Integration over \(G\) uses Schur orthogonality of \(\sigma\).
+Let \(J_{\rm std}\) be the amplitude in the standard normalization, \(\mathcal O_\gamma\) the orbital integral obtained by integrating over the period variables, and \(S\) the normalization scalar of the two-sided model. The two orders of integration give
+\[
+ S J_{\rm std}=d^{-1}\mathcal O_\gamma.
+\]
+To compute the weighted square, the quotient isometry
+contributes \(d^{-1}\) and the amplitude normalization
+contributes \(|d^{-1}|^2=d^{-2}\). Thus before changing
+frequencies their product is \(d^{-3}\) in the fixed Haar
+gauge. Changing the additive-character scale by
+\(\alpha=c_{\rm std}/c\) changes the weighted measure by
+\(|\alpha|^{-2\kappa_N}\), where \(\kappa_N\) is its dilation
+degree, and changes phases by scalars of modulus one.
+Consequently
+\[
+ \int \|J_{\rm std}\|_{\rm HS}^{\,2}\,d\mu_{\rm cell}
+          = c_0|\alpha|^{-2\kappa_N}d^{-3}.
+\]
+
+With the Haar measures and compact types of \(A\), the amplitude is \(J_A=\eta J_{\rm std}\), where
+\(|\eta|=d\sqrt{d_Wd_{W'}}\) and \(d_W,d_{W'}\) are
+the dimensions of the two compact types. Its transported degree
+is \(d_A=\kappa d\) with \(\kappa\) fixed by Haar transport. Hence
+\[
+ \|J_A\|_{\rm cell}^2
+   = |\eta|^2\|J_{\rm std}\|_{\rm cell}^2
+   = c_0|\alpha|^{-2\kappa_N}d_Wd_{W'}d^{-1}.
+\]
+In the transported degree convention the same formula uses
+\(\kappa/d_A\) in place of \(d^{-1}\).
+The constant is uniform over spectral parameters in the
+same interpolation window. The Haar change and Cayley
+conjugation cancel in ratios of formal degrees. The compact
+dual degree formula supplies the remaining Vandermonde ratio.
+
+This comparison also fixes one coefficient before a point or a
+section is chosen. Use the inner product linear in the second
+variable as in the period formula above. Write the two transported
+Bessel maps as \(b\ell,b'\ell'\), and let \(v_0\) be the common
+lowest vector. Normalize their two squared quotient norms to
+\(c_N\dim V,c_N\dim V'\) at \(v_0\); the same \(c_N>0\) divides
+the transported orbital coefficient. The quotient isometry gives
+\[
+ |b|^2\|v_0\|^2=c_Nd\dim V,\quad
+ |b'|^2\|v_0\|^2=c_Nd\dim V',\quad
+ \eta=c_N^{-1}b\overline{b'}\|v_0\|^2 .
+\]
+
+Choose compact-finite \(v,v'\) with \(\ell(v),\ell'(v')\ne0\).
+Such vectors exist by the continuity and nonvanishing of the two
+maps. For \(w\in V,\ w'\in V'\), write \(w\otimes(w')^*\) for
+\(t\mapsto w\langle w',t\rangle\). Integration in the two orders
+used above then gives, on every matched cell where the indicated
+majorants apply,
+\[
+ J_\gamma\big(\langle v,\sigma(\cdot)v'\rangle
+                    w\otimes(w')^*\big)
+   =d\,\langle\ell(v),w\rangle\langle w',\ell'(v')\rangle
+                J_{\rm std}(\gamma).
+\]
+
+In particular, set
+\[
+ w=\frac{\eta\,\ell(v)}
+      {d\,\|\ell(v)\|^2\|\ell'(v')\|^2},\qquad w'=\ell'(v').
+\]
+The resulting coefficient gives \(J_A\) throughout those cells.
+It retains the relative phase of the two Bessel maps. A common
+compact exhaustion can therefore start from this single smooth
+coefficient for the point and the section, using the unit-scale
+quotient identification of Lemma~\ref{lem:orbital-frame-transport}.
+
+\end{proof}
+
+\subsection{Lower bound for the critical level}
+
+The norm calculation determines the formal degree with the actual parameters. Its use in the row estimate requires comparison with the critical level uniformly under the allowed weight perturbations.
+
+\begin{paramdefinition}[Base and binary perturbed weights]\label{hyp:critical-level-weights}
+Put \(m=2r+2\), \(\kappa=2\pi/\mathrm{rd}\) and \(g=g_0g_1\).
+Write the archimedean parameters as
+\[
+ (v_1,\ldots,v_{k-1},-b_1,\ldots,-b_m).
+\]
+The \(v_i\) satisfy
+\[
+ v_i=v_{k-1}+4\Delta(k-1-i),\qquad
+ v_{k-1}\ge0,\qquad v_1\le4k\Delta,\qquad\Delta\ge1.
+\]
+Here \(k\ge4\), \(1\le b_1<b_2<\cdots<b_m\), the consecutive
+gaps are at least one, and \(b_j\le b^2\).
+
+Write \(B=\prod_j b_j\). In the realized row the binary choices affect the definite column. The ambient formal degree uses the fixed row list \(\lambda=(v_1,\ldots,v_{k-1},-b_1,\ldots,-b_m)\). Consequently its positive Vandermonde is
+\[
+ \mathrm{VV}=\operatorname{Vand}(v)
+    \prod_{i<j}(b_j-b_i)\prod_{i=1}^{k-1}\prod_{j=1}^m(v_i+b_j)
+       \ge\operatorname{Vand}(v)B^{k-1}.
+\]
+This also supplies the factor \(1/2\) allowed by the subsequent estimate.
+The first definite coordinate is \(a\), where
+\(\alpha_0=a-v_1\ge4k\Delta\).
+The interior coordinates have the form
+\(v_i-\tfrac12-d_i\Delta\) with \(d_i\in\{0,1\}\).
+At a nontop place the last coordinate has this form with
+\(d_{k-1}=0\). At a top place it is \(-b_*\), with
+\(b_1/2\le b_*\le b_1-3\). Define
+\[
+ a_{\rm eff}=
+ \begin{cases}
+ \alpha_0,&\text{at a nontop place},\\
+ ab_* /(k\Delta),&\text{at a top place}.
+ \end{cases}
+\]
+\end{paramdefinition}
+
+The critical level is defined by
+\[
+ T_{\rm crit}^k=\kappa^{-(m-1)k-m(m-1)/2}\,
+   \mathrm{rd}^{-(m-1)/2}g^{mk+m(m-1)/2}
+       \frac{\mathrm{VV}}{\operatorname{Vand}(u)} .
+\]
+
+\begin{auxlemma}[Binary Vandermonde perturbation]\label{lem:binary-vandermonde-run}
+For integers \(J\ge1\) and \(d_1,\ldots,d_J\in\{0,1\}\), put
+\(x_{ij}=(d_j-d_i)/(4(j-i))\) for \(i<j\). Then
+\[
+ \left|\sum_{i<j}\log(1+x_{ij})\right|\le J/4 .
+\]
+\end{auxlemma}
+\begin{proof}
+Write \(H_0=0\) and \(H_a=\sum_{k=1}^a1/k\). The linear sum is
+\(4\sum_{i<j}x_{ij}=\sum_i d_i(H_{i-1}-H_{J-i})\).
+Its coefficients increase and change sign at the midpoint. Its largest
+absolute value is attained by ones on either half. For \(J\ge2\) put
+\(n=\lfloor J/2\rfloor\), \(m=J-n\). The sum across this cut is
+\[
+ \sum_{i\le n<j\le J}\frac1{j-i}
+ =JH_J-nH_n-mH_m
+ \le n\log(J/n)+m\log(J/m)\le J\log2 .
+\]
+The first inequality follows by integrating \(1/t\), the second by
+concavity of binary entropy. The case \(J=1\) is empty. Since
+\(|x_{ij}|\le1/4\), the power series for the logarithm gives
+\[
+ \sum_{i<j}|\log(1+x_{ij})-x_{ij}|
+ \le\frac{2}{3}\sum_{h=1}^{J-1}\frac{J-h}{16h^2}
+ \le\frac{J\pi^2}{144}.
+\]
+Adding the bounds gives the assertion since \((\log2)/4+\pi^2/144<1/4\).
+\end{proof}
+
+\begin{construction}
+\begin{tabular}{@{}lccc@{}}\toprule
+Position of \(i<j\) & \(j\le n\) & \(i\le n<j\) & \(n<i\)\\\midrule
+\((d_i,d_j)\) & \((0,0)\) & \((0,1)\) & \((1,1)\)\\
+\(4x_{ij}\) & \(0\) & \(1/(j-i)\) & \(0\)\\\bottomrule
+\end{tabular}
+\caption{The binary word maximizing the linear term of the Vandermonde perturbation, with \(n=\lfloor J/2\rfloor\). Only pairs crossing the midpoint contribute. The quadratic remainder is bounded uniformly for all words.}\label{fig:vandermonde-crossing-pairs}
+\end{construction}
+
+\begin{proposition}[Uniform lower bound for the critical level]\label{prop:critical-level-lower}
+Assume Definition~\ref{hyp:critical-level-weights} and
+\(4mk\Delta/b_1\le 1/10\).
+In the main parameter range, with \(g/\kappa\ge\mathrm{rd}\ge1\),
+\(b_1\ge k^{40}\), \(a_{\rm eff}\le b_1^4\), \(m\ge40\) and
+\(\kappa\le k\) and \(2m\log b/k\le\log 2\), at every place and for every binary interpolation word the critical level satisfies 
+\[
+ T_{\rm crit}\ge g^m k^{3r}.
+\]
+
+\end{proposition}
+
+\begin{proof}
+\proofstep{Interior Vandermonde factors.}
+
+On a run of \(J\) interior nodes the Vandermonde ratio is exactly
+\[
+ \prod_{i<j}\left(1+\frac{d_j-d_i}{4(j-i)}\right).
+\]
+Lemma~\ref{lem:binary-vandermonde-run} therefore bounds the ratio between
+\(e^{-J/4}\) and \(e^{J/4}\).
+
+\proofstep{The nontop place.}
+
+Put \(E=e^{1/4}\), \(\epsilon_0=\exp(-2m\log b/k)\)
+and \(\theta=1+4k\Delta/b_*\) at a top place,
+\(\theta=1\) elsewhere. Then \(\epsilon_0^kB\le1\).
+Set \(c_1=0.38\epsilon_0/\theta\).
+At a nontop place the factors joining \(a\) to the other
+coordinates are at most \(2\alpha_0+1/2\), so
+\[
+ (c_1 B/a_{\rm eff})^k\operatorname{Vand}(u)
+ \le \frac{e^{1/16}(0.76E)^k}{2\alpha_0}
+           B^{k-1}\operatorname{Vand}(v)
+ \le \tfrac12 B^{k-1}\operatorname{Vand}(v).
+\]
+\proofstep{The top place.}
+
+At a top place put \(n=k-2\), \(x=k\Delta\).
+The interior nodes lie in \([0,4x]\). Their differences
+from the first and last coordinates are at most \(a\)
+and \(b_*\theta\) respectively. The first-to-last factor
+is \(a+b_*\). The last node of the \(v\)-progression
+contributes \((4\Delta)^n n!\). Dividing the desired
+inequality by \(B^{k-1}\operatorname{Vand}(v)/2\)
+bounds its left side by
+\[
+ \frac{2(0.38)^{n+2}E^{n+1}(n+2)^n}{4^n n!}
+     \frac{x^2(a+b_*)}{a^2b_*^2}\,
+                 \theta^{-2}\epsilon_0^kB.
+\]
+
+Use \(n!\ge(n/e)^n\) and \((1+2/n)^n\le e^2\).
+The first factor is bounded by
+\[
+       2(0.38)^2Ee^2(0.38Ee/4)^n<1
+       \qquad(n\ge2).
+\]
+Also \(a\ge4x\), \(b_*\ge40x\), and \(x\ge4\) give
+\[
+ \frac{x^2(a+b_*)}{a^2b_*^2}
+      =\frac{x^2}{ab_*^2}+\frac{x^2}{a^2b_*}\le1 .
+\] The bound on \(b_*\) follows from
+\(4mk\Delta/b_1\le1/10\). Thus both cases give
+\(c_1 B/a_{\rm eff}\le(\mathrm{VV}/\operatorname{Vand}(u))^{1/k}\).
+
+\proofstep{The level bound.}
+
+The weight perturbations have been estimated locally. Their product must now be compared with the level used in the critical orbital term.
+
+
+Taking the \(k\)-th root in the definition leaves
+\((g/\kappa)^{m(m-1)/(2k)}\mathrm{rd}^{-(m-1)/(2k)}\)
+after extracting \(g^m\kappa^{-(m-1)}\). This factor is at least
+one. Moreover \(\epsilon_0\ge1/2\) by the stated logarithmic
+bound, and \(\theta\le 11/10\) by \(b_*\ge40k\Delta\) in the top
+case. Thus \(c_1\ge1/8\). Using \(B\ge b_1^m\) gives
+\[
+ T_{\rm crit}\ge
+ g^m\kappa^{-(m-1)}\frac{c_1 B}{a_{\rm eff}}
+ \ge \frac{g^m}{8}\,k^{40(m-4)-(m-1)}
+ \ge g^m k^{3r}.
+\]
+Here \(k\ge4\), \(m=2r+2\ge40\), and the power left over
+before division by 8 is at least \(k^2\).
+The bound \(2m\log b/k\le\log2\) holds eventually in the
+selected family used in Section~\ref{sec:row-sums}.
+This comparison is uniform over both types of place
+and over the binary interpolation words.
+\end{proof}

@@ -1,0 +1,330 @@
+\section{Positive kernels and the scalar row estimate}\label{sec:block-recursion}
+\hypertarget{source-block-recursion}{}
+
+For a fixed pair of histories the global kernel is a product over places. The Schur product preserves positivity in this product. We can therefore combine the histories in one positive form and apply Cauchy--Schwarz after the local differentiations. Lemma~\ref{lem:residual-single-cofactors} gives the action and relative phase of the two single cofactors in the same compact frame. Poisson summation and a period bound using Fej\'er
+kernels turn the resulting Fourier majorants into a scalar
+recursion, which is used in the selected-row Gram estimate. Proposition~\ref{prop:positive-block-fourier} specifies the mixed pairing and its two diagonal energies. Their successive suprema are the scalars in \eqref{eq:block-scalar-recurrence}.
+
+\subsection{Fourier bounds from positive blocks}
+
+A derivative can improve the dependence on a single frequency without improving a diagonal energy. Keeping the two diagonal blocks in the positive form lets the mixed estimate use both pieces of information.
+
+\begin{proposition}[Bounds from positive blocks tested on histories]\label{prop:positive-block-fourier}
+Fix a positive kernel on the word histories and take the tensor product of the local wave blocks. On a realized marked row, Lemma~\ref{hyp:selected-orbital-coefficient-bounds} identifies the differentiated blocks on those same words, compact types and coefficient frames. The resulting positive form has two diagonal blocks (the two energies) and one off-diagonal block (the mixed pairing).
+Let \(l_v\) be the local Fourier frequency and \(X_v>0\) the scale in the fifth-derivative bound at \(v\). Write \(W(x,y)\) for the mixed pairing and \(A'(x,x),B'(y,y)\) for the diagonal forms averaged over the modified words. Then 
+\[
+ |W(x,y)|\le \frac{A'(x,x)+B'(y,y)}{2}\prod_v\min\{1,(X_v/|l_v|)^5\}.
+\]
+ A zero frequency contributes a factor of one. The lift comparison has the corresponding majorant in \(t_v^{-1}-t_v'^{-1}\)
+with threshold \(2\Lambda'_v\). The weights of the averages
+are independent of the vectors testing the forms.
+\end{proposition}
+
+\begin{proof}
+For a positive block with diagonal forms \(A,B\) and cross form
+\(W\), one has
+\[
+ |x^*Wy|^2\le (x^*Ax)(y^*By).
+\]
+Testing a positive block on \((x,\lambda y)\) and minimizing
+over the phase and modulus of \(\lambda\) proves the displayed
+inequality, including when a diagonal value is zero. Conversely,
+that inequality bounds the mixed term of the quadratic form by
+the sum of the two diagonal terms for every \((x,y)\).
+
+At \(v\in S=\{v:|l_v|>X_v\}\) take the differentiated block. Its entries, with \(|\eta_v|=1\), are
+\[
+ K^{(v)}_{12}=\eta_v l_v^5 W_v,\qquad
+ K^{(v)}_{11}=X_v^5 A'_v,\qquad K^{(v)}_{22}=X_v^5 B'_v ,
+\]
+where \(A'_v,B'_v\) are positive averages of modified forms. At the other places keep the original block.
+Here is why taking the product over places preserves the required inequality for arbitrary histories. On a finite set of indices, including the two block labels, factor the history kernel as \(H_{ij}=\langle h_i,h_j\rangle\). Factor each chosen local block as \(K^{(v)}_{ij}=\langle k_{v,i},k_{v,j}\rangle\), using its positive square root.
+
+The entrywise product is the Gram matrix of explicit vectors:
+\[
+ H_{ij}\prod_v K^{(v)}_{ij}
+   =\left\langle h_i\otimes\bigotimes_v k_{v,i},
+                   h_j\otimes\bigotimes_v k_{v,j}\right\rangle .
+\]
+Thus the mixed entry tested by two arbitrary coefficient families is an inner product of sums of these vectors. Factoring out the powers of \(X_v\) from their squared norms leaves positive averages, with coefficients determined before the vectors are tested. Apply the block inequality to the resulting diagonals \(A',B'\),
+with their \(X_v^5\) factors extracted. This yields
+\[
+ |W(x,y)|\le
+  \prod_{v\in S}\left|\frac{X_v}{l_v}\right|^5
+                \sqrt{A'(x,x)B'(y,y)}
+ \le \prod_v\min\{1,(X_v/|l_v|)^5\}
+              \frac{A'(x,x)+B'(y,y)}{2}.
+\]
+Here each of \(A'\) and \(B'\) is an average in the chosen
+modified families. All weights arise from the forms themselves. The zero Fourier coefficient
+is the lower-level form by the local integral identity.
+
+For a lifted form the same argument uses the difference of
+inverse parameters \(t_v^{-1}-t_v'^{-1}\). At the top of the
+chain, if its modulus is greater than \(2\Lambda'_v\), put \(l_v=t_v^{-1}-(t'_v)^{-1}\). The triangle inequality
+gives
+\[
+ \max(|t_v|^{-1},|t'_v|^{-1})\ge |l_v|/2,
+ \qquad \min(|t_v|,|t'_v|)\le 2/|l_v|.
+\]
+At the smaller argument the diagonal has decay exponent ten.
+Taking its square root in the block inequality gives exponent
+five with threshold \(2\Lambda'_v\). This leaves
+three choices per complex place, according to which diagonal
+is changed or whether the original block applies. All probability
+weights are chosen on the forms before evaluating on the test
+vectors. The resulting inequalities can be iterated on the
+same arbitrary positive history kernel. \label{cor:block-recursion-1}
+
+\end{proof}
+
+\begin{construction}
+\begin{tabular}{@{}lll@{}}\toprule
+Frequency at \(v\) & Local block used & Factor in the cross bound\\\midrule
+\(|l_v|\le X_v\) & original wave block & \(1\)\\
+\(|l_v|>X_v\) & differentiated wave block & \((X_v/|l_v|)^5\)\\\bottomrule
+\end{tabular}
+\caption{Choice of a local block before taking its Schur product with the history kernel. The local gains multiply, and the averaged diagonal forms can then be tested on the same history.}\label{fig:frequency-block-choice}
+\end{construction}
+
+Fourier decay bounds a period by its diagonal energies. Passing to the limiting orbital germ requires an inequality that survives the limit in those energies.
+
+\begin{lemma}[An upper bound for a germ period sum]\label{lem:germ-period}
+Use the pairing \(2\RePart\sum_v \xi_v z_v\) on \(\C^f\).
+Let \(L_0\) be a full period lattice and \(L_0^*\) its dual for
+this pairing. Let \(\phi\) be a nonnegative integrable function,
+continuous at the points in a finite set \(S\subset z_0+L_0\).
+Assume that a positive block on inverse coordinates has diagonal
+corners \(U,Q\) and cross corner \(P\). For any finite
+\(T\subset L_0^*\), evaluate it at inverse coordinates
+\(x+g\xi\) for \(\xi\in T\). Write \(x=(x_v)_v\in\mathbb C^f\).
+Suppose that, with \(T\) fixed and \(\min_v|x_v|\to\infty\), the entries
+of \(P\) and \(Q\) converge to
+\(\widehat\phi(\xi'-\xi)/\mathcal D\), with \(\mathcal D>0\),
+and
+\[
+ |U(x+g\xi,x+g\xi')|\le M(\xi'-\xi),
+ \qquad \sum_{\xi\in L_0^*}M(\xi)<\infty .
+\]
+Then
+\[
+ \sum_{z\in S}\phi(z)
+ \le \frac{\mathcal D}{\operatorname{covol}(L_0)}
+     \sum_{\xi\in L_0^*}M(\xi).
+\]
+\end{lemma}
+
+\begin{proof}
+Test the positive block on \((a,-a)\), with
+\(|a_\xi|=|T|^{-1/2}\). This gives
+\[
+ 2\RePart\langle a,Pa\rangle-\langle a,Qa\rangle
+ \le \langle a,Ua\rangle
+ \le \frac1{|T|}\sum_{\xi,\xi'\in T}M(\xi'-\xi)
+ \le \sum_{\xi\in L_0^*}M(\xi).
+\]
+For the last inequality each difference occurs at most \(|T|\)
+times. Pass to the limit
+with \(T\) fixed.
+
+Choose a basis \(\mu_1,\ldots,\mu_{2f}\) of \(L_0^*\), and let \(T\) consist of its combinations with coefficients \(0,\ldots,N-1\). Write \([\xi,z]=2\RePart\sum_v\xi_vz_v\). In the Fourier convention \(\widehat\phi(\xi)=\int\phi(z)e^{-2\pi i[\xi,z]}\,dz\), take \(a_\xi=|T|^{-1/2}e^{2\pi i[\xi,z_0]}\). Expanding the square shows that the limiting quadratic form is \(\mathcal D^{-1}\int\phi(z)F_N(z-z_0)\,dz\), where
+\[
+ F_N(z)=\prod_{j=1}^{2f}\frac1N
+       \left|\sum_{h=0}^{N-1}e^{2\pi i h[\mu_j,z]}\right|^2 .
+\]
+The variables \([\mu_j,z]\bmod 1\) identify normalized Haar measure with product Lebesgue measure on the unit torus.
+
+By character orthogonality each factor has integral one. At distance at least \(\eta\) from an integer, the geometric series bounds that factor by \(1/(N\sin^2(\pi\eta))\), for \(0<\eta<1/2\). Thus the mass outside the coordinate box of radius \(\eta\) tends to zero, while the total unnormalized mass is \(\operatorname{covol}(L_0)\).
+At each point of \(S\), integrate over a small neighborhood
+where \(\phi\) is bounded below by its value minus \(\delta\).
+The neighborhoods can be chosen disjoint, and the Fej\'er
+mass in each tends to the full mass of a domain. Summing
+these lower bounds and sending \(\delta\) to zero proves
+the estimate.
+\end{proof}
+
+\subsection{Passing from the germ to a full period}
+
+To pass from one block size to the next, the bound on a germ must control the entire higher period. Write \(U\) for the preceding block and \(\phi\) for the higher diagonal block tested against the positive history kernel. The local Gram blocks give the semidefinite input of
+Proposition~\ref{prop:positive-block-fourier}. To use
+Lemma~\ref{lem:germ-period}, pair the tensor products at the
+same indices with the fixed positive history kernel. The
+product of their entries is semidefinite by the Schur product
+theorem. This gives the block in that lemma. The Fourier normalizer
+\(\mathcal D\) equals the unscaled period covolume
+\((d/2)^f g^{3f}d^{2f\nu}\). The lift bound controls \(U\)
+at a difference \(g\xi\) by one product majorant times a
+positive average of preceding diagonal energies.
+
+\begin{proposition}[Full period through the auxiliary truncation]\label{prop:auxiliary-period-comparison}
+Use the history kernel of Proposition~\ref{prop:positive-block-fourier},
+with \(R\rho_v/g\ge1\) at the intermediate sizes and
+\(\operatorname{vol}(b,s)\le1\) on the actual lattice at the
+last size \(s\). In the bound for the full period the truncation is the original one. Its factor in \eqref{eq:block-last-period} is 
+\[
+ C_4^{fs}\prod_{n=1}^{s-1}\operatorname{vol}(b,n).
+\]
+
+\end{proposition}
+
+\begin{proof}
+\proofstep{The auxiliary period lattice.}
+
+Suppose these energies are bounded at every point by a
+scalar \(P_{n-1}\) times positive averages of the starting
+energies. Take first the auxiliary period lattice
+\(R\mathbb Z[i]^f\). The sum of the majorant with coordinate
+thresholds \(\rho_v>0\) is at most
+\[
+ C^f\prod_v\bigl(1+(R\rho_v/g)^2\bigr).
+\]
+For one coordinate, the integer points in a disk of radius
+\(T\ge1\) number \(O(T^2)\), and on each successive annulus
+of doubled radius the weight falls with exponent five.
+This gives the displayed estimate, including thresholds
+below one.
+
+Choose \(R\) so that \(R\rho_v/g\ge1\) at every
+place. After division by \(R^{2f}\), Lemma~\ref{lem:germ-period}
+applied to a singleton gives
+\[
+ P_n\le C'^f\operatorname{vol}(b,n)P_{n-1},\qquad
+ \operatorname{vol}(b,n)=
+ \frac{(\prod_v\rho_v)^2}{N(I_D)} .
+\]
+In this step
+\(\mathcal D\prod_v(\rho_v/g)^2
+  =(2gd)^{-f}\operatorname{vol}(b,n)\).
+The real Euclidean and trace dual conventions change the
+absolute constant by a fixed factor per place. Positive
+averages are combined by multiplying their coefficients, so
+the scalar estimate retains a probability on words. The
+initial pointwise estimate follows by the same auxiliary
+lattice argument using the wave bound.
+
+\proofstep{The actual period lattice at the last size.}
+
+The auxiliary lattice permits a uniform product estimate during induction. At the last size the normalization belongs to the actual period, whose covolume now cancels the Fourier factor.
+
+
+Apply the lemma there at size \(s\), with the covolume factor \(\mathcal D\). The dual
+frequencies after multiplication by \(g\) lie in \(I_D\).
+If \(\operatorname{vol}(b,s)\le1\), Lemma~\ref{lem:lattice-frequency}
+with \(H=1\) bounds their total majorant mass by \(C''^f\),
+including the zero term. The final coefficient is therefore
+\begin{equation}\label{eq:block-last-period}
+ C_4^{fs}\prod_{n=1}^{s-1}\operatorname{vol}(b,n).
+\end{equation}
+Each induction step permits at most five additional letters
+at a place. The last volume is used to bound the majorant
+mass, and the product of volumes is over the preceding
+sizes. The estimate is uniform in the number of places and
+their different coordinate thresholds.
+\label{cor:block-recursion-2}
+
+\end{proof}
+
+\subsection{The scalar recursion}
+
+\input{row-frequency-sizes}
+
+The dependence on a history has now been absorbed into a supremum of positive energies. What remains is to propagate the loss over the whole sequence without multiplying by a large factor at each level.
+
+\begin{proposition}[Accumulated density loss]\label{prop:accumulated-density-loss}
+Suppose that \(\sigma_i\) is the square root of the supremum
+of the normalized energy at level \(i\), and that the one-level
+and long-block comparison satisfies \eqref{eq:block-scalar-recurrence} with
+\(0\le a\le q\le 1/2\) and \(e_i\ge0\).
+If \((r+1)q\le1\), then at each level \(0\le i\le r+1\) 
+\[
+ \sigma_i^2\le\bigl(1+C(r+1)q\bigr)\,\sigma_0^2\prod_{j=1}^i(1+e_j),\qquad C=e^6-1.
+\]
+
+\end{proposition}
+
+\begin{proof}
+In the scalar recursion, write \(\sigma_i\) for the square
+root of the supremum of the normalized energy at level \(i\).
+Write \(e_i\) for the primitive density errors and take
+\(q=(C_0/\Theta)^f\). The terms indexed by \(s\ge2\) use
+the bound for the longer blocks.
+For the normalized energies the recursion to be estimated is
+\begin{equation}\label{eq:block-scalar-recurrence}
+ \sigma_i\le (1+a)\sqrt{1+e_i}\,\sigma_{i-1}
+       +\sum_{s=2}^i q^{s-1}\sigma_{i-s},
+ \qquad 0\le a\le q,\quad e_i\ge0 .
+\end{equation}
+Put \(D_i=\prod_{j=1}^i\sqrt{1+e_j}\), \(D_0=1\),
+and \(a_i=\sigma_i/D_i\). Then \(D_{i-1}\sqrt{1+e_i}=D_i\)
+and \(D_{i-s}/D_i\le1\). Hence
+\[
+ a_i\le(1+a)a_{i-1}+\sum_{s=2}^i q^{s-1}a_{i-s}.
+\]
+
+For \(0\le q\le1/2\), the geometric sum is at most \(2q\).
+If \(a_j\le \sigma_0(1+3q)^j\) for \(j<i\), every term
+\(a_{i-s}\) is bounded by \(\sigma_0(1+3q)^{i-1}\).
+Multiplying this bound by \(1+q+2q\) proves the induction.
+For \((r+1)q\le1\) the squared factor is bounded by
+\[
+ (1+3q)^{2(r+1)}\le e^{6(r+1)q}
+ \le 1+(e^6-1)(r+1)q .
+\]
+The last inequality uses the chord bound for the exponential
+on \(0\le(r+1)q\le1\). Thus the long-block
+errors do not require a constant depending on the number
+of recursion levels. The remaining row mass normalization
+uses the stabilizer volumes at the selected pair of words.
+\end{proof}
+
+\begin{auxlemma}[The accumulated error on the selected row]
+\label{lem:selected-density-error}
+For two distinct selected words, all starting indices \(i\) and all
+permitted block lengths \(h\), in the notation of
+Lemma~\ref{lem:selected-frequency-size}, one has
+\[
+ \operatorname{vol}(i,h)\le k^{-2f},\qquad
+ (e^6-1)(r+1)(C_0/k)^f\le b^{-7}.
+\]
+Here \(C_0\) is an absolute constant that bounds the losses in
+\eqref{eq:block-scalar-recurrence} and is fixed before \(x\).
+\end{auxlemma}
+\begin{proof}
+Since \(N(\mathfrak d)=d^{2f}\), the containing dual ideal for this
+block has \(N(I_D)=(gd^{\nu+1})^{-2f}\). Thus its volume
+is exactly the square of the first product in
+Lemma~\ref{lem:selected-frequency-size}. The same calculation for
+\(I_L\) uses \(gd^\nu\). The final inverse difference doubles the
+radius, so Lemma~\ref{lem:lattice-frequency} applies with \(H=k/2\)
+there and with \(H=k\) on \(I_D\). The one-level loss, including
+the choices of differentiated blocks, is at most
+\[
+ a\le (C_1 k^{-5/2})^f\le q,\qquad q=(C_0/k)^f.
+\]
+
+
+For length \(h\ge2\), the primitive density and the one-level
+lattice correction each cost at most two on the energy. For the
+first of these bounds use the local Euler product
+\(\exp(12f2^{-(k-2r-2)})\le2\) on the selected row; the second
+follows from the preceding frequency estimate. The norm is the
+square root of the energy. The coefficient of the long block is
+therefore bounded using \eqref{eq:block-last-period} by
+\[
+ 2 C_4^{fh/2}\prod_{n=1}^{h-1}\operatorname{vol}(i,n)^{1/2}
+ \le 2 C_4^{fh/2}k^{-f(h-1)}\le q^{h-1},
+\]
+once \(C_0\ge2\max(1,C_4,C_1)\). This uses all earlier sizes
+at this start. The last volume alone would give only the bound for
+the final frequency sum.
+
+Finally \(f\ge 2x^2\), \(r+1\le k\le x^5\) on the late intervals
+of Proposition~\ref{prop:actual-rank-budget}. For \(k\ge C_0^2\),
+\[
+ \log\big((e^6-1)(r+1)q\big)
+ \le \log(e^6-1)+\log k-\tfrac12 f\log k\le-7x^\epsilon .
+\]
+Apply Proposition~\ref{prop:accumulated-density-loss}. The resulting
+factor \(1+b^{-7}\) is uniform in the translate, the two words
+and the target character with its fixed conductor and weights.
+\end{proof}

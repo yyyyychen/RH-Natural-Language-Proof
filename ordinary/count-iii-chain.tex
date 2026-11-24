@@ -1,0 +1,345 @@
+\subsection{The four residual links for the rank-four case}
+\label{sec:count-three-chain}
+
+The tensor now supplies a point in ordinary support. To reach the target we construct residual intermediate representations over a common finite field, so successive comparisons refer to the same local characters.
+
+\begin{proposition}[The residual path over one finite field]\label{prop:count-three-residual-path}
+Use the tower of Proposition~\ref{prop:count-three-fitted-layers},
+the normalized tensor of Proposition~\ref{prop:count-three-tensor-endpoint}
+and the support conditions of Lemma~\ref{hyp:count-three-path-endpoints}.
+In the notation for the two bridge points \(P_3,P_4\), the common intermediate datum \(P_2\), target \(P_0\) and seed \(S_F\), the four residual lines carrying the ordered flags form the path 
+\[
+ P_0\longrightarrow P_3\longrightarrow P_4\longrightarrow P_2\longrightarrow S_F.
+\]
+ All lines and the good endpoints can be
+defined over a single finite residue field after the indicated
+coefficient extension.
+\end{proposition}
+
+\begin{proof}
+Use the ordered frame on the tame field \(F_0\) from
+Section~\ref{sec:count-three-tower}. Write \(d_i\) for
+the four diagonal residual characters, and put
+\(A=d_1/d_0\), \(B=d_2/d_0\), so \(d_3/d_0=AB\).
+The roots of these three ratios are
+\(-w_\alpha,-w_\Psi,-w_\vartheta\). Each of the
+ratios is nontrivial at the normalizer. A residual
+datum comprises its global matrices and one lower
+unipotent symplectic frame \(N_v\) at each marked
+place. The conjugated local matrices are upper
+triangular with prescribed diagonal throughout
+the chain.
+
+\begin{established}[The support of the normalized target and the tensor seed]\label{hyp:count-three-path-endpoints}
+On the fitted tower of Proposition~\ref{prop:count-three-fitted-layers}, write for off-diagonal entries:
+\[
+ \begin{split}
+ S_+&=\{w_\beta,-w_\alpha,-w_\Psi,-w_\vartheta\},\\
+ S_-&=\{-w_\beta,-w_\alpha,-w_\Psi,-w_\vartheta\},\\
+ S_0&=S_+\cap S_- .
+ \end{split}
+\]
+Write \(\mathcal A\) for the residual data with
+global support in
+\(\{-w_\beta,-w_\Psi,-w_\vartheta\}\) and
+\[
+ (N_v)_{10}\ne0
+\]
+at every marked place.
+Here support refers to entries that are allowed to
+be nonzero. The normalized rational target restricts
+to a datum \(P_0\) with global support in \(S_+\) and frame support in
+\(S_0\). Its two possible initial conditions are
+\begin{enumerate}
+\item the global roots \(-w_\Psi\) and \(w_\beta\) occur,
+\item the global support lies in
+\[
+ S_+\setminus\{-w_\Psi\},
+\]
+all the frame
+entries \((N_v)_{20}\) are nonzero and
+the global root \(-w_\alpha\) occurs.
+\end{enumerate}
+
+
+The input from the tensor construction is one more
+datum \(S\) on \(F_0\), with global support in \(S_-\).
+It can be ramified at one extra split rational prime
+\(w\) with \(w\equiv1\pmod\ell\). On every deeper
+layer where that tame inertia has been killed, the
+construction gives a characteristic-zero integral
+seed with residual datum \(S_F\). This is the
+restriction of \(S\) with its transported frames.
+The transported seed satisfies
+\[
+      S_F\in\mathcal A,\qquad
+        -w_\beta,\,-w_\vartheta\in\operatorname{supp}(S_F).
+\]
+\end{established}
+\begin{proof}
+Proposition~\ref{prop:rational-rank-four-torus} gives the two
+alternatives for the marked rational target in its normalized
+basis. Lemma~\ref{lem:count-two-target-restriction} gives the restriction
+calculation for these shapes: a nonzero normalized cocycle of
+character \(\theta\) remains nonzero on the normal subgroup
+containing a marked element \(\tau\) with \(\theta(\tau)\ne1\).
+Indeed its vanishing there would give
+\((1-\theta(\tau))f(g)=0\) for every \(g\) by conjugation.
+Proposition~\ref{prop:count-three-fitted-layers} retains the
+distinguishing elements here, and the same lemma treats the
+transported local frame in the second shape.
+For the other endpoint use Proposition~\ref{prop:count-three-tensor-endpoint}.
+In the tensor basis its two marked factor entries supply
+\(-w_\beta,-w_\vartheta\) and the prescribed nonzero local frame
+entry. Killing the added tame inertia gives precisely the deep-layer
+seed there, with the same marked reductions. These two calculations
+apply to the two endpoints before any interpolating family is chosen.
+\end{proof}
+
+\proofstep{Simultaneous cup lifts.}
+For support \(S_-\), row one of a product gives
+\[
+ (r(g)r(h))_{10}=r(g)_{10}d_0(h)+d_1(g)r(h)_{10}.
+\]
+Dividing by \(d_0(gh)\) yields the \(A\)-cocycle \(x\).
+For \(S_+\), row two uses just columns zero and two,
+and the same computation gives the \(B\)-cocycle \(y\). Normalization makes
+these cocycles zero at the normalizer.
+The first-column equations on the marked
+decomposition groups give the local coboundaries
+\[
+ x(s)=(1-A(s))(N_v)_{10},\qquad
+ y(s)=(1-B(s))(N_v)_{20}
+\]
+in the respective supports. In the first identity
+row one of \(r(s)N_v\) uses only the first two
+entries of its first column. In the second identity
+row two uses only entries zero and two.
+
+Apply the locally split cup lift of
+\cite{count-two-cohomology}, with \(x\)
+from \(S\) held fixed and a new \(B\)-cocycle \(y\)
+chosen nonzero. Its finite coefficient module has
+coordinates \((y,z')\), with action
+\[
+   (u,v)\longmapsto (B(g)u,(AB)(g)v+x(g)B(g)u).
+\]
+The result is a cochain \(z'\) with product
+cross term \(x(g)B(g)y(h)\).
+The cochain \(z=xy-z'\) has cross term
+\(y(g)A(g)x(h)\), by the product rule for \(xy\).
+Write \(\mathcal D=\operatorname{diag}(d_i)\) and
+\[
+ U(x,y,t)=
+ \begin{pmatrix}
+ 1&0&0&0\\ x&1&0&0\\ y&0&1&0\\ t&y&-x&1
+ \end{pmatrix}.
+\]
+At a marked place write \(x=(1-A)m_v\) and
+\(y=(1-B)n_v\). For this local primitive the change \(z=xy-z'\) gives
+\[
+  z'=(1-AB)o'_v-xBn_v
+     \quad\Longrightarrow\quad
+  z=(1-AB)(m_vn_v-o'_v)-yAm_v .
+\]
+Here \(x=(1-A)m_v\) and \(y=(1-B)n_v\) are used on the same
+decomposition group.
+
+Consequently the matrices \(U(x,y,2z-xy)\mathcal D\)
+with frames \(U(m_v,n_v,m_vn_v-2o'_v)\)
+give a datum \(P_2\) of support \(S_0\).
+In particular \(P_2\) has the
+same \((1,0)\) coordinate as \(S\) in both global
+matrices and local frames, and its root
+\(-w_\Psi\) occurs. The new ramification is only
+at finitely many extra split rational primes as
+in the cup lift.
+
+Next retain the \(B\)-cocycles of \(P_0\) and
+\(P_2\) simultaneously. Use the direct sum of
+the two cup coordinates with a common \(A\)-coordinate.
+The finite action is
+\[
+ (u,v_0,v_2)\longmapsto
+  (A(g)u,(AB)(g)v_0+y_0(g)A(g)u,
+           (AB)(g)v_2+y_2(g)A(g)u).
+\]
+A cocycle \((x,v_0,v_2)\) for this action has the usual
+\(A\)-cocycle law in its first coordinate and satisfies
+\[
+ v_i(gh)-v_i(g)-(AB)(g)v_i(h)=y_i(g)A(g)x(h),
+                                  \qquad i=0,2 .
+\]
+These are the two cup equations with one common \(x\).
+Prescribe the ramification direction \((1,0,0)\).
+The duality argument gives a solution with \(x\ne0\)
+and both lifts locally split at the old places. Hence it constructs two data \(P_3,P_4\)
+with global and frame support in \(S_0\), using the
+retained \((2,0)\) entries of \(P_0,P_2\),
+respectively. They have the same \((1,0)\) entry in
+each matrix and frame. Their common root
+\(-w_\alpha\) occurs. The same local constants
+are used for the common \(x\) at each marked place.
+
+For every new prime, including \(w\), let \(C_w\) be
+the degree-\(\ell\) cyclotomic subfield at that conductor
+and set \(F_1=F_0\prod_w C_w\). The diagonal on each added
+inertia group is trivial. For that inertia group \(I_w\), the cocycle factors as
+\[
+ I_w\longrightarrow I_w^{\rm tame,(\ell)}
+ \simeq\Z_\ell(1)\longrightarrow\mathbf F_\ell(1)
+ \longrightarrow \text{the residual coefficient module}.
+\]
+The degree-\(\ell\) cyclotomic field at \(w\) is totally ramified there, so its inertia subgroup lies in the kernel of the middle reduction.
+
+On inertia at
+\(w\) the tensor input will use that quotient as
+well. Thus restriction removes the extra ramification
+of all data at once. Over this tame \(F_1\), fix the
+cohomological bound \(C\) for the growing cyclotomic
+layers, and choose the layer \(F\) of the indicated
+depth. The good target remains the restriction of
+the same rational point. The identities of retained
+entries and the nonvanishing needed for the links
+persist on restriction with the transported flags.
+Here the identities of global entries are
+restrictions, and the nonzero root cocycles survive
+by the \(\ell\)-power calculation of
+\cite{count-two-cohomology}.
+
+For the local frames one uses the identities
+\[
+ (N_v')_{i0} =
+ \frac{(r(g)N_{v_0})_{i0}}{(r(g)N_{v_0})_{00}}
+ \qquad (i=1,2)
+\]
+whenever the indicated conjugating matrix has unit
+first pivot. This follows from the first column in
+the lower--upper factorization defining the
+transported frame. Each support is triangular in
+a suitable coordinate order, so the principal pivots
+are units and elimination keeps the same support. In both supports the denominator
+equals \(d_0(g)\). For \(i=2\) with support \(S_+\),
+row two uses only columns zero and two, and for
+\(i=1\) with support \(S_-\), row one uses only
+columns zero and one. This proves that the equalities
+of retained frame coordinates survive transport.
+The formula for \(i=1\) also transports the
+nonzero seed frame coordinate to \(P_2\).
+The rational lattice shape already supplies the
+marked frame on the restricted target, so the
+comparison uses its actual local flag.
+
+\proofstep{The links and their endpoints.}
+The path over \(F\) is
+\[
+                     P_0\longrightarrow P_3
+                  \longrightarrow P_4
+                  \longrightarrow P_2
+                  \longrightarrow S_F .
+\]
+For the first and third links the two endpoints
+have global and frame support in \(S_+\) and
+the same \((2,0)\) data. Order the blocks as
+\(\{0,2\},\{1,3\}\). The matrices are block lower
+triangular in this order. Their first diagonal
+block is fixed because it consists of the two
+diagonal entries and the common \((2,0)\)
+entry. In bases dual for the pairing, write \(A,D\) for the two diagonal blocks. The similitude equation in the paired blocks is
+\[
+ A^{\mathsf T}D=\mu I,\qquad D=\mu A^{-\mathsf T}.
+\]
+Thus fixing \(A\) and the similitude fixes \(D\). For the second
+and fourth links the global support is \(S_-\)
+and the frames are lower triangular.
+Use blocks \(\{0,1\},\{2,3\}\), whose diagonal
+blocks are fixed by the common \((1,0)\) data and
+the similitude.
+
+Thus at each link, for both the
+representation and the frames, the difference
+lies in the lower-left block ideal of a block
+triangular algebra. This ideal is square-zero
+and is preserved by the symplectic adjoint in
+each order because the two blocks are paired.
+In that algebra let \(A_s=(1-s)A_0+sA_1\) and
+\(B_s=(1-s)B_0+sB_1\) be matrices built from two endpoint
+pairs. Their differences have zero product, giving
+\[
+ A_s B_s
+      =(1-s)A_0B_0+sA_1B_1,
+ \qquad
+ (A_s)^\dagger=(1-s)A_0^\dagger+sA_1^\dagger .
+\]
+For each link write its global matrices \(r_s\) and local
+frames \(N_{v,s}\) by affine interpolation. The two product
+identities yield
+\[
+ r_s(g)r_s(h)=r_s(gh),\qquad
+ r_s(g)^\dagger r_s(g)=\nu(g)I,\qquad
+ r_s(h)N_{v,s}=N_{v,s}B_{v,s}.
+\]
+In the last identity \(h\) is local and \(B_{v,s}\) is the
+interpolation of the conjugated upper triangular matrices.
+It retains the same ordered diagonal. In particular the normalization, prescribed
+unramified quotients and residual diagonal hold
+on all four polynomial lines.
+
+The first bridge point \(P_3\) has the same
+\((2,0)\) data as \(P_0\) and a nonzero
+\(-w_\alpha\) root. Thus it has the first type
+of ordinary good residual datum if the target
+has global \(-w_\Psi\), and the frame type if
+the target has only the local \((2,0)\) data.
+For \(P_4\) the two nonzero roots are explicit:
+\[
+ \{-w_\alpha,-w_\Psi\}\subseteq\operatorname{supp}_{\rm glob}(P_4).
+\]
+This verifies the first ordinary test using the global matrices alone.
+
+Write \(r_2\) and \(N_{2,v}\) for the global matrices and marked frames of \(P_2\).
+The \((1,0)\) entry agrees with the seed. In support \(S_0\) the symplectic adjoint pairs it with \((3,2)\), while the local frames retain their nonzero seed entry. Thus
+\[
+ (r_2(g))_{10}=(r_2(g))_{32}=0\quad\text{for every }g,
+ \qquad (N_{2,v})_{10}\ne0\quad\text{at every marked }v.
+\]
+It follows that \(P_2\in\mathcal A\); its root \(-w_\Psi\) occurs. The endpoint
+\(S_F\) is in \(\mathcal A\) with both
+\(-w_\beta,-w_\vartheta\) occurring. The last
+two good-point conditions are the extra cases
+required for the rank-four case.
+\label{cor:ordinary-count-iii-chain-1}
+
+\begin{construction}
+\(\displaystyle
+P_0 \xrightarrow[\ (2,0)\ ]{S_+} P_3
+    \xrightarrow[\ (1,0)\ ]{S_-} P_4
+    \xrightarrow[\ (2,0)\ ]{S_+} P_2
+    \xrightarrow[\ (1,0)\ ]{S_-} S_F
+\)
+\caption{The four affine residual lines. Above each arrow is the allowed global support on that line, below is the entry shared by the two endpoints in both the global and frame data. Fixing the paired diagonal blocks makes the interpolation multiplicative.}\label{fig:four-residual-line-supports}
+\end{construction}
+
+\proofstep{Descent of the residual path.}
+
+The links have been verified after making coefficient choices for their cocycles. They enter the component argument only once all four descend to the same finite residue field.
+
+The matrices in a polynomial line are locally
+constant over the discrete ring \(\overline{\mathbf F}_\ell[X]\).
+Each continuous polynomial-valued matrix has finite image by
+compactness and discreteness. Let \(S\) be the union of all coefficients of those images and frames across the four lines. Both the set of matrices and their polynomial degrees are finite, so
+\[
+ k'=\mathbf F_\ell(S),\qquad [k':\mathbf F_\ell]<\infty .
+\]
+All four matrix families have entries in \(k'[X]\).
+The algebraic equations, inertia equations and
+nonvanishing conditions can be read there
+because scalar extension is injective. The four
+lines and their good endpoints consequently
+descend to a single finite residue field. This
+extension can be made together with the
+coefficient extensions for the actual
+characteristic-zero seed, the small target model
+and the two ordinary levels.
+\label{cor:ordinary-count-iii-chain-2}
+\end{proof}

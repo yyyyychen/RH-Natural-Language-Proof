@@ -1,0 +1,711 @@
+\paragraph{Correcting the lattice at a Frobenius cut.}\label{par:wach-cut-correction}
+In the ordinary cyclotomic variable \(\pi\), let \(\Delta\)
+be the tame group of order \(\ell-1\) and take
+\(X=-\prod_{\delta\in\Delta}\delta(\pi)\).
+\begin{lemma}[The tame-invariant parameter]
+The tame-invariant coefficient ring is \(O[[X]]\). Put \(q=X+\ell\)
+and \(p_s=\phi^s(q)\). Up to a unit, \(p_s\) is a distinguished
+polynomial of degree \(\ell^s\) with constant term associated to
+\(\ell\), and for each \(j\ge1\),
+\[
+ (\phi^j X)=(X)\prod_{0\le s<j}(p_s)^{\ell-1}.
+\]
+\end{lemma}
+\begin{proof}
+The defining product is a unit times \(\pi^{\ell-1}\). On the invariant ring
+write \(\mathcal R=O[[X]]\). Indeed the action on degree \(k\) in the \(\pi\)-adic
+filtration is by the \(k\)-th power of the tame character.
+An invariant series can only have its first nonzero term in
+degree a multiple of \(\ell-1\). Successively subtracting
+a constant multiple of the corresponding power of \(X\)
+expresses it as a series in \(X\).
+At a primitive \(\ell\)-th root of unity minus one,
+\(X\) evaluates to \(-\ell\), by the product formula for
+all primitive \(\ell\)-th roots. Thus \(q=X+\ell\) is
+associated to the usual cyclotomic factor in \(O[[\pi]]\)
+by Weierstrass preparation.
+
+As a result
+\[
+ \phi(X)=uXq^{\ell-1},\qquad
+ \gamma(X)=\omega_X X\pmod{X^2},\qquad
+ v_\ell(\omega_X-1)=1 ,
+\]
+where \(u\) is a tame-invariant unit and
+\(\omega_X=\chi(\gamma)^{\ell-1}\).
+Here \(\phi\) acts on coefficients in
+\(\mathcal R\) and \(\Phi\) is the corresponding semilinear operator
+between letters. Put \(p_s=\phi^s(q)\). Iteration gives
+\(\phi^j(X)\) associated to \(X\prod_{s<j}p_s^{\ell-1}\), and
+\(p_s\) lies in \((\ell,X^{\ell^s})\). The latter follows by
+reducing the Frobenius formula modulo \(\ell\). By Weierstrass
+preparation, \(p_s\) is a unit times a monic polynomial of degree
+\(\ell^s\) whose other coefficients are divisible by \(\ell\)
+and whose constant coefficient is associated to \(\ell\).
+Different \(s\) have different cyclotomic zero sets and their
+distinguished polynomials are relatively prime over
+\(\operatorname{Frac}(O)\).
+
+\end{proof}
+For the free Wach lattices \(N_i\), use the height bounds
+\(q^h\Phi N_i\subset N_{i+1}\) everywhere and
+\(q^g\Phi N_i\subset N_{i+1}\) in the first \(j\) steps after a
+cut. The cyclotomic action is trivial on \(N_i/XN_i\). Write
+\(P_c=\mathcal R\Phi^j N_c,\ D=X^M\prod_{s<j}p_s^{3g}\).
+
+\begin{lemma}[Correction at a cut]
+Use the chosen positive integers \(M,j\) and nonnegative integer
+\(\sigma\) with \((\ell-1)M>h,\ (\ell-1)M\ge3g\) and
+\((\ell-1)^2\sigma/\ell-3g\ge M/\ell^{j-1}\). In the odd-prime
+range of the cut, each \(z\in XN_c\) has a correction \(\tau\in P_c\)
+satisfying
+\[
+ \ell^\sigma\Phi^j z-(\gamma-1)\tau\in DP_c\subset X^M N_{c+j}.
+\]
+Its class modulo \(DP_c\) is uniquely determined by the two
+congruences for \(v,\tau\) below, is additive in \(z\), and is
+compatible with maps of the Wach lattices.
+\end{lemma}
+\begin{proof}
+The height bounds and the parameter formula give
+\[
+ \Phi(X^M N_i)\subset q^{(\ell-1)M-h}X^MN_{i+1},\qquad
+ \Phi^j(X^MN_c)\subset DP_c\subset X^MN_{c+j}.
+\]
+The first inclusion yields contraction of \(\Phi\) on the cyclic
+product of these deep lattices. For the second use
+\[
+ (\prod_{s<j}p_s^g)P_c\subset N_{c+j},
+\]
+by iteration.
+Frobenius sends a basis to an independent family after inverting
+the cyclotomic factors by the two-sided height comparison. It thus
+gives a basis of \(P_c\). The image of \(D\) modulo a uniformizer
+is a nonzero power series. Componentwise reduction in this basis
+then shows that \(P_c/DP_c\) has no \(\ell\)-torsion.
+Both lattices are \(\gamma\)-stable by commutation with \(\Phi\)
+and stability of the ideals \((X),(p_s)\).
+Given \(z\in XN_c\), first solve the equation for
+\(\gamma-1\) modulo \(X^M\).
+
+On degree \(r\) it acts by
+\(\omega_X^r-1\). With
+\(A_r=\sum_{k=1}^r(1+v_\ell(k))\) and \(K=A_{M-1}\), there are
+\(d_r\in N_c\) such that
+\[
+ v=\sum_{1\le r<M}\ell^{K-A_r}X^r d_r,\qquad
+ (\gamma-1)v-\ell^K z\in X^M N_c.
+\]
+To construct \(v\), at degree \(r\) multiply the previous
+approximation by \(\ell^{1+v_\ell(r)}\) and subtract an
+\(X^r\)-term given by the inverse of the unit part of
+\(\omega_X^r-1\) times the degree-\(r\) residual coefficient.
+This eliminates the residual at that degree. Legendre's formula
+gives \(A_r\le\ell r/(\ell-1)\).
+
+For \(1\le r<M\) one can divide
+\(\ell^\sigma(\phi^j X)^r\) by \(\ell^{A_r}\) modulo \(D\).
+For \(A_r\le\sigma\) this is literal division. Otherwise let
+\(d_j=\ell^{j-1}\) and
+\(m=(\ell-1)r-3g-(A_r-\sigma)\). From the bound on \(A_r\)
+and the definition of \(\sigma\),
+\[
+ m\ge\left(\frac{(\ell-1)^2}{\ell}-1\right)A_r-3g+\sigma
+   \ge\frac{(\ell-1)^2}{\ell}\sigma-3g\ge M/d_j.
+\]
+
+The binomial expansion of \(p_{j-1}^{A_r-\sigma+m}\), using
+\(p_{j-1}\in(\ell,X^{d_j})\), lies in
+\((\ell^{A_r-\sigma},X^{d_j m})\).
+After multiplying by the other factors in \((\phi^j X)^r\),
+the second summand is divisible by \(D\). Choose \(b_r\in
+\mathcal R\) with
+\(\ell^{A_r} b_r\equiv\ell^\sigma(\phi^jX)^r\pmod{D}\).
+Then
+\[
+ \tau=\sum_{1\le r<M} b_r\Phi^j d_r\in P_c,\qquad
+ \ell^K\tau-\ell^\sigma\Phi^j v\in DP_c .
+\]
+Commuting \(\gamma\) past \(\Phi^j\) and using the equation for
+\(v\) shows that
+\[
+ \ell^K(\ell^\sigma\Phi^j z-(\gamma-1)\tau)\in DP_c.
+\]
+
+Saturation removes \(\ell^K\), and
+\[
+ DP_c\subset X^M N_{c+j}
+\]
+gives the required correction. If two corrections solve the
+two displayed congruences for the same \(z\), take their
+difference and bring their powers of \(\ell\) to a common power.
+The associated difference of the \(v\)'s is in \(XN_c\) and
+has \(\gamma-1\) image in \(X^MN_c\).
+
+If \(v'\) denotes that difference, reduction in each successive degree gives
+\[
+ (\omega_X^r-1)[v']_r=0\ \Longrightarrow\ [v']_r=0
+ \qquad(1\le r<M).
+\]
+The scalar is nonzero on a free graded piece, so induction gives \(v'\in X^MN_c\). Saturation gives a difference of corrections in
+\(DP_c\). This also proves compatibility with maps and addition
+of the congruences, by applying the equations before comparing
+corrections. For a change of the cut vector by \(u\in XN_c\) the
+correction to \((\gamma-1)u\) can be taken to be
+\(\ell^\sigma\Phi^j u\), since one may use \(v=u\), \(K=0\)
+in those congruences. This is the comparison modulo \(XN_c\)
+needed in the Herr assembly.
+
+\end{proof}
+\input{wach-levels}
+
+\paragraph{A level comparison for the mixed-sign arc.}
+\label{par:wach-mixed-constant}
+Use the arc length \(a\le A\), the powers \(H_s^{\mathrm{arc}}\),
+and the level data of Paragraph~\ref{par:wach-level-models}.
+Distinguish the transported ranks \(r_i\), the coordinate map
+\(L:O^{r_1}\to O^{r_2}\) on the starting bases modulo \(X\),
+and its coefficientwise extension \(L_{\mathcal R}\).
+The polynomial comparison uses, at each \(s\), evaluation
+maps from \(W_i\) and from \(\mathcal R^{r_i}\) to a common level
+space. Denote their values by \(w_s\) and \(y_s\), respectively.
+The latter refers to a vector \(y\) of coordinate series, not to
+its coefficients at \(X=0\). The following are the lattice
+properties used in this comparison.
+
+\begin{itemize}
+\item There are two local lattices \(B_{i,s},J_{i,s}\) with
+\(p_s^g B_{i,s}\subset J_{i,s}\) and
+\[
+ p_s^g J_{i,s}\subset B_{i,s}.
+\]
+A submodule \(F_{i,s}\) lies
+in both. Every vector on either side of the evaluation has a partner
+on the other side, whose evaluation agrees with \(\ell^\sigma\)
+times the original modulo \(F_{i,s}\), simultaneously at all
+levels. The two evaluation maps commute with the corresponding
+maps induced by \(f\) and \(L_{\mathcal R}\). The level map
+preserves the \(F_{i,s}\).
+\item The preimage of \(N_{i,c}\) under multiplication by
+\(\Theta\) lies in \(W_i\). On \(W_i\) this preimage is tested
+by
+\[
+ p_s^g w_s\in J_{i,s}
+\]
+for all \(s\).
+The map \(f\) lifts on this preimage with cost \(\ell^R\).
+If \(y_s\in F_{2,s}\), then \(p_s^{H_s^{\mathrm{arc}}}\) divides
+\(\varpi^k y\) for some \(k\), where \(\varpi\) is a
+uniformizer of \(O\).
+\item There are saturated constant submodules \(U_{i,s}\) of
+\(O^{r_i}\) and subgroups \(D_{i,s}\) of crystalline constants
+in the level spaces. Membership \(y_s\in B_{i,s}\) is equivalent,
+over all levels, to the conditions
+\[
+ y\in
+ \begin{cases}
+ p_s^{H_s^{\mathrm{arc}}}\mathcal R^{r_i} &\text{smaller jumps},\\
+ p_s^{H_s^{\mathrm{arc}}-b_s}\mathcal R U_{i,s}+p_s^{H_s^{\mathrm{arc}}}\mathcal R^{r_i}
+                          &\text{up},\\
+ p_s^{H_s^{\mathrm{arc}}}\mathcal R U_{i,s}+p_s^{H_s^{\mathrm{arc}}+b_s}\mathcal R^{r_i}
+                          &\text{down},
+ \end{cases}
+ \tag{\(*\)}\label{eq:wach-level-condition}
+\]
+after allowing multiplication of \(y\) by a power of \(\varpi\)
+at each level. Membership \(y_s\in D_{i,s}+B_{i,s}\) is tested
+by the same conditions on \(\varpi^k y-\Lambda d\) at each level,
+for some \(k\ge0\), \(d\in O^{r_i}\). Write \(\mathcal N_i\)
+and \(\mathcal I_i\) for these two modules of coordinate series.
+\end{itemize}
+
+\begin{lemma}[The up subspace after a down letter]\label{lem:up-after-down}
+Suppose the two positions with larger jumps are a down letter
+at \(s_0\) and an up letter at \(s_1>s_0\).
+Assume \(L(U_{1,s_1})\subset U_{2,s_1}\),
+\(2b_{s_0}\le\ell b_{s_1}\) and \(2a_0<b_{s_1}\), where
+\(a_0=2\sigma+R+2gA\) is the initial exponent of
+Section~\ref{sec:inert-long-orbit} and \(a\le A\) is the arc length. Then
+\[
+ \ell^{2a_0}U_{2,s_1}\subset L(U_{1,s_1}).
+\]
+\end{lemma}
+
+\begin{proof}
+Put \(Q=p_{s_1}^{b_{s_1}}\), \(P=p_{s_0}^{b_{s_0}}\) and
+\(\Lambda_1=\Lambda/Q\). If \(v\in U_{2,s_1}\), the series
+\(y_2=P\Lambda_1 v\) belongs to \(\mathcal N_2\), directly
+by \eqref{eq:wach-level-condition} at each of the two positions with larger jumps and at every position with smaller jumps.
+
+Choose its partner \(w_2\in W_2\). The error at each level lies
+in \(F_{2,s}\) and \((y_2)_s\in B_{2,s}\), so
+\[
+ p_s^g(w_2)_s\in J_{2,s}.
+\]
+The preimage test gives a lift
+\(w_1\) on the \(\Theta\)-divisible lattice, with
+\(f(w_1)=\ell^R w_2\). Choose the coordinate partner \(y_1\)
+of \(w_1\). Each \(p_s^{2g}(y_1)_s\) belongs to \(B_{1,s}\),
+so \(\Theta^2 y_1\in\mathcal N_1\).
+The partner errors and compatibility with \(f\) give
+\[
+ (L_{\mathcal R}y_1-\ell^{2\sigma+R}y_2)_s\in F_{2,s}.
+\]
+
+Every \(p_s^{H_s^{\mathrm{arc}}}\) therefore divides the difference after
+multiplication by a power of \(\varpi\). These divisibilities
+hold integrally: each quotient by a distinguished polynomial
+power is free over \(O\) by Weierstrass division. Their product
+\(\Lambda\) divides by relative primality after inverting
+\(\varpi\), followed by the same saturation for the product.
+This uses no integral Chinese remainder decomposition.
+
+\proofstep{Testing cyclic quotients of the image.}
+Take an integral linear form \(\lambda\) on \(O^{r_2}\)
+such that \(\lambda(v)=1\) and
+\(\lambda L(U_{1,s_1})\subset tO\).
+For any \(y\in\mathcal N_1\),
+\[
+                 \lambda L_{\mathcal R}(y)
+                   \in \Lambda_1(t,Q).
+\]
+Indeed split \(O^{r_1}\) along the saturated \(U_{1,s_1}\).
+On its complement the up condition implies divisibility by
+\(p_{s_1}^{H_{s_1}}\), and on the summand \(U_{1,s_1}\) it
+implies divisibility by \(p_{s_1}^{H_{s_1}-b_{s_1}}\).
+All coordinates are divisible by \(p_s^{H_s^{\mathrm{arc}}}\) at the other
+levels. Multiplying the powers of the distinct cyclotomic factors, the complementary
+summand gives a multiple of \(\Lambda\) and the up summand gives
+a multiple of \(t\Lambda_1\). Applying this to
+\(\Theta^2 y_1\) and using the congruence for
+\(L_{\mathcal R}y_1\) yields, after cancelling \(\Lambda_1\),
+\begin{equation}\label{eq:wach-gauss-ideal}
+                 \ell^{2\sigma+R}\Theta^2P\in(t,Q).
+\end{equation}
+
+\proofstep{The Gauss valuation and Smith factors.}
+Normalize \(v_\varpi(\varpi)=1\), and put \(e_O=v_\varpi(\ell)\).
+For \(x>0\) the Gauss valuation of \(\sum a_m X^m\) is
+\(\min_m(v_\varpi(a_m)+mx)\). If \(i,j\) are the least minimizing indices for \(f,g\), then in
+the coefficient of \(X^{i+j}\) only \(f_i g_j\) attains the minimum.
+Indeed a different pair with the same index sum uses an index below
+\(i\) or below \(j\). Therefore
+\[
+ v_\varpi([X^{i+j}]fg)+(i+j)x=v_x(f)+v_x(g)=v_x(fg).
+\] Preparation gives
+\(v_x(p_s)=\min(e_O,\ell^s x)\).
+
+If \(t\ne0\), set
+\(k=v_\varpi(t)\); for \(t=0\) take \(k=+\infty\).
+The assertion for \(k=0\) is immediate. Otherwise set
+\(b_1=b_{s_1}\), \(b_0=b_{s_0}\),
+\(m=\min(k,e_O b_1)\), and \(x=m/(b_1\ell^{s_1})\). Then
+\(v_x(Q)=m\), and \(v_x(P)\le b_0 m/(\ell b_1)\).
+The ideal relation and \(v_x(p_s)\le e_O\) give
+\[
+ m\le e_O(2\sigma+R+2ga)+\frac{b_0}{\ell b_1}m
+   \le e_O a_0+m/2 .
+\]
+Thus \(m\le2e_Oa_0<e_Ob_1\), which excludes \(t=0\) and
+proves \(t\mid\ell^{2a_0}\).
+
+Since \(U_{2,s_1}\) is a direct
+summand, Smith coordinate forms extend to the ambient
+\(O^{r_2}\). Apply the divisibility assertion to its Smith
+basis vectors for the inclusion of \(L(U_{1,s_1})\).
+A missing image direction would give \(t=0\); the invariant
+factors in the image directions all divide \(\ell^{2a_0}\).
+Consequently
+\[
+                   \ell^{2a_0}U_{2,s_1}\subset L(U_{1,s_1}).
+\]
+The use of \(s_0<s_1\) gives the factor \(1/\ell\) in the
+valuation comparison. The argument measures divisibility by a
+scalar in a ramified coefficient ring and so is uniform under
+the coefficient extension.
+\end{proof}
+
+\paragraph{From constant coordinates to the arc lattice.}
+\begin{lemma}[Lifting constant coordinates across an arc]\label{lem:wach-constant-lift}
+With the integral lattices and scalar \(a_0\) of this comparison,
+each \(y\in\mathcal I_2\) has a lift modulo \(\mathcal N_2\):
+\begin{equation}\label{eq:wach-const-coord-lift}
+ \ell^{2a_0}y=L_{\mathcal R}y_1+\ell^{2a_0}\nu,\qquad
+ y\in\mathcal I_2,\quad y_1\in\mathcal I_1,\quad
+ \nu\in\mathcal N_2 .
+\end{equation}
+\end{lemma}
+\begin{proof}
+Here is the constant comparison for all the words. For either
+representation, omit its index and let \(V=O^r\). If there is
+no down letter, the level conditions are unchanged by adding a
+local constant times \(\Lambda\), so \(\mathcal I=\mathcal N\).
+This includes a word with two up letters. Otherwise there is at
+most one up letter. Write \(Q=p_s^{b_s}\) at the up letter and
+\(Q=1\) if there is none. Divisibility at every level gives
+\(y=(\Lambda/Q)Y\), with \(Y\in\mathcal R^r\).
+At an up letter the condition for \(Y\) is
+\[
+             Y\in\mathcal R U_s+Q\mathcal R^r .
+\]
+
+At a down letter with \(P=p_s^{b_s}\) it is the condition that
+the image of \(Y\) in \((\mathcal R/(P))\otimes_O(V/U_s)\)
+lie in the rational constant line factor \(\overline Q\) times
+\((V/U_s)\otimes_O\operatorname{Frac}(O)\). To see this,
+divide by the full local power \(p_s^{H_s^{\mathrm{arc}}}\), then cancel the
+other level factors modulo \(P\) after inverting \(\varpi\).
+The difference between \(\mathcal I\) and \(\mathcal N\) is
+that \(\mathcal N\) requires the image at each down letter to
+be zero. The quotients in this test are free over \(O\) by
+Weierstrass division and saturation of \(U_s\).
+
+With a single down letter and no up letter, primitivity means the coefficient map splits the constant inclusion:
+\[
+ O\xrightarrow{\ a\mapsto a\ }\mathcal R/(P)\xrightarrow{\lambda}O,\qquad \lambda(1)=1.
+\]
+In fact, if the projected class is \(1\otimes v\), choose an integral
+linear form \(\lambda\) on \(\mathcal R/(P)\) with \(\lambda(1)=1\).
+Then
+\[
+ (\lambda\otimes1)(1\otimes v)=v\in V/U_s .
+\]
+This recovers the constant integrally in the saturated quotient. If the up letter
+has smaller offset than the down one, its power \(Q\) reduces
+modulo \(\varpi\) to a unit times a monomial of smaller degree
+than the distinguished polynomial for \(P\), by the inequality
+\(b_{\rm up}<\ell b_{\rm down}\). The class of \(Q\) modulo
+\(P\) is again primitive, which proves integrality of the
+constant by the same linear-form test. In both cases lift the
+constant to \(d\in V\). Then
+\[
+ y-\Lambda d\in\mathcal N.
+\]
+
+
+\proofstep{Two down letters.}
+For two down letters let \(P,Q\) be their powers in increasing
+offset order, and \(U_0,U_1\) the corresponding submodules.
+There are integral constants \(d_0,d_1\in V\) by the separate
+primitive test for \(1\) in each quotient. Their difference
+belongs to the ideal \((P,Q)\) in
+\(\mathcal R\otimes_O V/(U_0+U_1)\). Let \(\rho\) be least with
+\[
+ \varpi^\rho\in(P,Q),
+\]
+which exists by coprimality after
+inverting \(\varpi\). The constant components in a cyclic
+decomposition of \(V/(U_0+U_1)\) belong to
+\(\varpi^\rho V/(U_0+U_1)\). On a free summand this follows
+from the definition of \(\rho\).
+
+On a summand of order
+\(\varpi^k\), if an integral representative \(a\) in
+\((P,Q,\varpi^k)\) had valuation below \(\min(k,\rho)\), then
+\(a-\varpi^k f\in(P,Q)\) for some \(f\in\mathcal R\).
+The factor \(1-(\varpi^k/a)f\) is a unit, a contradiction
+to the choice of \(\rho\).
+Write
+\[
+ d_0-d_1=u_0+u_1+\varpi^\rho d'
+\]
+with
+\(u_i\in U_i\). Choose \(f_\rho\in(Q)\) with
+\(f_\rho-\varpi^\rho\in(P)\). Put \(Y'=Y-d_1-u_1-f_\rho d'\).
+The two reductions are
+\[
+ \begin{aligned}
+  Y'&\equiv d_0-d_1-u_1-\varpi^\rho d'=u_0
+        &&\pmod {P\mathcal R^r+\mathcal R U_0},\\
+  Y'&\equiv d_1-d_1-u_1=-u_1
+        &&\pmod {Q\mathcal R^r+\mathcal R U_1}.
+ \end{aligned}
+\]
+Both images vanish. Multiplying back by \(\Lambda\) gives the
+two factors \(\Lambda\) and \(\Lambda f_\rho\).
+
+\proofstep{A down letter before an up letter.}
+For a down letter at the smaller offset and an up letter at
+the larger one, write \(U=U_{s_1}\) and \(V_0=U_{s_0}\),
+with \(P,Q,\Lambda_1\) as in the mixed-sign estimate. Write
+\(Q=\varpi^k\alpha+P\beta\), with \(k\) largest possible.
+There is such a finite \(k\) because the image of \(Q\) in
+the finite free \(\mathcal R/(P)\) is nonzero. The class
+of \(\alpha\) is primitive. The down condition for \(Y\)
+therefore gives
+\[
+ \overline Y=\overline\alpha d_0
+\]
+in
+\((\mathcal R/(P))\otimes_O(V/V_0)\) for some \(d_0\in V/V_0\).
+The up condition, projected further to \(V/(U+V_0)\),
+shows that \(\overline\alpha d_0\) belongs to
+\(\varpi^k\overline\alpha((\mathcal R/(P))\otimes_O V/(U+V_0))\).
+
+A linear form taking value one on \(\overline\alpha\)
+gives \(d_0=v+\varpi^k d\) modulo \(V_0\), with
+\(v\in U,d\in V\). This test works on the tensor product
+with \(V/(U+V_0)\) even if that module has torsion. Now
+\[
+ \overline{Y-\alpha v-Qd}
+    = \overline\alpha(d_0-v-\varpi^k d)=0
+     \quad\text{in }(\mathcal R/(P))\otimes_O(V/V_0).
+\]
+The same difference still lies in the required up lattice:
+\(\alpha v\in\mathcal R U\) and \(Qd\in Q\mathcal R^r\).
+Upon multiplying back by the coordinate factors, the resulting
+normal form uses \(\Lambda\) times an ordinary constant and
+\(\alpha\Lambda_1\) times a vector of \(U\).
+In each of the cases the displayed representatives themselves
+satisfy the \(\mathcal I\) conditions, by reducing at the same
+levels.
+
+On those normal forms, the ordinary constants lift using the
+cost \(\ell^R\) on the starting constant map and \(R\le2a_0\).
+In the mixed case the additional constant in \(U_{2,s_1}\)
+lifts by the Gauss valuation and Smith argument. This gives
+\eqref{eq:wach-const-coord-lift}.
+\end{proof}
+
+\begin{lemma}[Integral lift between the two polynomial actions]
+Let \(x'\) be a target arc vector evaluating in \(D_{2,s}+B_{2,s}\)
+at each level of the cut. There is one source vector \(z\) for the arc map \(f\) such that
+\[
+ f(z)=\ell^{2\sigma+2a_0+R}x',\qquad z_s\in D_{1,s}+p_s^{-g}J_{1,s}\quad\text{at every level }s,
+\]
+where \(z_s\) is its evaluation.
+\end{lemma}
+\begin{proof}
+Choose the coordinate partner \(y\) of \(x'\). Its error belongs
+to \(F_{2,s}\subset B_{2,s}\), so \(y\in\mathcal I_2\).
+Apply \eqref{eq:wach-const-coord-lift} to \(y\) and choose the
+source arc partner \(x_1\) of \(y_1\). Put
+\(\Delta=\ell^{2\sigma+2a_0}x'-f(x_1)\).
+In its evaluation the target partner error has coefficient
+\(-\ell^{\sigma+2a_0}\), the mapped source partner error has
+coefficient \(-1\), and the remaining term is
+\(\ell^{\sigma+2a_0}\nu_s\). All belong to \(B_{2,s}\);
+the preimage test therefore puts \(\Delta\) in the
+\(\Theta\)-divisible lattice. Lift \(\ell^R\Delta\) there to
+\(\Delta_1\). Then
+\[
+ f(\ell^Rx_1+\Delta_1)
+ =\ell^R(f(x_1)+\Delta)=\ell^{2\sigma+2a_0+R}x'.
+\]
+The source partner congruence and
+\(B_{1,s}\subset p_s^{-g}J_{1,s}\) give the stated evaluation
+at every level, with the same exponent.
+\end{proof}
+\begin{lemma}[The lift on invariant classes]
+The invariant first-coordinate test used in the cut comparison is
+\[
+ (\gamma-1)z\in XN.
+\]
+The source and target polynomials in \(\gamma\) and the intervening lattice lift preserve this test in the sense of that comparison.
+\end{lemma}
+\begin{proof}
+To apply this lift, use the level properties of
+Paragraphs~\ref{par:wach-level-models} and~\ref{par:wach-polynomial-actions}. The level actions commute with the
+evaluation of arc vectors. If the difference under \(\gamma-1\)
+is in \(J_{i,s}\) at a level, the vector there lies in
+\(D_{i,s}+J_{i,s}\). Writing \(P_2,P_1\) for the target and source polynomials, the actions at a level are
+\[
+ \begin{aligned}P_2(\gamma)(D_{2,s}+p_s^{-g}B_{2,s})&\subseteq D_{2,s}+B_{2,s},\\ P_1(\gamma)(D_{1,s}+p_s^{-g}J_{1,s})&\subseteq D_{1,s}+J_{1,s}.\end{aligned}
+\]
+The action fixes \(D_{i,s}\) and preserves
+\(J_{i,s}\). Finally \(XN_{i,c}\) consists of the vectors in
+\(XW_i\) whose evaluations belong to all the \(J_{i,s}\).
+These are statements on the two level models at the same cut.
+
+The action on \(W_i/XW_i\) is trivial. To see this, use the
+trivial action on the starting Wach lattice modulo \(X\) and
+the commutation with \(\Phi\), together with
+\(\phi^a(X)\in(X)\). Division by \(\Lambda\) preserves the trivial action at the origin, since
+\[
+ \gamma(\Lambda)/\Lambda\equiv1\pmod X.
+\]
+For an arc vector \(w\) with
+\((\gamma-1)w\in XN_{2,c}\), the first level property gives
+evaluations in \(D_{2,s}+J_{2,s}\).
+
+Since
+\(J_{2,s}\subset p_s^{-g}B_{2,s}\), the target polynomial
+produces the input \(x'\) of the intervening lattice lift.
+The output, after applying the source polynomial, has
+evaluations in \(D_{1,s}+J_{1,s}\). Its \(\gamma-1\) image
+therefore has evaluations in all \(J_{1,s}\) and belongs to
+\(XW_1\). The last level property puts the image in
+\(XN_{1,c}\). An operator polynomial on a vector fixed
+modulo \(XN_{2,c}\) agrees with its value at one modulo that
+submodule. Writing \(P_2,P_1\) for the target and source
+polynomials and \(c_{\rm lift}=2\sigma+2a_0+R\) for the intervening exponent,
+choose \(y\) with
+\[
+ f(y)=\ell^{c_{\rm lift}} P_2(\gamma)w.
+\]
+Then
+\[
+ f(P_1(\gamma)y)
+ =\ell^{c_{\rm lift}} P_1(\gamma)P_2(\gamma)w
+ \equiv\ell^{c_{\rm lift}} P_1(1)P_2(1)w\pmod{XN_{2,c}} .
+\]
+
+\end{proof}
+\paragraph{The colength at the cuts of the long orbit.}\label{par:wach-cut-colength}
+
+\begin{lemma}[The scalar annihilator at a cut]\label{lem:wach-cut-annihilator}
+Let \(f\) be the integral crystalline surjection on the local
+arc of Paragraph~\ref{par:wach-level-models}. For \(R\) defined
+in Paragraph~\ref{par:inert-cut-exponents}, write \(f_N\) for the Wach map at the cut and \(f_N^{\rm tame}\) for its map on tame invariants. Then
+\[
+ \ell^R\operatorname{coker} f_N=0,\qquad \ell^R\operatorname{coker} f_N^{\rm tame}=0.
+\]
+In the extension it gives a lift of \(\ell^R e_0\), and gives
+the corresponding constant-map bound after reduction modulo \(X\).
+\end{lemma}
+
+\begin{proof}
+For an integral crystalline surjection, let \(s_i\) be the
+least exponent of the ordinary cyclotomic parameter \(\pi\)
+that kills the Wach cokernel at letter \(i\), before tame
+invariants. The global height box in this case is symmetric
+and has width
+\[
+ H_{\max}=\max_i H_i=2h.
+\]
+A common Tate
+twist moves both representations into the positive range
+of Berger's convention. This multiplies both Wach lattices
+by the same power of \(\pi\) in the twisted coordinates and
+preserves the cokernel. Berger's integral comparison
+\cite[Theorem III.3.1]{berger-wach} places the base change of
+each positive Wach lattice between the corresponding base
+change of \(T_i\) and its sublattice multiplied by
+\(\pi^{H_{\max}}\). Apply the comparison over
+\[
+ \widetilde{\mathbf A}^{+}=W(\widetilde{\mathbf E}^{+}),
+\]
+which contains the integral period ring of that comparison.
+
+Since the integral Galois lattice map is onto,
+\(\pi^{H_{\max}}N_2\) lies in the image after this base change.
+This base change is faithfully flat over
+\(\mathcal O_F[[\pi]]\). Modulo \(\ell\) the tilt valuation
+ring is torsion-free over the DVR \(k_F[[\overline\pi]]\),
+and \(\overline\pi\) is a nonunit in it. The ring of Witt
+vectors is \(\ell\)-torsion-free and \(\ell\)-adically complete,
+so the adic flatness criterion gives flatness
+\cite[Lemma 15.28.5]{stacks-flat}. The residue of the maximal
+ideal is proper after extension, giving faithfulness.
+Extending by \(O\) and taking the embedding factors preserve
+faithful flatness. In the ordinary cokernel
+\[
+ C_i=N_{2,i}/f(N_{1,i}),
+\]
+the inclusion
+after base change reads
+\[
+ (\pi^{H_{\max}}C_i)\otimes_{\mathcal O_F[[\pi]]}
+      \widetilde{\mathbf A}^+=0.
+\]
+Faithful flatness implies \(\pi^{H_{\max}}C_i=0\), hence \(s_i\le H_{\max}\). The same argument applies to every crystalline
+extension of the trivial lattice by \(T_2\), since its
+jumps are the union of the target jumps and zero.
+
+\proofstep{The scalar loss from the cyclotomic action.}
+Use a topological generator \(\gamma_*\) of the full
+cyclotomic group whose cyclotomic value \(u_*\) generates
+\(\Z_\ell^\times\). This action is trivial on Wach lattices
+modulo \(\pi\). Suppose \(\ell^k\pi^r N_{2,i}\subset f(N_{1,i})\)
+for \(r>0\). For any \(v\in N_{2,i}\), choose \(x\) lifting
+\(\ell^k\pi^r v\). The vector \((\gamma_*-1)x/\pi\) is
+Wach-integral. Its image, modulo \(\ell^k\pi^rN_{2,i}\), is
+\[
+                   \ell^k\pi^{r-1}(u_*^r-1)v .
+\]
+This follows by reducing \(\gamma_*(\pi)/\pi\) and the action
+on \(v\) modulo \(\pi\).
+
+The error is already in the image.
+One therefore lowers \(r\) by one at the cost
+\(v_\ell(u_*^r-1)\). The cost is zero unless
+\[
+ \ell-1\mid r,
+\]
+and it is \(1+v_\ell(r/(\ell-1))\)
+otherwise. Thus the initial parameter exponent \(s\) gives
+a scalar exponent at most \(\ell s/(\ell-1)^2\) by
+Legendre's formula.
+
+\proofstep{The recurrence in the letter exponents.}
+To pass through Frobenius, put \(d_0=\ell-1\) and let
+\(s=s_i\). From \(s\) down to \(r<s\), the exact cost is
+\(n-m+v_\ell(n!/m!)\), with \(n=\lfloor s/d_0\rfloor\)
+and \(m=\lfloor r/d_0\rfloor\). For \(n=0\) this is zero.
+Otherwise it is at most
+\[
+         \frac{\ell(s-r)}{d_0^2}+\frac{\ell}{d_0}
+                         +\lfloor\log_\ell n\rfloor .
+\]
+Indeed each term in the factorial valuation differs from
+\((n-m)/\ell^v\) by less than one, and there are at most
+\(\lfloor\log_\ell n\rfloor\) nonzero terms.
+
+Take
+\(a=\lceil s/d_0\rceil+c_H+2\). Since
+\(q_{\rm cyc}\in(\ell,\pi^{d_0})\), the power
+\(\phi(\pi)^a=\pi^a q_{\rm cyc}^a\) is in the ideal
+generated by \(\ell^{a-j'}\pi^{a+d_0j'}\) for
+\(0\le j'\le a\).
+Those terms with \(r=a+d_0j'\ge s\) kill the cokernel.
+For \(r<s\),
+\[
+ a-j'-\frac{\ell(s-r)}{d_0^2}
+ =a-\frac{\ell(s-a)}{d_0^2}+\frac{j'}{d_0}
+ \ge\frac{a}{d_0^2}+\frac{\ell(c_H+2)}{d_0}.
+\]
+This exceeds \(\ell/d_0+\lfloor\log_\ell n\rfloor\) since
+\(n\le H_{\max}\). Hence each term kills the cokernel by
+the cost bound, and so does \(\phi(\pi)^a\).
+
+Write \(H_i=M_i+h_i\) for the letter's width, with the two ordinary one-step height inclusions
+\[
+ q_{\rm cyc}^{M_i}\Phi N_{2,i-1}\subset N_{2,i},\qquad q_{\rm cyc}^{h_i}N_{1,i}\subset\operatorname{span}(\Phi N_{1,i-1}).
+\]
+
+Lift \(\phi(\pi)^a q_{\rm cyc}^{M_i}\Phi v\) for
+\(v\in N_{2,i-1}\) and multiply its lift by
+\(q_{\rm cyc}^{h_i}\pi^{H_i}\).
+It now lies in the source Frobenius span and maps to
+\(\Phi(\pi^{a+H_i}v)\).
+Frobenius linearization is injective on both lattices,
+as it is invertible on the ambient \((\Phi,\gamma)\)-modules
+after localization. The scalar ring is free over its
+Frobenius image with a basis starting at \(1\), by
+Weierstrass division by \(\phi(\pi)-Y\).
+Compare the coefficient of \(1\) in the Frobenius-span
+expression for the lift.
+
+This constant coefficient gives a lift of
+\(\pi^{a+H_i}v\) in the preceding letter. Consequently
+\[
+                  s_{i-1}\le H_i+c_H+3+\frac{s_i}{\ell-1}.
+\]
+Iterating the recurrence leaves a remainder bounded by a
+geometric fraction of \(H_{\max}\), which tends to zero.
+This gives \(s_i\le S(i)\), in addition to
+\(s_i\le H_{\max}\). The scalar annihilator above therefore
+has exponent at most \(R\) at each cut.
+
+\proofstep{Passage to tame invariants.}
+Averaging a lift of an invariant vector by the tame group costs
+a unit. Thus the ordinary-module annihilator yields the desired
+annihilator on the tame-invariant Wach lattices. This gives
+the lift of \(\ell^R e_0\) in the extension Wach lattice and
+the ordinary constant-map bound at the preceding cut after
+reducing the surjection modulo \(X\). Dividing by \(\Theta\)
+commutes with the map and is possible in the ambient module
+because the factors of \(\Theta\) are units there. It gives
+the required lift on the \(\Theta\)-divisible lattices at
+the terminal cut.
+\end{proof}

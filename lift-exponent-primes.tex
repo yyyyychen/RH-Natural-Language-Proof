@@ -1,0 +1,303 @@
+\subsubsection{Summing the weight exponents}\label{subsec:lift-exponent-primes}
+\hypertarget{source-lift-exponent-primes}{}
+
+The integral inclusion gives local exponents indexed by highest weights. The sum over primes depends on which differences between shifted weights can be divisible by the prime. We keep the head weights and the consecutive block distinct in making this count.
+
+\begin{established}[Heights, cutoff and exceptional interval]\label{hyp:weyl-prime-range}
+Use the weight record for one lift. In this subsection \(r\) is
+its coefficient rank, \(k_c=k-1\) is the head size, \(t\) is its
+consecutive block length, and \(S,\eta\) bound the widths of
+the head weights and the displaced weights, respectively.
+The shifted weights in that
+record are the highest weights plus the usual staircase. Their
+height is bounded by \(h_0=\lfloor h\rfloor\), where
+\(h=b+S+\eta+t+1\). Write \(X'\) for the auxiliary cutoff,
+\(b'=xb/X'\), \(f=2n\), and \(w''=b/(nX')\).
+
+Let \(N=k+m(t+1)\) be the final rank, and let \(\ell_*\)
+be the auxiliary threshold
+\[
+ \ell_*=\frac{mb}{nt^2(N+t)z^2+kn^2(S+t+z)} .
+\]
+Put \(K_*=\lfloor 2b/\ell_*\rfloor\). Define the small-prime
+threshold \(y\) and the exceptional interval \(\mathcal I\) by
+\[
+ y=\frac{mbz}{k(m+t)\log(3h)},\qquad
+ \mathcal I=\left[b-\frac{t-1}{2}-K_*\,,\,
+       b+S+\eta+1+\frac{t-1}{2}+K_*\right].
+\]
+Uniformly beyond a fixed threshold one has \(z\ge4\),
+\(y>8\), \(y\le b\), \(r+1<p\) and \(S+k<p\) for \(p>y\),
+\(h\le2b\), \(h+r\le3b<y^2\), and \(\mathcal I\subset(0,y^2)\).
+Furthermore \(k(S+1)\le2kS\le2w''\) since \(S\ge1\). \label{cor:lift-exponent-primes-1}
+\end{established}
+\begin{proof}
+Here \(b=\exp(x^\epsilon)\), \(z=\log b\). The ranks \(k,m,t,r\) are polynomially bounded in \(x\), and \(S,\eta\le x^{O(1)}\exp(x^{\epsilon/4})=b^{o(1)}\) by the weights of Lemma~\ref{lem:window-parameter-choice}. Hence \(h=(1+o(1))b\), \(K_*=b^{o(1)}\) by its displayed denominator, and \(\log(3h)\ge z\). As \(m\le k(m+t)\), one has \(b^{1-o(1)}\le y\le b\). In particular \(y^2>3b\), \(r+1,S+k<y\), and both endpoints of \(\mathcal I\) equal \(b+o(b)\). Finally \(kS=b^{o(1)}\) and \(w''=b^{1-o(1)}\), which proves the last comparison.
+\end{proof}
+
+For an integral highest weight \(\lambda\) in rank \(d\), let
+\(e_p(\lambda)\) be the least exponent carrying the dual Weyl
+lattice into the Weyl lattice over \(\Z_{(p)}\). Determinant
+translation of both lattices leaves it fixed.
+
+\begin{lemma}[Cutting a Weyl lattice at a consecutive block]
+\label{lem:consecutive-weyl-cut}
+The exponent satisfies the following estimate at a consecutive cut into ranks
+\(a\) and \(d-a\). If the full shifted weights lie in an interval
+of integer width \(W\), then
+\begin{equation}\label{eq:lift-weyl-cut}
+ e_p(\lambda)\le e_p(\lambda_{<a})+e_p(\lambda_{\ge a})
+                   +a(d-a)\lfloor\log_p W\rfloor .
+\end{equation}
+Use zero for the logarithmic term at \(W=0\). Here the
+restricted weights use the staircase in their own ranks.
+Thus restriction changes the shift by a constant on each block
+and preserves its width. \end{lemma}
+
+\begin{proof}
+We require a rational operator for the Levi blocks that realizes the two integral inclusions with scalars \(c_1,c_2\). In the adjoint action on endomorphisms,
+apply the successive rank-one projections for the cross-block
+pairs. Grid invariance gives an endomorphism of the full
+representation. Its scalar on the highest weight vector is the
+inverse of the product of the cross-block shifted differences.
+Schur's lemma gives that same scalar on the module. In the
+integral grid comparison the beta denominator for each pair
+is bounded by the denominators of
+\(i!j!/(i+j+1)!\) for \(i+j+1\le W\). Put \(m=p^a\).
+
+At this power the factorial valuation contributes at most one, since
+\[
+ \left\lfloor\frac{i+j+1}{m}\right\rfloor-\left\lfloor\frac{i}{m}\right\rfloor-\left\lfloor\frac{j}{m}\right\rfloor=\left\lfloor\frac{(i\bmod m)+(j\bmod m)+1}{m}\right\rfloor\le1 .
+\] Hence a factor
+\(p^{\lfloor\log_p W\rfloor}\) per pair, times the two block
+inclusion scalars, clears the full inclusion once the grid is
+multiplied by its highest-weight scalar denominator. This gives the grid identities for the rank-one line, its scalar and the integral denominator. We use those grid identities
+on the Weyl lattices with the stated width condition.
+\label{cor:lift-exponent-primes-2}
+
+\end{proof}
+
+\begin{proposition}[Sum of least integral exponents on the selected record]
+\label{prop:selected-weyl-prime-sum}
+With the heights, cutoff and exceptional interval of
+Lemma~\ref{hyp:weyl-prime-range}, for
+each selected lift the original rational-prime contributions
+\(B_j(p)\) in \eqref{eq:division-least-sum} have
+\[
+ \sum_p B_j(p)\log p\le30|T_2|mbz^2+2mb.
+\]
+The estimate also holds for a restricted set of rational primes
+satisfying Lemma~\ref{hyp:weyl-prime-range}. The constants and threshold are
+uniform over the selected lifts and coefficient fields.
+\end{proposition}
+
+\begin{proof}
+\proofstep{The width estimate and the small primes.}
+Rank zero and rank one have exponent zero. Iterating
+\eqref{eq:lift-weyl-cut} with one rank-one block gives
+\(e_p(\lambda)\le\binom d2\lfloor\log_p W\rfloor\), and hence
+zero for \(p>W\). At an index with a smaller weight, the width satisfies \(W_\tau\le2b'\).
+If \(W_\tau>1\), the bound
+\(\pi(Y)<1.26Y/\log Y\) for \(Y>1\), used here with
+\(Y=W_\tau\), follows from Rosser and Schoenfeld's explicit
+estimate \cite{rosser-schoenfeld-explicit}. This gives
+\[
+ \sum_p e_p(\lambda_\tau)\log p
+ \le \binom r2\log W_\tau\,\pi(W_\tau)
+ \le 1.3r^2 b'.
+\]
+
+If \(W_\tau\le1\), this sum is zero. At an index with a larger weight the
+crude pointwise bound is \(\binom r2\log h\) for the
+exponent times \(\log p\). For \(p\ge2\eta+t\), cut off the
+head of size \(k_c\). Its weights lie in an interval of width
+at most \(S\). The
+remaining weights have width strictly less than \(p\) under
+the weight shape conditions. The lower block therefore has
+exponent zero, and \eqref{eq:lift-weyl-cut} gives the bound
+\[
+ e_p(\lambda_\tau)\log p\le
+ k(m+t)\log(3h)+k^2\log(S+k).
+\]
+
+In particular, the head by itself has zero exponent when
+\(p>S+k\). At \(p\le y\), the displayed bound times \(p\)
+is at most \(2mbz\) since \(k\le m+t\), \(S+k\le3h\),
+and \(y\,k(m+t)\log(3h)=mbz\). In the other case
+\(p<2\eta+t\), the size conditions \(t\le\eta\), \(r\le2t\)
+and \(\eta\le b/(t^3 f k^3)\) give the same bound from
+\(e_p(\lambda_\tau)\log p\le4t^2 z\) and
+\(m f t k^3\ge6\). For an index with a larger weight the small-prime contribution is at most \(2mbz^2\), since
+\[
+ \sum_{p\le y}\frac1p\le\sum_{j=2}^{\lfloor y\rfloor}\frac1j\le \log y\le z .
+\]
+
+\proofstep{The exceptional primes above the cutoff.}
+Above \(y\), an exceptional prime divides an integer of
+\(\mathcal I\). Each such integer has at most one distinct
+prime factor above \(y\), as all these integers are positive
+and less than \(y^2\). Hence the number of excluded primes
+above \(y\) is at most \(S+\eta+t+2K_*+1\), plus the
+number of specified primes. The conductor of the auxiliary field factors that
+are at most \(y\) are already charged in the small-prime range.
+Indeed the additional small factors divide an integer at most
+\(n^2\le kt\), and \(kt\le b/(4kt)\le y\) by the large
+parameter conditions.
+
+The four listed primes \(q,d,p_{\rm de},
+p'_{\rm de}\) suffice in the specified set after this removal.
+Allowing five gives an exceptional cost at most
+\begin{equation}\label{eq:exponent-exceptional-prime-cost}
+ (S+\eta+t+2K_*+6) f r^2 z,
+\end{equation}
+because each of the \(f\) label contributions satisfies
+\[
+ e_p(\lambda_\tau)\log p
+ \le \binom{r}{2}\log h\le r^2 z
+\]
+whenever its width exceeds one. For a smaller weight use its
+width, at most \(2b'\) and at most \(h\), in place of \(h\);
+widths at most one have zero exponent.
+The vanishing above height holds on the full record because the
+smaller widths are at most \(h\) as well.
+\label{cor:lift-exponent-primes-3}
+
+\proofstep{The restricted exponent at the remaining primes.}
+At primes \(y<p\le h\) outside the excluded interval and the
+specified set, use the local weight-elimination formula with
+the depth estimate of Lemma~\ref{lem:selected-pieri-depth}. Let \(j_\tau,q_\tau\ge0\), \(j_\tau+q_\tau\le m\),
+be its two counts outside the head and consecutive block. At an index with a larger weight, the head interval \([x_-,x_+]\) and the top weight \(B_\tau\) of the consecutive block satisfy
+\[
+ 0\le B_\tau<x_-\le x_+\le h,\qquad x_+-x_-\le S.
+\]
+Put \(d_\tau=x_--B_\tau\).
+
+The head exponent in this formula is zero. The correction counts from the windows
+around the consecutive blocks of radius \(\lfloor h/(p-1)\rfloor\)
+are zero for the original and the Frobenius-labelled weights.
+In the signed coordinates of the shape condition, center the
+comparison at the midpoint of the consecutive block. Write \(c\) for this midpoint, \(z_0\) for a point of the
+enlarged consecutive window, and \(H_p=\lfloor h/(p-1)\rfloor\).
+The window and the signed displacement bounds give, for a displaced
+weight \(u\),
+\begin{equation}\label{eq:weyl-short-window-distance}
+ |z_0-c|\le (t-1)/2+H_p,\qquad
+ 0<|u-z_0|\le\eta+t+H_p<p .
+\end{equation}
+The strict lower bound uses the lower displacement in the weight
+record. Thus no displaced weight is congruent to \(z_0\) modulo
+\(p\).
+
+For the head weights there are two further tests. At an
+index with a larger weight the signed difference, with the sign
+prescribed by the shape, belongs to \(\mathcal I\).
+At a top or an index with a smaller weight the absolute
+difference lies in \((0,p)\). Summarizing the exclusions,
+\[
+ \begin{aligned}
+ d\in\mathcal I\cap\mathbb Z&\quad\Longrightarrow\quad p\nmid d
+       &&\text{by the choice of }p,\\
+ 0<|d|<p&\quad\Longrightarrow\quad p\nmid d
+       &&\text{by size}.
+ \end{aligned}
+\]
+Reflection preserves the absolute differences in \eqref{eq:weyl-short-window-distance} and the nondivisibility tests, so the reflected shape has the same vanishing correction counts.
+Thus the remaining depth in the real bound for
+this formula is \(q_\tau h\). Let \(I_p\) indicate whether
+\(p\mid u-B_\tau\) for an integer \(u\in[x_-,x_+]\).
+
+Write \(r_p\) for the least positive residue of \(d_\tau\) modulo
+\(p\). The term \(G_p\) is \(\min(k,t,q_\tau h/r_p)\) if
+\(r_p<d_\tau\), and zero otherwise. The larger-weight
+part of the rational-prime summand, before multiplying by
+\(\log p\), is bounded by
+\[
+ (q_\tau+2j_\tau)\left(\frac{h+r}{p-1}+6\right)
+   +\frac{kS}{p}+k I_p+G_p
+   +\frac{q_\tau h}{p}(1+\log(h/p)).
+\]
+Two elementary sums give
+\[
+ \sum_{y<p\le h} I_p\log p\le(S+1)\log h,\qquad
+ \sum_{y<p\le h} G_p\log p\le q_\tau h(1+\log h)\log h.
+\]
+
+\proofstep{Summing the two residue terms.}
+For the first, map each prime counted by the indicator to one
+integer \(u\in[x_-,x_+]\) such that \(p\mid u-B_\tau\). Two distinct primes cannot give the same \(u\). Otherwise
+\[
+ y^2<pp'\le u-B_\tau\le h<y^2 .
+\] The interval contains at most \(S+1\) such integers.
+For the second, every prime with \(G_p\ne0\) divides the positive
+integer \(d_\tau-r_p\le h\). Thus \(p\mapsto r_p\) is injective
+by the same product inequality. Sum \(q_\tau h/r\) over
+\(1\le r\le\lfloor h\rfloor\), and bound \(\log p\) by \(\log h\).
+\label{cor:lift-exponent-primes-4}
+\proofstep{Elementary weighted prime sums.}
+The other sums use \(\sum_{p\le h+r}\log p\le(h+r)\log4\)
+and \(\sum_{p\le h+r}(\log p)/p\le\log(h+r)+\log4\).
+At any integer \(Y\ge2\), sum \(Y/p\le\lfloor Y/p\rfloor+1\) with weights \(\log p\). The contributions of the two sums give
+\[
+ Y\sum_{p\le Y}\frac{\log p}{p}\le \sum_{p\le Y}\lfloor Y/p\rfloor\log p+\sum_{p\le Y}\log p\le\log(Y!)+Y\log4 .
+\]
+The floor terms are bounded by \(\log(Y!)\) and the unit terms
+by \(Y\log4\). Division by \(Y\) and taking floors in the
+cutoff give the bound for real cutoffs as well.
+
+For \(p>y>8\) one can replace \(1/(p-1)\) by \(9/(8p)\).
+Here \(h+r\le3b\), \(\log h\le z+0.7\), and
+\(\log(h+r)+\log4\le z+2.49\). The two terms with factor
+\(k\) contribute at most \(2k(S+1)(z+2)\) since
+\(S(z+2.49)+(S+1)(z+0.7)\le2(S+1)(z+2)\).
+The remaining four terms together cost at most \(mb\) times
+\[
+ \tfrac{27}{4}(z+2.49)+50.04
+   +2(z+1.7)(z+0.7)+2(z+1.7)(z+2.49)\le18z^2.
+\]
+For the last inequality the difference has value and derivative
+positive at \(4\) and has positive quadratic coefficient.
+These bounds apply to every subset of the indicated primes.
+
+\proofstep{Absorption of the three tails.}
+After summing the residue terms, the remaining tails involve different sources of divisibility. Their bounds must all fit the exponent allowance for this single lift.
+
+Let \(T_2'\) be the number of indices with larger weights in the record.
+Adding the three prime ranges gives the term
+\(30T_2' mbz^2\), with room from \(2+18\le30\). The remaining
+terms are
+\begin{equation}\label{eq:exponent-prime-tails}
+ 2T_2' k(S+1)(z+2)+1.3 f r^2 b'
+       +(S+\eta+t+2K_*+6) f r^2 z .
+\end{equation}
+
+To bound them let \(A\ge1\) be the polynomial size majorant
+for the selected parameters. The active size rows give
+\[
+ \begin{gathered}
+ f r^2\le4A^3,\quad kS\le w'',\quad S+\eta\le b/X',\quad
+ K_*+t\le A^4x^2(z^2+S),\\
+ 4(z+2)\le X',\quad 5.2A^3x\le X',\quad
+ 40 A^7x^2 z\le X',\quad 40 A^7x^2 z^3\le b .
+ \end{gathered}
+\]
+The bound for \(K_*+t\) follows by expanding \(2b/\ell_*\)
+and using \(n,k,t\le A\), \(N\le Ax\) and \(m\ge2\).
+The last four inequalities hold eventually for the common
+polynomial majorant at \(X'=\exp(x^{\epsilon/3})\),
+\(z=x^\epsilon\), \(b=\exp z\). The first term of
+\eqref{eq:exponent-prime-tails} is at most
+\(8(z+2)b/X'\le2b\), using \(T_2'\le f=2n\).
+The second is at most \(5.2A^3xb/X'\le b\).
+
+For the third use
+\(S+\eta+t+2K_*+6\le5A^4x^2(z^2+b/X')\).
+After multiplication by \(fr^2z\) the two terms are each
+at most \(b/2\). Adding these three remainders and using \(m\ge2\) gives
+\[
+ 2b+b+2(b/2)=4b\le 2mb .
+\] This proves the rational-prime bound in
+\eqref{eq:division-least-sum} with \(T_2'\le|T_2|\).
+It is uniform over the chosen weights, lifts, coefficient fields
+and subsets of rational primes in those size rows.
+\label{cor:lift-exponent-primes-5}
+\end{proof}

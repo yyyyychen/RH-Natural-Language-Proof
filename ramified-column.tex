@@ -1,0 +1,515 @@
+\subsection{The trace-zero column and its slope}
+\label{sec:ramified-column}
+
+The level-zero metric in \eqref{eq:lower-slopes} controls the full column. The division argument uses the kernel of the level trace, so its slope also involves the index of the trace-zero lattice. Use \(K\) for the coefficient field in
+this calculation. The definite unitary group has rank \(k\ge2\) over a
+totally real field of degree \(f\); its CM field has degree \(2f\).
+The fine level at each of the two auxiliary type primes \(g_i\)
+is the inverse image of an upper unitriangular subgroup. The prime assigned to the sequence splits completely, giving \(f\) places in the totally real field.
+
+Fix a word \(u\) and put \(T=T_u\). Write \(S\) for the level-zero
+column lattice in its coefficient space over \(K\), and put
+\(d_S=d_u^S\).
+
+\begin{proposition}[Rank and slope of the trace-zero column]\label{prop:trace-zero-column}
+Let \(S\) be the level-zero column lattice of the selected
+word \(u\), with the fine level at each \(g_i\) the inverse image
+of the upper unitriangular subgroup. Suppose the assigned
+prime \(T=T_u\ge3\) splits completely in the CM field. Impose the trace-zero condition at each of the \(f\) primes of its maximal totally real subfield above \(T\). The resulting lattice \(S_R\), with the
+induced metric, satisfies
+\[
+ \operatorname{rk} S_R=d_S(1-1/(T-1))^f,\qquad
+ \mu(S_R)=\mu(S)-\frac{f\log(T-1)}{T-2},\qquad
+ \mu_{\max}(S_R)\le\mu_{\max}(S).
+\]
+In particular the loss of rank is at most \(f d_S/(T-1)\).
+\end{proposition}
+
+\begin{proof}
+\proofstep{Show that the residue diamond group acts freely on the fine classes.}
+In the split Hermitian model,
+let \(K_v^1\) fix the chosen residue row at \(v\mid T\) and
+\(K_v^0\) preserve its line. These are subgroups of the
+stabilizer of the self-dual overlattice. The scalar on the
+row gives \(K_v^0/K_v^1\simeq\mathbf F_T^\times\). It is
+surjective because in a basis adapted to the row one can
+lift any nonzero scalar by an integral diagonal matrix.
+The quotient
+\[
+                   H=\prod_{v\mid T}\mathbf F_T^\times
+\]
+acts by right translations on the fine class set, and on
+its spaces of values. The other local levels are the same
+at both levels. A fixed class for an element of \(H\)
+would give a rational stabilizer at the level with local
+groups \(K_v^0\), by the equation identifying the translated
+adelic representative with the original class. This stabilizer is finite by definiteness and discreteness of
+the rational lattice stabilizer.
+
+At a place above \(g_i\) it embeds
+in a conjugate of a pro-\(g_i\) group, by the unitriangular residue
+condition and the principal congruence filtration.
+If \(W\) denotes the value lattice on a representative fibre, the orbit realization reads
+\[
+  S\simeq\bigoplus_{h\in H}W,\qquad \operatorname{rank} S=|H|\operatorname{rank}W .
+\]
+ A nontrivial
+finite subgroup would contain an element of order \(g_i\). Its
+action over \(\mathbb Q\) in dimension \(2fk\) would contain the
+cyclotomic polynomial of degree 
+\[
+  g_i-1>2fk
+\]
+ in its minimal
+polynomial. This is impossible. The inequality holds at all
+sufficiently late points since \(g_i\ge(kb)^8\) and \(f\le k\). The class equation then puts the translating
+element in the fine level. Thus the \(H\)-action on fine
+classes is free.
+
+\proofstep{Transport each integral fibre and its metric along this action.}
+Let \(\Lambda_c\) be the value lattice in a basis of the dual
+Hermitian lattice at the class \(c\). In the enlarged stabilizer
+a diamond \(h\) preserves the underlying lattice. The class
+equation identifies it locally at every prime, hence globally.
+Let \(U_h\) be transport by the resulting rational isometry
+and the level character. The latter is a root of unity. At
+finite and infinite places, respectively, we get
+\[
+ U_h\Lambda_c=\Lambda_{ch},\qquad
+ \langle U_h x,U_h y\rangle_{ch}=\langle x,y\rangle_c .
+\]
+The first equality uses the local unit character and inverse
+transport. The second uses the transported metric and the
+absolute value one of that character. Distinct class summands
+are orthogonal, so transport on their sum is an integral isometry.
+
+Take one class in each \(H\)-orbit, and let \(W\) be the
+orthogonal sum of the value lattices on those classes.
+Free orbit transport therefore gives an orthogonal integral decomposition
+\[
+  S\simeq\bigoplus_{h\in H}W.
+\]
+ On that sum the
+diamond operators permute the \(H\)-coordinates by
+translations. For \(v\mid T\) write \(N_v\) for the sum
+of its diamond operators. The ramified space \(R\) is the
+intersection of all the kernels of \(N_v\) in the level-zero
+space. Its integral lattice \(S_R=S\cap R\) corresponds to
+arrays with sum zero in each one of the \(f\) coordinates.
+Put \(n=T-1\). On one factor the sum-zero lattice
+
+\[
+  A=\ker(\mathbb Z^n\to\mathbb Z)
+\]
+ has the basis \(e_i-e_n\) for
+\(1\le i<n\). The split decomposition of \(\mathbb Z^n\) into
+\(A\) and \(\mathbb Z e_n\), with the sum equal to the projection
+on the second factor, works over \(\mathcal O_K\).
+Applying it in each coordinate identifies \(S_R\) with
+\(W\otimes_{\mathbb Z} A^{\otimes f}\), including its induced
+metric, and gives
+\begin{equation}\label{eq:ramified-rank}
+        d_{\rm ram}:=\operatorname{rank} S_R
+           =d_S\left(1-\frac1{T-1}\right)^f .
+\end{equation}
+This is the dimension of the column after imposing the trace
+condition at every place above \(T\).
+
+\proofstep{Compute the determinant of the tensor product of trace-zero factors.}
+The Gram matrix of \(A\) in this basis is \(I+J\), where
+\(J\) has every entry one. Its determinant is \(n\), since
+its eigenvalues are \(n\) on the constants and \(1\) on
+their orthogonal complement. The tensor Gram matrix has
+size \((n-1)^f\), and its log determinant divided by this
+size is \(f\log n/(n-1)\), by the determinant formula for
+a tensor product. The integral coordinates above are
+free in the \(A\)-factors, so the finite determinant
+contribution per rank is the one for \(W\).
+
+At infinity
+the squared-norm determinant of the tensor Gram matrix
+subtracts \(f\log n/(n-1)\) per rank in the degree. Thus
+\begin{equation}\label{eq:ramified-slope}
+        \mu(S_R)=\mu(S)-\frac{f\log(T-1)}{T-2},\qquad
+        \mu_{\max}(S_R)\le\mu_{\max}(S).
+\end{equation}
+The inequality uses the induced metric and inclusion of
+\(S_R\) in \(S\), so any sublattice used for the maximum
+slope has the same degree as a sublattice of \(S\).
+For \(T\ge3\) the lost dimension is at most \(f d_S/(T-1)\).
+The exact rank and slope formulas apply at every selected sequence with the class and lattice identifications above.
+In particular \(T\ge b^{m/2}\ge b\) and
+\(f\le k\le x^5\) make both \(f/(T-1)\) and
+\(f\log(T-1)/(T-2)\) tend to zero uniformly. For the
+second term use that \(\log y/(y-1)\) decreases for \(y>1\).
+\end{proof}
+
+\subsection{Weight change at the prime assigned to the sequence}
+\label{sec:ramified-weight-change}
+
+At the assigned prime the change of weight alters the integral frames. We compute that change before comparing the two Hecke maps on the trace-zero space.
+
+Let \(w\) be a coefficient-field place over \(T\) at which
+the split level comparison is used. It designates one
+embedding \(\tau=\tau(w,v)\) for each \(v\mid T\).
+Write \(\mathcal O=\mathcal O_{K,w}\) and \(e_w=v_w(T)\),
+with \(v_w\) taking value one on a uniformizer. We use
+the two coefficient lattices in the actual level-zero
+class coordinates. The usual one is \(S_w\). The second,
+denoted by \(B_{w,v}\), uses the mixed lattice for the
+\(v\)-move in the \(\tau\)-factor and the usual lattice
+in every other factor.
+
+\begin{proposition}[Integral change to the mixed column lattice]\label{prop:ramified-mixed-column}
+For \(w\mid T\) and the specified split factor at a selected
+embedding \(\tau\), the mixed coefficient image is
+\(\rho_\lambda(A_c^{-1})\mathcal L_c\) in each class.
+With \(b_v=\max(0,-\lambda_k)\), the inclusion and its length from \eqref{eq:column-branch-length} are
+\[
+ T^{b_v}S_w\subseteq B_{w,v},\qquad \operatorname{length}_{\mathcal O}(B_{w,v}/T^{b_v}S_w)=e_wd_S(s_\lambda/k+b_v).
+\]
+
+\end{proposition}
+
+\begin{proof}
+\proofstep{The mixed lattice is the marked index-\(T\) neighbor.}
+
+In the indicated split component write \(L_c\) for the
+underlying column lattice of a class, so that the
+ordinary lattice for the coordinate comparison is
+\(L_c^\vee\). The mixed lattice is \(L_c+T L_c^\vee\)
+at the indicated place. Its plus factor is the kernel
+of the chosen residue row on \(L_c^\vee\), since
+\(T L_c^\vee\subseteq L_c\). Thus it is an index-\(T\)
+neighbor of \(L_c^\vee\) in the relevant factor.
+In a basis whose last
+vector has residue value one for that functional, a
+basis of the neighbor is given by multiplying that last
+vector by \(T\) and keeping the other vectors. This
+also proves the determinant valuation for arbitrary
+local bases. Denote by \(A_c\) the ordinary-to-mixed
+basis matrix of the neighbor, written in ordinary
+coordinates at a class \(c\). Then \(A_c\) is integral
+and 
+\[
+  v_w(\det A_c)=e_w.
+\]
+
+\proofstep{Apply the divided-root Weyl lattice to the basis change.}
+
+Use the coefficient model of highest weight
+\(\lambda_\tau=(\lambda_1,\ldots,\lambda_k)\). Write
+\(a=\lambda_k\), \(s_\lambda=\sum_i\lambda_i\), and
+\[
+       \rho_\lambda(A)=\det(A)^a\,\rho_{\lambda-a\boldsymbol1}(A).
+\]
+The last representation is polynomial. Its integral model
+here is the divided-root Weyl lattice from
+Section~\ref{subsec:selected-column-metric}. Unimodular
+matrices preserve that lattice by integral Weyl covariance.
+For an integral matrix of nonzero determinant over the DVR,
+take a Smith factorization into two unimodular matrices
+and a diagonal integral matrix. The torus weight spaces of
+the polynomial Weyl lattice have nonnegative exponents, so
+the diagonal factor also preserves it by inclusion.
+
+In ordinary coordinates at \(c\), write \(\mathcal L_c\)
+for the tensor of integral coefficient models at all
+embeddings. Write \(\mathcal L_c^{\rm mix}\) for the mixed lattice in these ordinary coordinates. Since the basis change acts only at \(\tau\), its image is
+\[
+  \mathcal L_c^{\rm mix}=\rho_\lambda(A_c^{-1})\mathcal L_c.
+\]
+This is an equality of lattices in the rational coefficient
+space. The level-zero class realization allows independent
+values at the fine classes. The polynomial model is
+defined over \(K\), and a basis change through the chosen
+embedding of the CM field is a matrix over \(K\).
+Thus a polynomial in the indicated image at each class
+gives a rational class value.
+
+In any other adapted basis
+the transition is unimodular in its local factor, so this
+same value satisfies the integral condition in that basis.
+Conversely a mixed integral value expressed in a chosen
+adapted basis lies in the indicated image. In particular
+both coordinate lattices have total rank \(d_S\).
+
+If \(a\ge0\), then \(\rho_\lambda(A_c)\mathcal L_c\subseteq
+\mathcal L_c\), giving \(S_w\subseteq B_{w,v}\).
+If \(b_v=-a\ge0\), then
+\[
+ T^{b_v}\det(A_c)^{-b_v}
+          =\bigl(T/\det(A_c)\bigr)^{b_v}
+\]
+is a unit in \(\mathcal O\). It follows that
+\(T^{b_v}\rho_\lambda(A_c)\mathcal L_c\subseteq\mathcal L_c\),
+and hence \(T^{b_v}S_w\subseteq B_{w,v}\).
+\proofstep{Take the determinant in the coefficient representation.}
+
+For an exponent \(b_v\) in either comparison, taking
+\(b_v=0\) in the first one, the resulting length is
+\begin{equation}\label{eq:column-branch-length}
+          \operatorname{length}_{\mathcal O}
+                  (B_{w,v}/T^{b_v}S_w)
+             = e_w d_S\left(\frac{s_\lambda}{k}+b_v\right).
+\end{equation}
+Indeed on the irreducible factor of dimension \(d_\tau\),
+the determinant of \(\rho_\lambda\) is a power of the
+ordinary determinant. This follows by restricting to
+the diagonal torus, where its exponent is invariant
+under permutations, and observing that the elementary
+unipotents act with determinant one. On scalar matrices
+the weight is \(s_\lambda\), so the exponent is
+\(d_\tau s_\lambda/k\). Tensoring with the other factors
+multiplies it by their ranks. Summing the determinant
+valuations over classes then gives \eqref{eq:column-branch-length}.
+The ramification index comes from \(v_w(T)\).
+
+\end{proof}
+
+\subsection{The integral Hecke index on the trace-zero space}
+\label{sec:ramified-hecke-index}
+
+The frame change accounts for the weight of a single term. On the trace-zero space the up and down sums preserve the lattice. Their scalar compositions give the index bound.
+
+\begin{proposition}[The two integral Hecke maps on the trace-zero part]\label{prop:ramified-hecke-maps}
+For the indicated split place and coefficient embedding the
+up and down sums preserve the integral coordinates as in
+\eqref{eq:ramified-hecke-input}. Both preserve the trace-zero space \(R\). On this space the two compositions satisfy
+\[
+ (D_vU_v)|_R=(U_vD_v)|_R=T^{k-1}1_R.
+\]
+
+\end{proposition}
+
+\begin{proof}
+\proofstep{Express the two transition maps in the mixed frames.}
+
+In the local comparison let \(U_v\) and \(D_v\) be the
+finite sums for the up and down moves. Use the chosen split
+component over \(v\), and write \(\mathcal O_v\) for its
+integer ring, with uniformizer \(T\). A local state has a
+lattice \(L\) and an index-\(T\) overlattice \(D\), the
+relevant component of \(L^\vee\), with a marking
+\(\lambda:D/TD\to\mathbf F_T\) whose kernel is \(L/TD\).
+The pairing recovers the lattices in the opposite split
+component from \(L,D\). Choose \(z_0\in D\) with
+\(\lambda(z_0)=1\) and let \(t=Tz_0\bmod TL\) in \(L/TL\).
+This vector is independent of the choice of \(z_0\), and
+is nonzero since \(z_0\notin L\).
+
+In the chosen split bases the up move with \(z\bmod TD\)
+and \(\lambda(z)=1\) has lattices and marking
+\[
+           D\ \subset\ D+\mathcal O_v T^{-1}z,\qquad
+                        z'\longmapsto\lambda(Tz').
+\]
+For the down move choose \(g\in(L/TL)^*\) with \(g(t)=1\). Its lattice inclusion and residue marking are
+\[
+  L_g=\{x\in L:g(x\bmod TL)=0\}\subset L,\qquad L/L_g\xrightarrow{\ g\ }{\cal O}_v/T.
+\]
+These descriptions follow from the up rule of adjoining
+the line generated by \(T^{-1}z\) to the ordinary dual
+lattice, and the down rule of taking the marked residue
+kernel on the mixed lattice. At other finite places the
+move is trivial. In class coordinates these equations are
+read after the rational isometry that transports the new
+class to the moving lattice. The two endpoint descriptions
+also show the lattice integrality.
+
+For an up move the
+transported mixed lattice at the new class is \(D\),
+the ordinary dual lattice of the starting class.
+Indeed, in the enlarged lattice the transported marking has kernel \(D\). On generators its values are
+\[
+  \lambda(TD)=0\pmod T,\qquad \lambda\!\left(T\cdot T^{-1}z\right)=1\pmod T.
+\]
+ For a
+down move the transported ordinary dual lattice is \(L\),
+the mixed lattice of the starting class. At the other
+embeddings the ordinary basis lattices agree under the
+transport. Thus the polynomial coefficient maps carry
+integral values to integral values, by changing adapted
+bases as in Section~\ref{sec:ramified-weight-change}.
+The value in the transported frame is multiplied only by
+the level character, a unit in \(\mathcal O\). The two integral transport maps therefore satisfy
+\[
+  U_v B_{w,v}\subseteq S_w,\qquad D_vS_w\subseteq B_{w,v}.
+\]
+
+\proofstep{Count the end states of the composite.}
+
+To compute the composite \(D_v U_v\), first choose a down
+label \(g\), then an up vector \(y\in L/TL\) with \(g(y)=1\).
+At \(v\) the end state is the pair
+\[
+         L\ \subset\ L+\mathcal O_v T^{-1}\widetilde y,
+                \qquad z'\longmapsto g(Tz'\bmod TL).
+\]
+Here \(\widetilde y\) is any lift into \(L\). The marking is
+zero on \(L\) and sends \(T^{-1}\widetilde y\) to one, so
+this state and marking depend only on \(y\). The support
+of the two moves is \(v\), and the data of a split lattice
+and its residue marking determine the coset of the local
+level.
+
+The local level character is trivial at this prime.
+Consequently, when evaluating at the starting frame, pairs
+with the same \(y\) give the same automorphic value
+\(F_y\). In particular \(F_t\) is the original value, and
+\(F_{a t}\) is its diamond translate by the scalar \(a^{-1}\),
+since the marking on the original \(D\) now sends \(az_0\)
+to one. Inversion permutes the nonzero scalars.
+
+For nonzero \(y\), use the evaluation map
+
+\[
+  g\mapsto(g(t),g(y))
+\]
+ on the dual \(k\)-dimensional vector space.
+The fibre of \((1,1)\) has size
+\[
+ \#\{g:g(t)=g(y)=1\}=
+ \begin{cases}
+ T^{k-1}, &y=t,\\
+ 0, &y=at,\ a\ne0,1,\\
+ T^{k-2}, &t,y\text{ linearly independent}.
+ \end{cases}
+\]
+The evaluation has rank one in the first two cases. In the second
+case its image is the line \((s,as)\), which omits \((1,1)\).
+In the third case its rank is two.
+For the corresponding sum \(E_v U_v\) allowing all
+nonzero \(g\) in the first move, every nonzero \(y\)
+has \(T^{k-1}\) choices. Thus for \(P_v=T^{-(k-1)}E_vU_v\)
+one obtains
+\[
+       D_v U_v=T^{k-1}1-T^{k-2}N_v+T^{k-2}P_v .
+\]
+The normalized trace \(P_v\) sums the states \(F_y\)
+over the nonzero vectors in \(L/TL\). A diamond on
+these states rescales their markings, which permutes
+the nonzero \(y\), so \(P_v\langle a\rangle_v=P_v\).
+\proofstep{Pass to the trace-zero part using the diamond actions.}
+
+Also \(U_v,D_v\) commute with a diamond at \(v\).
+Indeed \(\lambda\mapsto a\lambda\) is accompanied by
+\(z\mapsto a^{-1}z\) in the up sum and by \(g\mapsto ag\)
+in the down sum. The endpoint lattices agree and the
+endpoint markings are multiplied by \(a\) in both cases.
+Diamonds at the other places commute by disjoint support.
+Summing the trace identity over \(a\) gives
+
+\[
+  (T-1)P_v=P_vN_v.
+\]
+ On \(R\) both \(N_v\) and \(P_v\)
+vanish, and the diamond commutations show that both
+Hecke operators preserve \(R\). The composite \(D_vU_v\)
+on \(R\) is \(T^{k-1}1_R\). In finite dimension this
+makes \(U_v|_R\) invertible and gives \(U_vD_v|_R=T^{k-1}1_R\).
+We have proved
+\begin{equation}\label{eq:ramified-hecke-input}
+ \begin{gathered}
+ U_v B_{w,v}\subseteq S_w,\qquad D_v S_w\subseteq B_{w,v},\\
+ U_v R,D_v R\subseteq R,\qquad U_v D_v|_R=T^{k-1}1_R .
+ \end{gathered}
+\end{equation}
+
+\end{proof}
+
+\begin{proposition}[Colength of the selected higher-level image]\label{prop:ramified-selected-hecke-colength}
+With \(M=S_w\cap R\), the normalized up map \(G_v\) is injective on \(M\). The index bound \eqref{eq:ramified-hecke-index} is
+\[
+ \operatorname{length}_{\mathcal O}(M/G_vM)\le e_wd_S(s_\lambda/k+b_v+k-1).
+\]
+
+The colength for the assigned product of the \(G_v\)'s to the
+\(m\)-th power is at most the sum of the individual bounds times
+\(m\), and is zero for an empty product. The weighted logarithmic
+degree over \(T\) uses \(\sum_{w\mid T} e_w\omega_w=\log T\).
+\end{proposition}
+
+\begin{proof}
+\proofstep{Compare the two integral images inside the trace-zero space.}
+
+To see which index is needed, set
+\(M=S_w\cap R\) and \(B_R=B_{w,v}\cap R\). For
+\(b_v=\max(0,-a)\), put \(G_v=T^{b_v}U_v|_R\).
+The mixed lattice inclusion gives \(T^{b_v}M\subseteq B_R\).
+The two Hecke lattice maps and their composition give
+\[
+         T^{k-1}M\subseteq U_v B_R\subseteq M,\qquad
+                           G_v M\subseteq U_v B_R .
+\]
+Consequently the colength of \(G_v M\) in \(M\) is the
+sum of the colength of \(U_v B_R\) in \(M\) and the
+length of \(B_R/T^{b_v}M\), using injectivity of \(U_v\)
+on \(R\).
+
+The quotient \(B_R/T^{b_v}M\) embeds into \(B_{w,v}/T^{b_v}S_w\), since
+\(T^{b_v}S_w\cap R=T^{b_v}M\).
+The first colength is at most
+\(e_w(k-1)\operatorname{rank} M\), since the quotient
+is a quotient of \(M/T^{k-1}M\). Formula
+\eqref{eq:column-branch-length} therefore gives
+\begin{equation}\label{eq:ramified-hecke-index}
+ \operatorname{length}_{\mathcal O}(M/G_vM)
+           \le e_w d_S\left(\frac{s_\lambda}{k}+b_v+k-1\right).
+\end{equation}
+This accounts for the ordinary and ramified lattice
+comparisons in the same coefficient space.
+
+\proofstep{Add the colengths of the injective factors.}
+
+In the column restriction at \(w\mid T\), the selected
+places \(v\) are those assigned the top twists.
+The unshifted column lattice at \(w\) is the image of \(M\)
+by the product of their \(G_v\), raised to the \(m\)-th power.
+Each factor is injective with \(G_vM\subseteq M\).
+
+For
+any two such factors \(G,G'\) the chain
+\(GG'M\subseteq GM\subseteq M\) gives the sum
+of their colengths, since \(G\) identifies
+\(M/G'M\) with \(GM/GG'M\). Induction and
+\eqref{eq:ramified-hecke-index} bound the local colength by
+\[
+          m e_w d_S\sum_{v}
+                 \left(\frac{s_{\lambda_{\tau(w,v)}}}{k}
+                                      +b_v+k-1\right)
+\]
+with the sum over those selected \(v\). The product is the
+identity in the empty case, in particular at the places
+where the split level comparison is unused. The estimate
+has the same coefficients at each place. At a top twist
+let \(a_{\max}\) bound the first weight coordinate and
+let \(W_\tau\) bound the absolute values of the other
+coordinates. Then \(b_v\le W_\tau\) and
+
+\[
+  s_{\lambda_\tau}\le a_{\max}+(k-1)W_\tau.
+\]
+The term in parentheses is bounded by
+\(a_{\max}/k+2W_\tau+k-1\). These are the weight
+bounds for the given top twists, with \(\tau(w,v)\)
+distinct as \(v\) varies at each \(w\).
+\proofstep{Sum over coefficient places without a degree loss.}
+
+Passing to the logarithmic degree uses the weighted
+place identity \(\sum_{w\mid T}e_w\omega_w=\log T\),
+so this step introduces no coefficient-field degree
+factor. For example the difference of slopes from the
+indices over \(T\) is bounded by
+\[
+ \frac{2m d_S\log T}{d_{\rm ram}}
+     \sum_{\tau\ {\rm top}}
+                  \left(a_{\max}/k+2W_\tau+k-1\right).
+\]
+The ratio \(d_S/d_{\rm ram}\) is bounded by
+\((1-f/(T-1))^{-1}\) once \(f/(T-1)<1\), hence
+by \(2\) above a common scale cutoff.
+
+
+\label{cor:ramified-column-1}
+\end{proof}

@@ -1,0 +1,229 @@
+\subsection{Two level primes with disjoint exceptional sets}
+\hypertarget{source-level-primes}{}
+
+The primes defining the quadratic characters are now fixed. The levels of the forms require two further primes. Both must split as prescribed, and the prime divisors introduced by their level factors must satisfy the separation below.
+
+Fix the primes \(q,d\) of Proposition~\ref{prop:quadratic-prime-pair}.
+For \(x\) in their common interval take the modulus
+\(N=Q_Sqd\) of \eqref{eq:host-character-compositum}.
+The restriction from \(\operatorname{Gal}(K_\psi C_e/\mathbb Q)\)
+onto \(\operatorname{Gal}(C_e/\mathbb Q)\) gives
+\[
+   2^e\le [K_\psi C_e:\mathbb Q]=n,\qquad
+   Q_S\le 4 f_\psi 2^e\le 4f_\psi n,\qquad n\asymp x^{2+8\epsilon}.
+\] With
+\(b=\exp(x^\epsilon)\), \(k\ge1\) the weight parameter and
+\(1\le r\le x^5\) the rank, define \(X=(kb)^8\). The preceding
+prime size bounds and \(Y\le x\) give
+\[
+ d\mid N,\quad d\equiv3\pmod4,\quad
+ \log N\le3x^{\epsilon/5}\log^2 x,\qquad
+ \log(4dN^2)=o(\sqrt{\log X}).
+\]
+Write \(K_0=\mathbb Q(\sqrt{-d})\). \begin{definition}[Exceptional primes for a type level]\label{def:type-exceptional-primes}
+For an integer \(g\ge2\) and a positive rank \(r\), define
+\[
+ B_r(g)=\{g\}\ \cup\!
+ \bigcup_{j=1}^r\{\ell\text{ prime}\mid
+                 \ell^{4v_\ell(g^j-1)}>g^j\}.
+\]
+These are the possible exceptional residual primes at the type
+level \(g\).
+\end{definition}
+
+\begin{proposition}[Disjoint exceptions at the two type levels]\label{prop:two-type-primes}
+For the auxiliary primes \(q,d\) in Proposition~\ref{prop:quadratic-prime-pair}
+with \(N=Q_Sqd\), \(X=(kb)^8\) and \(1\le r\le x^5\), there are
+at every sufficiently large eligible \(x\) distinct
+primes \(g_0,g_1\) and elements \(\pi_i\in\mathcal O_{K_0}\) satisfying
+\[
+ X<g_i\le2X,\quad N_{K_0/\mathbb Q}(\pi_i)=g_i,\quad \pi_i\equiv1\pmod{N\mathcal O_{K_0}},\quad B_r(g_0)\cap B_r(g_1)=\varnothing.
+\] There are also distinct
+primes \(p,p',q_0\le N^{C_8}\), with \(p,p'\equiv1\pmod{15N}\)
+and \(q_0\equiv1\pmod N\), for an absolute \(C_8\).
+\end{proposition}
+
+\begin{proof}
+\proofstep{Count degree-one ideals in the ray class.}
+Let \(L/K_0\) be the ray class field for \(N\mathcal O_{K_0}\).
+Its degree \(h_N\) is at most \(h_{K_0}N^2\) by the ray class
+exact sequence. Minkowski's bound gives a representative ideal
+of norm \(O(\sqrt d)\) for each ideal class, and the number of
+ideals of norm \(j\) is at most the divisor function. Thus
+\(h_N\ll N^2\sqrt d\log(2d)\).
+In the abelian relative Chebotarev theorem take the base field
+\(K_0\) of degree two and absolute discriminant \(d\), take
+the whole Galois group as the abelian subgroup, and take the
+identity conjugacy class \cite[Theorems 1.4 and 3.3]{tz-chebotarev}.
+Each relative Hecke conductor divides \(N\mathcal O_{K_0}\)
+and has norm at most \(N^2\). Put \(D=4dN^2\).
+
+For
+\(u=X,2X\) the theorem counts unramified prime ideals of norm
+\(\le u\) with trivial Frobenius as
+\[
+ \frac{\operatorname{Li}(u)-\theta\operatorname{Li}(u^\beta)}
+ {h_N}\left(1+O\left(
+ e^{-c\log u/\log D}+e^{-c\sqrt{\log u}}\right)\right).
+\]
+Here \(\theta=0\) in the absence of an exceptional zero and
+\(\theta=1\) otherwise. The hypothesis \(u\ge D^{C}\) for
+a sufficiently large absolute \(C\) holds. Stark's bound in
+the same theorem sequence gives \(1-\beta\gg D^{-C'}\) for
+some absolute \(C'\). In its notation
+\(\lambda_1=(1-\beta)\log Q\gg Q^{-2}\) with \(Q\) polynomial
+in \(D\) for degree two. This includes the trivial relative
+character.
+
+Set
+\[
+ \lambda=\min(1,(1-\beta)\log X)
+\]
+in the exceptional
+case and \(\lambda=1\) otherwise. The difference between the
+two main numerators is \(\asymp X\lambda/\log X\), by integrating
+\((1-\theta t^{\beta-1})/\log t\) on \([X,2X]\). Each numerator
+is itself \(O(X\lambda/\log X)\). For \(\beta\ge3/4\) this
+follows by integrating \(1/\log t\) from \(u^\beta\) to \(u\),
+and when the zero is farther away use \(\lambda=1\) for large
+\(X\). Thus the two endpoint errors are \(o(X\lambda/(h_N\log X))\).
+The resulting count is \(\gg X/(D^{C''}\log X)\).
+
+Let \(I\) be the ray-class ideal count on \([X,2X]\). After excluding residue degree two, ramification and divisors of the modulus, the number of underlying rational primes is at least
+\[
+ \tfrac12\bigl(I-O(\sqrt X+\log N)\bigr).
+\]
+The factor \(1/2\) allows for both degree-one primes over the same rational prime.
+Consequently there are at least \(X^{9/10}\) candidate rational
+primes for every sufficiently large \(x\), uniformly in these hosts.
+
+For a counted ideal the ray condition gives a generator
+\(\pi\equiv1\bmod N\mathcal O_{K_0}\). Integrality follows
+from the integrality of its ideal. Write
+\(\pi=(A+B\sqrt{-d})/2\) in the basis
+\(1,(1+\sqrt{-d})/2\). Then
+\[
+ A^2+dB^2=4g,\qquad N\mid B,\qquad 2N\mid A-2-B .
+\] In particular
+\(g\equiv1\bmod N\). For the type primes use the short norm calculation on the interval \((X,2X]\).
+
+\proofstep{Avoid the exceptional set of the first prime.}
+The ray class imposes the splitting conditions. The second norm must also avoid the exceptions of the first.
+
+For a given \(j\) there are at most three such primes. Four of
+the corresponding primary factors would have product greater
+than \(g^j\) and also dividing \(g^j-1\). Thus
+\(|B_r(g)|\le3r+1\). Fix \(\ell,j\), and consider all the
+integers \(X<g\le2X\) satisfying the indicated strict inequality.
+If the set is nonempty, let \(v\) be the least of their
+\(v_\ell(g^j-1)\). The minimizer satisfies \(\ell^{4v}>X\). By minimality every counted integer satisfies
+\[
+ g^j\equiv1\pmod{\ell^v},\qquad \ell^v>X^{1/4}.
+\]
+
+There are at most \(2j\) roots, since the unit group is cyclic
+for odd \(\ell\) and is a product of a cyclic group and a
+group of order at most two for \(\ell=2\).
+Each residue class occurs at most \(1+X/\ell^v\le1+X^{3/4}\)
+times. For any fixed candidate \(g_1\), the number of integers
+with \(B_r(g)\cap B_r(g_1)\ne\varnothing\) is therefore at most
+\[
+ (3r+1)\big(1+2r^2(1+X^{3/4})\big)<X^{9/10}.
+\]
+The last inequality follows from \(r\le x^5\) and
+\(X\ge\exp(8x^\epsilon)\). A second candidate \(g_0\) has disjoint
+exceptional set. It is distinct since \(g_1\in B_r(g_1)\).
+
+\proofstep{Choose the remaining split primes.}
+The small primes needed with these two are obtained by applying
+the least-prime bound in the class one successively to \(15N\),
+\(15Np\), and \(Npp'\). For a modulus \(m\ge2\) the bound
+\(\ll m^{C}\) follows also from the relative progression estimate
+above at \(t=m^C\), with \(C\) an absolute constant large enough
+to make the relative error less than \(1/2\) and the positive
+weighted main term nonzero. Finitely many small moduli are
+absorbed by enlarging the exponent. The successive moduli ensure distinctness and give
+\[
+ p,p'\equiv1\pmod{15N},\qquad q_0\equiv1\pmod N,\qquad \max(p,p',q_0)\le N^{C_8}
+\]
+for an absolute \(C_8\), hence smaller than \(b\) and both level
+primes for sufficiently large \(x\).
+\end{proof}
+
+\begin{auxlemma}[The two characters used to remove ramification]
+\label{lem:split-deletion-characters}
+Let \(E\) be the original CM field of
+Definition~\ref{def:family-original-host}, let \(F=E^+\), and let
+\(p,p'\) be the distinct primes congruent to \(1\bmod 15N\) in
+Proposition~\ref{prop:two-type-primes}. For each \(h\in\{p,p'\}\)
+there is a finite-order Hecke character \(\delta_h\) of \(E\),
+trivial on \(\mathbb A_F^\times\) and at every infinite place.
+It is unramified away from the primes above \(h\). For each \(w\mid h\)
+its restriction to \(\mathcal O_{E_w}^\times\) factors through the
+residue field and satisfies
+\[
+       \bigl(\delta_{h,w}|_{\mathcal O_{E_w}^\times}\bigr)^a=1
+                   \quad\Longleftrightarrow\quad 15\mid a
+                   \qquad(a\ge1).
+\]
+In particular its finite conductor divides \(h\mathcal O_E\).
+Take \(\delta=\delta_p\) and \(\delta'=\delta_{p'}\) in
+Construction~\ref{hyp:family-prescribed-realization}.
+\end{auxlemma}
+
+\begin{proof}
+Put \(k_0=\mathbb Q(\sqrt{-d})\subset E\) and let \(c\) denote complex
+conjugation. The cyclotomic modulus \(N=Q_Sqd\) for \(E\) divides
+\(h-1\), so \(h\) splits completely in \(E\).
+Choose one of the two primes \(\mathfrak q\) of \(k_0\) above \(h\).
+The set \(S=\{w:w\mid\mathfrak q\}\) and its conjugate \(cS\)
+partition the primes of \(E\) above \(h\). Every residue field here
+is identified with \(\mathbb F_h\) by its prime subfield.
+Since \(\mathbb F_h^\times\) is cyclic and \(15\mid h-1\), choose
+a character \(\omega:\mathbb F_h^\times\to\mathbb C^\times\) of order
+\(15\). Put \(\mathfrak m=\prod_{w\in S}w\) and prescribe on its residue
+units the character
+\[
+        \theta((z_w)_{w\in S})=\omega\!\left(\prod_{w\in S}z_w\right).
+\]
+
+This prescription is compatible with every global unit. Indeed
+\(d\equiv7\bmod16\), so \(\mathcal O_{k_0}^\times=\{\pm1\}\). For
+\(u\in\mathcal O_E^\times\), reduction of the norm at the completely
+split prime gives
+\[
+       \prod_{w\in S}(u\bmod w)
+          =N_{E/k_0}(u)\bmod\mathfrak q\ \in\{\pm1\}.
+\]
+Both values lie in the kernel of the odd-order character \(\omega\).
+In the ray class sequence
+\[
+ \mathcal O_E^\times \longrightarrow
+ \prod_{w\in S}(\mathcal O_E/w)^\times\longrightarrow
+ \operatorname{Cl}_{\mathfrak m}(E)\longrightarrow
+ \operatorname{Cl}(E)\longrightarrow 1
+\]
+use the middle map induced by the local unit ideles.
+Thus \(\theta\) gives a character on their image.
+Extend it to a character \(\lambda\) of the finite abelian ray class
+group. Explicitly, when adjoining an element \(b\) of order \(n\)
+modulo the current subgroup, choose an \(n\)-th root of the assigned
+value of \(b^n\) as the value of \(b\). The resulting ray class
+character is trivial at infinity and unramified outside \(S\).
+
+Define \(\delta_h(z)=\lambda(z)/\lambda(cz)\) on the idele classes
+of \(E\). Complex conjugation fixes the image of \(\mathbb A_F^\times\),
+so the quotient is trivial there. On local residue units this gives
+\[
+ \delta_{h,w}|_{\mathbb F_h^\times}=
+       \begin{cases}\omega,&w\in S,\\ \omega^{-1},&w\in cS.\end{cases}
+\] This gives the asserted order at every prime
+over \(h\). Away from these primes both factors are unramified.
+Both characters have finite image, so their values can be included in
+one coefficient field by adjoining finitely many roots of unity.
+The two constructions use disjoint sets of ramified primes.
+At coefficient characteristic \(\ell\) the choice is \(\delta'\)
+if \(\ell=p\), and \(\delta\) otherwise. In either case it is
+unramified above \(\ell\) and its inertia image
+has order \(15\) above \(p'\) or \(p\), respectively.
+\end{proof}

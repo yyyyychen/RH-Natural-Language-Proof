@@ -1,0 +1,417 @@
+\paragraph{Computing orders of vanishing on the flag.}
+Work over the deep coefficient field \(F\). Let \(v\) be a
+discrete valuation on \(F(X_Z)\) centred at the boundary point
+\(y\), including a divisorial valuation on a modification whose
+centre on \(X_Z\) has arbitrary codimension.
+
+\begin{lemma}[A common valuation ring for boundary evaluations]\label{lem:common-boundary-trait}
+The marked generic flag admits a split trait with closed point
+over \(y\). For its complete DVR \(V\), normalized order \(v_V\)
+and local map \(g:\mathcal O_{X_Z,y}\to V\), one has a common proportionality constant
+\[
+ \exists\,c>0\quad \forall\,a\in\mathcal O_{X_Z,y}\setminus\{0\},\qquad v(a)=c\,v_V(g(a)).
+\]
+
+\end{lemma}
+\begin{proof}
+Complete the valuation ring dominating \(\mathcal O_{X_Z,y}\).
+The generic flag remains in the open marked locus. Pull back the
+semiabelian family and choose an integral eigenframe adapted to
+the flag by triangular change of basis, together with a generating
+theta frame. Extend to split the reduction torus. Polarized
+uniformization gives a period lattice \(X\), an integral quadratic
+form \(Q\) and a balanced pairing with \(\beta(x,x)=2Q(x)\);
+the adjoint on \(\mathcal O_E\) is CM conjugation. If \(e'>0\)
+is the ramification index of the extension and the initial
+comparison is \(v=c_0v_{\rm old}\), then
+\[
+             v_V|_{\rm old}=e'v_{\rm old},\qquad c=c_0/e' .
+\]
+The map preserves the generic flag and sends the closed point
+to \(y\). The structure map over \(F\) embeds \(F\) in the
+residue field, which therefore has characteristic zero.
+\label{cor:deep-boundary-orders-1}
+\end{proof}
+
+\begin{lemma}[Normalization of evaluation in a boundary frame]\label{lem:deep-trait-frame-order}
+At the selected valuation centred on the boundary, use the
+split trait and comparison factor \(c>0\) of Lemma~\ref{lem:common-boundary-trait}. Define \(\phi=c\inf_h h(\beta)\), where \(\beta\) is the
+trait's monodromy form. The infimum runs over real linear functionals
+on symmetric balanced forms that take integral values on integral
+forms and are strictly positive on every nonzero positive semidefinite
+form. For a nonzero germ \(a\) of any weight line of central theta exponent zero, write \(a_V\) for its value in the integral frame over the valuation ring. In the local line frame,
+\[
+ \phi=c\inf_h h(\beta)>0,\qquad v(a)=c\,v_V(a_V).
+\]
+
+\end{lemma}
+
+\begin{proof}
+\proofstep{The monodromy parameter on the common trait.}
+For the split trait define \(\phi_V\) to be the infimum of
+\(h(\beta)\) for real linear functionals \(h\) on the space
+of symmetric balanced forms which are integral on integral
+forms and strictly positive on every nonzero positive
+semidefinite form. The toric rank is positive. Otherwise
+the abelian special fibre would place the image of the
+closed point in the model interior. The polarization gives
+positive definite \(Q\) on its nonzero period lattice.
+Thus \(\beta\) is nonzero and integral. Strict positivity and integrality give
+\[
+ h(\beta)\in\mathbb Z_{>0}\quad\text{for every admissible }h,\qquad \phi_V\ge1.
+\]
+The admissible
+set is nonempty by the spanning construction below. Set
+\(\phi=c\phi_V>0\).
+
+In each trivialization of a weight line at \(y\), the
+coefficient of an open-locus rule, evaluated at the generic
+point of this trait, is a unit of \(V\) times the integral
+frame evaluation. Indeed the adapted eigenbases are related
+by a triangular flag change whose diagonal factors are units
+because both generate the successive integral quotients.
+If \(u_i\) are the diagonal units and \(a_i\) the integral exponents of the weight character, the multiplier is a unit because
+\[
+ v\!\left(\prod_i u_i^{a_i}\right)=\sum_i a_i v(u_i)=0.
+\]
+The central
+theta exponent is zero, so the result is a unit also for
+negative weight entries. It has zero trait order, and the
+only change of valuation is the common factor \(c\). It applies equally to the
+coefficient of a section extending the rule. In particular
+a nonzero value in the frame gives a nonzero germ, with order \(c\)
+times the frame order. \label{cor:deep-boundary-orders-2}
+
+\end{proof}
+
+\paragraph{A single section with large order.}
+The choice of the section begins on the geometric generic fibre. We
+need a product of nonzero theta values there, while retaining the
+residues of its labels modulo five for the boundary calculation.
+
+Take \(R=5\). The deep principal level contains \(R^4\), since
+\(\lfloor3L/\log3\rfloor\ge4\). Write \(P_x\) for the torsion
+point with label \(x\) in the full \(R^4\)-marking. The null
+value of order \(R^2\) at \(P_x\) is the theta section at
+\([R^2]P_x\), expressed in the fibre trivialization given by the
+theta structure. The trivialization is an isomorphism. For labels
+\(x+R\widetilde u\), with \(u\) varying modulo \(R\), we have
+\[
+   [R^2]P_{x+R\widetilde u}=[R^2]P_x+P_{R^3\widetilde u},
+   \qquad \{P_{R^3\widetilde u}:u\in\Lambda/R\Lambda\}=A[R],
+\]
+Here \(\Lambda\) is the marked period lattice.
+
+The geometric
+generic field embeds in \(\mathbb C\) since \(Z\) is of finite
+type over a number field. In this embedding
+Lemma~\ref{lem:eta-torsion-translate} gives a shift with a nonzero
+value for every label. The full marking defines each shifted
+evaluation over the geometric generic field, so nonvanishing descends.
+For a generating tuple \((x_b)_{b=1}^N\) choose the shifts
+independently. If \(A\) denotes the normalized theta value, then
+\[
+ f=\prod_{b=1}^N A(x_b+R\widetilde u_b)\ne0,\qquad
+ x_b+R\widetilde u_b\equiv x_b\pmod{R\Lambda}\quad(1\le b\le N).
+\]
+This single section is nonzero on the component. The congruence
+retains the generating property in every split uniformization.
+\label{cor:deep-boundary-orders-3}
+
+\begin{lemma}[One auxiliary section on each component]
+\label{lem:deep-boundary-uniform-order}
+On a component \(Z\) of the marked compact flag, there is a
+single nonzero auxiliary section \(\theta\) such that for each allowed centered boundary valuation \(v\), with normalized boundary order \(\phi_v\),
+\[
+ v(\theta)\ge\frac{8}{625}\phi_v.
+\]
+
+The section is fixed before the center or comparison trait is
+chosen.
+\end{lemma}
+
+\begin{proof}
+\proofstep{The auxiliary lower order from the half-level product.}
+Here is the lower order estimate. Put \(m=5^2\). In a
+Heisenberg lift at level \(m^2\), let \(y_j\in X\) be
+the period coordinates of the shifted labels. They generate
+\(X\) modulo \(m^2X\) as an \(\mathcal O_E\)-module.
+The integral odd-level expansion of the normalized
+theta-null at the \(j\)-th label has order at least
+\[
+             m^{-2}\min_{z\in X}Q(y_j+mz).
+\]
+This is the valuation bound term by term in the theta
+expansion on that coset: the normalized quadratic term
+has the indicated order and the integral coefficient has
+nonnegative order. The valuation can be extended to the
+algebraic closure for this computation. The product is
+the value of \(f\) over the original fraction field.
+
+Choose minimizing representatives \(b_j=y_j+m z_j\).
+The quotient of \(X\) by their \(\mathcal O_E\)-span
+is finitely generated over \(\mathbb Z\) and is equal
+to its multiple by \(m\), so it has rank zero. Take the
+marked half-trace element \(w_0\in\mathcal O_E\) with
+\(w_0+\bar w_0=1\). Then
+\[
+ h(\gamma)=\sum_j\gamma(w_0 b_j,b_j)
+          =\tfrac12\sum_j\gamma(b_j,b_j)
+\]
+is integral on integral balanced forms. For a semidefinite
+\(\gamma\), equality to zero puts every \(b_j\) in its
+radical. Balance and finite index then put all of \(X\)
+in its radical. Hence \(h\) is admissible and
+\(\sum_j Q(b_j)=h(\beta)\ge\phi_V\). The product has
+order at least \(\phi_V/625\).
+
+\proofstep{Transporting the fixed section to every centre.}
+Use the key rule \(K\) and the component flat rules
+\(s_\tau\) of the preceding flat-line construction. On
+\(Z\) the required rule is
+\[
+        f^8 K^N \prod_\tau s_\tau^{4N}.
+\]
+Extension by the component idempotent specifies its support.
+The key cancels the central exponent, and the flat power
+restores weight \(8N\omega_{\rm H}\). All factors after
+\(f^8\) are invertible there. The key on a generating
+integral theta and Lie frame is integral, and the flat rules have order zero here. More explicitly,
+the rank-one and de Rham canonical extension comparisons
+give a horizontal generator taking a unit value in the
+integral frame on a trait over \(F\). The constant-length
+rule of the same weight differs by a scalar in \(F^\times\)
+on this component. For such a scalar \(a\) the inclusion \(F\subset V\) gives
+\[
+ a,a^{-1}\in V,\qquad v(a)=0.
+\]
+
+Thus every such nonzero value has order at least
+\(8\phi_V/625\). The rule defines a rational section,
+regular on the open. At every codimension-one boundary
+point the calculation with its local DVR gives nonnegative
+order. Normality extends the rule to a section \(\theta\)
+on \(X_Z\). It remains nonzero by its value on the generic fibre.
+The same calculation at each centred valuation now gives
+\[
+ v(\theta)\ge 8\phi/625.
+\]
+
+\label{cor:deep-boundary-orders-4}
+
+\end{proof}
+
+\paragraph{A cusp section with small order at a given centre.}
+We give the weight and coordinate details because this
+section varies with the valuation. For the selected quotient weight \(u_1\), write \(p,q\ge1\) for the two block sizes, \(p+q=r\). Let \(q_\tau\) be the size at an embedding of \(E\), equal to \(p\) or \(q\) on the two embeddings of each conjugate pair. Define
+\begin{equation}\label{eq:deep-quotient-column-count}
+ c=\sum_{\tau}\sum_{j=1}^{q_\tau}2j
+   =f[p(p+1)+q(q+1)],\qquad
+ n=8\big(\lfloor c/8\rfloor+fr+1\big).
+\end{equation}
+There are \(fr\) nonempty row labels. Hence \(c\le n\le2fr^2+8fr+8\), and the \(j\) columns for every \(j\)-row minor may be selected disjointly across all labels. This is the column number for the quotient-weight differential.
+
+At \(\tau\) in the chosen CM type, write the decreasing coordinates of \(u_1\) as \(u_{\tau,1},\ldots,u_{\tau,r}\). Let \(h_0\) be the undivided inter-block gap and \(d_{\rm fl}=f\binom r2\) the flag dimension. The gap reserve in the weight selection gives
+\[
+ 4Tn\le80Tfr^2\le T r f^2m^2 k d_{\rm fl}\le h_0 .
+\]
+
+Euclidean division at length \(T\) gives \(4T(u_{\tau,p}-u_{\tau,p+1}-3r)\ge h_0\), so \(u_{\tau,p}-u_{\tau,p+1}\ge n+3r\). Use the parallel shift \(w_\tau=n/2+1-u_{\tau,p}\) and central exponent \(n/2\). Their polynomial exponents, in the original and conjugate block, are
+\begin{align}
+ a_{\tau,j}&=u_{\tau,j}+1-u_{\tau,p} &&(1\le j\le p),\nonumber\\
+ a_{\bar\tau,j}&=u_{\tau,p}-u_{\tau,r+1-j}-n-1
+                                    &&(1\le j\le q).\label{eq:deep-quotient-exponents}
+\end{align}
+Thus the two arrays are decreasing and nonnegative. The last exponent on the chosen side is one. Each exponent is at most \(4b+1\) because \(|u_{\tau,j}|\le2b\), so the total degree \(D_a\) is at most \(fr(4b+1)\).
+
+Put
+\[
+ H=2fm,\qquad R_E=|\operatorname{disc}E|^{2/[E:\mathbb Q]}
+                    /(2[E:\mathbb Q]),\qquad M=g_0g_1,
+\]
+where \(m\) here denotes the rank parameter in the original family. The
+original half-level generator satisfies
+\(\alpha\bar\alpha=M\), the deep level is divisible by
+\(M\) and its marked half ideal is contained in
+\((\bar\alpha)\). The two half ideals are coprime, so
+\(\alpha,\bar\alpha\) generate the unit ideal. These are
+the level conditions for translating a jet at level \(M\)
+inside this cover.
+
+The numerical hypothesis used at \(u_1\) is
+\[
+ 4D_a+4\le g_0,\quad 2D_a\sqrt H<g_0,\quad
+ \frac{R_E H^3(rH/4+2D_a^2)}{g_0}\le\frac1{2500}.
+\]
+Indeed the quotient-weight and size inequalities give
+\(D_a\le fr(4b+1)\), \(f,m,r\le t\), \(t\ge11\),
+\(t^7\le b\), \(R_E\le b\), \(b^8\le g_0\).
+They imply \(D_a\le b^2\), \(H^3\le b\),
+\(rH\le b^2\). The numerator is at most \(3b^6\)
+and \(b\ge100\), which proves the last inequality.
+The first two follow from \(4b^2+4<b^8\) and
+\(2b^2\sqrt H<b^8\).
+\label{cor:deep-boundary-orders-5}
+
+\begin{lemma}[A cusp section detecting a prescribed center]
+\label{lem:deep-boundary-detecting-section}
+For each allowed centered boundary valuation there is a cusp
+section at the selected quotient weight \(u_1\) whose value \(a\) in the chosen frame satisfies, in the original normalization,
+\[
+ a\ne0,\qquad v(a)\le\phi/2500.
+\]
+ This section may depend on the center. The
+constant and size thresholds are independent of the center,
+component and ramification.
+\end{lemma}
+
+\begin{proof}
+\proofstep{The detecting jet at the chosen centre.}
+Use a truncated integral frame chart, after a further
+finite extension if necessary. Denote its ramification
+index by \(e_1\), its boundary parameter by
+\(\Phi=e_1\phi_V\), and its toric rank by \(s\le H\).
+For clarity, the local theta-jet estimate used here is the
+following one. For a truncated chart with split polarized
+uniformization and torsion identification, residue
+characteristic zero, an antitone exponent array and an even column count divisible
+by eight and at least twice the sum of row ranks, the infimum of
+normalized orders of its marked harmonic theta translates
+is at most
+\[
+ \nu_{\rm loc}(P)+D_a^2 R_E s^3\Phi/M .
+\]
+Here \(P\) is a harmonic polynomial of this weight and
+\(\nu_{\rm loc}(P)\) is the infimum of its contracted jet
+orders on integral germs. The estimate requires the half
+generator just specified, \(4D_a+4\le M\) and
+\(2D_a\sqrt s<M\).
+
+To see the loss, take the period basis \(b_j\) given by
+reduction of the balanced Gram form. It satisfies
+\[
+ Q(b_j)\le H_0=R_Es^3\Phi,\qquad
+ |Q(b_j+z)-Q(b_j)-Q(z)|\le 2\sqrt{s}\,Q(z)
+ \quad(z\in X).
+\]
+On the product of \(n\) copies, place one basis vector
+in one coordinate at a time. The form on the product is
+the sum of the forms on the coordinates, so the same
+two bounds hold without an extra factor of \(n\).
+To lift an integral jet \(J\) through degree \(D_a\), take
+the small characters \(\chi=\sum_j n_j b_j\) on this product
+with \(n_j\ge0\) and \(\sum_j n_j\le D_a\).
+The triangle inequality for \(\sqrt Q\) gives
+\(Q(\chi)\le D_a^2 H_0\).
+
+For a nonzero period \(z\),
+\[
+ Q(\chi+Mz)-Q(\chi)
+     \ge M(M-2D_a\sqrt{s})Q(z)>0 .
+\]
+Thus \(\chi\) is the unique minimum in its level coset.
+This shows why reduction of the corresponding integral
+theta expansion singles out the \(\chi\)-term. At
+\[
+ M\ge4D_a+4
+\]
+the integral abelian jet theorem permits
+arbitrary base jets in its coefficient line, in a local
+generator. The remaining torus jets are spanned over those
+base jets by the small characters: the differences of the
+basis characters from their values at the identity generate
+the torus augmentation directions, and products of at most
+\(D_a\) such differences suffice in the truncated ring.
+Frame factors here are units. Reduction therefore spans
+the whole jet module on the special fibre. This finite
+truncated module over the local ring is spanned by the lifted
+jets by Nakayama. Write \(J\) as an integral combination
+of them.
+
+In their generic expansions the valuation loss
+per character is at most \(Q(\chi)/M\). Over a valued
+algebraic closure choose \(\lambda\) of order
+\[
+ \lfloor D_a^2 H_0\rfloor/M
+\]
+(a root of a uniformizer
+power suffices). Since \(Q(\chi)\) is integral, this
+one scalar clears all the losses. The resulting global
+expansion has nonnegative normalized coefficient orders
+and jet \(\lambda J\).
+The coprime half generators
+and the unit \(M\) in the residue field allow the
+torsion-translate spanning formula for this expansion.
+Its coefficients \(c_j\) have nonnegative valuation.
+Uniqueness of expansion identifies its germ with the
+sum of the translated germs in the same frame. Thus,
+for harmonic contraction \(P(\nabla)\), which only sees
+the jet through degree \(D_a\), one has
+\[
+ \lambda P(\nabla)J=\sum_j c_j P(\nabla)J_j.
+\]
+A nonzero left side gives a nonzero summand whose
+unweighted order is at most
+\(v(P(\nabla)J)+D_a^2H_0/M\).
+
+In passing from the
+translate to its marked rule one removes a multiplier
+of nonnegative order. The canonical connection and the
+level factorization identify the harmonic contraction on
+both sides. Taking the infimum over integral germs proves
+the estimate. Here orders of evaluated rules are taken in
+the chart DVR even though the translation identity can be
+formed over its algebraic closure.
+\label{cor:deep-boundary-orders-6}
+
+\proofstep{The compatible highest-weight polynomial.}
+Choose for \(P\) the product of successive highest-weight
+minors with distinct assigned columns. Dominance gives
+nonnegative difference exponents and the disjoint columns
+for conjugate rows give harmonicity. On the saturated
+chart directions the dual monomial jet gives a nonzero
+product of factorials as contraction. These integers
+are units in residue characteristic zero. Consequently
+\[
+ \nu_{\rm loc}(P)\le0.
+\]
+The bound for the infimum
+is now at most \[
+ B=D_a^2R_Es^3\Phi/M\le\Phi/2500.
+\]
+A zero evaluation has infinite order. Since the chart's order has normalization factor one, every nonzero value \(a\) satisfies
+\[
+ v(a)>B\quad\Longrightarrow\quad v(a)\ge\lfloor B\rfloor+1.
+\]
+If all nonzero values satisfied the left inequality, their infimum would satisfy the same integer lower bound. Thus there is
+a rule with a nonzero value of order at most \(B\).
+
+\proofstep{Returning its integer order to the original trait.}
+For the same theta rule \(f\) on the extended chart and original integral frame the two orders satisfy
+\[
+ v_{\rm chart}(f)=e_1 v_{\rm frame}(f).
+\]
+Restriction to the component gives a cusp rule
+with the same value: the dominant exponents, last positive
+entry and column range are those of the harmonic cusp
+construction. Its weight differs from \(u_1\) by a parallel
+shift and central exponent \(n/2\). Multiply by the
+inverse parallel twist and the inverse key twist for this
+central degree. The exponent needed for the weight return is integral, since
+\[
+ 4\mid n/2\quad\Longrightarrow\quad n/8\in\mathbb Z.
+\]
+Their evaluations are units here,
+including inverse powers since the component idempotent
+reads one.
+
+The cusp extension to the compact flag therefore
+provides a section at \(u_1\) with a nonzero value in the frame of order at most \(\phi_V/2500\). Multiplication by the
+original \(c\) bounds the order of its chart germ by
+\(\phi/2500\). Every choice after fixing the auxiliary
+section may depend on the centre. The constants and
+the family size thresholds used for these two inequalities
+are independent of that choice, the component, and the
+ramification of either trait.
+\label{cor:deep-boundary-orders-7}
+\end{proof}

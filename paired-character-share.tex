@@ -1,0 +1,110 @@
+We explain the character and group-order bounds used here.
+Over the residue field \(\mathbb F_Q\) of cardinality \(Q\), the mirabolic subgroup is
+\(\operatorname{GL}_{r-1}(\mathbb F_Q)\ltimes\mathbb F_Q^{r-1}\).
+Counting successive independent columns and using
+
+\[
+  |U_Q|=Q^{r(r-1)/2}
+\]
+ shows that its index divided by
+\(|U_Q|\) is \(\prod_{a=1}^{r-1}(1-Q^{-a})\). This formula
+also covers the empty product. For the product over the
+two level primes the ratio \(I/|U|\) is at least
+\(1-\sum_Q 1/(Q-1)\), since the sum of all the powers
+\(Q^{-a}\) at one place is at most \(1/(Q-1)\). There
+are at most \(2f\) places, and each \(Q\) is at least
+\(\min(g_0,g_1)\). The common size record has \(f\le k\) and
+\(\min(g_0,g_1)\ge(kb)^8\), so
+\(2f/(\min(g_0,g_1)-1)<1/8\).
+
+\begin{lemma}[The character dimension at the definite lift]
+\label{lem:paired-character-share}
+For the definite two-level cusp model at the selected weight, write \(V\) for the full cusp space of dimension \(R_j\). Its character multiplicity at the given level is
+\[
+ \mu=(\chi|_U)\psi_0^{-1},\qquad \dim V[\mu]=\frac{R_j}{|U|}.
+\]
+
+\end{lemma}
+
+\begin{proof}
+\proofstep{Free orbits at the definite lift.}
+For the dimension bound use the two-level model of cusp
+forms for this same lift. Scalar extension through the
+selected complex embedding preserves the ambient dimension
+and the dimension of the character space. In fact the
+images of the coordinate basis are independent and span,
+and the joint eigenspace is the kernel of the stacked
+matrices \(\rho(u)-\mu(u)\) for \(u\in U\).
+Equivalently, if \(V\) is the model space, the selected subspace is
+\[
+  V[\mu]=\bigcap_{u\in U}\ker\big(\rho(u)-\mu(u)I\big).
+\]
+ All their
+nonzero minors stay nonzero. Use the model character
+\(\mu=(\chi|_U)\psi_0^{-1}\), including the scalar
+twist on the model action.
+
+At the definite end the
+subgroup acts freely on the components at this level.
+A stabilizer would give a unitary rational matrix at a
+balanced frame, unipotent modulo the specified split prime
+and bounded in the positive definite norms. The
+small-element estimate at that level forces it to be the
+identity, and faithfulness gives the identity subgroup
+element. The direct sum of the component spaces is therefore
+a sum of regular representations of \(U\), by identifying
+a representative fiber with each of its translates. Its
+\(\mu\)-space has dimension \(R_j/|U|\).
+\label{cor:paired-character-share-1}
+
+\end{proof}
+
+\input{paired-row-reading}
+\input{paired-cusp-ranks}
+
+\begin{proposition}[Uniform proportion of the selected character space]
+\label{prop:paired-character-share}
+In the same two-level model, let \(V[\mu]\) be the character space for \(\mu=(\chi|_U)\psi_0^{-1}\). On the selected family,
+\[
+ \dim V[\mu]\ge(1-y)\,\frac{R_j}{|U|},\qquad y\le\tfrac18.
+\]
+
+Lemma~\ref{lem:paired-character-share} gives the definite case.
+For the other lifts use the separating section and the rank bounds
+of Lemma~\ref{lem:separating-level-section} and
+Proposition~\ref{prop:three-selected-weight-ranks}.
+\end{proposition}
+
+\begin{proof}
+Write \(P_\mu=\sum_g\mu(g)\rho(g^{-1})\).
+Multiplication by a translate of \(u_0\) carries a shifted
+cusp section \(X\) into the cusp space of weight \(\kappa\).
+This uses boundedness of the translated section.
+The map
+\[
+ X\longmapsto\big(P_\mu(X\cdot h^*u_0)\big)_{h\in U}
+\]
+from the shifted cusp space to \(|U|\) copies of the
+character space is injective. Indeed, at a frame \(z\)
+where the translate matrix is invertible, its rows express
+the vanishing of those traces as a linear system on the
+values \((g^*X)(z)\) times nonzero character and action
+scalars. The column for the identity gives \(X(z)=0\).
+
+On every component the determinant is holomorphic and
+nonzero somewhere. The invertible locus is dense in its
+connected frame domain, so continuity gives vanishing
+throughout. Finally,
+\[
+ \frac{\binom{T_0+n}{n}}{\binom{T_0+2n+6}{n}}
+   =\prod_{a=1}^{n}
+       \left(1-\frac{n+6}{T_0+n+6+a}\right)
+   \ge 1-\frac{n(n+6)}{T_0}.
+\]
+The family takes \(n(n+6)/T_0\le1/(4(fk)^3)\le1/8\).
+This gives the asserted lower share for the character on
+both signatures on the indicated two-level model. Taking \(y\) to be the
+larger of the two losses gives \(y\le1/8\).
+\end{proof}
+
+\input{paired-good-share}

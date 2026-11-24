@@ -1,0 +1,259 @@
+The preceding rank and lifting statements concern the symbol
+with the reduced weights. In Proposition~\ref{prop:residue-plane-neighbor-test}
+the source must have the full weight. The replacement below
+retains the rank of the model family and supplies the integral
+contractions used on the target side.
+
+\paragraph{Restoring the bounded weights.}
+\label{par:plane-middle-weights}
+\hypertarget{source-plane-middle-weights}{}
+At a top let \(\lambda=(\lambda_1,\ldots,\lambda_k)\) be its
+true dominant weight and let \(b=\lambda_1-\lambda_2\). Remove
+\((b,0,\ldots,0)\) to form the remaining dominant weight
+\[
+ \mu=(\lambda_2,\lambda_2,\lambda_3,\ldots,\lambda_k).
+\]
+
+Away from the tops take the removed weight to be zero and
+\(\mu=\lambda\). At odd indices use the corresponding reversed
+negative weights in the polynomial model. Write \(d_l(\gamma)\)
+for the dimension of highest weight \(\gamma\) in dimension \(l\).
+The local factor of the count for restoring weights is
+\(d_{k-1}(\lambda_2,\ldots,\lambda_k)\) at a top and
+\(d_k(\lambda)\) elsewhere. We construct integral polynomials
+realizing exactly this count.
+
+\begin{auxlemma}[Counting the tableaux at one index]\label{lem:bounded-tableau-count}
+With the top weights \(\mu\) defined at the start of
+paragraph~\ref{par:plane-middle-weights}, use tableaux of the
+determinant-shifted shape. At an even top take tableaux with every entry in the first row
+equal to zero. At an odd top take the reversed negative shape and exclude zero
+from its alphabet. Writing \(n_s\) for the number admitted at position \(s\),
+\[
+ n_s=\begin{cases}d_{k-1}(\lambda_2,\ldots,\lambda_k),&s\text{ a top},\\d_k(\lambda),&s\text{ away from the tops}.\end{cases}
+\]
+Away from the tops every tableau is allowed. Distinct selected tableaux have distinct leading monomials over
+every residue field.
+\end{auxlemma}
+\begin{proof}
+Use a matrix of variables \(X=(X_{i,h})\), with rows and columns
+numbered from zero. For a dominant weight \(\gamma\) the
+polynomial realization after its determinant twist has shape
+\(\gamma-\gamma_k(1,\ldots,1)\). Its integral basis consists of
+products of initial-column minors indexed by semistandard
+tableaux of this shape on the alphabet \(0,\ldots,k-1\).
+For each tableau its leading monomial uses the diagonal of each
+minor. Order the variables by column first and by increasing
+row within a column, giving the earlier variable precedence.
+
+In a minor the largest monomial uses the smallest available row
+in the first column and then the smallest remaining row in each
+successive column. For rows \(i_0<\cdots<i_{s-1}\), this gives
+\[
+ \operatorname{in}\det(X_{i_a,b})_{0\le a,b<s}
+    =\prod_{b=0}^{s-1}X_{i_b,b}.
+\]
+The coefficient is one. If \(M_T\) is the diagonal monomial of the product for a tableau \(T\), then
+\[
+ \deg_{X_{i,b}}M_T=\#\{c:T(b,c)=i\}.
+\]
+Its weakly
+increasing order reconstructs that row from these counts. These are the integral
+standard monomial coordinates used for the component lattices.
+\cite[Theorem II.2.16]{abw-schur}
+
+Away from the tops take every tableau of \(\mu\) in the
+corresponding signed realization. At an even top restrict to
+those with first tableau row all zero. Removing that row
+leaves the tableau of the smaller shape with alphabet
+\(1,\ldots,k-1\), since every remaining box had a box above it.
+This restriction counts
+\[
+ d_{k-1}(\lambda_2,\ldots,\lambda_k),
+\]
+
+by subtracting the common determinant shift. At an odd top
+restrict to tableaux with no entry zero. The reversed negative
+weight of \(\mu\) has two equal last entries. The determinant
+shift leaves at least its last shape row empty. Dropping this
+row and using the alphabet \(1,\ldots,k-1\) counts the dimension
+of the reversed negative of \((\lambda_2,\ldots,\lambda_k)\),
+which equals \(d_{k-1}(\lambda_2,\ldots,\lambda_k)\) by duality.
+\end{proof}
+Let \(n_2\) be the product of these counts and \(H_i\) the
+resulting basis products in the independent block variables.
+
+\begin{proposition}[Restoration of the bounded highest weights]\label{prop:restore-plane-model-rank}
+Use the removed flat degrees and the \(n_2\) tableau products
+\(H_i\) counted in Lemma~\ref{lem:bounded-tableau-count}. The products \(\theta(Q)H_i\) retain
+independence modulo the uniformizer for every independent
+family of flat polynomials \(Q\) of the prescribed degrees.
+With the common factor \(C\) of \eqref{eq:plane-clean-factor}
+and precision \(c'\ge\max(2(D_1+1),c_\star+o_S)\), the products
+admit the stated clean approximations at the distinguished edge. With the bounded spread \(c_0\) and lower
+degree \(a\), let \(f_{\rm true}\) and \(f_{\rm flat}\) be the retained fractions in the true and flat dimensions, respectively. In the indicated size range,
+\[
+ f_{\rm true}\ge(1-kc_0/a)^N f_{\rm flat}.
+\]
+
+\end{proposition}
+
+\begin{proof}
+\proofstep{Independence after restoring the removed weight.}
+To prove independence after restoring the removed weight, let
+\(\theta\) insert the first column at an even index and the
+signed \((k-1)\)-row minors of the first \(k-1\) columns at an
+odd index. This is the vector and covector polynomial model of
+Section~\ref{sec:edge-transfer}. At an even top with removed
+degree \(b\), the leading monomial of a degree-\(b\) monomial
+in the flat variables inserts exponents \(\alpha_c\) at
+\(X_{c,0}\). The exponent matrix of a chosen tableau has no
+\(X_{c,0}\) for \(c>0\).
+
+At each \(c>0\) the exponent of \(X_{c,0}\) in the leading product
+is therefore precisely \(\alpha_c\). Recover the missing exponent from
+the homogeneous degree:
+\[
+ \alpha_0=b-\sum_{c>0}\alpha_c.
+\] At an odd top the leading
+monomial of the cofactor omitting row \(c\) uses \(X_{t,t}\)
+for \(0\le t<c\) and \(X_{t+1,t}\) for \(c\le t<k-1\).
+In the selected tableau the entry in row \(t\) is at least
+\(t+1\), so its exponent at \(X_{t,t}\) is zero. The diagonal exponents of the product read
+\(d_t=\sum_{c>t}\alpha_c\) for \(0\le t<k-1\).
+
+If \(b\) is the fixed flat degree, invert this triangular
+reading by
+\[
+     \alpha_0=b-d_0,\qquad
+     \alpha_c=d_{c-1}-d_c\ (1\le c\le k-2),\qquad
+     \alpha_{k-1}=d_{k-2}.
+\]
+Thus the diagonal exponents and the degree recover the
+full flat monomial. After recovering the flat exponents, subtract their contribution
+to recover the leading exponent matrix of the tableau. At an
+off-top position there is no contribution to subtract. Thus the
+pairs of a flat monomial and a selected tableau product have
+distinct leading monomials. Each has leading coefficient a unit,
+including in the residue field. In a proposed nonzero relation
+\[
+ \sum_i\theta(Q_i)H_i=0,
+\]
+choose the largest of those leading
+monomials among the nonzero coefficients. Its coefficient cannot
+cancel with that of any other pair. This proves the assertion
+over the residue field for arbitrary \(Q_i\) of the fixed degrees.
+
+\proofstep{The three normalized edge lattices.}
+Use the normalized edge coordinates on all three weights
+\(\lambda,\mu,\lambda-\mu\). The normalization consists of
+pullback to the component frames, the last-entry determinant
+powers in the signed realizations, and the common edge powers
+\(w^{A_r}\) for the respective weights. In each frame the common powers on the two factors have product
+\[
+ w^{A_r(\mu)}w^{A_r(\lambda-\mu)}=w^{A_r(\lambda)},
+\]
+by additivity of the edge exponent in the weight.
+
+On a flat polynomial this change to edge
+coordinates is the letter substitution followed by \(\theta\).
+Indeed a vector transforms by the frame matrix \(M\), and the
+cofactors by \(\det(M)M^{-t}\), which follows by multiplying
+the adjugate identity by \(M\). The last-entry twist on the
+covector cancels the determinant. The flat edge exponent is
+one copy of the degree for each even block and zero for each
+odd block. Write
+\[
+ D=\operatorname{diag}(w^{-1}I_r,I_{k-r})
+\]
+for the diagonal
+part. After the common determinant cancels, the two letter maps are
+\[
+ wD=\operatorname{diag}(I_r,wI_{k-r})\quad\text{on vectors},\qquad
+ D^{-t}=\operatorname{diag}(wI_r,I_{k-r})\quad\text{on covectors}.
+\] The
+other frame factors act by the same matrix identities, with
+Frobenius at the corresponding index. Thus this normalization
+pulls the edge coefficient lattices back to their integral
+standard monomial models, including their reductions.
+
+In the distinguished frame the model vectors \(S_b\) have
+normalized polynomials \(B_b C\) with one common factor \(C\).
+This is \(\operatorname{subst}(\mathrm{SPtrue})\) in the symbol
+identity, with residue the product of \(F_*\) and the separate
+determinant reserve on the digits. Each determinant uses distinct
+rows and has a permutation monomial with unit coefficient, so
+\(\overline C\ne0\). To obtain the clean source, expand \(B_b\)
+by its segment presentation. Its nonnegative separation margin
+allows each homogeneous pair to be expanded in the paired paths
+of Section~\ref{par:plane-column-orders}. The common factor
+\begin{equation}\label{eq:plane-clean-factor}
+                 C=F_*\prod_s T_s^{kQ}
+\end{equation}
+supplies the precision reserve and the factors for the digits. Write \(S_{b,o}\) for the standard-edge pullback of the
+normal degree-\(o\) component of \(C B_b\). Apply the path
+and digit constructions to this component.
+
+In the flat source
+lattice \(R_e\) on the chosen edge, the resulting vector
+\(F_{b,o}\) has source order at most \(o\) and satisfies
+\[
+                 F_{b,o}-w^o S_{b,o}\in w^{o+c'}R_e .
+\]
+The insertions commute with
+the projection to the full true multidegree because \(C\)
+has the reserved degrees. Divide by \(w^o\) in the displayed bound,
+then sum over the finitely many \(o\) bounded in
+Section~\ref{par:plane-rank}. Thus
+\[
+  F_b:=\sum_o w^{-o}F_{b,o}\in S_b+w^{c'}R_e .
+\]
+Here \(S_b=\sum_o S_{b,o}\). The competing-edge conditions
+of the construction give \(F_b\in w^{c'}R_{e'}\) on every
+other edge out of the same source. Restore the weights by multiplying
+with the inverse edge transports of the \(H_i\). They are integral
+on the chosen edge, so the same congruence holds in the restored
+lattice there.
+
+If a combination with coefficients \(c_{b,i}\in O\) is
+zero modulo \(w\) in the normalized edge lattice, then in the
+residue polynomial model
+\[
+ 0=\sum_i\theta\left(\overline C\sum_b\overline{c_{b,i}}\overline{B_b}\right)
+                    \overline{H_i}.
+\]
+All polynomials inside \(\theta\) have the full common flat
+multidegree. By block independence, for each \(i\) the coefficient polynomial
+vanishes. Cancellation takes place in the residue polynomial ring,
+a domain, and then independence of the \(\overline{B_b}\) gives
+\[
+ \overline C\sum_b\overline{c_{b,i}}\overline{B_b}=0
+ \ \Longrightarrow\ \sum_b\overline{c_{b,i}}\overline{B_b}=0
+ \ \Longrightarrow\ c_{b,i}\in wO\quad\text{for every }b .
+\] In particular primitive combinations remain primitive
+in the actual source lattice.
+
+\proofstep{Pairing the restored model family.}
+For the pairing one can therefore test the restored model family.
+An integral target test evaluates the difference between the clean
+and model combinations in \(w^{c'}O\). If \(c'\ge 2(D_1+1)\), this
+is contained in \(p^{D_1+1}O\), since \(w^2=p\). A model evaluation
+of valuation at most \(D_1\) has the same valuation on the clean
+combination. On competing source edges restoration costs at most
+\(o_S\) powers of \(w\), by the source vertex bound for the remaining
+weights. Thus \(c'\ge c_\star+o_S\) gives the source conductor there.
+
+At each top the spread \(\lambda_2-\lambda_j\) for \(j\ge2\)
+is at most \(c_0\), with \(b\ge a\) in the plane count.
+The Weyl factors involving the first entry give
+\[
+ d_k(\lambda)\le d_{k-1}(\lambda_2,\ldots,\lambda_k)D_k(b)
+                  (1+c_0/a)^{k-1}.
+\]
+This follows term by term from
+\(\lambda_1-\lambda_j+j-1\le (b+j-1)(1+c_0/a)\).
+The retained fraction of the true dimension is therefore at
+least the flat fraction multiplied by \((1-kc_0/a)^N\), using
+\((1+t)^{-(k-1)}\ge1-(k-1)t\) for \(t\ge0\). The product of
+the off-top dimensions is included exactly.
+\end{proof}

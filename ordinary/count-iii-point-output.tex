@@ -1,0 +1,252 @@
+\subsection{The target in the rank-four construction at the rational level}
+\label{sec:count-three-target}
+
+Ordinary support has reached the target at the two chosen levels. Its Frobenius identities now allow the full-block exclusion and the rational conductor bounds needed to count the remaining representations.
+
+\begin{proposition}[Rank-four bound at the original level]\label{prop:count-three-host-output}
+For the data of Lemma~\ref{hyp:count-three-host}, with \(j\ge2\), and
+using the four-link support of Proposition~\ref{prop:count-three-extra-vertices},
+the characteristic-zero full blocks are excluded by the determinant test
+of Proposition~\ref{prop:count-two-full-block-excluded}. Irreducible
+targets have the rational flag, quadratic packet attachment and
+level \(M_{\mathrm{host}}=\ell\,2^{n_{\rm III}}\mathcal Np_1\), with
+\(n_{\rm III}\) defined in \eqref{eq:ordinary-dyadic-exponents}. Their normalized cohomology length satisfies
+
+\[
+ \log\ell\,s_\ell(\xi,j)\le(\ell\mathcal N j)^C
+\]
+ with the
+constant independent of the fitted fields, exceptional places
+and coefficient extension.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Classical control and full-block exclusion.}
+
+After the four-link propagation the actual target kills
+the sum of the two ordinary ideals. On the chosen CM
+layer it has the target exponents \(j+1,j,1,0\), plus
+the common link exponent. The common twist cancels in successive differences, giving
+\[
+ (j+1)-j=1,\qquad j-1\ge1,\qquad 1-0=1
+\]
+for \(j\ge2\). Subtracting the index from
+the oppositely signed Hodge numbers gives a dominant
+weight, exactly as in Proposition~\ref{prop:two-link-classical-control}.
+The ordinary control argument there puts each evaluation
+in the classical part of the same quotient. At the
+exceptional prime of each link the residual matrix is
+scalar, whereas the residual cyclotomic character has
+nonidentity value. The rank-four tower supplies Frobenius elements with these two
+residual properties at primes chosen separately from the seed prime. The Speh
+argument of Proposition~\ref{prop:count-two-full-block-excluded} therefore
+applies. The Frobenius modulus ratios at good primes are
+strictly less than the residue norm.
+
+For a full block on the
+rational chart, first apply Proposition~\ref{prop:full-block-extension}
+and run the propagation on the resulting nonsplit point.
+The same ratio bound holds for the split point since the
+characteristic polynomials agree. Adding the inertial exponents within each block gives its determinant exponent,
+\[
+ (j+1)+1=j+2,\qquad j+0=j.
+\]
+At a split good prime the ratio of determinant moduli is
+\[
+ p^{j+2}/p^j=p^2.
+\]
+For roots \(\lambda_i,\mu_i\) of the
+respective blocks the two-link bound instead gives
+\[
+              \frac{|\lambda_1\lambda_2|}{|\mu_1\mu_2|}
+                   =|\lambda_1/\mu_1|\,|\lambda_2/\mu_2|<p^2 .
+\]
+This is the required contradiction. The degree-zero and length comparisons of
+Section~\ref{sec:rank-four-deformation} use this exclusion
+on the chart for the rank-four construction.
+
+\proofstep{Glue the two cuspidal attachments.}
+
+At an irreducible target the four restricted residual
+labels are distinct at the powered normalizer, so the
+trace self-twist argument of
+Proposition~\ref{prop:count-two-cuspidal-attachment} gives irreducibility
+on \(G_L\). The two cuspidal transfers have equal polynomials
+on the common good primes. Strong multiplicity one identifies
+them. At each exceptional pair use the other level's local
+comparison, and at \(\ell\) retain the comparison on the
+marked side. Remove the common scalar twist to obtain the
+cuspidal attachment of \(r|_{G_L}\).
+\cite[Theorem 1.2 and Corollary 1.3]{newton-thorne-unitary}
+
+\proofstep{The rational local ratio test.}
+De Rhamness at \(\ell\) follows by descent from \(L\).
+On the ordinary flag over \(\Q_\ell\), the four characters and their pairwise ratios are
+\[
+ \kappa_i=\nu_i\epsilon_\ell^{m_i},\qquad
+ \frac{\kappa_i}{\kappa_h}=\frac{\nu_i}{\nu_h}\epsilon_\ell^{m_i-m_h},
+ \qquad m=(j+1,j,1,0),
+\]
+with finite inertia for the \(\nu_i\). At an arithmetic Frobenius lift \(s\) with
+\(\epsilon_\ell(s)=1\), the ordered residual labels
+of the rational flag are
+\[
+                 (\bar\eta\bar\Psi,\bar\Psi,\bar\eta,1)(s).
+\]
+The adjacent characteristic ratios at \(s\) are
+\[
+ \bar\kappa_0/\bar\kappa_1=\bar\eta,\qquad
+ \bar\kappa_1/\bar\kappa_2=\bar\Psi/\bar\eta,\qquad
+ \bar\kappa_2/\bar\kappa_3=\bar\eta .
+\]
+The rational Frobenius test of Paragraph~\ref{par:dyadic-residual}
+makes each of them nontrivial there.
+This includes the middle pair when \(j=2\).
+The Weil lines on the flag have parameters
+\(\iota(\nu_i(g))\,\ell^{m_i\deg(g)}\) on the rational
+Weil group.
+
+Write \(\mu_i(g)=\iota(\nu_i(g))\ell^{m_i\deg(g)}\).
+If two lines were related by the norm character, take the
+order in which \(\mu_i(g)/\mu_h(g)=\ell^{\deg(g)}\).
+Applying the coefficient-field \(\ell\)-valuation at a
+Frobenius lift gives
+\[
+       m_i-m_h=1,\qquad
+       \nu_i(g)/\nu_h(g)=1\quad\text{on the Weil group}.
+\]
+In the first computation the \(\nu_i\) are units. Weil-group
+density then identifies the two finite-inertia factors. The residual values at \(s\) rule this out
+for every pair with exponent difference one.
+
+Indeed, on two such Weil lines of characters \(\mu_i,\mu_h\) the monodromy equation gives
+\[
+ (\mu_i(g)/\mu_h(g)-|g|)N_{ih}=0\qquad(g\text{ in the Weil group}),
+\]
+with the inverse norm in the opposite convention. The preceding exclusion in both orders forces every \(N_{ih}=0\).
+Thus \(N=0\) rationally, and \(N|_{G_{L_v}}=0\) after restriction.
+This use of the rational flag precedes restriction:
+the quadratic root \(\bar\alpha\) is trivial at the
+selected decomposition groups above \(\ell\) in \(L\),
+where the rational separation need not hold.
+\cite{colmez-fontaine}\label{cor:ordinary-count-iii-point-output-1}
+
+At the selected places above \(\ell\) in \(L\), the
+cuspidal transfer is tempered after undoing the common
+algebraic normalization. As its parameter has zero
+monodromy, the absolute values of all the ratios of
+the Weil lines there are one. Scalar twisting cancels
+in a ratio. Write \(f_{ih}\) for a ratio of two rational Weil lines.
+For a rational Weil element \(g\), choose \(a>0\) with
+\(g^a\) in the finite-index local restriction from \(L\).
+Then
+\[
+                         |f_{ih}(g)|^a=|f_{ih}(g^a)|=1 .
+\]
+This proves the modulus equality on the rational group.
+At the rational lift \(s\), \(\epsilon_\ell(s)=1\).
+If the ratio of the finite-inertia factors were torsion at that
+element, its complex absolute value would be one. This would give
+\[
+       |\mu_i(s)/\mu_h(s)|=\ell^{(m_i-m_h)\deg(s)}\ne1,
+\]
+contrary to the modulus equality.
+Thus all these ratios have infinite order, and the same
+is true on a positive power in any prescribed finite
+extension's decomposition group.
+
+\proofstep{Rigidity, descent and the valuation.}
+
+Classicality supplies Frobenius data on the fitted field. Bounding the original character component requires counting the descended representations and their integral congruences.
+
+The normalizer in \(G_L\) has trivial mod-\(\ell\)
+cyclotomic character and retains four distinct labels.
+Suppose a sign \(\chi\) through cyclotomic reduction
+twists \(\bar\kappa_i\) to \(\bar\kappa_{\sigma(i)}\).
+Writing \(g_0\) for this normalizer gives
+\[
+ \bar\kappa_{\sigma(i)}(g_0)=\chi(g_0)\bar\kappa_i(g_0)
+ =\bar\kappa_i(g_0)\quad\Longrightarrow\quad\sigma(i)=i .
+\]
+The identity \(\chi\bar\kappa_i=\bar\kappa_i\) now holds as characters, so cancellation gives \(\chi=1\). The simple-spectrum
+element just constructed and the argument of
+Proposition~\ref{prop:marked-invariant-rigidity} give irreducibility on
+\(G_{L(\mu_{\ell^\infty})}\).
+The same adjoint vanishing theorem and local tangent
+argument apply to the ordinary cuspidal attachment.
+In particular the infinite-order ratios apply on the
+open local subgroups needed for the weight-gap-one
+extensions. The rational tangent class then vanishes
+in the normalized chart.
+
+\proofstep{Return to the original level.}
+
+For the original field level take
+\[
+ M_{\mathrm{host}}=\ell\,2^{n_{\rm III}}\mathcal Np_1.
+\]
+
+Away from \(\ell\) the rational chart factors inertia
+through the residual character quotient because
+\(S_b=\varnothing\). It gives finite abelian inertia
+with conductors dividing \(M_{\mathrm{host}}\).
+At \(\ell\) the finite parts of the ordered rational
+inertia characters have conductors dividing the same
+level, and the rational ratio test supplies the zero
+monodromy condition for this order of weights.
+For quadratic descent choose the ramified prime of
+\(K\) in the fitted tower outside the fixed packet
+discriminants as in Proposition~\ref{prop:count-two-quadratic-packets}.
+This is allowed in the simultaneous splitting
+conditions of Section~\ref{sec:count-three-tower}.
+
+At inertia at this ramified prime the original representation acts trivially and the quadratic sign acts nontrivially. The incompatible characteristic polynomials
+\[
+ (X-1)^4\quad\text{and}\quad (X+1)^4
+\]
+give the self-twist exclusion for each admissible quadratic restriction as in Proposition~\ref{prop:count-two-quadratic-packets}. Cyclic descent
+and unramified comparison give the rationally
+normalized cuspidal attachment on each member of the
+packet list for which the restriction is irreducible.
+At \(w\mid p\) of a member \(K'\) of the list, a
+restricted unit character is the rational one composed
+with \(N_{K'_w/\Q_p}\). For \(u\in1+M_{\mathrm{host}}\mathcal O_{K'_w}\), use the
+matrix of multiplication in an integral local basis:
+\[
+ N_{K'_w/\Q_p}(u)=\det(I+M_{\mathrm{host}}A)
+                         \in1+M_{\mathrm{host}}\Z_p .
+\]
+This gives triviality of the inducing unit characters on
+the required congruence group. The weights on that side
+are \(j+1,j,1,0\).
+\cite{clozel-rajan,blggt,blggt-lg,thorne-adjoint}\label{cor:ordinary-count-iii-point-output-2}
+
+\proofstep{Apply the pointwise valuation bound.}
+
+The indexed trace product of the pointwise bound
+therefore applies to the rank-four case with this \(M_{\mathrm{host}}\).
+Choose \(p\geq5\) prime to \(2\ell\mathcal Np_1\),
+with \(p\leq6\ell\mathcal Np_1+1\).
+The reducible target and all other points have the
+same trace comparison as in the even-order case, with the
+\(2^{n_{\rm III}}\)-th roots included.
+Each irreducible point maps to a distinct record in the fixed
+packet product \(D_p\), with the two possible rational descents
+retained as separate labels.
+
+The cardinality bound of
+Proposition~\ref{prop:marked-rational-packets} is polynomial in
+\(M_{\mathrm{host}}(j+1)\).
+The norm, integrality and length arguments then give
+\[
+      \log\ell\,s_\ell(\xi,j)\leq(\ell\mathcal N j)^C .
+\]
+Here \(p_1\) is fixed by the primitive target, and
+\(2^{n_{\rm III}}\) and the order of the root group
+in the trace are bounded by fixed powers of
+\(\ell\mathcal N\). Thus \(C\) is independent of the
+fitted fields, the weight of the Eisenstein seed, its
+prime \(w\), both exceptional places and the degree of
+the coefficient extension. This gives the rank-four positive-component valuation estimate with the same host and
+parameters as the common-window calculation.
+\end{proof}

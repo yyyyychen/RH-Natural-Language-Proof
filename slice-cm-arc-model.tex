@@ -1,0 +1,215 @@
+\paragraph{The normalized degeneration and its fields of definition.}
+On the complementary period lattice let \(H_B\) be the Hermitian
+form, normalized so that its imaginary part is the integral Riemann
+form. Let \(C_y\) be the abelian component of the period belonging
+to \(y\in Y\). The toric periods are affine in the arc coordinate
+\(w\), with linear term given by the positive form of the preceding
+construction. The constant term in their pairing can be chosen to be
+\begin{equation}\label{eq:slice-cm-normal-pairing}
+ T(y,y')=-\frac{H_B(C_y,C_{y'})}{2i}
+                 +\operatorname{Im}H_B(\alpha C_y,C_{y'}),
+ \qquad \alpha+\bar\alpha=1,
+\end{equation}
+where \(\alpha\) is the marked integral element of the CM host.
+The Rosati relation and the displayed equation for \(\alpha\)
+make \(T\) symmetric. They also give
+
+\[
+  T(y,\alpha y')+T(y',\alpha y)=T(y,y').
+\]
+
+Consequently \(\exp(2\pi i T(y,\alpha y))\) is the even
+trivialization with polarization given by \(T\).
+Replacing the old symmetric constant pairing by \(T\) is a
+translation along the complex cusp flow. Indeed the difference
+is conjugate balanced over \(\mathcal O_E\) on \(Y\), so over
+the trace pairing it is a complex linear combination of real
+parameters of that flow. The slope and abelian projection are
+preserved. At large imaginary \(w\) the positive slope absorbs
+the fixed translation in each embedding. A Fourier--Jacobi
+coefficient under that translation receives its trace character,
+which is never zero.
+
+In the normalized model \(n'C_y\) belongs
+to the abelian period lattice. Thus
+\begin{equation}\label{eq:slice-cm-tau-normal}
+  \exp\bigl(2\pi i T(n'y,n'y')\bigr)
+       \exp\bigl(\pi H_B(n'C_y,n'C_{y'})\bigr)=1.
+\end{equation}
+Indeed its remaining exponent divided by \(2\pi i\) is the
+integral Riemann pairing of \(\alpha n'C_y\) and \(n'C_{y'}\).
+On this sublattice the two gluing points are the identity of the
+abelian variety. The exponential product is the comparison of
+the polarization of the trivialization with the rigidification
+there. This is the canonical torsion normalization.
+\label{cor:slice-cm-arc-model-1}
+
+\begin{proposition}[Comparison of the two evaluations on the normalized CM arc]
+\label{prop:marked-cm-arc-base-change}
+On the marked CM degeneration with pairing
+\eqref{eq:slice-cm-normal-pairing}, let \(s,a_\nu\) and \(s',a'_\nu\) denote the positive slope and the Fourier--Jacobi coefficient before and after the change of constant period. Then
+\[
+ s'=s>0,\qquad a'_\nu=\gamma_\nu a_\nu,\quad\gamma_\nu\ne0.
+\]
+ Over the fields with the prescribed marking, the
+complex and finite-place evaluations use the same toric parameter and
+the same normalized theta and frame lines, up to the indicated constant
+frame changes.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Realizing and descending the marked period.}
+The marked CM period realization applies to this complementary
+lattice with its principal alternating form, split CM type and
+bounded basis. It gives a polarized abelian scheme \(B\) after a
+finite number field extension and an identification of its complex
+periods and CM action with the above ones. In this construction one
+keeps the isometry of marked period lattices, so the same
+identification carries the Riemann matrix and the Weil pairings on
+the gluing points.
+
+Toroidal uniformization for the isotropic
+quotient uses \(B\), the character lattice \(Y\), the gluing
+homomorphism \(c:Y\to B[n']\), the positive period form and a
+trivialization in the pulled-back cubical line. The norm and the
+trivialization are compared using the rigidification at zero and
+the symmetric primitive theta characteristic. Writing \(E_B\) for the integral period pairing, the symmetric characteristic evaluates on a period \(a\) as
+\[
+  (-1)^{E_B(\alpha a,a)}.
+\]
+ The equality of
+the period pairings gives equality of these signs, which is needed
+for the two Appell--Humbert readings to agree.
+\cite{faltings-chai}\label{cor:slice-cm-arc-model-2}
+
+\proofstep{Preserving the toric parameter in descent.}
+To descend the normalized model, first adjoin the \(n'\)-torsion
+of \(B\). The characteristic-zero torsion scheme is finite, so
+all points of \(c\) are now defined over a number field \(k\).
+Choose algebraic generators for the one-dimensional cubical
+fibres at \(c(y)\). Compare them with the normalized analytic
+generators by nonzero scalars \(q(y)\). In the quotient \(\mathbb C^\times/k^\times\), divide the
+analytic and algebraic symmetry and cube identities. They
+give an even function \(\bar q\) with bimultiplicative
+polarization
+\[
+ b(y,y')=\frac{\bar q(y+y')}{\bar q(y)\bar q(y')}.
+\]
+The normalized product in \eqref{eq:slice-cm-tau-normal} is
+the rigidification over \(k\) on \(n'\)-multiples, so
+\[
+ b(y,y')^{(n')^2}=b(n'y,n'y')=1.
+\]
+Bimultiplicativity also gives \(\bar q(0)=1\).
+Since \(b(y,-y)=\bar q(y)^{-2}\), one has
+
+\[
+  \bar q(y)^{2(n')^2}=1.
+\]
+ Thus \(q(y)\) satisfies a
+power equation over \(k\) and is algebraic.
+For a finite integral generating family of \(Y\), it suffices to
+adjoin the scalars on the generators and on their pairwise sums.
+In the quotient by the enlarged field all polarizations vanish
+by bimultiplicativity, and then all the scalars vanish in the
+quotient group by the character law. This is one finite extension
+for the entire trivialization. The remaining level data are points
+in finite torsion schemes of the bounded level and can be adjoined
+in a further finite extension.
+If \(k_i/k\) are the finitely many fields of definition of the residual level records, their compositum is finite since
+\[
+  [k_1\cdots k_t:k]\le\prod_{i=1}^t[k_i:k].
+\]
+ The rigidified line, the marked
+action and the normalized toric parameter are transported together.
+\label{cor:slice-cm-arc-model-3}
+
+\paragraph{Finite-place realization of the same arc.}
+
+The archimedean construction has now specified the arc and its field. Its evaluation must also extend to the completed model at every finite place needed for the height.
+
+Use a finite place \(w\) of the field \(K'\) just constructed,
+write \(V\) for its complete DVR and \(F_V\) for its fraction
+field. Base change the abelian part \(B\) to \(V\). By properness
+every gluing point in \(B(F_V)\) extends uniquely to \(B(V)\).
+The extended points form a homomorphism \(c_V:Y\to B(V)\):
+both sides of 
+\[
+  c_V(y+y')=c_V(y)+c_V(y')
+\]
+ extend the same
+generic point, as do the sides of the CM equivariance identity.
+For the rigidified cubical line \(\mathcal T\) on \(B/V\),
+the datum retains each generic generator in
+\[
+             (c_V(y)^*\mathcal T)\otimes_V F_V .
+\]
+
+In particular one retains its valuation relative to
+\(c_V(y)^*\mathcal T\), even if the generator is not a basis
+over \(V\). This is
+the datum used in the integral toroidal model. In particular it
+has the same generic fibre as the original selected arc. The
+level points in the degeneration datum may be kept as generic
+level records. Extension of a generic level point as a point of
+an abelian torsion group alone would not specify its toric record.
+
+\proofstep{Integral frames and tangent coordinates on the chart.}
+An integral framed chart has constant tangent letters in each
+CM embedding block and a generator of the theta line on the
+integral abelian part. The comparison of two such descriptions
+is made over \(F_V\) by base change of the same degeneration
+datum.
+Thus two ordered tangent bases \(e,e'\) on a common CM block over the generic fibre differ by
+\[
+  e'=eA,\qquad A\in{\rm GL}_n(F_V),
+\]
+ Each block of algebraic tangent letters is related to the
+integral block by a constant matrix. Constancy follows by taking
+invariant tangent vectors of the semiabelian extension and
+identifying their pullbacks via the common generic group. The
+theta generators there span the same one-dimensional space.
+
+Let
+\(\gamma\) be the scalar expressing the algebraic section in the
+integral generator.
+Thus if \(\vartheta_{\rm alg}\) and \(\vartheta_{\rm int}\) are the indicated generators, their comparison and its valuation are
+\[
+  \vartheta_{\rm alg}=\gamma\,\vartheta_{\rm int},\qquad v_w(\vartheta_{\rm alg}/\vartheta_{\rm int})=v_w(\gamma).
+\]
+ These identifications determine the frame
+comparison over the entire arc. A change of the torsion
+normal form multiplies the reading by a root of unity, as the
+torsion sections differ by their level character. This leaves the
+finite order of \(\gamma\) unchanged.
+\cite{faltings-chai}\label{cor:slice-cm-arc-model-4}
+
+The generator of the global theta ideal at \(w\) is a local
+coordinate for the theta line of this same polarized model.
+Carry the generator and a Lie frame through the polarized
+pullback. The integral theta generator differs from the former
+by a unit in \(V\), since both generate the same rank-one module
+and the isomorphism is rigidified. If \(t_w\) generates the theta ideal in this trivialization,
+then 
+\[
+  \gamma^{-1}=u t_w
+\]
+ with \(u\in V^\times\).
+
+Passing to the dual
+ideal changes the sign:
+\[
+ v_w(\gamma)=-v_w(t_w)=v_w I(\mathcal T^\vee).
+\] The determinant
+of the Lie comparison is that of the same model. This identifies
+the central factor of the coefficient line used at infinity as
+well as at finite places. In the finite comparison below, the
+integral toroidal evaluation is made on smaller punctured discs
+over valued extensions. The input is the framed chart extending
+the normalized degeneration, with the valuation-compatible
+extension of the coefficient field. Base change makes the two
+evaluations agree after the constant frame change. The bound on
+the integral reading uses the integral lattice of sections on
+that chart.
+\label{cor:slice-cm-arc-model-5}
+\end{proof}

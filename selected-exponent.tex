@@ -1,0 +1,261 @@
+\subsection{Centering the exponent on its full support}
+\label{subsec:selected-exponent}
+
+The assigned primes fix the column dimensions. In the arithmetic comparison each lift contributes exponents at every prime in its support. Centering its contribution requires accounting for all of them.
+
+\begin{paramdefinition}[Word, lift and local exponents]\label{hyp:selected-exponent-data}
+Fix a word \(u\) and a lift \(1\le j\le m\) at the point of
+Section~\ref{subsec:selected-word-level}. Let \(T\) index the designated top weights and \(a_t=a_t(u)\) be the weight of the sequence at \(t\). Write \(S=\sum_{t\in T}a_t\),
+\(L=\log b\), \(B_0=fmbL\), and \(N=N_m\). For the coefficient field
+\(K\) put \(\omega_w=\log\mathrm Nw/[K:\mathbb Q]\) and
+\(e_w=v_w(p)\) at \(w\mid p\), with \(v_w\) the integer valuation. Use the local exponent
+decomposition of Section~\ref{sec:finite-valuations} and the
+level at \(T_u\) of Proposition~\ref{prop:assigned-prime}.
+\end{paramdefinition}
+\begin{proposition}[Uniform centering]\label{prop:selected-exponent-centering}
+For the word and lift of Definition~\ref{hyp:selected-exponent-data},
+let \(\mathcal S\) contain both full fibres above \(g_0,g_1\);
+allow partial support at the remaining primes. Then
+\begin{align}
+ \left|\sum_{w\in\mathcal S}2\omega_w e_w E_{u,j}(w)
+               -S\log(g_0g_1)\right|&\ll B_0,\label{eq:selected-exponent-all}\\
+ \sum_{\substack{w\in\mathcal S\\w\nmid g_0g_1}}
+             2\omega_w e_w |E_{u,j}(w)|&\ll B_0.\label{eq:selected-exponent-away}
+\end{align}
+The constants and eventual threshold can be taken before the
+point, word and lift are chosen. The denominator determining the finite support may vary. The local exponents \(E_{u,j}(w)\) are those of Section~\ref{sec:finite-valuations}. \label{cor:selected-exponent-1}
+\end{proposition}
+
+\begin{proof}
+\proofstep{The two complete type fibres.}
+Let \(g\) be either type prime and \(\pi\bar\pi=g\) its norm
+factorization. The level at the prime assigned to the sequence is prime to \(g\) and the support
+contains the entire fibre. Let \(H_\rho\) be the sum of the
+partition rows of the jet at \(\rho\), and \(J\) the total Fock
+degree of the lift. At \(w\mid g\) the entry is
+\[
+ v_g(D_{\Gamma,u})-J/2+
+ V_w+c_g f(N^2+m^2\eta),\qquad
+ V_w=\sum_\rho H_\rho\,v_w(\rho(\bar\pi))/e_w .
+\]
+Set \(\mu_w=e_w\omega_w\). Conjugation permutes the places over
+\(g\), preserving \(\mu_w\). Since each CM embedding commutes with
+conjugation and \(\pi\bar\pi=g\), the following identities hold even
+at a place fixed by this permutation:
+\[
+ V_w+V_{\bar w}=\sum_\rho H_\rho,\qquad
+ \sum_{w\mid g}\mu_w=\log g .
+\]
+Summing on the complete fibre gives
+\[
+ 2\sum_{w\mid g}\mu_w V_w
+   =\sum_{w\mid g}\mu_w(V_w+V_{\bar w})
+   =(\log g)\sum_\rho H_\rho .
+\]
+The other terms of the entry are constant on the fibre. Thus
+the fibre sum minus \(S\log g\) is exactly
+\[
+ \left(\sum_\rho H_\rho-J-S+2v_g(D_{\Gamma,u})
+                  +2c_g f(N^2+m^2\eta)\right)\log g.
+\]
+
+\proofstep{The jet weights and Fock degree.}
+
+Put \(e=w_{j\rho}\), and let \(A_\rho=a_t\) on the top indexed
+by \(t\), zero elsewhere. The first \(k\) rows of the jet have the
+form \(u_r+e\) with shifts between \(-N\) and zero. The \(k-2\)
+interior head parameters lie in the prescribed interval of
+size \(S_c\). The
+first parameter equals \(A_\rho\) at a top and has size at most
+\(3S_c\) elsewhere. The last row of the head is positive and
+at most the second row. Each of the remaining
+\((j-1)(t+1)\) entries is a difference of two offsets in the
+same width window with its rank shift, of size at most \(2\eta\).
+Here \(t\) in the ranks denotes the block-length parameter. It
+follows that
+\[
+ |H_\rho-A_\rho-(k-2)e|
+ \le 2e+3k(S_c+N)+2m(t+1)\eta .
+\]
+
+For the local Fock degree \(J_\rho\) sum the absolute values of the
+two letter weights. The first \(k-1\) entries of the large block
+are \(e\) plus a head weight and a half-sum shift bounded by
+\(2N\). The other \(j\) entries and the \(m-j\) entries of the
+small block involve \(e-B_h\) or its negative with a shift of size
+at most \(2N\), where all \(B_h\) at this place lie within
+\(2\eta\) of \(e\). Using \(e\ge0\) and
+\(\big||q|-e\big|\le |q-e|\) gives
+\[
+ |J_\rho-(k-1)e|
+ \le k(S_c+2N)+2m(\eta+2N).
+\]
+The degree formula uses both blocks with the small block in its
+dual order, hence \(J=\sum_\rho J_\rho\).
+
+There is exactly one
+\(\rho\) for each designated top. Summing the last two inequalities
+and using \(\sum A_\rho=S\) gives
+\[
+ \left|\sum_\rho H_\rho-J-S\right|
+ \ll \sum_\rho w_{j\rho}+f\big(k(S_c+N)+m(t+1)\eta\big)\ll fb .
+\]
+Indeed \(e\le 3b\), \(kS_c,kN,m(t+1)\eta\le b\) on the chosen
+size ranges. Also \(N^2+m^2\eta\ll mb\), \(\log g\ll L\), and
+\(v_g(D_{\Gamma,u})\log g\le\log D_{\Gamma,u}\ll
+fN\log(2fN)\) by the common Minkowski stabilizer bound. The last
+ranks grow polynomially with \(x\) while \(b=\exp(x^\epsilon)\).
+This proves a two-sided \(O(B_0)\) error on each type fibre.
+
+\proofstep{The assigned prime and the determinant factor.}
+At the assigned prime \(T_u\), the two orientations have equal
+total local degree by conjugation. In the notation of the assigned-prime
+term \eqref{eq:tag-w5} of Section~\ref{subsec:word-period}, the two entries are
+\[
+ E_{u,j}(w)=
+ \begin{cases}
+ 2\sum_\rho W_\rho+fN+|T|(t+1)(m+1)/4,&\text{chosen orientation},\\
+ 0,&\text{conjugate orientation}.
+ \end{cases}
+\] In \(W_\rho\) take the maximum of the
+absolute entries of the successive weights after subtracting the
+integer shift \(\lfloor i(t+1)/2\rfloor\) at step \(i\), omitting entry one at a top.
+In the original head the remaining parameters have size
+\(O(S_c+b')\), including the negative last parameter at a top.
+
+In the appended blocks the parameters are \(-w_{h\rho}\), of
+size at most \(3b\). Passing from these parameters to the
+weight and removing the common shift costs \(O(N)\) in each
+coordinate. Thus \(W_\rho\ll b\). Since \(\log T_u\ll mL\),
+the fibre costs \(O(B_0)\). For the determinant term on the other fibres it suffices to take
+absolute values and extend the sum to every rational prime. The bound is
+\[
+            2\sum_p v_p(D_{\Gamma,u})\log p=2\log D_{\Gamma,u}.
+\]
+
+\proofstep{The discriminant prime.}
+
+In Proposition~\ref{prop:unserved-discriminant-entries}, let
+\(A_t^\pm\) be the two column counts, \((A_t^-)'\) the length of
+the second minus row, and \(H_{(-,t)}\) the total minus degree.
+The discriminant calculation gives
+\[
+ c_t(u)=
+ \begin{cases}
+ H_{(-,t)},& t\text{ off the tops},\\
+ H_{(-,t)}-A_t^-+(A_t^-)' + A_t^+,&t\text{ at a top}.
+ \end{cases}
+\]
+Thus at a top only the excess of the first minus row over the
+second can carry the exceptional parameter. At the minus embeddings the weights are in
+the smaller range. The plus embeddings lie outside the top index set.
+The minus chain weight is at most \(9b'/4\) and the plus
+weight at most \(b+\eta+1\). Off the tops the entire minus degree
+is \(O(kb')\) by the head and tail bounds above, using
+\[
+ kS_c+kN+m(t+1)\eta\ll kb'.
+\]
+
+At a top first subtract the
+difference of the first two minus rows. This cancels the exceptional
+\(a_t\), since the weight in the second row lies in the interval
+for the interior head weights. Restoring the first
+plus row costs at most \(b+O(S_c+\eta+N)\). Positivity and
+monotonicity of the rows show \(c_t\ge0\) in both cases. There are \(f/2\) pairs in \(F_d\), and the smaller weight in each
+pair is at most \(9b'/4\). Thus
+\[
+ 0\le -F_d\le \frac{k-1}{2}\,\frac f2\,\frac{9b'}4 .
+\]
+The non-top terms in \(\sum_t c_t(u)\) cost \(O(fkb')\);
+the top terms add \(O(|T|b)\) by the cancellation just obtained. Thus
+\[
+ |F_d+\tfrac12\max_u\sum_t c_t(u)|
+          \ll |T|b+fkb'\ll fb .
+\]
+Here \(kb'\le b\). Multiplication by \(2\log d\le2L\) suffices.
+
+\proofstep{Central and remaining inert fibres.}
+
+The marked-prime contribution does not exhaust the exponent. The central and remaining inert fibres must be included before the total can be centered on its support.
+
+
+The inert terms vanish above \(X''\). At a central residue prime \(p\le X''\), the entry is
+\[
+ 3fN^2\log_p a+\frac{\sum_\rho w_{j\rho}}{p^2-1}.
+\]
+Weight by \(\log p\) and sum. For the set \(\mathcal P_c\) of central primes, \(\log_p a\log p=\log a\)
+and \(\#\mathcal P_c\le X''\). Hence the sum is at most
+\[
+ 3fN^2 X''\log a+
+  \Big(\sum_\rho w_{j\rho}\Big)\sum_{n\ge2}\frac{\log n}{n^2-1}.
+\]
+The series converges by comparison with \((\log n)/n^2\). Since \(X''N^2\le b\) and
+\(\log a\ll_\epsilon L\), the total is \(O_\epsilon(fbL)\).
+
+At any other inert prime separate the unbarred orbits without a
+signal (class A) from the remaining indices (classes B and C).
+If \(J_i\) denotes the orbit objective starting at \(i\), the
+quantity that must be bounded for class A is
+\[
+ A_p=\left(\frac1{n_p}\sum_{i\in {\rm A}}J_i\right)_+ .
+\]
+Taking the positive part after the sum preserves the common period
+normalization of the local entry. The B and C contributions are nonnegative
+for the chosen local constants. Their sum with the positive part gives the entry after removing
+the exceptional contribution. Its cubic weight and digit cost
+are estimated separately below.
+
+To see this, test the
+orbit minimum with zero. Its upper bound at a starting index is
+\(p/(p^2-1)\) times the sum of \((k-1)w\) over its \(n_p\)
+steps. Without the signal an unbarred starting index stays
+unbarred, so \(w\le 3(b'+\eta)\) there, and
+\(k(b'+\eta)\le mb\). Since there are at most \(f\) starts, the positive part of
+the mean of the A objectives is at most
+\[
+ \frac{f}{n_p}\,\frac{p}{p^2-1}\,n_p\,3(k-1)(b'+\eta)
+       \ll fmb/p .
+\]
+
+For B and C, the top count costs at most
+\(fp(b+\eta+1+3S_c)/(p^2-1)\) and the sum of weight
+terms at most \(12\sum w/p\ll fb/p\).
+The digit and rank prices cost \(O(f\eta L)\) per prime
+after multiplication by \(\log p\): the rank products
+are at most \(N^2\le\eta\), and \(\log(2a),\log(4n_pNa)=O(L)\).
+The squared base-\(p\) logarithm costs \(O(L^2/\log p)\),
+also \(O(\eta L)\) there.
+By Chebyshev, each dyadic interval below \(X''\) contributes
+\(O(1)\) to \(\sum_{p\le X''}\log p/p\). Thus the weight
+and digit prices total
+\[
+ O\left(fmb\sum_{p\le X''}\frac{\log p}{p}
+                       +f\eta L X''\right)=O(fmbL),
+\]
+using \(X''\eta\le b\).
+
+There is one further cubic weight sum. It occurs only at a
+residue prime with nonzero Frobenius component of odd order, and
+contributes \(O(fkb\log p/p^3)\) and a digit price already covered
+above. The projection of this component to the dyadic group
+\((\mathbb Z/2^{e_2+2}\mathbb Z)^\times/\{\pm1\}\) is trivial.
+Thus, with \(H=2^{e_2+2}\), any such prime satisfies
+\(p\equiv\pm1\pmod H\). Writing \(p=hH\pm1\) gives \(h\ge1\) for
+either sign. Since \(hH-1\ge hH/2\),
+\[
+ \sum_{p\ {\rm in\ this\ class}}\frac{\log p}{p^3}
+ \ll \frac1{H^3}\sum_{h\ge1}\frac{\log(2H)+\log h}{h^3}
+ \ll\frac{\log(2H)}{H^3}.
+\]
+The bounds \(H\ge x^2\), \(k\le x^5\) imply
+\(k\log(2H)/H^3=O(1)\), completing the inert prime sum.
+
+These terms exhaust the off-type definition. On a subset of the
+fibre of \(p\) the normalized local degrees sum to at most \(\log p\).
+This proves \eqref{eq:selected-exponent-away}, even when the
+support there is a proper subset. Adding the two complete type
+fibres gives \eqref{eq:selected-exponent-all}. Summing over the
+\(m\) lifts gives \(|E_u-mS\log(g_0g_1)|\ll mB_0\) on precisely
+the words counted in Section~\ref{subsec:selected-word-level}.
+\label{cor:selected-exponent-2}
+\end{proof}

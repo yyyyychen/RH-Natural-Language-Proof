@@ -1,0 +1,305 @@
+\subsubsection{The downward lift on the full good eigenspace}
+\label{subsec:selected-point-adjoint}
+
+The preceding multiplicity bound uses the rank of the whole good eigenspace. To compute it by the downward lift, we need injectivity of the adjoint on that eigenspace, including the multiplicity space of each occurring representation.
+
+\begin{established}[Tied level, Weil data and good ranks]\label{hyp:tied-adjoint-level}
+Consider the realizations at the fixed lift and its twist
+on the selected cut of Proposition~\ref{prop:cut-selector}. Write \(A=V_j\) for the definite
+Hermitian space used to realize the point coefficient type and
+\(W=W_j\) for the lower space. Their dimensions and stable range are
+\[
+ (\dim_E A,\dim_E W)=(r+t,r),\qquad 0<r,\qquad t\ge r+5 .
+\] The finite bad set \(S\) is the
+set below the ramification and auxiliary level of this twist.
+The source form has the fixed principal level and Cartan type,
+and the splitting characters and Weil representation at both
+levels are the ones in the tied realization. In particular
+the host splits at the dyadic places in the application of
+the first term identity.
+\end{established}
+\begin{proof}
+Proposition~\ref{prop:cut-selector} selects points inside the fixed signed theta realization of Proposition~\ref{prop:signed-theta-data}. Projection to a type or an eigenspace restricts the vector space of functions and leaves its Hermitian spaces, splitting characters, Schwartz data and principal level fixed. The dimension at a lift is \(r+t\), with its lower constituent of dimension \(r\). The selected-rank estimates in Section~\ref{sec:family-window} give \(r>0\) and \(t\ge7r+4\ge r+5\). Finally \(-d\equiv1\pmod 8\) by the choice of \(d\). Hence \(\mathbb Q(\sqrt{-d})\otimes\mathbb Q_2=\mathbb Q_2\times\mathbb Q_2\). Base change to every dyadic completion of the totally real subfield splits the CM quadratic algebra there.
+\end{proof}
+
+\begin{proposition}[Injectivity on a full good Hecke eigenspace]
+\label{prop:downward-on-good-space}
+For the tied models of Lemma~\ref{hyp:tied-adjoint-level}
+with \(r>0\) and \(t\ge r+5\), at each selected lift and twist let \(V\) be its full good Hecke eigenspace. The adjoint theta operator satisfies
+\[
+ \ker(\Theta_\mu^*|_V)=0.
+\]
+\end{proposition}
+
+\begin{proof}
+\proofstep{Read the good spherical system on both kinds of places.}
+Let \(f\) be any element of the full Hecke eigenspace at a
+good point. Read \(f\) in the vector-valued automorphic model
+on \(A\) and take its inverse image \(u\) in the multiplicity
+space. This reading is injective. The actions of the finite
+Hecke operators on the reading and on the multiplicity space
+are intertwined. In particular, if \(u\ne0\), then it has
+the required spherical system of eigenvalues away from \(S\).
+Here the assertion concerns a joint eigenvector, and the
+system of eigenvalues can have arbitrary multiplicity.
+The untwisted rank-\(r\) constituent and common normalizing
+characters determined by the point give the following
+property of the system.
+
+For a good place \(w\) of \(E\)
+over \(F\), let \(x_w\) be the unitary character value
+of the twisted datum. The system contains the string
+\[
+ \left\{ x_w\,(\mathrm Nw)^{\,j-(t-1)/2}\mid 0\le j<t\right\}.
+\]
+Removing this multiset leaves \(r\) entries,
+each of absolute value at most \((\mathrm Nw)^{(r-1)/2}\).
+The local comparison with base change gives this description
+at split and inert good places, including the passage from a
+spherical parameter over \(F\) to the entries over \(E\).
+The transported good projector acts as the identity on
+\(u\). In proving this last assertion, use that the
+archimedean signature and both selected finite type labels
+of a localization form are good and that the arithmetic
+idempotent reads as the same type projector on the
+automorphic model. These two transports use the actual
+twisted place and the same row index. \label{cor:selected-point-adjoint-1}
+
+\proofstep{Detect a nonzero vector by the doubling integral.}
+Suppose \(u\ne0\). At each real label take a vector \(v_\tau\)
+of the prescribed lower compact type, and let \(w_0\) belong to
+the definite source type. Use their Cartan inclusion
+\[
+ P=\iota_P((\bigotimes_\tau v_\tau)\otimes w_0)
+\]
+into the
+Fock polynomials. The polarized vacuum test on the chosen
+levels is nonzero on this Cartan summand. Pure tensors span it,
+so choose \((v_\tau),w_0\) for which \(P\) times the vacuum
+gives a nonzero vector \(\Phi\).
+
+Take as \(a\) the scalar
+component of the adelic extension of \(u\) paired against
+this same \(w_0\). Schur orthogonality in the definite type gives
+\[
+ \int_{U(A)_\infty}
+    \langle\omega(b)\Phi,\Phi\rangle\,r_a(b)\,db
+  = c_1c_2\int_{U(A)_\infty}
+       \big|\langle w_0,\rho(b)w_0\rangle\big|^2\,db ,
+\]
+with the conventions for the two coefficients chosen
+conjugately. The Weil factor \(c_1\) is nonzero by the
+nonzero chosen Cartan polynomial and the norm of its finite
+part. The factor \(c_2\) is nonzero because the definite
+multiplicity norm of \(u\) is positive. The remaining
+continuous matrix coefficient is nonzero at identity.
+This proves the real occurrence integral is nonzero and
+also shows \(a\ne0\). Let \(p_0\) denote extraction of the chosen scalar component. At each good finite Hecke operator \(T\),
+\[
+ T a=T p_0(u)=p_0(Tu).
+\]
+Hence \(a\) has the same spherical parameter. The chosen finite Schwartz readings
+are spherical away from \(S\) and principal-congruence
+fixed at the level of \(a\). \label{cor:selected-point-adjoint-2}
+
+The occurrence integral supplies the nonzero local factor in
+the scalar zeta integral. To locate its pole, in the standard
+partial \(L\)-function of \(a\) twist by
+the inverse of \(x\). Write \(L_c^S\) for the Euler product on the \(r\) remaining entries after the twist. With \(w\mid S\) denoting all places over \(S\), the incomplete zeta factor is
+\[
+ \zeta_E^S(s)=\zeta_E(s)\prod_{w\mid S}(1-(\mathrm Nw)^{-s}).
+\]
+The product for the standard factor is
+\[
+ L_{\rm std}^S(s,a,x^{-1}) =
+   L_c^S(s)\prod_{j=0}^{t-1}
+          \zeta_E^S\big(s+(t-1)/2-j\big).
+\]
+The absolute parameter bound makes the Euler logarithm for
+\(L_c^S\) normally convergent on
+\(\RePart s>(r+1)/2\).
+
+At \(s_*=(t+1)/2\) the last
+zeta argument is \(1\), and all other arguments are integers
+at least \(2\). The simple pole of the Dedekind zeta function
+has nonzero residue, and none of its finitely many removed
+factors vanish at \(1\). The factors with \(j<t-1\) are nonzero at \(s_*\), as is
+\(L_c^S(s_*)\) by convergence of its Euler logarithm. Hence
+\[
+ \operatorname*{Res}_{s=s_*} L_{\rm std}^S(s,a,x^{-1})
+  =L_c^S(s_*)\!
+      \prod_{j<t-1}\zeta_E^S(t-j)
+         \operatorname*{Res}_{u=1}\zeta_E^S(u)\ne0 .
+\]
+It is a simple pole.
+
+Add \(t\) hyperbolic planes to \(W\) to obtain \(B\), of
+rank \(r+2t\). Its doubled Siegel section is built from the
+pair of copies of \(\Phi\boxtimes \Phi_H\), where \(\Phi_H\)
+is the split Weil vacuum with principal-congruence support.
+The complementary ranks in the doubled space and the positive doubling point satisfy
+\[
+ (r+2t)+r=2(r+t),\qquad s_0=\frac{(r+2t)-(r+t)}2=\frac t2.
+\]
+
+For clarity, the dimension parameter of the split group in
+the first term identity is its Siegel parabolic rank \(r+t\).
+Apply that identity in the complementary-space range,
+with the compatible splitting character, the majorant
+compact average, and the Ikeda map toward \(W\).
+When \(W\) is anisotropic the paired residue is proportional
+to the convergent integral of its theta kernel. When \(W\)
+is isotropic it is the indicated leading regularized theta
+coefficient on \(W\).
+
+In this second case apply the
+regularizing operator before integration, using the Witt
+decomposition and the nonzero scalar of its auxiliary
+Eisenstein series. Write \(\mathcal R\) for the paired residue before integration against the two forms. The implication used in both cases is
+\[
+ \Theta_{W,\phi}(a)=0\ \ (\text{all }\phi)\quad\Longrightarrow\quad \langle\mathcal R,a\otimes\overline a\rangle=0.
+\]
+Indeed, on doubled
+Schwartz tensors the pulled-back theta kernel separates as
+two theta factors, so integrating against the two forms
+gives products of the corresponding lifts. The same
+vanishing applies to the compact-averaged and regularized
+inputs by the seesaw identity, continuity on Schwartz
+vectors and the nonzero regularizing scalar.
+\cite{gqt-rallis,yamana-first-term}\label{cor:selected-point-adjoint-3}
+
+On the right of absolute convergence the doubling
+unfolding instead gives the scalar zeta integral as
+\[
+ Z(s)=C\,\frac{L_{\rm std}^S(s+1/2,a,x^{-1})}{d_S(s)}.
+\]
+The denominator \(d_S\) is the unramified spherical
+normalizer on the doubled group. For positive real part its
+shifted unitary-character factors are absolutely
+convergent and nonzero. The local factor \(C\) is independent
+of \(s\) for the chosen data. To see this, the hyperbolic
+vacuum coefficient vanishes outside the principal
+congruence factor in the finite integration at level.
+
+On this support the exponentiated height in the unfolding
+is \(1\) and every right-level translate fixes the
+coefficients. On the real compact group the hyperbolic
+vacuum is fixed, leaving its nonzero squared norm times the
+definite occurrence integral above. This yields \(C\ne0\).
+Both \(C\) and \(d_S(s_0)\) are nonzero. The unfolding and
+meromorphic continuation therefore give
+\[
+      \operatorname*{Res}_{s=s_0} Z(s)
+        =\frac{C}{d_S(s_0)}
+                 \operatorname*{Res}_{s=s_*}L_{\rm std}^S(s,a,x^{-1})
+        \ne0,\qquad s_*=s_0+\tfrac12 .
+\] This contradicts
+vanishing of all the lifts and proves the existence of a
+Schwartz vector and a scalar reading for which the integral
+on \(W\) is nonzero. \label{cor:selected-point-adjoint-4}
+
+\proofstep{Use the finite level generators to test the downward pairing.}
+The test vectors used so far range over all Schwartz functions. At the selected level the adjoint uses a specified kernel; the finite level generators connect these two pairing tests.
+
+The preceding conclusion uses all Schwartz data. To pass
+to the actual downward operator, suppose its output on
+\(u\) is zero. Its good target projection agrees with the
+whole normalized level output on a good source by the
+local type comparisons at the selected primes. The
+output pairs the Cartan tensors against the coefficients
+of the target compact types.
+
+For a target argument \(g\) and a source linear functional \(\lambda\), denote the downward pairing with test \(\phi\) by \(B_{g,\lambda}(\phi)\). Vanishing on the generating tensors implies, by linearity,
+\[
+ B_{g,\lambda}(P\,\phi_{\rm vac})=0\qquad(\text{every allowed polynomial }P).
+\]
+Here \(\phi_{\rm vac}\) includes the fixed finite vacuum.
+This uses the span of the real Fock polynomials under the
+compact tensor maps and target translation. The same
+vanishing holds for all Schwartz vectors whose finite
+Heisenberg translates satisfy the linear relations of
+the chosen finite vacuum. The real Schwartz approximation
+on this fixed finite module is in the Sobolev norm for
+which the downward pairing at each fixed argument is
+continuous.
+
+For a source level element \(k\) with character \(\chi_V(k)\),
+right translation of the integration variable gives
+\[
+ I_u(\omega(k,1)\phi,l,g)=\chi_V(k)^{-1}I_u(\phi,l,g).
+\]
+Project a Schwartz test onto the inverse character by
+averaging over the compact source level. On every fixed
+finite vector this is a finite sum over cosets of an open
+stabilizer after intersecting with the character kernel.
+The difference from the projection pairs to zero. On the
+inverse-character space let \(G\) be the finite level
+quotient and \(k_b\) lifts of its elements \(b\). The resulting right action on the tests is
+\[
+ \pi(b)=\chi_{\rm flag}(k_b)^{-1}\omega(k_b^{-1},1),\qquad b\in G,
+\]
+where \(\chi_{\rm flag}\) is the flag part of the level character. The extra generators are the images of
+\(\sum_{b\in G}c_b\pi(b)\) of the following types.
+
+At one
+of the selected residual places and for a nonzero vector
+\(a\), take the subgroup of matrices fixing \(a^\perp\)
+pointwise or inducing the identity on the quotient by
+the line through \(a\). Use the identity at the other
+places. For either choice of subgroup \(H\), write \(\eta\) for its prescribed determinant character or its inverse. The group algebra element acting on the source is
+\[
+ \sum_{b\in G}c_b\pi(b)=\sum_{b\in H}\eta(b)\pi(b).
+\]
+
+The selected good source projector kills these same
+character sums with the normalized right action on
+every scalar component. The substitution
+\(h\mapsto hk_b\) in the theta integral transfers test
+averaging to this source averaging, including the factor
+\(\chi_{\rm flag}(k_b)^{-1}\). On a finite-dimensional orbit space \(V\), each subgroup \(H_j\) in this construction gives the normalized average
+\[
+ P_j=\frac1{|H_j|}\sum_{b\in H_j}c_b\pi(b),
+\]
+where the normalization is taken in characteristic zero. These projections
+are self-adjoint in the invariant metric, so
+\[
+              \left(\sum_j\operatorname{im}P_j\right)^\perp
+                            =\bigcap_j\ker P_j .
+\]
+In particular the self-adjoint projections give the orthogonal decomposition
+\[
+ V=\biggl(\bigcap_j\ker P_j\biggr)\oplus\biggl(\sum_j\operatorname{im}P_j\biggr).
+\]
+The good source
+projector kills the pairings from the latter.
+
+On the common kernel the local generation comparison
+spans the inverse-character tests by target translates of
+the fixed finite Heisenberg module above. This comparison
+is applied one place at a time, with the spherical
+generation at split and inert off-level places and the
+prescribed local types at the twist and type primes.
+Target translation replaces \(g\) by its right translate.
+The normalized output thus tests a spanning family of the
+inverse-character quotient and forces every downward
+pairing of \(u\) to vanish. The pole test now applies in its full form:
+\[
+ \bigl(\Theta_{W,\phi}(u)=0\ \text{for every allowed }\phi\bigr)\quad\Longrightarrow\quad u=0.
+\]
+
+\label{cor:selected-point-adjoint-5}
+
+\proofstep{Identify the normalized level operator with the actual adjoint.}
+Finally identify this normalized level operator with the
+point-to-row map \(\Theta_\mu^*\). The theta rule on simple
+tensors is the adelic integral in the chosen source and
+target coordinates. Both rules preserve level. They agree
+after composition with the chosen embedding of the finite
+coefficient model. The level comparison gives injectivity
+of this restriction on the subspace of level rules, so the
+resulting full coefficient tensors agree. Hence zero under
+\(\Theta_\mu^*\) gives zero under the normalized level
+operator. Applying its injectivity and the source coordinate isomorphism
+proves \(f=0\) for every vector of the full eigenspace.
+\label{cor:selected-point-adjoint-6}
+\end{proof}

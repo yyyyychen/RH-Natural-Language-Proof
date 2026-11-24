@@ -1,0 +1,287 @@
+\paragraph{The filtered product decomposition.}
+
+Interpolation gives values on the cut. To estimate the cokernel of multiplication we need to express a section through products of short and light sections in successive degrees.
+
+Write \(a=T-s\), and let \(t'_i\) be the chosen short
+rational forms of weight \(w_F\) whose restrictions
+are a basis on the cut. For a section \(f\) of weight
+\(\kappa=w_F+Tw_L\) with the low modes through \(c_1\)
+zero, match its jets of order less than \(a\) using
+the products
+\[
+            t'_i L_0^{T-|\alpha|}\prod_j S_j^{\alpha_j},
+           \qquad |\alpha|<a .
+\]
+Divide by \(L_0^T\) locally at every cut point and use
+the coordinates \(S_i/L_0\). Let \(\mathcal E\) be the evaluation matrix of the \(t'_i\) on
+the entire cut.
+
+If \(v_\alpha\) is the residual Taylor coefficient
+on the cut for \(|\alpha|=j<a\), solve
+\[
+       \mathcal E\,b_\alpha=v_\alpha,\qquad
+       g_{j+1}=g_j-\sum_{|\alpha|=j}\sum_i(b_\alpha)_i\,
+             t'_i L_0^{T-j}\prod_m S_m^{\alpha_m},
+       \qquad g_0=f .
+\]
+The new terms lie in the \(j\)-th power of the cut ideal, so
+\(\mathcal E\) inverts the degree-\(j\) coefficient without
+changing any coefficient of smaller degree. This leaves a section \(g\) vanishing
+to order at least \(a\) along the whole cut. The goal
+is to divide \(g\) by the degree-\(a\) monomials
+with coefficients of weight \(w_F+s w_L\), bounded
+and cuspidal on the quotient.
+
+Put \(W_L=\sum_l\|w_l\|^2\) and
+\(S=\sum_i\|S_i\|^2\) in the normalized light metric.
+Take the quotient integral of \(|g|^2\) with the
+weight
+\[
+     W_{\rm div}=e^{-\varphi_\kappa}
+                           W_L^{-1/2}S^{-(T-1/2)} .
+\]
+Near a cut point use the complex dimension \(s\) when integrating
+the bound from the order-\(a\) vanishing:
+\[
+   \int_0^\epsilon r^{\,2a-2(T-1/2)}r^{\,2s-1}\,dr=\epsilon .
+\]
+On the complement \(W_L\ll S\) bounds the singular factor
+by a constant times \(W_L^{-T}\).
+The \hyperref[par:slice-cusp-decay]{cuspidal decay estimate}
+on complete rank-one periods at total cutoff \(c_1\) is
+\(\|f(x)\|_{\kappa}^2\le C e^{-2\pi c_1/\lambda_1(x)^2}\).
+The selected cutoff has \(TcP\le c_1/\lambda_1^2\),
+where \(P\) is the first-minimum penalty of the light
+family.
+
+In detail \(P\le2 f/\lambda_1^2\) and
+\(c_1\ge 2fTc\). The lower bound \(W_L\gg e^{-2cP}\) gives uniform control
+on the complement of the cut in the cuspidal region:
+\[
+   \|f\|_\kappa^2 W_L^{-T}
+    \ll \exp(2TcP-2\pi c_1/\lambda_1^2)
+    \le \exp\bigl(-2(\pi-1)c_1/\lambda_1^2\bigr).
+\]
+Each correcting product has squared norm \(\ll W_L^T\):
+the \(t'_i\) are bounded, and the squared norm of each light
+factor is bounded by a constant times \(W_L\). The quotient has finite invariant
+volume. For the definite lift compactness and
+nonvanishing of the light family give this integrability
+with the full cusp space.
+
+\paragraph{Lifting before dividing.}
+Let \(k=e^{-\beta R}\), using the exponent \(\beta\) of Lemma~\ref{lem:short-weight-curvature}.
+Poincar\'e summation maps the holomorphic functions
+of finite norm
+\(\int |F|^2 W_{\rm div}D/k\) on the open flag cell to
+a subspace of the quotient weighted Hilbert space.
+After automorphy factors are absorbed into the norms, the
+pointwise Cauchy--Schwarz inequality is
+\[
+ \Bigl|\sum_\gamma F(\gamma x)\Bigr|^2
+ \le \Bigl(\sum_\gamma k(\gamma x)\Bigr)
+       \sum_\gamma |F(\gamma x)|^2/k(\gamma x).
+\]
+Integration on the quotient unfolds the second sum to the
+whole-cell integral, and the first sum is uniformly bounded.
+The ball bound gives holomorphy and boundedness because
+\(W_{\rm div}\gg e^{-\varphi_\kappa}\). The weight-gap
+cuspidality criterion at \(\kappa\) places the image in
+the finite-dimensional cusp space, so the image is closed
+in the quotient weighted norm. We use the same criterion
+for bounded holomorphic sections at \(w_F+s w_L\).
+The within-block and extreme cross-block comparisons
+in the zero-mode calculation apply at both weights.
+
+\begin{proposition}[Analytic lifting and division on the common cut]
+\label{prop:lift-and-divide-at-slice}
+Let \(f\) be a section of weight \(w_F+Tw_L\) whose low modes
+through \(c_1\) vanish, or a section in the full cusp space on the
+compact definite lift. Assume the \(t'_i\) of weight \(w_F\) give
+a basis on the whole cut, that the \(S_j/L_0\) are coordinates
+there, and use the division margin
+\(\beta^2u_0+\beta<m_{\rm div}\) of
+Lemma~\ref{lem:short-weight-curvature} and the cell estimate of
+Lemma~\ref{lem:short-poincare-summation}. Put \(a=T-s\).
+Let \(J\) denote the section matching the jets through degree \(a-1\). The difference lies in the \(a\)-th power of the cut ideal and has an expansion
+\[
+ f-J=\sum_{|\alpha|=a}S^\alpha h_\alpha,\qquad \operatorname{wt}(h_\alpha)=w_F+s w_L,
+\]
+with every \(h_\alpha\) a bounded cusp form.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Surjectivity of the automorphic Poincaré sum.}
+The next calculation proves surjectivity onto cusp
+forms with finite quotient norm for this singular
+weight. Suppose \(g_0\) in that space is orthogonal
+to the image. Unfolding with the summable kernel gives
+\[
+          I=\int k|g_0|^2 W_{\rm div}D<\infty
+\]
+on the cell. In these coordinates write
+\(\Psi=-\log W_{\rm div}-\log D\). The formula for
+\(W_{\rm div}\), the nonnegative Levi forms of the
+two logs of sums of squares, and the division
+margin give 
+\[
+  \mathcal L(\Psi)\ge m_{\rm div}\mathcal L(R)
+\]
+where the cut functions do not vanish simultaneously.
+Work on the pseudoconvex cell after removing the
+zero hypersurface of one nonzero cut function.
+
+\proofstep{Transferring the radius to the unfolded cell.}
+The radius is pulled back from the bounded matrix
+domain with potential \(-\log\det(I-Z^*Z)\) at each
+embedding. Its gradient squared in its Levi form is
+\(\operatorname{tr}(Z^*Z)\): at diagonal singular
+values \(z_i\) the gradient entries are
+\(z_i/(1-z_i^2)\) and the corresponding Levi
+coefficients are \((1-z_i^2)^{-2}\).
+This is at most \(\min(p,q)\) since \(\|Z\|_{\rm op}<1\).
+Cauchy--Schwarz across the embeddings and pullback
+to the flag cell give
+
+\[
+  |\partial R(\xi)|^2\le u_0\mathcal L(R)(\xi)
+\]
+for every tangent vector \(\xi\).
+Apply the weighted \(\bar\partial\) estimate with
+potential \(\Psi-\beta R\) to the derivative of
+\(kg_0\). Its datum is \(-\beta k g_0\bar\partial R\),
+and the inverse Levi cost is bounded using
+\((m_{\rm div}-\beta)\mathcal L(R)\).
+This gives a holomorphic \(F\) such that
+\[
+ \int |kg_0-F|^2\frac{W_{\rm div}}{k}D
+       \le \frac{\beta^2u_0}{m_{\rm div}-\beta}I .
+\]
+The Levi form can be semidefinite in the compact flag
+directions because the datum vanishes in those directions.
+Use exhaustion and the directional estimate to apply the
+weighted Hilbert space argument. Since the scalar on the
+right is strictly less than one, \(F\) has finite seed
+norm. It extends across the removed hypersurface by local
+square integrability, using the local positive lower
+bound for the metric. It extends to equivariant readings
+on the other frame charts in the same way as the
+interpolating seed.
+
+Orthogonality to the sum of this \(F\) implies
+
+\[
+  \int F\overline{g_0}W_{\rm div}D=0
+\]
+ by unfolding.
+The integrals are absolutely convergent by the seed norm
+and \(I<\infty\). Thus the left hand side in the displayed
+inequality equals \(I+\int |F|^2 W_{\rm div}D/k\).
+It follows that \(I=0\), so \(g_0=0\) by the positive
+weight almost everywhere and holomorphy. This shows that
+\(g\) has a seed in the specified whole-cell norm.
+The stronger inequality 
+\[
+  \beta^2u_0+\beta<m_{\rm div}
+\]
+enters here.
+\cite{hormander-slice}\label{cor:slice-short-division-1}
+
+\paragraph{Iterating division and returning to the quotient.}
+
+After lifting once, division leaves a section of lower degree. The norm change at each repetition determines the cost on returning to the quotient.
+
+In a local holomorphic frame write
+\(S_0'=\sum_i|S_i|^2\), \(W_0'=\sum_l|w_l|^2\).
+The seed norm for \(g\) is
+\[
+  \int |F|^2 (S_0')^{-(T-1/2)} e^{-\Phi},\qquad
+     \Phi=\varphi_F-\log D+\tfrac12\log W_0'-\beta R .
+\]
+The light family has no common zero, and the division
+margin makes \(\Phi\) plurisubharmonic. Use Skoda's
+\(L^2\) division theorem with \(s\) holomorphic
+generators in dimension \(s\). For an exponent
+\(H>s\), finite norm with weight
+\((S_0')^{-H}e^{-\Phi}\) gives division by the \(S_i\)
+with coefficients of finite norm with exponent \(H-1\).
+In the theorem's notation \(q=s-1\) and
+
+\[
+  H=\alpha q+1
+\]
+ with \(\alpha>1\).
+Here the last input exponent is \(s+1/2\), so all
+\(a=T-s\) divisions are allowed. Sum the finitely
+many ordered products with the same exponent tuple.
+Each resulting seed has the weight with exponent
+\(s-1/2\). It extends across the removed zero
+hypersurface by local square integrability.
+
+\proofstep{Convergence and descent after division.}
+The \(S_i\) and \(w_l\) are bounded in their normalized metric. Consequently each resulting seed \(u\) has finite norm for the regular metric, with the indicated density,
+\[
+  \int|u|^2 e^{-\varphi_{w_F+s w_L}}\frac{D}{k}<\infty.
+\]
+Extend each seed across the frame chart divisor
+and Poincar\'e sum it in weight \(w_F+s w_L\).
+The resulting forms are bounded by the ball estimate
+and are cuspidal by the shifted-weight criterion.
+Multiplication by each automorphic monomial
+\(\prod_i S_i^{\alpha_i}\) commutes with summation
+in the corresponding weight. Absolute convergence
+therefore yields the division equation for \(g\)
+on the whole quotient. The construction also works
+in the definite case: \(R=0\), the gradient cost
+is zero, and the compact quotient has no cusps.
+\cite{skoda-slice}\label{cor:slice-short-division-2}
+
+\end{proof}
+
+\input{slice-shifted-theta}
+
+\paragraph{Descent of the containment.}
+
+The three spans have now been defined over the coefficient field. The containment needed in the index estimate concerns their saturated intersections with the integral row.
+
+\begin{proposition}[The saturated containment on the selected row]
+\label{prop:descent-of-slice-division}
+With the rational good space of Proposition~\ref{prop:shifted-low-mode-descent},
+the containment provided by Proposition~\ref{prop:lift-and-divide-at-slice}
+holds over the generic coefficient field \(K(X)\). Writing \(M_g\) for the integral good submodule, and taking saturation inside the completed cusp lattice, one has
+\[
+ \operatorname{Sat}(M_g)\subseteq\operatorname{Sat}(N_1+Z).
+\]
+
+Finite indices inside these saturations require separate bounds.
+\end{proposition}
+
+\begin{proof}
+A rational form of the selected good space has the required
+low modes zero at \(\kappa\) by the maximal cusp comparison.
+The preceding division writes its reading in the complex
+span of the leading products and the boundary products.
+Work first over \(K(X)\), the coefficient field with the
+cutting coefficients indeterminate. The products are
+polynomials in \(X\) in the rational cusp space.
+
+At the
+chosen algebraically independent complex tuple, the
+full reading on that space is faithful after scalar
+extension. Thus the ranks of the columns with and
+without the rational form are exactly the ranks of the
+original matrices over \(K(X)\), as polynomial minors
+vanish at this tuple precisely when they are zero
+polynomials.
+Writing \(A\) for the column matrix and \(v\) for the rational form to be tested, membership is the minor test
+\[
+  v\in\operatorname{im}A\quad\Longleftrightarrow\quad \operatorname{rank}[A\mid v]=\operatorname{rank}A .
+\]
+ This gives the containment over \(K(X)\).
+Extend scalars to the fraction field of the Gauss DVR
+at each finite place. Intersecting with the completed cusp
+lattice then gives containment of the saturated good
+lattice in the saturation of \(N_1+Z\). The indices inside
+those saturations still require the finite-place comparisons.
+\label{cor:slice-short-division-3}
+\end{proof}

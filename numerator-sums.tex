@@ -1,0 +1,258 @@
+\subsubsection*{Summing the local bounds}
+\hypertarget{source-numerator-sums}{}
+
+A bound for a congruence ideal must first be turned into a bound for the corresponding integral module. This conversion keeps the rank of the retained eigenspace in the sum over good characters.
+
+\begin{established}[Hecke congruence ideal and normalized length]\label{hyp:eigencharacter-lattices}
+First consider the passage from a Hecke congruence ideal
+to the congruence length of its module. Work over one
+coefficient DVR \(O\), normalize \(v(\ell)=1\), and write
+\(Y\) for the theta eigensystems and \(Z\subseteq Y\) for
+the good ones. Let \(T\) be the Hecke algebra inside the
+algebra of functions on the generic eigensystems. Write \(I_Y=\{f\in T:f|_{Y^c}=0\}\). For each \(\pi\in Z\) its evaluation and normalized colength satisfy
+\[
+ 0\ne I_Y(\pi)=(f_\pi(\pi))\subseteq O,\qquad
+ v_{cc}(\pi)=v(f_\pi(\pi)),\qquad f_\pi\in I_Y .
+\]
+\end{established}
+\begin{proof}
+For each generic character \(y\ne\pi\), choose \(t_y\in T\) with \(t_y(\pi)\ne t_y(y)\). The product \(\prod_{y\ne\pi}(t_y-t_y(y))\) vanishes away from \(\pi\) and has nonzero evaluation there. The scalars \(t_y(y)\) belong to the splitting DVR \(O\). Hence the image of the supported ideal is a nonzero ideal of \(O\). Choose a generator and lift it to a supported element of \(T\).
+\end{proof}
+
+\begin{lemma}[From eigencharacter valuations to module colength]\label{lem:eigencharacter-colength}
+With the ideal and length of Lemma~\ref{hyp:eigencharacter-lattices},
+let \(M\) be the Hecke-stable lattice and \(V_Z\) its good generic
+subspace. Put \(U=p_ZM\), \(B=M\cap V_Z\)
+and let \(a\) be the integral type operator of
+Proposition~\ref{prop:cut-selector}. Then the normalized
+colength of \(B\) in \(U\) is at most
+\[
+ \sum_{\pi\in Z}\dim(V_\pi)\bigl(v_{cc}(\pi)+v_\ell(h)\bigr).
+\]
+\end{lemma}
+
+\begin{proof}
+The type operator \(a\) acts by \(h\) on the good
+eigenspaces and by zero on the remaining eigenspaces
+of \(Y\). The product \(af_\pi\) kills every eigenspace
+outside \(Z\). It also preserves the integral module,
+so it maps \(U=p_ZM\) into \(B=M\cap V_Z\), by applying
+it to a lift in \(M\). The products for the different
+\(\pi\) may all act on multiple good eigenspaces.
+Order those eigenspaces and filter \(U\) and \(B\) by
+intersection with their successive partial sums.
+
+For
+the step adding \(V_\pi\), the graded lattice of \(U\)
+is the projection of the intersection at this step
+onto \(V_\pi\), and likewise for \(B\). Multiplication
+by \(h f_\pi(\pi)\) takes the first graded lattice into
+the second, since \(af_\pi\) preserves the partial sum.
+For the step adding \(V_\pi\), the DVR index formula therefore bounds the normalized graded length by
+\[
+ \dim V_\pi\bigl(v_{cc}(\pi)+v_\ell(h)\bigr).
+\]
+With \(U_i,B_i\) the intersections with the first \(i\) eigenspaces,
+the successive index is read in the projection to the new eigenspace.
+Equivalently
+\[
+ \operatorname{len}(U/B)=
+ \sum_i\operatorname{len}\bigl((U_i/U_{i-1})/(B_i/B_{i-1})\bigr)
+ \le\sum_{\pi}\dim V_\pi\bigl(v_{cc}(\pi)+v_\ell(h)\bigr).
+\]
+This proves the local comparison, with the Hecke
+algebra and the theta set of the cut when it is
+applied to the cut.
+\end{proof}
+
+\begin{proposition}[Weighted local return on the cut]\label{prop:weighted-local-return}
+Fix a lift on the selected point family and use its good
+multiplicities from Proposition~\ref{prop:cut-multiplicity}.
+The numerator of Definition~\ref{def:weighted-congruence-numerator} satisfies \eqref{eq:local-division-star} of Section~\ref{subsec:division-length} on the cut, with the allowed additional term \((\log x)^2N_c\) and a threshold uniform over the selected points. In the notation of the local table its contribution at an ordinary localization \(i\), away from the two type primes, satisfies
+\[
+ \eta_i\le \sum_{\pi\in Z_i^+}m_{i,\pi}
+               \bigl(v_{cc}(i,\pi)+v_\ell(h)\bigr).
+\]
+Here \(v_{cc}(i,\pi)\) is the local congruence bound, \(h\) the order of the finite row group and \(m_{i,\pi}\) the good multiplicity. The separate loss \(d_j\log h\) from returning to the original Hecke module is absorbed at this scale.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Weight each localization by its normalized local degree and good multiplicities.}
+Apply Lemma~\ref{lem:eigencharacter-colength} on the cut at
+a single selected point. Fix a lift \(j\) and write \(d_j\) for the rank after
+the small-level rank identification. Let \(\mathcal T\)
+be the finite set of rational primes below the twisted
+coefficient places in its support. The type and auxiliary prime cases use
+Propositions~\ref{prop:type-prime-row-length}
+and~\ref{prop:auxiliary-prime-row-length}. The local length
+comparison at a prime \(\ell\) other than
+\(g_0,g_1\), is the bound
+\[
+ \eta_i\le \sum_{\pi\in Z_i^+}
+      m_{i,\pi}\bigl(v_{cc}(i,\pi)+v_\ell(h)\bigr).
+\]
+Here \(\eta_i\) is the normalized congruence length of the
+cut localization, \(m_{i,\pi}\) is its multiplicity, and
+\(v_{cc}\) is the local congruence bound attached to the
+Galois family at \(\pi\). The factor \(h\) belongs to this
+comparison on the cut itself. Returning to the original
+module incurs the separate loss proved above.
+
+Lemma~\ref{lem:marked-row-column-lattices} gives the required integral presentation at each good character of this cut. Proposition~\ref{prop:marked-signature} supplies its complement estimate. The resulting local table has
+\[
+ v_{cc}(i,\pi)\le
+ \nu_\ell+2\ell^{-2}+\mathcal L_\ell+V_\ell+v_\ell(h_E),
+\]
+where \(\nu_\ell\) and \(\mathcal L_\ell\) are independent
+of \(i,\pi\) for fixed \(\ell\) at this point. The table
+incorporates the uniform bound on \(s_\pi\) separately
+from the split row estimate. At each twisted \(w\mid\ell\), \eqref{eq:retained-multiplicity}
+gives
+\[
+ \eta_{j,w}=\sum_{i\text{ over }(j,w)}\eta_i
+ \le d_j\bigl(\nu_\ell+2\ell^{-2}+\mathcal L_\ell+V_\ell
+                 +v_\ell(h_E)+v_\ell(h)\bigr).
+\]
+All terms in this upper bound are nonnegative and independent of
+\(w\). Multiply by \(e_w\log\mathrm Nw/[K:\mathbb Q]\) and sum
+over the chosen places. The factor from their weights is at most
+\(\log\ell\), by the residue-degree formula on all places above
+\(\ell\). At the two type primes the
+paired-character estimate bounds the weighted lengths
+directly by
+\(d_j\log\ell(\mathcal L_\ell+2\ell^{-2}+V_\ell+v_\ell(h_E))\).
+Up to nonnegative terms the same summation applies there.
+
+The class number term contributes at most \(\log h_E\),
+since
+\[
+ \sum_{\ell\in\mathcal T}v_\ell(h_E)\log\ell=\log\!\left(\prod_{\ell\in\mathcal T}\ell^{v_\ell(h_E)}\right)\le\log h_E.
+\]
+The factor \(h\) costs at most \(\log h\)
+by the same argument. Also
+\(\sum_{\ell\in\mathcal T}\ell^{-2}\log\ell\) is absolutely
+bounded by the series over the integers. The strict
+cohomology terms contribute at most the global budget
+\[
+ V=\sum_\ell V_\ell\log\ell
+\]
+once, since \(\ell\) is
+summed only after the multiplicity and degree estimates.
+This bound is independent of the number of localizations
+and the coefficient-field degree.
+
+The scalar cyclotomic term has its own bound for the weighted sum over primes.
+Put \(a=tr\), which is odd since \(t\) is odd, \(k,m\)
+are even, and \(r=k+m-1\). The cyclotomic minimum \(\nu_\ell\) in \eqref{eq:signature-cyclotomic-minimum}
+is taken over the absolute Galois group of this same field \(E\). If \(\ell\mid Q_S\), the image
+contains \(1+\ell^{v_\ell(Q_S)}\) since \(E\) lies in
+the cyclotomic field of conductor \(Q_Sqd\). The
+binomial argument in Section~\ref{subsec:split-local-length}
+gives
+\[
+ \nu_\ell\le v_\ell(Q_S)+v_\ell(a).
+\]
+
+The depth at \(2\) is at least two. If
+\(\ell\nmid Q_Sqd\), the cyclotomic image is full by
+the Chinese remainder theorem. Then \(\ell\) is odd
+and \(-1\) gives \(\nu_\ell=0\).
+At \(q,d\), the host Artin action of the factor at
+that prime has order dividing two. Thus the cyclotomic
+image modulo that prime contains the subgroup of
+squares, of order \((\ell-1)/2\). This order exceeds
+\(a\) by the auxiliary prime choice, so a generator raised
+to \(a\) differs from \(1\). This again gives
+\(\nu_\ell=0\). Therefore
+\[
+ \sum_{\ell\in\mathcal T}\nu_\ell\log\ell
+ \le \log Q_S + \log(tr)=O(\log x).
+\]
+Here \(Q_S\le4 f_\psi n\le n^2\) eventually by
+\eqref{eq:host-character-compositum} and \eqref{eq:dyadic-coordinate-orders}.
+The target is fixed before the scale and the ranks grow polynomially.
+
+The multiplicity estimate and the local table join at
+one common threshold in \(x\). The arguments of
+Section~\ref{subsec:special-prime-lengths}
+give the type and ramified entries. Section~\ref{subsec:ordinary-split-length}
+proves the ordinary split entry and the implication from a local
+inert band to the indicator in the sum. The cyclic row estimates
+in Section~\ref{subsec:inert-rows} supply the long-orbit and
+the two remaining inert entries. The comparison above the
+cutoff in Section~\ref{subsec:outside-windows} uses the
+integral local classification on the same jump windows. The table
+assigns \(\mathcal L_\ell\) in the following ranges.
+
+\begin{itemize}
+\item At each type prime \(g_i\) the table entry and sizes satisfy
+\[
+ \mathcal L_{g_i}\le Cx^C\eta_c,\qquad \log\eta_c\le x^{\epsilon/4},\qquad \log g_i=O(z).
+\]
+
+\item At each dyadic or odd conductor prime and at three,
+Proposition~\ref{prop:small-split-loss} bounds the cost by \(C fmb\log x+Cx^Cz^2\). The weighted
+sum is \(O(fmbz^2)\) by the size comparison of
+Section~\ref{subsec:split-local-length}.
+\item At \(q,d\), the cost is at most \(2C fmb\).
+The weighted sum is \(O(fmbz)\) by the conductor of the auxiliary field
+bound on the chosen prime pair.
+\item The remaining table uses a positive cutoff
+\(\ell_*\). The summation below gives \(O(fmbz^2)\)
+for the boundary, split, inert and short-band costs
+weighted by \(\log\ell\) at primes at most \(\ell_*\).
+\item Above \(\ell_*\) the remainder is supported on
+the exceptional set. With
+\[
+ U=x^{C+2}\exp(x^{\epsilon/4}),
+\]
+its cardinality is at most \(388U^8\). The weighted cost
+per exceptional prime is at most \(3000(C+1)^2U^{10}\),
+giving at most \(1164000(C+1)^2U^{18}\) in total.
+\end{itemize}
+
+\proofstep{Sum the same table before absorbing the exceptional-prime cost.}
+The table is now weighted by the local degrees and actual multiplicities. Summing those entries first keeps the exceptional primes and the scalar cohomology on the same retained family.
+
+For fixed \(C\) and \(\epsilon>0\),
+\[
+ \log(U^{18}/b)=18(C+2)\log x+18x^{\epsilon/4}-x^\epsilon
+ \longrightarrow -\infty .
+\]
+In particular the exceptional sum and the two type-prime
+costs are \(o(b)\) uniformly. The same comparison absorbs
+any fixed polynomial in \(x\). The bound on \(\log h_E\)
+can be obtained separately. All character conductors of the abelian
+host divide \(N\), so the conductor--discriminant formula
+gives \(\log|\Delta_E|\le [E:\mathbb Q]\log N\).
+Minkowski's bound supplies an ideal in every class of
+norm at most \(2^{[E:\mathbb Q]}|\Delta_E|^{1/2}\).
+\cite[Theorems 3.27 and 4.3 respectively]{milne-cft,milne-ant}
+With \(n_E=[E:\mathbb Q]\) and
+\(D=2^{n_E}|\Delta_E|^{1/2}\), count these representatives by
+\[
+ h_E\le\sum_{\mathrm N\mathfrak a\le D}1
+  \le D^2\sum_{\mathfrak a}(\mathrm N\mathfrak a)^{-2}
+  =D^2\zeta_E(2)\le D^2\zeta(2)^{n_E}.
+\]
+The last inequality is Euler factor by Euler factor, since there
+are at most \(n_E\) prime ideals above each rational prime and
+their residue degrees are at least one.
+
+Taking logarithms and
+using \(\log|\Delta_E|\le n_E\log N\) gives
+\(\log h_E=O(n_E(1+\log N))\), which is polynomial in \(x\)
+under the selected size bounds. With the local table,
+these estimates give the cut numerator bound (*) with the
+allowed additional
+nonnegative term \((\log x)^2 N_c\). The loss \(d_j\log h\)
+from the cut to the original level can be absorbed
+at this same scale.
+
+The local inputs are assembled on the cut family
+before applying the weighted sum. The estimate uses
+the complete local table and the rank and period
+identification at the chosen points. \label{cor:numerator-sums-1}
+\end{proof}
+
+\input{prime-cost-sums}

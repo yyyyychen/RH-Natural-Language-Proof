@@ -1,0 +1,459 @@
+\paragraph{Primes above the cutoff outside the exceptional windows.}
+\label{subsec:outside-windows}
+\hypertarget{source-large-prime-length}{}
+\begin{established}[Signed jumps outside the exceptional windows]\label{hyp:offwindow-local}
+Fix the same family and good point, and let \(\ell>\ell_*\) be outside
+the exceptional set and different from the two type primes.
+At each Frobenius letter the shifted rank-\(r\) jumps and scalar string lie in \([1,h_i-1]\). For the end interval of size \(\eta'_i\) and carry \(\sigma_i\) computed below one has
+\[
+  \sigma_i\le\lfloor 2b/\ell_*\rfloor,\qquad \eta'_i+4\sigma_i+6<\ell .
+\]
+Every rank-\(r\) jump is at distance greater than \(\sigma_i+2\) from each scalar jump. For a jump outside the end interval its distance from the chosen end is incongruent modulo \(\ell\) to every integer in \([-2\sigma_i-2,\eta'_i+2\sigma_i+3]\).
+\end{established}
+\begin{proof}
+Once the family scale is sufficiently large, every such prime satisfies
+\[
+ \ell>t+1,\qquad \ell\ge5,\qquad \ell\nmid Q_Sqd.
+\]
+The estimates here use the jump conditions and the norm choice on
+the selected cut. We describe the conversion of the exceptional-set
+test to a local cohomology condition. The integral classification below uses the residue models of the
+extensions and their specified jumps.
+
+At a place over \(\ell\), each embedding of the maximal unramified
+subfield has a unique extension to the local field, since the field
+itself is unramified. Order these embeddings by Frobenius, cyclically.
+At a letter let \(F_l,F_c\) be the finite sets of integral central and
+outer jumps of the rank-\(r\) representation, before shifting the
+first scalar character. Put \(p=(t-1)/2\),
+\[
+ B=b/\ell_*.
+\]
+
+The weight boxes give, with a center \(W_0\) from the exceptional list,
+\[
+ \begin{gathered}
+ 2B+t/2+3\le |j-p|\le\eta_c \quad(j\in F_l),\\
+ W_0\le \pm(j-p)\le W_0+S_c+\eta_c+1 \quad(j\in F_c).
+ \end{gathered}
+\]
+The sign is fixed at this letter. Here
+\(W_0\ge 2B+t/2+3\), \(t\le\eta_c\), and
+\(2\eta_c+8B+7<\ell\) on a common threshold. Indeed the
+sizes \(B,\eta_c,t\) are at most powers of the
+\(U\) in Section~\ref{subsec:exceptional-range}, and
+that section has
+\[
+ U^j=o(\omega),o(\ell_*)
+\]
+for every fixed
+\(j\). The central lower separation is a jump-box condition.
+The reflected set at the opposite embedding uses \(j\mapsto t-1-j\).
+
+Let \(l_0=\min(F_l\cup\{0\})\),
+\(l_1=\max(F_l\cup\{t-1\})\), \(\eta'=l_1-l_0+1\).
+Shift all jumps by \(w=1-l_0\) in the positive case
+and by \(w=1-\min(F_l\cup F_c\cup\{0\})\) in the negative case.
+
+In the positive case take
+\[
+ h=\max(F_l\cup F_c\cup\{t-1\})+w+1
+\]
+and in the negative case take \(h=l_1+w+1\). Then the
+shifted rank-\(r\) jumps \(U_i=(F_l\cup F_c)+w\) and the scalar
+block \([w,w+t-1]\) lie in \([1,h-1]\). The scalar block and
+shifted central jumps lie in \([1,\eta']\) in the positive case
+and \([h-\eta',h-1]\) in the negative case. Refer to this
+interval as the end interval. The union records the rank-\(r\)
+multiplicities since each retained rank-\(r\) jump is simple.
+The shift is integral even when some of the input windows have
+nonintegral endpoints.
+
+For letter \(i\), abbreviate these quantities by \(w_i,h_i,\eta'_i\)
+and form the carry bound
+\[
+ \sigma_i=\left\lfloor\sum_{j\ge1}\frac{h_{i+j}}{\ell^j}\right\rfloor .
+\]
+The two formulas for \(h_i\), the boxes and \(W_0\le b\) on the
+selected family (the centers other than \(b\) are \(o(b)\))
+give \(h_i\le b+S_c+2\eta_c+3\). Summing the
+geometric series gives \(\sigma_i\le 2B\), hence
+\(\sigma_i\le s_+=\lfloor 2B\rfloor\). For this bound use
+\[
+ (b+S_c+2\eta_c+3)/(\ell_*-1)\le 2b/\ell_*,
+\]
+valid
+eventually by the preceding sizes. Also
+\(\eta'_i+4\sigma_i+6<\ell\). The distance from a rank-\(r\)
+jump to each scalar jump is greater than \(\sigma_i+2\), by
+subtracting the half-width \((t-1)/2\) from its distance to \(p\).
+
+There is a separate residue test for a shifted jump outside the
+end interval. Such a jump comes from \(j\in F_c\). Its distance
+from the chosen end, measured from 0 or \(h_i\), is
+\(d=j+1-l_0\) on the positive side and \(d=l_1+1-j\) on the
+negative side. If \(-2\sigma_i-2\le v\le\eta'_i+2\sigma_i+3\),
+then in both cases
+\[
+ W_0-\eta_c-2s_+-3\le d-v\le
+                    W_0+S_c+2\eta_c+2s_++4 .
+\]
+
+For the lower bound insert \(\eta'=l_1-l_0+1\) before estimating.
+This cancels \(l_0\) on the positive side and \(l_1\) on the
+negative side. The inequalities \(p-\eta_c\le l_0\) and
+\(l_1\le p+\eta_c\) then suffice. The upper bound uses the
+opposite endpoint for \(v\). A congruence \(d\equiv v\pmod\ell\)
+would make \(\ell\) exceptional by its defining window.
+We have proved every letter's end-interval size, separation, and
+residue-avoidance conditions at the given \(\ell\).
+\label{cor:large-prime-length-1}
+\end{proof}
+
+\input{residue-model-length}
+
+\begin{proposition}[Vanishing of the local rank-complement loss above the cutoff]\label{prop:offwindow-local-vanishing}
+Let \(\ell>\ell_*\) lie outside the exceptional set and the
+two type primes, at a sufficiently large point satisfying the signed windows and residue
+tests of Lemma~\ref{hyp:offwindow-local}. At each \(w\mid\ell\) let \(D_w\) be the image of the marked rank-\(r\) classes modulo their finite local condition. Then
+\[
+ \operatorname{len}D_w=0\qquad(w\mid\ell).
+\]
+\end{proposition}
+
+\begin{proof}
+The required local assertion will follow by reducing the admissible extension classes to the residue field, then lifting through their successive coefficient quotients. Work over a finite unramified extension \(F\) of
+\(\mathbb Q_\ell\) with \(\ell\ge5\), in a splitting coefficient
+DVR \(O'\) with uniformizer \(\lambda\), whose fraction field contains
+the images of the local field and the first cyclotomic level. Take a crystalline
+representation with lattice \(L\) and jumps \(U_i\), and
+integral crystalline characters
+\[
+ \chi_c=\chi_1\epsilon^{1-c}
+\]
+for \(1\le c\le t\) with jumps \(w_i+c-1\), where
+\(\epsilon\) is the cyclotomic character. Assume the position
+conditions just proved. Call a representation full if it is crystalline, its residual characteristic polynomials are the reductions for the rank-\(r\) representation plus the scalar characters, and its labeled jump multisets are
+\[
+ U_i\sqcup\{w_i+c-1:1\le c\le t\}.
+\]
+
+\proofstep{Use the residue models in the signed jump windows of this completion.}
+For a finite coefficient module \(X\), consider a cocycle with
+target \(L\otimes X\) twisted by \(\chi_1^{-1}\), or with the
+analogous character target. Form the extension with quotient
+line of character \(\chi_1\). Suppose all sufficiently deep
+reductions of the quotient line, at depths killing \(X\), give
+quotients of nested stable lattices in finite direct sums of full
+representations. Then the rank-\(r\) cocycle comes from integral
+finite cohomology with coefficients in \(X\), up to coboundary.
+Writing \(\Lambda\) for the untwisted rank-\(r\) target lattice, the asserted containment is
+\[
+ [c]\in\operatorname{im}\bigl(H^1_f(F,\Lambda)\otimes X\longrightarrow H^1(F,\Lambda\otimes X)\bigr).
+\]
+
+For characters \(c\ge2\)
+the cocycle is a coboundary, and for \(c=1\) its restriction to
+inertia is a coboundary.  The residue bound for the character targets is Proposition~\ref{prop:offwindow-scalar-residue-model}. For the rank-\(r\) target the end multiplicities of Lemma~\ref{lem:end-sen-multiplicities} give the dimension bound below. The following coefficient argument converts these bounds into assertions about the integral classes.
+\label{cor:large-prime-length-2}
+
+Let \(\Lambda\) denote the lattice after removing the quotient
+character \(\chi_1\), and put \(k'=O'/\lambda O'\).
+Write
+\[
+ A(X)\subset H^1(F,\Lambda\otimes X)
+\]
+for the classes
+satisfying the finite-quotient presentation just stated. At a
+common depth \(b\) killing the coefficient modules, suppose
+\[
+   0\longrightarrow\Lambda\otimes X
+    \longrightarrow E_X\longrightarrow O'/\lambda^b
+    \longrightarrow0
+\]
+is the extension after untwisting. For \(f:X\to X'\) the pushout along \(1\otimes f\) is
+\[
+ E_{X'}=\big(E_X\oplus(\Lambda\otimes X')\big)/
+  \{(a,-(1\otimes f)a):a\in\Lambda\otimes X\}.
+\] Both the
+new target and the old quotient characters have presentations
+from the split full module. Quotients of nested stable lattices
+are closed under sums and subquotients, by taking preimages
+between the two lattices. This proves preservation under
+pushout.
+
+If \(f\) is injective, the old extension is the
+subextension with kernel \(\Lambda\otimes X\) of the pushout,
+since \(\Lambda\) is free. Thus injection reflects admissibility.
+The same operations work at any larger \(b\). Pullback along the
+diagonal on \(O'/\lambda^b\) followed by addition on the two
+kernels gives closure under sums. These operations make \(A(X)\)
+an \(O'\)-submodule.
+
+Write \(H_1=H^1(F,\Lambda)\). For the rank-\(r\) target the
+residue calculation gives
+\[
+ H^0(F,\Lambda/\lambda)= H^2(F,\Lambda/\lambda)=0
+\]
+and \(\dim_{k'} A(k')\le d_f\),
+where \(d_f\) counts the negative jumps of \(\Lambda\).
+The cohomology sequences for the successive reductions
+give the same two vanishings at finite depth, and passage to
+the complete lattice gives the integral vanishings.
+The multiplication sequence for \(\lambda^a\) therefore yields
+\[
+    H_1[\lambda^a]=0,\qquad
+    H_1/\lambda^a H_1\xrightarrow{\sim}
+                H^1(F,\Lambda/\lambda^a\Lambda)
+            \qquad(a\ge1).
+\]
+The cyclic decomposition of finite \(O'\)-modules gives
+\[
+ H^1(F,\Lambda\otimes X)=H_1\otimes X.
+\]
+
+Let \(H_{1,f}\subset H_1\) be the inverse image of the rational
+finite part. It is saturated, so \(H_1=H_{1,f}\oplus C\)
+over the DVR. The crystalline dimension formula gives rank \(d_f\)
+for \(H_{1,f}\). Retwist the crystalline extension of a finite
+class and add the other scalar lines. Strictness of the
+crystalline filtration adds the stated jumps, and the upper
+triangular action gives the prescribed residual polynomial.
+Its successive reductions are presentations for the class.
+Thus
+\[
+ H_{1,f}\otimes X\subseteq A(X),
+\]
+with equality at \(k'\)
+by the residue dimension bound.
+
+To pass to arbitrary depth, first use the projection onto
+each cyclic summand of \(X\). For \(X=O'/\lambda^n\), subtract
+the finite component and take a complementary element
+\(c\in C/\lambda^n C\). If \(c\ne0\), write \(c=\lambda^j c_0\)
+where \(j<n\) and \(c_0\bmod\lambda C\ne0\). Then
+\[
+    \lambda^{n-1-j}c=\lambda^{n-1}c_0
+\]
+comes from the nonzero \(c_0\bmod\lambda C\) under
+\(k'\hookrightarrow X\), \(1\mapsto\lambda^{n-1}\).
+Reflection along this injection makes \(c_0\bmod\lambda C\)
+admissible, contrary to equality at \(k'\). This proves
+\[
+ A(X)=H_{1,f}\otimes X
+\]
+for the rank-\(r\) target.
+
+For the character ratios \(\epsilon^{1-c}\), \(2\le c\le t\),
+the same reduction sequence applies. Use zero as the distinguished
+summand in the propagation argument.
+The residual invariant spaces of both this ratio and its
+Tate dual are zero: the exponents \(1-c\) and \(c\) are
+nonzero modulo \(\ell-1\) by \(t+1<\ell\), and residual
+cyclotomic inertia has order \(\ell-1\) on the unramified
+base. Local Tate duality gives the required vanishing in
+degree two. The classification gives \(A(k')=0\), so
+the cyclic-module argument gives \(A(X)=0\).
+
+For the trivial ratio, reciprocity identifies the full
+cohomology with
+\[
+ H^1(F,X)=\operatorname{Hom}_{\rm cont}
+        \bigl(\mathbb Z_\ell\oplus U_F^1,X\bigr).
+\]
+The first factor is valuation and the pro-\(\ell\) principal
+unit group \(U_F^1\) is free over \(\mathbb Z_\ell\), since
+\(\ell\) is odd and \(F\) is unramified. To see that the whole
+valuation summand is admissible, write \(x\in X\) for a desired
+Frobenius value. Choose \(b\ge1\) with \(\lambda^b X=0\).
+Take two split full representations, changing the first scalar
+line of the second by an unramified character of Frobenius
+value \(1+\lambda^b\). This preserves its jumps and residual
+polynomial. With first scalar basis \(e_1,e_2\), set
+\(v=(e_1+e_2)/\lambda^b\).
+
+After removing the common character,
+Frobenius on the lattice \(O'v\oplus O'e_2\) has
+\[
+           v\longmapsto v+e_2,\qquad
+           e_2\longmapsto(1+\lambda^b)e_2 .
+\]
+Modulo \(\lambda^b\), Frobenius fixes \(e_2\) and acts on \(v\) by a
+translation. Thus for each \(n\ge0\),
+\[
+  (\operatorname{Frob}^n-1)v=n e_2 .
+\]
+Sending \(e_2\) to \(x\) is well defined since \(\lambda^b x=0\).
+The induced unramified homomorphism \(h\) is determined on a dense subgroup by
+\[
+ h(\operatorname{Frob}^{n})=nx\qquad(n\in\mathbb Z).
+\]
+Continuity determines \(h\) on the unramified quotient. Add the other summands to both
+lattices of the presentation.
+The residue upper bound is one, so equality at \(k'\)
+with the valuation summand follows. Splitting off this
+summand in the displayed homomorphism module and applying
+the same cyclic-module argument kills the complementary
+principal-unit part. All three calculations use the residue
+tests at the same cut.
+\label{cor:large-prime-length-3}
+
+We verify the presentation hypothesis on the cut cocycles. Choose a
+crystalline character \(\theta\) with labeled jumps \(w_i\).
+Over an unramified local base with coefficients containing each
+embedding such a character exists by the labeled crystalline character
+comparison (equivalently use the algebraic characters of the units
+with the matching reciprocity convention).
+Twist the normalized family by \(\theta\). After twisting back, the scalar strings read
+\[
+ \chi_c=\theta\epsilon^{1-c}\quad(1\le c\le t),\qquad\chi_1=\theta.
+\]
+Exactness and twisting of the crystalline
+filtration give the prescribed rank-\(r\) and full jumps.
+At each family point the common residual polynomial follows from
+localization of the Galois characteristic polynomials. Thus all
+the family representations used in a presentation are full.
+\label{cor:large-prime-length-4}
+
+In the original normalized family let \(E\) be the presenting vector in a finite sum of fibres. For a finitely generated stable submodule \(Y\) and an equivariant map \(\phi\) on it, the cut cocycle has the presentation
+\[
+ gE-E\in Y,\qquad c(g)=\phi(gE-E).
+\]
+
+This is the local definition of the cut, obtained by applying
+the functional to the corresponding differences in the global
+matrix lattice. Extension of coefficients preserves it by extending
+\(\phi\) on the free span of \(Y\). Its values form a finite set
+in the divisible target, since the cocycle is locally constant
+on a compact group. They are killed by some \(\lambda^a\).
+In the enlarged coefficients use the cyclic module
+\[
+ X=\lambda^{-a}O'/O'\simeq O'/\lambda^a O'
+\]
+and choose its generator \(x_0\). Reading coordinates
+identifies \(L\otimes X\) with the corresponding torsion in the
+divisible target. The construction applies also to a stable
+presentation mapping to that torsion. If \(D\) is the divisible target, replace \(Y\) by
+\[
+ Y_a=\ker\bigl(Y\xrightarrow{\ \phi\ }D\longrightarrow D/D[\lambda^a]\bigr).
+\]
+Since \(\lambda^a\phi(gE-E)=0\), each \(gE-E\) lies in \(Y_a\).
+Equivariance makes \(Y_a\) stable. It is finitely generated because
+it is a submodule of \(Y\) over a Noetherian DVR.
+
+For clarity one can build the requisite finite quotient as follows.
+Let \(i_L\) be the rational embedding of the target into the
+good-point representation and \(e\) a nonzero vector in its
+trivial line, before twisting. For a scalar target use its
+eigenline for \(i_L\). Embed \(Y\oplus L\oplus O'\) in the
+finite family sum with two extra copies of the good fiber by
+\[
+        (y,v,s)\longmapsto (y+sE,\ i_L(v),\ se).
+\]
+These last two coordinates make the map injective. After twisting
+the whole sum by \(\theta\), the first coordinate supplies the
+term \(s\theta(g)(gE-E)\), and the last coordinate transforms by \(\theta(g)\).
+
+Consequently
+\[
+ (y,v,s)\mapsto(\phi(y)+v\otimes x_0,s)
+\]
+maps the
+stable image equivariantly onto the extension with the cocycle
+in question. Reduce its last coordinate modulo \(\lambda^b\) for
+any \(b\ge a\). This gives a finite quotient of the stable image.
+To realize it as a quotient of two full lattices, choose a stable
+full lattice in the ambient representation. If \(M\) is the stable image, \(K\subset M\) its kernel and \(L\) the full ambient lattice, choose \(n\) such that \(\lambda^n L\cap M\subseteq K\). Adding this same deep lattice to both modules preserves the target quotient:
+\[
+ (M+\lambda^n L)/(K+\lambda^n L)\simeq M/K.
+\]
+Such a scale exists
+by elementary divisors for the image in its rational span and
+because the finite quotient is killed by \(\lambda^b\).
+This proves the integral presentation required in the classification.
+\label{cor:large-prime-length-5}
+
+\proofstep{Retract the enlarged coefficient field before returning to the original divisible lattice.}
+The residue calculation was made after enlarging the coefficient field. Its contribution to the numerator is a length for the original divisible lattice, so the same classes must be detected after descent.
+
+Read back the resulting local conclusions by untwisting
+\(\theta\). A finite class in the enlarged coefficient lattice
+gives a finite class in the original divisible target up to
+coboundary. Indeed the original integers embed as a saturated
+rank-one direct summand of the enlarged integers. If \(K\subset K'\) are the two local coefficient fields with integers \(O,O'\), then
+\[
+ K\cap O'=O,
+\]
+because integrality is detected by the restriction of the absolute valuation. A linear retraction preserving
+the integers and fixing one thus exists, and extends to the
+fraction fields. Apply it to the rational finite cocycle and to
+the cobounding vector. It commutes with the matrices over the
+original field and preserves the crystalline period condition by
+linearity. The same retraction descends the character coboundary
+and the condition on inertia. The span of rank-\(r\) restrictions
+therefore has length zero modulo its finite condition at every
+place above \(\ell\). \label{cor:large-prime-length-6}
+\end{proof}
+
+\paragraph{Global terms after local vanishing.}
+The cyclotomic character on inertia at an unramified completion
+surjects on \(\mathbb F_\ell^\times\). Choose a generator in
+this residue image. On the rank-\(t\) corner at the good point
+its character roots are pairwise distinct modulo \(\ell\),
+because their ratios have exponents of absolute value between
+one and \(t-1<\ell-1\). Use the orthogonal idempotents from
+the residual full matrix span of the rank-\(r\) block and the
+character blocks. In the corner the coefficients of the
+characteristic polynomial belong to the complete local Hecke
+algebra by the matrix-span argument. Its simple residual factors
+lift by Hensel's lemma. All the root-difference denominators at
+the good point are units. Using these operators in the
+determinant comparison therefore makes the coboundary costs
+proportional to \(v_\Delta\) vanish. The absence of the first
+character off the theta locus permits the same supported
+determinant bound there. \label{cor:large-prime-length-7}
+
+\begin{lemma}[A global valuation bound after local vanishing]
+\label{lem:offwindow-global-budget}
+On the same good family and outside the exceptional windows
+and the two type primes above the cutoff, the supported determinant
+satisfies
+\[
+       v_{cc}(i,\pi)\le s_\pi+V_\ell+v_\ell(h_E)
+                           +t\sum_{v\in Q}v_\ell(\zeta_v-1).
+\]
+The numerator table uses \(\mathcal L_\ell=0\) there, retaining
+the four summands displayed above as separate allowances.
+\end{lemma}
+
+\begin{proof}
+At the prescribed tame places with unit root difference the
+quadratic inertia relation forces the character cocycle to
+vanish on inertia. At the other prescribed places the polynomial
+inertia condition gives the same vanishing. On the auxiliary
+set \(Q\) the nonzero difference \(\zeta_v-1\) gives cost
+\(v_\ell(\zeta_v-1)\) for each scalar block. After removing
+these restrictions the first character gives an everywhere
+unramified homomorphism and costs at most \(v_\ell(h_E)\) by
+global reciprocity. The other scalar characters are locally
+coboundaries above \(\ell\) and unramified away from it, giving
+the strict cohomology allowance \(V_\ell\). The rank-\(r\)
+part satisfies the prescribed Selmer conditions and costs
+\(s_\pi\). Thus on the good family
+\[
+ v_{cc}(i,\pi)\le s_\pi+V_\ell+v_\ell(h_E)
+                   +t\sum_{v\in Q}v_\ell(\zeta_v-1).
+\]
+The tame sum with its factor \(t\) is at most \(\ell^{-2}\)
+on the selected twist. The signature estimate bounds \(s_\pi\)
+as before.
+
+In the table for the numerator this gives
+\(\mathcal L_\ell=0\) outside the exceptional windows above the
+cutoff, with all four displayed allowances entering the comparison.
+The three thresholds used for the jump boxes, admissible
+parameters and conductor bound are independent of the place,
+the point and the index of the chosen lift. Their maximum
+suffices throughout this range. \label{cor:large-prime-length-8}
+\end{proof}
+

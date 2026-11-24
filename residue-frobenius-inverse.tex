@@ -1,0 +1,84 @@
+\begin{lemma}[Frobenius coefficient and divided-action inverse]
+\label{lem:residue-frobenius-left-inverse}
+For an upper-end letter, set \(d=w_i^*\) with \(1\le d\le\ell-7\)
+and \(M=\langle\Phi_i N_{i-1}\rangle\) in the residue model of
+Lemma~\ref{lem:largest-compatible-residue-model}. Write \(\Psi_i\) for the Frobenius left inverse and \(\Psi\) for its scalar counterpart. Then
+\[
+ \Psi_i(X^{1-d}M)\subseteq N_{i-1},\qquad\Psi(X^{1-d}k'[[X]])\subseteq k'[[X]].
+\]
+On the kernel in \(X^{1-d}M\) the \(\gamma_i-1\) equation
+has a solution in \(X^{-d}M\) in the kernel.
+\end{lemma}
+
+\begin{proof}
+Extend scalars temporarily to
+\(k'((\pi))\), with \(X\) the invariant parameter of
+Paragraph~\ref{par:residue-wach-realization}.
+Write \(p=\ell,\ d=w_i^*\) and \(A=1+\pi\).
+Use the extended lattices \(\widetilde N=k'[[\pi]]N_{i-1}\)
+and \(\widetilde M=k'[[\pi]]M\). A basis of \(\widetilde N\)
+from \(N_{i-1}\) gives a Frobenius basis of \(\widetilde M\).
+
+In this basis every vector in the ambient space has a unique
+expansion
+\[
+             \sum_{j=0}^{p-1} A^j\Phi_i(y_j).
+\]
+Indeed \(1,\pi,\ldots,\pi^{p-1}\) form the usual basis over
+the image under \(\pi\mapsto\pi^p\). The triangular change
+to \(1,A,\ldots,A^{p-1}\) is integral with unit diagonal.
+Define \(\psi_i\) to return \(y_0\). This definition is
+independent of the Frobenius basis, by uniqueness of the
+direct sum expansion. A tame substitution of exponent \(z\)
+sends the \(j\)-summand to the summand with index \(zj\bmod p\),
+since
+\[
+ A^{zj}=A^{j'}\phi(A^{(zj-j')/p}).
+\]
+Thus the
+projection descends to the tame invariants, commutes with
+the principal action and satisfies \(\psi_i\Phi_i=1\).
+The same expansion in rank one gives the scalar companion.
+
+If the input lies in \(X^{1-d}M\), its ordinary order in
+\(\widetilde M\) is at least \((p-1)(1-d)\ge p(1-d)\).
+The integral change of basis gives
+\(y_j\in\pi^{1-d}\widetilde N\) for every \(j\).
+The zeroth component is tame-invariant. Its nonzero
+coefficients have orders divisible by \(p-1\) in the
+invariant basis. Since \(1-d>-(p-1)\), it belongs to
+\(N_{i-1}\). This proves in particular the scalar bound.
+
+For an input with \(y_0=0\), solve separately for \(1\le j<p\).
+On the \(j\)-summand the difference is
+\[
+   (\gamma_i-1)\bigl(A^j\Phi_i(z)\bigr)
+      = A^j\Phi_i\bigl((A^j\gamma_{i-1}-1)z\bigr),
+\]
+since \(\gamma(A)=A^{1+p}\). The operator on the right is
+multiplication by \(A^j-1\), of ordinary order one, plus
+\(A^j(\gamma_{i-1}-1)\). On each
+\(\pi^h\widetilde N\), \(h\in\mathbb Z\), the latter term
+increases order by at least \(p-1\): use
+\(\gamma(\pi)/\pi\equiv1\bmod\pi^{p-1}\) and
+\((\gamma_{i-1}-1)N_{i-1}\subset XN_{i-1}\).
+After dividing by \(A^j-1\), the error raises order by at
+least \(p-2>0\). Put \(B_j=(A^j-1)^{-1}A^j(\gamma_{i-1}-1)\).
+
+The operator \(B_j\) increases order by at least \(p-2\), so the solution is
+\[
+  z_j=\sum_{k\ge0}(-B_j)^k(A^j-1)^{-1}y_j
+                       \ \in\ \pi^{-d}\widetilde N .
+\]
+Multiplication by \(A^j-1\) after applying \(1+B_j\)
+gives \((A^j\gamma_{i-1}-1)z_j=y_j\).
+The resulting sum has ordinary order at least \(-pd\) in
+\(\widetilde M\). Tame averaging preserves that order, the
+equation and the vanishing under \(\psi_i\). For the averaged
+vector, the lower order bound rounds up to \(-(p-1)d\), since
+\(d<p-1\) and the coefficients in the invariant basis have
+orders in \((p-1)\mathbb Z\). This gives the preimage in
+\(X^{-d}M\) with the required one-power loss.
+\label{cor:residue-frobenius-inverse-1}
+\end{proof}
+

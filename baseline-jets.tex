@@ -1,0 +1,295 @@
+\subsubsection{Integral derivatives away from the discriminant}
+\label{subsec:baseline-jets}
+\hypertarget{source-baseline-jets}{}
+
+Beyond the primes where the jets give a positive gain, the product of local estimates still requires integrality in every order of differentiation. This applies at the level-free places. We keep the
+scale of the curve ideal used in the period. Thus the period
+lattice \(\Gamma\) has discriminant
+\(g_2(\Gamma)^3-27g_3(\Gamma)^2=1\). Use the basis
+\(\lambda a,\lambda(b+\sqrt{-d})/2\) of
+Section~\ref{subsec:theta-normalization}, with \(a\) odd.
+Write \(E=\C/\Gamma\), \(h=\lambda a/2\) modulo \(\Gamma\),
+and \(\theta\) for its even degree-one section normalized by
+\(\theta(0)=1\). Its sole zero is \(h\).
+Fix a coefficient embedding into \(\mathbb C_p\) and extend it
+to a field isomorphism on \(\C\) as in
+Section~\ref{subsec:word-measure}. Elliptic functions will
+be transported as rational functions on the Weierstrass curve.
+All formal identities use the transport on coefficients.
+
+\begin{proposition}[Integral jets at level-free primes]\label{prop:level-free-theta-jets}
+Use a discriminant-one curve with period lattice \(\Gamma\),
+odd \(a\) in the basis of Section~\ref{subsec:theta-normalization},
+and the degree-one even section normalized by \(\theta(0)=1\)
+with zero at \(\lambda a/2\bmod\Gamma\).
+At \(p\ne d\), on the admissible lattice pairs with the
+stated level exclusions and prime-to-\(p\) denominators,
+let \(a_{\alpha,w}\) be the tested ordinary derivative of multi-order \(\alpha\) at a coefficient place \(w\). Then
+\[
+ v_w(a_{\alpha,w})\ge0\qquad\text{for every permitted }\alpha,w.
+\]
+ The bound is uniform in the order of
+the derivative and in the coefficient field. It includes
+the primes \(2\) and \(3\) when they split in the chosen CM field.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Choose a good model with the given invariant differential.}
+The CM \(j\)-invariant is an algebraic integer. Consequently
+the curve has potentially good reduction. To keep track of
+the differential, take a good model after extension and choose
+its analytic homothety \(c\) from the fixed lattice. Its
+discriminant is \(c^{-12}\), so \(c\) has norm one. The change
+of Weierstrass variables with zero translations and unit scaling
+returns an integral good model with the original \(g_2,g_3\)
+invariants. Over \(\mathbb C_p\) the normalized differential
+therefore identifies the formal logarithmic variable with the
+transported analytic variable \(z\). Write \(T\) for a good
+formal parameter and \(z=l(T)\) for the formal logarithm,
+with unit tangent. In particular
+
+\[
+  D_z=(l'(T))^{-1}\frac{d}{dT},\qquad D_z\big(R[\![T]\!]\big)\subset R[\![T]\!]
+\]
+ preserves integral formal series
+because the invariant differential has integral unit coefficient
+in this parameter. For existence over a finite local extension,
+the invariants \(g_2,g_3\) are algebraic by the discriminant
+identity and \(j=1728g_2^3\). The analytic scale fixes the
+ratios of the invariant differentials. \cite{cm-reciprocity,serre-tate}
+
+\proofstep{Check that the odd characteristic remains visible in the special fiber at two.}
+
+For odd \(p\), \(h\) has nonzero reduction by injectivity on
+prime-to-\(p\) torsion. At two we use its particular
+characteristic. The ring \(O=\Z[(1+\sqrt{-d})/2]\) splits at two,
+since \(d\equiv7\pmod8\). In \(O/2O\) the integers
+\(\omega=(1+\sqrt{-d})/2\) and \(\bar\omega\) give the
+two complementary idempotents. The two idempotents split the point as
+\[
+       h=\omega h+\bar\omega h,\qquad
+       \omega h\ne0,\quad\bar\omega h\ne0\quad\text{in }E[2].
+\]
+Indeed the second lattice coordinate of the corresponding lift
+is \(a/2\) or \(-a/2\), which excludes membership in \(\Gamma\).
+
+Each idempotent cuts out a height-one summand of
+\(E[2^\infty]\), as one sees on the generic Tate module.
+The action extends over a good model. The special fiber has
+dimension one, so one summand has dimension zero and is
+\'{e}tale, and the other has dimension one and is connected.
+Reduction is injective on points of the \'etale summand.
+Thus the reduction of \(h\) has order two at this place as
+well.  It holds for either embedding of \(O\).
+
+\proofstep{Use a split dilation with a unit tangent and norm divisible by the residue prime.}
+
+Suppose that \(p\) splits in \(O\), including \(p=2\) and
+\(p=3\) in the selected host (\(d\equiv2\pmod3\)).
+Order the components of \(O\otimes\Z_p\) with the differential
+embedding first.
+At a split prime the two idempotents are
+\[
+  O\otimes\mathbb Z_p\simeq\mathbb Z_p\times\mathbb Z_p,\qquad e_1=(1,0),\quad e_2=(0,1).
+\]
+ Choose \(\alpha\in O\) congruent to \((1,0)\)
+modulo \(p\), nonzero and of norm \(m>1\). Its action
+\([\alpha](T)\) on the good formal curve is integral and
+has unit linear coefficient \(A\), while \(p\mid m\).
+The quadratic sign of the theta vector at a lattice period
+\(v\) is \((-1)^{E_0(\omega v,v)}\), with \(E_0\) its alternating
+form, as in Section~\ref{subsec:theta-normalization}.
+
+Replacing
+\(v\) by \(\alpha v\) multiplies that integer by \(m\).
+The Hermitian automorphy exponents also multiply by \(m\).
+The quotient
+\[
+             R(z)=\theta(\alpha z)/\theta(z)^m
+\]
+is therefore elliptic. Its divisor is supported on \(h\) and
+the preimages of \(h\). None reduces to the identity since
+\(\bar h\ne0\) and \([\alpha]\) preserves reduction. Both
+\(R\) and its inverse have unit integral expansions at the
+identity, with constant term one. For detail, its divisor is
+defined over a finite extension of the good reduction field,
+so the rational function descends there up to a scalar.
+A degree-zero principal divisor of rational points has a
+one-dimensional space of defining rational functions, by base
+change of sections on the proper curve.
+
+If two such functions \(f,g\) have the prescribed divisor and are normalized at zero, then
+\[
+  {\rm div}(f/g)=0,\qquad (f/g)(0)=1\quad\Longrightarrow\quad f=g.
+\]
+ The normalization at
+zero fixes the scalar. On a smooth model the only possible
+component of the divisor through the origin is vertical.
+After dividing by the corresponding power of a uniformizer
+one has a unit in the local ring, since that ring is regular
+and all divisor orders there vanish. Evaluation at the origin
+shows that the original vertical order was zero.
+
+Put \(F(T)=\theta(l(T))\) using the fixed good-model coefficient
+embedding into \(\mathbb C_p\) and the normalized \(\theta(0)=1\). The identity
+\[
+             F([\alpha](T))=F(T)^m R(l(T))
+\]
+gives integrality of \(F\) from its constant term one. At degree
+\(j>0\) the unknown coefficient occurs with multiplier
+\(A^j-m\), which is a unit, and all remaining terms are
+integral by induction. The same conclusion holds for the
+inverse series. This argument uses the split CM action on the
+ordinary curve, including in residue characteristic three
+where changing to a short integral equation could lose a
+factor of three. At three the CM norm identity of \eqref{eq:cm-isogeny} gives the same integral correction with
+\(\alpha=\sqrt{-d}\). There the correction
+
+\[
+  (\alpha^2-1)b_2/12=-((d+1)/3)b_2/4
+\]
+ is integral for the
+general good equation. \label{cor:baseline-jets-1}
+
+\proofstep{Use the logarithmic derivative of the theta section for primes at least five.}
+
+For \(p\ge5\) with \(p\ne d\), the short equation at this
+scale is good. Indeed \(j\) integral gives \(g_2\) integral
+and the discriminant identity then gives \(g_3\) integral.
+Apply \eqref{eq:cm-isogeny} with \(\alpha=\sqrt{-d}\).
+Its kernel is killed by \(d\), hence every nonzero kernel point
+has integral affine coordinates. The quadratic-coefficient
+identity following \eqref{eq:cm-isogeny} gives \(s_2\) integral
+because \(\alpha^2-\alpha\bar\alpha=-2d\) is a unit. The
+second logarithmic derivative of the even theta function is
+\[
+           (\log\theta)''(z)=-\wp(z+h)-s_2 .
+\]
+The shift by \(h\) and the scalar gauge in the translated sigma
+function contribute only a linear term to the logarithm in
+addition to the displayed quadratic correction. The translated
+Weierstrass coordinate is regular integral on the identity
+disc by good reduction and \(\bar h\ne0\). All of its invariant
+derivatives at the origin are integral.
+
+Since \(\theta(0)=1\)
+and \(\theta'(0)=0\), every positive derivative of
+\(\log\theta\) at zero is integral. Applying Leibniz's rule
+successively to \(\theta'=\theta(\log\theta)'\) proves
+integrality of every ordinary derivative of \(\theta\).
+This also treats inert primes where the argument with the
+split dilation is unavailable.
+
+\proofstep{Remove the zero of a translated section before taking a prime-to-residue-characteristic root.}
+
+Let \(t\) have order dividing \(M\) prime to \(p\). With the
+normalized translation \(U_t\) above, put
+\[
+       Q_t(z)=\left(\frac{U_t\theta(z)}{\theta(z)}\right)^M .
+\]
+The ratio has a period character of order dividing \(M\) by
+the Heisenberg commutator. Thus \(Q_t\) is rational on the
+curve and its divisor is \(M([h-t]-[h])\).
+Let \(|\cdot|_{\rm vert}\) be the norm at the
+generic point of the good special fibre. The telescope
+of theta ratios gives
+\[
+          \prod_{j=0}^{M-1} Q_t(z+jt)\ \in\ \mu_\infty:
+\]
+after cycling the translates the only factor is a
+Heisenberg phase and the \(Mt\)-period sign. Each
+translation preserves the special fibre and its generic
+valuation. Hence \(|Q_t|_{\rm vert}^M=1\) and
+\(|Q_t|_{\rm vert}=1\), including any scalar of the
+normalized theta ratio by multiplicativity.
+
+At \(p=2\) the reduction of \(h\) has order two and \(t\)
+has odd order. At the odd primes the points generated by
+\(h,t\) are prime-to-\(p\) torsion and reduction is injective
+on them. Thus the divisor on the identity disc has either
+no support or a zero of order \(M\) at the identity, the
+latter precisely when \(t=h\) on the curve. The order on the identity disc can thus be written
+\[
+  \operatorname{ord}_{T=0}(Q_t)=eM,\qquad e=\begin{cases}1&t=h,\\0&t\ne h.\end{cases}
+\]
+ The expansion of \(Q_t/T^{eM}\)
+is an integral unit with unit constant term. To see this, take
+a defining function over a finite extension up to a scalar,
+remove its vertical order, then remove the power of a regular
+parameter defining the identity section.
+
+The remaining
+function and inverse are units at the special point by the
+local divisor criterion above. The original generic norm
+one makes the residual scalar a unit. The formal root
+\((U_t\theta/\theta)(l(T))/T^e\) thus has unit constant and
+integral coefficients. After dividing by its constant term,
+write the normalized root as \(1+\sum_{j\ge1}b_j T^j\).
+Then
+\[
+ [T^k]\Bigl(1+\sum_{j\ge1}b_j T^j\Bigr)^M
+      =M b_k+P_k(b_1,\ldots,b_{k-1})
+             \quad(P_k\in\mathbb Z[b_1,\ldots,b_{k-1}]).
+\]
+Since \(M\) is a unit, induction gives integral \(b_k\)
+at every positive degree. The ratio itself is an integral series in \(T\).
+Consequently its invariant derivatives are integral. The
+product rule and the preceding bounds for \(\theta\) prove
+the unit bound for all jets of \(U_t\theta\). In particular
+the calculation covers the translate whose constant term
+vanishes without dividing by that value.
+
+\proofstep{Transfer the unit bound through both integral lattice comparisons.}
+
+Consider a kernel term between the actual source and target
+lattices. Its admissible pair agrees locally with these
+lattices at \(p\). Choose positive integers \(s_1,s_2\)
+prime to \(p\) clearing their two lattice comparisons in both
+directions. For every test matrix \(y\) mapping the source
+into the target, \(s_1s_2 y\) maps the admissible source into
+the admissible target.
+Neither clearing factor affects the valuation of a coordinate of a test direction, since
+\[
+  v_p(s_1s_2)=0,\qquad v_p(s_1s_2v)=v_p(v).
+\]
+ Multiplication by any period of
+\(\Gamma\) sends this scaled embedded direction into the
+period lattice of the Hom space. Likewise a translate
+prime-to-\(p\) on the original pair has a prime-to-\(p\)
+denominator on the admissible pair, by the same inclusions.
+
+Apply the standardizing isometry \(g\) of
+Section~\ref{subsec:theta-normalization} to the four copies.
+It carries their lattice into the standard one after multiplication
+by an integer prime to \(p\), by the relative index.
+For each coordinate \(v\) of a scaled test direction the same
+integer \(b_0\), prime to \(p\), gives
+\[
+ b_0v\Gamma\subseteq\Gamma
+ \quad\Longrightarrow\quad b_0v\in\operatorname{End}(\Gamma)=O
+ \quad\Longrightarrow\quad v\in O\otimes\Z_{(p)}.
+\]
+Here the endomorphisms are complex multipliers of the period lattice.
+This proves integrality of the argument matrix under the chosen
+embedding. Undoing the two lattice comparisons only multiplies
+its columns by \(1/(s_1s_2)\). Further integral linear changes
+of the two local bases, including the dual basis on the source,
+preserve this conclusion by the chain rule.
+
+In the four copies the normalized section is a finite sum of
+products of the degree-one translates just treated, with
+integral scalars. Integral ordinary derivatives are stable under
+such sums, products and the indicated linear substitutions.
+For instance the product step uses the integral coefficients in
+\[
+  \partial^\alpha(FG)(0)=\sum_{\beta\le\alpha}\binom{\alpha}{\beta}\partial^\beta F(0)\,\partial^{\alpha-\beta}G(0).
+\]
+The derivative identity in Lemma~\ref{lem:cm-disjoint-tensor}, applied
+to the normalized section with \(m=4\), gives the unit bound for each
+ordinary derivative in one copy. A prescribed
+integral linear combination of translates satisfies that
+bound as well. Use the stated admissible lattices and level exclusions and the prime-to-\(p\) denominator throughout. The estimate has constant one independently
+of derivative order, the number of terms, the word and the
+degree of the coefficient field. \label{cor:baseline-jets-2}
+\end{proof}
+

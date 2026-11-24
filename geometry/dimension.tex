@@ -1,0 +1,780 @@
+\section{The dimension of the common cuspidal space}\label{sec:count}
+
+The off-diagonal Gram estimate is measured relative to the dimension of a common target. Its level and archimedean types are already prescribed by the periods. We compute the trace of the projector onto precisely these data, so its identity term has the same normalization as the Gram sum. Bounding the unipotent
+and boundary terms relative to the identity term gives the
+dimension estimate with rank, level and field degree allowed
+to vary. This estimate normalizes the selected-row Gram
+bound in the next chapter. Definition~\ref{hyp:cuspidal-dimension} specifies the convolution idempotent and the discrete-series parameter at every infinite place. The dimension in \eqref{eq:dimension-count} refers to their simultaneous image.
+
+The following trace calculation draws on companion expositions of
+the dimension of the common cuspidal space. \cite{companion-row-count}
+\begin{paramdefinition}[Level, signature and weight gap for the trace estimate]\label{hyp:cuspidal-dimension}
+Let \(r=p+q\) be the ambient unitary rank. At every real place the signature is \((p,q)\), where \(p\ge q\) and \(q^2\le r\). The CM extension
+\(E/E^+\) is unramified at the finite places in this comparison.
+Write \(f=[E^+:\Q]\). Both \(r\) and \(f\) may grow.
+
+Let \(g\) be the level
+size, \(g_0>4r\) a rational prime split completely in \(E\)
+and unramified there, and \(d_E\) the root discriminant of \(E\).
+The finite projector \(e\) is a self-adjoint convolution idempotent
+on the lattice stabilizer \(K_f\), bi-invariant under its principal
+level subgroup \(K_g\). Its support reduces to unipotents at \(g_0\).
+For the Harish--Chandra parameter \(\lambda_v\), let \(I_+, I_-\)
+be the two signature blocks of the compact Cartan. Require, at every
+real place,
+\[
+ |\lambda_{v,i}|\le b^2\quad(1\le i\le r),\qquad
+ |\lambda_{v,i}-\lambda_{v,j}|\ge h\quad(i\in I_+,\ j\in I_-).
+\]
+The second condition is vacuous when \(q=0\).
+Assume
+\[
+ \begin{gathered}
+ 1\le g\le b^{C_g},\qquad b^2\ge r^{19},\qquad
+ \log d_E\le e^r,\\
+ \log f\le\sqrt r,\qquad \log\log b\le rf\log r/16,\\
+ h\ge 8\cdot10^{14}(C_g+4)\,r^{19}f^5\log(bd_E).
+ \end{gathered}
+\]
+Here \(C_g\) is fixed and \(r\) is sufficiently large. \end{paramdefinition}
+The instance in the ambient rank count is checked in Proposition~\ref{prop:selected-rank-comparison}. In particular the exponent for \(g=g_0g_1\) is twice the common exponent for either prime. The split prime giving the support condition is \(g_0\).
+
+The rank-dependent archimedean gap will control the far orbital sum.
+
+For each infinite place \(v\), let \(\pi_v\) be the
+discrete series of the prescribed weight, \(w_v\) a unit vector
+of its lowest compact type, and \(d_v\) its formal degree for
+the chosen Haar measure. Put \(w=\bigotimes_v w_v\) in the
+archimedean tensor product \(\pi=\bigotimes_v\pi_v\). We will
+count archimedean intertwiners into the image of the finite
+projector. Write \(D\) for their dimension and \(V\) for the
+quotient volume. The identity term in the trace is
+\[
+        D_*=\left(\prod_v d_v\right)e(1)V.
+\]
+
+\begin{proposition}[Dimension of the projected cuspidal space]\label{prop:projector-dimension}
+For the self-adjoint finite projector and the discrete-series weights
+of Definition~\ref{hyp:cuspidal-dimension}, the multiplicity \(D\) is finite. For \(q=0\) one has \(D=D_*\). For sufficiently large \(r\),
+uniformly over the fields, levels and admissible weights,
+\begin{equation}\label{eq:dimension-count}
+    |D-D_*|\le e^{-rf\log(r)/16}D_* .
+\end{equation}
+The threshold depends on the fixed constants in the hypotheses.
+\end{proposition}
+
+The argument first bounds the periodized kernel on the moderate
+part of the quotient. On its complement we estimate a finite
+orthonormal family before taking the trace. This order will also
+establish that the projected space has finite dimension.
+
+\subsection{The finite projector and its normalization}
+
+The value of the finite projector at the identity enters both the trace and its main term. Passing to the finite quotient computes this value without fixing the volume of the maximal compact subgroup to be one.
+
+Let \(H=K_f/K_g\), equipped with counting measure, and let
+\(\kappa=\operatorname{vol}(K_g)\) for the finite Haar measure.
+Write \(e(x)=a(\bar x)/\kappa\) on \(K_f\), so convolution is the counting-measure convolution of \(a\) on \(H\).
+\begin{lemma}[Mass of the finite projector]\label{lem:finite-projector-mass}
+The finite convolution projector is of positive type, satisfies
+\(|e(x)|\le e(1)\), and has
+\[
+ e(1)=\frac{\operatorname{rank}(a\mid\C[H])}{\operatorname{vol}(K_f)}.
+\]
+In particular the identity contribution \(D_*\) is unchanged by a
+rescaling of any of the chosen Haar measures.
+\end{lemma}
+
+\begin{proof}
+For a self-adjoint
+idempotent \(a\),
+\[
+  a(1)=\sum_{x\in H}|a(x)|^2,\qquad |a(x)|\le a(1).
+\]
+The equality is the convolution identity at 1. The bound at any
+\(x\) follows by Cauchy--Schwarz from the convolution identity at
+\(x\). In addition \(e\) is of positive type on the finite adelic
+group. In finite adelic \(L^2\) its values are coefficients of the right
+regular action on \(e\):
+\[
+ \int\overline{e(y)}e(yx)\,dy=(e*e)(x)=e(x),\qquad |e(x)|\le e(1).
+\]
+This gives the positive-type kernel used in the automorphic count.
+
+The two finite constructions used by the count can be treated in
+this description. A unitary character of an open subgroup gives
+its normalized averaging idempotent. It is constant on the level
+cosets when the character is trivial on \(K_g\). In the two-prime
+construction, the first reduction has a subgroup character
+idempotent supported on the required unipotent reductions. The
+other reduction uses the product of a subgroup character
+idempotent with a central idempotent.
+
+In a unitary irreducible block \(\rho\), a central idempotent
+\(z\) acts by a scalar \(c_\rho\) satisfying \(c_\rho^2=c_\rho\).
+Thus \(c_\rho\in\{0,1\}\) and \(z^*=z\). For the subgroup
+character projector \(a_\chi\) the two identities needed at this
+reduction are
+\[
+ (a_\chi z)^*=z a_\chi=a_\chi z,\qquad
+ (a_\chi z)^2=a_\chi^2 z^2=a_\chi z .
+\]
+The tensor of the two factors inflates by division by the Haar
+volume of the common reduction kernel. It is bi-invariant under
+each level subgroup inside this kernel. The first factor gives
+the stated unipotent support at \(g_0\).
+
+In the delta basis of the regular representation of \(H\) every
+diagonal entry of convolution by \(a\) is \(a(1)\). Hence
+\[
+ \operatorname{rk}(a)=\operatorname{tr}(a)=|H|a(1),\qquad
+ e(1)=\frac{\operatorname{rk}(a)}{\operatorname{vol}(K_f)} .
+\]
+For a subgroup character this is the reciprocal of its supporting
+subgroup's volume. The independent \(\kappa^{-1}\) in the pointwise
+bound comes from unfolding \(K_g\). In \(D_*\), a change in finite
+Haar measure scales \(V\) and \(e(1)\) inversely. At a real place
+the same cancellation pairs \(V\) with the formal degree.
+
+\end{proof}
+
+\input{geometry/dimension-local}
+\input{geometry/dimension-projector}
+
+\subsection{Small rational group elements}
+
+The real projector suppresses elements far from the maximal compact. For rational elements satisfying the finite support condition, closeness at every real place forces all their eigenvalues to be one.
+
+Set \(\epsilon_N=10^{-6}r^{-8}f^{-2}\).
+\begin{lemma}[Small supported elements are unipotent]\label{lem:small-unipotent}
+Suppose a supported rational element has a polar decomposition
+\(U_v\exp X_v\) with \(\|X_v\|_{\rm HS}\le\epsilon_N\) at every
+real place. It is unipotent and
+
+\[
+ \|U_v\exp X_v-I\|_{\rm HS}\le3\sqrt{r\epsilon_N}
+\]
+ at each such
+place. If \(q=0\), the only supported rational element is the identity.
+\end{lemma}
+
+\begin{proof}
+Since \(\|X_v\|_{\rm op}\le\epsilon_N\), for
+\(1\le j\le r\) the trace of the \(j\)-th power differs from
+\(r\) by at most \(r(1+\exp(j\epsilon_N))\le3r\).
+The original rational element preserves the adelic lattice,
+so its power traces are algebraic integers. Its reduction is
+unipotent at every prime over \(g_0\). The traces of its powers
+are therefore \(r\) modulo every such prime, and hence
+modulo \(g_0\mathcal O_E\) because \(g_0\) is unramified.
+
+Write \(a_j=\operatorname{tr}(\gamma^j)-r\).
+If \(a_j\ne0\), divisibility and the archimedean estimates would give
+\[
+    g_0^{[E:\mathbb Q]}\le |N_{E/\mathbb Q}a_j|\le
+        (3r)^{[E:\mathbb Q]}\qquad(1\le j\le r).
+\]
+This contradicts \(g_0>4r\).
+Write \(p_j=\operatorname{tr}(\gamma^j)=r\) for \(1\le j\le r\).
+Newton's recursion for the elementary symmetric functions gives
+\[
+ e_0=1,\qquad j e_j=\sum_{i=1}^j(-1)^{i-1} e_{j-i}p_i
+      \quad(1\le j\le r).
+\]
+These are precisely the initial value and recursion of the identity
+matrix, so \(e_j=\binom rj\). Hence \(\det(tI-\gamma)=(t-1)^r\).
+
+Also \(\|U\exp X_v-U\|_{\mathrm{op}}\le2\epsilon_N\).
+The equality of the first trace gives
+\(\operatorname{Re}\operatorname{tr}U\ge r-2r\epsilon_N\).
+Since \(U\) is unitary,
+\(\|U-I\|_{\mathrm{HS}}^2=2r-2\operatorname{Re}\operatorname{tr}U\).
+Subadditivity and \(\|A\|_{\rm HS}\le\sqrt r\|A\|_{\rm op}\) give
+\[
+ \|U\exp X_v-I\|_{\rm HS}
+ \le 2\sqrt r\,\epsilon_N + (4r\epsilon_N)^{1/2}
+ \le 3\sqrt{r\epsilon_N},
+\]
+using \(\epsilon_N\le1/4\).
+This is the small entry bound used to place a nonidentity
+unipotent in the canonical short isotropic flag of the lattice.
+In the case \(q=0\), all archimedean elements lie in compact
+groups and the power-trace argument applies to every element
+in the support. A unitary unipotent is the identity by the
+spectral theorem. The estimates for nonidentity elements below
+are for \(q\ge1\).
+\end{proof}
+
+
+\input{geometry/dimension-flags}
+
+\subsection{The measure of short flags}
+
+Packing gives a bound at a fixed lattice. Its factors may grow when a grade of the flag becomes short, so the trace integral also needs the measure of lattices with those short grades.
+
+Let \(\tau_1<\cdots<\tau_a<1/2\) be successive sizes of the
+canonical short isotropic flag of Lemma~\ref{lem:canonical-short-flag}. Its layer ranks are positive
+integers \(j_1,\ldots,j_a\), with \(J=\sum_i j_i\le q\).
+\begin{lemma}[Measure of the short-flag region]\label{lem:short-flag-measure}
+For \(q\ge1\) put \(U_0=rf\log r\). For large \(r\), let \(X_{\rm short}\) consist of the points in the quotient \(X\) with a nonempty isotropic flag of successive sizes less than \(1/2\). Its relative measure satisfies 
+\[
+ \frac{\operatorname{vol}(X_{\rm short})}{\operatorname{vol}(X)}\le e^{-U_0/4}.
+\]
+
+\end{lemma}
+
+\begin{proof}
+\proofstep{The modular character.}
+The Levi group of its parabolic is the product of
+\(\mathrm{GL}_{j_i}(E)\) and the unitary group of signature
+\((p-J,q-J)\). In the logarithmic size variables the modular
+character of the parabolic is the product of the determinants
+on the unipotent blocks. Write this product as \(\mathcal L(\tau)\).
+With \(f=[E^+:\Q]\) it is
+\begin{align*}
+ \mathcal L(\tau)
+ &=\prod_{i<k}(\tau_i/\tau_k)^{2fj_i j_k}
+               (\tau_i\tau_k)^{2fj_i j_k}\
+ &\hspace{1em}\cdot\prod_i \tau_i^{2fj_i(r-2J)}
+                                  (\tau_i^2)^{fj_i^2}.
+\end{align*}
+The two cross blocks between layers of complex dimensions
+\(j_i,j_k\) each have real dimension \(2j_i j_k\) per place.
+The blocks with the central quotient have real dimension
+\(2j_i(r-2J)\). The skew-Hermitian block of layer \(i\) has
+dimension \(j_i^2\) and scales by \(\tau_i^2\).
+
+On the \(i\)-th layer of rank \(j_i\) use the positive determinant
+coordinate \(a_i=\tau_i^{2fj_i}\). The quotient of its Haar
+measure by the determinant-one gauge is \(da_i/a_i\).
+The change from the determinant to the size on each layer is
+\[
+ \log a_i=2fj_i\log\tau_i,\qquad
+ \prod_i\frac{da_i}{a_i}=\prod_i 2fj_i\frac{d\tau_i}{\tau_i}.
+\]
+The residual volumes below use this same decomposition.
+
+Unfold the sum of short flags along this parabolic. The
+normalized measure of any measurable set of sizes for the
+given type is at most
+\begin{equation}\label{eq:count-flag-density-product}
+              \kappa\int\mathcal L(\tau)
+                                   \prod_i \frac{2f j_i\,d\tau_i}{\tau_i}.
+\end{equation}
+The volume of the residual unitary quotient occurs in the
+numerator of the unfolded integral. Dividing by the volume
+of the original quotient replaces this factor by the inverse
+of the successive unitary volume ratios. The ratios follow
+from the convergent one-vector Siegel--Weil identity with
+self-dual additive measures. In rank \(M\ge3\) average a
+Gaussian sum over vectors of norm \(+1\) or \(-1\), using
+the sign whose signature entry is positive. Witt's theorem
+makes this a single orbit with stabilizer the group on
+the perpendicular complement. Unfolding extracts the
+volume of that rank-\((M-1)\) quotient.
+
+On the Siegel--Weil
+side the volume of the rank-\(M\) quotient multiplies
+the local Gaussian densities and the Euler-product factor
+\[
+             d_E^{f/2}(d_E/2)^{-Mf}\mathcal L_M^{-1},
+\]
+where \(\mathcal L_M\) is the rank \(L\)-factor at \(M\).
+The real Gaussian densities are positive for the selected
+sign. The finite lattice normalization in the unfolding
+contributes \(2^{Mf}\). Dividing this factor by the displayed
+Euler-product factor gives the successive ratio in the common gauge,
+\[
+ \frac{2^{Mf}}{d_E^{f/2}(d_E/2)^{-Mf}\mathcal L_M^{-1}}
+          =d_E^{f(M-1/2)}\mathcal L_M .
+\]
+Taking one step of each sign reduces the signature by \((1,1)\).
+In the quotient of residual volume by original volume the resulting
+Euler-product contribution after \(J\) pairs is
+\[
+ \prod_{a=0}^{J-1}(\mathcal L_{r-2a}\mathcal L_{r-2a-1})^{-1}
+                 =\prod_{M=r-2J+1}^r \mathcal L_M^{-1}.
+\] The general linear quotients give
+\(\operatorname{Res}_{s=1}\zeta_E(s)\prod_{s=2}^{j_i}\zeta_E(s)\)
+per layer. Haar gauges of the finite stabilizers and the
+archimedean quotient occur in both the unfolding and the
+volume ratio and cancel.
+
+For clarity, in the resulting constant the discriminant
+factor is \((d_E/2)^{-fd_N/2}\), where \(d_N\) is the sum
+of the unipotent block dimensions at one place and
+\(d_N\le2Jr\). The power of two is
+\(2^{-f(rJ-J^2+J/2)}\). With \(S(m)=\prod_{i=1}^m
+2\pi^i/(i-1)!\), the compact factor is
+\[
+ \left(\frac{S(p)S(q)}
+              {S(p-J)S(q-J)\prod_i S(j_i)}\right)^f.
+\]
+The remaining factors are the general linear factors above
+divided by the product of the rank \(L\)-factors at
+\(r-2J+1,\ldots,r\), evaluated on the corresponding powers
+of the quadratic character of \(E/E^+\).
+The compact factor supplies the main saving in \(\kappa\).
+
+For each \(p-J<i\le p\), one has \(i\ge r-2\sqrt r+1\),
+and Stirling's estimate gives
+\[
+   \log\frac{2\pi^i}{(i-1)!}
+            \le -r\log r+O(r+\sqrt r\log r)
+\]
+uniformly in that range. The other compact factors have
+logarithms bounded above by \(O(fJ\sqrt r\log r)\), since
+all their indices are at most \(\sqrt r\).
+
+The discriminant factor costs at most \(O(fJr)\) in the
+logarithm since \(d_E\ge3/2\), and the power of two is at most
+one. A residue bound
+\(\operatorname{Res}_{s=1}\zeta_E(s)\le
+(16\log d_E)^{2f}\) follows from the unconditional degree
+and discriminant bound for Dedekind zeta residues.
+Since \(\log d_E\le e^r\), the residues also cost at most
+\(O(fJr)\) in total. For the layer ranks \(j_i\), the Euler-product majorant gives
+\[
+ \sum_i\sum_{s=2}^{j_i}\log\zeta_E(s)
+ \le 2f\,\#\{i\}\sum_{s\ge2}\log\zeta(s)\ll fJ .
+\]
+Indeed there are at most \(J\) layers, and \(\zeta(s)-1\ll2^{-s}\)
+for integer \(s\ge2\).
+For the reciprocal rank \(L\)-factors, the same Euler-product
+bound in degree \(f\) gives \(O(fJ)\) in the logarithm.
+The compact factors supply the leading negative term. Combining all
+errors gives, uniformly for \(J\le q\le\sqrt r\) and large \(r\),
+\[
+                         \kappa\le \exp(-fJr\log r/2).
+\]
+\hfill\mbox{\cite{louboutin-row-count}}\label{cor:geometry-dimension-1}
+
+\proofstep{Integration over the size variables.}
+
+The modular character supplies powers of the relative sizes of the graded pieces. Integrating those powers determines whether the growth in the near-element count can be absorbed.
+
+On the full simplex of sizes every factor of \(\mathcal L\)
+is at most one. Keep just \(\prod_i\tau_i^{2fj_i(r-2J)}\).
+When \(r-2J\ge1\), the integral in each remaining coordinate
+is at most one, since
+\[
+ 2f j_i\int_0^{1/2} t^{2fj_i(r-2J)-1}\,dt\le1 .
+\]
+Thus the relative measure of all nonempty short flags is
+bounded by \(\sum_{J=1}^q2^{J-1}e^{-JU_0/2}\), where
+\(U_0=rf\log r\). The sum is at most \(e^{-U_0/4}\) for
+large \(r\). In particular the region \(\tau(x)<\tau_*<1/2\)
+has this measure bound.
+\end{proof}
+
+\subsection{Absolute volume in the pointwise estimate}
+
+The preceding estimate is relative to the total volume. The pointwise estimate in Section~\ref{sec:count-sobolev} instead uses the Haar density in Hilbert--Schmidt coordinates. To multiply the two bounds we compute the absolute quotient volume in that gauge.
+\begin{lemma}[Absolute quotient volume in the local gauge]\label{lem:deep-volume-estimate}
+At each real place let \(c_v\) be the reciprocal Haar density
+at the origin in the Hilbert--Schmidt coordinates of
+Section~\ref{sec:count-sobolev}. Use the quotient measure induced
+by these Haar measures and the chosen finite measures. For \(X_0=rf d_Egb\), \(N=r^2 f\) in the stated
+range (in particular \(r\ge8\), \(X_0\ge16\)),
+\[
+ \frac{(\prod_v c_v)V}{\operatorname{vol}(K_g)}
+                 \le g^{2N}X_0^N.
+\]
+\end{lemma}
+
+\begin{proof}
+Use the unitary volume formula for a self-dual lattice over the
+everywhere finitely unramified CM extension. If the finite stabilizer
+and compact duals have volume one, the quotient volume in rank \(j\) is
+\begin{equation}\label{eq:row-self-dual-mass}
+  2 |D_{E^+}|^{j^2/2}
+  \prod_{a=1}^j \left(\frac{(a-1)!}{(2\pi)^a}\right)^f L_a ,
+\end{equation}
+where \(L_a=L_{E^+}(a,\eta)\) for odd \(a\) and
+\(L_a=\zeta_{E^+}(a)\) for even \(a\), with \(\eta\) the quadratic
+character of \(E/E^+\). The Tamagawa number is \(2\). The local
+densities at residue size \(Q\) are the orders of the corresponding
+\(\mathrm{GL}_j\) or finite unitary groups divided by \(Q^{j^2}\).
+
+If \(\eta_v=1\) at a split place and \(\eta_v=-1\) at an inert
+one, both finite group order formulas read
+\[
+  Q^{-j^2}\#G(\mathbb F_Q)
+        =\prod_{a=1}^j(1-\eta_v^{\,a}Q^{-a}).
+\]
+This is the inverse local Euler factor of \(\prod_{a=1}^j L_a\).
+Self-duality at the unramified places supplies the smooth lattice
+model, also in residue characteristic two. The real compact-dual
+density is the same for the signatures compared here.
+\cite{gan-yu-row-count,terakado-yu-row-count}
+The volume of \(U(r)\) for the Hilbert--Schmidt metric is
+\(\prod_{j=1}^r(2\pi)^j/(j-1)!\). To compute it, project to
+the first column with fibre \(U(r-1)\).
+
+At the identity a
+horizontal tangent vector has first column \((ia,z)\), with
+metric square \(a^2+2\|z\|^2\), while the unit sphere has
+metric square \(a^2+\|z\|^2\). Thus the ratio of Hilbert--Schmidt volumes in successive ranks is
+\[
+ \frac{\operatorname{vol}U(r)}{\operatorname{vol}U(r-1)}
+   =2^{r-1}\frac{2\pi^r}{(r-1)!}=\frac{(2\pi)^r}{(r-1)!}.
+\]
+Thus \(\operatorname{vol}U(r)=\prod_{j=1}^r(2\pi)^j/(j-1)!\). The passage from the compact dual
+to \(U(p,q)\) multiplies the noncompact tangent directions by
+\(i\), preserving their Hilbert--Schmidt measure. With the
+gauge \(c_v\) defined in the Sobolev estimate, this gives
+\[
+  \frac{(\prod_v c_v)V}{\operatorname{vol}(K_f)}
+       =2\,d_E^{r^2f/2}\prod_{j=1}^r L_j .
+\]
+Here the unramified CM extension has
+\(|D_E|=|D_{E^+}|^2\), so \(|D_{E^+}|=d_E^f\).
+
+The factors with \(j\ge2\) have product at most \(e^f\).
+Indeed \(L_j\le\zeta(j)^f\) and
+\(\sum_{j\ge2}\log\zeta(j)\le\sum_{n\ge2}1/(n(n-1))=1\).
+For \(L_1=L_{E^+}(1,\eta)\), take the ratio of the
+analytic class number formulas for \(E\) and \(E^+\).
+The units of \(E^+\) give a sublattice in the unit lattice of
+\(E\) of regulator \(2^{f-1}R_{E^+}\), since the complex
+logarithmic coordinates are doubled. The regulator and the first Euler factor therefore satisfy
+\[
+ R_E\le2^{f-1}R_{E^+},\qquad
+ L_1\le(2\pi)^f d_E^{-f/2}h_E .
+\]
+
+By Minkowski's bound every class of \(E\) has an ideal of
+norm at most \(d_E^f=\sqrt{|D_E|}\). The ideal count up to
+\(T\) is at most \(T(1+\log T)^{2f-1}\), by majorizing the
+Euler coefficients by those of \(\zeta(s)^{2f}\) and
+summing over the \(2f\) divisor factors. Hence
+\[
+ L_1\le (2\pi)^f d_E^{f/2}(1+f\log d_E)^{2f}.
+\]
+Put \(X_0=rf d_E g b\) and \(N=r^2 f\).
+
+Since
+\(1+f\log d_E\le f d_E\) and \(X_0\ge16\), the bound for
+the quotient divided by \(\operatorname{vol}(K_f)\) is at most
+\(X_0^{N/2+9f/2}\le X_0^N\) for \(r\ge8\).
+Reduction at level \(g\) embeds \(K_f/K_g\) into the
+endomorphisms of the rank-\(r\) lattice modulo \(g\).
+There are \(g^{2fr^2}\) such endomorphisms, also for a projective
+lattice by its local rank. It follows that
+\[
+   \frac{(\prod_v c_v)V}{\operatorname{vol}(K_g)}
+                        \le g^{2N}X_0^N .
+\]
+This is the absolute bound used in the deep part of the
+diagonal estimate.
+\end{proof}
+
+\input{geometry/dimension-deep}
+
+\subsection{Bounds for the diagonal integral}
+
+The diagonal is estimated separately where the smallest lattice size stays above the cutoff and where it falls below. In the latter region the covering of the short unipotent orbit is used before integration.
+
+Write \(X_0=rf d_E g b\), \(N=r^2f\), \(\tau_*=X_0^{-11q}\).
+The lattice size function \(\tau(x)\) is the threshold for its
+first nonzero short layer. The portion \(\tau(x)\ge\tau_*\)
+allows a uniform lattice point bound for the orbital expansion.
+Write \(U_0=rf\log r\).
+\begin{construction}
+\begin{tabular}{@{}lll@{}}
+\toprule
+Region & Quantity controlled & Bound \\
+\midrule
+\(\tau(x)\ge\tau_*\) & integrated nonidentity terms &
+       \((e^{-N}+e^{-U_0/4})D_*\)\\
+\(\tau(x)<\tau_*\) & relative measure & \(e^{-U_0/4}\)\\
+\(\tau(x)<\tau_*\) & integral for \(n\) orthonormal vectors & \(e^{-N}n\)\\
+\bottomrule
+\end{tabular}
+\caption{Two estimates on the same quotient for \(q\ge1\) in Lemma~\ref{lem:diagonal-integral-bounds}. The final row uses an arbitrary finite family before taking the full trace.}\label{fig:two-trace-regions}
+\end{construction}
+
+\begin{lemma}[Bounds for the diagonal integral]\label{lem:diagonal-integral-bounds}
+Suppose \(q\ge1\). If \(X\) is the quotient and \(X_{<}=\{x:\tau(x)<\tau_*\}\), the short-vector locus satisfies 
+\[
+ \frac{\operatorname{vol}(X_{<})}{\operatorname{vol}(X)}\le e^{-U_0/4}.
+\]
+ On its complement the integrated
+absolute nonidentity terms are at most
+\((e^{-N}+e^{-U_0/4})D_*\). On \(\tau(x)<\tau_*\) the integral of
+the sum of squared values of any finite orthonormal family of
+projected vectors is at most \(e^{-N}\) times the size of that family.
+\end{lemma}
+
+\begin{proof}
+The measure estimate is Lemma~\ref{lem:short-flag-measure}.
+\proofstep{Moderate region outside the polar threshold.}
+  The point count for each archimedean shell has lattice factor
+  at most \((3\sqrt r/\tau_*^2)^{2N}\).
+  For two supported rational matrices their difference
+  preserves the point lattice as an endomorphism. Thus two distinct supported matrices \(\gamma,\gamma'\) give a nonzero integral endomorphism \(T=\gamma-\gamma'\). The separation needed for packing is 
+\[
+ \left(\prod_v\|T_v\|_{\rm op}\right)^{1/f}\ge\tau_1(x)^2,\qquad \tau_1(x)=\min\{1/2,\tau(x)\},
+\]
+ with one representative from each complex-conjugate pair.
+  In the size inequality for a nonzero lattice map, take
+  the saturated quotient by the kernel and the saturated
+  image. The determinant on the induced quotient has
+  local norm at most the corresponding power of the
+  operator norm. Write \(\Lambda_Q,\Lambda_I\) for the saturated quotient by
+  the kernel and the saturated image. If their common rank
+  is \(j\), the determinant inequality reads
+  \[
+   \operatorname{size}(\Lambda_I)
+   \le \operatorname{size}(\Lambda_Q)
+             \left(\prod_v\|A_v\|_{\rm op}\right)^{1/f}.
+  \]
+
+This follows by raising to \(2fj\), using the square of the
+  complex determinant at each place, and allowing the index
+  of the image in its saturation. The smallest size
+  bounds \(\operatorname{size}(\Lambda_I)\) below and its
+  reciprocal bounds \(\operatorname{size}(\Lambda_Q)\) above
+  by self-duality. Their ratio is at least \(\tau_1(x)^2\).
+  If the local containing balls have radii \(R_v\) of
+  geometric mean \(R\), use product balls of radii
+  \(\tau_1(x)^2 R_v/(2R)\) about the lattice points.
+  The separation makes these product balls disjoint. Bounding their
+total volume by that of the enlarged box gives
+\[
+    \#\{\text{points in the product ball}\}
+       \le (1+2R/\tau_1(x)^2)^{2N}.
+\]
+  A noncompact distance at most \(u_v\) gives
+  \(R_v\le\sqrt r\exp(u_v)\) by polar decomposition.
+  Let \(\bar u=f^{-1}\sum_v u_v\). Since \(R\le\sqrt r e^{\bar u}\)
+and \(\tau_1(x)\ge\tau_*\), the packing estimate gives
+\[
+ (1+2R/\tau_1(x)^2)^{2N}
+ \le(1+2\sqrt r/\tau_*^2)^{2N}\exp(2r^2\textstyle\sum_v u_v).
+\]
+
+The large-gap matrix coefficient bound supplies a factor
+  \(2f\,3^f\exp(-h\epsilon_N^2/16)\), which absorbs this
+  lattice factor and \(e^N\). To see the shell sum put
+  \(\epsilon=\epsilon_N\), \(c=\sqrt{2q}\) and \(B=2r^2\).
+  If the noncompact distances at the places are bounded
+  by \(u_v\), the lattice count is at most the lattice
+  factor times \(\exp(B\sum_v u_v)\).
+  For local noncompact distances \(s_v\), \eqref{eq:count-polar-decay}
+bounds the coefficient relative to its identity value by
+\[
+ \prod_v\exp[-(h/8)\min(s_v^2,s_v/c)]
+       =\exp[-(h/8)\textstyle\sum_v\min(s_v^2,s_v/c)] .
+\]
+This product permits a separate partition at each real place.
+  Partition each distance into \([0,\epsilon]\) and
+  \((2^{j-1}\epsilon,2^j\epsilon]\) for \(j\ge1\).
+  For \(s_v\in[0,\epsilon]\) the counting factor costs at most
+\(e^{B\epsilon}\le2\).
+
+For \(u\le s_v\le2u\) the two competing
+factors are bounded by
+\[
+ e^{Bs_v}\exp[-(h/8)\min(s_v^2,s_v/c)]
+ \le \exp[2Bu-(h/8)\min(u^2,u/c)] .
+\] For the
+  bin with lower endpoint \(u=2^{j-1}\epsilon\), use
+  \(\epsilon\le1/c\) and \(32B\le h\epsilon\) to get
+  \[
+   2Bu-\tfrac h8\min(u^2,u/c)\le-hu\epsilon/16,\qquad
+   \sum_{j\ge1}e^{-h2^{j-1}\epsilon^2/16}
+                         \le2e^{-h\epsilon^2/16}.
+  \]
+  Here \(h\epsilon^2/16\ge1\). Each coordinate costs at most
+  \(3\) in total, and at least one must lie outside its first bin.
+  Summing over that choice costs at most
+  \(2f\,3^f e^{-h\epsilon^2/16}\). 
+
+The lower bound supplied by the spectral gap and the logarithm of the lattice-counting factor are
+  \[
+    h\epsilon_N^2/16\ge50(C_g+4)r^3 f\log(bd_E),\qquad
+    \log(\text{lattice factor})=2N(\log(3\sqrt r)+22q\log X_0).
+  \]
+  Here \(q\log X_0\le r+\sqrt r[\log r+
+  (C_g+1)\log b+\log d_E]\). With \(b\ge2\) and
+  \(d_E\ge3/2\), the spectral-gap bound absorbs this logarithm,
+  \(N\) and \(\log(2f3^f)\), uniformly for large \(r\)
+  at fixed \(C_g\).
+\proofstep{Near unipotent terms in the moderate region.}
+  Lemma~\ref{lem:small-unipotent} identifies the terms within the
+  polar threshold as unipotent. Use Lemma~\ref{lem:near-flag-packing}
+  to group the nonidentity terms by the ranks of the short flag. A type with \(a\) nonzero layers of
+  total rank \(J\le q\) contributes at most
+  \(2\kappa Y^a D_*\), where
+  \(\kappa\le e^{-JU_0/2}\) and
+  \(Y=2fq\log(1/\tau_*)\le e^{U_0/8}\).
+  There are at most \(J\) layers, so its bound is
+\[
+ 2\kappa Y^a D_*\le 2e^{(-J/2+a/8)U_0}D_*
+              \le 2e^{-3JU_0/8}D_* .
+\]
+  The near count uses the same unipotent blocks as the
+  measure. In a block of size parameter \(\lambda\) the count
+  contributes \((1+12\epsilon/\lambda)^{d}\), where \(d\)
+  is its real dimension and
+  \(\epsilon=3\sqrt{r\epsilon_N}\). This is the lattice
+  ball bound with radius \(\epsilon\) in the block gauge.
+  Multiplying by the density changes each such factor to
+  \((\lambda+12\epsilon)^d\).
+
+Since \(\lambda\le1\) in each factor and \(\sum d\le3Jrf\), one has
+\[
+       \prod (\lambda+12\epsilon)^d
+            \le\exp(12\epsilon\textstyle\sum d)
+            \le e^{36Jrf\epsilon}\le2
+\]
+for sufficiently large \(r\).
+  Integrating the remaining product of \(2fj_i\,d\tau_i/\tau_i\)
+  from \(\tau_*\) to \(1/2\) in every coordinate costs at most
+  \(Y^a\).
+  A composition of \(J\) is determined by the cuts among its
+\(J-1\) gaps. The total near contribution is bounded by
+\[
+  D_*\sum_{J=1}^q2^{J-1}\,2e^{-3JU_0/8}
+      \le 2^{q+1}e^{-3U_0/8}D_* .
+\] As \(q\le\sqrt r\), the near
+  terms together contribute at most \(e^{-U_0/4}D_*\) for
+  large \(r\).
+\proofstep{Orthonormal families in the deep region.}
+
+Deep in the quotient the short unipotent orbit bounds a whole orthonormal family by cuspidality.
+
+  Use the fixed radius \(\rho\) from Proposition~\ref{prop:short-orbit-cover}
+  at the point \(x\), and use the neighborhood of points
+  \(x\exp(A)\exp(Y)\) of total coordinate norm at most \(\rho\).
+  The deep threshold gives \(\rho\le\log2\), so the lattice
+  size bound on this neighborhood is \(\tau(x)/2\).
+  Write \(M_P\) for the supremum of the evaluation vector's
+  norm on this neighborhood for unit vectors in the word
+  space of order \(P\). Along each exponential segment the
+  derivative inserts one infinitesimal action. The sum of
+  the real-place derivative norms is at most \(\sqrt f B\)
+  times the product norm of the direction, for
+  \[
+    B=\sqrt r\,b^2+\tfrac32 r^{3/2}+3(8qN+N).
+  \]
+  Each orbit representative is connected to \(x\) by two such
+  segments of total length at most \(\rho\) within the
+  neighborhood.
+
+Let \(F_u(y)\) be the vector of evaluations of the family
+  on a unit test vector \(u\) of order \(P\).
+  Normalize the unipotent quotient measure to mass one and use
+  cuspidality to write
+  \[
+    F_u(x)=\int_{[N]}\bigl(F_u(x)-F_u(nx)\bigr)\,dn .
+  \]
+  The real representatives from the orbit cover give the
+  same values as \(nx\), by rational invariance and the finite
+  level. At each representative the integral along the two
+  exponential paths bounds the norm of the difference by
+  \(\rho\sqrt f B M_{P+1}\). The same bound follows for
+  \(F_u(x)\) after integration.
+
+For any other point in the neighborhood the same segment
+  estimate compares its value to the value at \(x\). The two comparisons give the recurrence on a single neighborhood
+\[
+             M_P\le2\rho\sqrt f B\,M_{P+1}\qquad(P<8qN).
+\]
+  The initial Sobolev estimate in Section~\ref{sec:count-sobolev}
+  at order \(8qN\) gives the
+  squared factor \((6B)^N e^f(17\sqrt r/\tau^2)^{2N}\)
+  times the size of the family and the ratio of the archimedean gauge to the
+  finite level volume. With \(K=2\rho\sqrt f B\), iterate the preceding inequality
+on the same neighborhood to obtain
+\[
+ M_0^2\le K^{2j}M_j^2 \quad(0\le j\le8qN),\qquad
+ M_0^2\le K^{16qN}M_{8qN}^2 .
+\]
+  In the same gauge the quotient volume is at most
+  \(g^{2N}X_0^N\) times the reciprocal of that ratio.
+
+  To check the resulting exponent, \(B\le X_0^4\) follows
+  from \(q^2\le r\), \(b\ge2\), and \(X_0\ge16\).
+  Then \(2\rho\sqrt f B\le X_0^6(2\tau)^{1/q}\).
+  On taking the \(N\)-th root the initial bound and absolute
+  volume give the factor
+  \(6e\,17^2 B r\,\tau^{-4}g^2X_0\), with the gauge
+  canceled. The descent gives the additional factor
+  \((2\rho\sqrt f B)^{16q}\le
+  X_0^{96q}(2\tau)^{16}\). Since \(B\le X_0^4\) and
+  \(r g^2 X_0\le X_0^4\), their product is at most
+  \[
+     6e\cdot17^2\cdot 2^{16}X_0^{96q+8}\tau^{12}
+       \le 6e\cdot17^2\cdot 2^{16}X_0^{-28}
+       \le e^{-1}.
+  \]
+  In the first inequality use \(\tau\le X_0^{-11q}\).
+  This gives the claimed diagonal integral.
+\end{proof}
+
+\subsection{Finite rank and the integral of the kernel}
+
+Up to this point the estimates apply to every finite orthonormal family. Their uniformity now allows one to deduce finite rank and identify the integral of the diagonal with the dimension.
+
+\begin{proof}[Proof of Proposition~\ref{prop:projector-dimension}]
+\proofstep{Finite rank before taking a trace.}
+The volume \(V\) is finite by Lemma~\ref{lem:deep-volume-estimate}. For
+\(q\ge1\), apply the initial Sobolev bound at order zero on
+\(\tau(x)\ge\tau_*\). For \(q=0\), the flag below size \(1/2\)
+is empty by isotropy, so the same bound is uniform on the whole
+quotient. In either case the bound gives one finite constant
+\(C_2\) for the squared pointwise value of the unit lowest vector
+under any isometric intertwiner on that region.
+
+For an orthonormal family \(F_i=T_i(w)\), Schur's lemma and
+evaluation on the unit vector \(w\) give \(T_i^*T_j=\delta_{ij}I\).
+Put \(S(x)=\sum_{i=1}^m |F_i(x)|^2\). If \(S(x)>0\), the operator
+\[
+ T=\frac{\sum_i\overline{F_i(x)}T_i}{\sqrt{S(x)}}
+ \quad\text{satisfies}\quad T^*T=I,\qquad T(w)(x)=\sqrt{S(x)} .
+\]
+The same pointwise bound therefore gives \(S(x)\le C_2\), also
+when \(S(x)=0\). Integrate and apply
+Lemma~\ref{lem:diagonal-integral-bounds} in the deep region:
+\[
+ \int S=m\le
+ \begin{cases}C_2V+e^{-N}m,&q\ge1,\\ C_2V,&q=0.\end{cases}
+\]
+Every finite orthonormal family has bounded cardinality, so the
+projection has finite rank.
+
+\proofstep{Integration of the finite-rank kernel.}
+
+Finite rank justifies computing the trace in an orthonormal basis. Its integral must still be identified with the estimate already obtained from periodization.
+
+Now take an orthonormal basis \(F_1,\ldots,F_D\).
+The integral kernel of this orthogonal projection is
+\[
+ K(x,y)=\sum_{j=1}^D F_j(x)\overline{F_j(y)}.
+\]
+
+Both this kernel and the periodized kernel are continuous
+and represent the same bounded operator, so they agree
+pointwise, as can be checked by testing on compactly supported
+functions in the two variables. The integral of their diagonal
+over \(Y\) is \(D\). For \(q=0\) the diagonal has only its
+identity orbital term, giving \(D=D_*\).
+
+For \(q\ge1\), the deep bound is now \(e^{-N}D\).
+The identity has coefficient \(e(1)\) by Lemma~\ref{lem:finite-projector-mass}, and contributes \(D_*\) times the relative measure
+of the moderate portion. The other moderate terms and the
+deep contribution therefore give
+\[
+       \abs{D-D_*}
+       \le (2e^{-U_0/4}+e^{-N})D_*+e^{-N}D .
+\]
+Write \(A=e^{-U_0/4}\) and \(B_1=e^{-N}\). Since
+\(D\le D_*+\abs{D-D_*}\), move the last error to the left to
+obtain \(\abs{D-D_*}\le 2(A+B_1)D_* /(1-B_1)\).
+For large \(r\) this is at most \(8e^{-U_0/4}D_*\) and then
+at most \(e^{-U_0/16}D_*\). All the thresholds used here
+depend only on the fixed constants in the counting hypotheses.
+This proves \eqref{eq:dimension-count}.
+\end{proof}

@@ -1,0 +1,403 @@
+\paragraph{The integral comparison away from the distinguished prime.}
+\label{par:off-prime-row-trace}
+\hypertarget{source-paired-off-prime-trace}{}
+Fix the run used at \(v\) and keep its base weight, base
+character and half level. Denote its distinguished rational
+prime by \(p_\circ\). In the argument let \(\lambda\) be any
+finite place of \(K\) of residue characteristic different
+from \(p_\circ\). The character of the finite trace is the
+one on the arithmetic row, namely \(\psi_0^{-1}\) in the
+base tuple convention. A generator of the source trace
+lattice is
+\[
+ t=\sum_{u\in U}\psi(u)\operatorname{cusp}(f_u).
+\]
+Here \((f_u)_{u\in U}\) is one orbit family of short theta
+rules.
+
+The orbit family has a common unimodular source lattice, an
+admissible odd level denominator, a common harmonic
+polynomial and a common residue datum. The labels of the
+rules are obtained from that datum by the prescribed level action. The target module \(J\) is the integral span, in
+these cusp coordinates, of the base kernel traces. An
+admissible kernel trace uses a finite split-supported
+source translate and a coefficient in its integral
+harmonic lattice. Its form coordinate is specified by
+evaluation at the lowest target types. We prove that
+\(t\in J_\lambda\).
+\label{cor:paired-off-prime-trace-1}
+
+\begin{proposition}[Integral kernel trace away from the distinguished prime]
+\label{prop:off-prime-trace-inclusion}
+At each place of residue characteristic different from
+\(p_\circ\), the orbit trace lattice maps into the kernel theta
+lattice in the common form coordinates. For the fixed coefficient character on all finite vectors, \eqref{eq:off-prime-trace-identity} reads
+\[
+ \mathcal A(t')(\mathbf w)=\sigma(c)\,T_\psi^{\rm ad}S_{\Phi_{\rm fr}}(h,y;\mathbf w)\quad(\text{all }\mathbf w),\qquad v(c)=0.
+\]
+ The inclusion also holds after the good
+projector, on the same local row.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Integral trivialization on the adapted orbit.}
+First adapt the lattice of the orbit to \(\lambda\). The
+congruence adjustment of a self-dual lattice makes it
+standard locally over the residue characteristic of
+\(\lambda\). It preserves the standard lattice at the
+old bad and level primes and is the identity modulo the
+level there. In the second adjustment, write its finite
+adelic lattice translate as \(\gamma h k\). Here \(\gamma\)
+is rational unitary, \(h\) has split support away from
+the forbidden primes and is identity at infinity, and
+\(k\) preserves the standard lattice and its congruence
+data. For this factorization use rational unitary
+approximation with a common denominator supported
+only at split primes outside the prescribed set.
+Write \(g\) for the adjusted finite matrix after removal
+of \(\gamma\).
+
+Let \(e\) be the finite-adelic idempotent of
+its allowed split support, including both conjugate halves.
+Set
+\[
+ h=eg+(1-e)1,\qquad k=e1+(1-e)g.
+\]
+Since \(e(1-e)=0\) and \(\bar e=e\), the products split into
+their two idempotent components. Writing \(*\) for the unitary involution,
+\[
+ hk=eg+(1-e)g=g,\qquad
+ h^*h=e\,g^*g+1-e=1,\qquad k^*k=e+(1-e)g^*g=1.
+\] Off the allowed support \(g\) lies in the integral
+congruence stabilizer, so \(k\) preserves its lattice and
+level marking.
+This factorization is used for the conjugated
+lattice because the coefficient convention contracts
+through conjugate source coordinates. Thus the adjusted
+polynomial lattice is the conjugate of the lattice read
+at \(h\). The representative has a common denominator
+prime to the old bad and level primes and to the residue
+characteristic of \(\lambda\). The two rational unitary
+changes push forward the polynomial and keep the residue
+label at the level.
+
+The invariance of the harmonic
+equations and the short theta transformation with even
+source rank show that all the short rules change by the
+same root of unity \(\zeta\in K_0\).
+The common scalar leaves the coefficient valuation unchanged, since
+\[
+  \zeta^n=1\ \text{for some }n\ge1\quad\Longrightarrow\quad v_\lambda(\zeta)=0.
+\]
+ The common factor
+comes from the normalized theta multiplier, which is
+independent of the translated residue label. The multiplier \(\zeta\) is in the base field \(K_0\), so it factors out of the trace on the whole orbit. For the adapted orbit and its trace one obtains
+\[
+        f'_u=\zeta f_u,\qquad t'=\zeta t,\qquad
+        \mathcal O_{K,\lambda}\,t'=\mathcal O_{K,\lambda}\,t .
+\]
+The last equality uses that both \(\zeta\) and its inverse are integral. The adjustment can
+increase the level denominator away from the indicated
+primes, where it has no effect on the local inclusion.
+\label{cor:paired-off-prime-trace-2}
+
+For the adapted polynomial \(P\), choose a rational integer
+\(b\) prime to the residue characteristic of \(\lambda\)
+that carries each of the adapted and standard lattices
+into the other. If \(D_P\) bounds its total degree, then
+\(b^{D_P}P\) has integral coefficients in the standard
+letters. In degree \(a\) the lattice inclusions in the two directions give, on the tensors in the source,
+\[
+ b^a L_{\rm ad}^{\otimes a}\subseteq L_{\rm std}^{\otimes a},
+ \qquad b^a L_{\rm std}^{\otimes a}\subseteq L_{\rm ad}^{\otimes a}.
+\]
+Dualizing reverses the inclusions and again costs at most \(b^a\) on coefficients. The same coefficient substitution in the
+polynomial realizes these inclusions after imposing the
+harmonic equations. For homogeneous degree \(a\le D_P\), a denominator cleared by \(b^a\) is also cleared by the same power for the whole polynomial, since
+\[
+  b^{D_P}=b^{D_P-a}b^a,\qquad D_P-a\ge0.
+\]
+ Homogeneity and the harmonic
+equations are preserved. The prescribed highest-weight coefficient map gives a lower Fock vector for this
+polynomial in the standard integral model.
+
+The highest-weight coefficient map is defined over the common row field, identified with the
+coefficient field of the lower vector through its chosen
+embedding. Transport into the adapted coefficient lattice
+can cost another power of \(b\). To see the support of
+this denominator, at every place over the residue
+characteristic the two source lattices coincide, so the
+integral symmetric tensors and their differential
+conditions coincide there as well. Outside those places
+only finitely many primes require clearing. Descent by
+the coefficient isomorphism and the integral highest-weight
+map then supply a lower vector \(y\) for \(P\) and an
+integer \(s_1\notin\lambda\) with
+\[
+                 s_1 y\in\mathcal C(h).
+\]
+Here \(\mathcal C(h)\) is the prescribed integral coefficient lattice, written in the lower Fock coordinates. The
+product of the two denominator clears is allowed in
+\(s_1\). This step uses the harmonic lattice on the
+adapted source, and the coefficient lattice obtained from
+the chosen highest-weight model.
+\label{cor:paired-off-prime-trace-3}
+
+\proofstep{The adelic theta evaluation.}
+We describe the adelic evaluation used for this generator.
+Let \(\chi_{\rm tuple}\) be the run's tuple character and
+\(\chi_{\rm aux}\) its finite-order auxiliary character.
+For the base kernel the splitting character is
+\[
+                    \chi_{\rm split}=\chi_{\rm tuple}\chi_{\rm aux}^{-1}.
+\]
+It is trivial on real-field ideles and has the prescribed values of the tame determinant character over the selected half of \(p_\circ\).
+The type residues are the prescribed full-rank ones. The half
+places are disjoint from their conjugates and from the
+type places. The self-dual frames give the base kernel
+as a product of a vacuum and the indicated residue
+functions. Write \(\Phi_{\rm fr}\) for the finite vector
+with free lower block at the twist places and the
+specified full-rank residue matrices at the type places.
+These full-rank residues are determined by the adapted
+orbit's label. At the twist places the upper \(r\)-by-\(r\)
+block is invertible and receives the inverse determinant
+character.
+\label{cor:paired-off-prime-trace-4}
+
+For a finite vector \(\Phi\), let
+\(S_\Phi(h,y;\mathbf w)\) be its single adelic theta series
+with coefficient 
+\[
+  y_{\C}=c'_0(y)
+\]
+ and the tuple \(\mathbf w\) of
+lowest target vectors. Here \(c'_0\) is the coefficient realization for this choice of levels. It sends the algebraic harmonic vector
+to the complex coefficient representation using the fixed embedding.
+Thus \(S_\Phi(h,y;\mathbf w)\) reads \(y_{\C}\) in the series,
+and clearing \(s_1 y\) at \(h\) gives the coefficient
+\(s_1 y_{\C}\) in the realized lattice. Denote the adelic realization of the coefficient row by \(\mathcal A(-)(\mathbf w)\). Let \(f\) be the single adapted short rule. With the
+fixed choice of \(\Phi_{\rm fr}\) the extremal comparison
+is the identity of adelic forms
+\[
+          \mathcal A(f)(\mathbf w)=c\,S_{\Phi_{\rm fr}}(h,y;\mathbf w),
+          \qquad c\in K,\quad s_2c\in O_{K,\lambda},\quad s_2\notin\lambda .
+\]
+The coefficient and target tuple in this identity are the
+ones selected above.
+In this comparison one unfolds the geometric class sum
+using the fixed adelic lift.
+
+At the extremal tuple the
+coefficient map differentiates exactly the letters of
+the short polynomial, with the polarization sign and the
+common frame and cover factors. The base-tuple class sums
+span the cusp space, so the frame comparison applies to the sections defined by short theta rules on the whole row. To obtain that
+span, choose a residue point using the surjective row
+pairing at each split half-level place and use the
+Chinese remainder theorem.
+For the disjoint prime-power half-level conditions, choosing the local residue point amounts to using the surjection
+\[
+  {\cal O}_E\longrightarrow\prod_{\mathfrak p\ {\rm used}}{\cal O}_E/\mathfrak p^{n_{\mathfrak p}} .
+\]
+ The stable short span can
+then be read at that point. Each raw term is moved to a
+split-supported self-dual class by the short theta
+transformation. The one-class kernel formula there gives
+the geometric class sum times the frame factors. These
+factors are nonzero, and linear independence of the cusp forms
+descends the resulting span to the construction field.
+\label{cor:paired-off-prime-trace-5}
+
+\proofstep{Correct the level character in the adelic evaluation.}
+The central level translation absorbs the difference
+between the two frame normalizations. The base phase is
+one, and the quotient of the two cover values and the
+remaining central normalization are roots of unity in the field of values.
+Thus if \(\xi_1,\xi_2\) denote the indicated normalization factors, their contribution at the chosen place is
+\[
+  v_\lambda(\xi_1\xi_2)=v_\lambda(\xi_1)+v_\lambda(\xi_2)=0 .
+\]
+ Their multiplication preserves the
+local integrality test on \(c\). When the class
+scalar is nonzero its expression, up to the preceding
+units, is
+\[
+    B(\Lambda)^{-1}\Psi(\mathfrak a)
+       [\Lambda:\Lambda\cap\Lambda_{\rm st}]^{r/2}.
+\]
+Here \(B(\Lambda)\) is the base genus scalar,
+\(\Lambda_{\rm st}\) is the standard lattice, and
+\(\Psi(\mathfrak a)\) is the unramified ideal value
+of the combined tame character at the moved class.
+Choose the determinant representative with
+\(\mathrm N\mathfrak a\) prime to the residue
+characteristic, using the local equality of the
+adapted and standard lattices there.
+
+In fact the determinant
+lattice is the quotient of \(\mathfrak a\) by its conjugate,
+and the two integral ideals are coprime. Order zero in
+the determinant lattice at all places over the residue
+characteristic forces order zero in both ideals there.
+The local genus comparison gives \(B(\Lambda)\) order zero
+at the same places, by comparing the theta normalization
+in the common integral frame.
+Consequently both directions of the genus-scalar comparison at such a place have order zero:
+\[
+  v_w\big(B(\Lambda)^{-1}\big)=-v_w\big(B(\Lambda)\big)=0 .
+\]
+ Its inverse becomes integral
+after multiplication by an integer prime to that
+characteristic. For the tame ideal value, take a power
+of \(\mathfrak a\) that is generated by an element
+congruent to one modulo the character conductor, using
+the finite ray class group. Its character value is then
+a product of integral powers of the embeddings of that
+generator.
+
+The generator divides a power of
+\(\mathrm N\mathfrak a\) as an algebraic integer, so a
+power of the norm clears the negative exponents.
+Integrality descends from a positive power by
+transitivity of integrality.
+In particular, if \(a^n\) is integral, then \(a\) satisfies the monic equation
+\[
+  X^n-a^n=0.
+\]
+ The square of the positive
+index factor is a rational integer. Their product is
+therefore integral after multiplication by one integer
+\(s_2\notin\lambda\). The computation takes place after extension to the chosen complex embedding, and integrality descends to \(K\) by
+the injective field embedding. If the coefficient
+is zero use \(s_2=1\).
+The determinant-one condition on \(U\) makes the
+remaining finite weight character trivial on the level
+translates. Thus the same \(c\) applies to each term
+\(f'_u\), with the unitary level action by \(u^{-1}\) on
+the target series.
+\label{cor:paired-off-prime-trace-6}
+
+\proofstep{Extending the identity to all finite vectors.}
+Both sides of this identity are multilinear in the
+lowest target vectors and equivariant separately at
+each archimedean place. The compact-group translates of
+the nonzero extremal vector span the lowest type at
+that place, by irreducibility of the lowest type.
+Translate and extend linearly in each variable. Taking
+the \(\psi\)-weighted sum gives
+\begin{equation}\label{eq:off-prime-trace-identity}
+ \mathcal A(t')(\mathbf w)
+    =\sigma(c)\, T_{\psi}^{\mathrm{ad}}
+                   S_{\Phi_{\rm fr}}(h,y;\mathbf w)
+ \quad\text{for all }\mathbf w,
+\end{equation}
+where the adelic trace uses the same action and summation
+as the row trace. The embedding \(\sigma\) here is the
+one fixed for the adelic evaluation. The form coordinates
+are determined by these tests. Indeed the smooth
+archimedean module is generated by its lowest types, and
+their translates on the target recover the full
+equivariant form. The coordinate map sends its basis to linearly independent forms, hence is injective. In particular the vanishing test for the form coordinates reads
+\[
+  c=0\quad\Longrightarrow\quad t'=0.
+\]
+\label{cor:paired-off-prime-trace-7}
+
+Finally turn the free-block vector into a translate
+of the base kernel \(\Phi_{\rm b}\). At a chosen twist
+place scale the lower \(n_V-r\) rows in the split model
+by an element of valuation one, with the inverse adjoint
+on the conjugate half. The upper \(r\) rows are fixed.
+The original kernel imposes zero lower residues. After
+the substitution this is automatic on integral entries.
+Conversely, if the scaled matrix is integral with the
+required zero lower residues, every entry before scaling
+is integral.
+For a lower-block entry \(a\) and local uniformizer \(\varpi\), the support equivalence is
+\[
+  \varpi a\in\varpi{\cal O}_v\quad\Longleftrightarrow\quad a\in{\cal O}_v .
+\]
+ The upper block determinant and its
+character are preserved. This proves the equality of
+the two support tests including the integrality test.
+
+At a type prime, complete the prescribed \(r\) columns to an
+invertible \(n_V\)-by-\(n_V\) matrix \(B\) over the residue field.
+Since \(n_V>r\), column \(r+1\) is among those added in the completion.
+Multiplying that column by \((\det B)^{-1}\) gives determinant one and
+preserves all \(r\) prescribed columns. Lift the change to the split unitary
+stabilizer by using the inverse adjoint at the conjugate
+place. It fixes the vacuum and the coefficient lattice
+there. The type and twist operations have disjoint
+supports. They give the identity of finite vectors
+\[
+      \Phi_{\rm fr}=\sigma(c')\,\omega(k,1)\Phi_{\rm b}
+\]
+with a finite source translate \(k\) and nonzero \(c'\in
+K\). In the split Weil formula, the determinant factors
+of the twist operation use the local values of
+\(\mu_0\chi\eta^{-1}\) at the chosen uniformizers.
+
+\proofstep{The local determinant valuation.}
+For each unit of determinant valuation in the forward
+scaling, the norm factor is the inverse \(r\)th power
+of the square root of the residue norm. The normalized
+base character reading supplies the other inverse
+square root. For residue cardinality \(Q\), the two scalar factors therefore combine as
+\[
+  Q^{-r/2}Q^{-1/2}=Q^{-(r+1)/2},\qquad (r+1)/2\in\mathbb Z.
+\]
+The translate uses the inverse scalar. The tame
+character values and their inverses are integral
+after multiplication by a power of \(p_\circ\), by
+the same unramified ideal argument for the base
+characters and finite order for the auxiliary
+character.
+
+At \(w\nmid p_\circ\) the two clearing conditions on a nonzero tame value \(\alpha\) imply
+\[
+  v_w(\alpha)\ge0,\qquad v_w(\alpha^{-1})\ge0\quad\Longrightarrow\quad v_w(\alpha)=0 .
+\]
+ The supported residue norms are powers
+of \(p_\circ\). The type operation has determinant one.
+The coefficient lattice also changes only at
+\(p_\circ\), where a large enough power carries the
+required coefficient lattices into one another. Hence
+there is an \(m\ge0\) such that \(p_\circ^m c'\) is
+integral and \(p_\circ^m s_1 y_{\C}\) is admissible at
+\(hk\). Increasing \(m\) preserves both properties.
+\label{cor:paired-off-prime-trace-8}
+
+By the Weil representation law, the series with
+\(\omega(k,1)\Phi_{\rm b}\) at \(h\) is the series of
+\(\Phi_{\rm b}\) at \(hk\). For \(c\ne0\) let \(e\) be the
+form coordinate of the latter kernel trace with
+coefficient \(p_\circ^m s_1y_{\C}\). Equation
+\eqref{eq:off-prime-trace-identity} and the determining
+property of the tests identify it with
+\[
+               e=\frac{p_\circ^m s_1}{cc'}\,t'.
+\]
+It belongs to \(J\) by the admissibility just proved.
+
+In the original orbit coordinates the identity reads
+\[
+       \bigl(p_\circ^{2m}s_1s_2\bigr)t
+        =\bigl(\zeta^{-1}(s_2c)(p_\circ^m c')\bigr)e .
+\]
+The coefficient on the right is integral, and the
+factor on the left is a unit at \(\lambda\). This proves
+\(t\in J_\lambda\), also in the zero case. The argument
+is uniform in the sense needed for the index comparison:
+it incurs zero local order at every \(\lambda\) of
+residue characteristic different from \(p_\circ\).
+The clearing powers may depend on the generator and
+the place. There is no such charge at the coefficient
+place \(v\) because the run pin chooses \(p_\circ\) from
+the other rational prime. Pull back along the common
+form-coordinate isomorphism to get the inclusion on
+the preprojected row. Applying the good projector
+gives the inclusion on the good row.
+\label{cor:paired-off-prime-trace-9}
+\end{proof}

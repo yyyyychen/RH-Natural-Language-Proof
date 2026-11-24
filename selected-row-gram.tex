@@ -1,0 +1,768 @@
+\section{The full Gram estimate on the selected row}
+\label{sec:selected-row-gram}
+
+A large period image in each column would still allow the images of different columns to coincide. On the chosen row, unfolding separates the identity term from the orbital terms. Comparing the latter with the common cuspidal dimension bounds both individual kernels and the overlap of distinct images. These are the two inputs
+to the rank lemma in Section~\ref{sec:frames}. The final
+calculations identify the column dimension at its assigned
+prime and center the exponents on their full support. The operators \(K_{uv}\) in Definition~\ref{hyp:full-gram-row} compare columns \(v\) and \(u\) through their common period space. Proposition~\ref{prop:gram-unfolded-measures} computes each relative translate with those quotient measures. For the mixed Fourier terms Lemma~\ref{hyp:selected-orbital-coefficient-bounds} supplies the differentiated local coefficients in the common compact frames.
+
+\begin{paramdefinition}[Realized row and its measures]\label{hyp:full-gram-row}
+Fix the target character and weights. Use the realized row at a
+retained translate and the marked word columns of
+Proposition~\ref{prop:level-zero-column-coordinates}, with the
+assigned primes of Proposition~\ref{prop:assigned-prime}. At a point of scale \(x\) write \(L=x^\epsilon\) and
+\(b=e^L\). The positive definite part of the row has rank \(k\), the
+row group has rank \(r=k+m-1\), and there are \(f\) real places.
+Use \(d_u\) for the dimension of the full column of the word \(u\).
+
+Let \(C_u\) be the full column Hilbert space of word \(u\) and \(\mathcal H\) the full row at the fixed point. The period maps and their cross products have types 
+\[
+ P_u:C_u\longrightarrow\mathcal H,\qquad P_u^*P_v:C_v\longrightarrow C_u.
+\]
+ Write \(c_u\) for the unfolding constant of \(P_u\). With the row and column
+realizations fixed, put
+\[
+ K_{uv}=(c_uc_v)^{-1/2}P_u^*P_v,\qquad
+ K''_{uv}=\sum_{\substack{t:\,G_t=0\\ t\text{ outside the identity part}}}
+                      a_{uv}(t),\qquad
+ \theta_{uv}=d_ud_v/D_* .
+\]
+Write \(K_2\) for the finite character level and let
+\(\operatorname{vol}(N_u)\) be the real unipotent
+fundamental-domain volume. Let \(H_u\) be the compact definite
+stabilizer and \(V_u\) its column type. Define the normalization
+\(c_u\) by
+\[
+  c_u=\frac{\operatorname{vol}(K_2)
+              \operatorname{vol}(N_u)
+              \operatorname{vol}(H_u)}{\dim V_u}.
+\]
+\end{paramdefinition}
+In the preliminary diagonal statement the inverse power at zero is defined to be zero.
+The sum is in the Hilbert space of Hilbert--Schmidt operators.
+The absolutely convergent unfolding gives \(K_{uv}=\sum_t a_{uv}(t)\).
+The identity part is \(I\) for equal words and vanishes for distinct
+words. The term \(K''\) contains the nonidentity degenerate terms.
+This uses the quotient measures on the actual flags, with the
+definite class masses of Section~\ref{sec:flag-counts}. The concrete
+column and row isometries intertwine the local character,
+term bijection, period maps and Haar factors. They identify the
+concrete scale \(d_ud_v/D_*\) with the scale of the arithmetic
+comparison. Conjugating the entire calculation by these isometries
+preserves absolutely convergent sums, identities and their
+Hilbert--Schmidt norms. \label{cor:selected-row-gram-1}
+
+\subsection{Unfolding in the chosen measures}
+
+To recognize the identity operator in the diagonal block, we must know the coefficient and phase of each unfolded term. They depend on the finite character and the intersection of the two real period lattices.
+
+\begin{proposition}[Character and measure in the unfolded term]
+\label{prop:gram-unfolded-measures}
+Use the word sections and quotient measures of
+Definition~\ref{hyp:full-gram-row}. At each noncompact real place
+use the gap \(h/(8\sqrt{2q})>6r^2\) supplied by
+Definition~\ref{hyp:cuspidal-dimension}, where \(q\) is the smaller
+signature rank. Write \(\chi_2^{-1}\)
+for the value on \(K_2\) of the normalized level function in a word
+section, with the first factor conjugated in the pairing.
+
+For representatives \(h_\rho,h_{\rho'}\),
+frame translates \(x_u,x_v\), and rational element \(\gamma\), put
+\[
+ t_f=(h_\rho x_u)^{-1}\gamma_f(h_{\rho'}x_v).
+\]
+The finite integral of the unfolded term is 
+\[
+ I_f(t_f)=\begin{cases}\operatorname{vol}(K_2)\chi_2(t_f),&t_f\in K_2,\\ 0,&t_f\notin K_2.\end{cases}
+\]
+ At infinity let \(F_u,F_v\) carry the two word frames into the ambient real space, and let \(\Lambda_u,\Lambda_v\) be the lattice unipotents in those frames. In the first frame the relative translate and the lattice defining the integration quotient are 
+\[
+ s_\infty=F_u^{-1}\gamma_\infty F_v,\qquad \widetilde\Lambda_v=s_\infty\Lambda_v s_\infty^{-1},\qquad \Lambda_{\gamma,u,v}:=\Lambda_u\cap\widetilde\Lambda_v.
+\]
+ The finite and real additive phases change by reciprocal scalars, so their product is defined on the double coset.
+\end{proposition}
+
+\begin{proof}
+Use the lattice representatives of Section~\ref{subsec:selected-column-metric}.
+Unfold the two sums against one another and group the finite terms by
+the word representatives. Strong approximation on the additive
+coordinates of the unipotent identifies the resulting finite classes.
+The two translated level functions have overlapping support precisely
+when their relative argument lies in \(K_2\). Write \(a=h_\rho x_u\) and \(b=\gamma_f h_{\rho'}x_v\).
+If \(t_f=a^{-1}b\in K_2\), a point of the overlap is \(ak\)
+with \(k\in K_2\). Unitarity gives
+\[
+ \overline{\chi_2(k)^{-1}}\,\chi_2(t_f^{-1}k)^{-1}
+       =\chi_2(t_f).
+\]
+Haar invariance now gives the finite integral
+\[
+ I_f(t_f)=
+ \begin{cases}
+    \chi_2(t_f)\displaystyle\int_{K_2} dk,&t_f\in K_2,\\
+    0,&t_f\notin K_2 .
+ \end{cases}
+\]
+
+At infinity, tile by the same double cosets. In the frame of the first word let \(\Lambda_u\) and
+\(\widetilde\Lambda_v\) denote the first lattice unipotent and
+the transported second one. The identifications within a tile are
+exactly the translations in \(\Lambda_u\cap\widetilde\Lambda_v\).
+Pair the first Bessel vector with the relative real translate of the
+second using this quotient measure. The full marked level is neat. A middle lattice
+with stabilizer \(\Delta\) still has weight \(1/|\Delta|\) in the row
+norm. Under a change of rational representative, let \(\xi\) denote
+the change in the finite additive phase. The trace character is
+trivial on rational arguments, so the corresponding changes satisfy
+\[
+ \frac{\text{new finite phase}}{\text{old finite phase}}=\xi,
+ \qquad
+ \frac{\text{new real phase}}{\text{old real phase}}=\xi^{-1}.
+\]
+This proves invariance of the product.
+
+It remains to justify the unfolding. At a noncompact real place,
+let \(R\) be the polar radius and \(q\) the smaller signature rank.
+For the shell \(n\le R<n+1\), ball growth, the slab weight, and
+\eqref{eq:count-polar-decay} bound the weighted coefficient integral,
+for all sufficiently large integers \(n\), by a constant times
+\[
+ (1+n)^q
+ \exp\!\left[-\left(\frac{h}{8\sqrt{2q}}-2r^2-4r^2\right)n\right].
+\]
+The exponent in parentheses is positive by the gap in
+Section~\ref{sec:count}. The shell bounds are summable, and a compact real factor has
+finite volume. A fixed real translate changes polar length by at most
+an additive constant, by the triangle inequality for the polar
+distance. Proposition~\ref{prop:gram-absolute-slab} below applies
+this weighted estimate to the two period seeds and justifies
+regrouping the unfolded terms. \cite{companion-row-count}\label{cor:selected-row-gram-2}
+
+\end{proof}
+
+\begin{construction}
+\begin{tabular}{@{}lll@{}}
+\toprule
+ & Overlap or change of variable & Contribution \\
+\midrule
+finite, \(t_f\notin K_2\) & disjoint level cosets & \(0\) \\
+finite, \(t_f\in K_2\) & one level coset & \(\operatorname{vol}(K_2)\chi_2(t_f)\) \\
+change of representative & finite additive phase & \(\xi\) \\
+                          & real additive phase   & \(\xi^{-1}\) \\
+\bottomrule
+\end{tabular}
+\caption{The factors in Proposition~\ref{prop:gram-unfolded-measures}. The first level function is conjugated in the pairing. The changes of additive phase cancel for a rational change of representative.}\label{fig:gram-local-phases}
+\end{construction}
+
+\input{geometry/slab-absolute}
+
+The phases and stabilizer factors are now fixed for one relative translate. Grouping the resulting terms by their Gram label requires a summability assertion in the same norms.
+
+\begin{lemma}[Absolute summability of the Gram terms]\label{lem:gram-term-sum}
+For the word sections of Definition~\ref{hyp:full-gram-row}, with the
+finite level and quotient measures of Proposition~\ref{prop:gram-unfolded-measures}, 
+\[
+ \sum_t\|a_{uv}(t)\|_{\rm HS}<\infty.
+\]
+
+\end{lemma}
+\begin{proof}
+Choose orthonormal bases \((e_i)\), \((e'_j)\) of the target
+and source columns. The finite-slab bound applies to each
+pair of these seeds. There are finitely many slabs in this
+unfolding and finitely many basis pairs. Therefore
+\[
+ \sum_t\|a_{uv}(t)\|_{\rm HS}\le
+        \sum_{i,j}\sum_t |\langle e_i,a_{uv}(t)e'_j\rangle|
+        <\infty .
+\]
+The double inner-product sum is also absolutely convergent,
+since it is bounded in absolute value by
+\((\sum_t\|a_{uv}(t)\|_{\rm HS})^2\).
+Thus the finite regroupings below pass to the full Gram sum.
+\end{proof}
+
+\subsection{Nonvanishing of the period on the ramified column}
+\label{subsec:pretransport-nonvanishing}
+
+The preliminary diagonal estimate is useful even before the periods are identified with the arithmetic evaluations. It bounds the entire kernel, so its dimension can be compared directly with that of the ramified subspace.
+
+\begin{auxlemma}[The finite Gram operator at a split type prime]\label{lem:coarse-split-gram}
+Let \(q\ge3\) be the residue cardinality at a split type prime, \(G=\mathrm{GL}_k(\mathbb F_q)\), and \(U\) its upper unitriangular subgroup. Let \(\eta\) be the character obtained by applying a nontrivial additive character to the sum of the first superdiagonal entries. On each free orbit of the coarse indices, the normalized Gram operator for this character satisfies
+\[
+                         0\preceq G_{\rm loc}\preceq(1+3/q)I .
+\]
+\end{auxlemma}
+\begin{proof}
+Identify the orbit with \(G\) by choosing an origin. In the finite character pairing, the comparison between two frames with relative element \(x\) sums over their common conjugating frame. For a frame \(y\) the summand vanishes unless \(yxy^{-1}\in U\), when it is \(\eta(yxy^{-1})\). Dividing by the \(|U|\) representatives of each flag gives the induced character
+\[
+ \gamma(x)=\frac1{|U|}\sum_{y:\,yxy^{-1}\in U}\eta(yxy^{-1}),
+ \qquad \gamma(1)=|G|/|U|.
+\]
+Thus the normalized matrix on an orbit is convolution by \(\gamma/\gamma(1)\), up to inversion of the relative coordinate. Distinct orbits contribute orthogonal blocks. The local comparison uses the free action on frame indices, before summing coefficients with the same index.
+
+For an irreducible complex representation \(\pi\) the convolution is central. Write \(m_\pi\) for the multiplicity in \(\operatorname{Ind}_U^G\eta\), using the dual representation if the opposite convention for convolution is taken. Taking traces and applying character orthogonality gives its eigenvalue
+\[
+          \lambda_\pi=\frac{|G|m_\pi}{\gamma(1)\dim\pi}
+                      =\frac{|U|m_\pi}{\dim\pi}.
+\] The finite Gelfand--Graev multiplicity-one theorem gives \(m_\pi\in\{0,1\}\) for this nondegenerate character. For the complex multiplicity-one theorem see \cite{gelfand-graev-finite} and Zhang \cite[Section~5.1]{zhang-modular-gelfand}.
+
+For \(k=1\), \(U\) is trivial, every irreducible is one-dimensional, and the convolution has norm one. Now take \(k\ge2\). When \(m_\pi=1\), an \(\eta\)-vector has nontrivial character on the abelian last-column radical \(\mathbb F_q^{k-1}\) of the mirabolic. The upper-left \(\mathrm{GL}_{k-1}\) acts transitively on its \(q^{k-1}-1\) nonzero characters. Their weight spaces have equal dimension. The stabilizer of the chosen character is the mirabolic one rank lower, and the same vector still has the prescribed character on its upper unipotent subgroup. Iteration, ending in a space of dimension at least one, gives
+\[
+ \dim\pi\ge\prod_{j=1}^{k-1}(q^j-1),\qquad
+ \frac{|U|}{\dim\pi}\le\prod_{j=1}^{k-1}(1-q^{-j})^{-1}.
+\]
+
+Since \(\prod_j(1-q^{-j})\ge1-\sum_{j\ge1}q^{-j}=1-1/(q-1)\), this is at most \((q-1)/(q-2)\le1+3/q\). The eigenvalues are nonnegative, as claimed.
+\end{proof}
+
+\input{same-word-gram}
+
+\begin{proposition}[A nonzero ramified period before transport]\label{prop:pretransport-ramified-period}
+For a word on the realized row of Definition~\ref{hyp:full-gram-row}, the full column has rank
+in \eqref{eq:linked-rank-window}. The preliminary diagonal
+estimate \eqref{eq:pretransport-diagonal} implies, on writing \(C_u^{\rm ram}\) for its ramified column subspace, that 
+\[
+ P_u(C_u^{\rm ram})\ne0.
+\]
+ The statement is
+made on the automorphic row before applying the two-term
+period relation.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Pair bounds for the preliminary estimate.}
+
+Let \(Q=kf\log k\) and
+\(M=m^5 f L\). The collision bound for pairs of corank at least two
+is an absolute sum bounded by
+\[
+  s_g\theta_{uu}+e^{-Q/2}d_u,\qquad
+  s_g=(g_0 g_1)^{-kf/2}\le1 .
+\]
+Indeed \eqref{eq:high-corank-in-gram-units} bounds this part by
+\(e^{-Q/2}\theta_{uu}\), and \eqref{eq:linked-rank-window} gives
+\(\theta_{uu}/d_u=d_u/D_*\le3/\Gamma^2\le1\) eventually.
+
+The corank-one bounds for the generic and nongeneric term groups
+control the real sums separately:
+\[
+ \sum_{\rm generic}\RePart\langle a(t),a(t')\rangle\le e^{C_1M}\theta_{uu},
+ \qquad
+ \sum_{\rm nongeneric}\RePart\langle a(t),a(t')\rangle\le e^{C_2M}\theta_{uu}.
+\]
+Both sums use the reciprocal row weights and the finite diagonal
+norm in \eqref{eq:equal-word-generic-corank-one}. For the first
+sum, take all the generic corank-one pairs in
+Lemma~\ref{lem:equal-word-generic-corank-one} and \(C_1=C_B\).
+For the second sum apply Lemma~\ref{lem:nonprimitive-diagonal}
+to the union of the matching coarse-index fibres in the nongeneric
+group and take \(C_2=C_N\). Both estimates precede the choice of
+the period column.
+
+The zero-Gram group satisfies
+\[
+       \|K''_{uu}\|_{\mathrm{HS}}^2\le e^{-Q}d_u
+\]
+by Lemma~\ref{lem:zero-gram-diagonal}. The sum of the norms of
+the term vectors is finite by Lemma~\ref{lem:gram-term-sum}.
+Hence the double sum of their inner products converges absolutely. \label{cor:selected-row-gram-3}
+
+\proofstep{Combining the generic and nongeneric sums.}
+
+For one nondegenerate group \(\mathcal T\), write \(B_b\)
+for the sum of its term vectors of coarse index \(b\).
+Let \(G_{bb'}\) be the Gram matrix of the finite coarse row vectors in the chosen normalization. For a finite sum expand each \(B_b\) in an orthonormal basis of the coefficient space, with coordinate vectors \(c_j=(c_{jb})_b\). Then
+\[
+ \Big\|\sum_b e_b\otimes B_b\Big\|^2
+  =\sum_j c_j^*G c_j
+  \le \|G\|_{\rm op}\sum_j\|c_j\|^2
+  =\|G\|_{\rm op}\sum_b\|B_b\|^2 ,
+\]
+where \(e_b\) is the coarse vector of index \(b\). Absolute convergence extends the estimate to the infinite sum. At each of the \(f\) places above \(g_i\),
+Lemma~\ref{lem:coarse-split-gram} bounds the normalized coarse matrix
+by \(1+3/g_i\). Multiplication of these local operator norms gives
+\(\|G\|_{\rm op}\le P_g=\prod_{i=0}^1(1+3/g_i)^f\). Hence
+\[
+ \left\|\sum_{t\in\mathcal T} a_{uu}(t)\right\|_{\rm HS}^2
+ \le P_g\sum_b\|B_b\|_{\rm HS}^2
+ =P_g\sum_b\sum_{\substack{t,t'\text{ of index }b\\
+                            \operatorname{row}(t)=\operatorname{row}(t')}}
+      \operatorname{Re}\langle a_{uu}(t),a_{uu}(t')\rangle_{\rm HS}.
+\]
+
+The equality uses row orthogonality, and
+Lemma~\ref{lem:gram-term-sum} justifies the double sum.
+The size hypotheses \(b\ge2\), \(f\le k\) and \(g_i\ge(kb)^8\ge256k\) imply
+\[
+ \log P_g\le\sum_{i=0}^1 3f/g_i\le6/256,
+ \qquad P_g\le(1-6/256)^{-1}<6/5 .
+\]
+Each remaining pair has corank at least one. The real pair weights at corank one and the absolute weights
+at higher corank can therefore be bounded in the preceding way.
+The two higher-corank pair sets are disjoint inside the full
+higher-corank set. Its absolute bound is charged once. The
+squared triangle inequality between the two groups now gives
+\[
+ \|K_{uu}-K''_{uu}-I\|_{\mathrm{HS}}^2\le
+ 2P_g\bigl((s_g+e^{C_1M}+e^{C_2M})\theta_{uu}
+                      +e^{-Q/2}d_u\bigr).
+\]
+
+Put \(C_D=\max(C_1,C_2)+1\ge1\), so that
+\(e^{C_1M}+e^{C_2M}\le e^{C_D M}\) for \(M\ge1\).
+Use \(\|a+b\|^2\le\tfrac32\|a\|^2+3\|b\|^2\) to add \(K''_{uu}\).
+The factor on the first bound is therefore at most \(3P_g\le18/5\),
+and the degenerate term costs \(3e^{-Q}d_u\).
+Use \(e^{-Q}\le(2/5)e^{-Q/2}\) to absorb one of these three
+copies into the \(e^{-Q/2}d_u\) error. This gives
+\begin{equation}\label{eq:pretransport-diagonal}
+ \|K_{uu}-I\|_{\mathrm{HS}}^2
+ \le 4(e^{C_D M}+1)\theta_{uu}
+        +(4e^{-Q/2}+2e^{-Q})d_u .
+\end{equation}
+
+\proofstep{Rank window from the extra level.}
+The class count is Proposition~\ref{prop:marked-column-dimension}.
+Proposition~\ref{prop:assigned-prime} gives the short interval
+for the prime assigned to the sequence. Let \(d_{u,*}>0\)
+be the dimension factor before imposing the extra level at
+that prime, and put \(\Gamma=e^{C_\Gamma M}\).
+Define \(T_{u,*}\) by
+\[
+ T_{u,*}=\left(\frac{D_*}{d_{u,*}\Gamma^2}\right)^{1/(fk)} .
+\]
+The rank identity on the linked level is
+\(d_u=d_{u,*}(T_u^k-1)^f\), and the window is
+\(T_{u,*}\le T_u\le (1+1/(fk))T_{u,*}\).
+The upper bound follows by taking the \(fk\)-th power, and the lower
+bound uses \((1-T_u^{-k})^f\ge1-f/T_u^k\ge 1/2\)
+when \(T_u\ge2\) and \(1\le f\le k\).
+
+In particular
+\begin{equation}\label{eq:linked-rank-window}
+ \frac{D_*}{2\Gamma^2}\le d_u\le
+       \frac{eD_*}{\Gamma^2}\le \frac{3D_*}{\Gamma^2}.
+\end{equation}
+This gives the full-rank proviso of width \(3\) and \(d_u>0\).
+With \(C_\Gamma\ge C_D+1\) the sharper upper bound also gives
+\(d_u/D_*\le e^{-2C_D M}\). Dividing
+\eqref{eq:pretransport-diagonal} by \(d_u\), we may take the error
+\(e_P=8e^{-C_D M}+6e^{-Q/2}\).
+
+\proofstep{The ramified column survives.}
+
+The diagonal estimate has bounded the dimension lost in the entire column. Comparing that loss with the ramified dimension guarantees a surviving vector before any change of realization.
+
+
+Since \(K_{uu}\) vanishes on \(\ker P_u\), extend an orthonormal
+basis of that kernel to the full column. Its contribution to the
+squared Hilbert--Schmidt norm gives
+\[
+ \dim\ker P_u\le \|K_{uu}-I\|_{\rm HS}^2\le e_Pd_u .
+\]
+Let \(C_u^{\rm ram}\) denote the ramified column subspace. The congruence
+\(T_u\equiv1\pmod{(g_0g_1)^2}\), with \(g_i\ge(kb)^8\), gives
+\(T_u\ge4f+1\). Hence
+\[
+ \frac{\dim C_u^{\rm ram}}{d_u}
+ =\left(1-\frac{1}{T_u-1}\right)^f
+ \ge 1-\delta_u,\qquad \delta_u=\frac f{T_u-1}\le\frac14 .
+\]
+
+The size bounds \(M,Q/2\ge5\) imply \(2e_P\le28e^{-5}<3/4\).
+Thus \(\dim C_u^{\rm ram}>\dim\ker P_u\), as required.
+Also \(c_u>0\), as \(c_u=0\) would give squared diagonal error
+\(d_u\). Choose \(v\in C_u^{\rm ram}\) with \(P_uv\ne0\). This nonzero
+period provides the initial value for the two-term relation of
+Section~\ref{sec:transport}.
+This order uses the full period operator before comparing it with
+the rational evaluation. The ramified column share and the good-row
+share control distinct dimensions. \label{cor:selected-row-gram-4}
+
+\end{proof}
+
+\subsection{The full Gram errors}
+\label{subsec:full-gram-errors}
+
+Nonvanishing gives a first vector on each selected column. To measure the span of all columns one also needs quantitative estimates for their cross products, including the nonidentity terms in an equal-word block.
+
+\begin{proposition}[Diagonal and off-diagonal errors on the full row]\label{prop:selected-full-gram}
+On the row of Definition~\ref{hyp:full-gram-row}, with the rank window
+\eqref{eq:linked-rank-window} and the pair estimates of
+Sections~\ref{sec:row-sums} and~\ref{sec:block-recursion} applied using
+Lemma~\ref{hyp:selected-orbital-coefficient-bounds} on these same local types,
+the equal-word error splits as in \eqref{eq:selected-diag-split}.
+For distinct words the estimates are 
+\[
+ K''_{uv}=0,\qquad \|K_{uv}\|_{\rm HS}^2\le(1+b^{-6})\,d_ud_v/D_*\quad(u\ne v).
+\]
+
+The bounds use the common scalar row normalization and are
+uniform on the selected terms.
+\end{proposition}
+
+\begin{proof}
+\proofstep{The sharper diagonal bound.}
+
+For equal words the selected row also has the following sharper
+form of the bound:
+\begin{equation}\label{eq:selected-diag-split}
+ \|K''_{uu}\|_{\mathrm{HS}}^2\le e^{-Q}d_u,\qquad
+ \|K_{uu}-K''_{uu}-I\|_{\mathrm{HS}}^2
+                         \le \Gamma\theta_{uu}.
+\end{equation}
+Lemma~\ref{lem:zero-gram-diagonal} gives the first inequality for the nonidentity terms of this same word. For the second inequality apply the finite
+Gram estimate to the generic and nongeneric term groups. By
+\eqref{eq:equal-word-generic-corank-one}, the entire generic
+corank-one sum, including the scalar pairs of
+Definition~\ref{def:corank-one-scalar}, satisfies
+\[
+ \Gamma_1\sum_{\substack{(t,t')\ \mathrm{generic}\\\operatorname{corank}(t,t')=1}}w_{t,t'}|a_t a_{t'}|
+       \le e^{C_BM}\theta_{uu}.
+\]
+This estimate uses the two
+copies of the same marked lattice and the prime \(T_u\).
+For pairs of corank at least two,
+\eqref{eq:high-corank-in-gram-units} gives \(e^{-Q/2}\theta_{uu}\).
+
+For the nongeneric group take all its matching corank-one fibres
+in \eqref{eq:nonprimitive-diagonal}. Their contribution is at most
+\(e^{C_NM}\theta_{uu}\). Each group has the same absolute allowance
+\(e^{-Q/2}\theta_{uu}\) for higher coranks. The squared norm of
+the sum of the two group vectors is at most twice the sum of their
+squared norms. With \(A=\max(C_B,C_N)\), the total multiplier of
+\(\theta_{uu}\) is therefore at most
+\[
+  2P_g\bigl(e^{C_BM}+e^{C_NM}+2e^{-Q/2}\bigr)
+     \le 8P_g e^{AM}\le e^{(A+1)M}.
+\]
+The last inequality uses \(P_g<6/5\) and \(M\ge32\). Both
+\(C_B\) and \(C_N\) were fixed at the counting and amplitude
+steps, so we may choose \(C_\Gamma\ge A+1\).
+The preliminary argument used
+\eqref{eq:pretransport-diagonal}, whose higher-corank term
+also includes a multiple of \(d_u\). \label{cor:selected-row-gram-5}
+
+\proofstep{Vanishing of the off-diagonal degenerate terms.}
+
+Fix a supported degenerate term with \(G=0\). If its combined
+unipotent character is nontrivial, integration over the real
+unipotent quotient gives zero. For the trivial character, use an
+orthonormal frame on the common positive complement. The change of
+frame conjugates the two compact actions and preserves Haar measure.
+At a place \(\nu\) where the selected parameters differ, contraction
+at the other places therefore gives an operator in
+\[
+ \operatorname{Hom}_{H_\nu}(V_{u,\nu},V_{v,\nu})=0 .
+\]
+Here \(H_\nu\) is the identified compact stabilizer and the two factors
+are inequivalent irreducible types. Thus the term vanishes on pure
+tensors and hence on their span. Proposition~\ref{prop:gram-unfolded-measures}
+has already removed all terms outside the support. Summing gives
+\(K''_{uv}=0\) for \(u\ne v\).
+
+\proofstep{Generic and nongeneric off-diagonal sums.}
+
+For the remaining terms put \(s=m/2-1\) and
+\(P_g=(1+3/g_0)^f(1+3/g_1)^f\). With the common scalar row
+normalization, the scalar generic sum of real weights is at most
+\(A\theta_{uv}\), where
+\[
+ A\le(1+b^{-7})\exp(12 f\,2^{-(k-2s-2)}).
+\]
+The factor \(1+b^{-7}\) follows from Lemma~\ref{lem:selected-density-error} with the actual block volumes and \(\Theta=k\). With \(v=k-2s-2\ge2\), each local density factor is at most
+\(\exp(4q_{\mathfrak p}^{-v})\). There are at most \(f\) residue
+fields over each rational prime, whence
+\[
+ \sum_{\mathfrak p}4q_{\mathfrak p}^{-v}
+ \le 4f\sum_{n\ge2} n^{-v}\le12f\,2^{-v}.
+\]
+
+Exponentiating gives the density multiplier on \(\theta_{uv}\) by the
+local mass identities.
+For every pair of distinct words \eqref{eq:high-corank-in-gram-units}
+gives \(e^{-Q/2}\theta_{uv}\) for the entire sum of coranks at least
+two, including the degenerate determinant pairs of corank two.
+The high-corank and nonscalar corank-one bounds thus each cost
+\(\varepsilon_1\theta_{uv}\) with
+\(\varepsilon_1=\exp(-c k f\log k)\), and the nongeneric
+corank-one bound costs \(\varepsilon_2\theta_{uv}\), with
+\(\varepsilon_2=2^{-(k-2s-5)}b^{C_4(2s+2)^5 f}\).
+Apply the coarse-index argument to each of the two groups
+and then add the two norms. This gives
+\begin{equation}\label{eq:distinct-gram-pairs}
+ \|K_{uv}\|_{\mathrm{HS}}^2
+ \le P_g\left(\sqrt{A+2\varepsilon_1}
+             +\sqrt{\varepsilon_1+\varepsilon_2}\right)^2\theta_{uv}.
+\end{equation}
+In this inequality the first term uses the scalar, nonscalar and
+higher-corank contributions from generic pairs. The second uses
+the nongeneric corank-one and higher-corank contributions.
+
+\proofstep{The scalar leading coefficient and its error.}
+
+Bounding the error terms leaves the scalar main coefficient. Its value must be expressed in the same units as the identity contribution to the cuspidal dimension.
+
+
+For the numerical estimate we may use \(b\ge16\), \(f\le k\),
+\(k\ge32\), \(k\ge4s+12\), \(k\ge70\log b\),
+\(5cf\log k\ge1\), and
+\(C_4(2s+2)^5 f\log b\le k/8\). These are imposed at the
+common size thresholds. They imply
+\[
+ \varepsilon_1,\varepsilon_2\le b^{-14},\qquad
+ 12 f\,2^{-(k-2s-2)}\le k2^{-k/2}\le e^{-k/5}\le b^{-14}.
+\]
+
+For the second error use
+\(k-2s-5\ge k/2\) and \((\log 2)/2-1/8>1/5\).
+The inequality for \(k2^{-k/2}\) holds at \(k=32\), and
+its ratio to \(e^{-k/5}\) decreases thereafter.
+The two large type primes give \(P_g\le e^{6b^{-7}}\).
+Put \(z=b^{-7}\le1/42\). The elementary estimates
+\[
+ e^{6z}\le1+7z,\qquad
+ (1+z)e^{z^2}+2z^2\le1+2z,\qquad
+ \sqrt{2z^2}\le3z/2
+\]
+bound the two square roots in \eqref{eq:distinct-gram-pairs} by
+\(1+z\) and \(3z/2\). The coefficient of \(\theta_{uv}\) is therefore at most
+\[
+ (1+7z)(1+5z/2)^2\le1+14z\le1+b^{-6}.
+\]
+The leading coefficient is the scalar row volume. This normalization
+is needed when taking the trace ratio. \label{cor:selected-row-gram-6}
+
+\end{proof}
+
+\subsection{The ambient count and the common scale}
+\label{subsec:selected-ambient-count}
+
+The separate estimates for orbital errors and cuspidal dimension use different parameters. The rank lemma requires them at a common scale that works for all the words at this point.
+
+\begin{proposition}[Uniform inputs for the rank comparison]\label{prop:selected-rank-comparison}
+For the row and columns of Definition~\ref{hyp:full-gram-row},
+with the projector of Proposition~\ref{prop:projector-dimension}
+and the Gram errors of Proposition~\ref{prop:selected-full-gram},
+for sufficiently large common scale \(x\),
+the dimension satisfies \(D\le (1+e^{-rf\log(r)/16})D_*\) and
+the good-label subspace has relative deficit at most
+\(\exp(-x^{e_z/7})\). The full columns satisfy the rank window
+\eqref{eq:linked-rank-window}. The normalized Gram and dimension errors
+\[
+ e_0=6/\Gamma+2e^{-Q},\qquad \eta_0=b^{-6},\qquad
+ \eta_1=e^{-rf\log(r)/16},\qquad Q=kf\log k
+\]
+satisfy
+\(\sqrt{e_0},\eta_0,\eta_1\le e^{-x^{\epsilon/8}}\), with
+\(D_*/\sum_u d_u\le x^{-C_H}\) and
+\(\sqrt{\max_u\delta_u}\le e^{-x^{\epsilon/8}}\).
+\end{proposition}
+
+\begin{proof}
+\proofstep{The matching projector and its dimension.}
+
+On the selected row the finite operator is the averaging idempotent
+of its unitary character on the marked subgroup of the self-dual
+level. Its support at \(g_0\) has unipotent reduction. If \(w_v\) is
+the designated unit lowest vector at \(v\), the real projector and
+its image are
+\[
+ P_\infty=\bigotimes_v P_{w_v},\qquad
+ \operatorname{im}P_\infty=\C\,(\textstyle\bigotimes_v w_v).
+\] Evaluation at this
+tensor identifies the intertwiner space with the selected
+automorphic lines, using their Petersson norm. The row realization
+ties its dimension \(D\) and the identity value \(D_*\) to the
+automorphic projector in this exact Haar normalization.
+
+To apply Proposition~\ref{prop:projector-dimension}, the signature
+is \((k+s,s+1)\), so \(q=s+1=m/2\) in the notation of
+Section~\ref{sec:count}. In particular \(r=k+m-1\). The standing bounds
+\(C_\ell m^2 L\le k\) and \(f\le k\le x^5\) give, for large \(x\),
+\[
+ q^2=m^2/4\le k/(4C_\ell L)\le r,\qquad
+ \log f\le\log k\le\sqrt r .
+\] The coordinates of the row weight
+are the first \(k-1\) nonnegative coordinates, all of positive
+sign, followed by \(-B_j\) for \(1\le j\le m\).
+The negative signs occur at even \(j\) in this last part.
+
+If \(v_a\) is an initial coordinate, the common spacing hypothesis
+\(C_\ell m\ge4\) bounds it by the first tail size:
+\[
+ 0\le v_a\le4k\Delta\le C_\ell m k\Delta\le B_1,\qquad B_j\le b^2 .
+\]
+Write \(s_0=C_\ell r^{19}f^5L\) for the required lower bound on gaps between parameters of opposite sign.
+For opposite signs in the tail, \(|B_i-B_j|\ge s_0\).
+For an initial coordinate \(v_a\) paired with a negative
+coordinate, the latter is \(-B_j\) with \(j\) even and
+\(j\ge2\). Thus \(v_a+B_j\ge B_j\ge s_0\).
+Consequently
+\[
+ \min_{\text{opposite signs}}|\lambda_a-\lambda_b|\ge s_0 .
+\]
+
+Since \(\log d_E\le L/C_\ell\), this meets the gap in
+Proposition~\ref{prop:projector-dimension} after the fixed
+choice of \(C_\ell\) at least twice its gap constant. Both primes
+lie between \((kb)^8\) and \(b^{C_g}\) and split completely in the
+host. Hence
+\[
+ 4r<(kb)^8\le g_0,\qquad
+ \log g=\log g_0+\log g_1\le 2C_g\log b .
+\]
+Use the fixed level exponent \(2C_g\) when invoking
+Definition~\ref{hyp:cuspidal-dimension} for the product level.
+The field bounds give \(\log f\le\sqrt r\) and
+\(\log\log d_E\le r\) on this family. The other two
+count bounds on \(b\) follow since \(r\) has polynomial upper
+and lower growth and \(L=x^\epsilon\). This gives
+\(D\le (1+e^{-rf\log(r)/16})D_*\) for the selected full row.
+\cite{companion-row-count}\label{cor:selected-row-gram-7}
+
+\proofstep{Restriction at one type prime.}
+
+The arithmetic subspace in the slope comparison is the image of
+the good-label projection in this same row. At one place over
+\(g_i\), let \(a_v\) be the finite normalized character idempotent
+and \(z_\ell\) the central idempotent for series label \(\ell\).
+Taking the regular trace of these commuting projectors gives
+the local series probabilities
+\[
+ \mu_v(\ell)=\frac{(a_v z_\ell)(1)}{a_v(1)},\qquad
+ \mu_v(\ell)\ge0,\qquad \sum_\ell\mu_v(\ell)=1 .
+\] For a set \(S_i\) of tuples at the prime
+\(g_i\), multiply the projector by the sum of the corresponding
+tensor products of central idempotents, leaving its factors
+at \(g_{1-i}\) unrestricted. The new projector is self-adjoint
+and remains at the same principal level. Its support has
+unipotent reduction at \(g_{1-i}>4r\). Its identity term is
+\[
+ D_*p_i(S_i),\qquad
+ p_i(S_i)=\sum_{\ell\in S_i}\prod_{v\mid g_i}\mu_v(\ell_v).
+\]
+Thus \eqref{eq:dimension-count} applies with this identity term.
+
+\proofstep{Regular trace for the two-chain character.}
+
+There are two finite character subgroups on these rows. For the
+full upper unipotent the probabilities are the Whittaker weights
+used in \eqref{eq:row-bad-types}. In the other subgroup omit the
+entries \((a,s+k)\) with \(s\le a<s+k\) in the zero-based indexing
+of the upper unipotent. Sum the character entries along the chains
+\((s,\dots,s+k-1)\) and \((0,\dots,s-1,s+k,\dots,r-1)\).
+The deleted column has one free field entry for each
+\(a=s,\ldots,s+k-1\). Counting upper triangular matrices with
+unit diagonal therefore gives, for the subgroup \(U'\subset U\),
+\[
+ [U:U']=\frac{g_i^{r(r-1)/2}}{g_i^{r(r-1)/2-k}}=g_i^k .
+\]
+For an irreducible representation \(V\) of
+\(\mathrm{GL}_r(\mathbb F_{g_i})\), let \(w_j(V)\) be the simultaneous
+Whittaker multiplicity in the invariants for the unipotent radical
+of the parabolic with blocks \((j,r-j)\).
+
+Thus \(w_0(V)\) is its usual
+Whittaker multiplicity, and every \(w_j(V)\) is nonnegative.
+The finite column trace formula for the two-chain character gives
+\[
+\operatorname{tr}(a_v\mid V)
+   =\sum_{j=0}^{k-1}(g_i^{k-j}-g_i^{k-j-1})w_j(V)+w_k(V).
+\]
+The exchange of the two-chain character with the last-column
+character reduces the trace to the mirabolic restriction. Its
+successive derivatives contribute the Whittaker multiplicities
+\(w_j(V)\), using multiplicativity of Whittaker multiplicities
+under induction from the two-block parabolic. The coefficient
+is the self-pairing of the Gelfand--Graev character on the
+remaining general linear group of rank \(k-j\). With \(Q\) the residue cardinality, the coefficient counts the monic polynomials of degree \(a=k-j\) with nonzero constant term. For \(a>0\) there are \(Q-1\) choices for that term and \(Q\) choices for every other coefficient below the leading one. Thus the count is 
+\[
+ \begin{cases}(Q-1)Q^{a-1},&a>0,\\ 1,&a=0.\end{cases}
+\]
+
+Multiply by \(\dim V\), sum over one series and
+divide by the regular trace of \(a_v\). If \(R_U\) and \(R_v\) are the two regular traces, then
+\(R_v=g_i^kR_U\) by the subgroup index. For the constituent
+series \(\ell\), the nonnegative terms with \(j>0\) can be
+omitted, giving
+\[
+ \mu_v(\ell)\ge \frac{g_i^k-g_i^{k-1}}{R_v}
+            \sum_{V\ {\rm of\ series}\ \ell}(\dim V)w_0(V)
+      =(1-g_i^{-1})\mu_U(\ell).
+\]
+In either subgroup, a diagonal conjugation with
+successive ratios along the character chains scales the additive
+character by any nonzero residue. It fixes the central series
+idempotents, so the probabilities are independent of that choice.
+Let \(\mathcal B\) be the bad tuples and use the bound on
+their complement. The two product measures satisfy
+\[
+ \mu_{\rm col}(\mathcal B)
+ \le1-(1-g_i^{-1})^f\big(1-\mu_{\rm Whit}(\mathcal B)\big)
+ \le \mu_{\rm Whit}(\mathcal B)+f/g_i .
+\]
+This uses the full product of the \(f\) residue factors.
+Thus the bounds for the four bad events in
+\eqref{eq:row-bad-types} still have order
+\(O(x^A\exp(-x^{e_z/6}))\) for a fixed \(A\).
+\label{cor:selected-row-gram-8}
+
+\proofstep{Good-row deficit.}
+
+The row dictionary identifies the geometric and automorphic
+label projectors, including their conjugate finite readings.
+Applying the tuple operator to the good basis keeps exactly its
+vectors of that label. Let \(D_{\rm good}\) be the dimension of
+the good row. For \(\alpha=e^{-rf\log(r)/16}\) put
+\(p_i=p_i(S_i)\) for the bad set at \(g_i\). Commuting projections
+give \(D-D_{\rm good}\le D_{0,S_0}+D_{1,S_1}\).
+Since \(D\ge(1-\alpha)D_*\), this gives
+\[
+  0\le\frac{D-D_{\rm good}}{D}
+       \le \frac{1+\alpha}{1-\alpha}(p_0+p_1)
+       \le\exp(-x^{e_z/7})
+\]
+eventually on the linked row. This is the good-row deficit in the
+comparison. The quantity \(\delta_u\) controls the ramified
+column dimension.
+
+\proofstep{One uniform scale for the rank lemma.}
+
+The rank lemma uses all columns at once. The scale threshold must therefore be independent of the word as well as valid for the shared target.
+
+
+By the squared triangle inequality in \eqref{eq:selected-diag-split}
+and \eqref{eq:linked-rank-window} the full diagonal error can be
+taken to be \(e_0=6/\Gamma+2e^{-Q}\). Take
+\[
+ \eta_0=b^{-6},\qquad \eta_1=e^{-rf\log(r)/16},
+ \qquad y=x^{\epsilon/8}.
+\]
+The standing size inequalities include \(k\ge8 C_\Gamma M\).
+As \(f\ge1\) and \(\log k\ge1\), they give \(Q\ge k\) and
+\(rf\log r\ge k\). Using \(M\ge L=y^8\),
+\[
+ e_0\le 8e^{-C_\Gamma y^8},\qquad
+ \eta_1\le e^{-C_\Gamma y^8/2},\qquad
+ \eta_0=e^{-6y^8}.
+\]
+Thus \(\sqrt{e_0},\eta_0,\eta_1\le e^{-y}\) eventually.
+The selected sequence set has size
+\(\lceil 3\Gamma^2 x^{C_H}\rceil\), with \(C_H\) the fixed
+height exponent used for that family.
+
+Summing
+\eqref{eq:linked-rank-window} gives
+\(D_*/\sum_u d_u\le x^{-C_H}\).
+The ramified share likewise has
+\(\sqrt{\max_u\delta_u}\le e^{-y}\) eventually, from
+\(T_u\ge b^{m/2}\) and \(f\le x^5\). All these bounds use one
+scale and one selection. Taking the maximum of their thresholds
+gives the same estimates for all sequences, pairs of words and
+translates at that scale. The Gram estimates were obtained before
+compressing the columns, and their normalized transfer to the
+arithmetic matrix is the one in Section~\ref{sec:frames}.
+\label{cor:selected-row-gram-9}
+\end{proof}

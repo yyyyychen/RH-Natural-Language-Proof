@@ -1,0 +1,615 @@
+\subsubsection{The long-orbit row bound}\label{sec:inert-long-orbit}
+\hypertarget{source-inert-long-orbit}{}
+
+Among the inert orbits, a long Frobenius orbit allows the marked jumps to be cut into shorter arcs. The colength can be bounded using those arcs only if the correction at each cut is controlled integrally.
+
+\begin{established}[Case B and the cyclic signed jump windows]\label{hyp:long-orbit-data}
+Let \(\ell<A_{\rm sec}\) be an ordinary inert prime whose Frobenius
+has order \(o_\ell>4L_w\) in the real cyclotomic quotient
+(case B of Section~\ref{sec:cut-length-rows}). Write \(F=E_\lambda\) for the
+unramified completion of the auxiliary field and
+\[
+ d=[F:\Q_\ell]=n_\lambda.
+\]
+
+Work over the integers \(O\) of a local coefficient field splitting \(F\).
+Write \(T_2\) for the marked dual Tate lattice, of rank \(r\), and
+\(T_1\) for a lattice in a subrepresentation of a finite sum of the
+twisted duals from the same cut. The maps to be estimated, including the marked matrix row, are precisely the indicated integral Galois surjections
+\[
+ f:T_1\twoheadrightarrow T_2,\qquad \operatorname{rank}_O T_2=r .
+\]
+
+The source and target are crystalline with central jumps \(|a|\le\eta_0\) and one outer signed interval of width \(S_0\) at each Frobenius embedding. The small letters have height at most \(G_P\) and all letters have height at most \(H\), in the notation of Section~\ref{sec:cut-length-rows}.
+\end{established}
+\begin{proof}
+The ordinary inert branch excludes all primes ramifying in the field or in the rows. Conjugating its marked row preserves the coefficient lattice and takes its dual Tate jumps to the reflected signed intervals. Apply Lemma~\ref{lem:marked-row-column-lattices} to obtain the displayed surjection. Lemma~\ref{lem:marked-signed-jumps} gives the central and outer bands before passage to its quotient. Both rational representations are crystalline with the
+local jump windows from the cut. Enumerate the embeddings of \(F\)
+cyclically by Frobenius. The residue characteristic is \(\ell\ge11\)
+in this inert branch.
+
+Use \(b_0,w_0,S_0,\eta_0\) for the local size parameters, with
+\(S_0,\eta_0\ge1\), and \(s_i\) for the size at position \(i\).
+The source jumps at \(i\) lie in \([-\eta_0,\eta_0]\) together
+with either \([s_i,s_i+S_0]\) or its negative. The larger range is
+\[
+ b_0\le s_i\le b_0+\eta_0.
+\]
+
+At every other position,
+\(s_i\le w_0\). Put \(g=w_0+S_0+\eta_0\) and set
+\[
+ h=\begin{cases}b_0+\eta_0+S_0,&\text{if some position has larger jumps},\\
+                  g,&\text{otherwise}.\end{cases}
+\]
+Thus the positions with smaller jumps have jumps in \([-g,g]\) and all positions
+have jumps in \([-h,h]\). The target satisfies the same bounds by
+strict exactness of the rational crystalline filtration.
+The two upper endpoints in Section~\ref{sec:cut-length-rows} bound \(b_0+\eta_0+S_0\le H\)
+and \(g\le G_P\), with \(H,G_P\) as in Section~\ref{sec:cut-length-rows}.
+The length of the cycle here is the unramified local degree, including
+the quadratic components of Frobenius.
+\end{proof}
+
+\begin{auxlemma}[Spacing of the larger jumps]\label{lem:long-orbit-spacing}
+On the unramified cycle of Lemma~\ref{hyp:long-orbit-data}, let
+\(J\) be the positions with larger jumps and \(L_w\) the length
+parameter for \(T_2\) in Lemma~\ref{lem:second-set-progressions}.
+Write \(\theta_\ell\in\mathbb Z/D\mathbb Z\) for the action of
+arithmetic Frobenius on \(C_e\). If
+\(o_\ell=\operatorname{ord}(\theta_\ell)>4L_w\), then
+\[
+ \#(J\cap I)\le2\qquad\text{for every interval of }L_w
+                  \text{ consecutive positions }I .
+\]
+If \(1\le j_\ell\) and \(2j_\ell+2\le L_w\), the cycle admits
+cuts with \(j_\ell\) smaller positions following each cut, at most
+two larger positions per arc, and maximum arc length \(3j_\ell+1\).
+\end{auxlemma}
+\begin{proof}
+In \(\operatorname{Gal}(C_e/\mathbb Q)\), the step \(\theta_\ell\)
+is the class of \(\ell\bmod 2^{e+2}\) up to sign, expressed in the
+generator 5. Thus
+\[
+   o_\ell=\min\{a\ge1:\ell^a\equiv\pm1\pmod{2^{e+2}}\},
+    \qquad o_\ell\mid [E_\lambda:\mathbb Q_\ell] .
+\]
+The divisibility holds because the order of the full Frobenius
+equals the unramified local degree and restriction preserves powers.
+
+By Lemma~\ref{hyp:translate-weights} the larger places are the
+translated labels \(e_1(s+u-t)\) and their complex conjugates
+at the two embeddings of a real place when the coordinates are
+centred at the selected top \(t\). Restriction to the real
+field \(C_e\) kills complex conjugation. Let \(w\) be the
+coordinate of the translate, equal to \(\rho(u-t)\) with this
+origin or \(\rho(u)\) before recentering. With \(s_i\) the integer representative of the larger label at
+position \(i\), \eqref{eq:dyadic-coordinate-orders} gives
+\begin{equation}\label{eq:translated-dyadic-visits}
+ x_0+i\theta_\ell=w+t_0 s_i\pmod D,\qquad
+                  0\le 4L_w s_i<n_0\quad(i\in J).
+\end{equation}
+
+Here \(x_0\) is the starting coordinate. Reversing the orientation
+replaces \(\theta_\ell\) by its negative and preserves its order.
+If \(a<b<c\) in one interval of length \(L_w\) are larger
+positions, their coordinates are distinct by the order bound.
+Put \(u'=b-a\), \(v'=c-a\). Eliminating the step gives
+\[
+ t_0\big(v'(s_b-s_a)-u'(s_c-s_a)\big)\equiv0\pmod D,
+ \qquad
+ v'(s_b-s_a)-u'(s_c-s_a)\equiv0\pmod{n_0}.
+\]
+
+The second implication uses \(D=t_0n_0\). The four terms have
+absolute value less than \(n_0/4\) by \eqref{eq:translated-dyadic-visits},
+so the last congruence is an integer equality between three
+distinct selected labels. The sphere construction in
+Lemma~\ref{lem:second-set-progressions} excludes this equality.
+Taking integer lifts of the positions includes intervals crossing
+the end of the cycle.
+
+Let \(j=j_\ell\). The numerical host choice allows some exponent
+\(j'\) with \(A_{\rm sec}\le(\ell-1)^{j'}\) and \(2j'+2\le L_w\).
+Here \(\ell<A_{\rm sec}\), so the least exponent \(j\) is at least two
+and satisfies
+\[
+ 2j+2\le L_w.
+\]
+Thus the local cycle has \(d>2j\).
+Join successive positions with larger jumps when their forward gap is at most
+\(j\). A chain of three would occupy at most \(2j+1\) consecutive
+positions and is excluded. The clusters thus have one or two
+positions, with at least \(j\) intervening positions with smaller jumps between
+clusters. Cut just after the last position with larger jumps of each cluster,
+using that position as the cut index \(c\). Each of \(c+1,\dots,c+j\)
+then has smaller jumps.
+
+If the next cluster starts at forward distance \(a\),
+insert cuts at the multiples of \(j\) up to \(a-j-1\), measured
+from the current cut. Include the original cut at distance zero. If
+\(k=\lfloor(a-j-1)/j\rfloor\), the remaining gap is
+\[
+ a-kj=j+1+\bigl((a-j-1)\bmod j\bigr)\in[j+1,2j].
+\] Adding the span of the next
+cluster gives an arc length at most \(3j\). Each arc is taken
+half-open, with its terminal cut included.
+
+Each such arc contains at most two
+positions with larger jumps. When there are no positions with larger jumps, partition the
+cycle into arcs of length \(j\) with the last remainder added to one
+arc. Each arc has length at least \(j\), since inserted cuts are
+spaced by \(j\) and each gap to a cluster of positions with larger jumps starts with its
+\(j\)-letter buffer of positions with smaller jumps. The maximum length \(A\) satisfies
+\(j\le A\le3j+1\).
+\end{proof}
+
+\paragraph{The exponent in the Wach lifting estimate.}\label{par:inert-cut-exponents}
+The correction at a cut in Paragraph~\ref{par:wach-cut-correction} and the integral level tests of Proposition~\ref{prop:wach-arc-membership} apply to the
+cyclotomic Wach modules of a surjection of crystalline lattices over
+an unramified field. Its arc hypotheses are a cyclic partition with
+\(j\) positions with smaller jumps after each cut, at most two positions with larger jumps per
+arc, and specified size inequalities when their signs differ.
+Lemma~\ref{lem:long-orbit-spacing} supplies the partition.
+
+We now compute the exponents for the symmetric jump boxes of
+Lemma~\ref{hyp:long-orbit-data}.
+Put \(q_0=\ell-1\), \(D_0=q_0^{j+1}\), and
+\[
+ \begin{split}
+ M&=\left\lfloor\frac{h+2g}{q_0}\right\rfloor+1,\\
+ \sigma&=\left\lceil 1+\frac{\ell}{q_0^2}
+                      \left(3g+\frac{M}{\ell^{j-1}}\right)\right\rceil,\\
+ H_i&=\begin{cases}2h,&i\text{ with larger jumps},\\2g,&i\text{ with smaller jumps},\end{cases}\\
+ c_H&=\left\lceil 1+\log_\ell(1+\max_i H_i)\right\rceil,\\
+ S(c)&=\sum_{a\ge0}\frac{H_{c+a+1}+c_H+3}{q_0^a},\\
+ R&=\max_c\left(c_H+\left\lfloor\frac{\ell}{q_0^2}
+           \min\{\lfloor S(c)\rfloor,\max_i H_i\}\right\rfloor\right).
+ \end{split}
+\]
+The initial exponent is \(a_0=2\sigma+R+2gA\). Define \(\kappa\)
+as the maximum of
+\[
+       A+\sum_{u\in J\setminus\{0\}}(A+1+v_\ell(u))
+\]
+over unions \(J\) of three intervals of at most \(3g\) consecutive
+integers in \([-2h,2h]\).
+
+In Theorem E the inputs for the source and
+target can both be taken to be \(H_i\). If the positions with larger jumps of
+opposite sign have magnitudes \(x\) at backward offset \(s_1\) and
+\(y\) at offset \(s_0<s_1\), the required comparisons are
+\(y<\ell x\) when the earlier position in the cycle is negative,
+and \(2y\le\ell x\) and \(2a_0<x\) when it is positive. With these
+inputs the theorem lifts every integral finite class of \(T_2\) after
+multiplication by \(\ell^e\), where
+\begin{equation}\label{eq:long-orbit-exponent}
+                 e=2R+4\sigma+2a_0+2\kappa.
+\end{equation}
+
+For the proof with cyclotomic evaluation coordinates, extend the
+coefficient field to contain the primitive \(\ell^d\)-th roots of
+unity. This extends the coefficients while keeping \(F\) and its
+Frobenius cycle fixed. The embeddings over the larger coefficient
+field are the same after composition, since the original field
+already splits \(F\). The finite cohomology group of a lattice
+is the preimage of the rational finite group.
+
+A basis of the
+extended coefficient ring over \(O\) identifies its continuous
+cochains with finitely many copies of the original complex.
+Rationalization and the crystalline period comparison also commute
+with this finite direct sum. Thus integral finite cohomology, its
+map and the cokernel extend by tensor product. For the cokernel \(C\) and extended coefficient DVR \(O'\), faithful flatness gives
+\[
+ \ell^e(C\otimes_O O')=0\quad\Longrightarrow\quad\ell^e C=0.
+\]
+
+
+The geometric estimate for \(R\) exhibits the dependence on the
+buffer of positions with smaller jumps. The first \(j\) terms of the sum at each cut have
+\(H_{c+a+1}=2g\), hence
+\[
+ S(c)\le \frac{q_0}{q_0-1}
+          \left(2g+c_H+3+\frac{2h}{q_0^j}\right).
+\]
+Since \(\ell\ge11\) and \(h\ge1\), we have
+\(c_H\le3+\log_\ell h\) and
+\[
+  R\le8g+3h/D_0+2\log_\ell h,
+  \qquad \sigma\le3g+2h/D_0.
+\]
+Indeed \(\ell/(q_0(q_0-1))\le11/90\) and
+\(2\ell/(q_0-1)\le22/9\) give the first inequality.
+
+For the second, \(\ell/q_0^2\le11/100\), and the coefficient
+of \(h+2g\) is at most \((11/10)/D_0\) for \(j\ge1\).
+Choose the common constant \(C_2\ge3200\) in the size condition
+\(b_0\ge C_2(j+1)(g+1)\). This condition holds uniformly for
+the rounded local word. In fact \(b_0\ge b-(t+1)/2\ge b/2\)
+at large scale, \(g+1\le G_P+1\le11b'\), and
+\(j+1\le3+\log A_{\rm sec}=O(\log x)\). Hence
+\[
+ C_2(j+1)(g+1)/b_0=O(C_2\log x\, b'/b),
+\]
+which tends
+to zero since
+\[
+ C_2\log x\,b'/b=C_2x\log x\exp(-x^{\varepsilon/3})\longrightarrow0.
+\]
+
+If there are positions with larger jumps,
+\(g\le b_0\), \(h\le2b_0\), and both magnitudes are between
+\(b_0\) and \(b_0+\eta_0\). Therefore \(2y\le4b_0<\ell x\).
+The bounds on \(\sigma,R\) in the expression \(a_0=2\sigma+R+2gA\) give
+\[
+ 2a_0\le40g(j+1)+14h/D_0+4\log_\ell h<b_0.
+\]
+For example, the three terms are bounded by \(0.04b_0\),
+\(0.28b_0\), and \(4\sqrt{2b_0}\) using \(b_0\ge2000\) and
+\(\log_\ell h\le\sqrt h\). The two mixed-sign comparisons follow.
+When all positions have smaller jumps these comparisons are vacuous.
+
+To bound \(\kappa\), each interval with at most \(3g\) integers
+contains at most \(3g/\ell^v+1\) nonzero multiples of \(\ell^v\),
+and such multiples require \(v\le\log_\ell(2h)\). Summing over
+the three intervals gives
+\(\kappa\le25gA+3\log_\ell h\) since \(A,g\ge1\).
+Using \eqref{eq:long-orbit-exponent},
+\[
+ e\le110gA+28h/D_0+14\log_\ell h
+   \le C_2\left(h/D_0+(g+1)(j+1)+\log_\ell h\right).
+\]
+In particular the high jump bound carries the factor
+\((\ell-1)^{-j-1}\) even when the cycle has many clusters. The
+exponents use a maximum over the arcs. The factor for the host
+degree enters only in the dimension of finite cohomology.
+
+\input{wach-arcs}
+
+\begin{proposition}[Finite-class colength in the long-orbit range]\label{prop:inert-long-colength}
+Use the marked crystalline surjection and signed jump windows
+of Lemma~\ref{hyp:long-orbit-data}, with the cyclic spacing
+and arc exponents of Paragraph~\ref{par:inert-cut-exponents}.
+Then \eqref{eq:long-orbit-exponent} gives a normalized colength on
+integral finite classes at most \(3C_2U_B\), with \(U_B\) as in
+Section~\ref{sec:cut-length-rows}.
+There exists one rational place entry \(c_w\) for all good characters at \(w\), satisfying
+\[
+ 3C_2U_B\le c_w\le(3C_2+1)U_B.
+\]
+\end{proposition}
+
+\begin{proof}
+The lifting argument behind \eqref{eq:long-orbit-exponent} is
+in the two operators \(\Phi-1\) and \(\gamma-1\) of the Herr
+complex. Here \(\Phi\) advances one letter and \(\gamma\) acts
+within a letter. Work in the tame-invariant Wach coordinates,
+with parameter \(X\) and Wach lattices \(N_i\) at the letters.
+The first filtration estimate places \(\Phi(X^M N)\) in
+\(X^M(\ell,X)N\) on the product \(N\) of the letters. On \(X^MN\) contraction therefore gives the convergent inverse
+\[
+ (\Phi-1)^{-1}=-\sum_{a\ge0}\Phi^a.
+\]
+The coefficients are complete and
+\(\Phi\) preserves the ideal \((\ell,X)\).
+
+\proofstep{Represent the scaled class by a restricted Herr pair and lift its arcs.}
+A finite class in the target has a Herr representative attached to
+a crystalline extension of the trivial lattice by \(T_2\). If \(E_0\) lifts the trivial generator in period coordinates, the target pair representing the connecting class is
+\[
+ ((\Phi-1)E_0,(\gamma-1)E_0).
+\]
+The
+cut colength bound provides, at each cut \(c\), a vector \(x_c\)
+in the extension Wach lattice over \(\ell^R\) times the trivial
+generator. The difference \((\gamma-1)x_c\) belongs to \(XN_c\)
+of the target.
+
+In fact it belongs to \(X\) times the extension
+Wach lattice by triviality modulo \(X\), and to the target
+period module because its image in the trivial quotient vanishes.
+Since \(X\) is regular on the trivial quotient and the
+extension Wach lattice intersects the target period module in the
+target Wach lattice, this gives the assertion. After advancing
+\(j\) letters and multiplying by \(\ell^\sigma\), the correction
+of Paragraph~\ref{par:wach-cut-correction} gives
+\[
+       Q_c=\ell^\sigma\Phi^j x_c-\tau_c,
+       \qquad (\gamma-1)Q_c\in X^M N_{c+j}.
+\]
+Use the target Wach lattice as its image in the extension.
+
+For consecutive cuts \(c',c\), write \(a\ge j\) for their
+forward distance. At the letters from \(c'+j\) up to the
+letter before \(c+j\), set \(E_{c'+j+t}=\Phi^tQ_{c'}\).
+This gives a global vector \(E\) with trivial quotient
+\(\ell^{R+\sigma}\) times the generator. The first component
+\(\ell^\sigma(\Phi-1)E\) vanishes at all the letters within
+each propagated arc. At a shifted cut it is
+\[
+ \begin{split}
+   y_c&=\ell^\sigma(\Phi^a Q_{c'}-Q_c)
+       =\ell^\sigma(\Phi^j w_c+\tau_c),\\
+   w_c&=\Phi^{a-j}Q_{c'}-\ell^\sigma x_c.
+ \end{split}
+\]
+The two terms defining \(w_c\) have the same trivial
+quotient, so \(w_c\) is in the target. Since \(\gamma\)
+commutes with \(\Phi\), the deep-lattice defects of the
+\(Q_c\)'s propagate along each arc and
+\((\gamma-1)y_c\in X^M N\).
+
+Set \(z_c=(\Phi-1)^{-1}(\gamma-1)y_c\) there.
+Uniqueness of the inverse on \(X^MN\) gives
+\[
+ \sum_c(y_c,z_c)
+    =\bigl(\ell^\sigma(\Phi-1)E,\ell^\sigma(\gamma-1)E\bigr).
+\]
+The difference from \(\ell^{R+2\sigma}\) times the original
+pair is the Herr coboundary of
+\(\ell^\sigma E-\ell^{R+2\sigma}E_0\). This is a target
+vector because its two terms have equal trivial quotient.
+
+Let \(c'\) be the preceding cut and \(a\) the length of its arc
+to \(c\). The propagated \(Q_{c'}\) at \(c\) belongs to the span
+of \(\Phi^a\) of the extension Wach lattice at \(c'\), since its
+correction at \(c'+j\) is in the span of \(\Phi^jN_{c'}\).
+The signed bound into the Frobenius span in
+Paragraph~\ref{par:wach-level-models} gives the same membership
+after multiplying \(x_c\) by
+\[
+ \Lambda=\prod_{s<a}p_s^{H_s^{\mathrm{arc}}}.
+\]
+
+The filtration of this extension has the same bounds as the target
+with the jump at zero included.
+
+For \(\Lambda w_c\), membership in the extension Frobenius
+span and in the target period module already holds. To
+intersect these two modules, put \(\mathcal R=O[[X]]\)
+and use a basis \((b_t)_t\) of \(\mathcal R\) over
+\(\phi^a(\mathcal R)\). Such a basis comes from Weierstrass
+division by \(\phi^a(X)-Y\) over \(O[[Y]]\), since
+\(\phi^a(X)\) first has a unit coefficient in degree \(\ell^a\).
+Group the extension expression as \(\sum_t b_t\Phi^a u_t\).
+If \(d_t\) is the trivial quotient of \(u_t\), then
+\[
+       \sum_t b_t\Phi^a u_t\longmapsto
+                    \left(\sum_t b_t\phi^a(d_t)\right)e_0=0 .
+\]
+Independence of the basis and injectivity of \(\phi^a\)
+give \(d_t=0\) for every \(t\). Therefore every \(u_t\)
+lies in the target Wach lattice at \(c'\). This proves
+\(w_c\in W_2\). The two defects to be subtracted belong respectively to \(X^MN_c\) and \(XN_c\). Therefore
+\[
+ (\gamma-1)w_c\in X^M N_c+XN_c\subseteq XN_c.
+\]
+
+
+For a change of cut vector by \(u\in XN_c\), the correction
+of Paragraph~\ref{par:wach-cut-correction} changes by
+\(\ell^\sigma\Phi^j u\) modulo the transported error.
+It cancels the change of the uncorrected advanced vector.
+Hence the corrected first component changes by a vector
+\[
+ v\in X^M N.
+\]
+The cocycle equation determines the change
+of the second component as \((\Phi-1)^{-1}(\gamma-1)v\).
+Together these give the coboundary of \((\Phi-1)^{-1}v\).
+Thus comparison of cut vectors modulo \(XN_c\) suffices
+for the finite classes of the corrected arc pairs.
+
+Choose a product \(D_{\rm prev}\) of cyclotomic factors
+clearing \(\Lambda w_c\) into \(N_c\), by iterating the
+one-step height inclusions on the preceding arc. Choose
+\(D_{\rm adv}\) clearing \(\Phi^j N_c\) into \(N_{c+j}\)
+and \(D_\tau\) clearing \(P_c\) into \(N_{c+j}\).
+Then the product
+\[
+            D=\phi^j(D_{\rm prev}\Lambda)\,D_{\rm adv}D_\tau
+\]
+clears \(y_c=\ell^\sigma(\Phi^j w_c+\tau_c)\) into \(N_{c+j}\)
+by semilinearity and \(\tau_c\in P_c\).
+The second component \(z_c\) and the defect
+\((\gamma-1)y_c=(\Phi-1)z_c\) are in \(X^MN\).
+Thus the two components satisfy the actual finite
+cyclotomic-denominator and deep-lattice tests.
+
+Pass to the ordinary cyclotomic parameter \(\pi\). Put
+\(V=T\otimes_O K\), with \(K=\operatorname{Frac}(O)\), and set
+\[
+ q_{\rm cyc}=\phi(\pi)/\pi,\qquad t=\log(1+\pi),\qquad
+ \lambda=t/\pi .
+\]
+The factors \(p_s\) occurring in \(D\) are associates of
+\(\phi^s(q_{\rm cyc})\). Also \((X^M)=(\pi^{(\ell-1)M})\).
+Thus, for some finitely supported family of integers \(b_s\ge0\),
+the Herr pair \((y,z)\) satisfies
+\begin{equation}\label{eq:long-arc-herr-lattices}
+ \Bigl(\prod_s\phi^s(q_{\rm cyc})^{b_s}\Bigr)y\in N(T),\qquad
+ z\in\pi N(T),\qquad (\gamma-1)y=(\Phi-1)z .
+\end{equation}
+The integral Herr isomorphism gives a class in \(H^1(F,T)\).
+Its rational image is represented by the same pair in the Robba-ring
+Herr complex \cite[Theorems 2.3 and 2.8]{liu-herr}.
+In the corresponding extension \(0\to V\to V'\to K\to0\), choose
+a tame-invariant lift \(e_0\) of the trivial basis. The extension
+actions are \(\Phi e_0=e_0+y\) and \(\gamma e_0=e_0+z\).
+
+Let \(\mathcal B^+\) denote the analytic functions on \(|\pi|<1\).
+Use crystalline coordinates in the kernel. For a positive crystalline
+representation the Wach comparison and its elementary divisors put the
+change of basis and its inverse over \(\mathcal B^+[1/\lambda]\)
+\cite[Propositions II.2.1 and III.2.1]{berger-wach}.
+A Tate twist gives the same conclusion for \(V\): the ratio of
+the two twist generators is
+\[
+ \pi^{-k}/t^{-k}=\lambda^k.
+\]
+
+Since \(\lambda(0)=1\), the change of basis is regular at zero
+in both directions. Writing brackets for crystalline coordinates gives
+\[
+ \lambda=\prod_{s\ge0}\frac{\phi^s(q_{\rm cyc})}{\ell},
+ \qquad \lambda^B[y]\in(\mathcal B^+)^{\dim V}\quad(B\gg 0),
+ \qquad [z](0)=0 .
+\]
+By \eqref{eq:long-arc-herr-lattices}, a sufficiently high power of the product absorbs all finitely
+many cyclotomic denominator factors of \(y\) and the poles of the
+change of basis. The factor \(\pi\) in \(z\) gives the last equality.
+
+In the crystalline basis the equation \((\gamma-1)v=z\)
+has a solution analytic near zero. Use \(t\) as local
+coordinate and put \(\omega=\chi(\gamma)\). If
+\(z(t)=\sum_{k\ge1} z_k t^k\), the solution with zero
+constant is
+\[
+          v(t)=\sum_{k\ge1}\frac{z_k}{\omega^k-1}t^k .
+\]
+The valuations \(1+v_\ell(k)\) of the denominators grow
+logarithmically in \(k\). Thus any strictly smaller positive disk of convergence of
+\(z\) is a disk of convergence of \(v\). For \(u=y-\Phi v+v\)
+the Herr equation and \(\gamma\Phi=\Phi\gamma\) give
+\[
+ (\gamma-1)u=(\Phi-1)z-(\Phi-1)(\gamma-1)v=0 .
+\]
+
+In the crystalline basis the coefficient \(u_k\) in degree \(k\)
+is therefore killed by \(\chi(\gamma)^k-1\). For \(k>0\) this
+factor is nonzero, so the coordinates of \(u\) are constant. For every \(m\ge1\)
+the identity of germs is
+\[
+ v=\Phi^m v-\sum_{i=0}^{m-1}\Phi^i y+\sum_{i=0}^{m-1}\Phi^i u.
+\]
+On every disk of fixed radius less than one,
+\(\phi^m(\pi)=(1+\pi)^{\ell^m}-1\) tends uniformly to zero.
+Hence \(\Phi^m v\) is analytic there for sufficiently large
+\(m\). Also \(\lambda^B\Phi^i y\) is analytic on the
+whole open disk for every \(i\), since
+\[
+ \lambda/\phi^i\lambda=\prod_{k<i}\phi^k(q_{\rm cyc}/\ell).
+\]
+
+The displayed identity therefore extends \(\lambda^B v\)
+to the whole disk. The continuations agree on overlaps by
+their Taylor series at zero. It follows that \(v\) belongs
+to the Robba module with \(t\) inverted. The identity
+\[
+ (\gamma-1)v=z
+\]
+holds there by its power series identity
+at zero after clearing powers of \(\lambda\), so \(e_0-v\)
+is \(\gamma\)-invariant. Its average over the tame
+group is invariant under the full cyclotomic group and still
+maps to the trivial basis. Berger's comparison
+\cite[Theorem 0.2]{berger-differential} identifies these
+invariants with \(D_{\rm cris}(V')\). The rank increases
+by one from \(D_{\rm cris}(V)\), so \(V'\) is crystalline.
+Thus the integral Herr class is finite. This criterion applies
+to both lattices and is compatible with the same row map.
+
+The quantitative estimate at an arc supplies a source vector
+of this kind mapping to \(m_c w_c\) modulo \(XN_c\), where
+\[
+ m_c=u_c\ell^{2\sigma+2a_0+R+k_c},\qquad u_c\in O^\times,
+                 \qquad 0\le k_c\le2\kappa.
+\]
+It applies the polynomials in \(\gamma\) to the target and then
+to its lift to impose the required local exponent windows.
+Modulo \(XN_c\) their actions reduce to their values at \(1\),
+since \(w_c\) is \(\gamma\)-invariant modulo this submodule.
+
+Let \(\omega\) be the cyclotomic value of \(\gamma\), with
+\(v_\ell(\omega-1)=1\), and let \(E=a-1\le A\).
+The polynomials have the form
+\[
+ P_{E,J}(Z)=\left(\sum_{v=0}^{\ell^E-1}Z^v\right)
+            \prod_{s\in J\setminus\{0\}}
+                 (Z^{\ell^E}-\omega^{s\ell^E}),
+\]
+At \(1\) the valuation is
+\(E+\sum_{s\in J\setminus\{0\}}(1+E+v_\ell(s))\)
+by the valuation of powers of a principal unit. The window
+bound gives at most \(\kappa\) for each polynomial. Between the two
+polynomials the comparison of Paragraph~\ref{par:wach-mixed-constant}
+costs \(2\sigma+2a_0+R\) on the level inputs.
+Paragraph~\ref{par:wach-cut-colength} gives the cut colength
+on the two-sided Wach height bounds. The simultaneous level
+realization and the two polynomial actions are those of
+Paragraphs~\ref{par:wach-level-models}--\ref{par:wach-polynomial-actions}.
+
+Multiply the finite source class for arc \(c\) by
+\(u_c^{-1}\ell^{2\kappa-k_c}\), and sum over the cuts. Its image
+is \(\ell^{2\sigma+2a_0+R+2\kappa}\) times the sum of the target
+arc classes. Together with the initial decomposition this gives
+\[
+ e=2R+4\sigma+2a_0+2\kappa.
+\]
+The sum over the cuts costs no
+additional power of \(\ell\).
+
+\proofstep{Include the torsion generators and then take the normalized colength.}
+The free part of the arc calculation bounds the failure of lifting along the orbit. Torsion in the generators must be included before the resulting length can enter the inert-prime table.
+
+
+Let \(V_2=T_2\otimes_O\operatorname{Frac}(O)\) and
+\(r_0=\dim V_2^{G_F}\). By the Bloch--Kato dimension formula the
+free rank of the integral finite group is
+\[
+ \dim(D_{\mathrm{dR}}(V_2)/\mathrm{Fil}^0)+r_0\le dr+r_0.
+\]
+
+For a uniformizer \(\varpi\) of \(O\), the long exact sequence
+for multiplication by \(\varpi\) gives
+\[
+ 0\longrightarrow T_2^{G_F}/\varpi T_2^{G_F}
+   \longrightarrow (T_2/\varpi T_2)^{G_F}
+   \longrightarrow H^1(F,T_2)[\varpi]\longrightarrow0.
+\]
+The first term has dimension \(r_0\) and the middle term has
+dimension at most \(r\). Thus at most \(r-r_0\) torsion generators
+are needed. The rank of the free quotient and the number of torsion generators together cost at most
+\[
+ (dr+r_0)+(r-r_0)=(d+1)r.
+\]
+Since its quotient by the image of
+the finite group of \(T_1\) is killed by \(\ell^e\), its length
+divided by \(\operatorname{length}_O(O/\ell O)\) is at most
+\((d+1)re\). This is the normalization used for the actual row
+cokernel. It handles all coefficient ramification degrees.
+
+Finally, for \(h\ge1\) use
+\[
+ \log_\ell h\le h/D_0+j+1,
+\]
+by splitting the logarithm at
+\(D_0\) and using \(\log_\ell t\le t\) for \(t>0\).
+When the word has a position with larger jumps, the bracket in the bound for
+\(e\) is at most \(2H/D_0+2(G_P+1)(j+1)\). Otherwise \(h=g\le G_P\)
+and it is at most \(3(G_P+1)(j+1)\).
+
+In both cases the resulting
+normalized colength is at most \(3C_2 U_B\), with \(U_B\) as in
+Section~\ref{sec:cut-length-rows}. Choose a rational table entry \(u_B\) satisfying
+\[
+ 3C_2U_B<u_B<(3C_2+1)U_B.
+\]
+The lower bound makes \(u_B\) valid for the cokernel at every good character. Such an entry exists since \(U_B>0\).
+This gives case B of the ordinary congruence comparison on the
+tied local data, with one constant and cutoff for every place,
+coefficient field and marked character in the window.
+
+Use the single word chosen for the large-orbit estimate.
+
+Sum the arc bounds and convert the result to the rational entry in its marked row.
+\label{cor:inert-long-orbit-1}
+
+The filtration statement for the Wach module
+of a crystalline representation over an unramified field is
+Berger's filtered comparison \cite[Corollary III.4.5]{berger-wach}.
+The exponent in \eqref{eq:long-orbit-exponent} belongs to the
+submission's quantitative lifting argument.
+\end{proof}
+

@@ -1,0 +1,238 @@
+\subsection{Transporting the pointwise bounds at the prime assigned to the sequence}
+\label{subsec:word-period}
+
+The preceding orbit estimates are away from the prime assigned to the sequence. The coefficient places above that prime fall into two classes, with different support conditions.
+
+Let \(T=T_u=\pi\bar\pi\) be the chosen prime assigned to the sequence and let \(w\mid T\)
+have ramification index \(e_w\). Call the place distinguished if it
+divides the embedded \(\pi\). Write \(V_w\) for the local factors
+corresponding to tops under the position bijection at a distinguished
+place, and \(V_w=\varnothing\) at the conjugate places. Set
+\(s=(t+1)/2\), 
+\[
+  N_i=k+i(t+1).
+\]
+ Let \(S_i\) be the integral space
+of values of the twisted forms of level \(i\) at \(w\), and \(K_i\)
+the transition to level \(i+1\).
+
+For this subsection its pointwise
+kernel is denoted by \(k_i(P,P')\). For a set \(V\) of factors
+define \(B_i(P,V)\) by the integral coefficient tests in mixed
+frames. At a distinguished place the frame uses the kernel of the
+residue row at factors in \(V\) and the underlying lattice elsewhere.
+At a conjugate place it uses the kernel frames with the conjugate
+coefficient action at every factor. On \(V=\varnothing\) the tests
+at the representatives define \(S_i\). All these tests are
+independent of the choice of adapted bases by their integral
+unimodular transition matrices.
+
+\begin{proposition}[Valuation after transporting the decorated column]\label{prop:word-prime-transfer}
+Suppose the pointwise estimates \eqref{eq:tag-w1} and incidence identity
+\eqref{eq:tag-w2} hold at every pair of points at the assigned levels.
+On the actual local trace-zero column, the composite transition
+to the terminal lattice has denominator killed by every
+coefficient \(c\) with \(v_w(c)\ge e_w m E_T(w)\).
+Here \(E_T(w)=0\) at a conjugate place. At a distinguished
+place it is
+\[
+ E_T(w)=2\sum_\tau W_\tau+fN_m+
+              |V_w|\frac{(t+1)(m+1)}4.
+\]
+This applies to each twisting tuple satisfying the same
+pointwise hypotheses.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Set out the two local inclusions and the neighbor incidence identity.}
+Here are the exact point estimates on which the estimate at the prime assigned to the sequence
+depends. They are needed at every pair of points at the indicated
+levels. Denote the complete set of factors by \(V_{\rm all}\).
+At a distinguished place and a conjugate place, respectively, they read
+\[
+\begin{split}
+ T^{fN_i+\sum_\tau s_{{\rm div},i}(\tau)}
+    k_i(P,P')B_i(P,\varnothing)
+       &\subset B_{i+1}(P',V_{\rm all}),\\
+    k_i(P,P')B_i(P,\varnothing)
+       &\subset T^{fs} B_{i+1}(P',\varnothing).
+\end{split}                                                       \tag{W1}\label{eq:tag-w1}
+\]
+The pointwise correspondence for the decorated neighbors at \(v\) is
+\[
+  \sum_{P'_1:\,P'\to_v P'_1}k_i(P,P'_1)y
+       =T^s\sum_{P_0:\,P_0\to_v P}k_i(P_0,P')y .               \tag{W2}\label{eq:tag-w2}
+\]
+The two sums in \eqref{eq:tag-w2} run through individual neighbors before passage
+to classes. We prove \eqref{eq:tag-w2} directly. Use \((D,\ell)\) and
+\((D',\ell')\) for the two local lattices with surjective residue
+rows, and take \(z_0\in D\) with \(\ell(z_0)=1\). The source
+marking has kernel \(H\). The finite reader in this factor takes
+value one on \(x\) precisely when \(xD\subset D'\) and
+\(\ell'x=\ell\), and zero otherwise.
+
+An upper target neighbor corresponds to \(y\in D'/TD'\) with
+\(\ell'(y)=1\), with lattice \(D'_y=D'+\mathcal O y/T\) and
+row \(z\mapsto\ell'(Tz)\). The latter row has kernel \(D'\).
+A lower source neighbor has lattice \(H\) and row \(h\) on
+\(H/TH\) with \(h(Tz_0)=1\).
+
+For a rational \(x\), either
+sum of indicators is one precisely when
+\[
+                xH\subset D',\qquad Txz_0\in D',
+                  \qquad \ell'(Txz_0)=1.
+\]
+Indeed at an admissible upper neighbor, the row equality on
+\(H\) forces \(xH\subset D'\), and the row on \(z_0\) forces
+\(y=Txz_0\bmod TD'\). Conversely this \(y\) works because
+\(D=H+\mathcal O z_0\) and \(\ell\) is the coefficient of
+\(z_0\) modulo \(T\). At a lower neighbor the only possible
+row is \(h=\ell'x|_H\), and it works under exactly the three
+displayed conditions. Thus the test includes every map, of
+any rank. All other local decorations are fixed, since the
+prime assigned to the sequence is disjoint from the selected twisting primes.
+
+For each upper summand move both underlying companions down
+by one local index. They become the companions of \(H,D'\),
+which are the same for every lower summand. The split vacuum
+comparison on a fixed away reader at source and target
+determinant increments \(d,d'\) has scalar
+\[
+          \omega_v^{d'-d} T^{N_{i+1}d/2-N_i d'/2}.
+\]
+Here the unramified step and twisting characters give the
+value \(\omega_v\) at the uniformizer. The other factor is
+the inverse square root of the ratio of the two Hom volumes:
+for a source index one the Hom ball expands by
+\(T^{N_{i+1}}\), and for a target index one it contracts
+by \(T^{N_i}\).
+
+To make the comparison for this reader,
+pass to a common refinement of its two finite translation
+quotients. For a coset \(C\) partitioned into its finer cosets \(C'\), the identity of theta sections follows term by term from
+\[
+  \mathbf1_C=\sum_{C'\subset C}\mathbf1_{C'}.
+\]
+ The away values and derivatives agree there,
+and the two split lattice changes act on the same indicator.
+The reader on the refined quotient is still the product of
+the preceding local test and its fixed away part. Thus the
+move has \(d=d'=1\) at this factor and zero at the others,
+so its scalar is \(T^s\). Linearity and the indicator equality
+prove \eqref{eq:tag-w2}. Target equivariance follows by changing the
+target variable in the theta sum and in its frame polynomial.
+\label{cor:word-period-1}
+
+Extend integral values from the level representatives by
+
+\[
+  \varphi(\gamma P_b)=\gamma\varphi(P_b).
+\]
+ The stabilizer
+condition makes this single valued, and transport preserves
+the adapted integral frames. In the kernel sum each denominator
+\(|\operatorname{Stab}P_b|\) is a \(T\)-unit. Otherwise Cauchy's
+theorem would give an element \(\gamma\) of order \(T\), and the
+faithful rational representation would imply
+\[
+ T-1=\deg\Phi_T\le \deg\min_{\mathbb Q}(\gamma)
+                         \le 2fN_m<T-1 .
+\]
+The sum therefore lies in the target lattice by \eqref{eq:tag-w1}.
+Target equivariance extends that conclusion from representatives
+to every point.
+For an integral functional \(f\) and a unit-valued level character \(\chi\), a change of level representative preserves the test because
+\[
+  v_w(\chi(h)f)=v_w(f) .
+\]
+At a distinguished place the operator \(U_{i+1,v}\) removes \(v\)
+from the set of mixed factors. For each forward neighbor at the
+target, the kernel frame of that neighbor at \(v\) spans the
+ordinary lattice of the original target. The other frames have
+the original spans. Thus every summand passes the reduced test.
+
+At an unused factor \(v\) one can remove the mixed condition
+by multiplying instead by \(T^{\lambda_1(\tau(v))}\), where
+\(\lambda\) is the true target weight. In adapted bases the change of frame is diagonal up to integral invertible factors, with elementary divisors
+\[
+  T,\,1,\ldots,1.
+\]
+Thus the least elementary divisor of its inverse has valuation \(-1\), in the valuation giving \(T\) order one. For a
+polynomial representation with bottom weight removed the
+maximum degree in the changed coordinate is the number of
+columns of the diagram, since each minor uses it at most once.
+Restoring the determinant power adds the bottom weight to this
+degree and gives \(\lambda_1\).
+
+If the bottom weight is \(\lambda_k\), the polynomial width and the determinant power give
+\[
+  (\lambda_1-\lambda_k)+\lambda_k=\lambda_1 .
+\]
+ The argument also applies to
+negative bottom weights. Consequently multiplying by this power
+puts the mixed value in the smaller test with \(v\) removed.
+Use the \(U\) operation at the tops and the scalar operation at
+every other factor. The sum of the latter exponents is at most
+\(\sum_\tau W_\tau\), since each first weight off the tops is
+bounded by its \(W_\tau\). Also
+\(\sum_\tau s_{{\rm div},i}(\tau)\le\sum_\tau W_\tau\).
+Let \(U_j\) be the ordered product at \(V_w\). We get
+\[
+ T^{e} U_{i+1}K_i S_i\subset S_{i+1},\qquad
+ e=\begin{cases}
+       2\sum_\tau W_\tau+fN_m,&w\mid\pi,\\
+       0,&w\nmid\pi ,
+     \end{cases}                                                  \tag{W3}\label{eq:tag-w3}
+\]
+In the second
+case \eqref{eq:tag-w1} already gives ordinary integral values and the empty
+product acts as the identity.
+
+To transfer the \(U\)'s across \(K_i\), apply \eqref{eq:tag-w2} term by term
+to the equivariant extension. Finite incoming and outgoing
+fibers give two ways of summing over orbits of incident pairs
+\((P_0,P)\). For a fixed marked first endpoint its stabilizer
+acts on the finite fiber, and the reciprocal order of that
+stabilizer times the orbit size is
+\(1/|\operatorname{Stab}(P_0,P)|\). Fixing the second endpoint
+gives exactly the same mass. This double count and source
+covariance yield
+\[
+ U_{i+1,v} K_i=T^s K_i U_{i,v},\qquad
+ U_{i+1}K_i=T^{s|V_w|}K_i U_i .                                 \tag{W4}\label{eq:tag-w4}
+\]
+
+All the sums act on forms: the neighbor sets are equivariant,
+and the point kernel is equivariant at the target. Induction
+moves one full product \(U_j\) through \(j\) successive
+transitions with scalar \(T^{js|V_w|}\). Applying \eqref{eq:tag-w3} at each
+stage therefore proves
+\[
+ T^{b}(K_{m-1}\cdots K_0)U_0^m S_0\subset S_m,\qquad
+ b=me+s|V_w|\frac{m(m+1)}2=m E_T(w).                              \tag{W5}\label{eq:tag-w5}
+\]
+Equivalently, \(E_T(w)=0\) at a conjugate place and at a
+distinguished place
+\[
+ E_T(w)=2\sum_\tau W_\tau+fN_m+
+             |V_w|\frac{(t+1)(m+1)}{4}.
+\]
+In particular one pays the commutation at stage \(j\) exactly
+\(j\) times. The weaker bound obtained by charging \(m\) times
+at every stage need not meet the specified price.
+
+\proofstep{Use the factor produced by repeated commutation on the actual column.}
+The actual local column is the image of \(S_0\cap R\) under
+\(T^{a}U_0^m\), with \(a=m\sum_{v\in V_w} b_v\ge0\) as in
+Section~\ref{sec:ramified-column}. Transporting the initial
+untwisted space through its level-zero identification preserves
+the mixed tests, top weights and neighbor operators. For every
+coefficient \(c\) with \(v_w(c)\ge e_w b\), the element
+\(cT^{a-b}\) is integral at \(w\). Multiplying \eqref{eq:tag-w5} by this
+element proves that \(c\) times the true column maps into the
+terminal lattice. This gives the contribution at the assigned prime for
+every twisting tuple satisfying the same point bounds.
+\label{cor:word-period-2}
+\end{proof}
+

@@ -1,0 +1,170 @@
+\subsubsection{Lattice inclusions on the selected lift}\label{subsec:lift-exponent-models}
+\hypertarget{source-lift-exponent-models}{}
+
+The least exponents entering the signed index measure a further lattice inclusion beside the congruence length. To bound them, put the two coefficient lattices in the same space of forms at the selected lift.
+
+Fix a selected lift, a tuple and a coefficient place \(w\mid p\).
+Write \(Z\) for the selected space of forms at its row level.
+In the coordinates of \(Z\), \(\mathcal C\) and \(\mathcal D\)
+are the inverse images of the value lattices for the dual Weyl
+and Weyl coefficients, respectively. The coordinate maps on
+the finite class set identify both lattices simultaneously.
+\begin{proposition}[Weyl inclusion on the original section lattices]
+\label{prop:local-weyl-value-inclusion}
+On the selected tuple and place \(w\mid p\), the sum of the exact Weyl exponents at all labels gives
+\[
+ p^{\sum_\tau e_p(\lambda_\tau)}\mathcal C_w\subseteq\mathcal D_w.
+\]
+For \(y<p\le h\) as in Lemma~\ref{hyp:weyl-prime-range},
+exclude \(q,d,p_{\rm de},p'_{\rm de}\) and primes dividing an
+integer of \(\mathcal I\). A power that gives the value inclusion at every local model under
+an occurring integral Hecke character gives the same inclusion on
+\(\mathcal C_w,\mathcal D_w\) at the original level.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Tensoring the exact inclusions and localizing the value map.}
+At each coefficient label \(\tau\) choose a local basis of the
+underlying lattice. The two coefficient models in that basis
+use the dual Weyl and Weyl lattices \(W_\tau^\vee,W_\tau\) in
+the prescribed rational realizations. The inclusion of
+Section~\ref{subsec:lift-exponent-primes} tensors to
+\[
+ p^{\sum_\tau e_p(\lambda_\tau)}
+          \bigotimes_\tau W_\tau^\vee
+       \ \subseteq\  \bigotimes_\tau W_\tau .
+\]
+An additive weight translation twists both sides by the same
+determinant line and does not change this exponent. If
+\(\operatorname{ev}\) is the finite map of value coordinates,
+the inverse image of the Weyl lattice is the kernel of its
+composition with reduction modulo that lattice.
+Writing \(q\) for reduction modulo the Weyl value lattice, exactness of localization gives
+\[
+ (\ker(q\circ\operatorname{ev}))_w=\ker(q_w\circ\operatorname{ev}_w).
+\]
+Equivalently one can
+multiply the finitely many denominators outside \(w\) occurring
+in the individual coordinates. The displayed inclusion therefore
+gives the asserted exponent on each tuple.
+\label{cor:lift-exponent-models-1}
+
+\proofstep{Comparing the two lattices in the same operator space.}
+
+We describe the sharper bound at primes in the weight range
+\(y<p\le h\) outside the exceptional interval and specified
+set, using the tuple assigned to \(w\). The base level and selected block hypotheses give finite free tensor value lattices over the same local coefficient ring. Choose
+an embedding of the coefficient field into \(\overline{\Q}_p\)
+inducing \(w\), and adjoin the roots of unity for the finite
+level character to the induced local field. Its integer ring
+\(O\) is a DVR. The integral frame data are changes of basis
+on the two local value lattices, including the level group
+matrices and character.
+
+In the common interpolation frame a Hecke correspondence is represented on both lattices by the same operator
+\[
+ T=\sum_j a_j R(g_j),\qquad a_j\in O,
+\]
+with \(R(g_j)\) the specified right translations. Thus on the auxiliary space \(M\) of
+integral forms the operators define an action of the commutative
+polynomial algebra \(\mathcal T\) over \(O\) in these operators.
+This action preserves the forms with values in the Weyl lattice,
+whose submodule is \(M_{\rm W}\).
+
+\proofstep{Detecting a failed inclusion at an occurring residual character.}
+Take the integral form \(x_0\) from the dual Weyl reading of a
+vector of \(\mathcal C\). Its value coordinates in the auxiliary
+model satisfy covariance: it holds after scalar extension, and
+extension is injective on the coordinates. The cyclic module
+\[
+ C=\mathcal T x_0\subset M
+\]
+is finite free over \(O\), and its
+generic extension lies in the selected Hecke-stable span.
+Write \(z=[p^a x_0]\) in \(M/M_{\rm W}\). If \(z\ne0\),
+choose a maximal ideal \(\mathfrak m\) containing its annihilator.
+Then \((\mathcal T z)_{\mathfrak m}\ne0\).
+The kernel of \(\mathcal T\to\operatorname{End}_O C\)
+kills \(x_0\) and hence \(z\). Thus the inclusions of ideals
+\[
+     \ker(\mathcal T\to\operatorname{End}_O C)
+                   \subseteq\operatorname{Ann}_{\mathcal T}(z)
+                   \subseteq\mathfrak m
+\]
+identify \(\mathfrak m\) with a maximal ideal of the
+finite image algebra \(A\).
+
+In a splitting field simultaneously triangularize the action on
+\(C\). The diagonal characters \(\chi_j\) are integral,
+and the matrices of \(J=\bigcap_j\ker\chi_j\) are strictly upper
+triangular. In a triangular basis, with \(C_i\) the span of the first
+\(i\) vectors, this gives
+\[
+ JC_i\subseteq C_{i-1}\quad(1\le i\le\dim C),
+ \qquad J^{\dim C}C=0 .
+\]
+The action of the image algebra is faithful, so \(J\) is nilpotent. The product of integer rings
+of the \(\chi_j\) is integral over \(A/J\). Lying over
+gives a coordinate character with reduction \(\mathfrak m\).
+Its generalized eigenspace is nonzero. On the generalized eigenspace \(V\), let \(a\) be the last exponent with \(\mathfrak n^aV\ne0\), for the maximal ideal \(\mathfrak n\) of the character. Then
+\[
+ 0\ne\mathfrak n^aV\subseteq\ker\mathfrak n,\qquad \mathfrak n^{a+1}V=0.
+\]
+Any nonzero vector in this term is an eigenvector. It is an eigencharacter in the selected span:
+extension of the interpolation frame preserves independence
+because its nonzero full-rank minors remain nonzero.
+
+\proofstep{Descent of the Weyl value test to the given row.}
+Use the local models at all maximal ideals arising in this
+way, equivalently those under integral eigencharacters occurring
+in the selected span. If \(p^a\) gives the Weyl inclusion in
+every such model, a maximal ideal detecting a nonzero class of
+\(p^a x_0\) would contradict that inclusion. Thus \(p^a x_0\) has
+Weyl values. Descent of the value tests gives the inclusion on
+\(\mathcal C,\mathcal D\). In a localized coefficient basis the
+condition is precisely nonnegative valuation on each coordinate.
+It follows at the original level by the inverse-image description
+above. This argument requires the same value and operator readings on both lattices.
+\label{cor:lift-exponent-models-2}
+
+\end{proof}
+
+\input{lift-crystalline-depth}
+\input{lift-graded-inclusion}
+
+\begin{lemma}[Least exponent on the original Weyl value pair]
+\label{lem:weyl-least-exponent-local}
+For the coefficient models of Proposition~\ref{prop:local-weyl-value-inclusion},
+let \(B_j(p)\) be the bound from Section~\ref{subsec:lift-exponent-primes}
+for the weight record of lift \(j\). For the ramification index \(e_w\) and the least local exponent,
+\[
+ J_{j,w}/e_w\le B_j(p)\qquad(w\mid p).
+\]
+This normalized upper bound descends through the coefficient extension.
+\end{lemma}
+
+\begin{proof}
+The exponent in these models is computed with the actual
+Frobenius and conjugation labels of the frame. In the indicated
+range the two window correction counts vanish by the shape
+calculation of Section~\ref{subsec:lift-exponent-primes}.
+The depth and all other terms are therefore independent of the Frobenius and conjugation labels. One power applies at every maximal ideal in the cover. Outside the weight range use the sum of the full Weyl exponents, with exponent zero above height. The small and excluded primes likewise use the full Weyl sum. At a remaining prime the contribution of each larger-weight index is the minimum of its full exponent and its integral coarse correction. These comparisons fix the
+tuple at \(w\) before taking the least exponent and keep the
+original weight record for the prime sum. In compatible Smith bases the two lattices to be compared are
+\[
+ \mathcal C_w=\bigoplus_i O_we_i,\qquad \mathcal D_w=\bigoplus_i O_w\varpi_w^{d_i}e_i\subseteq\mathcal C_w.
+\]
+
+Then
+\[
+     J_{j,w}=\max_i d_i,\qquad
+     p^{B_j(p)}\mathcal C_w\subseteq\mathcal D_w
+             \ \Longrightarrow\ d_i\le e_wB_j(p)\quad\text{for all }i.
+\]
+The same comparison applies if the surviving eigensystem
+requires an extension of the coefficient field. Over the extension the exponents and
+the absolute ramification index both multiply by its relative
+ramification index.
+\label{cor:lift-exponent-models-3}
+\end{proof}
+

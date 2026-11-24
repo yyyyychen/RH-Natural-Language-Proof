@@ -1,0 +1,504 @@
+\paragraph{Curvature at the selected short weight.}
+\hypertarget{source-slice-short-analytic}{}
+
+Control on the chosen cut must extend to a neighborhood. The curvature of the short weight determines the local norm comparison used in this extension.
+
+Write \(q\) for the length of the first signature block,
+\(p=r-q\), and \(s=fr(r-1)/2\). At an orthonormal flag,
+use a lower unipotent coordinate matrix \(I+Z\). The
+Gram matrix in each embedding is \((I+Z)^*J(I+Z)\), where
+\(J\) is diagonal with \(q\) signs of one kind followed by
+\(p\) of the other. The potential of a weight \(v\) is
+\[
+ \varphi_v=\sum_\tau\sum_{i=0}^{r-1}
+               v_{\tau,i}\log\left|
+                 \frac{\Delta_{\tau,i+1}}{\Delta_{\tau,i}}\right|,
+\]
+where \(\Delta_{\tau,k}\) is the leading minor of
+order \(k\) and \(\Delta_{\tau,0}=1\).
+
+In the quadratic expansion of this minor's logarithm,
+an entry \(Z_{ji}\), \(i<j\), contributes only when
+\(i<k\le j\). The first \(k\) rows give a unit lower
+triangular factor whose determinant is constant. The
+remaining rows contribute the quadratic trace with sign
+\(J_j/J_i\). For a tangent connecting positions \(i<j\), the coefficient of the Levi form after summing the weight differences is
+\[
+  \begin{cases}v_i-v_j&i,j\text{ in the same block},\\v_j-v_i&i,j\text{ in opposite blocks}.\end{cases}
+\]
+ At another
+point take its orthonormal frame by triangular
+orthogonalization. The induced change on tangents is
+invertible and the logarithm of the change in the weight
+character is pluriharmonic. This transports the diagonal
+calculation to that point.
+
+In this chart the invariant density is
+\(D=\prod_{\tau,k<r}|\Delta_{\tau,k}|^{-2}\).
+The full Gram determinant is constant on the unipotent
+cell, so
+
+\[
+  \mathcal L(\log D)=\mathcal L(\varphi_{k_{\rm vol}})
+\]
+with \((k_{\rm vol})_{\tau,i}=2i-(r-1)\). Write \(d\)
+for the sign weight that is \(-1\) on the first block
+and \(+1\) on the second. The radius potential \(R\)
+is \(\varphi_d/2\) plus a pluriharmonic function, since
+the only nonzero interior weight difference of \(d\)
+occurs at \(q\). In particular \(\mathcal L(R)\) has unit
+coefficients in the cross-block directions and zero
+coefficients within blocks in these coordinates.
+\label{cor:slice-short-analytic-1}
+
+\begin{lemma}[Curvature for the short-weight interpolation]
+\label{lem:short-weight-curvature}
+In the flat cut chart with the given signatures, the short weight
+has the positive Levi directions used in the local interpolation
+estimate. For the selected cutoff on each fixed zero neighborhood, put \(G=w_F-k_{\rm vol}-s w_L\). With \(i,j\) in opposite blocks in the indicated order, the signature margin is
+\[
+ G_j-G_i\ge2((w_L)_j-(w_L)_i)\ge19T/5.
+\]
+
+\end{lemma}
+
+\begin{proof}
+\proofstep{Positivity at the chosen short weight.}
+Here is the weight comparison used on both runs.
+Put \(G=w_F-k_{\rm vol}-s w_L\). Within either block the
+selected weight inequalities give
+\(G_i-G_{i+1}\ge2((w_L)_i-(w_L)_{i+1})>0\).
+Across the blocks they give
+\((w_L)_j-(w_L)_i\ge19T/10\) and
+\(G_{r-1}-G_0\ge2((w_L)_{r-1}-(w_L)_0)\).
+
+Summing the adjacent inequalities from the outer
+indices to \(i,j\) gives
+\[
+ G_j-G_i\ge2((w_L)_j-(w_L)_i)\ge19T/5 .
+\]
+These are the bounds for the actual shifted short weight.
+In taking consecutive differences of \(w_F-s w_L\),
+the volume weight contributes
+\((k_{\rm vol})_{i+1}-(k_{\rm vol})_i=2\). The light weight and
+\(2w_L-d\) are strictly positive in the Levi formula.
+For \(0\le u\le T\), the weight \(G-u d-w_L/2\)
+has nonnegative Levi form. Its cross-block gap is at
+least \(3(19T/10)/2-2T>0\), and the within-block
+difference of \(d\) is zero.
+
+\proofstep{The weighted curvature comparison.}
+The invariant potential \(\psi_0\) is bounded above and
+has \(\mathcal L(\psi_0)\ge-(r/2)\mathcal L(\varphi_d)\).
+Its cusp coefficient and the selected cutoff are
+\[
+ a_1=\frac{1}{2\cdot5^4|\operatorname{disc}E|^{1/f}},
+ \qquad
+ c_1=2(\operatorname{rd}E)^7 T c\,(fq)^2 q .
+\]
+Here \(q\ge1\) on the indefinite lift and \(c>0\)
+is the light first-minimum coefficient. To check the allowance, put \(d_E^{\rm root}=\operatorname{rd}E\), \(\mathcal P=C_2z^{A_2}\), and write \(Q\) for the denominator of the light coefficient.
+The numerical inequalities on this run are
+\[
+ c=(d_E^{\rm root})^7\mathcal P D_F^2/Q,\qquad
+ (d_E^{\rm root})^{28}\mathcal P^3D_F^2\le Q,\qquad
+ 1250\,rfm^3\le\mathcal P^2,\qquad
+ 2fm\le d_E^{\rm root}.
+\]
+Thus \(c\mathcal P^2(d_E^{\rm root})^{21}\le1\).
+
+Since \(q\le m\) and \(d_E^{\rm root}\ge1\),
+\[
+ \frac{r c_1}{a_1}
+    =Tc\, (1250\,rfq^3)\,(2f(d_E^{\rm root})^9)
+    \le Tc\mathcal P^2(d_E^{\rm root})^{21}\le T .
+\]
+With \(r\le T\) this gives \(r(1+c_1/a_1)\le2T\).
+Put \(\psi=(1+c_1/a_1)\psi_0\). The preceding
+comparison with \(u=r(1+c_1/a_1)/2\) gives
+\[
+ \mathcal L(\varphi_F-\log D-s\varphi_L+\psi)
+                    \ge \tfrac12\mathcal L(\varphi_L).
+\]
+The cross-block estimate also gives the independent
+lower bound \(m_{\rm int}\mathcal L(R)\) on this expression,
+with \(m_{\rm int}=19T/5-2T\).
+
+For division the potential
+omits the \(\psi\) term and the subtraction of
+\(s\varphi_L\). The margin there is
+\(m_{\rm div}=19T/5+s(19T/10)\).
+Set \(\beta=5fr^2\) and \(u_0=f\min(p,q)\). Then
+\[
+ 4fr^2<\beta<m_{\rm int},
+ \qquad \beta^2 u_0+\beta < m_{\rm div}.
+\]
+Indeed \(f\ge1\), \(r\ge8\), \(2u_0\le fr\), and
+\(T\ge11s^2\). These give
+\(\beta\le20s^2/49\) and
+\(\beta^2 u_0\le20s^3\) by \(5r^2\le(r-1)^3\).
+The additional \(19T/5\) and \(19sT/10\) cover the
+two terms in the division margin. For a definite
+signature \(R=0\) and \(\psi_0=0\); the within-block
+calculation supplies the nonnegative Levi form and the
+same inequalities with arbitrary margins in the zero
+directions of \(\mathcal L(R)\).
+\label{cor:slice-short-analytic-2}
+
+\end{proof}
+
+\paragraph{The Poincar\'e estimate on coordinate balls.}
+
+The curvature estimate is local. To obtain the norm bound after Poincar\'e summation one must compare the coordinate balls about the translated frames.
+
+Let \(x_*\) be the orthonormal frame of the seed cell.
+At an orthonormal frame \(x\) write the relative
+isometry \(x_*^{-1}x\) at each embedding in signature
+order \(p,q\), with bottom-right block \(D_0\).
+Then \(R(x)=2\sum_\tau\log |\det D_{0,\tau}|\).
+For a general admissible frame, subtract the logarithm
+of its Gram minor of order \(q\) in each embedding.
+This formula is invariant under the upper triangular
+change of frame.
+
+\begin{lemma}[Local integrals and the Poincaré estimate]
+\label{lem:short-poincare-summation}
+For the coordinate balls and weights below, the estimate for the
+Poincaré sum follows from the local integral of the lifted section
+and the bound on the overlap of the translated balls. In particular, for a seed of finite weighted integral \(I=\int|P|^2W_u e^{\beta R}D\), its integral \(I_\gamma\) on a translated ball, before the factor \(e^{\beta R}D\), satisfies
+\[
+ I_\gamma\le C I e^{-\beta R(\gamma x)}.
+\]
+The constants may depend on the fixed cut chart.
+\end{lemma}
+
+\begin{proof}
+\proofstep{Bounding the overlap of translated balls.}
+Use discreteness of the group in the product of the
+archimedean matrix groups. Two distinct relative
+isometries \(g,h\) from \(\Gamma x\) have an entry of
+\(hg^{-1}-I\) bounded below in absolute value by a
+positive constant depending on the group and \(x_*\).
+This is independent of \(x\) because the factor \(x\)
+cancels in the quotient. If all entries of both
+isometries have absolute value at most \(A\ge1\),
+the entries of \(g^{-1}=Jg^*J\) are at most \(A\).
+Since 
+\[
+  hg^{-1}-I=(h-g)g^{-1},
+\]
+ at least one entry of
+\(h-g\) is separated by a constant times \(A^{-1}\).
+Partitioning the box of real and imaginary matrix
+entries into cubes of that sidelength bounds its
+number of isometries by \(C A^{4fr^2}\).
+
+For a single signature matrix \(g=\left(\begin{smallmatrix}
+A_0&B_0\\ C_0&D_0\end{smallmatrix}\right)\) write \(s_i\) for the singular values of \(B_0\). The identity
+\(D_0^*D_0=I+B_0^*B_0\) gives
+\[
+ |\det D_0|^2=\prod_i(1+s_i^2)\ge1+\sum_i s_i^2
+ =1+\|B_0\|_{\mathrm{HS}}^2.
+\]
+The other block identities bound the square of
+each entry of \(g\) by \((r+1)|\det D_0|^2\).
+Thus a dyadic shell of maximal entry \(A\) contributes
+\(O(A^{4fr^2-2v})\) to the sum of \(e^{-vR}\).
+Consequently
+\[
+          \sup_{x\ {\rm orthonormal}}\
+               \sum_{\gamma\in\Gamma}e^{-vR(\gamma x)}<\infty
+                 \quad(v>2fr^2).
+\]
+
+The same bound controls local integrals. On a small
+fixed unipotent coordinate ball about an orthonormal
+centre \(y\), the Gram minors are close to their identity
+values, uniformly in \(y\). In signature order, right
+multiplication of the relative isometry by the nearby
+coordinate frame \(N\) changes its bottom-right
+determinant by the factor
+\(\det(N_{22}+D_0^{-1}C_0N_{12})\).
+The relation \(D_0D_0^*=I+C_0C_0^*\) implies that \(D_0\) is
+invertible and gives the operator inequality
+\[
+ (D_0^{-1}C_0)(D_0^{-1}C_0)^*
+ =I-D_0^{-1}(D_0^{-1})^*\le I.
+\]
+Hence \(\|D_0^{-1}C_0\|_{\rm op}\le1\). On a ball fixed in
+these coordinates the determinant of the factor is at
+least \(1/2\), independently of the relative isometry.
+The Gram-minor formula gives \(R(yN)\ge R(y)-3f\log2\).
+The density \(D\) is bounded below there.
+
+\proofstep{Weights in the local integral estimate.}
+Let \(W_u\) be a squared-reading weight transforming
+inversely to the squared weight character and invariant
+under \(\Gamma\). Suppose the seed has finite integral
+\(I=\int |P|^2 W_u e^{\beta R}D\) on the entire flag
+cell. Write \(I_\gamma\) for the integral without
+\(e^{\beta R}D\) in the coordinates of the translated
+ball. The invariant measure and the uniform bounds
+give 
+\[
+  I_\gamma\le C I e^{-\beta R(\gamma x)}.
+\]
+Here the change to the seed cell preserves the
+integral even when the small ball crosses its chart
+divisor, which has measure zero. Summing square roots
+is allowed since \(\beta/2>2fr^2\).
+The holomorphic submean inequality gives the bound on
+the normalized Poincar\'e sum by a constant times
+\[
+       \sup_{z\ \text{in the ball}}
+              \left(e^{-\varphi_v(z)}/W_u(z)\right)^{1/2}.
+\]
+
+On a smaller neighborhood of any centre the same
+submean inequality supplies a common summable
+majorant for all evaluation points, provided
+\(W_u\ge c_*e^{-\varphi_v}\) for some \(c_*>0\).
+Triangular orthogonalization at that centre changes
+this majorant by its nonzero weight character. This
+proves locally normal convergence on the frame domain.
+All constants in the ball bound can depend on the
+lift, weight, cut and seed. They are uniform in the
+orthonormal centre and its orbit, which is the
+uniformity needed for the Fourier test.
+\label{cor:slice-short-analytic-3}
+
+\end{proof}
+
+\paragraph{Extracting Fourier coefficients along the cusp flow.}
+On an indefinite component the potential is the
+logarithm of the sum of normalized squared theta
+values over ordered \(r\)-tuples of points of order
+dividing 25 whose multiples by 25 generate the
+period lattice modulo 5 over \(\mathcal O_E\).
+Each factor is divided by the theta squared
+\(L^2\) norm. The theta estimate used here assumes an
+integral CM element \(\omega\) with
+\(\omega+\bar\omega=1\), the even trace comparison for
+multiplication by \(\omega-\bar\omega\), an isotropic
+lattice vector, \(\operatorname{rd}E\ge\max(f^2,16)\),
+and a rank parameter \(h\) with \(h^4\le f\) and
+\(\min(p,q)\le h\). In the trace comparison the difference
+of the two trace pairings on any two integral period
+vectors is in \(2\mathbb Z\). The chosen host supplies
+\(\omega\) and this comparison.
+
+On lift \(j\) the
+signature has 
+\[
+  q=m-j>0,
+\]
+ so one can use \(h=m\).
+The invariant smooth potential satisfies the lower Levi
+bound used above and, for \(0<\varepsilon<1/2\),
+\[
+ \psi_0(x)\le C_\varepsilon
+    +A_\varepsilon\log(1+\lambda_1(x)^{-1})
+    -8\pi(1-2\varepsilon)a_1\min_\tau t_\tau(x,\xi)
+\]
+whenever all \(t_\tau(x,\xi)\ge1\) for an isotropic
+lattice vector \(\xi\). The bound with just the constant
+and logarithm also holds on the entire domain.
+Here \(\lambda_1^2\) is the minimum of the sum of the
+positive majorants on nonzero lattice vectors, and
+\(t_\tau(x,\xi)\) is the reciprocal of the corresponding
+individual weighted majorant. In the thin region a
+vector with sum of the majorants at most
+\(2\lambda_1^2\) is isotropic by integrality and all its
+times are at least \((2\lambda_1^2)^{-1}\). Using it in
+the displayed inequality bounds \(\psi_0\) above even
+as \(\lambda_1\) tends to zero.
+\label{cor:slice-short-analytic-4}
+
+\begin{proposition}[Fourier vanishing and the cusp decay estimate]
+\label{prop:slice-cusp-gap-decay}
+At the prescribed short weight the vanishing test on each complete rank-one period forces its low Fourier--Jacobi coefficients \(a_\nu\) to satisfy
+\[
+ a_\nu=0\qquad\left(\sum_\tau\nu_\tau\le c_1\right).
+\]
+ Here \(\tau\) ranges over the chosen CM half, so
+\(\sum_\tau\nu_\tau=\tfrac12\operatorname{Tr}_{E/\mathbb Q}(\nu)\).
+The resulting bound on a section with those terms zero
+is the uniform first-minimum decay used in the division norm.
+The cross-block gap gives the stated limiting constant-coefficient
+test also for \(w_F+k w_L\) with \(k\ge0\).
+\end{proposition}
+
+\begin{proof}
+\proofstep{The local estimate for coefficient tests.}
+For the coefficient test, a small coordinate ball
+about any orthonormal flag changes each positive
+majorant by factors in \([1-\delta,1+\delta]\), for
+any fixed \(\delta>0\) after decreasing the radius.
+Indeed the majorant matrices in that ball are given by
+orthogonalizing the Gram matrix of the unipotent
+coordinate frame. In orthonormal coordinates these
+matrices vary continuously from the fixed positive
+form at the origin. The comparison holds simultaneously
+for all vectors, so it gives the same comparison for
+the squared minima and a reciprocal comparison for
+each time. Put \(a=(1+c_1/a_1)a_1=a_1+c_1\).
+
+For every \(a'<a\) with \(a'>0\), choose the radius
+and \(\varepsilon\) so that
+\((1-2\varepsilon)a/(1+\delta)>a'\).
+The normalized ball bound for the Poincar\'e sum then
+gives
+\[
+ \|P_{\rm aut}(x)\|_v
+     \le C(1+\lambda_1(x)^{-1})^A
+               e^{-4\pi a'\min_\tau t_\tau(x,\xi)}
+\]
+when all times at the centre are at least 2. Triangular
+normalization carries it to general frames with the
+same majorants. The exponent \(4\pi\) comes from the
+square root of the metric bound.
+
+\proofstep{Decay along the integral cusp flow.}
+On the holomorphic flow of \(\xi\), translate each
+complex parameter to \(u_\tau+iY\), with the real
+parameters \(u_\tau\) in a fixed period parallelepiped.
+Each time becomes \(t_\tau(x,\xi)+Y\). This follows
+from the rank-one isotropic shear. The Gram matrix at
+time \(Y\) is a rank-one Hermitian update of the
+original Gram matrix, since the quadratic term of the
+shear is a multiple of the norm of \(\xi\) and vanishes.
+Each leading minor divided by its value at zero is
+\(1+Y b_{\tau,k}\) with \(b_{\tau,k}\ge0\).
+Writing \(\Delta_{\tau,k}(Y)\) for the moving leading minor, the rank-one calculation gives
+\[
+  \frac{\Delta_{\tau,k}(Y)}{\Delta_{\tau,k}(0)}=1+Yb_{\tau,k}\ge1\qquad(Y\ge0).
+\]
+
+The signs of the minors persist for all \(Y\ge0\).
+This gives polynomial upper and inverse bounds for
+the diagonal factors of the weight metric. The entries
+of the frame and of its inverse grow at most polynomially
+in \(Y\) for bounded \(u\), since the shear is linear
+in the flow parameter and its rank-one term squares
+to zero. Orthogonalization using these minors shows
+that the inverse of the positive majorant matrix grows
+at most polynomially as well. Hence
+\(1+\lambda_1^{-1}\) and the change from the normalized
+norm to the holomorphic reading both have polynomial
+bounds in \(1+Y\) on this slice.
+In particular along this slice there are constants \(C,N\), depending on the initial data, for which
+\[
+  1+\lambda_1(Y)^{-1}\le C(1+Y)^N .
+\]
+ These bounds may depend
+on the initial flag and on \(\xi\).
+
+The holomorphic reading has character frequency
+\(2\nu\) on the real period lattice. By definition the
+coefficient is zero when \(2\nu\) is outside the dual
+period lattice. For an actual character, shifting the torus
+integral to height \(Y\), by holomorphy and periodicity,
+gives
+\[
+ |F_{\xi,\nu}(x)|e^{-4\pi Y\sum_\tau\nu_\tau}
+     \le \sup_u |P_{\rm aut}(\operatorname{flow}_\xi(u+iY)x)|.
+\]
+If \(\sum_\tau\nu_\tau<a\), take \(a'\) strictly between
+\(\max(0,\sum_\tau\nu_\tau)\) and \(a\). The right hand
+side is bounded by a polynomial times
+\(e^{-4\pi a'Y}\). Letting \(Y\) grow gives the required
+vanishing. The strict inequality at \(a=a_1+c_1\) kills
+the mode of total frequency exactly \(c_1\).
+\label{cor:slice-short-analytic-5}
+
+\paragraph{Uniform decay of a section with zero low modes.}
+\label{par:slice-cusp-decay}
+
+The extracted low Fourier coefficients describe the part that must be removed. Once those coefficients vanish, the cusp flow bounds the remainder uniformly.
+
+Let \(P\) be a bounded normalized section whose coefficients
+of total frequency at most \(c_1\) vanish on the rank-one
+periods. The moderate-growth coefficient estimate, using
+one quarter of its exponential rate as slack, gives
+\[
+ \|P_{\xi,\nu}(x)\|_\kappa
+ \le C \exp\!\left(-3\pi\sum_\tau\nu_\tau
+                                      t_\tau(x,\xi)\right)
+\]
+when the majorants of the integral isotropic vector \(\xi\)
+are at most one. The constant is independent of the vector,
+the frequency and the flag \(x\) on the specified quotient.
+The support has \(\nu_\tau\ge0\), and the nonzero terms are
+admissible frequencies. The frequency-sum bound on the
+period lattices gives a uniform finite majorant for the sum
+of \(e^{-(3\pi/2)\sum_\tau\nu_\tau}\) over their nonnegative
+frequencies. These coefficient and summability bounds apply
+to the bounded weight-\(\kappa\) sections here.
+
+\proofstep{Using the first minimum to choose the flow.}
+For \(\lambda_1(x)^2\) sufficiently small, choose an integral
+vector with sum of its weighted majorants
+
+\[
+  S<3\lambda_1(x)^2/2
+\]
+ and \(S<1\).
+At this threshold the vector is isotropic, by integrality
+of its Hermitian norm and the bounds under all embeddings.
+Its times are at least \(1/S\). Each surviving \(\nu\) has
+\(\sum_\tau\nu_\tau>c_1\). Half of the exponential rate
+therefore bounds the term by \(C e^{-\pi c_1/\lambda_1^2}\),
+and the other half leaves the summable frequency majorant
+above. The period expansion and the triangle inequality
+give \[
+ \|P(x)\|_\kappa\ll e^{-\pi c_1/\lambda_1(x)^2}.
+\]
+On the rest of the quotient the positive lower threshold
+for \(\lambda_1(x)\) and boundedness give the same estimate
+with a larger constant. The squared norm bound is uniform
+in \(x\) at the given lift. Its constant can depend on the
+lift and section since it is used for integrability.
+\label{cor:slice-short-analytic-6}
+
+\proofstep{The norm needed by division.}
+For the division coefficients only the zero mode must
+vanish. A bounded holomorphic section of a weight \(v\)
+with nonincreasing weights inside each block and
+
+\[
+  v_{\tau,r-1}-v_{\tau,0}\ge1
+\]
+ at one embedding \(\tau\)
+is already cuspidal. Shift the imaginary flow at this
+embedding alone. Let \(\rho_k\) be the ratio of the
+leading Gram minor at the new time to its original
+value. The isotropic rank-one update has
+\(\rho_0=\rho_r=1\) and \(1\le \rho_k\le\rho_q\):
+the signed squared lengths in the isotropic vector's
+orthogonal-frame coordinates accumulate to an extreme
+at the cut between signs. Also 
+\[
+  \rho_q=1+Y/t_\tau.
+\]
+Summation by parts yields
+\[
+ \sum_{i=0}^{r-1} v_{\tau,i}
+       (\log\rho_{i+1}-\log\rho_i)
+     \le (v_{\tau,0}-v_{\tau,r-1})\log\rho_q .
+\]
+The coefficients of \(\log\rho_k\) for \(k\ne q\) are
+nonnegative and the term at \(q\) keeps its exact value.
+
+The metric conversion now bounds the holomorphic
+reading on the translated period torus by a constant
+times \((1+Y/t_\tau)^{-1/2}\).
+The other embeddings retain their metric factors.
+The torus integral for the zero coefficient tends
+to zero. These weight conditions hold for \(w_F+k w_L\)
+with \(k\ge0\). In a block the integral light gap is
+at least one, so the two light gaps in \(G\) absorb
+the successive change of two in \(k_{\rm vol}\). The
+outer cross-block gap is at least one by the bounds
+on \(G\), \(w_L\) and the increasing \(k_{\rm vol}\).
+\label{cor:slice-short-analytic-7}
+\end{proof}

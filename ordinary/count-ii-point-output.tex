@@ -1,0 +1,498 @@
+\subsubsection{Classical specializations of both Hecke quotients}
+\label{par:count-two-classical}
+\hypertarget{source-ordinary-count-ii-point-output}{}
+
+For a characteristic-zero target the two ordinary evaluations yield representations. To compare their Frobenius polynomials with those of the original point, the evaluations must first be realized at classical weight.
+
+\begin{proposition}[Classical control at the propagated target]\label{prop:two-link-classical-control}
+At a characteristic-zero even-order target reached by the
+two-link propagation, each evaluation factors through a classical
+ordinary eigensystem in its link. Let \(r_i\) be the Galois representation of the eigensystem at level \(i\), \(r\) the representation at the chosen determinant point and \(\kappa\) the common twisting character. Then 
+\[
+ \det(X-r_i(g))=\det(X-\kappa(g)r(g))\qquad(g\in G_L).
+\]
+
+\end{proposition}
+
+\begin{proof}
+Use the same Hecke quotients \(R_i/J_i\) as in
+Paragraph~\ref{par:count-two-ideals}. At a characteristic-zero
+target \(y\) reached by Paragraph~\ref{par:count-two-propagation},
+the evaluations \(x_i=y|_B f_i\) factor through these quotients.
+Write \(m=(j+1,j,1,0)\) for the rational inertial exponents.
+On the selected inertia groups above \(\ell\), \(\kappa\) is
+an integral cyclotomic power up to a finite character. It
+adds a common integer to the four exponents at each place.
+Thus the coefficients have the algebraic parts given by
+\(\lambda_{\tau,3-i}=-m_{w,i}-i\), with \(m_{w,i}\) the exponents
+after twisting. The difference in the highest weight order is
+\[
+       \lambda_{\tau,2-i}-\lambda_{\tau,3-i}
+                  =m_{w,i}-m_{w,i+1}-1\ge0 .
+\]
+The difference inequality gives dominance. After the algebraic
+part is removed the remaining compact torus character is smooth. These conditions put the point in the arithmetic ordinary locus used in the cohomology calculation.
+
+Here is the control argument at this weight. Write \(O_x\)
+for a coefficient DVR containing the weight values, \(\pi_x\)
+for its uniformizer, \(W_\lambda\) for the algebraic coefficient
+representation, and \(p_\lambda\) for its lowest weight quotient
+for the upper unipotent group. Use a lattice in \(W_\lambda\)
+stable under the integral local groups and decomposed into
+algebraic torus weights. Such a lattice is given by the integral
+highest weight construction at the embeddings, tensored with
+the required integral determinant powers. Write \(L\subset W_\lambda\) for this integral lattice and \(L_\mu\) for its weight submodules. Then
+\[
+ L=L_{\rm low}\oplus\ker(p_\lambda|_L),\qquad L_{\rm low}\simeq O_x,
+ \qquad \ker(p_\lambda|_L)=\bigoplus_{\mu\ne\mu_{\rm low}}L_\mu .
+\]
+This gives the rank-one projection integrally.
+Choose \(c\) so that the smooth character kills \(T_c\) and
+\(\bar N_c\) acts trivially on the coefficient lattice modulo \(\pi_x\).
+Use \(J_c=NT\bar N_c\) for the following comparison.
+
+Trivial stabilizers identify the classical module with the
+finite module of values on double coset representatives.
+In the left-invariant realization \(F_\ell\) of
+Section~\ref{sec:count-two-seed-specialization}, the dominant
+translation \(z\) acts by the sum with coefficient matrices
+\(W_\lambda(b)W_\lambda(z)\), where \(b\) ranges over
+\(N/zNz^{-1}\). Normalize each matrix by the lowest-weight
+scalar of \(z\). The normalized \(W_\lambda(z)\) is integral
+and kills the kernel of \(p_\lambda\) modulo \(\pi_x\):
+For any other weight \(\mu\), write
+\(\mu-\mu_{\rm low}=\sum_\alpha n_\alpha\alpha\) with
+\(n_\alpha\ge0\), some \(n_\alpha>0\).
+
+Then
+\[
+ v_{\pi_x}\!\left(\frac{\mu(z)}{\mu_{\rm low}(z)}\right)
+      =\sum_\alpha n_\alpha v_{\pi_x}(\alpha(z))>0.
+\]
+Modulo \(\pi_x\), the normalized diagonal operator kills all
+these higher weight spaces. The integral unipotent matrices
+\(W_\lambda(b)\) preserve the quotient projection, so the same
+holds for the normalized translation sum. The resulting operator intertwines the
+ordinary operator on the scalar functions under \(p_\lambda\).
+On characteristic-zero functions the projection is into the
+scalar module with lower unipotent depth allowed to increase
+with precision, by continuity of the coefficient action.
+
+Modulo \(\pi_x\), the scalar module at depth \(c\) is obtained
+by projecting the algebraic values on the same cosets. Let \(P:C\to S\) be this projection on the
+depth-\(c\) residue spaces. It is onto, commutes with the
+normalized translation \(U\), and \(U\ker P=0\).
+Since \(P\) is equivariant and onto, \(P(U^a C)=U^a S\)
+for every \(a\).
+
+At the stable images its kernel is
+\[
+    C^{\rm ord}\cap\ker P \ \subseteq\ C^{\rm ord}\cap\ker U=0 .
+\]
+The last equality uses invertibility on \(C^{\rm ord}\).
+This proves the comparison on the stable images. The integral ordinary projectors reduce
+to these stable-image projectors. The scalar ordinary module
+is finite free with the value filtration of
+Paragraph~\ref{par:ordinary-functions}; its ordinary reduction
+is exactly the stable image at depth \(c\). Thus the projected
+classical ordinary module maps isomorphically onto the scalar
+ordinary module, by freeness and reduction modulo \(\pi_x\).
+The spherical Hecke actions and their residual localizations
+commute with the projection. Together with the scalar weight
+base change of Section~\ref{sec:count-two-seed-specialization},
+this gives the classical realization on each \(M_i\).
+
+Any field evaluation of \(R_i/J_i\) at this weight occurs in
+that specialization. Indeed, putting \(A_i=R_i/J_i\), finiteness and faithfulness imply
+\[
+ \operatorname{Supp}_{A_i}M_i=V(\operatorname{Ann}_{A_i}M_i)
+ =\operatorname{Spec}A_i,\qquad M_i\otimes_{A_i}\kappa(\mathfrak p)\ne0 .
+\]
+The last assertion is Nakayama's lemma at the evaluation prime \(\mathfrak p\).
+After extending coefficients, that fiber has the evaluation
+as an eigensystem. In the automorphic decomposition choose a
+contributing constituent with these spherical eigenvalues.
+Its semisimple Galois attachment has the characteristic
+polynomials of \(\kappa\,r|_{G_L}\), by the spherical
+normalization on the dense set of split good Frobenius classes.
+This equality holds on all of \(G_L\), including at reducible
+targets. At an irreducible target it identifies the actual
+Galois representations.
+\hfill\mbox{\cite{newton-thorne-unitary}}\label{cor:ordinary-count-ii-point-output-1}
+
+\end{proof}
+
+\subsubsection{The Frobenius ratio test at a full block}
+\label{par:count-two-purity}
+
+A hypothetical full two-dimensional block imposes a determinant ratio at good primes. The polynomials just obtained from both ordinary levels give an incompatible restriction on their roots.
+
+\begin{proposition}[Exclusion of a full block]\label{prop:count-two-full-block-excluded}
+At a characteristic-zero full-block target, write \(\alpha_i(w)\) for the Frobenius roots at a good prime in the block test. The two-link specialization gives 
+\[
+ |\alpha_i(w)/\alpha_j(w)|<Nw\qquad\text{for every }i,j.
+\]
+
+This contradicts the determinant ratio of the two blocks.
+\end{proposition}
+
+\begin{proof}
+In the transfer of a contributing constituent from link \(i\),
+a discrete Speh summand of length at least two would give two
+summands of its Galois representation differing by
+\(\epsilon_\ell\) or its inverse. Take the chosen Frobenius
+element \(g_i\) at the exceptional place of this link.
+All four roots of the characteristic polynomial at \(g_i\)
+reduce to the same nonzero residual eigenvalue, by the
+construction of \(J_i\) and \(f_i\). The eigenvalues of both
+summands are units, since they are roots of that integral
+polynomial with unit constant coefficient. If \(z\) and \(z\epsilon_\ell(g_i)^{\pm1}\) are such roots,
+then \(z\) is a unit. Their reductions cannot agree:
+\[
+              \bar z\,\bar\epsilon_\ell(g_i)^{\pm1}\ne\bar z .
+\]
+This contradicts the common nonzero residual eigenvalue.
+
+Consequently every discrete summand is cuspidal. The
+cuspidal summands in the unitary base change are tempered
+at the good places, by the results cited after
+Corollary~1.3 of Newton and Thorne. The common algebraic
+normalization multiplies every root at a place by the same
+power of its residue norm. Thus all roots have the same
+absolute value there, and in particular each ordered ratio
+of absolute values is strictly less than the residue norm.
+
+The purity condition for that calculation is the ratio condition just proved. It passes to the rational representation:
+If \(\alpha_i\) are the rational roots, restriction to a
+place \(w\mid p\) of residue degree \(f\) gives \(\alpha_i^f\).
+The common scalar twist cancels. The inequalities over \(L\) imply
+\[
+              |\alpha_i/\alpha_j|^f<Nw=p^f
+            \quad\Longrightarrow\quad|\alpha_i/\alpha_j|<p.
+\] The property
+also holds at primes splitting completely in \(L\), which
+suffices for the block-determinant test. Apply the link to
+the nonsplit representative constructed in
+Paragraph~\ref{par:full-block-extension}. Equality of polynomials
+gives the same ratio bound at the split block point.
+\hfill\mbox{\cite{newton-thorne-unitary}}\label{cor:ordinary-count-ii-point-output-2}
+
+\end{proof}
+
+\subsubsection{Attachment at an irreducible target}
+\label{par:count-two-glue}
+
+At an irreducible target, equality of the characteristic polynomials identifies the restricted representations themselves. Using both levels then compares their local parameters outside their respective exceptional sets.
+
+\begin{proposition}[Cuspidal attachment from the two links]\label{prop:count-two-cuspidal-attachment}
+At a rational irreducible target of the even-order construction,
+the restrictions to \(G_L\) are absolutely irreducible. The
+cuspidal transfers from both ordinary links give the same
+representation there; if \(S_1,S_2\) are the respective sets of exceptional places, the compatible local parameters cover both choices because 
+\[
+ S_1\cap S_2=\varnothing.
+\]
+
+\end{proposition}
+
+\begin{proof}
+For a rational irreducible target, restriction to \(G_L\)
+is absolutely irreducible. The restriction to a normal
+subgroup is semisimple, by taking translates of a simple
+subspace. If the restriction were reducible, the action of
+the abelian quotient \(\operatorname{Gal}(L/\Q)\) on its
+commutant would have a nontrivial character. An eigenvector in the commutant is a nonzero intertwiner
+for a self-twist \(\chi\), hence invertible by irreducibility on
+the rational group. It yields
+\[
+              (1-\chi(g))\operatorname{tr}r(g)=0 .
+\]
+On any coset where \(\chi\ne1\) the trace is zero. The reduction of the trace on such a coset
+is a linear combination of the four distinct restricted
+residual labels with nonzero coefficients. Linear independence
+of characters rules out its identical vanishing. This proof
+also applies to any target obtained by the change of frame
+or scalar extension in the modular-locus argument.
+
+Each link now gives a cuspidal transfer over \(L\): an isobaric
+sum with several terms would make the attachment reducible.
+At a common good prime the same twist and normalization give
+\[
+     P_{\Pi_1,w}(T)=\det(T-\kappa r(\mathrm{Frob}_w))
+                         =P_{\Pi_2,w}(T),
+\]
+where \(P_{\Pi_i,w}\) denotes the algebraically normalized local
+polynomial. Both links use the same specialization \(y\). Strong multiplicity
+one identifies the transfers. For each selected place, use
+the local comparison at a level where it is outside the
+exceptional pair of places over \(L^+\). Indeed if \(S_i\) is the exceptional pair over the \(i\)-th choice of \(v_0\), their rational primes are distinct. Consequently
+\[
+ S_1\cap S_2=\varnothing,\qquad S_1^c\cup S_2^c
+ =\{\text{all finite places}\}.
+\]
+
+At each of the exceptional places the other link therefore supplies the local comparison. At the other places outside the level the
+transfer is unramified, and at the marked places above
+\(\ell\) the split local comparison gives the Weil--Deligne
+parameter of the same target.
+The common scalar \(\kappa\) is locally algebraic at \(\ell\)
+with integral labeled exponents and finite inertia away from
+\(\ell\). By reciprocity it is the \(\ell\)-adic avatar of an
+algebraic Hecke character. Twisting the transfer by its inverse
+gives the cuspidal attachment of \(r|_{G_L}\), with the rational
+similitude as its multiplier. In particular the target weights
+are recovered after removing the twist.
+\hfill\mbox{\cite{newton-thorne-unitary}}\label{cor:ordinary-count-ii-point-output-3}
+
+\end{proof}
+
+\subsubsection{Ordinary flag and rational level}
+\label{par:count-two-host-level}
+
+The attachment is obtained after restriction to the fitted field. To count at a prescribed rational level, the original representation must have the required ordered inertia exponents and conductor bounds.
+
+\begin{proposition}[The rational ordinary flag and its level]\label{prop:count-two-rational-level}
+For an irreducible even-order target with \(j\ge2\) in
+Section~\ref{sec:odd-prime-cases} and the attachment of
+Proposition~\ref{prop:count-two-cuspidal-attachment}, the rational
+ordinary flag has the prescribed exponents and zero monodromy.
+The rational inertia conditions give the level bound for the ensuing quadratic restriction, with 
+\[
+ M=\ell\,2^{n_{\rm II}}\mathcal N.
+\]
+
+\end{proposition}
+
+\begin{proof}
+\proofstep{Recover the rational ordinary characters.}
+
+At \(\ell\) write the ordered characters of \(r\) as
+\(\kappa_i=\nu_i\epsilon_\ell^{m_i}\) with
+\(m=(j+1,j,1,0)\) and \(\nu_i\) finite on inertia. The
+character \(\kappa_i/\kappa_k\) can equal the cyclotomic
+character on a full decomposition group only if
+\(m_i-m_k=1\). Restrict to an open inertia subgroup
+killing \(\nu_i/\nu_k\) and use the infinite cyclotomic image
+there to see this. As \(j\ge2\), the consecutive gaps are
+\((1,j-1,1)\), each at least one.
+
+If \(m_i-m_k=1\) with
+\(i<k\), then \(k=i+1\). At the retained Frobenius lift of
+Paragraph~\ref{par:count-ii-tower}, the cyclotomic
+character and the residual \(\bar\Psi\) are one, and
+\(\bar\eta\) has order greater than four. In both permitted frames the labels at this lift are
+\[
+         (\bar\eta,1,\bar\eta,1)\qquad(\bar\eta\ne1).
+\]
+Thus all adjacent labels differ at a point where
+\(\bar\epsilon_\ell=1\). This rules out the cyclotomic equality at the
+marked place of \(L\) as well as over \(\Q_\ell\).
+
+The target is de Rham at \(\ell\), since it is so over the
+fitted CM field and de Rhamness descends along a finite
+extension. Its local Weil--Deligne representation is
+therefore defined. By exactness on the ordinary flag its
+graded Weil lines, on the rational Weil group, are
+\[
+       \mu_i(s)=\iota(\nu_i(s))\,\ell^{m_i\deg(s)}
+\]
+in the arithmetic Frobenius convention, where \(\deg(s)\)
+is the exponent of arithmetic Frobenius in the unramified
+quotient.
+
+At the marked place of \(L\) use the restriction
+of these lines. A norm ratio between two lines would give
+\(\kappa_i/\kappa_k=\epsilon_\ell\) in one order: taking
+\(\ell\)-adic valuations at Frobenius forces the exponent
+difference to be one, because the \(\nu_i\) take unit
+values. Equality then forces the two \(\nu_i\) to agree
+by density of the Weil group. The Weil--Deligne relation on the \((i,k)\) entry of \(N\)
+forces a norm ratio \(\mu_i/\mu_k=|\cdot|^{\pm1}\) if
+that entry survives. Indeed the ratio constraint follows entrywise from the Weil--Deligne identity
+\[
+ (\mu_i(s)/\mu_k(s)-|s|)N_{ik}=0
+\]
+in the convention \(r(s)Nr(s)^{-1}=|s|N\). Switching conventions inverts the norm. Since both orders have been excluded, \(N=0\) over \(\Q_\ell\) and after restriction.
+
+At the marked place of \(L\) all \(|\mu_i/\mu_k|\) on
+Weil elements are one, by temperedness of the glued
+cuspidal transfer and its local compatibility. Removing
+the scalar twist preserves this equality. It holds on the
+rational Weil group by taking positive powers into this
+local subgroup. Choose \(s\) in the rational Weil group
+mapping to the uniformizer \(\ell\) under reciprocity. Then
+\(\epsilon_\ell(s)=1\) and \(\deg(s)\ne0\). Were \(\kappa_i(s)/\kappa_k(s)\) torsion, its complex modulus
+would be one.
+
+Since \(\epsilon_\ell(s)=1\), the displayed
+Weil lines would then give
+\[
+       |\mu_i(s)/\mu_k(s)|=\ell^{(m_i-m_k)\deg(s)}\ne1 .
+\]
+Temperedness on the restricted Weil group forces absolute value one. If \(s^a\) lies there, then
+\[
+ |(\mu_i/\mu_k)(s^a)|=|(\mu_i/\mu_k)(s)|^a .
+\]
+Thus the violation persists on restriction, a contradiction. The character ratios in question have infinite order. A power of \(s\) fixes \(L\), and
+further positive powers give the same conclusions over
+finite local extensions. This element will be used for
+adjoint rigidity.
+
+Away from \(\ell\) the rational chart kills an open subgroup
+of inertia. At primes of \(S_b\) it imposes the inertia
+quotient from \(\xi\). Elsewhere inertia factors through
+the residual character quotient. The given finite characters
+have conductors dividing
+\[
+ M=\ell\,2^{n_{\rm II}}\mathcal N.
+\]
+
+The resulting inertia image is finite and abelian, and
+Frobenius acts trivially on it because all these characters
+come from rational characters. The Frobenius-semisimplified
+local parameter is thus a sum of Weil lines with zero
+monodromy, and each smooth unit character is trivial on
+\(1+M\Z_p\). At \(\ell\) the graded Weil lines just
+computed have smooth unit characters from the finite
+inertia factors of the rational flag, also of conductor
+dividing \(M\). These conductor and local conditions enter the rank-four packet comparison. \hfill\mbox{\cite{newton-thorne-unitary}}\label{cor:ordinary-count-ii-point-output-4}
+
+\end{proof}
+
+\subsubsection{Descent and admissible quadratic restrictions}
+\label{par:count-two-descent}
+
+The rational local calculation fixes the level. To use the count of cuspidal representations, one must still verify descent and cuspidality after each imaginary quadratic restriction allowed in that count.
+
+\begin{proposition}[Quadratic packet restrictions of the even-order target]\label{prop:count-two-quadratic-packets}
+After the stated descent to \(K\), every admissible imaginary
+quadratic restriction on the fixed packet list has the regular
+algebraic cuspidal attachment at the level \(M\) from the rational local calculation. Its ordered weights are 
+\[
+ (j+1,j,1,0).
+\]
+
+\end{proposition}
+
+\begin{proof}
+\proofstep{Descend to the fitted quadratic field.}
+
+Let \(K\subset L\) be the imaginary quadratic field of the
+fitted tower. We descend the untwisted transfer to \(K\)
+along a chain of cyclic prime degree extensions inside the
+abelian extension \(L/K\). At each step the upper cuspidal
+transfer is invariant under the cyclic Galois group:
+on the Galois side conjugation carries the restriction to an isomorphic representation, since
+\[
+ r(ghg^{-1})=r(g)r(h)r(g)^{-1}.
+\]
+Thus it preserves the good Frobenius parameters. Strong multiplicity one proves invariance.
+Cyclic cuspidal descent then gives a cuspidal representation
+over the lower field. Its weight is regular algebraic,
+as can be checked after base change at infinity. Apply
+unramified Galois attachment for regular algebraic cuspidal
+representations over CM fields to this descent. Its
+semisimple representation has the same restriction to
+the upper field as \(r\), by unramified compatibility and
+Chebotarev. This restriction is absolutely irreducible
+since the restriction to \(G_L\) is.
+
+After identifying the restrictions, let \(r_1,r_2\)
+be the two extensions to the lower group \(G\), and let
+\(H\triangleleft G\) be the upper group. For \(g\in G\) put
+\[
+ C_g=r_1(g)r_2(g)^{-1}.
+\]
+Write \(r_H\) for the common restriction. Normality of \(H\) gives, for \(h\in H\),
+\[
+ C_g r_H(h)C_g^{-1}=r_1(g)r_H(g^{-1}hg)r_1(g)^{-1}=r_H(h).
+\]
+By irreducibility and Schur's lemma this ratio is a
+scalar \(\zeta(g)\). Writing \(r_1(g)=\zeta(g)r_2(g)\) gives
+\[
+ \zeta(gh)r_2(gh)=r_1(g)r_1(h)=\zeta(g)\zeta(h)r_2(gh).
+\]
+Hence \(\zeta\) is a character, and \(\zeta|_H=1\)
+makes it a finite character of the cyclic quotient.
+Twist the descended cuspidal representation by the inverse
+finite character.
+Its attachment is now \(r\) restricted to the lower field.
+The polarization of \(r\) and strong multiplicity one give
+the corresponding essential conjugate duality on the
+descended cuspidal representation. This proves the assertion
+at every stage with the same normalization.
+\hfill\mbox{\cite{clozel-rajan,harris-lan-taylor-thorne}}\label{cor:ordinary-count-ii-point-output-5}
+
+\proofstep{Pass to each admissible quadratic field.}
+
+The count requires cuspidality and the level bound over each admissible field.
+
+
+Fix its eighteen imaginary quadratic fields of pairwise coprime discriminants.
+In choosing the ramified prime of \(K\) in
+Paragraph~\ref{par:count-ii-tower}, avoid these fixed
+discriminants in addition to the rational ramification set.
+Dirichlet's theorem in that paragraph allows any such finite
+exclusion. For \(K'\) on the list with \(r|_{G_{K'}}\) irreducible,
+write \(\eta_{KK'/K'}\) for the quadratic character of
+\(KK'/K'\). We use
+\[
+        r|_{G_{K'}}\not\simeq
+               r|_{G_{K'}}\otimes\eta_{KK'/K'} .
+\]
+This suffices for irreducibility on the index-two subgroup. Indeed, reducibility on that index-two group
+would give the quadratic self-twist of \(G_{K'}\)
+corresponding to \(KK'/K'\).
+
+At the chosen ramified prime
+of \(K\), inertia lies in \(G_{K'}\), acts trivially on \(r\)
+and takes the value \(-1\) on the quadratic character.
+For such an inertia element \(s\), if \(\nu\) is the quadratic character, then
+\[
+ \operatorname{tr}r(s)=\dim r,\qquad
+ \operatorname{tr}((r\otimes\nu)(s))=-\dim r .
+\]
+These characteristic-zero traces distinguish the two representations. Cyclic base change
+from \(K\) to \(KK'\) is cuspidal by irreducibility there,
+and the same descent to \(K'\) now gives the required
+attachment. The argument applies to any specified finite
+list by the same finite exclusion. No degree or discriminant
+of the intermediate tower enters the packet bound.
+
+At a place \(w\mid p\) of \(K'\), restricting the rational
+Weil lines gives the inertia characters on the descended
+side. Their smooth unit characters factor through the
+local norm on units. If \(x\in1+M\mathcal O_{K'_w}\), multiplication by \(x\)
+on \(\mathcal O_{K'_w}\) has matrix \(I+MA\) over \(\Z_p\).
+Thus
+\[
+           N_{K'_w/\Q_p}(x)=\det(I+MA)\in1+M\Z_p.
+\] Away from \(\ell\)
+local--global compatibility for the polarized cuspidal
+representation identifies the full Frobenius-semisimplified
+Weil--Deligne parameters. Above \(\ell\), compatibility up
+to semisimplification suffices. All ratios of the Weil
+lines have absolute value one on Frobenius, so the
+semisimplification admits only zero monodromy. Hence the
+local parameters on the descended side are sums of Weil
+lines and their inertia characters have the asserted bounds.
+Under local Langlands the local representation is a
+principal series subquotient.
+
+It is generic by cuspidality,
+and a generic subquotient of a reducible induction of
+linked rank-one characters has a segment of length greater
+than one and nonzero monodromy. So it is the irreducible
+principal series of those lines. Let \(K(M)\) be the principal congruence subgroup. If \(\chi_B\) denotes the full inducing character of the Borel \(B\), including its modulus factor, then \(\chi_B|_{B\cap K(M)}=1\). Hence
+\[
+ f(bk)=\chi_B(b)\quad(b\in B,\ k\in K(M)),\qquad
+ f|_{G\setminus BK(M)}=0
+\]
+is well-defined and right \(K(M)\)-invariant, with \(f(1)=1\). Where
+\(p\nmid M\) the inducing characters are unramified and
+there is a spherical vector. The weights after descent
+are \(j+1,j,1,0\), from the local de Rham flag. This gives
+the quadratic restriction at level \(M\) used in the
+packet count.
+\hfill\mbox{\cite{blggt,blggt-lg,zelevinsky}}\label{cor:ordinary-count-ii-point-output-6}
+\end{proof}

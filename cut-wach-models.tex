@@ -1,0 +1,336 @@
+\subsection{Integral local models for the selected lattices}
+\label{subsec:cut-wach-models}
+
+At unramified primes we need Wach modules realizing the signature lattices and their labeled jumps.
+
+Keep the lift, the twisted coefficient place and its assigned
+tuple fixed. At an odd rational prime \(p\) unramified in the auxiliary field \(E\), let \(F\) be a completion of \(E\) above \(p\). Use a finite extension of
+the coefficient field containing all embeddings of \(F\) and
+the first \(p\)-th roots of unity. Write \(O\) for its integers,
+\(\varpi\) for its uniformizer and \(k_O\) for its residue field.
+Write \(a\) for an ordinary coefficient embedding of
+\(O_F\otimes_{\mathbb Z_p}O=\prod_a O\), and set
+\(\rho(a)=a\circ\operatorname{Frob}_F\), with
+\(\operatorname{Frob}_F\) the arithmetic Frobenius on \(O_F\).
+The terminal Hodge label of the ordinary target \(a\) is
+\(i=\rho(a)\). Expressing the same Frobenius arrow in the two
+sets of labels gives
+\begin{equation}\label{eq:wach-terminal-label-arrow}
+ \begin{array}{rclcl}
+ \text{ordinary embeddings}&\rho(a)&\xrightarrow{\ \varphi\ }&a,\\
+ \text{terminal labels}&i^-=\rho(i)&\xrightarrow{\ \varphi\ }&i .
+ \end{array}
+\end{equation}
+
+By \eqref{eq:wach-terminal-label-arrow} the ordinary factor carrying label \(i\) is
+\(\rho^{-1}(i)\). This is the convention of
+Paragraph~\ref{par:wach-level-models}. The de Rham evaluation at
+the first root uses \(\varphi^{-1}\), so we transport the
+crystalline coefficients of the target by inverse crystalline
+Frobenius to read the filtration at \(i\).
+The factors over distinct completions of \(E\) are
+independent. The reflected arrays at conjugate embeddings use
+the same predecessor permutation, since conjugation commutes
+with the unramified Frobenius on the embeddings of \(E\).
+
+\begin{auxlemma}[Integral Wach factors]\label{lem:covariant-wach-factor-free}
+Let \(F/\mathbb Q_p\) be unramified, with \(p\) odd, and take the
+coefficient ring \(O\) splitting its embeddings and containing the
+first \(p\)-th roots of unity. For a stable free \(O\)-lattice \(T\)
+in a crystalline representation, put
+\[
+ N(T)=D(T)\cap N(T[1/p]),\qquad N_a=e_aN(T)
+\]
+in the rational \'etale module, where \(e_a\) is the ordinary
+idempotent of \(O_F\otimes_{\mathbb Z_p}O\). Each \(N_a\) is
+free over \(O[[\pi]]\) of rank \(\operatorname{rk}_O T\).
+\end{auxlemma}
+\begin{proof}
+Here \(D\) is the cyclotomic \'etale equivalence for integral
+and finite \(\mathbb Z_p\)-representations. Use its
+exactness, tensor compatibility and compatibility with scalar
+actions \cite[Theorem A.3.4.3]{fontaine-etale}. Berger's Wach
+comparison applies because \(F\) is unramified. It gives an
+integral free lattice before extending coefficients, a basis of
+\(D(T)\) after inverting the cyclotomic variable and completing,
+trivial cyclotomic action at the origin and a Frobenius matrix
+and inverse with at most powers of the first cyclotomic factor
+as denominators. The ring action of \(O\) is carried along by
+functoriality. For any coefficient idempotent \(e\) of \(O_F\otimes O\), the corresponding summand satisfies
+\[
+ eN\ \text{is finite over}\ O[[\pi]].
+\]
+Here \(N\) denotes the full integral Wach module under consideration. Before the coefficient
+action is taken into account the integral Wach lattice is free
+over \(O_F[[\pi]]\), so its reduction modulo \(\pi\) is
+\(\mathbb Z_p\)-torsion-free. The direct summand \(N_a/\pi N_a\)
+has the same property.
+
+Since a power of \(\varpi\) is associated
+to \(p\) in \(O\), it is also torsion-free over \(O\), hence free.
+Choose lifts \(b_1,\ldots,b_s\) of an \(O\)-basis of this reduction. Nakayama gives a surjection
+\[
+ O[[\pi]]^s\to N_a
+\]
+with these images. Let \(K\) be the kernel of the indicated surjection. Reducing
+a relation modulo \(\pi\) puts each coordinate in
+\(\pi O[[\pi]]\). As \(N_a\) is \(\pi\)-torsion-free, division
+by \(\pi\) gives another relation, so \(K\subseteq\pi K\).
+Iterating gives
+\[
+       K\subseteq\bigcap_{k\ge1}\pi^k O[[\pi]]^s=0 .
+\]
+Thus the surjection is an isomorphism. The \'etale comparison identifies
+\(s\) with the dimension of the coefficient representation.
+\cite[Proposition III.4.2 and Corollary III.4.5]{berger-wach}
+\end{proof}
+
+For a finite extension \(O'/O\), choose an \(O\)-basis of
+\(O'\). The integral and rational comparison modules of
+\(T\otimes_O O'\), and their intersection, are the finite
+direct sums determined by that basis. This yields
+\[
+       N(T\otimes_O O')=N(T)\otimes_O O'
+\]
+with its natural scalar action. The same finite direct sums on
+continuous cochains commute with taking cohomology, and with the
+images defining the integral finite condition. If \(e'\) is
+the relative ramification index, tensoring a composition factor
+\(O/\varpi O\) gives \(O'/\varpi O'\) of length \(e'\).
+Dividing the respective lengths by \(\operatorname{length}_O(O/pO)\)
+and \(\operatorname{length}_{O'}(O'/pO')\) therefore gives the
+same normalized length. Faithful flatness
+also detects the required inclusions over \(O\). We use
+these comparisons only at the coefficient place already fixed.
+
+\paragraph{The norm coordinate and the labeled heights.}
+On each factor of Lemma~\ref{lem:covariant-wach-factor-free},
+use the ordinary cyclotomic variable \(\pi\), with
+\(\gamma(1+\pi)=(1+\pi)^{\chi(\gamma)}\) and
+\(Q=\big((1+\pi)^p-1\big)/\pi\). With \(\Delta\) the tame
+group of order \(p-1\), put
+\[
+     Z=\prod_{\delta\in\Delta}\delta(\pi).
+\]
+Since \(\delta(\pi)\equiv\chi(\delta)\pi\pmod{\pi^2}\),
+we have \(Z=v\pi^{p-1}\) for a unit \(v\in O[[\pi]]^\times\).
+For an invariant series \(f\) with first term \(a_n\pi^n\ne0\),
+comparison on the \(n\)-th graded piece gives
+\[
+ a_n\chi(\delta)^n=a_n\quad(\delta\in\Delta),
+ \qquad n=(p-1)m\quad(m\ge0).
+\]
+Subtract \(a_n v(0)^{-m}Z^m\) to raise the order. Iteration
+in the complete ring, together with the invariance of \(Z\),
+gives
+\[
+ O[[\pi]]^\Delta=O[[Z]].
+\]
+Lifting a basis of \(N(T)/\pi N(T)\) and averaging
+it over \(\Delta\) gives an invariant basis on each factor.
+
+In
+this basis the tame-invariant lattice \(N_i\) is free over
+\(O[[Z]]\) and gives the full ordinary Wach lattice after
+extension to \(O[[\pi]]\). At \(\pi=\zeta^a-1\), with
+\(\zeta\) primitive of order \(p\) and \(1\le a<p\), we have
+\(Z=p\), by the product of the nonzero cyclotomic differences.
+Weierstrass preparation thus makes \(Z-p\) associated to \(Q\)
+over \(O[[\pi]]\). The constant term and the initial unit
+coefficient give the norm parameter used in the lift comparison.
+
+Choose a cyclotomic generator \(\gamma\) with
+\[
+ u=\chi(\gamma)=1+pc,\qquad c\in\mathbb Z_p^\times,\qquad v_p(u-1)=1.
+\]
+The quotient
+\(\gamma(Z)/Z-1\) is a series in \(Z\) which vanishes at
+\(Z=p\), since \(\gamma\) fixes each primitive root. Hence
+\(\gamma(Z)=Z(1+(Z-p)A(Z))\) for an integral series \(A\).
+The constant term of \(\gamma(Z)/Z\) is \(u^{p-1}\), from
+the leading ordinary term of \(Z\). Consequently
+\[
+ 1-pA(0)=u^{p-1}\equiv 1+(p-1)pc\pmod{p^2},
+ \qquad A(0)\equiv c\pmod p .
+\]
+In the residue ring Frobenius substitutes \(Z^p\). In the
+ordinary lifting calculation put \(X=-Z\), \(q=X+p\). With bars
+denoting reduction in the residue ring the quadratic terms are
+\begin{equation}\label{eq:wach-norm-cyclotomic-sign}
+ \overline{\gamma(Z)}\equiv Z+\bar c Z^2\pmod{Z^3},\qquad
+ \overline{\gamma(X)}\equiv X-\bar c X^2\pmod{X^3}.
+\end{equation}
+Taking \(u=1+p\) in \eqref{eq:wach-norm-cyclotomic-sign} gives
+quadratic coefficient \(-1\) in \(X\). This change of variable also changes the sign
+of the divided matrix \((\gamma-1)/Z\) on the constants.
+
+In the terminal labels write \(P_i\) for the Frobenius matrix
+from \(i^-\) to \(i\) and \(1+Z D_i\) for the cyclotomic matrix
+on \(i\). If the Hodge jumps at \(i\) are \(d_{i,1},\ldots,d_{i,r}\),
+the elementary divisors of \(P_i\) at a primitive root have
+orders \(d_{i,a}\). For an unramified quadratic host and a
+line of jumps \((0,1)\), the orders in ordinary target order
+are \((1,0)\). The terminal indexing gives \((0,1)\).
+\begin{lemma}[First-level heights in the terminal index]
+\label{lem:first-level-terminal-heights}
+At each terminal label \(i\) the elementary-divisor orders of the
+first-level matrix \(P_i\) are the signed jumps \(d_{i,a}\). For
+\(-M_i\le d_{i,a}\le H_i\) its two integral height bounds are
+obtained by clearing \(P_i\) by \((Z-p)^{M_i}\) and \(P_i^{-1}\)
+by \((Z-p)^{H_i}\). For nonnegative jumps each \(a\)-minor is
+divisible by the power given by the sum of the \(a\) least
+jumps. In particular the characteristic polynomial, including multiplicities, is
+\[
+ \det(T-\bar D_i(0))=\prod_a(T+\bar c\,d_{i,a}).
+\]
+\end{lemma}
+
+\begin{proof}
+For the general comparison, first take nonnegative jumps and
+compare the Wach lattice to the constant crystalline lattice
+over the ring of convergent series. Let \(C_i\) express the
+Wach basis in the constant basis. At the root, in the
+filtration-adapted basis, the Wach lattice has generators
+\(s^{-d_{i,a}}\) times the constant generators. Thus \(C_i\)
+has elementary-divisor orders \(-d_{i,a}\). The matrix \(U_i\)
+of the Frobenius image of the source Wach basis in the target
+constant basis is invertible over the root power series ring.
+Indeed the root maps to \(\pi=0\), where the comparison has
+orders zero, and crystalline Frobenius is invertible.
+Write
+\(C_i=A_i\operatorname{diag}(s^{-d_{i,a}})_a B_i\) with both
+outer factors invertible in the root power series ring.
+
+Since
+\(C_iP_i=U_i\) and \(U_i\) is invertible there,
+\[
+       P_i=B_i^{-1}\operatorname{diag}(s^{d_{i,a}})_a
+                               A_i^{-1}U_i .
+\]
+So its elementary-divisor orders are exactly \(d_{i,a}\).
+The inverse Frobenius transport of the constant basis puts these
+orders and the cyclotomic matrix at the same terminal label.
+A common twist adds its rank-one order to all \(d_{i,a}\).
+Cancelling the rank-one factor gives the same formula for signed jumps.
+In the same root chart, with local variable
+\(s=\log((1+\pi)/\zeta^a)\), the action is \(s\mapsto us\).
+The constant crystalline basis is fixed, and the matrix on the
+Wach lattice at the root has eigenvalues \(u^{-d_{i,a}}\)
+with multiplicity. These are the first-level cases of
+Berger's Propositions II.3.1, III.2.1 and III.2.2.
+\cite{berger-wach,dousmanis-wach}\label{cor:cut-wach-models-1}
+
+In particular, if \(-M_i\le d_{i,a}\le H_i\), then
+\[
+ (Z-p)^{M_i}P_i,\qquad (Z-p)^{H_i}P_i^{-1}
+                \quad\text{have entries in }O[[Z]].
+\]
+For descent of these entrywise conditions, start with the
+coarse Wach common denominator, a power of \(Q\). In ordinary
+coordinates multiply by it and remove the excess factors by
+monic division at every primitive root. A monic linear factor
+with a root of positive valuation in \(O\) gives integral
+division with remainder the value at that root. Its prime ideal
+has quotient \(O\), so distinct factors can be removed with their
+specified multiplicities. The factors have product \(Q\).
+The resulting bounded entries are invariant, so they descend to
+\(O[[Z]]\).
+
+For nonnegative jumps, apply the same monic division to any \(a\)-minor \(D_a\) of \(P_i\). Ordering the jumps increasingly gives
+\[
+ (Z-p)^{\sum_{b=1}^{a}d_{i,(b)}}\mid D_a\quad\text{in }O[[Z]].
+\]
+At \(Z=p\) subtract the identity
+from the cyclotomic matrix and divide by \(p\) before reduction.
+Since \(Z=p\) reduces to \(0\), this gives
+\[
+     \det(T-\bar D_i(0))=\prod_a(T+\bar c d_{i,a})
+\]
+in the residue field. This uses that the coefficients
+of the characteristic polynomial commute with reduction and
+that \((u^{-d}-1)/p\equiv-cd\pmod p\). On a scalar line
+the Frobenius ideal is \((Z-p)^d\), by the two height bounds
+with the sole jump \(d\).
+\end{proof}
+
+\begin{lemma}[Height bounds on the induced residue lattices]
+\label{lem:localized-induced-wach-heights}
+Put \(R_0=k_O[[Z]]\) and \(K_0=k_O((Z))\). Let
+\(L_i=N_i/\varpi N_i\) with the terminal labels of Lemma~\ref{lem:first-level-terminal-heights}. A Galois-stable flag in
+\(T/\varpi T\) gives a flag in the corresponding \(K_0\)-factors,
+of the same ranks. At each factor, intersecting with \(L_i\) and
+projecting to a flag quotient gives a free \(R_0\)-lattice. Let \(B_i\) denote the Frobenius span from \(i^-\) to \(i\).
+If \(Z^{H_i}L_i\subseteq B_i\subseteq Z^{-M_i}L_i\), write \(L_i'\) for any induced flag-subquotient lattice and \(B_i'\) for its Frobenius span. Then
+\[
+ Z^{H_i}L_i'\subseteq B_i'\subseteq Z^{-M_i}L_i'.
+\] Each marked line is identified by its specified
+crystalline rank-one comparison in the residual \'etale realization.
+\end{lemma}
+
+\begin{proof}
+Exactness of the \'etale equivalence at multiplication by \(\varpi\)
+identifies the reduced module with the module of \(T/\varpi T\).
+The invariant field of the tame action on \(k_O((\pi))\) is \(K_0\).
+Indeed \(Z\) has order \(p-1\), and division by this series gives
+extension degree \(p-1\). The \(p-1\) substitutions are distinct by
+their linear coefficients. Field descent preserves dimension, and
+taking the tame invariants is exact by averaging. Also the map
+from the Wach lattice to the \'etale module is \(\varpi\)-saturated:
+for \(b\in D(T)\) one has
+\[
+ \varpi b\in D(T)\cap N(T[1/p])\quad\Longrightarrow\quad b\in D(T)\cap N(T[1/p]),
+\]
+since the rational Wach module is closed under \(\varpi^{-1}\). Reduction therefore gives the
+specified inclusion of \(L_i\) into the residual \'etale realization.
+
+For the maps of a flag, take inverse images of its subspaces in
+\(T\). Each inverse image contains \(\varpi T\) and has the same
+crystalline rationalization as \(T\). Functoriality and exactness
+of the \'etale equivalence identify the images of these maps after
+reduction. The given rank-one comparison determines the individual
+marked line in this flag. In particular this determines its
+position before forming any saturated power-series lattices.
+\label{cor:cut-wach-models-2}
+
+For a stable rational subspace \(W_i\) of a flag, set
+\(S_i=L_i\cap W_i\). Its quotient \(L_i/S_i\) is torsion-free,
+so both are free over \(R_0\). Denote by \(B_i\) the Frobenius
+span of \(L_{i^-}\) in the terminal factor. The height conditions
+reduce to
+\[
+    Z^{H_i} L_i\subseteq B_i\subseteq Z^{-M_i}L_i.
+\]
+Flat Frobenius base change and a basis adapted to \(S_{i^-}\)
+identify the Frobenius span of \(S_{i^-}\) with \(B_i\cap W_i\).
+Intersection of the displayed inclusions with \(W_i\) gives
+\[
+    Z^{H_i} S_i\subseteq B_i\cap W_i\subseteq Z^{-M_i}S_i.
+\]
+Taking images in a stable rational quotient preserves the two
+inclusions. This gives the assertion for a subquotient by first
+intersecting and then projecting.
+\end{proof}
+
+The ordinary row and column comparisons use actual surjections
+from the matrix span at the retained point. Their rational sources
+are subrepresentations of finite sums of the normalized family and
+its dual twists. Strictness of crystalline comparison puts the
+Hodge jumps of source, target and kernel in the same labeled
+boxes. If a positive twist is used, the same shift applies to
+source and target. For a finite class let \(T'\) be its extension of the trivial lattice by the target \(T_2\). Strictness gives the multiset identity
+\[
+ \mathrm{Jumps}_\tau(T')=\mathrm{Jumps}_\tau(T_2)\sqcup\{0\}.
+\]
+Thus the same boxes apply whenever they contain zero. These are the data for the integral Herr pairs.
+
+At the complementary primes use the heights of
+Lemma~\ref{lem:first-level-terminal-heights}. The local comparison
+uses the full
+crystalline lattices at the same marked point and the induced
+models of Lemma~\ref{lem:localized-induced-wach-heights}. Its
+reduced matrix on the full lattice is the divided cyclotomic
+matrix computed above. The common containing lattice permits
+the various integral presentations of a class. For the least
+exponent comparison choose the full lattice of the characteristic-zero
+eigensystem lifting the surviving weight. Its marked lines are
+those of the actual residual congruence. The Wach bases may differ between comparisons. Keeping the terminal labels fixed identifies the residual extension being tested, and normalization returns its length bound to the original coefficient place.

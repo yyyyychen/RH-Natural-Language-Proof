@@ -1,0 +1,376 @@
+\subsection{The integral type cut}\label{subsec:selected-cut}
+\hypertarget{source-selected-cut}{}
+
+A scalar cohomology length is counted with the multiplicity of the corresponding good character. To determine which characters contribute, we must realize the restriction to good types on the integral Hecke module at each of the two distinguished primes.
+
+\begin{definition}[Type group and theta support at a localization]\label{def:localized-type-support}
+Fix a point of a chosen chain, with its two distinguished depth-zero
+primes \(g_0,g_1\). These are the primes defining the type conditions.
+For each coefficient localization \(i\), let \(O_i\) be the coefficient
+DVR, \(M_i\) the integral Hecke module and \(X_i\) its set of generic
+Hecke characters. Write \(Z_i\subseteq X_i\) for the characters with
+the prescribed theta summand and \(Z_i^+\subseteq Z_i\) for the good
+ones, whose remaining type polynomials satisfy the tests of Definition~\ref{hyp:retained-type-tests}. The row group is
+\[
+ \Gamma=\prod_{k=0}^1\,\prod_{v\in\mathcal P_k}
+              \mathrm{GL}_r(\mathbb F_{g_k}),\qquad h=|\Gamma|,
+\]
+where \(\mathcal P_k\) indexes the type places at \(g_k\) up to the
+specified conjugacy. The same \(h\) is used at all localizations of
+this point. It may vary along the family.
+\end{definition}
+
+\begin{lemma}[Integral central operators]\label{lem:integral-central}
+Let \(e\) be a central idempotent of \(\mathbb C[\Gamma]\). For any
+embedding of a characteristic-zero coefficient DVR \(O\) into \(\mathbb C\) whose image contains a primitive \(h\)-th root of unity, the induced map on group algebras satisfies
+\[
+ he\in\operatorname{im}\bigl(Z(O[\Gamma])\longrightarrow Z(\mathbb C[\Gamma])\bigr).
+\]
+The assertion also holds for a sum of products of central
+idempotents.
+\end{lemma}
+
+\begin{proof}
+For \(\gamma\in\Gamma\), let \(T\) be left multiplication by
+\(\gamma^{-1}e\) on the regular representation. Its diagonal entries
+on the group basis all equal the coefficient of \(\gamma\) in \(e\).
+Since \(e\) is central, \((\gamma^{-1}e)^{h+1}=\gamma^{-1}e\).
+The eigenvalues of \(T\) are therefore zero or powers of the
+primitive root. Its trace is in the embedded ring \(O\). Taking
+this trace for each \(\gamma\) gives the coefficients of \(he\).
+Coefficientwise injectivity descends centrality. Products of
+commuting central idempotents are central idempotents, and the
+scaled lifts may be added in the center. In particular the
+clearing factor for a product in the type cut is \(h\).
+\end{proof}
+
+We use the point data tied to the integral module. A complex
+automorphic point \(P\) over a Hecke character \(a\) has a nonzero
+form space \(U_P\) of the required tuple and lift index. Every
+\(a\in X_i\) has at least one such point. At each \((k,v)\) the
+irreducible finite group types have monic polynomial labels over
+\(\mathbb F_{g_k}\). The central idempotent of a label is the sum
+of the central idempotents of the types with that label. Its
+action on the complex row space is the projection to those
+isotypic components, by complete reducibility of finite group
+representations in characteristic zero. Acting at every
+\((k,v)\) gives the product of these commuting projections. The good
+selector \(e_0\) is the sum of the products specified by the good
+label tuples.
+
+\begin{definition}[Support of the good type projector]\label{def:good-projector-support}
+At a localization of Definition~\ref{def:localized-type-support} with \(Z_i^+\ne\varnothing\), the support of the projector \(e_0\) on the point spaces \(U_P\) is
+\[
+ S_i=\{a\in X_i: \text{some }P\text{ over }a
+                    \text{ and }F\in U_P\text{ satisfy }e_0F\ne0\}.
+\]
+\end{definition}
+
+\begin{proposition}[The good support of the type selector]
+\label{prop:cut-selector}
+For the integral center action and the depth-zero dictionary
+on these point models, \(Z_i\cap S_i=Z_i^+\). There is an integral Hecke-equivariant endomorphism \(T:M_i\to M_i\). On the full eigenspace \(V_x\) at \(x\) it satisfies
+\[
+ T|_{V_x}=\begin{cases}h\,\mathrm{id}_{V_x},&x\in Z_i^+,\\0,&x\in X_i\setminus S_i.\end{cases}
+\]
+At each split type place \(w\) at \(g_k\), every point over
+\(S_i\) has wild inertia with characteristic polynomial a power
+of \(X-1\), zero monodromy, and each repeated eigenvalue of the tame generator has order
+dividing \(g_k-1=\mathrm Nw-1\).
+\end{proposition}
+
+\begin{proof}
+\proofstep{Check the projector on all points of the theta locus.}
+When \(a\in Z_i\), the isobaric partition includes the specified
+character block of rank \(t\). Removing it and undoing the common
+twist gives the rank-\(r\) datum used for the type dictionary.
+To see that the removal is available at any \(P\) over \(a\), start
+with a point over \(a\) whose isobaric partition contains this block. The isobaric
+partitions of points over \(a\) agree up to permutation. The
+character block thus occurs at \(P\) with the same twisting
+convention.
+
+The parameter surjectivity in the dictionary gives
+a type parameter with the same local data. The form space
+\(U_P\) lies in the summand for that parameter. The series support
+identity acts there by one for a good parameter and by zero
+otherwise. The resulting test on the characteristic-zero fibre is
+\[
+ a\in Z_i^+\quad\Longleftrightarrow\quad\text{the parameter left after removal is good}.
+\]
+For \(a\in Z_i^+\), transport a partition with good remaining parameter to \(P\)
+by a permutation. Conversely, if the parameter after removal is good,
+the partition at \(P\) gives \(a\in Z_i^+\). This gives
+\[
+ e_0 F=F\quad(a\in Z_i^+),\qquad
+ e_0 F=0\quad(a\in Z_i\setminus Z_i^+),\qquad F\in U_P .
+\]
+\proofstep{Descend from the point spaces to the integral Hecke module.}
+The fibre calculation determines where the scalar should act. Its use in estimating lengths depends on realizing that scalar by an endomorphism before tensoring with the fraction field.
+
+The integral action of the center of \(O_i[\Gamma]\)
+commutes with the Hecke action on \(M_i\). Its comparison with
+the action on the form spaces detects any scalar that acts on
+all \(U_P\) over \(a\), as a scalar on the entire generic
+\(a\)-eigenspace of \(M_i\). This is the tied eigenspace spanning
+condition. The coefficient DVRs in this comparison already
+contain the roots of unity in Lemma~\ref{lem:integral-central}.
+
+The two action formulas give
+\[
+ Z_i\cap S_i=Z_i^+,
+\]
+with inclusion
+of \(Z_i^+\) using nonzero form spaces. Lemma~\ref{lem:integral-central}
+and the integral center action give an endomorphism of \(M_i\)
+acting by \(h\) on the full eigenspaces over \(Z_i^+\). For
+\(a\notin S_i\), the same endomorphism acts by zero on the
+full eigenspace since all the form spaces there have zero
+image. This is the operator used in the length comparison.
+
+\proofstep{Read the inertia polynomial from one occurring type, then use it throughout the fibre.}
+If \(e_0F\ne0\), some good tuple product has nonzero
+value on \(F\). Each factor has nonzero value since the
+factors commute. Expanding a factor as a sum of individual
+type idempotents gives an occurring type with the indicated
+label at that place. The depth-zero dictionary attaches to
+that label \(P_v(X)\) the inertia polynomial in residue-field
+labels
+\[
+                         P_v(X)(X-u_v)^t .
+\]
+Here \(P_v\) is squarefree with nonzero constant term and
+avoids the two forbidden reciprocal labels from the theta
+block. The dictionary gives zero monodromy and
+\(u_v\in\mathbb F_{g_k}^{\times}\). These assertions include
+the conjugate places, with the inverse labels on conjugation.
+All roots are nonzero. A root of multiplicity at least two
+must come from the repeated rank-\(t\) block and therefore
+belongs to \(\mathbb F_{g_k}^{\times}\). The dictionary attaches
+distinct continuous tame inertia characters to distinct
+nonzero labels.
+
+For two such characters \(\theta,\theta'\) and a tame generator
+\(t\), agreement at \(t\) would give
+\[
+ (\theta/\theta')(t)=1\ \Longrightarrow\
+ \overline{\langle t\rangle}\subseteq\ker(\theta/\theta').
+\]
+The kernel is closed by continuity and the cyclic subgroup is dense,
+so the two characters would coincide. The dictionary is
+multiplicative in the residue-field labels, so eigenvalues
+of multiplicity at least two have order dividing \(g_k-1\).
+At these completely split places \(g_k=\mathrm Nw\). Thus the local parameter satisfies the type condition. Writing \(m\) for the local rank and \(\lambda\) for any repeated tame eigenvalue, the three tests read
+\[
+ P_{\rm wild}(X)=(X-1)^m,\qquad N=0,\qquad \lambda^{\mathrm Nw-1}=1.
+\]
+
+This allows the repeated character block.
+
+This argument used one point \(P\) over \(a\) with \(e_0F\ne0\) for some \(F\in U_P\).
+At any other point above \(a\) the equality of the isobaric
+partitions gives the same local parameter at each split
+type place. Consequently this condition holds at every point of the cut, including points whose form spaces were unnecessary for deciding membership in \(S_i\). The cut comparison
+therefore applies to the whole retained Hecke module.
+\end{proof}
+
+\subsubsection*{Compatibility with the integral module and rank}
+
+Proposition~\ref{prop:cut-selector} identifies the generic eigensystems on \(S_i\). Their integral structure is the image of the original lattice under the same projection. Write \(V=V_{S_i}\oplus V_{S_i^c}\) for the rational
+decomposition and \(M_{S_i}\) for the projected lattice.
+Its exact presentation is
+\[
+  0\longrightarrow M_i\cap V_{S_i^c}
+    \longrightarrow M_i\longrightarrow M_{S_i}\longrightarrow0.
+\]
+A central operator commuting with Hecke preserves each
+eigenspace, so it preserves the kernel and descends integrally.
+Writing \(p\) for the cut projection and \(V_a\) for the generic eigenspace at a retained character, one has
+\[
+ p|_{V_a}=\operatorname{id}_{V_a}.
+\]
+Hence the same point-space tests
+detect its scalar action before and after taking the cut.
+
+The row labels, the
+inertia polynomials and the attached representations at the
+retained points still come from the original place and tuple.
+The finite paired-character equations restrict with them.
+In particular the restriction uses the original norm choice,
+with fewer local characters to test.
+
+The reduced space still realizes the same tame and Hodge--Tate
+labels at each retained character. At places over the coefficient prime use local--global compatibility with the specified inertia and monodromy condition at the type primes and the unramified parameter elsewhere. For the de Rham, potentially semistable representation at an unramified type, the criterion is
+\[
+ \mathrm{WD}(R)|_{I_v}=1,\quad N=0\quad\Longrightarrow\quad R|_{G_{E_v}}\text{ is crystalline}.
+\]
+
+At the
+type primes the monodromy and inertia calculation is used in
+the potentially crystalline comparison. The Hodge--Tate jumps
+are those of the algebraic level-zero row. Their multiplicity
+one implies that the semisimplified representation has distinct
+absolutely irreducible constituents. Every summand of a de Rham representation is de Rham. At a fixed embedding \(\tau\), if an irreducible \(U\) occurred at least twice, any jump \(a\) of \(U\) would give
+\[
+ \dim\operatorname{gr}^a D_{\rm dR,\tau}(R^{\rm ss})\ge 2\dim\operatorname{gr}^a D_{\rm dR,\tau}(U)\ge2,
+\]
+contrary to simplicity of the labelled jumps. Here \(R\) denotes the attached representation. Thus the retained eigenspaces carry both the required inertia polynomials and the distinct labelled jumps used to identify their multiplicities.
+
+\subsubsection*{Multiplicities at a twisted coefficient place}
+
+Projection retains entire eigenspaces over the selected characters. We now compare their total multiplicity with the rank of the twisted theta image at a single place.
+
+Fix a lift \(j\), a twisted coefficient place \(w\) and the
+twist \(\mu=\mu(w)\) assigned to it. The row is the internal
+direct sum \(M_j=\bigoplus_\sigma M_{j,\sigma}\).
+Write \(\Theta_\mu\) for the theta map on this row and
+\(\Theta_\mu^*\) for its adjoint. On \(M_{j,\sigma}\)
+the operator \(\Theta_\mu^*\Theta_\mu\) is a positive
+scalar. The twisted zero-space is the image of \(\Theta_\mu\)
+and has dimension \(d_j(w)=\dim M_j\).
+
+\begin{proposition}[Multiplicity after the type cut]
+\label{prop:cut-multiplicity}
+For a lift \(j\) and twisted coefficient place \(w\) on the cut
+of Proposition~\ref{prop:cut-selector}, let
+\(m_{i,\pi}\) be the dimension of the full good Hecke
+eigenspace at a retained localization \(i\). Then
+\begin{equation}\label{eq:retained-multiplicity}
+ \sum_{i\ {\rm over}\ (j,w)}\;\sum_{\pi\in Z_i^+} m_{i,\pi}
+             \le d_j(w)=d_j .
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+\proofstep{Assign each good lower-row label by its integral split polynomials.}
+For a localization \(i\) over \((j,w)\), assign a good
+row label \(\sigma\) to \(i\) if the normalized polynomials
+of its lifted parameter have integral representatives with
+the residual Hecke values of \(i\) at every split place
+away from the residue characteristic, the original
+ramification set and the auxiliary level. Form the lifted
+parameter by adding the rank-\(t\) character part and
+taking the common normalizing twist. The local Hecke order
+has a single residue character, so the test may use any
+point of the localization. At surviving localizations it
+may use any retained point. In the cut the polynomials,
+their residue test and the assigned row label set are
+therefore preserved. Projection of the split generic Hecke
+algebra to a subset of characters retains their whole
+eigenspaces. In particular, if \(V_a\) and \(V_a^{\rm cut}\) denote the original and cut eigenspaces at a good character, then
+\[
+ V_a^{\rm cut}\simeq V_a,\qquad \dim V_a^{\rm cut}=\dim V_a.
+\]
+
+
+\proofstep{Identify the full good eigenspace by the theta map and its adjoint.}
+For a good character \(\pi\) and an isobaric row parameter
+\(\Sigma\) for it, let \(M_{j,\Sigma}\) be the sum of row
+spaces with that parameter and \(V_{i,\pi}\) the full
+Hecke eigenspace. A row label belongs to this sum when its
+local reading agrees with that of \(\Sigma\) at each split
+place. We use the split local theta comparison
+on the tied row and point models. The upward image of each
+row type is in its specified point type. The local parameter
+formula adds the character part and applies the common twist.
+The split components of this base change determine the
+Hecke character. The primes excluded from this split comparison have
+Dirichlet density zero over \(E\).
+For an inert place \(w\) above \(v\),
+\[
+ \mathrm Nw=(\mathrm Nv)^2.
+\]
+
+The Euler product of the lower field at \(2\) converges, so
+\[
+ \sum_{w\ {\rm inert}}(\mathrm Nw)^{-1}
+   \le\sum_{v}(\mathrm Nv)^{-2}<\infty .
+\]
+The other exclusions form a finite set. In each finite Galois quotient
+of \(G_E\), a nonempty conjugacy class has positive
+Chebotarev density, so it meets the remaining Frobenius
+classes. Local--global compatibility at those primes
+and the common twist identify the functions
+\[
+       g\longmapsto \det(1-X\rho(g))
+\]
+for the two attached representations on a dense set.
+Their continuity gives equality on \(G_E\). At all
+unramified places the corresponding standard parameters
+therefore agree. Strong multiplicity one for isobaric
+representations identifies their constituents with multiplicity.
+In the tied model these lists determine the local split
+and unramified inert parameters used for the point
+comparison.
+
+Conversely, equality of the good split
+Hecke readings gives equal split parameters by taking
+the roots of the common Hecke polynomials and undoing
+the normalization. \label{cor:selected-cut-1}
+Thus \(\Theta_\mu M_{j,\Sigma}\subseteq V_{i,\pi}\).
+For a row vector \(v\) in a different parameter and
+\(u\in V_{i,\pi}\), use
+\[
+ \langle v,\Theta_\mu^*u\rangle
+                    =\langle\Theta_\mu v,u\rangle .
+\]
+A nonzero value requires an occurring type over \(\pi\)
+by orthogonality. Its split Hecke polynomials then agree
+with those of \(\pi\), and cancelling the common character
+block and twist identifies its row parameter with \(\Sigma\).
+Thus \(\Theta_\mu^*V_{i,\pi}\subseteq M_{j,\Sigma}\).
+The upward injection and the injection of the adjoint
+on the full good eigenspace
+(Proposition~\ref{prop:downward-on-good-space}) give
+\[
+ \dim M_{j,\Sigma}\le\dim V_{i,\pi}\le\dim M_{j,\Sigma},
+ \qquad \Theta_\mu M_{j,\Sigma}=V_{i,\pi}.
+\]
+
+\proofstep{Identify the assignment with the sum of full good eigenspaces.}
+A nonzero good row component assigned to \(i\) lifts
+into a point type. Its lifted parameter has the split
+polynomials of the residual test. The local point exhaustion
+on this model puts the lift in the localization \(i\).
+The two type-prime labels of its rank-\(r\) part are those
+of the row, so the point is good. Conversely a good point
+supplies its own integral Hecke polynomials for the residual
+test. Any row of its parameter has good labels, since
+base changes over this point have the same split components,
+and the character part and twist cancel as above. These
+two inclusions give the sum of good row components assigned
+to \(i\) as the sum of the \(M_{j,\Sigma}\) for good
+characters at \(i\). Put \(M^+\) for this assigned sum. Its image and dimension are
+\[
+ \Theta_\mu(M^+)=\bigoplus_{\pi\in Z_i^+}V_{i,\pi},\qquad \dim\Theta_\mu(M^+)=\sum_{\pi\in Z_i^+}m_{i,\pi}.
+\]
+For the upper bound an empty good point set contributes zero.
+
+\proofstep{Separate the residual Hecke characters before summing dimensions.}
+Summing over localizations gives a rank bound only if distinct localizations count disjoint lower-row labels.
+
+Distinct localizations over \((j,w)\) have disjoint
+assigned row sets. Their coefficient DVRs are identified
+compatibly with the complex comparison. The same row
+label has the same split parameter at both, and the added
+character depends on \(j,\mu(w)\). If a label were
+assigned to both localizations, choose a split place \(v\)
+good for both and an index \(a\) whose Hecke generator has
+different residues, using separation of the residual ideals.
+The two lifted polynomials at \(v\) agree over the
+identified DVR because their complex images agree.
+Their coefficients of \(T^{r+t-a}\) have the same
+reduction. Writing \(H_v(T)\) for the lifted polynomial and \(t_{v,a}\) for the Hecke value, the coefficient is
+\[
+ [T^{r+t-a}]H_v(T)=(-1)^a(\mathrm Nv)^{a(a-1)/2}t_{v,a}.
+\]
+
+The multiplier is a unit since \(v\) is away from the
+residue characteristic of \(w\). Thus the two Hecke values
+have the same reduction, a contradiction. Summing dimensions over the disjoint sets inside \(M_j\)
+gives the inequality. The comparison of twisted and base
+zero-spaces gives the last equality for this lift.
+\label{cor:selected-cut-2}
+\end{proof}
+
+\input{selected-point-adjoint}

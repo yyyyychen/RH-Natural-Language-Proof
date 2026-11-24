@@ -1,0 +1,262 @@
+\subsubsection{Cuspidal induction on the fitted CM layer}
+\label{par:count-three-cuspidal-induction}
+
+The separation of the infinity exponents is used here to obtain a regular cuspidal representation. Its restriction to the fitted CM field supplies the automorphic realization of the integral tensor.
+
+\begin{proposition}[Cuspidal induction of the separated tensor]\label{prop:count-three-cuspidal-induction}
+For the chosen infinity separation and the tensor of
+Propositions~\ref{prop:count-three-tensor-endpoint}
+and \ref{prop:count-three-tensor-irreducible}, the restriction to the fitted CM layer \(L\) has the regular algebraic polarized cuspidal attachment used for the seed. For the separated tensor before the common scalar twist, the ordered infinity labels and their consecutive gaps are 
+\[
+ (k-1+m,k-1-m,m,-m),\qquad(2m,k-1-2m,2m).
+\]
+
+\end{proposition}
+
+\begin{proof}
+With \(a\) chosen by the infinity separation, put
+\(L=FK\) and \(M'=LK'\). The latter extension has degree
+two over \(L\) because the powered normalizer belongs
+to \(G_L\) and acts nontrivially on \(K'\). The extension
+\(M'/K'\) is solvable, since both \(L\) and \(K'\) are
+abelian over \(\Q\). Let \(\pi\) be the cuspidal representation
+of \(\mathrm{GL}_2(\mathbb A_\Q)\) of the newform \(g\).
+Base change to \(K'\), twist by the Hecke character of
+\((\kappa')^a\), and base change to \(M'\). These are
+cuspidal base changes.
+
+At each cyclic step, failure of
+cuspidality would give a nontrivial self-twist by a character
+of the cyclic extension. Comparison at unramified places would give a Galois self-twist by a nontrivial quotient character \(\nu\). An intertwiner \(T\) restricts on the upper subgroup \(H\) to an element of its scalar commutant. Hence
+\[
+ T=cI,\qquad T r(g)T^{-1}=\nu(g)r(g)
+ \quad\Longrightarrow\quad \nu(g)=1\quad\text{for all }g,
+\]
+which is impossible. This holds by the rank-two strong irreducibility
+and is preserved by the character twist. At unramified places, base change takes the powers
+dictated by the residue degrees and the twist multiplies
+by the rank-one value. Thus the attached representation is
+\[
+                 \rho|_{G_{M'}}\otimes(\kappa')^a .
+\]
+\cite{clozel-rajan}\label{cor:ordinary-count-iii-admission-1}
+
+Write \(R=\rho\otimes\operatorname{Ind}_{G_{K'}}^{G_\Q}
+(\kappa')^a\), with the tensor basis already specified.
+The tensor identity for induction gives
+\[
+  R|_{G_L}
+   \simeq\operatorname{Ind}_{G_{M'}}^{G_L}
+                 \bigl(\rho|_{G_{M'}}(\kappa')^a\bigr).
+\]
+The two constituents on \(G_{M'}\) are inequivalent by
+the determinant test above. Hence the cuspidal representation
+over \(M'\) is inequivalent to its conjugate over \(L\),
+by unramified Galois comparison. Quadratic automorphic
+induction is cuspidal under this hypothesis. At an embedding \(\tau:L\hookrightarrow\C\), if \(\tau_+,\tau_-\)
+are the two extensions to \(M'\), the infinity multiset is
+\(\Lambda_{\tau_+}\sqcup\Lambda_{\tau_-}\). If \(B_+,B_-\) denote the unshifted rank-two multisets at the two embeddings, the character of \(K'\) gives
+\[
+ \Lambda_{\tau_+}\sqcup\Lambda_{\tau_-}
+ =(B_++am_0)\sqcup(B_--am_0)
+\]
+after choosing the positive embedding first.
+
+Their
+restrictions to \(K'\) are the two distinct embeddings,
+so the parameters are the four separated by the choice
+of \(a\). They are algebraic in rank four: the rank-two
+algebraic shifts have the same half-integral parity as
+the rank-four shifts, and the twists add integers.
+Thus the induced representation is regular algebraic,
+with \(R|_{G_L}\) as its Galois representation by comparison
+at the unramified places. For the polarization, write \(W=\rho|_{G_{M'}}\otimes(\kappa')^a\) and let \(\iota\) denote complex conjugation. The rank-two factor extends over \(\Q\), its determinant is \(D\), and \((\kappa')^\iota=(\kappa')^{-1}\). The exterior pairing in rank two therefore gives
+\[
+ W^\iota\simeq \rho|_{G_{M'}}\otimes(\kappa')^{-a}
+       \simeq W^\vee\otimes D|_{G_{M'}} .
+\]
+Induction and comparison at unramified places give the corresponding essential conjugate duality of the automorphic representation by strong multiplicity one.
+\cite{clozel-rajan}\label{cor:ordinary-count-iii-admission-2}
+
+The finite-place conditions can be checked before induction.
+At primes in \(S\) and at \(w\), the extension \(M'/L\)
+splits, by the splitting in \(K'\) at \(S\) and the
+choice at \(w\). At primes away from \(S\cup\{w\}\), the
+quadratic extension \(M'/L\) is unramified. In fact the
+quadratic character there is the restriction of \(\bar\alpha\)
+on \(G_L\), and
+\[
+ \alpha=\eta\epsilon_\ell/\omega
+\]
+is
+unramified away from \(S\). The representation
+\(\rho|_{G_L}\) is unramified at these places as well, since
+the conductors of \(\phi\) and \(\theta\) are supported on
+\(S\cup\{w\}\). The Hecke character of \(K'\) is
+unramified away from \(\ell\), so the twisted base change
+is spherical at the nonsplit places of \(M'/L\).
+Here one uses the local compatibility of the rank-two
+attachment away from \(\ell\), under restriction and
+character twist.
+
+At a split place of \(M'/L\) the
+parameter of the induction is the direct sum from its
+two places. At a nonsplit unramified place the inertia group \(I\) is the same for the quadratic extension and the base. On restricting the induced parameter to inertia, its two coset summands both restrict trivially:
+\[
+ \left.(\operatorname{Ind}\tau)\right|_I
+ =\left.\tau\right|_I\oplus\left.\tau^c\right|_I
+ =\mathbf{1}^{\oplus4}.
+\]
+The summands have zero monodromy, hence the induction is spherical there. These are
+the split and unramified local comparisons for the induced representation.
+
+In particular the induced rank-four representation matches
+the tensor at all places away from \(\ell\), including
+monodromy. At \(\ell\) the quadratic extension is split. The ordered
+exponents of the tensor before the scalar shift and their gaps are
+\[
+      (k-1+m,k-1-m,m,-m),\qquad
+      (2m,k-1-2m,2m).
+\]
+Every gap is at least two. The local Weil lines are unlinked
+by the valuation calculation in
+Section~\ref{sec:count-two-seed-specialization}.
+The local--global compatibility theorem at \(\ell\)
+applies to the regular algebraic polarized cuspidal
+representation, since those gaps give Shin regularity.
+\cite{blggt,blggt-lg}\label{cor:ordinary-count-iii-admission-3}
+
+\end{proof}
+
+\subsubsection{The eigenpoint at both ordinary levels}
+\label{par:count-three-actual-seed}
+
+The cuspidal tensor has to give an ordinary specialization at each of two levels. With the chosen local flags one can impose both sets of Hecke relations at the same integral point.
+
+\begin{proposition}[Support of the integral tensor seed]\label{prop:count-three-ordinary-attachment}
+The normalized integral tensor gives a seed evaluation on both
+ordinary Hecke quotients. In the framed ring over \(F\), write \(f_i\) for their level maps. For these maps \(f_i\) and ideals \(J_i\), every prime \(P\) below the seed kernel in \(B\) satisfies 
+\[
+ f_1(J_1)B+f_2(J_2)B\subseteq P\subseteq\ker y_{\rm seed}.
+\]
+ This is the initial support condition for the four
+residual links.
+\end{proposition}
+
+\begin{proof}
+On the framed integral tensor the scalar is \(\delta\);
+the twist over \(L\) by \(\delta^{-1}\) recovers
+\(\delta^{-1}(\delta R|_{G_L})=R|_{G_L}\), the attached
+cuspidal representation. Write \(e_0=j+2-k\)
+for the exponent of \(\delta^2\) on an open subgroup.
+There is a positive integer \(h\) with
+\[
+ (\delta^{-2}\epsilon_\ell^{e_0})^h=1,
+\]
+since this
+character has finite image. Along with the even doubled
+gaps and the parity of the doubled first exponent plus
+the doubled correction, this is the scalar correction data
+in the ordinary seed interface. The required irreducibility
+on the cyclotomic kernel was proved above. The choice of
+\(\delta\) gives determinant multiplier \(\vartheta\) on \(G_F\)
+because \(\theta\) is trivial there.
+
+For each link use the parallel weight shift of
+Paragraph~\ref{par:count-two-seed-support}, which is
+needed here as the seed's doubled weights can be odd.
+Write \(\beta_i\) for the link companion and \(h_0\) for
+the first doubled seed exponent. Take the shift
+\(n=|h_0|\). All adjacent doubled gaps are even. Thus for every \(r\)
+\[
+ h_r\equiv h_0\equiv |h_0|=n\pmod2,\qquad (h_r+n)/2\in\Z .
+\]
+This gives integral seed exponents for \(\kappa\beta_i^n\) at the chosen embeddings. Thus on \(G_L\) the shifted
+evaluation has the cuspidal attachment just constructed
+twisted by the algebraic Hecke character of
+\(\kappa\beta_i^n\delta\).
+
+At a selected embedding, if \(m^{(R)}_r\) denotes the
+\(r\)-th integral untwisted tensor exponent, the scalar exponent is
+\[
+             \frac{h_r+n}{2}-m^{(R)}_r\in\Z .
+\]
+It is independent of \(r\), since the companion acts by one
+scalar on all four lines.
+At the conjugate embeddings integrality follows from
+the link pairing with its integral cyclotomic multiplier
+and the rank-two determinant \(D\). The anticyclotomic
+companion preserves the link pairing and its unitary
+normalization.
+
+For the tame types, after killing \(\theta\) on \(G_F\)
+the inertia of \(R\) away from \(\ell\) has finite image of
+order prime to \(\ell\). Where \(K'\) splits this follows
+from the rank-two inertia calculation and unramifiedness
+of \(\kappa'\). At the other places the quadratic extension
+is unramified and the whole seed is unramified. The
+finite inertia of \(\kappa\beta_i^n\delta\) away from \(\ell\) has
+order prime to \(\ell\), by the common twist and the
+formula for \(\delta\). If \(e\) is the order of this finite inertia image, each inertial root satisfies
+\[
+ z^e=1,\qquad e\in\mathbb Z_\ell^\times.
+\]
+Thus the polynomial \(X^e-1\) has simple roots modulo \(\ell\). Each inertial root \(z\) is consequently determined by its reduction:
+\[
+ z^e=1,\qquad (X^e-1)'(z)=e z^{e-1}\in O^\times
+ \quad\Longrightarrow\quad z=[\bar z].
+\]
+Here the brackets denote the Teichmüller lift. This is the type at each prescribed
+tame place, with zero monodromy.
+
+At \(w\) it is unramified
+after killing \(\theta\). At both exceptional places the
+seed is unramified as required: these places are outside
+\(S\cup\{w\}\), and their inertia is killed by the common
+link twist. The finite places where it can ramify are
+split over \(F\), including those over \(\ell\).
+Above \(\ell\), the same exponent gaps and the ordered
+local characters from the tensor flag give the ordinary
+vector using the ordered translation in
+Section~\ref{sec:count-two-seed-specialization}.
+At inert places over \(F\) the attachment is spherical.
+The compact unitary descent and the projection to
+ordinary scalar functions therefore apply with exactly
+the prescribed types and one exceptional place on each
+of the two levels.
+\cite{thorne-unitary-descent,newton-thorne-unitary}\label{cor:ordinary-count-iii-admission-4}
+
+Let
+\[
+ f_{i,n}:R_i\to B
+\]
+be the shifted link map to the
+common framed ring and \(y_{\rm seed}\) the tensor point.
+The characteristic coefficients of \(y_{\rm seed}\circ f_{i,n}\)
+agree with those of the ordinary eigenpoint at split good
+primes, hence everywhere by density. The local-character
+coordinates agree by the matched weights and uniformizer
+translations. The spectral and local matches give
+\[
+ J_i\subseteq\ker(y_{\rm seed}\circ f_{i,n}).
+\]
+
+By the finite-twist invariance in
+Paragraph~\ref{par:count-two-seed-support},
+\[
+                  f_{i,n}(J_i)B=f_i(J_i)B
+                             \subseteq\ker y_{\rm seed}.
+\]
+This transfers support to the original link. The hypotheses of the adjoint comparison in the same
+paragraph hold on this tensor: it is cuspidal, irreducible
+on the cyclotomic kernel, has the separated ordinary
+exponents, and is unramified at the exceptional place.
+The comparison gives vanishing at every prime below
+the seed evaluation kernel. In the normalized framed
+ring over \(F\), the sum of the two extended ideals therefore
+satisfies the seed condition for the four links.
+Propositions~\ref{prop:tower-residual-propagation},
+\ref{prop:count-three-residual-path} and
+\ref{prop:count-three-extra-vertices} propagate this same ideal
+to the normalized target in the rank-four construction.
+\end{proof}

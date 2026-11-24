@@ -1,0 +1,1451 @@
+\section{Introduction}
+\label{sec:introduction}
+
+Suppose that a Dirichlet \(L\)-function has a zero \(\rho\) with
+\(1/2<\RePart\rho<1\). What would the primes have to do differently if such a zero existed?
+In a sum over primes up to size \(y\), the zero contributes a term
+proportional to \(y^\rho\) in Mellin inversion. When \(\rho\) is nonreal
+this term oscillates. The two quantities visible in that term are
+\[
+         |y^\rho|=y^{\RePart\rho},\qquad
+         y^\rho/|y^\rho|=e^{i\Im(\rho)\log y}.
+\]
+Thus on its own the size of \(y^\rho\) cannot tell us at which real scale a prime sum
+will be large. The arithmetic construction seeks an upper bound on certain intervals. How can the two pieces of information meet?
+
+Levent Alp\"oge's argument makes a particular real sum over primes serve
+two purposes. Its transform has a pole at the putative zero. The same
+sum can be recovered, up to controlled errors, by averaging a chain of
+theta lifts over a finite group. The length of the chain is a parameter
+in the proof. Denote the prime-sum scale by \(x\) and the number of lifts
+by \(m\). Once the arithmetic errors have been divided by the total
+weight, two of their characteristic sizes are
+\[
+                         x/m \qquad\text{and}\qquad m .
+\]
+
+Taking \(m\) close to \(\sqrt{x}\) explains where the critical exponent enters the argument. The hard part is to obtain both estimates for the
+very same chain. We shall follow the prime sum to that chain and back,
+keeping the zero \(\rho\) in view. The precise conclusions, including
+the pole of a principal character and the range for an imprimitive
+character, are given in Theorem~\ref{thm:claims}. The uniform estimate that delivers them is Theorem~\ref{hyp:uniform-arithmetic-data}. \cite{alpoge}
+
+Write \(G(x)\) for the real weighted prime sum, centered by subtracting the contribution at one. The analytic criterion in Section~\ref{sec:window} asks, for sufficiently small \(\epsilon>0\), for
+\[
+ G(x)\le x^{1/2+9\epsilon}\qquad
+        (Y\le x\le Y^{3/2},\ \text{for arbitrarily large }Y).
+\]
+
+Why should arithmetic information at isolated scales control a whole
+interval? For fixed \(\psi\), moving a square argument by at most
+\(3\sqrt{x}\) changes this particular prime sum by
+\(O_\psi(\sqrt{x}\log(2x))\). Thus a bound at squares, with a little room
+in the exponent, suffices throughout the interval. At each square the
+arithmetic difficulty is more precise still. The finite Fourier average
+is bounded above by the value at its maximizing translate. After fixing
+the base weights one can choose this translate before constructing any
+lifts (Lemmas~\ref{lem:maximizing-translate} and~\ref{lem:square-window-transfer}).
+
+Thus at each square it suffices to estimate the member belonging
+to the maximizing translate,
+\[
+    x=k^2\quad\longmapsto\quad u_*(x)\quad\longmapsto\quad P(x,u_*).
+\]
+Both divisibility estimates must hold on this member, with constants
+uniform as the squares vary. Section~\ref{subsec:window-points} obtains the stronger range
+\[
+      x\in[Y_\nu,Y_\nu^{3/2}],\qquad u\in A_0(x).
+\]
+The squares and their maximizing translates explain how much of this comparison the zero criterion needs.
+
+How can one recognize the same member in two estimates? Construction~\ref{hyp:family-prescribed-realization} starts with a geometric row whose cusp forms have both an analytic period and an integral lattice.
+The construction begins with the two CM types induced from the imaginary quadratic subfield of the host. For each type, Lemma~\ref{lem:marked-principal-cm-sources} gives a principally polarized rank-one variety. Tensoring with a unimodular Hermitian lattice gives the definite points of Lemma~\ref{lem:marked-definite-cm-points}. At such a point Lemma~\ref{lem:terminal-valuative-realization} computes the degree of the coefficient line.
+
+At the opposite end of the lift chain, how can one still recognize a
+given row? The test sought for its multiplicity \(v\) is a nonzero
+number at the original modulus:
+\[
+   v\ne0\quad\Longrightarrow\quad I_v(\rho,\xi;\Psi,\Phi)\ne0
+       \quad\text{for some permitted tests.}
+\]
+Lemma~\ref{lem:fitted-completed-nonvanishing} answers by
+carrying a nonzero period from the row to a permitted column at the
+specified level. The real operators entering its later norm estimate
+are computed in Lemma~\ref{hyp:selected-orbital-coefficient-bounds}.
+On a marked family the two Frobenius comparisons descend to one integral flag model (Lemma~\ref{lem:flag-finite-frobenius-model}). This computes the relative square in the geometric index bound, including at ramified primes.
+
+Which row supplies the index? In a basis \(b_i\) of marked cusp sections, the integral test is
+\[
+               z\in B_v\quad\Longleftrightarrow\quad
+         \left|\sum_i z_i b_i(y)\right|_v\le1
+                             \quad\text{at every integral frame }y .
+\]
+Reading those same sections on a lowest-weight vector gives their complex periods (Lemma~\ref{lem:constructed-signed-coefficient-row}). A finite set of signed theta evaluations then selects the characters \(\varphi_i\) needed for the twists. When their values are adjoined, retain the reference forms with their original Haar measures. At a new character, a surjective lift puts the required system of Hecke eigenvalues in the new space (Lemma~\ref{lem:new-ray-type-occurrence}).
+\[
+    \text{reference row}\ \longrightarrow\ (\varphi_i)_i
+                       \ \longrightarrow\ P'(x,u).
+\]
+
+Only now make the two auxiliary covers. Both measure the indices of this last member. To pass from one member to an interval, assign an auxiliary prime pair to each of a sequence of disjoint intervals, and complete the family at all their scales. Its last error estimate has one threshold \(X_*\). For every \(Z\), choose a member of that sequence with
+\[
+                       Y_\nu>\max(Z,X_*).
+\]
+The same bound now holds at every translate for every real scale on the chosen interval (Figure~\ref{fig:common-window-choice}). To see why its exponent detects a zero, start with the prime sum itself.
+
+\subsection{What a zero contributes to a prime sum}
+
+To follow the contribution of one zero, we first need to distinguish one Dirichlet
+series from the others in a count of primes. For an integer \(q\ge1\) and a
+residue \(a\) prime to \(q\), membership in the progression
+\(n\equiv a\pmod q\) is a condition in a finite abelian group.
+Expanding its indicator in the characters of that group separates
+the different Dirichlet series through which the zeros enter.
+\begin{definition}[Dirichlet characters, modulus and conductor]\label{def:dirichlet-modulus}
+Fix an integer \(q\ge1\). The group of units modulo \(q\) is
+\(U_q=(\mathbb Z/q\mathbb Z)^\times\). Its order is Euler's totient \(\varphi(q)\).
+A \emph{Dirichlet character modulo \(q\)} is a group homomorphism
+from \(U_q\) to the multiplicative group of nonzero complex numbers,
+\[
+ \chi:U_q\longrightarrow\mathbb C^\times,\qquad
+ \chi(ab)=\chi(a)\chi(b)\quad(a,b\in U_q).
+\]
+These characters form the group \(X(q)=\operatorname{Hom}(U_q,\mathbb C^\times)\)
+under pointwise multiplication. For an integer \(n\), write \([n]_q\) for its
+residue class. We use the same symbol for the resulting periodic function on \(\mathbb Z\),
+\[
+ \chi(n)=
+ \begin{cases}
+    \chi([n]_q),&\gcd(n,q)=1,\\
+    0,&\gcd(n,q)>1.
+ \end{cases}
+\]
+The trivial homomorphism on \(U_q\) gives the \emph{principal character} modulo \(q\),
+\(\chi_{0,q}(n)=\mathbf 1_{\gcd(n,q)=1}\).
+Complex conjugation gives the character \(\bar\chi(n)=\overline{\chi(n)}\).
+
+The \emph{conductor} \(f_\chi\) is the least positive divisor \(f\mid q\) for which
+the homomorphism \(\chi\) factors through the reduction map \(U_q\to U_f\).
+The resulting character \(\chi^*\in X(f_\chi)\) is the unique primitive character inducing \(\chi\).
+Thus \(\chi\) is primitive exactly when \(f_\chi=q\).
+Write \(1=\chi_{0,1}\) for the conductor-one character.
+\end{definition}
+
+\begin{definition}[Dirichlet series and Euler product]\label{def:dirichlet-series}
+For \(\chi\in X(q)\) and a complex variable \(s\) with \(\RePart s>1\), the
+Dirichlet \(L\)-function and the Riemann zeta function are given by
+\[
+ L_q(s,\chi)=\sum_{n\ge1}\frac{\chi(n)}{n^s}
+       =\prod_{p\nmid q}(1-\chi(p)p^{-s})^{-1},\qquad
+ \zeta(s)=L_1(s,1).
+\]
+The same symbols denote the meromorphic continuations.
+We use the customary \(L(s,\chi)\) when the modulus of \(\chi\) has
+been fixed. In particular \(L(s,\chi^*)\) uses modulus \(f_\chi\).
+\end{definition}
+
+\begin{definition}[Prime powers in an arithmetic progression]\label{def:progression-primes}
+The von Mangoldt function \(\Lambda\) assigns weight \(\log p\) to each
+positive power of a prime \(p\). For \(n\ge1\) an integer, \(y\ge1\) real
+and \(a\in U_q\), its value and its sum over the progression are
+\[
+ \Lambda(n)=\begin{cases}\log p,& n=p^r,\ p\text{ prime},\ r\ge1,\\
+                             0,&\text{otherwise},\end{cases}
+ \qquad
+ \Psi(y;q,a)=\sum_{\substack{1\le n\le y\\ n\equiv a\bmod q}}\Lambda(n).
+\]
+\end{definition}
+
+
+Taking a logarithmic derivative converts the Euler product into a sum
+over prime powers. Orthogonality of the characters of \(U_q\)
+then expresses the count in the prescribed progression as
+\begin{align*}
+ -\frac{L_q'(s,\chi)}{L_q(s,\chi)}
+      &=\sum_{n\ge1}\Lambda(n)\chi(n)n^{-s} &&(\RePart s>1),\\
+ \Psi(y;q,a)&=\frac1{\varphi(q)}\sum_{\chi\in X(q)}
+       \overline{\chi(a)}\sum_{n\le y}\Lambda(n)\chi(n).
+\end{align*}
+For fixed \(q\) the prime number theorem for arithmetic progressions gives
+\(\Psi(y;q,a)\sim y/\varphi(q)\). The error is where the other
+singularities of the logarithmic derivatives can enter. At a zero
+of multiplicity \(d\), write \(L_q(s,\chi)=(s-\rho)^d h(s)\),
+where \(h\) is holomorphic and \(h(\rho)\ne0\). Locally,
+\[
+ -\frac{L_q'(s,\chi)}{L_q(s,\chi)}
+       =-\frac{d}{s-\rho}-\frac{h'(s)}{h(s)} .
+\]
+The coefficient of the pole records the multiplicity. In particular,
+zeros shared by two characters contribute residues with the same sign
+before the Mellin kernel is inserted. This observation will allow the
+arithmetic argument to use several characters to detect a zero of one.
+\cite{tz-progressions}
+
+For a concrete example, take the character \(\chi_4\) modulo four
+with \(\chi_4(1)=1\) and \(\chi_4(3)=-1\). Its extension to the
+integers vanishes on even numbers. The two reduced progressions give
+two independent combinations. Subtracting their sums isolates
+\(\chi_4\); adding them retains the principal character modulo four:
+\begin{align*}
+ \Psi(y;4,1)-\Psi(y;4,3)&=\sum_{n\le y}\Lambda(n)\chi_4(n),\\
+ \Psi(y;4,1)+\Psi(y;4,3)&=\sum_{n\le y}\Lambda(n)
+              -\left\lfloor\frac{\log y}{\log 2}\right\rfloor\log 2.
+\end{align*}
+The lost terms in the second line are exactly the powers of two.
+On the Euler-product side the same distinction reads
+\[
+        L_4(s,\chi_{0,4})=(1-2^{-s})\zeta(s).
+\]
+It is for this reason that we keep track of the modulus until we have
+passed to a primitive character. In particular the principal
+character in an average of primitive characters is the character of
+conductor one. The correction for an arbitrary imprimitive character
+is computed in Lemma~\ref{lem:analytic-change-modulus}.
+
+\subsection{A prime sum with a known pole removed}
+
+The character expansion tells us which series to examine. How should we weight its
+prime powers? The same weight must admit a simple Mellin transform here and arise from
+integral weights in the theta lifts below.
+\begin{definition}[Smoothed prime-power sum]\label{def:smoothed-prime-sum}
+For \(u>0\) let \(W(u)=\max(u-1,0)\). For \(y\ge1\) and
+\(\chi\in X(q)\) put
+\begin{equation}\label{eq:smoothed-sum}
+ S(y;q,\chi)=\sum_{n\ge1}\Lambda(n)\chi(n)W(y/n)
+            =\sum_{n\le y}\Lambda(n)\chi(n)(y/n-1).
+\end{equation}
+For a primitive \(\chi\), write \(S_\chi(y)=S(y;f_\chi,\chi)\).
+\end{definition}
+
+
+The Mellin transform is especially transparent on a single summand.
+Beginning at the first value of \(y\) where the weight can be nonzero gives
+\[
+ \int_n^\infty (y/n-1)y^{-s-1}\,dy
+       =n^{-s}\left(\frac1{s-1}-\frac1s\right)
+       =\frac{n^{-s}}{s(s-1)}\qquad(\RePart s>1).
+\]
+Summing is justified by absolute convergence of the logarithmic
+derivative on this half-plane. For a primitive \(\chi\), the transform
+of \(S_\chi\) and the contribution of a zero \(\rho\) in the open
+strip in Mellin inversion are therefore, respectively,
+\[
+ -\frac{L'(s,\chi)}{s(s-1)L(s,\chi)},\qquad
+       -\frac{d\,y^\rho}{\rho(\rho-1)}
+           \quad\bigl(d=\operatorname{ord}_{s=\rho}L(s,\chi)>0\bigr).
+\]
+Only the local residue calculation is needed here. To use the size of
+this term one must still control the contributions of the other poles.
+Section~\ref{sec:window} does that by varying the order of a derivative.
+
+At \(s=1\) the smoothing itself has introduced a pole. Its residue
+has to be removed before a zero inside the strip can be detected.
+Let \(h=s-1\) and let \(\gamma\) denote Euler's constant. For the
+character of conductor one and for a nonprincipal primitive character,
+respectively, the expansions at this point are
+\[
+ -\frac{L'(1+h,\chi)}{(1+h)hL(1+h,\chi)}
+ =\begin{cases}
+ h^{-2}-(1+\gamma)h^{-1}+O(1),&\chi=1,\\
+ -\dfrac{L'(1,\chi)}{L(1,\chi)}h^{-1}+O(1),&\chi\ne1 .
+ \end{cases}
+\]
+The second line uses the boundary nonvanishing of
+Lemma~\ref{lem:boundary}. The first uses the two leading coefficients
+of \(\zeta(1+h)=h^{-1}+\gamma+O(h)\). If the principal part before
+Mellin inversion is \(A/h^2+B/h\), multiplication by \(y^{1+h}\) gives
+\[
+      \operatorname*{Res}_{h=0}
+      y^{1+h}(A/h^2+B/h)=Ay\log y+By .
+\]
+Consequently the centered sum used throughout the book is
+\[
+ G_\chi(y)=
+ \begin{cases}
+ S_1(y)-y\log y+(1+\gamma)y,&\chi=1,\\
+ S_\chi(y)+y\,L'(1,\chi)/L(1,\chi),&\chi\ne1 .
+ \end{cases}
+\]
+This is Definition~\ref{def:smoothed-centering}. Centering removes the
+known singularity at one while preserving the residue at every zero
+in the open strip.
+
+\subsection{The arithmetic estimate that would detect the zero}
+
+Centering has preserved the pole we want to detect. The arithmetic bound, however,
+concerns a real average. To see why the pole survives this second operation, fix a
+primitive character \(\psi\) of order \(o\). Its modulus is its
+conductor. Form its powers at this modulus and then take their primitive
+inducing characters. The resulting family and its weights are
+\[
+ \mathcal K(\psi)=\{(\psi^a)^*:0\le a<o\},\qquad
+ w_\psi(1)=1,\qquad
+ w_\psi(\chi)=\frac1{3o+1}\quad(\chi\in\mathcal K(\psi),\ \chi\ne1).
+\]
+The quantity we seek to bound is real. With \(\mathcal K=\mathcal K(\psi)\)
+we shall use the abbreviation of Definition~\ref{def:family-weights},
+\[
+             G_{\mathcal K}(y)=
+         \sum_{\chi\in\mathcal K}w_\psi(\chi)\RePart G_\chi(y).
+\]
+For instance, when \(\psi\) is primitive quadratic the family consists
+of \(1\) and \(\psi\), and the sum is \(G_1+G_\psi/7\).
+A real zero of the quadratic character would enter with positive
+multiplicity and a factor of \(1/7\); a zero shared with \(\zeta\)
+would enter through both terms. When \(o=1\), the sum is just \(G_1\).
+
+To see why the same reasoning detects nonreal zeros, write \(H_\chi\)
+for the Mellin transform of \(G_\chi\).
+Since conjugating the values of a character conjugates its prime
+sum, taking real parts on the real \(y\)-axis gives the transform
+\[
+       \Phi(s)=\tfrac12\sum_{\chi\in\mathcal K}w_\psi(\chi)
+                         (H_\chi(s)+H_{\bar\chi}(s)).
+\]
+Write \(d_\chi(\rho)\) for the order of vanishing, including zero when
+the character's function does not vanish at \(\rho\). At a point in
+the open strip all these orders share the same multiplier in the residue,
+\[
+ \operatorname*{Res}_{s=\rho}\Phi(s)=
+ -\frac{\sum_{\chi\in\mathcal K}w_\psi(\chi)
+            (d_\chi(\rho)+d_{\bar\chi}(\rho))}
+            {2\rho(\rho-1)} .
+\]
+Since all weights are positive and \(\psi\) belongs to the family,
+a zero of \(L(s,\psi)\) gives a genuine pole of \(\Phi\). Positivity
+is used here for a finite sum of multiplicities. The function
+\(G_{\mathcal K}(y)\) itself can have either sign.
+
+Here is the arithmetic assertion on which the rest turns. For each
+fixed \(\psi\) there is an \(\epsilon_0(\psi)>0\) such that, for every
+\(0<\epsilon<\epsilon_0(\psi)\), Proposition~\ref{prop:arithmetic} gives
+\[
+ \forall Z\ge1\quad\exists Y>Z\quad\forall y\in[Y,Y^{3/2}],
+ \qquad G_{\mathcal K}(y)\le y^{1/2+9\epsilon}.
+\]
+The left endpoint may depend on the character and on \(\epsilon\).
+The same endpoint must serve every real \(y\) in that interval.
+For a proposed zero with real part \(\beta>1/2\), choose
+\(9\epsilon<\beta-1/2\). The exponent provided by arithmetic is
+then strictly less than the real part of the pole.
+
+Why should selected intervals and an upper bound suffice? In the
+coordinate \(u=\log y\) each interval contains a whole range
+of possible derivative orders. At a real center \(\sigma>2\),
+the \(k\)-th normalized Laplace derivative weights the integrand by
+\[
+                 \frac{u^k}{k!}e^{-\sigma u}.
+\]
+By choosing \(k\) in proportion to \(\log Y\) one can control the
+tails outside the given interval. Comparing derivatives at two
+centers arranges that the multiplier of the real prime sum is
+nonnegative. We shall perform both steps at the end of the introduction.
+For the moment they specify exactly what the construction must supply:
+one upper bound throughout the interval for this particular weighted sum.
+
+There is a useful calculation to keep in mind before entering the
+construction. If a comparison over \(m\) lifts has leading allowances
+\(x/m\) and \(m\), write \(m=x^\alpha\) for its scale and ignore
+rounding for this calculation. The exponent of their larger allowance is
+\[
+       \max(1-\alpha,\alpha)
+          =\tfrac12+\big|\alpha-\tfrac12\big| .
+\]
+Using a single lift leaves the first allowance of order \(x\); using
+order \(x\) lifts leaves the second of order \(x\). At the intermediate
+scale both can be paid from a bound of order \(\sqrt{x}\). This
+calculation concerns the upper bounds. Proving that the actual
+arithmetic terms obey them, uniformly while the auxiliary point varies,
+is the work that follows.
+
+\begin{construction}
+\begin{tikzpicture}[x=6cm,y=2.65cm,>=Stealth,line width=.45pt]
+  \draw[->] (0,0)--(1.17,0) node[right] {\(\alpha\)};
+  \draw[->] (0,0)--(0,1.19) node[above] {exponent};
+  \draw[dashed,black!55] (0,.5)--(.5,.5)--(.5,0);
+  \draw[black!50] (0,0)--(1,1) (0,1)--(1,0);
+  \draw[thick] (0,1)--(.5,.5)--(1,1);
+  \fill (.5,.5) circle[radius=1.6pt];
+  \node[left] at (0,1) {\(1\)};
+  \node[left] at (0,.5) {\(\tfrac12\)};
+  \node[below] at (0,0) {\(0\)};
+  \node[below] at (.5,0) {\(\tfrac12\)};
+  \node[below] at (1,0) {\(1\)};
+  \node[above] at (.23,.81) {\(1-\alpha\)};
+  \node[above] at (.8,.84) {\(\alpha\)};
+\end{tikzpicture}
+\caption{The chain length and the two normalized allowances.
+The heavy segments give the larger exponent. Lemma~\ref{lem:comparison}
+also accounts for the density of the retained indices and the other
+terms omitted in this scale calculation.}\label{fig:intro-length-balance}
+\end{construction}
+
+\subsection{How the theta lifts recover a fixed character sum}
+\label{subsec:intro-family-arithmetic}
+
+Where could the unequal coefficients in this average come from? Keep the primitive
+character \(\psi\) and its order \(o\) fixed while the auxiliary field varies. A theta lift compares
+automorphic forms on unitary groups of different ranks. In Alp\"oge's
+argument a chain of such lifts carries integral weights indexed by
+embeddings of an auxiliary abelian field. The local contribution to the
+comparison depends on which embeddings lie above a given prime. This
+dependence lets the construction distinguish Frobenius classes. Write \(\mathcal K(\psi)\) for the primitive inducers of the powers
+of \(\psi\). Adding the local contributions must recover the combination
+\[
+ G_{\mathcal K}(x)=G_{\mathbf1}(x)
+   +\frac{1}{3o+1}\sum_{\substack{\chi\in\mathcal K(\psi)\\ \chi\ne\mathbf1}}
+                   \RePart G_\chi(x),
+\]
+where \(\mathbf1\) is the conductor-one character. The auxiliary field has
+many more characters than occur in this sum.
+
+For example, the reference row uses a definite unitary space of
+dimension \(r+t_{\rm rk}\) and a row space of dimension \(r\), with
+\(t_{\rm rk}\ge r+5\). On the definite side one sums over a finite
+class set with its volume weights. The theta lift maps this space of
+forms to a cuspidal multiplicity space with its Petersson metric and
+a factor from the dimensions of the compact types. The scalar obtained
+from the lift and its adjoint enters the height calculation once for
+each lift. Proposition~\ref{prop:selected-reference-height}
+bounds the height of the reference operator \(B_{\mathbf v}\) for a chosen
+sequence \(\mathbf v\) by
+\[
+ \operatorname{ht}(B_{\mathbf v})\le h_A(\mathbf v)+\sum_{j=1}^m\bigl(h_B(j)-h_X(j)\bigr)
+                               -\bar\kappa .
+\]
+Here \(h_A\) is the terminal bound, \(h_B\) bounds the kernel height,
+\(h_X\) bounds the logarithm of the scalar from below, and
+\(\bar\kappa\) is the common period correction. Recovering the analytic
+sum requires adding prime contributions with their actual multiplicities.
+
+To see these multiplicities, separate the two quadratic characters
+at the auxiliary primes \(q,d\) from the joint image \(A\) of \(\psi\)
+and the action on a real cyclotomic field of \(2\)-power conductor.
+The target conductor remains \(f_\psi\).
+The auxiliary Galois group \(H\) and its quotient for the target are
+\[
+ H=(\mathbb Z/2\mathbb Z)^2\times A,\qquad
+ A_0=\ker\bigl(A\xrightarrow{\ \pi_\psi\ }\operatorname{im}\psi\bigr),
+ \qquad |A/A_0|=o .
+\]
+Three indices enter the local calculation. The index \(1\le j\le m\)
+specifies the lift, \(t\in T\subset A\) specifies a top weight \(a_t\),
+and \(u\in A_0\) translates the lower weights relative to the top. Definition~\ref{def:translate-scale} gives
+the group and the weight sets at a fixed scale.
+
+\paragraph{From a prime power to a character value.}
+Read the quadratic coordinates in the order \(d,q\), recording
+a sign change of the corresponding square root by \(1\). The subgroup
+used in the prime sum and its character are
+\[
+ P=\operatorname{Gal}(E/\mathbb Q(\sqrt{-d}))
+    =\{0\}\times\mathbb Z/2\mathbb Z\times A,\qquad
+ \omega_P(i,j,s)=(-1)^i,\qquad f_P=|P|=2|A|.
+\] Follow one prime power through a single lift. At fixed \((j,t,u)\) the construction
+pairs
+each \(g\notin P\) with one element of \(P\). Let \(w_g\) be the
+positive weight of that partner and write \(a=a_t\). The positive-part kernel at \(p^\nu\) has the form
+\[
+ \log p\,\bigl(a/p^\nu-w_g\bigr)_+
+     = w_g\log p\,\left((a/w_g)/p^\nu-1\right)_+ .
+\]
+The point \(a/w_g\) where the smoothed sum is to be evaluated is thus
+already specified by the integral weights.
+
+For \(\omega\in\widehat H\), let \(\chi_\omega\) be the primitive
+Dirichlet character obtained by inflating \(\omega\) along the Artin
+map and passing to its conductor. Write \(I_p\) for inertia in \(H\),
+and choose a lift \(F_p\in H\) of arithmetic Frobenius modulo
+\(I_p\). The integral weight may vary with the lift and the translate.
+The coefficient counting the Frobenius class is independent of
+these choices. In the additive notation for \(H\), it is
+\[
+ \frac1{f_P}\sum_{\omega\in\widehat H}\overline{\omega(g)}\,
+                    \chi_\omega(p^\nu)
+   =\frac{2}{|I_p|}\,\mathbf 1_{\{g\in\nu F_p+I_p\}}.
+\]
+
+Indeed, averaging \(\omega(\nu F_p+v)\) over \(v\in I_p\) gives
+\(\chi_\omega(p^\nu)\), including its value zero if \(\omega\) is
+nontrivial on inertia. Orthogonality therefore turns the local count at \(p^\nu\) into
+\[
+ \frac{2\log p}{|I_p|}
+      \sum_{g\in(\nu F_p+I_p)\setminus P}(a/p^\nu-w_g)_+ .
+\]
+If \(p\) splits in the distinguished quadratic subfield, its entire
+coset lies in \(P\) and the sum vanishes. At \(d\), inertia has order
+two and precisely one member \(g_d\) of the coset lies outside \(P\).
+The coefficient of \((a/d^\nu-w_{g_d})_+\) is consequently \(\log d\).
+At unramified primes with \(\nu F_p\notin P\) there is again a
+single term, now with coefficient \(2\log p\). These alternatives
+explain why deleting all ramified primes would change the comparison.
+
+There are two terms to subtract from the resulting prime sum. The
+principal character gives the logarithmic main term, and among the
+nonprincipal characters only \(\omega_P\) has nonzero sum on
+\(H\setminus P\). That sum is \(-f_P\). With \(\gamma\) Euler's
+constant, the total to subtract is therefore
+\[
+ a\left(\log a-1-\gamma-\frac1{f_P}\sum_{g\notin P}\log w_g\right)
+    +a\,\RePart\frac{L'(1,\chi_{\omega_P})}{L(1,\chi_{\omega_P})}.
+\]
+Both terms use the weights of the very same translate. By
+\eqref{eq:color-balance}, the difference \(\Delta_{j,t}(u)\) between
+the prime sum and this expression is
+\[
+ \Delta_{j,t}(u)=\frac1{f_P}\RePart
+ \sum_{g\notin P}\sum_{\omega\in\widehat H}
+     \overline{\omega(g)}\,w_g G_{\chi_\omega}(a_t/w_g).
+\]
+
+\paragraph{Which characters survive the translates.}
+Put \(b=\exp(x^\epsilon)\) and \(X'=\exp(x^{\epsilon/3})\). The character expansion still contains every character of the auxiliary group. To
+recover the prescribed average, first distinguish the two ranges of integral weights. Put
+\(e_1(v)=((1,0),v)\). For a set \(T_2\subset A_0\) and an offset
+\(\eta>0\) with \(\log\eta\le x^{\epsilon/4}\), the ranges are
+\[
+\begin{aligned}
+  b\le w_g\le b+\eta+1
+       &\quad\text{if }g=e_1(s+u-t),\quad s\in T_2,\\
+  0<w_g\le 2xb/X'&\quad\text{at the remaining }g\notin P .
+\end{aligned}
+\]
+
+The top weight satisfies \(|a_t/b-x|\le1\). At a smaller weight,
+\(a_t/w_g\ge (x-1)X'/(2x)\ge X'/3\) for \(x\ge3\).
+Estimate~\eqref{eq:thin-host} bounds the centered sum at this larger
+argument. Its contribution after multiplication by \(w_g\) is at most
+\((x+1)b\exp(-c x^{\epsilon/8})\) for a fixed \(c>0\) above the
+corresponding threshold. At a larger weight the argument may be close
+to \(x\), where we want to measure the centered sum. Here we retain the
+term and estimate the effect of replacing \(w_g\) by \(b\).
+
+For the uncentered sum \(S_\chi\), the positive-part kernel gives
+\[
+ \left|w_gS_\chi(a_t/w_g)-b S_\chi(a_t/b)\right|
+ \le(w_g-b)\sum_{n\le a_t/b}\Lambda(n)\ll (x+1)(\eta+1).
+\]
+The nonprincipal centering term after multiplication by \(w_g\) is
+independent of \(w_g\). The principal centering changes by at most
+\((a_t/b)(w_g-b)\). After summing over \(g,\omega\) and dividing by
+\(f_P\), the polynomial factor \(f_P\ll x^{2+8\epsilon}\) is absorbed
+in both estimates. The combined error is at most \(2b/x\) per pair
+\((j,t)\) above a uniform threshold.
+
+The positions of the large weights are as important as their sizes.
+They are exactly the elements \(e_1(s+u-t)\).
+Every \(s\in T_2\) belongs to the subgroup over which we
+average. Translating through this subgroup gives
+\[
+ \frac1{|A_0|}\sum_{u\in A_0}\overline{\omega(e_1(s+u-t))}
+   =\omega(e_1(t))\,\mathbf 1_{\{\omega|_{0\times A_0}=1\}}.
+\]
+Thus the calculation only retains the \(4o\) characters of
+\(H/(0\times A_0)\). Their primitive inducers are the powers of
+\(\psi\), each optionally multiplied by either or both of the
+quadratic characters. Averaging over the top indices determines the
+coefficients of the desired powers.
+
+Write \(C=A/A_0\) and let \(p_c=|T\cap c|/|T|\) for \(c\in C\).
+Section~\ref{subsec:frobenius-selection} chooses the top indices so that
+\[
+ p_c=\frac{3+\mathbf1_{\{c=A_0\}}}{3o+1}+\varepsilon_c,\qquad
+ |\varepsilon_c|\le x^{-1+\epsilon},\qquad \sum_{c\in C}\varepsilon_c=0 .
+\]
+The model proportions sum to one since \(4+3(o-1)=3o+1\).
+For the principal character, summing the actual proportions also gives
+one exactly. For a nonprincipal \(\xi\in\widehat C\), the uniform part
+of the distribution disappears while the extra mass at the identity
+contributes with positive sign:
+\[
+ \frac1{|T|}\sum_{t\in T}\xi(t)
+  =\frac{3\sum_{c\in C}\xi(c)+\xi(A_0)}{3o+1}
+        +\sum_{c\in C}\varepsilon_c\xi(c)
+  =\frac{1}{3o+1}+O(o x^{-1+\epsilon}).
+\]
+For a quadratic target the two proportions are \(4/7\) and \(3/7\).
+Their sum gives the principal coefficient; their difference gives
+the coefficient \(1/7\) of the quadratic character, up to the stated
+error. If \(o=1\), there is only the identity coset and the principal
+coefficient is exactly one.
+
+We can now recognize the prescribed weights on the primitive characters inducing the powers of \(\psi\), up to the coset-counting error just estimated. Each remaining term contains an auxiliary quadratic twist and has coefficient of absolute value at most one. For fixed target modulus, interval exponent \(K\ge1\), and
+\(0<\epsilon<1/52\), Proposition~\ref{prop:quadratic-prime-pair}
+selects one pair \((q,d)\) for each sufficiently late interval
+\([Y_0,Y_0^K]\). For each of these twists \(\chi\) and every \(x\) in
+that interval it gives
+\[
+ |G_\chi(x)|\le x^{1/2+\epsilon/2},\qquad
+ \left|\frac{L'(1,\chi)}{L(1,\chi)}\right|\le4\log x .
+\] The second estimate permits
+the shift from \(a_t/b\) to \(x\) in the centered sum. Write \(\Sigma(x)\)
+for the sum of the absolute values of the omitted terms before their
+coefficients are applied, as in Definition~\ref{def:translate-errors}.
+
+Suppose the sum of the centered local contributions is at most
+\(D(x)\) at every translate. Each lift and top index contributes the
+same multiplicity \(|T_2|\) to the translated mean. Writing
+\(Q=m|T|b\) and \(\delta_2=|T_2|/|A|\), one obtains
+\[
+ \frac{Q\delta_2}{2}
+       \bigl(G_{\mathcal K}(x)-\Sigma(x)-4x^{1/2+\epsilon}\bigr)
+    \le D(x)+\frac{2Q}{x}.
+\]
+The factor \(1/2\) comes from \(|T_2|/f_P=\delta_2/2\).
+Proposition~\ref{prop:translate-fourier} makes the threshold uniform in
+the lift, top index, translate and field on the selected interval.
+It remains to produce the bound \(D(x)\) on that scale.
+
+\paragraph{Keeping the two division estimates on one family.}
+To bound \(D(x)\), we must track what survives the passage from a selected point to
+its two lattice comparisons. On the cohomology side the field is still the original
+auxiliary field \(E\).
+For \(a\ge1\), put \(M_{\ell,a}=(\mathbb Q_\ell/\mathbb Z_\ell)(-a)\).
+Write \(S_\ell\) for the places of \(E\) above \(\ell\) and infinity,
+and \(G_{E,S_\ell}\) for the Galois group unramified outside
+\(S_\ell\). The quantity to be estimated is the \(\mathbb Z_\ell\)-length
+\(V(E,\ell,a)\) of
+\[
+ \ker\!\left(H^1(G_{E,S_\ell},M_{\ell,a})
+          \longrightarrow\prod_{v\mid\ell}H^1(E_v,M_{\ell,a})\right).
+\]
+These fields are totally imaginary, so there is no degree-one term
+from any infinite place. The bound needed for division adds these
+lengths with weight \(\log\ell\) and sums over the twists below
+the rank of the chosen construction.
+
+For the family application the common selection of
+Proposition~\ref{prop:common-host-prime-pair} is made for the bounded
+list of primitive twists in the cohomological construction.
+On a subinterval \([W,W^2]\) of the prime interval,
+Proposition~\ref{prop:original-window-budget} bounds the lengths at the
+original field \(E_z\) of scale \(z\), simultaneously for finite sets
+\(\mathcal P\) of primes. At the cutoff \(T_{401}(z)=\lfloor z^{401}\rfloor\)
+the estimate reads
+\[
+ \sum_{\ell\in\mathcal P}\log\ell
+        \sum_{1\le a<T_{401}(z)} V(E_z,\ell,a)\le \exp(z^\epsilon/2)
+                  \qquad(W\le z\le W^2).
+\]
+The position of this subinterval may depend on the prime pair.
+
+The order of the group \(A\) in the theta comparison determines which
+cyclotomic layer to use. Lemma~\ref{lem:rescale-host-budget}
+selects a field at \(x'=x/\kappa_{\rm sc}\), where the constant
+\(\kappa_{\rm sc}\) accounts for the fixed part of this order. The
+rescaled intervals \([Y,Y^{3/2}]\) can be taken arbitrarily late.
+Write \(t_{\rm rk}\) for the rank called \(t\) in
+Proposition~\ref{prop:actual-rank-budget}; it is distinct from the
+top index. For every \(x\) on such an interval and every finite set
+\(\mathcal P\) of rational primes,
+\[
+ \begin{gathered}
+  1\le a<t_{\rm rk}\le\lfloor x^{400}\rfloor
+                 \le\lfloor (x')^{401}\rfloor,\\
+  \sum_{\ell\in\mathcal P}(\log\ell)
+       \sum_{1\le a<t_{\rm rk}}V(E,\ell,a)\le\sqrt b .
+ \end{gathered}
+\]
+The strict inequality in the twist index persists even if the two
+integer cutoffs coincide. Nonnegativity of the lengths justifies the
+restriction to the selected rank.
+
+At \(2\) the cyclotomic tower gives a bound over \(E(i)\), with
+\(i^2=-1\). To use it over \(E\), restrict a strict cohomology
+class to \(E(i)\); its local restrictions still vanish. The kernel
+of restriction has length at most one by inflation--restriction for
+the extension of degree at most two. Lemma~\ref{lem:dyadic-host} therefore gives
+\[
+ V(E,2,a)\le 1+V(E(i),2,a)\quad(a\ge1),\qquad
+ \sum_{a=1}^{t_{\rm rk}-1}V(E,2,a)
+ \le (t_{\rm rk}-1)+\sum_{a=1}^{t_{\rm rk}-1}V(E(i),2,a).
+\]
+The added unit of length is counted for each twist before summing.
+
+\begin{construction}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{.31\linewidth}>{\raggedright\arraybackslash}p{.60\linewidth}@{}}
+\toprule
+Range of the choice & Data held fixed in that range \\
+\midrule
+A selected prime interval & Both auxiliary primes and the estimates for all three quadratic twists.\\
+One real scale \(x\) & The field at \(x'\), the ranks, the weight functions and the assigned primes.\\
+One translate \(u\) & The initial row selects the twist characters. The reference period and fields are retained in constructing \(P'(x,u)\).\\
+Two covers of \(P'(x,u)\) & The original lattices and quotient action of this member, with a cover prime different from the residue characteristic.\\
+\bottomrule
+\end{tabular}
+\caption{Choices shared by the translate average and the two division estimates. The field can change with the real scale; the comparison at each translate retains the field and ranks chosen at that scale.}\label{fig:intro-family-choices}
+\end{construction}
+
+For the odd-prime cohomology count, the multiplicities come from
+ordinary automorphic forms at two prescribed levels. The deformation
+argument first locates points on components of a Galois deformation
+space. To infer the needed Frobenius identities there one must show
+that the Hecke modules are supported at those points.
+The coefficient data at the two levels prescribe the ordered characters
+of the ordinary flag. At a place above the coefficient prime, denote
+the flag by \(F^j\) and the character on its \(j\)-th quotient by
+\(\delta_j\). For a local representation of rank \(r_{\rm ord}\) the action of
+a local Galois element \(g\) satisfies
+\[
+   0=F^0\subset F^1\subset\cdots\subset F^{r_{\rm ord}},\qquad
+   \dim(F^j/F^{j-1})=1,\qquad
+   g|_{F^j/F^{j-1}}=\delta_j(g).
+\]
+
+The order of these characters restricts which constituents can enter
+the comparison (Appendices~\ref{sec:count-two-level-data}
+and~\ref{sec:count-two-level-attachments}). The supply of starting
+points depends on the rank. In the even-order rank-four construction
+it comes from quadratic automorphic induction. In rank two the starting representation is a scalar twist of the one
+attached to a newform. In rank three it is the trace-zero adjoint
+of the representation attached to another newform
+(Appendices~\ref{sec:count-two-seed-specialization} and~\ref{sec:linked-seeds}).
+The selected rank-three multiplicities are computed in
+Appendix~\ref{sec:rank-three-multiplicity}.
+
+Appendix~\ref{sec:linked-components} propagates support from a known
+ordinary eigenpoint along the component graph. For instance, at a
+characteristic-zero even-order target reached by the two-link construction,
+Proposition~\ref{prop:two-link-classical-control} factors both
+evaluations through classical ordinary Hecke quotients. If \(r\) is
+the target representation, \(r_i\) comes from the eigensystem at
+level \(i\), and \(\kappa\) is the common twisting character, then on
+the marked field \(L\) it gives
+\[
+ \det(X-r_i(g))=\det(X-\kappa(g)r(g))
+       \qquad(g\in G_L,\ \text{at both levels}).
+\]
+At a good prime these characteristic polynomials supply the Frobenius data needed for
+the count. Appendix~\ref{sec:local-global} relates finite types to their
+Weil--Deligne parameters, and Appendix~\ref{sec:additional-rank-four}
+transports the integral ordinary flags needed in the rank-four case.
+
+For this argument to give an integral length, support over the
+enlarged field has to be brought back to the coefficient ring in which
+the length is measured. The Taylor--Wiles tests at the intervening
+curve points bound the first-order deformations at the marked level.
+Write \(J_{\rm ord}\) for the image of the ordinary Hecke ideal at the
+target and \(Q_{\rm end}\) for its target prime. Transport along the
+chain gives the inclusion needed for descent:
+\[
+             J_{\rm ord}\subseteq Q_{\rm end}
+             \qquad\text{(Proposition~\ref{prop:marked-chain-support}).}
+\]
+
+The finite algebra at the
+marked point and descent to the two levels identify the constituents
+that contribute (Appendices~\ref{sec:marked-hosts} and~\ref{sec:host-descent}).
+For example, over a discrete valuation ring \(O\) with uniformizer
+\(\pi\), take nonnegative integers \(d,h\). An \(O\)-linear
+map from \(O/(\pi^d)\) into \(O/(\pi^h)\)
+is determined by the image of \(1\), which must be killed by \(\pi^d\).
+For \(M=O/(\pi^h)\) the possible images form its annihilator subgroup
+\[
+               M[\pi^d]=\pi^{\max(h-d,0)}M .
+\]
+
+Its length is therefore
+\[
+             \operatorname{length}_O\operatorname{Hom}_O
+                      (O/(\pi^d),O/(\pi^h))=\min(d,h).
+\]
+Appendix~\ref{sec:rank-three-length} uses such Smith summands in
+bounding the length by valuations of differences of Frobenius traces.
+This is one source of the odd-prime estimates summed over the common
+interval in Appendix~\ref{sec:cohomology}.
+
+Fix the base data at a sufficiently late scale with admissible
+marked levels. Proposition~\ref{prop:translate-completion} supplies
+a member at every integer translate \(0\le u_0<|A|\) in the
+subgroup average. Proposition~\ref{prop:all-window-applications} applies the integral comparison, period and Gram bounds to this family. On its late intervals one thus has
+\[
+ \forall\,0\le u_0<|A|\quad\exists\,P(x,u_0)\quad
+ \text{with both division estimates at }P(x,u_0).
+\]
+One estimate compares the integral lattices attached to the periods,
+and the other uses cohomology to control a numerator weighted by
+the multiplicities of the good characters.
+Proposition~\ref{prop:completed-division-pair} identifies its two
+realizations at every prescribed subspace. One can therefore pass
+from the arithmetic divisibilities to the norms and determinants of
+those same period maps. This is the input to the geometric estimates.
+
+\subsection{Following a period from a lattice to a complex integral}
+
+Fix one translate and its selected point. Choose a sequence \(\mathbf u\) of lifts. We now have bounds for lengths of finite modules, yet the period we want to
+estimate is a complex integral of automorphic forms. The passage between them starts
+with a choice of lattice for that integral. We need a rational vector space on which the integral defines a functional, an integral lattice in that space, and metrics at every infinite place of its coefficient field. An index will then contribute to the degree of a determinant line.
+
+For a rank-one illustration take \(K=\mathbb Q(i)\) and the place \(w\) over \(3\). It is inert, so \(3\) is a uniformizer in its valuation ring \(O_w\). The conjugation on \(K\) preserves \(w\). The usual Hermitian form \(H(x,y)=x\bar y\) on the completion \(K_w\) gives
+\[
+ M=3^aO_w,\qquad M^\#=\{y\in K_w:H(M,y)\subseteq O_w\}=3^{-a}O_w
+                                  \qquad(a\in\mathbb Z_{\ge1}).
+\]
+
+The two lattices span the same local field. In a basis of \(M\), the generator of \(M^\#\) has coordinate \(3^{-2a}\). Consequently their signed index and the length of the quotient in the opposite order are
+\[
+                [M:M^\#]_w=-2a,\qquad
+                \operatorname{length}_{O_w}(M^\#/M)=2a .
+\]
+The place weight in this example is \((\log 9)/2=\log 3\). An identification of the underlying vector spaces would give no information about the integer \(a\). In the actual construction the Hermitian form is the level pairing, and at split places its two arguments also involve conjugate places. Section~\ref{sec:word-division} makes the determinant comparison on those lattices.
+
+Let \(K\) be the totally complex coefficient field. A tuple \(\tau\) specifies the local data used to realize the forms. Write \(\tau_0\) for the reference tuple and \(\tau(w)\) for the tuple prescribed at a finite place \(w\) of \(K\). The finite-dimensional space \(V_{\tau}\) has a lattice \(M_{\tau}\) of integral forms. Projecting to the selected quotient and comparing it with the base row gives maps
+\[
+ V_{\tau}\xrightarrow{\ P_{\tau}\ }Q_{\tau}\xrightarrow{\ \iota_{\tau}\ }R_{0,K},
+ \qquad P_{\tau}(V_{\tau})=Q_{\tau},\qquad \iota_{\tau_0}:Q_{\tau_0}\simeq R_{0,K}.
+\]
+Here the row is the space on the second side of the period pairing. At \(w\) its lattice is the image of the integral forms for the tuple actually used there. A rational row vector belongs to the global lattice precisely when it satisfies all the following membership tests.
+\[
+ R_0=\{y\in R_{0,K}: y\in\iota_{\tau(w)}P_{\tau(w)}(M_{\tau(w),w})
+                           \ \text{for every finite }w\}.
+\]
+
+There is a test for the quotient at the reference tuple. At lift \(j\), let \(J_j\) realize a column in the complex source of the theta lift and let \(W_j\) realize row coordinates in its target. In these coordinates the lift \(\Theta_j\) satisfies
+\[
+                 \Theta_jJ_j=W_j B_jP_j,\qquad
+                 \ker(\Theta_jJ_j)=\ker P_j,
+\]
+since \(B_j\) is invertible and \(W_j\) identifies a coordinate space with its image. Surjectivity of \(P_j\) puts every row basis vector in the image of \(\Theta_j\). The rank \(D_0>0\) counts primitive row labels with multiplicity. Equation~\eqref{eq:selected-theta-square} and Proposition~\ref{prop:base-theta-rank} also identify the dimension of the good part at the other tuples used in the comparison.
+
+Consider the reference period \(P_{\mathbf u,0}(\phi,f)\) as a function of its second argument \(f\). It annihilates the kernel of the reference quotient \(q_0\). Consequently one can compute it from the column coordinates of \(\phi\) and the row coordinates of \(q_0 f\). Write \(e_{\nu,\mathbf u}\) and \(e_R\) for their identifications with the chosen rational spaces. The descended pairing satisfies
+\[
+              B_{\mathbf u}(e_{\nu,\mathbf u}\phi,e_R q_0 f)=P_{\mathbf u,0}(\phi,f).
+\]
+Surjectivity makes this prescription unique on the row. At the other tuples one must still determine the scalar that compares their period with this rational pairing. Requiring the same group, evaluation translate, characters and Haar measures fixes what is being compared. Proposition~\ref{prop:completed-division-pair} identifies the two realizations on that point for every sequence.
+
+Section~\ref{sec:transport} follows this scalar through the theta kernels. For a tuple \(\tau\) let \(K_{\tau,j}\) be the definite lift on columns, \(S_{\tau,j}\) the prescribed endomorphism there, and \(D_{\tau,j}\) the descending row operator. At an even level \(j\) the two compositions act in opposite directions.
+\[
+ \varphi^{(j+2)}=K_{\tau,j+1}K_{\tau,j}S_{\tau,j}\varphi^{(j)},
+ \qquad G^{(j)}=D_{\tau,j}D_{\tau,j+1}G^{(j+2)} .
+\]
+
+In the descending tower a row is integrated against a theta kernel on a unitary quotient. In the definite tower a column lifts by a finite sum over lattice classes, with the mass of each class given by its level volume and stabilizer. Unfold two consecutive integrals. At a nonterminal step the real compact integral is a finite linear combination of evaluations in frames. Lemma~\ref{lem:common-definite-expansion} shows that the frames and coefficients depend only on the real type and test. This permits summing over tuples before the remaining real integration.
+
+For a term indexed by tuple \(\tau\), write \(i_{\tau,j}\) for the nonzero normalization of a descending row integral, \(k_{\tau,j}\) for that of a definite lift, and \(v_{\tau,j}\) for the factor from unfolding the pair of steps. The coefficients \(a_{\tau,j}\) of a linear relation at even levels satisfy
+\[
+ a_{\tau,j}v_{\tau,j}k_{\tau,j}k_{\tau,j+1}
+       =a_{\tau,j+2}i_{\tau,j}i_{\tau,j+1}.
+\]
+At the top, branching for the compact terminal group has multiplicity one and supplies the terminal scalar. Induction down the chain now takes a relation between terminal class sums to a relation between the actual periods at every base frame and smooth test vector. Lemma~\ref{lem:joint-period} gives the implication with both endpoint products. The induction uses linearity throughout, so it applies even when an individual period vanishes.
+
+To read off the scalar, choose a nonzero bottom period \(b_*\) at
+the reference tuple. If \(A_*\) is its raw terminal entry, the entry
+in the descended relation is \(p_*=(h_0/d_0)A_*\), where \(h_0,d_0\)
+are the reference top and bottom products. For any matched raw
+entry \(A_t\) and bottom pairing \(B_t\), the relation now gives
+\[
+          p_* B_t=c_t A_t b_*,\qquad
+          c_t=s_{\rm col}\,h_t/d_t .
+\]
+The column similarity contributes the same \(s_{\rm col}\ne0\) to every \(c_t\).
+Comparing with \(t=0\) therefore leaves the ratio \(c_t/c_0\)
+used on the rational row. The identity \eqref{eq:word-period-cross-product}
+expresses this comparison even at zero entries.
+
+\subsection{Geometry and the two indices in the determinant}
+
+We have followed the period into the integral dual. To read the resulting determinant
+inequality as a height bound we still need two archimedean estimates. To bound the maximal slope of \(R_0\), use coefficient evaluations on the same theta space as the pairing. On the base multiplicity space \(V\), Lemma~\ref{lem:fitted-completed-nonvanishing}
+detects every nonzero vector at the prescribed depth. Proposition~\ref{prop:fitted-grid-base-separation}
+chooses \(\dim V\) tests at one real pair. Their coordinate map
+\(F:V\to\mathbb C^{\dim V}\) is injective, so on the original column
+\[
+                  \ker(FP_{\tau_0})=\ker P_{\tau_0}.
+\] Evaluating the other tuples in compatible coordinates then controls the integral images defining \(R_0\). With \(\bar\kappa\) the mean of the logarithms of the period scalars, Proposition~\ref{prop:descended-row-height} obtains
+\[
+                         \mu_{\max}(R_0)+\bar\kappa\le b x^{C_H}.
+\]
+A finite change of level has a separate index and metric factor. It cannot be absorbed by rescaling each tuple independently.
+
+The other estimate concerns the determinant of an entire good row at lift \(j\). Here the relevant space is a space of cusp forms on a unitary Shimura variety. Its integral model has several components after passage to a sufficiently deep level. The dimension of the moving system of cusp sections and the size of integral sections both enter the estimate. If \(D_Z\) is the moving degree on component \(Z\), the degrees from growth at two nearby weights satisfy
+\[
+                       V_Z(u')\le D_Z\le V_Z(u_1).
+\] These bounds agree across components at a given weight. This uniformity allows ranks and degrees to be summed before descent to the required character type. See Proposition~\ref{prop:deep-moving-degree}.
+
+One can ask how a calculation on a flag determines an arithmetic
+degree as the weight varies. On each of the two marked flag spaces,
+Section~\ref{sec:covolume-flag-test} fixes the graded-line metrics.
+For a block of rank \(n\), with Chern roots in their flag order, the
+point monomial for the fibre degree is
+\[
+               m_n=\prod_{a=0}^{n-1}(-x_a)^{n-1-a}.
+\]
+The product of these monomials over the blocks and embeddings has
+degree one on the flag fibre. This specifies the scale of the test.
+Section~\ref{sec:flag-wall-slope} uses the tests and the behavior on
+the chamber walls to constrain the homogeneous degree polynomial.
+To use the degree at \(u'\) for sections of weight \(u_1\), we must
+also bound the norm of multiplication by a section of the weight
+difference. Fix a component \(Z\). If \(g\) runs over its nonzero cusp
+sections of weight \(u_1\), the norm of evaluation is measured by
+\[
+      \mathcal B_{u_1,Z}(y)
+      =\sup_{g\ne0}\frac{\|g(y)\|^2}{\|g\|_{2,Z}^2}.
+\]
+
+Near the boundary a short period makes the multiplying theta section
+small. Lemma~\ref{lem:deep-thin-evaluation} chooses a theta translate
+whose value still controls the ratio on that same component.
+On the complementary region a congruence-level neighbourhood embeds,
+and Lemma~\ref{lem:deep-thick-evaluation} constructs a cusp section with
+prescribed value at its centre. Combining the estimates bounds the
+cost of the weight change in Lemma~\ref{hyp:covolume-shift-costs}.
+Section~\ref{sec:flag-component-transfer} then transfers the component
+bounds from the deep cover to the chosen levels.
+
+The metric matters in this calculation. A geometric degree alone does not account for the size of a section at the complex embeddings. For a principally polarized abelian scheme on a horizontal arithmetic surface let \(\bar\omega\) be the Hodge bundle with its polarization metric and \(d_{\det\omega}\) the degree of its determinant on the generic curve, taken over \(\mathbb Q\). The second Hodge intersection is
+\[
+             \widehat{\deg}\,\widehat{\operatorname{ch}}_2(\bar\omega)
+                            =\tfrac12 r_*d_{\det\omega}.
+\]
+The constant \(r_*\) is independent of the scheme, surface and relative dimension. Thus variation of this particular arithmetic term can be measured on the generic curve. Theorem~\ref{thm:hodge-surface-degree} specifies the degree also when a regular cover is needed.
+
+A further determinant twist restores the original row weight after estimating sections in a range where there are sufficiently many of them. The two blocks of the unitary signature enter with opposite signs. Writing \(w_{j\rho}\) for the integral weight shift at embedding label \(\rho\), \(\Omega\) for the chosen period scale and \((p_j,q_j)\) for the signature, the normalized log covolume \(L_{3,j}\) satisfies
+\[
+          L_{3,j}\le \sum_\rho(p_j-q_j)w_{j\rho}\log\Omega+(C_0+1)U .
+\]
+Here \(U=B_0\log\log x\) is the common error scale of Proposition~\ref{prop:selected-base-covolume}. The flat line preserves rank and its normalized degree supplies the signed term. Character traces, descent of integral coefficients and comparison with the Petersson metric contribute to the error. The terminal lift has its own type estimate. The constant and cutoff precede the choices of translate, sequence and lift.
+
+\begin{construction}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{.25\linewidth}>{\raggedright\arraybackslash}p{.29\linewidth}>{\raggedright\arraybackslash}p{.38\linewidth}@{}}
+\textit{Where} & \textit{Object compared} & \textit{Quantity entering the degree}\\ \hline
+infinite places & good base row with its Petersson metric & normalized log covolume \(L_{3,j}\)\\
+\(w,\bar w\) at a twist & transported row lattices in the common space & sum \(I_{wj}\) of two signed indices\\
+the same local tuple & row and its Hermitian dual & dual index with the actual character multiplicities
+\end{tabular}
+\caption{Three terms in the determinant comparison at one lift. The two finite comparisons use the tuple assigned to the place and the common base rank \(D_0\).}\label{fig:intro-period-indices}
+\end{construction}
+
+To see how geometry controls a finite index, work first at a place \(\lambda\) of a field over which a geometric realization is defined. Write \(M_{0,\lambda}\) for its integral lattice of forms and \(\Theta_\lambda\) for the local module generated by the prescribed products of sections. Intersect both with a subspace \(V\) of the completed span of \(M_0\). At each integer depth \(h\) above the specified local threshold, Proposition~\ref{prop:geometric-run-index} gives
+\[
+ \operatorname{length}
+ \frac{V\cap M_{0,\lambda}}{V\cap M_{0,\lambda}\cap\Theta_\lambda}
+                         \le h\dim V+r_\lambda .
+\]
+
+The nonnegative \(r_\lambda\) is chosen before \(V\) and \(h\), and its sum with the normalized finite-place weights is bounded. In particular one may take \(V\) to be spanned by the Smith directions of exponent greater than \(h\). The remainder then bounds the sum of their excess exponents.
+
+For example, suppose that a sublattice has three Smith exponents \(1,3,7\) in a lattice with basis \(e_1,e_2,e_3\), and take \(h=3\). The choice \(V=K_\lambda e_3\), where \(K_\lambda\) is the local field, gives
+\[
+      7\le3+r_\lambda,\qquad
+       (1-3)_++(3-3)_++(7-3)_+=4,\qquad (a)_+=\max(a,0).
+\]
+If the inequality were tested only on the whole space, it would require merely \(1+3+7\le9+r_\lambda\). That would allow \(r_\lambda=2\) and miss half the excess in the third direction. Under extension by ramification index \(e\), the change of exponents and the excess at the new depth are
+\[
+        (1,3,7)\longmapsto(e,3e,7e),\qquad
+        (e-3e)_++(3e-3e)_++(7e-3e)_+=4e .
+\] 
+The proof of \eqref{eq:run-cut} bounds the excess for all subspaces over the larger field by first bounding the length of the image of the full lattice multiplied by the depth power.
+
+On returning to \(K\), retain the assigned tuple at both orientations of every twisted place. At \(w\mid p\) put \(\omega_w=\log{\rm N}w/[K:\mathbb Q]\) and let \(e_w\) be its ramification index. The transport part of the determinant carries the factor \(\omega_w/D_0\). Subtract from the sum over lifts the forced weights \(F_h(w)\) and the correction \(2e_w/p^2\). Divide its positive part equally among the \(m\) lifts. With \([v]_+=\max(v,0)\), this gives
+\[
+ e_w r^0_{j,w}=\frac1m\left[
+ D_0^{-1}\sum_{h=1}^m I_{wh}-2\sum_{h=1}^m e_wF_h(w)-2e_w/p^2\right]_+ .
+\]
+The summand \(J_{j,w}\ge0\) from the least exponent at lift \(j\) still has to be included. Writing \(W_{\rm tw}\) for the twisted places, the first error is
+\[
+           E_{1,j}=\sum_{w\in W_{\rm tw}}\omega_w(e_wr^0_{j,w}+J_{j,w}).
+\]
+
+The second error \(E_{2,j}\) occurs in the signed index of the lift lattice \(\mathcal T\) against the localization of its global Hermitian dual. With \(\eta_j(w)\) the normalized congruence length, \(D_G\) a class and level denominator, and \(s\) clearing the classwise dual inclusions, Proposition~\ref{prop:signed-lift-dual-index} gives
+\[
+ [\mathcal T_w:(\mathcal T^\#)_w]_w
+          \le e_w\eta_j(w)+D_0\bigl(J_{j,w}+v_w(sD_G)\bigr).
+\]
+The cohomological numerator involves the marked Tate-dual row and the direct column in the localized Galois calculation. Their lengths are evaluated with the multiplicities of the good characters at precisely this tuple. Passing from the restricted lattices to the full lattices and clearing the common class denominator \(d_*\) costs at most \(\log d_*+\log s\). The selected comparison has \(s=1\).
+
+Write \(n=|A|\) for the group order in the family and \(N_c\) for the rank allowance at the point. The parameters of the error estimate are
+\[
+     f=2n,\quad z=x^\epsilon,\quad b=e^z,\quad
+     B_0=fmbz,\qquad \mathcal E=z(B_0+N_c).
+\] Lemma~\ref{lem:parent-transport-cost} and Proposition~\ref{prop:parent-dual-cost} yield, for \(1\le j\le m\),
+\[
+ \begin{aligned}
+ E_{1,j}&\le 2(4C^2+25C+C_b+44)\mathcal E,\\
+ E_{2,j}&\le (|C_N|+1)\mathcal E+\log d_*
+              \le (|C_N|+3+9C_\Gamma)\mathcal E .
+ \end{aligned}
+\]
+The constants refer to the two geometric comparisons and the cohomological length estimate in those results. Both bounds hold for the same point and choice of sequence once the common threshold is reached. This quantifier is what permits summation over the lifts in a single determinant. Proposition~\ref{prop:sequence-division} combines the resulting \(O(m\mathcal E)\) with the weight and evaluation terms. The period enters that proposition through a numerical upper height, defined even for a zero map.
+
+\subsection{How much of a row survives interpolation?}
+
+The determinant has given a total length. To use it on a subspace of a period row we
+need finer information. How many independent directions survive at a specified depth? Take a good cycle selected in Section~\ref{subsec:frobenius-selection}.
+Its length is the even order of the Frobenius step. On that cycle
+Section~\ref{sec:host-edge-tests} constructs a coefficient DVR in which
+the two neighbouring lattices can be tested together. Section~\ref{sec:interpolation} uses two tests on the local lattices. The first varies an integral weight on an arithmetic progression of step prime to \(p\). Suppose its matrix \(A(T)\) has size \(l\), with entries integral combinations of \(\binom{T}{i}\) for \(i\le\delta\). Write \(C\) for the leading coefficient and \(d\) for the degree of its nonzero determinant. Normalize \(v(p)=1\). In a splitting field factor the determinant
+and choose \(L\) to bound its leading coefficient and degree by
+\[
+             \det A(T)=C\prod_{\nu=1}^d(T-\zeta_\nu),
+             \qquad v(C)+d/(p-1)\le lL .
+\]
+
+At the \(j\)-th of \(H\) successive evaluation points, let \(b_j\) count the Smith factors of valuation at least \(E\), with valuation \(+\infty\) for a zero. Over the coefficient DVR each specialization has a Smith normal form.
+With \(E\ge1\), \(H\le p^h\) and \(\delta<p^h\),
+Lemma~\ref{lem:smith-average} gives
+\[
+             H^{-1}\sum_j b_j
+               \le l\left(\frac{\delta}{H}+
+                           \frac{L+\delta h/H}{E}\right).
+\]
+A zero of the determinant at a chosen weight is therefore allowed. The degree term pays for exceptional evaluations, and the second term limits the number of large invariant factors at the other weights. The output is an average with multiplicity over the progression.
+
+A second test holds the target lattice fixed and varies the incoming neighbor. On the smaller-prime range, a polynomial in Frobenius-twisted coordinates separates a chosen residue plane from the competing planes. Lifting the resulting symbols with controlled denominators produces vectors and covectors on each incoming edge. Pairing tests from distinct edges gives entries of higher valuation than the diagonal blocks. After the stated normalization the combined matrix is the identity modulo the uniformizer, so it has an integral inverse. For the recovered target subspace \(V_{\rm rec}\), Proposition~\ref{prop:residue-plane-neighbor-test} gives
+\[
+                 \dim V_{\rm rec}\ge(1-\kappa)\dim V,
+                          \qquad \kappa=O(Nx^{-12}),
+\]
+where \(N\) counts the selected top positions. Its endpoint orders and its denominator \(p^{D_{\rm II}}\) are fixed in that prime range.
+
+Section~\ref{sec:frames} asks for the dimension spanned at infinity. For complex matrices \(A_i\) with common target of dimension \(D\), put \(Q=\sum_i A_iA_i^*\). Its image is their joint span. Whenever \(\operatorname{tr}Q>0\),
+\[
+                 \operatorname{rank}Q
+                       \ge\frac{(\operatorname{tr}Q)^2}
+                                {\operatorname{tr}(Q^2)} .
+\]
+Lemma~\ref{lem:frame-rank} gives the version allowing each source to lose a controlled number of directions. For the period maps this leaves two questions. Which columns have nonzero period, and how large is the second moment of their sum on the common target?
+
+\subsection{Nonvanishing and the dimension of the period image}
+
+Here the two questions left by interpolation meet. The sections live on several
+definite unitary groups, but their periods take values in a common space of cuspidal
+forms. A nonzero section can have zero period. Moreover, periods from distinct groups can have nearly the same image, even if each period map has large rank. Let \(P_{\mathbf u}\) be the period map from the full column Hilbert space \(C_{\mathbf u}\) indexed by a sequence \(\mathbf u\), and let \(\mathcal H\) be the common row. These two questions concern different spaces:
+\[
+             \ker(P_{\mathbf u}:C_{\mathbf u}\longrightarrow\mathcal H),\qquad
+             \mathcal H\Big/\sum_{\mathbf u} P_{\mathbf u}(C_{\mathbf u}).
+\]
+The first occurs in identifying a rational evaluation with a nonzero automorphic period. The second occurs in bounding the slopes of the common row.
+
+Fix one of the selected points. Put \(d_{\mathbf u}=\dim C_{\mathbf u}\). Unfolding its inner products introduces an explicit scalar \(c_{\mathbf u}\) from the Haar measures and the dimension of the definite type. The operators to be estimated have source and target
+\[
+ K_{\mathbf u\mathbf v}=(c_{\mathbf u}c_{\mathbf v})^{-1/2}P_{\mathbf u}^*P_{\mathbf v}:C_{\mathbf v}\longrightarrow C_{\mathbf u} .
+\]
+Definition~\ref{hyp:full-gram-row} specifies the measures, the preliminary convention at zero and the finite levels for these maps.
+
+Unfolding makes the identity term on an equal pair of columns the reference identity operator. The other terms are indexed by relative positions of two flags. At finite places the character level is a compact open subgroup \(K_2\), with character \(\chi_2\). Two translated level functions overlap precisely when their relative translate \(t_f\) belongs to \(K_2\). With the quotient measures of Section~\ref{sec:selected-row-gram}, the finite integral is
+\[
+ I_f(t_f)=
+ \begin{cases}
+  \operatorname{vol}(K_2)\chi_2(t_f), & t_f\in K_2,\\
+  0, & t_f\notin K_2.
+ \end{cases}
+\] At infinity one integrates modulo the intersection of the two unipotent lattices after expressing both in the first frame. The change of either rational representative introduces reciprocal finite and infinite phases. Proposition~\ref{prop:gram-unfolded-measures} thus gives an operator attached to the relative position.
+
+There are two estimates to make for a given collection of relative positions. One counts the integral representatives, each weighted by the reciprocal order of its stabilizer. The other measures their orbital amplitudes. For the first, remove the isotropic flag and its marked negative line from a row lattice. The remaining definite Hermitian lattice has rank \(k\). In Section~\ref{sec:flag-counts} the line has norm \(-T\) for a completely split prime \(T\ge3\). If there are \(f\) real places of the totally real base field, Proposition~\ref{prop:flag-row-mass} gives the two masses
+\[
+ M=m_k\left(\frac{T^k-1}{T-1}\right)^f,\qquad
+ M_{\rm row}=(T-1)^fM .
+\]
+Here \(m_k\) is the mass of the standard unimodular genus. Counting two flags requires their common sublattice as well. Its corank governs the estimates in Proposition~\ref{prop:flag-pair-counts}.
+
+On the analytic side, successive blocks of a flag can meet along a degenerate orbit. Near that orbit the oscillatory integral has a leading term expressed by integrals over a single unipotent group. The integral for block sizes \((s-1,1)\) is expanded in terms of the single-block integral of size \(s\). Write \(n=s-1\), fix a compact set \(K\subset\mathbb C^\times\) and let \(D=ct^n\in K\). For the additive character \(\psi_\beta\) and the derivative bound \(M_0\) of Section~\ref{sec:orbital-germ}, Lemma~\ref{lem:orbital-germ} gives
+\[
+ |t|^{n^2}O_{n,1}(t,c)
+  =\frac1s\sum_{z^s=(-1)^nD}|z|^{n^2}\psi_\beta(sz/t)O_s(z)
+      +O_{s,\beta,K}(M_0|t|).
+\]
+The sum has one term for each stationary phase. The remainder tends to zero uniformly on the stated determinant levels as \(t\to0\). This local statement becomes a bound on a period only after one sums the allowed frequencies.
+
+Two normalizations enter that summation. The period lattice has a dual for the field trace, whereas Fourier inversion uses the Euclidean dual in a product of complex planes. For the CM field \(E\), use one embedding \(\sigma_v\) from each conjugate pair. Write \(g\) for the level and \(c=d^{-\nu}\) for the scale in Section~\ref{sec:period-lattice}, where \(d\) is the root discriminant. For the period lattice \(L\), put \(\Lambda=c\sigma(L)\). Lemma~\ref{lem:period-lattice-normalization} gives both the frequency and its normalization:
+\[
+ \frac1g\operatorname{Tr}_{E/\mathbb Q}(lL)\subseteq\mathbb Z
+ \quad\Longleftrightarrow\quad
+ \frac{2\overline{\sigma(l)}}{gc}\in\Lambda^\vee,
+ \qquad \operatorname{covol}(\Lambda)=(d/2)^fg^{3f}.
+\]
+
+The sign and spectral parameter of each added letter also change the vector tested against the orbital integral. The transfer matrices in Section~\ref{sec:word-pairing} keep track of these changes, and Proposition~\ref{prop:real-node-positivity} gives positivity at the real interpolation nodes. Consequently a mixed pairing can be bounded by the two diagonal energies. The resulting Fourier decay and the lattice covolume give the block recursion in Section~\ref{sec:block-recursion}. Its final step uses the actual period lattice.
+
+At a place with frequency \(l\) and derivative scale \(X>0\) the mixed pairing gains the factor \(\min(1,(X/|l|)^5)\), interpreted as one at zero. In one complex plane a dyadic annulus of outer radius \(R\) contains \(O(R^2)\) points of the standard Gaussian lattice. For example, for the standard lattice and \(X\ge1\), the successive outer annuli contribute at most
+\[
+ \sum_{j\ge0} O((2^jX)^2)\,2^{-5j}
+       \ll X^2\sum_{j\ge0}2^{-3j}\ll X^2 .
+\]
+This is the elementary one-place calculation behind the product estimate. Proposition~\ref{prop:auxiliary-period-comparison} first uses an auxiliary lattice for intermediate block sizes, then cancels the Fourier normalization against the covolume at the last size. This accounts for the product of the preceding block volumes in \eqref{eq:block-last-period}.
+
+To sum over the remaining relative positions one needs absolute convergence and the local operator norm. The integrable majorants of Section~\ref{sec:xi} control the integrations over the flag unipotent and the real group at the required weight gaps. Proposition~\ref{prop:real-period-norm} identifies the squared norm of the Bessel pairing on the open cell in terms of the reciprocal formal degree. Apply the identity of Section~\ref{sec:bessel-periods} to the two definite stabilizers. With compatible characters on the relative stabilizer and the required weight gaps for both periods, Proposition~\ref{prop:local-operator-normalization} in Section~\ref{sec:local-amplitudes} gives
+\[
+                  \|J_A\|_{\rm cell}^2=C/d_A .
+\]
+Here \(J_A\) is the orbital amplitude, \(d_A\) its discrete-series formal degree in the transported Haar measure, and \(C\) is uniform in the fixed interpolation window. On a cell with nonzero Gram invariant and nonzero preceding minor, Section~\ref{sec:absolute} also gives a pointwise estimate. The squared-norm estimate still applies when that minor vanishes.
+
+For a nonscalar generic pair at corank one, at least one amplitude has extra decay. Use this on the side supplying it and the squared-norm bound on the other. To sum their product one must count the representatives in both orders. For two labels \(X,Y\), let \(H_X,H_Y\) be their heights and \(n_X,n_Y>0\) the normalization factors formed from their positive Gram invariants in Section~\ref{sec:row-sums}. With \(h\) the counting exponent and \(c\) the height constant, the two counts for the same fibre give
+\[
+       N(X,Y)\le c^f(H_XH_Y)^h
+                    \min\{H_X^h n_X,H_Y^h n_Y\}.
+\]
+
+The squared-norm bound for each amplitude supplies an inverse square root of its corresponding \(n\). Multiplying the first count alone by these two factors would leave \(\sqrt{n_X/n_Y}\), for which the heights give no comparison here. Reversing the order of the two labels gives the second count. The elementary inequality \(\min(a,b)\le\sqrt{ab}\) now yields
+\[
+ \frac{N(X,Y)}{\sqrt{n_Xn_Y}}
+      \le c^f(H_XH_Y)^h\,
+          \frac{\sqrt{H_X^h n_X\, H_Y^h n_Y}}{\sqrt{n_Xn_Y}}
+      =c^f(H_XH_Y)^{3h/2}.
+\]
+For a repeated word the two squared-norm estimates alone suffice.
+After summing the two labels and restoring the row mass, the
+generic corank-one pairs contribute at most
+\[
+          e^{C_Bm^5 f\log b}\,\frac{d_{\mathbf u}^2}{D_*}
+\]
+in the diagonal comparison of Proposition~\ref{prop:pretransport-ramified-period}.
+Here \(d_{\mathbf u}\) is the dimension of the marked column and \(D_*\)
+is the identity contribution to the ambient trace.
+Lemma~\ref{lem:equal-word-generic-corank-one} proves this bound for the
+whole set, including its scalar pairs.
+
+For distinct words the error budget is tighter. Proposition~\ref{prop:summed-row-corank-one}
+uses the extra decay available on one side of a nonscalar pair. At higher
+corank the genus mass also enters the count, as in
+Lemma~\ref{lem:higher-corank-total-error}.
+
+\begin{construction}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{.29\linewidth}>{\raggedright\arraybackslash}p{.62\linewidth}@{}}
+\toprule
+Estimate & Role in the sum of orbital terms \\
+\midrule
+Flag count & Bounds the number of integral representatives of a fixed pair of labels, with stabilizer weights.\\
+Squared orbital norm & Supplies a bound on either amplitude even when its preceding minor vanishes.\\
+Pointwise decay & Improves the bound on at least one side of a nonscalar generic pair at corank one.\\
+Cuspidal dimension & Fixes the common scale for the aggregate contribution of different columns.\\
+\bottomrule
+\end{tabular}
+\caption{From the local orbital estimates to the rank of the joint period image.}\label{fig:intro-gram-estimates}
+\end{construction}
+
+Here is how the estimates in Figure~\ref{fig:intro-gram-estimates} detect an individual period. On the full column the preliminary diagonal comparison gives \(\|K_{\mathbf u\mathbf u}-I\|_{\rm HS}^2\le e_Pd_{\mathbf u}\). An orthonormal basis of \(\ker P_{\mathbf u}\) contributes one unit per vector to this squared norm. At the assigned prime \(T_{\mathbf u}\) the ramified subspace \(C_{\mathbf u}^{\rm ram}\) has a computable dimension. In the selected range the two comparisons are
+\[
+ \frac{\dim\ker P_{\mathbf u}}{d_{\mathbf u}}\le e_P<\frac34,
+ \qquad
+ \frac{\dim C_{\mathbf u}^{\rm ram}}{d_{\mathbf u}}
+   =\left(1-\frac{1}{T_{\mathbf u}-1}\right)^f
+   \ge 1-\frac{f}{T_{\mathbf u}-1}\ge\frac34 .
+\]
+Thus there is a ramified vector \(v\) with \(P_{\mathbf u}v\ne0\). Its period supplies the nonzero initial value used in the two-term period relation. The argument takes place before transport to the rational row (Proposition~\ref{prop:pretransport-ramified-period}).
+
+For the dimension of the combined images the relevant scale is the identity contribution \(D_*\) to the cuspidal trace. It is the quotient volume times the finite projector evaluated at the identity and the product of the archimedean formal degrees. Proposition~\ref{prop:projector-dimension} compares \(D_*\) with the
+actual multiplicity \(D\) in the range of Definition~\ref{hyp:cuspidal-dimension}.
+Proposition~\ref{prop:selected-rank-comparison} places the selected
+projector in that range. Uniformly in its fields, levels and weights,
+for sufficiently large ambient rank \(r\),
+\[
+          |D-D_*|\le e^{-rf\log(r)/16}D_*.
+\]
+There is equality \(D=D_*\) for a definite group in the stated range. For distinct sequences Proposition~\ref{prop:selected-full-gram} gives
+\[
+ \|K_{\mathbf u\mathbf v}\|_{\rm HS}^2\le(1+b^{-6})d_{\mathbf u}d_{\mathbf v}/D_* .
+\]
+The common scale \(b\) and the range of column dimensions are specified in Proposition~\ref{prop:selected-rank-comparison}.
+
+The estimate for \(D_*\) comes from a separate trace calculation. A finite convolution projector prescribes the level and a lowest compact type selects the archimedean discrete series. In the part of the quotient where the lattice has no very short subspace, separation of the integral matrices controls the nonidentity terms. The complementary part can contain many short unipotent translates of one point. There the estimate uses a filtration by normalized lattice covolumes and bounds the contribution of an orthonormal family before taking its trace. Both estimates are needed when the smaller signature index is positive.
+
+Indeed, for the normalized column maps \(A_{\mathbf u}=c_{\mathbf u}^{-1/2}P_{\mathbf u}\) put \(Q=\sum_{\mathbf u} A_{\mathbf u}A_{\mathbf u}^*\). Cyclicity of the trace gives
+\[
+ \operatorname{tr}(Q^2)=\sum_{\mathbf u,\mathbf v}\|A_{\mathbf u}^*A_{\mathbf v}\|_{\rm HS}^2 .
+\]
+The diagonal bounds control the individual kernels, while this identity uses the off-diagonal bounds to control overlap. Lemma~\ref{lem:frame-rank} converts the resulting trace ratio into a bound on the codimension of the sum of the images, even after restricting the columns to subspaces of small total codimension. This is the rank information needed for the slope comparison: it controls how much of
+the common row can be missed after the columns have each been restricted.
+
+\subsection{Where the square root enters}
+
+Return to the real scale \(x\) in the chosen interval. We can now put a number on the
+error that Fourier projection left undetermined. The
+period, lattice and Gram estimates have supplied the upper bound
+of Proposition~\ref{prop:fixed-point-slope-gap} on each translate.
+The prime sum in that proposition already includes every lift and
+every top index. In particular, the upper bound is for the sum
+\[
+             \sum_{j=1}^m\sum_{t\in T}\Delta_{j,t}(u)
+                       \qquad(u\in A_0).
+\]
+There is no further factor of \(m\) when it is inserted in the Fourier
+average. An average over \(A_0\) has mass one. This is where it pays
+to have kept the translate and the integral weights fixed in the
+slope calculation.
+
+Here are the sizes which determine the answer. In the notation of
+Lemma~\ref{lem:comparison}, let \(n=|A|\), \(n_T=|T|\), let \(n_2\)
+count the indices of the second weight, and put \(\delta_2=n_2/n\).
+Write \(b\) for the weight scale, \(k\) for the integer in the
+arithmetic comparison and \(a_E\) for its size parameter, bounded
+by \(2xb\). Dividing the three terms of the arithmetic bound by
+\(Q=n_Tmb\) leaves the quantities
+\[
+ \frac{a_E}{mb}\left(1+\frac{m^2}{k}\right),\qquad
+        2\frac n{n_T}m x^\epsilon,\qquad
+        \frac n{n_T}\delta_2\frac{k}{n^2}x^{2\epsilon}.
+\]
+This line separates the effect of lengthening the chain from the
+cost of selecting the weights. The leading part of the first
+quantity decreases with \(m\). The second increases with \(m\)
+because the estimates accumulate along the chain. The third
+depends on the upper bound for \(k\), which is why the construction
+has to provide a range for this integer.
+
+For example, consider the first quantity with \(xm\le k\).
+The term containing \(m^2/k\) has a different behavior from the
+leading term. Direct substitution gives
+\[
+ \frac{a_E}{mb}\left(1+\frac{m^2}{k}\right)
+       \le \frac{2x}{m}+\frac{2xm}{k}
+       \le \frac{2x}{m}+2 .
+\]
+For the remaining terms use the density of the top indices and
+the upper bound for \(k\). The family has
+\[
+       \frac{n}{n_T}\le2x^{\epsilon/8},\qquad
+       x^{-\epsilon}\le\delta_2\le1,\qquad
+       k\le n^2 x^{1/2-\epsilon}.
+\]
+It follows that the second term is at most \(4m x^{9\epsilon/8}\)
+and the third at most \(2x^{1/2+9\epsilon/8}\). The only variable
+still governing the two competing powers is the length \(m\).
+
+Here the choice of the family is slightly asymmetric. The retained
+density parameter is \(\delta_1=x^{-\epsilon/8}\).
+The family chooses \(m\) in the range of Lemma~\ref{lem:rank-window}, between
+\(\sqrt{x\delta_1}\) and twice that value, hence
+\[
+ x^{1/2-\epsilon/16}\le m\le 2x^{1/2-\epsilon/16},
+ \qquad
+ \tfrac12 x^{1/2+\epsilon/16}\le x/m\le x^{1/2+\epsilon/16}.
+\]
+The power sacrificed by using a slightly shorter chain is thus
+explicit. The remaining division in the Fourier comparison is by
+\(\delta_2/2\), which costs at most \(2x^\epsilon\).
+Section~\ref{subsec:fixed-weight-absorption} bounds the unnormalized
+error by \(x^{5\epsilon}\) times the comparison expression.
+Lemma~\ref{lem:comparison} restores the omitted twists, absorbs
+fixed factors for sufficiently large \(x\), and gives
+\[
+       G_{\mathcal K}(x)\le x^{1/2+9\epsilon}
+                          \qquad(Y\le x\le Y^{3/2}).
+\]
+Thresholds may depend on the fixed character and on \(\epsilon\).
+
+The family estimates made them independent of the translate and of
+the auxiliary ranks appearing at \(x\). By Lemma~\ref{lem:disjoint-common-pair-windows} the lower endpoints tend to infinity on the already chosen family. Hence the left endpoint can exceed the last threshold of Lemma~\ref{lem:uniform-numerical-application}.
+This choice of lower endpoint is what the pole argument needs.
+
+\subsection{Reading an interval with a Laplace derivative}
+
+We now read the interval estimate in the opposite direction, from the primes back to
+the zeros. Fix \(\psi\) and suppose that its primitive function has a zero
+\(\rho\) with \(1/2<\beta=\RePart\rho<1\). Choose a positive
+\(\epsilon<\epsilon_0(\psi)\) so small that
+\[
+             \theta=\tfrac12+9\epsilon<\beta .
+\]
+The transform \(\Phi\) of the weighted sum has a pole at \(\rho\)
+by the residue calculation above. We shall obtain incompatible
+estimates for its high derivatives. It helps to distinguish two
+features of the interval: its position determines the derivative
+order; its length permits an exponentially small tail.
+
+Put \(u=\log y\), \(g(u)=G_{\mathcal K}(e^u)\) and \(U=\log Y\).
+The window in \(u\) is \([U,3U/2]\). The finite weighted sum has
+the elementary global bound \(|g(u)|\le Be^{2u}\) for a constant
+depending on the fixed family. Indeed each uncentered prime sum is
+\(O(y(1+\log^2 y))\), by summing \(y\log n/n\), and the explicit
+centering satisfies the same bound for the fixed family. On the
+window the arithmetic argument supplies the stronger inequality
+\[
+              g(u)\le e^{\theta u}
+                     \qquad(U\le u\le 3U/2).
+\]
+The negative values of \(g\) could have large absolute value. A
+direct estimate for the absolute value of a single complex Laplace
+integral would discard precisely the information contained in this
+one-sided inequality.
+
+For a real \(\sigma>2\) and \(\RePart z=\sigma\), use the notation
+of Theorem~\ref{thm:window},
+\[
+ T_k(z)=\frac{(-1)^k}{k!}\Phi^{(k)}(z)
+       =\int_0^\infty g(u)\frac{u^k}{k!}e^{-zu}\,du .
+\]
+Here \(k\) is a derivative order; the integer used in the arithmetic
+comparison has played its part. To estimate the derivative at
+\(z=\sigma+i\tau\), rotate it by a scalar \(c\) of absolute value one
+so that \(\RePart(cT_k(z))=|T_k(z)|\), then add the real derivative
+at \(\sigma\). Under the integral, the combined multiplier is
+\[
+         0\le 1+\RePart(ce^{-i\tau u})\le2 .
+\]
+This choice uses the reality of \(g\). With \(g^+=\max(g,0)\), it gives
+\[
+ |T_k(\sigma+i\tau)|+\RePart T_k(\sigma)
+       \le 2\int_0^\infty g^+(u)\frac{u^k}{k!}e^{-\sigma u}\,du .
+\]
+The right side is independent of \(\tau\). Later we can move the
+complex center vertically to isolate an individual pole while
+keeping exactly the same upper bound.
+
+To estimate the integral outside the window, write \(a=\sigma-2\)
+and choose \(k=\lceil 5aU/4\rceil\). Against the global bound for
+\(g^+\), the substitution \(v=au\) gives the probability density
+\[
+             \frac{v^k e^{-v}}{k!}\,dv,\qquad
+             v>0,\qquad \int_0^\infty\frac{v^k e^{-v}}{k!}\,dv=1 .
+\]
+The mode in the original coordinate is \(k/a\), close to \(5U/4\).
+The standard deviation is \(\sqrt{k+1}/a\), of order \(\sqrt U\)
+for fixed \(a\). Each boundary of the window is at distance of order
+\(U\) from the mode. An exponential moment gives exponential decay
+of the two tails, as in Section~\ref{sec:window}.
+
+\begin{construction}
+\begin{tikzpicture}[x=2.2cm,y=.68cm,>=Stealth,line width=.42pt]
+ \fill[black!7] (1,0) rectangle (4,1.7);
+ \draw[->] (.1,0)--(4.95,0) node[right] {\(u\)};
+ \draw (1,.08)--(1,-.1) node[below] {\(U\)};
+ \draw (2.5,.08)--(2.5,-.1) node[below] {\(5U/4\)};
+ \draw (4,.08)--(4,-.1) node[below] {\(3U/2\)};
+ \draw[dashed,black!55] (2.5,.1)--(2.5,1.57);
+ \draw[thick] (.2,.03) .. controls (1.12,.03) and (1.55,.19) .. (1.93,.72)
+     .. controls (2.18,1.13) and (2.32,1.53) .. (2.5,1.53)
+     .. controls (2.71,1.53) and (2.87,1.18) .. (3.12,.78)
+     .. controls (3.56,.14) and (4.25,.04) .. (4.68,.035);
+\end{tikzpicture}
+\caption{Placement of the derivative kernel on the logarithmic scale (schematic).
+The shaded interval is where the arithmetic estimate holds. Its length is \(U/2\);
+the effective width of the gamma density for the tail estimate is of order
+\(\sqrt{U}\) with \(a\) fixed.}\label{fig:analytic-road}
+\end{construction}
+
+Inside the window use \(g^+(u)\le e^{\theta u}\). Put
+\(D=\sigma-\theta\); the inequality \(v^ke^{-v}/k!\le1\) gives
+\[
+ \int_U^{3U/2}g^+(u)\frac{u^k e^{-\sigma u}}{k!}\,du
+              \le \frac{U}{2}D^{-k}.
+\]
+Outside the window the global estimate leaves a factor
+\(Ba^{-k-1}\) times the gamma tail. Choose \(a\) large enough,
+once for all these intervals, so that the exponential decay of the
+tail absorbs the difference between \(a^{-k}\) and \(\sigma^{-k}\).
+Since \(D<\sigma\), both pieces give the bound of
+\eqref{eq:derivative-upper},
+\[
+ |T_k(\sigma+i\tau)|+\RePart T_k(\sigma)
+       \ll (1+U)D^{-k},\qquad k=\lceil 5aU/4\rceil .
+\]
+Its strength is in the exponential base \(D\). A pole closer than
+\(D\) to a suitable center would force larger derivatives along
+these very same orders.
+
+\subsection{Returning to the putative zero}
+
+All poles arising here from zeros are simple poles of a logarithmic derivative, even for a multiple zero. To contradict the interval estimate we must isolate one of these poles at the very
+derivative orders the interval supplies. If a meromorphic
+function has a unique closest pole \(\lambda\) to a center \(z\),
+which is simple with residue \(r\ne0\) and distance \(d=|z-\lambda|\), take a
+circle of radius \(R>d\) enclosing no other pole and contained
+in the domain of continuation. The principal part and the holomorphic
+remainder give, by Cauchy's estimate,
+\[
+       T_k(z)=\frac{r}{(z-\lambda)^{k+1}}+O(R^{-k}).
+\]
+A derivative indexed by \(k\) therefore measures distance to this
+pole with exponential precision. The comparison uses a real and a
+complex center because the arithmetic bound controls only a
+particular sum of derivatives.
+
+If the unique closest pole to the real center \(\sigma\) is a real
+\(\lambda\) at distance \(d<D\), the residue formula gives
+\(r>0\). Use both derivatives at \(\sigma\). For any radius \(R\)
+strictly between \(d\) and the smaller of \(D\) and the distance to
+the next pole, the lower bound is
+\[
+          2\RePart T_k(\sigma)\ge 2r d^{-k-1}-O(R^{-k}).
+\]
+
+It contradicts the upper bound as \(U\) tends to infinity along the
+chosen intervals. After multiplication by \(d^k\), the two sides would have to satisfy
+\[
+    2r/d-O\bigl((d/R)^k\bigr)\ll(1+U)(d/D)^k\longrightarrow0 ,
+\]
+although the left side tends to \(2r/d>0\). This also explains why the real
+sign of the residue mattered.
+
+In the other cases move the complex center along the line
+\(\RePart z=\sigma\). If the open disk of radius \(D\) about
+\(\sigma\) is free of poles, align the height with that of the
+putative pole to the right of \(\RePart s=\theta\). The horizontal
+distance is strictly less than \(D\). If the real center has a
+nonreal nearest pole inside that disk, taking its height strictly
+decreases the distance. This gives a center closer to some pole
+than the real center is and at distance less than \(D\).
+
+For example, if the nearest poles to the real center are a
+conjugate pair \(\alpha\pm i\gamma_0\), with \(\gamma_0>0\), compare
+the squared distances at height \(\tau\):
+\[
+ \big|\sigma+i\tau-(\alpha-i\gamma_0)\big|^2-
+ \big|\sigma+i\tau-(\alpha+i\gamma_0)\big|^2=4\tau\gamma_0 .
+\]
+Moving toward the upper pole separates the two contributions while the
+bound on the pair of derivatives stays uniform in \(\tau\).
+
+A small further variation of the height removes ties. On a short
+vertical segment only finitely many poles can be relevant, and a
+pair with distinct imaginary parts is equidistant at most at one
+height, by subtracting the squared distances. Two poles at the same
+height have distinct horizontal distances since both lie to the left
+of \(\sigma\). Let \(\mathcal P\) denote the set of poles. We obtain a unique
+nearest pole \(\lambda\) at distance \(d\) from \(z\) and can choose
+a radius satisfying
+\[
+ d<R<\min\{D,\operatorname{dist}(\sigma,\mathcal P),
+                    \operatorname{dist}(z,\mathcal P\setminus\{\lambda\})\}.
+\] At the complex center take
+the absolute value of the principal part. At the real center
+Cauchy's estimate now bounds the entire derivative by \(O(R^{-k})\).
+Together the estimates would imply
+\[
+       \frac{|r|}{d}-O\bigl((d/R)^k\bigr)
+                        \ll(1+U)(d/D)^k .
+\]
+
+The two sides have incompatible limits. The contradiction completes
+the passage from a one-sided bound on a sequence of intervals to
+the absence of the proposed zero. It is here, after the arithmetic
+averaging, that a conclusion about the individual target character
+is recovered.
+
+Section~\ref{sec:deduction} finishes the passage to the full
+statement. On \(\RePart s=1\), Lemma~\ref{lem:boundary} gives
+nonvanishing away from the principal pole. On \(\RePart s>1\) the
+absolutely convergent Euler product gives nonvanishing. For a character \(\chi\) modulo \(q\), let \(f=f_\chi\)
+and use the finite Euler-factor identity of
+Lemma~\ref{lem:analytic-change-modulus},
+\[
+   L_q(s,\chi)=L_f(s,\chi^*)\prod_{\substack{p\mid q\\p\nmid f}}
+                                  (1-\chi^*(p)p^{-s}).
+\]
+
+Each extra factor is nonzero for \(\RePart s>0\), since
+\(|\chi^*(p)p^{-s}|=p^{-\RePart s}<1\). Thus changing the
+modulus introduces no new zero in the open strip. The principal
+character retains its simple pole at one. For a primitive character,
+the gamma and conductor factors in Definition~\ref{def:completed-dirichlet}
+are finite and nonzero in the open strip. The functional equation there gives
+\[
+        L(s,\chi)=0\quad\Longleftrightarrow\quad
+              L(1-s,\bar\chi)=0\qquad(0<\RePart s<1).
+\]
+
+A zero to the left of the critical line would therefore give a
+zero to its right for the conjugate character. For \(\zeta\) the
+functional equation also identifies the zeros at the negative even
+integers, and \(\zeta(0)=-1/2\). These are the distinctions of scope
+in Theorem~\ref{thm:claims}. \cite[(25.15.5)]{dirichlet}
+\cite[(25.4.1)--(25.4.4)]{zeta}
+
+The number \(1/2\) has appeared twice for different reasons.
+On the arithmetic side a chain of length near \(\sqrt x\) balances
+the normalized errors \(x/m\) and \(m\). On the analytic side a
+zero at \(\rho\) would force growth governed by \(\RePart\rho\).
+The interval bound leaves room for arbitrarily small positive
+losses in the arithmetic exponent. Fixing the zero first allows
+one to choose those losses smaller than \(\RePart\rho-1/2\);
+the functional equation accounts for the other half of the strip.

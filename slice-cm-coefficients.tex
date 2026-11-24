@@ -1,0 +1,490 @@
+\paragraph{The coefficient tests at the prescribed cutoff.}
+We keep the two level primes, the CM field \(E\) of degree \(2f\),
+and the lift \(j<m\). Write \(\mathcal A\) for the sum of the
+nonnegative flag exponents of the section being tested and \(n\)
+for its central weight. For weight \(\kappa\) these numbers satisfy
+\(\mathcal A+frn\le S_\kappa\). Let \(q_j\) be the negative signature rank. Define the
+Fourier--Jacobi cutoff at this lift by
+\[
+ c_1=\tfrac12\operatorname{rd}(E)^{C_R}(2fq_j)^2q_j\,Tc,
+ \qquad C_R=7 .
+\]
+
+The weight and cutoff fix the torsion order \(n'\) and the letter
+radius bound \(\Lambda\) before the tests are chosen.
+The split approximation uses weight allowance \(S_\kappa+r\),
+level \(g_0g_1\), and the two integer norms
+\(|\operatorname{disc}E|\) and \(\mathrm N\mathfrak c_K\).
+The radius is enlarged to be at least one. The split construction
+is used only at \(j<m\), where \(q_j\ge1\) and \(c_1>0\).
+Thus the two signature cases entering the split construction are separated by
+\[
+  q_j=m-j\ge1\quad(j<m),\qquad q_m=0 .
+\]
+At \(j=m\) there is no complementary quotient.
+\label{cor:slice-cm-coefficients-1}
+
+An arc has a character lattice of rank one over \(\mathcal O_E\), a semiabelian model,
+a normalized theta generator, and tangent letters in each
+embedding block. Let \(t\) be its parameter and let \(X=(X_\tau)\)
+be independent square frame matrices. Replace each letter in
+row \(i\) by the combination with coefficients \((X_\tau)_{ik}\)
+of the original letters.
+Writing \(\ell_{\tau k}\) for the original letters, the variable frame has rows
+\[
+  \ell_{\tau i}(X)=\sum_k(X_\tau)_{ik}\,\ell_{\tau k}.
+\]
+ The section reading is a polynomial
+\(P_F(X,t)\) in the entries of \(X\), with coefficients in
+\(K'((t))\), over the number field of the arc. Homogeneity follows
+by scaling all the tangent letters and applying the flag character.
+In particular
+\[
+ P_F(X,t)\text{ has total frame degree }\mathcal A,
+ \qquad \phi_{\mu,J}(F)=[X^\mu t^J]P_F(X,t).
+\]
+It is linear in \(F\). The same definition applies to a section
+with complex scalar coefficients, by extending each coefficient
+reading linearly along the chosen embedding of \(K'\).
+
+\input{slice-split-frame}
+
+\paragraph{Isolation of the frequency on one arc.}
+
+Nonvanishing on a small chart still permits several Fourier frequencies. An arc on which the chosen frequency can be separated gives a single coefficient to estimate.
+
+Let \(E^+\) be the fixed field of complex conjugation and
+write \(\operatorname{Tr}=\operatorname{Tr}_{E/\mathbb Q}\).
+Let \(N\) be the transvection level, \(Y\) the rank-one
+character lattice and \(\xi:Y\to\mathbb Z\) its marked
+nonzero functional. Choose \(D>0\) clearing the trace dual
+of \(\mathcal O_E\).
+
+\begin{lemma}[The frequency lattice at a split cusp]\label{lem:slice-cm-frequency-lattice}
+Every occurring frequency \(\nu\) at the selected split cusp
+satisfies the archimedean positivity and finite trace conditions
+\[
+ \sigma(\nu)\ge0\quad(\sigma:E^+\hookrightarrow\mathbb R),\qquad \operatorname{Tr}_{E^+/\mathbb Q}(ND\nu\,\mathcal O_{E^+})\subseteq\mathbb Z.
+\]
+
+\end{lemma}
+
+\begin{proof}
+The principal-level transvections for the selected isotropic
+line have trivial weight character. The full transvection
+period lattice is rational in \(E^+\). Thus Fourier characters
+are trace pairings with elements of \(E^+\). For a nonzero
+coefficient, sending one cusp time to infinity with the other
+times fixed multiplies its raw term by the corresponding Fourier
+exponential. For a nonzero coefficient \(a_\nu\), with the
+other times fixed, the modulus of that Fourier reading is a
+constant multiple of
+\(|a_\nu|\exp(-2\pi t\,\tau(\nu))\).
+It is at most the supremum on the real period torus.
+The norm change on this time family grows at most polynomially
+in \(t\) in both directions. If \(\tau(\nu)<0\) the displayed
+exponential violates that bound as \(t\to\infty\).
+This proves total nonnegativity.
+
+Trace duality gives
+\(p:Y\to E\) with 
+\[
+  \operatorname{Tr}(a p(y))=\xi(ay)
+\]
+ for
+\(a\in\mathcal O_E\). The map is \(\mathcal O_E\)-linear and
+injective since it is nonzero on the torsion-free rank-one
+lattice. For \(t_0\in\mathcal O_{E^+}\) the
+bilinear form
+\[
+  (y,y')\longmapsto
+  \operatorname{Tr}\bigl(2NDt_0 p(y)\overline{p(y')}\bigr)
+\]
+is divisible by \(N\), since \(D\overline{p(y')}\) is integral.
+Under the unimodular alternating period pairing this divisibility
+says that the transvection with parameter \(NDt_0\) moves each
+lattice vector by an element of \(N\) times the lattice. One sees
+this by pairing its displacement against every lattice vector.
+The transvection is therefore a period with trivial weight
+character. Its Fourier character gives
+\(\exp(2\pi i\operatorname{Tr}(ND\nu t_0))=1\) for every \(t_0\)
+in the integer ring of \(E^+\), which is the asserted dual
+lattice condition.
+\end{proof}
+
+\begin{proposition}[Isolating a low mode by arc coefficients]
+\label{prop:cm-low-mode-detector}
+For \(j<m\), let \(a_\nu\) denote extraction of the Fourier--Jacobi coefficient of frequency \(\nu\). On the selected source space, the allowed arc coefficient tests detect precisely the modes of half-trace at most \(c_1\),
+\[
+ \bigcap_{\mu,J,\ {\rm allowed\ arcs}}\ker\phi_{\mu,J}=\bigcap_{\nu:\,\sum_\tau\nu_\tau\le c_1}\ker a_\nu.
+\]
+
+Here \(\tau\) ranges over the chosen CM half, so
+\(\sum_\tau\nu_\tau=\tfrac12\operatorname{Tr}_{E/\mathbb Q}(\nu)\).
+The statement holds after extension along the chosen complex
+embedding because each nonzero low coefficient has a detecting arc
+and frame. The detecting field may depend on that coefficient.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Choosing the frequency on the arc.}
+Put \(j_0=\operatorname{Tr}(ND\nu_0)\), a nonnegative integer.
+The totally nonnegative elements of this trace dual of trace
+\(j_0\) are finite. Their real conjugates lie in a compact
+simplex and the dual embeds as a lattice. Choose
+\(b\in\mathcal O_{E^+}\) such that
+\(\operatorname{Tr}((\lambda-ND\nu_0)b)\ne0\) for all other
+elements of the slice. The nondegenerate trace pairing makes
+each excluded set a proper rational hyperplane, and an
+integral lattice cannot be covered by finitely many such
+hyperplanes. Set \(M=\max_\tau |\tau(b)|\) and take an
+integer \(R>M(2j_0+1)\). The element \(u=R+b\) is totally
+positive.
+
+If 
+\[
+  \operatorname{Tr}(\lambda u)=
+\operatorname{Tr}(ND\nu_0 u)
+\]
+ and \(i=\operatorname{Tr}\lambda\),
+then \(R|i-j_0|\le M(i+j_0)\). If \(i\ne j_0\) then \(|i-j_0|\ge1\) and
+\(i+j_0\le |i-j_0|+2j_0\). Combining the two inequalities gives
+\[
+ R|i-j_0|\le M(i+j_0)\le M(2j_0+1)|i-j_0|,
+\]
+contrary to the choice of \(R\).
+Equality of the perturbed traces in the slice now forces
+\(\lambda=ND\nu_0\).
+
+\proofstep{The period and its Fourier variable.}
+Use \(s_E=NDu\) in the period form above. This form is
+positive definite and level-divisible. Conversely it determines
+\(s_E\) uniquely by trace duality against the multiples of
+one nonzero \(p(y)\overline{p(y)}\). The rank-one toroidal
+uniformization therefore gives an arc with the times
+\(y\tau(s_E)\) at height \(y\). Its exponent for \(\nu_0\) is
+\[
+ J=2\sum_{\tau\text{ in the CM half}}
+              \tau(\nu_0)\tau(s_E).
+\]
+All occurring frequencies have integral exponents by the level
+condition, and \(\nu_0\) is the unique one with exponent \(J\).
+Along the deep part of the flow the Fourier expansion converges
+normally. Integrating the circle of \(t=e^{2\pi i w}\) against
+\(t^{-J}\) therefore selects exactly the \(\nu_0\)-term.
+
+For invertible \(X\), the resulting identity has the form
+\begin{equation}\label{eq:slice-arc-coeff}
+     [t^J]P_F(X,t)\,t^J
+          = \kappa_X\,F_{\nu_0}(x_X),
+          \qquad \kappa_X\ne0 .
+\end{equation}
+Here \(F_{\nu_0}\) is measured at the corresponding complex
+frame and height, and \(\kappa_X\) includes the change of
+theta section and tangent frame. The normalized base change
+identifies the arc theta generator with the complex generator
+up to a nonzero scalar. Formula \eqref{eq:slice-arc-coeff}
+holds on the complex chart and hence computes its Laurent
+coefficient, even if there is a pole at the boundary. Rescaling
+\(t\) by a nonzero constant changes both sides of the coefficient
+comparison by the matching power.
+\label{cor:slice-cm-coefficients-2}
+
+\proofstep{The kernel of the coefficient tests.}
+These identities give both directions of the kernel assertion.
+Every allowed arc has
+\(\tfrac12\operatorname{Tr}_{E/\mathbb Q}\nu_0\le c_1\).
+If every mode of half-trace at most \(c_1\) vanishes, write \(Q_J(X)=[t^J]P_F(X,t)\). On the punctured arc, \eqref{eq:slice-arc-coeff} gives
+\[
+ Q_J(X)=t^{-J}\kappa_X F_{\nu_0}(x_X)=0
+       \qquad (X\ \text{invertible}).
+\]
+The product of the general linear groups is Zariski dense in the product of the matrix spaces. Hence the polynomial \(Q_J\) vanishes identically, which kills every coefficient test on this arc. Conversely take a nonzero
+coefficient on one component with
+
+\[
+  \sum_\tau\nu_\tau=\tfrac12\operatorname{Tr}\nu\le c_1.
+\]
+The split construction just proved keeps this coefficient nonzero
+and gives the bounded CM basis on the complement of the hyperbolic
+plane. Use the resulting frame and the above positive form
+to construct the arc. The abelian period lattice is obtained
+from the orthogonal to the isotropic line by quotienting by
+the line. Its complex structure is diagonal on the split CM
+letters. The principal Riemann form on the original lattice
+identifies the rank-one quotient with the dual of the isotropic
+lattice.
+Writing \(I\) for the isotropic lattice and \(L\) for the ambient period lattice, this is the perfect duality induced by the principal alternating form:
+\[
+  L/I^\perp\simeq I^\vee .
+\]
+ These are the two toric parts of the period lattice.
+The complementary Riemann form is principal on the abelian
+part. The bounded split approximation also gives the prescribed
+\(n'\) which clears the projection to the isotropic line.
+
+Write \(V_{\rm ab}/\Lambda_{\rm ab}\) for the abelian torus in the period decomposition and \(\widetilde y_{\rm ab}\) for the abelian component of a lift of \(y\in Y\). Clearing the projection gives
+\[
+       n'\widetilde y_{\rm ab}\in\Lambda_{\rm ab}
+       \quad\Longrightarrow\quad
+       n'[\widetilde y_{\rm ab}]=0\quad\text{in }V_{\rm ab}/\Lambda_{\rm ab}.
+\]
+Thus the gluing points have the prescribed torsion bound. The rank-one period
+comparison keeps the complex flow on this component. The
+canonical trivialization and algebraic descent are described
+below. The identification of tangent spaces respects the embedding blocks,
+so a block change \(X\) of these letters reads the prescribed
+split frame.
+
+Changes along the cusp flow multiply that mode by
+a nonzero exponential. Thus \eqref{eq:slice-arc-coeff} is
+nonzero at one such \(X\), and some monomial of the polynomial
+is detected. The field of definition of the split CM data may depend on the coefficient being tested. Taking all such tests gives the rational kernel. After scalar extension, the tests annihilate every complex family whose corresponding low modes vanish.
+\label{cor:slice-cm-coefficients-3}
+
+\end{proof}
+
+\input{slice-cm-arc-model}
+
+\paragraph{Finite order of an arc coefficient.}
+At a place \(w\) of \(K'\) over \(\lambda\) of \(K\), take
+the completed integral semiabelian model. Let
+\(\mathcal T\) be the theta line with its normalized generator
+and \(\ell_{\tau k}\) the line of the letter in column \(k\)
+of the \(\tau\)-block. A toric letter has the unit line.
+Write \(\gamma\) for an inverse local generator of the ideal of \(\mathcal T\)
+and \(d_{\tau k}\) for the generators of the ideals of the
+letter lines. Use \(\operatorname{ord}_w\) with integer orders.
+The integral comparison supplies a matrix \(B_\tau\) from
+an integral frame to the coordinates normalized by these
+generators. In its inverse \(A_\tau\), every entry has order
+at least \(-b_w^0\), where
+\[
+ b_w^0=e_{w/\lambda}
+             \max\{\operatorname{ord}_\lambda|\operatorname{disc}E|,
+                         \operatorname{ord}_\lambda n'\}.
+\]
+
+For a toric letter the infinitesimal character on \(y\in Y\)
+is the labelled conjugate of \(p(y)\). A torus tangent vector
+over the dual numbers is determined by its evaluations
+\(1+\varepsilon h(y)\) on the characters, with \(h\) additive.
+The trace-dual condition gives \(d_Ep(y)\in\mathcal O_E\),
+so the multiplied tangent vector is integral by this
+character description on the same constant torus. For an
+abelian letter the local generator \(d_{\tau k}\) gives an
+integral tangent vector on \(B\). The classifying extension
+has \(n'\)-torsion gluing homomorphism and the chosen
+trivialization on \(n'Y\). The pullback under \([n']\) is split,
+with these trivializations specifying a splitting compatible
+with the generic fibre. Applying its tangent map to the
+integral vector on \(B\) extends precisely the generic
+semiabelian letter multiplied by \(n'\).
+
+On invariant tangent vectors the abelian multiplication map acts by
+\[
+  d[n']_0(v)=n'v .
+\]
+ The local unit
+needed to compare a differential model with this frame
+is invertible over \(V\). These are separate columns, and
+the same bound on the entries uses the larger of the two
+orders. The theta generator is the integral rigidified
+generator up to a local unit after rescaling by its line.
+These comparisons are made on the integral chart of the
+toroidal model. An integral section is bounded by one when
+evaluated there in any integral frame with unit determinant.
+\label{cor:slice-cm-coefficients-4}
+
+\begin{lemma}[Finite and complex bounds for one coefficient]
+\label{lem:cm-coefficient-metrics}
+Use the theta and tangent lines of the selected arc. For an integral
+source form the coefficient bounds in the following calculation hold
+on the ideal defined by those lines for the same \(\phi_{\mu,J}\)
+at the finite and the complex places. For the finite reading on an integral source form \(F\), the coefficient ideal of the value line gives
+\[
+ \operatorname{ord}_w\phi_{\mu,J}(F)-\operatorname{ord}_w I(\mathcal L_\mu)\ge-\mathcal A b_w^0.
+\]
+The complex bound uses \(\max(1,c_1)\) and the frame radius bound \(\Lambda\), independently of the length of the isolating direction.
+\end{lemma}
+
+\begin{proof}
+\proofstep{The nonarchimedean coefficient estimate.}
+We give the coefficient argument because it also fixes the finite
+offset in the quotient. In the variable
+\(Y=(Y_\tau)\) for the integral frames put
+\[
+ R(Y,t)=\gamma^{-n}P_F((Y_\tau B_\tau D_\tau^{-1})_\tau,t),
+ \qquad D_\tau=\operatorname{diag}(d_{\tau k}^{-1}),
+ \qquad A_\tau=B_\tau^{-1}.
+\]
+The finite chart comparison gives convergence and
+\(|R(Y,t)|_w\le1\) for the integral \(Y\) with unit block
+determinants and the allowed \(t\) with \(0<|t|_w<1\).
+One may evaluate over the completed algebraic closure with
+infinite residue field. The allowed radii are dense in
+\((0,1)\) and the readings of \(t\) are stable under multiplication
+by units with arbitrary nonzero residues in an infinite
+subfield.
+In particular unit variation on any allowed circle preserves its radius:
+\[
+  |t_0u|_w=|t_0|_w\qquad(u\in V^\times).
+\]
+ Such extensions and parameters in the integral arc
+comparison leave the value line on \(K'\) fixed.
+
+For a fixed \(Y\) and allowed radius \(|t_0|_w\), the maximum
+of \(\big|[t^i]R(Y,t)t_0^i\big|_w\) is attained if it is nonzero.
+Convergence makes only finitely many of the terms attain it.
+Divide by one such term and reduce the sum at \(t=t_0u\).
+If \(a_i=[t^i]R(Y,t)\), the normalization is by one term attaining
+\[
+  |a_jt_0^j|_w=\max_i |a_it_0^i|_w>0 .
+\]
+The remaining terms of maximal norm give a nonzero Laurent
+polynomial in the residue of \(u\). A unit with a residue
+outside its finitely many roots gives a value of precisely
+the maximal norm. Hence
+\[
+ \big|[t^J]R(Y,t)\big|_w\,|t_0|_w^J\le1.
+\]
+Let the radii tend to one from below. This works for every
+integer \(J\).
+
+\proofstep{Clearing denominators of the chosen coefficient at finite places.}
+For the fixed polynomial \([t^J]R(Y,t)\) divide again by a
+coefficient of maximal absolute value. Its reduction times
+the product of the block determinants is nonzero. A tuple
+in the infinite residue subfield detects this polynomial,
+so lifts of the tuple give unit block determinants and
+detect the original maximal coefficient norm. It follows
+that every coefficient of \([t^J]R(Y,t)\) is integral.
+The reverse substitution 
+\[
+  Y_\tau=X_\tau D_\tau A_\tau
+\]
+uses \(\mathcal A\) factors from the matrices \(A_\tau\)
+in every term. Their contribution to a coefficient has
+order at least \(-\mathcal A b_w^0\), with no additional
+loss from the integer multinomial coefficients or the sums.
+Evaluation after the remaining diagonal rescaling multiplies
+the \(\mu\)-coefficient by exactly
+\(\prod_{\tau,i,k}d_{\tau k}^{-\mu_{\tau i k}}\).
+
+Consequently the finite estimate is
+\[
+ \operatorname{ord}_w\phi_{\mu,J}(F)-
+       \operatorname{ord}_w I(\mathcal L_\mu)
+       \ge-\mathcal A b_w^0,
+ \qquad
+ \mathcal L_\mu=(\mathcal T^\vee)^n
+                  \otimes\bigotimes_{\tau,i,k}
+                         (\ell_{\tau k}^\vee)^{\mu_{\tau i k}}.
+\]
+This gives \(s_{iw}=-\operatorname{ord}_w I(\mathcal L_\mu)\)
+in the quotient calculation below. A test of the wrong
+total frame degree vanishes by homogeneity. For the other
+tests the common baseline has the factor \(\mathcal A\).
+\label{cor:slice-cm-coefficients-5}
+
+\paragraph{Archimedean bound for the same coefficient.}
+
+The local order accounts for the finite part of the height. The archimedean contribution must be evaluated on the same coefficient and the same arcs.
+
+Use a good embedding \(\sigma\) of \(K'\) and denote the
+positive metric factors of \(\mathcal T,\ell_{\tau k}\) there
+by \(q_\theta,q_{\tau k}\). Put \(v=\max(1,c_1)\) and
+\(\epsilon_*=v^{-1}\). Move the frame in
+\eqref{eq:slice-arc-coeff} along its cusp flow to all CM
+times equal to \(\epsilon_*\). The shift adds
+\(\epsilon_*-y\tau(s_E)\) to each old time. The Fourier
+factor at time \(y\tau(s_E)\) is recovered by multiplying by
+\[
+ \exp\left(4\pi\sum_{\tau}\tau(\nu_0)
+                         (\epsilon_*-y\tau(s_E))\right)
+ = |t|^J\exp\left(4\pi\epsilon_*\sum_\tau\tau(\nu_0)\right).
+\]
+Here \(y=\operatorname{Im}w\) and the sum is over the CM half.
+
+The total frequency bound and the common shifted time give
+\[
+  \epsilon_*\sum_\tau\tau(\nu_0)\le\frac{c_1}{\max(1,c_1)}\le1,\qquad \exp\!\left(4\pi\epsilon_*\sum_\tau\tau(\nu_0)\right)\le e^{4\pi}.
+\]
+ The \(|t|^J\) cancels the factor
+from taking the modulus of \eqref{eq:slice-arc-coeff}.
+Thus the initial height and the size of the isolating direction
+\(s_E\) add no cost to this estimate. In particular the proof of
+isolation needs no uniform bound on \(R\). The transvection torus integral for the coefficient
+at the new time bounds it by the supremum of the section
+divided by its pointwise normalizing factors.
+
+\proofstep{Archimedean normalization on the same arc.}
+For clarity, the remaining normalizing factors in this
+integral can be computed before coefficient extraction in
+\(X\). Let \(H_X\) be the positive Riemann form in the
+shifted frame and \(h_{\tau i}=\pi (H_X)_{\tau i,\tau i}\).
+The complex comparison of the theta and frame
+normalizations gives the factor
+\[
+ \left(C v^f\right)^{n/2}\prod_{\tau,i}h_{\tau i}^{a_{\tau i}/2},
+ \qquad C\le q_\theta^2\operatorname{rd}(E)^f .
+\]
+Indeed the central normalization is initially
+\((C\prod_\tau \mathrm{time}_\tau^{-1})^{n/2}\)
+times the central-weight norm in the old frame.
+
+The central-weight norm times this product is invariant
+under the move. Dividing by the norm of the total weight
+at the new frame leaves the diagonal factors displayed
+above. In the normalized theta trivialization, comparison
+with the period volume gives \(C/q_\theta^2\le
+\sqrt{|\operatorname{disc}E|}\).
+These comparisons use the Riemann form on the same
+semiabelian degeneration as the trace formula and the
+abelian CM metric on its central fibre.
+\label{cor:slice-cm-coefficients-6}
+
+\proofstep{Bounding the coefficient on the polydisc.}
+Give \(X_{\tau i k}\) radius \(q_{\tau k}^{-1}\) in a closed
+complex polydisc. At new time \(\epsilon_*\), the individual
+CM letter satisfies
+
+\[
+  \sqrt{\pi H_X(e_{\tau k},e_{\tau k})}\le
+\Lambda\sqrt v\,q_{\tau k},
+\]
+ where the pairing on the left
+is the pullback of the shifted Riemann form to the letter.
+The same inequality also holds for the toric letter with
+its unit line; its squared length is bounded by the
+reciprocal time. The row is a sum of at most \(r\) such
+letters with the indicated coefficients. The triangle
+inequality in that Hermitian norm gives
+\(\sqrt{h_{\tau i}}\le r\Lambda\sqrt v\).
+Put
+\[
+ p_{\rm arch}=\log(r\Lambda)
+       +\tfrac12\log v+\log\operatorname{rd}(E).
+\]
+The product above is at most
+\(q_\theta^n\exp(p_{\rm arch}(\mathcal A+fn))\).
+These bounds first apply where the block matrices are
+invertible.
+
+Since the reading is a polynomial in \(X\),
+continuity extends the bound to the full polydisc.
+The multivariate Cauchy coefficient formula gives
+\[
+ |\sigma\phi_{\mu,J}(F)|\,\|\mathcal L_\mu\|_\sigma
+ \le \|F\|_{\sup,\sigma|K}\,
+       \exp\big(4\pi+p_{\rm arch}(\mathcal A+fn)\big).
+\]
+In fact the product of the Cauchy radii is exactly the
+differential metric factor of the dual value line. The
+division by \(q_\theta^n\) gives its remaining factor.
+At the other embeddings use the conjugate good
+uniformization, with the same metric by complex
+conjugation. This gives the archimedean offset for precisely
+the ideal in the finite calculation.
+\label{cor:slice-cm-coefficients-7}
+\end{proof}

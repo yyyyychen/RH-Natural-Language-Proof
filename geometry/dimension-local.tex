@@ -1,0 +1,554 @@
+\subsection{Decay of the archimedean projector}\label{sec:count-decay}
+
+The finite projector restricts rational elements. At the real places the spectral gaps must give uniform decay away from the compact subgroup.
+
+At one real place use the coordinate order of the strictly decreasing
+Harish--Chandra parameter \(\lambda=(\lambda_1,\ldots,\lambda_r)\).
+Let \(J\) be the diagonal signature matrix in this order, and
+\(K=\mathrm U(p)\times\mathrm U(q)\) its compact centralizer in
+\(\mathrm U(r)\). The gap condition is
+\(\lambda_i-\lambda_j\ge h\) for \(i<j\) of opposite signs.
+This allows either sign at each index in the weight order.
+
+Write \(S\) for the irreducible lowest \(K\)-type, \(w\) for a unit
+highest weight vector of \(S\), and \(P_z\) for the rank-one
+orthogonal projector onto a unit vector \(z\). For a Hermitian
+matrix \(X\) with \(XJ=-JX\), the compression of \(\pi(\exp X)\) to
+\(S\) is
+\begin{equation}\label{eq:count-compression}
+ (\dim S)\int_K \Phi_\lambda(k^{-1}\exp(X)k)P_{\pi(k)w}\,dk .
+\end{equation}
+The Haar measure on \(K\) has mass one. Let \(\rho=\rho_C+\rho_N\) be the half-sum of the positive roots,
+split into compact and noncompact roots.
+If \(m_i(A)\) denotes the
+leading principal minor of order \(i\) and \(m_0=1\), define
+\[
+ \Phi_\lambda(A)=\prod_{i=1}^r \left(\frac{m_i(A)}{m_{i-1}(A)}\right)^{-\mu_i},
+ \qquad \mu=\lambda+\rho.
+\]
+The exponents \(\mu_i\) are
+integers by the Harish--Chandra parameter condition. For \(A\) in
+\eqref{eq:count-compression}, \(m_r(A)=1\) since
+\(\operatorname{tr} X=0\). Thus only the powers
+\(-\mu_i+\mu_{i+1}=-(\lambda_i-\lambda_{i+1}+1)\) for \(i<r\) remain.
+
+\begin{proposition}[Lowest-type compression and polar decay]\label{prop:lowest-type-polar-decay}
+Let \(\pi\) be the discrete series of
+Definition~\ref{hyp:cuspidal-dimension}, with lowest \(K\)-type \(S\),
+and let \(X=X^*\) satisfy \(XJ=-JX\). For \(q\ge1\), the lowest-type compression is the flag integral
+\eqref{eq:count-compression}. Writing \(P_S\) for the lowest-type projector, its norm bound \eqref{eq:count-polar-decay} is 
+\[
+ \|P_S\pi(\exp X)|_S\|_{\rm op}\le\exp\!\left[-\frac{h}{8}\min\!\left(s^2,\frac{s}{\sqrt{2q}}\right)\right],\qquad s=\|X\|_{\rm HS}.
+\]
+
+If \(q=0\), the relation \(XJ=-JX\) forces \(X=0\) and the
+compression is the identity.
+\end{proposition}
+
+\begin{proof}
+\proofstep{The compact flag integral.}
+Let \(H(A)\) denote the expression on the right in
+\eqref{eq:count-compression}, with \(A\) in place of \(\exp X\).
+It is defined on positive definite matrices and is holomorphic
+where all the minors in the integral are uniformly nonzero,
+in particular near the identity. Write \(\tau\) for the
+holomorphic extension of the action on \(S\) to the complexified
+compact group \(K_{\C}\). It satisfies \(\tau(a^*)=\tau(a)^*\),
+where the matrix star in this paragraph denotes Hermitian transpose.
+This holds on \(K\) by unitarity and extends to \(K_{\C}\) by
+holomorphic continuation. The highest weight and the minor exponent satisfy
+\[
+ \Lambda=\lambda+\rho_N-\rho_C,\qquad
+ \mu=\lambda+\rho_N+\rho_C=\Lambda+2\rho_C .
+\]
+This difference of weights determines the Jacobian in the flag integral.
+
+For \(a\in K_{\C}\) and \(k\in K\), apply QR decomposition in each
+sign space using the induced coordinate order. Write \(ak=cb\),
+where \(c\in K\) and \(b\) is upper triangular with positive diagonal
+\(d_i\). Write \(b_i\) for the first \(i\)-by-\(i\) block of \(b\), and
+\(A_i\) for that of \(A\). Triangularity implies
+\[
+ (b^*Ab)_i=b_i^* A_i b_i,\qquad
+ m_i(b^*Ab)=|\det b_i|^2m_i(A)=\prod_{j\le i}d_j^2\,m_i(A).
+\] Since the upper unipotent fixes the highest weight vector, the
+minor and vector factors transform by
+\[
+ \begin{aligned}
+ \Phi_\lambda(k^{-1}a^*Aa k)&=d^{-2\mu}\Phi_\lambda(c^{-1}Ac),\\
+ \tau(k)w&=d^\Lambda\tau(a)^{-1}\tau(c)w,
+ \end{aligned}
+ \qquad d^\nu=\prod_i d_i^{\nu_i}.
+\] The map of compact flags \(kT\mapsto cT\), for the diagonal
+torus \(T\) of \(K\), has real Jacobian \(d^{-4\rho_C}\).
+
+In the tangent spaces translated to the standard flag, its complex
+differential is \(\operatorname{Ad}(b)\) on the quotient of the
+compact complexified Lie algebra by its upper triangular subalgebra.
+The quotient has one direction for each negative compact root, and
+the diagonal of the induced triangular action is \(d_j/d_i\) for
+\(i<j\) of the same sign. Squaring the absolute value of the
+determinant gives the stated Jacobian in the invariant flag measure.
+The integral descends to this flag space because a torus element
+preserves the highest weight line and conjugation by it preserves
+all the leading minors.
+
+Inserting the two weights in the integral
+gives precisely \(d^{-2\mu+2\Lambda}=d^{-4\rho_C}\). Therefore
+\[
+       H(a^* A a)=\tau(a)^{-1}H(A)\tau(a^*)^{-1} .
+\]
+Near identity this identity extends holomorphically in \(A\) and in
+the independent variables replacing \(a^*\) and \(a\). Indeed the
+Hermitian matrices and the pairs \((a^*,a)\) give real forms in
+local complex coordinates for those variables. The local holomorphic identity is therefore
+\[
+ H(uAv)=\tau(v)^{-1}H(A)\tau(u)^{-1}
+       \qquad(u,v\in K_{\mathbb C}\text{ near }I).
+\]
+It follows that the germ \(g\mapsto H(g^*)\) on the real unitary
+group has the left and right \(K\)-covariance of the compression.
+Its value at identity is \(I_S\) by compact Schur orthogonality.
+
+\proofstep{The first-order equations.}
+The complexified noncompact tangent space \(\mathfrak p_{\C}\) has
+basis \(E_{ij}\) with opposite signs. Its tensor product with \(S\)
+splits into two orthogonal sums \(V_+\) and \(V_-\) of compact types
+with highest weights \(\Lambda+\alpha\) for positive and negative
+noncompact roots \(\alpha\), respectively. To see the list of types,
+let \(W_+,W_-\) be the two sign spaces. Under the complexified
+compact group,
+\[
+ \mathfrak p_{\C}=(W_+\otimes W_-^*)\oplus(W_-\otimes W_+^*).
+\]
+The matrix unit from the \(j\)-th to the \(i\)-th coordinate
+has weight \(e_i-e_j\), with the signs of \(i,j\) opposite. The one-box Pieri rule and its dual add a single
+coordinate in the first factor and subtract a single coordinate in
+the other, retaining exactly the dominant results. These are the
+indicated noncompact roots.
+
+In the discrete series every compact type
+has highest weight \(\Lambda\) plus a sum of positive roots for the
+order of \(\lambda\), by Atiyah--Schmid, Theorem 8.5. Thus the action
+map \(\mathfrak p_{\C}\otimes S\to\mathcal H_\pi^\infty\) kills
+\(V_-\). This gives the first-order equations for the compression
+\(g\mapsto P_S\pi(g)|_S\). For \(v_-=\sum E_{ij}\otimes u_{ij}\in V_-\), differentiate
+the compression \(F(g)=P_S\pi(g)|_S\) in the right directions:
+\[
+ \sum D_{ij}F(g)u_{ij}
+   =P_S\pi(g)\left(\sum d\pi(E_{ij})u_{ij}\right)=0 .
+\]
+The vanishing is precisely the absence of \(V_-\) in the
+discrete-series action on \(\mathfrak p_{\C}\otimes S\).
+
+For an upper strictly triangular \(Y\), right multiplication
+by \(\exp(tY)\) acts on each initial block of columns by an
+upper unitriangular matrix. In particular,
+\[
+ m_l(Z\exp(tY))=m_l(Z)\quad(1\le l\le r),\qquad D_Y\Phi_\lambda=0 .
+\] The scalar in \(H(g^*)\) is
+\(\overline{\Phi_\lambda(k^{-1}gk)}\). On the real Lie algebra
+\(\overline Y=-JY^tJ\), so after complexification and conjugation
+by \(k\) its derivative only uses the original entries \(Y_{ij}\)
+with \(i\le j\). The conjugate of each vanishing upper-direction
+derivative is a vanishing lower-direction derivative.
+In the tensor of differentiation directions and input vectors this
+conjugation is the compact action by \(k^{-1}\), which preserves
+\(V_-\). For \(i<j\), the component indexed by the matrix unit \(E_{ij}\) has zero coefficient along \(w\). Otherwise that tensor would have a weight component
+\(\Lambda+e_i-e_j\).
+
+Indeed every weight of a constituent with highest weight
+\(\Lambda-\beta\), for a positive noncompact root \(\beta\), has the form
+\[
+ \Lambda-\beta-\sum_{\alpha\in\Delta_C^+} n_\alpha\alpha,
+       \qquad n_\alpha\in\mathbb N ,
+\]
+where \(\Delta_C^+\) is the set of positive compact roots. This
+omits \(\Lambda+e_i-e_j\) for \(i<j\), since a nonempty sum of
+positive roots cannot vanish. 
+
+The diagonal matrix units do not belong to \(\mathfrak p_{\C}\). After conjugation by \(k\), write the input tensor as \(\sum_{i,j} E_{ij}\otimes u_{ij}(k)\), summing over the noncompact root spaces. The differentiated integrand
+is a sum of scalar derivatives times
+\(\langle w,u_{ij}(k)\rangle\pi(k)w\).
+If \(a_{ij}(k,g)\) denotes the scalar derivative in the direction \(E_{ij}\), the
+two tests give
+\[
+ a_{ij}(k,g)=0\quad(i>j),\qquad
+ \langle w,u_{ij}(k)\rangle=0\quad(i<j).
+\]
+There is no diagonal term, so each summand
+\(a_{ij}(k,g)\langle w,u_{ij}(k)\rangle\pi(k)w\) vanishes. Thus the first-order equation holds before integration.
+
+\proofstep{Determination from the value at identity.}
+Let \(F\) be the difference of the two germs. It is zero at identity.
+Suppose derivatives of all orders less than \(m\) vanish there.
+At order \(m\) any compact differentiation can be commuted to the
+right, with commutators of lower order. Right covariance then
+reduces it to order \(m-1\). Interchanging two noncompact directions produces a commutator of
+lower order, which vanishes by induction. Thus the remaining derivative belongs to
+\[
+ \operatorname{Hom}_K(\operatorname{Sym}^m\mathfrak p_{\mathbb C}
+                         \otimes S,S).
+\] Differentiating the
+first-order equations shows the map kills tensors with \(V_-\)
+in the product of any one noncompact tensor factor with \(S\). It factors through
+the orthogonal complement of the sum of these subspaces. In this
+complement each noncompact factor paired with \(S\) lies in \(V_+\).
+
+Let \(c_S\) be the compact Casimir eigenvalue on \(S\), in the trace
+form. On the tensor product the compact Casimir is
+\(c_S+\Omega_{\mathfrak p^{\otimes m}}+2\sum_i M_i\), where
+\(M_i\) is the mixed term between the \(i\)-th tensor factor and \(S\).
+Compact unitarity gives
+\[
+ \langle u,\Omega_{\mathfrak p^{\otimes m}}u\rangle\ge0 .
+\] The Casimir on a single \(\mathfrak p_{\C}\)
+factor equals \(p+q=r\), since the standard and dual standard
+representations of \(\mathrm U(d)\) each have trace-form Casimir
+\(d\). Thus on a positive type \(\Lambda+e_a-e_b\), \(2M_i\)
+has eigenvalue
+\[
+  2(\lambda_a-\lambda_b+\rho_N(a)-\rho_N(b))+2-r
+                 \ \ge\ 2(h-2r).
+\]
+Here \(|\rho_N(a)|\le r/2\).
+
+Since \(h>2r\) in the noncompact
+case, the quadratic form of the tensor Casimir on the complement
+is strictly larger than \(c_S\) times the squared norm. The
+complement is \(K\)-invariant, so it has no summand isomorphic to
+\(S\). This forces the derivative map to vanish and completes the
+induction.
+
+Along \(g=\exp(tX)\) with \(X\) Hermitian and anticommuting with
+\(J\), the integral is real analytic for all real \(t\). All the
+leading minors are positive there and compactness gives a common
+complex neighborhood of each \(t\) for the integration. The
+compression is real analytic on this curve as well. In fact the
+infinitesimal norm estimate \eqref{eq:count-step} below at one
+place grows at most linearly in the word length. Iteration from the lowest type gives a constant \(C_X\) such that
+\[
+ \left\|\frac{d^m}{dt^m}\pi(\exp(tX))u\right\|
+       \le m! C_X^m\|u\|\qquad (m\ge0,\ t\in\mathbb R).
+\]
+Unitarity makes the bound uniform in \(t\), so Taylor's estimate
+gives analyticity. The vanishing
+at identity of all derivatives therefore proves
+\eqref{eq:count-compression} for every such \(X\). The quantitative threshold \(h\ge120rq^{3/2}\) implies
+\(h>2r\) at every noncompact place.
+
+\proofstep{Quantitative decay.}
+
+The local expression for the compressed coefficient is now explicit. Its useful decay must be expressed in terms of the opposite-sign spectral gap, which remains large throughout the count.
+
+
+Put \(Y=k^{-1}Xk\) and \(s=\|Y\|_{\mathrm{HS}}=\|X\|_{\mathrm{HS}}\).
+On the \(i\)-th exterior power let \(L_i(Y)\) act by applying
+\(Y\) to each wedge factor and summing. With
+\(e_{[i]}=e_1\wedge\cdots\wedge e_i\), the minor has the spectral representation
+\[
+ m_i(\exp Y)=\langle e_{[i]},\exp(L_i(Y))e_{[i]}\rangle.
+\]
+
+The spectral measure of \(L_i(Y)\) at this unit vector is a
+probability distribution \(\xi_i\). Its mean is zero because all
+diagonal entries of \(Y\) vanish. Its variance is
+\[
+   V_i=\|L_i(Y)e_{[i]}\|^2=\sum_{a\le i<b}|Y_{ba}|^2.
+\]
+
+Indeed, for each term off the diagonal, the replacement of the
+\(a\)-th factor by \(e_b\) either repeats a factor or gives one of
+the orthonormal wedges with exactly one index outside \([i]\).
+The eigenvalues of \(Y\) are pairs \(\pm t_j\) with \(t_j\ge0\),
+and zeros, by the singular-value decomposition of the block between
+the two sign spaces. There are at most \(q\) pairs and
+\(2\sum_j t_j^2=s^2\). Each eigenvalue of \(L_i(Y)\) is a sum drawn without replacement
+from this multiset. In particular
+\[
+              \|L_i(Y)\|_{\rm op}\le \sum_j t_j\le\sqrt{2q}\,s .
+\]
+
+For \(s>0\), set \(t=\min(1,1/(\sqrt{2q}\,s))\). If \(|z|\le1\),
+Taylor's integral remainder and \(e^{uz}\ge1-u\) for \(0\le u\le1\)
+give \(e^z\ge1+z+z^2/3\). Apply this to \(z=t\xi_i\). Since
+\(t^2V_i\le1\) and \(\log(1+a/3)\ge a/4\) for \(0\le a\le1\),
+the log moment satisfies \(\log\mathbb E e^{t\xi_i}\ge t^2 V_i/4\).
+Its value at zero is zero, so convexity on \([0,1]\) gives
+\[
+ \log m_i(\exp Y)=\log\mathbb E e^{\xi_i}
+       \ge t^{-1}\log\mathbb E e^{t\xi_i}\ge tV_i/4 .
+\] The weighted sum of
+the variances satisfies
+\[
+ \sum_{i<r}(\lambda_i-\lambda_{i+1}+1)V_i
+ = \sum_{a<b}(\lambda_a-\lambda_b+b-a)|Y_{ba}|^2
+ \ge h s^2/2 .
+\]
+All nonzero entries in the last sum cross the two signs. Thus the
+scalar multiplier in \eqref{eq:count-compression} is bounded above by
+\begin{equation}\label{eq:count-polar-decay}
+      \exp\!\left[-\frac h8\min\!\left(s^2,\frac{s}{\sqrt{2q}}\right)\right].
+\end{equation}
+
+It is nonnegative, and the same bound is immediate for \(s=0\).
+By Schur orthogonality,
+\((\dim S)\int_K P_{\pi(k)w}\,dk=I_S\). Consequently the multiplier
+bound is also the operator norm bound for the compression, with no
+factor depending on \(\dim S\). The polar decomposition \(g=k_0\exp X\)
+preserves this bound since \(\pi(k_0)\) acts unitarily on \(S\).
+
+\end{proof}
+
+\subsection{The initial bound in the deep part}\label{sec:count-sobolev}
+
+Near a very short lattice, many translates can contribute at a single point. A pointwise bound for any finite orthonormal family is needed before one knows that the whole projected space has finite dimension.
+
+\begin{proposition}[Initial point evaluation in a fixed order]\label{prop:initial-point-evaluation}
+Fix the archimedean representation, Haar gauges and finite level of
+Definition~\ref{hyp:cuspidal-dimension}, with \(r\ge8\).
+Set \(N=r^2 f\), \(B=b_{P_0+N}\) as in \eqref{eq:count-step}, and
+let \(C(y)\) be the multiplicity factor in \eqref{eq:gram-chart-multiplicity}.
+For a finite family of \(D\) isometric intertwiners and a vector \(u\)
+of order at most \(P_0\) at each place, one has
+\[
+ \sum_{j=1}^D |F_j(u,y)|^2\le (4B)^N C(y)D\|u\|^2 .
+\]
+For \(P_0=8qN\) this gives the starting bound, uniform on the
+neighborhood of a deep point with least size \(\tau(x)\), used
+in the descent.
+\end{proposition}
+
+\begin{proof}
+Use the same isometric intertwiners that give the diagonal kernel.
+Write \(F_j(u,y)\) for the continuous automorphic representative at
+\(y\) of a vector \(u\) in the \(j\)-th copy of the representation.
+It is invariant on the right by the finite level subgroup \(K_g\),
+and \(\|F_j(u,\cdot)\|_2=\|u\|\). At each real place take the
+filtration by the span of words of at most \(P\) infinitesimal
+operators on the lowest \(K\)-type. Use the tensor product of these
+spaces, with the same bound \(P\) at each place, as the space \(V_P\).
+For a unit Hilbert--Schmidt Lie algebra element at one place,
+differentiation sends \(V_P\) into \(V_{P+1}\) with norm at most
+\begin{equation}\label{eq:count-step}
+ b_P=\sqrt r\,b^2+\tfrac32 r^{3/2}+3P .
+\end{equation}
+
+To see this, let \(\rho_C,\rho_N\) be the half-sums of positive
+compact and noncompact roots, and \(\rho=\rho_C+\rho_N\). The
+lowest \(K\)-type has highest weight \(\Lambda=\lambda+\rho_N-\rho_C\).
+For the derived group this is the discrete-series lowest-type formula
+of Atiyah and Schmid, Theorem 8.5. The central character supplies
+the common central coordinate when passing from
+\(\mathrm{SU}(p,q)\times \mathrm U(1)\) to its finite central quotient
+\(\mathrm U(p,q)\).
+The infinitesimal character is \(\lambda\) in the normalization in
+which the quadratic Casimir for the trace form acts by
+\(\|\lambda\|^2-\|\rho\|^2\). \cite{atiyah-schmid}
+The lowest isotypic component consists of smooth vectors.
+
+Write \(P_S\) for the compact isotypic projection. Compact
+averaging preserves smoothness, and continuity gives
+\[
+ P_S(\mathcal H_\pi^\infty)\subseteq S\cap\mathcal H_\pi^\infty,
+ \qquad \overline{P_S(\mathcal H_\pi^\infty)}=P_S(\mathcal H_\pi)=S .
+\]
+Since \(S\) is finite dimensional, the projected dense linear space
+equals \(S\).
+For the word space \(V_P\), the surjection
+\[
+ \bigoplus_{j=0}^P\mathfrak g_{\C}^{\otimes j}\otimes S
+      \longrightarrow V_P,\qquad
+ X_1\otimes\cdots\otimes X_j\otimes u
+       \longmapsto d\pi(X_1)\cdots d\pi(X_j)u
+\]
+is \(K\)-equivariant.
+Thus each occurring compact highest weight \(\nu\) is a weight of
+the first factor plus at most \(P\) roots of length \(\sqrt2\).
+The weights of the first factor lie in the convex hull of the compact
+Weyl orbit of \(\Lambda\). For any compact Weyl permutation \(w\), dominance gives
+\[
+ \|\Lambda+\rho_C\|^2-\|w\Lambda+\rho_C\|^2
+      =2\langle\Lambda-w\Lambda,\rho_C\rangle\ge0 .
+\]
+Convexity extends the norm bound to every weight in the convex hull. Adding the contributions from the lowest type and the \(P\) adjoint
+factors yields
+\[
+         \|\nu+\rho_C\|\le\|\lambda\|+\|\rho_N\|+\sqrt2 P .
+\]
+
+Let \((E_i)\) be a Hilbert--Schmidt orthonormal basis
+adapted to the compact and noncompact directions. In the trace
+form the compact basis contributes with a minus sign and the
+noncompact basis with a plus sign. Thus in the enveloping algebra
+\[
+ \Omega_K=-\sum_{i\ {\rm compact}}E_i^2,\qquad
+ \Omega_G=\Omega_K+\sum_{i\ {\rm noncompact}}E_i^2.
+\]
+Since \(d\pi(E_i)\) is skew-adjoint on smooth vectors, it follows
+that \(\sum_i\|d\pi(E_i)u\|^2
+=\langle u,d\pi(2\Omega_K-\Omega_G)u\rangle\). The operator \(\Omega_K\) uses the trace form
+restricted to the compact subalgebra and acts on a compact type
+\(\nu\) by \(\|\nu+\rho_C\|^2-\|\rho_C\|^2\).
+
+With
+\(A=\|\lambda\|\) and \(\delta=\|\rho_N\|+\sqrt2 P\), the sum is
+therefore at most \((2(A+\delta)^2-A^2+\|\rho\|^2)\|u\|^2\).
+In fact
+\[
+ 2(A+\delta)^2-A^2+\|\rho\|^2
+        \le (A+2\delta+\|\rho\|)^2,\qquad
+ A+2\delta+\|\rho\|
+        \le \sqrt r\,b^2+\tfrac32r^{3/2}+2\sqrt2 P\le b_P .
+\]
+The second comparison uses the bound \(r/2\) on each coordinate
+of \(\rho,\rho_N\) and \(b^2\) on \(|\lambda_i|\). For an arbitrary unit direction use
+Cauchy--Schwarz in the orthonormal basis, and tensor the resulting
+bound at a single place with the identity at the others.
+
+\proofstep{An injective product chart and its Jacobian.}
+
+Write \(N=r^2 f\) and \(B=b_{P_0+N}\) for a fixed starting order
+\(P_0\). Take \(a=1/B\). By Definition~\ref{hyp:cuspidal-dimension}, \(b^2\ge r^{19}\);
+for \(r\ge8\) the chart radius therefore satisfies
+\[
+   a=B^{-1}\le\min\{(8r^5)^{-1},(12r^3)^{-1}\}.
+\]
+At each real place use an orthonormal Lie algebra basis \(E_i\)
+and the coordinates
+\(t\mapsto\Theta(t)=\prod_{i=1}^{r^2}\exp(t_i E_i)\) on
+\([0,a]^{r^2}\). For a product \(U=\prod_j\exp(s_j E_{i_j})\), put \(L=\sum_j|s_j|\); negative parameters include inverses. Expanding the product and using \(\|E_i\|_{\rm op}\le1\) gives 
+\[
+ \|U\|_{\rm op}\le\prod_j e^{|s_j|}=e^L,\qquad \|U-I\|_{\rm op}\le\prod_j e^{|s_j|}-1=e^L-1.
+\]
+
+For the chart differential, its \(i\)-th column is a product of a
+prefix, \(E_i\), and a suffix. The ambient Hilbert--Schmidt distance
+from \(E_i\) is at most \(e^{r^2 a}-1\le 2r^2a\). Let \(S_i=\prod_{j>i}\exp(t_jE_j)\). Left translation gives
+\[
+ \Theta(t)^{-1}\partial_i\Theta(t)=S_i^{-1}E_i S_i,\qquad
+ \|S_i^{-1}E_iS_i-E_i\|_{\rm HS}\le e^{2r^2a}-1\le3r^2a .
+\]
+Indeed subtract \(E_iS_i\) and use the bounds on \(S_i^{\pm1}\)
+together with \(\|E_i\|_{\rm HS}=1\).
+The operator norm of a map with \(r^2\) such error columns is at
+most \(r\) times the maximum column norm. Set \(I_E(t)=\sum_i t_iE_i\), the linear map into the
+ambient matrix space. For \(t,t'\) in the cube, integration of
+the ambient differential along the segment gives
+\[
+ \|\Theta(t)-\Theta(t')-I_E(t-t')\|_{\rm HS}
+                         \le 2r^3a\|t-t'\| .
+\]
+
+Since \(\|I_E(t-t')\|_{\rm HS}=\|t-t'\|\)
+and \(2r^3a<1\), the chart is injective. For the
+left-translated differential each singular value is at least
+\(1-3r^3a\), so the Jacobian with respect to the orthonormal basis satisfies
+\[
+ |\det d\Theta|\ge(1-3r^3a)^{r^2}\ge e^{-6r^5a}\ge e^{-1}.
+\]
+Here \(3r^3a\le1/4\) and \(6r^5a\le1\).
+Let \(c_v\) be the reciprocal of the density of Haar volume at the
+identity relative to Hilbert--Schmidt Lebesgue measure. Write \(dt_v\) for coordinate Lebesgue measure and \(dg_v\) for
+Haar measure. On the image the Jacobian estimate gives
+\[
+ dt_v\le e c_v\,dg_v,\qquad
+ \prod_v dt_v\le e^f\Big(\prod_v c_v\Big)\prod_v dg_v .
+\] Two elements of the image
+have quotient of operator norm \(\le e^{2r^2 a}\le 2\) at every place.
+
+\proofstep{Unfolding the \(L^2\) integral.}
+
+Write \(\tau_1(y)=\min(1/2,\tau(y))\) for the truncated least
+lattice size at \(y\). In unfolding the chart about \(y\) with the
+finite coset \(y_fK_g\), two points mapping to the same automorphic
+point differ by a rational group element preserving the lattice at
+\(y\). Relative to a chosen representative of the fibre, its
+archimedean matrix is a quotient of two chart points. Thus
+\[
+ \|\gamma_v\|_{\rm HS}\le\sqrt r\|\gamma_v\|_{\rm op}
+     \le\sqrt r e^{2r^2a}\le2\sqrt r
+\]
+in the lattice frame at each place.
+The lattice separation and product packing in the far orbital count
+below bound the number in the fibre by
+\(M(y)=(1+4\sqrt r/\tau_1(y)^2)^{2N}\).
+Indeed the difference of two distinct elements is a nonzero integral
+endomorphism, so the geometric mean of its Hilbert--Schmidt norms
+is at least \(\tau_1(y)^2\).
+
+Product balls about the elements with
+radius \(b_0=\tau_1(y)^2/2\) at each place thus have disjoint interiors.
+In ambient real dimension \(2N\) their volume ratio is bounded by
+\[
+ \left(\frac{2\sqrt r+b_0}{b_0}\right)^{2N}
+     =\left(1+\frac{4\sqrt r}{\tau_1(y)^2}\right)^{2N}.
+\] The finite coset contributes its full
+volume \(\operatorname{vol}(K_g)\) in the unfolded integral, since
+the squared absolute value is right \(K_g\)-invariant. The integral
+of \(|F_j(u,\cdot)|^2\) on the product coordinate cube is therefore
+at most \(C(y)\|u\|^2\), where
+\begin{equation}\label{eq:gram-chart-multiplicity}
+ C(y)=e^f\Bigl(\prod_v c_v\Bigr)\frac{M(y)}{\operatorname{vol}(K_g)} .
+\end{equation}
+This estimate uses the isometry and applies to every
+\(u\in V_{P_0+N}\).
+
+\proofstep{Iteration of the point evaluation inequality.}
+
+The evaluation bound has so far been obtained at a fixed derivative order. Iteration allows the depth of the thin region to determine how much decay is needed.
+
+
+For a differentiable function \(\phi\) on \([0,a]\), the fundamental
+theorem of calculus and Cauchy--Schwarz give
+\[
+ |\phi(0)|^2\le\frac{2}{a}\int_0^a|\phi(t)|^2\,dt
+                     +2a\int_0^a|\phi'(t)|^2\,dt .
+\]
+Start at the origin and append the coordinates in order. At stage
+\(i\) fix the prefix \(x=y\exp(t_1 E_1)\cdots
+\exp(t_{i-1}E_{i-1})\) and one of the fixed vectors \(w\) from
+the preceding stages.
+
+Apply the one-variable inequality to
+\(t\mapsto F_j(w,x\exp(tE_i))\). Right differentiation inserts the next word operator:
+\[
+ \frac d{dt}F_j(w,x\exp(tE_i))=F_j(d\pi(E_i)w,x\exp(tE_i)).
+\] The two resulting
+cube integrands thus use the fixed vectors \(w\) and
+\(d\pi(E_i)w\), with weights \(2/a\) and \(2a\),
+respectively. Applying the next inequality at each point of this
+prefix leaves these vectors fixed as the next factor is appended.
+After \(N\) stages apply the cube bound to each resulting vector.
+The sum of their squared norms with these weights is at most
+\((2/a+2aB^2)^N\|u\|^2\), so for \(u\in V_{P_0}\)
+\[
+ \sum_{j=1}^D |F_j(u,y)|^2\le(2/a+2a B^2)^N C(y)D\|u\|^2
+                          =(4B)^N C(y)D\|u\|^2 .
+\]
+Each derivative raises the order by at most one, so \(P_0+N\)
+suffices for the whole iteration. For the subsequent descent one may enlarge \((4B)^N\) to \((6B)^N\).
+
+In the unipotent neighborhood used below the finite lattice is
+fixed. The archimedean change of frame at each place is
+\(\exp(A_v)\exp(Z_v)\), with
+\(\|A_v\|_{\mathrm{HS}}+\|Z_v\|_{\mathrm{HS}}\le\rho\le\log 2\).
+The matrix and its inverse both have operator norm at most two.
+Consequently each covolume in rank \(d\) loses at most a factor
+\(2^d\) at one place in the complex Euclidean determinant norm.
+For a fixed subquotient of rank \(d>0\) the inverse frame has
+\(\|\bigwedge^d g_v^{-1}\|\le2^d\). The induced quotient norm obeys
+the same bound by taking the infimum over lifts. Thus
+\[
+  C_y/C_x\ge\prod_{v\mid\infty}2^{-2d}=2^{-2fd},\qquad
+  (C_y/C_x)^{1/(2fd)}\ge\tfrac12
+\]
+for its normalized covolumes.
+
+Taking the least and truncating at \(1/2\) shows
+\(\tau_1(y)\ge\tau(x)/2\) when \(\tau(x)<1/2\). There
+\(1+4\sqrt r/\tau_1(y)^2\le17\sqrt r/\tau(x)^2\). The factor for
+that neighborhood follows with \(P_0=8qN\). These bounds use the
+given lattice and gauge and hold uniformly in \(r,f,b,P_0\) under
+the stated size conditions.
+\end{proof}

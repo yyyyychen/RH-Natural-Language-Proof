@@ -1,0 +1,309 @@
+\subsection{The exponent from an elliptic curve}
+\label{subsec:curve-exponents}
+\hypertarget{source-curve-exponents}{}
+
+The logarithmic differences and torus action used in the jet estimates arise from a single elliptic formal group. We construct them in coordinates in which the Frobenius congruences can be compared. Work first over a finite
+unramified extension of \(\mathbb Q_p\), or the completion of its maximal
+unramified extension, with Frobenius lift \(\sigma\), \(p\ge5\).
+Write \(f\sim h\) for zero-constant series if \(\exp(f-h)\)
+is an integral unit with constant one. The relation is additive,
+is preserved by integral substitutions fixing zero, and permits
+multiplication by a scalar in \(\mathbb Z_p\). For the latter
+property expand a principal unit to that power by the integral
+binomial coefficients. These statements continue to hold after
+valued extension.
+
+Let 
+\[
+  L(X)=\sum_{n\ge0}p^{-n}X^{p^{2n}},
+\]
+ and let \(F\) be
+the formal law with logarithm \(L\). We need precise control
+of which additive-coordinate substitutions are integral in
+formal group coordinates. On series in any finite set of
+variables let \(\Phi\) apply \(\sigma^2\) to the coefficients
+and raise the variables to \(p^2\). For \(A(0)=0\),
+\begin{equation}\label{eq:integral-log}
+ L^{-1}(A)\text{ is integral}\quad\Longleftrightarrow\quad
+                       A-p^{-1}\Phi A\text{ is integral}.
+\end{equation}
+\begin{proposition}[The integral logarithm criterion]\label{prop:quadratic-integral-log}
+On the unramified ring and for \(A(0)=0\), the condition
+\eqref{eq:integral-log} characterizes integral substitutions into
+\(L^{-1}\). In particular the following formal sum and scalar substitutions have coefficients in the unramified ring, with \(a\) integral in the scalar case:
+\[
+ F(X,Y)=L^{-1}(L(X)+L(Y)),\qquad [a]X=L^{-1}(aL(X))\quad(\sigma^2a=a).
+\]
+
+\end{proposition}
+
+\begin{proof}
+For \(A=L(h)\) the latter difference is \(h\) plus
+\[
+ \sum_{a\ge0}p^{-a-1}\big\{(h^{p^2})^{p^{2a}}-
+                                      (\Phi h)^{p^{2a}}\big\}.
+\]
+If \(h\) is integral, then \(h^{p^2}\equiv\Phi h\bmod p\).
+Raising a congruence modulo \(p^b,\ b\ge1\), to the \(p\)-th
+power improves it to one modulo \(p^{b+1}\). This proves
+integrality termwise. Conversely determine \(h\) by degree:
+at each degree the terms in braces depend only on earlier
+coefficients, so the same argument applied to that integral
+truncation proves the next coefficient integral. In particular
+\(F\) and \([a]X=L^{-1}(aL(X))\) for \(a\) integral,
+\(\sigma^2a=a\), are integral.
+
+\end{proof}
+
+Use a short Weierstrass curve \(y^2=4x^3-g_2x-g_3\) with
+integral invariants and good reduction. Let \(z\) be its
+additive uniformizing parameter, \(x=\wp(z),y=\wp'(z)\),
+and \(t=-2x/y\) the formal parameter. Then \(z=l(t)=t+\cdots\)
+is its formal logarithm; \(x(t)=t^{-2}a(t)\) with \(a\)
+integral, even, \(a(0)=1\). Indeed, substituting \(y=-2x/t\) and \(x=t^{-2}a\) in the curve
+equation gives
+\[
+ P(t,a)=a^3-a^2-(g_2/4)at^4-(g_3/4)t^6=0,\qquad
+ P(0,1)=0,\quad \partial_aP(0,1)=3-2=1 .
+\]
+The formal implicit-function theorem therefore gives a unique integral
+solution with \(a(0)=1\).
+
+Since \(P(-t,a)=P(t,a)\), uniqueness also
+gives \(a(-t)=a(t)\). Write \(\varsigma\) for
+the odd Weierstrass sigma function normalized by
+\(\varsigma'(0)=1\). Its formal series is specified by
+\(-(\log\varsigma)''=\wp\) and oddness with the usual
+zero quadratic term in \(\log(\varsigma(z)/z)\).
+For a scalar \(s_2\) put
+\[
+       q_E(t)=-\log\frac{\varsigma(l(t))}{t}
+                                     +\tfrac12s_2 l(t)^2.
+\]
+Let \(t_\pm\) represent addition and subtraction on the curve.
+\begin{proposition}[Additivity and conjugate scalars in the curve pairing]\label{prop:curve-additive-pairing}
+Suppose the good-model change \(l^{-1}(cL(X))\) is integral
+with \(c\) a unit. The parallelogram relation for \(q\) holds
+modulo \(\sim\), and its polarization \(b\) is additive in both
+variables modulo \(\sim\). If \eqref{eq:cm-norm-relation} holds
+for all quadratic units, then it holds for all quadratic integers
+and for each such \(a\) the polarized scalar action satisfies
+\[
+ b([a]x,y)\sim b(x,[\sigma(a)]y).
+\]
+
+\end{proposition}
+
+\begin{proof}
+\proofstep{The integral parallelogram relation.}
+
+The formal addition formula for sigma gives
+\[
+ \frac{\varsigma(l(t)+l(u))\varsigma(l(t)-l(u))}
+      {\varsigma(l(t))^2\varsigma(l(u))^2}=\wp(l(u))-\wp(l(t)).
+\]
+For instance, as elliptic functions of \(l(t)\) the two sides
+have the same poles and principal parts by quasi-periodicity
+and the normalization at zero. Their difference is constant,
+and evaluation at \(l(t)=l(u)\) fixes that constant. Expansion
+at the identity yields the formal identity over the field of
+the invariants by the coefficient recursions for \(\wp\) and
+\(\varsigma(z)/z\).
+
+It follows that the exponential of minus the parallelogram
+difference \(q_E(t_+)+q_E(t_-)-2q_E(t)-2q_E(u)\) is
+\[
+ \frac{t^2a(u)-u^2a(t)}{t^2-u^2}
+                   \frac{t+u}{t_+}\frac{t-u}{t_-}.
+\]
+Each factor is an integral unit with constant one. Evenness
+of \(a\) gives this for the first; integrality of the curve's
+formal law and its odd inverse give divisibility by \(t\pm u\)
+and the linear term gives the other two. For a unit \(c\)
+suppose that \(t(X)=l^{-1}(cL(X))\) is integral. This is the
+coordinate comparison required of the local CM model. Its
+linear term is \(cX\). The exponent in these coordinates is
+\[
+           q(X)=-\log\frac{\varsigma(cL(X))}{cX}
+                                    +\tfrac12s_2(cL(X))^2 .
+\]
+It differs from \(q_E(t(X))\) by a logarithm of an integral unit
+since \(t(X)/(cX)\) is such a unit. The same parallelogram
+relation therefore holds for \(q\) modulo \(\sim\).
+
+\proofstep{Additivity via the integral formal half.}
+
+Let \(b(X,Y)=q(X+_FY)-q(X)-q(Y)\). It vanishes on the two
+axes and is symmetric. Modulo \(\sim\) it is additive in each
+variable on all integral formal points. To see this, subtract
+the parallelogram identities at \((x+z,y)\) and \((x,y)\),
+writing the group law additively. For \(f(x)=b(x,z)\) this gives
+\(f(x+y)+f(x-y)\sim2f(x)\). Taking \(y=x\) gives
+
+\[
+  f(2x)\sim2f(x)-f(0)=2f(x),
+\]
+ since \(f(0)=0\). With \(x=(u+v)/2\) and \(y=(u-v)/2\) in the formal group, the two
+relations give
+\[
+ f(u)+f(v)\sim 2f\bigl((u+v)/2\bigr)\sim f(u+v).
+\]
+The formal half is integral here. Symmetry of \(b\) gives additivity
+in the second variable.
+
+\proofstep{Conjugate scalars and extension from units.}
+
+There is also a scalar comparison from CM. Its needed input
+on this model is that for every unit \(a\) fixed by \(\sigma^2\),
+\begin{equation}\label{eq:cm-norm-relation}
+                   q([a]X)\sim a\sigma(a)\,q(X).
+\end{equation}
+The scalar \(n=a\sigma(a)\) is in \(\mathbb Z_p^\times\).
+Polarization gives \(b([a]x,[a]y)\sim n b(x,y)\).
+For \(n\in\mathbb Z_p\), additivity implies
+\(b(x,[n]y)\sim n b(x,y)\): approximate \(n\) by nonnegative
+integers. Each coefficient of each side and its exponential
+difference is continuous in \(n\), since at bounded degree
+only finitely many operations occur. The valuation ring is
+closed. Replacing \(y\) by \([a^{-1}]y\) therefore gives
+\[
+                        b([a]x,y)\sim b(x,[\sigma(a)]y).
+\]
+This holds for nonunits \(a\) fixed by \(\sigma^2\) as well,
+by subtracting the identities for \(1+a\) and \(1\).
+
+In particular \(q([a]x)\sim a\sigma(a)q(x)\) for nonunits too:
+use \([a]x=[1+a]x-x\), the evenness of \(q\),
+and \(b(x,x)\sim2q(x)\) from its parallelogram identity.
+Moving \(1+a\) across this pairing, or polarizing
+\(q([1+a]x)\), gives the claimed identity. Explicitly
+\(b([a]x,x)+b(x,[a]x)\sim
+b(x,[a+\sigma(a)]x)\sim2(a+\sigma(a))q(x)\);
+this determines the cross term by division by two.
+
+\end{proof}
+
+Write \(\widetilde b(G,H)=b(L^{-1}G,L^{-1}H)\).
+The preceding rules apply whenever \(G,H\) satisfy
+\eqref{eq:integral-log}. For an even cycle choose integral
+bases \(\omega_r,\omega_r^*\) of the unramified degree \(d\)
+field over its unramified quadratic subfield, dual for the
+relative trace. Such bases exist since the residue trace is
+perfect and its lifted determinant is a unit. Set
+\[
+ \begin{aligned}
+ E(c,Z)&=\sum_{s\ {\rm even}}\sigma^s(c)Z_s,&
+ O(c,Z)&=\sum_{s\ {\rm odd}}\sigma^s(c)Z_s,\\
+ B^\circ(Z)&=\sum_r\widetilde b(E(\omega_r^*,Z),O(\omega_r,Z)).
+ \end{aligned}
+\]
+Define \(B\) as the average of \(B^\circ\) under
+\(Z_s\mapsto u^{(-1)^s p^s}Z_s\) over \(u^{p^d-1}=1\). It
+has coefficients in an unramified field and is torus invariant.
+The two positive parity degrees follow from the axes of \(b\).
+An even-odd bilinear term would have character
+\(p^s-p^t\bmod(p^d-1)\) for distinct \(s,t\), so the averaging
+eliminates it.
+
+\begin{proposition}[The cycle exponent in a trace-dual frame]\label{prop:curve-cycle-exponent}
+On an even cycle, with the integral curve and scalar comparisons
+just proved, the averaged exponent \(B\) has the two integrality
+properties of Lemma~\ref{lem:two-differences}. The trace-dual
+substitution from an integral orthogonal theta chart gives
+the local series of Proposition~\ref{prop:cyclic-jet}, whose exponential factor and integral remainder combine to give
+\[
+ \exp\!\left(-\sum_{i,b}B((Z_{sib})_s)\right)U(g(Z)).
+\]
+ The one-letter exponent is the equal-variable
+specialization with the factor \(1/2\).
+\end{proposition}
+
+\begin{proof}
+\proofstep{Check the two parity differences.}
+
+For \(Z_s={\cal L}_s(X)\) one has
+\(Z_s-p^{-1}\Phi Z_{s-2}=X_s\). More generally suppose all
+these differences are integral and all \(Z_s(0)=0\). Both
+\(E(c,Z)\) and \(O(c,Z)\) satisfy the right side of
+\eqref{eq:integral-log} for integral \(c\) fixed by \(\sigma^d\),
+by shifting indices in the sum. Torus translation replaces
+\(\omega_r^*\) by \(u\omega_r^*\) and \(\omega_r\) by
+\(u^{-1}\omega_r\), since 
+\[
+  \sigma^s(u)=u^{p^s}.
+\]
+The parity differences of each translated \(B^\circ\), evaluated
+on the two copies of \({\cal L}\), are therefore equivalent to
+zero by additivity. This remains true on averaging since
+\((p^d-1)^{-1}\in\mathbb Z_p\). This verifies precisely the two
+integrality hypotheses of Lemma~\ref{lem:two-differences}.
+
+\proofstep{Compare the torus average to the original contraction.}
+
+To identify the resulting exponent with the one on the original
+theta chart, one needs \(B(Z)\sim B^\circ(Z)\) on these points.
+For a torus element write
+\(c_{rr'}=\operatorname{Tr}(u\omega_r^*\omega_{r'})\), with
+the trace over the quadratic subfield. Its entries are integral,
+fixed by \(\sigma^2\). Then
+\[
+ u\omega_r^*=\sum_{r'}c_{rr'}\omega_{r'}^*,\qquad
+ \omega_{r'}=\sum_r c_{rr'}\,u^{-1}\omega_r .
+\]
+In \(E\) the coefficients of the first expansion are \(c_{rr'}\).
+Move each across \(\widetilde b\) by the scalar comparison;
+the resulting \(\sigma(c_{rr'})\) are exactly the coefficients
+in \(O\) for the second expansion. This proves invariance
+modulo \(\sim\) under each torus element, whence the asserted
+comparison with the mean.
+
+\proofstep{Apply the hyperbolic Gram identities.}
+
+For clarity, suppose the theta series on the orthogonal chart
+has \(U_0=\exp(\sum_i q(X_i))\Theta(X)\) integral. To pass to
+a hyperbolic frame use the formal sum of multiples of independent
+coordinates with coefficients \(f_{ei},f'_{ei}\) integral in
+the quadratic subfield. The orthogonality conditions on these two families are
+\[
+  \sum_i\sigma(f_{ei})f_{e'i}=0,\qquad\sum_i\sigma(f'_{ei})f'_{e'i}=0,\qquad\sum_i\sigma(f_{ei})f'_{e'i}=\delta_{ee'}.
+\]
+Expanding \(q\) on this formal sum gives diagonal terms
+\(f_{ei}\sigma(f_{ei})q(X_e)\) and terms paired by \(b\),
+with the conjugated first coefficient moved to the second slot.
+Summing over \(i\) leaves just \(\sum_e b(X_e,Y_e)\) modulo
+\(\sim\). Thus after this substitution the theta series is an
+integral series times the exponential of minus that sum.
+The index \(e\) includes a trace-basis index and a matrix
+entry.
+
+Now set
+\[
+  X_r=L^{-1}(E(\omega_r^*,Z)),\qquad
+  Y_r=L^{-1}(O(\omega_r,Z))
+\]
+at each entry. On substituting \(Z={\cal L}(W)\), both are
+integral formal points by \eqref{eq:integral-log}. The
+exponential of the difference between the summed exponents
+and the sum of the corresponding \(B\)'s is an integral unit
+in \(W\). Absorb it into the integral factor and substitute
+\(W=g(Z)\). This gives the factor \(U(g(Z))\) and the exponent
+\(-\sum_{i,b} B((Z_{sib})_s)\) of
+Proposition~\ref{prop:cyclic-jet}. Auxiliary orbit variables
+can be left as indeterminates throughout. For one letter use
+\(d=2,\ \omega=\omega^*=1\). In the equal-variable
+specialization 
+\[
+  b(X,X)=q([2]X)-2q(X)\sim 2q(X);
+\]
+ division by two yields
+the one-letter exponent. A unit change of the logarithmic
+variable common to the two slots scales the homogeneous jet by
+a unit.
+
+This calculation gives the local series from an integral
+orthogonal theta chart, an integral logarithm comparison and
+\eqref{eq:cm-norm-relation}. Establishing those three inputs
+on the family requires its models and the normalization of its
+translated theta sections.
+\label{cor:curve-exponents-1}
+\end{proof}

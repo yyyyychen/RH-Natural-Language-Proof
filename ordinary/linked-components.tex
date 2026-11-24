@@ -1,0 +1,1006 @@
+\section{Propagation of ordinary Hecke support between irreducible components}
+\label{sec:linked-components}
+\hypertarget{source-ordinary-linked-components}{}
+
+The ordinary eigenpoints of Appendix~\ref{sec:linked-seeds}
+supply the initial components. To reach the desired type-I points we pass support along the prescribed links. In rank
+three one such passage can meet the reducible locus with irreducible outer plane; the
+patching tests also cover this case. The resulting support statement is the input to
+descent over the marked field and to the integral length
+comparison. For a Hecke ideal \(J\), its image \(M_n\) in the degree-zero ring \(B_n\) controls Proposition~\ref{prop:ordinary-component-propagation} at each level: 
+\[
+ P\text{ is good for }J\quad\Longleftrightarrow\quad M_n\subseteq P\cap B_n.
+\]
+
+
+Keep the frame and the three levels of Section~\ref{sec:linked-seeds}.
+Put \(d=[L^+:\Q]\), \(d_v=[L_v^+:\Q_\ell]\) for \(v\mid\ell\),
+and \(D=nd+1\) in rank \(n\). We give the component comparison
+with its arithmetic inputs stated explicitly. On a frame chart \(R\) write \(A=(a_{ij})\) for a frame matrix. Conjugation by the
+torus gives the entry degrees from the two diagonal vectors:
+\[
+ r(t)A r(t)^{-1}=(t^{u_i-u_j}a_{ij})_{ij},\qquad
+ \mathbf u=(1,-1)\ \text{or}\ (1,0,-1).
+\]
+Let \(I_{\rm up}\) and \(I_{\rm low}\) be the ideals killing,
+respectively, the entries below and above the diagonal.
+
+In
+rank three the odd ideal \(I_{\rm odd}\) kills the four
+entries joining the middle index to either outer index.
+The complement of the triangular loci is the open subset
+\[
+ \operatorname{Spec}(R)\setminus
+              \bigl(V(I_{\rm up})\cup V(I_{\rm low})\bigr).
+\]
+Within it the exceptional locus in rank three is \(V(I_{\rm odd})\). A point of type I
+lies off both triangular loci and, in rank three, off the
+exceptional locus. The marked normal form identifies this
+with the absolutely irreducible locus. A point of type E
+lies off both triangular loci but on the exceptional locus
+in rank three. Its outer block is irreducible. For a Hecke ideal \(J\) let \(M_n=\Phi_n(J)B_n\).
+Goodness is defined by the preimage of its vanishing locus:
+\[
+      P\in\operatorname{Good}(J)
+                  \ \Longleftrightarrow\ M_n\subseteq P\cap B_n .
+\]
+Goodness specializes because contraction preserves inclusion: 
+\[
+ P\subseteq Q,\quad M_n\subseteq P\cap B_n\quad\Longrightarrow\quad M_n\subseteq Q\cap B_n.
+\]
+
+
+\paragraph{The prime conditions at the three levels.}
+The support movement in Proposition~\ref{prop:marked-chain-support}
+is used only with the completed local inclusions of
+Appendix~\ref{sec:patching-cotangent}. To use these inclusions in the component graph we need two conclusions on the level
+determinant ring. Its curve points take
+values in \(k[[t]]\) with \(k\) finite of characteristic \(\ell\).
+The point conditions include regular semisimple detection on the
+cyclotomic kernel, the prescribed residual constituents, distinct
+ordinary characters on the local test subgroups, and the local and
+global restrictions of the marked level. In determinant terminology
+a stable prime has absolutely irreducible determinant over an
+algebraic closure of its fraction field. At a thick prime in this
+application the semisimplification has an outer two-dimensional
+constituent and a middle character. Write \(V_{\rm out}\) for the outer plane and \(\chi_{\rm mid}\) for the middle character. The ordinary Cayley--Hamilton algebra admits a nonsplit extension with semisimplification 
+\[
+ V^{\rm ss}\simeq V_{\rm out}\oplus\chi_{\rm mid},\qquad \dim V_{\rm out}=2.
+\]
+
+Let \(Q\) denote the kernel of a nice type-I curve point
+in the Hecke locus. The first patching implication is
+\begin{equation}\label{eq:ordinary-component-stable-test}
+              P\subseteq Q\quad\Longrightarrow\quad J\subseteq P .
+\end{equation}
+For the second implication write \(Q_0,\ldots,Q_s\) for
+the kernels of nice type-II curve points. Suppose
+\(Z_i\subseteq Q_{i-1}\cap Q_i\) is thick for each
+\(1\le i\le s\) and \(J\subseteq P_0\subseteq Q_0\) for
+a stable \(P_0\). Then the comparison gives
+\begin{equation}\label{eq:ordinary-component-thick-test}
+ P\subseteq Q_s,\quad P\ \text{stable or thick}
+                  \quad\Longrightarrow\quad J\subseteq P .
+\end{equation}
+This includes the chain with \(s=0\).
+One common Taylor--Wiles system is needed for the whole list.
+Section~\ref{sec:marked-patching} constructs its common tests,
+gives the uniform first-order and odd obstruction bounds, and
+recovers the Hecke support on the augmentation fiber. Sections~\ref{sec:patching-cotangent}
+and~\ref{subsec:closed-link} give the completed comparison, including
+specialization of thick primes. We verify the point conditions and
+identify the ordinary modules on the three levels at the curve
+construction below.
+
+The frame constructed in Section~\ref{sec:marked-hosts}
+supplies the abelian quotient bound, the local inertia generators
+and the ordinary Selmer inequality \eqref{eq:fitted-relative-euler}.
+The locally split nonzero residual cocycles in the outer and
+adjacent weights, the bound \(C_0\), and the lower bounds on
+\(d,d_v\) all apply to this frame.
+
+\subsection{The two-dimensional corner}
+
+We start in rank two because the outer plane will enter both rank-three comparisons.
+Write \(\lambda_n\) for the ideal of \(B_n\) generated by the
+uniformizer and the differences \(\psi_{v,i}(g)-1\) on inertia
+with trivial residual scalar. The finite weight condition on
+an ideal \(I\) in these charts is
+\(\mathfrak m_{B_n}\subseteq\sqrt{I+\lambda_n}\).
+It holds for \(M_n\). For the weight transport let \(q_0\)
+be the residue cardinality. Raising inertial labels to
+\(q_0-1\) kills their residual values.
+
+Write \(h=q_0-1\). For units \(a,c\) with the same residue the geometric factor in \(a^h-c^h\) is a unit, because
+\[
+ \sum_{i=0}^{h-1}a^{h-1-i}c^i\equiv h\bar a^{h-1}\ne0 .
+\] Thus equality of the powers in a
+prime quotient recovers equality of the units. For the
+scalar twist use its fixed inertial values in the weight
+specialization of the level ring. The finite algebra over
+that ring has Artinian special fiber. Its map onto the
+specialized degree-zero quotient forces every prime there
+to be maximal.
+
+\begin{lemma}[Outer-corner support and the weight fibre]
+\label{lem:rank-three-outer-corner}
+For the indicated rank-two corner of the rank-three chart, let \(I_3\) be the ideal obtained from \(M_2\). For every type-E point
+\(P\) satisfying the specified outer-block condition,
+\[
+                       I_3\subseteq P\cap B_3 .
+\] It satisfies the finite weight-fibre condition for
+\(\lambda_3\).
+\end{lemma}
+
+\begin{proof}
+\proofstep{The completed rank-two comparison.}
+First carry out the type-I propagation below in rank two,
+where only the first patching input is needed. Quotient
+\(A_3\) by the odd entries and let \(C\) be the image of
+\(B_3\) there. Write \(p:B_3\to C\). The outer block
+\(\sigma\) and the middle entry \(u\) in this quotient are
+individually multiplicative. The outer block inherits the
+transpose relation by restriction of the antidiagonal matrix
+to the outer indices. It has ordinary characters \(\psi_0,\psi_2\).
+To verify this integrally, at an ordinary place choose the marked
+element \(g_1\) for which the middle residual value differs
+from both outer values. Put
+\[
+ P_x=\sigma(x)-\psi_0(x),\quad
+ T=\sigma(g_1)-\psi_1(g_1),\quad Q_y=\sigma(y)-\psi_2(y),
+\]
+where scalars multiply the identity. The determinant of \(T\)
+is a unit by the marked unit condition. The rank-three ordinary
+product on the outer block gives \(P_xTQ_y=0\) for all \(x,y\).
+
+Taking \(y=g_1\) gives
+\(P_xT^2=(\psi_2(g_1)-\psi_1(g_1))P_xT\).
+Cayley--Hamilton in dimension two gives
+\[
+  \det(T)P_x =
+    \bigl(\operatorname{tr}T-\psi_2(g_1)+\psi_1(g_1)\bigr)P_xT .
+\]
+Multiplication by \(Q_y\) yields \(P_xQ_y=0\). On the middle
+entry of the triple product at \((g_1,y,g_1)\) the first and
+last factors are units, giving \(u(y)=\psi_1(y)\) locally.
+The corner therefore defines a map from the rank-two frame
+whose degree-zero part is \(\beta:B_2\to C\). Put
+\[
+                        I_3=p^{-1}\bigl(\beta(M_2)C\bigr).
+\]
+At a type-E prime a nonzero upper and lower entry must both
+lie in the outer block. Its contraction in rank two is type I,
+hence good for \(M_2\). If \(P\) is the type-E prime, the rank-two contraction contains \(M_2\); taking the inverse image in the degree-zero ring gives 
+\[
+ I_3=p^{-1}(\beta(M_2)C)\subseteq P\cap B_3.
+\]
+
+
+\proofstep{The resulting weight-fibre bound on the outer corner.}
+The ideal \(I_3\) also has finite weight fiber. A prime above
+\(I_3+\lambda_3\) gives a prime of \(C\) whose rank-two
+contraction contains \(M_2+\lambda_2\). All rank-two degree-zero
+values then reduce to coefficients. Consider the middle character
+\(u\) in the resulting local domain in characteristic \(\ell\).
+It reduces to one, is invariant under the frame involution, and
+is one on the indicated inertia kernels. Modulo each power of the
+maximal ideal its continuous image is a finite \(\ell\)-group in
+the principal units. The abelian generator condition of the frame
+gives a fixed positive exponent \(h\) for such finite quotients
+once the prescribed inertia and involution differences are killed.
+Separatedness turns the finite-depth identities into an equality in the domain.
+
+For its maximal ideal \(\mathfrak m\),
+\[
+ u(g)^h-1\in\bigcap_{b\ge1}\mathfrak m^b=0 .
+\] Its \(\ell\)-part
+can be dropped by injectivity of Frobenius. The remaining geometric
+sum is a unit since \(u(g)\) reduces to one. Thus \(u=1\).
+In any degree-zero monomial an odd factor vanishes and all middle
+diagonal factors can be removed. The remaining monomials come
+from rank two, and the middle ordinary character is one. These
+generators and the coefficient reduction force the prime to be
+maximal. This gives the required weight-fiber control on the
+exceptional locus using only the rank-two Hecke ideal.
+
+\end{proof}
+
+\subsection{Curves and the component graph}
+
+To connect components through curves, work locally at a closed point on the residual
+lower triangular locus off the upper triangular locus. Use its complete pointed chart
+\(R\), flat over the frame ring, and contract primes of \(R\)
+to \(B_n\). Call a chart prime nice if its quotient is
+one-dimensional of characteristic \(\ell\), it lies off both
+triangular loci, and its distinct ordinary indices give
+different characters on each distinguished local subgroup \(N_v\).
+The following estimates govern the choice. In the chart the
+upper triangular ideal is the unit ideal and the opposite
+triangular quotient has dimension at most
+\[
+                   (n-1)d+2+3C_0+5 < nd .
+\]
+For the latter estimate cut by the uniformizer, \(1+C_0+d\)
+outer diagonal values at abelian generators and \(d\) values for
+each middle diagonal index.
+
+On the triangular quotient the
+diagonal characters determine the characteristic polynomials.
+The cut forces the degree-zero maximal ideal and leaves chart
+fiber dimension at most \(3C_0+5\). For a prime off both
+triangular loci above \(I\) with finite weight fiber, coincidence
+of two characters on \(N_v\) in characteristic \(\ell\) gives
+\[
+                    \dim(R/P)+d_v\le nd+5 .
+\]
+The weight count drops the \(d_v\) generators of one of the
+equal labels, retaining one distinguished value, the other
+generators and the coefficient uniformizer. The radical test
+bounds the dimension by the number of cuts. The off-triangular
+framing has at most one transcendental parameter over degree
+zero. The large-frame condition gives \(d_v>5\).
+
+\begin{proposition}[A nice specialization in the pointed chart]\label{prop:nice-ordinary-specialization}
+Use a complete pointed chart at a closed point of the
+residual lower triangular locus off the upper triangular locus.
+Let \(P\) have quotient dimension at least \(D\), with
+contraction to \(B_n\) containing an ideal \(I\) of finite
+weight fibre. There exists a nice prime \(Q\) with
+\[
+                    P\subseteq Q,\qquad \operatorname{char}\kappa(Q)=\ell .
+\] The resulting curve admits
+an embedding into a complete DVR with finite residue field.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Producing a curve with the required specializations.}
+Let \(P\) have quotient dimension at least \(D\), with contraction
+containing such an \(I\). Imposing the uniformizer leaves a
+component of dimension at least \(nd\), by the principal ideal
+theorem and catenarity. The bounds just proved keep its generic
+point off the opposite triangular locus and all local coincidence
+loci. In that component choose a product \(f\) of one nonvanishing
+element from each bad ideal, times a nonzero element of the maximal
+ideal.
+
+Let \(A\) be the local domain of the chosen component, and write \(R\twoheadrightarrow A\) for the quotient of the pointed chart. Lemma~\ref{lem:local-curve-avoidance} applied to \(0\ne f\in\mathfrak m_A\) gives a prime \(\mathfrak q\) avoiding \(f\) with one-dimensional quotient. Pull it back to \(Q\) in \(R\). Then
+\[
+ P+(\varpi)\subseteq Q,\qquad R/Q\simeq A/\mathfrak q,
+ \qquad f\notin\mathfrak q .
+\]
+The first inclusion gives the specialization and its residue characteristic. The last condition keeps its generic point away from every excluded locus, since the factor of \(f\) chosen in the corresponding ideal survives there. The complete local domain of the
+resulting curve embeds into a complete DVR \(k[[t]]\) with
+\(k\) finite. A parameter gives a finite extension of a
+one-variable power series ring over the coefficient field. Normalizing in the finite fraction field
+extension gives the DVR.
+
+\end{proof}
+
+\input{marked-points}
+
+\paragraph{Contraction to a level.} Now contract to a level. A type-I generization gives
+a stable determinant, since the representation
+is absolutely irreducible and the level group maps onto the
+frame group. For a thick generization use the nonsplit
+ordinary realization of its block determinant. Its group algebra
+map kills the Cayley--Hamilton relations by the characteristic
+polynomial. The ordered products, before and after the involution,
+map to scalar multiples of the ordinary and reversed ordinary
+products of the extension. The tame inertia relations follow
+from the marked prime-to-\(\ell\) power test. Adic continuity
+kills the closure of the ideal of relations. Thus the nonsplit
+realization factors through the ordinary Cayley--Hamilton algebra,
+while its determinant is reducible. Contraction transports
+both prime conditions, including the links that must be thick.
+
+\begin{construction}
+\begin{tikzpicture}[>=Stealth,every node/.style={align=center,inner sep=2pt}]
+\node (two) at (0,0) {Rank-two comparison on \(M_2\)};
+\node (input) at (0,-.85) {Outer-corner support};
+\node (three) at (-2.3,-1.9) {\(M_3\) and its quotient};
+\node (zero) at (2.3,-1.9) {\(M_0\) and its quotient};
+\draw[->] (two)--(input);
+\draw[->] (input)--(three);
+\draw[->] (input)--(zero);
+\end{tikzpicture}
+\caption{Propagation uses the rank-two comparison first. Its outer-corner input is applied to two different rank-three support problems.}\label{fig:ordinary-three-levels}
+\end{construction}
+
+\paragraph{Which components can link curves.}
+Which components do these links reach from the seed?
+
+\begin{proposition}[Propagation from a seed across ordinary components]
+\label{prop:ordinary-component-propagation}
+In the selected ordinary frame, given the seed of Appendix~\ref{sec:linked-seeds} of the required dimension
+and the completed comparisons
+\eqref{eq:ordinary-component-stable-test} and~\eqref{eq:ordinary-component-thick-test},
+each type-I prime \(P\) is good for its corresponding level ideal, meaning 
+\[
+ M_n\subseteq P\cap B_n.
+\]
+
+The application to \(M_2\) supplies the outer-corner input for the
+applications to \(M_3\) and \(M_0\), which keep their separate
+quotient maps.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Relative dimension and the presentation of the chart.}
+The ungraded chart has a presentation over a complete DVR in
+\(N\) variables with \(N-D\) relations, padding with zeros if
+necessary. At a rank-three point on the exceptional locus, use
+conjugation by the sign on the middle coordinate to grade the
+presentation by parity. There are \(a\) even and \(g\) odd
+variables, at most \(a-D\) even and \(g\) odd relations. The relation count uses the relative obstruction group.
+For a small extension with kernel \(I\), let \(c(g,h)\) be
+the \(I\)-valued error in multiplying two matrix lifts.
+For each ordinary place let \(b_v(g)\) be the error in the
+lifted local flag, read in the adjoint quotient by
+\(\mathfrak b_v\). With the cone differential
+\(d(c,b)=(dc,\operatorname{res}(c)-db)\), associativity
+and the local multiplication law give
+\[
+      dc=0,\qquad db_v=\operatorname{res}_v(c).
+\]
+
+Write \(\alpha\) for the one-cochain changing the matrix
+lifts and \(\beta_v\) for the zero-cochain changing the flag at
+\(v\), in the cone convention just specified. The new errors are
+\[
+ c'=c+d\alpha,\qquad
+ b'_v=b_v+\operatorname{res}_v(\alpha)-d\beta_v .
+\]
+Thus a zero obstruction class permits both errors to be removed
+in the same lift. The dual
+of the minimal relation space injects into this obstruction
+space. Indeed if a nonzero functional gave zero obstruction,
+push out along it and lift a section to the power series variables.
+Two lifts of the variables then differ in the square-zero
+kernel killed by the maximal ideal. Every minimal relation has
+zero relative linear part modulo that ideal, so its value is
+unchanged. A relation on which the functional is nonzero would
+have both zero and nonzero value. Since \(2\) is invertible, an involution \(s\) admits the complementary projections
+\[
+ e_+=(1+s)/2,\qquad e_-=(1-s)/2,\qquad e_+e_-=0.
+\]
+Applying the argument to the images gives both eigenspace assertions.
+
+In the ordinary tangent and Euler characteristic formulas of
+the marked frame, the finite-place contribution is
+\(\sum_{v\mid\ell}d_v\dim\mathfrak b_v\), from which one subtracts the
+sum of the dimensions fixed by real conjugations. Here
+\(\dim\mathfrak b_v=n(n+1)/2\). Multiplication by the
+polarization matrix identifies the fixed matrices at a real
+place with skew matrices, of dimension \(n(n-1)/2\).
+
+Since \(\sum_{v\mid\ell}d_v=d\) and \(L^+\) has \(d\) real
+places, counting the extra frame direction gives
+\[
+ d\frac{n(n+1)}2-d\frac{n(n-1)}2+1=nd+1=D .
+\]
+In rank three the Borel dimensions are \(4\) even and \(2\) odd:
+the even part consists of the three diagonals and the outer root.
+The real skew dimensions are \(1\) even and \(2\) odd, from the
+outer pair and the two adjacent pairs respectively. The extra
+frame direction is even. Thus the two lower bounds for relative
+tangent dimension minus obstruction dimension are
+\[
+        4d-d+1=D,\qquad 2d-2d=0.
+\]
+
+\proofstep{Connectedness and the odd incidence equations.}
+In rank two, or outside the exceptional locus of rank three,
+Grothendieck connectedness applied to the ungraded presentation
+joins the minimal components in a graph with intersections
+of dimension at least \(D\). Each component has dimension at
+least \(D+1\). At the remaining rank-three centers write \(y\)
+for the odd variables. If there are odd variables, pad the odd
+relations to a square system \(H y=0\). Each odd relation lies
+in the ideal \((y)\) by parity, and minimality permits the
+entries of \(H\) to be taken in the maximal ideal. Impose
+\(\det H=0\) in the chart. Every type-I prime contains the extra equation. Indeed modulo such a prime at least one entry of \(y\) survives, whereas
+\[
+ 0=\operatorname{adj}(H)Hy=(\det H)y.
+\]
+The quotient is a domain, so \(\det H\) vanishes there. The odd dimension on this pointed chart is positive in the exceptional case.
+
+To see the same intersection bound, use an independent
+\(g\times g\) matrix \(X\) and vector \(z\). The incidence
+locus \(Xz=0,\det X=0\) has irreducible support of codimension
+\(g\). On \(z_i\ne0\) solve for the \(i\)-th column, with
+all other coordinates free, and these charts overlap. At \(z=0\), choose a nonzero vector \(v\in\ker X\) for the singular residue matrix. The line is a specialization from the open locus, since
+\[
+ X(tv)=0,\qquad tv\ne0\ (t\ne0),\qquad (tv)|_{t=0}=0 .
+\] The homogeneous prime radical gives a domain after
+completion: the initial homogeneous pieces of two nonzero
+elements still have nonzero product. Keep the \(a\) even and
+\(g\) odd variables of the original chart separate from the
+\(g^2+g\) new variables \((X,z)\). The new incidence equations
+have codimension \(g\) in the new variables. Thus the ambient
+irreducible complete local germ has dimension
+\[
+             1+a+g+(g^2+g)-g=1+a+g+g^2.
+\]
+
+In this germ impose \(X-H=0\), \(z-y=0\) and the at most
+\(a-D\) even relations. Their number is at most
+\(g^2+g+a-D\), so each component has dimension at least
+\(D+1\). The complete local connectedness theorem with the
+same equation count gives connectedness in dimension \(D\).
+\cite{stacks-connectedness}
+
+\proofstep{The nonsplit extension at an exceptional branch.}
+The minimal primes of this smaller locus are off both triangular
+loci by the bounds above. An exceptional prime there has \(y=0\)
+and \(H\) singular. Choose a nonzero vector in its kernel
+over the fraction field and clear denominators. At \(y=0\) an odd variation annihilates the even relations. For the odd ones the linearization is
+\[
+ d(Hy)=(dH)y+H\,dy=H\,dy=0 .
+\] This gives a derivation
+of the original chart, zero on even entries and ordinary characters.
+If \(r_{\rm out},r_{\rm mid}\) are the two retained blocks,
+let \(u(g)\) be the derivative of the column from the middle
+line to the outer block. The even derivatives vanish, so the
+linearized multiplication law in that column is
+\[
+   u(gh)=r_{\rm out}(g)u(h)+u(g)r_{\rm mid}(h).
+\]
+Consequently \(\left(\begin{smallmatrix}r_{\rm out}(g)&u(g)\\
+0&r_{\rm mid}(g)\end{smallmatrix}\right)\) is a representation with
+the original block determinant.
+
+The same linearization of the
+two ordered ordinary products gives the prescribed local tests. A splitting would give an
+invariant eigenvector with middle coordinate 1. Write a splitting vector as \((u,1)\) in the outer-plane
+and middle-line decomposition. Its equations at the mark
+\(g_*\) and its polarized mate \(g_*^*\) have a common
+off-diagonal column and the same middle value, while the
+two distinct outer eigenvalues are exchanged. Write \(D_*,D_*'\) for the two outer diagonal matrices, \(c\) for
+the common column and \(m\) for the common middle value. The two splitting
+equations give
+\[
+ D_*u+c=mu=D_*'u+c
+ \quad\Longrightarrow\quad (D_*-D_*')u=0 .
+\]
+Both diagonal entries of the difference are nonzero, forcing \(u=0\). The splitting equation at all
+\(g\) then says the differentiated column vanishes. Polarization also kills the opposite differentiated
+row, contradicting the nonzero odd derivation. This proves
+thickness at the exceptional branches used by the graph.
+
+\proofstep{Propagation from a seed.}
+Suppose a chart has a good type-I prime with quotient dimension
+at least \(D\). Write \(P\) for this good prime. Using \(I=M_n\), choose the minimal prime \(P_{\min}\) and the nice specialization \(Q\) so that
+\[
+ P_{\min}\subseteq P\subseteq Q,\qquad \dim(\text{chart}/P)\ge D .
+\] The minimal prime is
+type I by generization, and is a vertex of the component graph,
+since every type-I prime contains the additional chart equation
+when one is imposed. If the nice point is type I, the first
+prime condition makes that vertex good. If the nice point is
+exceptional, the original good prime serves as the stable
+generization for the length-zero second prime condition. This
+again makes the vertex good.
+
+\proofstep{The induction along the component graph.}
+Along a path of adjacent vertices keep the following information.
+A type-I vertex reached is good. At a thick vertex keep a
+nice exceptional point containing it, linked by a finite
+sequence of nice exceptional points to one having a good type-I
+generization. In the chart ring \(A\), adjacency of successive vertices \(P,P'\) supplies a common specialization of controlled dimension: 
+\[
+ V\supseteq P+P',\qquad\dim A/V\ge D.
+\]
+ Choose the nice specialization \(Q\) above \(V\); then
+\[
+                       P+P'\subseteq V\subseteq Q .
+\]
+
+If \(P\) is good type I, use \(M_n\) in the specialization
+and apply the first or the length-zero second condition at
+\(Q\), according to its type. If \(P_1\) is any type-I generization of this \(Q\), either implication gives 
+\[
+ P_1\subseteq Q\quad\Longrightarrow\quad M_n\subseteq P_1\cap B_n.
+\]
+ If \(P\) is thick, \(V\)
+contains the corner ideal \(I_3\). Use \(I_3\) in the
+specialization: \(Q\) still contains the odd ideal, so is
+exceptional.
+Write \(Q_{\rm old}\) for the stored nice point on the current thick vertex. The common vertex joins the new exceptional point to the chain since 
+\[
+ P\subseteq Q_{\rm old}\cap Q.
+\]
+
+The second prime condition now makes every type-I generization
+of the new point good. If the next vertex is type I, this proves
+the assertion for it. If it is thick, specialize \(V\) using
+its \(I_3\) as well. A previous vertex of type I gives a good type-I generization of this new exceptional point. When the previous vertex is
+thick the stored chain extends through that common vertex.
+This proves the invariant without an assumption that every
+thick component belongs to the rank-three Hecke locus.
+In rank two all the vertices and nice points used are type I.
+
+\proofstep{Passage between charts.}
+It remains to pass between charts. Write \(\pi_0\) for the projection to the degree-zero spectrum, \(x_0\) for its residual point and \(Z_{\rm up}\) for the upper triangular locus. The core used to join the charts is 
+\[
+ C=\pi_0^{-1}(x_0)\setminus Z_{\rm up}.
+\]
+ Its relevant points admit smooth lower
+triangular realizations over their residue fields. Minimal
+frame primes are homogeneous. A homogeneous type-I generic
+point specializes to this core. One chooses a lower entry nonzero
+there, uses the chart obtained by retaining its direction under
+the torus, and specializes its degree-zero coefficients to the
+closed point.  Applying this to a homogeneous lift of a seed contraction gives a chart prime \(\mathfrak q\) with quotient dimension
+\[
+ \dim(\text{chart}/\mathfrak q)=\dim\bigl(B_n/(P\cap B_n)\bigr)+1 .
+\] The extra parameter is the one-dimensional torus orbit.
+
+The core is preconnected. In rank two the sole lower entry is
+a twisted cocycle subject to linear local and marked equations.
+Interpolation over \(k[t]\) to a fixed nonzero solution gives
+a common generization, still off the upper triangular locus.
+In rank three write \(y\) for the adjacent lower entry and
+\(a\) for the outer lower entry. The other adjacent entry
+is given by the involution.
+
+Write \(\partial a\) for the linear part of the outer
+cocycle equation and \(Q(y)\) for its quadratic term.
+A pure outer solution \(b\) satisfies \(\partial b=0\),
+so
+\[
+        \partial(t^2 a+(1-t)b)=t^2 Q(y)=Q(ty).
+\]
+This is the lower multiplication law for the interpolant
+\((ty,t^2a+(1-t)b)\). The local flag coordinates scale
+in degrees one and two, and adding a pure outer solution adds
+its outer flag coordinate. Pick \(b\ne0\) as supplied by the
+frame. The kernel of the map into \(k[t]\) is a common
+generization of \((0,b)\) and the given point. To see density
+off the exceptional locus one needs a solution with \(y\ne0\).
+
+For the frame's nonzero adjacent cocycle \(u\), put \(P=\bar\Psi\)
+and use the conventions \(u(gh)=P(h)u(g)+u(h)\) and
+\(u(g^*)=u(g)/P(g)\). Set, pointwise,
+\[
+ y=u+\delta(P-1),\qquad
+ a=\frac{u^2}{2P}-\delta u(1+P^{-1})
+                +\delta^2\bigl(1-(P+P^{-1})/2\bigr).
+\]
+Here \(\delta(P(g_*)^2-1)=-u(g_*)(P(g_*)-1)\), with
+\(g_*\) the marked element for the normal form. Substitution
+gives the marked equality for \(y\), the quadratic multiplication
+law for \(a\) and the required local coboundary forms, using
+\(u|_{G_v}=\alpha_v(P-1)\). If \(y=0\), substitution in the formula for \(u(g_*^*)\) gives
+\[
+ 2\delta\bigl(P(g_*)^2-1\bigr)=0 .
+\]
+This forces \(u=0\), a contradiction. With one such solution
+\((y_0,a_0)\), the following curve exhibits a pure outer point as a specialization: 
+\[
+ (y(t),a(t))=(t y_0,t^2a_0+a),\qquad (y(0),a(0))=(0,a).
+\]
+ Since \(y_0\ne0\), the generic point lies outside the exceptional locus.
+
+\proofstep{From the open core to all required components.}
+Divide the finitely many components meeting the open type-I
+locus according as their generic points are good or bad.
+The high-dimensional seed in its pointed chart gives a good
+component by the local propagation. Every component under
+consideration meets the core by marked specialization.
+The good and bad unions are closed and cover the core, because
+off the exceptional locus its closed points lie on type-I
+components by the ungraded chart calculation, and these
+points are dense there and in the core.
+
+By the Jacobson
+specialization property of this fiber, a closed set
+meeting it contains a closed chart center there, also after
+restriction to an open subset of the core.
+Write \(C_{\rm good}\) and \(C_{\rm bad}\) for the two closed subsets of the core \(C\). Preconnectedness gives 
+\[
+ C=C_{\rm good}\cup C_{\rm bad},\quad C_{\rm good},C_{\rm bad}\ne\varnothing\quad\Longrightarrow\quad C_{\rm good}\cap C_{\rm bad}\ne\varnothing.
+\]
+ Choose a closed chart center in the
+intersection. Flatness lifts both generic points by going
+down, giving two type-I minimal chart primes. Local propagation
+from the good one reaches the other, contrary to the latter's
+contraction. Thus every type-I prime is good. This argument
+first applies to \(M_2\), then to each of \(M_3\) and \(M_0\)
+on the same rank-three frame.
+
+\end{proof}
+
+\subsection{Two levels and the local annihilator}
+
+Support at the two levels supplies local information at different exceptional places.
+To compare the resulting cuspidal attachments, let \(\xi:A_3\to\overline{\Q}_\ell\) be a continuous integral
+type-I point with arithmetic ordinary characters on the first
+level. At the other level identify the local groups via the
+marked place, in the order prescribed by the common frame.
+The map of pairs on each level gives the characters of precisely
+the same twisted frame point. Thus local algebraicity and the
+strict inequalities of its weights transfer at each embedding.
+
+Both determinant points lie on their respective Hecke supports.
+Classicality gives cuspidal attachments with the prescribed
+local compatibility away from the respective exceptional places.
+Both pullbacks give the same representation \(\epsilon^{-1}r_\xi\). Thus for a good Frobenius \(g\) their common characteristic polynomial is
+\[
+ \det\bigl(1-X\epsilon(g)^{-1}r_\xi(g)\bigr).
+\]
+Agreement at almost all unramified places identifies the cusps by strong multiplicity one. At
+each exceptional prime the other level gives the missing local
+comparison.
+
+\paragraph{Weights for fixed-weight adjoint vanishing.}
+The comparison at the two levels will be used locally on a component. Fix an integral
+type-I point of the full frame ring \(A=A_n\)
+with kernel \(q\). Lemma~\ref{lem:ordinary-annihilator-derivative}
+will show that \(a\in M_n A\) vanishes in \(A_q\).
+To supply the local hypothesis for the density argument on a component,
+choose one embedding \(\tau_v:L_v\hookrightarrow\overline{\Q}_\ell\)
+for each marked place over \(\ell\). At each marked place and \(j=0,1,2\), prescribe the weight according to the chosen embedding by
+\[
+ h_j(\tau)=\begin{cases}2j&\tau=\tau_v,\\ j&\tau\ne\tau_v.\end{cases}
+\] The indices increase strictly at every
+embedding. The local degree is greater than five, so choose
+a nonzero trace-zero \(x\in L_v\), sufficiently small that
+the exponential and logarithm are inverse on its neighborhood
+of zero. Then \(u=\exp(x)\) is a nontorsion unit with norm one.
+
+Take an inertial Artin lift of \(u\). Its cyclotomic value is
+one, and the \(j\)-th ordinary character there has value
+\[
+   \zeta_j\,N_{L_v/\Q_\ell}(u)^{-j}\tau_v(u)^{-j}
+      =\zeta_j\tau_v(u)^{-j},\qquad \zeta_j\ \text{of finite order}.
+\]
+Every ratio for distinct indices has infinite order on this
+single element. The argument works for any finite parts in the
+specialization. Density at this weight therefore supplies the
+local hypothesis of fixed-weight adjoint vanishing at an
+integral type-I point on each component. At
+rank three the two-level comparison supplies its finite-place
+compatibilities. We give the commutative algebra in detail.
+
+\begin{lemma}[Differentiation on the ordinary support]
+\label{lem:ordinary-annihilator-derivative}
+With the finite weight quotient and type-I density at these
+two levels, an ordinary Hecke relation \(a\) restricted to the
+chart is annihilated by an element outside the prime of the
+type-I point. Writing \(\xi\) for evaluation at the point and \(D_\xi\) for any
+point derivation, this gives
+\[
+                      \xi(a)=0,\qquad D_\xi(a)=0
+\]
+also at a point with resonant weights.
+\end{lemma}
+
+\begin{proof}
+\proofstep{Heights in a flat pointed chart.}
+Use a flat pointed chart \(R\) containing a prime \(Q\) over
+\(q\), minimal in that fiber, with \(\dim(R/Q)=1\). This chart
+is obtained by specializing an integral model of the point
+and completing at its residual center. Every prime \(P\subset Q\)
+contracts to a type-I prime of the frame, so its degree-zero
+contraction contains \(M_n\). That quotient is finite over an
+ordinary weight quotient and has dimension at most \(D\).
+The chart dimension formula adds at most one for the torus
+fiber, giving \(\dim(R/P)\le D+1\). Extend any chain ending at \(Q\) by the specialization to the closed point. The resulting dimension bound is
+\[
+ \operatorname{ht}Q+1\le D+1 .
+\]
+
+In the presentation of \(R\) with \(N\) variables over a
+DVR and \(N-D\) relations, the lift of \(Q\) has height \(N\)
+by catenarity and \(\dim(R/Q)=1\). Its height after imposing
+\(N-D\) equations is at least \(D\). Hence equality holds.
+At the lifted prime the relations have their full possible
+height in a regular local ring and form a regular sequence.
+The quotient local ring \(R_Q\) is therefore Cohen--Macaulay.
+For the flat local map \(A_q\to R_Q\), the depth and dimension
+formulas with the zero-dimensional closed fibre give
+\[
+ \operatorname{depth}A_q=\operatorname{depth}R_Q
+      =\dim R_Q=\dim A_q .
+\]
+In particular \(A_q\) is Cohen--Macaulay and has no embedded
+associated primes. The dimension identity is
+\(\operatorname{ht}q=\operatorname{ht}Q\).
+
+\proofstep{Generic reducedness along every component.}
+For each minimal prime \(P_0\subset q\) of \(A\), going down
+and taking a minimal prime in the chart lifts it to a minimal
+chart prime below \(Q\). Every such chart component has
+dimension at least \(D+1\), by the presentation and the
+height theorem. Its frame contraction has degree-zero quotient
+dimension at least \(D\), by the bound of one on the torus
+fiber. If \(P\) is the frame contraction and \(B_n\) its degree-zero ring, the fiber bound and the Hecke upper bound now agree: 
+\[
+ D\le\dim B_n/(P\cap B_n)\le D.
+\]
+ Apply density on this component and lift using the
+graded frame to a type-I point \(\xi'\) on \(P_0\) with
+the weights just prescribed.
+
+At \(\xi'\) the ordinary adjoint
+vanishing says every fixed-weight deformation is inner.
+In the marked basis the remaining infinitesimal change of
+frame has dimension at most one. The extra inertial weight directions contribute at most \(nd\), so the bound for the full tangent space is
+\[
+ \dim T_{\rm full}\le 1+nd=D .
+\] The height lower
+bound at \(q'=\ker\xi'\) is \(D\) by the same chart
+presentation. Over the characteristic-zero coefficient field
+the residue field extension is separable and formally smooth,
+so every cotangent functional extends to a coefficient-relative
+point derivation. Together the tangent and height bounds give 
+\[
+ D\le\dim A_{q'}\le\operatorname{edim} A_{q'}\le D.
+\]
+ Hence \(A_{q'}\) is regular local and a domain; localization at its minimal prime gives the field \(A_{P_0}\).
+
+\proofstep{Differentiating the annihilator relation at the original point.}
+Now if \(\operatorname{Ann}_A(a)\subseteq q\), take a prime
+minimal over that annihilator inside \(q\). It is associated
+to the cyclic submodule \(Aa\), hence to \(A\). It must
+therefore be a minimal prime \(P_0\) by the unmixedness at
+\(q\). Goodness at \(P_0\) puts \(a\) in \(P_0\). In the
+field \(A_{P_0}\) it vanishes. This supplies an annihilator
+outside \(P_0\), a contradiction. We obtain the asserted
+\(s\notin q\). Since \(s\notin q\), we have \(\xi(s)\ne0\). Evaluation first gives \(\xi(a)=0\); differentiation then gives 
+\[
+ 0=D_\xi(sa)=\xi(s)D_\xi(a)+\xi(a)D_\xi(s)=\xi(s)D_\xi(a).
+\]
+ Thus every point derivation kills \(a\), even if the original point has resonant
+weights.  At that point Section~\ref{sec:rank-three-multiplicity}
+supplies the selected multiplicity used on the determinant
+quotient in the fixed-weight comparison.
+
+\end{proof}
+
+\paragraph{Exclusion of an adjacent cyclotomic ratio.}
+We now use the bound on fixed-inertia derivatives to rule out a cyclotomic ratio for
+the marked points specified below.
+
+\begin{paramdefinition}[The points tested for an adjacent cyclotomic ratio]\label{hyp:cyclotomic-ratio-point}
+On the rank-three type-I chart of
+Proposition~\ref{prop:ordinary-component-propagation}, let
+\(X_e\), \(e\ge1\), denote the field points having the finite
+inertia parts and local degree bounds of
+Proposition~\ref{prop:separated-marked-host}, absolutely irreducible
+on each open global subgroup, and potentially crystalline at the
+marked \(\ell\)-adic places with ordered exponents \((e,0,-e)\).
+At such a point fix the inertia characters when taking derivatives,
+as in Lemma~\ref{lem:ordinary-annihilator-derivative}.
+\end{paramdefinition}
+For the application to the even level, the restriction and
+attachment arguments proving Lemma~\ref{lem:rank-three-host-restriction}
+and Proposition~\ref{prop:ordinary-host-attachment} supply these
+properties before applying the ratio test.
+
+\begin{proposition}[Exclusion of cyclotomic resonance]
+\label{prop:ordinary-no-cyclotomic-resonance}
+At a point of Definition~\ref{hyp:cyclotomic-ratio-point}, writing \(D_v\) for the marked local group, any two distinct ordinary flag positions satisfy 
+\[
+ (\psi_i/\psi_j)|_{D_v}\ne\epsilon|_{D_v}\qquad(i\ne j).
+\]
+ The two estimates concern the same
+fixed-inertia tangent space: the global calculation bounds its
+rank by one, while the proposed ratio forces rank at least two.
+\end{proposition}
+
+\begin{proof}
+\proofstep{The upper bound on fixed-inertia derivations.}
+First consider the upper estimate at the point \(x\) of the
+level determinant ring. A derivation induced from the frame
+with fixed inertia annihilates \(J\) by the local annihilator
+and kills the power series weight ring \(\Lambda\) by its
+generators. Let \(J'\) be the reduced support ideal of the
+projected module. A trace Gram minor \(b_0\) nonzero at \(x\)
+restricts the support to its irreducible locus. On this open,
+dense good arithmetic points of the ordinary Hecke component
+have positive selected multiplicity. Thus \(b_0a\in J\) for
+\(a\in J'\), by reducedness and density in the Hecke quotient.
+The local annihilator gives \(D(b_0a)=0\). Since \(a(x)=0\) and \(b_0(x)\ne0\), 
+\[
+ 0=D(b_0a)=b_0(x)D(a)+a(x)D(b_0)=b_0(x)D(a),
+\]
+ so \(D(a)=0\).
+
+\proofstep{Separating the eigenvalues in the fixed-weight fibre.}
+On the finite free projected weight module choose a linear
+combination \(t\) of Hecke generators primitive for its
+generic reduced algebra and separating the systems in the
+weight fiber at \(x\). Finitely many proper linear conditions
+on the coefficients suffice for both separations in
+characteristic zero. Let \(t\) be this separating combination of Hecke generators. The characteristic polynomial in the generic algebra has the factorization
+\[
+ P_t(X)=\prod_i g_i(X)^{m_i},\qquad \gcd(g_i,g_j)=1\quad(i\ne j),
+\]
+with the \(g_i\) distinct monic irreducibles. They lie in \(\Lambda[T]\) by integral closedness.
+Let \(k_i\) be the multiplicity of \(x(t)\) as a root of
+the specialization of \(g_i\). If \(k_i>0\), lying over in
+the corresponding finite integral component gives a point
+with these values of \(\Lambda,t\). Separation identifies it
+with \(x\).
+
+On that component choose a good arithmetic point
+\(y\) with the same algebraic exponents and with
+\(b_0g_i'(t)\prod_{j\ne i}g_j(t)\ne0\). This uses density
+at those exponents with varying finite-order parts. The
+displayed element is generically nonzero there by separability.
+The selected joint dimension at \(y\) is at most the root
+multiplicity \(m_i\), and at \(x\) it is the whole root
+multiplicity since \(t\) separates at \(x\). Consequently
+\[
+       \sum_i m_i k_i=\mu_e(x)=\mu_e(y)\le m_i
+                              \qquad(k_i>0).
+\]
+Some \(k_i\) is positive. Exactly one is positive and it is
+one. The square-free product \(\prod g_i(t)\) belongs to \(J'\)
+and has a simple root at \(x(t)\). Differentiating gives
+\(D(t)=0\). The component ideal for that root is killed by
+\(D\) as well, since multiplying each element by
+\(\prod_{j\ne i}g_j(t)\), a unit at \(x\), puts it in \(J'\).
+
+For \(a\) in the component algebra define
+\[
+          P_a(T)=\operatorname{Tr}\bigl(a\,g_i(T)/(T-t)\bigr)
+                     \in\Lambda[T].
+\]
+Here the trace is from the generic component field, and
+integrality of the coefficients follows from monic division
+by \(T-t\) and integral closedness. At \(T=t\) the identity
+embedding contributes \(a g_i'(t)\) and all other embeddings
+contribute zero. Differentiate this identity at \(x\). The coefficients and \(t\) have zero derivative. Differentiating the surviving term gives 
+\[
+ g_i'(x(t))D(a)=0,\qquad g_i'(x(t))\ne0,
+\]
+ and hence \(D(a)=0\). Thus the derivation
+vanishes on the whole determinant ring and on its image \(B_3\).
+
+At a type-I frame point there are nonzero specialized entries
+of both signs and one of odd weight. Products give two
+monomials \(p_+,p_-\) of weights \(1,-1\) nonzero there.
+A derivation vanishing on \(B_3\) is determined by its value
+on \(p_+\). Write \(\xi\) for the frame point above \(x\). If \(D(p_+)=0\), applying \(D\) to \(p_+p_-\) gives \(D(p_-)=0\). For an entry \(u\) of weight \(j\ne0\), take \(p=p_-\) if \(j>0\) and \(p=p_+\) if \(j<0\). Its balanced product then gives 
+\[
+ 0=D(up^{|j|})=\xi(p)^{|j|}D(u),\qquad \xi(p)\ne0.
+\]
+ All generating entries
+and ordinary characters have zero derivative. This proves the
+upper bound one for the dimension of fixed-inertia derivations.
+
+\proofstep{The lower bound from a cyclotomic ratio.}
+For the lower bound, equality on an open inertia subgroup forces equality of cyclotomic exponents since \(\epsilon\) has infinite image there:
+\[
+ e(w_i-w_j)=1,\qquad (w_1,w_2,w_3)=(1,0,-1).
+\] Thus \(e=1\) and
+the two indices are adjacent. Normalize the adjacent
+two-dimensional subquotient by its second character. Its
+extension cocycle \(b\) takes values in \(E(1)\), with \(E\)
+a finite coefficient field. Its class belongs to the
+Bloch--Kato finite subspace. Indeed the subquotient and its
+characters become crystalline after finite extension and
+restriction on cohomology with crystalline period coefficients
+is injective by averaging in characteristic zero. By Kummer
+theory this finite subspace consists of local units, annihilated
+under cup product by the unramified line in \(H^1(F_v,E)\).
+For a nonzero unramified additive character \(u\) take a
+cochain satisfying
+\[
+      \beta(st)=\beta(s)+\epsilon(s)\beta(t)-b(s)u(t).
+\]
+Scaling \(u,\beta\) together makes them integral by compactness.
+\cite{bloch-kato-finite}
+
+Write \(A_k=\mathcal O_E/\ell^k\), \(q_k=|A_k|\), and work
+in a stable ordinary integral basis. At each \(v\mid\ell\)
+the local Euler characteristic and Tate duality give at least
+\(q_k^{6(1+d_v)}\) upper triangular adjoint cocycles before
+fixing inertia. At each of the \(d_v\) pro-\(\ell\) unit generators, three diagonal coordinates are fixed. Thus the maximum cost is
+\[
+ (q_k^3)^{d_v}=q_k^{3d_v}.
+\]
+The marked local fields have no \(\ell\)-power roots of unity.
+At the distinguished place impose equal variations on the
+adjacent diagonals. The resulting module has rank five and
+projects equivariantly onto \(A_k(1)\) via the adjacent entry,
+so the dual invariant factor has size at least \(q_k\). Only
+two inertia characters must be killed. With the two diagonal variations equal, the lower bound for the number of solutions simplifies to
+\[
+ q_k^{5(1+d_v)+1-2d_v}=q_k^{6+3d_v}.
+\]
+
+One further integral cocycle has unramified diagonal difference
+\(u\) on the resonant pair and zero difference on the other
+adjacent pair. Its resonant entry is supplied by \(\beta\). Then
+the remaining error is a two-cocycle in the outer root
+\(\kappa_0/\kappa_2\). This differs from \(\epsilon\)
+since the other adjacent ratio is nontrivial at the marked
+regular element. With \(\theta=\kappa_0/\kappa_2\), local duality identifies the obstruction space by 
+\[
+ H^2(G_v,E(\theta))^\vee\simeq H^0(G_v,E(\epsilon\theta^{-1}))=0,
+\]
+ since \(\epsilon\theta^{-1}\) is nontrivial. Correct the outer entry and clear denominators
+once.
+
+Multiples of this integral cocycle at depth \(k\)
+supply at least \(q_k/|\mathcal O_E/(c)|\) different cosets
+of the equal-diagonal solutions, where \(c\ne0\) is a fixed
+value of its diagonal difference. Adding all full-matrix
+coboundaries gives another factor at least \(q_k^3\) at
+every place, since distinct residual eigenvalues at the
+marked local element force the generator of any coboundary
+that stays upper triangular to be upper triangular. Thus
+the allowed local cocycles \(Z_v\) satisfy
+\[
+  \prod_{v\mid\ell}|Z_v|
+        \ \ge\ q_k^{9\,\#\{v\mid\ell\}+3d+1}/C
+\]
+with \(C\) independent of \(k\) for this point.
+
+\proofstep{The global cardinality estimate and contradiction.}
+The global Selmer cardinality inequality for these local
+conditions gives
+\[
+ |Z_{\rm glob}|\, q_k^{9\,\#\{v\mid\ell\}}
+             \prod_{v\mid\infty}|H^0_v|
+      \ \ge\ q_k^9\prod_{v\mid\ell}|Z_v| .
+\]
+The dual global invariant factor is trivial here. The
+residual frame separates each matrix unit's adjoint character
+from \(\bar\epsilon\), using \(1,\bar\Psi^{\pm1}\) on the
+positive component and \(\eta\bar\Psi^{\pm2}\) on the outer
+roots. Nakayama shows that the images of
+\(\operatorname{Ad}\rho(s)-\epsilon(s)\) span the truncated
+module, so no equivariant dual functional survives. At each real place the fixed matrices identify with the skew matrices; there are three free entries.
+
+Taking the product over the \(d\) real places gives
+\[
+ \prod_{v\mid\infty}|H_v^0|=(q_k^3)^d=q_k^{3d}.
+\] Before normalization the global cocycle bound is \(q_k^{10}/C\). Imposing zero
+at conjugation costs six scalar entries by its square relation.
+For \(Y=z(g_1)\rho(g_1)\) the remaining equations set the
+off-diagonal part of \(Y-JY^tJ\) to zero, with \(J\) the
+antidiagonal matrix. The two outer corners already vanish
+and the other four entries form two opposite pairs. Thus, writing \(Z_k\) and \(Z_k^{\rm norm}\) for the cocycles before and after imposing the two normalizations, respectively, we obtain
+\[
+ |Z_k^{\rm norm}|\ge q_k^{-6-2}|Z_k|
+              \ge q_k^{-8}q_k^{10}/C=q_k^2/C .
+\]
+
+Each normalized cocycle deforms the representation by
+\((1+\delta z(s))\rho(s)\), \(\delta^2=0\), with the
+prescribed ordinary conditions, and hence induces a distinct
+fixed-inertia point derivation into \(A_k\). The relative
+cotangent module after imposing those inertia equations is
+finite over \(\mathcal O_E\). Write \(M\) for this module and \(T\) for its torsion submodule. If \(\operatorname{rk}M\le1\), the elementary divisor decomposition over the coefficient DVR gives
+\[
+  q_k^2/C\le |\operatorname{Hom}_{\mathcal O_E}(M,A_k)|
+      \le q_k |T| .
+\]
+Here \(C\) and \(T\) are fixed as \(k\) varies. Since \(q_k\to\infty\), the rank is at least two. This contradicts
+the upper bound on the very same framed tangent space and
+excludes the cyclotomic equality. The constants in this
+depth argument can depend on the chosen point and the field.
+
+At a type-I point of the even-level Field used in the rank-three trace estimate over the
+imaginary quadratic field \(K\), the marking for this use takes
+\(M=\ell N|\operatorname{disc}K|\). On complex conjugation \(c\) the two parity factors cancel:
+\[
+ (\epsilon^e\psi)(c)=(-1)^e\psi(-1)=(-1)^{2e}=1 .
+\] Every prime ramifying in the quadratic
+character divides \(M\). Factor the integral point through
+the integers of a finite coefficient extension. Its ordinary
+flag pulls back to the marked groups and its restriction to
+the open CM subgroups is irreducible by the type-I host
+hypothesis.
+
+Given the automorphic attachment on this field, the preceding result supplies the unlinked local flag at the even level. The resulting local nonresonance and the three distinct weights give the required freedom of the ordinary characters. The original packet level in this branch
+is \(N\), while \(M\) is the ramification cutoff of the comparison.
+For the auxiliary field over \(\mathbb Q(i)\), use the same local exclusion after lifting to that field in the rigidity and trace bounds. Thus the local calculation is shared
+even though the host attachment and the two-dimensional
+constituent of the other Case of the rank-three trace estimate require separate
+arguments.
+\end{proof}

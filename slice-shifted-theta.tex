@@ -1,0 +1,173 @@
+\paragraph{Analytic realization of theta sections at the shifted weights.}\label{par:shifted-theta}
+Fix one of the two runs and its embedding \(\sigma_0:K\to\C\).
+Write \(C(u)\) for the space of rational cusp forms at weight \(u\).
+We need three consequences of the arithmetic realization. The analytic realizations of \(C(w_F+k w_L)\) span the full space of complex cusp families for
+every \(k\ge0\). At \(\kappa=w_F+T w_L\) the subspace with the
+specified low modes zero is spanned by the analytic images of the rational good space. Finally at \(w_F,w_F+s w_L,\kappa\) there are spanning
+sets in the prescribed scaled theta lattices with a bound on the mean
+log supremum of each member. The last assertion is a size estimate.
+
+\begin{proposition}[Theta spanning on marked components]\label{prop:shifted-component-span}
+Use the marked level and two runs of
+Proposition~\ref{prop:linked-comparison-rows}. On one run let
+\(u=w_F+k w_L\) for an integer \(k\ge0\). Assume \(u\) has
+even central degree at least \(4[E:\mathbb Q]r+4\) and
+positive last weights in the respective blocks, as furnished
+by the chosen \(w_F,w_L\). Let \(S_{\rm an}(u)\) be the space of analytic cusp families on the marked components, and \(\Theta_\alpha(u)\) the restrictions of the classical theta series on the common lattice family, with the prescribed scalar on each component. Then
+\[
+ S_{\rm an}(u)=\operatorname{span}_{\mathbb C}\{\Theta_\alpha(u)\}_\alpha.
+\]
+
+\end{proposition}
+
+\begin{proof}
+\proofstep{Apply the theta spanning theorem at the shifted weight.}
+Write \(n=u.n\) for the central degree and
+\(r=p_j+q_j\). The central degree of \(w_F\) is even and at least
+
+\[
+  8fr+4=4[E:\Q]r+4.
+\]
+ The last positive row weights of \(w_F\)
+are positive. Adding \(k w_L\) preserves both conditions.
+Each analytic component has the prescribed CM type, Hermitian form,
+signature and polarization scalar. Use one component as reference.
+Move the integral period lattices with their markings into the
+self-dual lattice family of the reference space. Write \(g_\gamma\) for
+the move from component \(\gamma\), \(L_\gamma\) for its moved lattice,
+and \(\Gamma_D\) for the level group. The level data include the
+principal polarization, the split odd level, the marked character
+tuple, and the auxiliary type prime distinct from three. There are
+two properties of this marked cover that matter for spanning.
+Writing \([L]_{\Gamma_D}\) for the orbit of a lattice, the marking distinguishes the components by
+\[
+  [L_\gamma]_{\Gamma_D}=[L_{\gamma'}]_{\Gamma_D}\quad\Longrightarrow\quad \gamma=\gamma'.
+\]
+
+On the
+stabilizer of \(L_\gamma\) the residual vacuum multiplier is one, and the
+group transported back to the component \(\gamma\) acts trivially on
+its section. Here the multiplier is what remains after the finite
+character of the reduction is taken out of the Weil action.
+We explain the use of these properties before giving the comparison
+of the markings.
+
+\proofstep{Comparison of theta functions in a common frame.}
+Let \(P_\gamma\) denote the function representing the analytic cusp family in the chosen frame on component \(\gamma\). Move it
+to the reference frame by \(g_\gamma\), dividing by the nonzero component
+normalization \(C_\gamma\) in the theta function. Extend this function to
+the entire orbit of \(L_\gamma\) by the inverse change of frame and the
+vacuum multiplier in the automorphy law. Indeed two moves \(g_1,g_2\) leading to the same lattice differ by a stabilizer element, since
+\[
+  g_1L_\gamma=g_2L_\gamma\quad\Longrightarrow\quad g_2^{-1}g_1\in\operatorname{Stab}(L_\gamma).
+\]
+ The stabilizer properties and the cocycle law give
+the same extension. Set the function to zero on every remaining
+orbit.
+
+The resulting function is bounded in the invariant norm since the multipliers
+are unitary and there are finitely many chosen components.
+Section~\ref{subsec:theta-row-rank} now applies to this one family.
+Its inverse overlap operator and reproducing kernel give a finite
+sum of theta series on the lattice family with coefficients in the
+harmonic highest-weight polynomial spaces. Restricting the sum to
+the \(L_\gamma\) gives all the component readings with one list of
+lattices and polynomials.
+\label{cor:slice-shifted-theta-1}
+
+\end{proof}
+
+\input{slice-marked-theta-cover}
+
+\begin{proposition}[Rational sections at the shifted weights]\label{prop:shifted-rational-cusp-span}
+Let \(\mathcal S(u)\) be the rational short sections and \(K\) the coefficient field of \(C(u)\). For each \(k\ge0\),
+\[
+ u=w_F+k w_L,\qquad \operatorname{span}_K\mathcal S(u)=C(u).
+\]
+Their analytic realizations span all analytic cusp families on the run.
+\end{proposition}
+
+\begin{proof}
+In the resulting classical series write \(\Lambda\) for a source
+lattice and \(N_\Lambda\) for an integer exhibiting its admissible
+level. The integral harmonic polynomials at this level span its
+complex highest-weight space. A concrete spanning set is constructed
+below. The classical evaluation of a short rule attached to an
+integral polynomial \(P\), on component \(\gamma\), is the corresponding
+classical theta reading times \(C_\gamma u_{\Lambda,N_\Lambda}\), with
+\(u_{\Lambda,N_\Lambda}\ne0\) independent of the component \(\gamma\). Write \(\Theta_{\Lambda,\gamma}(P)\) for the classical theta
+reading on component \(\gamma\), linear in the harmonic polynomial.
+The common classical expansion has coefficients \(P_\Lambda\) with
+
+\[
+  C_\gamma^{-1}P_\gamma=\sum_\Lambda\Theta_{\Lambda,\gamma}(P_\Lambda).
+\]
+Replace each polynomial by \(P_\Lambda/u_{\Lambda,N_\Lambda}\)
+and express the result in the spanning integral polynomials.
+The corresponding short rules then have total reading \(P_\gamma\)
+on every component, using the same coefficients on them all. Both sides can be
+extended by zero off the frame domains. For an empty component set
+the assertion holds with an empty sum. The transformation law
+gives rational sections and the last-positive-weight condition
+gives cuspidality at every good embedding. Faithfulness after
+extension of \(K\) follows from the independent evaluation rows of
+Section~\ref{subsec:selected-cusp-reading}. In particular the rational
+span of the short rules is \(C(u)\), since a proper rational
+subspace stays proper after extending scalars.
+\label{cor:slice-shifted-theta-2}
+
+\end{proof}
+
+\paragraph{Descent of the low-mode space.}\label{par:shifted-good}
+Suppose \(j<m\). For each admissible CM arc over \(K'/K\), use the
+coefficient functional \(\phi:C(\kappa)\to K'\) of the specified
+frame monomial and order. The arc calculation at the half-trace
+cutoff \(c_1\) identifies the intersection of their kernels over
+\(K\) with \(H_g\). For a complex linear combination with all low
+modes zero, the coefficient equation holds at \emph{each} extension
+\(\iota:K'\to\C\) of \(\sigma_0\). Indeed at that embedding the
+conjugate arc realizes the same Fourier--Jacobi test on the unfolded
+components, with the same cutoff. Extracting the coefficient from
+the sum commutes with its finite complex linear combination.
+
+\begin{proposition}[The rational good space and its complex extension]
+\label{prop:shifted-low-mode-descent}
+At \(\kappa\) the complex families with the prescribed low modes
+zero are exactly the scalar extension of the rational kernel \(H_g\)
+of the coefficient tests. Thus if \(S_{\rm low=0}\) denotes the complex subspace defined by those coefficient tests,
+\[
+ S_{\rm low=0}=H_g\otimes\mathbb C,\qquad H_g=C(\kappa)\quad\text{at the definite lift}.
+\]
+
+The rational kernel spans the same good families used in the
+slice-rank and division arguments.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Descent by annihilation of the low modes.}
+To see why these equations suffice, take a full-span expansion
+of the analytic family in rational forms and choose a
+\(\sigma_0(K)\)-basis \(b_1,\ldots,b_h\) of the span of its complex
+coefficients. Regroup the rational forms into \(F_1,\ldots,F_h\)
+so the expansion has coefficients \(b_i\). For each arc,
+\(\sum_i b_i\iota(\phi(F_i))=0\) for every \(\iota\) above
+\(\sigma_0\).
+
+For any \(a\in K'\), multiply by \(\iota(a)\) and
+sum over these embeddings. The result is
+\[
+ \sum_i b_i\,\sigma_0\!\left(
+       \operatorname{Tr}_{K'/K}(a\phi(F_i))\right)=0 .
+\]
+Independence and the nondegenerate trace pairing give
+\(\phi(F_i)=0\) for every \(i\). The same \(F_i\) work for every
+arc, so all belong to \(H_g\). Conversely the readings of \(H_g\)
+have zero low modes by the detector. At \(j=m\) the Hermitian
+form is definite, there is no isotropic line, and \(H_g=C(\kappa)\).
+Thus in both cases the interpolation, rank and division arguments
+use precisely the scalar extension of the rational good space.
+\label{cor:slice-shifted-theta-3}
+
+\end{proof}
+
+\input{slice-short-heights}

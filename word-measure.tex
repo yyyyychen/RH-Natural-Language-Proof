@@ -1,0 +1,774 @@
+\subsubsection{The ordinary CM chart and its theta measure}
+\label{subsec:word-measure}
+
+The moments depend on more than the moduli of the theta coefficients. Translation on the ordinary CM chart records the character and support of the measure used in both tests.
+
+For the ordinary chart use the imaginary quadratic order
+\[
+ K_0=\Q(\sqrt{-d}),\qquad O=\Z[(1+\sqrt{-d})/2],
+ \qquad d\text{ prime},\quad d\equiv7\pmod{16}.
+\] In this section \(p\)
+is the odd split prime assigned to the sequence and \(\lambda\) is the chosen embedding
+of the algebraic coefficients in \(\mathbb C_p\). We use subscripts
+\(+,-\) for the two \(p\)-adic components of \(O\), with the first
+induced by \(\lambda\). We may transport formal complex Taylor
+coefficients by a field isomorphism \(\iota:\C\simeq\mathbb C_p\)
+extending \(\lambda\) on \(\overline{\Q}\). Both fields are
+algebraically closed of transcendence degree continuum over
+\(\overline{\Q}\), so a bijection of transcendence bases extends
+the prescribed action on the algebraic coefficients. This transport
+uses the field operations on Taylor coefficients.
+
+For the order lattice \(O\) put
+\(H(z,w)=2z\bar w/\sqrt d\), and write
+\[
+\begin{split}
+ U_wF(z)&=e^{-\pi H(z,w)-\pi H(w,w)/2}F(z+w),\\
+ W_wF&=e^{\pi i |w|^2}U_wF,\qquad
+ \kappa(v,w)=e^{-2\pi i\operatorname{Im}H(v,w)}.
+\end{split}
+\]
+Let \(\theta\) be the degree-one even theta vector with
+\(\theta(0)=1\), \(W_l\theta=\theta\) for \(l\in O\), and zero
+at \(h=1/2\) modulo \(O\). These data follow from the
+degree-one theta transformation law. In the basis
+\(1,(1+\sqrt{-d})/2\) the quadratic sign
+\(e^{\pi i|l|^2}\) is \((-1)^{a+ab}\) on \(l=a+b(1+\sqrt{-d})/2\).
+Here the norm of the second generator is \((1+d)/4\), which is
+even. The theta characteristic is the translate of the odd
+theta section by \(1/2\). The divisor has degree one, so
+this translation gives its only zero.
+
+\begin{proposition}[The ordinary chart with its chosen torsion coordinate]\label{prop:word-ordinary-chart}
+At the assigned split prime, the ordinary formal coordinate
+has transported logarithm \(\omega\log(1+X)\) with
+\(|\omega\iota(\delta_0)|_p=1\), where \(\delta_0^{12}=\Delta(O)\).
+Choose it so that at a connected torsion point \(y=v/p^n\)
+with \(v_-\in p^{2n}\Z_p\), the coordinate specializes according to
+\[
+ 1+X(y)=\iota(\kappa(1,v/p^n)).
+\]
+
+\end{proposition}
+
+\begin{proof}
+\proofstep{Obtain a good ordinary formal model and its unit differential.}
+
+Write \(\delta_0^{12}=\Delta(O)\) for the discriminant in
+the analytic uniformization by \(\C/O\). The CM \(j\)-invariant
+is an algebraic integer, so after base extension the elliptic
+curve has good reduction. A good Weierstrass model can be
+chosen over algebraic coefficients. With analytic scaling
+\(c\) from the lattice invariants to this model,
+\(\abs{\iota(\delta_0)/\iota(c)}_p=1\), by the discriminant
+transformation of weight twelve. Good reduction is ordinary
+here. Indeed the two idempotents of
+
+\[
+  O\otimes\Z_p=\Z_p\oplus\Z_p
+\]
+ give the two height-one
+parts of the \(p\)-divisible group and the tangent map chooses
+the first. Over the completed algebraic closure the connected
+part is \(\widehat{\mathbb G}_m\). Its isomorphism with the
+formal elliptic curve is integral and has unit linear
+coefficient in a good parameter at the identity. It can be
+obtained by choosing a compatible generator of the dual
+\'{e}tale \(p\)-power group and using Cartier duality at every
+level. Write \(z(X)\) for the complex logarithmic coordinate after this transport. On the multiplicative formal group the resulting logarithm is
+\[
+  z(X)=\omega\log(1+X),\qquad z'(0)=\omega.
+\]
+ The two
+invariant differentials differ by a unit in good coordinates,
+so \(\Omega_0=\omega\iota(\delta_0)\) has norm one.
+\cite{bannai-kobayashi-theta}\label{cor:word-measure-1}
+
+\proofstep{Normalize by the connected torsion pairing.}
+
+For \(y=v/p^n\) with \(v\in O\) and
+\(v_-\in p^{2n}\Z_p\), \(y\) belongs to the connected
+\(p^n\)-torsion. Its coordinate \(1+X\) is
+\(\zeta_y=\iota(\kappa(1,y))\). Indeed on that line the pairing
+with \(1\) is a generator of its dual at every level.
+
+In the basis \(1,(1+\sqrt{-d})/2\), if \(v=a+b(1+\sqrt{-d})/2\),
+then 
+\[
+  \kappa(1,v/p^n)=e^{2\pi i b/p^n},
+\]
+ and \(b\) modulo
+\(p^n\) is a unit multiple of \(v_+\) on the connected factor.
+The ratio between this identification and any multiplicative
+coordinate on the connected torsion is multiplication by a
+compatible system of units modulo \(p^n\). Replacing the
+initial coordinate by its power for the resulting unit of
+\(\Z_p\) enforces this normalization without changing
+\(\abs{\Omega_0}_p\). All connected torsion has lifts with the
+stated extra divisibility by the Chinese remainder theorem.
+
+\end{proof}
+
+For a complex germ \(G\), let \(\widehat G\) be the series
+obtained by applying \(\iota\) to its Taylor coefficients
+and substituting \(\omega\log(1+X)\). The coefficient
+supremum norm of a bounded series is its supremum on the open
+unit disc. This follows by applying the Gauss norm at radii
+tending to one. The norm is multiplicative and is unchanged
+by the substitutions
+\[
+ h_a(X)=(1+X)^a-1\quad(a\in\Z_p^\times),\qquad
+ X\longmapsto \zeta(1+X)-1\quad(\abs{\zeta-1}_p<1).
+\]
+Each substitution maps the open unit disc into itself
+in both directions. We also use the following fact about an
+elliptic rational function with no pole in an identity disc
+or another specified residue disc of a good model. The two
+expansions in integral parameters have the same finite
+coefficient norm.
+Indeed, if the two parameters are related by \(\phi\) and \(\phi^{-1}\), both integral, the coefficient norm comparison in both directions gives
+\[
+  \|F\circ\phi\|\le\|F\|=\|(F\circ\phi)\circ\phi^{-1}\|\le\|F\circ\phi\|.
+\]
+ This is the norm at the generic point of the
+special fiber.
+
+To see the assertion at the identity, multiply
+the rational function by a monic polynomial in the Weierstrass
+coordinate \(x\) whose roots are the \(x\)-coordinates of all
+its poles off the identity, with enough multiplicity to clear
+those poles. Each root is integral when the pole is outside the
+identity disc. The resulting numerator is a polynomial in
+\(x,y\), linear in \(y\). Its monomials have distinct pole
+orders at the identity.
+Indeed in a Weierstrass parameter at the identity \(O\) the two lists of orders are
+\[
+  \operatorname{ord}_O(x^i)=-2i,\qquad \operatorname{ord}_O(x^iy)=-2i-3\qquad(i\ge0).
+\]
+ Multiplication by the corresponding
+power of the formal parameter makes each expansion integral
+with leading coefficient a unit. After scaling by a coefficient
+of maximum norm, the terms of maximum norm have a nonzero
+reduction, as their initial orders are distinct. The monic
+denominator, shifted by its pole order, is a power series
+unit.
+
+For its shifted denominator \(D(T)\) this uses the unit criterion
+\[
+  D(0)\in{\cal O}^{\times}\quad\Longrightarrow\quad D(T)^{-1}\in{\cal O}[\![T]\!].
+\]
+ This computes the norm of the expansion. Equivalently,
+the numerator after this scaling has nonzero reduction as a
+rational function on the special fiber and the denominator is
+monic in \(x\). Translating by a point of the good model
+preserves that generic norm and proves the assertion at the
+other disc. The expansion of the translated rational function
+at a point of the identity disc is therefore its analytic
+translation on that disc. These arguments apply to the
+transported elliptic quotients by expressing them as rational
+functions of the Weierstrass coordinates on the complex curve
+and transporting the finite rational expression.
+
+\paragraph{Integral translations of the degree-one theta vector.}
+
+The ordinary local measure is built from translated theta vectors. Begin with translations of order prime to the residue characteristic, where the coefficient norm is preserved as asserted below.
+
+\begin{proposition}[Coefficient norms of prime-to-\(p\) translations]\label{prop:word-integral-translates}
+In the ordinary chart, the normalized theta vector and
+each prime-to-\(p\) translate have coefficient norm at
+most one. For a finite sum \(G\) of fixed powers of these translates and any allowed translation by \(t\), the coefficient norm satisfies
+\[
+ \|U_tG\|_{\rm coeff}=\|G\|_{\rm coeff}.
+\]
+ This
+also holds coordinatewise for sums of products.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Use a CM norm divisible by \(p\).}
+
+Choose \(\alpha\in O\) with \(\alpha_+\) a unit and
+\(\alpha_-\equiv0\pmod p\), and set \(m=\alpha\bar\alpha\).
+The quotient
+\[
+ R_\alpha(z)=\theta(\alpha z)/\theta(z)^m
+\]
+is elliptic, since the two factors have identical automorphy
+on \(O\). It and its inverse have no poles in the identity
+disc. A zero of either theta factor would map under \(1\)
+or \(\alpha\) to the nonzero two-torsion \(h\). Its
+reduction is nonzero because \(p\) is odd, whereas an
+endomorphism preserves the identity disc.
+
+Since \(R_\alpha(0)=1\),
+its series and inverse are bounded, and multiplicativity gives
+norm one for both. Consequently the formal equation for
+\(F=\widehat\theta\) is
+\[
+                  F(h_{\alpha_+}(X))=F(X)^m\widehat R_\alpha(X).
+\tag{M1}\label{eq:tag-m1}
+\]
+The coefficient of degree \(j>0\) determines the coefficient
+of \(F\) there with unit multiplier \(\alpha_+^j-m\).
+The terms of smaller degree are integral by induction, from
+\(F(0)=1\). This proves \(\|F\|=\|F^{-1}\|=1\).
+
+\proofstep{Apply the isogeny on a prime-to-\(p\) residue disc.}
+
+Suppose \(t\in K_0\) satisfies \(s t\in O\) for some positive
+\(s\) prime to \(p\), and \(t\not\equiv h\pmod O\).
+Choose \(\alpha\in O\) with \(\alpha_+\) a unit,
+\(\alpha_-\equiv0\pmod p\) and \(\alpha\equiv1\bmod sO\).
+Using \(H(\alpha z,\alpha w)=mH(z,w)\) gives
+\[
+ U_{\alpha t}\theta(\alpha z)=(U_t\theta(z))^m R_\alpha(z+t).
+\]
+
+Since \(\alpha t-t\in O\), \(U_{\alpha t}\theta\) differs from
+\(U_t\theta\) by a root of unity. Both \(R_\alpha\) and its
+inverse are regular throughout the disc of \(t\), since the
+reductions of both \(t\) and \(\alpha t=t\) on the curve
+differ from that of \(h\). Their translated series have
+norm one by the generic norm comparison. In particular the
+constant term of the translated quotient is a unit. The
+nonzero constant term of \(\widehat{U_t\theta}\) has norm one
+by the constant term of the displayed functional equation.
+Dividing by this constant gives \eqref{eq:tag-m1} with an integral
+quotient of constant term one. The same induction gives a
+unit series for \(\widehat{U_t\theta}\).
+
+\proofstep{Compare the norm in the two residue discs.}
+
+Fix a power \(a\) and write the finite sum as
+\[
+  G=\sum_j c_j(U_{t_j}\theta)^a.
+\]
+Choose a common integer \(s\), prime to \(p\), clearing the denominators of \(t\) and of all \(t_j\).
+The function
+\[
+               R(z)=G(sz)/\theta(sz)^a
+\]
+is elliptic. Its potential poles are where \(sz\equiv h\).
+If \(t\not\equiv h\), the discs at \(0\) and at \(t/s\) avoid
+these poles, since \([s]\) is prime to \(p\) and \(t\) and
+\(h\) are separated in reduction. Its coefficient norm is
+\(\|\widehat G\|\) there, as \(\widehat\theta\) and its inverse
+have norm one. From
+\[
+       \sum_j c_j (U_t(U_{t_j}\theta)(sz))^a
+                =(U_t\theta(sz))^a R(z+t/s)
+\]
+and the preceding unit-series bound, translation by \(t\)
+preserves this norm.
+
+When \(t\equiv h\), apply the bound
+twice for \(t/2\), which is prime to \(p\) and is not the
+half-period modulo \(O\). The two translations along
+\(t/2\) compose to \(U_t\). In particular every prime-to-\(p\)
+translate of \(\theta\) has norm at most one. Applying the
+same proof one variable at a time gives the norm preservation
+for sums of products of fixed powers in several variables.
+\label{cor:word-measure-2}
+
+\end{proof}
+
+\paragraph{Connected torsion acts through the commutator.}
+\begin{proposition}[Connected torsion on the same ordinary series]\label{prop:word-connected-torsion}
+Take a connected torsion lift \(y=v/p^n\) with
+\(v\in O\) and \(v_-\in p^{2n}\mathbb Z_p\), and a translate \(t\)
+of order prime to \(p\). In the coordinates of Proposition~\ref{prop:word-ordinary-chart}, the transformation law \textup{\eqref{eq:tag-m2}} is
+\[
+ \widehat{W_y(U_t\theta)}(X)=\widehat{U_t\theta}\big(\zeta_y(1+X)-1\big).
+\]
+ Its derivatives
+in the stipulated \(\delta_0^{-1}\)-scaled directions are
+algebraic and retain the unit bound.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Use the commutators to determine the scalar.}
+
+Write \(y=v/p^n\) for this lift. For \(\alpha_+\equiv1\pmod{p^n}\)
+we have \(\alpha y-y\in O\), and \(y\bar y\in\Z\) by the
+condition on \(v_-\). The quadratic factor and the
+Heisenberg composition of the \(W\)'s then give
+\(W_{\alpha y}\theta=W_y\theta\): the product
+\(y\overline{(\alpha-1)y}\) is in \(O\), on which the
+quadratic cocycle is integral. Put
+\(P(X)=F(\zeta_y(1+X)-1)\) and \(Q=\widehat{W_y\theta}\).
+The dilation \(h_{\alpha_+}\) commutes with the indicated
+substitution because \(\zeta_y^{\alpha_+}=\zeta_y\).
+
+Translating \eqref{eq:tag-m1} and transporting the identity for
+\(W_{\alpha y}\theta(\alpha z)\) gives
+\[
+ (Q/P)(h_{\alpha_+}(X))=(Q/P)(X)^m .
+\]
+Here the translated quotient is \(R_\alpha(z+y)\) on
+both sides, and \(P\) is a unit series. The ratio is nonzero
+since \(W_y\theta\) is nonzero. Comparing orders at \(X=0\)
+shows that the ratio has order zero. Its constant term
+\(b\) satisfies \(b^{m-1}=1\), and comparing the first possible
+nonconstant coefficient with multiplier \(\alpha_+^j-m\)
+shows the ratio is constant. This holds for all such
+\(\alpha\) with \(p\mid m\). First take one of norm \(m_1\).
+Then additionally require \(m_1-1\mid\alpha\) in \(O\),
+which is compatible with the \(p\)-conditions. The resulting
+norm \(m_2\) is divisible by \(m_1-1\), so
+
+\[
+  \gcd(m_1-1,m_2-1)=1
+\]
+ and \(b=1\).
+
+\proofstep{Translate the elliptic quotient in the connected chart.}
+
+For \(U_t\theta\), take \(s\) prime to \(p\) with \(st\in O\)
+and a primary lift \(y=s v/p^n\) with
+\(v_-\in p^{2n}\Z_p\). Use the elliptic quotient
+\(R(z)=U_t\theta(sz)/\theta(sz)\).
+On replacing \(z\) by \(z+y/s\) the chart expression
+of \(R\) transforms by
+\(1+X\mapsto\zeta_y^{1/s}(1+X)\), since \(y/s\)
+is the indicated lift of connected torsion.
+Here \(1/s\) in the root of unity is taken modulo \(p^n\).
+
+Since \(W_y(U_t\theta)(sz)=W_y\theta(sz)R(z+y/s)\),
+cancellation of the invertible substitution \(h_s\) gives
+\[
+    \widehat{W_y(U_t\theta)}(X)
+              =\widehat{U_t\theta}(\zeta_y(1+X)-1).
+\tag{M2}\label{eq:tag-m2}
+\]
+The elliptic quotient has no pole in the identity disc,
+so the rational comparison applies there. The proof also
+applies for \(t\equiv h\), since the quotient uses
+\(\theta(sz)\) in the denominator.
+
+\proofstep{Check the coefficient transport for the scaled derivatives.}
+
+The jets in \eqref{eq:tag-m2} in directions scaled by \(\delta_0^{-1}\)
+are algebraic. Indeed \((1+X)d/dX\) preserves the unit
+coefficient bound. Applied repeatedly at zero it gives the
+transported derivatives, with powers of \(\Omega_0\) of norm
+one. The same bound holds for every field isomorphism
+extending \(\lambda\), with its own multiplicative chart and
+unit period. If one of the scaled derivatives were
+transcendental, an automorphism of \(\C\) fixing
+\(\overline{\Q}\) could multiply it by \(p^{-k}\), by
+extending from a transcendence basis. The absolute values
+of its images would then be unbounded. This proves the
+algebraicity needed for transport by \(\lambda\).
+\label{cor:word-measure-3}
+
+\end{proof}
+
+\paragraph{Measures.}
+
+The coefficients of the ordinary power series are the binomial moments of its measure. Translation and finite character projection can therefore be checked on these moments.
+
+A bounded power series \(\sum_\nu a_\nu X^\nu\) in \(g\)
+variables determines a measure \(\mu\) on \(\Z_p^g\) by
+
+\[
+  \mu(\prod_i\binom{A_i}{\nu_i})=a_\nu,
+\]
+ with norm
+\(\sup_\nu\abs{a_\nu}_p\). The product Mahler basis is
+orthonormal for continuous functions on \(\Z_p^g\), so the
+measure evaluates a Mahler expansion by a convergent sum.
+The generating series is \(\mu_A(\prod_i(1+X_i)^{A_i})\).
+In this representation \((1+X_i)d/dX_i\) multiplies by
+\(A_i\), and substitution
+
+\[
+  1+X_i\mapsto\zeta_i(1+X_i)
+\]
+ multiplies by
+\(\zeta_i^{A_i\bmod p^n}\) when \(\zeta_i^{p^n}=1\).
+Indeed these identities hold for each integer sample and
+extend to \(\Z_p^g\) by continuity, with the substitutions
+converging on every smaller disc. Thus \eqref{eq:tag-m2} realizes
+connected torsion translates as twists of the same measure.
+\cite{bannai-kobayashi-theta}\label{cor:word-measure-4}
+
+\paragraph{The Hom period lattice.}
+In a Hom space of the selected kernel let \(M\) be its period
+lattice in complex coordinates, and let \(H\) be its
+Hermitian form. Use
+\(\beta=\sqrt d\,H/2\), so that
+\(\operatorname{Im}H\) is the alternating form that is
+perfect on \(M\) and \(\beta(M,M)\subset O\).
+The same formulas for \(U,W,\kappa\) apply, with
+\(\beta(y,y)\) in place of \(|y|^2\).
+\begin{proposition}[The ordinary bound in the actual Hom lattice]\label{prop:word-hom-lattice-integral}
+For \(e^\natural\) of the selected actual Hom pair and
+any prime-to-\(p\) translate, write \(\sum_\alpha b_\alpha\mathbf X^\alpha\) for the series in a finite list of actual period directions in the ordinary chart. Then
+\[
+ \sup_\alpha|b_\alpha|_p\le1.
+\]
+ The logarithmic scale \(\omega\)
+is common to these directions and to the standard pair.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Test along the actual period lattice.}
+
+For \(v_1,\ldots,v_k\in M\) test the series
+\[
+      G\!\left(\sum_{j=1}^k
+             \omega\log(1+X_j)v_j\right)
+\]
+after the specified field transport. Bound one means that
+all its coefficients belong to the valuation ring. Such
+series are closed under products and integral linear
+combinations. If a linear change sends a direction \(v_j\)
+into the lattice after multiplying it by an integer \(s\)
+prime to \(p\), use the series for \(s v_j\) after substituting
+\(X_j\mapsto h_{1/s}(X_j)=(1+X_j)^{1/s}-1\).
+The binomial coefficients are integral since \(1/s\in\mathbb Z_p\),
+and the constant term is zero. The identity
+
+\[
+  \log(1+h_{1/s}(X_j))=s^{-1}\log(1+X_j)
+\]
+ gives the claimed
+pullback and preserves bound one.
+
+\proofstep{Compare with the good model by the prime-to-\(p\) isogeny.}
+
+For the base curve lattice \(\Gamma=\delta\mathfrak c\),
+the ideal \(\mathfrak c\) has norm prime to \(2p\).
+The isogeny \(\C/\mathfrak c\to\C/O\) has order prime to
+\(p\) and identifies the two formal groups on good models.
+In good coordinates the two invariant differentials have
+unit ratio under this isogeny. In coordinates for the
+lattices without the scale \(\delta\) their differentials
+are matched by the identity map. In particular
+\(\delta/\delta_0\) has \(p\)-adic norm one.
+
+In valuations this comparison is
+\[
+  v_p(\delta/\delta_0)=v_p(\delta)-v_p(\delta_0)=0 .
+\]
+ This follows
+also by the equality of the valuations of the two
+discriminants in their analytic coordinates, since each
+normalized discriminant is a unit and the isogeny has
+unit differential. The equality holds for every field
+transport extending \(\lambda\), which proves
+\(\delta/\delta_0\in\overline{\Q}\) by the same
+automorphism argument used for the theta jets.
+The half-period of the even theta section on \(\Gamma\)
+is nonzero of order two by the parity computation in
+Section~\ref{subsec:theta-normalization}.
+Proposition~\ref{prop:word-integral-translates} applies to
+that section on \(\Gamma\): the endomorphisms are still
+\(O\), the same automorphy yields the elliptic ratios,
+and the half-period is still separated from zero in
+reduction. The pulled-back multiplicative chart now uses
+logarithmic scale \(\iota(\delta)\omega\). For the
+lattice-direction series above, each direction
+
+\[
+  v_j=\delta b_j
+\]
+ uses the substitution associated to
+the integral exponent \(\lambda(b_j)\in\Z_p\).
+Writing \(b_j\) for these directions in the unscaled
+coordinates, the multiplicative parameter of their sum is
+\[
+           \prod_j(1+X_j)^{\lambda(b_j)}-1 .
+\]
+It has integral coefficients and zero constant. Composing
+the integral one-variable section with this parameter proves
+bound one for the prime-to-\(p\) translates in all the
+chosen directions.
+
+\proofstep{Pull back the orthogonal standard chart.}
+
+Apply the fourth-tensor normalization of
+Section~\ref{subsec:theta-normalization} to the
+base CM vector. At \(p\) the rational isometry of the four
+copies sends the period lattice to the standard curve
+lattice. Its global intersection indices are prime to
+\(p\). The vector after an arbitrary prime-to-\(p\)
+translation becomes a finite sum of products of
+one-variable translates. Every coefficient in that sum
+is a product of the normalized unit, an inverse square
+root of a prime-to-\(p\) index and Heisenberg roots of unity.
+For an index \(I\) prime to \(p\) and a root of unity \(\zeta\), the two frame factors contribute
+\[
+  v_p(I^{-1/2}\zeta)=-\tfrac12v_p(I)+v_p(\zeta)=0 .
+\]
+Every translation in its product factors has order prime
+to \(p\). Pull back the bound one from the standard
+directions, multiplying by an intersection index
+before the pullback if necessary.
+
+Write \(A(X)=\sum_\alpha a_\alpha X^\alpha\) for the one-copy
+reading after this pullback. The four test blocks are independent.
+Independence of the four variable blocks gives
+\[
+  [X_1^\alpha X_2^\alpha X_3^\alpha X_4^\alpha]\prod_{\nu=1}^4 A(X_\nu)=a_\alpha^4.
+\]
+The bound for the fourth tensor gives \(4v_p(a_\alpha)\ge0\)
+for every nonzero coefficient, without needing a nonzero
+constant term. Tensoring these one-variable estimates along
+the matrix entries gives the same bound for the standard Hom
+vector and the same scale \(\omega\).
+
+\proofstep{Use the two period-lattice averages in the actual frames.}
+
+For general source and target in the Hom space,
+rational unitary changes put both lattices in standard
+position at \(p\). This is the split lattice argument
+in Section~\ref{subsec:theta-normalization}, using a basis
+and its dual at \(p\) and weak approximation on the Cayley
+chart. The basic theta identity for the selected vector
+uses the two normalized period-lattice averages,
+first changing the source, then the target. After
+these changes the intermediate lattices and the standard
+ones agree at \(p\). For either average, write \(\mathcal D=M_2/(M_1\cap M_2)\).
+The normalized translation of the section is
+\[
+      |\mathcal D|^{-1/2}\sum_{a\in\mathcal D}W(a)G .
+\]
+
+In our two steps its normalization is a local unit, because
+the intermediate and standard lattices agree at \(p\).
+This is the theta-line transfer of Section~\ref{subsec:theta-normalization}.
+Here both such indices are prime to \(p\).
+The determinant character between the transported
+combinations has norm one, as its determinant ideals
+agree at \(p\) and the remaining finite characters
+have finite image. The resulting coefficients are
+integral. Adding a prime-to-\(p\) translate preserves
+the order condition on every summand by the lattice
+intersection inclusion. Thus the bound one holds for
+the actual normalized vector \(e^\natural\) and all
+its prime-to-\(p\) translates. The rational changes
+carry both the vector and its argument lattice, so
+the test directions are the actual period directions.
+\label{cor:word-measure-5}
+
+\end{proof}
+
+\begin{proposition}[An integral theta measure for decorated jets]\label{prop:theta-measure-word}
+Use the ordinary model at the assigned split prime and
+the normalized vector on the actual Hom lattice above.
+Write \(\mu\) for the measure in the selected coordinates. For a monomial moment test \(P\), its theta jet value \(J(P)\) satisfies
+\[
+ J(P)=\int P\,d\mu,\qquad \|\mu\|\le1.
+\]
+
+A finite list of those moments is approximated at any
+prescribed precision by one set of samples in the
+rational Hom period lattice with integral coefficients.
+\end{proposition}
+
+\begin{proof}
+Choose a \(K_0\)-basis \(x_j\) of the rational space of \(M\)
+with \(x_j\in M\), orthogonal for \(\beta\), and with
+\(\beta(x_j,x_j)=a_j\in\Z_{>0}\) prime to \(p\).
+To find one, take a basis and the dual basis in the two
+split factors of the unimodular lattice, approximate
+both modulo \(p\) by rational vectors of \(M\), and
+orthogonalize. The pivots are units at \(p\), so the
+denominators can be cleared by integers prime to \(p\).
+The resulting \(x_j\) remain a basis after localization
+at \(p\). The orthogonal frame determines the pair of lattices
+\[
+ M_0=\bigoplus_j O x_j\ \subseteq\ M\ \subseteq\ M_0^\#
+        =\bigoplus_j a_j^{-1}O x_j ,
+\]
+where \(\#\) denotes the alternating dual. The section on the smaller
+lattice factors in this frame as \(F_0(z)=\prod_j\theta(z_j)^{a_j}\).
+
+For any \(t_0\in M_0^\#\),
+\(U_{t_0}F_0\) is fixed by the Weyl operators of \(M_0\).
+Summing its Weyl translates over \(M/M_0\) gives a theta
+vector for \(M\). At least one such sum is nonzero:
+evaluate at \(-t_0\) and divide by the common
+nonzero Gaussian there. The coefficients of the
+characters 
+\[
+  t_0\mapsto\kappa(l,t_0)
+\]
+ for \(l\in M/M_0\)
+are then the corresponding Weyl translates of \(F_0\) at
+zero, with coefficient one for \(l=0\).
+These characters are distinct by duality. The theta
+space has dimension one since \(M\) is self-dual.
+
+It follows that any of its vectors is a linear
+combination of products of powers \(a_j\) of
+prime-to-\(p\) translates of \(\theta\). The composition
+scalars in such a sum are roots of unity. A further
+prime-to-\(p\) translate \(t\) of the vector modifies
+the one-variable translates by coordinates with
+prime-to-\(p\) denominators and by the same type of
+scalars.
+
+\proofstep{Transport the expansion and evaluate its coordinates by the product Mahler measure.}
+Transport this expansion for 
+\[
+  G=U_t e^\natural
+\]
+ and
+apply the product Mahler measure in the \(x_j\) frame.
+Its norm is at most one because the \(x_j\) are test
+directions for the actual normalized vector. Let
+\(b_j\) be a different frame of lattice vectors that
+is a basis after localization at \(p\). The transformation
+to measure coordinates \(A\in\Z_p^{\dim M}\), with
+\(\dim M\) the rank over \(O\), for this
+frame is obtained by replacing the measure coordinates
+in the \(x_i\) chart by
+\[
+                  A'_i=\sum_j A_j\lambda(\beta(x_i,b_j)).
+\tag{M3}\label{eq:tag-m3}
+\]
+This is an integral homeomorphism since the Gram
+diagonal entries and the split change of basis are
+units.
+
+If \(v\) is an algebraic linear combination
+of lattice directions, then differentiating in
+the direction \(\delta_0^{-1}v\) gives the linear
+factor
+\[
+         L_v(A)=\Omega_0^{-1}\sum_j
+               A_j\lambda(\beta(v,b_j)).
+\tag{M4}\label{eq:tag-m4}
+\]
+To see the formula, write \(v=\sum_i v_i x_i\), compute
+\(\Omega_0^{-1}\sum_i\lambda(v_i)A'_i\) by
+\((1+X_i)d/dX_i\), and substitute \eqref{eq:tag-m3}.
+
+For a prime-to-\(p\) integer \(N_0\) with
+\(N_0t\in M\), consider the primary translates generated
+by \(N_0\eta x/p^n\), where \(x\in M\), \(\eta\in O\)
+and \(\eta_-\in p^{2n}\Z_p\). Their sums have the same
+divisibility in the minus factor. Choose a common
+\(\epsilon\in N_0O\) with components \((1,0)\) modulo
+\(p^{2n}\). Reducing the plus component in the \(b_j\)
+frame expresses each such translate \(y\), modulo
+\(N_0 M\), as 
+\[
+  \epsilon\sum_j y_j b_j/p^n.
+\]
+The difference in the minus component is already
+divisible by \(p^n\). The difference in the plus
+component is divisible by \(p^n\) by the definition
+of the digits \(y_j\). Both the new representative
+and \(y\) have integral \(\beta\)-pairing with the
+difference, since the original numerators have
+minus component divisible by \(p^{2n}\).
+
+For \(l\in N_0 M\) the operator \(W_l\) fixes \(G\),
+because \(W_l\) commutes with \(U_t\) up to the
+character \(\kappa(l,t)=1\).
+In particular a change by \(l\in N_0M\) introduces the character factor
+\[
+  \kappa(l,t)=1,\qquad W_l U_tG=U_tW_lG\quad(l\in N_0M).
+\]
+ The composition law
+therefore preserves \(W_yG\) under this change of
+representative. The pairing with the measure
+coordinates is preserved as well.
+
+Let \(D\) be a common multiple of the prime-to-\(p\) denominators
+of the tensor translates and of the \(a_i\), prime to \(p\).
+The Chinese remainder theorem gives \(s\equiv0\bmod D\),
+\(s\equiv1\bmod p^n\). This clears the coordinates for \eqref{eq:tag-m2} in
+the \(x_i\) frame without changing the action, since
+\[
+ (s-1)y\in N_0M,\qquad \beta(y,y)\in\mathbb Z
+       \quad\Longrightarrow\quad W_{sy}G=W_yG .
+\]
+If the denominators of the prime-to-\(p\) translates
+are cleared by \(s_0\mid s\), each coordinate of
+\(s y\) has the form \(s_0 v_i/p^n\) with
+\(v_i\in O\) and \((v_i)_-\in p^{2n}\Z_p\).
+That is the lift in \eqref{eq:tag-m2}.
+
+In the product the
+torsion character from this action is the image
+under \(\lambda\) of
+\(\kappa(\sum_j (A_j\bmod p^n)b_j,y)\).
+Indeed on the split torsion the alternating pairing is
+the pairing of the opposite coordinate of its first
+argument with the plus coordinate of its second
+argument. In the \(x_i\) frame this is the sum
+of the one-variable pairings with weights \(a_i\).
+Formula \eqref{eq:tag-m3} includes exactly these weights and the
+conjugated first-argument coordinates. Reducing an
+exponent modulo \(p^n\) leaves the character unchanged.
+
+If \(\zeta^{p^n}=1\), this invariance follows from
+\[
+  m'=m+p^n h\quad\Longrightarrow\quad\zeta^{m'}=\zeta^m(\zeta^{p^n})^h=\zeta^m .
+\]
+Thus the derivatives of \(W_yG\) in a list of scaled
+directions are the integrals of the products of
+\eqref{eq:tag-m4} times this torsion character. The same measure,
+of norm at most one, works for all such translates
+and lists of directions. The transported derivatives
+are algebraic by the one-variable argument, the
+product rule and algebraic directions. In the tensor
+expansion the scalar of a normalized vector is
+algebraic by comparing one nonzero scaled jet.
+If \(J\) is the nonzero scaled jet chosen for this comparison and \(G=cG_0\), then
+\[
+  c=\frac{J(G)}{J(G_0)}\qquad(J(G_0)\ne0).
+\]
+Such a jet is algebraic for the actual vector by
+its bound one for all field transports, and for the
+expansion by the same one-variable argument.
+\label{cor:word-measure-6}
+
+For the actual period reading, write \(b_j\) in complex
+coordinates as \(\delta\operatorname{emb}(B_j)\), with
+\(B_j\) rational Hom maps, and take the direction \(v\)
+in \eqref{eq:tag-m4} equal to \(\delta_0\operatorname{emb}(V)\).
+The factor \(\sqrt d/(2\operatorname{area}(\Gamma))\)
+in \(\beta\) equals \((\abs{\delta}^2 N\mathfrak c)^{-1}\).
+Consequently \eqref{eq:tag-m4} is the trace pairing with
+\(\sum_j A_j B_j\), divided by the period
+\[
+       \Omega=\Omega_0\, N\mathfrak c\,\lambda(\delta/\delta_0),
+                      \qquad \abs{\Omega}_p=1.
+\tag{M5}\label{eq:tag-m5}
+\]
+
+In entries the trace pairing with a matrix unit is the
+corresponding adjoint entry. The diagonal derivation
+generators give the units
+\(u_\tau=\lambda(c_{D,\tau})/\Omega\), whose unit
+valuations are the chosen derivation normalization at the
+prime assigned to the sequence. Hence the polynomial belonging to the jet
+index \(m\) is exactly the monomial of the point
+evaluation in Section~\ref{subsec:word-moments}.
+Multilinearity applies to a repeated derivative of any
+degree without a factorial denominator. Passing from the
+analytic Taylor coefficient to the jet multiplies by the
+multi-index factorial.
+In coordinates the conversion is
+\[
+  \partial^m F(0)=\left(\prod_j m_j!\right)[X^m]F .
+\]
+
+\proofstep{Approximate the entire finite list simultaneously by residue balls.}
+The characteristic functions of residue balls
+in \(\Z_p^{\dim M}\) can now be used to approximate each
+finite list of such integrands simultaneously. In this
+Riemann sum, assign a ball the measure of its indicator
+and sample it at a nonnegative integer point in the ball.
+The norm bound makes every measure coefficient integral.
+There are no losses as the precision or list grows.
+The resulting sample is a rational point in the Hom
+period lattice and has exactly the pairing monomial
+and torsion character just computed.
+\end{proof}
+

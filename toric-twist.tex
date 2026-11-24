@@ -1,0 +1,652 @@
+\subsubsection*{The abelian theta coefficients}
+\label{subsec:toric-twist}
+\hypertarget{source-toric-twist}{}
+
+The Selmer determinant controls the signature contribution to the simultaneous twist. The abelian theta values require a separate argument: changing the toric order changes both the coefficients and their period normalization. Let \(E/F\) be the CM extension of the
+selected host, with \(F\) totally real, and let \(\varphi\)
+be its chosen CM type. Fix a toric label, its integer
+\(s\ge1\), the nonnegative harmonic exponents \(\kappa\),
+its base conductor \(\mathfrak f\), and its unitary Hecke
+character \(\chi\), trivial on the ideles of \(F\).
+Its infinity exponents are \(\kappa_i+s\) at the places
+of \(\varphi\) in the unitary normalization. At the base
+conductor its local conductor is prescribed and nontrivial.
+Enlarge the order conductor to
+\[
+ \mathfrak c=\mathfrak f\prod_{v\in Q}v
+\]
+in the real
+field, at split places prime to the base conductor and to
+the coefficient prime \(\ell\).
+Let \(\operatorname{Pic}(\mathfrak c)\) denote the
+ideal class group of the resulting order.
+
+For a finite idele \(y\) representing a class, let
+\(S_y(z)\) be the continuation of the lattice sum on
+\(E\cap y\widehat{\mathcal O}_{\mathfrak c}\), with the
+harmonic numerator and shifted exponent of the fixed label,
+over nonzero vectors modulo \(\mathcal O_F^\times\).
+The toric term is
+\[
+       T_y=\frac{S_y(0)}
+          {\chi_f(y)\,|y|_f^{s}},
+\]
+where the finite modulus \(|y|_f\) is the one in the
+unitary Hecke normalization. In the convergent region the
+weights are homogeneous under
+multiplication of the lattice by an element of \(E^\times\).
+The character at infinity and the norm exponent give
+the inverse of this change in the finite prefactor.
+The completed order units preserve the lattice and
+the finite character is trivial on them. The resulting
+normalized term therefore depends on the class. These
+identities pass to the continued value.
+
+\paragraph{The denominator after changing the order.}
+Choose the fixed CM period lattice with basis
+\(1,(1+\sqrt{-d})/2\) at the imaginary quadratic subfield,
+and choose a twelfth root of its discriminant. Incorporate the
+fixed power of this root and the normalization constant
+of the harmonic numerator into a nonzero scalar
+\(\Omega_*\). In this normalization
+\[
+ \beta(T)=(T/\Omega_*)^{12}.
+\]
+
+The local class-value estimate for lattices with
+\(y_w=1\) at every \(w\mid\ell\) has the following form.
+Put \(W=\operatorname{wtM}(2s,\kappa)\), the degree of
+the period used in the twelfth power. Let \(a_0\) be the
+maximum conductor exponent of \(\mathfrak f\) over \(\ell\).
+Let \(c_E\) be the largest denominator exponent at
+\(\ell\) of the partial zeta values of \(F\) at \(1-2s\),
+divided by \(2^{[F:\mathbb Q]}\) before taking the
+denominator. Put \(f_0=|I|=[F:\mathbb Q]\) for the size
+of the chosen CM type, \(K_\kappa=\sum_{i\in I}\kappa_i\),
+and \(W=2sf_0+2K_\kappa\).
+Write \(c_\ell=a_0\) if \(a_0>0\) and
+\(c_\ell=v_\ell(D_E)/[E:\mathbb Q]\) otherwise. The
+ramified allowance is
+\[
+ n_\ell =
+ \begin{cases}
+ 0,&c_\ell=0,\\
+ 2sf_0c_\ell+K_\kappa(2c_\ell+1+
+       \mathbf 1_{\ell=2}+\tfrac12\mathbf 1_{\ell=d}),&c_\ell>0 .
+ \end{cases}
+\]
+\begin{proposition}[Uniform denominator of the CM class values]\label{prop:toric-class-denominator}
+At every embedding into \(\overline{\Q}_\ell\), for a representative
+with \(y_w=1\) at all \(w\mid\ell\), the normalized twelfth
+power is algebraic and satisfies
+\[
+    v_\ell\bigl(\beta(S_y(0))\bigr)\ge-12(c_E+n_\ell+Wa_0).
+\]
+Auxiliary split places disjoint from \(\ell\) may vary.
+\end{proposition}
+The proof follows in the local jet calculation below. First we pass
+from one lattice to the coefficients of the theta element.
+
+\begin{lemma}[Clearing the abelian theta coefficients]\label{lem:toric-common-denominator}
+With the CM type, base conductor, critical weight and coefficient
+prime fixed, there is an integer \(c\ge0\) such that every coefficient \(a\) of a normalized abelian theta element, at any allowed auxiliary level and after any allowed finite-order ring class twist, satisfies
+\[
+ v_\ell(a)\ge-c.
+\]
+\end{lemma}
+
+\begin{proof}
+Every ideal class admits a representative that is one
+above \(\ell\). Indeed, use weak approximation in \(E\)
+to put the components above \(\ell\) in the local
+completed order-unit subgroups and then divide by those
+units. On such a representative \(\chi_f(y)\) is a unit
+at \(\ell\) in the algebraic normalization. This follows
+from the formula for its infinity type on principal
+ideles, applied after taking a power to clear the ideal
+class, and from the roots of unity on the compact unit
+group.
+
+The element of \(E^\times\) used in this formula
+has valuations zero above \(\ell\), so every conjugate
+factor is a unit. The character and norm factors of such a representative have
+\[
+ v_\ell(\chi_f(y))=0,\qquad v_\ell(|y|_f)=0,
+\]
+where \(|y|_f\) denotes the finite norm factor in this normalization.
+The same bound thus holds for \(\beta(T_y)\) on all
+classes. If a finite order ring class character is added,
+its values again have valuation zero. If the separately cleared summands \(a_y\) have nonnegative valuation, the only estimate required for their sum is
+\[
+ v_\ell\!\left(\sum_y a_y\right)\ge\min_y v_\ell(a_y)\ge0.
+\]
+Thus the number of classes of the varying order does not change the clearing power.
+
+For the abelian theta module the coefficient at an Artin
+label is obtained from the terms \(T_y\) in its fiber,
+multiplied by the same nonzero normalization scalar
+specified by the toric construction. The fiber map
+uses the inverse ideal class. Choose the complex
+embedding in the algebraic closure of the row fraction
+field as in the toric comparison. Taking twelfth roots gives the individual integral bound
+\[
+ v_\ell(T_y/\Omega_*)\ge -N\qquad(N\in\mathbb Z,\ N\ge c_E+n_\ell+Wa_0).
+\]
+
+One more fixed power clears the product of
+\(\Omega_*\) and the normalization scalar in that
+algebraic closure. To see this for any algebraic element,
+take a monic polynomial over the fraction field and
+choose the power large enough that the rescaled monic
+polynomial has integral coefficients. Each coefficient
+of the theta module is already in the fraction field
+of \(O\). Integral closure of the DVR puts its cleared
+value in \(O\). For each abelian label with an allowed
+\(s\), use one such \(s\) for its fixed coefficient
+functions and then take the maximum over the finitely
+many labels of this row. This gives the exponent \(N_0\)
+in the abelian part of the simultaneous specialization.
+\label{cor:toric-twist-1}
+\end{proof}
+
+\paragraph{The local jet bound in period coordinates.}
+Let \(\omega^{12}\) be the fixed lattice discriminant
+and let \(g\) be the defining holomorphic lattice sum
+before inserting the powers of the conjugate variables.
+The field data here use \(E/\mathbb Q\) abelian,
+\(E/F\) unramified at all finite places, and a CM type
+containing the chosen image \(i\sqrt d\) of \(\sqrt{-d}\)
+at each selected embedding. In particular
+\([F:\mathbb Q]\ge2\). If \(F=\mathbb Q\), the
+discriminant formula would give \(|D_E|=1\) for an
+imaginary quadratic field. The condition on the real
+degree applies at weight two as well.
+
+\begin{proof}[Proof of Proposition~\ref{prop:toric-class-denominator}]
+\proofstep{Integral idempotents and tangent directions.}
+We give the integral comparisons on the lattice
+\(E\cap y\widehat{\mathcal O}_{\mathfrak c}\) with
+\(y=1\) above \(\ell\). Work over the valuation ring
+\(R\) of a finite algebraic coefficient field in
+the prescribed embeddings. We enlarge it finitely
+to contain the CM embeddings and the good-reduction
+model constructed below. The order action extends
+to that abelian scheme by the extension property
+for homomorphisms. Use \(v_\ell(\ell)=1\) in every
+coefficient extension.
+Use a generator of the fractional polarization
+module locally at \(\ell\). If \(H\) denotes the integral de Rham lattice, perfection of the resulting alternating form means
+\[
+ H\xrightarrow{\;v\mapsto B(v,-)\;}H^\vee\ \text{is an isomorphism}.
+\]
+
+Indeed that local generator gives an isomorphism to
+the dual at the coefficient prime, and the integral
+de Rham duality comparison gives its perfect form.
+The comparison with the ordinary polarization
+pairing uses \(2B\), with \(B\) itself the perfect
+integral pairing. The generic CM eigenspaces have
+rank one, with Hodge subspace given by one
+embedding from each conjugate pair. The perfect
+pairing is between the opposite eigenspaces.
+
+Let \(D\) be a scalar clearing every primitive CM
+idempotent, with
+\[
+ v_\ell(D)=c_\ell.
+\]
+For a basis
+\((x_j)_j\) of the maximal order and its trace-dual basis
+\((x_j^\vee)_j\), the idempotent at an embedding \(\iota_i\)
+is \(\sum_j\iota_i(x_j^\vee)x_j\) after coefficient
+extension. Multiplication by an element of the different
+clears the trace-dual coordinates. Galois uniformity gives
+\[
+ c_\ell=v_\ell(D_E)/[E:\mathbb Q]
+\]
+away from the conductor.
+At a conductor prime the maximal order is unramified at the
+odd prime \(\ell\), so those idempotents are integral there.
+Multiplication by \(\ell^{a_0}\) puts their coefficients in
+the conductor order. The extra order places are prime to
+\(\ell\), so the same local order works in both comparisons.
+
+Let \(e_i,f_i\) be the primitive generators of the two
+opposite integral lines in the de Rham lattice and put
+\(P_i=B(e_i,f_i)\). They are saturated line lattices.
+Perfection of \(B\) supplies an integral \(x\) with
+\(B(e_i,x)=1\). Write \(D E_{\bar i}x=s_i f_i\), where
+\(E_{\bar i}\) is the idempotent on the opposite line and
+\(s_i\in R\). Then
+\[
+      s_iP_i=B(e_i,D E_{\bar i}x)=D ,
+      \qquad 0\le v_\ell(P_i)\le c_\ell .
+\]
+The equality uses the oppositely paired eigenspaces.
+Multiplying the rank-one map \(e_i\mapsto f_i\) by \(D\)
+gives an integral operator \(M_i\) killing other eigenlines,
+as \(D E_i\) maps into the primitive lattice on the
+line of \(e_i\), where \(E_i\) denotes that idempotent.
+Each \(M_i\) commutes with the real order and is skew for \(B\).
+
+If \(M=\sum_i t_i M_i\), then \(M^2=0\) and
+\[
+ B((1+M)u,(1+M)v)
+  =B(u,v)+B(Mu,v)+B(u,Mv)+B(Mu,Mv)=B(u,v).
+\]
+The linear terms cancel by skewness and the last is
+\(-B(u,M^2v)=0\). The same expansion applies to the other
+polarization forms, since they are obtained by real
+multiplication and the \(M_i\) commute with that multiplication.
+
+\proofstep{Comparison with the reference CM periods.}
+The primitive integral tangent eigenforms have
+complex period scalars \(a_i\). For their comparison
+with \(\omega\), let \(A_{\rm ref}\) be the elliptic curve
+of the fixed quadratic lattice. Its CM \(j\)-invariant
+is integral, so it has good reduction after finite
+extension at \(\ell\). Choose an integral generator of
+its tangent line. Its analytic coordinate \(t\) in the
+given lattice has \(t^{12}\omega^{12}\) equal to the
+discriminant of a good Weierstrass model. This is the
+weight-twelve change of Weierstrass invariants, using
+the full Weierstrass equation at two and three.
+Thus \((t\omega)^{-1}\) is algebraic and integral at
+the selected place.
+
+Let
+\[
+ L_y=E\cap y\widehat{\mathcal O}_{\mathfrak c}.
+\]
+
+Since the local lattice at each place above \(\ell\)
+is the conductor order, \(\ell^{a_0}\mathcal O_E\)
+is contained in it locally. At the remaining places
+one integer \(m_0\) prime to \(\ell\) clears the
+necessary lattice index. Thus
+\[
+ n_0\mathcal O_E\subset L_y
+\]
+with
+\(n_0=\ell^{a_0}m_0\). Choose \(\theta\in\mathcal O_E\)
+separating the complex embeddings and take the
+matrix with columns \(n_0(\varphi_i(\theta^j))_i\),
+\(0\le j<f_0\).
+
+For \(V=(n_0\varphi_i(\theta^j))_{i,j}\), the embeddings
+give distinct values \(\varphi_i(\theta)\), so
+\[
+ \det V=n_0^{f_0}\prod_{i<i'}
+               (\varphi_{i'}(\theta)-\varphi_i(\theta))\ne0 .
+\]
+The reference lattice consists of simultaneous embedded
+quadratic integers. Thus column \(j\) maps such an
+integer \(a\) to the lattice element \(n_0a\theta^j\)
+of \(n_0\mathcal O_E\subseteq L_y\). The matrix defines an
+isogeny from \(A_{\rm ref}^{f_0}\) to the CM variety.
+After finite extension its finite generic kernel has
+a finite flat schematic closure in the torsion group
+of the good source. Quotient by this closure gives
+the good target model and an integral isogeny.
+The integral tangent vector on the factor in column
+\(j=0\) has image with analytic coordinates
+\(w_i^0=n_0t\) for all \(i\). Consequently
+\[
+ v_\ell((w_i^0\omega)^{-1})\ge-a_0.
+\]
+
+Evaluating the integral eigenform on this vector
+gives \(a_iw_i^0\in R\). This implies the first
+of the two bounds below. For the determinant,
+the same cleared CM idempotents on the tangent
+dual put \(D\) times the full lattice in the span
+of the primitive eigenforms. Their wedge is
+\(u_0\) times a determinant generator, where
+\(0\le v_\ell(u_0)\le f_0c_\ell\) by Smith normal
+form. The complex determinant scalar is
+\[
+ C=(\prod_i a_i)/u_0.
+\]
+
+
+For the lowering coordinates let \(w_i\) be the
+complex tangent coordinate of \(f_i\) and choose
+the integral unit \(r_i\) with \(P_i=r_i a_i w_i\).
+This equality follows by using \(B(e_i,-)\) as
+the primitive covector on the tangent quotient.
+The Riemann form in the polarized uniformization
+has real scale \(h_i\) on this coordinate.
+If \(\psi\) is the complex polarization pairing
+and \(\xi\) is the imaginary generator of the
+polarization module locally at \(\ell\), the
+comparison of alternating forms gives
+\[
+  2i\varphi_i(\xi)\psi(e_i,f_i)=h_i P_i .
+\]
+The local ideal of polarizations is dual to the
+lattice under the trace pairing.
+
+At the chosen
+places, \(y=1\) and the extra level is a unit.
+The local generator consequently satisfies
+\(v_\ell(\varphi_i(\xi))\le0\).
+Equivalently one can choose a local anti-invariant
+inverse-different generator \(\xi'\) of nonpositive
+valuation and use
+\(m\xi'=a\xi\) with \(m\) prime to \(\ell\)
+and \(a\in\mathcal O_F\) to compare the two generators.
+The scale of the lowering direction and its auxiliary
+period are
+\[
+  A_i=\pi h_i\frac{D}{\psi(e_i,f_i)}w_i^2,\qquad
+  b_i=\frac{a_i A_i}{D}.
+\]
+In particular \(b_i/(a_i A_i)=D^{-1}\). Writing
+\(\delta=\sqrt{-d}\) with \(\varphi_i(\delta)=i\sqrt d\),
+the other period quotient is
+\[
+   (a_i b_i\sqrt d/(2\pi))^{-1}
+       =\frac{r_i^2}{P_i\,\varphi_i(\xi\delta)} .
+\]
+All of these right-hand sides are algebraic.
+Since \(v_\ell(\varphi_i(\delta))=\frac12\mathbf1_{\ell=d}\),
+we obtain
+\[
+ v_\ell(a_i/\omega)\ge-a_0,\qquad
+ v_\ell\bigl((a_i b_i\sqrt d/(2\pi))^{-1}\bigr)
+     \ge-c_\ell-\tfrac12\mathbf1_{\ell=d}.
+\]
+The determinant and inverse-idempotent bounds just
+proved supply the other two valuations.
+
+\proofstep{The divided-power deformation.}
+Use the divided-power thickening of the chosen abelian scheme. In horizontal coordinates the prescribed variation of its Hodge submodule is
+\[
+ \operatorname{Fil}^1_{\boldsymbol t}=(1+\sum_i t_iM_i)\operatorname{Fil}^1_{0},
+\]
+with the original filtration extended to the jet ring.
+The real action and polarizations lift with the
+filtration because the indicated operators commute
+with that action and preserve the forms.
+Here use the divided-power jet lifting theorem for the integral level.
+Its base is a characteristic-zero local domain and its
+thickening is the truncated divided-power jet ring,
+with split augmentation and nilpotent divided-power
+kernel. The input endomorphisms are admissible for the
+real action, filtration and alternating forms, as are the
+lowering operators above. The theorem gives a polarized
+abelian scheme with real multiplication over that jet
+ring, together with the pullback to the augmentation.
+Under the horizontal de Rham identification, its
+Hodge submodule is the span of the prescribed jet lifts
+of the original filtration.
+
+If \(s_{\det}\) is the determinant lift and \(s_0\) the given generator at the origin, its normalization in the horizontal identification is
+\[
+ s_{\det}\bmod(t_1,\ldots,t_d)=s_0,
+\]
+where \(d\) is the number of deformation parameters.
+Complex base change identifies the integral jet and its lifted filtration with the analytic deformation used to calculate the periods.
+On the reductions modulo powers of \(\ell\) the
+underlying deformation comparison has \(\ell\) nilpotent,
+as in Grothendieck--Messing theory.
+\cite{messing}\label{cor:toric-twist-2}
+
+Transport the periods horizontally in that family.
+In the \(i\)-th real factor take complex combinations
+of the parallel cycles with holomorphic coordinate one
+and with zero holomorphic coordinate and antiholomorphic
+coordinate one, respectively. The latter cycle
+represents the Hodge direction at the origin.
+After the lowering it lies in the annihilator of
+the lifted holomorphic forms.
+
+Let \(P_i^{\rm hol}\) be the nonzero period on the first cycle and \(\varepsilon\) the period pairing sign. Evaluation on the second cycle gives
+\[
+          P_i^{\rm hol}(\zeta_i-\varepsilon A_i t_i)=0 .
+\]
+Its constant term is nonzero, so \(P_i^{\rm hol}\) is a unit
+in the complex jet ring. Hence \(\zeta_i=\varepsilon A_i t_i\) there.
+The determinant scale on the horizontal frame is
+\(C\). Indeed the parallel cycles with holomorphic
+coordinates the standard basis are on the opposite
+CM eigenlines, where the lowering operator is zero.
+Evaluating the lifted determinant on their wedge
+gives exactly the value at the origin.
+
+\proofstep{Extracting the coefficient of the prescribed jet.}
+Put \(g_\kappa=\partial^\kappa g(0)\) and
+\[
+ J_\kappa=g_\kappa\prod_i((b_i/a_i)^{\kappa_i}/a_i^{2s}).
+\]
+
+Let \(m=\ell^{c_E}\) and let \(R\) be the local ring
+of algebraic coefficients for the integral CM model,
+contained in the chosen valuation ring. It contains
+the rational \(\ell\)-integers. The weight-\(2s\) Hilbert
+Eisenstein form on each polarized component has
+integral nonconstant Fourier coefficients in the
+algebraic normalization. Its constant coefficient
+is the corresponding partial zeta value divided
+by \(2^{f_0}\). The partial zeta rationality theorem
+applies since \(F\) is totally real and \(s\ge1\).
+The integral model of the Hilbert moduli problem
+and the \(q\)-expansion principle on all components
+then gives the form multiplied by \(m\) over \(R\).
+For weight two the Fourier statement uses the value
+at zero of the continued family in real degree at
+least two. \cite{deligne-pappas,serre-tate}\label{cor:toric-twist-3}
+
+Use the divided-power algebra in the deformation parameters truncated at total degree
+\[
+ |\kappa|=\sum_i\kappa_i.
+\]
+
+The admitted de Rham operators of the integral CM
+model determine its deformation over this algebra.
+The lifted determinant generator reads the section
+as a scalar in the divided-power basis, with
+coefficient \(x\in R\) at the multi-index \(\kappa\).
+After base change to \(\mathbb C\), the lowering
+direction in the \(i\)-th coordinate has scale
+\(\varepsilon A_i\), where \(\varepsilon\in\{1,-1\}\).
+The determinant scale is \(C\). Comparing the divided
+power coefficient after base change gives
+\[
+       C^{2s}x=m g_\kappa\prod_i(\varepsilon A_i)^{\kappa_i}.
+\]
+
+In particular there is no factorial in this coefficient
+identity. The integral model comparison gives
+\(v_\ell(C/\prod_i a_i)\ge-f_0c_\ell\) and
+\(v_\ell(b_i/(a_i A_i))\ge-c_\ell\). Thus
+\[
+       J_\kappa=x m^{-1}
+         \left(\frac{C}{\prod_i a_i}\right)^{2s}
+         \prod_i\left(\frac{b_i}{\varepsilon a_i A_i}\right)^{\kappa_i}
+\]
+has valuation at least \(-c_E-2sf_0c_\ell-K_\kappa c_\ell\).
+At zero depth this is \(-c_E\).
+At positive depth the sum of the factorial valuations satisfies
+\[
+                  \sum_i v_\ell(\kappa_i!)\le K_\kappa/(\ell-1).
+\]
+Subtract this from the bound for \(v_\ell(J_\kappa)\) to obtain
+\[
+ v_\ell\!\left(J_\kappa/\prod_i\kappa_i!\right)
+    \ge -c_E-2sf_0c_\ell
+             -K_\kappa(c_\ell+1+\mathbf1_{\ell=2}) .
+\]
+\proofstep{Returning to the harmonic lattice sum.}
+The normalized coordinate derivative for the harmonic
+lattice sum is \((-1)^{K_\kappa}c_{2s}
+\prod_i(2s)_{\kappa_i} S_y(0)\), where \(c_{2s}\) is
+the defining lattice constant and \((2s)_a\) is the
+rising factorial. This identity follows by differentiating
+the continued defining sum. In the convergence region each
+derivative increases the relevant denominator exponent by
+one, supplying its successive factor, and continuity in
+the exponent gives the formula at the evaluation point.
+The definition of \(\Omega_*\) absorbs the same constant
+and rising factorials. Multiplying \(J_\kappa\) by
+\[
+   \prod_i (a_i b_i\sqrt d/(2\pi))^{-\kappa_i}
+                  (a_i/\omega)^{2s+2\kappa_i}
+\]
+leaves, up to the sign, \(S_y(0)/\Omega_*\).
+
+In the positive-depth case use the divided-power jet
+and also multiply by \(\prod_i\kappa_i!\). These
+factorials are integral at every prime. The two period
+factors cost \(K_\kappa(c_\ell+\tfrac12\mathbf1_{\ell=d})\)
+and \(Wa_0\), respectively. At zero depth \(\ell\ne d\)
+since the auxiliary field contains the imaginary quadratic
+subfield of discriminant \(-d\). The same multiplication
+then costs only \(Wa_0\). Adding these contributions
+and taking the twelfth power proves the stated local
+lattice estimate from the normalized jet inequalities.
+The coordinate and jet comparisons use the fixed CM
+type and base conductor. The auxiliary order and the
+class label may vary with these data and the coefficient
+prime fixed. \label{cor:toric-twist-4}
+\end{proof}
+
+\paragraph{Distribution at an added split place.}
+Write \(q\) for the size of the residue field of a finite place \(v\) of the totally real field
+that splits in the CM extension, and \(P,P^c\) for the places above it.
+The local completed order at depth one consists of
+pairs with equal residues. For a character unramified
+at \(v\), let \(u\) be its value on a uniformizer at
+\(P\), so its value at \(P^c\) is \(u^{-1}\). In the
+absolutely convergent half-plane write \(X=q^{-z}\),
+where \(z\) is the complex argument of the Hecke series.
+
+\begin{lemma}[Distribution at a split finite place]\label{lem:toric-split-distribution}
+With inverse Artin reciprocity on the ideal classes, removal of an
+auxiliary pair multiplies a value unramified at the pair by
+\[
+       (1-uX)(1-u^{-1}X)+(q-1)X^2,\qquad X=q^{-z},
+\]
+where \(u\) is the corresponding twisted uniformizer value on
+one factor. This relation holds on the remaining group-ring
+coordinates with the same period normalization.
+\end{lemma}
+
+\begin{proof}
+The two unit coordinates with equal residues give one
+class modulo the order units. Pairs with both
+coordinates divisible by a uniformizer give \(q-1\)
+unit cosets for each pair of positive valuations.
+There are no pairs with exactly one positive valuation.
+The local sum is consequently
+\[
+     1+(q-1)\frac{X^2}{(1-uX)(1-u^{-1}X)} .
+\]
+Relative to the original two Euler factors this is the
+polynomial
+\[
+          (1-uX)(1-u^{-1}X)+(q-1)X^2 .
+\]
+If the tested character is ramified at this place,
+only the simultaneous unit class contributes. The other
+terms sum to zero because the character on the ratio of
+residue units is nontrivial. The usual local factor of
+the Hecke series there is one as well. The exponent-one
+order is essential to the unit coset count.
+
+\proofstep{The unit group of the order.}
+To justify applying this computation to the lattice sum,
+we identify the global units of the order precisely.
+The base conductor is nonzero and proper and has an odd
+prime divisor of residual characteristic \(p\) unramified
+in \(E\) over \(\mathbb Q\). Let \(\mathfrak P\) be a prime of
+\(E\) above that divisor. If \(u\in\mathcal O_{\mathfrak c}^\times\),
+then \(u,\bar u\) are algebraic units and
+\[
+ u-\bar u\in\mathfrak c\mathcal O_E\subseteq\mathfrak P,
+\]
+since the image of the order modulo the conductor is real.
+All complex conjugates of \(u/\bar u\) have absolute value one.
+An algebraic integer with that property is a root of unity,
+as the monic polynomials of all its powers have bounded integral
+coefficients. At \(\mathfrak P\) the root lies in the principal unit
+group. Here the normalized local valuation satisfies \(v(p)=1\).
+
+If \(v(t)\ge1\) and \(t\ne0\), then \(v(pt)=1+v(t)\). The
+intermediate terms \(\binom pj t^j\), \(2\le j<p\), have valuation
+at least \(1+2v(t)\), and the final term has valuation \(pv(t)>1+v(t)\)
+because \(p\) is odd. Thus
+\[
+ v((1+t)^p-1)=v(pt)=1+v(t).
+\] For an exponent \(a\) prime to \(p\) the linear term
+gives \(v((1+t)^a-1)=v(t)\). For any positive exponent
+\(m=p^j a\) with \((a,p)=1\), iteration therefore gives
+\[
+                  v((1+t)^m-1)=v(t)+j<\infty .
+\]
+This is incompatible with \(m\)-torsion.
+Thus the principal unit group has no nonidentity torsion, and
+\(u=\bar u\). Both \(u\) and its inverse belong to \(\mathcal O_F\),
+so
+\[
+ \mathcal O_{\mathfrak c}^\times=\mathcal O_F^\times.
+\]
+
+
+With this equality,
+in the convergence half-plane group the nonzero lattice
+vectors by the corresponding integral finite ideles
+modulo the completed order units. Dividing each
+idele into a class representative and an element of
+\(E^\times\) identifies the fiber with the lattice vectors
+modulo the global order units. Homogeneity identifies
+its summand with the Hecke weight. The local
+order conditions and the multiplicativity of the weight
+give the Euler product. At a place of the base conductor
+the character has the prescribed exact conductor.
+In its nonunit layers the sum over the last available
+residue unit quotient vanishes by that conductor, leaving
+the primitive local factor. At all other unchanged
+places the full order gives the usual geometric series.
+The equality of the continued sums follows from the
+identity theorem, and at the desired value one
+substitutes
+\[
+ X=q^{-s}.
+\]
+
+
+\proofstep{The sign in the inverse-class map.}
+Pair removal will compare coefficients at a split prime through their ray classes. The transfer must therefore use the same convention for inversion as the distribution relation.
+
+For removal of one pair of auxiliary places, evaluate
+the abelian group-ring data on any character of the
+remaining Artin labels. Such a character is unramified
+at the removed place. Summing the removed coordinate
+amounts to forgetting it in the inverse-class map.
+A uniformizer at either place above \(v\) acts on the
+remaining labels through its inverse Artin class.
+Define \(Y\) to be the inverse of the image of \(\chi(P)\)
+in the coefficient field.
+
+With this reciprocity convention the unramified twisting factor at \(P\) is
+the value of the remaining character on its Frobenius.
+Thus evaluation at a remaining character \(\psi\) gives
+\[
+ u_\psi=Y^{-1}\psi(\operatorname{Frob}_P),\qquad
+ (1-u_\psi X)(1-u_\psi^{-1}X)+(q-1)X^2 .
+\]
+The second local root is \(u_\psi^{-1}\).
+The polynomial gives the same
+multiplicative relation at every tested character, so
+finite Fourier inversion proves the group-ring
+distribution. With all auxiliary places removed, the
+sum of the base coefficients is a nonzero scalar times
+the untwisted Hecke \(L(s,\chi)\). The character is unitary
+and is ramified at the base conductor, so the classical
+nonvanishing theorem for unitary Hecke \(L\)-functions
+on \(\RePart z\ge1\), away from the pole of a norm
+character, applies. Both the coefficient bound and this
+distribution refer to the same inverse-class map and
+the same period. \label{cor:toric-twist-5}
+\end{proof}

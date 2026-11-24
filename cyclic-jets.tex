@@ -1,0 +1,270 @@
+\subsection{Several letters and a linear program}
+\label{subsec:cycle-jets}
+\hypertarget{source-cyclic-jets}{}
+
+For a full Frobenius orbit the substitutions at successive positions are linked. The exponents contributing to one derivative must therefore satisfy constraints around the entire cycle.
+
+Index the \(d\) matrix variables \(Z_s\) by \(s\in\mathbb Z/d\mathbb Z\). At position \(s\) let the differential operator be a product of minors of the row-framed
+matrix \(Y_s\partial_{Z_s}\). A minor of height \(h\) uses the
+first \(h\) rows and a specified list of columns. Write \(A_s\)
+for the number of minors, \(A'_s\) for the number of height at
+least two, and \(H_s\) for the sum of their heights. Choose a set
+\(T\subseteq\mathbb Z/d\) of letters at which to treat the first
+row separately. Set
+\[
+ D_s=H_s-{\bf1}_{s\in T}A_s,\qquad
+ C_s=\begin{cases} A'_s&s\in T,\\ A_s&s\notin T.\end{cases}
+\]
+For nonnegative real capacities \(D_s\) allow a variable
+\(z_{sj}\ge0\) for each odd \(1\le j<d\).
+
+The variable \(z_{sj}\) uses \(p^jz_{sj}\) units at \(s\) and \(z_{sj}\) at \(s+j\); the sum of all uses
+at \(s\) is bounded by \(D_s\). Define
+\[
+ {\cal F}_p(D)=\gamma\sum_sD_s-\max\sum_{s,j}z_{sj}.
+\]
+By finite linear programming duality there are numbers
+\(0\le b_s\le1\) with
+\begin{equation}\label{eq:flow-dual}
+ p^jb_s+b_{s+j}\ge1\quad(j>0\text{ odd}),\qquad
+ {\cal F}_p(D)=\sum_sD_s(\gamma-b_s).
+\end{equation}
+Indeed the primal feasible set is nonempty and compact. Its
+dual minimizes \(\sum D_s b_s\) over nonnegative \(b_s\)
+with the indicated inequalities for \(j<d\). Capping each
+\(b_s\) by one preserves feasibility. For any other positive
+odd \(j\), reduce \(j\) modulo the even integer \(d\) and use
+nonnegativity.
+
+For \(s\in T\) put \(h_s=\min\{j>0:j\ {\rm odd},\ s+j\in T\}\),
+with minimum \(\infty\) allowed. Set
+\[
+ \begin{split}
+ T_s={}&\sum_{\substack{0<j<h_s\\ j\ {\rm odd}}}
+                 (A_sp^{-j}-C_{s+j})_+
+       +\sum_{\substack{j>h_s\\ j\ {\rm odd}}}A_sp^{-j},\\
+ W_s={}&\max\{C_{s-j}: j>0\ {\rm odd},\ p^j\le D_{s-j}\},
+ \end{split}
+\]
+where \(t_+=\max(t,0)\) and an empty maximum is zero. For each
+destination \(t\) form the list of pairs \((s,j)\), where
+\(s\in T\), \(j\) is a signed odd integer, \(s+j=t\), and
+\[
+       j>0\ \Longrightarrow\ p^j\le A_s,\qquad
+       j<0\ \Longrightarrow\ p^{-j}\le D_t .
+\]
+Denote its length by \(J_t\), and set
+\(a_*=\max(1,\max_{s\in T}A_s,\max_t C_t)\).
+
+\begin{proposition}\label{prop:cyclic-jet}
+Suppose \(N_0>0\) and \(J_t+{\bf1}_{t\in T}\le N_0\) for all \(t\).
+Use \(B\) as in Lemma~\ref{lem:two-differences}, an integral
+series \(U\), and the inverse \(g\) of the logarithms \({\cal L}\)
+on each matrix entry. Apply the product of all the framed minors
+to
+\[
+          U(g(Z))\exp\!\left(\pm\sum_{i,b}
+                        B\big((Z_{sib})_{s\in\mathbb Z/d}\big)\right)
+\]
+at zero. Each coefficient of the resulting frame polynomial has
+valuation at least
+\begin{equation}\label{eq:cyclic-gain}
+ {\cal F}_p(D)+\sum_{s\in T}(T_s-\gamma W_s)
+                    -dN_0N_1(1+\log_p a_*).
+\end{equation}
+\end{proposition}
+\begin{proof}
+Use independent indeterminates for the entries of the frames and
+the Gauss valuation. At each \(s\in T\) replace the first row
+\(Y_{s0}\) by its coordinatewise \(p^m\)-th powers, where
+\(m\ge\max_{(s,j)}(-j)\) and \(m\ge0\).
+This preserves the valuation of the frame polynomial since
+distinct monomials still have distinct exponent vectors. We
+construct at \(t\) new rows \(x_{tk}\). The distinguished first
+row at \(t\in T\) stays fixed.
+
+To the pair \((s,j)\) ending at
+\(t\) assign the covector
+\[
+                  \lambda_{s,j}=Y_{s0}^{\,p^{m+j}}
+\]
+using coordinatewise powers of the original first row. Reserve
+one distinct nondistinguished row at \(t\) for each of these
+covectors. The matrix of their evaluations on the reserved
+rows has unit determinant. To see this, reduce the polynomial
+modulo the maximal ideal and specialize the reserved rows to
+distinct coordinate vectors. These rows are independent of
+the covectors, since \(s\ne t\) by parity. In the resulting
+determinant each summand is a distinct monomial. At a given
+coordinate its variable and exponent recover the pair \((s,j)\)
+assigned there. This proves the unit assertion, also when the
+list is empty.
+
+Use the inverse evaluation matrix to replace the reserved rows
+by dual rows. Subtract the corresponding projections from each
+other nondistinguished row. Writing \(r(s,j)\) for the reserved row after this change of basis, the evaluation matrix on all nondistinguished rows becomes
+\[
+  \lambda_{s,j}(x_{tk})=\begin{cases}1&k=r(s,j),\\0&k\ne r(s,j).\end{cases}
+\]
+Both basis changes have integral coefficients.
+The old minor operators expand in these new rows with integral
+coefficients. A determinant with two occurrences of the same
+row vanishes.
+
+In any surviving monomial of differentiation with
+multi-index \(\kappa\), the distinguished row has degree exactly
+\(A_s\), the other rows at \(s\) total \(D_s\), and each of them
+has degree at most \(C_s\). At a selected letter, only a minor
+of height at least two can contribute to a nondistinguished row;
+the row change mixed only those rows with each other. In
+particular every coordinate of \(\kappa\) is at most \(a_*\).
+The row-by-row bounds on the differentiation orders read
+\[
+  \sum_b\kappa_{s0b}=A_s,\qquad \sum_{k\ne0,b}\kappa_{skb}=D_s,\qquad \sum_b\kappa_{skb}\le C_s\quad(k\ne0).
+\]
+
+In evaluating this monomial make the dual change of variables
+\(Z_{sab}=\sum_k x_{sk,a}Z'_{skb}\). It suffices to bound
+the series modulo the monomial ideal generated by
+\(({Z'}_i^{\kappa_i+1})_i\), since all coefficients entering
+\([{Z'}^\kappa]\) survive there. Initially give every variable
+weight \(\rho\). By Lemma~\ref{lem:two-differences} only the
+exceptional terms need an extra unit of weight for the
+exponential. In the expansion of such a term, a mixed choice of
+coordinates in either \(p\)-power of a linear form has
+multinomial coefficient divisible by \(p\). For the remaining
+choices write \(s+\alpha=t+\beta\), with \(s,t\) distinct and of
+opposite parity. For coordinates \(i=(s,k,b)\), \(i'=(t,k',b')\)
+the bad product is possible only for \(b=b'\). Its coefficient
+from that term, divided by the original coefficient of \(B\),
+is
+\[
+                \sum_a x_{sk,a}^{\,p^\alpha}
+                           x_{tk',a}^{\,p^\beta}.
+\]
+
+If \(i\) is distinguished and \(i'\) is not, let
+\(j=\alpha-\beta\). If the product survives truncation then
+\((s,j)\) belongs to the list at \(t\). If \(k'\) is not its
+reserved row, the last display is zero modulo \(p\). For \(j>0\)
+it is congruent to
+\((\lambda_{s,j}(x_{tk'}))^{p^\beta}\), and for \(j<0\) it is
+congruent to the same evaluation raised to \(p^\beta\), using
+\(x_{s0}=Y_{s0}^{p^m}\). Both congruences hold modulo the ideal
+\((p)\) of the integral coefficient ring by the binomial
+theorem.
+In particular, for an unreserved partner the evaluation contributes
+\[
+  \lambda_{s,j}(x_{tk'})=0\quad\Longrightarrow\quad \sum_a x_{s0,a}^{p^\alpha}x_{tk',a}^{p^\beta}\in(p).
+\]
+ Thus this case also recovers the missing unit.
+
+We specify extra input weights \(r_i\) for the remaining
+products. Give a distinguished row at \(s\) weight increment
+\(\epsilon_s\ge0\), requiring \(\epsilon_s\ge p^{-h_s}\) for
+finite \(h_s\). Give the nondistinguished rows at \(t\) increment
+\(b_t\), raised on the row reserved for \((s,j)\) to
+\[
+ \begin{cases}
+ \max(b_t,1-p^j\epsilon_s),&j>0,\\
+ \max(b_t,p^j),&j<0 .
+ \end{cases}
+\]
+For two nondistinguished rows, \eqref{eq:flow-dual} gives
+\(p^\alpha r_i+p^\beta r_{i'}\ge1\) after orienting the difference
+of exponents so that it is positive.
+
+For two distinguished rows
+in that orientation, the first has \(h_s\le\alpha-\beta\), so
+the same bound follows from its own increment. For one row of
+each kind, the reserved-row formula gives the bound with either
+sign of \(j\). Every surviving exponent term now has weight at
+least \(\theta\) at input weights \(\rho+r_i\). The exponential
+and the integral factor therefore have weight at least zero.
+Using the factorial formula as in \eqref{eq:one-letter-jet}, we
+obtain the lower bound
+\[
+       \sum_i\kappa_i(\gamma-r_i)-dN_0N_1(1+\log_p a_*).
+\]
+
+For a fixed \(s\in T\) the extra cost of the negative labels
+is at most \(W_s\sum_{j>0,\ j\ {\rm odd}}p^{-j}=\gamma W_s\).
+For the positive labels and the distinguished row, one can choose
+\(\epsilon=\epsilon_s\) so that
+\[
+ A_s\epsilon+
+ \sum_{\substack{j>0\ {\rm odd}\\(s,j)\ {\rm in\ a\ list}}}
+       C_{s+j}(1-p^j\epsilon)_+
+                \ \le\ A_s\gamma-T_s .
+\]
+Indeed the right side is the sum of
+\(\min(A_sp^{-j},C_{s+j})\) at odd \(j<h_s\), together with
+\(A_sp^{-h_s}\) when \(h_s\) is finite. Take the first odd
+\(j<h_s\) with \(A_sp^{-j}\le C_{s+j}\), or \(j=h_s\) if none
+exists.
+
+At a finite choice set \(\epsilon=p^{-j}\).
+For a finite choice the threshold has the two consequences
+\[
+  A_sp^{-i}>C_{s+i}\quad(0<i<j,\ i\ {\rm odd}),\qquad p^i\epsilon\ge1\quad(i\ge j).
+\]
+ All earlier
+positive-label costs are bounded by their \(C_{s+i}\); later
+ones and the one at \(j\) cost zero. The term at \(j\) pays for
+\(A_s\epsilon\). If the choice is infinite use \(\epsilon=0\)
+and all finite costs are bounded by the respective minima.
+This also verifies the lower bound on \(\epsilon_s\). The
+nondistinguished baseline is
+\(\sum D_t(\gamma-b_t)={\cal F}_p(D)\), and the distinguished
+baseline at \(s\), before paying costs, is \(\gamma A_s\).
+Adding gives \eqref{eq:cyclic-gain}.
+\end{proof}
+
+For comparison with the common chain, write \(V_s=(k-1)w_s\)
+with \(k\ge3,\ w_s>0\), and suppose
+\[
+      D_s=V_s+E_s-2{\bf1}_{s\in T}w_s,\qquad
+                         0\le E_s\le4w_s .
+\]
+Then
+\begin{equation}\label{eq:flow-comparison}
+            {\cal F}_p(D)\ge {\cal F}_p(V)
+                                   -\frac{11}{p}\sum_s w_s .
+\end{equation}
+To prove this take an optimum \(b\) in \eqref{eq:flow-dual}
+for \(V\), and let \(H=\{s:b_s\ge2/p\}\). Complementary
+slackness with an optimum flow shows that every vertex of \(H\)
+has saturated capacity, and every edge starting there has zero
+flow, since its dual constraint is strict. Hence
+\(\sum_{s\in H}V_s\) is the total flow into \(H\). Summing the
+capacity inequalities shows \(p\sum z_{sj}\le\sum_sV_s\), so
+
+\[
+  \sum_H w_s\le p^{-1}\sum_s w_s.
+\]
+ In the dual formula,
+increasing \(V\) by \(E\) decreases its objective at this \(b\)
+by at most \(\sum E_s(b_s-\gamma)_+\). On \(H\) use \(b_s\le1\);
+outside \(H\) use \(\gamma\ge1/p\). The resulting loss is at
+most \((8/p)\sum w_s\). Finally adding \(2{\bf1}_T w\) to
+\(D\) increases its optimum dual objective by at most
+\(2\gamma\sum_T w_s\), since every feasible \(b\) is
+nonnegative. As \(2\gamma\le3/p\), this proves
+\eqref{eq:flow-comparison}.
+Together the two changes of capacities cost at most
+\[
+  \frac8p\sum_s w_s+2\gamma\sum_s w_s\le\frac{11}{p}\sum_s w_s.
+\]
+
+Taking the smaller numerator \(A_s-A'_s\) and subtracting
+\(C_{s+j}\) at every odd \(j\ne h_s\) can only reduce \(T_s\).
+Replacing \(D_{s-j}\) by \(H_{s-j}\) in the definition of \(W_s\)
+can only increase the loss. If \(H_s\le a\), the number of
+positive and negative labels at one destination is at most
+\(2\log_p a+2\): for each signed \(j\) there is just one source.
+Thus \(2\log_p a+2\le N_0-1\) suffices for the row count; also
+\(a_*\le\max(1,a)\). These observations give the constants
+\(11\) for the capacity error and \(1\) for the digit loss in
+the split bound. A common unit rescaling of the local variables
+multiplies a homogeneous jet by a unit and leaves its valuation
+unchanged.  \label{cor:cyclic-jets-1}

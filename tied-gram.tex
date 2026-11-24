@@ -1,0 +1,241 @@
+\subsection{The Gram matrix when a weight varies}
+\hypertarget{source-tied-gram}{}
+
+To apply Lemma~\ref{lem:smith-average}, we need a matrix polynomial with a controlled determinant. A decomposition by the degree of the final vector produces it from the Gram form.
+
+Let \(f\) be a polynomial in the \(b\) vector or covector variables of a fixed initial segment, each having \(r\) coordinates. Their degrees are \(o_i\), the
+total degree is \(S\), and the last letter \(w\) is a vector of
+degree \(o\). The others may be vectors or covectors. The Fock
+pairing is bilinear, with orthogonal monomials and squared
+monomial norms \(\prod_\alpha m_\alpha!\). Choose a coordinate
+\(\rho\) and add a covector \(\eta\) of variable degree \(n\ge S\).
+Define the substitution \(T_\eta\) on each vector \(v\) and covector \(u\). For every \(i\ne\rho\) its coordinate rules are
+\[
+ \begin{aligned} (T_\eta v)_\rho&=v\cdot\eta, & (T_\eta v)_i&=\eta_\rho v_i,\\ (T_\eta u)_\rho&=\eta_\rho u_\rho, & (T_\eta u)_i&=\eta_\rho u_i-u_\rho\eta_i. \end{aligned}
+\]
+Set \(f_n=\eta_\rho^{n-S}T_\eta f\). Evaluating at the \(\rho\)-th coordinate vector recovers
+\(f\). In particular the substitution is an integral injection.
+
+Let \(U\) multiply by \(w\cdot\eta\), let
+\(D=\sum_i\partial_{w_i}\partial_{\eta_i}\), and let \(z\)
+be the nonnegative integer decoration of this adjacent pair.
+Write \(B=o+n+r+z-1\) and define
+\[
+ \Phi_z=\sum_{j=0}^o\frac{(-1)^j U^jD^j}
+                           {(j!)^2\binom Bj},\qquad
+ \Gamma_n(f,g)=\binom Bo\,
+       \frac{\langle\Phi_z f_n,g_n\rangle}
+            {(n-S)!\,S!\prod_i o_i!}.
+\]
+Multiplication \(U\) and contraction \(D\) are adjoint for the Fock pairing. The scalar
+in this formula is used before the bound on small Smith factors.
+
+\begin{lemma}[Polynomial Gram pairing at a tied pair]
+\label{lem:tied-gram-polynomial}
+For fixed inputs and fixed decoration \(z\), \(\Gamma_n\) is polynomial
+in \(n\) of degree at most \(S+o\). For integral inputs its entries
+after multiplication by \(p^u\) lie in the integral binomial basis, with
+\[
+ u=\left\lceil ((b+3)r+1)
+                    (1+\log_p(\max(1,3S)))\right\rceil .
+\]
+If a basis \((f_i)\) is adapted to the filtration by order in \(w_\rho\),
+write \(e_i\) for the order of \(f_i\), \(l\) for its size and
+\(d_0=\sum_i(S+o-e_i)\). Suppose each normalized graded determinant
+has valuation at most \(v_*\) times its rank. For \(S,z\le2a\) the
+determinant of \((p^u\Gamma_n(f_i,f_j))\) has degree \(d_0\) and leading
+coefficient \(C\) with
+\[
+ v(C)+d_0/(p-1)\le
+     l\big(u+v_*+3(1+\log_p(8a+r))\big).
+\]
+\end{lemma}
+
+\begin{proof}
+\proofstep{Degree in the varied weight.}
+Each entry is polynomial in \(n\) of degree at most \(S+o\).
+In the \(j\)-th term move \(U^j\) by adjunction.
+The ratio \(\binom Bo/\binom Bj=\binom{B-j}{o-j}/\binom oj\)
+is polynomial of degree \(o-j\). To see the remaining polynomial,
+put \(m=n-S\). Before applying \(D^j\), the two occurrences of
+\(\eta_\rho\) in a monomial pairing have powers \(m+t,m+t'\),
+where \(0\le t,t'\le S\). If the differentiation orders there
+are \(a,a'\), the residual powers must agree. Their contribution,
+including the Fock factorial and division by \(m!\), is
+\[
+   \frac{(m+t)!}{m!}(m+t')_{\underline{a'}},
+       \qquad t-a=t'-a' .
+\]
+All remaining factors are independent of \(m\). This polynomial
+has degree \(\le S+j\), and its falling factorial also gives the
+correct zero when the differentiation order is too large.
+
+\proofstep{Integrality in the binomial basis.}
+For integral inputs we can clear the binomial-basis denominators
+with logarithmic loss. Evaluate at the consecutive integers
+\(S\le n\le S+S+o\le3S\). In the expansion of \(D^j/j!\)
+let \(h_i\) contractions take place at coordinate \(i\).
+On a monomial with exponents \(u_i,v_i\) in \(w,\eta\), the multi-index \(h\) contributes the coefficient
+\[
+ \prod_i\frac{u_i^{\underline{h_i}}v_i^{\underline{h_i}}}{h_i!} =\prod_i h_i!\binom{u_i}{h_i}\binom{v_i}{h_i},\qquad \sum_i h_i=j.
+\]
+Use this on both sides, with multiplicities \(h_i,h'_i\).
+
+If the resulting monomial has exponent vector \(d\), the
+numerator contains \(\prod_\alpha d_\alpha!\prod_i h_i!h'_i!\).
+The sum of the factorial arguments is exactly \(S+n\), the
+same as for \((n-S)! S!\prod_i o_i!\). Legendre's formula
+gives
+\[
+  0\le t/(p-1)-v(t!)\le 1+\log_p(\max(1,t)).
+\]
+There are at most \((b+3)r\) numerator factorials. The additional
+denominator \(\binom oj\) costs at most \(1+\log_p(\max(1,o))\)
+by counting carries in base \(p\). The other factor
+\(\binom{B-j}{o-j}\) is integral for every \(z\). Thus the
+values become integral after multiplication by \(p^u\) for
+\[
+ u=\left\lceil\big((b+3)r+1\big)
+                \big(1+\log_p(\max(1,3S))\big)\right\rceil .
+\]
+Taking forward differences at \(S\) recovers the integral
+coefficients in the basis \(\binom{n-S}{j}\). Translation
+through an integer preserves the integral binomial basis,
+so the hypothesis on the entries in \eqref{eq:smith-average}
+holds with \(\delta=2S\).
+
+\proofstep{The leading harmonic pairing.}
+We compute the leading coefficient to keep the dependence on
+\(S\) out of the final valuation allowance. Write \(e(f)\) for
+the least exponent of \(w_\rho\) in a nonzero \(f\), and \(I_e f\)
+for its terms of exponent exactly \(e\). For
+\(e=e(f),e'=e(g)\) one has
+\begin{align}
+ \deg\Gamma_n(f,g)&\le S+o-\max(e,e'),\label{eq:tie-degree}\\
+ {}[n^{S+o-e}]\Gamma_n(f,g)
+   &=\frac{e!\binom{z+e}{e}}{o!\,S!\prod_i o_i!}
+                   \langle I_e f,I_e g\rangle
+                      \qquad(e=e').\label{eq:tie-top}
+\end{align}
+It suffices to prove these rational identities on monomials,
+so we can use the positive real Fock metric to compute the
+leading coefficient there. On bidegree \((o,n)\) the orthogonal
+decomposition by powers of \(U\) has summands \(U^j\ker D\)
+with harmonic factors of degrees \((o-j,n-j)\). Indeed
+\((\ker D)^\perp=\operatorname{im}U\), and iteration gives the
+summands. The commutator \([D,U]\) is the sum of the two Euler
+operators plus \(r\), which proves orthogonality by moving powers
+of \(U\) across the pairing.
+
+It gives the eigenvalue of
+\(\Phi_z\) on the \(j\)-th summand as
+\[
+ \sum_{l=0}^j (-1)^l\binom jl
+       \binom{o+n+r-j-1}{l}/\binom Bl
+      =\binom{z+j}{j}/\binom Bj .
+\]
+The equality is inclusion--exclusion for a sample of \(j\)
+objects from \(B\) objects, of which \(o+n+r-j-1\) are forbidden.
+Thus the eigenvalue is \(O(n^{-j})\) for fixed prefix and \(z\).
+The image \(f_n\) belongs to \(U^e\) times the smaller bidegree,
+since the substitution sends \(w_\rho\) to \(w\cdot\eta\).
+Also
+\[
+ \|f_n\|^2/(n-S)!=O(n^S)
+\]
+by expanding its monomials.
+Only levels \(j\ge\max(e,e')\) can pair, proving
+\eqref{eq:tie-degree}. The real limits here extract coefficients
+at fixed prefix. The uniform estimates used as the prefix grows
+are the ensuing factorial valuations.
+
+For \(e=e'\), write \(f_n=U^e h_n\). The polynomial \(h_n\)
+is \(\eta_\rho^{n-S}\) times the substitution on
+\(h=f/w_\rho^e\), and has bidegree \((o-e,n-e)\).
+Use \(g_n=U^e h'_n\) in the same way. After division by \((n-S)!\), a level \(j>e\) contributes at most
+\[
+ O(n^{S})\,O(n^{-j})=O(n^{S-j})=O(n^{S-e-1}).
+\]
+Thus only level \(e\) can survive at order \(n^{S-e}\).
+
+Let \(P\) be the harmonic projector on this smaller bidegree.
+Its formula is the sum defining \(\Phi_z\), with degrees
+\(o-e,n-e\) and denominator parameter \(o+n-2e+r-2\).
+The same eigenvalue identity gives one on level zero and zero
+on the higher levels (use the binomial identity at \(z=-1\)).
+Only large \(n\) are needed in this limit. On harmonic vectors
+\[
+ D^eU^e=e!\,(o+n-2e+r)^{\overline e}.
+\]
+Multiplying by the level-\(e\) eigenvalue therefore tends to
+\((e!)^2\binom{z+e}{e}\).
+
+The remaining harmonic pairing has limit
+\[
+  \lim_{n\to\infty}\frac{\langle P h_n,h'_n\rangle}
+                            {(n-S)!\,n^{S-e}}
+       =\langle h|_{w_\rho=0},h'|_{w_\rho=0}\rangle .
+\]
+In the \(l\)-th term of \(P\), move the \(l\) multiplications
+across as derivatives. The term before the projector coefficient,
+divided by \((n-S)! n^{S-e+l}\), tends to
+\(\langle \partial_{w_\rho}^l h,\partial_{w_\rho}^l h'\rangle\).
+To check the powers, let \(d,d'\) count occurrences of
+\(\eta_i\), \(i\ne\rho\), and \(a,a'\) the respective numbers
+of derivatives falling there. A contributing pair has
+\(d-a=d'-a'\). After factorial division its degree is at most
+\[
+ S-e+l-\underbrace{(d-a)}_{\ge0}-a-a'\le S-e+l.
+\]
+Equality forces \(a=a'=0\) and \(d-a=d'-a'=0\), hence \(d=d'=0\).
+
+The coefficient of the pure
+\(\eta_\rho\)-power in the substituted \(h\) is \(h\) itself.
+This proves the limit term by term. The leading projector
+coefficient is \((-1)^l/(l! n^l)\). On the terms of \(w_\rho\)-degree \(t\) in each argument,
+moving the derivatives across the Fock form and the factor
+\(1/l!\) give the scalar
+\[
+       \sum_{l=0}^t(-1)^l\binom tl
+           =\begin{cases}1,&t=0,\\0,&t>0.\end{cases}
+\]
+Distinct degrees are orthogonal. Thus the limiting operator
+keeps only the restrictions \(w_\rho=0\). Restoring the factor
+\(w_\rho^e\) in the initial terms multiplies this pairing by
+\(e!\). Finally \(\binom Bo/n^o\to1/o!\),
+which proves \eqref{eq:tie-top}.
+
+\proofstep{The leading determinant in a filtration basis.}
+Choose a basis \(f_i\) adapted to the integral filtration by
+vanishing order, so that the \(I_e f_i\) of order \(e\) form
+a basis for the image at graded order \(e\). Such a basis
+exists over a DVR by successive lifting from the free graded
+images of the coefficient map. In the determinant of
+\((p^u\Gamma_n(f_i,f_j))\) the degree is at most
+\(d_0=\sum_i(S+o-e_i)\). For a permutation \(\pi\) the excess in vanishing orders is
+\[
+ \sum_i\max(e_i,e_{\pi(i)})-\sum_i e_i =\tfrac12\sum_i|e_i-e_{\pi(i)}|.
+\]
+Thus its determinant term can attain degree \(d_0\) only if \(e_i=e_{\pi(i)}\) throughout, by
+\eqref{eq:tie-degree} and \(\sum_i e_i=\sum_i e_{\pi(i)}\).
+
+Consequently its top coefficient is the product of the
+determinants of the graded Fock forms normalized by \(\prod o_i!\),
+times
+\[
+                  \prod_i\frac{p^u e_i!\binom{z+e_i}{e_i}}
+                                         {o!\,S!}.
+\]
+If each normalized graded determinant has valuation at most
+\(v_*\) times its rank, the top coefficient is nonzero. For
+\(S,z\le2a\), Legendre's formula and the carry bound give
+\[
+  v(C)+d_0/(p-1)\le l\big(u+v_*+3(1+\log_p(8a+r))\big),
+\]
+where \(l\) is the size of the matrix. Indeed the three
+linear factorial terms cancel \((S+o-e_i)/(p-1)\) in every
+row, and the digit error from \(e_i!\) has favorable sign.
+This supplies the polynomial and the precise leading-coefficient
+input to \eqref{eq:smith-average} from a bound on the graded
+form.
+\end{proof}

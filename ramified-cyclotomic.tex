@@ -1,0 +1,511 @@
+\subsubsection*{The integral Hodge--Tate estimate at full cyclotomic level}
+\label{subsec:ramified-ht}
+\hypertarget{source-ramified-cyclotomic}{}
+
+The small-prime comparison needs an integral bound for invariants. We first pass to the field containing all roots of unity at the chosen cyclotomic level and keep track of the power of the coefficient prime needed to return to the original lattice.
+
+Let \(F_0/\mathbb Q_\ell\) be finite unramified and
+\(F_j=F_0(\mu_{\ell^j})\). The local lattices in this
+argument are first restricted to \(F_s\), with \(s\ge1\)
+and \(s\ge2\) at two. Include \(F_s\) in the finite
+coefficient field. Normalize \(v(\ell)=1\) and let
+\(L\subset V\) be the original stable lattice.
+Write its jump interval as \([-a,b]\), and choose the depth by
+\[
+ H=a+b,\qquad n_0=\min\{n\ge0:H\le(\ell-1)\ell^n\},\qquad M=2s+n_0+1.
+\]
+
+\begin{proposition}[Integral cyclotomic comparison at the full ramified level]
+\label{prop:ramified-integral-wach-comparison}\label{hyp:ramified-integral-wach-comparison}
+Put \(S=\mathcal O_{F_0}[[\pi]]\), \(X=(1+\pi)^{\ell^{s-1}}-1\), \(Q=\varphi(X)/X\), and \(\Gamma_s=\operatorname{Gal}(F_\infty/F_s)\), where \(F_\infty=\bigcup_jF_j\). Let \(T\) be a crystalline lattice over \(F_s\) with jumps in \([-a,b]\). Its cyclotomic module \(N=N(T)\) is finite free over \(S\), is functorial in \(T\), and generates the associated integral étale module. For a generator \(\gamma\) of \(\Gamma_s\),
+\[
+ (\gamma-1)N\subset XN,\qquad
+ Q^a\varphi^*N\subset N,\qquad Q^bN\subset\varphi^*N.
+\]
+Here \(\varphi^*N\) denotes the image of linearized Frobenius.
+
+Inside the common period space the corresponding bounds are
+\[
+  X^b(A_{\inf}\otimes T)\subset A_{\inf}N
+                     \subset X^{-a}(A_{\inf}\otimes T).
+\]
+At every root of \(Q\), write \(t=\log(1+\pi)\) for a local uniformizer. In a basis \((v_j)_j\) adapted to the filtration, indexed with multiplicity by its jumps, the rational completed lattice is \(\bigoplus_j F'[[t]]t^{-j}v_j\) over a splitting field \(F'\). The module of a kernel is the kernel on integral modules.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Specialize the Kisin--Ren classification.}
+Use the multiplicative Lubin--Tate group over \(L=\mathbb Q_\ell\) with uniformizer \(\ell\). Its \(\ell^s\)-division points are \(\zeta-1\) for \(\zeta^{\ell^s}=1\), and \(K=F_s\) is contained in \(F_0L_\infty\). Thus one may take \(m=s\) in the construction of Kisin and Ren. Their three elements are
+\[
+ [\ell](\pi)=(1+\pi)^\ell-1,\quad
+ P=[\ell^{s-1}](\pi)=X,\quad
+ [\ell^s](\pi)/[\ell^{s-1}](\pi)=Q .
+\]
+Since \(K\otimes_{\mathbb Q_\ell}L=K\), their crystalline condition imposes no further filtration condition. The Lie algebra condition of \(L\)-analyticity is automatic for \(L=\mathbb Q_\ell\). Their integral equivalence therefore applies to the underlying \(\mathbb Z_\ell\)-lattices of all the representations here. We use the covariant module, equivalently the contravariant construction on the dual lattice. \cite[Sections~2.1, 2.4 and Corollary~3.3.8]{kisin-ren-lubin-tate}
+
+Any extra coefficient action comes along by functoriality. For coefficient integers \(O\) containing \(\mathcal O_{F_0}\), the unramified embeddings give
+\[
+ O\otimes_{\mathbb Z_\ell} S\simeq
+   \prod_{\tau:F_0\hookrightarrow\operatorname{Frac}O} O[[\pi]] .
+\] On each summand, reduction of \(N\) modulo \(\pi\) is \(\ell\)-torsion-free and hence free over \(O\). Lift a basis. It generates by Nakayama's lemma and is independent by successive reduction modulo \(\pi\), since \(N\) has no \(\pi\)-torsion.
+
+\proofstep{Read the filtration and the two integral bounds.}
+The filtered-module construction makes modifications at the roots of \(Q,\varphi Q,\varphi^2 Q,\ldots\). At a root of \(Q\) the defining completed lattice is the degree-zero filtration on \(F'((t))\otimes D_{\rm dR}\); the preceding root reached by Frobenius is unmodified. An adapted basis therefore gives
+\[
+   N^{\wedge}=\bigoplus_j F'[[t]]t^{-j}v_j,\qquad
+   (\varphi^*N)^{\wedge}=\bigoplus_j F'[[t]]v_j .
+\]
+Here \(Q\) has a simple zero, so these relative exponents give both height bounds after inverting \(\ell\). Integrally, the Frobenius matrix and its inverse already have entries in \(S[1/Q]\). The required products by powers of \(Q\) have no poles at any factor of \(Q\) by the calculation just made. Hence they lie in \(S\): division by the distinguished monic polynomial \(Q^k\) has an integral remainder, and a remainder vanishing after inverting \(\ell\) is zero. \cite[Section~2.2, Lemmas~2.2.1 and~2.2.5]{kisin-ren-lubin-tate}
+
+The lower height bound gives
+\[
+      \varphi^*(X^a N)=X^aQ^a\varphi^*N\subseteq X^aN .
+\] Lemma~3.2.1 of Kisin and Ren evaluates every integral functional of its étale lattice on this module in their integral period ring \(S^{\rm ur}\subset A_{\inf}\). Multiplication by \(X\) is invertible in the étale coefficient ring. Evaluating on a basis of \(T^\vee\) thus gives \(X^aN\subset A_{\inf}\otimes T\). The dual module has jumps in \([-b,a]\); the identical argument yields
+\[
+     X^bN^\vee\subset A_{\inf}\otimes T^\vee
+        \quad\Longrightarrow\quad
+     X^b(A_{\inf}\otimes T)\subset A_{\inf}N .
+\]
+The implication uses the perfect evaluation pairing for a finite free module. \cite[Lemma~3.2.1 and Corollary~3.3.8]{kisin-ren-lubin-tate}
+
+\proofstep{Pass from the parameter \(\pi\) to the full divisor \(X\).}
+The classification gives trivial action modulo \(\pi\). Consider any \(z=\zeta-1\) with \(\zeta^{\ell^{s-1}}=1\). The group \(\Gamma_s\) fixes \(z\), and \(Q(z)=\ell\ne0\). Over the fraction field, Frobenius identifies the fibre at \(z\) with the coefficient twist of the fibre at \(\zeta^\ell-1\). Frobenius commutes with \(\gamma\). Iteration from the fibre at zero shows that \(\gamma\) acts trivially on all these fibres. They are the distinct roots of \(X\), so monic division gives
+\[
+                         (\gamma-1)N\subset XN.
+\]
+
+For a surjection \(T_1\to T_2\) with kernel \(T'\), the rational modified lattices are exact. Away from their modifications this follows from exactness of the crystalline modules. At each modification the completed lattices are the filtered modules above, and the induced map is strictly surjective for the filtration. This also proves exactness on \(S[1/\ell]\): any nonunit irreducible there is represented by a distinguished polynomial and is tested in the corresponding local completion.
+
+The integral module for \(T'\) is the intersection of its étale lattice with its rational module, as in the proof of Corollary~3.3.8 of Kisin and Ren. Combining rational and étale exactness yields
+\[
+                         N(T')=\ker(N(T_1)\longrightarrow N(T_2)).
+\]
+The integral cokernel \(C\) is killed by a power of \(\ell\) by rational surjectivity. After reduction modulo \(\ell\) it vanishes upon inverting \(\pi\), by étale surjectivity. Hence \(\pi^d C\subset\ell C\) for some \(d\); iteration shows that some power of \(\pi\) kills \(C\). Section~\ref{subsec:ramified-lift} removes the dependence on this preliminary power. \cite[Proposition~2.2.6 and Corollary~3.3.8]{kisin-ren-lubin-tate}
+\end{proof}
+
+\begin{lemma}[Finite classes and restricted Herr pairs]\label{lem:ramified-restricted-herr}
+For \(T\) as in Proposition~\ref{prop:ramified-integral-wach-comparison} with jumps in \([-h,h]\), put \(N=N(T)\). Every cocycle in
+\[
+   Q^{-h}N\oplus XN,\qquad
+   d(y,z)=(\gamma-1)y-(\varphi-1)z ,
+\]
+defines an integral class with crystalline rational extension. After inverting \(\ell\), these pairs represent all finite classes, and two such pairs have the same class precisely when their difference is \(((\varphi-1)w,(\gamma-1)w)\) with \(w\in N[1/\ell]\).
+\end{lemma}
+
+\begin{proof}
+Given a cocycle \((y,z)\), adjoin one generator \(v\) to \(N\). Define its Frobenius and cyclotomic action by
+\[
+      \varphi(v)=v+y,\qquad\gamma(v)=v+z .
+\]
+The cocycle equation says exactly that the operators commute. Write \(\Phi_N\) for the Frobenius matrix on \(N\). After inverting \(Q\), the linearized Frobenius has inverse
+\[
+   \begin{pmatrix}\Phi_N & y\\ 0 & 1\end{pmatrix}^{-1}
+     =\begin{pmatrix}\Phi_N^{-1}&-\Phi_N^{-1}y\\0&1\end{pmatrix}.
+\] The cyclotomic generator acts trivially modulo \(\pi\) because \(z\in XN\). Its powers extend continuously to \(\Gamma_s\simeq\mathbb Z_\ell\). Indeed, \(\gamma\) acts trivially on \(I/I^2\) and on the module modulo \(I\), where \(I=(\ell,\pi)\). For \(M=N\oplus Sv\) this gives
+\[
+  (\gamma-1)I^kM\subset I^{k+1}M,\qquad
+  \lim_{n\to\infty}\gamma^{\ell^n}=1\quad\text{on each }M/I^kM
+\]
+by the binomial expansion.
+
+This is an object of the Kisin--Ren category for \(L=\mathbb Q_\ell\); its associated lattice is crystalline after tensoring with \(\mathbb Q_\ell\). In the étale module the two differences of \(v\) are its usual Herr representative. For the new lift \(v+w\) its pair is
+\[
+    (y,z)+\bigl((\varphi-1)w,(\gamma-1)w\bigr).
+\] \cite[Theorem~1.6 and Corollary~3.3.8]{kisin-ren-lubin-tate}
+
+Conversely, a rational finite class is a crystalline extension of the trivial representation by \(T[1/\ell]\). It admits a stable lattice extension after scaling the class: a continuous cocycle on the compact Galois group has bounded image. On the corresponding cyclotomic modules the surjection to the trivial module is rationally onto by Proposition~\ref{prop:ramified-integral-wach-comparison}. The kernel identity and the bounds on the extension module put the differences of any such lift \(v\) in
+\[
+  (\varphi-1)v\in Q^{-h}N[1/\ell],\qquad
+  (\gamma-1)v\in XN[1/\ell].
+\]
+
+Indeed, if \(N'\) is the extension module, multiplication by \(Q^h\) reduces the first intersection to the kernel identity. For the second, \(Xn'\) in the kernel implies that the image of \(n'\) in the free trivial quotient is zero. Thus the intersections inside the rational étale module are
+\[
+ Q^{-h}N'[1/\ell]\cap D_{\rm et}(T[1/\ell])=Q^{-h}N[1/\ell],
+ \qquad XN'[1/\ell]\cap D_{\rm et}(T[1/\ell])=XN[1/\ell].
+\]
+Here \(D_{\rm et}\) denotes the cyclotomic étale module.
+
+An equality of rational extension classes gives an isomorphism of extensions inducing the identity on kernel and quotient. Full faithfulness of the cyclotomic equivalence carries it back to the modules. It changes the chosen lift by a single \(w\in N[1/\ell]\), giving the asserted description of coboundaries. \cite[Corollaries~2.4.4 and~3.3.8]{kisin-ren-lubin-tate}
+\end{proof}
+
+At the full level, Proposition~\ref{prop:ramified-integral-wach-comparison} gives the integral Hodge--Tate bounds below. Lemma~\ref{lem:ramified-restricted-herr} will enter when lifting finite classes across a surjection.\label{cor:ramified-cyclotomic-1}
+
+\begin{proposition}[Integral Hodge--Tate coordinates at full cyclotomic level]\label{prop:full-level-ht-coordinates}
+With the module of Proposition~\ref{prop:ramified-integral-wach-comparison}, over \(F_s=F_0(\mu_{\ell^s})\), with \(F_0/\mathbb Q_\ell\)
+unramified and \(s\ge2\) at two, for each embedding \(\tau\)
+there are coordinates with image lattice \(B'\) and semilinear generator matrix \(U\) at level \(M\) such that
+\[
+ B_r\subseteq B'\subseteq\ell^{-1}B_r,\qquad v((U-1)_{ij})>1/(\ell-1)\quad\text{for all }i,j.
+\] A vector of the rational
+space whose image belongs to \(B'\) lies in the original
+stable lattice, and the graded de Rham comparisons identify
+the twist coordinates with the Hodge--Tate jumps at \(\tau\).
+\end{proposition}
+
+\begin{proof}
+\proofstep{Specialize the two height inclusions in the same Wach basis.}
+In the Wach comparison the height sandwich is
+\[
+ X^b (A_{\inf}\otimes L)\ \subseteq\ A_{\inf}N
+    \ \subseteq\ X^{-a}(A_{\inf}\otimes L),
+ \qquad X=(1+\pi)^{\ell^{s-1}}-1.
+\]
+Here the coefficient tensor products and the images
+in the common period module are understood.
+Use the Wach basis after multiplying its columns
+by \(X^a\), so they can be read in the \(A_{\inf}\)
+lattice.
+
+Choose compatible primitive roots with \(\zeta_{\ell^0}=1\)
+and put \(\epsilon=(1,\zeta_\ell,\zeta_{\ell^2},\ldots)\) and
+\(\pi=[\epsilon]-1\). For every \(k\ge0\), Fontaine's map
+\(\theta\) and the Witt Frobenius give
+\[
+  (\theta\circ\varphi^{-k})([\epsilon])
+       =(\epsilon^{1/\ell^k})^\sharp=\zeta_{\ell^k}.
+\]
+The sharp map takes the limit of the \(\ell^j\)-th powers of
+the lifted \(j\)-th components. Here every such power equals
+\(\zeta_{\ell^k}\). We specialize at the absolute depth
+\(d_0=s+n_0\). Thus
+\begin{equation}\label{eq:full-level-fontaine-map}
+ \pi\longmapsto\zeta_{\ell^{d_0}}-1,\qquad
+ X\longmapsto c=\zeta_{\ell^{n_0+1}}-1,\qquad
+ v(c)=\frac{1}{(\ell-1)\ell^{n_0}} .
+\end{equation}
+
+On \(\mathcal O_{F_0}\) the map acts by inverse unramified
+Frobenius to power \(d_0\). It permutes the unramified embeddings.
+In an integral \(\mathbb Z_\ell\)-basis the action of the extra coefficient
+integers is by endomorphisms of the underlying Wach module.
+Their matrix entries lie in \(\mathcal O_{F_0}[[\pi]]\).
+Evaluation therefore puts these entries in
+\(\mathcal O_{F_{d_0}}\subset\mathcal O_{F_M}\).
+The change of basis to the original period lattice itself can
+have entries in \(\mathcal O_{\mathbb C_\ell}\).
+
+Taking the Wach basis columns times a
+\(\mathbb Z_\ell\)-basis of the coefficient integers gives
+a square matrix \(D\) on the underlying \(\mathbb Q_\ell\)
+coordinates. The specialized sandwich puts its ball
+image between \(c^H B_d\) and \(B_d\), where
+\(B_d=\mathcal O_{\mathbb C_\ell}^d\).
+Since
+\[
+ v(\ell)-v(c^H)=1-\frac{H}{(\ell-1)\ell^{n_0}}\ge0,
+\]
+it follows that \(D\) is invertible and
+\[
+                       \ell B_d\subseteq DB_d\subseteq B_d.
+\]
+The action and the coefficient multiplication in this
+basis have matrices over \(\mathcal O_{F_M}\).
+Indeed their columns are the specialized
+Wach-coordinate expressions in the same basis.
+The multiplication by \(X^a\) cancels in the action
+comparison because \(c\) is fixed at level \(M\).
+On the cyclotomic kernel the matrix part of the
+action is the identity, by the \'etale--Wach
+comparison. \label{cor:ramified-cyclotomic-2}
+
+\proofstep{Increase the depth until the generator is strictly small in the integral model.}
+For the generator estimate, start with a
+cyclotomic generator at depth \(s\), with action
+\(\gamma_0\), and set \(I=(\ell,\pi)\) in the
+Wach coordinate ring. On \(S/(\pi)=\mathcal O_{F_0}\) the cyclotomic
+generator acts trivially. Its action on \(N/\pi N\) is trivial
+by \((\gamma_0-1)N\subset XN\) in
+Proposition~\ref{prop:ramified-integral-wach-comparison}, and \(\gamma_0(\pi)/\pi\equiv1\pmod I\).
+The Leibniz rule for a semilinear difference gives
+\[
+   (\gamma_0-1)(I^j N)\subset I^{j+1}N
+           \qquad(j\ge 0).
+\]
+Let \(k=s+n_0+1\). Expand the operator on \(N\):
+\[
+  \gamma_0^{\ell^k}-1
+       =\sum_{j=1}^{\ell^k}\binom{\ell^k}{j}(\gamma_0-1)^j .
+\]
+For \(j<\ell^{k-1}\), \(v_\ell(j)\le k-2\), so the small-index binomial terms satisfy
+\[
+ v_\ell\binom{\ell^k}{j}
+ =k-v_\ell(j)+v_\ell\binom{\ell^k-1}{j-1}\ge2
+ \qquad(1\le j<\ell^{k-1}).
+\]
+
+For \(j\ge\ell^{k-1}\), the
+operator \((\gamma_0-1)^j\) takes values in
+\(I^{\ell^{k-1}}N\). By \eqref{eq:full-level-fontaine-map}, the least valuation of a
+generator of the specialized ideal \(I\) is
+\(1/((\ell-1)\ell^{s+n_0-1})\). Since \(k-1=s+n_0\),
+the valuations for the two ranges are respectively at least
+\[
+     2,\qquad
+     \frac{\ell^{k-1}}{(\ell-1)\ell^{s+n_0-1}}
+                =\frac{\ell}{\ell-1}.
+\]
+In both ranges the strict logarithm threshold holds because
+\[
+ \min\{2,\ell/(\ell-1)\}>1/(\ell-1).
+\]
+
+Consequently \(\gamma=\gamma_0^{\ell^k}\) at level \(M\)
+has action matrix \(U\) with this entrywise bound on \(U-1\).
+For \(u=\chi(\gamma_0)\) and a nonzero integer \(j\), the generator depth is computed by
+\[
+ v(u^j-1)=v(u-1)+v_\ell(j).
+\]
+For \(j\) prime to \(\ell\)
+this follows by expanding the binomial and for
+multiplication of \(j\) by \(\ell\) the valuation
+increases by one. The latter step requires
+\(v(u-1)>1/(\ell-1)\), which holds for the admitted
+depths. Negative \(j\) give the same valuation by
+inversion.
+
+\proofstep{Project by the separability idempotent and choose a maximal minor.}
+Fix a field embedding \(\tau:F_s\to L_{\rm coeff}\).
+The separability idempotent \(E_\tau\) of
+\(F_s\otimes_{\mathbb Q_\ell}\mathbb C_\ell\), acting
+through \(\tau\) on the coefficients and the standard
+embedding on the scalar factor, selects the
+\(\tau\)-component. The conjugated idempotent
+\(D^{-1}E_\tau D\) has entries in \(F_M\).
+Write
+\[
+ E'=D^{-1}E_\tau D.
+\]
+Select a nonzero
+maximal-rank minor of largest absolute value.
+Multiply the selected rows by the inverse of
+that minor's matrix to obtain a row map \(R\).
+Its entries are integral by the minor ratio rule.
+
+For the selected column inclusion \(S_0\), we have
+\(RS_0=1\), \(RE'=R\), and \(E'=E'S_0R\).
+Thus \(S_0\) is an integral section of \(R\).
+The induced action on \(P=RD^{-1}\) is computed by
+\(R U_g S_0\). This is well defined since \(\ker R=\ker E'\)
+is stable and \(S_0\) lifts every coordinate.
+It gives integral matrices and preserves the strict
+bound for \(U_\gamma-1\).
+In these coordinates the image \(B'=P B_d\) satisfies
+\[
+                         B_r\subseteq B'\subseteq \ell^{-1}B_r.
+\]
+The first inclusion follows from \(D B_d\subseteq B_d\)
+and the integral section \(S_0\), and the second follows
+from \(\ell D^{-1} B_d\subseteq B_d\).
+
+To detect integrality on \(V\), extend \(\tau^{-1}\)
+to an embedding of the coefficient field in
+\(\mathbb C_\ell\). Evaluation in this embedding sends
+\(B_d\) into the unit ball of the coefficient
+coordinates and factors through \(P\) since it
+factors through \(E_\tau\).
+On a rational vector these evaluations have the
+valuations of its coordinates in an integral
+coefficient basis of \(L\). For \(v=\sum_i v_i e_i\) in this basis, the integrality test reads
+\[
+ Pv\in B'\quad\Longrightarrow\quad v_\ell(v_i)\ge0\ (\text{all }i)\quad\Longrightarrow\quad v\in L.
+\]
+Finally the graded de Rham
+comparison, using the same separability idempotent
+on both factors, gives a basis of the coordinate
+space of vectors fixed after twists by jumps at \(\tau\).
+Indeed adapted filtered vectors give their symbols in
+\(\operatorname{gr} B_{\rm dR}\), and the projection
+selects the \(\tau\)-part of each graded piece.
+These are the Hodge--Tate coordinates of the
+specialized lattice. \label{cor:ramified-cyclotomic-3}
+\end{proof}
+
+\begin{lemma}[Cohomology and invariant loss at full cyclotomic level]\label{lem:cyclotomic-invariant-loss}
+In the cyclotomic comparison of Proposition~\ref{prop:full-level-ht-coordinates}, put
+\[
+ N_i=\max\left(1,\sum_{a\in J\setminus\{i\}}
+                    (M+v_\ell(a-i))\right)
+\]
+for the indicated distinct jumps \(J\) in the marked comparison.
+Let \(B(i)\) be the integral coordinate ball with twisted action,
+and keep the projected jump set \(J\) at the chosen embedding.
+The degree-one bound holds for every \(i\). For the second bound
+take an embedding giving the integrality test of
+Proposition~\ref{prop:full-level-ht-coordinates} with \(0\notin J\).
+Then, for the original lattice \(L\subset V\),
+\[
+ \ell^{1+N_i} H^1(G_{F_M},B(i))_{\rm tors}=0,\qquad
+ 0\notin J\ \Longrightarrow\ \ell^{2+N_0}(V/L)^{G_{F_M}}=0.
+\]
+These exponents are independent of the coefficient degree.
+\end{lemma}
+
+\begin{proof}
+\proofstep{Use the integral trace on the cyclotomic kernel.}
+Set \(H_\infty=G_{\bigcup_jF_j}\).
+For a continuous cocycle of \(H_\infty\) in the scalar
+ball \(\mathcal O_{\mathbb C_\ell}\), multiplication by
+\(\ell\) gives an integral coboundary. In fact Tate's
+trace theorem for a finite extension of the
+cyclotomic tower puts every element of positive
+valuation in the integral trace image. To approximate
+the coboundary, choose an open normal subgroup on
+which the cocycle \(f\) has norm at most \(\varepsilon\).
+Take an integral \(b\) of trace \(\ell\) in the fixed
+field of this subgroup. For a set \(S\) of coset
+representatives put \(x=-\sum_{\sigma\in S}\sigma(b)f(\sigma)\).
+In the difference \(hx-x\), replace each \(h\sigma\)
+by its representative times an element of the subgroup.
+
+If \(h\sigma=\tau n_\sigma\) with \(\tau\in S\), the
+cocycle identity gives
+\[
+ h f(\sigma)=f(\tau)+ \tau f(n_\sigma)-f(h).
+\]
+Since \(n_\sigma(b)=b\) and the
+\(\tau\)'s permute \(S\), we obtain
+\[
+       hx-x=\ell f(h)-\sum_{\sigma\in S}
+                       \tau(b)\tau f(n_\sigma).
+\]
+The last sum has norm at most \(\varepsilon\) by the
+ultrametric inequality and integrality of \(b\), uniformly
+in \(h\).
+Also \(\|x\|\le\sup_h\|f(h)\|\).
+Apply this construction successively to the residual
+cocycle divided by \(\ell\), with the error bounds
+tending to zero geometrically. The successive corrections
+then converge in the ball to the integral cobounding
+vector. Apply the construction coordinatewise on
+\(H_\infty\), where the matrix action and the
+cyclotomic twist are trivial. Tate's fixed-field
+comparison gives
+\[
+ \mathbb C_\ell^{H_\infty}=\widehat{F_\infty}.
+\]
+
+\cite[\S3, Propositions 9--10]{tate-pdivisible}
+
+\proofstep{Split off the base by the compatible normalized trace.}
+Let \(A_g=\chi(g)^iU_g g\) denote the semilinear
+action in twist \(i\). On the completed integers of
+\(F_\infty\), split off \(\mathcal O_{F_M}\) by the
+normalized trace. At finite level \(j\ge M\) the
+basis \(\zeta_{\ell^j}^{a}\) for
+\(0\le a<\ell^{j-M}\) is integral over
+\(\mathcal O_{F_M}\) by the Eisenstein uniformizer
+description, with normalized trace the constant
+coordinate. The integral projections are compatible
+as \(j\) grows. Write \(Y\) for the kernel of the extended normalized trace. Compatibility gives the integral splitting
+\[
+ \widehat{\mathcal O}_{F_\infty}=\mathcal O_{F_M}\oplus Y.
+\]
+Both this module and the base are
+stable under \(A_\gamma\).
+
+On \(Y\), \(\gamma-1\) is invertible after inverting
+\(\ell\), with inverse taking \((\zeta_\ell-1)Y\)
+into \(Y\). To see the uniform bound, at each finite
+level the nonzero basis exponents are permuted by
+multiplication by \(u=\chi(\gamma)\) modulo
+\(\ell^{j-M}\), with multipliers in the base roots of
+unity. If \(v_\ell(a)=b_0\), the length of its orbit
+is \(d_a=\ell^{\max(0,j-2M-b_0)}\). The return multiplier
+is \(\zeta_{\ell^j}^{a(u^{d_a}-1)}\), which is nontrivial
+since
+\[
+ v_\ell(a(u^{d_a}-1))=b_0+M+\max(0,j-2M-b_0)=\max(M+b_0,j-M)<j.
+\]
+Let \(c_a=\zeta_{\ell^j}^{a(u^{d_a}-1)}\) be this
+return multiplier, whose difference from one has valuation
+at most \(1/(\ell-1)\).
+
+On the orbit module,
+\[
+   (\gamma-1)\sum_{i=0}^{d_a-1}\gamma^i
+                          =\gamma^{d_a}-1=(c_a-1)\mathrm{id}.
+\]
+The sum of powers is integral, so the inverse obtained by
+dividing by \(c_a-1\) sends \((\zeta_\ell-1)\) times
+the orbit module into the orbit module. This proves the
+integral bound and the inverses agree on the nested
+finite trace-zero spaces. Since they commute with
+the base uniformizer, they extend through completion
+with the same integral bound. Now
+\(u^iU_\gamma-1\) has strictly higher valuation than
+\(\zeta_\ell-1\) entrywise. On this summand write \(D=\gamma-1\) and \(E=(A_\gamma-1)-D\).
+The denominator of \(D^{-1}\) costs at most the valuation of
+\(\zeta_\ell-1\), whereas \(E\) has strictly higher valuation. Hence
+\(D^{-1}E\) raises the base-uniformizer filtration and
+\[
+ (A_\gamma-1)^{-1}=\sum_{n\ge0}(-D^{-1}E)^nD^{-1}
+\]
+converges in that filtration. In particular
+\((A_\gamma-1)^{-1}\ell Y^r\subseteq Y^r\).
+
+The Hodge--Tate basis vectors have coordinates fixed
+by \(H_\infty\) and are fixed by \(A_\gamma\)
+in their individual twists. By the trace-zero
+invertibility just proved, their coordinates are
+in the base field \(F_M\). Thus \(U_\gamma\) has
+an annihilating polynomial with the distinct roots
+\(u^{-a}\) for the set \(J\) of their jumps.
+For twist \(i\), let
+\[
+ Q_i(Z)=\prod_{a\in J\setminus\{i\}}(Z-u^{-a}),\qquad
+ N_i=\max\left(1,\sum_{a\in J\setminus\{i\}}
+                   (M+v_\ell(a-i))\right).
+\]
+If \(w\) is integral on the base and
+\(\ell^k w=(u^iU_\gamma-1)w'\) there, then
+\(Q_i(U_\gamma)w=0\).
+Integral polynomial division gives
+\[
+ Q_i(Z)-Q_i(u^{-i})=(Z-u^{-i})D_i(Z),\qquad D_i\in \mathcal O_{F_M}[Z].
+\]
+Substitute \(Z=U_\gamma\) and apply to \(w\). Since \(u^i\) is a unit, this gives
+\[
+ Q_i(u^{-i})w\in(A_\gamma-1)B(i),
+\] where \(B(i)\) denotes the integral ball with the twisted action. The valuation of this scalar is the sum in \(N_i\). Together with the trace-zero
+bound, this shows that \(\ell^{N_i}\) kills the
+torsion in the integral generator coinvariants.
+
+\proofstep{Return to integral cohomology, then kill invariants modulo the original lattice.}
+The coinvariant bound is now used to clear denominators of invariant vectors.
+
+For an integral cocycle \(f\) of \(G_{F_M}\) whose
+class is \(\ell\)-power torsion, subtract the
+integral coboundary from \(\ell f\) on \(H_\infty\).
+The result descends to the procyclic quotient, with
+values fixed by \(H_\infty\). Its torsion cobounding
+vector is fixed there as well, since the cocycle
+vanishes on the kernel. The generator calculation
+makes the descended value at \(\gamma\) an integral
+coboundary after multiplication by \(\ell^{N_i}\).
+Equality at the generator extends by the cocycle
+law and continuity. Restriction to the kernel and the generator calculation together give
+\[
+ \ell^{1+N_i}H^1(G_{F_M},B(i))_{\rm tors}=0.
+\]
+
+\label{cor:ramified-cyclotomic-4}
+
+For an invariant class \(v\bmod L\), write \(y=Pv\).
+The cocycle \(g\mapsto\ell(gy-y)\) in twist zero is
+integral in the ball and a sufficiently large
+\(\ell\)-power makes it an integral coboundary.
+Applying the bound yields an integral vector whose
+coboundary is that of \(\ell^{2+N_0}y\).
+When the jumps avoid zero, the difference vanishes
+by Tate's nonzero-twist invariant theorem over the
+finite local field \(F_M\).
+Thus
+\[
+ \ell^{2+N_0}y\in B_r\subseteq B'
+\]
+and \(\ell^{2+N_0}v\in L\).
+This proves the invariant loss used in the row
+estimate with no dependence on the coefficient degree.
+\cite[Theorem 2]{tate-pdivisible}
+\end{proof}
+

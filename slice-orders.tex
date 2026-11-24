@@ -1,0 +1,221 @@
+\paragraph{The same sections over the number field.}
+The first term of \eqref{eq:geometric-four-terms} uses a
+discriminant at the generic intersection. We identify that
+discriminant over the number field, using the same sections
+as in the branch computations, before applying the global
+height formula.
+\hypertarget{source-slice-orders}{}
+Put \(F=K(X)\), \(L=\prod_Z L_Z\) and \(\delta=\dim_F L\).
+
+\begin{lemma}[One short basis before localization]
+\label{lem:slice-short-basis-before-localization}
+With a weight frame \(\tau\) nonzero at every point of the
+geometric generic cut,
+one can select \(\delta\) short forms from
+\(s_F(g_0g_1)^{frw_F.n}\operatorname{Sh}(w_F)\) whose restrictions \(b_i\) give a basis over \(F\),
+\[
+ b_i=(t'_i/\tau)|_L,\qquad L=\bigoplus_{i=1}^\delta F b_i.
+\]
+
+The same list works after extension to every \(K_\lambda(X)\),
+with the light columns and \(\eta\) fixed.
+\end{lemma}
+\begin{proof}
+Embed \(K\) in \(\mathbb C\) and specialize \(X\) to algebraically
+independent complex numbers over its image. This embeds \(F\) in
+\(\mathbb C\). Separability and the chart identify
+\(L\otimes_F\mathbb C\) with the product over the \(\delta\) distinct
+generic intersection points \(z\). Interpolation of
+\hyperref[par:slice-interpolation]{arbitrary values} at weight
+\(w_F\), with vanishing low modes, gives the delta functions there.
+The bounded rational family spans this section space, so choose
+\(\delta\) of its members with \(\det(t'_i(z))_{z,i}\ne0\) in
+the chosen nonzero frames. In the \(\tau\)-frame,
+\[
+ \det(b_i(z))_{z,i}
+    =\left(\prod_z\tau(z)^{-1}\right)\det(t'_i(z))_{z,i}\ne0 .
+\]
+Thus the \(F\)-linear map \(F^\delta\to L\) with columns \(b_i\)
+is invertible and remains so over \(K_\lambda(X)\). Clearing
+polynomial denominators gives the same assertion for rational
+section identities. Only the short restrictions were selected.
+\label{cor:slice-orders-1}
+\end{proof}
+
+\begin{proposition}[Comparison of the two branch lattices]\label{prop:slice-completed-branch-comparison}
+Use the one list of short forms from
+Lemma~\ref{lem:slice-short-basis-before-localization}, and suppose
+their branch orders are in the pulled-back integral frames.
+The integral closures over the two generic coefficient DVRs satisfy
+\[
+ B'_Z=R_1\otimes_{R_0} B_Z.
+\]
+ The branches correspond
+with the same ramification indices and residue degrees. In
+the shifted coordinates of the short forms this gives
+the local length inequality and the auxiliary order identity
+in \eqref{eq:slice-order-comparison}. The auxiliary identity
+is used before the definite last lift.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Comparing the two integral lattices.}
+We compare the two computations of the integral lattice. Put
+\[
+ R_0=(\mathcal O_{K,\lambda}[X])_{(\pi)},\qquad
+ R_1=(\widehat{\mathcal O}_{K,\lambda}[X])_{(\pi)},\qquad
+ F_1=\operatorname{Frac}R_1 .
+\]
+Here \(\pi\) can be taken to generate the maximal ideal of
+\(\mathcal O_{K,\lambda}\). Both DVRs have residue field
+\(k_\lambda(X)\) and ramification index one over the
+coefficient DVR. Let \(B_Z\) be the integral closure of
+\(R_0\) in \(L_Z\). It is a finite torsion-free module
+over \(R_0\). For example, take an integral field basis.
+The trace dual of its span contains every integral element,
+by separability and integrality of trace. Each localization
+of \(B_Z\) at a maximal ideal is a DVR. Its order \(w\) is
+normalized to have image \(\mathbb Z\), with ramification
+index \(e_w=w(\pi)\) and residue degree \(f_w\).
+
+The integral closure after base change is exactly
+
+\[
+  B'_Z=R_1\otimes_{R_0}B_Z
+\]
+ in \(F_1\otimes_F L_Z\).
+In fact this is finite free over \(R_1\), and its generic
+fibre is a product of separable fields. The special fibres identify, because both coefficient rings
+have residue \(k_\lambda(X)\):
+\[
+ (R_1\otimes_{R_0}B_Z)/\pi
+       =(R_1/\pi)\otimes_{R_0/\pi}(B_Z/\pi)
+       \simeq B_Z/\pi .
+\]
+This bijects the primes above \(\pi\), even if the generic
+fibre splits into several fields. At corresponding
+primes localize on both sides; write \(t\) for a uniformizer
+of \((B_Z)_w\).
+
+Since \(\pi\) is a unit times \(t^{e_w}\)
+there, the quotient of the local ring of \(B'_Z\) by \(t\)
+is its residue field. This follows by making that quotient
+already in the common localized special fibre. Thus the
+maximal ideal is principal. The local ring has dimension
+one, since the extension is finite over a DVR and \(\pi\)
+is a nonzerodivisor. It is a regular local ring, hence a DVR.
+The generic localizations are fields. This proves normality
+and the asserted equality with the integral closure, as well
+as preservation of both \(e_w\) and \(f_w\).
+For corresponding DVRs \(T_w\) and \(T'_{w'}\) on the two models, the branch calculation gives
+\[
+  e_{w'}=e_w,\qquad f_{w'}=f_w .
+\]
+ In particular
+the branch correspondence counts places even if a field
+splits after extending coefficients. \cite{dvr-slice}
+
+\proofstep{Returning to the integer branch order.}
+For each branch identified in this way let \(n_w(g)\)
+be the integer order of the section \(g\) in an integral
+frame of its weight. It is infinite for the zero reading.
+To compare with the order on \(L_Z\), restrict the valuation
+ring to \(\Omega_Z\). Over this valuation ring the generic
+point extends by properness. The induced valuation on
+\(\Omega_Z\) is discrete up to a positive integer factor
+since \(\pi\) has nonzero order.
+Indeed \(v(\Omega_Z^\times)\) is a nonzero subgroup of \(\mathbb Z\) containing \(v(\pi)\). For its positive generator \(b\) this gives
+\[
+  v(\Omega_Z^\times)=b\mathbb Z,\qquad b\mid v(\pi).
+\]
+
+Taking the saturated
+flag lattices and a generator of the theta line gives an
+integral frame there. Its pullbacks to the two branch
+valuations are integral frames. Uniqueness in the valuative
+criterion compares the underlying extended points and
+the frame changes in the same integral flag have unit
+diagonals. Thus for any two nonvanishing sections of the
+same weight,
+\[
+ n_w(g)-n_w(\tau)=w(g/\tau),\qquad
+ n_w(g)=e_\zeta\operatorname{val}_{y_\zeta}(g)
+\]
+at the corresponding branch. This argument fixes the
+absolute order of a section as well as the order of a
+quotient. It is why the adjusted lattices can be compared
+at weights other than the light weight.
+\label{cor:slice-orders-2}
+
+\proofstep{Comparing shifted lattices in one trivialization.}
+Take \(\tau\) of weight \(w_F\), nonzero on each component,
+and choose \(d_Z\in L_Z^\times\) with
+\(w(d_Z)=n_w(\tau)\) at all places above \(\lambda\),
+by weak approximation. The shifted lattice over \(R_0\)
+is \(B(\tau)=\prod_Z d_Z^{-1}B_Z\).
+The \(b_i\) belong to it by integrality of the \(t'_i\).
+Changing \(\tau\) rescales both the ball and the \(b_i\)
+componentwise. Under the coordinate map over \(R_1\)
+the local lattice of restrictions with nonnegative point
+orders lies in \(R_1\otimes B(\tau)\), and the short
+columns map to \(1\otimes b_i\). Hence
+\begin{equation}\label{eq:slice-order-comparison}
+ I_\lambda\le I^{\mathrm{ff}}_\lambda
+ :=\operatorname{length}_{R_0}
+       (B(\tau)/\textstyle\sum_i R_0 b_i),\qquad
+ N_{\eta,\lambda}=\sum_{Z,w\mid\lambda} f_w n_w(\eta).
+\end{equation}
+The map on lengths uses flatness and the common residue
+field. The second assertion is used only before the final
+lift. The integer order already includes the ramification
+factor relative to the normalized point valuation.
+
+\end{proof}
+
+\paragraph{A discriminant for the shifted lattice.}
+
+After changing the frame, the discriminant in the index formula is that of the shifted branch lattice. Its change is measured by the determinant of the frame map.
+
+\begin{lemma}[Trace discriminant after the frame shift]\label{lem:shifted-slice-discriminant}
+For the branch and shifted lattices of
+Proposition~\ref{prop:slice-completed-branch-comparison},
+let \(\Delta\) be the discriminant of the trace matrix of the
+\(b_i\), and \(t_\lambda\) that of the integral closure in
+valuation units. Then the normalized Gauss order satisfies
+\[
+ v_\lambda(\Delta)+2\sum_{Z,w\mid\lambda}f_w n_w(\tau)
+                  =2I_\lambda^{\mathrm{ff}}+t_\lambda .
+\]
+An empty slice has \(\Delta=1\) and both order contributions
+zero.
+\end{lemma}
+
+\begin{proof}
+Let \(\Delta=\det(\operatorname{Tr}_{L/F}(b_i b_j))\).
+The trace pairing of a product of separable fields is
+nondegenerate. With an integral basis of \(\prod_Z B_Z\)
+let \(t_\lambda\ge0\) be the order of its discriminant.
+Write \(C\) for the matrix of \(d b_i\) in an integral
+basis of the closure, where \(d=(d_Z)_Z\).
+The trace matrix in the new basis is \(C^{\mathsf T}GC\),
+with \(G\) the trace matrix of the integral basis. Its
+determinant has valuation \(t_\lambda+2I_\lambda^{\mathrm{ff}}\)
+by Smith form. The change from \(b_i\) to \(d b_i\)
+has determinant \(\mathrm N_{L/F}d\), so the same trace
+determinant is \((\mathrm N_{L/F}d)^2\Delta\).
+
+Taking valuations gives
+\begin{equation}\label{eq:slice-discriminant-order}
+ v_\lambda(\Delta)+2\sum_{Z,w\mid\lambda} f_w n_w(\tau)
+     =2I^{\mathrm{ff}}_\lambda+t_\lambda .
+\end{equation}
+Here the order of the norm is the sum of the orders times
+the residue degrees. For an integral \(d\) this follows by
+filtering the quotient by \(d\) into the residue fields
+of the local DVRs; division gives the formula for
+fractional \(d\). The Gauss order of the single rational
+function \(\Delta\) thus bounds the first price after the
+frame correction. An empty slice has zero lattice, empty
+discriminant one and zero contributions in both formulas.
+\cite{dvr-slice}\label{cor:slice-orders-3}
+\end{proof}

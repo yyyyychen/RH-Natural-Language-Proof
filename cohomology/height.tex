@@ -1,0 +1,611 @@
+\subsection{Bounding the cohomology at the reference layer}
+\label{sec:cohom-height}
+
+The interval argument leaves a bounded list of twists for which proximity to a cyclotomic centre need not give useful decay. For these twists a bound in terms of the discriminant and the degree of a reference layer is sufficient.
+
+\begin{proposition}[Height bound uniform in the auxiliary layer]\label{prop:uniform-reference-height}
+Let \(L\) be the reference layer satisfying the cyclotomic hypotheses of Appendix~\ref{sec:cohomology}, and let \(D_L\) be its discriminant. With \(S\) as in \eqref{eq:height}, the bound 
+\[
+ \log|H^2(G_{L,S},\mathbb Z_\ell(j+1))|\le\exp\!\left((2j[L:\mathbb Q])^{C_K}\log(2|D_L|)\right)
+\]
+ is uniform in the further layers used to detect the degree-one localization kernel. The detecting cycle is constructed
+in the next subsection.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Choose a bounded reference layer.}
+
+Write \(u=j\), \(k=2u\) and \(m_0=k+1\).
+Enlarge \(L\) first to a reference cyclotomic layer with largest
+root level \(c\), such that both \(\ell^c\) and \(r_2(L)\)
+exceed \(m_0\). The degree of this enlargement over the
+original field is at most \(([L_{\rm orig}:\Q]+1)(4u+4)\).
+The layer degrees are powers of \(\ell\). The original field
+contains \(\mu_\ell\) for odd \(\ell\) and \(\mu_4\) for \(\ell=2\),
+so
+\[
+              \ell\le[L_{\rm orig}:\Q]+1 .
+\]
+This bounds the extra jump at the first layer exceeding the two
+required thresholds.
+The relative discriminant divides a power of the
+cyclotomic conductor, and \(\ell^c\le 2[L:\Q]\).
+Restriction to the enlarged field is injective on the
+degree-one localization kernel, by the earlier injection
+into the infinite cyclotomic tower.
+
+\proofstep{Reduce localization to equivariant class-group maps.}
+
+In a further layer \(F=L(\mu_{\ell^\nu})\), write
+\(Q_\nu=\ell^\nu\), \(s=[F:L]=\ell^{\nu-c}\),
+\(\lambda=1+\ell^c\), and take the generator \(\gamma\) acting
+on roots by the power \(\lambda\). Put \(g=\gamma^{-1}\),
+\(a=\lambda^u\), and \(\Delta=g-a\) in additive notation.
+For a homomorphism \(h\) to the scalar target, equivariance reads
+\[
+ h(gx)=a h(x)\quad\Longleftrightarrow\quad
+ h(\Delta x)=0\qquad (x\in\operatorname{Cl}(F)).
+\]
+Thus it factors through \(\operatorname{Cl}(F)/\Delta\operatorname{Cl}(F)\). We control their number
+by counting classes of weighted norms of elements with
+divisor in the image of \(\Delta\).
+
+Let \(A=F^\times/\mu(F)\), written additively, and \(I\) the
+free divisor group of \(F\). Set
+\[
+ W=\operatorname{div}^{-1}(\Delta I)/\Delta A,
+ \qquad V=\sum_{i=0}^{s-1}a^i g^{-i}.
+\]
+As \(g^s=1\), the weighted norm gives
+\[
+ V\Delta=\sum_{i=0}^{s-1}a^ig^{1-i}
+              -\sum_{i=1}^{s}a^ig^{1-i}
+          =g-a^sg^{1-s}=(1-a^s)g .
+\]
+The factors commute, so the same holds for \(\Delta V\).
+Since \(a^s\ne1\), this product is injective on each
+torsion-free group, and hence so is \(\Delta\). Sending an element of \(W\)
+to the class of its unique divisor preimage under \(\Delta\)
+gives an exact sequence
+\[
+ 0\longrightarrow U/\Delta U\longrightarrow W
+      \longrightarrow\operatorname{Cl}(F)[\Delta]\longrightarrow 0,
+ \qquad U=\mathcal O_F^\times/\mu(F).
+\]
+If the divisor preimage is principal, subtracting \(\Delta\)
+of a generator leaves a class of a unit. This gives
+exactness at \(W\), and every class killed by \(\Delta\)
+lifts by choosing a generator after applying \(\Delta\).
+
+\proofstep{Detect the norm classes by residue evaluations.}
+
+The finite-field detection bound used here is the following.
+Put
+\[
+ b_0=k+m_0(c+m_0),\qquad
+ T_i=\left|H_i(\mathrm{GL}_{4u+6}(\mathcal O_L),\Z)_{\mathrm{tors}}\right|.
+\]
+Among elements of \(F^\times\) with divisor in \(\Delta I\)
+the number of distinct classes of \(\ell^{b_0}V\alpha\)
+modulo \(Q_\nu\)-th powers is at most
+\(Q_\nu^{r_2(L)}T_{k+1}T_k\). The detection uses a
+stabilized integral-lattice cycle after reduction modulo
+\(Q_\nu\). On a residue field at a prime of relative degree
+one it has value
+\[
+    \left(\prod_{0\le i<m_0,\ i\ne u}
+                   (\lambda^u-\lambda^i)\right)v_P(V\alpha),
+\]
+where \(v_P\) is the quotient character of the residue
+multiplicative group modulo \(Q_\nu\)-th powers.
+The cycle construction is Proposition~\ref{prop:detecting-cycle-residue}.
+
+Since \(c\ge2\) in the dyadic case, the valuation formula
+applies to each \(i\ne u\):
+\[
+    v_\ell(\lambda^u-\lambda^i)=c+v_\ell(u-i)<c+m_0 .
+\]
+Write the multiplier, including \(\ell^k\), as \(\ell^e u_0\) with \(u_0\) an \(\ell\)-adic unit. The valuation bounds give \(e\le b_0\). For the difference \(z\) of two residue evaluations,
+\[
+ \ell^e u_0 z=0\quad\Longrightarrow\quad
+ \ell^{b_0}z=\ell^{b_0-e}u_0^{-1}(\ell^e u_0z)=0 .
+\]
+It forces equality over \(F\) by Chebotarev in the Kummer
+extension of a \(Q_\nu\)-th root of the ratio. Indeed a
+nonidentity Frobenius there precludes a root in the
+residue field, and primes of relative degree greater
+than one over \(L\) have density zero among primes of
+\(F\). Finitely many primes at which the cycles fail to
+reduce do not change this detection.
+
+\proofstep{Bound the homology evaluations.}
+
+Use the standard stabilization \(g\mapsto\operatorname{diag}(g,1)\). The Dedekind domain \(\mathcal O_L\) has Bass stable rank at most two. Indeed, for a unimodular triple \((b,c,d)\) first make \(b'=b+ud\ne0\), unless \(b=d=0\) and \(c\) is already a unit. At each prime dividing \(b'\), either \(d\) vanishes and \(c\) is a unit locally, or one residue for \(v\) must be avoided. The Chinese remainder theorem therefore supplies \(v\) with
+\[
+      (b+ud,\ c+vd)=\mathcal O_L,\qquad
+        \operatorname{sr}(\mathcal O_L)\le2 .
+\]
+
+The constant-coefficient case of the homological stability theorem of Randal-Williams and Wahl \cite[Theorem~5.11]{rw-wahl-stability} gives an isomorphism in degree \(i\) whenever \(2i\le a-\operatorname{sr}(\mathcal O_L)-2\). Thus in degree \(i=k+1\) all further stabilizations induce isomorphisms from rank
+\[
+ 2(k+1)+4=4u+6.
+\]
+
+The stable homology over \(\Q\) has primitive rank at
+most \(r_2(L)\) in the odd degree \(k+1\), by Borel's
+calculation for a totally complex field. Use the
+block repetition operator with \(\ell\) copies, and for
+each \(d=2,\ldots,k+1\) subtract \(\ell^d\) times
+ordinary stabilization into the same rank. Let \(R_\ell\) act by block repetition, with comparison in
+the common stabilized group. In the stable group the repeated block map factors as the diagonal into \(\ell\) copies followed by block sum.
+
+For a rational primitive class \(z\), each term of the iterated coproduct maps to \(z\) under block sum:
+\[
+ \Delta^{(\ell)}z=\sum_{i=1}^\ell 1^{\otimes(i-1)}\otimes z\otimes1^{\otimes(\ell-i)},
+ \qquad R_\ell z=\ell z.
+\] Block repetition respects the product on stable homology because reordering the blocks is conjugation in a common general linear group. Consequently
+\[
+ R_\ell(z_1\cdots z_d)=\ell^d z_1\cdots z_d
+          \qquad(z_i\text{ rational primitive}).
+\] Thus
+\[
+            \prod_{j=2}^{k+1}(R_\ell-\ell^j)\big|_{\text{length }d}=0
+              \quad(2\le d\le k+1).
+\]
+Only the rational primitive part in degree \(k+1\) remains. In degree \(k+1\) the only
+remaining rational image thus has dimension at most
+\(r_2(L)\).
+
+On additive residue evaluations the operation
+multiplies by \(\prod_{d=2}^{k+1}(\ell-\ell^d)\),
+which is \(\ell^k\) times a unit. The integral classes
+therefore give at most \(Q_\nu^{r_2(L)}T_{k+1}\)
+values, by reduction of a group of this rank with
+torsion bounded by \(T_{k+1}\). Write \(G_{\rm st}=\mathrm{GL}_{4u+6}(\mathcal O_L)\)
+for the group at the stabilized rank. The homology coefficient
+sequence in degree \(k+1\) is
+\[
+ \begin{aligned}
+ 0\longrightarrow H_{k+1}(G_{\rm st},\Z)/Q_\nu
+   &\longrightarrow H_{k+1}(G_{\rm st},\Z/Q_\nu)\\
+   &\longrightarrow H_k(G_{\rm st},\Z)[Q_\nu]\longrightarrow0 .
+ \end{aligned}
+\] The last term has order at most
+\(T_k\), so it contributes at most that many cosets of the
+image of integral classes. This explains the two torsion
+factors in the evaluation count.
+\hfill\mbox{\cite{borel}}\label{cor:cohomology-height-1}
+
+Now \(W\to A/Q_\nu A\) given by \(\ell^{b_0}V\) is
+well defined because \(\ell^\nu\mid a^s-1\). Its image
+has size bounded by the preceding count, which also
+bounds the image after quotienting by roots of unity.
+If a class is in its kernel, write
+\(\ell^{b_0}Vx=Q_\nu y\) and apply \(\Delta\).
+The identity \(\Delta V=(1-a^s)g\) gives, after cancellation
+in the torsion-free group \(A\),
+\[
+       \ell^{b_0}\frac{1-a^s}{Q_\nu}\,gx=\Delta y .
+\]
+As \(v_\ell(a^s-1)=\nu+v_\ell(u)\) and \(g\) is invertible,
+the \(\ell\)-primary kernel is killed by \(\ell^{b_0+v_\ell(u)}\).
+
+For \([x]\in W[\ell]\) choose \(y\) with \(\ell x=\Delta y\).
+Changing \(x\) by \(\Delta z\) changes \(y\) by \(\ell z\),
+by injectivity of \(\Delta\) on \(A\). Thus
+\[
+ W[\ell]\longrightarrow (A/\ell A)^g,\qquad [x]\longmapsto[y]
+\]
+is well defined because \(g- a\) kills \(y\bmod\ell\)
+and \(a\equiv1\bmod\ell\). If \(y=\ell z\), the torsion-free
+identity gives \(x=\Delta z\), proving injectivity.
+For \(\operatorname{div}x=\Delta D\), taking divisors of
+\(\ell x=\Delta y\) proves
+\[
+ \Delta(\ell D-\operatorname{div}y)=0
+                       \quad\Longrightarrow\quad\operatorname{div}y=\ell D,
+\]
+since \(\Delta\) is injective on the divisor group.
+\proofstep{Control the divisor and unit errors.}
+
+For an invariant class choose a representative with
+\(\gamma y/y=z^\ell \rho^t\) in multiplicative notation,
+where \(\rho\) generates the roots of unity and
+\(0\le t<\ell\). Norms show there are at most
+\(\ell^2\) pairs \((t,N_{F/L}z)\). For two elements in one
+such part, Hilbert 90 applied to the ratio of their
+\(z\)'s shows that their classes differ by a class from
+\(L^\times\). This class has valuations divisible by
+\(\ell\) away from \(\ell\), because the extension is
+unramified there. The classes of such elements modulo
+\(\ell\)-th powers are bounded by the order of the
+\(\ell\)-torsion in the ideal class group of the
+\(\ell\)-integers times the order of their unit quotient
+modulo powers. These bounds give
+\[
+             |W[\ell]|\le\ell^{d_0},
+             \qquad d_0=2[L:\Q]+\lfloor\log_2 h_L\rfloor+2 ,
+\]
+where \(h_L\) is the class number.
+
+\proofstep{Cancel the layer degree in the class group.}
+
+Finally \(g\) acts on the complex places of \(F\) in
+\(r_2(L)\) free cycles of length \(s\). The logarithmic
+unit lattice spans the hyperplane with coordinate sum
+zero, so the determinant of \(g-a\) on it has absolute
+value \((a^s-1)^{r_2(L)}/(a-1)\). Its \(\ell\)-valuation is
+\[
+           (\nu+v_\ell(u))r_2(L)-c-v_\ell(u).
+\]
+Take \(\ell\)-primary orders in the exact sequence for \(W\).
+The units contribute
+\(\ell^{(\nu+v_\ell(u))r_2(L)-c-v_\ell(u)}\) to \(|W|_\ell\).
+The evaluation count and its kernel bound give
+\[
+ |W|_\ell\le
+ Q_\nu^{r_2(L)}T_kT_{k+1}\ell^{(b_0+v_\ell(u))d_0}.
+\]
+Dividing by the unit contribution cancels the term
+\(\ell^{\nu r_2(L)}\). On the finite class group the
+kernel and cokernel of \(\Delta\) have the same order,
+also on the \(\ell\)-primary part.
+
+Every equivariant
+homomorphism to \(\Z/Q_\nu\Z\) factors through the
+cokernel of \(\Delta\), and the number of homomorphisms
+from a finite abelian group to \(\Z/Q_\nu\Z\) is at
+most the order of its \(\ell\)-primary part. It follows that
+the number of these equivariant homomorphisms is bounded by
+\[
+                    T_kT_{k+1}
+                     \ell^{(b_0+v_\ell(u))d_0+c+v_\ell(u)}.
+\]
+This is independent of \(\nu\). Every finite set of
+classes in the localization kernel injects into these
+homomorphisms at a sufficiently high common layer.
+Their continuous cocycles and the local coboundary
+values over \(\ell\) have finite order. In the layer
+where they are fixed, localization makes the restricted
+homomorphisms everywhere unramified, so they factor
+through the class group. The equivariance exponent is
+\(a\) for \(g=\gamma^{-1}\). Injection follows upon further
+restriction to the infinite tower.
+\label{cor:cohomology-height-2}
+
+\proofstep{Bound reference-layer torsion.}
+
+The torsion bound needed for \(T_i\) has the form
+\[
+                        \log T_i\le
+                  (2|D_L|)^{(2u[L:\Q])^C}
+                  \qquad(0\le i\le 2u+1)
+\]
+with absolute \(C\). One obtains it from the lattice
+complex of the arithmetic general linear group. Use the
+region of positive Hermitian forms in which every nonzero
+integral vector has total squared norm at least one.
+Its vertices are determined by the active minimum-vector
+inequalities. Tuples of vertices with a common minimizing
+positive functional give the nerve of the corresponding
+normal cones.
+
+The cones cover the open cone of strictly
+positive functionals and have convex intersections.
+The ordered-tuple complex is acyclic, by the nerve
+argument on compact convex subsets of that open cone.
+The common minimum vectors must span. Otherwise take a
+nonzero positive semidefinite form \(B\) vanishing on their span.
+For small \(\epsilon>0\) the active inequalities for \(Q\) remain
+equalities for \(Q-\epsilon B\), and the other inequalities remain
+valid. The minimizing positive functional \(\lambda\) would then satisfy
+\[
+           \lambda(Q-\epsilon B)=\lambda(Q)-\epsilon\lambda(B)<\lambda(Q).
+\]
+
+For a tuple choose \(n\) independent common minimum
+vectors as the columns of a matrix, with \(n=4u+6\) and
+\(d=n[L:\Q]\). Their lattice has index at most
+\(I=|D_L|^{n/2}d^{d/2}\) by Hadamard's inequality in the
+archimedean metrics and Minkowski's lower bound on
+the covolume of a lattice of first minimum one.
+Hermite normal form counts the row lattices of such
+matrices with logarithm of the count \(O(d^2\log(2I))\).
+For a vertex form the traces sum to \(n\). The
+determinant-product lower bound from the covolume estimate,
+together with the bound \(n\) on each eigenvalue, gives
+\(\lambda_{\min}\ge I^{-1}n^{-d/2}\) in the chosen frame.
+
+If \(v=(v_\sigma)_\sigma\) is any other minimum vector,
+\[
+ 1=\sum_\sigma Q_\sigma(v_\sigma)
+    \ge I^{-1}n^{-d/2}\sum_\sigma \|v_\sigma\|^2 .
+\]
+Thus \(\|v_\sigma\|\le\sqrt I n^{d/4}\) at each embedding.
+For the actual frame index \(I_0\le I\), the coordinates
+are in \(I_0^{-1}\mathcal O_L\). For a nonzero \(a\in\mathcal O_L\),
+\[
+    \max_\sigma |\sigma a|
+      \ge \bigl|\operatorname N_{L/\Q}(a)\bigr|^{1/[L:\Q]}\ge1 .
+\]
+The scaled coordinates therefore have separation at least \(1/I_0\)
+in the maximum embedding norm. Packing bounds the number of
+possible active vectors. Selecting enough to determine
+each vertex bounds the logarithm of the number of
+tuple orbits in degree \(i\) by a polynomial in
+\(n,d,i\) times \(\log(2|D_L|)\).
+
+The stabilizers are finite and inject into reduction
+modulo \(3\), so their orders have the same type of
+bound. If \(G\) is the arithmetic group and \(G_\sigma\) a
+tuple stabilizer, the equivariant complex yields the page
+\[
+ E^1_{a,b}=\bigoplus_{\sigma\in G\backslash\mathcal C_a}
+                   H_b(G_\sigma,\Z)
+ \ \Longrightarrow\ H_{a+b}(G,\Z),
+\]
+with \(\mathcal C_a\) the ordered tuples of degree \(a\).
+Since each stabilizer is finite, over \(\Q\) only \(b=0\)
+survives. In the integral degree-zero row a boundary column has at most
+\(i+2\) signed faces, counting repetitions, so its Euclidean norm
+is at most \(i+2\).
+
+For a minor of size \(a\), Hadamard gives
+\[
+                         |\det B_a|\le(i+2)^a .
+\]
+The determinantal divisors bound the torsion of the boundary
+cokernels. For a finite stabilizer \(G\) the positive-degree homology is finite and killed by \(|G|\). If such a group \(H_i\) has \(m_i\) generators, then
+\[
+ (\mathbb Z/|G|\mathbb Z)^{m_i}\twoheadrightarrow H_i,\qquad |H_i|\le |G|^{m_i}.
+\]
+Bounding their
+number of generators by the sizes of the finite bar
+groups gives a bound of the same exponential form
+for the logarithm of their orders in the required
+degrees. The spectral sequence then gives the
+displayed bound for \(T_i\).
+\label{cor:cohomology-height-3}
+
+The class number in \(d_0\) is bounded by counting integral
+ideals of norm at most the Minkowski representative
+bound. The enlargement of \(L\) increases its degree and
+the logarithm of its discriminant by polynomial factors
+in \(u\) and the original degree. Substituting these facts
+into the bound for the localization kernel shows that
+the logarithm of its order is at most the right side
+of \eqref{eq:height}, after increasing \(C_K\).
+Write \(K^2\) for the degree-two localization kernel, whose dual is the kernel just bounded by Poitou--Tate duality. The localization sequence gives the order comparison
+\[
+ |H^2|=|K^2|\,|\operatorname{im}(\mathrm{loc}^2)|
+       \le |K^2|\prod_{v\mid\ell}|H^2_v| .
+\]
+Here the groups are those of the indicated twist. The archimedean terms vanish for the totally imaginary field. Local duality
+identifies each order with the order of the fixed
+points on the corresponding local torsion twist.
+\proofstep{Add the local degree-two terms.}
+
+The global calculation controls the relevant divisor and unit terms. To bound the full degree-two group one must also account for the groups at the places allowed to ramify.
+
+
+The image of the local cyclotomic character contains
+a procyclic subgroup of index bounded by the local
+degree. On the twist of exponent \(-j\), its generator
+minus one has valuation at most
+\(2+\lfloor\log_\ell[L_{\rm orig}:\Q]\rfloor+j\).
+Put \(D=[L_{\rm orig}:\Q]\). Each local invariant group is killed by the generator minus one in the rank-one torsion twist. With at most \(D\) local terms, their total contribution to the base-\(\ell\) logarithm is at most
+\[
+       D(2+\lfloor\log_\ell D\rfloor+j).
+\]
+Adding this polynomial correction proves
+\eqref{eq:height} for the whole degree-two group.
+All constants precede the choice of the cyclotomic
+layer, the prime and the twist.
+
+\end{proof}
+
+\subsubsection{The detecting cycle}
+
+The height estimate used a class whose residue detects a weighted norm. To justify that detection one must compute the effect of the projector on the valuation at the chosen degree-one prime.
+
+\begin{proposition}[Residue evaluation of the detecting cycle]\label{prop:detecting-cycle-residue}
+For \(Q_\nu\), \(\lambda\) and \(V\) as in the reference-layer
+argument, the stabilized lattice cycle attached to a weighted norm
+has residue value at the degree-one primes used there equal to
+\[
+ \left(\prod_{\substack{0\le i<m_0\\i\ne u}}
+                  (\lambda^u-\lambda^i)\right)v_P(V\alpha).
+\]
+This is the finite-field evaluation used to compare the
+\(Q_\nu\)-power classes.
+\end{proposition}
+
+\begin{proof}
+\proofstep{The cyclic-group cycle and its weight projector.}
+
+Put \(B=\Z/Q_\nu\Z\) and \(w=\ell^c\). In the bar complex
+of the additive cyclic group \(B\) with coefficients
+in \(B\), use the degree-\(2u\) cycle
+\[
+           z=\sum_{b_1,\ldots,b_u\in B}
+                      [b_1\mid1\mid\cdots\mid b_u\mid1].
+\]
+The first face cancels because \(|B|=0\) in the
+coefficient ring. For the others, consecutive terms
+cancel after translating a summation variable.
+For \(0\le t\le m_0\), send it to \(B^2\) by
+\(d_t(b)=(b,tb)\). The cyclic periodic resolutions give
+\(m_0\) generators in homological degree \(2u\) for
+\(B^2\) with these coefficients. Lift the \(m_0+1\)
+classes to the free integral module on these generators.
+An integral relation whose coefficients have no common
+\(\ell\)-factor yields
+\[
+             \sum_t n_t(d_t)_* z=\partial b
+\]
+for a bar chain \(b\), with some \(n_{t_0}\) a unit.
+\proofstep{Divide the common factor before reduction.}
+
+The division of a common factor is done in the free
+integral module before reducing.
+
+Use the group ring of \(B^2\) to separate the linear
+functionals \((a,b)\mapsto a+tb\). For this let
+\(P(X)=\prod_{i=0}^{m_0-1}(X-\lambda^i)\) and set
+\(Q(X)=\sum_i [X^i]P(X)X^{\lambda^i}\).
+Put \(J=(X^w-1)\). Substitution \(U_0:X\mapsto X^\lambda\)
+is the identity modulo \(J\), and
+\[
+   U_0(X^w-1)=X^{\lambda w}-1\equiv\lambda(X^w-1)\pmod{J^2}.
+\]
+It therefore acts by \(\lambda^j\) on \(J^j/J^{j+1}\).
+Applying \(P(U_0)\) to \(X\) gives
+\(Q(X)\in(X^w-1)^{m_0}\).
+
+In the group ring of \(B\),
+each \([t_0-t]-1\) for \(t\ne t_0\) divides
+\([w]-1\), as the class of \(w\) lies in the subgroup
+generated by \(t_0-t\). Here \(0<|t-t_0|<w\).
+Therefore the image of \(Q(X)\) under \(X\mapsto[1]\)
+is divisible by the product of those factors.
+Multiplying a quotient by
+\[
+       [-\textstyle\sum_{t\ne t_0}t]\,
+            \prod_{t\ne t_0} ([(0,1)]-[(t,0)])
+\]
+in the group ring of \(B^2\), with the initial bracket in
+the first coordinate, gives an element \(\eta\).
+For \(\pi_t(a,b)=a+tb\), the \(t\)-indexed factor in the
+product maps to \([t]-[t]=0\) when \(t\ne t_0\).
+For \(t_0\) the initial translation and the product yield the
+factors \([t_0-t]-1\) used to form the quotient. Thus
+\[
+       (\pi_t)_*\eta =
+        \begin{cases}
+        0,&t\ne t_0,\\
+        \sum_i[X^i]P(X)[\lambda^i],&t=t_0 .
+        \end{cases}
+\]
+
+\proofstep{Stabilize with lattices carrying the prescribed divisors.}
+
+Let \(\operatorname{div}\alpha=\Delta\mathfrak d\).
+On the basis indexed by \(j\in B^2\) of \(F^{B^2}\),
+let \(\rho(v)\) act diagonally by the characters
+\(\zeta^{j\cdot v}\), with \(\zeta\) a primitive
+\(Q_\nu\)-th root. Compare the two stable lattices
+consisting respectively of the standard coordinates
+and of the fractional ideals with divisors
+\(\eta(j)\mathfrak d\).
+For \(t\ne t_0\) the total divisor in each
+equal-character block for \(\rho d_t\) is zero.
+The classification of projective modules over
+\(\mathcal O_F\) gives a block isomorphism
+of determinant one in each block.
+
+For \(t=t_0\)
+move a coordinate with exponent \(\lambda^i\)
+to exponent one using \(\gamma^{-i}\). This acts
+on its divisor by \(g^i\).
+The resulting divisor sum in that block is
+\[
+             P(g)\mathfrak d=P_u(g)\Delta\mathfrak d .
+\]
+It is therefore the divisor of
+\[
+             \beta=P_u(g)\alpha,\qquad
+       P_u(X)=\prod_{0\le i<m_0,\ i\ne u}(X-\lambda^i).
+\]
+In this formula the action is additive on
+multiplicative classes. Take an isomorphism with
+determinant \(\beta\) in the block of exponent one
+and determinant one in the other blocks, then undo
+the coordinate changes. In every case the resulting
+map \(g_t\) is \(L\)-linear and carries the same pair
+of lattices while commuting with \(\rho d_t\).
+
+Conjugate \(\rho\) by \(g_{t_0}^{-1}\) to obtain
+\(\rho'\) on the original lattice, and put
+\(u_t=g_{t_0}^{-1}g_t\) in its automorphism group.
+\proofstep{Correct the conjugations at chain level.}
+
+The bar prism \(\mathcal P_h\) for conjugation by
+\(h^{-1}\) satisfies
+\(\partial\mathcal P_h+\mathcal P_h\partial
+=(\operatorname{conj}_{h^{-1}})_*-1\).
+It follows from the relation with boundary \(b\) that
+\[
+      \rho'_*b-\rho_*b+
+                   \sum_t n_t\mathcal P_{u_t}(\rho'd_t)_*z
+\]
+is a cycle on the original lattice. In the localized
+group the composition of the conjugation homotopies
+makes it homologous to
+\[
+ \sum_t n_t\mathcal P_{g_t}(\rho d_t)_*z.
+\]
+
+Divide by the unit \(n_{t_0}\) in the coefficient ring
+and add a projective complement with trivial action
+to put the cycle on a free \(\mathcal O_L\)-lattice.
+
+\proofstep{Evaluate after reduction.}
+
+Reduction converts the projected cycle into the required residue valuation.
+
+
+For reduction to a finite field \(K\) containing
+\(\mu_{Q_\nu}\), take a cyclic logarithm of \(K^\times\)
+and its integral carry two-cocycle. Normalize the
+logarithm of \(\zeta\) as \((|K^\times|/Q_\nu)\)
+modulo \(|K^\times|\). Cup \(u\) copies of the
+carry cocycle with the quotient character \(v_P\).
+On the prism over exponent \(x\), each summation
+over a bar pair telescopes to \(x\) in \(B\).
+Interior insertions cancel by symmetry of the
+carry cocycle, giving \(x^u v_P(h)\) for a scalar
+prism element \(h\).
+
+For a matrix representation transfer along projective
+lines by recording the successive scalar changes of
+chosen representatives. If
+\[
+ g e_L=c(g,L)e_{gL}
+\]
+in the chosen line representatives, then
+\[
+ c(g_1g_2,L)=c(g_1,g_2L)c(g_2,L).
+\]
+This identifies each middle face of the transferred bar simplex with the corresponding product face. The two end faces agree after reindexing the lines, so transfer commutes with the differential. Under direct sum, projection to the
+lines of the first nonzero block has fibres of
+size a power of \(|K|\), which is one in \(B\).
+Thus the evaluation adds across blocks and the
+trivial complement contributes zero. On a
+scalar-character block it is a homomorphism in the
+prism element by the prism composition law. Each elementary transvection lies in the commutator subgroup, which this homomorphism kills. The resulting dependence on the matrix \(g\) is therefore through
+\[
+ g\longmapsto\det g.
+\]
+
+This proves the same scalar formula with \(h\)
+replaced by its determinant. Only the block with
+determinant \(\beta\) contributes. Taking the product
+over the conjugate residue factors of \(F\) evaluates
+the weighted norm of \(\beta\). More explicitly the
+image of \(\zeta\) in the \(i\)-th conjugate factor
+is the \(\lambda^i\)-th power of the reference
+image, so its scalar cycle contributes \(a^i\)
+times the residue evaluation of \(\gamma^i\beta\).
+The scalar factors are periodic modulo \(Q_\nu\), since
+\[
+ a^{i+s}=a^i a^s\equiv a^i\pmod{Q_\nu}.
+\]
+This permits cyclic reindexing. In the residue evaluation it gives
+\[
+       v_P(Vg^j\alpha)=a^j v_P(V\alpha).
+\] Summing the coefficients
+of \(P_u(g)\) therefore gives
+\(P_u(\lambda^u)v_P(V\alpha)\), as required in
+the detection bound.
+\label{cor:cohomology-height-4}
+\end{proof}

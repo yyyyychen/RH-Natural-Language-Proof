@@ -1,0 +1,262 @@
+\subsection{Choosing one pair of quadratic twists on an interval}
+\label{sec:pair-selection}
+\hypertarget{source-prime-selection}{}
+
+The quotient of the translate group retains twists by each auxiliary quadratic character and by their product. To discard their contributions uniformly, the same two primes must control all three twists at every argument in the selected interval.
+
+\begin{proposition}[A quadratic pair on the full interval]\label{prop:quadratic-prime-pair}
+Fix the modulus \(M\), \(0<\epsilon<1/52\) and \(K\ge1\).
+For all sufficiently large \(Y\), put \(w=Y^{\epsilon/5}\)
+and \(Z=Y^{400K}\). There are primes \(q\equiv3\pmod 8\) and
+\(d\equiv7\pmod{16}\), with
+\[
+ \tfrac12w<\log q\le w,\qquad
+ \tfrac12 w\log^2Y<\log d\le w\log^2Y,
+ \qquad d\equiv-1\pmod{q\prod_{2<p\le w}p},
+\]
+where the product is over primes. For every primitive inducer at
+level \(8M\), the twists by the Legendre character at \(q\), at
+\(d\), or by their product satisfy
+\[
+ |G_\chi(y)|\le y^{1/2+\epsilon/2},\qquad
+ |L'(1,\chi)/L(1,\chi)|\le 4\log y
+       \qquad(Y\le y\le Y^K).
+\]
+
+For the twist by the character at \(q\), take \((F,\log U)=(8M,w)\).
+For the twists by the character at \(d\) and by the product of the two
+characters, take \((F,\log U)=(8Me^w,w\log^2Y)\). Each twist is
+zero-free for \(\RePart s>1-1/400\) and \(|\Im s|\le FU\) with its
+indicated pair. The lower
+threshold for \(Y\) depends only on \(M,K,\epsilon\).
+\end{proposition}
+
+\begin{proof}
+\proofstep{Count the candidate primes and control correlations.}
+Consider a reduced class \(a_0\bmod m_0\), with \(8\mid m_0\).
+Each prime dividing \(m_0\) is at most \(w\) or exceeds \(Z\).
+The candidates \(\mathcal P\) are the primes in this class in
+\((\sqrt U,U]\). In each application
+\[
+  \tfrac14\log^2Y\log m_0\le\log U,\qquad
+  Y^{\epsilon/6}\le\log U\le w\log^2Y .
+\]
+Put \(B=m_0 Z^2\), so \(\log B\le5\log U/\log^2Y\).
+For each modulus \(m\le B\) under consideration, apply the relative
+prime number theorem in progressions of Thorner and Zaman
+\cite[Corollary 1.4 and Remark 1.5]{tz-progressions}.
+
+For \(\sqrt U\le t\le U\) one has \(t\ge m^{12}\) eventually.
+The relative error in the log-weighted count is \(O_A(Y^{-A})\)
+for every fixed \(A\), since \(\log t/\log m\gg\log^2Y\) and
+every fixed positive power of \(\log t\) dominates \(\log^2Y\).
+The possible secondary term may be taken from one primitive real
+character \(\xi\) for all these moduli. For an absolute sufficiently small \(c>0\), the Landau--Page theorem \cite[Lemma 7.1]{landau-page} gives at most one primitive real character satisfying both conditions
+\[
+ \operatorname{cond}\xi\le B,\qquad L(\beta,\xi)=0,\quad \beta>1-c/\log B.
+\]
+Such a zero is in the
+exceptional region for every multiple of the conductor up to \(B\).
+A local exception below this threshold changes the main term by
+a relative \(O(\exp(-c\log t/\log B))\).
+
+For a reduced class \(a\bmod m\) write \(u_a=\xi(a)\) if the
+exception exists and its conductor divides \(m\), and \(u_a=0\)
+otherwise. Terms involving \(\beta\) are omitted in the latter
+case. Partial summation gives, with the same relative error,
+the unweighted count
+\[
+  \frac{1}{\varphi(m)}\int_{\sqrt U}^U
+                   \frac{1-u_a t^{\beta-1}}{\log t}\,dt .
+\]
+In particular the small-main-term case \(u_a=1\) is allowed.
+With \(\lambda=\min(1,(1-\beta)\log U)\), the numerator is
+\(\asymp\lambda\) on the interval. Indeed
+\[
+ 1-t^{\beta-1}=1-e^{-(1-\beta)\log t}
+ \asymp\min\{1,(1-\beta)\log t\}\asymp\lambda
+ \qquad(\sqrt U\le t\le U).
+\]
+
+The weighted main term
+\((t-t^\beta/\beta)/\varphi(m)\) is \(O(t\lambda/\varphi(m))\)
+there, by \(-\log\beta\le2(1-\beta)\) for \(\beta\) near one.
+Consequently both the boundary terms and the integral of the
+weighted error in partial summation are
+\(O_A(Y^{-A}U\lambda/(\varphi(m)\log U))\).
+The effective zero bound \cite[(1.2)]{tz-progressions} and the size of the modulus give
+\[
+ 1-\beta\gg B^{-1/2},\qquad B=U^{o(1)}.
+\]
+Hence the relative loss from the exceptional factor is at most a subpower of \(U\), and \(|\mathcal P|\ge U^{9/10}\) eventually.
+
+For distinct \(w<r,s\le Z\), the candidate primes exceed \(Z^2\),
+so quadratic reciprocity identifies \((rs/p)\), in the prescribed
+class modulo \(m_0\), with a fixed sign times
+\(\eta_{r,s}(a)=(a/r)(a/s)\) on the classes \(a\bmod m_0rs\)
+above \(a_0\). The two new prime factors are coprime to \(m_0\).
+The primary term in this weighted class sum is proportional to
+\[
+       \sum_{a_r\in\mathbb F_r^\times}
+       \sum_{a_s\in\mathbb F_s^\times}(a_r/r)(a_s/s)=0.
+\]
+
+If the exceptional conductor divides \(m_0\), its contribution is
+also constant across these classes and vanishes by the same sum.
+Otherwise the progression modulo \(m_0\) has its full primary
+main term. The exception contributes on the larger modulus only
+when its conductor divides that modulus and its local characters
+on both new factors equal the two nontrivial quadratic factors.
+Thus its prime-to-\(m_0\) conductor must be \(rs\).
+Only one unordered pair can have that property. The relative
+progression errors give \(O_A(Y^{-A})\) for every other correlation.
+
+For any \(|\kappa(n)|\le1\) write
+\[
+ S_p(y)=\sum_{n\le Z}\Lambda(n)\min(1,y/n)\kappa(n)(n/p).
+\]
+Primes \(\le w\) contribute \(O(w)\). The powers of exponent at
+least two contribute \(O(\sqrt y)\), since Chebyshev's bound gives
+\(\sum_{r^j\le t,\,j\ge2}\log r\ll\sqrt t\).
+On the shell \(2^k y<r^j\le2^{k+1}y\), the weight is at most
+\(2^{-k}\), so the tail costs at most
+\[
+ \sum_{k\ge0}2^{-k} O\bigl((2^{k+1}y)^{1/2}\bigr)\ll y^{1/2}.
+\] Dyadic summation bounds the diagonal mass and the off-diagonal mass separately:
+\[
+ \sum_r |a_r|^2\ll y\log(2y),\qquad \sum_r |a_r|\ll y(1+\log Z).
+\]
+The exceptional pair costs at
+most \(|a_r|^2+|a_s|^2\) in the expanded mean square. All other
+off-diagonal terms together cost
+\(O(Y^{-K-1}y^2(1+\log Z)^2)=O(y)\).
+
+Hence \(\sum_p|S_p(y)|^2\ll |\mathcal P| y\log(2y)\) for every
+weight and every \(Y\le y\le Y^K\). For nonintegral
+\(y\), \(yS_p'(y)\) is the sum with the weight replaced by
+\(\kappa(n)\mathbf 1_{n>y}\). Thus the same estimate gives
+\(\sum_p |S_p'(y)|^2\le C y^{-1}\log y\,|\mathcal P|\).
+On \([V,b]\subseteq[V,2V]\), absolute continuity and
+Cauchy--Schwarz imply
+\[
+ \sum_p\sup_{y\in[V,b]}|S_p(y)|^2
+ \le 2\sum_p|S_p(V)|^2
+      +2V\int_V^b\sum_p|S_p'(u)|^2\,du
+ \ll V\log(2V)\,|\mathcal P|.
+\]
+For fixed \(\tau>0\) the exceptional fraction for threshold
+\(V^{1/2+\tau}/2\) is \(O(V^{-2\tau}\log(2V))\).
+The total exceptional fraction on dyadic intervals up to any endpoint
+in \([Y,Y^K]\) is bounded by extending the sum to infinity:
+\[
+ \sum_{j\ge0}(2^jY)^{-2\tau}\log(2^{j+1}Y)
+ =Y^{-2\tau}\sum_{j\ge0}2^{-2j\tau}
+            \bigl(\log(2Y)+j\log2\bigr)
+ \ll_\tau Y^{-2\tau}\log(2Y).
+\] The same conclusion holds for
+any fixed finite set of base characters.
+
+\proofstep{Discard the primes giving a zero in the box.}
+Let the weight now be any of a fixed number of primitive base
+characters of conductor at most \(F\le\sqrt U\), and put \(Q=FU\)
+with \(F\ge1\). Each twisted character is primitive and
+nonprincipal, of conductor \(fp\), where \(f\le F\) is its base
+conductor. This conductor determines \(p\) as its unique prime
+factor greater than \(F\). Huxley's density estimate for primitive
+characters up to conductor \(Q\), at height \(T=Q\), bounds the
+number with a zero of real part \(>1-1/400\) in that box by
+\[
+ O_\eta\big((Q^2 T)^{12/(5\cdot400)+\eta}\big)
+                 \ll Q^{1/4}\le U^{3/8}
+\]
+on taking \(\eta=1/100\) \cite[(1.1)]{huxley}. Thus the union of
+the failed zero-box and maximal-sum tests omits a positive
+fraction of the candidate primes, uniformly in the list for a
+fixed bound on its size.
+
+\proofstep{Recover the centered sums.}
+The mean-square and zero-density estimates have removed exceptional choices of the auxiliary prime. To use a remaining choice in the translate average, we need a bound for the centered sum itself, uniform throughout the original interval.
+
+For a surviving character choose the margin and strip width together:
+\[
+ \alpha=\epsilon/(1600K),\qquad \nu=1/400-\alpha.
+\]
+The logarithmic derivative is
+\(O_\alpha(\log Q)\) on \(1-\nu\le\sigma\le 2\),
+\(|t|\le Q/2\). Indeed, the partial fraction expansion of the
+completed primitive \(L\)-function, differenced at \(2+it\),
+has an \(O(\log Q)\) remainder after retaining the zeros within
+unit vertical distance. The unit-band count is \(O(\log Q)\)
+by the argument principle (equivalently by the real part of the
+logarithmic derivative at \(2+it\) and Stirling's formula).
+The distant bands contribute \(O(\log Q)\) by inverse-square decay. In the unit band the zero-box condition gives
+\[
+ \sum_{|\Im\rho-t|\le1}\frac{1}{|\sigma+it-\rho|}\ll \frac{\log Q}{\alpha}.
+\]
+
+
+Set \(Z'=\lfloor Z\rfloor+1/2\) and apply truncated Perron to
+\(\sum_{n\le Z}\Lambda(n)\chi(n)/n\), on
+\(\Re s=1/\log Z'\) at height \(Q/2\). The truncation costs
+\(O(Z'\log^2 Z'/Q)\). For \(Z'/2<n<2Z'\) use the
+distance of \(Z'\) from integers in
+\(1/|\log(Z'/n)|\ll Z'/|Z'-n|\). Away from that range use
+absolute convergence and \(-\zeta'/\zeta(1+1/\log Z')
+\ll\log Z'\). Moving to \(\Re s=-\nu\) crosses the Perron pole
+with residue \(-L'(1,\chi)/L(1,\chi)\).
+
+For \(y\le Y^K\), the contour bounds after multiplying by \(y\) are
+\[
+ O_\alpha\!\left(y\left[
+   \frac{Z'\log^2Z'}{Q}
+   +\frac{\log Q}{Q}
+   +(Z')^{-\nu}\log^2 Q\right]\right).
+\]
+The first term is truncation, the second is horizontal and the third
+is vertical. The lower bound \(\log Q\ge Y^{\epsilon/6}\) makes
+the first two negligible. For the last, \(Z'\asymp Y^{400K}\)
+and \(400K\alpha=\epsilon/4\), so its size is
+\(O_\epsilon(Y^{\epsilon/4}Y^{\epsilon/2})=
+O_\epsilon(Y^{3\epsilon/4})\), using \(\log Q\le Y^{\epsilon/4}\).
+By \eqref{eq:centered-sum} this is the error in \(G_\chi(y)+S_p(y)\)
+with the primitive base used as the weight.
+
+Set \(\tau=\epsilon/2\) in the maximal-sum test. For large \(Y\)
+the sum and the tail together give the asserted bound for
+\(|G_\chi(y)|\). Dividing the centered identity by \(y\) gives
+\[
+ |L'(1,\chi)/L(1,\chi)|\le
+ y^{-1/2+\tau}+\sum_{n\le y}\Lambda(n)/n\le4\log y .
+\]
+Indeed, summing the divisor identity for \(\log n\) and bounding
+the integer-part error by Chebyshev's estimate gives
+\begin{equation}\label{eq:factorial-mangoldt-bound}
+ \log(\lfloor y\rfloor !)
+ =\sum_{d\le y}\Lambda(d)\lfloor y/d\rfloor
+ =y\sum_{d\le y}\frac{\Lambda(d)}d+O(y).
+\end{equation}
+Stirling's formula on the left yields the stated \(\log y+O(1)\).
+
+\proofstep{Select \(q\) and then \(d\).}
+In the first application \(\log U=w\), \(p=q\equiv3\bmod8\)
+and the conductor bound is \(F=8M\). Use all primitive
+characters inducing characters at level \(8M\).
+In the second application \(\log U=w\log^2Y\). Choose
+\(p=d\equiv7\bmod16\) and \(d\equiv-1\) modulo the product
+of \(q\) and the odd primes \(\le w\). This is a reduced class
+by the Chinese remainder theorem. Its modulus has logarithm
+at most \(4w\) by the prime number theorem.
+
+The sole factor
+greater than \(w\) is \(q>Z\). Include the first list and every
+twist in that list by \(q\), with \(F=8M e^w\le\sqrt U\).
+The two applications give
+\[
+ w/2<\log q\le w,\qquad \tfrac12 w\log^2Y<\log d\le w\log^2Y.
+\]
+This proves all three twist estimates and zero-box assertions on
+one interval. Their thresholds depend only on \(M,K,\epsilon\).
+Quadratic reciprocity identifies the two Legendre characters
+with those of discriminants \(-q,-d\), including their value at
+two.
+\end{proof}

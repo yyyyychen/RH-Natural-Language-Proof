@@ -1,0 +1,432 @@
+\subsection{The selected theta section in the incident frames}
+\label{subsec:incident-sections}
+
+The local jet estimate now requires identifying the theta section of the selected tuple in each incident frame.
+
+Fix a word, one of its used twisting tuples and a selected coefficient
+place \(w\) over \(p\). Use the determinant character, curve ideal,
+twelfth root of the discriminant, translated theta vector and type
+levels attached to this tuple. At consecutive ranks the parameters are
+\[
+ i=j-1,\quad g=t+1,\quad N=k+ig,\quad N'=N+g,
+ \qquad A=ig/2,\quad A'=(i+1)g/2 .
+\]
+The ranks and \(g\) are even. Write \(\lambda\) for the embedding
+of algebraic coefficients in \(\C_p\) extending the chosen place
+on the coefficient field. All local absolute values below use this
+embedding and \(v_p(p)=1\).
+
+A label at level \(i\) consists of a component and a lattice \(L_v\)
+at each split factor above \(p\).
+
+\begin{proposition}[Companion lattices in the incident frames]\label{prop:incident-companion-lattices}
+At two consecutive levels the label and its component frame give
+self-dual rational companion lattices. Writing \(C,C'\) for the two companion lattices, their local spans and global self-duality are
+\[
+ C_v=F_vL_v,\qquad C'_v=F'_vL'_v,\qquad C^\vee=C,\qquad(C')^\vee=C'.
+\]
+The determinant ideles in the theta kernel are \(\det x,\det x'\).
+\end{proposition}
+
+\begin{proof}
+To obtain its adelic point \(x\),
+keep the component's away coordinates. At \(v\) use a matrix
+carrying the reference lattice to \(L_v\) in the component's frame.
+At the conjugate prime the unitary condition prescribes the inverse
+adjoint matrix. Changing the chosen bases on the right changes the
+point by the local level. Write 
+\[
+  x=\gamma y_b\kappa,
+\]
+ with \(y_b\)
+the fixed representative in its level class, \(\gamma\) rational
+unitary and \(\kappa\) in the compact level. At level zero use the
+untwisted representative with the prescribed change at the twist
+support. This change has trivial level character and is the identity
+above \(p\). At positive levels the classes and representatives are
+those of the actual step of the twisted chain.
+
+\proofstep{Recover the local factors of the rational companion.}
+
+Let \(M\) be the companion lattice of \(x\) in the rational orthonormal
+space. If \(V\) is the rational orthonormal space and \(M_v\) are the translated local base lattices, the companion lattice is their rational intersection
+\[
+  M=\{u\in V:u_v\in M_v\text{ at every finite }v\}.
+\]
+ Localization recovers every
+factor. Indeed, after multiplying by a common denominator these
+are sublattices of one integral lattice with conditions modulo
+finitely many relatively prime ideal powers. The Chinese remainder
+theorem lifts each prescribed finite set of residues, to arbitrarily
+high precision at a chosen prime.
+
+For the integral lattice \(L\) after clearing denominators and coprime ideal powers \(\mathfrak a_v\), the residue map is
+\[
+  L/\bigl(\prod_v\mathfrak a_v\bigr)L\xrightarrow{\ \sim\ }\prod_v L/\mathfrak a_v L .
+\]
+ Dualizing locally commutes with
+this construction. The standard companion is self-dual in the
+chosen normalization, and the adelic action preserves the pairing.
+Thus \(M\) is self-dual. At \(v\) its span is \(F_v L_v\), where
+\(F_v\) takes the component frame into the orthonormal frame.
+At the next level the same construction gives \(M'\) with span
+\(F'_v L'_v\). The determinant ideles used for these labels are
+\(\det x,\det x'\). This describes both the completed lattices and
+the determinant entering the theta kernel. \label{cor:incident-sections-1}
+
+\end{proof}
+
+Write \(I,I'\) for their determinant ideals relative to the two
+standard companions. The normalized theta vector on the pair is
+the transported vacuum times
+\[
+ C_\chi=\chi(I)^{N'/2}\chi(I')^{-N/2}.
+\]
+\begin{proposition}[The normalized incident Taylor series]\label{prop:incident-taylor-series}
+At a good inert coefficient place for the chosen tuple, the scalar \(S\) from \textup{\eqref{eq:tag-i1}} satisfies
+\[
+ v_p\!\left(p^{\sum_v\Delta_j(v)(l'_v-l_v)}S\right)=0.
+\]
+ In the
+trace-dual pair frames the length-normalized series is \textup{\eqref{eq:tag-i4}},
+with \(U\) integral and the same phase \(B_{d_v}\) in each entry
+at \(v\). The factor \(U\) can depend on all places.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Normalize the finite sum of translated vacua.}
+
+The finite reader \(\Xi\) weights its translates on the prescribed
+quotient of the Hom lattice. Its coefficients are algebraic and
+integral at \(w\). In fact the finite data are locally constant at
+the stated level, and the denominators of the finite type projectors
+are supported on the bad set for the tuple. Both primes at \(v\)
+avoid this set. The translation quotient has level prime to \(p\).
+The resulting kernel is a finite sum of entire translates with
+algebraic Taylor coefficients in the chosen differential coordinates.
+
+Write \(\mu\) for the stage character. Before the local length
+normalization the scalar on this sum of normalized translates is
+\[
+ S=C_\chi^{-1}\frac{\mu(\det x')}{\mu(\det x)}
+                  \chi(I)^{-A}\chi(I')^{A'} .
+ \tag{I1}\label{eq:tag-i1}
+\]
+The determinant ideals of self-dual companions have norm one.
+Their \(\chi\)-values have absolute value one at a good inert
+prime. For example, a positive power of the ideal is principal,
+and its prescribed character power is the reflex value of a
+norm-one generator up to a root of unity. Complex conjugation
+fixes the place on the quadratic reflex field and reverses this
+value, so its valuation is zero.
+
+\proofstep{Compute the valuation from the alternating cycle.}
+
+For each \(v\), let \(s\) run around its cycle and write
+\(\tau(v,s)\) for the corresponding infinite position. The
+completion \(\rho_v\) of the host on the first factor, the
+chosen inclusion \(\iota_v\) of its unramified coefficient field,
+and the Witt Frobenius \(\sigma\) satisfy
+\[
+ \lambda(\tau(v,s)(z))=
+ \iota_v\sigma^s\rho_v
+ \begin{cases} z,&s\text{ even},\\ \bar z,&s\text{ odd}.
+ \end{cases}
+ \tag{I2}\label{eq:tag-i2}
+\]
+Indeed \(s=0\) fixes the prolongation and moving one place in
+the real cycle composes with residue Frobenius. On the quadratic
+CM factor this composition changes the structural embedding.
+The CM-type lift therefore includes conjugation exactly at the
+odd positions.
+
+In particular a uniformizer idele \(\pi_v\) with
+components \(p\) and \(p^{-1}\) at the conjugate places and one
+elsewhere has \(v_p(\mu(\pi_v))=\Delta_j(v)\). The character's
+infinity exponents have the stage weights after the common shift.
+A constant shift disappears in the alternating sum on this even
+cycle. One can compute this valuation on principal ideles after
+raising to the exponent of the finite ray quotient, since compact
+level factors have finite character. The local determinant order
+of \(x\) is \(-l_v\) for log volume \(l_v\). Applying the formula
+at every \(v\) gives
+\[
+    v_p(S)=-\sum_v\Delta_j(v)(l'_v-l_v).
+ \tag{I3}\label{eq:tag-i3}
+\]
+Thus the factor \(p^{\sum_v\Delta_j(v)(l'_v-l_v)}\lambda(S)\)
+in the local Taylor reading is a unit. The valuation statement
+holds for lattices of either sign of length.
+
+\proofstep{Pass from the orthogonal chart to the paired frames.}
+
+Use one good model and one tangent unit \(c\) of the
+formal isomorphism in Section~\ref{subsec:cm-models} for the
+whole site. A basis of \(F_vL_v\) and its trace dual on the
+conjugate summand identify the completed lattice with a
+hyperbolic pair. Do this also for \(F'_vL'_v\) and take the
+resulting Hom bases. In both the reference and these bases the
+orthogonal model of the fourfold lattice has unimodular Gram
+matrix. The transition matrix \(U\) between the two integral orthonormal bases satisfies
+\[
+  U^*U=I,\qquad U^{-1}=U^*\in M_n({\cal O}_w),
+\]
+where \(n\) is the size of the frame.
+
+The change of frame \(U\) preserves the sum of the one-variable gauges modulo logarithms of integral principal units, by the
+calculation of Section~\ref{subsec:cm-models}. The normalized
+fourth tensor expansion of Section~\ref{subsec:theta-normalization}
+applies to each translate, since the translation order is prime
+to \(p\). Extracting the coefficient at four equal indices on
+disjoint sets of variables proves integrality of the gauged
+single section. Summing with the reader coefficients and using
+\eqref{eq:tag-i3} preserves integrality. On each matrix entry the two
+isotropic factors have zero self-pairings and identity cross
+pairing. Substitution of the two trace-dual bases as in
+Proposition~\ref{prop:curve-cycle-exponent} now gives the series
+\[
+    U\big((g_{d_v}(Z_{v,ab}))_{v,a,b}\big)
+    \exp\left(-\sum_{v,a,b} B_{d_v}(Z_{v,ab})\right).
+ \tag{I4}\label{eq:tag-i4}
+\]
+Here \(g_d\) is the vector of inverse logarithms on the cycle,
+and \(U\) has integral coefficients in the completed algebraic
+closure. All entries at \(v\) have the same \(B_{d_v}\).
+The multiplier may involve variables from every place. The
+series comparison does not require its coefficients to factor.
+
+For a change of source and target bases \(C,C'\), the Hom
+coordinate at the even positions transforms by
+\(Z\mapsto C'ZC^{-1}\), at the odd positions by
+\(Z\mapsto(C'^{-1})^t Z C^t\), with the corresponding
+Frobenius applied to the matrices. Hence for an incident pair
+one may take a basis adapted to the sublattice, with \(p\) in
+the selected diagonal positions. This gives the scaling on the
+two parities used in \eqref{eq:tag-j1}. \label{cor:incident-sections-2}
+
+\end{proof}
+
+\begin{proposition}[Equivariance and the local neighbor relation]\label{prop:incident-covariance}
+The length-normalized incident series transforms under a rational
+source move by \textup{\eqref{eq:tag-i5}} with its length correction and the
+prescribed Hom substitution. Fix every coordinate away from \(v\). The character of the two length changes, with units \(a,a'\) from \textup{\eqref{eq:tag-i6}}, is
+\[
+ (n,n')\longmapsto a^n(a')^{n'}.
+\]
+ After removing
+these units and the volume normalization, every rational indicator
+relation of \(\{z:zL_v\subset L'_v\}\) holds coefficientwise for
+the normalized series, with the remaining length factor of \textup{\eqref{eq:tag-p1}}.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Transform the source by a rational unitary map.}
+
+Consider
+an arithmetic move of the source by \(g_0\) in its rational
+unitary group. Write \(x_1=g_0 x\kappa\) and \(e\) for \(g_0\)
+conjugated into the orthonormal frame. Then \(M_1=eM\) and
+\(F_{1,v}\gamma_v=\rho_v(e)F_v\), with \(\gamma_v\) the action
+on the source coordinates. In the reader replace \(z\) by \(ze\).
+The change of the finite character is
+\(c_\Xi=\mu(\det\kappa)/\chi_{\rm lev}(\kappa)\).
+Writing \(P=\prod_\tau \tau(\det g_0)\), the determinant ideal
+rule gives \(\chi(I_1)=P^{-1}\chi(I)\).
+Substitution in \eqref{eq:tag-i1} gives
+\[
+ \frac{S_1 c_\Xi}{S}
+   =\frac{P^{A+N'/2}}{\mu(\det g_0)\chi_{\rm lev}(\kappa)} .
+ \tag{I5}\label{eq:tag-i5}
+\]
+For the length-normalized series there is the additional factor
+\(p^{-\sum_v\Delta_j(v)(l_{1,v}-l_v)}\).
+This is exactly the inverse arithmetic character times the
+inverse differential determinant, with its length correction.
+
+To see the equality, the local differential determinant on
+\(\gamma_v\) is the product of its embedded determinants raised
+to \((-1)^s w_j(s)\) at positions \((v,s)\). Apply \eqref{eq:tag-i2} to
+those factors, use the finite character on \(g_0 x\kappa\),
+and use 
+\[
+  \operatorname{ord}_v\det\gamma_v=l_v-l_{1,v}
+\]
+in the length correction. The shifted constant exponent on
+\(\det g_0\) gives \(A+N'/2\) in \eqref{eq:tag-i5}. With the Hom
+substitution above this proves covariance on the whole orbit.
+In particular two ways of carrying a representative to the
+same lattice give equal kernel readings by applying covariance
+to their quotient in the stabilizer. \label{cor:incident-sections-3}
+
+\proofstep{Vary the two lattices at one split factor.}
+
+Next fix every component and lattice away from \(v\), and vary
+\(L_v,L'_v\) within this fiber. Set \(m_v=\lambda(\mu(\pi_v))\)
+and let \(z_v\) be the \(\chi\)-value of its relative
+determinant ideal. The units in \eqref{eq:tag-p1} are
+\[
+     a=p^{-\Delta_j(v)}m_v z_v^{A},
+   \qquad a'=p^{\Delta_j(v)}m_v^{-1}z_v^{-A'} .
+ \tag{I6}\label{eq:tag-i6}
+\]
+They belong to the embedded field of the readings. Indeed a
+diagonal uniformizer in one split factor, completed by its dual,
+realizes \(\pi_v\) as a determinant at either positive rank.
+The step and twist characters on these adelic determinants take
+their prescribed values in that field. The valuations follow from
+\eqref{eq:tag-i2} and the norm-one ideal rule.
+
+If the two lengths change by
+\(n,n'\), the determinant ratio in the numerator of \eqref{eq:tag-i1},
+including \(\chi(I)^{-A}\chi(I')^{A'}\), changes by
+\(m_v^{n-n'}z_v^{An-A'n'}\). After multiplication by
+\(p^{\Delta_j(v)(n'-n)}\) this is \(a^n(a')^{n'}\).
+
+\proofstep{Transfer the indicator relation through the fixed away reader.}
+
+Dividing the normalized theta vector by \(C_\chi\) restores the
+transported vacuum. In the split model put \(H_v=\{z:zL_v\subset L'_v\}\). The two successive lattice changes give the normalized indicator
+\[
+  \operatorname{vol}(H_v)^{-1/2}\,\mathbf1_{H_v}(z).
+\]
+ This follows by composing the two changes of variables
+in the Hom space, whose Jacobian gives the volume computed in
+\eqref{eq:tag-p1}.
+
+The trace different at these good places is a unit and
+the reader away from \(v\) is fixed. Thus any rational linear
+relation of indicators remains a relation of these normalized
+series after removal of the two character units and the volume
+factor. Indeed apply the identical away reader to the relation
+before the finite sum of theta translates, then take each Taylor
+coefficient. The length-normalized reading includes
+\(p^{\Delta_j(v)(l'_v-l_v)}\). Removing it for the untwisted Hom
+indicator calculation introduces precisely the last factor in
+\eqref{eq:tag-p1}. This proves the required away-data statement for the full
+neighbor sums. \label{cor:incident-sections-4}
+
+\end{proof}
+
+\begin{proposition}[The derivative and the neighbor operator use one scalar]\label{prop:incident-reading-scalar}
+On the chosen stage and at the fixed coefficient place, the
+class-representative derivative and the incident-frame derivative
+are related by the scalar \(c_K\) of \textup{\eqref{eq:tag-i7}}. Writing \(v_w\) for the chosen valuation, the common scalar has the value
+\[
+ c_K=c^{-D}\lambda(k_T/(k_S c_{\rm op})),\qquad v_w(c_K)=0.
+\]
+It is independent of the lattice pair and works for every sharp polynomial of the given weight, also in the initial twisted copy. The separate length factor remains in the Taylor coefficient.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Pull back both class representatives.}
+
+For decompositions
+\(x=\gamma y_b\kappa_S\), \(x'=\gamma' y_{b'}\kappa_T\),
+the pullback of the class kernel uses the rational unitary
+maps on both factors. Its scalar on the theta function is
+\[
+     \frac{\mu(\det\kappa_S)\chi_{{\rm lev},T}(\kappa_T)}
+          {\mu(\det\kappa_T)\chi_{{\rm lev},S}(\kappa_S)} .
+\]
+This follows by changing variables by the two rational maps in
+the translation sum. Each finite weight transforms by its two
+compact characters. Apply the chain rule to the frame minors
+and contract their source indices against a polynomial of the
+specified sharp weight. Each contracted index pairs a basis
+matrix with its inverse. The residual determinant powers at
+the source and target can be recorded as follows. For a rational
+matrix \(M_0\) write \([M_0]_b=\prod_\tau\tau(\det M_0)^{b_\tau}\).
+
+Let \(B_i\) be the chart basis in the rational orthonormal
+coordinates and \(G_i\) the fixed change to orthonormal
+coordinates for the identity element. Let \(q_i\) be the
+level's determinant twist, and \(s_{\rm sh},s_{\rm div}\)
+the source sharp and target divided shifts of the stage. Put
+\[
+ k_S=[B_i]_{-s_{\rm sh}}[G_i]_{N'/2+q_i},\qquad
+ k_T=[B_{i+1}]_{-s_{\rm div}}[G_{i+1}]_{N/2+q_{i+1}} .
+\]
+Indeed the frame polynomial changes by the determinant to its
+weight shift, and removing the determinant line of the theta
+vector adds the constant half-rank to the twist exponent.
+Let \(c_{\rm op}\) be the odd row reversal sign times the product
+of the chosen derivation generators to minus the number of boxes
+at their respective positions, and \(D\) the total number of boxes.
+The differential comparison uses the single scalar
+\[
+                 c_K=c^{-D}\lambda(k_T/(k_S c_{\rm op})).
+ \tag{I7}\label{eq:tag-i7}
+\]
+\proofstep{Identify the single differential scalar.}
+
+For the cancellation, write \(G_i(\gamma)\) for the rational
+change to orthonormal coordinates for \(\gamma\), so that
+\(G_i(1)=G_i\). Put \(z_b=\chi_D(\det y_b)\) for the twist
+character on the determinant class, and use the analogous
+notation at the target. With \(P_i(\gamma)=[G_i(\gamma)]_1\)
+the two residual factors are
+\[
+\begin{aligned}
+ u_S&=\chi_{{\rm lev},S}(\kappa_S)^{-1}\mu(\det\gamma)^{-1}
+            P_i(\gamma)^{N'/2+q_i} z_b^{-q_i},\\
+ u_T&=\chi_{{\rm lev},T}(\kappa_T)\mu(\det\gamma')
+            P_{i+1}(\gamma')^{-(N/2+q_{i+1})} z_{b'}^{q_{i+1}} .
+\end{aligned}
+\]
+
+\proofstep{Cancel the level characters and rational determinant factors.}
+
+To obtain them, insert both double-coset decompositions in
+\eqref{eq:tag-i1} times the compact character ratio. The determinant
+characters of the representatives give the two class characters
+already in the stage differential. Moving the rational factors
+out of the determinant ideals by \eqref{eq:tag-i5} and its target version
+leaves \(u_Su_T\). The separate power of \(p\) given by the
+lengths stays in the local Taylor reading. Include the source
+coordinate determinant \(c_A\) with the signed weights of \eqref{eq:tag-i5},
+and write \(s_O\) for the source reading with its level character,
+twist, inverse basis determinant to the twist and operator
+normalization. Multiplication by \(u_S\) cancels the source
+level character and \(z_b^{q_i}\). The rational and frame
+determinants combine into the two factors of \(k_S\). Thus
+
+\[
+  c_A s_O\lambda(u_S)=\lambda(k_S c_{\rm op}).
+\]
+ The target
+reading equals \(\lambda(u_T k_T)c^{-D}\), since each box
+differentiates the argument scaled by \(c\). Consequently
+\[
+  c_K(c_A s_O)\lambda(u_S)\lambda(u_T)=\lambda(u_T k_T)c^{-D}.
+\]
+This proves the scalar identity with \eqref{eq:tag-i7}.
+This computation applies coefficientwise to all the sharp
+polynomials, including those in the initial twisted copy of
+level zero, whose frames are identified by its level isomorphism.
+
+\proofstep{Check the valuation and independence from the pair.}
+
+The bases \(B_i\) are shared across components of a stage in the
+chosen chart construction. Their embedded determinants have norm
+one. Locally they compare integral bases on the given split
+lattice and its dual with the integral bases on the standard
+companion, so the local change is invertible over the valuation
+ring in the relevant embedding. For the constant powers of \(G_i\)
+one needs only the product over the CM type. Its determinant is
+norm one and the reflex product is in the quadratic CM field,
+where the inert valuation is invariant under conjugation.
+
+For the norm-one reflex product \(u\) at this inert place the calculation is
+\[
+  v_p(u)=v_p(\bar u),\qquad 2v_p(u)=v_p(u\bar u)=0 .
+\]
+ The
+product therefore has valuation zero. The derivation generators
+are units at this good place, as is \(c\). These facts give
+\(|c_K|_p=1\) and show that \eqref{eq:tag-i7} is independent of the lattice
+pair. Consequently the calculation of the neighbor operator
+before differentiation and the application of \eqref{eq:tag-j1} after
+differentiation give bounds on the same stage of the selected
+chain. This common scalar allows the linear combinations in the
+Euler inversion of \eqref{eq:tag-p7}. \label{cor:incident-sections-5}
+\end{proof}

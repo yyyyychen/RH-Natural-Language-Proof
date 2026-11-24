@@ -1,0 +1,532 @@
+\subsubsection*{Why the retained localization has an irreducible block}
+\label{subsec:retained-galois}
+\hypertarget{source-retained-galois}{}
+
+The local estimates on the character summands leave a complementary Galois block. Its residual irreducibility is needed for the integral matrix algebra used in the congruence argument. The two tame type conditions test that irreducibility on the retained support.
+
+\begin{paramdefinition}[Good theta point and the two tame type tests]\label{hyp:retained-type-tests}
+For a candidate type at a theta point of Section~\ref{subsec:selected-cut}, let \(g\in\{g_0,g_1\}\) be a type prime and let \(r\) be
+the rank of the complementary summand. At each place \(v\mid g\), require that the degree-\(r\) polynomial \(P_v\) have simple nonzero roots. Call the tuple good at this prime when it satisfies all three tests.
+\begin{itemize}
+\item For each possible constituent dimension, one place excludes it:
+\[
+ \forall a\in\mathbb Z\cap[1,r/2]\quad\exists v\mid g
+ \quad\nexists Q\in\mathbb F_g[X]:\quad Q\mid P_v,\quad \deg Q=a .
+\]
+\item Away from the bad prime set for \((r,g)\), projection to the
+prime-to-\(\ell\) parts is injective on the roots of each \(P_v\).
+At every \(\ell\ne g\), those projected roots avoid the projected
+labels of the character block and their inverses.
+\item At one place there is an irreducible factor of prime degree
+\(p\) with \(r/2<p\le r-3\).
+\end{itemize}
+Retain a pair of types when it is good at both primes. The bad prime set is
+\[
+ \{g\}\cup\{\ell\text{ prime}:\ g^d<\ell^{4v_\ell(g^d-1)}
+                    \text{ for some }1\le d\le r\}.
+\]
+The projector in Definitions~\ref{def:localized-type-support} and~\ref{def:good-projector-support} retains exactly the jointly good labels within its theta support. Proposition~\ref{prop:two-type-primes} supplies type primes with disjoint exceptional sets. For a root of unity \(z\) of order
+\(\ell^a b\), with \(\ell\nmid b\), its prime-to-\(\ell\) part
+is \(z^e\), where \(e\equiv0\pmod {\ell^a}\) and
+\(e\equiv1\pmod b\).  \label{cor:retained-galois-1}
+\end{paramdefinition}
+
+\begin{proposition}[The irreducible rank-complement]\label{prop:retained-rank-complement}
+At a good theta point satisfying Definition~\ref{hyp:retained-type-tests},
+the complement of the prescribed string is cuspidal of rank \(r\).
+Its attached integral representation has absolutely irreducible
+reduction at the coefficient prime \(\ell\). Choose a marked type
+prime \(g\) with \(\ell\notin B_r(g)\), with \(B_r(g)\) as in Definition~\ref{def:type-exceptional-primes}. Write \(\bar W\) for the reduction over an algebraic closure of its residue field. For every open normal subgroup \(H\) with solvable quotient containing the inertia groups at the selected places over \(g\),
+\[
+ 0\ne U\subseteq\bar W,\quad HU=U\quad\Longrightarrow\quad U=\bar W
+\]
+for every subspace \(U\).
+\end{proposition}
+
+\begin{proof}
+\proofstep{Apply the common divisor-degree test to the possible isobaric partitions.}
+First the parameter left after removal of the specified character
+block is cuspidal of rank \(r\). Indeed, if its parts have ranks
+\(a_j\) and multiplicities \(d_j\), the degree calculation is
+\[
+ r=\deg\!\left(\prod_j P_{v,j}^{d_j}\right)=\sum_j d_j\deg P_{v,j}\le\sum_j d_j a_j=r.
+\]
+Thus \(\deg P_{v,j}=a_j\) for every part at every place.
+The labels have no repetitions, so every \(d_j=1\). If there were at least two parts, choose a smallest one of rank \(a\). Its factor would satisfy
+\[
+ 1\le a\le r/2,\qquad P_{v,j}\mid P_v,\qquad\deg P_{v,j}=a\quad(\text{every }v).
+\]
+This contradicts the
+first test.
+
+\proofstep{At a good type prime, use the distinct prime-to-residue-characteristic inertia labels.}
+Choose \(g\) for which \(\ell\) is outside the bad set. The attached
+integral representation for this regular algebraic conjugate
+self-dual cusp has the following inertia polynomials. In the
+depth-zero dictionary a root \(z\) gives the corresponding tame
+root of unity on a fixed generator \(T_v\). Transport to
+\(\overline{\mathbb Q}_\ell\) followed by reduction kills its
+\(\ell\)-part and is injective on the roots of order prime to
+\(\ell\). For the prime-to-\(\ell\) order \(b\), these roots remain distinct because
+\[
+ z^b=1\quad\Longrightarrow\quad b z^{b-1}\ne0
+ \quad\text{in residue characteristic }\ell.
+\] The unramified
+normalizing twist has value one on inertia. Thus the eigenvalues of
+\(\bar\rho(T_v)\) are the images of the projected roots just
+described. The depth-zero parameter has trivial wild inertia.
+For a wild element the polynomial \((X-1)^r\) makes its residual image unipotent, hence of \(\ell\)-power order. Its order is also a power of \(g\), so
+\[
+ g\ne\ell\quad\Longrightarrow\quad\operatorname{ord}(\bar\rho(\text{wild element}))=1.
+\]
+
+Arithmetic Frobenius conjugates \(T_v\) to \(T_v^g\) modulo wild
+inertia, since every marked type place splits completely and has
+residue field \(\mathbb F_g\). Consequently Frobenius permutes the
+residual eigenlines with the same orbit lengths as the roots of
+\(P_v\) under \(z\mapsto z^g\). Projection commutes with this
+power map and the roots remain distinct. On lines, taking the
+inverse permutation gives the same orbit lengths.
+
+\proofstep{Use the two permutation tests and then restrict to the auxiliary subgroup.}
+The tame generator has separated the residual inertia lines. Thus an invariant subspace would select a set of lines stable under the permutation induced by Frobenius.
+
+An invariant subspace over \(\overline{\mathbb F}_\ell\)
+is a sum of the eigenspaces for \(T_v\), by the polynomial
+projectors for its distinct eigenvalues. It is Frobenius stable.
+Thus for each selected \(v\) its dimension and codimension lie in
+the set
+\[
+     \left\{\sum_{C\in S}|C|:
+          S\text{ a subset of the Frobenius cycles at }v\right\}.
+\]
+This set consists of the degrees of divisors of \(P_v\)
+over \(\mathbb F_g\). The first test excludes a common degree
+between \(1\) and \(r/2\), so no proper nonzero subspace
+is possible. Scalar normalization preserves invariant subspaces.
+At each split unramified Frobenius outside the finite level, denote the full polynomial by \(P_{\rm full}\) and the monic character factors by \(P_1,\dots,P_t\). The comparison with the cusp reads
+\[
+ P_{\rm full}/(P_1\cdots P_t)=P_{\rm cusp}.
+\]
+Chebotarev on a common finite quotient and Brauer--Nesbitt give
+the same semisimplified reduction. Its irreducibility implies
+irreducibility of the actual reduction.
+
+Let \(H\) now be the open normal subgroup containing the selected
+inertia groups, with solvable quotient. At the prime-degree
+test place a minimal nonzero \(H\)-invariant space is a span of
+coordinate lines of \(T_v\). Its translates are also minimal
+and distinct ones have zero intersection. Full irreducibility makes these translates a partition of the eigenlines into \(h\) blocks of size \(b\), hence
+\[
+ \#\{\text{eigenlines}\}=hb=r.
+\]
+A power of the Frobenius permutation is a single
+\(p\)-cycle: the other cycles have lengths smaller than \(p\).
+For \(h,b>1\), the group preserving the blocks has order
+\((b!)^h h!\), prime to \(p\) since
+\[
+ h,b\le r/2<p.
+\]
+
+This excludes those values of \(h,b\).
+
+If \(b=1\), the action on the lines is transitive and factors
+through the solvable quotient. It is primitive by the same
+order argument applied to any invariant nontrivial partition.
+A minimal nontrivial normal subgroup is elementary abelian
+and transitive, and faithfulness makes that abelian action
+regular. Hence the action is affine on \(\mathbb F_q^u\)
+for a prime \(q\) with \(r=q^u\). Our \(p\)-cycle has a
+nonempty affine fixed space, so
+\[
+ r-p=q^d.
+\]
+In the test
+range \(3\le r-p<p\), giving \(d\ge1\). But then
+\[
+               p=q^d(q^{u-d}-1)
+\]
+would force \(q^d=p\), a contradiction. The remaining
+partition has \(h=1\), so the original minimal subspace
+is the whole space.
+
+This proves the restriction assertion for \(H\). \label{cor:retained-galois-2}
+\end{proof}
+
+\subsubsection*{Constructing the two integral projections}
+
+With residual irreducibility established, the next step is integral. The matrix algebra must contain projections that distinguish the complementary block from a character line after specialization.
+
+\begin{proposition}[Integral projections at a retained localization]\label{prop:retained-integral-projections}
+At a retained theta localization with absolutely irreducible
+residual complement of rank \(r>1\), the local matrix algebra contains orthogonal idempotents \(e_B,e_1\). For the complement \(W\) and every character line \(L\) at a theta point, their ranks are
+\[
+ (\operatorname{rk}e_B|_W,\operatorname{rk}e_1|_W)=(0,1),\qquad (\operatorname{rk}e_B|_L,\operatorname{rk}e_1|_L)=(1,0).
+\]
+The marked corner operator may be chosen with simple spectrum at
+the retained fibres, keeping its prescribed value at the selected
+point and perturbing by any given power of the coefficient uniformizer
+in the ideal vanishing there.
+\end{proposition}
+
+\begin{proof}
+Let \(O\) be the complete coefficient DVR and \(F\) its fraction
+field. At a localization containing a good point write \(X\)
+for the finite set of systems and \(\mathcal T\subset O^X\)
+for the local Hecke algebra. At every \(x\) there is a
+continuous semisimple integral model \(R_x\), with characteristic
+coefficients in \(\mathcal T\) as functions of \(x\).
+Here an integral model means a stable lattice in the semisimple
+rational representation. A compact image stabilizes such a lattice
+by taking the span of the orbit of an initial lattice. The
+coefficient splitting in the selected norm data realizes the
+constituents over \(F\). At theta points use the rational
+decomposition into the rank-\(r\) complement and the \(t\)
+prescribed lines.
+
+Let \(k\) be the residue field and \(\mathfrak m\) the unique maximal
+ideal of \(\mathcal T\). Each residual evaluation
+\[
+ \overline{\operatorname{ev}}_x:\mathcal T\longrightarrow k
+\]
+is onto, since it contains the reduction of the constant scalars. Its kernel is therefore
+\(\mathfrak m\), and the induced isomorphism \(\mathcal T/\mathfrak m\to k\)
+is the same for all \(x\) because it fixes the residue scalars. Thus,
+for every \(g\) and any two systems \(x,x'\), reduction of the
+characteristic coefficients gives
+\[
+ \det(1-T\overline R_x(g))=\det(1-T\overline R_{x'}(g))
+       \quad\text{in }k[T],
+ \qquad
+ \overline R_x^{\,\mathrm{ss}}\simeq \overline R_{x'}^{\,\mathrm{ss}}
+\]
+by Brauer--Nesbitt. This includes the systems outside theta.
+In particular their distinct simple modules consist of the
+absolutely irreducible rank-\(r\) module above and some
+one-dimensional characters. Repeated residual characters are
+allowed. Here \(r>1\) by the type tests.
+
+\proofstep{The residual algebra and its idempotents.}
+The integral residual action is obtained from the simultaneous matrix order
+\[
+ A=\sum_g\mathcal T\,(R_x(g))_x.
+\]
+
+It is a finite torsion-free \(O\)-algebra inside a product of
+matrix rings. In its residue action on the distinct simple
+modules the image is the product of their full matrix rings.
+Indeed each action is onto by absolute irreducibility and the
+density theorem, and inequivalent simples have different
+maximal two-sided annihilators, which are pairwise comaximal.
+This also follows by applying the semisimple algebra theorem
+to the joint action. The simple actions for \(A\) here are the
+ones for the residual Galois matrices, because the extra Hecke
+scalars have common reduction. In the product of the rank-\(r\) matrix factor with the character factors, the desired residual projections are
+\[
+ (0,1,\ldots,1),\qquad (E_{11},0,\ldots,0).
+\]
+
+
+Let \(k=O/\varpi O\) and let \(J\) be the Jacobson radical
+of \(A/\varpi A\). Its semisimple quotient surjects onto
+the product acting on the indicated simples. Choose the
+character projection and the matrix unit there and give
+both zero on any unused simple factors. For an approximate idempotent \(a\), correct its defect by
+\[
+ d=a^2-a,\qquad b=3a^2-2a^3=a-(2a-1)d.
+\]
+The polynomial identities
+\[
+       b-a=-(2a-1)d,\qquad
+       b^2-b=d^2(4d-3)
+\]
+show that the error is squared at each iteration.
+This first lifts across the nilpotent ideal \(J\) and then
+converges in the \(\varpi\)-adically complete ring \(A\).
+After lifting the character projection \(e_B\), lift the
+second idempotent \(e_1\) inside the corner with identity
+\(1-e_B\). This preserves orthogonality.
+
+For a stable integral fibre, an idempotent \(e\) gives
+\(R_x=eR_x\oplus(1-e)R_x\) on its lattice. Reduction
+therefore preserves its rank, and applying \(e\) on an
+invariant composition series adds the ranks on the
+residual factors. There are \(t\) one-dimensional factors \(L_i\)
+counted with multiplicity, and one rank-\(r\) factor \(W\).
+The chosen residual actions give
+\[
+ \begin{aligned}
+ \operatorname{rk}(e_B R_x)&=\sum_{i=1}^{t}\dim e_B L_i
+                                      +\dim e_B W=t,\\
+ \operatorname{rk}(e_1 R_x)&=\sum_{i=1}^{t}\dim e_1 L_i
+                                      +\dim e_1 W=1 .
+ \end{aligned}
+\]
+This calculation depends only on the residual composition
+factors and hence holds for every admitted fibre. At the marked theta point the \(\mathcal T\)-linear
+matrix expressions restrict individually to each of the
+rational constituents. Applying the same rank check on
+each given stable lattice gives zero and rank one on the
+rank-\(r\) summand, respectively, and identity and zero
+on every scalar line. These are the characteristic-zero
+projections asserted above.
+
+\proofstep{An inertia element with the prescribed depth.}
+At the split small primes the local host lies inside the compositum of the unramified field and the level-\(s\) cyclotomic field. Hence one can choose
+\[
+ g_0\in I_\ell,\qquad \epsilon_{\rm cyc}(g_0)=1+\ell^s,
+\]
+where \(I_\ell\) denotes host inertia and \(\epsilon_{\rm cyc}\) the cyclotomic character. When a type prime \(g_k=\ell\), start with
+\(\sigma\) in inertia above \(\ell\) whose cyclotomic value
+is \(1+\ell^{s_0}\), with \(s_0\ge1\) the prescribed local
+depth.
+
+In the closed procyclic subgroup generated by \(\sigma\), define
+\[
+ g_0=\operatorname{pr}_{\ell}(\sigma),
+\]
+where the projection is to the \(\ell\)-primary component in each finite quotient. The original
+inertia group is closed, hence contains \(g_0\). At every
+place above \(\ell\) whose inertia contains \(g_0\), its
+image in tame inertia is trivial since that quotient has
+prime-to-\(\ell\) order in every finite quotient. The
+cyclotomic image of the closed cyclic group lies in the
+pro-\(\ell\) group \(1+\ell^{s_0}\mathbb Z_\ell\).
+Projection therefore preserves its value, in particular the
+required exact depth
+\[
+ v_\ell(\epsilon(g_0)-1)=s_0.
+\]
+
+In particular the marked \(t\) eigenvalues are distinct,
+since consecutive character values differ by the fixed
+cyclotomic ratio of infinite order.
+
+\proofstep{Preserving the value at the marked point.}
+Lifting an idempotent separates the blocks in the integral order. The determinant calculation also requires a corner element with a prescribed specialization at the marked point.
+
+We construct \(X_0\) in the corner of \(e_B\), specializing
+to \(e_BR_\pi(g_0)e_B\) at \(\pi\) and with simple spectrum
+on the corner at all \(x\). Over an algebraic closure of
+\(F\) the evaluation algebra at each \(x\) is the product
+of full matrix algebras on distinct irreducible constituents.
+Their multiplicities are one by the weight test of
+Section~\ref{subsec:selected-cut}. Its \(e_B\)-corner can
+therefore realize a diagonal matrix with \(t\) distinct
+entries. Over \(F\), separation by \(\mathcal T\) gives all
+individual coordinate functions by interpolation. Hence the
+rational span of
+\[
+  J_\pi e_B A e_B,\qquad
+  J_\pi=\{f\in\mathcal T:f(\pi)=0\},
+\]
+gives all the corner directions away from \(\pi\).
+Write \(V_x\) for the rational fibre at \(x\).
+
+On the perturbation lattice consider the polynomial
+\[
+    F(s)=\prod_{x\ne\pi}\operatorname{disc}
+       \det\bigl(T-(e_BR(g_0)e_B+s)|_{e_B V_x}\bigr).
+\]
+Each factor is nonzero as a polynomial, because the directions
+at that point include matrices with distinct eigenvalues.
+Thus the product is nonzero, including the empty product. This may be checked after
+extending the fraction field by the preceding matrix
+description. For any prescribed \(L\ge0\), the lattice scaled
+by \(\varpi^L\) is Zariski dense in its rational span. Indeed a
+polynomial vanishing on every integral linear combination of
+a spanning list is zero there by repeated univariate
+interpolation over the infinite ring \(O\). Writing \(D_x\) for the discriminant of the perturbed corner at \(x\), density supplies an integral perturbation \(s\) in the chosen scaled lattice with
+\[
+ s(\pi)=0,\qquad \prod_{x\ne\pi}D_x(s)\ne0,
+\]
+with the empty product interpreted as one.
+This gives all three marked matrices and the perturbation in
+the integral congruence module. The caller takes \(L=0\).
+
+\proofstep{The finite choice of coefficient field.}
+To arrange roots in the actual coefficients, first take the
+system at a preliminary coefficient level which splits the
+constituents and admits the theta decompositions. At each live
+localization make the choices just proved and record the roots
+of its corner polynomials at all points and all theta marks,
+using the tied embedding in \(\mathbb C\). This is a finite set
+for that localization. Write \(S_i\) for the finite root set at a live localization. At a coefficient place \(w\) take
+\[
+ S_w=\bigcup_{j=0}^{m}\ \bigcup_{i\mid(j,w)}S_i,
+\]
+with the inner union over the live localizations there. The construction of the coefficient rings
+allows any prescribed finite set at each such place, along
+with the elements required to identify the systems and
+their integral Hecke actions at all larger levels.
+
+At the resulting level every live localization lies over
+a preliminary one at the same coefficient place. The Hecke
+character and theta factorization descend along this
+comparison. If \(k\subset k'\) are the two residue fields, cancellation of the common character factors at split Frobenius elements identifies the semisimplified rank-\(r\) complements:
+\[
+ (\bar W_{\rm old}^{\rm ss}\otimes_k k')^{\rm ss}\simeq \bar W_{\rm new}^{\rm ss}.
+\]
+Thus a live point upstairs lies over a live one downstairs. The marked roots occur among
+the prescribed elements at its place. The integral Hecke
+span extends by the identified coefficient map, so the
+old matrices and their polynomial factorizations give the
+marks there. Restricting to a cut restricts these functions
+and matrices, keeps every good point and can only decrease
+the finite set of root conditions.  It applies to the coefficients allowed
+in the original choice of a norm. No estimate on the degree
+of this splitting field enters the normalized lengths.
+\label{cor:retained-galois-3}
+\end{proof}
+
+\subsubsection*{Inertia tests in the localized Hecke algebra}
+
+The projections separate the two blocks. The congruence presentation also needs inertia relations inside the localized Hecke algebra, where different character blocks can have identical restrictions to inertia.
+
+Use the same localization \(i\), coefficient DVR, character
+\(\chi_1\), and the sets \(S,Q\) of its norm choice. All their
+places are away from \(\ell\). Write \(\gamma_v\) for the
+chosen lift of a topological tame generator. Unramifiedness of the cyclotomic character gives
+\[
+ \chi_c|_{I_v}=(\chi_1\epsilon^{1-c})|_{I_v}=\chi_1|_{I_v}.
+\]
+
+There are two different applications of the type dictionary.
+
+At a type place \(v\in S\), put \(u=\chi_1(\gamma_v)\).
+One needs separation of \(\bar u\) from the residual complement
+even if \(\ell\) belongs to the bad prime set for this particular
+type prime. Here \(\ell\ne g\). The local admissibility condition excludes equality of the prime-to-\(\ell\) part of any root of the complementary label and that of the specified character label. The test also holds for the inverse label. The
+change to a conjugate marked place can invert either value in
+the comparison.
+
+If \(z\) is a projected complementary label and \(b\) the projected character label, the two exclusions give
+\[
+ z^\delta\ne b^{\delta'}\qquad(\delta,\delta'\in\{1,-1\}),
+\]
+by simultaneous inversion as necessary. Changing the tame generator
+acts on the finite cyclic image by an automorphism and preserves
+the exclusions. The residual Frobenius comparison identifies the
+complement in the actual integral lattice with the scalar twist
+of the good cuspidal one. This scalar is unramified at the type
+places away from \(\ell\). Let \(D^{\rm res}_v\) be the residual characteristic
+polynomial of the rank-\(r\) complement at \(\gamma_v\).
+Thus
+\[
+      D_v^{\rm res}(\bar u)\ne0,\qquad
+      \bar F_v(X)=(X-\bar u)^tD_v^{\rm res}(X).
+\]
+The multiplicity of \(\bar u\) is exactly \(t\) on every
+system with the same residual characteristic polynomials.
+This uses all the character factors and equality of the residual
+characteristic polynomials.
+
+At a retained point the type comparison gives the rank-\(t\)
+inertia summand on which every \(g\in I_v\) acts by
+\(\chi_1(g)\), and an invariant complement of rank \(r\).
+Indeed the occurring full label has the character block of
+Section~\ref{subsec:selected-cut}. The unramified normalization
+preserves it. Its distinct tame labels give the inertia
+characters and its monodromy vanishes. The local parameter supplies \(t\) scalar copies and reduction can only increase multiplicity. Thus
+\[
+ t\le\operatorname{mult}_{u}(F_v)\le\operatorname{mult}_{\bar u}(\overline F_v)=t,
+\]
+where \(F_v\) is the full inertia characteristic polynomial. Local--global
+compatibility passes this decomposition to each Galois fibre
+after scalar extension. The common complement is invariant for
+the entire inertia group.
+
+Form the full characteristic polynomial \(F_v(X)\in\mathcal T[X]\)
+of \(R(\gamma_v)\) and divide by the monic polynomial
+\((X-u)^t\). In every fraction-field fibre the remainder
+vanishes by the decomposition. Injectivity into the product of fibres kills the remainder already over \(\mathcal T\). Thus
+\[
+ F_v(X)=(X-u)^t D_v(X),\qquad D_v\in\mathcal T[X]\ \text{monic of degree }r.
+\]
+Its evaluation
+at a fibre is the characteristic polynomial on the complement.
+The multiplicity computation shows that \(D_v(u)\) has nonzero
+residue in the local Hecke algebra.
+
+On each generic fibre write
+\[
+ V_x=V_{x,B}\oplus V_{x,C}
+\]
+for the invariant block and complement. Then
+\[
+ D_v(R_x(\gamma_v))|_{V_{x,B}}=D_v(u)\,\mathrm{id},
+ \qquad D_v(R_x(\gamma_v))|_{V_{x,C}}=0,
+\]
+the latter by Cayley--Hamilton. On the rank-\(t\)
+space every \(R(g)-\chi_1(g)\) vanishes. As the first space
+is stable under \(R(g)\), the product
+\[
+       D_v(R(\gamma_v))(R(g)-\chi_1(g))=0
+       \qquad(g\in I_v)
+\]
+holds integrally on the whole family. This constructs the single
+polynomial with unit character value needed for the row cocycles.
+The unit test uses the residual multiplicity at the localization.
+Squarefreeness in characteristic zero by itself only controls
+the rational eigenspaces. \label{cor:retained-galois-4}
+
+\begin{lemma}[Inertia at the auxiliary and order-fifteen places]\label{lem:retained-inertia-types}
+At \(Q\) and at the additional distinguished places of \(S\),
+the zero-monodromy and character conditions give, on every characteristic-zero fibre,
+\[
+ R_x|_{I_v}\simeq \mathbf1^{\oplus r}\oplus(\chi_1|_{I_v})^{\oplus t}.
+\] The power of the chosen inertia generator representing
+\(R_x(g)\), for \(g\in I_v\), can be chosen independently of \(x\).
+At the distinguished \(S\)-places \(\zeta_v-1\) is a unit, including
+in coefficient characteristics three and five.
+\end{lemma}
+
+\begin{proof}
+At \(Q\) and at the additional distinguished places of \(S\),
+the local parameter has zero monodromy and inertia polynomial
+\((X-1)^r(X-\chi_1(g))^t\) for each \(g\in I_v\).
+These are the unramified rank-\(r\) and prescribed character
+types in the norm tuple. Zero monodromy gives finite inertia
+image for each fibre by the Weil--Deligne comparison away from
+\(\ell\). The displayed polynomial identifies the representation
+of inertia with \(1^r\oplus\chi_1^t\): both representations
+factor through a finite quotient and their characteristic
+polynomials agree there, so Maschke and Brauer--Nesbitt apply
+in characteristic zero. In particular one decomposition per
+fibre works for all inertia elements. Merely checking the
+spectrum of a single matrix would not prove this assertion.
+
+At \(v\in Q\) the first twist factor is unramified and the ramified auxiliary factor has
+\[
+ \#\chi_1(I_v)=\ell^a\qquad(a\ge0).
+\]
+At the extra
+distinguished prime of \(S\) the auxiliary character is
+unramified, and the tame factor or its inverse has inertia
+image of order \(15\), with residue norm \(1\bmod 15\).
+The construction uses the second distinguished prime when
+the first equals \(\ell\). In both cases wild inertia is
+trivial on the character: the wild pro-residue-characteristic
+group has no quotient of the indicated order. Hence the image
+of inertia is the finite cyclic group generated by
+\(\zeta_v=\chi_1(\gamma_v)\).
+
+At \(Q\) ramification forces
+\(\zeta_v\ne1\). For \(g\in I_v\) choose an integer \(a\)
+such that
+\[
+ \chi_1(g)=\zeta_v^a.
+\]
+In the simultaneous
+decomposition just proved,
+\[
+ R_x(g)=R_x(\gamma_v)^a
+\]
+at every \(x\), using the same
+\(a\) for them all. At the additional \(S\)-places
+\(\zeta_v\) is primitive of order \(15\).
+The identity \(\Phi_{15}(1)=1\) makes \(\zeta_v-1\) a unit:
+subtract \(\Phi_{15}(\zeta_v)=0\) and factor the difference.
+This argument also covers coefficient characteristics three
+and five. The common exponent of the tame generator and the unit at the additional places give the two inertia controls needed in the ensuing congruence presentation. \label{cor:retained-galois-5}
+\end{proof}

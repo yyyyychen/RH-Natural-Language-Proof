@@ -1,0 +1,191 @@
+\paragraph{Lifting an outer coordinate through a quadratic component.}
+\label{par:row-mixed}
+\hypertarget{source-row-mixed}{}
+
+\begin{lemma}[Lifting the main tensors]\label{lem:mixed-row-tensors}
+For the main tensors on a one-sign component, or on a mixed
+component with \(e=2\), put
+\(y_c=\lceil\eta+1/2+\log_pH\rceil\).
+For each such tensor, let \(y\in N_c(T_2)\) represent its image
+under the forward comparison \(\alpha\) of Section~\ref{par:row-metric},
+modulo \(XN_c(T_2)\). There exists \(v\in N_c(T_1)\) with
+\[
+ (\gamma-1)v\in XN_c(T_1),\qquad Fv\equiv p^{\rho+\max(2\sigma,y_c)}y\pmod{XN_c(T_2)}.
+\]
+\end{lemma}
+
+\begin{proof}
+Let \(f\otimes x\) be one of the simple tensors above. We require an
+invariant in the source with the same image as a power of \(p\) times
+its image under \(\alpha\) modulo \(XN_c(T_2)\). Two operations suffice.
+First, if an invariant model tensor has an invariant source partner
+under \(F\), apply \(\alpha\) and use naturality. Changing the partner by \(u\in X^M E^{3H}P_c\) preserves its cut class because
+\[
+ X^M E^{3H}P_c\subseteq XN_c.
+\]
+
+Second, if a model
+tensor belongs to \(N^{\rm mod}_2\), its image under \(\alpha\) belongs to
+\(N_c(T_2)\), hence has an integral lift after multiplication by
+\(p^\rho\). Any such lift is invariant modulo \(XN_c(T_1)\).
+Here a model tensor with a scalar coefficient and a preceding constant
+can be lifted by multiplying the scalar by a lift of that constant,
+provided the resulting tensor meets the invariance test. Actual
+preceding constants have lifts after \(p^\rho\) by the same Wach
+cokernel bound on the preceding component.
+
+\proofstep{Components with one sign.}
+At a component with only plus tests, the product of each
+coefficient of \(f\) with \(x\) lies in the required
+filtration, since \(f\) starts in degree \(-b_\tau\) or
+later and \(x\in\operatorname{Fil}^{b_\tau}\). Thus
+\[
+ f\otimes x\in N^{\rm mod}_2.
+\]
+
+At a component with only minus tests, choose a preceding constant
+\(x_1\) with
+\[
+ F x_1=p^\rho x,
+\]
+and take \(f\otimes x_1\).
+The source conditions are
+\[
+  E^H f\in A,\qquad
+  (\gamma-1)f\in XE^{-H}A,\qquad
+  \operatorname{ord}_{\tau}\big((\gamma-1)f/X\big)
+      \ge b_\tau+S .
+\]
+The last inequality suffices because the entire source constant
+space is in \(\operatorname{Fil}^{-b_\tau-S}\) at each minus test.
+
+\proofstep{The two roots of the quadratic component.}
+For opposite signs assume \(e=2\). Write \(r_U,r_D\) for the
+two parameter values at the plus and minus tests, and put
+\[
+ y_U=X-r_U,\ y_D=X-r_D.
+\]
+Division by \(X-r\) at any such
+value is integral since \(r\) belongs to the maximal ideal and
+\(O\) is complete. Over the fraction field the changes to \(y_U\) and \(y_D\) have invertible linear term at their respective roots. Each preserves the order of vanishing and transports the filtration test. In particular equal \(X\)-values impose identical scalar Taylor conditions.
+
+If a plus test has the minus
+root as well, the high vanishing of \((\gamma-1)f/X\) at the
+minus root also suffices at that test, since its positive degree
+is greater than \(\eta\). This gives the preceding-lift argument
+when every plus test shares a minus root. Otherwise there are just
+two distinct roots, the minus tests at \(r_D\) and the remaining
+plus tests at \(r_U\), with the same labeled filtration at all
+points over the corresponding embedding.
+
+Write
+\[
+ b=b_U,\qquad B=b_D+S,\qquad
+ E=a_2 y_U y_D,\qquad v(a_2)=0,\qquad d_*=r_D-r_U.
+\]
+Both roots have valuation \(s/(p-1)=1/2\). Also
+\(v(d_*)=1/2\): at \(r_U\) differentiate the cyclotomic identity
+\(Q(\pi)={\rm unit}\cdot E(X(\pi))\), where
+\(Q=((1+\pi)^p-1)/\pi\). The derivative of \(Q\) at a primitive
+point has valuation \(1-1/(p-1)\), and \(X'(\pi)\) has valuation
+\((s-1)/(p-1)\). Hence
+\[
+ v(E'(r_U))=v(Q'(\pi))-v(X'(\pi))=1-\frac1{p-1}-\frac{s-1}{p-1}=\frac12.
+\]
+This accounts for the half power in the following allowance.
+Let \(y_c=\lceil\eta+1/2+\log_p H\rceil\).
+
+\proofstep{Nearby breaks.}
+Suppose first \(b\le B+2\eta\). The numerator \(a=E^H f\) is
+divisible by \(y_U^{H-b}\) in \(A\). At the down root the series
+of \(f\) equals a constant \(x_0\) modulo degree \(B\).
+Consequently the coefficients of \(a/y_U^{H-b}\) there, through
+degree \(H+B-1\), agree with those of
+\(x_0 a_2^H y_D^H(y_D+d_*)^b\). They are integral in \(y_D\)
+by division in \(A\). In particular
+\[
+           x_0a_2^H \binom{b}{j} d_*^{\,b-j}\in O
+                   \quad (0\le j<B,\ j\le b).
+\]
+
+If \(b<B\) take \(j=b\). Otherwise take \(j=B-1\); then
+\(b-j\le2\eta+1\) and
+\[
+ v_p\binom{b}{j}\le\lfloor\log_p b\rfloor
+\]
+by the factorial formula, a difference of at most one in each
+power-\(p\) count. In either case \(p^{y_c}x_0\in O\).
+Subtract this constant from \(p^{y_c}f\). The remainder times
+\(x\) belongs to \(N^{\rm mod}_2\). At the minus points its
+order is at least \(B\); at the plus points its order is at
+least \(-b\) and the target constant is in \({\rm Fil}^b\).
+The constant term itself lifts by an arbitrary preceding lift,
+since a constant is fixed by \(\gamma\). Applying the two operations
+gives an invariant lift in the source Wach lattice at exponent \(\rho+y_c\).
+
+\proofstep{Separated breaks.}
+Suppose now \(B+2\eta<b\). A division by \(d_*^{b-B+1}\) could
+cost an amount proportional to the outer height. Instead form the
+auxiliary numerator
+\[
+ a_0=y_U^{H-b}y_D^{H+B}.
+\]
+The tensor
+\(a_0 x/E^H\) belongs to \(N^{\rm mod}_2\) by its orders at both
+roots. Apply \(\alpha\), lift its image in the target Wach lattice after \(p^\rho\)
+in \(N_c(T_1)\), and apply \(\beta\).
+
+Write the result with denominator
+\(E^H\) as \(\sum_j a_j v_j/E^H\), \(a_j\in A\), where \(v_j\)
+are integral preceding constants of the source. The sum in every
+numerator coefficient of degree \(i\) at a root lies in
+\({\rm Fil}^{H-i}_\tau\). On applying \(F\) its expansion in degrees
+through \(H\) agrees with
+\[
+                  p^{\rho+2\sigma}a_0 x .
+\]
+Indeed the forward and backward composites give this scalar and the
+coordinate modulus, after multiplying by \(E^H\), contains the
+factor \(E^{4H}\) in every error term. Integral bases on the preceding
+component give a representation in this common constant space for
+both filtrations.
+
+Expand each \(a_j\) at \(r_D\) through degrees \(<H-\eta\), with
+coefficients in \(O\), and remove this polynomial in \(y_D\).
+In degree \(i<H-\eta\) the corresponding sum against \(v_j\)
+belongs to
+\[
+ {\rm Fil}^{H-i}_D=0,
+\]
+since the largest source
+jump there is at most \(\eta\). These polynomial coefficients
+therefore give zero sums against both \(v_j\) and \(Fv_j\) at the
+plus root also, by the common crystalline constant identification.
+Divide the remaining functions by \(y_D^{H-\eta}\), obtaining
+integral \(a'_j\). At \(r_U\) this divisor is a unit over the
+fraction field and the source coefficient condition
+\({\rm Fil}^{H-i}_U\) persists. The new target expansion agrees
+through degree \(H\) with
+\[
+       p^{\rho+2\sigma}y_U^{H-b}
+                  (y_U+r_U-r_D)^{B+\eta}x .
+\]
+
+Take its coefficient of degree \(j_*=H-b+B+\eta\) in \(y_U\).
+The assumption gives \(j_*<H-\eta\); changing from \(t\) to \(y_U\)
+preserves the filtration test and precision, by triangular substitution.
+This is the leading coefficient of the displayed polynomial. Hence
+the same integral linear combination of the \(v_j\) maps to
+\(p^{\rho+2\sigma}x\) and belongs to
+\({\rm Fil}^{H-j_*}_U\subset{\rm Fil}^{\eta+1}_U
+={\rm Fil}^b_U\). The equality uses the empty interval of jumps
+strictly between \(\eta\) and \(b\). This combination supplies a
+preceding lift compatible with the plus test. Keeping \(f\) gives
+an invariant model lift at both signs, hence an invariant Wach-lattice
+lift after \(\alpha\). Altogether a single exponent
+\[
+                       y_1=\rho+\max(2\sigma,y_c)
+\]
+serves every main tensor on every component, including the one-sign
+cases.  \label{cor:row-mixed-1}
+\end{proof}

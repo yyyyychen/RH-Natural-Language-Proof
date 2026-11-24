@@ -1,0 +1,538 @@
+\paragraph{A locally split cup lift at auxiliary primes.}
+\label{par:count-two-cup}
+To join the two endpoints we next construct the required extension classes. The
+residual path begins over the tame real field \(F_0\).
+Write \(\Gamma=G_{F_0}\), let \(k\) be the common residual
+coefficient field, and put
+\[
+ A=d_1/d_0,\qquad B=d_2/d_0 ,
+\]
+where \(d_i\) are the four ordered residual characters. Their
+symplectic products satisfy \(d_0d_3=d_1d_2\). The normalizing
+element \(\tau\) has distinct diagonal entries.
+
+In particular
+\(A(\tau)\ne1\) and \((AB)(\tau)\ne1\). The normalized target
+has support in the diagonal and the entries
+\[
+ (1,0),\ (2,0),\ (3,0),\ (3,1),\ (3,2),\ (1,2).
+\]
+Its local lower unipotent symplectic frame \(N_v\) has
+\((N_v)_{21}=0\). Put \(y(g)=r(g)_{20}/d_0(g)\).
+Multiplication in that support gives
+\[
+ y(gh)=y(g)+B(g)y(h),\qquad y(\tau)=0 .
+\]
+For \(s\) in the marked decomposition group \(G_v\), the first
+column of \(r(s)N_v=N_v(N_v^{-1}r(s)N_v)\) gives
+\[
+                    y(s)=(1-B(s))n_v,\qquad n_v=(N_v)_{20}.
+\]
+This uses the prescribed first diagonal character in the local
+upper triangular matrix. It applies even when \(y\) is zero and
+the local entry \(n_v\) is nonzero.
+
+\begin{lemma}[The two rational shapes after restriction]\label{lem:count-two-target-restriction}
+In the first lattice shape of Proposition~\ref{prop:rational-rank-four-torus},
+the two entry functions on the restricted group satisfy
+\[
+ r_{20}|_{G_{F_0}}\not\equiv0,\qquad r_{12}|_{G_{F_0}}\not\equiv0 .
+\]
+In the second shape the global \((2,0)\) entry is zero, the normalized
+marked frame has nonzero \((2,0)\) coordinate, and a \((1,0)\) entry is
+nonzero on \(G_{F_0}\).
+\end{lemma}
+
+\begin{proof}
+The fitted field \(F_0\) is abelian over \(\Q\). For an entry
+whose normalized coordinate is a cocycle \(f\) of
+character \(\theta\), suppose \(f\) vanishes on \(G_{F_0}\).
+For any \(g\in G_\Q\), normality puts
+\(g\tau g^{-1}\) in \(G_{F_0}\), and the cocycle
+identity gives
+\[
+              \begin{aligned}
+ 0=f(g\tau g^{-1}) &= f(g)+\theta(g)f(\tau)
+                       +\theta(g)\theta(\tau)f(g^{-1})\\
+                   &=(1-\theta(\tau))f(g),
+ \end{aligned}
+\]
+Since \(1-\theta(\tau)\ne0\), the restriction of a
+nonzero normalized cocycle to \(G_{F_0}\) is nonzero.
+The \((2,0)\) coordinate has character \(d_2/d_0\). For the
+\((1,2)\) coordinate, no intermediate product contributes to
+the \((1,2)\) entry, so dividing by \(d_2\) gives a cocycle
+of character \(d_1/d_2\). The two coordinates therefore survive
+in the first shape. The other allowed pattern is distinguished by the global representation entry and the local frame entry
+\[
+ r(g)_{20}=0\ (\text{all }g),\qquad n=N_{20}\ne0 .
+\]
+
+In this support the normalized \((1,0)\) entry is a
+cocycle, since its only additional product would use
+the zero \((2,0)\) entry. If it vanishes on the tower
+it vanishes over \(\Q\) by the displayed argument.
+On the rational marked decomposition group the
+first-column equations in rows two and one then
+give \(d_2=d_0\) and
+\[
+             r(s)_{12}=\frac{N_{10}}{n}(d_2(s)-d_1(s)).
+\]
+This contradicts the non-coboundary in the second
+lattice shape. Thus the restricted point has a
+nonzero \(-w_\alpha\) entry. The frame transport calculation in
+Paragraph~\ref{par:count-two-restriction} gives
+\(n\mapsto (d_2(g)/d_0(g))n\) when the global \((2,0)\) entry
+vanishes. Thus the other coordinate required in the second
+shape survives as well.
+\end{proof}
+
+\begin{lemma}[A prescribed tame ramification direction]\label{lem:cup-ramification-direction}
+Let \(\ell\) be an odd prime, \(F_0\) a number field, and \(M\) a
+finite continuous \(\mathbb F_\ell\)-representation of \(G_{F_0}\).
+Fix a nonzero \(e_0\in M\), a finite set \(S\) containing the places
+above \(\ell\), the infinite places and the ramification of \(M\),
+and a finite Galois extension of \(\Q\) containing the normal closure
+of \(F_0\), a splitting field of \(M\), and \(\mu_\ell\). There is a
+continuous cocycle \(c\colon G_{F_0}\to M\) unramified outside \(S\)
+and the places above finitely many rational primes splitting completely
+in that extension. Its local class is zero at every \(v\in S\).
+On the new inertia groups its image satisfies 
+\[
+ c(I_v)\subseteq\mathbb F_\ell e_0\quad(v\text{ new}),\qquad c(I_v)\ne0\quad\text{for at least one new }v.
+\]
+
+\end{lemma}
+
+\begin{proof}
+\proofstep{Specify the new local ramification.}
+Take a set \(P\) of places over sufficiently many distinct
+new rational primes, including all the places over each of those
+primes. Chebotarev permits arbitrarily large \(|P|\).
+Let \(M'=\operatorname{Hom}(M,\mu_\ell)\) with its natural Galois
+action. At \(v\in P\) both modules are trivial and the residue
+cardinality is one modulo \(\ell\). The quotient of
+\(H^1(F_{0,v},M)\) by its unramified subspace identifies with the
+homomorphisms from the cyclic exponent-\(\ell\) quotient of tame
+inertia to \(M\). This follows from the tame presentation
+\(\operatorname{Frob}\,t\,\operatorname{Frob}^{-1}=t^{q_v}\).
+Requiring the image to lie in \(\mathbb F_\ell e_0\) gives a
+one-dimensional subspace of this quotient.
+\proofstep{Bound the dual obstruction.}
+In the sum of local groups over \(S\cup P\) take the subgroup whose component at each place is
+\[
+ U_v=\begin{cases}H^1_{\rm unr}(G_v,M)&v\in P,\\0&v\in S.\end{cases}
+\]
+By local Tate duality its annihilator imposes unramifiedness at
+each place of \(P\). By Poitou--Tate exactness the annihilator of
+the image of \(H^1(G_{F_0,S\cup P},M)\) is the image of
+\(H^1(G_{F_0,S\cup P},M')\). Intersect this latter image with
+\(U^\perp\). Any representative global class is unramified at
+\(P\), since the local inertia actions are trivial there and
+coboundaries vanish on those inertia groups.
+
+It inflates from
+\(H^1(G_{F_0,S},M')\), by factoring the cocycle through the quotient
+that kills the normal closure of the new inertia groups.
+This fixed cohomology group is finite. Let \(L\) be the
+localization image modulo \(U\), in the quotient of the sum
+\(V_{\rm loc}\) of local groups over \(S\cup P\). The annihilator
+description gives
+\[
+ \operatorname{codim}_{V_{\rm loc}/U}L
+ =\dim L^\perp\le \dim_{\mathbb F_\ell}H^1(G_{F_0,S},M').
+\]
+\proofstep{Obtain a class in the prescribed directions.}
+Let \(D_P\subseteq V_{\rm loc}/U\) be the direct sum of the
+prescribed ramification lines and zero entries at \(S\).
+Then \(\dim D_P=|P|\). Choose
+\(|P|>\dim_{\mathbb F_\ell}H^1(G_{F_0,S},M')\).
+The dimension formula gives
+\[
+ \dim(D_P\cap L)\ge |P|-\operatorname{codim}_{V_{\rm loc}/U}L>0.
+\]
+Lift a nonzero element of this intersection to a global class.
+At the new places the inertia restriction is independent of its
+representative and is nonzero on some inertia element, which acts
+trivially on \(M\). At an old place, a representative is a
+coboundary on the full decomposition group, so is zero on any
+subgroup on which \(M\) acts trivially.
+\hfill\mbox{\cite{milne-duality}}\label{cor:cohomology-count-two-chain-1}
+\end{proof}
+
+\begin{proposition}[The marked auxiliary symplectic datum]\label{prop:count-two-auxiliary-datum}
+Take the residual characters and the marked \((2,0)\) target
+column obtained by restriction in
+Lemma~\ref{lem:count-two-target-restriction}. For these data,
+one can choose an auxiliary representation \(r'\) with the same diagonal.
+Writing \(r,N_v\) for the target matrices and frames and \(N'_v\) for the auxiliary frames, one has
+\[
+ r'_{20}=r_{20},\qquad (N'_v)_{20}=(N_v)_{20}\quad(v\text{ marked}),
+                         \qquad r'_{10}\not\equiv0 .
+\] It is diagonal at
+\(\tau\), kills the required old inertia and is locally conjugate
+to the marked diagonal at the prescribed local places. The new
+ramification is supported above finitely many completely split
+rational primes as in Lemma~\ref{lem:cup-ramification-direction}.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Lift the new root together with its cup correction.}
+Apply Lemma~\ref{lem:cup-ramification-direction} with \(M\)
+carrying coordinates \((x,z)\)
+and action
+\[
+ \rho(g)(u,v)=\bigl(A(g)u,\ (AB)(g)v+y(g)A(g)u\bigr).
+\]
+The second component of \(\rho(g)\rho(h)(u,v)\) is
+\[
+ (AB)(gh)v+
+ A(gh)\bigl(B(g)y(h)+y(g)\bigr)u .
+\]
+This is the second component of \(\rho(gh)(u,v)\) by the cocycle
+identity for \(y\). Let \(k_{\rm d}\) be the finite subfield generated
+by the diagonal characters' images. The span \(V_y\) over
+\(k_{\rm d}\) of the finite image of \(y\) is finite, since \(y\) is
+continuous on a compact group with discrete target. The chosen additive module is finite even when \(k\) is infinite, since it is the sum of the two finite pieces in the action:
+\[
+ M=k_{\rm d}\oplus V_y,\qquad |M|=|k_{\rm d}|\,|V_y| .
+\]
+
+Take \(e_0=(1,0)\).
+All originally prescribed ramification is retained by taking
+\(S\) large enough to contain it and using the same construction
+with the additional condition that the rational primes split in
+the field cut out by the residual diagonal, the quadratic CM
+character and the mod-\(\ell\) cyclotomic character. On any old
+inertia on which the former representation is required to be
+the identity both the diagonal and \(y\) are trivial. The local
+coboundary constructed there is zero on that subgroup.
+
+The cocycle coordinates obey
+\[
+\begin{aligned}
+ x(gh)&=x(g)+A(g)x(h),\
+ z(gh)&=z(g)+(AB)(g)z(h)+y(g)A(g)x(h).
+\end{aligned}
+\]
+On \(G_v\) write the local coboundary as
+\[
+ x(s)=(1-A(s))m_v,\qquad
+ z(s)=(1-(AB)(s))o_v-y(s)A(s)m_v .
+\]
+Subtract a global coboundary to make \(x(\tau)=z(\tau)=0\).
+At \(\tau\) the action is diagonal because \(y(\tau)=0\), and
+neither of its two eigenvalues is one. Thus the subtraction is
+possible and just changes the local constants. At the inertia element where \(x\ne0\), the action is trivial, so the subtraction leaves \(x\) unchanged. The same argument works with finitely
+many fixed \(y_j\), by replacing \(z\) by a tuple with the indicated
+action in each coordinate.
+
+\proofstep{Produce the symplectic matrices and local flags.}
+Set
+\[
+\begin{aligned}
+ U(x,y,t)&=
+ \begin{pmatrix}
+ 1&0&0&0\\ x&1&0&0\\ y&0&1&0\\ t&y&-x&1
+ \end{pmatrix},\\
+ U(x,y,t)U(x',y',t')&=U(x+x',y+y',t+t'+yx'-xy') .
+\end{aligned}
+\]
+For the alternating form pairing positions \(0,3\) and \(1,2\)
+with the same sign, \(U\) is symplectic and conjugation by
+\(\mathcal D(g)=\operatorname{diag}(d_i(g))\) scales its three
+coordinates by \(A(g),B(g),(AB)(g)\).
+Let
+\[
+ R_1(g)=U(x(g),y(g),2z(g)-x(g)y(g))\mathcal D(g).
+\]
+Writing \(c=2z-xy\), the two cocycle equations give
+\[
+ c(gh)-c(g)-(AB)(g)c(h)
+   =y(g)A(g)x(h)-x(g)B(g)y(h).
+\]
+Together with the identities for \(x,y\) this is exactly the
+multiplication law for the unipotent factor of
+\(R_1(g)R_1(h)\). Thus \(R_1\) is a representation with
+the prescribed similitude and diagonal.
+
+It is diagonal at \(\tau\), kills the required inertia, and has a
+nonzero \((1,0)\) entry. At \(v\) take
+\[
+                         N_{1,v}=U(m_v,n_v,2o_v-m_vn_v).
+\]
+On \(G_v\), conjugating \(\mathcal D(s)\) by this matrix gives
+\(R_1(s)\). In the third unipotent coordinate both sides give
+\((1-(AB)(s))(2o_v-m_vn_v)+(B(s)-A(s))m_vn_v\).
+This proves the flag conditions with both the full local
+diagonal and the smaller inertia quotient. It also retains
+the given \((2,0)\) matrix and frame entries.
+\label{cor:cohomology-count-two-chain-2}
+\end{proof}
+
+\paragraph{Removing the auxiliary ramification and transporting the flags.}
+\label{par:count-two-restriction}
+The cup lift introduced tame ramification at the new primes. Before comparing the flags we restrict to a compositum of real cyclotomic subfields on which the new inertia cocycles vanish. The root classes needed for the path must survive this same restriction.
+
+\begin{auxlemma}[Restriction of a normalized root cocycle]
+\label{lem:root-cocycle-ell-power}
+Let \(k\) be a field of characteristic \(\ell\), \(G\) a group,
+\(\theta:G\to k^\times\) a character and \(u:G\to k\) a nonzero
+cocycle for the action by \(\theta\). Suppose \(u(\tau)=0\) and
+\(\theta(\tau)\ne1\) for some \(\tau\in G\). For any normal subgroup \(H\) the nonvanishing test is 
+\[
+ \exp(G/H)\mid\ell^a\quad\Longrightarrow\quad u|_H\ne0.
+\]
+
+\end{auxlemma}
+
+\begin{proof}
+Choose \(g\) with \(u(g)\ne0\). When \(\theta(g)=1\), replace \(g\)
+by \(\tau g\). Its cocycle value is \(\theta(\tau)u(g)\ne0\) and
+its character value is \(\theta(\tau)\ne1\).
+For the resulting \(g\) the cocycle identity and the Frobenius map give
+\[
+ u(g^{\ell^a})=u(g)\sum_{j=0}^{\ell^a-1}\theta(g)^j
+ =u(g)\frac{\theta(g)^{\ell^a}-1}{\theta(g)-1}
+ =u(g)(\theta(g)-1)^{\ell^a-1}\ne0 .
+\]
+The element \(g^{\ell^a}\) belongs to \(H\).
+\end{proof}
+
+\begin{proposition}[Restriction and transport of the marked flags]\label{prop:count-two-tame-return}
+For each new rational prime \(w\) of the auxiliary datum of
+Proposition~\ref{prop:count-two-auxiliary-datum}, adjoin the real
+cyclic degree-\(\ell\) subfield of \(\mathbb Q(\mu_w)\) to \(F_0\).
+Let \(F_1\) be the resulting compositum. For each of these new
+places \(v\) of \(F_0\), with tame inertia cocycle \(z_v\), restriction gives
+\[
+                          z_v|_{I_v\cap G_{F_1}}=0 .
+\]
+Passing to a further finite real cyclotomic layer preserves the
+required nonzero root entries, the diagonal normalization and the
+common \((2,0)\) frame coordinates of the target and auxiliary datum.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Kill the added tame inertia.}
+For a new rational prime \(w\), every completion \(F_{0,v}\)
+above \(w\) is \(\Q_w\). At its inertia, the old \(y\) and the
+diagonal characters are trivial, and the new cocycle is a
+homomorphism to an additive group killed by \(\ell\).
+Write \(I_v\) for inertia and \(z\) for this restricted
+additive cocycle. Since \(w\ne\ell\), wild inertia and the
+prime-to-\(\ell\) factors of tame inertia have zero image. The
+remaining factor is procyclic, so \(z\) factors as
+\begin{equation}\label{eq:count-two-tame-quotient}
+ I_v\longrightarrow I_v^{\mathrm{tame},(\ell)}\simeq\mathbb Z_\ell
+  \longrightarrow\mathbb Z_\ell/\ell\mathbb Z_\ell
+  \xrightarrow{\ \bar z\ }(k,+).
+\end{equation} The cyclic
+degree-\(\ell\) subfield of \(\Q(\mu_w)\) realizes that
+quotient, since \(w\equiv1\pmod\ell\) and \(\Q(\mu_w)\) is
+totally ramified at \(w\). Adjoin these subfields for all
+new \(w\) to obtain \(F_1\). This extension is real and abelian
+over \(\Q\); it is unramified over \(F_0\) at \(\ell\) and the
+quotient of absolute groups over \(F_0\) has exponent dividing
+\(\ell\).
+
+By \eqref{eq:count-two-tame-quotient} every new inertia
+restriction vanishes on \(G_{F_1}\). For \(F'=F_1\) take \(a=1\);
+after adjoining a finite layer of the real cyclotomic
+\(\mathbb Z_\ell\)-extension choose \(a\) so that the exponent
+of \(\operatorname{Gal}(F'/F_0)\) divides \(\ell^a\). Then
+\[
+ \tau^{\ell^a}\in G_{F'},\qquad
+ d_i(\tau^{\ell^a})-d_j(\tau^{\ell^a})
+       =(d_i(\tau)-d_j(\tau))^{\ell^a}\ne0\quad(i\ne j).
+\]
+The restricted diagonal characters therefore still separate the labels.
+
+\proofstep{Preserve the nonzero root entries.}
+For each normalized cocycle \(u\) the normalizing element satisfies
+\(u(\tau)=0\) and \(\theta(\tau)\ne1\). The quotient by the new absolute
+group has exponent dividing a power of \(\ell\), so
+Lemma~\ref{lem:root-cocycle-ell-power} preserves a nonzero value on
+that group.
+The same two-by-two multiplication applies to the retained
+entries whenever the indicated block support is used.
+Thus the restricted cocycle can be nonzero even if the original inertia element lies outside the subgroup.
+
+\proofstep{Transport the local flags.}
+At a place of a deeper layer, take a conjugator \(g\) over
+the earlier field carrying its marked predecessor to the
+place in question. Transport the flag by \(r(g)N_v\) and
+take its lower unipotent factor. For \(A=r(g)N_v\) the successive determinants in the flag calculation are
+\[
+ \Delta_0(A)=1,\qquad \Delta_m(A)=\det(A_{ij})_{0\le i,j<m},
+\]
+with indices starting at zero throughout.
+
+In the support
+of the first line, the first row has no off-diagonal terms and
+\(A_{21}=0\). Gaussian elimination therefore gives
+\[
+ \Delta_{i+1}/\Delta_i=d_i(g)\quad(0\le i\le2),\qquad
+ \Delta_4/\Delta_3=\det(A)/(d_0(g)d_1(g)d_2(g)).
+\]
+These four pivots are units. Hence the decomposition into a lower
+unipotent and an upper triangular factor is unique.
+The symplectic adjoint reverses products and preserves
+upper triangular and lower triangular types. Applying it
+to the factorization shows by uniqueness that the lower
+unipotent factor is symplectic. A different conjugator
+differs on the right by an element of the original
+decomposition group and hence gives the same flag.
+In the transported frame the \((2,0)\) entry is
+\[
+             \frac{r(g)_{20}+d_2(g)(N_v)_{20}}{d_0(g)} .
+\]
+It is identical for the target and the auxiliary datum.
+The \((2,1)\) entries remain zero. The local upper
+triangular matrices have the original characters pulled
+back, since conjugation inside the earlier Galois group
+does not change those characters.
+
+The same Gaussian construction carries the integral
+target to each marked place. The leading principal
+minors are units since their reductions are the
+pivots just computed. Its flag characters are the
+original rational characters restricted to inertia.
+The rational point kills the inertia on the residual
+kernel outside its marked set. At an original exception allowed by the target, the inertia and tower conditions give
+\[
+ \bar\Psi=1,\qquad\kappa=1\quad\Longrightarrow\quad\psi_0=1
+\]
+on the relevant inertia. Hence the rational point's other inertia condition applies there as well.
+On inertia above \(\ell\) in the cyclotomic kernel,
+the trivial residual labels and the prime-to-\(\ell\)
+order of \(\psi_0\) on the deep tower give all four
+ordered inertia characters equal to one.
+\label{cor:cohomology-count-two-chain-3}
+\end{proof}
+
+\paragraph{The two Levi blocks and the three lines.}
+\label{par:count-two-lines}
+We can now read the path from its block decompositions. At each step the endpoints agree on the diagonal blocks. The middle step changes which
+pair is held fixed.
+\begin{construction}
+\begin{tikzpicture}[>=Stealth,node distance=7mm,every node/.style={inner sep=2pt}]
+\node (target) {Restricted rational target};
+\node[below=of target] (aux) {Auxiliary datum};
+\node[below=of aux] (proj) {One-root projection};
+\node[below=of proj] (seed) {Mixed Hilbert seed};
+\draw[->] (target) -- node[right=3mm] {\(\{0,2\},\{1,3\}\)} (aux);
+\draw[->] (aux) -- node[right=3mm] {\(\{0,1\},\{2,3\}\)} (proj);
+\draw[->] (proj) -- node[right=3mm] {\(\{0,2\},\{1,3\}\)} (seed);
+\end{tikzpicture}
+\caption{Block orders for the three affine lines of Proposition~\ref{prop:count-two-three-lines}. In the indicated order the endpoint differences belong to the square-zero off-block ideal.}\label{fig:analytic-three-lines}
+\end{construction}
+
+\begin{proposition}[Three lines joining the rational target to the seed]\label{prop:count-two-three-lines}
+In the even-order case, after the restriction of
+Proposition~\ref{prop:count-two-tame-return} and at a deep layer
+where the mixed seed is available, the rational target and that
+seed are joined by affine interpolation from target to auxiliary datum,
+then from the auxiliary datum to its one-root projection, and finally
+from that projection to the seed. Write \(D_0,D_1,D_2,D_3\) for the four marked data in that order.
+There are families \(\mathcal D_i\) over \(k[t]\), affine in the matrix
+and frame coordinates, with
+\[
+           \mathcal D_i(0)=D_i,\qquad \mathcal D_i(1)=D_{i+1}
+                         \qquad(0\le i<3).
+\]
+They preserve the marked flags, similitude,
+diagonal normalization and the prescribed inertia characters.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Project to the one-root datum.}
+In the even-order case the character \(B\) is trivial on the
+decomposition groups above \(\ell\). On the deeper tower,
+project the auxiliary global matrices to their diagonal
+blocks in the order \(\{0,1\},\{2,3\}\). Do the same
+to the local frames. These projections respect products
+on the block lower triangular algebra; the symplectic
+form pairs the two blocks, so the projected matrices and
+frames still satisfy the same similitude and flag
+identities. The projected residual representation has
+only the off-diagonal entries of degree \(-w_\alpha\),
+including the nonzero entry in position \((1,0)\).
+In its projected frame the local triangular matrix is
+diagonal, because the representation and frame are
+lower triangular as well.
+
+At each marked place, fix the frame's \((2,0)\) entry using the seed value \(e_v\):
+\[
+ (N_v)_{20}=e_v .
+\]
+Right-multiply the projected frame by \(U(0,e_v,0)\).
+On the marked decomposition group the first and third diagonal characters agree. Cancelling this common character in the paired-product identity gives
+\[
+ d_0=d_2,\qquad d_0d_3=d_1d_2\quad\Longrightarrow\quad d_1=d_3 .
+\] Thus the frame multiplier commutes with the
+diagonal local matrix. It preserves the \((1,0)\) entry
+and inserts \(e_v\) in position \((2,0)\).
+
+\proofstep{Construct the three lines.}
+The first line joins the restricted target to the
+auxiliary datum. The second joins the auxiliary datum
+to this one-root projection with the modified frame.
+The third joins the projection to the reduced seed.
+For the first and third lines, order the blocks as
+\(\{0,2\},\{1,3\}\). Both endpoints have the same
+diagonal blocks, by the common \((2,0)\) entry, the
+paired \((3,1)\) entry determined by the alternating
+form, and the fixed diagonal characters. In the third line the two endpoints have identical readings in the global and the frame coordinates at position \((2,0)\):
+\[
+ (\text{global entry},\text{marked frame entry})=(0,e_v).
+\] The second line uses
+\(\{0,1\},\{2,3\}\), with the same diagonal blocks by
+the common \((1,0)\) entry and its paired \((3,2)\)
+entry.
+
+In each order, all differences are in the
+square-zero ideal of strictly off-block matrices.
+The adjoint preserves this ideal, since the form
+pairs the two ordered blocks. To verify the interpolation, write any interpolated matrix
+as \(M_0+t\Delta M\), with \(\Delta M\) in the square-zero ideal.
+For two such matrices multiplication gives
+\[
+ (M_0+t\Delta M)(N_0+t\Delta N)
+ =M_0N_0+t(M_0\Delta N+\Delta M N_0)
+ =(1-t)M_0N_0+tM_1N_1 .
+\]
+The adjoint is linear and preserves the ideal, so the same
+calculation applies to both the product identities and the
+similitude identity. Applying the equality to the individual basis columns \(e_i\) reads the marked flag along each line:
+\[
+ R(s)(N_v e_i)=N_vD_v(s)e_i .
+\] The
+interpolants are defined over \(k[t]\) and preserve
+the normalization and all marked characters.
+
+The original target vertex uses the two cases of the
+lattice and restriction calculation above. The auxiliary
+vertex retains the nonzero \(-w_\Psi\) if present,
+and otherwise has the same nonzero marked frame entry
+as the target and the new \(-w_\alpha\) entry. The
+third vertex uses the nonzero \(-w_\alpha\) entry and
+the seed's nonzero frame entry. For the seed, let \(S_{\ne0}\) be the set of weights of nonzero entries in its prescribed support. The two allowed alternatives are
+\[
+ -w_\alpha\in S_{\ne0}\qquad\text{or}\qquad \{w_\beta,-w_\vartheta\}\subseteq S_{\ne0}.
+\]
+In the second alternative the \(w_\alpha\)-character must also be nontrivial on the marked local group.
+
+These choices put the auxiliary fields before the
+bounds on the deeper cyclotomic tower. The finite
+set of ramified auxiliary primes and \(F_1\) are fixed
+using the target over \(F_0\). The cocycle bound \(C\)
+is taken at this tame base \(F_1\). Choose the deeper layer only after obtaining \(C\) over \(F_1\). If \(d_{\rm layer}\) denotes its degree, impose both the depth condition and
+\[
+ d_{\rm layer}\ge30(C+1)^2
+\]
+before constructing the mixed seed on that layer. The cup lift, the ramification removal and the
+transport of the target are independent of this later
+seed. Its frame entry is used only in the last two lines.
+\label{cor:cohomology-count-two-chain-4}
+\end{proof}

@@ -1,0 +1,575 @@
+\subsection{Descent of the row lattice and its maximal slope}
+\label{subsec:fitted-row-height}
+
+The matrix estimates refer to a different tuple at each assigned place. Descent assembles their integral images into the base row on which the maximal slope is taken. Let \(K\) be its
+totally complex coefficient field, \(t_0\) the base tuple,
+and \(t(w)\) the tuple assigned to a finite place \(w\).
+Write \(P_t:V_t\twoheadrightarrow Q_t\) for the column quotient,
+\(\iota_t:Q_t\to R_{0,K}\) for the row comparison, and \(M_t\) for
+the integral lattice in \(V_t\). The base comparison \(\iota_{t_0}\)
+is an isomorphism. The selected row has
+\[
+ (R_0)_w=\iota_{t(w)}P_{t(w)}(M_{t(w),w}).
+\]
+Here and below a subscript \(w\) on a lattice means localization.
+
+The coefficient tests of Section~\ref{subsec:fitted-evaluation} give the matrix \(V(t)\) over \(K\) on these tuple coordinates.
+Write \(r_t=\prod_{ij}r_{t,ij}\) for the
+product of the square ratios in the field fit. The base ratios
+satisfy \(r_{t_0,ij}=1\), and the ratios at realized tuples are
+nonzero.
+
+\begin{proposition}[Height of the descended base row]
+\label{prop:descended-row-height}
+Use the nonvanishing in Lemma~\ref{lem:fitted-completed-nonvanishing} at the selected point and the evaluation grid and Fourier fit of the realization supplying the base quotient and integral frame. For this row estimate one may instead fix admissible tests on the same grid with the uniform size estimates of Proposition~\ref{prop:fitted-grid-constituent-costs}, the common tuple comparisons and both tests of Lemma~\ref{lem:fitted-base-minor} at the base. At every selected point above one threshold, the descended base row satisfies
+\[
+ \mu_{\max}(R_0)+\bar\kappa\le b x^{C_H},
+\]
+where
+\(\bar\kappa\) is the mean logarithm of its period scalar.
+Here \(C_H\ge16(\lceil|C_t|\rceil+10)+1\) suffices. The sharp
+level passage adds at most \(14\log|G|\), and the resulting
+bound is at most \(b x^{C_H+1}\) when \(x\ge56\).
+\end{proposition}
+
+\begin{proof}
+\proofstep{Descend one comparison map on all realized tuples.}
+At the selected place let \(j_t\) be the complex realization of
+\(Q_t\) in the common theta space. The primitive links identify
+the images of the base and tuple realizations. The row comparison
+is the relative matrix for this inclusion, expressed over \(K\)
+in the chosen row coordinates. In particular \(j_{t_0}\) is
+injective and, for each \(u\in Q_t\),
+\[
+    j_{t_0}\bigl(\sigma_0(\iota_t u)\bigr)
+                  =j_t\bigl(\sigma_0(u)\bigr).
+\]
+Here \(\sigma_0\) denotes coordinate embedding into the complex
+realization. The coefficient test uses the same vector \(\mathcal F\)
+of convergent level functionals on that common space. Thus its
+reading on \(j_t(\sigma_0(P_t y))\) equals its reading on
+\(j_{t_0}(\sigma_0(\iota_t P_t y))\). Write \(F\) for the latter
+test as a function on the embedded base row. In the matrix
+coordinates of the test, the integral comparison is
+
+\[
+  z_t c_t F(\iota_t P_t y)=c_* V(t)y.
+\]
+The \(z_t\) are roots of unity in \(K\), each \(c_t\) is nonzero,
+and \(c_t/c_{t_0}\) is the image of \(r_t\).
+Here the displayed expression uses the embedded row coordinates,
+including the conjugate embedding in the theta test. The
+semilinearity of the test with respect to that embedding gives
+ordinary complex matrix multiplication in these coordinates.
+The base quotient has positive rank and its nonzero vectors are
+separated by the level functionals. Surjectivity of \(P_{t_0}\)
+therefore implies \(c_*\ne0\). The same comparison at the base
+shows that \(\ker V(t_0)=\ker P_{t_0}\).
+
+Put \(V'(t)=(z_t/z_{t_0})^{-1}V(t)\).
+Multiplying the level functionals by \(z_{t_0}c_{t_0}/c_*\)
+gives a single linear map at the selected embedding. Its
+matrix \(\Psi\) satisfies
+\begin{equation}\label{eq:fitted-common-fourier}
+ \Psi\iota_t P_t=r_t^{-1}V'(t).
+\end{equation}
+Choose a \(K\)-linear right inverse \(A_0\) to
+\(\iota_{t_0}P_{t_0}\). Since \(r_{t_0}=1\) and
+\(V'(t_0)=V(t_0)\), the base equation reads
+\[
+                   \Psi=V(t_0)A_0.
+\]
+It determines the matrix over \(K\), and the injective complex
+embedding descends every equation \eqref{eq:fitted-common-fourier}
+to \(K\).
+
+If \(\Psi x=0\), choose \(y\) with
+\(\iota_{t_0}P_{t_0}y=x\). Then \(V(t_0)y=0\), so
+\(P_{t_0}y=0\) and \(x=0\).
+Thus the kernel test factors through the two operators as
+\[
+  \Psi x=0\ \Longrightarrow\ V(t_0)y=0\ \Longrightarrow\ P_{t_0}y=0\ \Longrightarrow\ x=0 .
+\]
+ At any finite place multiplication
+of \(V(t)\) by the phase ratio changes it by a unit. Thus
+one can use the base archimedean bound and the local bounds on
+the unnormalized matrices.
+
+\proofstep{Assemble the images in a fractional ideal times the test dual.}
+The coefficient indices group into a datum, a class
+representative, and a coefficient basis in that block.
+The test lattice for the original evaluation is the direct
+sum of the class lattices in those coordinates. The target
+\(M\) is its bilinear dual. At infinity its Hermitian Gram
+is the transpose of the inverse of the test Gram. The
+transpose implements bilinear evaluation. In particular,
+bounding coordinates separately in arbitrary bases could
+lose the dimension in the operator bound.
+
+For the finite calculation, write \(\Sigma\) for the sum of
+level depths times the logarithms of the norms of their
+moduli, and set
+\[
+ b_1(C)=CfmN^2b(\log b+\Sigma).
+\]
+The factors in each expanded class term are the external
+scalar, the product of local coefficients, the local datum
+values, the inverse stabilizers, the two chains of length
+\(m\), the initial row form, and the final pairing.
+Use the local lower valuation bounds for these factors at
+comparison constant \(C/16\). The first four cost functions
+have weighted sum at most \(m b_1(C/16)\) each, and the
+remaining four at most \(b_1(C/16)\) each before iteration.
+
+In particular the first four contributions together are at most
+\[
+  \sum_{i=1}^4 m\,b_1(C/16)=4m\,b_1(C/16).
+\]
+The initial top test is integral. Iterating the top and row
+maps multiplies their two costs by \(m\). Each term is
+therefore bounded below by the negative of the sum of the
+eight costs with these multiplicities. The expansions over
+cosets, classes and datum support are finite and have that
+same lower bound, by the ultrametric inequality.
+
+For the finite set of class and coset terms \(a_i\), the bound passes to the reading by
+\[
+  v_w\left(\sum_i a_i\right)\ge\min_i v_w(a_i).
+\]
+ Their
+cardinalities take no part in the finite cost. Pairing with
+an integral vector of the test lattice and expanding it
+block by block gives the same bound on every dual pairing.
+Testing on a local basis gives membership in the scaled
+dual lattice. Equivalently, if \(d_w^*\) is the sum of the
+eight local costs, one clears denominators with a scalar
+of valuation at most \(\lfloor d_w^*\rfloor\). A scalar of
+that valuation times a local unit clears all other
+denominators, by finite generation. The full sum of
+\(d_w^*\) with finite weights is at most
+\(8m b_1(C/16)=m b_1(C)/2\).
+
+At a complex place use
+\[
+ a_1(C)=CfNb\log b+CmN^2\Sigma,\qquad U=Cm^2N^2\Sigma.
+\]
+In this paragraph the individual factor bounds are at \(C\).
+Within each test block the three sums over cosets, classes
+and coset-expansion support cost \(e^{ma_1(C)}\) each in
+the absolute norm, and the external scalar costs one
+further such factor. Inverse stabilizers are reciprocals
+of positive integers and cost at most one. The coefficient
+and datum bound costs \(e^U\). Let the two chain gains in
+squared norm be \(e^{g_T(v)}\) and \(e^{g_R(v)}\) per step,
+with both mean exponents at most \(a_1(C)\). The terminal
+pairing contributes \(e^{a_1(C)}\) in squared norm. Thus for
+a block of test norm squared \(B_c\) and an initial row
+bound \(B_f\), the squared value is at most
+\[
+ e^{8ma_1(C)+2U+a_1(C)+m g_T(v)+m g_R(v)}B_cB_f.
+\]
+There are at most \(e^{2ma_1(C)}\) test blocks, by the
+counts of data and class representatives.
+
+Cauchy--Schwarz
+uses this count once in squared norm and replaces the sum
+of \(B_c\)'s by the full squared norm in the test Gram.
+The initial row form contributes one more factor
+\(e^{ma_1(C)}\) in \(B_f\). Taking the dual norm of the tested operator \(A_v\) at a complex place and collecting these exponents gives
+\[
+  \log\|A_v\|_{\rm op}^2\le (8+2+1)m a_1(C)+2U+a_1(C)+m g_T(v)+m g_R(v).
+\]
+Complex density of \(K\) extends the tested inequality
+from algebraic vectors to the entire complex spaces.
+Taking the mean and using \(U\le ma_1(C)\) gives
+\(16m a_1(C)\). Increasing the comparison constant by
+the factor \(16\) absorbs this overhead. The sum \(\Sigma\)
+is at most the enlarged modulus budget \(S_b\) below, so
+\[
+ A_{\rm op}\le Cf mNb\log b+Cm^2N^2S_b.
+\]
+These norm estimates use the same test Gram and integral
+test basis as the equation for \(\Psi\).
+\label{cor:fitted-row-height-1}
+
+\proofstep{Use the operator norm at infinity and ideal valuations at finite places.}
+Let \(M\) be the coefficient lattice of the functional with its
+fitted Hermitian metric. Use the square-norm slope convention, with
+finite weights 
+\[
+  \omega_w=\log\mathrm Nw/[K:\Q]
+\]
+ and the uniform
+mean over the complex places. The away condition in the field
+fit applies to \(t(w)\) at \(w\). To see this, a prime of the
+host that occurs in the tuple level is ramified for its
+level character. Off the twisted places the character at
+\(t(w)=t_0\) is trivial.
+
+At a twisted place over \(\ell\)
+the character is \(\delta_\ell\psi_w\). The second factor
+is unramified above \(\ell\), and the first uses the deletion
+prime different from \(\ell\), as in
+Section~\ref{sec:transport}.
+Consequently, for the inertia group \(I\) at any place above \(\ell\), the local character has
+\[
+  (\delta_\ell\psi_w)|_I=(\delta_\ell|_I)(\psi_w|_I)=1.
+\]
+ Thus every prime of this
+extra level is away from \(\ell\). The finite estimate supplies
+a real cost \(d_w^*\), with finite support, such that for each
+integral input \(y\) there is a nonzero scalar \(s\) with
+\(v_w(s)\le d_w^*\) and \(s V(t(w))y\in M\).
+
+In the local ring, \(s\) is a unit times a power of a
+uniformizer. Thus 
+\[
+  V(t(w))M_{t(w),w}\subset w^{-d_w}M_w
+\]
+with \(d_w=\lfloor d_w^*\rfloor\). The choice of \(s\) may
+vary with \(y\). The floor works for every integral input
+and preserves the upper bound for the weighted sum of the
+costs. The product formula is used with integral valuations
+\(v_w\). Equation~\eqref{eq:fitted-common-fourier}
+and localization at every \(w\) give
+\[
+ \Psi R_0\subset JM,\qquad
+ J=\prod_w w^{-v_w(r_{t(w)})-d_w}.
+\]
+The exponent is zero outside the twisted places and the support
+of \(d_w\). It is a signed exponent. A negative contribution
+may decrease the height.
+
+We identify the metric on the parent row. Write \(v_*\) for the
+infinite place of the chosen realization, \(n_P\) for its level
+index and \(J_t\) for the input frame of the theta map \(\Theta_t\).
+The image of \(J_t\) lies in
+\(\operatorname{im}\Theta_t^*=(\ker\Theta_t)^\perp\). The projected
+level and the adjoint preserve the two marked spaces. Thus the
+frame reads the quotient by the kernel in its orthogonal
+representatives, with
+\[
+ \langle J_t x,J_t y\rangle=n_P\langle x,y\rangle_{Q_t,v_*}.
+\]
+The relative matrix \(\iota_t\) was chosen on
+\(j_t=\Theta_t J_t\). The Gram of the row at \(v_*\) is the
+Gram of \(j_{t_0}\) divided by \(n_P\).
+
+If \(j_t x\) is of
+type \(p\), the coupled theta-adjoint period identity on the
+selected level gives
+\(\Theta_t\Theta_t^*j_t x=c_p j_t x\), where
+\(c_p=\kappa(v_*)\prod_j\lambda_{j,t,p}(v_*)>0\).
+The difference \(\Theta_t^*\Theta_t J_t x-c_p J_t x\) is
+in the kernel of \(\Theta_t\) and in its orthogonal complement.
+Consequently
+
+\[
+  \langle j_t x,j_t y\rangle=c_p n_P\langle x,y\rangle_{Q_t,v_*}
+\]
+for every \(y\). Dividing by \(n_P\) gives exactly the scalar
+for \(\iota_t\) in the parent row. The conjugate complex
+realization has the conjugate adjoint; a unit phase in the
+theta map cancels against its conjugate. The individual and
+coupled period identities used here concern the same projected
+class sums in Sections~\ref{subsec:selected-period}
+and~\ref{subsec:selected-lift-scalar}.
+
+At another infinite place \(v\) the parent metric is defined
+at the base tuple by the orthogonal sum
+\[
+ \langle x,y\rangle_{R_0,v}=
+ \kappa(v)\sum_p\left(\prod_j\lambda_{j,t_0,p}(v)\right)
+       \langle E_p x,E_p y\rangle_{Q_{t_0},v}
+\]
+in base coordinates. Here \(E_p\) are the rational projections
+in the direct sum of the base type spaces. The base relative
+matrix is the identity. The rational quotient pairing has
+orthogonal distinct Hecke parts at these places by the adjoint
+relations for the conjugate Hecke operators. The commuting
+operators and their adjoints descend to the quotient by the
+stable kernel, represented by its orthogonal complement. They
+are simultaneously diagonalizable there. Distinct type parts
+are sums over disjoint sets of joint eigencharacters.
+
+For each
+pair of characters in different sets choose an operator with
+different eigenvalues, and apply its adjoint relation. This
+gives the claimed orthogonality by sesquilinearity. Thus 
+\[
+  \sum_p E_p=1
+\]
+ recovers the full
+quotient norm from these terms. The row estimate uses
+the base tuple at every infinite place and the other used
+tuples at \(v_*\). These are precisely the two domains of
+the metric comparison. \label{cor:fitted-row-height-2}
+
+Divide the squared metric by \(\kappa(v)\) and call the result
+\(R_0^{\rm n}\). At \(v_*\) the type spaces span and are
+eigenspaces of the positive comparison of the two metrics.
+At the other places use the displayed sum. Denote the quotient metric by \(\|\cdot\|_{Q,v}^2\). On either
+domain the comparison reads
+\[
+ \|z\|_{R_0^{\rm n},v}^2\ge e^{g(v)}\|z\|_{Q,v}^2
+ \quad\text{if}\quad
+ g(v)\le\sum_j\log\lambda_{j,t_0,p}(v)
+       \quad\text{for every occurring }p .
+\]
+
+The quotient metric is the one induced by the surjection
+\(P_{t_0}\). Consequently the operator norm of
+\(\Psi\iota_{t_0}\) from \(Q_{t_0}\) equals the norm of its
+composition with \(P_{t_0}\), namely \(V(t_0)\). If
+\(A_{\rm op}\) bounds the mean logarithm of this squared norm,
+the logarithmic squared operator height of \(\Psi\) from
+\(R_0^{\rm n}\) is at most \(A_{\rm op}-\operatorname{mean}g\).
+For the same fitted data, the bound from the individual
+lift scalars is 
+\[
+  -\operatorname{mean}g\le
+3CfmN^2\log b.
+\]
+ Indeed one can take the sum of the lower
+logarithmic bounds for the \(m\) blocks. The hook terms are
+nonnegative, and the loss per block is at most
+\(3CfN^2\log b\) by the parameter bound for \(L_p\), with
+\(n_V\le N\).
+
+For a rank-\(s\) sublattice \(L\subset R_0^{\rm n}\),
+the image \(\Psi L\subset JM\) has the same rank. On its
+determinant line 
+\[
+  \|\wedge^s\Psi\|^2_v\le\|\Psi\|_v^{2s}.
+\]
+Since \(\Psi:L\to\Psi L\) is an isomorphism of the
+underlying integral modules, the archimedean inequality gives
+\[
+ \mu(L)\le \mu(\Psi L)
+                +\operatorname{mean}_v\log\|\Psi\|_v^2.
+\]
+The first term is at most \(\mu_{\max}(M)-2\log\mathrm N(J)/[K:\Q]\),
+and the second is at most \(A_{\rm op}-\operatorname{mean}g\).
+Taking the supremum over \(L\) gives
+\begin{equation}\label{eq:fitted-row-slope}
+ \mu_{\max}(R_0)+\bar\kappa
+ \le \mu_{\max}(M)+A_{\rm op}-\operatorname{mean}g+
+   2\sum_w\omega_w\bigl(v_w(r_{t(w)})+d_w\bigr).
+\end{equation}
+The sign on \(\bar\kappa=\operatorname{mean}\log\kappa\)
+follows from the division of the squared metric. The factor
+two in the finite contribution is from the same squared-norm
+convention.
+
+\proofstep{Apply the product formula to the fitted square ratios.}
+Use \(N=k+m(t+k+m+6)\), \(r=k+m-1\), and \(B_T\)
+from Section~\ref{subsec:fitted-square-ratios} for the
+weighted absolute sums of the shifted toric valuations.
+In each square, the two unshifted
+bottom values \(A_{ij},A'_{ij}\) are nonzero. Their
+valuations are at least \(-3\delta_w\), with
+\(\sum_w\omega_w\delta_w\le D_b\), and their positive
+archimedean logarithms have mean at most \(A_b\).
+
+For
+either value \(z\), the product formula gives
+\[
+ \sum_w\omega_w |v_w(z)|
+ =\operatorname{mean}_v\log|z|_v+
+   2\sum_w\omega_w\max(0,-v_w(z))
+ \le A_b+6D_b.
+\]
+Set \(B=\max(A_b+6D_b,B_T)\). The two bottom terms and
+four copies of each of two toric terms contribute at most
+\(2(2+8N)B\) per square, allowing for the two local branches
+of the toric label. The upper bound \(N\) is for the
+half rank of the square. If \(B_N\) bounds the prime sum
+of the density term for each of its indices, the density
+part costs at most \(10NB_N\) per square. In this sum a
+weight at a place over \(p\) includes \(e_w=v_w(p)\), so
+the full fibre weighs precisely \(\log p\).
+After summing each fibre, the contribution of the error with denominator \(p^2\) is bounded by
+\[
+  2N\sum_p\frac{\log p}{p^2}\le2N\sum_{n\ge2}\frac{\log n}{n^2}<2N.
+\]
+
+Indeed \((\log t)/t^2\) decreases for \(t\ge2\), so
+\[
+ \sum_{n\ge2}\frac{\log n}{n^2}\le
+ \frac{\log2}{4}+\frac{\log3}{9}
+   +\int_3^\infty\frac{\log t}{t^2}\,dt
+ =\frac{\log2}{4}+\frac{\log3}{9}+\frac{1+\log3}{3}<1.
+\] The defect part costs at most
+\(6D_b\). The fixed prime-power moduli contribute at most
+\(4mS_b\), where \(S_b\) is the sum of the prescribed
+exponents times the logarithms of the moduli. Here the
+norm of an integer bounds its contribution on any subset
+of places. All together, the square estimate gives
+\begin{equation}\label{eq:fitted-grid-sum}
+ \sum_w\omega_w v_w(r_{t(w)})
+ \le m^2\bigl(2(2+8N)B+10NB_N+2N+6D_b+4mS_b\bigr).
+\end{equation}
+The signed sum on the left requires the actual tuple
+assignment at each finite place.
+
+\proofstep{Absorb the uniform estimates in one exponent before changing level.}
+Set \(L=\log b\). Define
+\[
+ D_*=b(k+m)g_0g_1p_dp'_d|\operatorname{disc}E|,
+ \qquad P=C f^2(k+m)^6\log D_*.
+\]
+The prime-power budget satisfies \(0\le S_b\le2P\).
+For a square \((i,j)\), let \(H_{ij}\) be its half rank and
+write \(n_{ij,s}(\ell)\) for the denominator exponent chosen in
+its toric comparison at \(1\le s\le H_{ij}\). Every rational prime at which
+one of the selected exponents is nonzero belongs to the grid's
+denominator prime set \(S_d\). The square inequality uses
+\({\bf1}_{\ell\in S_d}e_w n_{ij,s}(\ell)\) at \(w\mid\ell\).
+In particular at \emph{each} \((i,j,s)\) the sum to be bounded is
+\[
+ \sum_{\ell\in S_d}n_{ij,s}(\ell)
+        \sum_{w\mid\ell}\omega_w e_w
+   =\sum_{\ell\in S_d} n_{ij,s}(\ell)\log\ell .
+\]
+The denominator calculation of Section~\ref{subsec:fitted-square-ratios}
+applies to the function supplied with this very critical integer
+and base conductor. Its values on \(S_d\) are nonnegative, so
+restricting to the actual twisted fibres only decreases the sum.
+This supplies \(B_N\) before the sum over \(s\).
+
+On the fitted grid choose the common bottom parameters and for
+each \((i,j)\) its two definite pairs \(P_{ij},P'_{ij}\) at the
+base conductor. The equations used to form the square include
+\(\sigma_*(A_{ij})=\operatorname{norm}(P_{ij})\) and
+\(\sigma_*(A'_{ij})=\operatorname{norm}(P'_{ij})\), where
+\(\operatorname{norm}\) is the mass-normalized form value of
+the pair. The bottom smallness and nonvanishing assertions
+hold for each pair satisfying these bottom equations. The
+finite integral comparison applied to this list gives one
+nonnegative function \(\delta_w\) whose weighted sum on
+every finite set is at most \(D_b\), and
+
+\[
+  v_w(A_{ij}),v_w(A'_{ij})\ge-3\delta_w.
+\]
+ The common
+defect in \eqref{eq:fitted-square-bottom} is this same function.
+For the infinite-place comparison take the conjugate norm sums
+of the two selected pairs. Since these values are the images of
+\(A_{ij},A'_{ij}\), averaging the positive logarithms bounds
+the two field heights appearing in the product formula above.
+One may compute in an extension containing the class coordinates, since
+restriction of embeddings gives the same mean. The rank,
+weight and base conductor in both calculations are those
+recorded on this grid.
+\label{cor:fitted-row-height-3}
+
+For the two bottom norms put \(L_0=\log Q_0\), where
+\(Q_0\) is the product of the base place norms with their
+conductor exponents, and let \(B_w\) be the upper bound on the
+fitted square weights. The bottom comparison uses the mass
+sum of the same small spherical pairs as in
+Section~\ref{subsec:fitted-square-ratios}. Its denominator
+and conjugate size estimates give
+\begin{align*}
+ D_b &\le C f(2N)\log(2fN)
+    +C f(2N)B_w L+C f(2N)^2 B_w L_0,\\
+ A_b &\le C f(2N)B_w\bigl(L+\log(2NB_w)\bigr)
+    +C fN^2\bigl(L+\log(2fNB_w)\bigr)+C N^2 L_0 .
+\end{align*}
+The denominator estimate uses integral representatives
+at each finite place. The real estimate uses the conjugate
+small spherical pairs and the mass normalization on the base
+level, with the root discriminant and the host logarithmic
+derivative bounded by the size record. These are estimates
+on the unshifted values \(A,A'\).
+\label{cor:fitted-row-height-4}
+Combining them with the toric bounds gives
+
+\[
+  B_T,B_N\le Cf b(L+\log x),
+\]
+\(D_b\le186C^2 f^2N^2 bL\), and
+\(A_b\le57C^3 fN^2 bL\). The last two estimates use
+\(L_0\le45fL\) and \(1\le B_w\le Cb\) with
+\(\log B_w\le CL\). In the defect bound, the three terms
+are bounded respectively by \(4,2,180\) times
+\(C^2 f^2N^2 bL\). For the positive real logarithm bound,
+the three multipliers of \(C^3 fN^2 bL\) are \(8,4,45\).
+These estimates use \(L\ge1\),
+\(\log(2fN),\log(2N)\le 1+L\), and
+\(\log x\le2L\).
+
+For clarity, the two monomials that absorb all the
+costs are
+\[
+ X_0=C^3 f m^2rN^3 bL,\qquad Y_0=C^3 f m^2N^2 bP .
+\]
+The coefficient lattice estimate \(4f n_*R_*\log(n_*R_*)\)
+from Proposition~\ref{prop:fitted-coefficient-slope} is at most \(32X_0\) by
+\(n_*\le2mr\), \(R_*\le CmN^3 b\) and
+\(\log(n_*R_*)\le4L\).
+The bound for the archimedean operator height, including
+\(-\operatorname{mean}g\), is
+\[
+ Cf mN bL + C m^2N^2 S_b + 3Cf mN^2 L\le4X_0+2Y_0.
+\]
+The bound for twice the weighted sum of \(d_w\) is
+\[
+ Cf bNm^2(L+S_b)+Cf m^2N^2b(L+S_b)
+ \le 2X_0+4Y_0.
+\]
+
+Since \(B\le1176C^3 f^2N^2bL\), the right side of
+\eqref{eq:fitted-grid-sum} is at most
+\((23520+30+2+1116)X_0+8Y_0\).
+Here \(f\le r\), \(m\le N\), and all size parameters
+multiplying these monomials are at least one.
+Substitution into \eqref{eq:fitted-row-slope} gives the bound
+\(100000(X_0+Y_0)\). This is \(b\) times the polynomial budget
+in the descent. Put \(T=\lceil|C_t|\rceil+1\) and
+
+\[
+  Q=x^{T+9}.
+\]
+ The selected size bounds give
+\(f,m,k,t,L\le Q\) and \(\log D_*\le20Q\).
+In particular \(N\le10Q^2\), \(r\le2Q\), and the expression
+\(rNL+P\) is at most \(20Q^4+1280CQ^9\), hence at
+most \(1300CQ^9\). Multiplying by \(100000 C^3 f m^2N^2\)
+bounds the polynomial by \(A C^4x^{16(T+9)}\) with
+\(A=13\cdot10^9\). With \(x\ge AC^4\), one more power of \(x\) absorbs the leading coefficient:
+\[
+  AC^4x^{16(T+9)}\le x^{16(T+9)+1}\le x^{C_H}\qquad(C_H\ge16(T+9)+1).
+\]
+
+The fitted-field cutoff precedes this descent. It is the
+maximum of the cutoff for the evaluation grid and the
+cutoff for the Fourier fit. The same realization of the row
+gives the base quotient, the field fit and the
+integral frame. For any fixed family and fixed cutoff,
+first take the maximum required comparison constant and
+then the maximum eventual scale thresholds.
+With the cutoff and family fixed, if \(C_i\) and \(x_i(C)\) are the comparison parameters of the two estimates, one may take
+\[
+  C=\max(C_1,C_2),\qquad x_0=\max\{x_1(C),x_2(C)\}.
+\]
+ These thresholds
+are uniform over the point indices and their realized tuples.
+
+The fitted matrix in Section~\ref{subsec:fitted-evaluation}
+and the all-powers estimate in
+\eqref{eq:fitted-toric-all-powers} apply to the row at this same point.
+The resulting height bound is
+\(\mu_{\max}(R_0)+\bar\kappa\le b x^{C_H}\)
+on the parent base lattice. Its period and metric are the ones
+used to define the height of the descended map. The sharp passage adds
+\(14\log|G|\), which is at most \(56b\) under the group
+size estimate. For \(C_H\ge1\) and \(x\ge56\) this
+additional cost fits within \(x^{C_H+1}b\).
+\label{cor:fitted-row-height-5}
+
+\end{proof}
+
+The signed covolume, the two local indices and the marked length
+comparison in the window argument refer to these same selected rows.

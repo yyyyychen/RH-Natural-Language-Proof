@@ -1,0 +1,509 @@
+\subsection{Separating and testing residue planes}
+\label{sec:plane-lifts}
+\hypertarget{source-plane-lifts}{}
+
+In the smaller-prime range of Section~\ref{sec:host-edge-tests}, the incoming lattices are indexed by residue planes. To add their ranks, each test must vanish to higher order on competing planes. Put \(r=r_G\).
+An edge of type \(r\) has \(L_+/L_-\) of dimension \(r\) over
+\(\mathbb F_q,\ q=p^{n'}\). For an edge of type \(r\), the exponent in the normalized pairing is
+\[
+                   A_r=\sum_s\sum_{i=1}^r\mu_{s,i}.
+\] For a fixed source, competitors are
+\(r\)-planes in \(p^{-1}L_-/L_-\). Choose coordinates taking one to the plane \(I_0=\{1,\ldots,r\}\) by an integral frame change.
+At this plane the substitution multiplies the even vector
+coordinates outside \(I_0\) and the odd covector coordinates
+inside \(I_0\) by \(w\). Call these coordinates normal and the
+others tangential. At a different plane use the corresponding
+twisted change of basis before measuring divisibility.
+
+\begin{proposition}[Neighbor tests on the smaller-prime range]\label{prop:residue-plane-neighbor-test}
+Use the selected good cycle and the smaller-prime bounds of
+Section~\ref{sec:host-edge-tests}, with its prescribed order
+\(t_{\rm II}\), depth \(D_{\rm II}\), and cutoff
+\(Y_2=x^{26}\). At each target let \(V_{\rm rec}\subseteq V\) be the subspace recovered from the incoming edges of type \(r\). Then
+\[
+ \dim V_{\rm rec}\ge(1-\kappa)\dim V,\qquad\kappa=O(Nx^{-12}).
+\]
+
+Here both endpoint orders are at most
+\(\lceil t_{\rm II}\rceil\), and the evaluation on the recovered
+directions has an integral right inverse after multiplication
+by \(p^{D_{\rm II}}\).
+\end{proposition}
+
+The proof first works in a fixed plane. It separates that plane
+from its competitors, lifts a space of residue symbols, and
+constructs detecting covectors with the required vanishing.
+Packing the resulting per-plane spaces at the same target
+then gives the rank assertion.
+
+\begin{lemma}[Frames, separation and normal directions on a good cycle]
+The selected cycle admits \(r\)-row frames with all the required
+Frobenius powers at most \(Q=p^{G'}\). In the adapted coordinates the separating polynomial vanishes on the other residue planes and is nonzero on the chosen plane, as specified in the proof. The bound for the Frobenius exponents \(p^{a_i}\) required in these frames is
+\[
+ p^{a_i}\le Q=p^{G'}\quad\text{for every required }i.
+\]
+ At a selected position the normal
+coordinates on the chosen plane have integral polynomial lifts
+after multiplication by the frame determinant and by \(w\),
+to first order modulo \(w^2\).
+\end{lemma}
+\begin{proof}
+In each marked block of Section~\ref{subsec:frobenius-selection}
+choose the middle \(r\) of its \(3r\) isolated selected even
+positions. These are consecutive tops. On either side there are
+another \(r\) even tops in that block. Between the last position
+of one frame and the first of the next there are consequently at
+least \(2r\) tops. The first and last \(r\) have preceding gaps
+greater than \(L_1\), by their isolation and the empty cells.
+The first position of a frame has such a gap as well. From the
+beginning of one frame to the end of the next the distance,
+including both enclosing blocks, lies within \(G'\), even across
+the partial block at wrap-around. Indeed marked block starts
+are at distance at most \((M+2)l\), leaving two full block
+lengths of slack in
+\[
+ G'=(M+5)l.
+\]
+The number of tops in
+this segment is thus at most \(N_1\).
+
+For any top after the
+incoming frame, the \(r\)-th preceding even top is present in
+the segment. Its distance is greater than \(L_1\), since
+\(r=K+1\) and no cyclic interval of length \(L_2\ge2L_1\)
+can contain \(r\) tops. In particular all powers taking any of
+these \(r\) rows up to the tested top are at most \(Q=p^{G'}\).
+These properties give the frame conditions and the twisting bounds used below.
+
+\proofstep{Separate Pl\"ucker coordinates along the cycle.}
+Write the frame positions as
+\[
+ a_{j,1}<\cdots< a_{j,r}=z_j
+\]
+in cyclic order, lifted to integers so that
+\(z_{j+J}=z_j+n'\). For each \(j\), form the \(r\)-by-\(k\)
+matrix of vector rows at \(a_{j,l}\), raising the \(l\)-th row's
+entries to \(p^{z_j-a_{j,l}}\). Write \(P_{j,I}\) for the
+minor on a subset \(I\) of size \(r\), \(D_j=P_{j,I_0}\) and
+\[
+ Q_j=p^{z_{j+1}-z_j}.
+\]
+There are \(r(k-r)\) subsets \(I\)
+differing from \(I_0\) by one exchange. Use all of them in
+\[
+ R=D_0\prod_I\left(\prod_{j=0}^{J-1}D_j^{Q_j-1}
+             -\prod_{j=0}^{J-1}P_{j,I}^{Q_j-1}\right),\quad
+ R_0=\prod_j D_j^{\alpha_j},\quad
+ \alpha_j=\mathbf1_{j=0}+r(k-r)(Q_j-1).
+\]
+Modulo \(w\) at a competing plane, let \(B\) be its rank-\(r\)
+matrix of rows over \(\mathbb F_q\) in the distinguished frame
+and \(b_I=\det B_I\). The \(j\)-th row matrix is a product of
+an \(r\)-square matrix in the free variables with \(B^{[p^{z_j}]}\).
+
+Indeed at a position \(a\) the surviving row is a linear
+combination of the plane rows twisted by Frobenius at \(a\).
+Powering moves them all to \(z_j\). Write Frobenius exponents
+modulo \(n'\) in this residue calculation. Every minor thus has
+the same polynomial factor at \(j\), times \(b_I^{p^{z_j}}\).
+For \(b_I\ne0\) the factors telescope:
+\[
+ \prod_j (b_I^{p^{z_j}})^{Q_j-1}
+    =b_I^{p^{z_J}-p^{z_0}}=1,\qquad z_J=z_0+n' .
+\]
+The final equality uses \(b_I\in\mathbb F_{p^{n'}}^\times\). If \(b_{I_0}=0\),
+the initial \(D_0\) vanishes. Otherwise row reduce \(B\) in
+the first \(r\) columns. In the resulting matrix \([I_r\mid C]\), a plane different
+from the coordinate plane has some \(C_{ih}\ne0\). Exchanging column
+\(i\) of \(I_r\) with column \(h\) of \(C\) gives
+\[
+ \det(e_1,\ldots,e_{i-1},C_{\bullet h},e_{i+1},\ldots,e_r)=C_{ih}\ne0 .
+\]
+Reordering the columns can only change the sign. The corresponding
+difference factor therefore vanishes. This proves \(R\in wO[\mathbf X]\) after
+substitution at every competitor.
+
+At the chosen plane \(D_j\) depends only on tangential
+coordinates. In every monomial of a one-exchange minor one
+entry comes from a normal column. After substitution its
+coefficient has \(w\)-order equal to its total normal degree.
+Expanding \(R-R_0\), or \(R^c-R_0^c\), each time a one-exchange
+term is chosen it costs at least \(Q_j-1\) normal degrees at
+each \(j\). Thus, before collecting terms, each error term of normal degree
+\(e\) has an explicit factor \(w^e\) and retains the tangential
+factor
+\[
+ D_j^{\max(0,c\alpha_j-e)}
+\]
+at each frame for \(R^c\).
+Here the word monomial refers to expansion after the undamaged
+determinant factors have been set aside.
+
+\proofstep{Recover a normal coordinate at the chosen plane.}
+Use the \(r\) preceding selected even positions at each selected
+\(s\), and power their vector rows to the index \(s\). Denote the
+first \(r\) columns by \(U_s\) and put
+\[
+ T_s=\det U_s.
+\]
+
+Every power comes from a strictly earlier position. For even
+\(s\) and \(h>r\), append column \(h\) and the current row to
+form an \((r+1)\)-minor. At the distinguished plane its leading
+expression is \(wT_s X_{s,h}\), with error divisible by \(w^2\).
+Any other term using column \(h\) from an earlier row has at
+least \(p\) powers of \(w\). At every plane the enlarged
+matrix has rank at most \(r\) modulo \(w\), by the same
+Frobenius factorization.
+
+For odd \(s\), contract each powered
+row with the current covector. At every plane these contractions
+vanish modulo \(w\), since the surviving covector annihilates the
+surviving row space. The leading terms at the distinguished plane
+are the entries of
+\[
+ wU_s(X_{s,i})_{i\le r},
+\]
+again with errors
+in \(w^2\). The adjugate of \(U_s\) expresses \(T_s X_{s,i}\)
+as a tangential linear combination of their leading terms
+divided by \(w\). This gives an order-one polynomial for each
+required term. All letters are at selected positions.
+
+\end{proof}
+
+\paragraph{Correction to the prescribed precision.}
+
+Separating one residue plane gives a congruence at the other planes. A correction is needed to reach the prescribed precision there while preserving the initial symbol.
+
+\begin{lemma}[Correction on all residue planes]\label{lem:plane-normal-correction}
+In this paragraph a factor
+of order \(d\le2Q\) means an integral polynomial having order
+at least \(d\) in every plane frame, with distinguished leading
+expression \(S\) divisible by \(w^d\), homogeneous in the
+normal coordinates of degree \(d\), and accurate modulo \(w^{d+1}\).
+Use finitely many such factors \(K_l\) with expressions \(S_l\),
+a power \(w^i\), \(i\ge0\), and any integral tangential polynomial
+\(H\). Use only letters at tops. The level is \(L=i+\sum_l d_l\).
+
+At any \(b\) with \(0\le b\le c\), consider the desired expression
+\[
+  w^i\prod_l S_l\, R_0^c\prod_jD_j^{b}
+                  \prod_{s\ {\rm top}}T_s^{(2Q+3)b}\,H.
+\]
+In this expression all determinants are in the distinguished
+coordinates. There is an integral polynomial whose substitution
+agrees with it modulo \(w^{L+b}\) and whose order at competitors
+is at least \(L+b\). For an initial level \(L\ge o\), taking
+\(b=c\) gives the precision \(o+c\) needed before division by
+\(w^o\). The construction can preserve any prescribed full
+multidegree of the desired expression.
+\end{lemma}
+
+\begin{proof}
+To prove the lemma, form the raw product by using the true
+factors \(K_l,R\) and the true determinants and tangential
+polynomial in the distinguished frame. The latter determinants
+and polynomial restrict exactly there, since their entries are
+tangential. Every term of the raw product has the required
+competitor divisibility as a polynomial, by the universal
+orders and the factor \(R^c\). The case \(b=0\) also follows
+by taking zero. For \(b>0\), expand its error at the designated
+plane. A replaced factor \(K_l\) contributes a monomial of
+normal degree \(m\) with coefficient divisible by
+\(w^{d_l+e_l}\), where
+\[
+ e_l=\max(1,m-d_l).
+\]
+
+Indeed the substitution of an integral polynomial first incurs
+\(w^m\) on that monomial, and its difference from \(S_l\)
+is divisible by \(w^{d_l+1}\). If \(R^c\) is replaced, let
+\(e_R\) be its order as computed above, otherwise set \(e_R=0\).
+The total extra order is
+\[
+ e=e_R+\sum_{\rm replaced}e_l>0.
+\]
+
+Discard terms with \(e\ge b\). For the others we recover all
+\(R_0^c\) by spending at most \(e\) of the \(b\) spare
+determinants at each \(j\). Put the unused excess above
+\(b-e\) into the tangential coefficient.
+
+\proofstep{The remaining normal order after correction.}
+The newly exposed normal multiplicity \(m_*\) satisfies
+\[
+ m_*\le e_R+\sum_{\rm replaced}(d_l+e_l)
+       \le (2Q+1)e .
+\]
+At each normal variable use one copy of the corresponding
+\(T_s\) and the preceding coordinate identity. This replaces it
+with a sum of order-one leading expressions divided by \(w\)
+and multiplied by tangential coefficients. There are enough
+copies at every position to leave \((2Q+3)(b-e)\) copies, with
+the surplus also tangential. After absorbing \(w^{m_*}\) into the order-one leading
+expressions, the external power is
+\(i'=i+\sum_{\rm replaced}d_l+e-m_*\ge0\).
+
+Adding the degrees of the untouched factors and the
+\(m_*\) order-one factors yields precisely
+\[
+ i'+\sum_{\rm untouched} d_l+m_*=L+e .
+\]
+The residual determinant reserves now have parameter \(b-e\),
+so each error term is in the induction at the smaller parameter. Induction lifts them
+to precision \((L+e)+(b-e)=L+b\) at the chosen plane and with
+at least that order at competitors. Subtract those lifts from
+the raw product. Finally one can project onto the prescribed
+multidegree, since every substitution is linear within each
+true letter and preserves its total degree.  Its use requires generating symbols
+with the displayed determinant powers in the available degrees.
+
+\end{proof}
+
+\paragraph{Extracting determinants from a prefix.}
+
+The correction must also preserve the orders at the cuts of a path. Extracting powers of the determinant from a prefix measures how much of its order remains.
+
+\begin{lemma}[Determinant divisibility from a prefix order]\label{lem:plane-prefix-determinant}
+In the plane variables
+before a cut, let \(A\) be a list of \(r\) distinct vector
+letters, let \(Z\) be the square matrix of their rows, and
+let \(B\) be the greatest total degree in all other vector
+letters before the cut in any monomial of an integral polynomial
+\(P\). Coefficients may themselves be polynomials in auxiliary
+variables over the DVR. Suppose that under a generic conjugate
+of \(\operatorname{diag}(1,\ldots,1,T)\) acting on the prefix
+vectors and contragrediently on its covectors every Laurent
+power in \(P\) is at least \(\theta>B\). Then
+\[
+                    P=(\det Z)^{\theta-B}P_1
+\]
+integrally. Dividing by this factor lowers the minimum Laurent
+power on any other subset of letters by at most \(\theta-B\).
+\end{lemma}
+
+\begin{proof}
+\proofstep{The determinant identity on the prefix chart.}
+For the first assertion localize the polynomial ring at the
+prime of the generic determinant \(\pi=\det Z\). This ring
+is a DVR. Indeed the generic determinant is irreducible over
+the fraction field of the coefficients and primitive over the
+coefficient UFD. Irreducibility follows by expanding in the
+last row, whose complementary minors have no common factor.
+For \(r>1\) two distinct such minors are nonassociate irreducibles
+by induction, and the case \(r=1\) is immediate. Only the finitely
+many variables occurring in the calculation are needed.
+
+In the
+residue field of this localization \(Z\) has rank \(r-1\)
+since a nonzero minor of size \(r-1\) is a unit there.
+Choose \(g\in\mathrm{GL}_r\) over the localization whose last
+column spans its kernel modulo \(\pi\), by lifting a basis of
+the residue space. Write
+\[
+ H_T=g\operatorname{diag} (1,\ldots,1,T)g^{-1}.
+\]
+Specialize the generic conjugating
+matrix to this \(g\). All coefficients remain integral and the
+lower Laurent-power bound persists, as the only matrix denominator
+is a power of the unit \(\det g\).
+
+In the transformed polynomial evaluate the input prefix rows at
+\(xH_\pi^{-1}\) and the input covector columns at \(H_\pi y\).
+At \(T=\pi\) the result is exactly the original \(P\).
+All covectors are integral. Each row of \(Zg\) has last entry
+divisible by \(\pi\), so the \(r\) chosen input rows are
+integral as well. Each remaining prefix vector can cost one
+power of \(\pi\) per coordinate factor. Their combined
+degree is still at most \(B\) under a linear change within
+each letter. For a term \(A_l\) of Laurent degree \(l\ge\theta\), the possible denominator loss is therefore at most \(B\), giving
+\[
+ \operatorname{ord}_\pi(A_l|_{T=\pi})\ge l-B\ge\theta-B.
+\]
+
+This gives the claimed divisibility in the localization and
+hence in the original UFD. For the last assertion apply the
+generic conjugate to any subset of the determinant rows. Their
+wedge is transformed by an exterior power of \(H_T\), in which
+the largest Laurent exponent is at most one. The determinant
+has minimum exponent at most one there. Minimum exponents
+add on nonzero products over a domain, giving the asserted
+bound for \(P_1\). The case \(P=0\) uses \(P_1=0\).
+The other cuts are controlled simultaneously.
+
+\end{proof}
+
+\begin{lemma}[Allocating the determinant reserves]\label{lem:plane-determinant-reserve}
+Assume the signed-prefix order and the one-sided coarse degree
+bound of \eqref{eq:plane-prefix-degree-assumptions}, with
+\(p\ge13\), \(k\ge3\), \(Y\ge2\), and the bounds on size and precision in Section~\ref{sec:host-edge-tests}.
+The residue-tangential product has a factor
+\(F_*\prod_{s\ {\rm top}}T_s^{kQ}\) to precision \(p^{c'}\)
+after substituting the original radices. Here
+\[
+ F_*=R_0^{c'}\prod_jD_j^{c'}
+                         \prod_{s\ {\rm top}}T_s^{(2Q+3)c'} .
+\]
+These factors are available in the stated degrees for
+Lemma~\ref{lem:plane-normal-correction}.
+\end{lemma}
+
+\begin{proof}
+\proofstep{Allocating the determinant factors.}
+For an application at the coarse degrees, let \(z\) be the last
+position of the outgoing frame in a segment. At a top \(s\)
+after the incoming frame take \(A\) to be the preceding \(r\)
+even tops and \(u\) their earliest position. Write
+\(B_o=\deg(u)/p^{z-u}\), with the true top degrees between
+\(a_0\) and \(2a_0\), where \(a_0\) is the lower bound for
+the plane model (at the host it is \(a-c_G\), up to integer
+rounding). Put \(Y=Y_2\). Let the minimum of the Laurent exponents at the
+prefix strictly before \(s\) be \(\operatorname{ord}_{<s}\).
+The conditions for this prefix and the coarse degrees on the
+incoming frame and intervening tops are
+\begin{equation}\label{eq:plane-prefix-degree-assumptions}
+ \operatorname{ord}_{<s}\ge\theta
+      =\left\lceil B_o/2-\left\lfloor B_o/(Yk^2)\right\rfloor\right\rceil,
+ \qquad
+ d_y\le1.01\deg(y)/p^{z-y}.
+\end{equation}
+The order bound holds on sums because it excludes every lower
+Laurent power.
+
+In particular the stated one-percent two-sided hypothesis suffices.
+Every earlier even top outside \(A\) belongs to these lists,
+because the outgoing frame ends the segment and has only
+\(r\) members. Such tops have \(y\le u-2\), so
+\[
+ B\le \sum_{y<u,\ y\ {\rm even}} d_y
+       \le 2.02 B_o\sum_{j\ge1}p^{-2j}
+       =2.02 B_o/(p^2-1).
+\]
+For \(p\ge13,\ k\ge3,\ Y\ge2\), this leaves
+\(\theta-B> 2B_o/5\). In particular these are large
+reserves even for the earliest row, since \(B_o\ge a_0/Q\).
+For example let \(c'=8(D_{\rm II}+1)+rN c_0+
+2rn'\lfloor c_G\rfloor\) and set
+\[
+ m_*=(N_1+1)\big((2Q+3)c'+kQ+c'\max_j\alpha_j+3c'\big).
+\]
+As \(\max\alpha_j\le1+rkQ\), \(N_1^2\le rN\), and
+\(k^3r^2NQ^5 c'Y=o(a_0)\) by
+Section~\ref{sec:host-edge-tests}, we have \(N_1m_*=o(a_0/Q)\).
+
+At each such cut extract \(m_1=(2Q+3)c'+kQ+c'\) copies of the
+ordinary determinant on the chosen rows. From the incoming frame
+extract \(m_2=c'\max_j\alpha_j+2c'\) copies of its determinant.
+This frame consists of the preceding \(r\) rows at the first cut.
+The total number extracted in a segment is at most
+\[
+ N_1m_1+m_2\le m_*.
+\]
+Each copy costs at most one in every
+prefix minimum and cannot increase the degree in any subset of
+the other vector variables, since highest degrees in a subset
+add on nonzero products. The absolute lower bound
+\(\theta-B>2B_o/5\) permits these successive extractions.
+
+The
+original plane-versus-complement inequalities have margin
+\(m_*\), which absorbs their loss from the extractions at each cut,
+including the cuts that end at a covector.
+The determinants continue to give the required tangential
+factors after radix substitution, to the precision needed for
+the symbol. Indeed put \(P_s=p^{z-s}\). The image of a
+determinant on the \(r\) preceding rows is \(\det(U_s^{[P_s]})\).
+Over \(O\) this is
+\[
+ T_s^{P_s}+pE
+\]
+with \(E\) integral,
+since Frobenius commutes with determinants in characteristic
+\(p\). In a power of \(h+c'\) such factors, terms using more
+than \(c'\) copies of \(pE\) vanish modulo \(w^{c'}\).
+The remaining terms have the common factor \(T_s^h\), with
+integral tangential quotient.
+
+Take \(h=(2Q+3)c'+kQ\).
+The coarse determinant of the incoming frame has image
+\(D_{j-1}^{p^{z-z_{j-1}}}+pE'\). The same argument gives a
+factor \(D_{j-1}^{(1+\alpha_{j-1})c'}\) from the \(m_2\) copies.
+Every top occurs after the incoming frame in exactly one segment
+per cycle. Around the cycle the factored expression is therefore
+\[
+ F_*\prod_{s\ {\rm top}}T_s^{kQ}\,H,\qquad
+ F_* = R_0^{c'}\prod_jD_j^{c'}
+                 \prod_{s\ {\rm top}} T_s^{(2Q+3)c'},
+\]
+for an integral tangential polynomial \(H\), and the discrepancy
+has coefficients in \(p^{c'}O\).  The factor \(\prod_s T_s^{kQ}\) will be used
+on the digit labels.
+
+\end{proof}
+
+\input{plane-symbols}
+\input{plane-rank}
+\input{plane-middle-weights}
+\input{plane-digits}
+\input{plane-gram}
+\input{plane-orbit}
+\input{plane-flat-test}
+
+\paragraph{From one plane to a full target.}
+\begin{proof}[Conclusion of the proof of Proposition~\ref{prop:residue-plane-neighbor-test}]
+
+Write \(d=\dim V\), and put \(a_0=a-c_G\).
+The preceding construction on every edge into the standard
+vertex gives \(m_e\) clean source vectors, with
+\[
+ m_e\ \ge\
+ (1-CNr^2 k/Y_2)(1-k c_0/a_0)^N
+                d\, q^{-r(k-r)} .
+\]
+For each combination within this block having a unit
+coefficient, the covector of Section~\ref{par:plane-rho} evaluates
+with valuation at most \(D_{\rm II}\) and satisfies the conductor
+condition at every competing incoming edge. Both endpoint orders
+are bounded by \(\lceil t_{\rm II}\rceil\).
+
+Take incoming edges for which the codimension-\(r\)
+subspace of \(L_+/pL_+\) is a graph over the last \(k-r\)
+coordinates. All \(q^{r(k-r)}\) graphs give distinct lattices.
+An arbitrary target is reached by a basis change over \(K_0\)
+and its Frobenius twists. For a primitive combination of the
+vectors from all these edges, choose a block containing a unit
+coefficient and its detecting covector. The other blocks contribute
+terms of valuation at least
+\[
+ c/2>D_{\rm II},
+\]
+by integrality
+of the edge pairings and \(c=8(D_{\rm II}+1)\). They preserve
+the valuation of the detected value.
+
+\proofstep{Combining the independent directions at the target.}
+If
+\[
+ M=\sum_e m_e,
+\]
+the evaluation image of the target lattice
+in \(O^M\) contains \(p^{D_{\rm II}}O^M\). Indeed in Smith
+coordinates any missing direction or any elementary divisor of
+larger valuation gives a primitive linear combination taking
+only values of larger valuation, contrary to what was just
+proved. Choosing a preimage of each scaled basis vector gives
+the integral right inverse at depth \(D_{\rm II}\). Finally
+\[
+ (1-kc_0/a_0)^N\ge 1-Nkc_0/a_0
+\]
+and \(c_0/a_0=O(1/X')\).
+The resulting deficit is at most \(\min(1,C'Nr^2 k/Y_2)\)
+after increasing the constant, including the range where this
+bound is one. At \(Y_2=x^{26}\) this deficit is \(O(Nx^{-12})\)
+with the host bounds of Section~\ref{sec:host-edge-tests}.
+The finite extension argument there preserves this estimate
+on the selected good cycles. This proves the smaller-prime input
+at the same host as the larger-prime estimate.
+ \label{cor:plane-lifts-1}
+\end{proof}

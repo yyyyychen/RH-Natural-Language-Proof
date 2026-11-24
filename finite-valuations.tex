@@ -1,0 +1,351 @@
+\section{Valuations of the finite periods}\label{sec:finite-valuations}
+\hypertarget{source-finite-valuations}{}
+
+Section~\ref{sec:transport} identifies the periods for different tuples over the coefficient field. The slope comparison requires lower bounds for their orders at finite places in the prescribed integral coordinates. We estimate the Taylor
+coefficients in the local period functions, then transport the
+result to the entire column lattice. The prime at which this
+divisibility is measured and the auxiliary places used to
+realize the row have different roles. The resulting ideal and
+index bounds enter the slope identity for the common row in
+Section~\ref{sec:word-division}.
+
+\subsection{Two differences of a logarithm}
+
+Two differences of the formal logarithm control the weights of the terms that can first appear in a derivative of the theta kernel.
+
+Fix an odd prime \(p\) and use the valuation \(v(p)=1\) on
+\(\C_p\), with \(v(0)=+\infty\). Put
+\[
+ \rho=(p^2-1)^{-1},\qquad \theta=(p-1)^{-1},\qquad
+ \gamma=p\rho,\qquad \theta-\gamma=\rho .
+\]
+For variables \(X_s\) with input weights \(r_s\), write \(X^n=\prod_s X_s^{n_s}\) for a nonnegative multi-index \(n\). The weighted coefficient valuation of a formal series \(A\) is
+\begin{equation}\label{eq:finite-weighted-coefficient-valuation}
+ \nu_r(A)=\inf_n\left(v(a_n)+\sum_s r_s n_s\right),
+ \qquad A=\sum_n a_n X^n,\qquad \nu_r(0)=+\infty .
+\end{equation}
+The assertion that \(A\) has weight at least \(h\) means
+\(\nu_r(A)\ge h\). Multiplication adds lower bounds on weights. Substitution
+preserves a lower bound if the series replacing \(X_s\) has
+weight at least \(r_s\) and zero constant term. Both assertions
+follow by bounding each summand in each coefficient.
+
+Let \(d\ge2\) be even, index variables by \(\mathbb Z/d\), and
+write \(E,O\) for its even and odd classes. For a second copy
+of the variables set
+\[
+ \Delta_E B=B(X_E+Y_E,X_O)-B(X_E,X_O)-B(Y_E,X_O),
+\]
+and form \(\Delta_O B\) by exchanging the roles of \(E,O\).
+On each copy of the variables define
+\[
+ {\cal L}_s(X)=\sum_{a\ge0}p^{-a}X_{s-2a}^{\,p^{2a}} .
+\]
+The local arithmetic hypotheses on \(B\) are the following.
+Its coefficients lie in a subfield with integral value group.
+It is invariant under \(X_s\mapsto\zeta^{(-1)^s p^s}X_s\),
+where \(0\le s<d\) and \(\zeta\) has order \(p^d-1\).
+Every term has positive degree in each parity block, and the
+bidegree \((1,1)\) is absent. For both differences,
+\(\exp(\Delta B)({\cal L}(X),{\cal L}(Y))\) has integral
+coefficients and constant one. These integrality hypotheses
+are on the series in the formal group coordinates.
+
+\begin{lemma}\label{lem:two-differences}
+At constant input weight \(\rho\), a coefficient of \(B\) has
+weight at least \(\theta\), with the possible exceptions
+\[
+ X_s^{p^\alpha}X_t^{p^\beta},\qquad
+ s\in E,\quad t\in O,\quad s+\alpha=t+\beta\bmod d,\quad
+ \alpha+\beta>0 .
+\]
+Their weight is at least \(\theta-1\).
+\end{lemma}
+\begin{proof}
+The formal inverse \(g\) of \({\cal L}\) exists by induction on
+total degree since the linear part is the identity. In
+\[
+ g_s=X_s-\sum_{a\ge1}p^{-a}g_{s-2a}^{\,p^{2a}},
+\]
+every coefficient on the right in a nonlinear term uses
+lower degrees. Since \((p^{2a}-1)\rho\ge a\), induction gives
+weight at least \(\rho\) for each \(g_s\). Apply this substitution
+to the integral series in the hypotheses after removing its
+constant. We obtain weight at least \(\rho\) for
+\(J=\exp(\Delta B)-1\). The torus acts on the second copy with
+the same characters as on the first. Hence each nonzero
+coefficient of \(J\) is invariant in the sense that its
+exponents have total character zero. Modulo \(p+1\), each
+character exponent is \(1\), and \(p+1\) divides \(p^d-1\).
+
+For a nonzero coefficient \(j_n=[X^n]J\), the torus invariance
+gives \(p+1\mid|n|\). Its valuation is integral because the
+additive-coordinate expansion uses rational operations on the
+coefficients of \(B\). Therefore
+\[
+ v_p(j_n)+\rho|n|
+     =v_p(j_n)+\theta\,\frac{|n|}{p+1}
+     \in \theta\mathbb Z .
+\]
+The lower bound \(\rho>0\) hence improves to \(\theta\).
+Since \(k\theta-v_p(k)\ge\theta\) for every \(k\ge1\), each
+term of \(\log(1+J)\) retains the improved bound. This proves
+the claim for both \(\Delta_E B\) and \(\Delta_O B\).
+
+Write \(b_n=[X^n]B\). Splitting the even block nontrivially
+between its two copies yields in \(\Delta_E B\) the coefficient
+\(b_n\prod_{s\in E}\binom{n_s}{m_s}\), where \(m_s\) is the
+exponent sent to the second copy. Merging the copies recovers
+\(n\) uniquely. If the sum of base-\(p\) digits in one block exceeds one,
+send one digit unit \(p^i\) in a coordinate \(s\) to its second
+copy. Both parts are nonempty. With digits \(d_j(n_s)\), the
+binomial expansion modulo \(p\) gives
+\[
+   \binom{n_s}{p^i}\equiv d_i(n_s)\not\equiv0\pmod p .
+\]
+
+All other binomial factors are one. Thus the weight of \(b_n\)
+is at least \(\theta\). Otherwise each block consists of one
+\(p\)-power. If, say, \(\alpha>0\), use the split of \(p^\alpha\)
+at \(p^{\alpha-1}\), for which
+\[
+   v_p\binom{p^\alpha}{p^{\alpha-1}}=1 .
+\]
+The weight is then at least \(\theta-1\). Invariance requires
+\(p^{s+\alpha}=p^{t+\beta}\bmod (p^d-1)\).
+The order of \(p\) modulo \(p^d-1\) is \(d\), since
+\(0<p^i-1<p^d-1\) for \(0<i<d\). This gives the congruence
+and also shows that \(\alpha,\beta\) have opposite parity.
+\end{proof}
+
+\subsection{The one-letter jet}
+
+Identifying two arguments gives an ordinary derivative in one letter. Its factorial contributes a positive valuation which must be combined with the lower bound for the series coefficients.
+
+For \(d=2\), identify the two letters at each matrix entry
+by substituting \((Z_{ib},\eta Z_{ib})\), where \(v(\eta)=0\).
+Write \(g_{ib}\) for the inverse of
+\(Z\mapsto\sum_{a\ge0}p^{-a}Z^{p^{2a}}\) in that entry.
+The one-letter theta series has the form
+\[
+ \Theta(Z)=U(g(Z))\exp\!\left\{\frac{\pm1}{2}
+           \sum_{i,b} B(Z_{ib},\eta Z_{ib})\right\},
+ \qquad 1\le i\le N_0,\quad 1\le b\le N_1 ,
+\]
+with \(U\) integral.
+
+\begin{construction}
+\begin{tabular}{@{}l@{\hspace{1.2em}}l@{}}
+\toprule
+\textit{Contribution to the ordinary derivative} & \textit{Valuation bound} \\
+\midrule
+Coefficient \([{Z'}^{\kappa}]\Theta(MZ')\) & \(\ge-\gamma|\kappa|\) \\
+Multi-index factorial \(\kappa!\) & \(=\theta(|\kappa|-\sum_i s_p(\kappa_i))\) \\
+Product, for \(\kappa_i\le a\) & \(\ge\rho|\kappa|-n(1+\log_p a)\) \\
+\bottomrule
+\end{tabular}
+\caption{The valuations entering the one-letter derivative estimate for the integral substitution of Lemma~\ref{lem:one-letter-derivatives}.}\label{fig:analytic-jets}
+\end{construction}
+
+\begin{lemma}[Derivatives of the one-letter series]\label{lem:one-letter-derivatives}
+Suppose \(B\) satisfies the hypotheses of Lemma~\ref{lem:two-differences}
+with \(d=2\). Let \(Z=MZ'\) be an integral linear substitution into
+\(n\) variables. For \(a\ge1\) and \(\kappa_i\le a\),
+\begin{equation}\label{eq:one-letter-jet}
+ v\big(\kappa!\,[{Z'}^\kappa]\Theta(MZ')\big)
+ \ \ge\ \rho|\kappa|-n(1+\log_p a).
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+\proofstep{Bound the coefficients before differentiation.}
+At input weight \(\gamma\), every term in
+the exponent has weight at least \(\theta\). In fact
+\(\gamma-\rho=1/(p+1)\), and each exceptional monomial in
+Lemma~\ref{lem:two-differences} has degree at least \(p+1\).
+The factor \(1/2\) is integral. For the exponential, the term
+of order \(k\) has weight at least \(k\theta-v_p(k!)\ge0\).
+The integral factor \(U(g(Z))\) also has weight at least zero by
+the inverse-series estimate. These conclusions hold after any
+integral linear substitution \(Z=MZ'\) into \(n\) variables.
+\proofstep{Include the factorials from differentiation.}
+The coefficient of \({Z'}^\kappa\) has valuation at least
+\(-\gamma|\kappa|\). The factorial identity
+\(v_p(m!)=(m-s_p(m))/(p-1)\) therefore gives the lower bound
+\[
+ (\theta-\gamma)|\kappa|-\theta\sum_i s_p(\kappa_i),
+\]
+where \(s_p(m)\) is the base-\(p\) digit sum. Each nonzero
+\(\kappa_i\) has at most \(1+\log_p a\) digits, each at most
+\(p-1\). Since \(\theta-\gamma=\rho\), this is
+\eqref{eq:one-letter-jet}.
+\end{proof}
+
+\paragraph{Application to framed minors.}
+
+In the column lattice the differential operators are products of framed minors. Their total order specifies which factorial estimate can be used.
+
+For a product of \(C\) minors, let \(h_c\) be their sizes and
+\(H=\sum_c h_c\). The corresponding differential operator is
+homogeneous of order \(H\). Each entry of the matrix occurs
+at most once in a determinant term, hence at most \(C\) times
+in a product term.
+Thus every derivative monomial \(\partial^\alpha\) in the unframed operator satisfies
+\[
+  |\alpha|=\sum_{c=1}^C h_c,\qquad 0\le\alpha_{ij}\le C.
+\]
+
+At an arbitrary row frame the matrix of
+derivations is \(Y\partial_Z\), where the rows of \(Y\) can
+be indeterminates. Equivalently apply the unframed minors after
+the substitution \(Z=Y^{\mathsf t}Z'\). Use the Gauss valuation
+on the coefficient field extended by the entries of \(Y\), under
+which the valuation of a polynomial is the minimum of those of
+its coefficients. This valuation is multiplicative because
+reduction modulo the valuation ideal leaves a polynomial ring
+over the residue field, an integral domain. The substitution
+matrix is integral, so \eqref{eq:one-letter-jet} gives, for every
+coefficient in the frame variables, the same bound
+\[
+               \rho H-N_0N_1(1+\log_p\max(1,C)).
+\]
+It also survives any linear reading integral on the frame monomials.
+This argument treats the orbit with the two identified letters.
+The other even cycles retain a matrix at each letter and use the
+individual column heights.
+
+\input{cyclic-jets}
+\input{integral-jets}
+\input{curve-exponents}
+\input{cm-models}
+\input{theta-normalization}
+\input{baseline-jets}
+\input{unserved-period}
+
+\subsection{From stage estimates to the column lattice}
+\label{subsec:division-shift}
+
+A bound for a matrix entry becomes a bound for a column only after the terminal restriction, the class lattice and its level trace have all been identified integrally.
+
+\input{terminal-realization}
+\input{terminal-period}
+
+Let \(s_w\) be the bound obtained by summing the
+placewise stage prices for the word \(u\). At an
+ordinary place the prices are the gain plus \(F-E\),
+with the class denominators included by
+\eqref{eq:unserved-terminal-bound} of Proposition~\ref{prop:unserved-terminal-valuation}
+or its version with the local orbit condition.
+The selected lattice gain in \(s_w\) is bounded by the
+gain proved for the local chain. At the discriminant the valuation bound is \(F_{\rm D}-E_{\rm D}-\Delta_w\), and at the
+prime assigned to the sequence it is \(-E_T(w)\). The type-prime estimate
+supplies \(s_w\) directly. Set \(\sigma_w=e_ws_w\).
+
+Write \(L=K\) for the coefficient field. Let \(A_t\) be the row
+quotient map followed by its rational identification with the
+common row space. The common row lattice \(R\) is specified
+by
+\[
+       R_w=(A_{t(w)}M_{t(w)})_w
+\]
+at the localized valuation rings. Suppose that the corresponding
+bilinear form \(B\) satisfies \(P_t(\varphi,F)
+=\xi_t B(\varphi,A_tF)\), with \(v_w(\xi_{t(w)})=0\), as in
+the period comparison.
+
+\begin{construction}
+\begin{tabular}{@{}lll@{}}\toprule
+ & Domain of the pairing & Ideal containing the values \\ \midrule
+At \(w\) & \(N_w\times R_w\) & \(\mathfrak p_w^{\tau_w}\mathcal O_{L,w}\) \\
+After twisting & \(I_wN_w\times R_w\) & \(\mathcal O_{L,w}\) \\
+Globally & \(IN\times R\) & \(\mathcal O_L\) \\ \bottomrule
+\end{tabular}
+\par\smallskip
+\(\tau_w=\lfloor\sigma_w\rfloor,\quad
+ I_w=\mathfrak p_w^{-\tau_w}\mathcal O_{L,w},\quad
+ I=\prod_w\mathfrak p_w^{-\tau_w}.\)
+\caption{From the local period valuations to the integral Hermitian dual in Proposition~\ref{prop:finite-period-shift}.}\label{fig:analytic-shift}
+\end{construction}
+
+\begin{proposition}[The fractional-ideal shift]\label{prop:finite-period-shift}
+Let \(N\) be the original column lattice of positive rank
+with its Hermitian metrics, and let \(R_w=(A_{t(w)}M_{t(w)})_w\)
+be the localized row lattice transported to the common rational space. Suppose the placewise period estimates give
+\(v_w(B(N_w,R_w))\ge\sigma_w\) at each finite place \(w\), where
+\(\sigma_w=0\) outside a finite set. Put
+\[
+ \tau_w=\lfloor\sigma_w\rfloor,\qquad
+ I=\prod_w\mathfrak p_w^{-\tau_w},\qquad N'=IN .
+\]
+Then \(B(N')\subseteq R^\vee\), and the squared-norm slope of
+\(N'\) differs from that of \(N\) by
+\[
+ 2\sum_w \frac{\log N\mathfrak p_w}{[L:\Q]}\,\tau_w.
+\]
+Replacing \(\tau_w\) by \(\sigma_w\) in this sum has error at most
+\(2\sum_{p\in S}\log p\) when all nonintegral \(\sigma_w\) are
+above the rational primes in \(S\).
+\end{proposition}
+
+\begin{proof}
+\proofstep{Check the inclusion at each finite place.}
+Localizing identifies \(I_w\) with a principal fractional ideal
+generated by an element of valuation \(-\tau_w\). Multiplying the
+column by this ideal preserves integrality of \(B\) on \(R_w\),
+because \(v_w(B)\ge\sigma_w\) for the unshifted generators.
+In a uniformizer \(\varpi_w\), the local test on a nonzero generator reduces to
+\[
+  v_w(B)\in\mathbb Z,\quad v_w(B)\ge\sigma_w\quad\Longrightarrow\quad B\in\varpi_w^{\lceil\sigma_w\rceil}{\cal O}_w .
+\]
+Localization permits division by any scalar of valuation zero.
+Intersecting over \(w\) now gives \(B(N',R)\subseteq{\cal O}_L\),
+or \(B(N')\subseteq R^\vee\). The conclusion in fact holds with
+any integral \(\tau_w\le\lceil\sigma_w\rceil\), by integrality
+of the valuation at a nonzero coefficient.
+
+\proofstep{Compare determinants and bound rounding.}
+For the squared Hermitian slope used here put
+\(\ell_w=\log N\mathfrak p_w/[L:\mathbb Q]\).
+At rank \(n>0\) the \(w\)-adic determinant exponent of the
+lattice changes by \(-n\tau_w\). The archimedean metrics are
+fixed. The normalized log covolume changes by
+\(-2n\sum_w\ell_w\tau_w\), and hence
+\[
+           \mu(N')=\mu(N)+2\sum_w\ell_w\tau_w .
+\]
+If the nonintegral \(\sigma_w\)'s occur only over a finite set
+\(S\) of rational primes, replacing \(\tau_w\) in this last
+formula by \(\sigma_w\) costs at most \(2\sum_{p\in S}\log p\).
+Indeed \(0\le\sigma_w-\tau_w<1\) and
+\(\sum_{w\mid p}e_w\ell_w=\log p\) by the degree formula. Both
+the inclusion in the dual and the slope change use the very
+same tuple selection at the finite places.
+\end{proof}
+
+\paragraph{The finite support in the selected family.}
+The nonzero exponents in the sum have residue
+characteristic among the primes at most \(X''\), the
+primes \(T_u,g_0,g_1,d\), and the prime divisors of
+\(D_{\Gamma,u}\). Above \(X''\) and outside those exceptions, the family prescribes zero gain. The forced term vanishes by its cutoff. The local error on the complement of the word, type and discriminant places has a residue-prime contribution only for \(p\le X''\). This leaves just \(v_p(D_{\Gamma,u})=0\)
+at every lift. These identities give zero for the prescribed
+shift. Integrality of the coefficient there makes this price valid. The product \(I\) is
+therefore finite. The bound \(\vartheta(X'')\le X''\log4\)
+and \(\sum_{p\mid D_{\Gamma,u}}\log p\le\log D_{\Gamma,u}\)
+give the rounding allowance
+\[
+  2\bigl(X''\log4+\log(T_u g_0g_1d D_{\Gamma,u})\bigr).
+\]
+
+This rounding allowance is independent of the number of coefficient places
+and the degree of \(L\).
+For the bound on \(\vartheta\), use the divisibility of
+\(\binom{2n}{n}\) by every prime in \((n,2n]\).
+For \(2n+1\), the analogous primes in \((n+1,2n+1]\)
+divide \(\binom{2n+1}{n}\le2^{2n}\), by the two equal
+central binomial coefficients. Induction on the integer
+argument gives \(\vartheta(x)\le x\log4\).
+
+Thus Proposition~\ref{prop:finite-period-shift} applies to the
+selected tuples with a rounding allowance independent of the
+degree of the coefficient field. The shift can therefore be used in Section~\ref{sec:word-division} on the original column, even when the local coefficient field had to be enlarged to compute a kernel entry.
+\label{cor:finite-valuations-1}

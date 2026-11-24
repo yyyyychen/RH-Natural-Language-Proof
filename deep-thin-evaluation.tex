@@ -1,0 +1,177 @@
+\begin{auxlemma}[Evaluation at a frame with a short period]
+\label{lem:deep-thin-evaluation}
+Let \(Z\) be a component at a nonterminal lift, \(u_1\) one of its
+selected quotient weights and \(y\) a frame on \(Z\) at a good
+complex embedding. Write \(N_*=g_0g_1 15^e\) for the deep level,
+\(\lambda=\lambda_1(y)\) for the first minimum in the polarization
+metric and \(\mathcal B_{u_1,Z}(y)\) for the supremum of
+\(\|g(y)\|^2/\|g\|_{2,Z}^2\) over nonzero cusp sections of weight
+\(u_1\) on \(Z\), with component measure of mass at most one. Uniformly
+over these components, weights and frames, for large family scale,
+\[
+ N_*\lambda^2<b\quad\Longrightarrow\quad
+ \mathcal B_{u_1,Z}(y)\ge e^{-\phi(y)/625},\qquad
+ \phi(y)=\frac{2f}{\operatorname{rd}(E)^2\lambda^2}.
+\]
+\end{auxlemma}
+\begin{proof}
+\proofstep{Choose a differential operator at the quotient weight.}
+Put \(M_0=g_0g_1\), \(d_*=2fm\), \(R=\operatorname{rd}(E)\).
+Use the specific column count \eqref{eq:deep-quotient-column-count} and exponents \eqref{eq:deep-quotient-exponents} for \(u_1\). The
+corresponding theta weight \(G\) is obtained by the parallel shift \(w_\tau=n/2+1-u_{\tau,p}\) and central exponent \(n/2\). If an embedding
+has \(q\) rows with exponents \(a_1\ge\cdots\ge a_q\), use one
+\(j\)-row minor \(P_{\tau j}\) at each height. By the definition of
+\(n\), all their column sets may be chosen disjoint. Put
+\[
+ P=\prod_{\tau}\prod_{j=1}^{q_\tau}
+          P_{\tau j}^{\,a_{\tau j}-a_{\tau,j+1}},
+ \qquad a_{\tau,q_\tau+1}=0 .
+\]
+
+This polynomial is harmonic since no two contracted opposite labels occur in
+the same column. Put \(D=\deg P\). The positive last exponent gives
+cuspidality: at a rational boundary the projected frame loses rank
+in the corresponding full minor, so that its constant term vanishes,
+as in Lemma~\ref{lem:marked-class-section-cuspidal}. A determinant
+of size \(j\) contributes at most \(j!\le r^j\) to the sum of
+absolute coefficients. Hence
+\[
+ 1\le D\le fr(4b+1)\le b^2,\qquad \|P\|_1\le r^D .
+\]
+
+The host, level and column estimates in
+\ref{cor:deep-boundary-orders-5} and
+Lemma~\ref{lem:joint-theta-parameters} give, uniformly,
+\[
+ frn\le b,\quad R^7\le b,\quad d_*\le2b,
+ \qquad b^{16}\le M_0\le b^{70}.
+\]
+
+Indeed \(f,r,n\) grow polynomially in \(x\), whereas
+\(b=\exp(x^\epsilon)\); at each type prime
+\((kb)^8\le g_i\), and the upper type bounds give
+\(\log g_i\le35\log b\). In the joint level estimate use this
+value of \(D\) and the smaller signature bound \(q_{\rm small}\le m\);
+the numerical condition is
+\[
+ R_0^2R^{28}Dr=90(fr+D)R^{28}Dr=O(b^9)\le M_0 .
+\]
+The inequalities \(m^4\le f\) and \(R\ge\max(16,f^2)\) are independent of the weight.
+
+\proofstep{Compare one actual translate with all frames on the original level.}
+For the frame over \(y\) after forgetting the deep marking, use
+the same lattice and form. Its first minimum is still \(\lambda\).
+Choose the marked half \(\mathfrak m=(\bar\alpha)\), \(\alpha\bar\alpha=M_0\).
+The isometry of Lemma~\ref{lem:scaled-light-metric} sends \(v\mapsto\bar\alpha v\) from the original lattice in the metric \(H_A\) to the half-level lattice in \(H'=H_A/M_0\). It preserves the first minimum, since
+\[
+ H'(\bar\alpha v,\bar\alpha v)=H_A(v,v).
+\]
+
+The isogeny pushes Haar probability forward to Haar probability, and the marked letter has squared length \(2\xi_R/M_0\) in \(H'\). Thus all \(M_0^{frn}\) translations of the
+principal theta tensor are readings of cusp rules at weight \(G\).
+Write \(b_\nu(z)\) for their invariant point norms multiplied by
+the common Lie normalization \((2\pi\xi_R)^{-D/2}\).
+Apply Lemmas~\ref{lem:light-thick-lift}, \ref{lem:light-frequency-column}
+and~\ref{lem:light-block-jet-product} to this particular \(P\).
+These lemmas treat arbitrary such ordered disjoint blocks. Changing to the
+marked derivative costs \((2\xi_R/M_0)^{D/2}\). Parseval over the
+half-level translates, followed by the maximum bound for a finite sum,
+gives
+\[
+ \begin{aligned}
+ M_0^D\sum_\nu b_\nu(y)^2
+    &\ge \pi^{-D}[24(2d_*)^{d_*/2}]^{-n}
+            2^{-(r+2)D}e^{-2a\phi(y)},\\
+ a&=8100\pi n m^4d_*^4R^7/M_0,\\
+ -\log\max_\nu b_\nu(y)&\le
+    3b^3D+a\phi(y)+(D+frn)\log M_0 .
+ \end{aligned}
+\]
+
+For the last inequality, \(D\ge1\), \(d_*\le2b\) and \(r,n\le b\)
+bound half the logarithm of all powers of \(2,\pi,24,2d_*\) in
+the first line by \(3b^3D\). Also
+\[
+ a\le 8100\pi\,16 b^{10}/b^{16}\le 1/2500
+ \qquad(b\ge1000).
+\]
+This gives a nonzero rule at \(y\); fix a maximizing translate \(\nu\).
+
+For its upper bound on the original level, let \(z_0\) be an orthonormal frame with value at least half its supremum. The rank-one
+period estimate in \ref{cor:slice-short-heights-3}, applied with
+spread at most \(3b^2\), gives first minimum at least
+\(e^{-40L}\). Thus, with \(L=3\log b\),
+\[
+ 2b_\nu(z_0)\ge\sup_z b_\nu(z),\qquad \lambda_1(z_0)\ge e^{-40L}.
+\]
+
+The four bounds needed here are
+\[
+ \log M_0\le30L,\qquad
+ \log(fr)\le L,\qquad
+ \log R\le3L,\qquad
+ D+frn\le2b^2.
+\]
+
+Set \(h=frn\) and \(A=2f^{3/2}n^2R\).
+For the standard tensor lattice a rational basis in its second
+factor consists of integral vectors of lengths at most \(A\). Contraction with this basis
+bounds the tensor minimum below by \(e^{-40L}/A\).
+Use the submean and Cauchy inequalities in
+\ref{cor:slice-short-heights-4} for the translated theta function
+in dimension \(h\). A polydisc of coordinate radius
+\[
+ b_0=\min\{1/\sqrt{\pi h},e^{-40L}/(4A\sqrt h)\}
+\]
+embeds in the torus.
+
+Its submean estimate costs
+\(e^{1/2}(\sqrt\pi b_0)^{-h}\). A multi-index of degree \(D\)
+costs \((\pi eD)^{D/2}\) times the coefficient sum by Cauchy's
+inequality on the Gaussian function. The Lie factor cancels the
+change from unit to marked coordinates. Including the factor two
+for the half-supremum frame gives
+\[
+ \log\sup_z b_\nu(z)\le \log 2+\tfrac12
+      +h\log(1/(\sqrt\pi b_0))+D\log r+\tfrac D2\log(eD)
+       =O(b^2\log b).
+\]
+Here \(h\le b\), \(D\le b^2\), and \(\log A=O(\log b)\).
+One may also retain the full finite marking count
+\(M_0^{frn}\) in the supremum estimate since its logarithm has
+the same bound.
+
+Since \(e=\lfloor3\log b/\log3\rfloor\), eventually \(15^e\ge b\).
+The thin-frame condition gives \(M_0\lambda^2\le1\) and hence
+\[
+ \phi(y)\ge b^{14},\qquad
+ 3b^3D+(D+frn)\log M_0+O(b^2\log b)\le \phi(y)/2500 .
+\]
+Together with the bound on \(a\), this proves
+\(e^{-\phi(y)/1250}\sup_z b_\nu(z)\le b_\nu(y)\).
+
+\proofstep{Return to the selected weight on the given component.}
+Forget the refined marking and pull the chosen cusp rule back to
+the deep level. In the adelic description the map enlarges the
+level stabilizer on the right; the Hermitian lattice and the
+orthonormal frame are carried by the same rational isometry.
+The first minimum and every invariant point norm are preserved.
+Write \(\pi\) for the forgetting map and \(e_Z\) for the idempotent of \(Z\). For the selected translate \(f_\nu\),
+\[
+ \|e_Z\pi^* f_\nu(z)\|=\|f_\nu(\pi z)\|\quad(z\in Z),
+ \qquad (e_Z\pi^* f_\nu)|_{Z^c}=0 .
+\]
+
+The parallel determinant generator of Lemma~\ref{lem:flat-generic-generator},
+raised at each embedding to power \(-w_\tau\), and the inverse central unit raised to power \(n/2\) in the weight return of
+\eqref{eq:parallel-return-norm} and \ref{cor:deep-cover-on-core-10} convert the weight \(G\) to
+\(u_1\). Both factors are invertible on the component and have
+constant positive invariant norm there. Their product multiplies
+both sides of the ratio estimate by one and the same positive
+constant. The resulting section \(g\) is cuspidal and
+\[
+ \|g(y)\|\ge e^{-\phi(y)/1250}\|g\|_{\sup,Z}>0,\qquad
+ \|g\|_{2,Z}\le\|g\|_{\sup,Z}.
+\]
+Squaring proves the assertion for \(\mathcal B_{u_1,Z}(y)\).
+\end{proof}

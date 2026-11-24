@@ -1,0 +1,787 @@
+\subsection{Square ratios on the fitted grid}
+\label{subsec:fitted-square-ratios}
+
+Passing between tuples changes the scalar of a grid evaluation. The ratios on its constituent squares measure that change before the coefficient matrix is assembled.
+
+Fix a selected point, its coefficient field \(K\), and its
+marked collection of tuples. The square with indices \(i,j\)
+has top dimensions \(a>a'\), signatures \((a-p,p)\) and
+\((q,a'-q)\), and \(e=(a-a')/2\). Put \(e_0=e+q-p\).
+The grid uses the stable range 
+\[
+  2(p+q)+1<\min(e,a'),
+\]
+adapted split planes and lattices, and regular infinity
+exponents with gaps exceeding \(a+a'\). The real matching
+maps for a tuple and its reference are taken on the same
+geometric data. The base CM extension is unramified at
+finite places over its real subfield, and its total field
+is abelian over \(\Q\). Use the standard additive character
+and the specified Weil frames.
+
+At each inert place the
+residue characteristic is odd and the residue cardinality
+exceeds three. The additive character is unramified there
+and at each split place in the selected set \(P\) of local
+frames. The two splitting characters \(\alpha,\beta\) restrict
+on the real-field ideles to the quadratic character of
+\(E/F\) to powers \(a',a\), respectively, and have the prescribed
+infinity exponents. Their base and auxiliary ramification
+sets \(S_0,Q\) are disjoint, with 
+\[
+  S_0\cup Q\subset P.
+\]
+Both characters are unramified off that union, and their quotient
+is ramified above every place in it. The matching place
+\(v_1\) lies outside the union and splits completely in
+\(E\). The real and finite maps use these restrictions in the
+two matched Weil models at each adjacent step.
+
+At the base place
+\(v_0\in S_0\) the prescribed conductor exponent at the chosen
+prime of \(E\) above \(v_0\) is one. Each extra level avoids
+\(v_0\), so the toric character for each tuple retains this
+conductor. It acts nontrivially on local units there.
+Indeed conductor exponent one means that the local character \(\xi\) satisfies
+\[
+  \xi|_{1+\mathfrak p}=1,\qquad \xi|_{{\cal O}^{\times}}\ne1 .
+\]
+ Every
+idele norm power is trivial on those units. The boundary
+nonvanishing theorem for Hecke characters therefore applies at
+\(s=1\), and the Euler product gives nonvanishing for real
+\(s>1\). The reflected integer arguments used below are in the
+range of the completed functional equation and the nonvanishing
+comparison. \label{cor:fitted-square-ratios-1}
+
+Write \(c(t)\) for the normalized top scalar, \(b_0(t)\)
+for the scalar of the terminal definite triangle, and
+\(\Lambda_t\) for the Hecke function of the square.
+\begin{proposition}[The top ratio from the matched square]\label{prop:fitted-square-ratio-identity}
+For the matched tuple and reference square with the stated
+stable range and level hypotheses, the ratio \(r_{t,ij}=c(t)/c(t_0)\)
+belongs to \(K^\times\) and satisfies \eqref{eq:fitted-square-tower}.
+In particular, for each indicated pair of indices,
+\[
+ r_{t,ij}=c(t)/c(t_0)\in K^\times,\qquad r_{t_0,ij}=1.
+\]
+
+\end{proposition}
+
+\begin{proof}
+\proofstep{Use the same third test at the bottom.}
+
+At a positive integer \(s\) in the square, put
+\(\rho_t(s)=\Lambda_t(s)/\Lambda_{t_0}(s)\). The fitted embedding
+identifies this nonzero ratio with an element of \(K\). At the definite
+triangle the forward and reverse integrals are rational sums evaluated
+against the same third test. Choose the test with nonzero denominator.
+Dividing the two quotients, first on the triangle and then between
+tuples, gives \(\gamma_t=b_0(t)/b_0(t_0)\in K^\times\).
+
+\proofstep{Compare the scalar before and after one plane is removed.}
+At any stage take the scalar in the order
+\[
+ I_{V,t}(\Phi)=c_{\rm before}(t) I_{V',t}(\Phi')
+\]
+on matched tests. Use the same order to define \(c_{\rm after}(t)\)
+on the smaller triangle. Write \(d=(\dim V-\dim V')/2\) for the
+half difference \emph{before} the removal, and let
+\(\nu_t=\alpha_t/\beta_t\). In adapted frames the finite factor in
+the plane comparison is
+\[
+ F_t(z)=\nu_t(\mathfrak b)^{\sigma_1}\nu_t(\mathfrak c)^{\sigma_2}
+    \prod_{v\in S_0\cup Q_t}\nu_{t,v}(\sigma_3)
+                        \varepsilon_v(z,\nu_{t,v},\psi_v).
+\]
+
+Here \(\mathfrak b,\mathfrak c\) are the fractional ideals on the
+adapted isotropic lines in the member and in the joint space,
+\(\sigma_1,\sigma_2,\sigma_3\in\{1,-1\}\) are the signs for this
+type of step, and the local character uses the chosen split embedding.
+For conductor exponent \(n\), uniformizer \(\varpi_v\), and
+\(q_v=\mathrm Nv\), the normalization is
+\[
+ \varepsilon_v(z,\nu,\psi_v)=q_v^{-nz}\nu(\varpi_v)^n
+   \sum_{x\in(\mathcal O_v/\varpi_v^n)^\times}
+          \nu(\tilde x)^{-1}\psi_v(\tilde x/\varpi_v^n),
+\]
+
+where \(\tilde x\) is a unit lift. At the unramified places the
+plane integral supplies the Euler factors of \(\Lambda_t\).
+The Euler factors omitted at \(S_0\) are one because \(\nu_t\)
+is ramified above every place in \(S_0\).
+
+Take the constant term along the parabolic stabilizing the removed
+isotropic line in the joint space. For the relevant Levi character,
+the zero vector contributes evaluation at zero, denoted by \(E\). For the nonzero vectors one first averages
+over the compact subgroup and then integrates along the line with
+multiplicative weight \(\nu_t(l)|l|_E^s\). Denote the resulting test
+by \(J_s\). Splitting the line into its zero and nonzero vectors
+places \(E\) on the unchanged member and \(J_s\) on the member
+losing a plane.
+
+In the lower matched quotient the pairs of tests are
+\[
+ \begin{array}{c|c|c}
+ \text{reduced member}&\text{lower tests}&
+                    \text{multiplier }M_t\\ \hline
+ V' & (M_t E\Phi,\ J_{d+1}\Phi') & D F_t(-d)\Lambda_t(d+1)\\
+ V  & (J_d\Phi,\ M_t E\Phi') & D F_t(1-d)\Lambda_t(d).
+ \end{array}
+\]
+Here \(D\ne0\) is the common real and measure factor in each row.
+The finite scalar is obtained by multiplying the local integrals.
+At an unramified place the valuation shells give a geometric series.
+At a ramified split place orthogonality on the unit group leaves the
+shell of the conductor, with the character sum displayed above. The
+two line ideals account for the changes of generators.
+
+Write \(I_1,I'_1\) for the integrals on the lower triangle. In the
+first row the lower matching identity and the upper constant-term
+identity, evaluated on a test with nonzero lower value, read
+\[
+ \begin{aligned}
+ M_t I_1(E\Phi)&=c_{\rm after}(t) I'_1(J_{d+1}\Phi'),\\
+ D_1 I_1(E\Phi)&=c_{\rm before}(t)D_2 I'_1(J_{d+1}\Phi').
+ \end{aligned}
+\]
+The constants \(D_1,D_2\ne0\) depend on the Haar measures and geometry
+of this step. Eliminating the two integrals gives
+\(c_{\rm before}(t)M_t=(D_1/D_2)c_{\rm after}(t)\).
+For the second row the same comparison reads
+\[
+ \begin{aligned}
+ I_1(J_d\Phi)&=c_{\rm after}(t) M_t I'_1(E\Phi'),\\
+ D_1 I_1(J_d\Phi)&=c_{\rm before}(t) D_2 I'_1(E\Phi').
+ \end{aligned}
+\]
+Here \(c_{\rm before}(t)=(D_1/D_2)M_t c_{\rm after}(t)\).
+
+Absorbing the nonzero geometric constants into one \(C\) for each
+step, we obtain
+\[
+ \begin{aligned}
+ c_{\rm before}(t)\Lambda_t(d+1)
+       &=[C F_t(-d)]^{-1} c_{\rm after}(t)
+       &&(\dim V'\mapsto\dim V'-2),\\
+ c_{\rm before}(t)
+       &= C F_t(1-d)\Lambda_t(d)c_{\rm after}(t)
+       &&(\dim V\mapsto\dim V-2).
+ \end{aligned}
+\]
+In the second row all planes on the primed side have already
+been removed. Within either step the same \(C\) occurs for
+\(t,t_0\) because the real maps and adapted geometric data agree.
+
+\proofstep{Telescope first on the smaller member and then on the larger.}
+Let \(r_k=c_k(t)/c_k(t_0)\) after \(k\) removals, so that
+\(r_0=r_{t,ij}\). At step \(k\) let \(u_{k+1}\) be the ratio of
+the finite factors as they occur in the corresponding line above.
+Thus in adapted frames the two recurrences are
+\[
+\begin{aligned}
+ r_b\rho_t(e+b+1)&=u_{b+1}r_{b+1} &&(0\le b<q),\\
+ r_{q+h}&=u_{q+h+1}\rho_t(e+q-h)r_{q+h+1} &&(0\le h<p).
+\end{aligned}
+\]
+
+In the first line \(u=F_{t_0}(-d)/F_t(-d)\), with \(d=e+b\).
+In the second \(u=F_t(1-d)/F_{t_0}(1-d)\), with \(d=e+q-h\).
+Changing adapted finite frames multiplies these ratios by character
+values, which are units away from the extra level. Successive
+substitution gives the following two expressions involving \(r_q\).
+\[
+\begin{aligned}
+ r_0\prod_{s=e+1}^{e+q}\rho_t(s)
+   &=\Bigl(\prod_{k=1}^{q}u_k\Bigr)r_q,\\
+ r_q&=\Bigl(\prod_{k=q+1}^{q+p}u_k\Bigr)
+         \Bigl(\prod_{s=e_0+1}^{e+q}\rho_t(s)\Bigr)r_{p+q}.
+\end{aligned}
+\]
+
+An empty product is one. On identifying the last triangle with the
+chosen definite triangle, the common real scalar cancels in the ratio.
+Changing the bottom lattice and frames gives a factor \(\zeta\in K^\times\)
+which is a unit away from the extra level. Thus
+\(r_{p+q}=\zeta\gamma_t\) and
+\begin{equation}\label{eq:fitted-square-tower}
+ r_{t,ij}\prod_{s=e+1}^{e+q}\rho_t(s)
+     =\zeta\gamma_t\prod_{k=1}^{p+q}u_k
+                        \prod_{s=e_0+1}^{e+q}\rho_t(s).
+\end{equation}
+
+The finite quotients are products of algebraic character values and
+ratios of nonzero Gauss sums in the fitted field. Division by the
+nonzero product on the left gives \(r_{t,ij}\in K^\times\).
+For \(t=t_0\) the ratio is one. \label{cor:fitted-square-ratios-2}
+
+\end{proof}
+
+Fix a finite place \(w\) above the rational prime \(\ell\).
+Set \(e_w=v_w(\ell)\) and \(t=t(w)\).
+
+\begin{proposition}[The bottom norm and the reflected indices]\label{prop:fitted-square-bottom-index}
+At \(w\mid\ell\), use \(t=t(w)\), with its extra level prime to
+\(\ell\), or the base tuple. For \(s\le0\), the left side below uses the ratio normalized by
+the completed functional equation; at the reflected positive index the ratio gives the same valuation directly. In the indicated range,
+\[
+ v_w(\rho_t(s))=v_w(\rho_t(1-s))\qquad(1-e_0\le s\le0,\ s\in\mathbb Z).
+\]
+
+The integral comparisons for the two bottom norms give
+\eqref{eq:fitted-square-bottom}; its clearing cost includes both
+\(v_w(A)\) and \(v_w(A')\).
+\end{proposition}
+
+\begin{proof}
+In the nonbase case the
+twist level is prime to \(\ell\). The factor \(\zeta\)
+is then a unit at \(w\), and the quotient of local factors
+\(u_h\) has absolute valuation at most
+\[
+ B_w^{\rm step}=2\sum_{v\in S_0} c_v v_w(\mathrm Nv).
+\]
+Indeed the base conductors are unchanged in the two
+comparisons. At a base place with unchanged character on
+units, the Gauss quotients cancel up to unit factors. At
+the remaining base places the two nonzero integral Gauss
+factors divide the same conductor norm power. The new local
+factors have norms supported on the prime-to-\(\ell\)
+twist level, so their quotients are units at \(w\).
+\proofstep{Reflect the integer arguments.}
+
+At \(1-e_0\le s\le0\) the functional equations express the
+ratio as an away unit times \(\rho_t(1-s)\). Define
+\(\rho_t(s)\in K^\times\) by this comparison at these indices.
+Thus 
+\[
+  v_w(\rho_t(s))=v_w(\rho_t(1-s)).
+\]
+
+\proofstep{Compare the integral coordinates at each bottom norm.}
+
+Let \(A,A'\) be the two base definite norm values.
+The first-occurrence product for the first twisted norm is
+\(Z_t=A\prod_{1-e_0\le s\le h_0}\rho_t(s)\), with
+\(e_0\le h_0\) and \(h_0+p+q\) equal to the square half rank.
+Both norms are nonzero. The integral coordinate comparisons
+for the two bottom lifts express \(Z_t/b_1\) and \(b_2A'\)
+by bottom mass sums, with 
+\[
+  b_1/b_2=\gamma_t
+\]
+ times an
+away unit.
+
+Choose a local integral representative in each
+class. The nonzero terms in either mass sum have one reciprocal
+stabilizer and two values in the integral coordinates. Their valuations
+are bounded below by \(-3\delta_w\) since each of the three
+terms has valuation at least \(-\delta_w\) and the comparison
+matrix has integer entries. Taking the product of the two sums
+and using the ultrametric inequality gives
+\begin{equation}\label{eq:fitted-square-bottom}
+ v_w(\gamma_t)\le v_w(A)+v_w(A')+
+             \sum_{s=1-e_0}^{h_0} v_w(\rho_t(s))+6\delta_w .
+\end{equation}
+In particular this uses two coordinate identities with opposite
+placements of the triangle constants. The unshifted base
+norms also have \(v_w(A),v_w(A')\ge-3\delta_w\) from their
+integral mass sums. \label{cor:fitted-square-ratios-3}
+
+\end{proof}
+
+\subsubsection{The toric shift and its branch}
+
+The toric deletion has two possible branches. A depth shift determined on the common base polynomial permits both to be measured in the same coordinates.
+
+\begin{proposition}[A shift from the common base polynomial]\label{prop:fitted-toric-denominator-shift}
+For each positive square index \(s\), the base norm gives an
+integer \(g_w\) with
+\[
+  -n_s(\ell)e_w\le v_w(\rho_t(s))+g_w .
+\]
+The shift is obtained from the base polynomial, independently of
+the deletion branch; the two deletion scalars \(d_c\) use the same
+period.
+\end{proposition}
+
+\begin{proof}
+For each positive index \(s\) in the square, let \(T_0\) be
+its base toric value, and let \(T_0^{(0)},T_0^{(1)}\) be the
+values for the two deleted-character branches. The branch
+\(c(w)\) satisfies that its character is the base character
+multiplied by the grid's deleted character at \(\ell\).
+
+Write \(d_c=T_0^{(c)}/T_0\in K^\times\).
+The scalar in the base toric slot is \(1\).
+Use the same period and normalization for all three twelfth
+powers 
+\[
+  \beta_0,\beta_c=d_c^{12}\beta_0.
+\]
+ The toric
+lattice formula in Section~\ref{subsec:toric-twist}
+writes the base values with the original conductor and the
+tuple values with extra split places disjoint from \(\ell\).
+The tuple character differs by a ring class character of the
+enlarged order. With \(n_s(\ell)\) the ceiling of a twelfth of
+the class-value denominator allowance, this formula and its
+integrality estimate give
+\(\ell^{12n_s(\ell)}\rho_t(s)^{12}\beta_0\)
+integral at every place above \(\ell\). The same clearing
+works for each of \(\beta_0,\beta_c\) at the base order.
+
+Let \(P_0\) be the monic minimal polynomial of \(\beta_0\)
+over \(K\) in the fitted embedding. Define the real normalized
+valuation \(m_w=v_w(P_0(0))/(12\deg P_0)\), and let
+\(g_w\) be its integer truncation toward zero. The norm
+from \(K(\beta_0)\) to \(K\) gives
+
+\[
+  -n_s(\ell)e_w\le v_w(\rho_t(s))+m_w.
+\]
+The two integer terms show that this remains true with \(g_w\).
+
+\end{proof}
+
+\subsubsection{The simultaneous toric comparison}
+
+The separate toric bounds will be summed over places. Their shifts and the assigned tuples must therefore be held fixed when taking both sides of the estimate.
+
+\begin{proposition}[Two-sided toric bounds for the assigned tuples]\label{prop:fitted-toric-assigned-bounds}
+For the selected places and their assigned twists, the two inequalities \eqref{eq:fitted-toric-two-sides} at each positive square index combine to give
+\[
+ -a_s(w)-n_s(\ell)e_w\le v_w(\rho_t(s))\le a_s(w)+e_w/\ell^2.
+\]
+ The bounds for the shift and the two deletion branches are
+\eqref{eq:assigned-weighted-deletions}, with \(B_T=Cfb(\log b+\log x)\).
+These bounds use the same \(g_w\) from the base minimal polynomial.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Use the simultaneous comparison for every cyclic power.}
+
+The marked coefficient places are grouped in conjugate pairs.
+For a nonbase place \(w\), the chosen twist index \(i_w\) lies under
+one of \(w,\bar w\), has residue characteristic \(\ell\), and
+carries the marked split auxiliary level \(Q_w\).
+On each selected pair the record carries the same index and
+the character with the prescribed side convention. The
+clearing exponent \(N_0(i)\) of Section~\ref{subsec:toric-twist}
+is chosen for the abelian coefficient functions at index \(i\)
+before the auxiliary primes and ray characters. There are
+finitely many indices on the datum.
+
+At a fixed index \(i\), write \(n_{i,\lambda}\) for the clearing exponent obtained for each abelian label with an allowed specialization. The finite maximum at this index is taken before selecting the auxiliary characters
+\[
+  N_0(i)=\max_\lambda n_{i,\lambda}.
+\]
+For an empty set of labels the clearing condition is vacuous and one may take zero.
+Apply Section~\ref{subsec:retained-twist} with allowance
+\(1/\ell^2\) on each pair, adding the rational primes already
+used to the avoidance set. This supplies the level, the
+coefficient extension, and a ray character \(\psi'_w\) of
+\(\ell\)-power order. Write \(\ell^n\) for the order of \(\psi'_w\). For the second reading, inversion replaces \(a\) by \(-a\).
+
+In particular every unit exponent in either reading generates the same character group
+\[
+  (a,\ell)=1\quad\Longrightarrow\quad \langle(\psi'_w)^{-a}\rangle=\langle(\psi'_w)^a\rangle=\langle\psi'_w\rangle,\qquad \operatorname{ord}((\psi'_w)^a)=\ell^n.
+\]
+For every marked \(w\), every \(a\) prime to \(\ell\), and every
+toric label \(\lambda\) of its index, the signed Fourier coefficient \(T_{w,\lambda}(a)\) at \((\psi'_w)^a\) satisfies
+\begin{equation}\label{eq:fitted-toric-all-powers}
+ T_{w,\lambda}(a)\ne0,\qquad
+ -N_0(i_w)\le v(T_{w,\lambda}(a))
+             \le v(S_{i_w,\lambda})+\ell^{-2}.
+\end{equation}
+Here \(S_{i,\lambda}\) is the empty-level sum and \(v(\ell)=1\).
+The same selected level and character satisfy the other
+constraints of the simultaneous specialization. The proof uses
+the unique lowest term at every primitive root of the selected
+order, so these assertions hold for all coprime powers on this
+one choice. The field fit carries this property into the
+evaluation grid. \label{cor:fitted-square-ratios-4}
+
+\proofstep{Read the deleted branch and the valuation side separately.}
+
+In the square at the critical integer \(s\), the entry labels are transported by
+\[
+   (i,j,s)\longmapsto (m-i,j,s),
+\]
+with the harmonic exponents of that square at \(s\).
+The prime deletion multiplies the base square character by
+the deleted character at \(\ell\). The resulting branch
+is \(c(w)\) above. Independently, the prime below \(w\) or
+\(\bar w\) chooses the side of the valuation comparison.
+Use the corresponding toric label \(\lambda\) on that side.
+The class-sum comparison groups order classes by their inverse
+Artin labels.
+For the class weights \(a_x\) this regrouping has the form
+\[
+  \sum_x a_x=\sum_\lambda\ \sum_{\operatorname{Art}(x)^{-1}=\lambda}a_x.
+\]
+ At the empty level it identifies \(S_{i_w,\lambda}\)
+with a common nonzero multiple of \(T_0^{(c(w))}\).
+
+At the
+selected level it identifies \(T_{w,\lambda}(a)\) with the
+same multiple of the toric sum with character \(\psi_c^{ca}\),
+where \(\psi_c\) is the ring class character of the complex
+reading and \(c\) is prime to \(\ell\). The identification of
+the exponents follows by identifying the two cyclic groups of
+character values under the chosen coefficient embeddings. More explicitly, with \(A_w\ne0\) the common proportionality
+factor in the matched readings, the empty branch and its
+specialization read
+\[
+ S_{i_w,\lambda}=A_w T_0^{(c(w))},\qquad
+ T_{w,\lambda}(a)=A_w T_{\psi_c^{ca}}^{(c(w))}
+\]
+after embedding in the common field. Here \(T_\eta^{(c(w))}\)
+denotes the toric sum for the indicated branch and character.
+The exponent \(c\) absorbs inversion on the second side.
+The choice of branch \(c(w)\) is independent of that inversion.
+
+\proofstep{Match the Galois centres and normalize the valuation.}
+
+To compare at \(w\), extend the local coefficient embedding
+to a common valued field. The finite extension in the field
+fit is Galois over the smaller coefficient field. Transitivity
+on primes above the common lower prime lets one choose a
+field automorphism giving the required centre.
+Write \(L/K_1\) for the Galois extension in this comparison. On the two chosen extensions \(w_1,w_2\) of the lower place, transitivity gives
+\[
+  \exists\,\sigma\in\operatorname{Gal}(L/K_1)\quad \sigma(w_1)=w_2.
+\]
+
+On the conjugate
+side compose the comparison with complex conjugation. The
+algebraic character values in the base class prefactors and
+their conjugates are in the smaller field by the principal-idele
+type and the finite class representatives. The CM embeddings
+and the quadratic period normalization are those of the fitted
+frame. With these identifications the toric Galois comparison changes the
+period-normalized ratio by a root of unity and sends
+\(\psi_c\) to \(\psi_c^r\) with \(r\) prime to \(\ell\).
+In particular, for the \(\ell\)-power order \(n\) of \(\psi_c\),
+\[
+  (r,n)=1\quad\Longrightarrow\quad\operatorname{ord}(\psi_c^r)=\operatorname{ord}(\psi_c)=n .
+\]
+In fact it acts on the cyclic character values by an automorphism.
+If the order is \(\ell^n\), choose an integer \(a\) prime to
+\(\ell\) with \(ca\equiv r\pmod{\ell^n}\).
+
+For the trivial
+character take \(a=1\). This choice occurs inside the
+all-powers assertion \eqref{eq:fitted-toric-all-powers}.
+The nonzero empty-level scalar cancels in the ratio.
+The root of unity has valuation zero, and two nonzero values of equal valuation in the local fraction field
+differ by a unit. Thus in that field, with valuation ring
+\(O_w^{\mathrm{loc}}\),
+\[
+   \frac{\rho_t(s)}{d_{c(w)}}S_{i_w,\lambda}
+       =uT_{w,\lambda}(a),\qquad u\in (O_w^{\mathrm{loc}})^\times .
+\]
+This gives the upper inequality
+\[
+ v_w(\rho_t(s)/d_{c(w)})\le e_w/\ell^2 .
+\]
+Indeed extension of valuation multiplies additive
+valuations by ramification and leaves their normalization
+by \(v(\ell)\) unchanged. The unit has valuation zero.
+Hence with
+\(a_s(w)=|g_w|+|v_w(d_{c(w)})+g_w|\) we have
+\begin{equation}\label{eq:fitted-toric-two-sides}
+  -v_w(\rho_t(s))\le a_s(w)+n_s(\ell)e_w,\qquad
+  v_w(\rho_t(s))\le a_s(w)+e_w/\ell^2.
+\end{equation}
+\label{cor:fitted-square-ratios-5}
+
+\proofstep{Bound the shift and deletion terms by the base norm heights.}
+
+For the finite sums of \(a_s\), the constant term of the
+minimal polynomial of \(\beta_c\) gives
+\(m_{c,w}=m_w+v_w(d_c)\). The product formula and the norm
+comparison via \(K(\beta_c)\) express
+\(\sum_w\omega_w m_{c,w}\) as the normalized logarithm of the
+absolute constant coefficient of its minimal polynomial over
+\(\Q\), divided by twelve. Use the same calculation for the
+base \(m_w\).
+
+If these archimedean means are at most \(A_T\)
+and \(\sum_\ell n_s(\ell)\log\ell\le D_T\), then the weighted
+sum of the absolute values is at most \(A_T+2D_T\) for each
+of the three normalized valuations. Indeed, for each of these three valuations \(m'_w\), write
+\((m'_w)^-=\max(0,-m'_w)\). The local bound gives
+\[
+ \sum_w\omega_w |m'_w|
+ =\sum_w\omega_w m'_w+2\sum_w\omega_w (m'_w)^-
+ \le A_T+2\sum_\ell n_s(\ell)\sum_{w\mid\ell}\omega_w e_w
+ \le A_T+2D_T .
+\]
+Here the full fibre has weight \(\sum_{w\mid\ell}\omega_w e_w=\log\ell\).
+\proofstep{Average over the quadratic ideal classes.}
+
+For the archimedean comparison, the CM transport writes
+each conjugate normalized twelfth power as the twelfth
+power of a Hecke value at permuted weights times the
+period factor. For a conjugating ideal \(\mathfrak a\) in
+the imaginary quadratic subfield of discriminant \(-d\),
+the logarithm is bounded by
+\[
+ 12\log C_0+12\log |L_{\mathfrak a}(s)|
+       -M\log((\mathrm N\mathfrak a)^6|\Delta_{\mathfrak a}|),
+ \qquad M=2sf+2\sum_\tau\kappa_\tau .
+\]
+Here \(\Delta_{\mathfrak a}\) is the period lattice
+discriminant and \(C_0\) is the CM normalization constant.
+The logarithm of the norm-discriminant factor depends only
+on the ideal class. Over embeddings fixing the quadratic
+subfield the classes occur equally often, and conjugating
+exchanges the two quadratic embeddings without changing
+absolute values. The Chowla--Selberg mean of that
+logarithm is
+\[
+ 12\log(2\pi)-6\log d+6\gamma-6L'(1,\chi_d)/L(1,\chi_d),
+\]
+where \(\chi_d\) is the quadratic character of discriminant
+\(-d\). We use the Chowla--Selberg formula in the same normalization
+as Lemma~\ref{lem:flat-cm-degree}. \cite{colmez-chowla-selberg}
+
+Here are the size estimates needed to take this mean uniformly. Put
+\(L_b=\log b\), \(f=[F:\Q]\), \(K_\kappa=\sum_\tau\kappa_\tau\),
+and \(X_s=2sf\). The fitted square uses the field and size conditions
+of Lemma~\ref{lem:window-parameter-choice} and
+Proposition~\ref{prop:translate-completion}. In particular its ranks,
+weights and field satisfy
+\[
+ 16\le X_s\le b,\quad 1\le\kappa_\tau\le5b,\quad
+ \log |D_F|\le fL_b,\quad
+ \log d+\left|\frac{L'}{L}(1,\chi_d)\right|\ll L_b .
+\]
+For the last estimate only an upper bound for the absolute logarithmic
+derivative of this selected quadratic character is needed. The
+normalization constant in the toric class formula has the bound
+\[
+ \log C_0\le\tfrac{2s-1}{2}\log|D_F|
+      +\sum_\tau\log\Gamma(2s+\kappa_\tau)+8K_\kappa
+      \ll fbL_b.
+\]
+Indeed \(2s+\kappa_\tau\le7b\) and
+\(\log\Gamma(n)=\log((n-1)!)\le n\log n\).
+The CM period term in the mean has the same order because
+\(M=X_s+2K_\kappa\ll fb\).
+
+For clarity, let \(\eta\) denote any of the conjugate unitary Hecke
+characters in this calculation, with conductor \(\mathfrak f_\eta\).
+Write \(Z=\zeta(3/2)^{2f}\) and
+\(A=|D_E|\mathrm N\mathfrak f_\eta\).
+Use the primitive \(L\)-function of \(\eta\) in the functional equation.
+If Euler factors above the fixed set \(S_*\) are omitted in the toric
+value, each inverse local factor has modulus at most \(2\) for
+\(\RePart z\ge1\). The omitted factors have total cost bounded by
+\[
+ \log\prod_{v\mid S_*}|1-\eta(v)(\mathrm Nv)^{-z}|
+      \le 2f |S_*|\log2\le10f\log2 .
+\]
+
+For \(\RePart z\ge3/2\) the Euler product gives \(|L(z,\eta)|\le Z\),
+in particular at every integer \(s\ge2\).
+At \(s=1\) put \(m_\tau=1+\kappa_{\pi(\tau)}\), where \(\pi\) permutes the
+CM embeddings, and write the archimedean factor as
+\[
+ G(z)=\prod_\tau 2(2\pi)^{-z-m_\tau}\Gamma(z+m_\tau).
+\]
+
+The integral for the gamma function gives
+\(|G(3/2+it)|\le G(3/2)\). Thus \(|G(z)L(z,\eta)|\le G(3/2)Z\)
+on the right edge of \(-1/2\le\RePart z\le3/2\).
+The functional equation for \(\eta\) and its inverse gives the bound
+\(A G(3/2)Z\) on the left edge. The nonzero infinity type makes the
+completed function entire, and its boundedness in vertical strips
+permits the Phragm\'en--Lindel\"of estimate at \(z=1\).
+These analytic properties are the global zeta-integral theorem.
+\cite[Sections~4.4--4.5]{tate-hecke}
+Since \(\Gamma(3/2+m)\le\Gamma(2+m)=(1+m)\Gamma(1+m)\) for \(m\ge1\),
+division by \(G(1)\) gives
+\[
+ |L(1,\eta)|\le ZA\prod_\tau(1+m_\tau).
+\]
+
+The base conductor has exponent at most two at the places above
+\(S_*=\{g_0,g_1,p_d,p'_d,q_0\}\) and exponent zero elsewhere.
+The size bounds for the level primes give
+\(\max_{\ell\in S_*}\log\ell\ll L_b\).
+Consequently
+\[
+ \log\mathrm N\mathfrak f_\eta\le4f\sum_{\ell\in S_*}\log\ell\ll fL_b,
+ \qquad \log|D_E|=2f\log\operatorname{rd}_E\ll fL_b .
+\]
+
+The bound for \(L(1,\eta)\) is uniform in the permutation and in
+the two deletion branches. Together these estimates bound the
+archimedean mean divided by twelve by \(A_T\ll fbL_b\).
+
+\proofstep{Sum the local denominator exponents.}
+In Proposition~\ref{prop:toric-class-denominator} write \(c_E(\ell)\)
+for the exponent contributed by the partial zeta values of \(F\).
+For every ordinary ideal class \(C\), put
+\(z_C=\zeta_F(1-2s,C)\).
+Deligne and Ribet's integrality theorem applied to the indicator of
+\(C\) and the principal ideal \((a)\), for an integer \(a>1\)
+prime to \(\ell\), gives
+\[
+              (a^{X_s}-1)z_C\in\mathbb Z_\ell .
+\]
+To see the passage from their imprimitive values to \(z_C\), omit
+the primes over \(\ell\) first. Restoring the factor for
+\(\mathfrak p\mid\ell\) in the vector indexed by ideal classes
+inverts \(1-(\mathrm N\mathfrak p)^{2s-1}P_{\mathfrak p}\),
+where \(P_{\mathfrak p}\) translates by the inverse class of
+\(\mathfrak p\). This integral matrix is the identity modulo \(\ell\),
+so its inverse preserves the same integral lattice.
+\cite[Theorem~0.4]{deligne-ribet-values}
+
+At odd \(\ell\), choose \(a\) generating the units modulo \(\ell^2\).
+If \(\ell-1\nmid X_s\), then \(a^{X_s}-1\) is a unit. Otherwise
+its valuation is \(1+v_\ell(X_s)\), by binomial expansion. At two
+take \(a=3\). Since \(X_s\) is even,
+\(v_2(3^{X_s}-1)=2+v_2(X_s)\). Dividing the partial zeta values
+by \(2^f\) as in the definition of \(c_E\) therefore gives
+\[
+ \begin{split}
+ c_E(2)&\le f+2+v_2(X_s),\\
+ c_E(\ell)&\le {\bf1}_{\ell-1\mid X_s}(1+v_\ell(X_s))
+                   \qquad(\ell>2).
+ \end{split}
+\]
+In particular the odd-prime contribution vanishes for
+\(\ell>X_s+1\). Summing yields
+\[
+ \sum_\ell c_E(\ell)\log\ell
+ \le (f+2)\log2 + \log X_s+\sum_{\ell\le X_s+1}\log\ell
+ \ll b(1+L_b).
+\]
+Here \(\sum_{\ell\mid X_s}v_\ell(X_s)\log\ell=\log X_s\), and
+even the bound \(\sum_{\ell\le X_s+1}\log\ell\le(X_s+1)\log(X_s+1)\)
+suffices.
+
+For the remaining part of \(n_s(\ell)\), put
+\(\delta_\ell=v_\ell(D_E)/(2f)\) and let \(a_0(\ell)\) be the
+maximum local conductor exponent at \(\ell\).
+Proposition~\ref{prop:toric-class-denominator}, including the term
+\(Wa_0\) and the ceiling to an integer, gives
+\[
+ n_s(\ell)-c_E(\ell)\ll
+ fb\bigl(a_0(\ell)+\delta_\ell+
+ {\bf1}_{a_0(\ell)>0}+{\bf1}_{\delta_\ell>0}\bigr).
+\]
+
+Indeed \(W=X_s+2K_\kappa\ll fb\), both indicators in the local
+ramified allowance are at most one, and the ceiling costs at most one
+when the ramified allowance is positive. The conductor terms are
+supported on \(S_*\). For the discriminant terms use that \(E/\Q\)
+is Galois. At a ramified prime of common ramification index
+\(e\ge2\), the local different exponent is at least \(e-1\), hence
+\(\delta_\ell\ge(e-1)/e\ge1/2\). Consequently
+\[
+ \sum_\ell \delta_\ell\log\ell=\log\operatorname{rd}_E,
+ \qquad
+ \sum_{\ell:\,\delta_\ell>0}\log\ell\le2\log\operatorname{rd}_E .
+\]
+
+This proves \(D_T=\sum_\ell n_s(\ell)\log\ell\ll fb(1+L_b)\).
+Choose the common comparison constant so that
+\(A_T,D_T\le(C/6)fb(\log b+\log x)\).
+Writing \(m_{c,w}=m_w+v_w(d_c)\), truncation toward zero gives
+\[
+ |g_w|\le|m_w|,\qquad
+ |v_w(d_c)+g_w|\le |m_{c,w}|+|m_w|.
+\]
+
+The two absolute-value estimates proved above now yield
+\begin{equation}\label{eq:assigned-weighted-deletions}
+ \begin{gathered}
+  \sum_w\omega_w |g_w|\le B_T,\qquad
+  \sum_w\omega_w|v_w(d_c)+g_w|\le B_T\quad(c=0,1),\\
+  B_T=Cfb(\log b+\log x).
+ \end{gathered}
+\end{equation}
+
+The proof pays for the two branches by summing over their
+respective subsets of places. Both use the shift from the
+base minimal polynomial. \label{cor:fitted-square-ratios-6}
+
+\end{proof}
+
+\begin{proposition}[Uniform valuation bound for the fitted square]\label{prop:fitted-square-valuation}
+For the assigned tuples of Proposition~\ref{prop:fitted-square-ratio-identity},
+with the common index cutoff, use the bottom and toric bounds of
+Propositions~\ref{prop:fitted-square-bottom-index}
+and~\ref{prop:fitted-toric-assigned-bounds}. For the fitted entry, the estimate \eqref{eq:fitted-square-valuation} is
+\[
+ \begin{aligned}v_w(r_{t,ij})\le{}&|v_w(A)|+|v_w(A')|+4\sum_{s=1}^{H}a_s(w)+5e_w\sum_{s=1}^{H}n_s(\ell)\\&+2He_w/\ell^2+6\delta_w+(p+q)B_w^{\rm step}.\end{aligned}
+\]
+ The same bound with zero
+on the left holds at the base tuple. One threshold works over
+the square indices, coefficient places and their assigned tuples.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Count the positive and negative multiplicities of the index intervals.}
+
+Use the bottom comparison of Proposition~\ref{prop:fitted-square-bottom-index}
+and the two-sided bound of Proposition~\ref{prop:fitted-toric-assigned-bounds}.
+
+Fix \(t=t(w)\) with extra level prime to \(\ell\). Put
+\(V_s=v_w(\rho_t(s))\) for this same tuple at every index. Before
+estimating any of the sums, \eqref{eq:fitted-square-tower} gives
+\[
+ v_w(r_{t,ij})=v_w(\gamma_t)+\sum_{k=1}^{p+q}v_w(u_k)
+       +\sum_{s=e_0+1}^{e+q}V_s-\sum_{s=e+1}^{e+q}V_s .
+\]
+
+The unit \(\zeta\) has zero valuation here. In
+\eqref{eq:fitted-square-bottom}, reflection sends the indices
+\(1-e_0,\ldots,0\) bijectively to \(1,\ldots,e_0\) without
+changing \(V_s\). Thus the total signed contribution at the positive
+indices is exactly
+\[
+\begin{aligned}
+ \sum_{s=1}^{h_0}V_s+\sum_{s=1}^{e_0}V_s
+ +\sum_{s=e_0+1}^{e+q}V_s-\sum_{s=e+1}^{e+q}V_s
+ &=\sum_{s=1}^{h_0}V_s+\sum_{s=1}^{e}V_s .
+\end{aligned}
+\]
+
+Indeed \(e_0+p=e+q\). The upper endpoints lie in
+\([1,H]\) since \(e_0\le h_0\) and \(H=h_0+p+q\le N\).
+The net multiplicity is at most two and is nonnegative,
+including when either set of removals is empty. Hence the upper
+bound in \eqref{eq:fitted-toric-two-sides} alone bounds the last
+display by
+\[
+ 2\sum_{s=1}^H a_s(w)+2H e_w/\ell^2 .
+\]
+
+Each step costs at most \(B_w^{\rm step}\) at this place. Adding
+the two base norm costs and \(6\delta_w\) from
+\eqref{eq:fitted-square-bottom}, and using \(a_s(w),n_s(\ell)\ge0\),
+gives the estimate used for the full grid.
+\begin{align}\label{eq:fitted-square-valuation}
+ v_w(r_{t,ij})\le{}&
+   |v_w(A)|+|v_w(A')|+4\sum_{s=1}^{H}a_s(w)
+       +5e_w\sum_{s=1}^{H}n_s(\ell)\\
+ &\quad+2H e_w/\ell^2+6\delta_w+(p+q)B_w^{\rm step}.\notag
+\end{align}
+
+The bound is also valid in the base case, with zero left side.
+The defect, denominators and toric shifts are those of the
+same fitted square. All the statements here use the one
+grid cutoff and its eventual size bounds, independent of the
+index \(i,j\), the place \(w\) and the chosen tuple at that place.
+In particular the hypotheses in the upper toric test are
+required at the places with their assigned twists.
+\label{cor:fitted-square-ratios-7}
+\end{proof}

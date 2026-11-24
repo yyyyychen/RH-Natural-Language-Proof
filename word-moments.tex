@@ -1,0 +1,158 @@
+\subsection{The two moment tests on the decorated lattices}
+\label{subsec:word-moments}
+
+To apply the assigned-prime bound to the selected columns, express the kernel at the decorated lattices through its two moment tests.
+
+At a standard pair at \(T\), let \(D_v,D'_v\) be the ordinary
+local lattices with residue rows \(\ell_v,\ell'_v\). The word
+character is unramified on the compact determinants there.
+The scalar of the kernel in the standard frames is a unit:
+the determinant ideals have exponent zero at the places over
+\(T\), the normalized away characters are units there, and
+the finite level characters have finite image. The two moment tests imply \eqref{eq:tag-w1} with its distinguished-place loss. Write \(T=p\) in this subsection and set
+\(F=fN_i\).
+
+For a rational matrix \(x\) in the Hom space put \(a_{\tau,ij}(x)=(u_\tau\lambda(\tau(x^*)))_{ij}\), with \(u_\tau\) the prescribed unit. Its point evaluation at the multi-index \(m\) is
+\[
+  \prod_{\tau,i,j}a_{\tau,ij}(x)^{m_{\tau,ij}}.
+\]
+ Let \(J_m\) be the Taylor jet with the
+derivation generators of the stage and its finite reader.
+Retain the indices whose determinant-normalized
+jet at each contributing coset belongs to the coefficient field.
+These are the rational indices used by the stage contraction.
+Sections~\ref{subsec:word-measure} and~\ref{subsec:word-projection}
+will construct the two approximations needed in the next statement.
+We first show why their different supports are sufficient.
+
+\begin{proposition}[A moment criterion for the word prime]\label{prop:word-moment-criterion}
+Use the selected rational jet indices on the standard lattices at
+\(p=T\). At every prescribed precision and for every finite list
+of these indices, suppose that the jet vector can be approximated
+by one integral linear combination of point evaluations times
+\(p^{-F}\) at the distinguished place, and by one integral linear
+combination without that factor at the conjugate place. The
+respective supports of the evaluations must satisfy
+\[
+\begin{aligned}
+ &x^*(\ker\ell'_v)\subset D_v\quad\text{for every }v,\\
+ &xD_v\subset D'_v,\qquad \ell'_v x=\ell_v
+                      \quad\text{on }D_v\text{ for every }v .
+\end{aligned}                                                     \tag{W6}\label{eq:tag-w6}
+\]
+With the selected target weights in the lowest alcove, these
+approximations imply the two pointwise bounds \eqref{eq:tag-w1}. The same
+implication holds for the transported decorations at \(p\).
+\end{proposition}
+
+\begin{proof}
+\proofstep{Identify the conjugate lattice map.}
+At a conjugate coefficient place the adjoint uses the opposite
+local factors. Write \(O_v\) for the ring of integers in the local row
+coordinates. With integral lifts of the residue rows, their kernel duals are
+\[
+ (\ker\ell_v)^\vee=D_v^\vee+O_v\,p^{-1}\ell_v,\qquad
+ (\ker\ell'_v)^\vee=(D'_v)^\vee+O_v\,p^{-1}\ell'_v
+\]
+in the local residue-row coordinates. The formula follows by
+taking a basis in which the row modulo \(p\) is the first
+coordinate. By \eqref{eq:tag-w6}, \(x^*(D'_v)^\vee\subset D_v^\vee\) and
+\[
+ x^*(p^{-1}\ell'_v)-p^{-1}\ell_v
+    =p^{-1}(\ell'_v x-\ell_v)\in D_v^\vee .
+\]
+Together these inclusions give the adjoint map on the two
+enlarged dual lattices.
+
+\proofstep{Identify the integral polynomial lattice at the target.}
+For a homogeneous source polynomial, contraction against the
+monomials of a single point evaluation is polynomial substitution
+by its adjoint matrix, with the prescribed determinant shifts.
+This follows on every monomial by the multinomial theorem for
+the substitution, or by applying the commuting derivations to
+the exponential with this linear argument. In adapted bases the
+matrix is integral by \eqref{eq:tag-w6}, so Cauchy--Binet gives integrality
+of the polynomial part. The source Weyl lattice is contained in
+the dual Weyl lattice of polynomials. At the target these lattices
+coincide over the local ring.
+
+To see this, if the target has rank
+\(r\) and dominant weight \(\nu\), its chosen size satisfies
+\[
+     \nu_a-\nu_b+b-a\le \nu_1-\nu_r+r < p
+                    \qquad (1\le a<b\le r).
+\]
+After the determinant twist the weight is polynomial. In
+characteristic \(p\) the Jantzen sum for its Weyl module is
+empty: the multiples \(mp\) in the formula satisfy
+\(0<mp<\langle\nu+\rho,\alpha^\vee\rangle\).
+Thus the Weyl module and its contravariant dual are simple.
+The standard map from the integral Weyl lattice to the dual
+Weyl lattice sends a highest generator to the primitive highest
+minor. Its reduction therefore has full image over an algebraic
+closure, and hence over the residue field. Nakayama's lemma gives
+the integral equality, also after each change of adapted basis.
+\cite{jantzen-rep}\label{cor:word-moments-1}
+
+\proofstep{Pass to the jet limit and account for determinant shifts.}
+At the prescribed degree write \(C\) for the finite linear
+map from a vector of moments to the contracted coefficients.
+For each precision the hypotheses supply a vector \(u_n\) of
+approximating moments on the required support, including its
+branch's factor in \eqref{eq:tag-w6}. Then \(u_n\to (J_m)_m\), so
+
+\[
+  C u_n\to C(J_m)_m.
+\]
+ All \(C u_n\) belong to the same
+rescaled integral lattice by the pointwise contraction and
+determinant bounds. This lattice is closed, so the limit does
+too. Coefficients in the chosen number field recover their
+integrality by restricting the valuation along its embedding. At the
+distinguished place choose the identity at the source in the
+standard basis and a basis of the kernel of the target row.
+Its determinant can be taken equal to \(p\), since the row is
+nonzero modulo \(p\). The contribution to the target determinant
+factor is 
+\[
+  p^{\sum_\tau\nu_{{\rm last},\tau}}
+=p^{-\sum_\tau s_{{\rm div},i}(\tau)}.
+\]
+
+At the conjugate place the two enlarged dual lattices have
+basis determinants of valuation \(-1\) in each position. For
+source and target shifts \(\sigma,\sigma'\), the determinant
+factor on substitution is \((\det B)^{\sigma'}
+(\det B')^{-\sigma}\) per position. The old coordinates of
+the stage weights give \(\sigma-\sigma'=(t+1)/2=s\).
+Thus at each position the product has valuation
+\(\sigma'(-1)-\sigma(-1)=\sigma-\sigma'=s\).
+Over the \(f\) positions the contributions sum to
+\[
+       v_p\!\left(\prod_\tau(\det B_\tau)^{\sigma'_\tau}
+                                 (\det B'_\tau)^{-\sigma_\tau}\right)
+                       = fs.
+\] Together with the
+two powers multiplying the point evaluations these are exactly
+\eqref{eq:tag-w1}.
+
+\proofstep{Transport the support and the jet to other decorations.}
+For nonstandard decorations choose rational unitary changes
+taking the lattices to standard ones above \(p\). Such changes
+exist by weak approximation: in a dense Cayley chart on the
+unitary group the inverse image of the prescribed open sets of
+lattice-carrying matrices is open in a rational vector space.
+At a split place a general linear change and its inverse adjoint
+give the desired target, and one can choose it in the chart by
+openness and density. Transport the finite away reader and the
+frames by the same rational maps. They take both the value
+lattices and the source and target rows to their transported
+versions. The change-of-variables identity for the rational
+kernel carries \eqref{eq:tag-w1} back.
+\end{proof}
+
+Sections~\ref{subsec:word-measure} and~\ref{subsec:word-projection}
+prove the simultaneous approximations on these two supports
+for the selected normalized vector. Thus \eqref{eq:tag-w1} holds on
+the stage readings for Proposition~\ref{prop:word-prime-transfer}, and \eqref{eq:tag-w2}--\eqref{eq:tag-w5} give the sharp
+contribution at the prime assigned to the sequence on the trace-zero column.

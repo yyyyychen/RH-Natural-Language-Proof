@@ -1,0 +1,364 @@
+\subsubsection*{The finite condition after projecting to a character}
+\label{subsec:ramified-character}
+
+A finite class lifted through the crystalline lattices must still satisfy the required condition after projection to a character. The extension class below isolates the difference between an integral lift of a generator and a Galois-invariant one.
+
+Let \(F_s=F_0(\mu_{\ell^s})\) be the full cyclotomic field of
+Section~\ref{subsec:ramified-ht}, and let \(O\) be the coefficient DVR.
+Choose a crystalline lattice extension and a lift \(v\) of its quotient generator:
+\[
+ 0\longrightarrow T\longrightarrow\widetilde T\xrightarrow{p}O\longrightarrow0,\qquad p(v)=1.
+\]
+Put \(f(g)=gv-v\in T\).
+Suppose that \(\psi:T\to E/O(-e)\) is an equivariant
+map, where \(E\) is the fraction field of the
+coefficient integers \(O\), and \(0\le e<t\le h\).
+The kernel jumps lie in a common set
+\(U\subseteq[-h,h]\) by strictness of the crystalline
+filtration. We bound the loss to make
+\(\psi f\) a finite class. Use \(M\) from
+Section~\ref{subsec:ramified-ht} with the interval
+\([-h,h]\).
+
+\paragraph{The truncated integral periods.}
+Write \(A_{\inf}\) for the integral period ring,
+\[
+ \xi=([\epsilon]-1)/\varphi^{-1}([\epsilon]-1)
+\]
+for the cyclotomic generator of the kernel of
+Fontaine's map, and \(t_{\rm dR}\) for the
+cyclotomic period.
+Modulo \(\xi^{e+1}\), the cocycle
+\(f\otimes1\) is a rational coboundary.
+In fact strictness gives a lift of one in filtration
+zero of the de Rham invariants of \(\widetilde T\).
+Subtract it from \(v\) in the de Rham tensor.
+The result lies in filtration zero of the tensor
+with \(T[1/\ell]\), and has coboundary \(f\otimes1\).
+The quotient \(A_{\inf}/\xi^{e+1}\) after inverting
+\(\ell\) is the corresponding de Rham jet, so some
+\(\ell\)-power gives an integral cobounding vector.
+
+At level \(M\), the degree \(i\) piece of the jet
+is the integral scalar ball in twist \(i\).
+For Fontaine's map \(\vartheta\), the ratio of the two generators satisfies
+\[
+ \vartheta(t_{\rm dR}/\xi)=\zeta_\ell-1.
+\]
+The difference between the two
+generators in degree \(i\) rescales the ball by an
+element fixed by \(G_{F_M}\). Use the unprojected
+frame \(D\) obtained at absolute depth \(s+n_0\) in
+\eqref{eq:full-level-fontaine-map}. The map \(\vartheta\) in the jet
+formula is the original depth-zero quotient. Indeed, writing
+\(\mu=[\epsilon]-1\), one has
+\[
+  t_{\rm dR}/\xi
+   =\bigl(\log(1+\mu)/\mu\bigr)\varphi^{-1}(\mu)
+   \ \xrightarrow{\ \vartheta\ }\ 1\cdot(\zeta_\ell-1).
+\]
+
+Both the scalar in this formula and the scalar \(c\) in
+\eqref{eq:full-level-fontaine-map} are fixed by \(G_{F_M}\).
+The transformed lattice lies between the ball and
+its \(\ell^{-1}\) multiple. Multiply a torsion cocycle
+once by \(\ell\) to enter the ball. A rational
+cobounding vector can also be brought into the ball
+by a sufficiently large \(\ell\)-power.
+The degree-one assertion of Lemma~\ref{lem:cyclotomic-invariant-loss}
+applies even when the auxiliary extension has a zero jump. It bounds
+the additional loss by
+\[
+   1+\max\left(1,\sum_{a\in U,\ a\ne i}(M+v_\ell(a-i))\right).
+\]
+This gives the summand of \(C(e+1)\) in degree \(i\)
+in the original integral tensor lattice.
+
+These losses add through the truncation.
+For successive rational jets \(J'\twoheadrightarrow J\), the necessary lifting statement is
+\[
+ H^0(G_{F_M},J')\longrightarrow H^0(G_{F_M},J)\longrightarrow0 .
+\]
+An adapted filtration basis in the de Rham comparison reduces surjectivity to scalar filtered periods. In a scalar interval the
+invariants come from its degree-zero piece, if
+present, by Tate's vanishing in nonzero degrees.
+This piece lifts by constants in the field \(F_M\).
+After clearing denominators this is an integral
+lift up to a power of \(\ell\).
+
+For two successive quotients, kill the projected torsion class and subtract its integral coboundary. The remaining graded cocycle is torsion: some power of \(\ell\) gives a cobounding vector in the whole jet. Its
+projection is invariant; lift that invariant
+after clearing denominators and subtract the lift.
+The remaining cobounding vector belongs to the
+graded piece. If the projected class is killed by \(\ell^u\) and the recovered graded torsion by \(\ell^v\), the original class \(c\) satisfies
+\[
+ \ell^v(\ell^u c)=0.
+\]
+This is the additivity of the successive exponent bounds. Restriction to \(F_M\) and
+corestriction back add
+\[
+ M-s=v_\ell([F_M:F_s])
+\]
+once. Thus \(\ell^{C(e+1)}(f\otimes1)\) is a
+coboundary over \(A_{\inf}/\xi^{e+1}\).
+\label{cor:cyclotomic-character-lifting-1}
+
+\begin{lemma}[Integral dual exponentials of positive twists at two]
+\label{lem:dyadic-integral-period}\label{hyp:positive-character-integral-period}
+Let \(F_0/\mathbb Q_2\) be finite unramified, \(F_s=F_0(\mu_{2^s})\), \(s\ge2\), and \(e\ge1\). Identify the de Rham line for \(\mathbb Q_2(-e)\) with \(F_s\) in the Tate basis \(t_{\rm dR}^e\). The integral cohomology classes have dual exponentials satisfying
+\[
+  2^{1-e-v_2((e-1)!)}\mathcal O_{F_s}
+           \subseteq\exp^*\!\bigl(H^1(F_s,\mathbb Z_2(-e))\bigr).
+\]
+\end{lemma}
+
+\begin{proof}
+\proofstep{Construct integral classes before taking their moments.}
+Choose compatible primitive roots \(\zeta_r\) of order \(2^r\). On \(\mathcal O_{F_0}[[X]]\) write \(Y=1+X\) and let \(\varphi\) act by arithmetic Frobenius \(\sigma\) on coefficients and by \(Y\mapsto Y^2\). Its left inverse \(\psi\) extracts the even powers in the decomposition \(f=\varphi(f_0)+Y\varphi(f_1)\), so \(\psi(f)=f_0\).
+
+At level \(r\ge2\), put \(u=1+2^r\). For a positive odd integer \(a\) and \(b\in\mathcal O_{F_0}\) set
+\[
+    g=b(Y^a-Y^{au}),\qquad y=\sum_{n\ge0}\varphi^n(g).
+\]
+Since \(Y^{2^n}-1\in(2,X)^{n+1}\), the series converges in \(\mathcal O_{F_0}[[X]]\). Both exponents in \(g\) are odd, hence \(\psi(g)=0\) and \(\psi(y)=y\). The integral Iwasawa comparison for the trivial lattice attaches to \(y\) a system of integral cohomology classes. Its moment of order \(-e\) at level \(r\) belongs to \(H^1(F_r,\mathbb Z_2(-e))\). At two the torsion-free cyclotomic tower used for this comparison starts at \(r=2\). \cite[Proposition~II.1.2 and Theorem~II.1.3]{cherbonnier-colmez-iwasawa}
+
+\proofstep{Evaluate a finite-level moment.}
+Let \(y^{\sigma^{-r}}\) denote the series obtained by acting on its coefficients. In the chosen Tate basis, the dual exponential of the moment is the coefficient of \(t^e\) in
+\[
+   2^{-r}y^{\sigma^{-r}}(\zeta_r\exp(t/2^r)-1),\qquad t=t_{\rm dR}.
+\]
+The dual exponential formula of Cherbonnier and Colmez gives this series at all sufficiently high levels. To descend one step from \(j\) to \(j-1\ge2\), trace the series. The two conjugates of \(\zeta_j\) have opposite signs. Their average on \(y\) retains its even part \(\varphi(\psi y)=\varphi(y)\). Hence
+\[
+ \operatorname{Tr}_{F_j/F_{j-1}}\!
+     \left(2^{-j}y^{\sigma^{-j}}(\zeta_j\exp(t/2^j)-1)\right)
+ =2^{-(j-1)}y^{\sigma^{-(j-1)}}(\zeta_{j-1}\exp(t/2^{j-1})-1).
+\]
+Corestriction of the moment commutes with the dual exponential and this unnormalized trace. The coefficient formula therefore holds for each \(r\ge2\). \cite[Theorem~IV.2.1 and its proof]{cherbonnier-colmez-iwasawa}
+
+After division by the odd unit \(a^e\), the computed value is \(C_r S_{r,a}(b)\), where
+\[
+ C_r=\frac{1-u^e}{2^{r(e+1)}e!},\qquad
+ S_{r,a}(b)=\sum_{n\ge0}2^{ne}\sigma^{n-r}(b)\zeta_r^{a2^n}.
+\]
+Indeed the powers \(a2^n\) and \(au2^n\) give the same root of unity at level \(r\), while the coefficient of \(t^e\) in their exponentials introduces their \(e\)-th powers. The series for this coefficient converges since \(e>0\). For \(r\ge2\), the lifting-the-exponent formula yields
+\[
+    v_2(C_r)=r+v_2(e)-r(e+1)-v_2(e!)
+            =-re-v_2((e-1)!).
+\]
+
+\proofstep{Recover each integral direction in the cyclotomic field.}
+Replace \(a\) by \(a+2^{r-1}\). In the difference of the two normalized moments all the terms with \(n\ge1\) cancel. Since \(b\) is arbitrary,
+\[
+ C_r\bigl(S_{r,a}(b)-S_{r,a+2^{r-1}}(b)\bigr)
+                   =2 C_r\sigma^{-r}(b)\zeta_r^a .
+\]
+Thus the image at level \(r\) contains \(2^{1-re-v_2((e-1)!)}\mathcal O_{F_0}\zeta_r^a\) for each odd \(a\).
+
+The ground-field direction is also needed. At \(r=2\), add the normalized moments for \(a=1,3\). Their leading terms cancel, the roots in the next terms equal \(-1\), and all later roots equal one. Consequently
+\[
+ C_2\bigl(S_{2,1}(b)+S_{2,3}(b)\bigr)
+ =2^{e+1}C_2\left(-\sigma^{-1}(b)+
+             \sum_{n\ge2}2^{(n-1)e}\sigma^{n-2}(b)\right).
+\]
+The endomorphism in parentheses is congruent to \(-\sigma^{-1}\) modulo \(2\), hence is bijective on the finite free \(\mathbb Z_2\)-module \(\mathcal O_{F_0}\). The image contains \(2^{1-e-v_2((e-1)!)}\mathcal O_{F_0}\).
+
+Restriction from \(F_r\) to \(F_s\) for \(2\le r\le s\) preserves integrality and includes the dual exponential value into \(F_s\). Each power of \(\zeta_s\) is \(\pm1\) or an odd power of a primitive \(\zeta_r\) with \(2\le r\le s\). These powers span \(\mathcal O_{F_0}[\zeta_s]=\mathcal O_{F_s}\) over \(\mathcal O_{F_0}\). The exponent \(1-re-v_2((e-1)!)\) is at most \(1-e-v_2((e-1)!)\), proving the assertion.
+\end{proof}
+
+\begin{proposition}[Returning scalar cocycles to the finite condition]\label{prop:cyclotomic-scalar-finite-condition}
+Take the cyclotomic module of Proposition~\ref{prop:ramified-integral-wach-comparison} for the ramified lattice. Let \(f(g)=gv-v\) represent the crystalline lattice extension over \(F_s\),
+and let \(\psi:T\to(E/O)(-e)\) be equivariant, with \(0\le e<t\le h\).
+With the integer loss \(C(k)\) of \eqref{eq:local-jump-loss}, put
+\[
+ A_e=(e+2)s+v_\ell(e)+\lfloor e/(\ell-1)\rfloor+1,
+ \qquad B_e=C(e+1)+s+v_\ell(e+1)+A_e,
+\]
+where the \(v_\ell(e)\) term in \(A_e\) is omitted when \(e=0\). Then the pushed-out class satisfies
+\[
+ \ell^{B_e}[\psi\circ f]\in H^1_f(F_s,(E/O)(-e)).
+\]
+Here the finite subgroup is the image of the rational finite condition.
+For a class defined over the original local field at level \(N\),
+corestriction adds at most \(1+\lfloor\log_\ell N\rfloor\) to the exponent.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Use the Bockstein allowance to lift the divisible cocycle to rational coefficients.}
+Lift \(\psi\) on an integral
+\(\mathbb Z_\ell\)-basis of \(T\) to the rational
+target. The lift need only be equivariant modulo the
+target lattice. Expand in an integral
+\(\mathbb Z_\ell\)-basis of this target lattice.
+Each coordinate of \(\psi f\) modulo \(\mathbb Z_\ell\)
+is now a cocycle in
+\(\mathbb Q_\ell/\mathbb Z_\ell(-e)\).
+
+By local Tate duality,
+\(H^2(F_s,\mathbb Z_\ell(-e))\) is dual to the
+invariants in \(\mathbb Q_\ell/\mathbb Z_\ell(e+1)\).
+The cyclotomic generator has \(v_\ell(\chi(\gamma)^{e+1}-1)=s+v_\ell(e+1)\). Duality therefore gives
+\[
+ \ell^{s+v_\ell(e+1)}H^2(F_s,\mathbb Z_\ell(-e))=0.
+\]
+The integral Bockstein sequence
+then gives a rational cocycle representing the scaled
+divisible cocycle in each coordinate. Adjust by a
+rational coboundary lifting the discrepancy between
+the divisible cocycles. The representatives then
+agree pointwise modulo
+\(\mathbb Z_\ell\).
+The equivariance errors of the lifted coefficient
+map are integral, so applying it to the jet
+coboundary preserves the congruence modulo integral
+periods. After scaling further by \(\ell^{C(e+1)}\),
+each rational cocycle \(z\) so obtained satisfies
+\[
+ z(g)\equiv \chi(g)^{-e}g b-b
+       \pmod {A_{\inf}+t_{\rm dR}^{e+1}B_{\rm dR}^+}
+ \qquad (b\in B_{\rm dR}^+).
+\]
+The congruence means that the error is in the
+image of \(A_{\inf}\) in the jet.
+
+Use the dual exponential in the Tate basis \(t_{\rm dR}^e\). Its value \(\alpha\in F_s\) is
+specified by the remaining term
+\(\log\chi(g)\alpha t_{\rm dR}^e\) after a rational
+twisted coboundary in that jet. To see this, filter the rational jet
+\((B_{\rm dR}^+/t_{\rm dR}^{e+1})(-e)\) by powers of \(t_{\rm dR}\).
+Its degree-\(i\) quotient is \(\mathbb C_\ell(i-e)\) for \(0\le i\le e\).
+For \(i<e\), Tate's theorem gives
+\(H^1(F_s,\mathbb C_\ell(i-e))=0\), so the cocycle in that quotient is
+a coboundary. In degree \(e\) the twist is trivial, and Tate's calculation gives
+\[
+ H^1(F_s,\mathbb C_\ell)=F_s\,[\log\chi].
+\]
+
+When the dual exponential is zero, the Bloch--Kato
+comparison gives a cobounding vector over
+\(B_{\mathrm{cris}}\otimes_{\mathbb Q_\ell}K_\ell(-e)\),
+where \(K_\ell\) is the coefficient field. This identifies
+the corrected class with the crystalline finite condition.
+\cite{tate-pdivisible,bloch-kato}\label{cor:cyclotomic-character-lifting-2}
+
+\proofstep{Estimate the dual exponential in the truncated period coordinates.}
+The Bockstein argument leaves a rational lift. Control of its projection to the finite subgroup now comes from the integral periods entering the dual exponential.
+
+The displayed integral congruence bounds \(\alpha\).
+At degree \(i<e\) use the integral multiplier
+\[
+ \ell^{1+s+v_\ell(i-e)}
+\]
+on the modified cobounding vector, then subtract an integral lift of its leading coefficient.
+The degree \(i\) scalar belongs to the ball
+modulo a twisted invariant, after this multiplication.
+This is the rank-one ball argument at depth \(s\)
+in twist \(i-e\), using the valuation of
+\(\chi(\gamma)^{i-e}-1\).
+In the \(t_{\rm dR}^i\) coordinates the integral
+leading coefficient is multiplied by
+\((\zeta_\ell-1)^i\), from \(t_{\rm dR}/\xi\).
+Thus it can be lifted by Fontaine's surjection
+and the power \(\xi^i\).
+After eliminating all lower degrees the logarithm coefficient is
+\[
+ \ell^{e(s+1)+v_\ell(e!)}(\zeta_\ell-1)^e\alpha.
+\]
+Its two factors record the scalar elimination costs and the generator conversion, respectively.
+
+If \(\alpha_1\log\chi(g)+g b_1-b_1\) is integral
+and \(\alpha_1\in F_s\), apply the integral
+coboundary estimate on the cyclotomic kernel
+after multiplying by \(\ell\).
+The remaining cobounding vector is fixed by that
+kernel. Take the integral normalized trace at the
+generator. It kills the difference of this
+vector and its translate and gives
+\(\ell\alpha_1\log\chi(\gamma)\) integral.
+Since \(v_\ell(\log\chi(\gamma))=s\), one obtains
+\[
+ v_\ell(\alpha)\ge
+ -e(s+1)-v_\ell(e!)-1-s-\frac{e}{\ell-1}.
+\]
+
+At weight zero the relevant integral image can be computed by local class field theory. Write \(E_0=(\ell-1)\ell^{s-1}\) for the ramification index of \(F_s/F_0\). The different is generated by \(\Phi'_{\ell^s}(\zeta_{\ell^s})\); its absolute valuation, with \(v_\ell(\ell)=1\), is \(s-1/(\ell-1)\). For \(v_\ell(z)\ge1/E_0\) the logarithmic series gives
+\[
+ v_\ell(\log(1+z))\ge \min_{n\ge1}\{n/E_0-v_\ell(n)\}
+                  =1+1/(\ell-1)-s .
+\]
+For fixed \(v_\ell(n)=j\) the minimum occurs at \(n=\ell^j\); comparing consecutive values gives the equality. For the inverse different \(\mathfrak D^{-1}=\mathfrak D_{F_s/\mathbb Q_\ell}^{-1}\) this gives
+\[
+          \ell^{-1}\mathcal O_{F_s}\log(1+\mathfrak m_{F_s})
+                              \subseteq\mathfrak D^{-1}.
+\]
+
+For \(a\in\ell^{-1}\mathcal O_{F_s}\) define on principal units
+\[
+       h_a(u)=\operatorname{Tr}_{F_s/\mathbb Q_\ell}(a\log u)\in\mathbb Z_\ell .
+\]
+Extend it by zero on prime-to-\(\ell\) roots of unity and a uniformizer. Local reciprocity gives an integral Galois character. The duality of the Bloch--Kato exponential with Kummer theory identifies its dual exponential with \(a\), up to the common reciprocity sign: pairing on principal units on both sides is the displayed trace. This proves the required inclusion for \(e=0\). \cite[Section~3]{bloch-kato-finite}
+
+For odd \(p=\ell\) and \(e>0\), put \(m=e+1\) and \(L=F_s\). For \(m\ge2\) the rational Bloch--Kato exponential is an isomorphism. In its standard Tate basis put
+\[
+ \mathcal H_m=\exp_{L,m}^{-1}\!\left(\operatorname{im}\big[H^1(L,\mathbb Z_p(m))
+                           \longrightarrow H^1(L,\mathbb Q_p(m))\big]\right)\subset L .
+\] Let \(\sigma\) be Frobenius on \(F_0\), and let \(f\in\mathcal O_{F_0}[[X]]\) range over the power series satisfying \(\sum_{\zeta^p=1}f(\zeta(1+X)-1)=0\). Denote their module by \(R\).
+
+The integral Coleman sequence and its explicit evaluation at level \(s\) give
+\[
+          p^{s+v_p(e)}\mathcal H_m\ \subseteq\ e!\,\Xi_{m,s}(R).
+\]
+Indeed the quotient of the full inverse-limit classes by the classes from principal units, after passing to the coinvariants for \(F_s\), is \(H^0(F_s,\mathbb Q_p/\mathbb Z_p(e))\). A generator with cyclotomic value \(1+p^s\) acts on that quotient through the relation
+\[
+       ((1+p^s)^e-1)x=0,\qquad v_p((1+p^s)^e-1)=s+v_p(e).
+\] For the principal-unit classes the evaluation diagram sends each integral class to \((m-1)!\,\Xi_{m,s}(f)\) in exponential coordinates. Here \(L=F_s\) is already the entire cyclotomic level, so the trace from that level to \(L\) in the diagram is the identity. \cite[Sections~2.3.1--2.3.2, (4)--(5)]{benois-nguyen-tamagawa}
+
+The explicit evaluation gives more than its determinant. In the formula for \(\Xi_{m,s}\), division by \(p^{m-s}\) makes the terms of index \(0\le k<s-1\) divisible by \(p^m\): their coefficients are \(p^{m(s-1-k)}\). The term for \(k=s-1\) and the constant correction give
+\[
+ p^{s-m}\Xi_{m,s}(f)\equiv
+ f^{\sigma^{-1}}(\zeta_p-1)-(1-p^m\sigma^{-1})^{-1}f^{\sigma^{-1}}(0)
+                      \pmod{p^m\mathcal O_L}.
+\]
+The inverse in the second term is the convergent geometric series and is the identity modulo \(p^m\). Evaluation of an integral series at \(\zeta_p-1\) agrees with its constant coefficient modulo \(\zeta_p-1\). The calculation also covers \(s=1\), when the earlier sum is empty. \cite[Section~2.2.1, definition of \(\Xi_{m,n}\)]{benois-nguyen-tamagawa}
+
+In particular every vector in \(\mathcal H_m\) has valuation at least
+\[
+ A=v_p(e!)+m-2s-v_p(e)+1/(p-1).
+\]
+Under local Tate duality the image of \(H^1(L,\mathbb Z_p(1-m))\) in the dual de Rham line is the trace dual of \(\mathcal H_m\). Indeed the integral cup product on the torsion-free quotients is perfect, and the Bloch--Kato exponential and dual exponential are adjoint for this pairing. In the dual Tate bases their de Rham pairing is \((a,b)\mapsto\operatorname{Tr}_{L/\mathbb Q_p}(ab)\). \cite[Section~3]{bloch-kato-finite}
+
+Put \(\beta=s-1-e-v_p((e-1)!)\). The valuation threshold for the inverse different is \(-s+1/(p-1)\); with \(m=e+1\) one has
+\[
+        \beta+A=-s+1/(p-1).
+\]
+Thus \(p^\beta\mathcal O_L\mathcal H_m\subseteq\mathfrak D^{-1}\). Every vector of \(p^\beta\mathcal O_L\) has integral trace pairing with \(\mathcal H_m\), proving the required inclusion at every odd prime.
+
+For \(\ell=2\) and \(e>0\), the exponent in Lemma~\ref{lem:dyadic-integral-period} is independent of the cyclotomic level. Since \(s\ge2\), the required ball satisfies
+\[
+  2^{s-1-e-v_2((e-1)!)}\mathcal O_{F_s}
+     \subseteq 2^{1-e-v_2((e-1)!)}\mathcal O_{F_s}
+     \subseteq\exp^* H^1(F_s,\mathbb Z_2(-e)).
+\]
+\label{cor:cyclotomic-character-lifting-3}
+
+Set
+\[
+ A_e=(e+2)s+v_\ell(e)+\lfloor e/(\ell-1)\rfloor+1,
+\]
+omitting the \(v_\ell(e)\) term at \(e=0\).
+The bound for \(\alpha\) gives
+\(\ell^{A_e}\alpha\in\ell^\beta\mathcal O_{F_s}\).
+For positive \(e\) use
+\(v_\ell(e!)=v_\ell(e)+v_\ell((e-1)!)\) and
+\(e/(\ell-1)<\lfloor e/(\ell-1)\rfloor+1\).
+For \(e=0\) it follows directly.
+Subtract an integral cocycle with this exponential
+from \(\ell^{A_e}z\). The difference has zero
+exponential and represents the same divisible
+class. Reassemble the scalar coordinates in the
+coefficient lattice. This puts the character image
+in the divisible finite condition after loss
+\(C(e+1)+s+v_\ell(e+1)+A_e\).
+Corestriction adds at most the original local degree
+loss, giving the character allowance used above.
+\end{proof}
+

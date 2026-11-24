@@ -1,0 +1,353 @@
+\paragraph{The integral lower bound on a single component.}
+\hypertarget{source-slice-metrics}{}
+Keep the integer \(h\) of \eqref{eq:chow-lower-section}. A product
+of \(h\) integral light forms, and any integral sum of those
+products, satisfies the integral framed-point test at weight
+\(h w_L\). This follows by multiplying their values in each framed
+valuation ring. Positive weight and cuspidality persist under this
+multiplication. Suppose the resulting form \(g\) restricts
+nontrivially to \(Z\). On the generic fibre multiply it by the
+idempotent of \(Z\). The resulting section \(g_Z\) is algebraic
+and cuspidal. In every framed DVR test its generic point belongs
+to exactly one component. The value tested there equals the
+original value or zero. Thus \(g_Z\) belongs to the same global
+integral lattice and is nonzero. This proof also covers components
+whose closures meet in a special fibre.
+
+\begin{proposition}[The lower norm bound on a single component]\label{prop:integral-chow-component-height}
+For the fixed exponent \(h\) of \eqref{eq:chow-lower-section}
+let \(g\) be an integral sum of products of \(h\) integral
+light sections with \(g|_Z\ne0\).
+Use the constant \(P_0\) of \eqref{eq:component-chow-lower-constant},
+chosen from the common column-size and weight data before \(g\) and \(Z\).
+On every such component,
+\[
+ \operatorname{mean}_\sigma\log\|g|_Z\|_{\sup,\sigma}\ge-hP_0S_L.
+\]
+
+The integral lifting uses the generic component idempotent
+and the original cusp lattice at weight \(h w_L\).
+\end{proposition}
+
+\begin{proof}
+\proofstep{Bounding the supremum by algebraic evaluations.}
+At an embedding \(\sigma\), the supremum norm of \(g_Z\) is bounded
+by the supremum of the norms of \(g\), with the same metric, under embeddings \(\Omega_Z\to\mathbb C\) extending
+\(\sigma\). Indeed, work on an open affine flag chart over \(K\)
+on which the frame has been trivialized. Its ring is countable.
+For a nonzero element of the ring the set of complex points
+where it vanishes has empty interior in each analytic component.
+Each geometric component dominates the integral chart over \(K\),
+and on the smooth complex chart the assertion follows from
+the identity theorem. Baire's theorem therefore gives a dense
+set of points where the ring embeds in \(\mathbb C\); the map
+at such a point extends to its fraction field.
+
+Equivalently the evaluation map on the chart ring \(A\) is injective at each point of the dense set
+\[
+  \bigcap_{a\in A\setminus\{0\}}\bigl\{x:a(x)\ne0\bigr\}.
+\]
+Let \(F\) be the coefficient of the section in an adapted frame and
+let \(J>0\) be the norm of that frame. The section has norm \(|F|J\).
+Under a change of frame with weight character \(\chi\), the coefficient
+and frame norm transform inversely, so
+\[
+  |\chi|\,|F|\cdot |\chi|^{-1}J=|F|J.
+\]
+Consequently the section norms on the dense set agree
+with the generic norm. The metric is continuous across the
+chart and the corresponding flag cells are dense in the component.
+At conjugate embeddings one uses the conjugate uniformization
+with its prescribed metric. This proves the supremum comparison.
+
+Apply \eqref{eq:slice-integral-norm} for nonzero integral
+\(F\) of the required weight \(v\). In the notation of that
+estimate, put \(P_*=3000Z^2\) with \(Z=fr+L+\log d_E+|\Omega|\).
+Then
+\[
+  \operatorname{mean}_\sigma\log\|F\|_{\sup,\sigma}
+        \ge-P_* (1+\log|v|)|v| .
+\]
+Here \(|v|\) is the weight size. Apply the bound to \(g_Z\)
+with \(v=h w_L\) and divide by \(hS_L\). Use \(1\le |h w_L|\le hS_L\)
+and
+\[
+ \log h\le \log\!\big(8(s+2)^3(2+P_O)\big)
+            +2\log N+\log\delta .
+\]
+The family bounds are \(\log N\le n_B\) and
+\(\log\delta\le1041z^3\), where \(n_B\) bounds the logarithm
+of the column size. One may take
+\begin{equation}\label{eq:component-chow-lower-constant}
+ P_0=\max\{1,P_*[1+\log S_L+\log(8(s+2)^3(2+P_O))
+                                         +2n_B+1041z^3]\}.
+\end{equation}
+Thus the lower bound of Proposition~\ref{prop:slice-lower-integral-norm}
+at the single weight \(h w_L\) gives \eqref{eq:chow-lower-section}.
+The integer \(h\) and the bound for \(P_0\) are common to all components. \label{cor:slice-metrics-1}
+
+\end{proof}
+
+\paragraph{From algebraic integral points to the orders of the slice.}
+\label{par:slice-valued-orders}
+The depth test available on algebraic points is a bound on the minimum valuation of the light sections in an adapted integral frame. We explain how
+it gives orders at the nonalgebraic places used by the height.
+The following extension lemma is the input to the branch calculation.
+
+\begin{lemma}[Integral tests at the closed fibre]\label{lem:slice-valuative-extension}
+Let \(O\) be a complete
+DVR of a number field completion, with uniformizer \(\pi\).
+Let \(A\) be a flat normal integral algebra of finite type over
+\(O\), and let \(g\in\operatorname{Frac}A\). Suppose that in
+every map \(A\to V\) to a finite extension DVR of \(O\) whose
+generic point belongs to a fixed dense open where \(g\) is
+defined, the value of \(g\) lies in \(V\). Then the simultaneous local conclusion is
+\[
+ g\in\bigcap_{\substack{q\in\operatorname{Spec}A\\ q+(\pi)\ne A}}A_q.
+\]
+
+
+\end{lemma}
+
+\begin{proof}
+A pole of \(g\) at a height-one prime \(P\subset q\)
+gives a point \((P,\infty)\) on the closure of its graph
+in \(\operatorname{Spec} A\times\mathbb P^1\), by evaluating
+on the DVR at \(P\). Taking the closure gives a closed point
+\((y,\infty)\) on the special fibre, since 
+\[
+  (q,\pi)\ne A.
+\]
+An integral curve through that point with generic point in
+the prescribed open can be chosen as follows.
+
+In the local
+domain of the graph at this point, of dimension \(d\), choose
+a nonzero \(b\) divisible by \(\pi\) such that \(D(b)\) is in
+the original graph over that open and \(1/g\) is nonzero
+there. The case \(g=0\) is immediate. Complete \(b\) to a
+system of parameters \(b,a_2,\ldots,a_d\). Write \(B\) for this local domain and \(I=(a_2,\ldots,a_d)\).
+Killing one element of the maximal ideal lowers the dimension
+by at most one \cite{slice-dimension-drop}. Hence
+\[
+ \dim B/I\ge d-(d-1)=1,\qquad \sqrt{I+(b)}=\mathfrak m_B .
+\]
+If every minimal prime over \(I\) contained \(b\), these two facts would
+give \(\dim B/I=0\). Choose such a prime \(\mathfrak p\) avoiding \(b\).
+In the local domain \(B/\mathfrak p\) the nonzero image of \(b\) generates a
+maximal-primary ideal. The same dimension inequality now gives
+\(\dim B/\mathfrak p=1\).
+
+Let \(C\) be the closure of this branch. It dominates \(\operatorname{Spec} O\)
+since \(\pi\mid b\). At the chosen closed point its local dimension is one
+and its residue field is finite over the residue field of \(O\).
+The dimension formula over the universally catenary DVR \(O\) gives
+\[
+ 1=1+\operatorname{trdeg}_{\operatorname{Frac}O}K(C)
+       -\operatorname{trdeg}_{O/(\pi)}\kappa(y).
+\]
+Thus the finitely generated field \(K(C)\) is finite over
+\(\operatorname{Frac} O\) \cite{dim-slice}. A local ring of the
+normalization above the closed point is a DVR dominating \(O\).
+The extension of the valuation of a complete DVR to this finite
+extension is unique and its valuation ring is finite over \(O\)
+\cite{dvr-slice}. On the resulting test the generic point lies in
+\(D(b)\), whereas \(1/g\) has strictly positive valuation.
+This contradicts the assumption on \(g\).
+Consequently \(g\) has no pole at any height-one prime of \(A_q\).
+Normality now gives
+\[
+ g\in\bigcap_{\operatorname{ht}_{A_q}\mathfrak p=1}
+               (A_q)_{\mathfrak p}=A_q
+\]
+by the intersection theorem for Noetherian normal domains
+\cite{slice-normal-intersection}.\label{cor:slice-metrics-2}
+
+\end{proof}
+
+\begin{proposition}[Transfer of the framed depth and metric tests]\label{prop:slice-chart-metric-readings}
+Use the selected light columns and, before the final lift,
+the auxiliary \(\eta\) with its stated pointwise depth
+inequality. On the chosen normalized charts the inequality
+holds at the generic slice branches, using the coefficient
+baseline on vertical branches and without that term on
+horizontal branches. At a horizontal branch \(q\) its incidence exponent obeys
+\[
+ 0\le E_q\le\frac{c\,n_q(\eta)}{2i_\eta}.
+\]
+
+Evaluation in the adapted complex frames gives the paired light and
+auxiliary metric bound in the proof. At the definite lift
+only the finite baseline is used.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Transferring the valuation test to the flag chart.}
+Apply this assertion on integral framed charts which record a
+smallest light column \(w_b\). Such a chart adjoins the regular
+ratios \(w_l/w_b\) and uses the normalization of the corresponding
+blowup chart. For a valued point with valuation \(v\), choose a column with least
+finite order. Then
+\[
+ v(w_l/w_b)=v(w_l)-\min_j v(w_j)\ge0
+\]
+for every \(l\), so all the adjoined ratios are in this valuation ring. The required cover uses the
+integral model, with frames chosen over its affine opens. To see that these charts suffice for the centre criterion, first
+take a vertical DVR. Complete it. Its map from the coefficient
+DVR extends to the completion, and its order on the original
+field stays unchanged. Use the proper model at this prime
+and its flag bundle as in the construction of \(y_\zeta\).
+
+At each elimination step in the flag matrix, choose a nonzero eligible pivot \(a\) of minimum valuation among the eligible entries \(a_j\). Comparability of principal ideals in the valuation ring \(V\) gives
+\[
+        v(a_j)\ge v(a)\quad\Longrightarrow\quad a_j/a\in V .
+\]
+The elimination coordinates therefore give an integral point on this flag chart.
+The theta generator and these flags may be chosen on finitely
+many trivializing charts. After adjoining the ratios for a
+smallest light column, the generic fibre over the original
+nonboundary locus is still covered: the columns there
+generate the unit ideal in a trivialization.
+
+Inverting the
+pivot therefore gives that chart on the generic fibre.
+After passing to the completed coefficient ring take the closures
+of the generic components and normalize. These normalizations
+are finite, since the base is excellent, and the valuative
+criterion for the resulting finite maps lifts the point with
+its generic lift. On the open generic flag charts the
+normalization agrees with the smooth model. The resulting
+affines are normal and flat over the DVR by torsion-freeness.
+In particular if \(A\) is such an affine algebra over the coefficient DVR, its flatness follows from
+\[
+  0\longrightarrow A\xrightarrow{\ \pi\ }A\longrightarrow A/\pi A\longrightarrow0.
+\]
+
+\proofstep{Horizontal orders and the line-frame correction.}
+For a horizontal valuation there are two orders to keep track
+of. Let \(T\) be its DVR with a copy of \(K\) on which its
+valuation is trivial. One can extend it, with ramification
+index one, to a DVR \(V\) containing \(K_\lambda\) as a
+field of units together with zero. To see this, complete \(T\)
+and choose a coefficient field containing \(K\). Explicitly,
+lift a transcendence basis of the residue field \(k/K\).
+The embedding of the rational function field so obtained
+extends across the separable algebraic residue extension by
+Hensel lifting, uniquely with the chosen residues. Thus
+
+\[
+  \widehat T=k[[u]]
+\]
+ for a uniformizer \(u\).
+Embed \(k\) and \(K_\lambda\) over \(K\) in a common field \(k'\), using the fraction field of a prime quotient of \(k\otimes_K K_\lambda\). The resulting inclusions are
+\[
+       T\longrightarrow\widehat T=k[[u]]
+          \longrightarrow V=k'[[u]],\qquad K_\lambda\subset k'.
+\]
+The first nonzero coefficient of a series stays nonzero after extending \(k\) to \(k'\), so \(u\)-adic orders are unchanged. Every nonzero element of \(K_\lambda\) is a constant unit of \(V\).
+
+Let \(R'\subset k'\) be a valuation ring extending the ring of \(K_\lambda\).
+The composite valuation has ring and maximal ideal
+\[
+ W=\{a\in V:\bar a\in R'\},\qquad
+ \mathfrak m_W=\{a\in V:\bar a\in\mathfrak m_{R'}\}.
+\]
+Thus \(\mathfrak m_V\subset\mathfrak m_W\). The
+coefficient uniformizer \(\pi\) is a unit of \(V\), but its
+residue in \(k'\) lies in \(\mathfrak m_{R'}\), so it belongs
+to \(\mathfrak m_W\).
+In particular the coefficient uniformizer distinguishes the two valuation rings by
+\[
+  \pi\in V^\times,\qquad \pi\in\mathfrak m_W .
+\]
+The extension of valuations used here follows by domination of
+a local ring by a valuation ring, or equivalently the extension
+theorem for Krull valuations.
+
+Apply proper extension, flag pivots, light pivots and the normal
+charts first over \(W\). The morphism to the fine valuation ring
+evaluates the chart in \(W\subset V\). Pullback to \(V\) gives
+the original horizontal point after the unramified extension.
+The integral frames differ there by units on the diagonals:
+the two underlying flag points agree by separatedness, and both
+frames are bases over \(V\). In this chart the inverse image of
+\(\mathfrak m_W\) contains both the inverse image of
+\(\mathfrak m_V\) and \(\pi\).
+Writing \(A\) for the chart ring, the two inverse images thus satisfy
+\[
+  (\mathfrak m_V\cap A)+\pi A\subseteq\mathfrak m_W\cap A .
+\]
+ This proves the specialization condition for the chosen model. An arbitrary neighborhood of a horizontal centre need not satisfy it.
+The good-level compactification used here is the same at each
+run and at all its places. \label{cor:slice-metrics-3}
+
+\proofstep{The corresponding least orders of the selected sections.}
+The algebraic test \eqref{eq:slice-tied-depth}
+in the light and auxiliary frames gives, with
+\(v(\pi_\lambda)=1\) for a uniformizer of \(K_\lambda\),
+\[
+ 0\le v(\eta),\qquad
+ v(w_b)\le\nu_\lambda+c'v(\eta),\qquad c'=c/(2i_\eta).
+\]
+Take \(v(\eta)\) finite by excluding its zero divisor in the
+open used to test regularity. It is nonzero on each component.
+For each integer \(l\ge1\) apply the assertion to
+\[
+ g_l=\pi^{\lceil e_O l\nu_\lambda\rceil}
+           \eta^{\lceil l c'\rceil}w_b^{-l},
+ \qquad e_O=\operatorname{ord}_O(\pi_\lambda).
+\]
+Use the readings in the chosen trivializations. The algebraic
+test and \(v(\pi)=1/e_O\) make every such value integral.
+Apply the same criterion to \(\eta\). Evaluate the resulting
+local-ring expressions at the centre of a slice valuation,
+where the generic readings are defined. After evaluation at the branch, the inequalities are
+\[
+ l\,v(w_b)\le
+   \lceil e_Ol\nu_\lambda\rceil\,v(\pi)
+      +\lceil lc'\rceil\,v(\eta).
+\]
+Divide by \(l\), keeping the branch fixed. The rounding
+errors tend to zero. On a vertical branch
+\(e_Ov(\pi)=1\) in the \(v(\pi_\lambda)=1\) normalization,
+which retains the coefficient baseline.
+
+On the horizontal
+branch the coefficient valuation is trivial and
+\(v(\pi)=0\), so only \(c'v(\eta)\) remains. Multiplying
+by the ramification factor on a vertical branch converts to
+its integer order. Summing with residue degrees gives exactly
+the auxiliary coefficient in the finite and horizontal
+comparisons for \(H_L\). Indeed 
+\[
+  E_q\le c'n_q(\eta)
+\]
+and each \(n_q(\eta)\ge0\). For a horizontal polynomial
+factor \(q\) its sphere height may be negative. Applying
+\eqref{eq:slice-sphere-lower} to the nonnegative difference
+\((c/i_\eta)n_q(\eta)-E_q\) incurs altogether at most
+\(s(c/i_\eta)a_\eta\ell_N\). This is the term
+\(s\beta a_e\ell_N\) above. At the last lift the
+test has only its baseline and the power of \(\eta\) is omitted.
+
+\proofstep{The complex metric in the adapted frame.}
+For the complex metric, choose the adapted frame attached to a
+generic embedding of \(\Omega_Z\). The invariant norms of the
+light forms then agree with the chart norms. For the auxiliary
+section the generic norm is at most the chart norm. The chart
+estimates with first-minimum function \(P\) are
+\[
+ -\log\big(\sum_l\|w_l\|^2\big)^{1/2}\le P_5 D_F+cP,
+ \qquad \log\|\eta\|\le-i_\eta(P-P_2).
+\]
+Since \(c\ge0\) and \(i_\eta>0\), substitution gives at each
+generic reading
+\[
+ -\log\big(\sum_l\|w_l\|^2\big)^{1/2}
+  \le P_5D_F+ (c/i_\eta)(-\log\|\eta\|)+cP_2 .
+\]
+The auxiliary reading is nonzero under a field embedding. These
+arguments reduce the metric comparisons to the algebraic-point
+bound and the two analytic first-minimum
+bounds on the selected forms. \label{cor:slice-metrics-4}
+\end{proof}

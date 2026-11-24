@@ -1,0 +1,348 @@
+\section{Galois representations of the contributing ordinary constituents}
+\label{sec:count-two-level-attachments}
+\hypertarget{source-ordinary-level-attachments}{}
+
+The two coefficient modules determine which classical forms can occur after localization. To compare their Hecke eigenvalues with deformation rings, we must attach Galois representations to the contributing forms at the same level. Starting
+with an algebraic ordinary constituent, we use the polarized
+Galois attachment and the local data at the split places to
+verify the required conditions. The integral representation
+and its ordered flags are used when specializing the seed and
+in the ensuing multiplicity arguments. To a constituent \(\sigma\), Proposition~\ref{prop:polarized-separating-constituent} attaches a representation of \(G_L\). The products in \eqref{eq:ordered-translation} determine the characters on the successive quotients of its ordinary flag, in the chosen order.
+
+Keep one of the two levels from Section~\ref{sec:count-two-level-data}.
+The hypotheses on the ground field fixing this level are
+\begin{equation}\label{eq:constituent-cm-field}
+ \begin{gathered}
+ L=L^+K_0,\qquad K_0\text{ imaginary quadratic},\qquad 2\mid[L^+:\mathbb Q],\\
+ e(w/v)=1\qquad (v\text{ finite in }L^+,\ w\mid v).
+ \end{gathered}
+\end{equation}
+The group is the unitary group
+of the standard Hermitian form and is compact at the real places.
+All places of \(L^+\) above \(\ell\) and all places where the
+level allows ramification are split in \(L\). Auxiliary places
+used to enlarge the level are split as well. Both levels in the chosen tower meet these splitting hypotheses, so the local attachment can be made at the very places on which their Hecke operators act.
+
+\subsection{The polarized representation of a constituent}
+
+At a separating classical evaluation the Hecke operators give Frobenius polynomials away from the level. The polarized attachment must have these polynomials and satisfy the local conditions dictated by the coefficient type.
+
+\begin{proposition}[The polarized representation of a classical constituent]
+\label{prop:polarized-separating-constituent}
+Assume \eqref{eq:constituent-cm-field}. Use the standard unitary group compact at infinity and either level of Section~\ref{sec:count-two-level-data}, with all places above \(\ell\), allowed ramification places and auxiliary places split in \(L\). A contributing classical constituent \(\sigma\) at a separating evaluation has a polarized Galois representation 
+\[
+ \rho_\sigma:G_L\longrightarrow\mathrm{GL}_n(\overline{\mathbb Q}_\ell)
+\]
+ with the prescribed classical compatibility.
+The construction applies at either level with its own coefficient
+data. The automorphic transfer and the Galois attachment in the
+proof use the cited results with those hypotheses.
+\end{proposition}
+
+\begin{proof}
+\proofstep{The constituent decomposition of the classical space.}
+Let \(C\) be the tensor of the algebraic coefficient space and
+the finite level coefficient spaces, and \(K\) the product of
+the groups at which their transformation rules are imposed.
+Realize the vector-valued forms as intertwiners from \(C^\vee\)
+into the scalar automorphic space. In its discrete decomposition
+\(\bigoplus_\sigma M(\sigma)\otimes\sigma\), write \(M(\sigma)\)
+for the multiplicity space. At the fixed finite level and
+algebraic weight the coefficient contribution is finite
+dimensional and decomposes as
+\[
+ \bigoplus_\sigma M(\sigma)\otimes
+                 \operatorname{Hom}_{K}(C^\vee,\sigma).
+\]
+The local level, unit-character and ordinary operators act
+within each constituent, so their selected summands impose
+the tests of Paragraph~\ref{par:ordinary-functions} on this
+same decomposition.
+\cite[Lemma 1.25]{newton-thorne-unitary}
+
+Let \(\sigma\) have nonzero intersection. Base change to \(L\)
+gives an isobaric sum of discrete conjugate self-dual automorphic
+representations of general linear groups. At every split place
+the local component of this sum is the component of \(\sigma\)
+under the chosen identification with \(\mathrm{GL}_n(L_w)\).
+At unramified places it is the unramified base change, and its
+infinitesimal character is determined by \(\sigma\) at infinity.
+The base-change theorem and its Galois corollary attach the continuous semisimple representation
+\[
+ \rho_\sigma:G_L\longrightarrow\mathrm{GL}_n(\overline{\mathbb Q}_\ell).
+\] It is unramified away from \(\ell\)
+where the constituent is unramified. At split places its
+Frobenius-semisimplified Weil--Deligne parameter is the
+algebraically normalized local parameter of the constituent,
+and it is de Rham above \(\ell\).
+\cite[Theorem 1.2 and Corollary 1.3]{newton-thorne-unitary}
+
+Here is the polarization and weight calculation for this
+attachment. A discrete summand of rank \(m s\) is the Speh
+representation of a conjugate self-dual cuspidal representation
+\(\pi_0\) of rank \(m\) and length \(s\). Its normalized parameter
+has the \(s\) twists of the cuspidal parameter with exponents
+\((s-1)/2-a\), \(0\le a<s\). This is the discrete spectrum
+classification of M{\oe}glin and Waldspurger.
+
+To express them
+using the normalization for cuspidal rank \(m\), put
+\[
+     t_a=\frac{m-n}{2}+\frac{s-1}{2}-a.
+\]
+The corresponding Galois summands are those of
+\(\pi_0|\det|^{t_a}\). Their weights are algebraic and regular:
+their infinitesimal characters after the common normalization
+are disjoint parts of the regular algebraic infinitesimal
+character of the rank-\(n\) base change. Each summand is
+essentially conjugate self-dual with a norm-character
+polarization, and the cuspidal attachment theorem supplies
+its de Rham weights. The shifts \(t_a\) compensate for the
+difference between the rank-\(m\) and rank-\(n\)
+normalizations. Hence the Hodge numbers of the full
+representation at an embedding are the numbers
+\((n-1)/2-z\) for the infinitesimal-character entries \(z\).
+With the dual of highest weight
+\(\lambda_\tau=(\lambda_{\tau,0},\ldots,\lambda_{\tau,n-1})\)
+at the embedding indexed by \(\tau\), these are
+\[
+    h_i(\tau)=\lambda_{\tau,n-1-i}+i,\qquad 0\le i<n.
+\]
+They are strictly increasing in the indicated order.
+\cite{moeglin-waldspurger,blggt}
+
+Fix complex conjugation \(c\). At unramified split places
+conjugation takes the rank-\(m\) Galois summand with twist
+\(t_a\) to the dual of the summand with twist \(t_{s-1-a}\)
+times \(\epsilon_\ell^{1-n}\). At the level of normalized Frobenius parameters, conjugation
+duals the rank-\(m\) parameter and contributes the exponent
+\(1-m\). Number the partner of slot \(a\) by \(a'=s-1-a\).
+Compared with the dual of that partner the exponent is
+\[
+ (1-m)+t_a+t_{a'}=(1-m)+(m-n)=1-n .
+\]
+Here the shifts \(t_a\) are exponents in the normalization
+of the local parameters of the algebraic rank-\(n\) summands.
+The split-prime Frobenius elements outside a finite set
+are dense up to conjugacy in \(G_L\).
+
+To see this in a
+finite quotient, pass to a finite Galois extension of \(L^+\)
+containing the fixed field of the quotient. Any element of
+the subgroup fixing \(L\) is realized by a Frobenius element
+over a split place of \(L^+\), by Chebotarev and choice of the
+place above it. Semisimplicity and the Frobenius identities
+therefore give
+\(\rho_\sigma^c\simeq \rho_\sigma^\vee\otimes
+\epsilon_\ell^{1-n}\).
+An intertwiner gives a nonsingular pairing \(P\) with
+\[
+  \rho_\sigma(g)^{\mathsf T}P\,\rho_\sigma(cgc^{-1})
+      =\epsilon_\ell(g)^{1-n}P .
+\]
+This is the pairing required for the determinant comparison.
+Write \(s_\nu\) for the Speh length of the \(\nu\)-th discrete
+summand. Each of its \(s_\nu\) cuspidal twists contributes a
+nonzero direct summand to the semisimple attachment. Thus
+\[
+ \rho_\sigma\text{ absolutely irreducible}
+ \ \Longrightarrow\ \sum_\nu s_\nu=1
+ \ \Longrightarrow\ \text{one discrete summand of length one}.
+\]
+This identifies the base change as cuspidal.
+
+The permitted level is hyperspecial off the finite ramification
+set. A nonzero contributing vector implies that the local
+constituent is unramified there. The attachment consequently
+factors through the same unramified Galois quotient as the
+determinant ring. At \(w\in S_{\mathrm t}\), the compact type
+forces the full prescribed inertia representation and \(N=0\).
+Since \(w\nmid\ell\), the Weil--Deligne description then gives
+the actual diagonal action on inertia by the Teichmüller lifts.
+At the split auxiliary places the local compatibility applies
+to the selected local factor. At unramified split places the
+coefficients of the geometric Frobenius polynomial are the
+Satake scalars with the powers \(q_w^{j(j-1)/2}\) of
+Section~\ref{sec:count-two-level-data}. This identifies the constituent by its split Hecke action. At \(w\mid\ell\) its ordinary operators will determine the flag. \label{cor:ordinary-level-attachments-1}
+
+\end{proof}
+
+\subsection{The ordered flag at the separating weights}
+
+The attachment identifies the local representation at a split place above the coefficient prime. An ordinary deformation also records an ordering of its flag. At separating weights the eigenvalues of the Jacquet operators recover the characters in that order.
+
+For the separating classical weights of
+Paragraph~\ref{par:ordinary-functions}, the smooth unit
+characters at \(w\mid\ell\) are pairwise distinct. Write
+\(K=L_w\), \(q=\ell^f\) and \(e=e(K/\Q_\ell)\).
+
+\begin{lemma}[Ordering the inducing characters by the ordinary Jacquet character]\label{lem:ordinary-jacquet-reading}
+Let the common eigenvector at a separating classical weight
+have pairwise distinct smooth unit characters and nonzero
+ordinary translation eigenvalues. Write \(v\) for this vector, \(N_B\) for the upper unipotent radical and \(q_{N_B}:\pi_w\to(\pi_w)_{N_B}\) for the Jacquet quotient. Then
+\[
+ q_{N_B}(v)\ne0,
+\]
+and the chosen Jacquet character orders the inducing
+Weil characters \(\omega_i\) of the local principal series.
+This series is irreducible with zero monodromy. The
+weight-normalized translation eigenvalues satisfy
+\eqref{eq:ordered-translation}.
+\end{lemma}
+
+\begin{proof}
+Let \(v\) be the prescribed eigenvector. If its image in
+unipotent coinvariants vanished, write
+\[
+                   v=\sum_b (u_b-1)w_b
+\]
+with finitely many \(u_b\) in that unipotent group. Choose a
+compact averaging group containing the \(u_b\), which makes the
+average of every summand zero. The formula for the translation
+by a sufficiently large power of the contracting diagonal uses
+such an average, after conjugation. Its value on \(v\) is
+instead a nonzero power of the ordinary eigenvalue times \(v\).
+This contradiction proves that the Jacquet reading is nonzero. The Jacquet subquotient theorem gives a principal
+series containing the local factor. Distinct restrictions to units rule out linking: for two of the inducing characters the implication is
+\[
+ \chi_i|_{\mathcal O_K^\times}\ne\chi_j|_{\mathcal O_K^\times}\quad\Longrightarrow\quad\chi_i/\chi_j\ne|\cdot|^{\pm1}.
+\]
+Thus their principal series is irreducible.
+
+Let \(\omega_i\), in the order of this eigenvector,
+be the Weil characters in the algebraic normalization, viewed
+as characters of \(K^\times\). The local comparison gives zero
+monodromy and these Weil lines. Distinctness on inertia implies
+that the Weil action is already Frobenius-semisimple, since
+Frobenius preserves its one-dimensional inertia eigenspaces.
+
+Put \(\alpha_i=\omega_i(\varpi_w)\), taking \(\ell\)-adic values
+using the coefficient identification. Write \(b_j\) for the
+eigenvalue of the weight-normalized translation with
+\(j\) uniformizer entries first. The two normalizations give
+\begin{equation}\label{eq:ordered-translation}
+ b_j
+   =\frac{q^{-j(j-1)/2}\prod_{i<j}\alpha_i}
+           {\prod_{\tau:K\hookrightarrow\overline{\Q}_\ell}
+                   \tau(\varpi_w)^{\sum_{i<j}\lambda_{\tau,n-1-i}}}.
+\end{equation}
+In the unnormalized Jacquet module, the translation sum
+contributes the index \(q^{j(n-j)}\) from the upper unipotent
+group. Normalizing the Jacquet action contributes the square
+root of the Borel modulus \(q^{-j(n-j)/2}\). Passing from the
+inducing characters to the algebraically normalized Weil lines
+contributes \(q^{-j(n-1)/2}\). Their product is
+\[
+       q^{j(n-j)}q^{-j(n-j)/2}q^{-j(n-1)/2}
+                     =q^{-j(j-1)/2}.
+\]
+Removing the algebraic weight divides by the remaining
+factor in \eqref{eq:ordered-translation}.
+\end{proof}
+
+\begin{construction}
+\[
+\begin{array}{ll}
+\text{ordinary datum}&\text{Weil parameter or Hodge weight}\\ \hline
+b_j&\text{shifted product on the first }j\text{ Weil lines}\\
+b_j/b_{j-1}&\text{next line after the corresponding shift}\\
+\operatorname{gr}_i&\text{Weil character }\omega_i,\quad
+       h_i(\tau)=\lambda_{\tau,n-1-i}+i
+\end{array}
+\]
+\caption{The cumulative ordinary eigenvalues determine the successive characters of the flag at a separating evaluation. The shifts are those of \eqref{eq:ordered-translation}.}\label{fig:ordinary-ordered-flag}
+\end{construction}
+
+\begin{proposition}[The flag with the ordered local characters]
+\label{prop:ordinary-ordered-separating-flag}
+Use the separating evaluations and the ordered Weil lines of
+Lemma~\ref{lem:ordinary-jacquet-reading}. The local Galois
+representation admits an ordered flag whose successive quotients
+have Weil characters \(\omega_i\) and labeled weights
+
+\[
+ h_i(\tau)=\lambda_{\tau,n-1-i}+i.
+\]
+ The shifted products on a
+geometric Artin lift of \(\varpi_w\) equal the \(b_j\) of
+\eqref{eq:ordered-translation}; dividing consecutive products reads
+the individual characters.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Equality in weak admissibility.}
+The ordinary Jacquet character determines the valuations of ordered products of Frobenius eigenvalues. Equality in weak admissibility is what turns these numerical identities into subrepresentations of the local Galois representation.
+
+On the ordinary summand every \(b_j\) is an \(\ell\)-adic
+unit. Since \(v_\ell(\tau(\varpi_w))=1/e\), this says
+\[
+ e\,v_\ell\left(\prod_{i<j}\alpha_i\right)
+       = \sum_{\tau:K\hookrightarrow\overline{\Q}_\ell}
+                      \sum_{i<j}h_i(\tau).
+\]
+Work with the filtered module with descent data of
+\(\rho_\sigma|_{G_K}\), over a finite Galois extension \(K'/K\)
+where it is crystalline and the finite inertia characters
+are trivialized.
+The Weil lines give ordered \(\varphi\)-stable summands
+with descent data. For their first \(j\) summands the
+left side times \([K':K]\) is the Newton number in the
+normalization summing over all embeddings of \(K'\).
+The Frobenius slopes scale by the residue degree, and the
+ramification index supplies the remaining factor.
+Every embedding \(\tau\) of \(K\) has \([K':K]\) extensions and the weights repeat at these extensions. Hence
+\[
+ \sum_{\tau' : K'\hookrightarrow\overline{\mathbb Q}_\ell}\sum_{i<j}h_i(\tau'|_K)=[K':K]\sum_\tau\sum_{i<j}h_i(\tau).
+\]
+
+Write \(D_j\) for this filtered subobject over \(K'\), and put
+\(S_j=\sum_{\tau}\sum_{i<j}h_i(\tau)\), with \(\tau\) ranging
+over embeddings of \(K\). At each embedding of \(K'\),
+the induced filtration inherits \(j\) ambient jumps, whose sum
+is at least the sum of the first \(j\). Weak admissibility gives
+the other inequality:
+\[
+ [K':K]S_j\ \le\ t_H(D_j)\ \le\ t_N(D_j)
+     =[K':K]\,e\,v_\ell\!\left(\prod_{i<j}\alpha_i\right)
+     =[K':K]S_j .
+\]
+Equality holds at each embedding because each individual excess
+above the sum of the first \(j\) jumps is nonnegative. All its subobjects inherit the weak
+admissibility inequality from the ambient module.
+The equivalence for weakly admissible filtered modules,
+with descent by full faithfulness, therefore gives
+an ordered Galois flag. The \(i\)-th successive quotient
+has Weil character \(\omega_i\) and weights \(h_i(\tau)\).
+\cite{colmez-fontaine}
+
+\proofstep{The ordered characters on the decomposition group.}
+Under geometric reciprocity, the rank-one quotient has
+character on \(K^\times\)
+\[
+    a\longmapsto \omega_i(a)
+                     \prod_\tau\tau(a)^{-h_i(\tau)}.
+\]
+This is the local class-field description of a de Rham
+character with the indicated smooth Weil part and labeled
+weights, where the cyclotomic character has weight \(-1\).
+On units the inverse coefficient character is
+\(\theta_i^{-1}(a)=\omega_i(a)
+\prod_\tau\tau(a)^{-\lambda_{\tau,n-1-i}}\).
+Here \(\omega_i|_{\mathcal O_K^\times}\) is the smooth
+factor. The quotient agrees on inertia with the
+specified character after reinstating the shift by
+\(\epsilon_\ell^{\,i}\) of Section~\ref{sec:count-two-level-data}.
+
+On a geometric Artin lift of the uniformizer, the
+cyclotomic value is \(N_{K/\Q_\ell}(\varpi_w)/q\).
+Since \(\prod_\tau\tau(\varpi_w)=N_{K/\mathbb Q_\ell}(\varpi_w)\),
+the two contributions to the quotient multiply to
+\[
+ \left(\frac{N_{K/\mathbb Q_\ell}(\varpi_w)}{q}\right)^i
+ \prod_\tau\tau(\varpi_w)^{-i}=q^{-i}.
+\] Thus the product of these shifted
+characters for \(i<j\) is \(b_j\) by
+\eqref{eq:ordered-translation}. Dividing consecutive
+products recovers the full ordered characters.
+This supplies the local flag at the separating evaluations of the ordinary Hecke action. \label{cor:ordinary-level-attachments-2}
+\end{proof}

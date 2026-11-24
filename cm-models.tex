@@ -1,0 +1,346 @@
+\subsection{Good inert places and translated theta sections}
+\label{subsec:cm-models}
+\hypertarget{source-cm-models}{}
+
+The formal group computation applies to the period kernel only if the translated theta sections extend on the corresponding integral CM model.
+
+Let \(K=\mathbb Q(\sqrt{-D})\), where \(D>0\) is squarefree
+and \(D\equiv3\bmod4\). The period lattice \(\Gamma\subset\C\)
+is stable under \((1+\sqrt{-D})/2\). Thus its multiplier order
+is the full ring of integers of \(K\). Fix \(p\ge5\) inert in
+\(K\) and an abstract field isomorphism \(\C\simeq\C_p\).
+All analytic identities below are transported on Taylor
+coefficients. Put \(R=W(\overline{\mathbb F}_p)\), the integers
+of the completed maximal unramified field, and let \(\sigma\)
+be its Witt Frobenius.
+
+\begin{proposition}[Good model and integral CM coordinates]\label{prop:good-inert-cm-model}
+At the specified inert \(p\ge5\), a homothety of the complex
+period lattice gives a good short model with coefficients in \(R\)
+under the chosen transport. The
+elliptic formal group has \(p\)-height two and admits an integral comparison with unit tangent
+\[
+ t(X)=l^{-1}(cL(X))\in R[\![X]\!],\qquad t'(0)=c\in R^\times.
+\]
+
+Nonzero prime-to-\(p\) torsion sections have integral affine
+coordinates on the good model.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Obtain good reduction with full level three.}
+
+Equip the elliptic curve with a
+full level-three basis. The main theorem of complex multiplication
+gives the moduli point with this basis over the ray class field
+of modulus \(3\) over \(K\): under reciprocity the local units
+preserve the ideal lattice and the units congruent to \(1\) at
+\(3\) preserve the basis modulo \(3\). The full basis removes
+automorphisms, so the curve with level structure descends there.
+This field is unramified at \(p\). The singular modulus is
+integral, so the curve has potentially good reduction. Its
+inertia image on the \(3\)-adic Tate module is finite and
+congruent to the identity modulo \(3\); it is trivial, since
+the matrix logarithm on \(1+3M_2(\mathbb Z_3)\) has the
+matrix exponential as inverse, and a torsion matrix there
+has logarithm zero.
+Indeed a torsion element \(A\in1+3M_2(\mathbb Z_3)\) of order \(n\) satisfies
+\[
+  0=\log(A^n)=n\log A\quad\Longrightarrow\quad \log A=0\quad\Longrightarrow\quad A=I .
+\]
+
+The good reduction criterion applies
+since \(3\ne p\). A good Weierstrass model can be shortened
+over \(R\) because \(2,3\) are units. Matching an invariant
+differential scales \(g_2,g_3\) by the fourth and sixth
+powers of a single factor.
+Thus a change of scale by \(u\) preserves the quotient defining \(j\), since
+\[
+  (u^4g_2)^3=u^{12}g_2^3,\qquad (u^6g_3)^2=u^{12}g_3^2.
+\]
+ CM endomorphisms extend over the
+valuation ring by the extension property of abelian schemes;
+they are defined over the moduli field containing \(K\),
+as can also be seen from their faithful action on the tangent
+line. \cite{cm-reciprocity,serre-tate}
+
+\proofstep{Determine the height and lift the formal isomorphism.}
+
+The formal completion is a one-dimensional formal
+\({\cal O}_{K_p}\)-module. The action of \({\cal O}_K\) extends
+by \(p\)-adic continuity: in logarithmic coordinates the
+coefficients of \([a](t)=l^{-1}(a l(t))\) at each degree are
+polynomials in \(a\), and \(R\) is closed. The special fibre
+of the elliptic formal group has \(p\)-height \(h=1\) or \(2\).
+The first nonzero term of \([p]\) in the residue field has
+degree \(p^h\). Let its leading coefficient be \(A\ne0\).
+
+In the residue
+field the leading terms of \([p]\circ[a]\) and
+\([a]\circ[p]\) agree, so
+\[
+                    A\bar a^{p^h}= \bar a A
+                            \quad(\bar a\in\mathbb F_{p^2}).
+\]
+Thus \(2\mid h\), and \(h\in\{1,2\}\) gives \(h=2\). The height as
+a formal \({\cal O}_{K_p}\)-module is one. Over an algebraically
+closed residue field such modules of the same height and
+structural embedding are isomorphic, and the deformation ring
+of a height-one formal module is just \(R\). The model with
+logarithm \(L\) in \eqref{eq:integral-log} has this height:
+its \([p]\)-series has linear coefficient \(p\), no terms of
+degrees \(2,\ldots,p^2-1\), and coefficient \(1-p^{p^2-1}\)
+at degree \(p^2\), by comparison in \(L([p]X)=pL(X)\).
+
+In particular the first surviving term on reduction is
+\[
+  [p](X)\equiv X^{p^2}\pmod{(p,X^{p^2+1})}.
+\]
+It has the integral action of the specified quadratic integers
+by \eqref{eq:integral-log}. Lift an isomorphism of the two
+reductions by the height-one deformation theorem. Comparing
+logarithms gives an integral isomorphism \(t(X)=l^{-1}(cL(X))\)
+with \(c\in R^\times\) its tangent map. Nonzero prime-to-\(p\)
+torsion on the good curve has integral affine coordinates in
+\(R\): the corresponding torsion group scheme is finite
+\'etale over the strictly henselian ring, so its distinct
+sections reduce distinctly, including the zero section.
+\cite{drinfeld-formal,serre-tate}
+
+\end{proof}
+
+Normalize the analytic invariants by the good-model homothety.
+For the quasi-period homomorphism of the Weierstrass zeta
+function write \(\eta(\omega)=s_2\omega+B\bar\omega\) on
+\(\Gamma\).
+
+\begin{proposition}[The integral norm relation]\label{prop:good-cm-norm}
+For the normalized good model the quadratic correction \(s_2\)
+belongs to \(R\). For every quadratic unit \(a\) at \(p\), its action in the good formal coordinate satisfies the congruence \eqref{eq:cm-norm-relation}
+\[
+ q([a]X)\sim a\sigma(a)q(X).
+\]
+
+\end{proposition}
+
+\begin{proof}
+\proofstep{Compare the isogeny divisor and its leading coefficient.}
+
+The Legendre relation gives
+\(B=\pi/\operatorname{area}(\C/\Gamma)\).
+Then \(\varsigma_*(z)=\varsigma(z)e^{-s_2z^2/2}\) obeys
+\[
+ \varsigma_*(z+\omega)=\chi(\omega)
+         \exp\big(B(z\bar\omega+|\omega|^2/2)\big)
+         \varsigma_*(z),\qquad \chi(\omega)\in\{1,-1\}.
+\]
+For \(0\ne a\in{\cal O}_K\) let \(n=a\bar a\). On the complex
+elliptic curve the following identity holds:
+\begin{equation}\label{eq:cm-isogeny}
+ \frac{\varsigma_*(az)^2}{\varsigma_*(z)^{2n}}
+       =a^2\prod_{P\in\ker[a]\setminus\{0\}}
+                                      (\wp(z)-\wp(P)).
+\end{equation}
+The left side is elliptic since the Hermitian exponent scales
+by \(a\bar a\) and the signs square to one. The two sides have
+the same divisor.
+
+For a point with \(P=-P\) the factor on the
+right has a double zero there; otherwise the two factors for
+\(P,-P\) provide the double zero. Comparison of the first
+Laurent coefficients at zero gives \(a^2\). Comparison at
+the next even power gives
+\[
+                 (a^2-n)s_2=\sum_{0\ne P\in\ker[a]}\wp(P).
+\]
+Take \(a=\sqrt{-D}\). All these points have order dividing
+\(D\), and \(a^2-n=-2D\) is a unit at \(p\). The good torsion
+calculation therefore puts \(s_2\) in \(R\).
+
+\proofstep{Use prime-to-\(p\) torsion and approximate the local units.}
+
+For \(a\) a unit at \(p\), express \eqref{eq:cm-isogeny} in
+the integral parameter \(t\). With \(A(t)=t^2\wp(l(t))\)
+the result is
+\[
+ \exp\{-2(q_E([a]t)-nq_E(t))\}
+  =\left(\frac{a t}{[a]t}\right)^2
+                   \prod_{0\ne P\in\ker[a]}(A(t)-\wp(P)t^2).
+\]
+The right side is a principal integral unit. The factor
+\([a]t/(a t)\) is integral with constant one by the extension
+of the CM action, and all kernel points have prime-to-\(p\)
+order.
+
+Taking a square root is integral since \(p\) is odd.
+Conjugate by \(t(X)\) and absorb the unit \(t(X)/(cX)\) as
+in the preceding subsection. The norm relation
+\eqref{eq:cm-norm-relation} follows for \(a\in{\cal O}_K\)
+of prime-to-\(p\) norm. Such elements are dense in
+\({\cal O}_{K_p}^\times\): approximate the two coordinates
+in the integral basis \(1,(1+\sqrt{-D})/2\) modulo \(p^j\).
+The first approximation modulo \(p\) already ensures the
+norm is prime to \(p\).
+Indeed, for the approximants \(a_j\) to a unit \(u\),
+\[
+  a_j\equiv u\pmod {p^j}\quad\Longrightarrow\quad a_j\bar a_j\equiv u\bar u\not\equiv0\pmod p .
+\]
+ On this quadratic field \(\sigma\)
+is conjugation. Each coefficient of the exponential of the
+norm difference is continuous in \(a,\sigma(a)\); its value
+on all units is integral by closedness. This supplies the
+comparison with all scalars in the trace calculation.
+
+\end{proof}
+
+Use the Heisenberg translation
+\[
+ (U_P f)(z)=f(z+P)\exp\{-B(z\bar P+|P|^2/2)\}.
+\]
+\begin{proposition}[Integral gauged torsion translates]\label{prop:good-cm-torsion-translates}
+For each prime-to-\(p\) translate \(P\) of the normalized even
+section \(\vartheta_0\), write \(G_P(t)=e^{q_E(t)}(U_P\vartheta_0)(l(t))\). The integrality and primitivity conclusions are
+\[
+ G_P(t)\in R[\![t]\!],\qquad G_P(t)\bmod\mathfrak m_R\ne0.
+\]
+ The same assertion holds in the
+integral coordinate \(X\) with its gauge \(q\).
+\end{proposition}
+
+\begin{proof}
+\proofstep{Obtain the addition recurrence.}
+
+In \(t\) coordinates write \(G_P(t)=e^{q_E(t)}
+ (U_P\varsigma_*)(l(t))\). In particular \(G_0=t\).
+For \(P\) a period this is \(t\) times a sign. If \(Q\)
+represents a nonzero torsion point, \(C=G_Q(0)\ne0\).
+Sigma addition, with all quadratic exponential factors
+cancelled, gives for \(P\) nonzero modulo periods
+\begin{equation}\label{eq:torsion-difference}
+      G_{P+Q}G_{P-Q}
+            = C^2\{\wp(Q)-\wp(l(t)+P)\}G_P^2 .
+\end{equation}
+\proofstep{Determine the exact special-fibre orders.}
+
+Take \(N\) the exact order of \(Q\), prime to \(p\). For
+\(1\le j<N\) write \(f_j=\wp(Q)-\wp(l(t)+jQ)\).
+It is an integral unit times \(t^{b_j}\), with
+\(b_j={\bf1}_{j=1}+{\bf1}_{j=N-1}\). To check this, translation
+by the integral section \(jQ\) identifies the completed local
+ring there with \(R[[t]]\); \(x\) is regular on its neighbourhood.
+The divisor \(x-x(Q)\) on the smooth Weierstrass curve has
+zeros exactly at the sections \(Q,-Q\), counted with
+multiplicity. On the special fibre its zeros have the same
+description. Reduction injects this prime-to-\(p\) torsion
+group; at order two the double zero is exact since the cubic
+has distinct roots and \(p>2\). Thus the first nonzero
+coefficient at the indicated order is a unit.
+
+\proofstep{Recover the scalar and the integral series.}
+
+Repeatedly using \eqref{eq:torsion-difference} gives
+\[
+ G_{NQ} G_0^{\,N-1}
+       =G_Q^{\,N}\prod_{j=1}^{N-1}(C^2 f_j)^{N-j}.
+\]
+This follows by taking successive quotients \(G_{(j+1)Q}/G_{jQ}\)
+in the Laurent series field. The total vanishing order of the
+product of \(f_j\)'s is \(N\), including \(N=2\). The left side
+is a unit scalar times \(t^N\). Cancel powers of \(t\) and
+compare constants: 
+\[
+  |C|_p^{N^2}=1\quad\Longrightarrow\quad v_p(C)=0.
+\]
+ Hence \(G_Q^N\) is
+an integral unit, and \(G_Q/C\) itself is one by the binomial
+series with exponent \(1/N\). For \(Q\) representing zero the
+formula \(G_Q=\pm t\) gives integrality directly.
+
+Fix a
+nonzero half-period \(Q_0\). Normalize the even translate
+\(\vartheta_0=U_{Q_0}\varsigma_*/(U_{Q_0}\varsigma_*)(0)\).
+Composing translations by \(P,Q_0\) differs from translation
+by \(P+Q_0\) by a root of unity for torsion arguments, since
+the alternating lattice pairing takes rational values on
+division points. The denominator at \(Q_0\) is a unit by the
+order-two case. Thus for any prime-to-\(p\) translate \(P\),
+\(e^{q_E(t)}(U_P\vartheta_0)(l(t))\) is integral with some
+unit coefficient. Substitution of the integral isomorphism
+\(t(X)\) and the change \(q_E\mapsto q\) preserve this
+assertion.
+
+\end{proof}
+
+\begin{auxlemma}[Extracting a coefficient or a derivative from disjoint copies]
+\label{lem:cm-disjoint-tensor}
+Let \(F\) be a valued field of characteristic zero and
+\(H(X)=\sum_\alpha a_\alpha X^\alpha\in F[[X_1,\ldots,X_n]]\).
+For any \(m\ge1\), take disjoint sets of variables \(X^{(1)},\ldots,X^{(m)}\)
+and set \(T=\prod_{j=1}^m H(X^{(j)})\). For a multi-index \(\nu\),
+\[
+ \left[\prod_j(X^{(j)})^\nu\right]T=a_\nu^m,\qquad
+ \left.\left(\prod_j\partial_{X^{(j)}}^\nu\right)T\right|_0
+         =\bigl((\partial_X^\nu H)(0)\bigr)^m .
+\]
+Integrality of the indicated coefficient or derivative of \(T\)
+therefore gives integrality of the corresponding coefficient or derivative of \(H\).
+\end{auxlemma}
+
+\begin{proof}
+In the indicated monomial each set of variables has its own exponent \(\nu\),
+so precisely one product of coefficients occurs. Multiplying each factor
+by \(\nu!=\prod_i\nu_i!\) gives the derivative identity. If a nonzero
+element has integral \(m\)-th power, then \(m\) times its valuation is
+nonnegative. The zero reading is integral as well.
+\end{proof}
+
+\begin{proposition}[Integral correction in an inert CM chart]\label{prop:inert-cm-chart}
+For the full-order curve at an inert prime \(p\ge5\),
+use the good formal model after homothety. Suppose that, after an integral unitary change of orthogonal frame,
+the fourth tensor power of the translated theta section is a finite
+integral linear combination of products of the one-variable
+translates of Proposition~\ref{prop:good-cm-torsion-translates}.
+For formal coordinates \(\mathbf X\) on that chart, the corrected series satisfies
+\[
+ e^{\sum q}\Theta\in R[\![\mathbf X]\!].
+\]
+This includes \(\Theta(0)=0\). Here \(q\) is the quadratic correction
+series from Section~\ref{subsec:curve-exponents}.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Transport the gauge by the integral unitary frame.}
+
+To see where these one-variable units enter the orthogonal
+chart, let \(\gamma\) be an integral unitary change of frame
+over the quadratic integers at \(p\). Its inverse conjugate
+transpose is integral. On \(4n\) coordinates it acts by
+\(Z\mapsto L^{-1}(\gamma L(Z))\) componentwise. By the CM
+norm relation and additivity of \(b\), the sum of \(q\) over
+all coordinates is invariant modulo \(\sim\): the diagonal
+contractions of \(\gamma^*\gamma\) are one and the off-diagonal
+ones vanish.
+
+For the contracted coefficients the two cases read
+\[
+  \sum_i\overline{\gamma_{ij}}\gamma_{ik}=(\gamma^*\gamma)_{jk}=\delta_{jk}.
+\]
+ Suppose in this frame the fourth tensor of the
+translated theta section has a finite expansion in products
+of the one-variable translates above, with integral coefficients.
+After multiplication by the exponential of the summed \(q\)
+each product is integral. Undo the unitary substitution and
+absorb the principal unit from the invariant sum. The result
+is that the fourth tensor of \(e^{\sum q}\Theta\) is integral.
+\proofstep{Recover each coefficient from its fourth power in disjoint variables.}
+
+Lemma~\ref{lem:cm-disjoint-tensor}, with \(m=4\) and 
+\[
+  H=e^{\sum q}\Theta,
+\]
+now gives integrality coefficient by coefficient, including at a zero
+of the section.
+
+The global scalar and its local standard frames are constructed in Section~\ref{subsec:theta-normalization}.
+\label{cor:cm-models-1}
+\end{proof}

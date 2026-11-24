@@ -1,0 +1,389 @@
+\subsubsection*{The residual coefficient of the signature determinant}
+\label{subsec:residual-twist}
+
+The signature lattice now gives a square matrix. To control its determinant at a specialization, we need a coefficient detectable from the mod-\(\ell\) Selmer classes and the Frobenius elements chosen for them.
+
+Keep the notation of Section~\ref{subsec:signature-selmer} and write
+\(W=T\otimes k\), \(W'=W^\vee(1)\). Conjugation of a group
+element by complex conjugation is denoted by \(h\mapsto h^c\).
+The good-signature duality gives an integral isomorphism of
+\((T^\vee(1))^c\) with \(T\otimes\epsilon^t\), where \(\epsilon\)
+is cyclotomic. The tame marking gives an inertia element \(z\)
+acting on \(W\) by \(d\), with \(d^2\ne1\), and on \(W'\) by
+\(d^{-1}\). At \(z^c\) the two scalars are reversed.
+Both modules are absolutely irreducible. Let \(S,S'\) be the
+residual Selmer groups for these modules at empty auxiliary
+level, with finite local conditions at \(\ell\) defined by
+the integral lattices.
+
+\begin{lemma}[Residual Selmer dimensions]
+For the residual primal and dual Selmer spaces of a good signature over its residue field \(k\),
+\[
+ \dim_k S=\dim_k S'.
+\]
+\end{lemma}
+\begin{proof}
+At \(v\mid\ell\), the cup of two integral finite cocycles has
+zero rational invariant by Bloch--Kato orthogonality. The local
+invariant map embeds integral \(H^2\) in rational \(H^2\) on the
+scalar Tate twist, hence the reductions are orthogonal. For the
+lattice of \(W\), Section~\ref{subsec:signature-selmer} gives
+\[
+ \dim L_v(k)-\dim H^0(E_v,W)
+   =\dim H^1_f(E_v,V)-\dim H^0(E_v,V).
+\]
+The right side is the dimension of the de Rham quotient by
+\(\operatorname{Fil}^0\). Add this equality to its analogue for
+the dual lattice. At each embedding the two quotient dimensions
+sum to \(r\) by the dual Tate filtration. Local duality identifies the invariants of the Tate dual with the
+dual of \(H^2(E_v,W)\). Thus the local Euler characteristic reads
+\[
+ \dim L_v(k)+\dim L'_v(k)
+ = [E_v:\mathbb Q_\ell]r+\dim H^0(E_v,W)+\dim H^2(E_v,W)
+ =\dim H^1(E_v,W).
+\]
+The orthogonal subspaces therefore have complementary dimensions.
+
+At the type and distinguished places
+away from \(\ell\) the inertia test of the signature excludes
+invariants on the residual modules: an
+inertia element acts with no eigenvalue one. The dual has
+the inverse eigenvalues there. The local Euler characteristic
+and duality give \(H^1=0\). Away from these places and
+\(\ell\), the unramified subgroups are exact annihilators.
+Global duality (the finite-module Selmer order formula) now
+gives \(|S|/|S'|=1\): the global invariant factors are one,
+the complex factors contribute \(|W|^{-f}\), and the
+\(\ell\)-adic factors contribute \(|W|^f\) by
+\eqref{eq:signature-local-size}. \cite{bloch-kato,milne-duality}
+
+\end{proof}
+\paragraph{Forms specified by Frobenius elements.}
+There is an open normal subgroup \(J\subset H\), stable under
+\(c\), on which the residual representations and the action
+on \(\mu_{2L}\) are trivial and which contains all commutators
+\([g,z]\). Intersect \(H\) with the cyclotomic and residual
+kernels and with the conjugate of the intersection. The
+commutators lie in these groups because \(H\) contains
+inertia at the distinguished pair, cyclotomic is abelian,
+and the marked elements act by scalars. The same construction
+works simultaneously for finitely many signatures. If needed
+one may replace each residual kernel here by the kernel modulo
+\((\ell^{\nu_\ell})\mathfrak m_{O_0}\): the distinguished
+inertia acts by scalars integrally on \(T\).
+
+For \(h\in J\) put
+\[
+       B_h(x,y)=x(h)\cdot y(h)-x(h^c)\cdot y(h^c)
+            \qquad (x\in S,\ y\in S').
+\]
+\begin{lemma}[Corank of the Frobenius pairing]
+\label{lem:residual-frobenius-forms}
+For every good signature there is a linear combination \(B\) of the second-half Frobenius forms for which
+\[
+ \dim\ker\bigl(S\longrightarrow(S')^*,\ x\longmapsto B(x,\cdot)\bigr)\le \mathbf1_{\nu_\ell>0}.
+\] The same second-half primes can be
+used for the finitely many signatures. Before combining their
+lists, each requires at most \((\dim S+\dim S')^2\) elements of \(J\).
+\end{lemma}
+\begin{proof}
+The values are independent of the cocycle representatives.
+Restriction to \(J\) is injective on cohomology. In fact a
+cocycle \(x\) vanishing there factors through a quotient in
+which \(z\) is central. The two expressions for \(x(gz)=x(zg)\)
+give
+\[
+ (d-1)x(g)=(g-1)x(z),\qquad
+ x(g)=(g-1)\bigl((d-1)^{-1}x(z)\bigr).
+\]
+Thus \(x\) is a coboundary. On the dual use \(d^{-1}\) in the
+same identity; both denominators are nonzero. For independent classes
+\(x_1,\ldots,x_a\) with values in \(W\), the vectors
+\((x_j(h))_j\) span \(W^a\) over \(k\) as \(h\) varies in
+\(J\). Let \(U\) be the span of the evaluation tuples in \(W^a\). It is stable by conjugation. If \(U\) were proper, semisimplicity and absolute irreducibility would give scalars, not all zero, with
+\[
+ \sum_{j=1}^a c_j x_j(h)=0\qquad(h\in J).
+\]
+Indeed any map \(W^a\to W\) on this isotypic space is a linear combination of coordinate projections. Restriction injectivity rules it out.
+
+If \(W\not\simeq (W')^c\), then
+\(W,W',W^c,(W')^c\) are pairwise inequivalent: the scalars
+at \(z\) separate the two groups and conjugation carries the
+remaining inequivalence to its partner. For bases of \(S,S'\)
+the simultaneous evaluations of these four lists on \(h\)
+span the direct sum of their four full isotypic spaces. This
+follows from the preceding projection test on each simple
+type. To show that the \(B_h\) span all bilinear forms, suppose
+\[
+ \sum_{i,j}a_{ij}B_h(x_i,y_j)=0
+\]
+for every \(h\in J\).
+
+Write the four evaluation blocks as \(v_i,w_j,\tilde v_i,\tilde w_j\),
+so the relation says that every evaluation tuple is a zero of
+\[
+ Q(v,w,\tilde v,\tilde w)=\sum_{i,j}a_{ij}
+      (v_i\cdot w_j-\tilde v_i\cdot\tilde w_j).
+\]
+Evaluation on \(J\) is additive, so the bilinear form
+\(B_Q(s,t)=Q(s+t)-Q(s)-Q(t)\) vanishes on all pairs of evaluation
+tuples and hence on their full linear span. Fix \(i,j\); give
+\(s\) just the entry \(v\) in the \(i\)-th first block and
+\(t\) just the entry \(w\) in the \(j\)-th second block. Then
+\begin{equation}\label{eq:frobenius-polarization-block-test}
+ 0=B_Q(s,t)=a_{ij}\,v\cdot w .
+\end{equation}
+Choosing a pair with nonzero pairing in \eqref{eq:frobenius-polarization-block-test} forces \(a_{ij}=0\), including
+in characteristic two.
+
+If \(W\simeq(W')^c\), choose an invertible intertwining
+matrix \(A\), so that
+\(W(g^c)^t A W(g)=\bar\epsilon(g) A\), with superscript
+\(t\) on a matrix denoting transpose. Transposing the same
+identity at \(g^c\) shows \(A^t=\lambda A\) by Schur's lemma.
+Here \(\lambda^2=1\) and \(\lambda^r=1\) by determinants, so
+\(A^t=A\) since \(r\) is odd. Transport \(S'\) to a subspace
+\(S_2\) of \(H^1(E,W)\) by sending \(y\) to \(A^{-1}y^c\).
+Choose a basis of \(S+S_2\) and evaluate it at \(h,h^c\).
+The two evaluations span the two full isotypic blocks together
+because \(z\) separates \(W\) and \(W^c\).
+
+In this basis the
+form has matrix entries
+\[
+     x_i(h)^t A x_j(h^c)-x_i(h^c)^t A x_j(h).
+\]
+A relation with coefficients \(a_{ij}\) depends on
+\(a_{ij}-a_{ji}\). Polarization and testing on vectors in
+the two separate blocks forces \(a_{ij}=a_{ji}\). Conversely
+these symmetric relations annihilate the displayed alternating
+matrices, including their diagonals. Thus the forms span the restrictions of alternating forms on
+\(S+S_2\). Set \(J_0=S\cap S_2\) and take complements
+\(S=J_0\oplus U\), \(S_2=J_0\oplus U'\). These complements
+have the same dimension. With dual bases for the pairing
+of \(U\) with \(U'\), choose the restriction \(S\times S_2\)
+with block matrix
+\[
+ \begin{pmatrix}J_{\dim J_0}&0\\0&I_{\dim U}\end{pmatrix},
+ \qquad
+ J_d=\bigoplus_{i=1}^{\lfloor d/2\rfloor}
+       \begin{pmatrix}0&1\\-1&0\end{pmatrix}
+       \quad\text{with a final zero block if \(d\) is odd}.
+\]
+The opposite off-diagonal pairing on \(U'\times U\) is the
+negative transpose, so this matrix extends to an alternating
+form on \(S+S_2\). Its left corank is \(d\bmod 2\), including
+in characteristic two.
+
+Consequently there is a linear combination of the forms
+with left corank at most \(e\), where \(e=0\) if
+\(\nu_\ell=0\) and \(e=1\) otherwise. Indeed an equivalence
+\(W\simeq(W')^c\) would imply
+\[
+ \bar\epsilon^{tr}=1
+\]
+by taking determinants in the signature duality, which
+implies \(\nu_\ell>0\) by \eqref{eq:signature-cyclotomic-minimum}.
+The number of elements \(h\) needed is at most
+\((\dim S+\dim S')^2\), independently of \(J\) and \(M\).
+Choose such elements for each good signature and concatenate
+the lists, padding with identities if necessary.
+
+For the finite list \(\mathcal Z\) of restrictions of the basis cocycles and their conjugates, use the common kernel
+\[
+ J_0=\bigcap_{z\in\mathcal Z}\ker(z|_J).
+\]
+The conjugation formula gives an open normal subgroup of \(J\).
+Apply Section~\ref{subsec:aux-coordinates} prescribing these
+elements for the second half. On replacing \(h\) by a
+Frobenius conjugate to it modulo this subgroup the matrix
+\(B_h\) changes only by the nonzero cyclotomic scalar of the
+conjugating element. Absorb it into the coefficients. Thus at
+the second-half Frobenius elements \(\phi_i\) we have, for each signature,
+coefficients \(b_i\) such that \(\sum_i b_i B_{\phi_i}\) has
+the stated corank. The same primes work for all signatures.
+
+\end{proof}
+\begin{lemma}[A residual coefficient from the Selmer pencil]\label{lem:residual-selmer-coefficient}
+Use the two halves of auxiliary places and the Frobenius forms
+of Lemma~\ref{lem:residual-frobenius-forms}, with \(R\) places
+in each half and \(L>4rR+2\). When \(\nu_\ell=0\), every polynomial determinant lift \(D\) satisfies
+\[
+ \exists\alpha:\quad |\alpha|\le4rR,\qquad [X^\alpha]D\in O^\times.
+\] For positive \(\nu_\ell\) the corresponding
+unit coefficient is obtained at this stage in an adjugate
+entry, for a nonempty square presentation. An empty presentation
+already has determinant one.
+\end{lemma}
+
+\begin{proof}
+\proofstep{Use the inertia and Frobenius evaluations in the relaxed residual space.}
+Let \(R\) denote the common length of each half. At the first
+half the untwisted residual module is unramified with Frobenius
+scalar \(d\) or \(d^{-1}\); both differ from one. The
+cyclotomic character is trivial there modulo \(\ell\).
+Thus \(H^0,H^2\), and by the local Euler characteristic also
+\(H^1\), vanish. At each second-half prime the Frobenius is
+in \(J\), as is inertia. Fix a tame \(\ell\)-generator
+\(\gamma_i\) with \(d_{P'_i}(\gamma_i)=1\). This is possible
+since the character on inertia is onto. In the following
+evaluation pairs, use at the conjugate place the transports
+\(\gamma_i^c,\phi_i^c\). Superscript \(c\) on group elements
+continues to denote conjugation.
+
+Write \(S_Q\) for the relaxed residual Selmer space and
+\[
+ D=(k^r\oplus k^r)^R.
+\]
+Define \(I:S_Q\to D\) by evaluation
+at \((\gamma_i,\gamma_i^c)_i\). Its kernel is \(S\), since
+on the trivial residual module a homomorphism on inertia
+factors through its pro-\(\ell\) tame quotient. The first-half
+places contribute nothing. For \(x\in S_Q\), \(y\in S'\),
+reciprocity gives units \(a_i\in k^\times\), independent of
+\(x,y\), such that
+\begin{equation}\label{eq:residual-reciprocity}
+ \sum_i a_i\{x(\gamma_i)\cdot y(\phi_i)
+             -x(\gamma_i^c)\cdot y(\phi_i^c)\}=0 .
+\end{equation}
+Indeed the cup invariant at an unramified pair of classes is
+zero, and at the primes over \(\ell\) it vanishes by the local
+orthogonality above.
+
+At a second-half place the second class
+is unramified. The invariant on a tame character of
+\(\gamma_i\) paired with an unramified character of \(\phi_i\)
+is a nonzero scalar: the two unramified classes cup to zero
+and local Tate duality is nondegenerate on the two-dimensional
+space for the trivial residual line. Bilinearity gives the
+formula for vectors. The transport to the conjugate place
+reverses the chosen identification of \(\mu_\ell\) with the
+prime field, since \(c\) acts by \(-1\) there. This explains
+the common scalar and the minus sign. The sum of local
+invariants vanishes by global reciprocity.
+
+Define
+\[
+ F:S_Q\to D
+\]
+by taking the pairs of Frobenius
+values of each class multiplied by \(b_i/a_i\). The two necessary linear conditions on a lift are
+\[
+ Ix=0,\qquad Fx=Ix_1\quad(x_1\in S_Q).
+\]
+The first gives \(x\in S\) and \eqref{eq:residual-reciprocity} applied
+to \(x_1\) puts \(x\) in the left radical of
+\(\sum b_i B_{\phi_i}\). Consequently
+\begin{equation}\label{eq:residual-pencil}
+  \dim\{x\in\ker I: Fx\in\operatorname{im}I\}\le e,
+  \qquad \dim S_Q\le 2rR+e .
+\end{equation}
+For the second inequality apply rank-nullity to
+\(\ker I\to D/\operatorname{im}I\) induced by \(F\).
+
+We give the specialization producing a coefficient of bounded
+degree; setting all group variables to the same variable would
+lose the coefficients \(b_i/a_i\). Put \(K=k((s))\).
+In the polynomial presentation matrix reduce modulo the
+uniformizer and set \(X_j=\alpha_j Z\), \(Y_i=\beta_i Z\),
+where
+\[
+  \beta_i=s\, b_i/a_i,\qquad
+  \alpha_j=1-\sum_i\beta_i\,\overline{d_{P'_i}(\phi_j)} .
+\]
+Write \(P(Z)\) for this square matrix over \(K[Z]\).
+Modulo \(Z^2\) the substitution factors through the group ring,
+since \(L\) is a positive power of \(\ell\). On the second-half
+decomposition group the coefficient of \(Z\) in the inverse
+universal character is \(-1\) at \(\phi_i\) and \(-\beta_i\)
+at \(\gamma_i\), by \eqref{eq:aux-coordinate}. At the
+conjugate place both signs reverse.
+
+A first-order lift of \(v\in\ker P(0)\) is a vector \(v+Zv_1\) satisfying
+\[
+ P(Z)(v+Zv_1)\equiv0\pmod{Z^2}.
+\]
+Naturality of the square presentation gives
+a Selmer cocycle in the dual numbers lifting its residual
+class \(x\in K\otimes_k S_Q\). This identification commutes
+with taking its constant term. Indeed additive functoriality
+gives the assertion for finite sums of \(k\), and each class
+over a discrete extension field is supported on a finite
+coefficient subspace.
+
+At each second-half place write the
+cocycle as \(x+Zx_1\), and the character as \(1+Z\lambda\).
+The tame relation
+\[
+ \phi\gamma\phi^{-1}=\gamma^q,
+\]
+where
+\(q=\mathrm NP'_i\), gives
+\[
+             \lambda(\phi)x(\gamma)=\lambda(\gamma)x(\phi).
+\]
+For this calculation the crossed term of the first-order
+cocycle at \(g,h\) is \(\lambda(g)x(h)\). In its value at
+\(\gamma^q\) the coefficient \(\binom q2\) vanishes in \(k\)
+because \(q\equiv1\bmod 2L\); the coefficient \(q\) is one.
+The prime-to-\(\ell\) inertia kernel has zero image in the
+successive additive groups used in this calculation.
+Thus \(Ix=sFx\), including at the conjugate places.
+
+The subspace of \(K\otimes S_Q\) satisfying this equation
+has dimension at most \(e\). Intersect it with the lattice
+\(S_Q[[s]]\). This saturated sublattice has reduction of
+dimension equal to its rank and may be given a basis with
+independent constant terms by elimination over \(k[[s]]\).
+Coefficient comparison in \(Ix=sFx\), with \(x=x_0+sx_1+\cdots\), gives
+\[
+ Ix_0=0,\qquad Ix_1=Fx_0.
+\]
+Now apply
+\eqref{eq:residual-pencil}. This argument can be used over
+any finite residue field, including \(\mathbb F_2\).
+
+\proofstep{Use the first-order kernel to bound the number of invariant factors of order at least two.}
+The evaluations have bounded the kernel of the first-order matrix. Reading the same matrix through its invariant factors converts that kernel bound into the restriction on the determinant's low-degree coefficients.
+
+Take Smith form over \(K[[Z]]\), with orders
+\(0\le a_1\le\cdots\le a_d\le\infty\), where a zero
+diagonal entry has order \(\infty\). Reduce the kernel of the \(i\)-th diagonal entry on \(K[[Z]]/(Z^2)\)
+modulo \(Z\). Its image in \(K\) is
+\[
+ \begin{cases}
+ 0,&a_i=0\text{ or }a_i=1,\\
+ K,&2\le a_i\le\infty.
+ \end{cases}
+\]
+For \(a_i=1\) its kernel is precisely the ideal \((Z)\), whose
+residue in \(K\) is zero.
+The dimensions just computed give
+\[
+ \#\{i:a_i>0\}=h=\dim S_Q\le2rR,
+ \qquad \#\{i:a_i\ge2\}\le e.
+\]
+If \(e=0\), all Smith exponents are zero or one. Therefore
+\[
+ \operatorname{ord}_Z\det P=\sum_i a_i=\#\{i:a_i=1\}=h .
+\]
+If \(e=1\) and \(d>0\), the ideal generated by the submaximal
+minors has order
+\[
+ \sum_{i=1}^{d-1}a_i\le\max(0,h-1)\le2rR.
+\]
+
+At least one adjugate entry has that order. For an empty matrix
+the determinant is already one. Both conclusions suffice with
+the degree bound \(4rR\). For \(L>4rR+2\) the
+choice of polynomial lift cannot change any reduced coefficient
+in these degrees: the coordinate relations reduce to
+\(X_j^L=Y_i^L=0\). A nonzero coefficient of the line
+specialization requires a nonzero coefficient of the same total
+degree before substitution. Hence every lift of the determinant
+has a unit coefficient of bounded degree when \(\nu_\ell=0\).
+For \(\nu_\ell>0\) the conclusion at this stage concerns one
+adjugate entry. Its conversion to a determinant with valuation
+at most \(\nu_\ell\) requires one further arithmetic step.
+\end{proof}
+

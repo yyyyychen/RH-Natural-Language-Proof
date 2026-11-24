@@ -1,0 +1,315 @@
+The Gram test must apply to the actual span of allowed
+operators. We verify the prefix bounds on that span before
+using the chosen-plane projection in
+Proposition~\ref{prop:residue-plane-neighbor-test}.
+\paragraph{Prefix orders on the exact operator span.}
+\label{par:plane-orbit}
+\hypertarget{source-plane-orbit}{}
+In the distinguished edge coordinates the flat generators of the model
+are exactly \(B_b\,\mathrm{SPR}\). Indeed pulling back each row of the
+true frame determinant by the edge substitution gives its designated
+plane row, so the product \(\mathrm{SPtrue}\) pulls back to
+\(\mathrm{SPR}\). Every monomial in this common factor uses only
+even plane coordinates. We work over the fraction field in their
+linear span and apply words in \(X_{sa}\partial_{sb}\), using each
+top \(s\) at most \(c_0\) times. Conjugation by an invertible linear
+substitution within each letter takes a row operator to a linear
+combination of row operators at the same letter. In matrix-unit notation the substitution by \(g\) acts on a row operator through
+\[
+ gE_{ab}g^{-1}=\sum_{c,d}g_{ca}(g^{-1})_{bd}E_{cd}.
+\]
+Each term acts at the same top, so the word allowance persists in edge coordinates.
+
+List the tops after the incoming frame of segment \(j\) in increasing
+order as \(x_0,\ldots,x_{h+r-1}\), where \(h\) is the number strictly
+between the frames. The last \(r\) positions are the outgoing frame,
+with shared index
+\[
+ m=r-1-(u-h)
+\]
+at position \(x_u\).
+Write \(B_u\) for the true degree of the oldest of the \(r\) even
+predecessors of \(x_u\), divided by its radix in this segment. Put
+\[
+ s_u=\lfloor B_u/(Yk^2)\rfloor.
+\]
+
+For a joint complement type,
+let \(k_u\) denote its largest weight at the prefix of the first
+\(u\) of the listed tops. In this paragraph frame subscripts on
+\(B_u,s_u,k_u\) are implicit. Define \(T_u\) as the largest of
+the following applicable quantities:
+\[
+ \frac{B_u}{2},\quad k_{u+1}+m_*+s_u\quad(x_u\text{ even}),\quad
+ k_{u-1}+m_*+s_u\quad(u>0,\ x_{u-1}\text{ odd}).
+\]
+The chain and link thresholds for the plane Gram argument are
+\begin{equation}\label{eq:plane-chain-link-thresholds}
+   T_u-s_u/8\quad(0\le u\le h),\qquad
+   T_u-3s_u/8\quad(h<u<h+r),
+\end{equation}
+respectively. Its separate chain
+slack is \(3s_u/8\). We show that these thresholds work for
+every choice of low digits, quotient multidegrees, joint
+complement type and coefficient of that type.
+
+\begin{proposition}[Prefix thresholds on the full permitted operator span]\label{prop:plane-operator-prefix-orders}
+On the fraction-field span of the flat generators \(B_b\,\mathrm{SPR}\)
+and the allowed words in \(X_{sa}\partial_{sb}\) with at most
+\(c_0\) operators at each top, the chain and link thresholds from \eqref{eq:plane-chain-link-thresholds} are
+\[
+ \begin{cases}T_u-s_u/8,&0\le u\le h,\\T_u-3s_u/8,&h<u<h+r.\end{cases}
+\]
+ They hold after taking any indicated digit class,
+quotient multidegree and joint complement type, with the same
+allowance \(s_u\) for the selected coefficient.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Expansion into segment generators.}
+First expand a generator in its presentation by products of
+segment pairs \(A_jG_j\) in the plane and complement
+coordinates. Do this before selecting a coefficient. The external
+label \(l\) at each top is strictly below the segment radix there.
+Take homogeneous components at the prescribed true degrees of
+\(B_b\) in this expansion. Renamed products of homogeneous segment
+factors have definite true degrees, and the sum of the components
+in other degrees is zero. Thus the degree bound below applies on
+each retained product. Expand \(\mathrm{SPR}\) into monomials
+\(X^\gamma\).
+In a coordinate of radix \(P\) and prescribed residue \(\rho\), the term can survive extraction only if
+\[
+ l+\gamma\equiv\rho\pmod P,\qquad (l+\gamma-\rho)/P\in\mathbb Z_{\ge0}.
+\]
+Apply this test in every coordinate.
+In the matching class the quotient after multidegree projection
+is a tensor product. Its complement factor is the projected
+product of the \(G_j\) with their positions renamed.
+
+The
+complement is absent on incoming rows and the complement label
+has zero quotient. Its plane factor, before multidegree projection,
+is
+\[
+        X^b\,\phi\!\left(\prod_j \chi_j A_j\right).
+\]
+Here \(b\) is the plane quotient of \(l+\gamma\) by the low
+radices, coordinate by coordinate. It vanishes on odd letters.
+The variable map \(\chi_j\) sends intervening, outgoing, and
+incoming letters respectively to the block letters,
+\(L_{j,m}\), and \(W_{j-1,m}\). If \(P_{\rm low}\) is the low
+radix on the preceding frame, the exponent multiplier at an incoming
+row is
+\[
+           P_{\rm coarse}=P_{\rm low}\,P_{j-1,m},
+                 \qquad P_{j-1,m}=p^{z_j-z_{j-1}}.
+\]
+This proves the displayed formula after collapse, since \(\phi\)
+raises \(W_{j-1,m}\) to the \(P_{j-1,m}\)-th power.
+These maps use the original frame radices after the transport in
+Section~\ref{par:plane-rank}.
+
+If the complement projection vanishes, the extracted plane
+coefficient is zero. Otherwise its type at every prefix has
+largest weight at most the upper Laurent order of the corresponding
+prefix of \(G_j\). The other complement factors are outside the
+cut, and the multidegree projection commutes with its action.
+An isotypic projection with larger first weight would annihilate
+the vector by the conjugate torus criterion. The original segment
+inequalities now give
+\[
+ \operatorname{ord}_{<x_u} A_j\ge T_u.
+\]
+
+For an even letter use the complement through that letter. For a
+preceding odd letter use its complement before it and the plane
+through it. On segment support this last plane prefix is precisely
+the prefix before \(x_u\). Its oldest even predecessor and hence
+the available margin are unchanged in traversing the odd letter.
+The absolute plane lower bound gives the first term of the maximum.
+The extracted coefficient is a scalar multiple of the projected
+plane factor. All these conditions describe linear spaces.
+
+\proofstep{Transport of the prefix cuts by relabeling.}
+For the chain cut \(S_{ju}\), the renaming \(\chi_j\) carries the
+prefix before \(x_u\) to all incoming \(W\)'s and the first \(u\)
+intervening letters with their original signs. Other segments
+have no variables in this cut. Thus
+\[
+ \Pi=\prod_j\chi_j A_j
+\]
+
+has order at least \(T_u\). Restrict to a desired true quotient
+multidegree of \(X^b\phi\Pi\) before applying the shared digit
+extraction. On \(\Pi\) this restriction selects the model
+multidegrees for which the weighted sum of letter degrees after
+collapse has the prescribed value. Their projections commute with
+the chain action. Expand the resulting polynomial by monomials
+\(L^M\) of the label letters, which are outside the cut. Each
+coefficient, a polynomial in block and \(W\) letters, retains the
+order.
+
+For each shared coordinate \(t\), divide the exponent in
+\(X^b\phi(L^M)\) by \(P_t\):
+\[
+     b_t+M_t=\rho_t+P_t a_t,\qquad 0\le\rho_t<P_t,\quad a_t\ge0 .
+\]
+Thus the coefficient contributes only to the residue \(\rho_t\)
+and acquires the fixed carry \(W_t^{a_t}\). For a tested residue \(\rho'_t\), the carry factor after extraction is therefore
+\[
+ \mathbf1_{\rho'_t=\rho_t}W_t^{a_t}.
+\]
+Apart from these carries the extra monomial
+is the block part of \(X^b\). All affected coordinates of this monomial are vectors.
+They have nonnegative least weight and multiplication preserves
+the lower bound. This proves the required chain order for every
+shared residue.
+
+A true link at \(x_u\) with \(u>h\) sees the intervening letters
+and the earlier outgoing rows. The original prefix also sees the
+incoming rows. In a homogeneous component of \(A_j\), let their
+total degree be \(d_W\). Let \(D(T)\) be the rank-one one-parameter torus
+used for the original Laurent substitution.
+
+To omit the
+incoming variables \(W\) from this cut, substitute \(D(T)^{-1}W\)
+in the transformed polynomial. A monomial of degree \(d_W\) accumulates \(d_W\) inverse weights, each either zero or \(-1\). Its Laurent order in this substitution is therefore
+\[
+ -\sum_{a=1}^{d_W}\varepsilon_a\ge-d_W,\qquad \varepsilon_a\in\{0,1\}.
+\]
+Therefore
+\[
+ \operatorname{ord}_{\rm prefix\ without\ incoming}(A_j)
+ \ge \operatorname{ord}_{\rm original\ prefix}(A_j)-d_W .
+\]
+Coefficient extraction in the now untransformed \(W\)
+preserves this bound for each remaining polynomial. Under collapse those incoming monomials go to frame
+\(j-1\), outside this true link. Here \(J\ge2\) follows from the
+frame span bound \(G'\) and \(3G'\le n'\), since one frame would
+recur only after \(n'\) positions. All factors from other
+segments and from \(b\) that meet this link use vectors there.
+Projection to the required multidegree preserves the lower bound.
+
+Only an incoming degree \(d_m^W\) with
+\[
+ P_{j-1,m}d_m^W\le (d_{\rm pl}(j-1,m)-|b_{j-1,m}|)_+
+\]
+
+can contribute. At the row \(y_m\) of that preceding frame put
+\(t_m=z_{j-1}-y_m\), \(g=z_j-z_{j-1}\). Removing the quotient
+of the external monomial leaves at most the original generator
+degree \(2a\) at true scale. Indeed after multiplying the
+remaining quotient by \(p^{t_m}\) the degree contributed by
+the segment products is bounded by their prescribed true degree,
+which is at most the flat degree. The \(t_m\) are distinct and
+nonnegative. Consequently
+\[
+ d_W\le\sum_m 2a p^{-g-t_m}\le 3a p^{-g}.
+\]
+
+If \(y\) is the oldest even predecessor of the current outgoing
+row, there are at least \(r\) intervening even tops before it is
+tested. The first intervening top is more than \(L_1\) after
+\(z_{j-1}\). Hence \(y\ge z_{j-1}+L_1+1\), and
+\(a\le B_u p^{z_j-y}\). The host spacing gives
+\(p^{L_1+1}\ge48Yk^2\); the size bound gives
+\(B_u/(Yk^2)\ge1\), since \(B_u\ge a/Q\).
+The permitted incoming degree is therefore bounded by
+\[
+ d_W\le \frac{3B_u}{p^{L_1+1}}
+     \le \frac{B_u}{16Yk^2}\le s_u/8 .
+\]
+The last step uses \(B_u/(Yk^2)\le2s_u\).
+Subtracting this degree from the full prefix order \(T_u\)
+gives the initial link bound.
+
+\proofstep{Admitting row operators in the order estimate.}
+It remains to allow row operators. For one coordinate of low radix
+\(P\), write its true power as \(v+Pq\), \(0\le v<P\).
+Write \(x^v F(X)\) with \(X=x^P\). The two derivative
+cases follow from the chain rule:
+\[
+ \partial_x\!\bigl(x^vF(x^P)\bigr)=
+ \begin{cases}
+   x^{v-1}(v+P X\partial_X)F(X),&v>0,\\
+   x^{P-1}P\partial_X F(X),&v=0 .
+ \end{cases}
+\]
+For multiplication the two cases are
+\[
+ x\,x^v F(X)=
+ \begin{cases}
+ x^{v+1}F(X),&v+1<P,\\
+ X F(X),&v=P-1 .
+ \end{cases}
+\]
+At \(P=1\) the second case applies to \(v=0\). The same
+formulas at the second digit extraction act on the incoming
+\(W\) quotient, or on the block coordinate at radix one. On an exponent \(v+Pq\), the Euler operator \(x\partial_x\) acts by \(v+Pq\). Thus on the quotient coordinate \(y\) in the residue class \(v\) its action is
+\[
+ v+P\,y\partial_y.
+\]
+
+Thus each multiplication or differentiation before extraction costs
+at most one in a lower cut order that meets the letter. Under
+conjugation the torus on a coordinate has weights \(0,1\) on a
+vector and \(0,-1\) on a covector, with opposite signs on the
+derivatives. The Euler operator also costs at most one, since one
+of its two factors has nonnegative least weight. On a disjoint cut
+these operations preserve the order.
+
+For a complement operation, insert the joint decomposition of the
+input before the operation and project the output. At each prefix \(I\), the upper-order estimate for an
+operator at \(x\) allows a transition from \(k_I\) only to
+\[
+                          k'_I\le k_I+\mathbf1_{x\in I}.
+\]
+Complement coefficients commute with the plane cuts. Thus
+this transition changes the maximum defining \(T_u\) by
+at most one for a complement operation. It can
+occur only for a top at or before \(x_u\) in that segment.
+A plane operation can affect the shared \(W\) cut even if its
+letter belongs to the previous frame, but that row occurs in the
+incoming part of the segment, also before \(x_u\).
+This accounts for both occurrences of a shared row, including
+across the cyclic endpoint.
+
+\proofstep{The exact operator span.}
+If \(a_u\) operators in the word act at such tops up to the tested position \(u\), induction therefore bounds their cumulative loss by 
+\[
+ \underbrace{2+\cdots+2}_{a_u\,\text{operators}}=2a_u.
+\]
+ The
+cut and type estimates for a single half-operation apply in all
+input digit classes and degrees. The induction therefore survives
+both quotient-degree changes and the sum over input types. For one cut, at most \(N_1c_0\) operators can touch its letters.
+The host inequalities give
+\[
+ a\ge16N_1c_0Yk^2Q,
+\]
+and
+\[
+ B_u\ge a/Q
+\]
+implies
+\[
+ s_u\ge16N_1c_0.
+\]
+
+For a word let \(m_I\) be the number of operators meeting
+the cut. The induction allows at most \(2m_I\) in the
+chain and at most \(4m_I\) in the link, with both occurrences
+of a shared row included. The budget \(m_I\le N_1c_0\) and
+\(16N_1c_0\le s_u\) in particular give
+\[
+    \operatorname{ord}_{\rm chain}\ge T_u-s_u/8,\qquad
+    \operatorname{ord}_{\rm link}\ge T_u-s_u/8-s_u/4 .
+\]
+The first loss is charged from the starting chain threshold
+and the second from the initial link threshold.
+These link thresholds are positive since \(T_u\ge B_u/2\)
+and \(s_u\le B_u/(Yk^2)\). Linear combinations over the fraction field
+preserve these inequalities. This proves the membership used for
+the selected plane polynomial in Section~\ref{par:plane-flat-test}.
+ \label{cor:plane-orbit-1}
+\end{proof}

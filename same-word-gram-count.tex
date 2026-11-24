@@ -1,0 +1,685 @@
+\input{same-word-genus-mean}
+
+We now attach the embedded data to actual pairs of flag terms.
+Write \(s=m/2-1,\ d=\mathrm{rd}(E)\), and let \(\mathfrak d\)
+be the different used for the integral frames. Fix a word \(u\).
+For a nonunit term \(t\) with \(G_t=0\) and nonzero coefficient, let \(j\) be the last
+nonzero leading minor of the mutual flag pairing and
+\(\delta=(\delta_h)_{1\le h\le j}\) its list of leading minors.
+In this calculation \(j\ge1\). Put
+\[
+ e_h=\sum_{a=1}^h(s+1-a),\quad
+ A_h=(\delta_h)\mathfrak d^{-2e_h},\quad
+ d_{v,h}=|\delta_h|_v d^{-2e_h},\quad
+ D_\delta=N A_j=\prod_{v\mid\infty}d_{v,j}^2 .
+\]
+Here \(v\) runs over one complex embedding above each real place
+and \(|\cdot|_v\) means ordinary complex modulus. The coefficient
+ideals of the two frames show that the \(A_h\) are integral.
+Omit zero minors when taking their norms. For \(H_1=b^{C_Hm}\) put
+\[
+ B_\delta=\prod_{\substack{1\le h\le j\\\delta_h\ne0}}N A_h,\qquad
+ S_\delta=\prod_v\max\left(1,\frac{\max_{1\le h\le j}d_{v,h}}
+                                      {(2H_1)^{2s}}\right),\qquad N=T_u^f .
+\]
+
+Write \(e_1,\ldots,e_s,e_{s+1}=z\) for the ordered vectors
+of the first augmented flag and use primes for the second. Set
+\(X_0=0\), \(X_i=\langle e_1,\ldots,e_i\rangle_E\) for \(i\le s\)
+and \(X=X_s\). Representatives of the same graded frame satisfy
+\[
+ \widetilde e_i-e_i\in X_{i-1}\quad(1\le i\le s+1),
+ \qquad \widetilde e'_i-e'_i\in X'_{i-1}.
+\]
+
+These changes preserve all leading determinants by unitriangularity.
+Use Lemma~\ref{lem:zero-gram-positive-rank} to choose representatives
+whose first \(j\) vectors have the signed block pairing and whose
+remaining representatives satisfy
+\[
+ I=X\cap X'=\langle e_{j+1},\ldots,e_s\rangle_E,\qquad
+ e'_i=\gamma e_i\ (j<i\le s+1),\qquad\gamma\bar\gamma=1.
+\]
+
+Indeed on the common tail the two vectors have this relation
+modulo the preceding flag spaces; subtracting those components
+gives the equalities in the chosen representatives. For the last
+vector this uses \(z'-\gamma z\in X+X'\). The active vectors
+and \(z\) span a nondegenerate space. In its orthogonal choose
+duals of the tail, and subtract one half of their Gram matrix
+in the tail directions to make the dual span \(I^*\) isotropic.
+This last change concerns rational coordinates. The split reference lattice has the following summands. On
+\(X\), and on the first \(j\) vectors of \(X'\), take the
+coefficient ideals \(\mathfrak d^{-(s+1-a)}\). On the dual tail
+take their inverses, and on \(z\) take \(\mathcal O_E\).
+Call their sum \(P_0\). The full reference lattice is
+\[
+ L_{\rm ref}=P_0+
+ \bigl((\Lambda+X)\cap(X+X'+I^*)^\perp\bigr).
+\]
+
+Let \(U\) be the common flag unipotent group and
+\(\Gamma_A=U(F)\cap\operatorname{Stab}(A)\).
+For these coordinates the inverse covolume, relative to the
+reference lattice, is the index ratio
+\[
+ \frac{[\Gamma_{L_{\rm ref}}:\Gamma_{L_{\rm ref}}\cap\Gamma_\Lambda]}
+      {[\Gamma_\Lambda:\Gamma_{L_{\rm ref}}\cap\Gamma_\Lambda]} .
+\]
+
+Write \(\omega_t\) for its infimum over adapted Witt coordinates
+inducing the given graded vectors. An upper estimate for this
+infimum may use any one adapted system.
+
+\begin{auxlemma}[Flag terms above one embedded datum]
+\label{lem:zero-gram-frame-count}
+Fix \(u,\Lambda,j,\delta\) as above and one embedded datum
+\((B,\Gamma)\) of index \(x\) in the definite space of \(\Lambda\).
+Two second frames define the same class if a unipotent \(n\)
+of the first flag preserves \(\Lambda\) and
+\(n e'_i-e''_i\in X''_{i-1}\) for every \(1\le i\le s+1\). The sum of the weights \(\omega_t\)
+of distinct frame classes above this datum is at most
+\begin{equation}\label{eq:zero-gram-frame-bound}
+ F_\delta(x)=
+ (D_\delta/x)^{k/2}8^{s+1}f^2D_\delta^{3c+6}N^2
+       (B_\delta D_\delta N)^{10000(s+1)^3},
+ \qquad c=1+\log_2(2f).
+\end{equation}
+\end{auxlemma}
+
+\begin{proof}
+\proofstep{Indices in the common orthogonal quotient.}
+In \(I^\perp/I\) let \(Q\) be the image of
+\(\Lambda\cap I^\perp\). It is unimodular since
+\(\Lambda\cap I\) is primitive in the unimodular lattice \(\Lambda\).
+Write \(P,P'\) for the images of \(\Lambda\cap X,\Lambda\cap X'\),
+\(Z=P_E+P'_E\), and \(K=Q\cap Z^\perp\).
+Projection along \(P_E\) and \(P'_E\) gives the lattices
+\[
+ K_1=(Q+P_E)\cap Z^\perp,\quad
+ K_2=(Q+P'_E)\cap Z^\perp,\quad
+ B_0=[Q\cap Z:P+P'],\qquad p=[K_1:K].
+\]
+
+Set \(J=\Lambda\cap I\), \(\mathfrak a_i=\mathfrak d^{-(s+1-i)}\)
+and \(A_i=\Lambda\cap X_i\). The index on the first side is
+\[
+ b_1=[A_s:A_j+J]=\prod_{i=j+1}^{s}[\mathfrak a_i:H_i],
+ \qquad H_i=\{t\in E:\exists y\in J,\ y-te_i\in X_{i-1}\}.
+\]
+
+Indeed the successive factors between \(A_j+J\) and \(A_s+J=A_s\)
+are obtained by taking the leading coefficient of \(A_i\) at \(i\).
+Its image is \(\mathfrak a_i\) by the frame condition, and the
+image of \(J\cap X_i\) is \(H_i\). For \(i>j\), the two filtrations
+of \(I\) coincide and \(e'_i=\gamma e_i\), so the corresponding
+ideal on the second side is \(H'_i=\gamma^{-1}H_i\). Thus
+\[
+ [\mathfrak a_i:H'_i]=[\mathfrak a_i:H_i],\qquad
+ |N_{E/\mathbf Q}\gamma|=1 .
+\]
+
+This uses equality of covolumes; the two ideals need not be equal.
+The product gives the same index \(b_1\) on \(X'\).
+
+Let \(\bar A_j,\bar A'_j\) be the images of the two integral
+active lattices in \(I^\perp/I\). Locally choose bases adapted
+to the flag filtrations. Their leading coefficient ideals are
+\(\mathfrak a_1,\ldots,\mathfrak a_j\) on each side. Consequently
+the absolute norm of the cross-pairing determinant, with its two
+coefficient ideals, is \(D_\delta\). The full Hermitian Gram matrix
+has the cross pairing and its adjoint as its two off-diagonal blocks:
+\[
+ \sqrt{\Delta(\bar A_j+\bar A'_j)}=D_\delta,\qquad
+ [P+P':\bar A_j+\bar A'_j]=b_1^2 .
+\]
+
+Both \(K_1,K_2\) are unimodular: projection along \(P_E\)
+identifies \(K_1\) isometrically with the lattice \(P^\perp/P\)
+in \(Q\), and likewise for \(P'\). Locally, complete a primitive
+isotropic basis to hyperbolic pairs to see unimodularity of the
+quotient. Therefore \([K_1:K]=[K_2:K]=|K^\#/K|^{1/2}\).
+In the unimodular lattice \(Q\), the primitive perpendicular
+lattices \(K\) and \(Q\cap Z\) have discriminant groups of equal
+order: projection of \(Q/(K\oplus(Q\cap Z))\) identifies it
+with each discriminant group, by perfect duality. On \(P+P'\)
+the square root of this order is \(D_\delta/b_1^2\), by the
+off-diagonal block determinant. Passing to \(Q\cap Z\) divides
+that square root by its index \(B_0\). Thus
+\[
+          pB_0=D_\delta/b_1^2,\qquad [K_2:K]=p .
+\]
+
+For the intersection there is also an injection
+\[
+ (K_1\cap K_2)/K\ \longrightarrow\ (Q\cap Z)/(P+P').
+\]
+
+Indeed, subtract the two integral lifts of the same vector along
+\(P_E,P'_E\). Changing either lift adds \(P\) or \(P'\). If the
+difference vanishes modulo \(P+P'\), an integral common lift
+lies in \(Z^\perp\).
+
+Inside \(Z^\perp\) take the orthogonal complement of the
+distinguished negative line, and denote it by \(W\).
+Let \(\Theta=K\cap W\) and \(M=M_\Gamma\). Writing \(L\)
+for the target definite lattice, we have
+\[
+ \Theta\subset M\subset (K_1\cap K_2)\cap W,\qquad L=K_1\cap W,\qquad
+ a=[M:\Theta],\qquad xa=[L:\Theta]\le p,\quad a\le B_0 .
+\]
+
+For \(\Theta\) the same integral lift supplies both entries of
+the congruence defining the graph. The inequality \(xa\le p\) is
+the injection \(L/\Theta\hookrightarrow K_1/K\). Similarly
+\(M/\Theta\hookrightarrow(K_1\cap K_2)/K\) gives \(a\le B_0\).
+To count generators, write \(y\in K_1\) as \(y=q+v\) with
+\(q\in Q\), \(v\in P_E\). Sending \(y\) to \(v\bmod P\)
+embeds \(K_1/K\) in \(P_E/P\), since \(Q\cap P_E=P\).
+Every finite subquotient of this rank-\(j\) torsion module is
+generated by at most \(j\) elements at each prime, hence globally
+by the Chinese remainder theorem. Apply this to \(L/M\), a
+quotient of \(L/\Theta\). Multiplication of the two index inequalities gives
+\begin{equation}\label{eq:zero-gram-effective-index}
+                    x(a b_1)^2\le D_\delta .
+\end{equation}
+
+\proofstep{Counting integral realizations.}
+Set \(D=D_\delta,\ B_*=B_\delta,\ n=N\mathfrak c\), with
+\[
+ \mathfrak c=(T_u)\prod_{h:\delta_h\ne0} A_h\overline {A_h},
+ \qquad n=(NB_*)^2,\qquad \ell=2s+1,\qquad e=12s+50 .
+\]
+
+In the product \(1\le h\le j\). In simultaneous echelon form
+the active pairing consists of signed antidiagonal blocks.
+The nonzero minors give the block ends. For a block of length
+\(h\) the first entry is a root of an equation of degree \(h\)
+given by the ratio of successive end determinants, up to sign.
+Thus compositions, signs and roots together cost at most \(8^s\)
+(\(h\le2^{h-1}\)). The primitive terminal markings in the two middle
+lattices give \(K_1\cap Ez=Rz\) and \(K_2\cap Ez=Rz'\), with
+\(R=\mathcal O_E\) and \(z'=\gamma z\) in the common quotient.
+Use the one lattice \(K\) to define two integral ideals by
+\[
+ \mathfrak a=\{a\in R:az\in K\},\qquad
+ \mathfrak a'=\{a\in R:az'\in K\},\qquad
+                   \mathfrak a=\gamma\mathfrak a'.
+\]
+
+The map \(a\mapsto az\bmod K\) embeds \(R/\mathfrak a\) in
+\(K_1/K\), and \(a\mapsto az'\bmod K\) does the same for
+\(R/\mathfrak a'\) in \(K_2/K\). Thus
+\(N\mathfrak a,N\mathfrak a'\le p\le D\).
+For each such pair of ideals the
+generators differ by norm-one units, hence by roots of unity.
+Using \(\varphi(t)\ge\sqrt{t/2}\) and \([E:\mathbf Q]=2f\) gives
+\[
+ \#\mu(E)\le8f^2,\qquad
+ \#\{\gamma\}\le 8f^2D^{2(c+2)} .
+\]
+
+Here the number of ideals of a prescribed norm \(d_0\) is at
+most \(d_0^c\): at a rational prime the exponent distributions
+are bounded by the ordered choices of at most \(2f\) prime factors
+at each step. The first row fixes its full middle lattice \(K_1\). On the other
+side the datum gives \(B=K_2\cap W\), and \(\gamma\) fixes the
+marked line lattice \(Rz'\). To recover the unimodular lattice
+\(K_2\) containing \(Rz'\oplus B\), its gluing must be the graph
+of an anti-isometry
+\[
+             (Rz')^\#/Rz'\simeq R/(T_u)\longrightarrow B^\#/B .
+\]
+
+Both summands are primitive, so both graph projections are
+isomorphisms by unimodularity. The image of one generator determines
+the map, giving at most \(|B^\#/B|=T_u^{2f}=N^2\) choices.
+
+Fix these choices and \(a,b_1\). A section of the quotient onto
+the projective lattice \(\Theta\) lifts the definite part of the
+common orthogonal lattice. Changing the Witt complement by this
+section is a common unipotent transformation: the rectangular block
+is the difference of the lifts and its opposite is minus its adjoint.
+The quadratic correction on the common tail can be taken with
+a coefficient \(t\in\mathcal O_E\) satisfying \(t+\bar t=1\).
+In coordinates with \(A\) the rectangular displacement, the
+quadratic block \(C\) must solve
+\[
+ C+C^*=-A^* A,\qquad C=-t A^* A .
+\]
+
+Such \(t\) exists because \(E/F\) is unramified at finite places
+and the integral trace is locally onto, including above 2.
+In the resulting orthogonal decomposition the integral definite
+intersection is \(\Theta\). Write \(P_{\rm int}\) for the
+intersection with its complementary rational \(\ell\)-plane.
+We record the denominator calculation in this plane:
+\begin{equation}\label{eq:zero-gram-lattice-sandwich}
+             \mathfrak c^{e}P_0\subset P_{\rm int}
+                           \subset\mathfrak c^{-e}P_0 .
+\end{equation}
+
+For the active flags, triangular elimination uses the leading
+block inverses. Each inverse is the adjugate divided by the
+nonzero leading determinant, with exactly the indicated powers
+of the different on its rows and columns. In particular, at a
+block end \(h\) each oriented denominator satisfies
+\[
+ \frac{\mathfrak c\,\mathfrak d^{2e_h}}{\delta_h}
+       \subset\mathcal O_E,\qquad
+ \frac{\mathfrak c\,\mathfrak d^{2e_h}}{\overline{\delta_h}}
+       \subset\mathcal O_E .
+\]
+
+One factor of
+\(\mathfrak c\) clears the denominator of that pivot or its
+conjugate. Applying the row and column eliminations at each flag
+step costs at most two powers. Including the negative vector
+and the common-tail frame costs two more. The two active lattices
+and their central reference vectors therefore have denominator
+exponent \(n_0=2s+2\).
+
+For clarity, adjoin a dual tail vector \(y\) by choosing a lift
+\(\Phi y\) with the prescribed pairings. First lift the pairings on \(\mathfrak c I^*\) into the
+unimodular lattice. Then project to the complementary \(\ell\)-plane.
+In terms of the two projections this lift has
+\[
+   \Phi=\operatorname{pr}_{\ell}\circ\Psi,\qquad
+     \Psi(\mathfrak c I^*_{\rm int})\subseteq\Lambda .
+\]
+
+To check the denominator of this projection, take an integral
+functional on \(\Theta\), lift it to \(\Lambda\) by primitivity,
+and subtract its definite component. Modulo the common tail the
+difference is supported on the two active flags and \(z\).
+Solving for their coefficients uses the two mutual pairing matrices
+and the norm of \(z\). Successive multiplication by the ideals of
+the two oriented determinants and by \((T_u)\) clears them:
+\[
+ \mathfrak c^3\Theta^\#\subset\Theta,\qquad
+     \mathfrak c^4\Phi(I^*_{\rm int})\subset\Lambda .
+\]
+
+Here \(I^*_{\rm int}\) has the dual frame ideals. The second
+inclusion spends one power on the initial lift and three on
+projecting it off the definite part. Put \(w_y=\Phi y-y\), and let \(q\) be the projection onto the
+common tail dual to the projection onto the chosen dual tail.
+Pairing with the central vectors costs \(n_0+4\) powers. Passing
+from the paired lattice to \(P_0\) costs one, since
+\(\mathfrak c P_0^\#\subset P_0\) on this plane. Consequently
+the denominator exponents of the following two expressions are
+bounded by
+\[
+    w_y-qw_y:\ n_0+5,\qquad
+    (w_y,w_{y'}):\ 2(n_0+5)+1 .
+\]
+
+The common-tail components pair to zero with all the \(w_y\).
+Subtracting the skew part of the pairing matrix by a central
+shear leaves, in the pairing with \(y'\), the error
+\(t((\Phi y,\Phi y')-(w_y,w_{y'}))\).
+The corrected lift differs from \(y\) by a central vector with
+denominator at most \(2n_0+12\). Expressing that vector in the
+integral central lattice costs a further \(n_0\) powers.
+In the reverse inclusion, pair with the corrected lifts and use
+\(\mathfrak c P_0^\#\subset P_0\) once more. Both exponents are at
+most \(6n_0+30\le e\). All these inclusions can be tested over
+the local discrete valuation rings, which proves
+\eqref{eq:zero-gram-lattice-sandwich} over \(\mathcal O_E\).
+
+It follows that the choices of the two orthogonal intersections
+and of the unimodular gluing are bounded respectively by
+\[
+       a^{k+c},\qquad n^{2e\ell^2},\qquad ((DN)^2)^\ell .
+\]
+For the first bound use elementary divisors in the rank \(k\)
+lattice \(M\), summing over determinant ideals of norm \(a\).
+For the second choose at most \(\ell\) generators in
+\(\mathfrak c^{-e}P_0/\mathfrak c^eP_0\). For the third, a
+unimodular gluing is the graph of an anti-isometry of discriminant
+modules. Its source has at most \(\ell\) generators. Its target
+has order \((xa)^2T_u^{2f}\le(DN)^2\).
+
+\proofstep{Relative volumes.}
+Filter the common unipotent group by its action on the span of the
+two flags and \(z\), then by its action on the definite complement.
+A shear \(u\) fixing the definite complement pointwise acts
+only on the \(\ell\)-plane. For \(\lambda\in\Lambda\), write
+\(\lambda=w+y\) with \(y\) in that plane. Pairing with
+\(\mathfrak c^e P_0\subset\Lambda\) gives
+\[
+ y\in \mathfrak c^{-e}P_0^\#\subset\mathfrak c^{-e-1}P_0,\qquad
+ (u-1)P_0\subset\mathfrak c^{3e+10}P_0
+ \ \Longrightarrow\
+ (u-1)y\in\mathfrak c^e P_0\subset\Lambda .
+\]
+
+Self-duality gives equality \(u\Lambda=\Lambda\). This applies
+directly on the central skew subgroup. On the top quotient lift
+the change of the two flag spans and \(z\) to their dual-tail
+coordinates while fixing the definite complement. The dual-tail
+linear block is the inverse adjoint on the common tail. The
+component along \(z\) is determined by its pairing divided
+by \(-T_u\), and its isotropic correction is obtained with
+\(t+\bar t=1\). In particular, with
+\(\mathfrak n=\mathfrak c^{3e+10}\), the initial depth gives
+\[
+    \mathfrak c^{3e+11}\subset (T_u)\mathfrak n,\qquad
+    (u z-z)/T_u\in\mathfrak n P_0 .
+\]
+
+The remaining entries of the lifted difference lie in
+\(\mathfrak n P_0\): taking the inverse adjoint preserves the
+identity modulo the star-stable ideal \(\mathfrak n\), and all
+terms of the quadratic correction contain a changed entry.
+Thus the kernel of reduction on the top block also lifts to the
+integral stabilizer. Each outer quotient acts on a module of rank
+at most \(\ell\), so that reduction of its matrix entries gives
+\[
+  \text{relative index on each outer layer}
+    \ \le\ |\mathcal O_E/\mathfrak c^{3e+11}|^{\ell^2}
+    = n^{(3e+11)\ell^2}.
+\]
+
+The middle quotient has one additive row for each of the
+\(s-j\) common-tail vectors, given by the definite component of
+the change of its dual. A row integral for both its frame ideal
+and \(\Theta\) lifts to a lattice-preserving shear, by adjoining
+minus its adjoint and the integral correction \(t\) above.
+In row \(i\) let \(h_i\) be the index of the common-tail leading
+ideal in the full frame ideal. Filtration of \(\Lambda\cap X\)
+by its ordered vectors gives
+\[
+ \prod_{i=j+1}^s h_i
+   =[\Lambda\cap X:(\Lambda\cap X_{\le j})+(\Lambda\cap I)]
+   =b_1 .
+\]
+
+A change of the coefficient ideal of index \(h_i\) costs \(h_i^k\)
+in a row of rank \(k\). Restricting its definite entries from
+\(L\) to \(\Theta\) costs \([L:\Theta]=xa\) in each row. Thus
+\[
+  \text{middle relative index}\ \le\ \left(\prod_i h_i^k\right)(xa)^{s-j}
+          = b_1^k(xa)^{s-j}\le b_1^k D^s .
+\]
+
+Relative indices multiply along kernels and images. Multiplying
+the three lattice counts by the three relative-index bounds gives
+at most
+\[
+ (a b_1)^k a^c(B_*DN)^{10000(s+1)^3}.
+\]
+
+Indeed \(n\le(B_*DN)^2\); the exponent after substitution is at
+most \(4e\ell^2+2\ell+s+4(3e+11)\ell^2\).
+There are at most \(D^2\) possible pairs \(a,b_1\).
+Use \eqref{eq:zero-gram-effective-index} for the factor with
+exponent \(k\), use \(a^c\le D^c\), and multiply by the block,
+scalar and line counts. This gives \eqref{eq:zero-gram-frame-bound}.
+\end{proof}
+
+\begin{auxlemma}[Matched zero-Gram terms with two prescribed labels]
+\label{lem:zero-gram-label-pairs}
+Let \(u\) be a selected word and fix two lists \(\delta,\delta'\)
+of positive active ranks \(j,j'\le s\). Take any finite set
+\(\mathcal P\) of pairs of nonunit terms with \(G_t=G_{t'}=0\)
+in the same finite matrix block, with those respective labels.
+In particular, the two terms have the same ordered endpoint rows
+\(\Lambda,\Lambda'\) and the same finite operator coordinate.
+Let \(w_\Lambda\) denote the reciprocal order of the finite
+row automorphism image and \(M_u=\sum_\Lambda w_\Lambda\).
+Uniformly on sufficiently late rows of the marked family,
+\begin{equation}\label{eq:zero-gram-weight-sum}
+ \begin{gathered}
+ \sum_{(t,t')\in\mathcal P}
+ w_{\Lambda}w_{\Lambda'}\,\omega_t\omega_{t'}
+     \le M_u E_\delta E_{\delta'},\\
+ E_\delta=D_\delta^{k/2}H_C^{Cs^4}S_\delta^{16k},
+       \qquad H_C=b^{Cm^2f}.
+ \end{gathered}
+\end{equation}
+The constant \(C\) is independent of both labels and the word.
+\end{auxlemma}
+
+\begin{proof}
+\proofstep{From flag pairs to embedded isometries.}
+Keep the first row fixed. First form the graph in the common
+quotient \(I^\perp/I\) of a single pair of flags; its integral
+lattice is \(Q\) from Lemma~\ref{lem:zero-gram-frame-count}.
+Set \(S=P_E+Ez\), \(S'=P'_E+Ez'\), and
+\(W_t=(S+S')^\perp\) in that quotient. Write
+\(L_t=(Q+P_E)\cap W_t\) and \(B_t=(Q+P'_E)\cap W_t\). For
+\(y'\in B_t\), \(y\in L_t\), the finite identification is the relation
+\begin{equation}\label{eq:zero-gram-congruence-graph}
+ (y',y)\in\Gamma_t
+ \ \Longleftrightarrow\
+ \begin{cases}
+ y'-l'\in P'_E,\quad y-l\in P_E\\
+ \text{for some }l',l\in Q,\quad l-l'\in gQ .
+ \end{cases}
+\end{equation}
+
+Indeed these are exactly the conditions on integral representatives
+of the two endpoint classes modulo their respective isotropic spaces.
+Using \(Q\) gives the same graph as using \(\Lambda\) before passing
+to \(I^\perp/I\): integral lifts of two congruent classes differ by
+an element of \(g\Lambda+(\Lambda\cap I)\), and the last summand can
+be subtracted on either side.
+
+For the original augmented flags, set \(e'_{s+1}=z'\),
+\(e_{s+1}=z\). At each \(1\le i\le s+1\) and \(t\in E\), the
+marking says
+\[
+ \forall v'\in\Lambda\cap(te'_i+X'_{i-1})\quad
+ \exists v\in\Lambda\cap(te_i+X_{i-1}):
+                     \quad v-v'\in g\Lambda .
+\] The
+condition also works in reverse: lift the desired leading coefficient
+using the common frame ideal, apply the forward condition and match
+the difference in the preceding space by induction. In particular,
+for \(v\in Q\cap S\) the resulting \(v'\in Q\cap S'\) satisfies
+\(v'\equiv v\bmod gQ\). The same assertion holds for \(Q\cap P_E\)
+and \(Q\cap P'_E\).
+
+Take \(y'\in B_t\) and choose \(l'\in Q\) with \(y'-l'\in P'_E\).
+Then \(l'\perp S'\) and
+\[
+ \langle v,l'\rangle=\langle v-v',l'\rangle\in gR
+       \qquad(v\in Q\cap S).
+\]
+The primitive module \(Q\cap S\) is an \(R\)-direct summand of
+\(Q\) since its quotient is projective over the Dedekind domain \(R\).
+Extend the integral functional \(v\mapsto\langle v,l'\rangle/g\)
+to \(Q\). Unimodularity gives a representative \(m_0\in Q\).
+Consequently
+\[
+      l=l'-gm_0\in Q\cap S^\perp .
+\]
+The perfect rational pairing of \(P_E\) and \(P'_E\) gives a
+unique \(p\in P_E\) with \(l-p\perp P'_E\). Since \(p\perp S\)
+and \(z'=\gamma z\), the vector \(y=l-p\) belongs to \(W_t\).
+It gives \((y',y)\in\Gamma_t\). Interchanging the flags proves
+surjectivity of the second projection as well.
+
+If \((0,y)\in\Gamma_t\), then \(l'\in Q\cap P'_E\).
+Choose \(p\in Q\cap P_E\) congruent to \(l'\). Now
+\[
+      (l-p)/g\in Q,\qquad y/g-(l-p)/g\in P_E,\qquad y/g\in W_t ,
+\]
+so \(y\in gL_t\). The reversed argument gives the other kernel
+\(gB_t\); conversely \(gB_t\times gL_t\subset\Gamma_t\) follows
+directly from \eqref{eq:zero-gram-congruence-graph}. Pairings of
+two representatives on one side agree with the pairings of their
+lifts \(l\): their differences lie in the isotropic space \(P_E\)
+orthogonal to the representatives. The analogous primed lifts are
+congruent modulo \(gQ\), proving preservation of the form modulo \(gR\).
+
+For different terms the rational spaces \(W_t\) may differ.
+Projection modulo the original first isotropic space canonically
+identifies them with the same definite quotient
+\[
+        W_0=(X+Ez)^\perp/X .
+\]
+It is injective since \(W_t\cap P_E=0\), and surjective by the
+same rational correction \(l\mapsto l-p\). Both statements concern
+Hermitian spaces; projection preserves the form. Under this map \(L_t\)
+becomes the fixed target lattice \(L\), the image of
+\(\Lambda\cap(X+Ez)^\perp\) in \(W_0\).
+Projection carries \(B_t\) to an embedded lattice \(B\) and the
+two coordinates of \(\Gamma_t\) to a graph \(\Gamma\). In each middle
+lattice the distinguished line is primitive of norm \(-T_u\).
+Unimodular gluing as in Proposition~\ref{prop:flag-row-mass} gives
+\[
+ B^\#/B\simeq L^\#/L\simeq R/(T_u),\qquad
+ [L:M_\Gamma]=x,\qquad L/M_\Gamma\text{ has at most }j\text{ generators}.
+\]
+The two index assertions follow from
+Lemma~\ref{lem:zero-gram-frame-count} and its proof. Apply the
+same construction separately to the other term, with index \(x'\)
+and at most \(j'\) generators.
+
+The rational isometries from the second definite row to these
+two embedded lattices, say \(h_t,h_{t'}\), give
+\[
+   \eta=h_t h_{t'}^{-1},\qquad
+   \eta B'=B,\qquad(\eta\times1)\Gamma'=\Gamma .
+\]
+In these equations \(h_t\) carries the fixed definite quotient
+of the second row to \(B\): transport an integral representative by
+the rational isometry of the term, quotient by the transported
+isotropic flag, and use \(W_t\simeq W_0\). The finite operator coordinate determines the correspondence
+on the two middle lattices modulo \(g\), hence on their marked
+definite parts. In the ordering (source, target) this last
+correspondence is given by
+\[
+ (v\bmod g,w\bmod g)\text{ correspond}\ \Longleftrightarrow\
+ (h_t v,w)\in\Gamma
+\]
+by \eqref{eq:zero-gram-congruence-graph}. This proves the graph identity for \(h_th_{t'}^{-1}\).
+
+To bound the fibre, fix a target row and one class of second
+graded frames. Two realizations differ by a unipotent preserving
+the target lattice, followed by a change of representatives in the
+graded frame. Transporting these maps back identifies the source
+lattices with their graded vectors. To identify the actual marked
+vectors, split the primitive isotropic lattice \(A\) with its
+hyperbolic dual as in Proposition~\ref{prop:flag-row-mass}, writing
+the integral lattice as \(A\oplus H\oplus A^\vee\). In a marked
+source row \(A=\bigoplus_i\mathfrak a_i e_i\). The two choices
+of representatives, with these same coefficient ideals, differ on
+\(A\) by an integral unitriangular automorphism \(T\); its inverse
+is integral by triangular elimination. Extend it by
+\[
+            T\oplus 1_H\oplus (T^*)^{-1}.
+\]
+
+The remaining difference of the two marked terminal vectors lies
+in \(A\), say \(a_0\). Their common image \(z_H\) is primitive
+in \(H\), so there is an integral map \(C:H\to A\) with
+\(Cz_H=a_0\) (split the primitive summand \(Rz_H\)). Its unitary
+extension, for \(\tau+\bar\tau=1\) in \(R\), is
+\[
+ (a,h,y)\longmapsto
+ (a+Ch-\tau CC^*y,\ h-C^*y,\ y).
+\]
+
+The two linear cross terms cancel, and the remaining quadratic
+coefficient is \(1-\tau-\bar\tau=0\). Thus the source marking
+can be aligned by an integral first-flag unipotent.
+The two sources are the same row \(\Lambda'\) in the chosen set
+of representatives. Fix one realization. For any
+other, the residual source automorphism fixes the graded frame.
+On \(X^\perp/X\) it fixes the negative vector and acts by an
+isometry on its definite complement. Two such automorphisms with the
+same induced isometry differ by a first-flag unipotent: they agree
+on every graded line, the middle quotient and the dual graded lines
+by unitarity. Consequently, denoting a second graded-frame class by \([F']\),
+\[
+ \#\{\text{terms over }\Lambda,[F']\}
+        \le|\Delta_{\Lambda'}|=1/w_{\Lambda'} .
+\]
+
+Here \(\Delta_{\Lambda'}\) is the finite row automorphism image.
+
+For a fixed pair of frame classes and a fixed triple, choice of
+the first term specifies \(h_t\); the equation
+\(h_{t'}=\eta^{-1}h_t\) now fixes the second term by the same
+double-coset argument. Thus the weighted fibre has total source
+weight at most \(w_{\Lambda'}(1/w_{\Lambda'})=1\).
+The two Hilbert--Schmidt row factors are
+\[
+  (\sqrt{w_\Lambda w_{\Lambda'}})^2=w_\Lambda w_{\Lambda'} .
+\]
+The second cancels the fibre bound; the first remains for the
+genus average. The relative index has the same value on
+integrally equivalent graded frames, by conjugation.
+Lemma~\ref{lem:zero-gram-frame-count} bounds each frame-class
+sum. Proposition~\ref{prop:flag-row-mass} identifies the
+normalized average on first rows with that on their definite genus.
+Thus division of the left side of \eqref{eq:zero-gram-weight-sum}
+by \(M_u\) leaves at most
+\[
+ \sum_{1\le x\le D_\delta}\sum_{1\le x'\le D_{\delta'}}
+  F_\delta(x)F_{\delta'}(x')\,
+         \langle|\mathcal T(L;x,x')|\rangle_{\mathcal G}.
+\]
+
+\proofstep{Absorbing the two index sums.}
+Take \(C_a\ge\max(2(C_H+1),C_T,1)\), where
+\(T_u\le b^{C_Tm}\). The bounds for \(m,k,f\) in Lemma~\ref{lem:rank-window}
+give \(m^4/f\ll x^{-33\epsilon/4}\),
+\(m^5 f/k\ll x^{-37\epsilon/16}\), and
+\((\log f)^2/s\ll(\log x)^2x^{-1/2+\epsilon/16}\).
+Together with the marked level choice in
+Paragraph~\ref{par:window-successive-bounds} they give the late range
+\[
+ \begin{gathered}
+ m\ge42C_a,\quad m^4\le f,\quad m^5 f\le k,\quad
+ 42 C_a m^2\log b\le k,\\
+ \log f\le\sqrt{s},\quad 2\le d\le b,\quad (kb)^8\le g .
+ \end{gathered}
+\]
+
+Set \(A=b^{C_am^2f},\ U=A S_\delta^2,\ U'=A S_{\delta'}^2,\)
+and \(Z=S_\delta S_{\delta'}\).
+Taking the product of the local maxima gives
+\[
+ D_\delta\le U,\qquad B_\delta\le U^s,\qquad N\le A,\qquad
+ F_\delta(x)\le (D_\delta/x)^{k/2}U^{250000s^4}.
+\]
+
+For the last inequality substitute the first three in
+\eqref{eq:zero-gram-frame-bound}; \(c\le4s\) and
+\(8^{s+1},f^2\le A\). In the genus estimate
+\eqref{eq:zero-gram-pair-mean}, \(Y=xx'N^4\le A^6Z^2\).
+The coefficient of \(Y^7\) obeys
+\[
+          (32/g)^{kf}(4kf)^{4f} A^{42}\le 2^{-f}.
+\]
+
+Indeed take the \(f\)-th root, use \(b^{42C_am^2}\le e^k\),
+\(f\le k,\ b\ge2\) and \(g\ge(kb)^8\); the result is at most
+\((32e/(2k)^8)^k(4k^2)^4\le1/2\) for \(k\ge9\).
+
+It follows that \(U_*,V_*\le Z^{14}/2\) in
+\eqref{eq:zero-gram-pair-mean}. Since \(Z\ge1\), the truncated
+sum of their powers is bounded after extracting \(Z^{14k}\)
+by a geometric series of ratio \(1/2\). The two other factors obey
+\[
+ Y^{6s+10+4c}\le(UU')^{96s},\qquad
+ 2+2(20fd^2)^{2f(6+c)}d^f\le A^{183}.
+\]
+For the first use \(Y\le(UU')^3,\ c\le4s\); for the second
+use \(f\le b^{2s},\ d\le b,\ 20\le b^5\), and \(m=2s+2\).
+The genus bound contains \((xx')^{k/2}\), cancelling precisely
+the denominator in the two \(F\)'s. At most \(UU'\) index
+pairs occur. Hence the contribution per label is at most
+\[
+ D_\delta^{k/2}U^{300000s^4}S_\delta^{14k},
+ \qquad 1+96s+183+250000s^4\le300000s^4 .
+\]
+Finally \(m^4\le f,\ m^5 f\le k,\ m\ge42\) imply
+\(300000s^4\le k\). With \(C=300000C_a\) the last expression
+is at most \(E_\delta\), and the same calculation applies
+to \(\delta'\).
+\end{proof}

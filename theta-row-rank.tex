@@ -1,0 +1,681 @@
+\subsubsection*{The span of the original theta rows}
+\label{subsec:theta-row-rank}
+
+Integrality after descent bounds the coefficients of the theta rows. For their determinant to detect the original row space, these rows must also span its good type at the base tuple with the prescribed unipotent character.
+
+\paragraph{Stable range and the lattice operator.}
+Write \(n\) for the source rank, \(r\) for the target
+rank and \(D_E=[E:\mathbb Q]r\) for the dimension of a
+target lattice over \(\mathbb Q\). The source dimension
+condition is \(n\ge 4D_E+4\), with \(n\) even as in the
+row construction. In the finite Weil model
+for the prescribed level, let \(\Phi(L,A)\) denote the
+normalized test vector for a self-dual target lattice
+\(L\) and a source lattice class \(A\). The test vectors
+are summed over the finite source classes with their
+stabilizer weights. Their pairings define the matrix
+\[
+      C(L,L')=\sum_A w(A)
+                \langle\Phi(L,A),\Phi(L',A)\rangle .
+\]
+With the same weights on both entries, its diagonal
+is a positive scalar. If \(m=[L':L\cap L']\), the
+ratio of the off-diagonal bound to the diagonal is
+\(m^{-n/2}\). We give the common-label calculation
+that makes this bound independent of the size of the level.
+
+\begin{lemma}[Invertibility of the overlap matrix in the stable range]\label{lem:theta-overlap-invertible}
+At the specified finite level let \(n\ge4D_E+4\) be even.
+For distinct lattices let \(a(L,L')\) denote their relative overlap. Then
+\[
+ |a(L,L')|\le [L':L\cap L']^{-n/2}.
+\] The resulting matrix \(C\) has
+a bounded inverse on bounded automorphic holomorphic frame functions
+of the prescribed weight.
+\end{lemma}
+
+\begin{proof}
+Let \(\mathfrak m\) be the level ideal, coprime to both
+\(2\) and \(\bar{\mathfrak m}\), and write \(L_*\) for the reference
+target lattice. A target lattice is commensurable with
+\(L_*\) by multiplication in both directions by some
+\(s\in\mathcal O_E\) prime to \(\mathfrak m\bar{\mathfrak m}\).
+The shifted lattice is
+\[
+ L^{\sharp}=(\mathfrak m L:\bar{\mathfrak m}).
+\]
+
+For a source lattice \(A\), let
+\(B_L=A\otimes L^{\sharp}\) be its self-dual tensor lattice
+in the Weil space, where the tensor convention uses
+conjugate source contractions. The normalized shifted
+vacuum \(v_L\) is fixed by the operators
+\[
+ U(\delta)=\varepsilon(\delta)W(\delta)
+\]
+for
+\(\delta\in B_L\). Here \(W\) is the Heisenberg action,
+and \(\varepsilon\) is the common lattice semicharacter.
+The level sum for \(L\) uses translates \(W(y)v_L\),
+with \(y\) labeled by source rows modulo \(\mathfrak m L_*\)
+after localization at \(\mathfrak m\).
+
+The allowed labels
+are the level subgroup in the first \(r\) rows and zero
+in the remaining rows. The reduced matrices and their
+unitary character give the same weights for all \(L\).
+The two sums admit common representatives: the intermediate lattices agree at the level because the intervening scalars are prime to \(\mathfrak m\). The Chinese remainder theorem supplies representatives in their intersection. Denominator-lattice shifts fix the translate. Both the lift \(y\) and the difference \(d\) contain the factor \(2\) in the level quotient. Hence the vacuum semicharacter and their integral pairing phase equal one. Consequently
+\[
+ \varepsilon(d)=1,\qquad W(y+d)v_L=W(y)v_L.
+\]
+
+
+\proofstep{Orthogonality from the Heisenberg characters.}
+Suppose \(\langle W(y)v_L,W(y')v_{L'}\rangle\ne0\). For every
+\(\delta\in B_L\cap B_{L'}\), the two vectors are eigenvectors
+of the same unitary \(U(\delta)\), with eigenvalue ratio
+\(\exp(2\pi i\, E_A(\delta,y-y'))\) up to the convention for
+the sign of the alternation \(E_A\). Put \(\Delta=y-y'\) and \(B_0=B_L\cap B_{L'}\).
+Unitarity gives
+\[
+ \bigl(1-e^{2\pi i E_A(\delta,\Delta)}\bigr)
+         \langle W(y)v_L,W(y')v_{L'}\rangle=0
+       \qquad(\delta\in B_0).
+\]
+For a nonzero overlap this gives
+\(\Delta\in B_0^\#\), with \(\#\) denoting the alternating
+dual.
+
+Choose \(s,s'\) prime to \(\mathfrak m\bar{\mathfrak m}\)
+from the two comparisons with \(L_*\). The inclusion
+\(ss' B_L\subseteq B_0\) implies
+\[
+ B_0^\#\subseteq(ss' B_L)^\#
+             =(\overline{ss'})^{-1}B_L ,
+\]
+using \(B_L^\#=B_L\) and the conjugate adjoint rule. The source lattices in the
+level sum contain \(N\mathcal O_E^n\) for an integer \(N\)
+prime to a level integer in \(\mathfrak m\).
+Contracting with \(Ne_k\) consequently gives
+\(N\overline{ss'}(y_k-y'_k)\in L^{\sharp}\) in each row.
+Take \(a\in\mathfrak m\), \(b\in\bar{\mathfrak m}\) with
+\(a+b=1\). The definition of \(L^\sharp\) gives
+\[
+  bN\overline{ss'}(y_k-y'_k)\in\mathfrak m L,\qquad
+  sbN\overline{ss'}(y_k-y'_k)\in\mathfrak m L_* .
+\]
+The scalar in the second inclusion is a unit modulo
+\(\mathfrak m\), hence \(y_k,y_k'\) have the same level
+label. This holds for every row.
+
+For equal labels the same \(W(y)\) occurs in each argument.
+Since it is unitary and the level-character weights have
+modulus one, the normalized level contribution is
+\(\langle v_L,v_{L'}\rangle\) times the common number of
+labels. For its absolute value put
+\(D'=B_{L'}/(B_L\cap B_{L'})\). The projection on the
+\(B_{L'}\)-vacuum line, evaluated on \(v_L\), is
+\[
+      \Pi_{L'}v_L=\frac1{|D'|}\sum_{\delta\in D'}U(\delta)v_L .
+\]
+The terms are well defined because the denominator fixes
+\(v_L\).
+
+Distinct terms have different \(B_L\)-characters
+by self-duality of \(B_L\), hence are orthogonal and each
+has norm one. Locally the source lattice is free of rank
+\(n\), so after the common shift the relative tensor index
+is \(|D'|=[L':L\cap L']^n=m^n\). Therefore
+\[
+ |\langle v_L,v_{L'}\rangle|^2
+   =\|\Pi_{L'}v_L\|^2=|D'|^{-1}=m^{-n}.
+\]
+The relative bound is the same for every source class. Summation
+with the identical nonnegative stabilizer weights gives it for
+the matrix \(C\).
+
+\proofstep{Counting neighboring self-dual lattices.}
+The number of self-dual \(L'\)
+with index \(m\) is at most \(m^{2D_E}\). Set
+\(J=L\cap L'\). Self-duality gives equal covolumes
+and hence both indices over \(J\) equal to \(m\).
+The intersection is an index-\(m\) sublattice of
+\(L\). The number of index-\(m\) sublattices of
+a free abelian group of rank \(D_E\) is at most
+\(m^{D_E}\), by triangular Hermite normal form.
+Indeed the recurrence in rank \(d\) is
+\[
+ a_d(m)=\sum_{k\mid m}k^{d-1}a_{d-1}(m/k)\le\sum_{k\mid m}k^{d-1}(m/k)^{d-1}=m^{d-1}\tau(m).
+\]
+There are at most \(m\) positive divisors, giving the asserted bound.
+
+Now \(L'\) is an index-\(m\) sublattice of the
+dual of \(J\), by the same covolume calculation.
+The same count bounds the choices for \(L'\) for
+each \(J\). Index one occurs only for \(L'=L\).
+The normalized absolute row sum off the diagonal
+is therefore at most
+\[
+       \sum_{m\ge2} m^{2D_E-n/2}
+          \le \sum_{m\ge2} m^{-2}<0.65 .
+\]
+The estimate applies to every target lattice in the
+system and every rank meeting the size condition.
+
+\proofstep{The inverse and its multiplier.}
+Let \(D\) be the positive diagonal of \(C\).
+The unweighted bound on the off-diagonal row sum
+makes \(D^{-1}C=1+T\) invertible on the bounded
+automorphic functions by the series
+\(\sum_{j\ge0}(-T)^j\). Each diagonal entry is
+the fixed test-vector norm with the finite class
+weights, so its inverse is bounded. The coefficient
+matrix is compatible with the unit-modulus
+automorphy multiplier on the target lattices.
+It acts on bounded holomorphic frame functions
+with the prescribed weight. The series converges
+uniformly on compact subsets, since the weighted
+supremum bound gives an ordinary supremum bound
+on compact subsets of the frame domain. Thus its
+inverse preserves holomorphicity and the multiplier.
+Given the original bounded holomorphic family
+\(F\), use \(F'=C^{-1}F\) in the unfolding.
+\end{proof}
+
+\paragraph{Reproduction on the thin slab.}
+
+\begin{lemma}[Reproduction of the holomorphic frame functions]\label{lem:slab-reproducing-kernel}
+For the Gaussian attached to the given stable-range weight, there is
+a sufficiently thin slab and a constant \(\rho>0\) such that its
+kernel reproduces each bounded holomorphic frame function of the
+specified weight there. At an orthonormal frame \(x_0\) the scalar is
+\[
+ \rho=\frac{\int_{\rm slab}|K(x_0,y)|^2\,dy}{K(x_0,x_0)} .
+\]
+\end{lemma}
+
+\begin{proof}
+Use the Gaussian kernel with the row highest
+polynomials in the prescribed weight. The stable
+range contains these polynomials in the harmonic
+tensor model. Take a finite family orthonormal
+for the Fock pairing on this component. At a real
+place use coordinates in which the Hermitian Gram
+matrix of an orthonormal frame is
+\(J=\operatorname{diag}(I_p,-I_q)\), \(p+q=r\).
+The frame domain has invertible frames and
+positive first \(p\) columns for this form. A thin
+slab consists of frames with Gram matrix in a small
+open neighborhood of \(J\), at every real place.
+Indefinite Gram--Schmidt writes a frame as \(u b\)
+in orthonormal coordinates, with \(u\) unitary for
+\(J\) and \(b\) upper triangular.
+
+For the first \(j\) columns of the frame \(y\), let
+\(G_j=y_{[j]}^*J y_{[j]}\) and put \(\det G_0=1\). Since
+\[
+ G_j=b_{[j]}^*J_{[j]}b_{[j]},
+\]
+where the brackets on the square
+matrices denote their leading blocks,
+\[
+ |b_{jj}|^2=\left|\frac{\det G_j}{\det G_{j-1}}\right|.
+\]
+On a sufficiently thin slab each \(\det G_j\) remains close to
+\(\det J_{[j]}=\pm1\). The diagonal entries and their inverses
+are therefore bounded. The Gram--Schmidt recursion then bounds
+the remaining entries of \(b\) using these pivots and the
+bounded entries of the Gram matrix.
+The left unitary action preserves the slab and
+Lebesgue measure because each unitary matrix has
+determinant of absolute value one.
+
+Let \(K(x,y)\) be the polarized Gaussian after
+applying the highest polynomials in both arguments.
+It is holomorphic in \(x\), and its right upper
+triangular covariance is the weight character
+\(\chi_\lambda\). For a unitary change \(u\), the two invariances are
+\[
+ K(y,x)=\overline{K(x,y)},\qquad K(ux,uy)=K(x,y).
+\]
+In the Gaussian
+these changes preserve the Gram factors. Swapping
+the two frames conjugates the polarized factors.
+In the first argument the upper triangular change
+contributes the determinant power of the Gaussian
+and the diagonal powers of the two blocks of the
+highest polynomial. Terms from same-argument
+quadratic factors are killed by the harmonic
+contractions.
+
+At an orthonormal frame \(x_0\) the
+diagonal Gaussian, in the harmonic letters \(z_l,w_l\),
+is a positive determinant factor times
+\(\exp(\sum_l t_l z_l w_l)\), with \(t_l>0\) from the
+positive imaginary part of the polarized parameter.
+For a nonzero polynomial \(P(z)=\sum_\alpha P_\alpha z^\alpha\)
+in the chosen harmonic basis, coefficient extraction gives
+\begin{equation}\label{eq:slab-gaussian-diagonal}
+ \left.P(\partial_z)\overline P(\partial_w)
+       \exp\!\left(\sum_l t_l z_l w_l\right)\right|_{z=w=0}
+      =\sum_\alpha |P_\alpha|^2\alpha!\prod_l t_l^{\alpha_l}>0 .
+\end{equation}
+Only matching multi-indices survive the two differentiations.
+Summing \eqref{eq:slab-gaussian-diagonal} over the basis and restoring the positive determinant
+factor gives \(K(x_0,x_0)>0\).
+
+\proofstep{The two torus characters.}
+Consider the difference \(F\) of two functions with the same
+value at \(x_0\), the prescribed right upper triangular weight
+and the matching left diagonal unitary character. In coordinates
+at \(x_0\), Gaussian elimination reduces a frame in the dense
+cell to a lower triangular matrix \(L\). Define
+\[
+ D(z)=\operatorname{diag}(z,z^2,\ldots,z^r),
+ \qquad L(z)=D(z)LD(z)^{-1}.
+\]
+The \((i,j)\) entry on or below the diagonal is \(z^{i-j}L_{ij}\),
+so \(L(z)\) extends holomorphically to an invertible diagonal
+matrix at zero.
+
+For \(0<|z|\le1\), the first \(p\) diagonal entries
+of \(D(z)\) have squared modulus at least \(|z|^{2p}\);
+the others have squared modulus at most \(|z|^{2p}\).
+Hence \(D(z)^*JD(z)\succeq |z|^{2p}J\), and the positive
+Gram block stays positive after left multiplication. The
+right diagonal changes that block by a congruence, so the
+arc stays in the domain. For \(|z|=1\) the left and right
+characters cancel and
+\[
+ F(L(z))=F(L).
+\]
+The maximum modulus
+principle applied to \(F(L(z))-F(L)\) gives the equality at
+zero. The value there vanishes by the prescribed weight and
+\(F(x_0)=0\). The dense cell and continuity give \(F=0\).
+
+For a fixed \(x_0\) this uniqueness expresses \(K(y,x_0)\)
+as \(K(x_0,x_0)\) times the product of leading minors
+\(\Delta_i\) of the coordinate matrices of \(y\) with
+powers \(\lambda_i-\lambda_{i+1}\), with the weight
+extended by zero at \(r+1\). This product has precisely
+the required two characters. Possible negative powers
+occur only at \(p,r\), where the minors do not vanish.
+At a place with \(p,q>0\) the weights decrease within
+each block and
+\[
+ \lambda_{p+1}-\lambda_p\ge n.
+\]
+
+On an orthonormal coordinate matrix \(U\), all the
+leading minors are bounded by \(|\Delta_p(U)|\ge1\)
+and \(|\det U|=1\). Write \(P=\mathrm{diag}(I_p,0)\) and \(Q=I-P\).
+For \(U^*JU=J\) set \(N=PU+Q\) and \(N'=P+QU\).
+Then
+\[
+ N^*N=U^*PU+Q=U^*(P-Q)U+U^*QU+Q=P+U^*QU=N'^*N'.
+\]
+The first
+\(p\) columns of \(U\), written \(\binom{A}{C}\), satisfy
+\(A^*A=I_p+C^*C\), so \(|\det N|=|\det A|\ge1\).
+Writing \(W=N'N^{-1}\), we obtain
+\[
+ W^*W=(N^{-1})^*N'^*N'N^{-1}=(N^{-1})^*N^*NN^{-1}=I .
+\] For \(N_i\) retaining the first
+\(i\) rows of \(U\) and taking the other rows from the identity,
+each row of \(N_iN^{-1}\) is a row of \(I\) or \(N'N^{-1}\).
+All have norm one, so Hadamard gives
+\[
+      |\Delta_i(U)|=|\det N_i|\le|\det N|=|\Delta_p(U)|.
+\]
+
+The sum of the minor exponents up to \(r-1\) telescopes
+to \(\lambda_1-\lambda_r\le-n\).
+It follows that \(|K(y,x_0)|\) is bounded by a
+constant times the product of \(|\Delta_p(y)|^{-n}\)
+on the slab. The triangular factors there change
+this bound only by a bounded factor. At a definite
+place the slab is bounded and separated from singular
+frames. A left unitary change and right triangular
+covariance give the same bounds with any fixed first
+frame \(x\).
+
+\proofstep{Integrability in the noncompact directions.}
+For integrability at an indefinite place write the
+first \(p\) columns of \(y\) as \(\binom{A}{C}\).
+The matrix
+\[
+ G=A^*A-C^*C
+\]
+stays in a bounded
+neighborhood of \(I_p\) in the positive cone.
+At fixed first columns use a left unitary isometry
+to move them to \(\binom{G^{1/2}}{0}\). On the last
+\(q\) columns this change has Jacobian one. The
+cross Gram block bounds their top block and the
+last Gram block then bounds their lower block.
+Their total volume is bounded independently of
+the first columns. For a square complex matrix \(A\),
+polar coordinates have measure proportional to
+\(d(A^*A)\) times compact unitary measure. This follows
+from the triangular decomposition with positive
+diagonal entries \(r_{ii}\), where both the matrix
+and Gram Jacobians have the factor
+\(\prod_i r_{ii}^{2(p-i)+1}\).
+
+Since
+\[
+ A^*A=C^*C+G,
+\]
+integration in \(A\) amounts
+to integration in a bounded set of \(G\) and is bounded
+by a constant times \(\det(I_p+C^*C)^{-n/2}\).
+To integrate \(C\), remove one row \(v\) and put
+\(H=I_p+C_{\rm rem}^*C_{\rm rem}\). The determinant lemma
+and the substitution \(v=wH^{1/2}\) give
+\[
+ \int_{\mathbb C^p}\det(H+v^*v)^{-a}\,dv
+    =\det(H)^{1-a}
+          \int_{\mathbb C^p}(1+\|w\|^2)^{-a}\,dw .
+\]
+The last integral is finite for \(a>p\). Starting with
+\(a=n/2\), the last of the \(q\) removals has exponent
+\(n/2-q+1>p\), since \(n/2\ge p+q\).
+This proves absolute integrability of \(K(x,\cdot)\) on the
+product slab. The pointwise bounds make the kernel bounded,
+and the weighted frame-function norm bounds the ordinary norm
+on the slab.
+
+
+\proofstep{Evaluation by the torus average.}
+Average a holomorphic frame function \(F\) against
+\(\chi_\lambda^{-1}\) on the left diagonal unitary torus
+at \(x_0\). Compactness gives a holomorphic average.
+The average retains the right weight and has value
+\(F(x_0)\) at \(x_0\). It also leaves the integral against
+\(K(x_0,y)\) unchanged, by simultaneous invariance
+and covariance in the first frame. Both this average
+and \(K(y,x_0)\) have the two characters from the
+uniqueness argument. Therefore
+\[
+ \int_{\rm slab}K(x_0,y)F(y)\,dy
+ =\frac{\int_{\rm slab}|K(x_0,y)|^2\,dy}{K(x_0,x_0)}
+   F(x_0).
+\]
+The numerator is finite and positive by boundedness,
+integrability and continuity at \(x_0\). Move \(x_0\)
+to any orthonormal frame by a left unitary change of
+variables, and then to any frame by right weight
+covariance. This proves reproduction with the same
+positive constant \(\rho\).
+\end{proof}
+
+\paragraph{Unfolding the reproducing integral onto the original rows.}
+
+\begin{proposition}[Spanning by the original theta rows]\label{prop:span-original-theta}
+For the level and stable range \(n\ge4D_E+4\) of
+Lemma~\ref{lem:theta-overlap-invertible}, unfolding
+the doubled Weil kernel spans the bounded holomorphic target of the
+prescribed weight by the original theta functions. At the base tuple write \(V_{\rm good}\) for the rational good row and \(\Theta_{\rm good}\) for the projected definite-source lift. After the prescribed scalar identifications,
+\[
+ \operatorname{im}\Theta_{\rm good}=V_{\rm good}.
+\]
+\end{proposition}
+
+\begin{proof}
+In the doubled Weil calculation the sum of the product
+kernel over rational changes of target frame is
+the finite sum of theta products, with the first
+factor read at \((L,x)\) and the second at the other
+target lattice and frame. On the unfolded side
+the term for \(L'\) is
+\[
+    C(L,L')\int_{\rm slab} K(x,y)F'(L',y)\,dy .
+\]
+To obtain the doubled identity, apply the definite
+Hermitian Siegel--Weil identity to the admissible
+doubled test function at zero in the auxiliary
+variables. The difference from the Eisenstein sum
+solves the doubled heat equation. The invariant
+sum of highest-polynomial differential operators
+therefore also kills that difference.
+
+In the
+Eisenstein sum a maximal isotropic subspace of
+the doubled space is either a unitary graph or
+contains a nonzero isotropic vector in one summand.
+Writing \(I(U)\) for the term attached to a maximal isotropic space \(U\), the no-coinvariants condition and the support of the finite Weil pairing give, respectively,
+\[
+ I(U)=0\quad\text{if }U\text{ is not a graph},
+ \qquad I(\operatorname{graph}g)=0\quad\text{if }g\text{ is outside the level group}.
+\]
+On a graph the finite pairing is the overlap of the two test functions. For the
+remaining graphs the Weil action on the translated
+frame and the conjugate multiplier give the
+integrand above. The double sum and
+integration may be interchanged.
+
+For fixed \(x\),
+the Gaussian at \(x\) is integrable in \(y\) on a
+sufficiently thin slab, the functions \(F'\) are
+uniformly bounded on that slab, and
+\[
+ \sum_{L'}|C(L,L')|<\infty
+\]
+by the overlap
+estimate. The group changes preserve the measure
+and the slab, and the unit-modulus multiplier
+cancels against the conjugate in the theta product.
+Integrate over the fundamental domain for these
+group changes. The finite sum of theta products
+then yields a finite sum of theta functions in
+\((L,x)\), whose scalar coefficients are the integrals
+of the second factors against \(F'\).
+The unfolded expression is
+\[
+    \rho\sum_{L'} C(L,L')F'(L',x)=\rho F(L,x).
+\]
+Dividing the coefficients by \(\rho\) gives the
+theta spanning assertion. Only the strict bound
+on \(T\) is used for an estimate on the rank.
+The overlapping lattice system and the doubled
+kernel both use the prescribed finite level in this
+application. \label{cor:theta-row-rank-1}
+
+\proofstep{Identification of the lowest-vector realization.}
+In the adelic realization, evaluate the target
+discrete-series map on its nonzero lowest weight
+vector. If \(v_0\) is that lowest vector, cyclicity gives the test for an intertwiner \(A\):
+\[
+ Av_0=0\quad\Longrightarrow\quad A(U(\mathfrak g)v_0)=0\quad\Longrightarrow\quad A=0.
+\]
+Here \(\mathfrak g\) denotes the complexified Lie algebra on the Harish--Chandra module.
+The bottom evaluation has the given compact
+torus weight and is killed by the lowering
+operators. After extracting the common
+determinant character it gives the holomorphic
+frame function of the preceding argument. Cusp
+rapid decay gives its weighted boundedness. The
+nonzero finite Weil vector of the base pair is
+a finite translate of the level test vector for
+that argument. Conjugating the frames and
+undoing this translation preserve the allowed
+harmonic source span. The lowest-vector identity spans the unprojected range of \(\Theta\): unfold each term as a definite-source lift summed over source classes. For the good-type projector \(e\),
+\[
+ \operatorname{im}(e\Theta)=e(\operatorname{im}\Theta).
+\]
+
+\proofstep{Projection onto the good row.}
+Spanning before taking finite types gives access to all row coordinates. The determinant at the selected place uses the good isotypic component, so the projection has to be applied to the same spanning family.
+
+Now take the base tuple on the actual row. The
+trivial auxiliary character and empty auxiliary
+level identify its projected lift with the class
+sum in the row construction. For its finite unipotent group \(U\) and character \(\chi\),
+the projection is
+\[
+ e_\chi=|U|^{-1}\sum_{u\in U}\chi(u)^{-1}u.
+\]
+
+Changing variables \(v=u_0u\) in the sum yields
+\[
+ u_0e_\chi=|U|^{-1}\sum_{v\in U}\chi(u_0^{-1}v)^{-1}v
+            =\chi(u_0)e_\chi .
+\]
+Conversely \(uf=\chi(u)f\) implies \(e_\chi f=f\). For the equivariant theta map \(T\),
+\[
+                  T(e_{\chi,\mathrm{src}}v)
+                         = e_\chi T(v),
+\]
+where the source operator uses the dual transformation
+rule of the row reading. This imposes that rule on each
+preimage of a good row vector. The equivariance of the row reading
+makes the average fix the given target vector.
+On the source the average imposes the dual
+unipotent rule. Thus a good row with this type
+is the reading of a class sum of functions on
+the source with the base finite transformation
+law.
+
+On a finite list of source classes, the
+harmonic coefficient lattice spans its allowed
+value space over \(\mathbb C\). For the class
+stabilizer, the finite trace with its level
+multipliers preserves that lattice. For a stabilizer \(H\) on the complex value space, its trace and projector satisfy
+\[
+ \operatorname{Tr}_H=\sum_{h\in H}h,\qquad |H|^{-1}\operatorname{Tr}_H=\operatorname{pr}_{H\text{-invariants}}.
+\]
+The operators include the specified level multipliers. Using the unnormalized trace on
+integral vectors therefore spans all such class
+functions. Their class sums span the given good
+row.
+
+A summand at one source class may be moved
+to a finite split-supported representative
+away from the excluded places. Rational
+automorphy and the finite transformation
+rule transport its polynomial in the harmonic
+lattice. The target character factor is
+absorbed by that rule. Each resulting term
+is the complex reading of an admitted original
+theta datum. This uses the split-support and
+level conditions in the definition of the
+allowed original data, and the base-series
+rational comparison on the same row.
+
+Finally, any vector of the rational good row
+whose complex reading is in the span of those
+data lies in their rational span. Indeed if \(W\) is their rational span, extension of
+scalars over a field is exact, so the kernel of
+\[
+         V_0\longrightarrow (V_0/W)\otimes_K\mathbb C
+\]
+is \(W\). The comparison identifies the complex reading
+with this scalar extension. Applying the type projection, which
+fixes the good row, gives the full span of the
+projected original theta elements in \(V_0\).
+The finite set of source classes and the
+finite harmonic lattices give a finitely generated
+row module.
+
+Equivalently, in the rational
+comparison the original theta elements lie
+in the fixed finite level lattice. Over its DVR,
+a generating set for a finite module contains
+a subset projecting to a basis modulo the
+maximal ideal. Since this module is torsion-free,
+the chosen generators form a lattice basis.
+This proves the original full-rank comparison
+on the fixed tied data and in the stated stable
+range. Its use for the division rank later
+also requires the identification with the
+selected point's period and row dimension.
+\label{cor:theta-row-rank-2}
+\end{proof}
+
+\paragraph{Containment for the twisted rows.}
+Fix the tested character at one admitted auxiliary
+level, and work over its coefficient DVR \(O_k\).
+The finite type multiplier on the source level
+group is a product of its base character, the
+splitting character at the two type primes, and
+the local components of the fixed and varying
+twists. The base character agrees with the
+given row character there. All its values are
+roots of unity in the coefficient field.
+At a place over a type prime \(g_i\) the field
+assumption includes the roots of order dividing
+\(g_i(g_i-1)\), since the host places there have
+residue field \(\mathbb F_{g_i}\).
+At the distinguished and auxiliary places use
+the prescribed character values in \(O_k\).
+If \(\mu\) denotes the product character and \(u\) a level
+element, each of its factors has finite order in the admitted
+coefficient field. Thus the normalization is
+\[
+       \mu(u)=\mu_{\rm base}(u)\mu_{\rm spl}(u)
+                          \mu_{\rm fixed}(u)\mu_{\rm aux}(u)
+                       \in O_k^\times .
+\]
+
+For a twisted generator the source translate
+differs from its original representative by a
+change supported at the chosen split places.
+Those places avoid the coefficient prime and
+the fixed exclusions. In the harmonic coefficient
+lattice the two readings agree over \(O_k\) after
+this change. At places over the coefficient prime
+the self-dual lattices agree, and all rational
+denominators of the other changes are units there.
+Write \(h\) for the resulting finite source point
+and \(P\) for its integral harmonic polynomial.
+The finite trace of \(P\) on the double coset
+of \(h\) is the sum of its rational source
+translates with the finite level multipliers.
+
+At a given source point the summands are indexed
+by a coset of a finite stabilizer, so this is
+a finite sum in its harmonic coefficient lattice.
+The reindexing uses the bijection of finite indexing sets
+\[
+ H\longrightarrow h_0H,\qquad h\longmapsto h_0h,
+\]
+where \(H\) is the stabilizer and \(h_0H\) is the coset indexing a translated sum. Including the level multiplier gives the dual transformation rule. It belongs to the integral module
+of class functions for this level.
+
+Unfold its class sum using the finite source
+representatives and the same stabilizer weights
+as in the original theta formula. On the kernel,
+rational left translation fixes the value at
+zero and the right level action is the inverse
+of the multiplier in the trace. The two factors
+cancel.
+
+For one contributing class let \(n_h\) be its stabilizer
+order and \(\Theta_h(P)\) the value of the corresponding
+flat series term. Each of the \(n_h\) translated terms
+has that same value after the two finite multipliers cancel.
+The resulting term in the class sum is
+\[
+       n_h^{-1}\sum_{i=1}^{n_h}\Theta_h(P)=\Theta_h(P).
+\]
+The reciprocal arises only in the characteristic-zero
+class-sum evaluation, after forming the integral trace. The result is the desired single flat
+twisted series, multiplied by its norm-one
+determinant character on the source point.
+That scalar is a root of unity in \(O_k\).
+Including it in the integral trace therefore gives
+the correct twisted generator. The trace takes
+no inverse stabilizer order on the integral
+module.
+
+By the comparisons on the fixed row, the class
+sum is the reading of an element of the finite
+level lattice. The twisted generator has the same
+reading. Injectivity over the extension field
+identifies these vectors, so the generator belongs
+to that lattice before applying the good-type
+projection. This proves the twisted containment
+used in the signed-index comparison. It applies
+to both sides and every admitted character of
+the specified depth. \label{cor:theta-row-rank-3}

@@ -1,0 +1,2175 @@
+\subsubsection{Normalized points on the fitted tower}
+\label{par:rank-four-promodular}
+\hypertarget{source-ordinary-promodularity}{}
+The orbit count gives Galois representations, but a Hecke trace count requires ordinary eigenpoints at the prescribed levels. Start with a normalized point and retain its four ordered ordinary characters and local flags throughout the comparison.
+The same argument applies when the matrix algebra is full and
+when the point has a full two-dimensional block in the positions
+\(\{0,2\}\) or \(\{1,3\}\). We describe the passage from a
+residual chain to membership in the modular locus. This part
+will be used in both host cases.
+
+\begin{paramdefinition}[Coefficient rings and flags on the fitted tower]\label{hyp:fitted-ordinary-tower}
+Restrict to a totally real abelian field \(F\) of the tower and
+let \(K\) be its fixed imaginary quadratic field. Put
+\[
+  L=FK,\qquad d=[F:\Q],\qquad
+  g=\#\{v\mid\ell\text{ in }F\},\qquad d_v=d/g .
+\]
+The local degrees are equal since \(F/\Q\) is abelian. The labels of the
+four residual characters give the diagonal order at the
+distinguished element. Choose the integral basis and the
+lower unipotent local flags before constructing the residual
+chain. The normalization retains both the conjugacy class
+over the fraction field and the marked inertia characters.
+
+The small coefficient model is an injective map from a
+complete local integral algebra to the valuation ring of the
+point. Writing \(A_{\rm sm}\) for this algebra and \(O_y\) for the target valuation ring, the model contains the finite lists
+\[
+  A_{\rm sm}\hookrightarrow O_y,\qquad
+  \{r(h_a)_{ij}\}_{a,i,j},\quad\{(b_v)_{ij}:i>j,\ v\mid\ell\},
+\]
+where \(h_a\) are the chosen group generators and \(b_v\) the lower
+unipotent matrices of the ordinary flags. The seed uses an ordinary
+integral coefficient ring. Use a common finite coefficient DVR \(\Lambda\) for the
+coefficient constants: take the compositum of the seed and ordinary
+coefficient fields and the unramified extension realizing the
+finite chain residue fields. The small integral target model is
+a coefficient algebra, with its given map to the target valuation
+ring. Its deformation variables are retained in that algebra.
+The integral marking at the target and its transported flags are
+constructed in Lemma~\ref{lem:rational-rank-four-marking} and
+Proposition~\ref{prop:rational-rank-four-torus}.
+\end{paramdefinition}
+
+Let \(B\) be the complete local base for the coefficients of
+characteristic polynomials and the ordinary characters, and
+let \(A\) be the finite type \(B\)-algebra carrying the
+normalized matrix representation and flags. Denote the four
+inertial characters at \(v\) by \(\psi_{v,i}\).
+The ordinary construction gives an ideal \(J\subset B\).
+The two properties proved below are
+\[
+ \mathfrak m_B^n\subset(J,\varpi_\Lambda,\psi_{v,i}(s)-1),\qquad
+ JA\subseteq\mathfrak p
+\]
+for some \(n\) in the first statement and for the primes
+\(\mathfrak p\) at the specified points in the second:
+
+\begin{enumerate}
+\item A power of \(\mathfrak m_B\) lies in the ideal generated
+by \(J\), the coefficient uniformizer and all the
+\(\psi_{v,i}(s)-1\) for \(s\) in inertia.
+\item At the characteristic-zero automorphic seed, the
+extension of \(J\) to \(A\) lies in every prime contained in
+the kernel of evaluation. The analogous local vanishing holds
+at a characteristic-\(\ell\) formal arc centered over
+\(\mathfrak m_B\) which kills \(J\), has absolutely irreducible
+generic representation and separates the four inertial
+characters on the prescribed open inertia groups.
+\end{enumerate}
+The local vanishing clause concerns the components through the
+point. Vanishing of the evaluations of \(J\) alone would only
+put the point in its closed locus. The stronger clause is what
+allows propagation to adjacent components.
+\label{cor:ordinary-promodularity-1}
+
+\subsubsection{Ordinary ideals and the closed specialization}
+\label{par:count-two-ideals}
+
+Membership in ordinary support is expressed by ideals from the two levels. At the closed point one first needs a bound on what remains after imposing these ideals, the marked characters and the coefficient uniformizer.
+
+\begin{proposition}[An ideal primary to the closed tower point]\label{prop:tower-closed-specialization}
+Take the two ordinary determinant links on \(G_L\) with the common
+scalar twist, and let \(J\) be the sum of the extended ordinary
+ideals in \(B\). For some \(d\ge1\), with \(\varpi\) the coefficient uniformizer, 
+\[
+ \mathfrak m_B^d\subseteq J+(\varpi)+(\psi_{v,i}(s)-1:s\in I_v,\ (v,i)\text{ marked}).
+\]
+
+\end{proposition}
+
+\begin{proof}
+\proofstep{Use the same tower and twisting character.}
+
+The two auxiliary levels on \(L\) use distinct split primes
+and a common scalar twist \(\kappa\). Each adds only one
+possible exceptional prime to the split-level set. At each
+of these levels take the universal ordinary determinant ring
+for the twisted residual representation, and its ordinary
+modular quotient with kernel \(J_i\). Pull the corresponding
+closed loci back to \(\operatorname{Spec} B\) by the
+determinant and ordered ordinary characters of the universal
+tower representation. Writing the link maps as \(f_i:R_i\to B\) gives
+\[
+                   J=f_1(J_1)B+f_2(J_2)B .
+\]
+The extension is by these two maps for the same tower point. The change of
+similitude on \(L\) supplied by \(\kappa\) gives the
+polarization for these determinant rings. Both comparisons
+use the same twist on the same tower.
+
+Write \(R_i\) for one universal ordinary determinant ring
+and \(f_i:R_i\to B\) for its map. If the characteristic polynomial of \(h\in G_L\) is \(P_h(X)\), twisting all four roots gives
+\[
+ P_h^{\rm tw}(X)=\kappa(h)^4 P_h(X/\kappa(h)).
+\]
+At the fixed marked place this same twist sends each ordered character \(\psi_a\) to \(\kappa\psi_a\). The determinant law descends to \(B\): its values on
+sums of group elements are integral polynomials in the
+characteristic coefficients of words in those elements.
+The polarization and flag relations hold over \(A\), hence
+in \(B\) by injectivity. Use the empty-auxiliary ordinary
+module \(M_i\) at the level of \(R_i\), with the tame type,
+weight character and residual localization of
+Section~\ref{sec:count-two-level-data}.
+
+In the paragraphs
+below, \(J_i=\ker(R_i\to\operatorname{End}_{\Lambda_i}M_i)\)
+throughout, where \(\Lambda_i\) is the ordinary weight
+algebra. The determinant and ordered characters of the
+constituent attachments in
+Section~\ref{sec:count-two-level-attachments} give that action.
+The quotient of the link ring embeds into the endomorphisms
+of the empty-auxiliary module:
+\[
+    R_i/J_i\ \lhook\joinrel\longrightarrow
+                         \operatorname{End}_{\Lambda_i}(M_i).
+\]
+The target is finite free over \(\Lambda_i\), so the image is
+finite and torsion-free.
+The enlarged levels in the patching argument have the
+same base module when the auxiliary conditions are removed.
+\proofstep{Make the determinant coefficients integral over the residue field.}
+
+Write \(I\) for the ideal generated in \(B\) by
+\(f_i(J_i)\), the coefficient uniformizer and
+\(\psi_{v,a}(s)-1\) for all marked inertia elements \(s\).
+Take a prime \(\mathfrak q\supset I\) and set
+\(D'=B/\mathfrak q\), a local domain with the same
+residue field \(k\) as the coefficient ring.
+The weight map to \(D'\) sends the ordered characters on
+inertia to the reductions of the fixed twisting character
+\(\kappa\). The universal property of the weight algebra
+therefore identifies this map with its residue specialization.
+The map thus factors on the quotient through
+\[
+  (R_i/J_i)\otimes_{\Lambda_i}k\longrightarrow D' .
+\]
+The algebra on the left is finite-dimensional over \(k\), so the image of each element of \(R_i\) is integral over \(k\).
+
+We must recover the generators on the tower side. For \(h\in G_L\), if \(a_j(r(h))\) is the coefficient of
+\(T^{4-j}\), then
+\[
+                 a_j(\kappa(h)r(h))=\kappa(h)^j a_j(r(h)).
+\]
+The left side belongs to the image of \(f_i\).
+As \(\kappa(h)\) is a coefficient unit, \(a_j(r(h))\) is
+integral in \(D'\) over \(k\). For \(g\in G_F\) use
+\(g^2\in G_L\).
+Each coefficient of the characteristic polynomial at \(g\)
+is integral over the ring generated by the coefficients at
+\(g^2\).
+
+To see the universal identity, use indeterminates
+\(x_1,\ldots,x_4\). Each \(x_a\) satisfies the monic
+equation \(\prod_b(T^2-x_b^2)=0\) at \(T=x_a\).
+Consequently each elementary symmetric function lies in the
+integral closure of
+\[
+        \mathbf Z[e_b(x_1^2,\ldots,x_4^2):1\le b\le4]
+            \ \subset\ \mathbf Z[x_1,\ldots,x_4].
+\]
+The monic relations specialize to characteristic coefficients
+of matrices, including the universal matrix over \(A\), by
+the symmetric polynomial identities for the square of a
+matrix. The inclusion \(B\hookrightarrow A\) descends those
+relations to \(B\). Reduction modulo \(\mathfrak q\) and
+transitivity of integrality give the assertion for all \(g\).
+For the other generators, every decomposition group at a
+marked \(v\mid\ell\) lifts to \(G_L\) since \(v\) splits in
+\(L/F\). Its four ordered character values therefore come
+from the ordinary determinant link, again up to a coefficient unit.
+
+\proofstep{Recover the closed point from its generators.}
+
+Integral dependence of the generators must now imply equality with their residues.
+
+
+An element \(x\in D'\) integral over \(k\) equals its
+residue \(a\in k\) inside \(D'\). The difference \(x-a\) lies in the maximal ideal, whereas \(k[x-a]\) is a finite-dimensional domain over \(k\), hence a field. If \(x-a\ne0\), then
+\[
+ 1=(x-a)(x-a)^{-1}\in\mathfrak m_{D'},
+\]
+since the inverse lies in \(k[x-a]\subset D'\). Thus the
+quotient map and the residue map into \(D'\) agree on the
+characteristic coefficients and the marked local characters.
+These determine maps out of the complete local base \(B\).
+Hence \(\sqrt I=\mathfrak m_B\). By Noetherianity
+\(\mathfrak m_B^n\subset I\) for some \(n\). Since
+\(f_i(J_i)\subset J\), one link proves the first property.
+
+\end{proof}
+
+\input{ordinary-level}
+\input{ordinary-patching}
+
+\subsubsection{Vanishing below the formal arc}\label{par:count-two-arc}
+
+The patching statement was made for one determinant link. Applied at each level, it gives an ideal containment below a formal arc on which the marked characters remain distinguishable.
+
+\begin{auxlemma}[Regular elements in the cyclotomic kernel in rank four]
+\label{lem:ordinary-four-regular-cosets}
+Let \(A=k[[t]]\) with \(k\) finite of odd characteristic and
+\(F=\operatorname{Frac}A\). Let \(G\) be a profinite group,
+\(H\) a closed normal subgroup, and
+\(r:G\to\mathrm{GL}_4(A)\) continuous with \(r|_H\) absolutely
+irreducible over \(F\). Assume the residual semisimplification
+on \(G\) is a sum of characters \(\chi_1,\ldots,\chi_4\), with
+one ratio of order greater than four. Suppose \(s\in H\) has four
+eigenvalues whose pairwise ratios have infinite order. For every
+open normal subgroup \(U\) of \(H\) one has
+\[
+  \forall h\in H\quad\exists g\in hU,\qquad
+               \operatorname{disc}_X\det(XI-r(g))\ne0 .
+\]
+\end{auxlemma}
+\begin{proof}
+\proofstep{Exclude a decomposition into four lines.}
+Work over an algebraic closure of \(F\). Write \(C\) for the
+Zariski closure of \(r(H)\), and \(C^\circ\) for its identity
+component. Both are normalized by \(r(G)\). The restriction of
+the four-dimensional space to \(C^\circ\) is semisimple: the sum
+of its simple submodules is nonzero and \(r(H)\)-invariant, hence
+the whole space. The isotypic components are permuted transitively.
+Some positive power of \(r(s)\) lies in \(C^\circ\) and still has
+simple spectrum, so no simple constituent occurs twice.
+Consequently the possible dimensions of the summands are
+\[
+             (4),\qquad(2,2),\qquad(1,1,1,1).
+\]
+
+In the last case the four lines are permuted by \(G\). Let
+\(N\) be the kernel of its permutation action. On these lines
+\(r|_N\) acts by characters \(\psi_i\). Their values and inverses
+are integral since they are roots of the characteristic
+polynomials of elements of \(\mathrm{GL}_4(A)\) and their inverses.
+Extend the \(t\)-adic valuation to the algebraic closure and
+reduce the four characters there. For every \(h\in N\),
+\[
+ \prod_i(X-\overline\psi_i(h))=\prod_i(X-\chi_i(h)).
+\]
+
+In particular all the reduced characters take values in a common
+finite group of roots of unity of order prime to the characteristic.
+Let \(C\) be this finite group and \([\,\cdot\,]:C\to\mu_{|C|}(\mathbb C)\)
+a fixed multiplicative lift. The equality of the multisets at \(h\) gives
+\[
+       \sum_i[\overline\psi_i(h)]=\sum_i[\chi_i(h)]\qquad(h\in N).
+\] Independence of the
+characters of the resulting finite abelian quotient of \(N\) gives
+equality of the two multisets of characters on \(N\). The
+\(\chi_i|_N\) are invariant under conjugation by \(G\). Since \(G\)
+permutes the \(\psi_i\) transitively, all four reductions must
+coincide. Thus every ratio \(\chi_i/\chi_j\) factors through the permutation image of \(G\). If \(\sigma\in S_4\) is the image
+of a lift of a generator of this cyclic ratio group, then
+\[
+  |\operatorname{im}(\chi_i/\chi_j)|\mid\operatorname{ord}(\sigma),
+          \qquad \operatorname{ord}(\sigma)\in\{1,2,3,4\}.
+\] This contradicts the hypothesis on the residual ratio.
+
+\proofstep{Find simple spectrum in every component.}
+Let \(hU\) be a coset of an open normal subgroup of \(H\). The
+Zariski closure of \(r(U)\) contains \(C^\circ\), since its finitely
+many translates cover \(C\). It suffices to show the discriminant is
+nonzero at some point of \(r(h)C^\circ\). The identity component of
+the closure of the cyclic group generated by \(r(s)\) is a torus.
+In an eigenbasis of \(r(s)\), its four coordinate characters are
+distinct, since their ratios have infinite order on \(r(s)\). Choose
+an integral cocharacter outside the finitely many hyperplanes where
+two of these characters agree. It yields in \(C^\circ\)
+\[
+             D(z)=\operatorname{diag}(z^{d_1},\ldots,z^{d_4})
+             \quad(d_i\text{ pairwise distinct}).
+\]
+
+First suppose \(r(h)\) preserves each simple summand. We need a point in the open set
+\[
+  \{X\in r(h)C^\circ:\prod_{i=1}^4 X_{ii}(X^{-1})_{ii}\ne0\}.
+\] Each individual condition is a nonempty
+open: in its summand the orbit of a coordinate vector spans by
+irreducibility, and inversion carries this coset to one with
+the same summands. The intersection is nonempty because
+\(C^\circ\) is irreducible. Order the four exponents as
+\(a<b<c<d\). For the characteristic polynomial of \(XD(z)\) let
+\(v_j\) be the lowest \(z\)-degree of the coefficient of
+\(Y^{4-j}\), with \(v_j=\infty\) for a zero coefficient. Expansion
+in principal minors gives
+\[
+ v_0=0,\quad v_1=a,\quad v_3=a+b+c,\quad
+ v_4=a+b+c+d .
+\]
+
+For \(v_3\) the relevant principal minor is a diagonal entry of the
+adjugate and is nonzero. If the minor of the two smallest weights
+is nonzero, \(v_2=a+b\), and the four Newton slopes are distinct.
+Otherwise its point lies strictly above the middle Newton segment:
+\[
+             v_2\ \ge\ a+c\ >\ a+(b+c)/2=(v_1+v_3)/2 .
+\]
+That segment has length two and only its endpoints lie on it. Its residual polynomial
+is a binomial of degree two with nonzero constant coefficient, hence
+has two simple roots in odd characteristic. More explicitly, after
+adjoining \(z^{1/2}\), rescale \(Y\) by the middle slope and
+divide out the common order. The two nonzero residue roots lift
+separately by Hensel's lemma. The outer segments give two further
+roots of distinct valuations. In either case the discriminant is
+nonzero over the Laurent series field.
+
+In the remaining case \(r(h)\) exchanges the two planes. Each plane
+is spanned by two of the chosen eigenvectors. Irreducibility on
+each plane permits us to choose \(X\) in the coset with every
+entry in both off-diagonal blocks nonzero, by the same open-set
+argument. In block coordinates write
+\[
+ XD(z)=\begin{pmatrix}0&B D_2(z)\\ C' D_1(z)&0\end{pmatrix},
+ \qquad
+ \det(Y-XD(z))=Y^4-TY^2+P,
+\]
+where \(T=\operatorname{tr}(B D_2 C'D_1)\) and
+\(P=\det(B D_2 C'D_1)\ne0\). If \(a<b\) and \(c<d\) are the
+weights of the two planes, the term of degree \(a+c\) in \(T\)
+is unique with nonzero coefficient. In particular
+\[
+ \operatorname{ord}_z T^2=2(a+c)<a+b+c+d=\operatorname{ord}_z P .
+\]
+The quadratic in \(Y^2\) has distinct nonzero roots, each with
+two distinct square roots. Hence the discriminant is again
+nonzero on the coset. Zariski density now supplies an actual
+element of \(hU\) with nonzero discriminant. Such cosets form a
+basis of the profinite topology.
+\end{proof}
+
+\begin{proposition}[Ordinary ideals below a separating formal arc]\label{prop:tower-below-arc}
+Let \(y:A\to k'[[t]]\) have center at the closed point of \(B\),
+kill \(J\), and be absolutely irreducible on the generic fiber
+with all the prescribed inertia characters separated. Under the residual tests in
+Lemma~\ref{hyp:ordinary-arc-residual-tests}, the containment at each generization is 
+\[
+ JA\subseteq P\qquad(P\in\operatorname{Spec} A,\ P\subseteq\ker y).
+\]
+
+\end{proposition}
+
+\begin{proof}
+Let \(y:A\to k'[[t]]\) be centered over the closed point of
+\(B\) and kill \(J\). Assume its generic representation
+is absolutely irreducible and its ordered characters
+separate on the specified open inertia groups. The component
+argument will construct such an arc. On \(G_L\) twist its matrices by
+\(\kappa\). The resulting representation has the determinant
+specified by \(y f_i\), its ordered characters are obtained
+by the same twist, and its pairing and ramification
+conditions come from the link. Continuity follows from
+locality of the map on \(B\) and continuity of the
+normalized matrices in their coefficient model.
+
+\proofstep{Irreducibility on the CM field.}
+
+The generic representation remains absolutely irreducible
+on \(G_L\). Indeed, by index-two Clifford theory a reducible restriction here would split over an algebraic closure into two conjugate summands exchanged by the other coset. Relative to those summands every such element would have the form
+\[
+ \begin{pmatrix}0&A\\ B&0\end{pmatrix},\qquad
+ \operatorname{tr}\begin{pmatrix}0&A\\ B&0\end{pmatrix}=0 .
+\] For \(u\in G_F\setminus G_L\), write the four residual
+characters as \(\bar\chi_a\). The reduction of the trace
+at \(uh\), \(h\in G_L\), is
+\[
+           \sum_{a=0}^3\bar\chi_a(u)\bar\chi_a(h).
+\]
+Every coefficient is nonzero. The restrictions of the
+\(\bar\chi_a\) to \(G_L\) are distinct, hence linearly
+independent, so this function of \(h\) is nonzero. This contradicts vanishing. The argument can be
+carried out after scalar extension to an algebraic closure
+of \(k'((t))\).
+
+\proofstep{Cyclotomic restriction and the residual tests.}
+
+Let \(H\subset G_L\) be the full \(\ell\)-adic cyclotomic
+kernel. Each pair of arc characters is separated on the
+part of inertia in \(H\) that also kills the residual
+characters. The tower's inertia subgroups at \(\ell\)
+are contained in \(G_L\), and the scalar twist cancels
+in a ratio. The ratios on that subgroup take values in \(1+tk'[[t]]\).
+
+For \(u\in tk'[[t]]\setminus\{0\}\) and \(\ell\nmid b\) the
+leading term of \((1+u)^b-1\) is \(bu\). Hence for
+\(m=\ell^a b>0\) one has
+\[
+            v_t((1+u)^m-1)=\ell^a v_t(u)<\infty .
+\]
+Thus the group is torsion-free. A finite union of the kernels of the nontrivial
+ratios cannot cover the compact group, since each has
+infinite index and measure zero. Thus choose \(s\) outside the union of those kernels.
+For any two local eigenvalues \(a_i,a_j\) at \(s\),
+\[
+ a_i/a_j\ne1 \quad\Longrightarrow\quad
+          (a_i/a_j)^m\ne1 \qquad(m>0)
+\]
+by the valuation formula. Thus all powers of the matrix
+at \(s\) have distinct eigenvalues.
+
+\begin{established}[The residual character tests on both fitted links]\label{hyp:ordinary-arc-residual-tests}
+On either fitted link let \(\mathcal C=\{\bar\chi_1,\ldots,\bar\chi_4\}\)
+as a multiset on \(G_L\). Its quadratic twists and ratios satisfy
+\[
+ \{\delta:G_L/\ker\bar\epsilon\to\{\pm1\}:\delta\mathcal C=\mathcal C\}
+    =\{1\},\qquad
+ \max_{i,j}\operatorname{ord}(\bar\chi_i/\bar\chi_j)>4 .
+\]
+\end{established}
+\begin{proof}
+Divide all four labels by the first one. If a character \(\delta\)
+permutes the labels after twisting, it permutes these normalized
+labels, so in particular it is one of them. Indeed, putting \(\xi_i=\bar\chi_i/\bar\chi_1\) gives
+\[
+          \delta\{\xi_1,\ldots,\xi_4\}=\{\xi_1,\ldots,\xi_4\},
+       \qquad \xi_1=1 \quad\Longrightarrow\quad
+          \delta\in\{\xi_1,\ldots,\xi_4\}.
+\]
+In the even-order tower
+the elements \(u_0,g_0\in\ker\bar\epsilon\) of
+Proposition~\ref{prop:count-ii-starting-field} distinguish every
+nontrivial normalized label from one on at least one of these
+elements. The marked root at \(u_0\) has order greater than four.
+Their restrictions are retained on the deep layer by
+Proposition~\ref{prop:count-ii-auxiliary-primes}.
+
+In the odd-order tower, at \(g_0\in\ker\bar\epsilon\) the four
+values up to inversion are \(1,-1,z,-z\), where \(z\ne1\) has
+odd order, by Proposition~\ref{prop:count-three-marked-elements}.
+Only the first label is one there, and \(-z\) has order
+\(2\operatorname{ord}(z)>4\). The powers retained in
+Proposition~\ref{prop:count-three-fitted-layers} have exponent
+prime to these orders. A common scalar twist of the labels affects
+neither the ratios nor the permutation test.
+\end{proof}
+
+\proofstep{Verify each one-point patching condition.}
+
+To apply patching to this arc one also needs the ordered local conditions.
+
+
+The ordinary determinant criterion in characteristic \(\ell\) requires four conditions.
+The ordinary characters must be distinct and must avoid a
+cyclotomic ratio in the indicated order. The representation
+must remain absolutely irreducible on \(H\). Elements with
+separable characteristic polynomial must be dense in
+\(H\). Finally the local cyclotomic intertwining space at
+the auxiliary split prime must vanish. The separation on
+inertia proves the first condition.
+
+For the second, an
+irreducible rank-four representation whose restriction to
+\(H\) is reducible has a nontrivial quadratic self-twist:
+the cyclotomic quotient is abelian and the number of
+conjugate constituents divides four. The element of \(H\)
+with distinct eigenvalues rules out a repeated isotypic
+constituent. The pro-\(\ell\) kernel of cyclotomic reduction is
+in the kernel of a quadratic self-twist, since \(\ell\) is odd.
+Thus reduction gives a permutation
+\[
+               \{\bar\chi_a\}=\{\bar\delta\,\bar\chi_a\}
+\]
+with \(\bar\delta\) trivial on the mod-\(\ell\) cyclotomic
+kernel. The first residual test excludes it.
+
+For the third condition apply
+Lemma~\ref{lem:ordinary-four-regular-cosets} with \(G=G_L\) and its
+full cyclotomic kernel \(H\). The element \(s\) constructed on inertia
+has the required simple spectrum on every positive power. The marked
+residual ratio is tested on \(G_L\); twisting all four characters by
+\(\kappa\) preserves it. Writing \(H_{\rm reg}\) for its separable-spectrum locus, the result gives
+\[
+     H_{\rm reg}\cap hU\ne\varnothing
+       \qquad(h\in H,\ U\trianglelefteq H\ \text{open}).
+\]
+
+This is the density required for the trace tests. For the fourth condition choose the element
+of the auxiliary decomposition group on which the four
+residual eigenvalues are equal to the same nonzero scalar
+and the mod-\(\ell\) cyclotomic value is different from
+one. An intertwiner \(U\) at the decomposition element \(g\)
+would satisfy \(\operatorname{Ad}(r(g))U=\epsilon_\ell(g)U\).
+Multiply by a power of \(t\) so that its reduction is
+nonzero. The eigenvalues of \(\operatorname{Ad}(\bar r(g))\) are all
+one, since they are ratios of the common residual eigenvalue.
+Therefore
+\[
+   \bigl(\operatorname{Ad}(\bar r(g))-\bar\epsilon_\ell(g)I\bigr)
+        \bar U=0\quad\Longrightarrow\quad\bar U=0.
+\] This verifies the auxiliary condition
+at the actual prime of each link.
+
+Apply Proposition~\ref{prop:ordinary-one-point-patching} to the point
+\(y f_i\).  The hypothesis \(y(J)=0\)
+puts \(J_i\) in its evaluation kernel. The marked auxiliary
+decomposition element also supplies the nontrivial
+mod-\(\ell\) cyclotomic value for detection. For a prime \(\mathfrak q\subset\ker y\) in \(A\), the
+one-point conclusion on each link is
+\[
+    f_i^{-1}(\mathfrak q)\subseteq\ker(yf_i),\qquad
+    J_i\subseteq f_i^{-1}(\mathfrak q).
+\]
+Extend the ideals to \(A\) and add the two inclusions to get
+\(JA\subseteq\mathfrak q\).
+
+\end{proof}
+
+\subsubsection{Vanishing below the characteristic-zero seed}\label{par:count-two-seed-support}
+
+Propagation also needs a starting component in characteristic zero. At its known automorphic point one must verify the same containment of ordinary ideals under generization as for the formal arc.
+
+\begin{proposition}[Ordinary ideals below the seed]\label{prop:tower-below-seed}
+For the characteristic-zero automorphic seed of the fitted tower,
+with the shift of Lemma~\ref{hyp:ordinary-seed-shift}
+and the residual tests of Lemma~\ref{hyp:ordinary-arc-residual-tests},
+if \(x_{\rm seed}\) denotes the seed evaluation, then 
+\[
+ P\subseteq\ker x_{\rm seed}\quad\Longrightarrow\quad JA\subseteq P\qquad(P\in\operatorname{Spec}A).
+\]
+
+The shift preserves the original extended ideals.
+\end{proposition}
+
+\begin{proof}
+\proofstep{The allowed shift of the ordinary weights.}
+
+\begin{established}[An integral parallel shift at the seed]\label{hyp:ordinary-seed-shift}
+Let \(w_0,\ldots,w_3\) be the doubled exponents at a chosen
+ordinary seed, in their prescribed order. For the link's
+anticyclotomic half-weight character \(\beta_i\), put \(n=|w_0|\)
+and twist the scalar by \(\beta_i^n\). Up to finite-order inertia
+characters the shifted exponents \(a_j\) satisfy
+\[
+        a_j=(w_j+n)/2\in\mathbb Z,\qquad
+        a_j-a_k=(w_j-w_k)/2 \quad (0\le j,k\le3)
+\]
+at the chosen half, with opposite shift at its conjugate. The shift is
+residually trivial, unramified outside \(\ell\), and trivial
+on the prescribed local torsion.
+\end{established}
+\begin{proof}
+Here is the character construction at the split coefficient prime.
+Write \(K\) for the marked imaginary quadratic field and
+\(\ell=\lambda\bar\lambda\) in \(K\). In local reciprocity units
+at \(\lambda,\bar\lambda\), use the principal-unit parts of the
+two cyclotomic characters with opposite exponents \(1/2,-1/2\)
+in the order of the link. Writing \(\langle\epsilon_w\rangle\) for the principal-unit part, the
+unit character in this orientation is
+\[
+ (x_\lambda,x_{\bar\lambda})\longmapsto
+  \langle\epsilon_\lambda(x_\lambda)\rangle^{1/2}
+  \langle\epsilon_{\bar\lambda}(x_{\bar\lambda})\rangle^{-1/2}.
+\]
+Squaring is invertible on principal units since \(\ell\) is odd. This defines an anticyclotomic
+character of the local unit ideles, trivial on torsion and on
+units at all other finite places. It kills the global units of
+\(K\), which are roots of unity.
+
+It therefore defines a character on the image of these units
+in the finite idele class group modulo \(K^\times\), with the
+complex infinite factor suppressed. For \(U_f=\prod_{v<\infty}O_{K_v}^\times\) the quotient is
+\[
+      \mathbb A_{K,f}^\times/(K^\times U_f)=\operatorname{Cl}(K).
+\] To extend the character, lift generators
+of its cyclic factors. If one such lift has order \(h\) modulo
+the preceding subgroup, choose an \(h\)-th root of its prescribed
+\(h\)-th power value, choosing residue one. These finitely many
+choices take values in the principal units of a finite extension.
+The extension \(\gamma\) is continuous because its original
+domain is open. If \(\kappa_0\) denotes the prescribed character on
+the local units \(U\), put
+\[
+ \kappa=(\gamma/\gamma^c)^{1/2},\qquad
+ \kappa^c=\kappa^{-1},\qquad
+ \kappa|_U=(\kappa_0^2)^{1/2}=\kappa_0 .
+\] Restrict it to \(G_L\) by reciprocity.
+This constructs the required companion, with either orientation
+of the split pair. Its square has the designated integral
+cyclotomic exponent on open inertia.
+
+The two seeds have even differences \(w_j-w_0\), by their displayed
+inertia exponents in Propositions~\ref{prop:count-two-integral-induced-seed}
+and~\ref{prop:count-three-tensor-endpoint}. Hence
+\[
+          w_j+n\equiv w_j-w_0\equiv0\pmod2,\qquad
+          (w_j+n)/2-(w_k+n)/2=(w_j-w_k)/2 .
+\]
+This proves integrality and preserves the required gaps (at least
+two). At the conjugate embedding the sign of the shift reverses
+and the same parity calculation applies.
+\end{proof}
+
+\proofstep{Invariance of the Hecke ideals.}
+
+We check invariance of this particular \(J_i\).
+Every finite \(\ell\)-power order approximation \(\chi\)
+of the companion with these conditions acts by scalar
+twist on the ordinary eigensystems. For an idele \(a\in\mathbb A_F^\times\) fixed by conjugation, anticyclotomicity gives
+\[
+ \chi(a)=\chi(a^c)=\chi(a)^{-1}.
+\]
+Since \(\ell\) is odd, the order comparison gives
+\[
+ \operatorname{ord}(\chi(a))\mid\gcd(2,\ell^b)=1
+\]
+for some \(b\). Hence \(\chi(a)=1\). The map
+\[
+ a\mapsto a/a^c
+\]
+and Hilbert 90 descend
+\(\chi\) to a character of the norm-one torus over \(F\).
+Twisting the unitary forms by its determinant character
+keeps the tame coefficients and changes only the torus
+character at \(\ell\) and the corresponding Hecke scalars.
+The residual localization and the prescribed torsion
+characters agree. The finite twist and its inverse therefore
+preserve the detecting eigenpoints of this ordinary family.
+
+For the adic assertion reduce \(\beta_i^n\) modulo
+\(\mathfrak m_{R_i}^b\), let \(Q_b\) be its finite image,
+and tensor the universal determinant by the resulting
+character with values in the group basis of \(R_i[Q_b]\).
+This is an allowed determinant over the local group ring,
+with the same tame relations and the conjugate polarization.
+At a detecting field evaluation \(\rho\), adjoin the
+characters of \(Q_b\). If
+\[
+ \operatorname{Tw}_{Q_b}(x)=\sum_q c_q[q]
+\]
+for \(x\in J_i\),
+the finite-twist argument gives
+\[
+ \sum_q \rho(c_q)\chi(q)=0\quad(\chi\in\widehat Q_b),
+ \qquad
+ \rho(c_q)=\frac1{|Q_b|}\sum_{\chi\in\widehat Q_b}\chi(q)^{-1}
+                             \sum_h\rho(c_h)\chi(h)=0 .
+\]
+Thus the group-basis coefficients lie in the kernel at
+every detecting evaluation.
+Such evaluations cut out \(J_i\), by
+Paragraph~\ref{par:ordinary-functions}.
+Substitute the original scalar values modulo
+\(\mathfrak m_{R_i}^b\). Separatedness lets \(b\) tend to
+infinity, so the twist preserves \(J_i\). Its inverse
+gives equality, hence
+\[
+                         f_{i,n}(J_i)B=f_i(J_i)B.
+\]
+
+The seed is cuspidal after the indicated scalar twist
+on \(G_L\), and its polarization and flag after the
+shift are those of the specialized determinant point.
+The ratio of the shifted scalar character to the seed
+automorphic twist is algebraic: the inertia weights have
+matching parity, so their difference gives integral
+cyclotomic exponents up to finite order. Thus algebraic
+twisting preserves the automorphic attachment.
+
+The seed
+is unramified at both auxiliary places. Its absolute
+irreducibility on the tower's CM cyclotomic subgroup
+implies that of the link on the full CM cyclotomic kernel,
+by restriction and cancellation of the scalar twist.
+The distinct inertial exponents rule out a cyclotomic
+ratio on any open subgroup of inertia.
+Section~\ref{sec:count-two-seed-specialization} puts the seed
+on \(M_i\) with the specialized Frobenius polynomials and
+the ordered local characters. Writing \(y_i\) for the shifted evaluation, these support conditions give
+\[
+ J_i\subseteq\ker y_i.
+\]
+This uses one common
+coefficient ring for the two links, the seed and the
+residual chain.
+
+We use the characteristic-zero adjoint comparison to
+strengthen this last containment. A dual-number
+lift of the specialized determinant that kills the
+infinitesimal weight parameters is represented by a
+matrix lift, by absolute irreducibility, with its pairing
+and ordered ordinary flags. If \(\widetilde r\) denotes the lift, write
+\[
+ \widetilde r(g)=(1+e c(g))r(g),\qquad e^2=0.
+\]
+Multiplication gives
+\[
+ c(gh)=c(g)+\operatorname{Ad}(r(g))c(h).
+\]
+The ordinary condition at \(\ell\) forces the inertial diagonal variations to vanish, and at the remaining allowed places the cocycle is unramified.
+
+At the
+auxiliary place the base representation is unramified
+and the residual cyclotomic separation gives the
+vanishing of the infinitesimal inertia term. The
+gaps between the \(m_{v,i}\) rule out cyclotomic
+ratios and give the separated ordinary parameters.
+Here one may apply the published adjoint vanishing theorem
+directly to the polarized seed. We give the passage to its
+local conditions. After a finite local extension killing
+the finite inertia factors, the two copies of each graded
+character in the dual-number flag form an unramified
+self-extension up to twist. They are crystalline. Denote
+these two-dimensional graded pieces in their flag order
+by \(E_i\). To extend an already crystalline preceding
+part \(V\) by \(E_i\), use
+\[
+ W=\operatorname{Hom}(E_i,V).
+\]
+
+Each Hodge jump of \(W\) is a difference of jumps of the
+ordered graded characters. The ordered gap makes all jumps of \(W\) strictly negative
+and its character exponents at least two. Therefore
+\[
+           \mathrm{Fil}^0D_{\rm dR}(W)=0,\qquad
+                         H^0(W^\vee(1))=0 .
+\]
+With \(d_v=[L'_v:\Q_\ell]\), local duality and the Euler
+characteristic give
+\[
+ \dim H^1(W)=\dim H^0(W)+d_v\dim W
+ =\dim H^0(W)+\dim D_{\rm dR}(W)/\mathrm{Fil}^0
+ =\dim H^1_f(W).
+\]
+The middle dimension is over the coefficient field, with
+\(D_{\rm dR}(W)\) viewed by restriction of scalars. The
+last equality uses the crystalline dimension formula.
+The inclusion \(H^1_f(W)\subseteq H^1(W)\) and the dimension equality give 
+\[
+ H^1(W)/H^1_f(W)=0.
+\]
+ Hence every extension represented by one of these classes is crystalline. Induction on the flag now proves crystallinity
+of the enlarged representation.
+
+The extension of the trivial
+character by the adjoint defined by the tangent class is
+crystalline there too. Indeed over \(B_{\rm cris}\) the
+enlarged representation splits above the original by
+exactness of the crystalline functor on crystalline
+representations, giving a splitting in their Hom space.
+On \(H^1(B_{\rm cris}\otimes\operatorname{ad})\) for the
+original local field the composite of restriction and
+corestriction is
+\[
+                \operatorname{cor}\circ\operatorname{res}
+                           =[L'_v:L_v]\operatorname{id}.
+\]
+The group is a vector space in characteristic zero. Hence the
+splitting over \(L'_v\) gives zero image in this cohomology group
+over \(L_v\), the required finite condition.
+Away from \(\ell\) the inertia subgroup killed by the link
+has finite index in inertia outside the auxiliary place.
+
+At that place a possible tame infinitesimal inertia value
+would intertwine the matrix of the chosen decomposition
+element with its cyclotomic twist, by the action of this
+element on tame inertia. Its eigenvalues reduce to a common
+scalar and its mod-\(\ell\) cyclotomic value differs from one.
+Writing \(U\) for that tame value at a generator and
+\(F\) for the matrix of the distinguished element, the
+local relation has the form
+\[
+                   F U=\epsilon_\ell(g)\,U F .
+\]
+The spectra of \(F\) and \(\epsilon_\ell(g)F\) reduce to
+different scalars, so the two spectra are disjoint. The
+associated Sylvester operator \(U\mapsto FU-U\epsilon_\ell(g)F\)
+is invertible, forcing \(U=0\).
+
+Wild inertia at residue characteristic
+different from \(\ell\) has no additive \(\ell\)-adic
+quotient, and finite-quotient averaging removes the
+remaining inertia class. Polarization extends
+the class to the adjoint over \(L^+\) (equivalently,
+use invariants for the order-two extension in characteristic
+zero). The seed on \(G_L\) comes from a polarizable, regular algebraic
+cuspidal representation of \(\mathrm{GL}_n(\mathbb A_L)\). Its
+restriction to \(G_{L(\mu_{\ell^\infty})}\) is absolutely irreducible,
+as checked above before taking the tangent. Thorne's adjoint Selmer
+vanishing theorem therefore applies to its polarized adjoint. The
+finite local conditions just proved give, by Theorem~6.1 of \cite{thorne-adjoint},
+\[
+ [c]\in H^1_f(L^+,\operatorname{ad}r)=0
+ .
+\]
+
+Thus the characteristic-zero tangent class is a coboundary.
+Choose \(Y\) giving the infinitesimal conjugation. Then the lift has
+matrix \((1+\delta Y)r(g)(1-\delta Y)\) in the dual numbers.
+Conjugating by the inverse gives
+\[
+     (1-\delta Y)\,r_\delta(g)\,(1+\delta Y)=r(g).
+\]
+
+The ordered eigenlines give the same ordered characters.
+Thus both the determinant lift and flag-character lifts are
+constant.
+\proofstep{Tangents and the dimension of the Hecke quotient.}
+
+Invariance preserves the Hecke conditions under the allowed weight shift. The size of the Hecke quotient at the shifted point still has to be compared with the dimension of the deformation component.
+
+
+This is the vanishing of the relative tangent space
+over the weight algebra.
+\hfill\mbox{\cite{thorne-adjoint}}\label{cor:ordinary-promodularity-2}
+
+Here is the commutative-algebra implication. At the
+characteristic-zero evaluation prime, vanishing of the
+relative tangent space gives an injection of absolute
+tangent spaces into that of the weight algebra. If
+there are
+\[
+ N=4[L^+:\Q]
+\]
+weight variables, the embedding
+dimension of the localized determinant ring is at
+most \(N\). The residue fields are algebraic over the
+coefficient fraction field and separable. The evaluation
+prime of the weight algebra has height \(N\). In fact
+its image is integral over the coefficient DVR. If an
+element in the image had absolute value greater than
+one, all its conjugates would have the same absolute
+value. Its minimal polynomial divided by its constant
+term would then have constant term \(1\) and other
+coefficients in the maximal ideal of the DVR. Applying
+that polynomial to a preimage would give a unit mapping
+to zero, a contradiction.
+
+Let \(\mathfrak p_\Lambda\) be the evaluation prime. Its image ring is an integral extension of the coefficient DVR and has dimension one. Catenarity of the regular local weight algebra now gives
+\[
+ \operatorname{ht}\mathfrak p_\Lambda
+ =\dim\Lambda-\dim(\Lambda/\mathfrak p_\Lambda)
+ =(N+1)-1=N .
+\]
+The localization
+of the modular quotient has dimension at least \(N\).
+Indeed its finiteness and torsion-freeness imply that
+each minimal prime contracts to zero over the weight
+algebra. Going down from a component through the
+evaluation prime bounds its dimension below by the
+height \(N\) of the characteristic-zero weight prime.
+
+For the localized link ring \(R'\) and its modular quotient,
+the dimensions just proved give
+\[
+       N\le\dim(R'/J_iR')\le\dim R'\le\operatorname{edim}R'\le N .
+\]
+The ambient local ring is regular of dimension \(N\).
+A nonzero ideal in it would lower dimension, so \(J_iR'=0\).
+In particular \(J_i\) belongs to every prime under the
+shifted evaluation kernel. Contracting a prime of \(A\)
+through the shifted determinant map and then using the
+equality of the extended ideals proves the seed assertion
+for each of the two original links.
+\label{cor:ordinary-promodularity-3}
+
+\end{proof}
+
+\subsubsection{Propagation across components of a completion}
+\label{par:count-two-components}
+
+The preceding containments control primes below particular points. To cross an intersection of components, one needs curves through the closed point whose generic points avoid the excluded degeneracy loci.
+
+\begin{auxlemma}[A curve avoiding prescribed closed loci]\label{lem:local-curve-avoidance}
+Let \((A,\mathfrak m)\) be a Noetherian local domain and let \(0\ne u\in\mathfrak m\).
+There exists \(P\in\operatorname{Spec}A\) satisfying 
+\[
+ u\notin P,\qquad \dim(A/P)=1.
+\]
+
+\end{auxlemma}
+\begin{proof}
+Choose \(P\) maximal among primes avoiding \(u\), and pass to \(B=A/P\).
+Every nonzero prime of \(B\) contains \(u\). If \(0\ne x\in\mathfrak m_B\),
+a minimal prime over \((x)\) has height one by the principal ideal theorem.
+It contains \(u\), hence is also minimal over \((u)\). Therefore
+\[
+ \mathfrak m_B\subseteq\bigcup_{\mathfrak q\in\operatorname{Min}(B/(u))}
+ \mathfrak q ,
+\]
+where the primes are viewed in \(B\). The union is finite. Prime avoidance makes \(\mathfrak m_B\) one of these height-one primes.
+\end{proof}
+
+\begin{proposition}[Propagation at a permitted vertex]\label{prop:tower-component-propagation}
+At a permitted residual vertex with the local flags and size
+conditions of the fitted tower, suppose one component of its
+normalized completed local deformation algebra contains \(J\).
+If \(P_1,\dots,P_h\) are the minimal primes of the normalized completed local algebra at the vertex, this propagates the inclusion to each branch: 
+\[
+ J\subseteq P_i\quad\text{for every }1\le i\le h.
+\]
+ The
+conclusion descends through the faithfully flat completion.
+\end{proposition}
+
+\begin{proof}
+\proofstep{The complete local presentation.}
+
+Let \(x:A\to k_\Lambda\) be a permitted residual representation
+with its flags, and let \(R\) be its complete local deformation
+algebra, with the map \(A\to R\) of the normalized space.
+Call a minimal prime of either algebra modular if it contains
+the image of \(J\). The local completion is faithfully flat.
+Thus each minimal prime of \(A\) under \(\ker x\) lifts to a
+minimal prime of \(R\), and modularity of such a lift descends.
+
+The residual presentation over \(\Lambda\) has \(a\) variables
+and \(b\) equations with
+\[
+                      b+2+2d\leq a+2g .
+\]
+Indeed the adjoint module is the symplectic Lie algebra. The
+ordinary Borel subalgebra at each place over \(\ell\) has
+dimension six. At a real place use dual bases of the paired Lagrangians \(V_+,V_-\). A centralizing endomorphism is block diagonal. The linearized symplectic equation reads
+\[
+ \begin{pmatrix}X^t&0\\0&Y^t\end{pmatrix}
+ \begin{pmatrix}0&I\\-I&0\end{pmatrix}
+ +\begin{pmatrix}0&I\\-I&0\end{pmatrix}
+  \begin{pmatrix}X&0\\0&Y\end{pmatrix}=0
+ \quad\Longleftrightarrow\quad Y=-X^t .
+\]
+The free block \(X\) has dimension four. The dual \(H^0\) term vanishes by the exclusion
+of the mod-\(\ell\) cyclotomic character from the adjoint root
+characters.
+
+The relative Poitou--Tate formula therefore gives
+\(h^1_{\rm rel}-h^2_{\rm rel}\geq h^0_{\rm rel}+2d\).
+The normalized framed presentation before imposing the local
+generator equations has at least
+\(h^1_{\rm rel}-h^0_{\rm rel}+2\) tangent variables.
+The final two directions come from the symplectic torus
+centralizing the diagonal normalizing matrix, with the
+global infinitesimal stabilizer subtracted in degree zero.
+At most \(h^2_{\rm rel}\) relations arise from the
+relative obstruction space, and the two independent diagonal
+conditions at each local mark add at most \(2g\).
+Combining with the tangent count gives
+\[
+ a-b
+ \ \ge\ (h^1_{\rm rel}-h^0_{\rm rel}+2)-(h^2_{\rm rel}+2g)
+ \ \ge\ 2d+2-2g .
+\]
+This is the stated presentation bound.
+
+\proofstep{Connectedness above the dimension threshold.}
+
+Set \(N=2d+1-2g\). The regular power series ring over
+\(\Lambda\) has dimension \(a+1\), so Grothendieck
+connectedness connects the minimal primes of \(R\) by
+intersections of dimension at least \(a-b\geq N+1\).
+Partition the minimal primes into two nonempty sets \(\mathcal P,\mathcal Q\) and let \(U,V\) be the corresponding unions of components. Noetherianity makes the unions finite, so
+\[
+ U\cap V=\bigcup_{\substack{P\in\mathcal P\\Q\in\mathcal Q}}V(P+Q),
+ \qquad
+ \dim(U\cap V)=\max_{\substack{P\in\mathcal P\\Q\in\mathcal Q}}\dim V(P+Q).
+\]
+Connectedness in dimension gives
+\[
+ \dim(U\cap V)\ge a-b.
+\]
+A pair attaining the maximum supplies an edge across the partition. It suffices to
+propagate modularity across one intersection.
+\hfill\mbox{\cite{stacks-connectedness}}\label{cor:ordinary-promodularity-4}
+
+\proofstep{Bound the reducible loci using the permitted supports.}
+
+The constant \(C\) used in the dimension bounds is chosen
+on the tower after the auxiliary ramification has been
+killed. It bounds \(g\), the global cocycles in the even
+root degrees and the global cocycles in all other degrees
+which are locally coboundaries at \(\ell\). For an odd
+root degree it bounds the excess dimension above \(d\)
+of the space of global cocycles. These estimates follow
+from Ferrero--Washington on the abelian residual kernel
+field and the local Euler characteristic. For a fixed allowed prime \(v\), the open decomposition subgroup \(D_v\) in the tower group \(G\) gives the uniform bound
+\[
+ \#\{w\mid v\text{ in a layer}\}\le[G:D_v]<\infty.
+\]
+The even ranks use the trivial action of complex
+conjugation, and the odd ranks include one dimension per
+real place. The estimates persist under extension of the
+residue field, so \(C\) is chosen before the deep layer
+and before its seed and coefficient field.
+
+Here is the reducible dimension bound. For the support list abbreviate the four root degrees by
+\[
+ (a_0,b_0,p_0,t_0)=(w_\alpha,w_\beta,w_\Psi,w_\vartheta).
+\]
+
+The diagonal projectors at the normalizing element lie
+in the image algebra. Write \(E_{ij}\) for a matrix unit. For a matrix \(X\) in the image algebra the diagonal projectors isolate
+\[
+ E_{ii}XE_{jj}=X_{ij}E_{ij},\qquad E_{ij}E_{jk}=E_{ik}.
+\]
+At a field point every nonzero \(X_{ij}\) can be divided out. This proves transitivity of the allowed arrows. They are stable under
+symplectic reversal, since taking the symplectic adjoint
+of a group element is a scalar times its inverse.
+The representation is absolutely irreducible when all
+arrows occur, since they then span the full matrix algebra.
+There are eight independent off-diagonal arrows under
+reversal.
+
+In the other cases their root degrees are
+contained in one of the following nine supports:
+\[
+\begin{gathered}
+\{\pm b_0,-a_0,-t_0,-p_0\},\quad
+\{\pm b_0,a_0,t_0,p_0\},\\
+\{\pm t_0,p_0,b_0,-a_0\},\quad
+\{\pm t_0,-p_0,-b_0,a_0\},\\
+\{\pm a_0,-t_0,-p_0,-b_0\},\quad
+\{\pm a_0,t_0,p_0,b_0\},\\
+\{\pm p_0,b_0,-a_0,-t_0\},\quad
+\{\pm p_0,-b_0,a_0,t_0\},\quad
+\{\pm b_0,\pm t_0\}.
+\end{gathered}
+\]
+One checks the list by taking any missing arrow \(j\to i\)
+and using transitivity to exclude each two-step path from
+\(j\) to \(i\). Equivalently, enumerate the \(2^8\)
+reversal-stable supports and retain those closed under
+composition. Setting the entries outside each support to
+zero gives the finite union of closed reducible loci.
+
+At a residual vertex the diagonal matrix entries and the
+ordinary characters are the marked reductions \(\bar\chi_i\).
+The global support is either contained in
+\[
+ N_P=\{b_0,-a_0,-t_0,-p_0\},\qquad
+ N_M=\{-a_0,-b_0,-p_0,-t_0\},
+\]
+with the additional frame support
+\(Q=\{-a_0,-p_0,-t_0\}\) in the \(N_P\) case.
+Write \(E(w)\) if a global matrix has a nonzero entry of
+degree \(w\). The allowed vertices satisfy at least one of
+these four tests.
+\begin{enumerate}
+\item \(E(-p_0)\) and either \(E(b_0)\) or \(E(-a_0)\).
+\item \(E(-a_0)\) and \(E(-b_0)\).
+\item The global support is in
+\[
+ V=\{b_0,-a_0,-t_0\},
+\]
+
+      each frame has support in \(Q\) with
+      \(n_v(2,0)\ne0\), and \(E(-a_0)\) holds.
+\item The same support and frame conditions as in the third
+      test hold, together with \(E(b_0)\), \(E(-t_0)\) and
+      \(\bar\chi_0/\bar\chi_1\ne1\) as a character on each
+      decomposition group at \(\ell\).
+\end{enumerate}
+These are conditions on the actual vertices. In particular,
+every support \(S\) for the tangent calculation already
+contains every degree \(w\) required by the corresponding test \(E(w)\).
+
+Let \(x\) be a point on this support and \(x_0\) its limit under the indicated diagonal torus. All points of the punctured torus orbit have equally large tangent spaces, so upper semicontinuity gives
+\[
+ \dim T_x=\dim T_{D(t)x}\le\dim T_{x_0}\quad(t\ne0).
+\]
+We bound the last dimension by \(d+20C\) after reducing the global matrices to the four characters. For the first two
+tests use the torus exponents \((0,2,1,3)\) on \(N_P\)
+and \((0,1,2,3)\) on \(N_M\).
+
+If the exponents are \(b_i\), conjugation by the diagonal \(D(t)=\operatorname{diag}(t^{b_i})\) gives
+\[
+ (D(t)XD(t)^{-1})_{ij}=t^{b_i-b_j}X_{ij}.
+\]
+Under the diagonal one-parameter subgroup with exponents \(a_i\), an \((i,j)\) entry is multiplied by
+\[
+ t^{a_i-a_j}.
+\]
+Positive differences therefore disappear at \(t=0\), and zero differences preserve the entry. The two paired sums agree, and the
+sign on every supported global off-diagonal entry is
+positive, so the torus limit of the global matrix is diagonal.
+Its frame limit is the identity. The lower odd root directions are then locally
+coboundaries by the flag condition. In the nine displayed
+supports the first two tests allow precisely rows \(1,5,7\).
+Each has at most one upper odd entry. Thus at most one
+direction uses the bound \(d+C\) for global cocycles.
+
+For the last two tests use the exponents \((0,1,0,1)\).
+The degrees in \(V\) have positive exponent, and precisely
+the \(-p_0\) entries of the lower frame survive. The residual
+point degenerates to the same diagonal representation with
+flags
+\[
+ 1+u_v(e_{20}+e_{31}),
+\]
+\(u_v\ne0\). The character
+of degree \(p_0\) is trivial on the local decomposition
+groups. Write \(Z\) for the local infinitesimal matrix
+including the changes of frame. The lower-triangular
+entries of the ordinary equation give
+\[
+ Z_{10}=-u_v Z_{12},\qquad Z_{30}=-u_v^2 Z_{12},
+ \qquad Z_{21}=2u_v Z_{01}+u_v^2 Z_{03}.
+\]
+Each equation only couples entries with the same local
+character. Hence if one of the first three entries
+represents a local coboundary then all three do.
+
+For the
+last triple, the same conclusion follows when two are
+local coboundaries. The supports containing \(-a_0\)
+or both \(b_0,-t_0\) are rows \(1,3,5,6,7,9\)
+when the nine sets above are read left to right. Fix the global cocycle at the entry indicated for each row.
+\[
+ \begin{array}{c|rrrrrr}
+ \text{row}&1&3&5&6&7&9\\ \hline
+ \text{entry}&(1,2)&(1,2)&(2,1)&(0,1)&(1,2)&(2,1)
+ \end{array}
+\]
+In its kernel at least one entry of the first triple and at least two of the second are zero as global cocycles. The other
+odd entries are then locally coboundaries. This leaves
+at most one direction with bound \(d+C\).
+
+After fixing this one global cocycle, at most ten
+independent global entries remain, each of dimension
+at most \(C\). The infinitesimal frame at each of the
+\(g\) places is determined by at most six lower entries.
+Let \(T_R\) be the tangent space of this fixed support
+and \(e\) evaluation at the chosen global cocycle. The
+two steps of the calculation give
+\[
+ \dim \operatorname{im} e\le d+C,\qquad
+ \dim\ker e\le10C+6g,\qquad
+ \dim T_R\le d+C+10C+6g\le d+20C .
+\]
+Thus the cotangent generators and the coefficient uniformizer
+generate the maximal ideal up to its square. Adding the coefficient uniformizer gives
+\[
+            \dim R_{\rm supp}\le\operatorname{edim}R_{\rm supp}
+                        \le d+20C+1,
+\]
+where \(R_{\rm supp}\) is the local ring of the fixed-support locus.
+\hfill\mbox{\cite{ferrero-washington}}\label{cor:ordinary-promodularity-5}
+
+On the irreducible locus,
+passing from the characteristic-polynomial and character
+base to the normalized representation adds dimension at
+most \(2+4g\). The latter number comes from two torus
+coordinates and the four entries of each lower unipotent
+symplectic local frame. To see the first contribution, the
+trace pairing on the full matrix algebra recovers the
+relations among the matrices of group elements from their
+traces of products. After making the four eigenvalues at the
+normalizing element rational over the characteristic-polynomial
+field by an algebraic extension, the matrix algebra splits
+over an algebraic closure of that field. Two absolutely
+irreducible realizations with these traces are conjugate
+there, and the ordered diagonal normalization makes the
+conjugation diagonal.
+
+For an invertible diagonal conjugator \(D=\operatorname{diag}(d_0,\ldots,d_3)\), the similitude condition is
+\[
+ d_0d_3=d_1d_2,\qquad
+ \dim\bigl(\{D:d_0d_3=d_1d_2\}/\mathbf G_m\bigr)=4-1-1=2 .
+\]
+The four entries \((1,0),(2,0),(3,0),(2,1)\) determine a
+lower unipotent symplectic frame. Summing the parameters gives
+\[
+    \operatorname{trdeg}_{\operatorname{Frac}(B/\mathfrak q)}
+        \operatorname{Frac}(A/\mathfrak p)\le 2+4g ,
+\]
+where \(\mathfrak p\) is the point's prime and
+\(\mathfrak q=\mathfrak p\cap B\). The two nonflag coordinates
+are the torus coordinates modulo scalars. The complete local dimension
+formula for the finite type representation chart gives the
+same bound on the difference of quotient dimensions at such
+a prime.
+
+For a characteristic-\(\ell\) prime of \(B\) containing
+\(J\), coincidence of two characters on the prescribed
+open inertia group at a single \(v\) gives a dimension
+bound \(2d+1-d_v\). Two independent symplectic characters
+are determined on all of inertia at a place by their values
+at \(d_v\) local units for each character. By local class
+field theory the local principal units modulo torsion have
+pro-\(\ell\) rank \(d_v\). For \(u=1+x\) with \(x\) in the maximal ideal of a characteristic-\(\ell\) local domain,
+\[
+ u^{\ell^a}=1+x^{\ell^a},\qquad
+ (u^m-1)/(u-1)=1+u+\cdots+u^{m-1}\equiv m\pmod{\mathfrak m}
+ \quad (\ell\nmid m).
+\]
+The second expression denotes the polynomial geometric sum. The two identities exclude both \(\ell\)-power torsion and prime-to-\(\ell\) torsion. Thus these parameters suffice on the prime quotients, including in the ramified layers.
+\proofstep{Exclude the inertia coincidence loci.}
+
+Connectedness supplies an intersection of components of sufficiently large dimension. The dimension bounds must also leave points where two marked inertia characters do not coincide.
+
+
+Use the prescribed coincidence on the subgroup in the
+cyclotomic kernel and impose one more equality on an inertia
+generator for the cyclotomic direction at \(v\). Coincidence
+on a subgroup of finite index in the kernel suffices,
+since any remaining value of the ratio would then be a
+torsion unit congruent to one.
+The two characters then agree on inertia. For symplectic partners the common value \(u\) on an inertia element satisfies
+\[
+ u^2=1,\qquad u\equiv1\pmod {\mathfrak m},\qquad
+ (u-1)(u+1)=0 .
+\]
+As \(\ell\ne2\), \(u+1\) is a unit, so both characters are one on inertia. Otherwise, killing one character
+also kills the other there.
+
+In either case all inertia
+characters are killed by the following parameters: \(d_v\)
+per place for a first independent character, \(d_v\) at
+the other \(g-1\) places for a second, and the one equality
+at the marked place. The first property of \(J\) applies after
+\(d+(d-d_v)+1=2d-d_v+1\) cuts. The height theorem bounds the
+coincidence-locus dimension in \(B\) by this count. For the
+irreducible locus in \(R\) add the chart parameters:
+\[
+                         \dim\le 2d+1-d_v+2+4g .
+\]
+
+In the deep layer one has \(d\geq30(C+1)^2\) and
+\(d_v\geq30(C+1)\). In particular
+\[
+                   d+20C+1<N,\qquad
+                   2d+1-d_v+2+4g<N .
+\]
+Suppose \(P,Q\) are adjacent minimal primes of \(R\) and
+\(P\) is modular. In their intersection, cut by the
+uniformizer and take a closed irreducible subset of
+dimension at least \(N\). It exists by the principal ideal
+dimension bound. It avoids containment in the reducible
+loci and, at an irreducible representation, in any of the
+coincidence loci. In the resulting local domain choose a
+nonzero element in each of their defining ideals, and
+choose also a nonzero element of its maximal ideal.
+
+Write \(t\) for the chosen maximal-ideal element and \(u_i\) for the chosen ideal elements. In this domain
+\[
+ 0\ne t\prod_i u_i\in\mathfrak m.
+\]
+Lemma~\ref{lem:local-curve-avoidance} gives a one-dimensional quotient in which this product survives. Its generic point therefore avoids all the prescribed closed loci.
+Normalization of this complete local one-dimensional
+domain gives a formal arc to \(k'[[t]]\) for a finite field
+\(k'\). The generic representation of the arc is
+irreducible and separates all the required inertia
+characters. The arc factors through \(P\), so it kills \(J\), and both
+\[
+ P,Q\subseteq\ker y.
+\]
+The second property of \(J\), namely
+Proposition~\ref{prop:tower-below-arc}, gives \(J\subseteq Q\). Thus \(Q\) is modular. This proves that
+if one component through a permitted residual point is
+modular then every component through that point is modular.
+\label{cor:ordinary-promodularity-6}
+
+\end{proof}
+
+\subsubsection{Propagation along the residual path}
+\label{par:count-two-propagation}
+
+The component argument is local at one residual point. When two successive points admit the required comparison, their common component carries ordinary support to the other endpoint. Iteration reaches the target.
+
+\begin{proposition}[Propagation from the seed to the target]\label{prop:tower-residual-propagation}
+Assume the normalized seed and target lie at opposite ends of
+a permitted residual path at a common coefficient level. Suppose
+every vertex admits the component propagation and the seed
+satisfies the containment of Proposition~\ref{prop:tower-below-seed}.
+If \(x_{\rm tar}\) is the resulting target evaluation with its original flags, 
+\[
+ J\subseteq\ker x_{\rm tar}.
+\]
+
+The argument allows a reducible characteristic-zero target.
+\end{proposition}
+
+\begin{proof}
+The residual chains consist of points joined by normalized
+matrix and flag families over \(k_\Lambda[t]\) with
+endpoints at \(0\) and \(1\). The lifts to \(A\) at the
+endpoints are determined by their matrix and flag entries.
+Let \(I_{\rm line}\) denote the prime kernel of the family
+over \(k_\Lambda[t]\). A minimal prime \(P\) below it
+satisfies
+\[
+        P\subseteq I_{\rm line}\subseteq I_0\cap I_1
+\]
+for the two endpoint kernels.
+
+If every component through one
+endpoint is modular, \(P\) is a modular component through the
+other endpoint. Proposition~\ref{prop:tower-component-propagation} applies at the
+other endpoint. The seed gives the first modular component by
+taking a minimal prime under its characteristic-zero point
+kernel and using local vanishing there. Inducting backwards
+along the chain shows that all components at the reduction
+of the target are modular. The kernel of its integral point
+in the small coefficient model lies under that of its
+reduction, so any minimal prime below the former is modular.
+This proves that the integral point kills \(J\), and the
+assertion survives the injection into the target valuation
+ring. The argument applies to the same residual point from
+which the matrix and its flags were constructed. It uses
+no characteristic-zero irreducibility of the target.
+\label{cor:ordinary-promodularity-7}
+
+\end{proof}
+
+\input{count-ii-tower}
+
+\subsubsection{The even-order induced seed}
+
+The propagation argument needs one known automorphic representation at the chosen levels. In the even-order case it will be induced from a rank-two Hilbert system with two different local weights.
+
+\begin{proposition}[Inducing characters of the even-order seed]\label{prop:count-two-seed-characters}
+For the fitted even-order fields of Paragraph~\ref{par:count-ii-tower}, the ordered residual labels
+at the deep normalizer prescribe the inducing characters.
+The construction selects positive multiples \(k,t\) of \(\ell-1\)
+for which the mixed ordinary Hilbert source \(r_2\) satisfies 
+\[
+ \det r_2=\epsilon_\ell^k\eta,\qquad \bar r_2^{\,\rm ss}\simeq1\oplus\bar\eta,
+\]
+ with ordered exponents \((k,0)\) and \((k+t,-t)\) at the two places of \(k_0\) over \(\ell\).
+\end{proposition}
+
+\begin{proof}
+\proofstep{Order the four residual labels.}
+
+Use the fitted fields and characters of
+Paragraph~\ref{par:count-ii-tower}. Write \(\tau\) for the
+diagonal normalizing element on the deep layer. On
+\(G_F\cap G_{k_0}\) the four reduced labels are
+\(1,\bar\eta\), each twice. The two
+possible orders of the labels exchange the roles of the
+two places of \(k_0\) above \(\ell\).
+
+The rank-two input is a cuspidal mixed ordinary Hilbert
+representation \(r_2\) over \(k_0\). For \(k,t>0\) divisible by \(\ell-1\), the required data are
+\[
+   \det r_2=\epsilon_\ell^k\eta,\quad
+   \bar r_2^{\,\rm ss}=1\oplus\bar\eta,\quad
+   \text{ordered exponents }(k,0)\text{ and }(k+t,-t).
+\]
+The determinant exponents sum to \(k\) at both places.
+Its first ordinary line has the residual character \(1\)
+at the first place and \(\bar\eta\) at the second. Away
+from \(\ell\) the two inertial eigencharacters are \(1,\eta\)
+with the trivial extensions over their common inertia kernel
+at the allowed primes. The construction needs irreducibility
+on every open subgroup.
+
+Here is the cuspidality test in the production of this
+mixed rank-two input. The character \(\eta\) is finite order
+and totally odd, has nontrivial finite conductor, and is
+unramified at both places above \(\ell\). The weight-one
+Eisenstein series with characters \(1,\eta\) at this
+conductor has nonconstant adelic coefficients
+\[
+ a(\mathfrak a)=\sum_{\mathfrak b\mid\mathfrak a} \eta(\mathfrak b),
+\]
+with \(\eta\) extended by zero on
+ideals sharing a prime with the conductor. Its constant
+coefficient is independent of the narrow class
+\cite[Section 2.2, Proposition 2.1]{dasgupta-darmon-pollack}.
+
+For \(w\mid\ell\) write \(\mathfrak a=w^e\mathfrak c\) with \(w\nmid\mathfrak c\). The divisor sum gives
+\[
+ a(w^e\mathfrak c)=a(\mathfrak c)\sum_{i=0}^e\eta(w)^i .
+\]
+The operator \(V_w\) lowers \(e\) by one in this coefficient, giving zero at \(e=0\). At the raised level,
+\(U_w V_w E=E\) and
+\(U_w E=(1+\eta(w))E-\eta(w)V_w E\) for the starting
+form \(E\), by the coefficient formulas. Let \(\alpha_w,\beta_w\) be the two roots \(1,\eta(w)\)
+in the desired order. Their sum and product give
+\[
+ U_w(E-\beta_w V_wE)
+   =(1+\eta(w)-\beta_w)E-\eta(w)V_wE
+   =\alpha_w(E-\beta_w V_wE).
+\]
+Thus the stated stabilization has eigenvalue \(\alpha_w\).
+
+Choose \((\alpha_{w_1},\beta_{w_1})=(\eta(w_1),1)\) and
+\((\alpha_{w_2},\beta_{w_2})=(1,\eta(w_2))\).
+Since the constant term of \(E\) is the same on every
+component, \((1-V_{w_1})E\) kills it identically:
+\[
+     a_0\bigl((1-V_{w_1})E\bigr)=a_0(E)-a_0(E)=0.
+\]
+The \(V_w\) at different primes commute and permute the
+component indices of the constant terms. The resulting
+form has integral nonconstant coefficients, first
+coefficient one, and the required two ordinary roots.
+
+For weight raising one can use
+the total Hilbert Hasse invariant of weight \(\ell-1\).
+The quadratic field is unramified at \(\ell\) and both
+places are split over \(\Q_\ell\). At a sufficiently small prime-to-\(\ell\) level the invariant
+has expansion \(1\) at each standard Tate cusp. Large parallel
+powers admit a characteristic-zero lift by the base change
+theorem for parallel weight
+\cite[Lemmas 2.2 and 2.3]{deo-dimitrov-wiese}.
+One may take a power whose weight is at least three and
+divisible by \(2(\ell-1)\).
+
+To obtain full level, pull the
+lift to a normal principal tame level contained in this
+level. For a lift \(H\) at the normal tame level, form the norm over
+the finite tame quotient \(C\):
+\[
+               H_{\rm full}=\prod_{g\in C}gH.
+\]
+Each \(gH\) reduces to the same Hasse power by naturality
+under prime-to-\(\ell\) level change. The product is invariant
+under \(C\) and its expansions are integral and congruent to \(1\). This gives the parallel weight-\(k\)
+form with \(\ell-1\mid k\) used below. Higher powers allow
+any fixed lower bound for \(k\).
+
+\proofstep{Lift the induced seed and its marked ordinary eigenvalue.}
+
+For the simultaneous lift let
+\(F\) be the product of the weight-one form and this
+weight-\(k\) form, and use a finite coefficient DVR
+\(O\) for the two expansions. The normalized first
+nonconstant coefficient of \(F\) is one modulo the
+maximal ideal. For an ideal \(\mathfrak a\) and a prime
+\(w\) away from the level, the coefficient of \(T_w F\)
+at \(\mathfrak a\) is
+\[
+ a_F(w\mathfrak a)+\eta(w)(Nw)^k a_F(\mathfrak a/w),
+\]
+where the second coefficient is zero if \(w\nmid\mathfrak a\).
+
+At a prime dividing the level the \(U_w\)-operator has
+only the first term. The weight-one formula has exponent
+zero. For \(w\) off the level, \(w\nmid\ell\) and
+\(\ell-1\mid k\) give \((Nw)^k\equiv1\pmod\ell\).
+At the \(\ell\)-adic places use the one-term \(U_w\) rule.
+Since \(\bar F\) has the expansions of the stabilized
+weight-one form, for every \(w\) these rules give
+\[
+          \overline{T_wF}=\bar\lambda^{(1)}_w\bar F
+\]
+with \(T_w\) replaced by \(U_w\) at the level.
+
+\proofstep{Use the integral lattice before restriction.}
+
+The eigenvalues determine the characteristic-zero representation. Its reduction along the tower depends on an integral model, which must be fixed before restriction.
+
+
+For the integral lifting take the coefficient-integral
+lattice in the characteristic-zero space generated by
+the Hecke translates of \(F\). The nonconstant coefficient
+functionals separate forms of this positive weight. A
+form with all of them zero would be constant on each
+component, and the weight transformation under a lower
+unipotent of the level would force that constant to be
+zero. Finitely many coefficient functionals suffice by
+finite dimension. They embed the lattice into a finite free
+\(O\)-module, so the lattice is finite free. It is stable
+under all the displayed Hecke operators by their
+coefficient formulas.
+
+If \(L\) denotes the coefficient-integral lattice and \(\pi\) a uniformizer, its definition gives
+\[
+ \{f\in L:a(\mathfrak a,f)\in\pi O\text{ at every coefficient}\}
+ =\pi L .
+\]
+Indeed \(f/\pi\) then has integral coefficients and belongs to the same characteristic-zero Hecke span. Thus coefficient congruences detect reduction. The finite commutative Hecke algebra splits into complete local
+factors indexed by the maximal ideals of its reduction. Write \(e\)
+for the idempotent of the stabilized system. Its residual summand
+contains the vector with nonzero coefficient at the unit ideal, so
+\[
+       eM/\varpi eM\ne0\quad\Longrightarrow\quad
+                    eM\otimes_O\operatorname{Frac}(O)\ne0 .
+\]
+Here \(M\) is the free Hecke lattice, and \(eM\) is a direct summand.
+Any simultaneous eigenvector in that fibre after scalar
+extension has the required reductions for all the operators.
+In particular its two \(\ell\)-adic eigenvalues are units.
+
+If \(\bar\lambda_1,\bar\lambda_2\) are the two reduced
+characters of a possible noncuspidal lift, at good Frobenius
+their trace and product give
+\[
+       (X-\bar\lambda_1)(X-\bar\lambda_2)
+                    =(X-1)(X-\bar\eta).
+\]
+At each good Frobenius one reduced character therefore equals one.
+Reciprocity and Chebotarev give \(G=\ker\bar\lambda_1\cup
+\ker\bar\lambda_2\) on the full group \(G\). Write \(H_i=\ker\bar\lambda_i\). If \(x\in H_1\setminus H_2\) and \(y\in H_2\setminus H_1\), then
+\[
+ \bar\lambda_1(xy)=\bar\lambda_1(y)\ne1,\qquad
+ \bar\lambda_2(xy)=\bar\lambda_2(x)\ne1 .
+\]
+This contradicts the union, so the kernels are nested. Thus one kernel is all of \(G\). Therefore the reductions
+are globally \(1,\bar\eta\), up to permutation.
+
+At a
+place above \(\ell\), the positive power of the residue
+norm makes the second term of the ordinary Eisenstein
+eigenvalue nonunit when that term occurs. The first
+Eisenstein character must consequently give the chosen
+unit eigenvalue at both places. It cannot have residual
+value \(\bar\eta\) at one and \(1\) at the other, since
+\(\bar\eta\) is nontrivial at both. This excludes every
+noncuspidal lift. Take the starting parallel weight \(k+1\ge4\), with
+\(\ell-1\mid k\), and denote its normalized Hecke eigenvalues
+by \(\lambda_w\). At a prime dividing the tame conductor
+the stabilized Eisenstein eigenvalue is \(1\), so the higher
+weight eigenvalue there is also a unit.
+\label{cor:ordinary-promodularity-8}
+
+\end{proof}
+
+\input{mixed-hilbert}
+
+\subsubsection{The induced representation on the fitted CM layer}
+
+Induction combines the mixed-weight representation and its conjugate into dimension four. Choosing an integral frame is essential because the residual extension class and the order of the diagonal labels enter propagation.
+
+\begin{proposition}[The integral four-dimensional seed after induction]\label{prop:count-two-integral-induced-seed}
+Take the mixed-weight Hilbert system \(r_2\) just constructed
+and the normalizer \(\tau\) on the fitted layer. There is an
+integral symplectic induced frame with the specified nonsplit
+rank-two reduction and the four ordered residual labels.
+The scalar correction \(\delta\equiv1\) gives the required
+similitude. The induced system is absolutely irreducible on
+\(G_L\cap\ker\epsilon_\ell\); after removing \(\delta\) its restriction to \(G_L\) has the cuspidal attachment with ordered exponents 
+\[
+ (k+t,k,0,-t)
+\]
+ in the untwisted convention.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Choose the nonsplit lattice in the marked eigenbasis.}
+
+Choose a stable lattice for \(r_2\) over \(G_{Fk_0}\)
+in which \(r_2(\tau^2)\) is diagonal and the reduction
+is a nonsplit extension of its two distinct residual
+characters. One can arrange the upper triangular
+orientation by Ribet's lattice argument. The eigenprojectors at \(\tau^2\) preserve every stable
+lattice, since its two eigenvalues differ by a unit. If \(b_g,c_h\)
+are the upper and lower entries, the residual trace comparison gives
+\[
+                        b_g c_h\equiv0\pmod\varpi
+                        \qquad(g,h\in G_{Fk_0}).
+\]
+Rescale the eigenvectors relatively so the smallest valuation
+of the \(b_g\) is zero. The products and the unchanged diagonal
+then give strictly positive valuation for the \(c_h\).
+This gives the nonsplit reduction and retains the
+diagonal residual characters.
+
+\proofstep{Induce in an integral symplectic basis.}
+
+Use \(\mu=\epsilon_\ell^k\eta\phi_0\) on \(G_\Q\).
+If the two diagonal entries at \(\tau^2\) are \(a^2,b^2\),
+choose the signs of \(a,b\) to agree with the residual
+labels at \(\tau\), and choose \(ab=\mu(\tau)\). This is
+possible since the determinant at \(\tau^2\) is
+\(\mu(\tau)^2\) and \(\ell\) is odd. On the two cosets of
+\(G_{k_0}\) the induced matrix of \(\tau\) is
+\(\left(\begin{smallmatrix}0&\operatorname{diag}(a^2,b^2)\\
+I_2&0\end{smallmatrix}\right)\). The change of basis
+\[
+ P=\begin{pmatrix}
+ 0&a&0&a\\
+ b&0&-b&0\\
+ 0&-1&0&1\\
+ 1&0&1&0
+ \end{pmatrix}
+\]
+is integral with inverse integral, and diagonalizes the
+operator. If \(R_\tau\) is the displayed two-coset matrix, then
+\[
+                       R_\tau P=P\operatorname{diag}(b,-a,-b,a).
+\]
+
+For \(J_2=\left(\begin{smallmatrix}0&1\\-1&0\end{smallmatrix}\right)\),
+the pairing in the induced basis is \(\operatorname{diag}(J_2,abJ_2)\)
+and has similitude \(\mu\). Indeed it is
+preserved up to \(\mu(h)\) on each block for
+\(h\in G_{k_0}\), and the matrix of \(\tau\) exchanges
+the blocks with the factor \(ab\). In the new basis the pairing satisfies
+\[
+       P^{T}\operatorname{diag}(J_2,abJ_2)P=-2abJ,
+\]
+where \(J\) is the standard alternating form pairing \(0,3\)
+and \(1,2\) in this order.
+On \(G_F\) the ratio \(\vartheta/\mu\) reduces to one,
+so it has a continuous square root \(\delta\) reducing
+to one, obtained from the inverse of squaring on the
+group of units congruent to one. Twisting the induced
+representation by \(\delta\) gives the required
+similitude without changing its reduction.
+
+\proofstep{Compare the two constituents on the cyclotomic kernel.}
+
+To apply cuspidal induction the two conjugate constituents must remain distinguishable after restriction. Their behavior on the cyclotomic kernel provides this distinction.
+
+
+For irreducibility put
+\[
+ U=G_L\cap\ker\epsilon_\ell.
+\]
+
+The restriction of \(r_2\) to \(U\cap G_{k_0}\) is
+irreducible. Indeed this is a normal subgroup with
+abelian quotient in an open subgroup of \(G_{k_0}\).
+If it has one or two invariant lines, an open subgroup
+of the larger group fixes a line. If it preserves at least three lines, its image is scalar. In a basis for the first two lines a diagonal matrix preserving a third has equal diagonal entries. Since the quotient is abelian, for elements \(g,h\) of the larger group
+\[
+ r_2([g,h])=cI,\qquad c^2=\det r_2([g,h])=1 .
+\] On a
+sufficiently small open subgroup they are the identity,
+and a commuting set of \(2\)-by-\(2\) matrices has a
+common eigenline over the algebraic closure. Either
+possibility contradicts irreducibility on open subgroups.
+
+If the constituents on \(U\cap G_{k_0}\) were equivalent,
+an intertwiner would be equivariant on \(G_L\cap G_{k_0}\)
+up to a scalar character. Schur's lemma gives this scalar and
+equality of determinants makes its square one. At a power of the marked inertia element
+with infinite cyclotomic image, square the element to
+remove the sign. If the cyclotomic value of the squared
+element is \(u\), the characteristic polynomials would
+have the two root multisets
+\(\{u^k,1\}\) and \(\{u^{k+t},u^{-t}\}\).
+Evaluation of the two characteristic polynomials at \(1\) would now give
+\[
+ 0=(1-u^{k+t})(1-u^{-t}).
+\]
+Both factors are nonzero since \(k+t,t>0\) and \(u\) has infinite order. The constituents are inequivalent, and \(U\) meets
+the other coset, so induction is irreducible on \(U\).
+
+\proofstep{Attach the cuspidal induction at the separating weights.}
+
+Over \(L\) the untwisted induction is the automorphic
+induction from \(Lk_0\) of the base change of the
+rank-two Hilbert system. Solvable base change and
+quadratic automorphic induction give the Frobenius
+polynomials of the induced representation. Cuspidality
+uses the irreducibility of the rank-two restriction
+and inequivalence of the conjugate systems. Their weights at the two exchanged places also distinguish them.
+The increasing gaps may be chosen with \(k,t\geq2\),
+giving the four ordered exponents \(k+t,k,0,-t\).
+The character used to recognize the automorphic seed
+is \(\delta^{-1}\) on \(G_L\), which cancels the scalar
+twist. Indeed
+\[
+ \delta^2=\epsilon_\ell^{j+1-k}\omega^{-1}\xi\phi_0^{-1}
+\]
+
+on \(G_F\), where \(\xi\) is the finite host character. Put
+\(b=j+1-k\). Thus the doubled modular weights are
+\[
+         2(k+t,k,0,-t)+(b,b,b,b).
+\]
+Their successive gaps are \(2t,2k,2t\), each at least four, and the parity and finite-order
+condition after removal of the cyclotomic factor are
+the ones used for ordinary classicality.
+\hfill\mbox{\cite{arthur-clozel,clozel-rajan}}\label{cor:ordinary-promodularity-9}
+
+\end{proof}
+
+\subsubsection{The integral flag of the induced seed}
+\label{par:induced-flag}
+
+The induced representation is integral, but its ordinary flags must reduce in the marked order. We verify this in the actual basis on each of the two local blocks.
+
+\begin{lemma}[Integral ordinary flags on the two induced local blocks]\label{lem:count-two-local-induced-flags}
+At each marked split decomposition group of
+Proposition~\ref{prop:count-two-integral-induced-seed}, use its
+integral basis \(P\) and the chosen ordered local lines. The
+matrix \(N\) below is integral symplectic and its flag is
+ordinary in the specified order. It obeys the residual grading condition and 
+\[
+ N_{20}=\pm1,\qquad N_{21}\equiv0\pmod{\mathfrak m},
+\]
+ where \(\mathfrak m\) is the maximal ideal of the coefficient ring.
+\end{lemma}
+
+\begin{proof}
+\proofstep{Local lines in the integral basis.}
+
+Use the integral frame of Proposition~\ref{prop:count-two-integral-induced-seed}.
+Write \(\gamma=b/a\) in its basis \(P\). On each
+marked decomposition group the split quadratic extension
+gives the two matrices \(A=r_2(h)\) and
+\(B'=r_2(\tau^{-1}h\tau)\). Both reduce to upper triangular
+matrices with diagonal \((1,\bar\eta(h))\). There is a
+decomposition element \(s\) at which \(\bar\eta(s)\ne1\):
+the marked nontrivial power of the \(\alpha\)-root in the
+quadratic tower supplies it. This remains necessary after
+restricting the two ordinary lines from \(k_0\).
+
+For an ordinary line reducing to character \(\bar\eta\),
+write a nonzero eigenvector as \((x,y)\). At \(s\) its
+eigenvalue minus the upper left entry is a unit. For a matrix \(A=(A_{ij})\) at \(s\), the first eigenvector
+equation is
+\[
+ (\lambda-A_{11})x=A_{12}y.
+\]
+A nonzero eigenvector therefore has \(y\ne0\) and
+\[
+ u=x/y=A_{12}/(\lambda-A_{11})\in O .
+\]
+Rescaling gives the integral generator \((u,1)\).
+For a line reducing to character \(1\), use
+\[
+        (\lambda-A_{22})y=A_{21}x .
+\]
+Here the left coefficient is a unit and \(A_{21}\) is in the
+maximal ideal, giving \((1,w)\) with \(|w|_\ell<1\). Each generator works
+on its entire decomposition group.
+
+The following two frames record the integral pivots. Put
+\[
+ N(p,q,r,s,z)=
+ \begin{pmatrix}
+ 1&0&0&0\\ p&1&0&0\\ q&s&1&0\\ r&z&-p&1
+ \end{pmatrix}.
+\]
+It is symplectic if \(z=q-ps\). If the first block has
+line \((u,1)\) and the second has line \((1,w)\), use
+\[
+ (p,q,r,s)=\left(\gamma u,-1,\gamma u,
+                \frac{-2w}{1+\gamma uw}\right).
+\]
+If the first has line \((1,w)\) and the second \((u,1)\), use
+\[
+ (p,q,r,s)=\left(-u,1,u,\frac{-2w}{\gamma+uw}\right).
+\]
+Both denominators are units. To check the flag, denote the
+two lines by \(U_\eta,U_1\) according to their reductions.
+In the original two-block coordinates the first two columns of
+\(PN\) are
+\[
+ \begin{pmatrix}a(p+r)\\ b(1-q)\\ -p+r\\ 1+q\end{pmatrix},
+ \qquad
+ \begin{pmatrix}a(1+z)\\ -bs\\ z-1\\ s\end{pmatrix}.
+\]
+In the first case the first column is \(2b(u,1,0,0)^t\).
+In the second it is \(2(0,0,u,1)^t\).
+The two-block pairs of the second column are
+\[
+ \begin{array}{c|cc}
+ \text{case}&\text{first block}&\text{second block}\\ \hline
+ 1&-bs\,(u,1)&(z-1)(1,w)\\
+ 2&a(1+z)(1,w)&s\,(u,1).
+ \end{array}
+\]
+These formulas follow by substituting \(z=q-ps\) in the two
+choices of \(N\).
+
+The second column has a unit
+coefficient on \(U_1\) in each case, since \(w\) belongs to
+the maximal ideal and \(2,a\) are units. Thus the first two
+columns span \(U_\eta\oplus U_1\).
+The third space is the perpendicular of the first for the
+block alternating pairing, so it adds the other graded
+line of the block containing \(U_1\). Consequently
+\(N^{-1}P^{-1}\operatorname{diag}(A,B')PN\) is upper
+triangular. The ordered exponents are \(k+t,k,0,-t\) in
+both cases. Multiplication by \(\delta\) multiplies all four
+characters by the same unit reducing to one. In particular
+the integral flag has \(N_{20}=\pm1\) and
+\(N_{21}\equiv0\), and every nonzero residual off-diagonal
+entry of \(N\) has degree in \(Q\).
+
+\end{proof}
+
+The integral ordinary flag identifies the residual labels locally. The residual path also needs the global extension pattern and its permitted ramification.
+
+\begin{proposition}[Residual support and inertia of the induced seed]\label{prop:count-two-residual-seed-support}
+In the integral induced frame, let \(R_{ij}\) denote the residual off-diagonal entries. Their support satisfies 
+\[
+ \operatorname{supp}_{\rm off}(R)\subseteq\{(1,0),(3,2),(3,0),(1,2)\},
+\]
+ with the paired entries given by the two expressions below, and the prescribed inertia is killed after the scalar
+correction. These conditions, together with the local flag
+constructed above, put the seed at the specified residual
+vertex.
+\end{proposition}
+
+\begin{proof}
+Keep the same frame
+\(P\) before changing the local flags. On
+\(G_F\cap G_{k_0}\) let \(x,y\) be the reduced upper
+right entries of the two blocks. Direct multiplication by
+\(P^{-1}\) and \(P\) gives diagonal
+\((\bar\eta,1,\bar\eta,1)\) and the only possible
+off-diagonal entries
+\[
+ R_{10}=-R_{32}=(\bar\gamma x-y)/2,\qquad
+ R_{30}=-R_{12}=(\bar\gamma x+y)/2 .
+\]
+There is an element with \(x\ne0\) by the nonsplit lattice
+choice. Since
+\[
+                   R_{10}+R_{30}=\bar\gamma x\ne0,
+\]
+the element has either the \(-w_\alpha\) entry or both the
+\(w_\beta\) and \(-w_\vartheta\) entries, using \(R_{30}=-R_{12}\). On the other coset multiply by the
+diagonal matrix of \(\tau\), which preserves this support
+and gives the specified residual labels there.
+
+For inertia away from \(\ell\) required to be killed in
+the tower representation, the fitted data make the host
+character trivial there and give trivial residual
+\(\bar\eta\). The latter gives \(\eta=1\) there since
+its order is prime to \(\ell\). The quadratic sign and the
+cyclotomic character are also trivial on this inertia.
+The two rank-two restrictions have diagonal inertial type
+\(1\oplus\eta\), including for the conjugate place. Both
+blocks act trivially there. On this inertia \(\delta^2=1\) and \(\bar\delta=1\). For every inertia element \(h\) we have
+\[
+ (\delta(h)-1)(\delta(h)+1)=0,\qquad \delta(h)+1\in O^\times
+\]
+because \(\ell\) is odd. Thus \(\delta(h)=1\).
+
+At
+\(\ell\) consider inertia fixing the cyclotomic roots.
+Here \(\omega=\phi_0=1\) since \(k_0\) splits at \(\ell\).
+The fitted tower makes the diagonal residual representation
+trivial on this inertia, hence its second character
+\(\overline\Psi=\bar\xi\) is one there. The restriction of
+the host character to the seed layer has order prime to
+\(\ell\), so \(\xi=1\) there as well. The formula for
+\(\delta^2\) now gives \(\delta^2=1\), and its residue
+again selects \(+1\). Thus the ordered characters are
+trivial on this part of inertia.
+These give the seed flag, residual vertex and ramification
+conditions in the same normalization.
+\label{cor:ordinary-promodularity-10}
+
+\end{proof}
+
+\subsubsection{Marked cup cancellation and the deep layer}
+\label{par:marked-cup}
+
+The residual labels at the two endpoints now agree with the chart. Connecting the endpoints still requires removing the obstruction given by a cup product at the marked places.
+
+\begin{proposition}[Three links from the marked cup correction]\label{prop:count-two-residual-links}
+For the normalized even-order target and seed, the marked
+cup term can be canceled after the indicated finite residue
+extension and cyclic layer. On a common sufficiently deep layer, write \(R_{\rm aux}\) for the auxiliary datum and \(R_{\rm root}\) for its one-root projection. The three residual lines have endpoints 
+\[
+ R_{\rm target}\longrightarrow R_{\rm aux}\longrightarrow R_{\rm root}\longrightarrow R_{\rm seed}.
+\]
+ Each vertex satisfies one of the component tests of
+Proposition~\ref{prop:tower-component-propagation}.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Normalize the residual cocycles.}
+
+On the starting layer \(F\), use the normalized residual
+datum with its prescribed local flags. The \((2,0)\)
+global and frame entries give a cocycle \(y\) and local
+primitives \(n_v\) of degree \(-w_\Psi\).
+Thus \(y(g_0)=0\) and
+\[
+ y(s)=(1-\beta_-(s))n_v
+\]
+on the local group at \(v\mid\ell\),
+where \(\beta_-\) is the residual character of degree
+\(-w_\Psi\). Denote the character of degree \(-w_\alpha\)
+by \(\alpha_-\), and put \(\gamma_-=\alpha_-\beta_-\).
+
+More generally let \(y_j\), \(j\) in a finite set, be
+such cocycles for which we need one common \(x\).
+The residual character values belong to a finite field
+\(k_{\mathrm{res}}\). In the ambient residue field,
+let \(V_y\) be the \(k_{\mathrm{res}}\)-span of the images of the
+\(y_j\). Each image is finite, as a continuous image of a compact group in a discrete field. In particular
+\[
+ \dim_{k_{\rm res}}V_y\le\sum_j|\operatorname{im}y_j|<\infty .
+\]
+\proofstep{Kill the marked cup term by the auxiliary extension.}
+
+The normalized root cocycles determine the marked obstruction. Passing to the chosen auxiliary extension removes this cup term while allowing the residual links to be compared on a common layer.
+
+
+Consequently \(V_y\) is a finite additive group, including
+when the \(y_j\) take transcendental values over \(k_{\mathrm{res}}\).
+
+On the finite \(\mathbf F_\ell\)-module
+\(M=k_{\mathrm{res}}\oplus V_y^{\{j\}}\) use the action
+\[
+ g\cdot(u,(b_j)_j)
+   =\bigl(\alpha_-(g)u,\,
+      (\gamma_-(g)b_j+y_j(g)\alpha_-(g)u)_j\bigr).
+\]
+The cocycle identity for \(y_j\) is exactly the
+multiplication rule for this action. The module is
+unramified outside the finite set \(S_0\) of allowed
+places, which includes the places above \(\ell\).
+Chebotarev gives infinitely many rational primes
+splitting in the normal closure of the finite field
+extension cut out by this action, the residual data,
+the mod-\(\ell\) cyclotomic character and \(F\). Use
+places of \(F\) over these primes as possible new
+ramification places. Both \(M\) and \(\mu_\ell\) are
+trivial on their decomposition groups.
+
+Here is the cohomology argument for a cocycle with
+nonzero first coordinate. Fix
+\[
+ e=(1,(0)_j)
+\]
+and add
+\(t\) of the split places to \(S_0\). At the original
+finite places impose zero in local \(H^1\). At each
+new place allow all unramified classes and require
+the restriction to inertia to take values in
+\(\mathbf F_\ell e\). Local class field theory at a new place gives
+\[
+ H^1(G_v,M)\simeq M_{\rm unr}\oplus M_{\rm tame},\qquad M_{\rm unr}\simeq M_{\rm tame}\simeq M.
+\]
+The inertia condition cuts the second summand down to \(\mathbf F_\ell e\). Thus at each added place \(v\) the local factor in the cardinality formula is
+\[
+ \frac{|M\oplus\mathbf F_\ell e|}{|H^0(G_v,M)|}
+   =\frac{|M|\ell}{|M|}=\ell .
+\]
+The product over the \(t\) new places is \(\ell^t\). The oddness of \(\ell\)
+kills \(H^1\) at the infinite places.
+
+The Greenberg--Wiles
+cardinality formula from Poitou--Tate bounds the order
+of this Selmer group below by \(2^t/C_0\), with
+\[
+ C_0=|M^\vee(1)|\,|M|^{[F:\Q]+\#S_0}.
+\]
+Indeed the dual Selmer order and the global invariants
+of \(M\) are at least one, the global dual invariants
+have cardinality at most \(|M^\vee(1)|\), and the
+remaining local invariant factors cost at most one
+\(|M|\) per original or infinite place. The number of
+cocycles unramified outside \(S_0\) is finite independently
+of \(t\). Each such cocycle and the action define a
+homomorphism into the finite affine group
+\(M\rtimes\operatorname{Aut}(M)\), so this follows by
+Hermite--Minkowski and finiteness of the possible maps
+for each field. Taking \(t\) large gives a cocycle
+ramified at a new place. On that inertia group the
+nonzero value is in \(\mathbf F_\ell e\), where the
+action on \(M\) is trivial.
+
+Write the resulting cocycle as \(c=(x,(z_j)_j)\).
+The action formula gives
+\[
+\begin{split}
+ x(gh)&=x(g)+\alpha_-(g)x(h),\\
+ z_j(gh)&=z_j(g)+\gamma_-(g)z_j(h)
+                 +y_j(g)\alpha_-(g)x(h).
+\end{split}
+\]
+At an original place over \(\ell\), write \(c(s)=
+(1-s)(m_v,(b_{j,v})_j)\). The resulting local equation is
+\[
+ z_j(s)=(1-\gamma_-(s))b_{j,v}
+                  -y_j(s)\alpha_-(s)m_v .
+\]
+Subtract a global coboundary to make
+\(x(g_0)=z_j(g_0)=0\). Its coordinates can be chosen in
+this order because \(\alpha_-(g_0)\) and \(\gamma_-(g_0)\)
+are both different from one, and \(y_j(g_0)=0\).
+This changes the local primitives by the corresponding
+constants and leaves the value on the chosen
+new inertia group fixed.
+
+The symplectic realization is explicit. Put
+\[
+ U(x,y,z)=
+ \begin{pmatrix}
+ 1&0&0&0\\ x&1&0&0\\ y&0&1&0\\ 2z-xy&y&-x&1
+ \end{pmatrix}.
+\]
+Then \(U\) preserves the alternating form and
+\[
+ U(x,y,z)U(x',y',z')=
+ U(x+x',y+y',z+z'+yx').
+\]
+The diagonal matrix of the four residual characters
+acts on these three coordinates by
+\(\alpha_-,\beta_-,\gamma_-\), respectively. Thus the
+global representation is
+\[
+ g\longmapsto
+ U(x(g),y_j(g),z_j(g))\operatorname{diag}(\bar\chi_i(g)).
+\]
+The local frame
+\(U(m_v,n_{j,v},b_{j,v})\) conjugates it to the marked
+diagonal on the local group. Both marked \(-w_\Psi\)
+entries are retained. The common \(-w_\alpha\) global
+and local entries come from \(x\) and \(m_v\).
+
+At each added rational prime \(p\), the base field
+is split and \(p\equiv1\bmod\ell\). The degree-\(\ell\)
+subfield of \(\Q(\zeta_p)\) cuts inertia by the unique
+index-\(\ell\) subgroup of its tame pro-\(\ell\)
+quotient. On that inertia the cocycle is a homomorphism to
+an elementary abelian \(\ell\)-group. Its tame pro-\(\ell\)
+restriction factors through
+\[
+                        \Z_\ell/\ell\Z_\ell .
+\]
+Thus the new extension kills it.
+The compositum of these auxiliary extensions is
+abelian of odd degree and unramified at \(\ell\).
+
+In particular, this step preserves tameness at the
+starting layer. The nonzero global entry survives
+restriction. If \(x(g)\ne0\), its normalization gives
+\[
+ x([g_0,g])=(\alpha_-(g_0)-1)x(g)\ne0
+\]
+for the commutator \(g_0gg_0^{-1}g^{-1}\). For an abelian extension \(L'/L\) of the starting layer, projection to \(\operatorname{Gal}(L'/L)\) kills commutators. Thus
+\[
+ g_0gg_0^{-1}g^{-1}\in G_{L'}.
+\]
+The new distinguished
+element is an allowed power of \(g_0\), so it still
+gives diagonal matrices. This yields the residual
+datum with its original allowed ramification in the
+subsequent deep layers.
+\label{cor:ordinary-promodularity-11}
+
+The three lines use the following operations on these
+residual data. Write \(R_0,R_1\) for the target and auxiliary matrices on the first line. For its retained entry one has 
+\[
+ (1-s)(R_0)_{20}+s(R_1)_{20}=(R_0)_{20}\quad\text{in }k[s],
+\]
+ because the common \(-w_\Psi\) coordinate is fixed, and the same identity holds in the frames. Then retain the \(-w_\alpha\)
+extension and discard the other entries. The local
+flags of this second endpoint can be chosen to share
+the \((2,0)\) entry of the seed, using the equality of
+the two residual characters on the relevant local
+subgroup. Finally interpolate between this one-root
+point and the seed, with the common local \(-w_\Psi\)
+flag entry and with the global \(-w_\Psi\) entry zero
+on both sides. The block orders and the entries fixed at both endpoints are
+\[
+ \begin{array}{c|c|c|c}
+ \text{line}&\text{ordered blocks}&\text{common entry}&\text{paired entry}\\\hline
+ 1,3&\{0,2\},\{1,3\}&(2,0)&(3,1)\\
+ 2&\{0,1\},\{2,3\}&(1,0)&(3,2).
+ \end{array}
+\]
+The matrices are block triangular.
+
+In each order the symplectic equation determines the paired entry from the common one, so both diagonal blocks are fixed, also in the frames. In either block order write \(R_1(g)=R_0(g)+D(g)\).
+In these block coordinates the differences all occupy one strict off-diagonal block. For instance, in lower block order,
+\[
+ \begin{pmatrix}0&0\\ X&0\end{pmatrix}
+ \begin{pmatrix}0&0\\ Y&0\end{pmatrix}=0 .
+\]
+In particular \(D(g)D(h)=0\) for all \(g,h\). Subtracting the two endpoint multiplication laws gives
+\[
+ D(gh)=R_0(g)D(h)+D(g)R_0(h).
+\]
+Set \(R_s=R_0+sD\). Square-zero multiplication eliminates
+\(s^2 D(g)D(h)\), so
+\[
+                R_s(g)R_s(h)=R_0(gh)+sD(gh)=R_s(gh).
+\]
+In the symplectic and frame products the two off-block differences again have zero product (the adjoint preserves that block ideal).
+
+For any of the resulting equations \(H=0\), substitution of the interpolated matrices gives
+\[
+ H(s)=(1-s)H(0)+sH(1)=0 .
+\]
+Thus the polynomial line respects these equations identically. The target passes the first test with
+\(E(b_0)\) or the third test, by its lattice normalization.
+If it has a nonzero global entry of degree \(-p_0\), the
+first intermediate vertex retains it and adds \(E(-a_0)\),
+so that the first test applies there. If its entire
+\(-p_0\) global entry vanishes, so does that of the
+first intermediate vertex. That vertex then has support
+in \(V\), inherits the nonzero local \((2,0)\) entry and
+passes the third test. The second intermediate vertex has
+only the degree \(-a_0\) globally and takes its nonzero
+\((2,0)\) frame entry from the seed.
+
+It passes the third
+test. The seed has global support in \(V\) and frame support
+in \(Q\) with nonzero \((2,0)\) entry. Its ordinary local image supplies one of the following inclusions.
+\[
+ \{-a_0\}\subseteq\operatorname{supp}_{\rm glob}(\text{seed})
+ \quad\text{or}\quad
+ \{b_0,-t_0\}\subseteq\operatorname{supp}_{\rm glob}(\text{seed}).
+\] In the second case the tower retains an element
+at each \(\ell\)-adic place on which the original
+\(\alpha\)-character remains nontrivial after the prescribed
+power change. Its residual value on that element equals the
+value of \(\bar\chi_0/\bar\chi_1\), giving the fourth test.
+ The cocycle
+bound \(C\) is taken after that extension. The large
+degree and local degree are then obtained in the same
+cyclotomic layer, and the seed is constructed there.
+The order of choices allows the preceding component
+proof to apply to that chain.
+\label{cor:ordinary-promodularity-12}
+
+\end{proof}
+
+\subsubsection{Characteristic-\(\ell\) specialization}
+
+Characteristic-zero propagation uses ordinary support at both levels. In residue characteristic the same ideals instead constrain the characteristic polynomials, a conclusion valid even when the point has coefficients of positive transcendence degree.
+
+\begin{proposition}[Characteristic polynomials on the split residual layer]\label{prop:tower-characteristic-ell}
+In characteristic \(\ell\), a normalized target killed by \(J\)
+and with the prescribed split residual inertia has, for its matrices \(r(g)\) and the prescribed diagonal characters \(d_i\), the identities 
+\[
+ \det(X-r(g))=\prod_i(X-d_i(g))\qquad(g\in G_F).
+\]
+
+The assertion holds over the original valuation ring of the point.
+\end{proposition}
+
+\begin{proof}
+Suppose the target valuation ring has characteristic \(\ell\).
+Let \(a:O\to V\) be its coefficient map and
+\(y:A\to V\) the normalized point. The kernel of \(a\)
+contains \(\ell\), so it contains the uniformizer of
+the coefficient DVR. The same holds after the finite
+coefficient extension used to define \(B\).
+For each \(s\) in the full inertia of a marked place,
+normalization gives the equality in \(V\)
+\[
+    y(\psi_{v,i}(s))=a\bigl((r_0)_{ii}(s)\bigr).
+\]
+The split residual system of the fitted tower is trivial on
+that inertia. Thus \((r_0)_{ii}(s)-1\) lies in the
+coefficient maximal ideal, and the displayed equality makes
+\(y(\psi_{v,i}(s)-1)=0\). The restriction of \(y\) to \(B\)
+kills \(J\) by propagation. The maximal-ideal power in Proposition~\ref{prop:tower-closed-specialization}
+therefore maps to zero.
+
+Since \(V\) is a domain,
+\(B\to V\) factors through its finite residue field. All
+characteristic polynomials on \(G_F\) specialize to those
+of the split residual system, including for the original
+point since conjugation preserves characteristic polynomials.
+This gives
+the finite-index characteristic-polynomial comparison
+used below, even when the original characteristic-\(\ell\)
+point has a transcendental coordinate.
+\label{cor:ordinary-promodularity-13}
+
+\end{proof}
+
+\input{count-ii-point-output}
+\input{count-iii-tower}
+\input{count-iii-seed}
+\input{count-iii-chain}
+\input{count-iii-components}
+
+\input{count-iii-point-output}

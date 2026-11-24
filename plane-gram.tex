@@ -1,0 +1,457 @@
+To obtain the covector in Proposition~\ref{prop:residue-plane-neighbor-test},
+we compare the actual pairing with its model on prescribed cut
+subspaces. The corrected pairing estimate below uses the same original multidegree as the source lift in
+Lemma~\ref{lem:lift-plane-symbol}.
+\paragraph{The Fock metric and the signed cuts.}
+\label{par:plane-gram}
+\hypertarget{source-plane-gram}{}
+We give the pairing argument in its signed polynomial model.
+Normalize the valuation by \(v(p)=1\). For a monomial with
+exponent \(\alpha\), write \(\alpha!=\prod_x\alpha_x!\) and
+\(h_\alpha=v(\alpha!)/2\). Use the bilinear form and its
+associated coefficient bound
+\[
+  [F,G]=\sum_\alpha F_\alpha G_\alpha\,\alpha!,
+  \qquad \nu(F)=\min_\alpha \bigl(v(F_\alpha)+h_\alpha\bigr).
+\]
+Then \(v([F,G])\ge \nu(F)+\nu(G)\). In true multidegree
+\(d=(d_i)\), set
+\[
+ n_0=\frac12 v\!\left(\prod_i d_i!\right),\qquad
+ K_d=\sum_i r\bigl(1+\log_p(d_i+r)\bigr),\qquad
+ e_d=r^2\bigl(1+\log_p(2\textstyle\sum_i d_i+r)\bigr).
+\]
+
+In this multidegree \(2n_0-K_d\le v(\alpha!)\le2n_0\).
+Indeed the difference is the valuation of a product of
+multinomial coefficients. Each multinomial is a product of
+at most \(r\) binomial coefficients with upper entries at most
+the letter degree. A binomial with upper entry \(n\ge1\) has
+valuation at most \(1+\log_p n\), by the base-\(p\) carry
+formula, which follows from Legendre's formula for factorials.
+The same argument for a split \(\alpha=A+M\) gives
+\[
+   v(A!)+v(M!)\ge 2n_0-2K_d,
+   \qquad \text{when \(A+M\) has multidegree \(d\)}.
+\]
+
+\begin{lemma}[Projectors for signed cuts in the factorial norm]\label{lem:plane-signed-projectors}
+For every prescribed cut and threshold in fixed multidegree
+\(d\), there is a Fock-self-adjoint rational projector onto
+the signed cutoff subspace, whose loss in \(\nu\) is at most
+\(e_d\). For nested or disjoint cuts write \(P_i\) for their projectors and \(P\) for the stipulated product. Then
+\[
+ P^2=P,\qquad \operatorname{im}P=\bigcap_i\operatorname{im}P_i,
+\]
+with loss at most \(e_d\) per cut.
+It preserves multidegree and the monomial exponents outside
+the union of those cuts.
+\end{lemma}
+
+\begin{proof}
+\proofstep{The projector for a signed cut.}
+Using the signed, generically conjugated Laurent order, the space attached to a cut \(S\) is
+\[
+ U(S,b)=\{F:\operatorname{ord}_S(F)\ge b\}.
+\]
+In fixed
+multidegree it is the sum of the \(\mathrm{GL}_r\)-types
+for the action on \(S\) whose least weight \(\lambda_r\) is
+\(\ge b\). Indeed all torus exponents in a type are at least
+\(\lambda_r\) in the selected coordinate, and the conjugates
+of that torus test detect the lowest weight in every nonzero
+copy. More explicitly the intersection of the conjugate
+weight-cut spaces is invariant, and the copies it contains
+are exactly the stated types. The type sum has a Fock
+self-adjoint projector \(\Pi\), defined over \(\mathbb Q\).
+
+By the trace formula and divided-power estimate for type
+projections proved above, its matrix on the coefficient lattice satisfies
+\[
+ v_p(\Pi_{\beta\alpha})\ge-e_d\qquad(\text{all }\alpha,\beta).
+\]
+In applying the
+estimate the coordinate span on the cut is at most \(\sum_i d_i\),
+and it suffices to use \(2\sum_i d_i\) in the Hom weight bound.
+Zero degree and \(r=1\) give scalar projections on the affected
+monomial spaces. The trace formula works for the sum of types
+with the same bound by the ultrametric inequality.
+
+For the matrix entry \(\Pi_{\beta\alpha}\), self-adjointness
+gives
+\[
+ \beta!\Pi_{\beta\alpha}=\alpha!\Pi_{\alpha\beta}.
+\]
+
+Consequently the two numbers
+\(v(\Pi_{\beta\alpha})+h_\beta-h_\alpha\) and
+\(v(\Pi_{\alpha\beta})+h_\alpha-h_\beta\) are equal.
+Their common value is the mean of the two unweighted
+entry valuations, each bounded below by \(-e_d\).
+For the coefficient of \(x^\beta\) in \(\Pi F\) the
+ultrametric inequality therefore gives
+\[
+ v((\Pi F)_\beta)+h_\beta
+    \ge\min_\alpha\{v(F_\alpha)+h_\alpha-e_d\}.
+\]
+Taking the minimum in \(\beta\) yields the claimed norm bound.
+
+For nested cuts the smaller-cut projector commutes with
+the action on that cut and with the action on its complement.
+It therefore preserves every isotypic component for the
+larger cut and commutes with its type projector. For disjoint
+cuts the projectors act on separate factors. A product over
+such cuts is self-adjoint, fixes their intersection and loses
+at most \(e_d\) per cut. It preserves multidegree and each
+exponent outside the union of the cuts. This proves the projection and gives the product bound used below.
+
+\end{proof}
+
+\begin{paramdefinition}[The true and model lattices, cuts and signs]\label{hyp:plane-gram-data}
+The block letters \(B_j\) in each frame \(j\) have specified
+signs and total block degree \(b_j\). The shared letters \(X_t\),
+indexed by \(t=(j,m)\), \(0\le m<r\), are vectors. Let
+\(P_t=p^{g_t}\) be their radices. The model has the same
+block letters and three vector letters \((L_t,W_t,T_t)\)
+over each shared letter. Its collapse \(\phi\) sends them
+respectively to \(X_t,X_t^{P_t},X_t\), coordinate by coordinate.
+The exponents on \(L_t,W_t,T_t\) will be denoted by
+\(\rho_t,\beta_t,M_t\). An admissible monomial has
+\[
+ \begin{gathered}
+ 0\le\rho_{t,a}<P_t, \\ M_{j,0}=0, \\ |M_{j,m}|\le b_j,
+\end{gathered}
+\]
+and exact collapsed multidegree \(d\).
+
+\smallskip
+The cuts are defined as follows.
+A true link cut contains \(B_j\) and the shared letters
+\(X_{j,m'}\) for \(m'>m\). Denote it by \(A_{jm}\);
+we use \(m+2\le r\). The corresponding model link cut
+\(U_{jm}\) contains \(B_j\), the letters \(T_{j,m'}\)
+for \(m'>m\), and all the \(W_{j-1,m'}\), where the frame
+indices are cyclic.
+
+A model chain cut \(S_{ji}\) contains a
+nested subset of \(B_j\) and all the \(W_{j-1,m'}\).
+Thus the link cuts alone, the chain cuts alone, and the
+union of the chain cuts with the model link cuts are each
+families of nested or disjoint cuts. Set
+\[
+ D_l=J(r-1)e_d,\qquad D_m=e_d\sum_j n_j,
+\]
+where \(J\ge1\) is the number of frames and \(n_j\) the
+number of chain cuts at \(j\). The model total degree is
+at most \(\sum_i d_i\) on admissible monomials because
+each \(P_t\ge1\).
+
+Use a diagonal unit \(\gamma(\alpha)\) on the true
+monomials. Its two signs admit integral binomial polynomial
+approximations of total degree at most \(6c\) modulo \(p^c\).
+
+Suppose that \(\nu(F)=0\) in true multidegree \(d\), that
+the true link orders of \(F\) are at least \(\ell_{jm}\),
+and that each digit part of \(F\) has chain orders at least
+\(\theta_{ji}\). The digit part for a fixed residue keeps the
+block exponents and reads on \(W_t\) the quotient exponent
+\[
+ m_t=\rho_t+P_t\beta_t\quad\longmapsto\quad \beta_t=(m_t-\rho_t)/P_t,
+\]
+with no \(L_t,T_t\) exponents.
+The pairing under consideration is \([F,\gamma\,\phi(Z)]\),
+where \(\gamma\) acts coefficientwise. Use the inequalities
+\begin{equation}\label{eq:plane-gram-reserves}
+ \begin{split}
+    c&>4(D_m+D_l+3K_d),\\
+    s_{ji}&\ge r\, b_{j-1}/P_{j-1,m}+13rc
+                     \qquad(0\le m<r).
+ \end{split}
+\end{equation}
+\end{paramdefinition}
+The family of test polynomials is indexed by primitive vectors of the true lattice. The two signs of the diagonal unit are treated by Lemma~\ref{lem:plane-digit-units-and-cuts}. The reserves are inequalities on the integer conductor chosen for the small-prime calculation; its specialization is made in Section~\ref{sec:host-edge-tests}.
+
+
+\begin{proposition}[An integral polynomial with prescribed orders at the model cuts]\label{prop:plane-corrected-gram-polynomial}
+Use the lattices, orders and sign approximations in
+Definition~\ref{hyp:plane-gram-data}, including \(\nu(F)=0\)
+and the reserves \eqref{eq:plane-gram-reserves}.
+Then there is an integral model polynomial \(Z_*\) of collapsed
+degree \(d\), with model link orders at least
+\(\ell_{jm}-30c\) and chain orders at least
+\(\theta_{ji}-s_{ji}-12c\), such that
+\[
+ v([F,\gamma\phi Z_*])-n_0+K_d
+                               \le D_l+D_m+4K_d.
+\]
+The order and valuation bounds are uniform over the coefficients,
+digit classes and radices with the data of Definition~\ref{hyp:plane-gram-data}.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Projecting a monomial to the link cuts.}
+Take a monomial \(x^\alpha\) attaining \(\nu(F)=0\) and
+project it to the true link cuts at levels \(\ell_{jm}\).
+The result \(Y\) has \(\nu(Y)\ge h_\alpha-D_l\), and
+\[
+ [F,Y]=F_\alpha\,\alpha!
+\]
+has valuation \(h_\alpha\).
+Apply an integral binomial approximation \(g\) of \(\gamma^{-1}\)
+of degree at most \(6c\) to its coefficients. A factor
+\(\binom{\alpha_x}{a}\) acts as
+\(x^a\partial_x^{[a]}\). Its loss in a signed cut is at
+most \(a\), by the cut estimates for the derivative and
+multiplication. This bounds the total link loss by \(6c\).
+The change in the pairing from \([F,Y]\) to
+\([F,\gamma(gY)]\) has valuation at least
+\[
+ c+h_\alpha-D_l>h_\alpha.
+\]
+
+Ordinary coefficients of \(gY\) have valuation at least
+\(h_\alpha-D_l-n_0\). Multiplication by
+\[
+ p^{\lceil n_0+D_l-h_\alpha\rceil}
+\]
+therefore makes \(gY\)
+an integral polynomial \(G\) in the original variables. It has link orders at least
+\(\ell_{jm}-6c\) and its twisted pairing has valuation at
+most \(n_0+D_l+1\).
+
+\proofstep{Lifting \(G\) in the prescribed plane.}
+To lift \(G\), first put each \(X_t\) entirely in \(L_t\).
+Within frame \(j\), order its block letters first and then
+the shared letters in decreasing order of \(m\). Each
+\(A_{jm}\) is a prefix of this order. Use the integral basis
+of signed path words proved in Section~\ref{sec:column-lifts},
+now testing the least torus weight at the prefixes.
+In a positive column the least exponent selects a
+subset avoiding the torus coordinate whenever \(h<r\).
+In a nonpositive column it selects a dual subset
+containing the coordinate whenever \(h<r\). Thus if
+\(h_b\) are the prefix heights,
+\[
+ \lambda_r=
+ \sum_{b\ {\rm positive}}\mathbf1_{h_b=r}
+       -\sum_{b\ {\rm nonpositive}}\mathbf1_{h_b<r}.
+\]
+The Pieri decomposition at the successive prefixes
+selects exactly the paths whose displayed sums obey all
+the lower bounds. The associated words span the
+intersection of the cuts. Since they are a
+subset of the integral basis, the expansion of an integral
+polynomial in this intersection uses integral coefficients.
+
+In a path word, a column meeting at least one block
+letter moves all its shared occurrences with \(m>0\) from
+\(L_{j,m}\) to \(T_{j,m}\). Keep \(L_{j,0}\) and every
+occurrence in a column disjoint from the blocks. Each
+column uses a given shared letter at most once. Count the columns by one of their block occurrences. Each chosen occurrence lies in only one column, so
+\[
+ \#\{\text{moved columns}\}\le\#\{\text{block occurrences}\}\le b_j.
+\]
+This gives the tangent degree bounds.
+On a moved column the new cut \(B_j\cup\{T_{j,m'}:m'>m\}\)
+acts on exactly the old cut occurrences. An unmoved
+column has zero order there. Its contribution to the
+prescribed lower bound was at most zero.
+
+In fact for a
+positive column the height at the cut is bounded by the
+number of its occupied vector letters before the cut,
+which is \(<r\) since the column meets only shared letters.
+For a prefix, a moved column retains its signed cut
+order and an unmoved column contributes zero, at least
+its previous order. Minimum Laurent orders add on products, giving the required cut
+bound for the whole word. For the coefficient valuation the relevant
+identity is
+\[
+      \nu_{\rm coeff}(AB)=\nu_{\rm coeff}(A)+\nu_{\rm coeff}(B)
+                 \qquad(A,B\ne0).
+\]
+Indeed, divide each factor by its minimum uniformizer power. Their
+reductions are nonzero polynomials over the residue field, so their
+product has nonzero reduction. The injective renaming on each
+column preserves that column's \(\nu_{\rm coeff}\), and
+hence preserves the valuation of the product word.
+Collapsing \(T_{j,m}\) back to the corresponding shared
+letter restores each column separately.
+
+Perform the operation coefficientwise outside each frame.
+Since the renamed letter sets are disjoint, that operation
+commutes with the cut substitutions in the other frames.
+For a remaining shared variable, divide its exponent by its radix.
+The lift and collapse act on the monomial by
+\[
+ a_t=P_tq_t+r_t,\quad 0\le r_t<P_t,\qquad
+ L_t^{r_t}W_t^{q_t}\:\longmapsto\: X_t^{r_t+P_tq_t}=X_t^{a_t}.
+\]
+The tangent exponents stay fixed throughout. To see that it preserves
+the link bounds, group by the \(L\)-exponents. These letters
+are outside the new link cuts, so coefficient extraction
+preserves the bounds. The added monomial in the \(W\) letters
+has nonnegative order at every model link cut, since those
+letters are vectors. The integral model polynomial \(Z\)
+therefore has admissible support, \(\phi(Z)=G\), and
+\(\operatorname{ord}_{U_{jm}}Z\ge\ell_{jm}-6c\).
+
+\proofstep{Correction to impose the chain cuts.}
+For an admissible model exponent \(\zeta\), let \(A\) be
+its collapsed exponent without \(T\), and let \(M\) be its
+tangent exponent on the true shared letters. Thus
+\(\phi(x^\zeta)=x^{A+M}\). The digit factorial identity
+gives
+\[
+       A! M! = \kappa_B\,u_\zeta\,\zeta!,
+       \qquad
+       \eta_\zeta=\gamma(A)u_\zeta ,
+\]
+where \(u_\zeta\) is the product of the digit units.
+The constant \(\kappa_B\) depends on the individual label and
+tangent exponents and on the model multidegrees, which we fix
+in each block of the next projection. Explicitly it is the
+product of the digit constants for each \(W_t\)-degree divided
+by the product of the label factorials. The letter \(T_t\)
+contributes the same factorial on both sides.
+
+\proofstep{Diagonal correction factors.}
+Choose diagonal multipliers \(g_+\) and \(g_-\) approximating
+\(\eta_\zeta\) and its inverse modulo \(p^c\), with
+integral values and cut cost \(12c\) on cuts excluding \(L\).
+For fixed label exponents, substitute
+\(\rho_{t,a}+P_t\beta_{t,a}\) into the binomial approximations
+to \(\gamma^{\pm1}\). Apply forward differences in \(\beta\) to the integer-valued polynomial \(A(\beta)=\binom{\rho+P\beta}{k}\). Its expansion is
+\[
+ A(\beta)=\sum_{j=0}^k(\Delta^j A)(0)\binom{\beta}{j},\qquad (\Delta^j A)(0)\in\mathbb Z.
+\]
+
+Multiplying this approximation by the degree-\(6c\) digit
+unit approximation yields the cost \(12c\). Extracting
+coefficients of \(L\) leaves every such cut intact, so the
+estimate holds after adding the label classes.
+
+In each model multidegree let \(\Pi_m\) be the product
+projector on chain orders at least \(\theta_{ji}-s_{ji}\).
+Use its linear extension over all multidegrees. It fixes
+the exponents on \(L,T\), preserves the admissible support
+conditions, and commutes with all model link projections.
+Each multidegree component of a polynomial satisfying a
+link bound still satisfies it, by the homogeneous cut action.
+ Set
+\[
+ \Omega=g_-\Pi_m g_+.
+\]
+
+Its chain orders are \(\ge\theta_{ji}-s_{ji}-12c\).
+Any model link bound is lowered by at most \(24c\).
+For \(\zeta,\zeta'\) in the same fixed block of \(\Pi_m\),
+\[
+ \lvert v(\zeta!)-v(\zeta'!)\rvert\le K_d.
+\]
+
+Only the block and \(W\) exponents can vary. Their degrees
+are bounded by the corresponding true degrees, so the
+multinomial estimate applies without a second factor for
+the fixed \(L,T\) exponents. The factorial-weighted projection
+bound proves that \(p^{N_2}\Omega\) preserves integrality
+on admissible support, with
+\(N_2=\lceil D_m+K_d/2\rceil\).
+
+\proofstep{Precision of the corrected pairing.}
+For a fixed tangent exponent \(M\) put
+\[
+         F_M=\gamma^{-1}\,\partial^{[M]}(\gamma F).
+\]
+Every coefficient of \(F_M\) has valuation \(\ge -n_0\):
+the unit multipliers and the integral divided derivative
+preserve the original coefficient bound. At a fixed label
+\(\rho\), its digit part has a decomposition \(Q+E\) such
+that
+\[
+ v(E_\beta)\ge c-n_0
+\]
+and
+\(\operatorname{ord}_{S_{ji}}Q\ge\theta_{ji}-s_{ji}\)
+for all \(j,i\). To obtain it, start with the digit parts
+of \(F\). In each of the two twist operations replace the
+unit multiplier by its degree-\(6c\) approximation. Each
+replacement error has coefficient valuation at least
+\(c-n_0\), and each approximation loses at most \(6c\) in
+the chain orders, using the affine binomial expansion.
+Between the two multipliers use the divided derivative
+expansion of the preceding subsection on each shared letter.
+
+The divided-derivative expansion takes the input label to the residue of \(\rho-M\)
+coordinatewise. The error coefficients have valuation at
+least \(c-n_0\). The approximate derivatives and all
+multiplying monomials have integral coefficients, so errors
+already made retain this valuation. Only derivatives on
+the \(W\) letters in the cut can lower its order. Their
+total loss is bounded by
+\[
+    \sum_{m=0}^{r-1}
+       \left(\frac{|M_{j-1,m}|}{P_{j-1,m}}+c\right)
+    \ \le\ s_{ji}-12c
+\]
+by \eqref{eq:plane-gram-reserves} and \(r\ge1\).
+This produces \(Q,E\) with the asserted relation.
+
+\proofstep{Comparing factorial terms in the corrected pairing.}
+For an admissible monomial the factorial identity and the
+coefficient formula for the divided derivative give
+\[
+ [F,\gamma\,\phi(x^\zeta)]
+       = \kappa_B\,\eta_\zeta\, (F_M)_A\,\zeta! .
+\]
+In the model multidegree of \(\zeta\), multiply \(Q\) by
+the fixed label and tangent monomial, then keep that
+multidegree. The resulting polynomial \(Q_B\) still has
+the required chain orders because \(L,T\) are outside
+those cuts. On that block the difference
+\[
+    g_-(\zeta')\,\eta_{\zeta'}(F_M)_{A'}-(Q_B)_{\zeta'}
+\]
+has valuation at least \(c-n_0\). The pairing with
+\(Q_B\) is unchanged by \(\Pi_m\).
+
+To estimate the remaining
+error from a coefficient of \(\Pi_m x^\zeta\), use its bound
+\(h_\zeta-h_{\zeta'}-D_m\). From the split factorial
+bound applied to \(\zeta\) and \(\zeta'\), and the equality
+of their \(\kappa_B\), we have
+\[
+ v(\kappa_B)+h_\zeta+h_{\zeta'}\ \ge\ 2n_0-2K_d .
+\]
+The error terms in comparing the evaluation before and
+after \(\Pi_m\) thus have valuation at least
+\(c+n_0-2K_d-D_m\), including the original monomial term.
+Applying \(g_+\) at the input preserves this error estimate.
+The factor \(g_+(\zeta)g_-(\zeta)-1\) has valuation at least
+\(c\), and the original evaluation has valuation at least
+\(n_0-K_d/2\) by \(\nu(F)=0\) and the true factorial bound.
+Linearity and integral coefficients of \(Z\) now give
+\begin{equation}\label{eq:plane-gram-stability}
+ v\bigl([F,\gamma\phi(\Omega Z)]-[F,\gamma\phi(Z)]\bigr)
+               \ \ge\ c+n_0-2K_d-D_m .
+\end{equation}
+
+\proofstep{The available precision after the conductor loss.}
+The strict conductor inequality in \eqref{eq:plane-gram-reserves}
+makes \eqref{eq:plane-gram-stability} larger than
+\(n_0+D_l+1\). Hence the integral test
+\(Z_*=p^{N_2}\Omega Z\) has valuation of its pairing at
+most \(n_0+D_l+1+N_2\). Its model link and chain orders are
+\(\ge\ell_{jm}-30c\) and \(\ge\theta_{ji}-s_{ji}-12c\),
+respectively. Its collapse has true multidegree \(d\) and
+integral coefficients, hence \(\nu(\phi Z_*)\ge n_0-K_d\).
+In particular
+\[
+ v([F,\gamma\phi Z_*])-n_0+K_d
+                 \le D_l+D_m+4K_d .
+\]
+Here \(K_d\ge1\) absorbs the two roundings. The estimate is uniform and needs no error polynomial.
+The chain and link losses and the valuation gain are
+uniform over all input coefficients, label classes, and
+radices at the specified degrees and cuts.
+\end{proof}

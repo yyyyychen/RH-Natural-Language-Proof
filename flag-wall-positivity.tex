@@ -1,0 +1,425 @@
+\subsection{The perturbed metric and the vertical curves}
+\label{subsec:flag-wall-positivity}
+
+Height estimates over number fields control horizontal points. For the arithmetic intersection near a wall we must also control curvature and degrees on the vertical curves.
+
+For the same marked point we compare the smooth reference
+height \(h_0(w)\), the interior Hodge height \(h_{\rm H}(w)\), and
+the height \(h_M\) of \(M_B(v,s)\) before taking any
+intersection. With \(M'\) the marked modulus, the finite set of primes at which the metric changes is
+\[
+ Q_B=\{p:p\text{ prime},\ p\le B\}
+      \mathbin{\cup}\{p:p\text{ prime},\ p\mid 2|\operatorname{disc}E|M'\}.
+\] Use the Hodge--Tate lattice at \(p\in Q_B\)
+and the de Rham lattice elsewhere.
+
+\paragraph{Smoothing and the finite change of lattice.}
+On the complex toroidal compactification use the Kähler reference
+form \(\Omega\) and the Hodge potential relative to its smooth
+root metric. For a proper initial flag step this is the difference
+of the logarithmic determinant metrics. For the relative potential \(u\) and the smooth reference curvature \(\theta\), positivity on the open part reads
+\[
+ \theta+dd^c u\ge0.
+\]
+Indeed these fundamental lines are the dual determinants of the first
+steps in the Hodge flag, with the conjugate flag in reverse order in
+the second block. In period coordinates the curvature on the base
+is the Hodge form on a subspace, and variation of the subspace adds
+the squared norm of its second fundamental form to the dual
+determinant curvature. Past the middle use the conjugate step and
+the flat full determinant.
+
+In the toroidal logarithmic charts the
+Hodge metric and its inverse have polynomial growth in the boundary
+radius
+\[
+ r=e-\log\|s_D\|^2,
+\]
+where \(s_D\) cuts out the boundary.
+Taking the logarithm of a determinant bounds the potential by
+\(C\log r+C\) in absolute value. A locally plurisubharmonic
+potential with this sublogarithmic growth extends across a normal
+crossing divisor. To see this, add \(\delta\sum\log|z_i|\) at its local branches,
+extend across them by the upper limit and take the upper
+semicontinuous regularization as \(\delta\downarrow0\).
+The resulting potential is bounded above on each compact chart.
+For the full central weight use the smooth extension of the
+flat determinant potential, whose curvature cancels its reference
+curvature identically. Its coefficient may have either sign.
+\label{cor:flag-wall-positivity-1}
+
+\begin{proposition}[A fibrewise nef perturbed root metric]
+\label{prop:perturbed-flag-metric}
+With the permitted smoothing and finite cutoff, \(M_B(v,s)\)
+on each of the two selected marked covers has an archimedean semipositive metric. On every vertical curve \(C\) its degree satisfies
+\[
+ \deg_C(M_B(v,s)|_C)\ge0.
+\]
+ It satisfies the interior, boundary and dense-set
+height comparisons \eqref{eq:flag-actual-ht}.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Regularizing the fundamental potentials.}
+Take \(L_s=s^{-2}\) and smooth the proper fundamental potentials by
+the holomorphic part of the Chern exponential map at radius
+\(\eta=\exp(-L_s)\). In Demailly's regularization theorem the
+background form is closed, its sum with \(dd^c\) of the potential
+is a positive current, and the compact Kähler metric admits a
+curvature lower bound on orthogonal tangent pairs. A multiple of
+\(\Omega\) provides that bound. The regularized potential
+\(\psi_\eta=\rho_\eta\psi+K\eta^2\) majorizes \(\psi\) on the
+open part. It satisfies, uniformly on the compactification,
+\[
+ -C(1+\log L_s)\le\psi_\eta\le C,\qquad
+ \theta+dd^c\psi_\eta\ge -C\frac{\log L_s}{L_s}\Omega .
+\]
+Here are the rates in this use of regularization. In each crossing
+chart the ball mean of \(-\log |z_i|\) truncated below at zero is
+\(O(1+\log(1/\eta))\).
+
+To obtain this bound, rescale the ball when its centre is within
+twice the radius of the hyperplane, and use the distance bound
+on the other balls. The normalized kernel is bounded by
+\(C\eta^{-2d}\) on a ball of radius \(C\eta\) in complex
+dimension \(d\). The smooth chart factors change the estimate by
+a constant. Jensen's inequality for the logarithm of the boundary
+radius gives the lower bound on \(\psi_\eta\). For the curvature
+bound Demailly's horizontal Hessian estimate costs
+\[
+ O(\eta^2+\partial_{\log\eta}\psi_\eta)\Omega.
+\]
+The radial
+Hessian bound gives convexity in \(\log\eta\) after a further
+fixed multiple of \(\eta^2\) is added. Comparing with a fixed
+small radius gives a secant bound \(O((1+\log L_s)/L_s)\) for
+the derivative, and gives the displayed estimate for small \(s\).
+There are finitely many fundamental steps and charts for the fixed
+model. \cite{demailly-flag}\label{cor:flag-wall-positivity-2}
+
+Form the weighted sum of these potentials by the successive gaps
+of \(w\), and its last coefficient for the full determinant. Call
+the result \(\phi_s(w)\). In each block of consecutive proper steps the coefficients sum by telescoping, 
+\[
+ \sum_{i=a}^{b-1}(w_i-w_{i+1})=w_a-w_b\le2\|w\|_\infty.
+\]
+ They are nonnegative by dominance, so their total on the fixed model is \(O(\|w\|_\infty)\).
+The smooth auxiliary line \(A\) has curvature at least \(c\Omega\),
+with \(c>0\) on every component. For \(\|w\|_\infty\le M\), choose
+\(s_0>0\) so that \(CMs\log(1/s)\le c\) for \(0<s\le s_0\).
+The curvature of the perturbed metric then satisfies
+\[
+ \operatorname{curv} M_B(v,s)
+ \ge \bigl(sc-C\|w\|_\infty s^2\log(1/s)\bigr)\Omega
+ \ge s\bigl(c-CMs\log(1/s)\bigr)\Omega\ge0 .
+\] Its potential is at least the open Hodge
+potential on the interior, globally bounded above by a constant,
+and globally bounded below by \(-C\log(1/s)-C\).
+
+\proofstep{Finite changes of the root metrics.}
+For each root, at a changed prime \(p\) the normalized point-height
+difference is at most
+\[
+   J_p=\frac{\log p}{p-1}+
+     \frac{v_p(|\operatorname{disc}E|)}{[E:\Q]}\log p .
+\]
+Indeed the Hodge--Tate and de Rham integral steps differ by the
+Hodge--Tate lattice loss \(1/(p-1)\) and the normalized different
+in the labelled projection. The same estimate holds on the reversed
+dual roots. In summing local readings on the field of a point,
+the degrees above \(p\) add to the degree of that field. The second
+sum in \(J_p\) is bounded by \(\log\operatorname{rd}_E\), and
+\[
+ \sum_{p\le B}\log p/(p-1)=O(1+\log B)
+\]
+by the elementary
+Chebyshev bound and partial summation. The extra marked primes have
+fixed total cost. Hence switching the finite lattices from the
+empty set to \(Q_B\) costs \(O(\|w\|_\infty\log B)\), uniformly
+over the points. \cite{scholze-weinstein-flag}\label{cor:flag-wall-positivity-3}
+
+\proofstep{Assembling the perturbed point height.}
+At a point the arithmetic height is additive. Its terms are the
+smooth height at \(Q_B\), the average of \(\phi_s(w)\) over the
+complex readings of the point, and \(s h_A\). The preceding
+comparisons give
+\begin{align*}
+  h_M&\ge h_{\rm H}(w)+s h_A-C\log B &&\text{in the interior},\\
+  h_M&\ge h_0(w)+s h_A-C\log(B/s) &&\text{everywhere},\\
+  h_M&\le h_0(w)+s h_A+C\log B &&\text{everywhere}.
+\end{align*}
+All three use the same finite lattices. Given \(\|v\|_\infty\le1\),
+let the middle gaps of \(v\) be at least \(t\), and the other gaps
+at least a fixed \(c_0>0\).
+
+Take \(s=t^2\),
+\(t\le\min(c_0,1)\) and \(4t\|d_0\|_\infty\le1\). Every
+shifted adjacent gap is at least \(t/2\), since it loses at most
+\(2t^2\|d_0\|_\infty\). Also \(\|w\|_\infty\le2\).
+Use \(b=t/2\) in Section~\ref{subsec:flag-point-heights}. With
+\(h=\max(h_F,0)\) the resulting bounds, after enlarging \(C\), are
+\begin{align}
+ h_M &\ge \tfrac t4 h-C\log(2+h)-C\log B-C
+           &&\text{in the interior},\notag\\
+ h_M &\ge t^2 h_A-C\log(2+C+h_A)-C\log(B/t^2)-C
+           &&\text{on the boundary},\label{eq:flag-actual-ht}\\
+ h_M &\le C\log B+C &&\text{on a dense set in each component}.
+           \notag
+\end{align}
+The lower bound for \(h_A\) applies also in the interior.
+
+\paragraph{Degrees at a Hodge--Tate prime.}
+For \(p\in Q_B\) pull the root lines to a common normal projective
+cover splitting level \(p^2\) and the roots of unity needed for its
+torsion characters. Consider a first step of length \(k\) in an
+eigenflag. In each affine tangent frame the characters on the
+\(p^2\)-torsion have integral representatives for their logarithmic
+differentials. Evaluate their \(k\)-fold minors on the step
+determinant. At an integral test point the largest minor gives
+the Hodge--Tate determinant norm. If \(m_\alpha\) are the normalized minors in the induced frame, integrality and the unit minor give
+\[
+ \min_\alpha v(m_\alpha)=0.
+\]
+
+On overlaps
+the differences of the two representatives for each minor have
+normalized absolute value strictly less than one. Thus their
+residue sections agree. More explicitly, the integral point
+criterion on the normal model gives regularity at the special
+fibre from the generic regularity and the integral readings.
+At a point of that fibre take an integral test point whose
+closed specialization detects units in the local ring. A unit
+minor there gives a generator on a neighbourhood, and the strict
+overlap inequality gives equality of the restrictions to every
+reduced vertical curve. The residue sections generate the step line on each such
+curve. For a curve \(C'\) above \(C\), let \(L_k\) be the
+step line and let \(A_{\rm base}\) account for the discriminant
+correction after clearing by \(d_E=[E:\Q]\). The line measured
+by the generated minors is
+\[
+ L_k^{\otimes d_E}|_{C'}
+\]
+
+times the pullback of \(A_{\rm base}\). Global generation on \(C'\) gives nonnegative degree, and the
+base line pulls back with degree zero. Consequently
+\[
+ 0\le\deg_{C'}(L_k^{\otimes d_E}\otimes A_{\rm base}|_{C'})
+    =d_E\deg_{C'}L_k .
+\] To descend choose a closed
+point of the fibre over the generic point of \(C\) and take
+its closure \(C'\); the map has a positive finite degree
+\(n\). The projection formula
+\[
+ \deg_{C'}L_k=n\deg_C L_k
+\]
+
+gives the same inequality on \(C\). This construction uses the determinant on the first \(k\)
+steps, including at a prime of the discriminant.
+\label{cor:flag-wall-positivity-4}
+
+The full signed determinant at each embedding has degree zero on
+these curves. The flat determinant section has a constant normalized
+Hodge--Tate valuation on the component at the chosen place. The
+section and its inverse therefore induce nef lines there. The
+comparison uses the determinant frame at that place and its
+valuation at a test point on the same component. For a step past
+the split \(j\), the negative prefix is a negative prefix of the
+conjugate Lie flag plus a full signed determinant. Its degree is
+again nonnegative. Clear the rational weight denominators.
+For an antitone weight \(w_1\ge\cdots\ge w_N\),
+\[
+ w=\sum_{k=1}^{N-1}(w_k-w_{k+1})\mathbf1_{[1,k]}
+                         +w_N\mathbf1_{[1,N]}.
+\]
+The gaps are nonnegative, and the full signed determinant
+has degree zero on the tested curves, so the root combination
+has nonnegative degree. Adding \(sA\) preserves it. \label{cor:flag-wall-positivity-5}
+
+\paragraph{Degrees at a de Rham prime.}
+For \(p\notin Q_B\) we have \(p>2\), \(p>B\), and \(p\) divides
+neither the field discriminant nor the marked level. Test on an
+integral vertical curve. Under a dominating projective model a
+contracted curve has zero pullback degree. In the other case
+normalize a dominating curve over \(\overline{\mathbb F}_p\).
+This multiplies all degrees by the same positive factor. The
+unramified action splits into eigenbundles.
+
+In using the semiabelian
+family on this curve, one can pass to a finite cover, separate the
+constant split torus and take the polarized abelian generic part.
+For a subbundle \(W\), let \(W'\) denote its image in the quotient and \(K\) its kernel in the constant torus part. Then
+\[
+ \deg W=\deg W'+\deg K\le\deg W',
+\]
+since \(K\) is a subsheaf of a trivial bundle.
+The full eigenbundle degrees are preserved under removal of the
+constant torus. Further finite pullback multiplies degrees by
+the map degree. Thus the flag prefix upper bounds below descend
+with the same factor as the total degrees.
+\label{cor:flag-wall-positivity-6}
+
+\proofstep{The Hodge and conjugate filtrations.}
+Write \(U=\bigoplus_\sigma U_\sigma\) for the Lie bundle of the
+resulting family and \(D_\sigma\) for its de Rham eigenbundles.
+The polarized Hodge and conjugate filtrations on the abelian
+open give
+\[
+ \begin{aligned}
+ 0&\to U_{\bar\sigma}^\vee\to D_\sigma\to U_\sigma\to0,\\
+ 0&\to F^*U_\sigma\to D_{\varphi\sigma}
+          \to F^*(U_{\bar\sigma}^\vee)\to0 ,
+ \end{aligned}
+\]
+where \(F\) is Frobenius and \(\varphi\) is its permutation
+of the embeddings. For precision, the sequence on the good open must extend as an
+exact sequence of vector bundles at each missing point. In the
+curve comparison one first makes the finite Frobenius pullback,
+using the Frobenius twist of the base field structure on the smooth
+curve. Over the abelian open take the two filtrations on primitive
+de Rham cohomology with its polarization pairing.
+
+At a missing
+point, in the completed discrete valuation ring let \(F_0\) denote
+the rational Hodge subspace and \(\Omega_0\) the lattice of integral
+invariant differentials. The integral comparison for the
+semiabelian torsion tower gives a finitely generated lattice
+\(\Lambda\) stable under the endomorphisms with Rosati adjoints.
+Its two conditions of adaptation for a rational subspace \(V\)
+and lattice \(N\subset V\) are
+\[
+ \Lambda\cap V=N,\qquad \Lambda+V=N^{\vee,\beta},
+\]
+where the right side means the inverse image of the integral
+linear dual under the polarization pairing \(\beta\).
+The integral polarized comparison for the \(p\)-divisible tower
+gives both identities at \((F_0,\Omega_0)\). It also gives
+\[
+ \Lambda\cap W=R\langle\operatorname{Fr}(\Lambda)\rangle,
+ \qquad W=K\langle\operatorname{Fr}(H)\rangle ,
+\]
+where \(R\) is the completed local ring and \(H\) the rational
+primitive de Rham space over its fraction field \(K\). This is the
+integral Frobenius saturation of the transported lattice.
+
+Since
+Frobenius kills \(F_0\) and
+\(\Lambda+F_0=\Omega_0^{\vee,\beta}\), this intersection is exactly
+\(N=R\langle\operatorname{Fr}(\Omega_0^{\vee,\beta})\rangle\).
+The same comparison sends \(\Lambda\) under Verschiebung into the
+integral span of the images of \(\Omega_0\) in the Frobenius-twisted
+space. In the Frobenius--Verschiebung adjunction, writing that
+image of \(x\in\Lambda\) as \(\sum_i a_i\iota(\omega_i)\) gives
+\[
+     \beta(x,\operatorname{Fr} y)
+          =\sum_i a_i\beta(\omega_i,y)^p\in R
+                    \qquad (y\in\Lambda).
+\]
+Here \(a_i\in R\), \(\omega_i\in\Omega_0\), and integrality of the
+pairings on the right follows from Hodge adaptation. Thus the
+projection of \(\Lambda\) to \(H/W\) lies in the full dual of
+\(N\).
+
+Let \(P_W\) be the image of \(\Lambda\) in \(H/W\), and
+use the pairing to view it in \(N^\vee\). The exact sequence
+\(0\to N\to\Lambda\to P_W\to0\) gives, in a symplectic basis,
+\[
+ v(\det\Lambda)=v(\det N)+v(\det P_W)
+       =\operatorname{length}_R(N^\vee/P_W).
+\]
+Indeed
+\[
+ v(\det N^\vee)=-v(\det N)
+\]
+in the dual basis.
+Computing the same determinant with the Lagrangian \(F_0\)
+instead gives zero, since Hodge adaptation identifies the
+projection with \(\Omega_0^\vee\). The resulting inclusion has zero colength, so
+\[
+ \operatorname{length}(N^\vee/P_W)=0\quad\Longrightarrow\quad P_W=N^\vee.
+\]
+This is the second adaptation identity
+at \((W,N)\).
+
+The comparisons use the Weil pairing and its extension on the
+torsion tower, with functoriality for the paired endomorphisms.
+The two adaptation identities give the sublattice and full
+quotient in each sequence. To descend a
+completed lattice, approximate a basis by rational vectors to
+precision strictly finer than its elementary divisors. The change
+of basis then belongs to the integral general linear group of
+the completion. The rational lattice with this completed span
+has the same intersections and quotients by faithful flatness.
+It modifies the bundle at just the finite set of missing points.
+The two sequences extend there by the prescribed lattices and
+the split integral action gives their eigensequences.
+\label{cor:flag-wall-positivity-7}
+Writing \(d_\sigma=\deg D_\sigma\) gives
+\[
+ d_{\varphi\sigma}=p d_\sigma.
+\]
+For an orbit of length \(h\), iterating gives
+\[
+ d_\sigma=d_{\varphi^h\sigma}=p^h d_\sigma .
+\]
+Since \(p^h>1\), \(d_\sigma=0\), hence
+\(\deg U_\sigma=\deg U_{\bar\sigma}\).
+
+\proofstep{Uniform control by the largest subsheaf degree.}
+Let \(P\) be the largest degree of a coherent subsheaf of \(U\).
+The degrees are integers. For an upper bound, twist the
+dual sufficiently to generate it, embed \(U\) into a sum of fixed
+ample lines, and take exterior powers. The zero subsheaf gives
+\(P\ge0\). Saturate a subsheaf attaining \(P\). Its degree remains
+\(P\). Its Frobenius pullback of degree \(pP\) injects in the full
+de Rham bundle \(D\), an extension of \(U\) by \(U^\vee\).
+If \(P'\subset U\) realizes \(P\), let \(B\) and \(A\) be
+the image and kernel of \(F^*P'\to D\to U\), respectively.
+Then \[
+ 0\to A\to F^*P'\to B\to0,\qquad \deg B\le P.
+\]
+Saturate \(A\subset U^\vee\). The dual of its locally free
+quotient embeds in \(U\), so
+\[
+ \deg A\le\deg U^\vee-\deg(U^\vee/A^{\rm sat})
+                  \le-\deg U+P .
+\]
+
+Now \(pP=\deg A+\deg B\le-\deg U+2P\), giving
+\[
+        (p-2)P\le e,\qquad e=-\deg U .
+\]
+For the root degrees \(r_{\tau i}\) on the resulting curve, set
+\(S_{\tau k}=\sum_{i<k}r_{\tau i}\).
+The full sum is the difference of the two conjugate Lie
+degrees, so \(S_{\tau N}=0\). The middle sum is one full Lie
+eigendegree, hence \(-2\sum_\tau S_{\tau j}=e\). Before the
+middle, a prefix is the degree of a flag subsheaf and is at
+most \(P\). After the middle, reverse the conjugate flag and
+use the vanishing full sum to obtain the same upper bound.
+The argument gives these properties for a common positive
+multiple of the original readings. Rescale \(P,e\) by the
+same factor on descent. \label{cor:flag-wall-positivity-8}
+
+Put \(S=\|w\|_\infty\) and suppose
+\[
+ 4f S\le(B-2)\delta_{\tau j}
+\]
+for each \(\tau\).
+Let \(b_p=4fS/(p-2)\), so that \(\delta_{\tau j}\ge b_p\).
+Summation by parts and \(P-S_{\tau k}\ge0\) now give
+\[
+ \begin{split}
+ -\sum_{\tau,i} w_{\tau i}r_{\tau i}
+ &=\sum_{\tau,k<N,\ k\ge1}\delta_{\tau k}(P-S_{\tau k})
+              -P\sum_\tau(w_{\tau0}-w_{\tau,N-1})\\
+ &\ge b_p\bigl(|\mathcal T|P+e/2\bigr)-2fSP\ \ge 0 .
+ \end{split}
+\]
+This proves nonnegative degree at every remaining prime.
+After adding \(sA\), clearing the line denominators and descending
+from the common model we obtain fibrewise nefness of \(M_B(v,s)\)
+on each marked component. Together with the archimedean
+semipositivity and \eqref{eq:flag-actual-ht} this supplies the
+point and positivity estimates for the arithmetic intersection
+on both selected covers. \label{cor:flag-wall-positivity-9}
+\end{proof}

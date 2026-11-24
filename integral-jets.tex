@@ -1,0 +1,162 @@
+\subsection{Evaluating a derivative on an integral lattice}
+\hypertarget{source-integral-jets}{}
+
+The coefficient estimates so far use products of framed minors. To pass to integral vectors of their rational span one needs saturation over the local valuation ring.
+
+\begin{lemma}[Saturation of flag-minor polynomials]\label{lem:saturated-minor-polynomials}
+Over a valuation ring \(\mathcal O\), fix a list of column
+heights and take products of minors in the first \(h\) rows
+at each height \(h\). Write \(S\) for their \(\mathcal O\)-span and \(A\) for the polynomial ring. For every \(f\in A\) and \(a\in\mathcal O\),
+\[
+ a\ne0,\quad af\in S\quad\Longrightarrow\quad f\in S.
+\]
+
+\end{lemma}
+
+\begin{proof}
+Sort the indices within each tableau column,
+carrying the determinant sign; a repeated index kills the term.
+One may straighten until the indices across each tableau row
+are weakly increasing. Indeed suppose adjacent columns
+\(a_1<\cdots<a_h\), \(b_1<\cdots<b_k\), \(k\le h\),
+violate \(a_i\le b_i\). Antisymmetrize the two-minor product
+in the \(h+1\) vectors indexed by
+\(a_i,\ldots,a_h,b_1,\ldots,b_i\).
+
+The antisymmetrized product vanishes because both minors use only the first \(h\) coordinates. Grouping shuffles
+modulo permutations internal to the two lists gives an identity
+with coefficients \(\pm1\) before collecting like terms. This
+identity holds over the integers, as is seen by first expanding
+over \(\mathbb Q\) and cancelling the common factorials.
+With \(P\) the identity-shuffle product, the alternating relation has the form
+\[
+  P=-\sum_{\sigma\ne1}\operatorname{sgn}(\sigma)P_\sigma,
+\]
+where the sum uses the shuffle representatives and each \(P_\sigma\) retains the order inside the two lists. Every other shuffle
+moves a value at most \(b_i<a_i\) into the left column in place
+of a larger value. After sorting, a surviving term has a
+strictly smaller left column in lexicographic order. Earlier
+columns remain fixed. The whole tableau decreases in a finite
+order, which proves spanning.
+
+Order the matrix variables row by row, preferring smaller
+column indices, and take lexicographic monomial order. The
+leading monomial of a sorted minor is its diagonal product
+with coefficient one. In a straightened tableau the row
+multisets read off from the diagonal monomial recover each
+weakly increasing row.
+For a tableau with column entries \(a_{1c}<\cdots<a_{h_c c}\), the recovery rule is
+\[
+  \operatorname{in}(P)=\prod_c\prod_{i=1}^{h_c}X_{i,a_{ic}},\qquad \deg_{X_{ij}}\operatorname{in}(P)=\#\{c:a_{ic}=j\}.
+\]
+ Distinct such tableaux consequently have
+distinct leading monomials. In an expansion over the fraction
+field, the coefficient of the largest leading monomial is the
+coefficient of its tableau. Subtract it and continue downwards;
+if the polynomial is integral all coefficients so obtained
+are integral. This proof works for products at several
+letters because their matrices have disjoint variables.
+
+\end{proof}
+
+\begin{lemma}[Transfer of a coefficient bound to integral jet functionals]
+\label{lem:jet-functional-coefficient-bound}
+If \(\lambda\) is integral on the prescribed products of flag minors and \(P=\sum_\alpha c_\alpha X^\alpha\) is a local jet polynomial, then
+\[
+ v(\lambda(P))\ge\min_\alpha v(c_\alpha).
+\]
+ Joint integral remainders in independent
+orbit variables obey the sum of the individual orbit bounds.
+\end{lemma}
+
+\begin{proof}
+Write the jet polynomial in the frame \(Y_s\).
+For a minor with row set \(I\) and column set \(J\),
+Cauchy--Binet applies because the constant-coefficient
+derivations commute:
+\[
+    \det((Y_s\partial)_{I,J})
+      =\sum_{|K|=|I|}\det((Y_s)_{I,K})\det(\partial_{K,J}).
+\]
+The row set \(I\) is initial. After those derivatives act and
+are evaluated at zero, only scalar coefficients of products
+of initial-row minors remain. These are the polynomials of
+Lemma~\ref{lem:saturated-minor-polynomials}. If the resulting
+polynomial is nonzero with coefficient of least valuation \(a\),
+divide by that coefficient to obtain an integral polynomial
+in their fraction-field span. Saturation gives an integral
+linear combination. Applying the integral functional to this
+combination gives a value of valuation at least \(v(a)\)
+after scaling back. The zero polynomial contributes zero.
+
+For independent
+sets of orbit variables an arbitrary integral factor \(U\) may
+depend on all sets. Expand it in monomials before applying the
+substitutions \(g\). Each monomial factors over the orbits, with
+integral scalar, and only finitely many affect a specified jet
+since \(g(0)=0\). Hence the bounds add even for this joint \(U\).
+\end{proof}
+
+There is a different calculation for a ramified quadratic factor.
+At a place over \(p\), suppose the local series has the form
+\[
+ \exp\!\left(-S\sum_{t,a,b}u_t X_{tab}Y_{tab}\right) H(X,Y),
+ \qquad v(S)\ge-1/2,\quad v(u_t)\ge0 ,
+\]
+and that every derivative of \(H\) at zero is integral. This last
+property is preserved by integral linear substitutions, by the
+chain rule with constant coefficients. Let \(H^\pm_t,A^\pm_t\)
+be the total orders and numbers of minors on the two sides,
+with \(X\) the minus side, and let \((A^-_t)'\) count minus
+minors of height at least two.
+
+For a fixed differential monomial
+with respective entry exponents \(m^\pm_{tab}\), in the
+derivative of the exponential times \(H\) each factor \(S\)
+uses one differentiation from each side at a common entry.
+At one entry write \(m^\pm=m^\pm_{tab}\). Choose \(h\) derivatives
+from each side and match them by a bijection. The corresponding
+coefficient and its valuation satisfy
+\[
+ C_h=\binom{m^-}{h}\binom{m^+}{h}h!(-Su_t)^h,
+ \qquad v(C_h)\ge -h/2,\qquad 0\le h\le\min(m^-,m^+).
+\]
+The remaining derivatives act on \(H\) and have integral value. Summing
+the losses over entries gives the lower bound
+\(-\frac12\sum_{t,a,b}\min(m^-_{tab},m^+_{tab})\).
+
+Evaluate the frames at independent indeterminates with their
+Gauss valuation. The determinants of the square frames are
+units there. Choose as the new minus derivations its given rows
+and as the new plus derivations the inverse transpose rows.
+For a change \(U\) of minus frame, the inverse transpose on the plus frame preserves the contraction because
+\[
+  (U x)^{\mathsf t}(U^{-\mathsf t}y)=x^{\mathsf t}y.
+\]
+ The plus frame is now an integral combination of the
+new plus rows, and the minus minor operators use the identity
+frame. Without restriction the sum of the minima at \(t\)
+is at most \(H_t^-\).
+
+At a selected \(t\in T\), the minus
+first-row degree is exactly \(A^-_t\), while the plus first-row
+degree is at most \(A^+_t\) after expanding its minors. Use
+the plus count on that row and the minus counts on the other
+rows. Writing \(a=1\) for the first row, this gives
+\[
+  \sum_{a,b}\min(m^-_{tab},m^+_{tab})\le \sum_b m^+_{t1b}+\sum_{a\ne1,b}m^-_{tab}\le A_t^+ +H_t^- - A_t^-.
+\]
+In particular the uniform lower bound used in the chain is
+\[
+ -\frac12\sum_t\left[H_t^-
+       -{\bf1}_{t\in T}\{A^-_t-(A^-_t)'\}
+       +{\bf1}_{t\in T} A^+_t\right].
+\]
+Passing back to the generic frame gives this bound coefficientwise.
+An integral functional on its monomials preserves it. At a
+place where all derivatives are integral and the differential
+operator has integral coefficients, the bound is simply zero.
+
+The calculations apply when the corresponding local form and
+integral remainder have been obtained from the curve.
+\label{cor:integral-jets-1}

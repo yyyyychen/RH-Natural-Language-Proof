@@ -1,0 +1,185 @@
+\begin{lemma}[A fixed exceptional span for a short arc]\label{lem:short-arc-exceptional-span}
+For the short arc of length \(a\) in the cut comparison,
+one may choose an exceptional set \(Z_c\) of target classes, independent of the input, with
+\[
+ \#Z_c\le(a+1)ma.
+\] Outside its span the scaled lift has
+exponent \(\sigma+E+\kappa_c\). The signed count is
+\(r_c=a\) because each letter has an off-central window.
+\end{lemma}
+
+\begin{proof}
+\label{par:short-exceptions}
+On the marked target over the coefficient field let \(U\) be the
+intersection of the transported \(\mathcal F_j^{u_j}\) over
+positive levels. Let \(V_-\) be the sum of
+\(\mathcal F_j^{-\eta}\) over negative levels. By the bound on
+central multiplicities,
+\[
+ \operatorname{codim}U+\dim V_-\le ma .
+\]
+In the initial integral basis, the constants form the lattice
+\(D_O\) with the transport of scalars to the terminal crystalline
+space understood. Split the saturated sublattice \(D_O\cap U\)
+off with complement \(K\), and project \(V_-\) along \(K\)
+to \(U\). The intersection of the projected space with the
+lattice of \(U\) is again saturated. Use adapted bases of these
+two splittings.
+
+Let \(e_j\) denote the adapted basis and let \(J\) index the complement \(K\) and this last intersection. Then
+\[
+ |J|\le ma,\qquad V_-\subseteq\operatorname{span}_{K_O}\{e_j:j\in J\}.
+\]
+Every other column belongs to \(U\).
+The two changes of basis are integral and invertible, so they
+give a Wach frame at \(c'\). Take the unique horizontal columns
+with these initial values.
+
+Apply the cut construction of Section~\ref{sec:inert-long-orbit}
+to a crystalline extension representing a finite target class.
+Its cut vector is the difference in that extension of a vector
+in the incoming Frobenius span and a terminal Wach vector.
+At each cyclotomic level the incoming span is regular; a pole
+of order \(k>0\) therefore has coefficient in the extension's
+\(\mathcal F^k\), and its image lies in the kernel of projection
+to the trivial representation. Strictness identifies this
+intersection with \(\mathcal F^k\) of the target.
+
+For a polar term \(a_{-k}t^{-k}\) with \(k>0\), strictness therefore gives the two respective tests
+\[
+ a_{-k}\in V_-\quad(\text{negative letter}),\qquad k\le u_j+S\quad(\text{positive letter}).
+\]
+The statement for an entire polar part is obtained
+coefficient by coefficient in the Laurent expansion, followed
+by Chinese remaindering on the finite jets. At negative levels
+all negative degrees thus disappear on indices outside \(J\).
+Likewise \((\gamma-1)w\in XN_c\) imposes the Wach filtration
+on the divided differences. Their projection outside \(J\)
+vanishes at a negative level in degrees below \(u_j\):
+for lower degrees the required filtration is contained in
+\(\mathcal F_j^{-\eta}\), or equals it by the gap.
+
+Write \(\mathcal J_c\) for the union of signed degree intervals
+used in \(\kappa_c\).
+Apply to these horizontal coordinates the integral operator
+\[
+ K(\gamma)=\left(\sum_{j=0}^{p^a-1}\gamma^j\right)
+     \prod_{k\in\mathcal J_c\setminus\{0\}}
+            (\gamma^{p^a}-\chi(\gamma)^{kp^a}) ,
+\]
+On a Laurent coefficient of
+degree \(k\) at level \(t<a\), the principal action raised to
+\(p^a\) is the scalar \(\chi(\gamma)^{kp^a}\). The sum
+projects degree zero to a common value on the primitive roots
+after tame invariants. Outside \(J\) this removes the excess
+positive-level poles and the negative-level degrees from \(u_j\)
+through \(u_j+S-1\).
+
+At a negative level the divided difference condition on a nonconstant coefficient \(a_k\) below \(u_j\) reads
+\[
+ (\chi(\gamma)^{kp^a}-1)a_k=0,\qquad k\ne0.
+\]
+The scalar is nonzero, hence \(a_k=0\).
+Thus the transformed scalar coefficients outside \(J\) satisfy
+\eqref{eq:short-scalar}. The remaining constant at each negative
+level is in the coefficient field, so a scalar power clears it.
+The operators preserve the bounded integral denominator
+\(\Lambda\); the improved pole orders descend to \(D\) by
+division by the distinguished factors. Outside \(J\), the only poles allowed by \(D\) are positive with directions in \(U\); the negative zeros have the required orders. Write \(f=f_J+f_{J^c}\) for the support decomposition and \(\Delta\) for divided difference. The Wach test is linear, so
+\[
+ \Delta f_J=\Delta f-\Delta f_{J^c}
+\]
+passes as well.
+
+For the latter part let \(M_J\) consist of the tuples with
+denominator \(\Lambda\) supported on \(J\); let \(I_J\) be
+the submodule whose divided differences pass the Wach test.
+Let \(P_J\) consist of \(X\) times the tuples passing the Wach test
+with bounded denominator, in \(M_J\). For numerators supported on \(J\),
+a change by \(X\Lambda^2h\) induces the following change of tuple:
+\[
+ \frac{f+X\Lambda^2 h}{\Lambda}-\frac{f}{\Lambda}
+       =X\Lambda h\in P_J .
+\]
+Weierstrass division reduces each numerator modulo \(X\Lambda^2\);
+hence \(M_J/P_J\) is finite over \(O\).
+
+The quotient \(M_J/P_J\) is also torsion-free.
+Suppose \(0\ne c\in O\) and \(c(f/\Lambda)\in P_J\). Monic division by
+\(X\) gives \(cf(0)=0\), hence \(f(0)=0\). The tuple
+\(f/(X\Lambda)\) now has bounded denominator. Its rational filtration
+tests hold since \(c f/(X\Lambda)\) satisfies them and the filtration
+spaces are vector spaces over the coefficient field. Thus
+\[
+ f/\Lambda\in P_J.
+\]
+
+
+Let \(E_J\) be the image of \(I_J\) in \(M_J/P_J\).
+After inverting \(p\), Chinese remainders for \(X\) and the
+distinct cyclotomic factors of \(\Lambda\) split the numerator
+jets at \(0\) and at the \(a\) levels. At \(0\) the quotient by
+\(X\) leaves at most one entry per coordinate in \(J\).
+At a cyclotomic level \(X\) is invertible, so the quotient is
+by the filtered Laurent lattice.
+
+In coefficient degree \(k\),
+the principal power fixing the roots acts on that quotient by
+\(\chi(\gamma)^{k p^a}\). A nonzero fixed class therefore needs
+\(k=0\), since \(\chi(\gamma)\) has infinite order. In degree
+zero the tame and principal root actions are transitive. Invariants
+have at most one copy of each supported coordinate, and passing
+to the quotient cannot increase this invariant dimension by
+the characteristic-zero averaging projection. Thus
+\[
+    \dim_{\operatorname{Frac}(O)}(E_J[1/p])
+          \le |J|+\sum_{t=0}^{a-1}|J|=(a+1)|J| .
+\]
+Since \(M_J/P_J\) is finite torsion-free over \(O\), this is
+also a bound on the number of generators of \(E_J\).
+
+Take an \(O\)-basis of the image and choose its representatives
+in \(I_J\) once for the cut. Realize \(p^\sigma\) times each
+by the horizontal comparison and take its cut Herr class. The
+resulting set \(Z_c\) consists of finite classes, since a
+product of cyclotomic factors carries the representative into
+the Wach lattice. Using one representative per basis vector of \(E_J\) gives the uniform bound
+\[
+ |Z_c|\le\operatorname{rank}_O E_J\le (a+1)ma.
+\]
+
+\proofstep{Reduce every class against the same chosen representatives.}
+For any input the exceptional coordinates are an integral
+combination of these representatives modulo \(P_J\).
+Terms of \(P_J\) represent elements of \(XN_c\) after the
+same comparison and give zero under the cut class map.
+The other coordinates lift at the common cost \(E\). To see the
+exponent accounting, the inverse horizontal comparison reads
+coordinates of \(p^\sigma w\). Realizing the split coordinates
+requires another \(p^\sigma\), while on the outside part the
+vector lifting relation already represents \(p^E\) times the
+coordinates.
+
+Since \(E\ge\sigma\), pad the realized split parts
+by \(p^{E-\sigma}\). Their sum now matches
+\[
+ p^{\sigma+E} K(\gamma)w
+\]
+modulo \(XN_c\). Naturality and the vanishing on
+\(XN_c\) follow from Frobenius contraction in the Herr complex,
+as in the cut construction. Write \(K(T)-K(1)=(T-1)Q(T)\). Stability and the cut-vector condition give
+\[
+ K(\gamma)w-K(1)w=Q(\gamma)(\gamma-1)w\in XN_c.
+\]
+Thus the two vectors give the same cut class. In the scalar reading
+\[
+        p^{\sigma+E}K(1)w
+             = u_c p^{\sigma+E+\kappa_c}w,\qquad u_c\in O^\times
+\]
+since \(v_p(K(1))=\kappa_c\). This gives the exponent
+\(\sigma+E+\kappa_c\) with the same set \(Z_c\) for every
+input class. For the present signed arcs every letter has a
+positive or negative off-central window, so the signed level count
+\(r_c=a\). \label{cor:inert-short-exceptions-1}
+\end{proof}
+

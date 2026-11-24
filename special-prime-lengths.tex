@@ -1,0 +1,806 @@
+\subsection{The type primes and the ramified auxiliary primes}
+\label{subsec:special-prime-lengths}
+\hypertarget{source-special-prime-lengths}{}
+
+The unramified models leave two different sources of exceptional local behavior. A coefficient prime can equal one of the levels imposing the tame type, or it can ramify in one of the auxiliary quadratic fields. We retain the original row in both calculations.
+
+Keep the cut, its good eigenspaces, and its attached
+integral Galois representations fixed. Write \(R=r+t\)
+for the full rank and normalize the length at a coefficient
+prime \(\ell\) by \(v_\ell(\ell)=1\). Both calculations retain the global terms of the numerator: the auxiliary signature length \(s_\pi\), the strict cohomology sum \(V_\ell\), and the class number \(h_E\).
+
+\subsubsection*{The type-prime hypotheses}
+
+At a type prime the local lifting problem retains both tame characters and labeled Hodge jumps. Complete splitting allows them to be specified at one embedding at a time.
+
+Fix a twisted localization at \(\ell=g_i\), with \(i\in\{0,1\}\), and suppose
+it has a good point. All completions of \(E\) at \(\ell\)
+have degree one. Each completion determines the unique
+labeled embedding of \(E\) inducing that place. The CM
+type gives a sign at each such embedding, reversed at
+the conjugate place. In the family at this localization
+the jump set has three parts: the cyclotomic jumps
+\(0,\ldots,t-1\), the jumps within \(\eta+1\) of
+\(c=(t-1)/2\), and the jumps in the signed outer range.
+The negative sign reflects about the central point \(c=(t-1)/2\):
+\[
+ a\longmapsto 2c-a=t-1-a.
+\]
+
+This preserves the central interval and cyclotomic
+set and reverses the signed range about \(c\).
+The bound on absolute jumps is \(2b\), so this gives
+a common set of at most \(R\) distinct integer jumps
+for all members of the family at the place. The jumps
+avoid \(-1,t\) by the window conditions.
+
+Take \(\eta=\lfloor\eta_c\rfloor\),
+\[
+ s_T=\lfloor3b\rfloor+2
+\]
+and \(S_T=0\) in the signed outer range. Then
+\(\eta+t+1<s_T\) since
+\[
+ \eta_c+S_c+t+2\le b.
+\]
+
+In each sign the distance of an outer jump in its
+specified direction from \(c\) is at most \(s_T-c\).
+For the size requirement of the paired-character
+argument, put \(y=kb\), where \(k\ge5\) is the ambient rank parameter. For every fixed \(C_T\le b\)
+we have \(s_T\le5b\le y\), \(R+1\le3y\) and \(y\ge5\).
+Consequently
+\[
+ C_T\bigl((s_T+S_T)(R+1)^2+(R+1)^3\bigr)
+ \le36y^4<y^8\le g_i.
+\]
+Both type primes lie in the same interval \([Y,2Y]\).
+In particular
+\[
+ g_{1-i}\le2g_i\le g_i^2.
+\]
+
+These bounds and the sign calculation supply the original-field and size conditions on the cut family.
+\label{cor:special-prime-lengths-1}
+
+In the semisimplification at a retained point the
+rank-\(r\) part and the \(t\) cyclotomic characters
+carry the specified common inertia and weight labels.
+The inertia comparison is transported along the actual
+norm choice, as in Section~\ref{subsec:selected-cut}.
+The tame generators and wild triviality at the auxiliary
+and signature places come from the local type there.
+The nontrivial inertia value at each signature place
+is part of the marked data. The kill comparison gives
+finiteness of the signature length and the strict
+cohomology bound gives finite \(V_\ell\) at all the
+required positive exponents. Thus the paired-character estimate may be applied on this cut whenever a good point occurs.
+If there are no good points, the projected and intersected
+lattices are both zero and the contribution is zero.
+\label{cor:special-prime-lengths-2}
+
+\subsubsection*{Lifting on a common tame type}
+
+The zero-monodromy and jump conditions at a type place control each paired character. For the numerator we need a uniform bound on the span of the corresponding pushouts, with one exponent for all characters of the common tame type.
+
+\begin{lemma}[A normalized bound on the tame pushout span]\label{lem:common-tame-pushout}
+At a type place of degree one let the source and target of the
+surjection of stable lattices be rational subquotients of sums from
+one potentially crystalline family with zero monodromy. Use a
+Frobenius-stable tame character set of size at most \(N=R+1\)
+and at most \(N+1\) jumps in \([-u,H]\), each set containing zero.
+Assume \(1\le u<H\) and \(C_T(HN^2+N^3)<\ell\) in the integral
+tame lifting comparison. If the finite lifting allowance is \(\ell^e\), let \(D(T_0)\) denote the image of the pushout span modulo the finite condition for the target lattice \(T_0\). Its normalized length satisfies
+\[
+ \operatorname{len}D(T_0)\le2e\operatorname{rk}T_0.
+\] The bound includes the torsion in
+integral finite cohomology.
+\end{lemma}
+
+\begin{proof}
+\proofstep{Put the source and target on one tame extension and bound the periods of character differences.}
+At a completion of degree one, zero monodromy and
+the tame inertia polynomial give a common finite
+extension on which the family is crystalline.
+One can form it using the kernel of the finite
+inertia characters and an unramified extension for
+the Frobenius action on them. The Artin character
+of the cyclotomic block is included before taking
+its inverse twist. Thus the common character set
+for the twisted family contains the trivial
+character, has at most \(N=R+1\) elements, and
+is Frobenius stable. The dual uses the inverse
+set and the same cardinality bound. The
+coefficient comparison uses a tame exponent
+dividing \(\ell^{(\ell-1)!}-1\).
+
+Write the tame characters additively, so Frobenius
+acts by multiplication by \(\ell\). If two labels have periods \(a,b\), Frobenius to the power \(\operatorname{lcm}(a,b)\) fixes both. Thus
+\[
+ \operatorname{period}(\chi-\chi')\mid\operatorname{lcm}(a,b).
+\]
+In distinct orbits with
+lengths \(a,b\), we have \(a+b\le N\) and hence
+\[
+ \operatorname{lcm}(a,b)\le ab\le\tfrac14(a+b)^2\le N^2/4.
+\]
+In one orbit, the difference has period dividing
+the common period \(a\). A nonzero orbit omits the
+fixed point zero, so \(a\le N-1\le N^2/4\).
+The zero difference has period one. The maximum \(A\)
+over differences thus satisfies \(1\le A\le
+\lfloor N^2/4\rfloor\), including differences with
+zero.
+
+The integral tame period comparison is used for a
+surjection of stable lattices whose rational source
+and target are subquotients of sums of the common
+potentially crystalline family. It uses the
+Frobenius-stable tame character set of size at most
+\(N\), including zero, and a jump set with at most
+\(N+1\) entries in \([-u,H]\), including zero,
+with \(1\le u<H\).
+The comparison uses both the bound on \(\ell\)
+\[
+                  C_T(HN^2+N^3)<\ell
+\]
+and the degree-one base. It gives the filtered
+integral lift after multiplying by
+\(\ell^{C_T(NA+u(N+A))}\). Here is the exponent
+calculation. The Breuil--Kisin comparison with tame
+descent gives an exact triple for the kernel,
+source and target lattices.
+
+Write \(A\) for the
+maximum period above. The integral Frobenius
+coordinates represent the finite target class
+after loss \(e_W=2(N-1)A\) by an element in the
+kernel of monodromy. A further factor \(\ell^u\)
+puts the element, up to a Frobenius coboundary,
+in the sum of the two integral coefficient
+submodules used for lifting. The exact-triple
+comparison lifts it with zero monodromy and loss
+\[
+             k_{\mathrm{lift}}
+               =u(A+1)+e_W+u+(N+1)u+e_W .
+\]
+The integral cocycle comparison on the source
+needs one more loss \(u(A+1)\). Its image on the
+target is the prescribed multiple of the class
+modulo an integral coboundary, by functoriality
+of the Frobenius-coordinate calculation.
+The sum of the four losses is
+\[
+                   6(N-1)A+u(2A+N+5)
+                   \le 7\{NA+u(N+A)\}.
+\]
+
+In particular \(C_T\ge40\) suffices. An integral
+linear retraction of the enlarged coefficients
+preserves the cochain and lattice identities and
+returns the lift to the original coefficients.
+In our use \(u=\eta+t+1\), \(H=s_T+S_T\),
+with the Tate dual on the negative side.
+\label{cor:special-prime-lengths-3}
+
+For the local cocycle length, take a finite
+collection of cocycles from the cut. Write the
+underlying cocycles as images of \(gE-E\), with \(E\)
+a vector in a finite sum of the twisted family and
+\(gE-E\) in a stable finitely generated lattice. Their
+representations can be combined in one such sum
+and one stable rational subrepresentation \(X\) of it.
+The stable source lattices \(L\) in \(X\)
+give finite cocycles \(y\) with values in \(L\),
+since \(gE-E\) is a rational coboundary.
+
+The residual maps in the presentation give equivariant
+maps
+\[
+ \phi:L\to U/T_0,
+\]
+where \(T_0\) is the
+target lattice in its rational representation \(U\).
+The corresponding classes are represented by \(\phi y\).
+The rational subrepresentation comparison puts \(X,U\),
+or their Tate duals for the dual lift, in the same sums
+of the common potential family. The period estimate
+can therefore be applied to a surjection of lattices
+between their direct sums.
+
+Write \(K\) for the local base and \(F\) for the coefficient
+field. To see the integral comparison, let \(\psi:X\to U\)
+be a coefficient-field linear lift of \(\phi\) on \(L\).
+Choose it on a basis of the free lattice \(L\). Its
+equivariance defect takes values in \(T_0\) on \(L\).
+The lattice
+\[
+ L_\psi=\{(a,b)\in L\oplus U:b-\psi a\in T_0\}
+\]
+in \(X\oplus U\) is stable for the product action and
+surjects onto \(L\). If the lift with loss \(\ell^e\)
+is available on this side, lift \(\ell^e[y]\) to an
+integral finite cocycle of \(L_\psi\). Its second
+coordinate reduces to \(\ell^e\phi y\) modulo a
+coboundary in \(U/T_0\) and belongs to the finite image.
+
+For the dual lift, use \(X'=X^\vee(1)\),
+\(U'=U^\vee(1)\), and the dual lattices \(L'\) and \(T_0'\)
+with respect to the Tate pairings. The transpose
+\(\psi^{\rm t}:U'\to X'\) has equivariance defect in \(L'\)
+on \(T_0'\), as follows by evaluating the defect of \(\psi\)
+on \(L\). Use the lattice
+\[
+ \{(a',b')\in T_0'\oplus X':b'-\psi^{\rm t}a'\in L'\}
+\]
+and its projection onto \(T_0'\).
+
+For any
+\(d\in H^1_f(K,T_0')\), lift \(\ell^e d\) to a finite
+cocycle \((a',b')\) in this lattice. Take the cup product with the dual cocycle first.
+For \(g,h\in G_K\) its value in \((F/O)(1)\) is computed by
+the following congruences in \(F(1)\):
+\begin{equation}\label{eq:local-dual-lift-cup}
+ \begin{aligned}
+ \langle a'(g),g\psi(y(h))\rangle
+ &\equiv\langle a'(g),\psi(gy(h))\rangle\\
+ &=\langle\psi^{\rm t}a'(g),gy(h)\rangle
+ \equiv\langle b'(g),gy(h)\rangle \pmod{O(1)} .
+ \end{aligned}
+\end{equation}
+The first difference in \eqref{eq:local-dual-lift-cup} pairs \(a'(g)\in T_0'\) with the
+equivariance defect in \(T_0\). The second pairs an element of
+\(L'\) with \(gy(h)\in L\). Thus the cup cochain for
+\(a'\) and \(\phi y\) is the reduction of the rational cup
+cochain for \(b'\) and \(y\). The latter rational
+cup product vanishes in cohomology by Bloch--Kato
+orthogonality.
+
+Integral local Tate duality identifies the
+finite image in \(H^1(K,U/T_0)\) with the annihilator of
+\(H^1_f(K,T_0')\). It follows that \(\ell^e[\phi y]\)
+is in the finite image also in this comparison.
+
+\proofstep{Apply finite-condition duality and count the free and torsion generators.}
+The common tame type has supplied an exponent for the local lifts. To convert that exponent into a length for the span, one must count both the free generators of the finite condition and its torsion.
+
+For the length, write
+\[
+ M=H^1_f(K,T_0')
+\]
+for the
+inverse image of the rational finite subspace. It is
+finite over \(O\) by local cohomology finiteness.
+The quotient of the pushout span by its intersection
+with the finite image injects by the cup pairing into
+\(\operatorname{Hom}_O(M/\ell^e M,F/O)\).
+The torsion of \(M\) has at most \(\operatorname{rk}T_0\)
+generators. Indeed the coefficient exact sequence identifies this torsion module as
+\[
+ H^0(K,U'/T_0')/\operatorname{im}H^0(K,U').
+\]
+The latter rational subspace meets \(T_0'\)
+in a saturated sublattice, so after quotienting by
+its image the ambient divisible module is still a direct
+sum of at most \(\operatorname{rk}T_0\) copies of \(F/O\).
+
+The rank of \(M\) is
+\(\dim_F D_{\mathrm{dR}}(U')/\mathrm{Fil}^0+
+\dim_F H^0(K,U')\) by the finite dimension formula.
+The invariant vectors inject into \(\mathrm{Fil}^0\),
+so the rank is at most \([K:\mathbb Q_\ell]\operatorname{rk}T_0\).
+Put \(r_0=\operatorname{rk} T_0\) and
+\(e_O=\operatorname{ord}_O(\ell)\). A free generator of \(M\)
+contributes \(ee_O\) to the quotient length, and a torsion
+summand \(O/(\varpi^a)\) contributes \(\min(a,ee_O)\).
+The two generator bounds therefore give
+\[
+ \operatorname{length}_O(M/\ell^e M)
+ \le ee_O\bigl([K:\mathbb Q_\ell]r_0+r_0\bigr)
+ =2ee_O r_0\quad(K=\mathbb Q_\ell).
+\]
+Its dual has the same length. Dividing by \(e_O\)
+gives \(2e\,\operatorname{rk}T_0\) in the normalized
+comparison. The bound holds for every finite span with
+the same exponent and rank, hence for the full span.
+\cite[Proposition 3.8 and Corollary 3.8.4]{bloch-kato}
+\label{cor:special-prime-lengths-4}
+\end{proof}
+
+\subsubsection*{Passing the paired-character bound to the numerator}
+
+The estimate on a span is made at one local character. To put it in the global numerator, sum it first with the actual good multiplicities and then with the normalized weights of the places above the type prime.
+
+\begin{proposition}[Sum of type-prime lengths on the selected row]\label{prop:type-prime-row-length}
+At \(\ell=g_i\), write \(M_\ell=C_*x^{C_*}\eta_c+
+2\ell^{-2}+V_\ell+v_\ell(h_E)\), with the fixed \(C_*\) below.
+The good multiplicities on the cut have
+\[
+ \sum_{w\mid\ell,\ w\text{ twisted}}
+       e_w\omega_w\eta_{j,w}\le d_j(\log\ell)M_\ell.
+\]
+The term from \(C_*x^{C_*}\eta_c\) is \(d_j\,o(b)\)
+on the two type primes together with one threshold.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Use the label projector before applying the common tame pushout bound.}
+For each good \(\pi\), form a point-dependent central
+type operator on the cut space. It projects to the
+series labels of \(\pi\) at both type primes, multiplied
+by the row group order \(h\). The scalar action at \(\pi\)
+uses the common isobaric partition for its Hecke
+character. The support \(Y_\pi\) of this operator
+contains \(\pi\). The agreement of the two series labels on the support gives
+\[
+ \pi\in Y_\pi,\qquad Y_\pi\cap Z_i\subseteq Z_i^+.
+\]
+This comparison
+uses the finite series projectors, their realization on
+the point spaces, and the span of those spaces in
+each generic eigenspace. The operator acts integrally
+and kills the eigenspaces outside \(Y_\pi\).
+
+On \(Y_\pi\) the squarefree labels exclude the two
+prescribed character values. The local--global
+comparison supplies zero monodromy and the same
+tame inertia type throughout this family. The inertia
+polynomial of the full representation includes the
+rank-\(t\) scalar character block. The corresponding
+tame characters are inverted at the conjugate place.
+Apply the type-prime period lifting comparison to the
+twisted family on the positive side and to its Tate
+dual on the negative side. The dual sends a jump \(a\) to \(-a-1\). Thus in both applications the jump parameters are
+\[
+ (\text{lower parameter},\text{upper parameter})=(\eta+t+1,s_T+S_T).
+\]
+The base field is \(\mathbb Q_\ell\) at every such use.
+For \(N=R+1\), put
+\[
+ A_0=\lfloor N^2/4\rfloor.
+\]
+
+The integral period lift has loss
+\[
+ e_*=C_T\{N A_0+(\eta+t+1)(N+A_0)\}.
+\]
+The local pushout comparison sends this to normalized
+length at most \(2u e_*\) modulo the finite
+cohomology condition in rank \(u\). For the rank-\(r\)
+constituent use \(u=r\), and for each of the \(t\)
+character constituents use \(u=1\).
+The same exponent applies throughout the locus \(Y_\pi\).
+\label{cor:special-prime-lengths-5}
+
+The global marked congruence comparison on \(Y_\pi\)
+now gives an element of the Hecke order supported
+on \(Z_i\cup(X_i\setminus Y_\pi)\). Its value at
+\(\pi\) has valuation bounded by \(4fR e_*\)
+plus the signature, strict cohomology, class-number,
+mark and tame allowances. The local term is
+\(2f(2re_*+2te_*)\) since all completions have
+degree one. The marked determinant is evaluated at the very same normalized specialization. Over all places above \(\ell\) the local rank and character terms sum with degree factor
+\[
+ \sum_{w\mid\ell}[E_w:\mathbb Q_\ell]=[E:\mathbb Q]=2f.
+\]
+
+In this application the row
+quotients are the local pushout images. With the
+finite condition imposed, the three global kernels
+are the signature, unramified class-number and
+strict Tate-twist kernels. For the character block,
+the coefficient character after twisting is
+\(\chi_\ell^{\,1-c}\) at index \(c\).
+The divisible finite image is unramified at \(c=1\).
+It vanishes at \(c>1\) by the finite cohomology
+formula for negative Tate twists. These conditions
+give the class-number and strict kernels after
+the tame restrictions away from \(\ell\).
+The marked and tame costs
+are \(4R v_\delta\) and
+\[
+ t\sum_{v\in\mathcal Q_i}v_\ell(\zeta_v-1).
+\]
+
+Multiplying the Hecke element by the integral
+type operator gives support on \(Z_i^+\).
+Apply the lattice filtration comparison with this
+product for the graded piece at \(\pi\).
+The other graded pieces may use different type
+operators.
+
+Since \(A_0\le R^2\) and \(N\le2R\), we have
+\[
+ e_*\le8C_TR^2(R+\eta+t).
+\]
+
+The valuation of the row group order at \(g=g_i\)
+is also explicit. Its factor from \(g\) is
+\(f\binom r2\) by the order formula for
+\(\mathrm{GL}_r(\mathbb F_g)\). The factor from
+\(g'=g_{1-i}\) is at most \(fr(r+1)\), because
+\(g'^j-1<g^{2j}\) and hence
+\[
+ v_g(g'^j-1)\le2j.
+\]
+Each of the factors has
+exponent \(f\), one place for each conjugate pair.
+Their total valuation is therefore at most
+\[
+ f\binom r2+f\sum_{j=1}^r2j=\tfrac12 f(3r^2+r)\le2fr^2 .
+\] Thus the whole
+localization length \(\eta_i\) is bounded by the
+multiplicity-weighted sum, over good \(\pi\), of
+\[
+ 4fR\,C_T'R^2(R+\eta+t)+2fr^2
+   +s_\pi+V_\ell+v_\ell(h_E)+4R\,v_\delta
+   +t\sum_{v\in\mathcal Q_i}v_\ell(\zeta_v-1).
+ \tag{T}\label{eq:local-prime-t}
+\]
+The constants in this inequality can be
+taken to be \(C_T=40\) and \(C_T'=8C_T\).
+Here \(v_\delta\) measures the cyclotomic mark of the
+localized order. Its depth is one at either type
+prime, so the marked determinant gives
+\[
+ v_\delta\le(t-1)+v_\ell((t-1)!)\le2t.
+\]
+
+The two killing allowances give
+\(s_\pi\le\ell^{-2}\) and
+\[
+ t\sum_{v\in\mathcal Q_i}v_\ell(\zeta_v-1)\le\ell^{-2}.
+\]
+
+The cyclotomic invariant term vanishes because the
+host is unramified at the odd prime \(\ell\) and \(tr\) is odd.
+For a lift of \(-1\) the scalar difference is
+\[
+ (-1)^{tr}-1=-2\in\mathbb Z_\ell^\times .
+\] For the signature
+allowance, take the character of the chosen signature of
+\(\pi\) in Section~\ref{subsec:signature-selmer} and its
+specialization at the auxiliary character of this coefficient
+place. The specialization is chosen simultaneously for the
+good signatures. The lattice comparison identifies the
+rank-\(r\) piece of the same marked representation with the
+specialized signature lattice. The Selmer injection and the
+normalized coefficient-extension comparison of the retained
+twist give finiteness and transfer the length allowance.
+The full-image generator of auxiliary inertia gives the
+tame allowance on this same localization. The strict
+cohomology lengths for \(1\le e<t\) are the separate
+finite lengths in the definition of \(V_\ell\).
+
+The uniform bounds used in the estimate are
+\[
+ R\le2t,\qquad t\le\eta_c,\qquad n,t\le x^{C_1}.
+\]
+Hence
+the first, second and sixth terms of \eqref{eq:local-prime-t} have sum at most
+\[
+ (256C_T'+20)nt^3\eta_c
+ \le (256C_T'+20)x^{4C_1}\eta_c .
+\]
+Put \(C_* = 2000(C_T'+1)+5C_1\). For \(x\ge1\) and
+\(C_1\ge1\) the last bound is at most
+\(C_*x^{C_*}\eta_c\). Thus the uniform bound per
+copy of a good character at \(\ell\) is
+\[
+ M_\ell=C_*x^{C_*}\eta_c+
+            2\ell^{-2}+V_\ell+v_\ell(h_E).
+\]
+\proofstep{Weight the lengths by the actual good multiplicities and the local degree identity.}
+The local inequality applies to a single good character. In the numerator each occurs with its actual eigenspace multiplicity; the bound for their sum uses the dimension of the same selected row.
+
+Use the local comparison including the empty case
+\(\eta_i=0\) when \(Z_i^+=\varnothing\).
+The ties defining the twisted row identify \(\eta_{j,w}\)
+with \(\sum_{i\ {\rm over}\ (j,w)}\eta_i\). Apply
+\eqref{eq:retained-multiplicity} to this sum:
+\[
+ \eta_{j,w}\le d_j M_\ell,\qquad
+ \sum_{\substack{w\mid\ell\\w\ {\rm twisted}}}
+        e_w\omega_w\eta_{j,w}\le d_j(\log\ell)M_\ell .
+\]
+The second inequality uses the degree sum over all places
+above \(\ell\). These bounds use the actual multiplicities
+and require no uniform upper bound for the number of
+localizations.
+
+In particular the contribution of the first, second and
+sixth terms to the numerator, summed over both rational
+type primes, is at most
+\[
+ d_j C_*x^{C_*}\eta_c(\log g_0+\log g_1)=d_j\,o(b),
+\]
+since \(\log g_i=O(\log b)\), \(\log\eta_c\le x^{\epsilon/4}\)
+and \(b=\exp(x^\epsilon)\). The \(o(b)\) bound per unit of rank
+is uniform on the chosen windows for fixed \(\epsilon\). The division
+comparison uses \(d_j=D_0\) before dividing by \(D_0\).
+The group-order factor in \((T)\) is already included at
+these two primes. The separate cost of returning to the
+uncut length and the common budgets for strict cohomology
+and class number enter the full numerator comparison.
+\label{cor:special-prime-lengths-6}
+\end{proof}
+
+\subsubsection*{The two ramified auxiliary primes}\label{subsec:ramified-auxiliary-row}
+
+Fix \(\ell\in\{q,d\}\) and let \(\ell'\) denote the other prime.
+The three factors left after omitting \(\sqrt{-\ell}\) from
+\eqref{eq:host-character-compositum} have a common cyclotomic modulus
+prime to \(\ell\). In fact, once the lower endpoint in
+Proposition~\ref{prop:quadratic-prime-pair} is large, both auxiliary
+primes exceed the fixed conductor \(f_\psi\). For each \(w\mid\ell\) put
+\[
+ M_\ell=\operatorname{lcm}(2^{e+2},f_\psi,\ell'),\qquad
+ B_\ell=K_\psi C_e(\sqrt{-\ell'}),\qquad F_w=(B_\ell)_{w|_{B_\ell}}.
+\]
+The completion embeds in \(\mathbb Q_\ell(\mu_{M_\ell})\). Roots of
+unity of order prime to the residue characteristic generate an
+unramified extension of a complete discretely valued field
+\cite[Corollary~10.16]{sutherland-local-fields}. In this application
+the base is \(\mathbb Q_\ell\) and \(\ell\nmid M_\ell\). Hence
+\begin{equation}\label{eq:host-auxiliary-completion}
+ F_w/\mathbb Q_\ell\text{ is unramified},\qquad
+ E_w=F_w(\sqrt{-\ell}),\qquad e(E_w/\mathbb Q_\ell)=2 .
+\end{equation}
+
+Indeed \(X^2+\ell\) is Eisenstein over \(F_w\), since
+\(v_{F_w}(\ell)=1\). Since
+\(\ell\equiv3\bmod4\), the unique quadratic subfield of
+\(\mathbb Q_\ell(\mu_\ell)\) is \(\mathbb Q_\ell(\sqrt{-\ell})\)
+by the quadratic Gauss sum. Writing \(\chi_{\rm cyc}\) for the cyclotomic character, we obtain
+\[
+ [F_w(\mu_\ell):E_w]=\frac{\ell-1}{2},
+ \qquad
+ \chi_{\rm cyc}(I_{E_w})\bmod\ell\ \supseteq\
+           (\mathbb F_\ell^\times)^2 .
+\]
+The size choice gives \((\ell-1)/2>tr\). For every nonzero tested exponent \(a\),
+\[
+ 0<|a|\le tr<(\ell-1)/2.
+\]
+The character with exponent \(a\) cannot be trivial on the square subgroup, which has order \((\ell-1)/2\). Thus \(\nu_\ell=0\).
+
+The source describes the CM type by the sign of
+\(\sqrt{-d}\). At \(q\), the congruence on the auxiliary discriminant gives
+\[
+ -d\equiv1\pmod q,\qquad -d\in\mathbb Q_q^{\times2}.
+\]
+Thus its decomposition group preserves the sign of \(\sqrt{-d}\). At \(d\) the nonidentity inertia element reverses it.
+In either case the local jump list is taken at each
+embedding, allowing its sign to depend on the
+embedding of \(E_w\). These primes are distinct from
+the two type primes, which split completely in the host.
+The integral global congruence comparison away from
+type primes applies. The declaration used in this ramified comparison is
+\[
+ \mathcal R_\ell=\{w:w\mid\ell\},\qquad \mathcal C_\ell=\varnothing.
+\]
+
+This choice requires a bound on each row at \(d\)
+with mixed embedding signs. A count of rows obtained
+by taking one sign for the whole completion would
+lose the role of the inertia involution at \(d\).
+\label{cor:special-prime-lengths-7}
+
+At each embedding the original jumps are
+\(0,\ldots,t-1\), \(m\) central jumps and \(k-1\) jumps
+in a signed interval of width \(S_c\), separated from
+the center by more than \(\eta_c+t+1\).
+Put \(J_\tau\) for the original outer integer jump set at
+embedding \(\tau\). The Tate operation on the outer jumps is
+\[
+ J_\tau\longmapsto -1-J_\tau=\{-1-j:j\in J_\tau\},
+\]
+with
+\[
+ \begin{aligned}
+ \max(-J_\tau-1)-\min(-J_\tau-1)
+    &=\max J_\tau-\min J_\tau\le\lfloor S_c\rfloor,\\
+ \min_{a\in J_\tau}|-a-1|
+    &\ge\min_{a\in J_\tau}|a|-1>\lfloor\eta_c\rfloor+t .
+ \end{aligned}
+\]
+Both the original jump list and its Tate-dual image have
+absolute bound \(\lfloor2b\rfloor\). Put \(I=[-\lfloor\eta_c\rfloor-t,\lfloor\eta_c\rfloor+t]\). For each embedding \(\tau\), removal of the cyclotomic summand leaves exactly the simple central jumps of the rank-\(r\) dual, so
+\[
+ \#\{a\in\mathrm{Jumps}_\tau(T_2):a\in I\}=m.
+\]
+
+For the row source, a subrepresentation of a sum of
+the full duals is crystalline and has its jumps in
+their union. This uses strictness of the crystalline
+filtration and the common jump set at the embedding.
+These are the family and target hypotheses of the
+integral row comparison.
+
+The local result used here is the crystalline
+row-denominator theorem with ramification two.
+For a surjection of stable lattices as above with
+rank-\(r\) target, let the source jumps at each
+embedding lie in the central interval of radius
+\(\eta_0\) together with a signed interval of width
+\(S\), lying at distance greater than \(\eta_0\)
+from zero. Let all jumps have absolute value at
+most \(h_0\). The target has at most \(m\) jumps,
+counted with multiplicity, in the central interval.
+Then the normalized finite-cohomology colength
+for this surjection is at most
+\[
+ 160\bigl((D_w+1)r(2h_0/\ell+2S+
+             2\log_\ell h_0+1+\eta_0)
+                   +3D_w m(h_0+1)\bigr).
+\]
+We derive this estimate from the integral period comparisons in the
+next paragraphs. The coefficient valuation throughout has
+\(v(\ell)=1\). \label{cor:special-prime-lengths-8}
+
+\input{row-metric}
+\input{row-coordinates}
+\input{row-mixed}
+\input{row-colength}
+
+\begin{proposition}[Weighted cost at the two ramified auxiliary primes]\label{prop:auxiliary-prime-row-length}
+At \(\ell=q\) or \(d\), use the local field
+\(E_w=F_w(\sqrt{-\ell})\) of \eqref{eq:host-auxiliary-completion}
+for each \(w\mid\ell\), and
+use the signed jump windows at each individual embedding
+from Section~\ref{subsec:ramified-auxiliary-row}.
+The local bound \eqref{eq:tag-r4}, after allowing the separate scalar
+cohomology and class number budgets, is \(O(fmb)\).
+Writing \(c_\ell\) for this local cost, the combined bound on the selected interval is
+\[
+ q,d\le\ell_*\quad\text{eventually},\qquad \sum_{\ell\in\{q,d\}}(\log\ell)c_\ell\ll fmb\log b.
+\]
+\end{proposition}
+
+\begin{proof}
+In this comparison put \(D_w=[E_w:\mathbb Q_\ell]\),
+\[
+ X_\ell=4b/\ell+2S_c+2\log_\ell(2b)+1+\eta_c+t,\qquad
+ Y_b=2b+1.
+\]
+On the original row lattices the integral denominator
+bound for a crystalline source and quotient with
+the preceding jump conditions gives
+\[
+ L_w\le 160\bigl((D_w+1)r X_\ell+3D_wmY_b\bigr)+1 .
+ \tag{R1}\label{eq:tag-r1}
+\]
+Here the local field is admitted at full level one,
+with its coefficient field containing the embeddings
+of \(F_w(\mu_\ell)\), and \(e(E_w/F_w)=2\).
+The raw bound uses \(h_0=\lfloor2b\rfloor\),
+\(S=\lfloor S_c\rfloor\) and
+\(\lfloor\eta_c\rfloor+t\) in place of \(2b,S_c,\eta_c+t\).
+Indeed the first two terms in \(X_\ell\) bound
+\(2h_0/\ell+2S\), and its logarithmic term bounds
+\(2\log_\ell h_0\). Rounding the resulting row bound up
+adds at most one.
+
+In the character rows again put \(h_0=\lfloor2b\rfloor\)
+and write
+\[
+ \lambda=\lfloor\log_\ell(2h_0)\rfloor.
+\]
+
+The distinct jump set \(U\) of a source for a character
+row lies in the union of the labeled jump sets. It
+has at most \(D_wR\le2fR\) elements and lies in
+\([-h_0,h_0-1]\). In the character lifting argument
+at depth \(M=3+n_0\), take \(n_0\) least with
+\[
+ 2h_0\le(\ell-1)\ell^{n_0},
+\]
+so \(M\le4+\lambda\).
+The base change to \(F_w(\mu_\ell)\) costs no
+\(\ell\)-power, as its relative degree is
+\((\ell-1)/2\). The relative degree from
+the first full level to depth \(M\) has valuation
+\(M-1\).
+
+For a twist exponent \(0\le e<t\), each nonzero
+difference \(a-i\), with \(a\in U\) and
+\(0\le i\le e\), has \(v_\ell(a-i)\le\lambda\).
+The distinct-jump sum in each degree is bounded by
+\(2fR(4+2\lambda)\). The exponent of the
+truncation, scalar Bockstein and integral dual
+exponential of Section~\ref{subsec:ramified-character}
+is consequently at most
+\[
+ c_B=6+\lambda+7t+2tfR(4+2\lambda).
+\]
+Here \(6+\lambda\) allows the depth term and the
+constant scalar terms, and \(7t\) allows the
+per-degree and scalar terms linear in \(t\).
+Since \(\lambda\le4\log b\) for \(\ell\ge3\), this gives
+\[
+                  c_B\le60tfR\log b .
+ \tag{R2}\label{eq:tag-r2}
+\]
+The application is to the cocycle of the chosen
+integral lift of the trivial quotient of a crystalline
+extension. The character comparison moves its image
+into finite cohomology. The rank-one local length
+estimate then costs \((D_w+2)c_B\).
+\label{cor:special-prime-lengths-9}
+
+With no columns the global determinant bound of the
+previous section has no column terms, and its row
+length is exactly \(L_w\). The character row cost is
+at most \(t\sum_{w\mid\ell}(D_w+2)c_B\).
+The cyclotomic mark has depth one and \(\ell>t\).
+Thus its normalized valuation is \(t-1\), giving a
+determinant allowance at most \(4Rt\). The tame
+character allowance is at most \(\ell^{-2}\). Together
+with the signature length and the strict and unramified
+global kernels this gives
+\[
+ v_{cc}(i,\pi)\le
+ \sum_{w\mid\ell} L_w+t\sum_{w\mid\ell}(D_w+2)c_B
+   +4Rt+\ell^{-2}+s_\pi+V_\ell+v_\ell(h_E).
+ \tag{R3}\label{eq:tag-r3}
+\]
+Every \(D_w\ge2\) and \(\sum_wD_w=2f\).
+
+In particular the two row sums are bounded by
+\[
+ 160(3fr X_\ell+6fm Y_b)+f,\qquad
+ 240 f^2t^2R\log b
+\]
+respectively. The additional \(4Rt\) and \(f\)
+are bounded by \(20 f^2t^2R\log b\).
+For \(\ell\ge3\) and \(b\ge6\), each coefficient
+in \(3X_\ell\) is at most \(13\) times its
+corresponding coefficient in
+\(b/\ell+S_c+\eta_c+t+\log b\), absorbing the constant
+into the logarithm. Also \(6Y_b\le13b\) once \(b\ge6\).
+Hence at this
+threshold \eqref{eq:tag-r3} yields
+\[
+ \begin{split}
+ v_{cc}(i,\pi)\le{}&
+ 2080 f\bigl(r(b/\ell+S_c+\eta_c+t+\log b)+mb\bigr)
+     +260 f^2t^2R\log b\\
+ &+2\ell^{-2}+V_\ell+v_\ell(h_E).
+ \end{split}
+ \tag{R4}\label{eq:tag-r4}
+\]
+For the second \(\ell^{-2}\) we used the signature
+bound. This supplies the entry at the ramified quadratic prime on the same point
+as its \(v_{cc}\) in the cut lattice.
+
+\proofstep{Use the prime range to absorb the non-leading two terms in \eqref{eq:tag-r4}.}
+For the selected auxiliary prime pair,
+\[
+ \log q,\log d=o(\log b)
+\]
+and both primes exceed
+every fixed power of \(x\), uniformly in the scale
+interval of that pair. In particular the condition
+\(\ell>x^{2C_t+5}\) at the pointwise ramified caller
+holds for the fixed rank exponent \(C_t\).
+The ranks grow polynomially,
+and \(\eta_c,S_c,t\) are at most
+\(x^{O(1)}\exp(x^{\epsilon/4})\).
+Thus the two terms of \eqref{eq:tag-r4} other than \(2080fmb\)
+and the common budgets are \(o(fmb)\), uniformly
+over both primes and all coefficient localizations.
+
+In particular the table cost is at most \(2Cfmb\)
+at a fixed large-scale threshold.
+Also
+\[
+ q,d\le\ell_*,
+\]
+since the denominator of
+\(\ell_*\) is \(x^{O(1)}\exp(O(x^{\epsilon/4}))\)
+and its numerator is \(mb\). Summing with
+\(\log q,\log d\le\log b\) gives \(O(fmb\log b)\),
+which fits the stated \(O(fmb\log^2 b)\) budget.
+\label{cor:special-prime-lengths-10}
+\end{proof}
+

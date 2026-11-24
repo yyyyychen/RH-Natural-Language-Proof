@@ -1,0 +1,286 @@
+\subsection{The integral contraction for the intermediate weights}
+\label{sec:edge-contraction}
+
+The segment calculation uses weights with only the extreme entries varying. An integral contraction compares these tests to the prescribed weights with bounded intermediate entries. At one top put \(d=c_{\rm cl}\)
+and \(r=k-2\). In this subsection write \(V_\nu\) for a Schur
+space in \(k\)-row matrix polynomials with column degrees
+\[
+ \nu_0\ge\cdots\ge\nu_{k-1}\ge0.
+\]
+It consists of polynomials
+transforming by \(\prod_i b_{ii}^{\nu_i}\) under right
+multiplication of the matrix by an upper triangular matrix \(b\).
+The flag minors have column sets consisting of initial columns.
+The coordinate ring of \(\mathrm{GL}_k\) under left and right
+translation identifies this space in characteristic zero with the
+irreducible of highest weight \(\nu\).
+
+The products of flag minors
+of this shape span that irreducible, since their span is
+row-stable and contains the highest vector. The integral standard
+monomial theorem gives its basis over \(O\)
+\cite[Theorem II.2.16]{abw-schur}. With a diagonal term order
+on the flag minors the leading monomial of a standard tableau
+records the entries of its rows. These monomials are distinct
+because the tableau rows are weakly increasing. Thus the
+span of the basis is saturated in the entire polynomial lattice.
+For a weight \(\lambda\) whose last entry may be negative put
+\[
+ \nu=\lambda-\lambda_{k-1}{\bf 1}.
+\]
+
+The lattice in a frame with matrix \(g\) consists of
+\[
+ (\det g)^{-\lambda_{k-1}}f(g^{-1}X)
+\]
+with \(f\) in the
+standard polynomial lattice. This is the determinant twist
+used in \(H(L)\).
+
+Take end weights \(A+d,-B-d\) and intermediate weight \(\mu\)
+with \(|\mu_j|\le d\), and put
+\begin{equation}\label{eq:edge-intermediate-weights}\begin{aligned}
+ \lambda_-&=(A,0,\ldots,0,-B),&
+ \lambda_+&=(A+2d,0,\ldots,0,-B-2d),\\
+ S&=(d,\mu,-d),&
+ S^*&=(d,-\mu_{\rm rev},-d).
+\end{aligned}\end{equation}
+We use a bilinear form on the \(r\)-row Schur lattices of
+middle partitions
+\(\alpha=B+d+\mu\) and \(\alpha'=d-\mu_{\rm rev}\).
+Their entries satisfy
+\(\alpha'_i=L-\alpha_{r+1-i}\) with \(L=B+2d\).
+Put \(e=\alpha_r\) and \(\gamma=\alpha-e{\bf1}\).
+Division by \(\det(Y)^e\) takes the first lattice to
+\(V_\gamma(O)\), since each monomial of shape \(\alpha\)
+has exactly \(e\) full-size minors.
+
+For the second lattice,
+with \(J_r\) the reversal matrix, use the map
+\[
+             f(Y)\longmapsto (\det Y)^{L-e} f(Y^{-\mathsf T}J_r).
+\]
+Jacobi's complementary-minor identity sends each initial-column
+minor to an initial-column complementary minor divided by
+\(\det Y\), up to sign. The determinant factor clears all
+denominators and the output has shape \(\gamma\).
+The same transformation in reverse, by its square on invertible
+matrices, gives surjectivity on the integral lattice.
+
+\begin{proposition}[Contraction across the intermediate weights]
+\label{prop:integral-edge-contraction}
+At each top take the weights of \eqref{eq:edge-intermediate-weights}
+with \(|\mu_i|\le d\). The flat-weight Schur lattices admit
+the multiplication and contraction maps through the integral
+\(r\)-row Schur lattice of shape \(\gamma\) obtained from the
+two complementary partitions \(\alpha,\alpha'\). For their tensor over \(N\) tops the exponent and the corresponding \(w\)-adic order are
+\[
+ d_T=Nd,\qquad \operatorname{ord}_w(p^{d_T})=2d_T\quad(w^2=p,\ \operatorname{ord}_w(w)=1).
+\]
+ After multiplication by \(p^{d_T}\), the pulled-back target
+covector satisfies the target integral test and the normalized pairing
+at the distinguished edge, with a loss of at most \(2d_T\) in the
+\(w\)-adic conductor at the other incoming edges. The source test
+holds simultaneously at all outgoing edges.
+\end{proposition}
+
+\begin{proof}
+\proofstep{A uniform pairing for the intermediate representation.}
+Here is a uniform integral pairing on \(V_\gamma\).
+For the transpose adjoint, the rational contravariant dual has
+the same highest weight as \(V_\gamma\). Choose the corresponding
+isomorphism between the two rational modules to take the highest
+polynomial to the highest dual functional evaluating to one
+there. Both lattices have a primitive generator on that line
+and are stable under divided powers. Write \(l=\gamma_1\)
+and
+\[
+ h=\binom r2\lfloor\log_p(l+r-1)\rfloor
+\]
+for \(r\ge2\).
+When \(r=1\) use \(h=0\).
+In either lattice the submodule generated from the highest
+vector by divided powers contains \(p^h\) times the full lattice.
+Indeed take a basis \(u_j\) of the divided-power lattice in
+that representation.
+
+Apply the invariant Hom projector of the
+preceding type calculation to \(u_j^\vee\otimes v\), where
+\(v\) lies in the full lattice. The coordinate weights of
+\(V_\gamma\) lie in \([0,l]\), as each symbol appears at most
+once per column of a tableau. Each coordinate of a Hom weight is a difference of two such coordinates, so
+\[
+ 0\le a,b\le l\quad\Longrightarrow\quad -l\le a-b\le l.
+\]
+Multiplying by \(p^h\) gives integral intertwiners,
+which take the highest vector into the integral highest line
+and its divided-power span into the divided-power span.
+The trace identity for that projector reconstructs \(p^h v\)
+as the sum of their values on \(u_j\), multiplied by
+\(\dim V_\gamma\).
+
+Let \(M\) and \(M^\sharp\) be the two full lattices and
+\(L,L^\sharp\) the respective divided-power sublattices.
+The contravariant isomorphism \(j\) sends \(L\) onto \(L^\sharp\).
+The inclusions just proved in both lattices give
+\[
+ p^{2h}M^\sharp\subseteq p^h j(M)\subseteq M^\sharp .
+\]
+The right inclusion uses \(p^h M\subseteq L\), and the
+left uses \(p^h M^\sharp\subseteq L^\sharp\).
+Thus \(p^h j\) is an integral pairing map with cokernel
+killed by \(p^{2h}\). Lifting \(p^{2h}\) times a dual basis
+gives the integral partners with those diagonal values. This bound depends on the width
+\(l\le2d\), even though the determinant power \(e\) can be
+large. In particular for \(2d\le8a\) the depth is at most
+\[
+ \lceil (k-1)^2\log_p(8a+k-1)\rceil.
+\]
+
+Compose with determinant division and the complementary-minor
+map to obtain a pairing \(J\) on shapes \(\alpha,\alpha'\),
+with the same full set of partners. Simultaneous substitution
+\(Y\mapsto gY\) in both inputs multiplies \(J\) by
+\(\det(g)^L\). This follows from the transpose adjoint,
+since the complementary-minor input then changes by
+substitution by \(g^{-\mathsf T}\) and the factor
+\(\det(g)^{L-e}\). The first input contributes the remaining
+\(\det(g)^e\).
+
+\proofstep{Contraction on the polynomial coefficients.}
+For a \(k\)-row polynomial \(f(X)\), put
+\(D(Y)=\operatorname{diag}(1,Y,1)\).
+Apply the pairing \(J\) in the variable \(Y\), coefficientwise in \(X\), to define
+\[
+ \mathcal C(f,t)(X)=J_Y\bigl(f(XD(Y)),t(XD(Y))\bigr).
+\]
+
+Here the two \(k\)-row inputs have the normalized shapes
+of \(\lambda=\lambda_-+S\) and \(S^*\).
+Cauchy--Binet expands each flag minor in these substitutions
+into middle flag minors of \(Y\) with coefficients in \(O[X]\)
+for integral input. The \(Y\)-shapes are \(\alpha,\alpha'\)
+because the first column of \(X\) is retained and the last is
+unused. Thus contraction is integral. It commutes with left matrix substitution in \(X\).
+
+For an invertible middle block \(g\) one has
+\[
+ D(g)D(Y)=D(gY),
+\]
+so the covariance of \(J\) gives
+\[
+ \mathcal C(f,t)(XD(g))=\det(g)^L\,\mathcal C(f,t)(X).
+\]
+This proves the middle diagonal degrees and invariance under
+upper unipotent middle-column operations. A first-column
+addition to a middle column is represented by a matrix \(u\)
+whose only off-diagonal entry is in the first row. The matrix
+\(D(Y)^{-1}uD(Y)\) is upper unipotent over \(K(Y)\), so
+\[
+ XuD(Y)=XD(Y)(D(Y)^{-1}uD(Y))
+\]
+has the same value in each input. Invariance there gives a
+polynomial identity over \(K\). The last column is unused,
+and the first-column degrees add. Together these operations
+give precisely the right triangular character of the
+normalized shape of \(\lambda_+\).
+
+For any middle polynomial of shape \(d+\mu\), lift each
+flag minor of size \(j\) to a flag minor including the first
+row and first column, of size \(j+1\). If the product has \(a\) minors, the lifted product has first-row degree \(a\). Multiply by
+\[
+ X_{00}^{2d-a},\qquad 0\le a\le2d,
+\]
+to obtain first-row degree \(2d\).
+Evaluation on \(D(Y)\) gives the original polynomial, and
+the lift has shape \(S+d{\bf1}\) and last-row degree zero.
+The same construction lifts the weight \(d-\mu_{\rm rev}\)
+to the shape of \(S^*\). Since multiplication by
+\((\det Y)^B\) identifies the shape \(d+\mu\) with \(\alpha\),
+choose the lifted partners \(s_b,t_a\) so that
+\[
+ J((\det Y)^B s_b(D(Y)),t_a(D(Y)))
+\]
+is the chosen
+scalar diagonal.
+
+If \(F\) has the lower flat shape, its
+substitution \(F(XD(Y))\) is \((\det Y)^B F(X)\),
+by the first-column and cofactor formula.
+It follows that \(\mathcal C(Fs_b,t_a)\) equals \(F\)
+times a polynomial with the flat normalized shape
+\((4d,2d,\ldots,2d,0)\), first-row degree \(4d\)
+and last-row degree zero. This space is spanned by
+\[
+          Z=(X_{00}\det X_{[0,k-2],[0,k-2]})^{2d}.
+\]
+In its first-column and cofactor model, every variable factor
+must have maximal first-row degree, and each cofactor must
+omit the last row. Since \(Z(I_k)=1\), evaluation at the
+identity matrix shows that
+\[
+ \mathcal C(Fs_b,t_a)= \delta_{ab}p^{2h}ZF.
+\]
+
+This constructs the one-component maps
+\[
+ i(F)=ZF,\ U_b(F)=s_b F,\ L_a(G)=\mathcal C(G,t_a).
+\]
+
+The number of pairs is \(\dim V_\gamma\), the dimension for
+the middle weight. Tensor over all tops, reversing the two
+end degrees at the odd tops, to obtain the maps on a cycle.
+
+\proofstep{Verification on the edge lattices.}
+We check the edge lattices for those maps. In a frame of an
+edge the single changing row direction in the lattice has
+scale \(1,w^{-1},w^{-2}\) at the source, intermediate
+lattice and target. For first-row degree \(2d\) and last weight \(-d\) the determinant-twisted scaling factors are
+\[
+ w^d\quad\text{at the first change},\qquad w^{2d}\quad\text{at the second}.
+\]
+Thus the transported
+\(s_b,t_a\) belong to the normalized intermediate lattice,
+and \(w^{2d}t_a\) is integral at the target.
+For \(Z\) the degree and the last weight are doubled.
+It is primitive in the coefficient lattice of the intermediate
+frame after normalization. To check saturation, reduce a product \(ZP\) in the coefficient
+lattice modulo the uniformizer \(w\). Primitivity of \(Z\) and the
+domain property give
+\[
+ \overline Z\,\overline P=0,\quad\overline Z\ne0
+       \ \Longrightarrow\ \overline P=0 .
+\]
+The original coefficient lattices are saturated, so \(P/w\) then
+belongs to the smaller lattice. This proves saturation of the image.
+
+For any outgoing edge at the same source, a polynomial
+integral at that source belongs to its normalized edge
+lattice. Indeed in the respective adapted row coordinates
+the transformed monomials have row weights between the
+two end weights. In particular the normalization subtracts
+the greatest one. This proves the outgoing tests for
+\(i\) and \(U_b\), using integrality of multiplication
+in every frame. For any incoming edge at the same target,
+the target lattice for \(S^*\) likewise lies in its
+normalized intermediate lattice. In the edge frame this uses
+\[
+ 2j-(j-d)=j+d\ge0
+\]
+for every row weight \(j\in[-d,d]\).
+For the tensor of \(t_a\)'s put \(d_T=Nd\).
+
+At the target \(\mathcal C(\,\cdot\,,t_a)\) is integral after
+multiplication by \(w^{2d_T}\), and it is integral at the
+distinguished normalized edge with no multiplier.
+At any other incoming normalized edge it loses at most
+\(w^{2d_T}\), by the target inclusion just proved.
+The normalized first weights of \(\lambda_+\) exceed those
+of \(\lambda\) by \(d_T\). The pullback of a covector
+multiplied by \(p^{d_T}\) therefore preserves the target
+condition and the raw edge pairing, and decreases the
+vanishing conductor at other incoming edges by at most
+\(2d_T\). These are the properties needed in the next
+subsection. They use the same integral section at all
+neighbors of the fixed source or target.
+\end{proof}

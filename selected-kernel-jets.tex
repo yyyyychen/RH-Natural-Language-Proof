@@ -1,0 +1,633 @@
+\subsubsection{The archimedean jet of a single kernel}
+\label{subsec:selected-kernel-jets}
+
+For a single term in the class sum one must bound a derivative of the archimedean kernel, including both jets when the last two lifts are coupled.
+
+\paragraph{The padded polynomial bound.}
+
+The first estimate bounds the archimedean polynomial after extending it to the larger of the two ranks in a lift.
+
+\begin{established}[Determinant shifts in the padded jet model]\label{hyp:padded-Gaussian-jets}
+For integers \(1\le n\le n'\), let \(\nu_\tau\) be a partition of
+\(q_\tau\) of length at most \(n\) at each real label \(\tau\).
+On the source divide out the common last entry, and on the target
+use the partition padded with zeros to length \(n'\), up to its
+determinant character. With the highest-vector metrics, restoring
+the source determinant factor by multiplication with
+\(\det^{\nu_{\tau n}}\) gives an isometry \(T\). In particular
+\[
+               T^*T=I,\qquad \deg(Tv)=|\nu_\tau|=q_\tau .
+\]
+\end{established}
+\begin{proof}
+In the flag-minor model the determinant has weight \((1,\ldots,1)\)
+and has absolute value one on the unitary group. Thus \(T^*T\)
+commutes with that group. Schur's lemma makes it scalar, and the
+normalized source highest polynomial is sent to the normalized
+target highest polynomial. The scalar is their squared norm ratio,
+which is one. If \(n=n'\), padding inserts no zeros. The common
+last entry is removed by the determinant twist in this case as well.
+\end{proof}
+
+\begin{lemma}[Norm of a padded jet contraction]\label{lem:padded-jet-estimate}
+Use the polynomial spaces of Lemma~\ref{hyp:padded-Gaussian-jets}.
+For \(Z_\tau\in\mathbb C^{n'\times n}\) substitute
+\(Y_\tau=Z_\tau^t X_\tau E_n\), where \(E_n:\mathbb C^n\hookrightarrow\mathbb C^{n'}\)
+includes the first coordinates and \(X_\tau\) is the square target
+variable. Let \(G\) be entire, with \(S\ge0\), \(r_\tau,\Omega_\tau>0\) and
+\[
+ |G(Z)|\le S\exp\!\left(\tfrac12\sum_\tau r_\tau^2\|Z_\tau\|^2\right),
+ \qquad |r_\tau d_\tau|^2=\Omega_\tau^{-1}.
+\]
+Here the matrix norm is Euclidean on the entries.
+The jet replaces \(Z^\alpha\) by
+\((\prod_\tau d_\tau^{|\alpha_\tau|})\partial^\alpha G(0)\).
+The squared operator norm of this contraction,
+in the normalized highest-vector metrics, is at most
+\begin{equation}\label{eq:selected-padded-constant}
+ S^2\prod_\tau\left[
+    \Omega_\tau^{-q_\tau} e(2q_\tau+2)^{2nn'}
+    \exp\!\left(\sum_i\varphi(\nu_{\tau i})\right)
+ \right].
+\end{equation}
+This bound includes labels of degree zero.
+\end{lemma}
+
+\begin{proof}
+Write \(W_\nu(\C^d)\) for the Schur module with its unitary
+metric, and \(v_{\nu,d}\) for its initial flag vector of norm
+one. The realization \(u\mapsto u^t W_\nu(Y)v_{\nu,d}\)
+is the flag-minor model, with the transpose taken in bases
+compatible with the real structures. In fact the highest
+matrix coefficient is the product of initial flag minors,
+and the row action generates the model. The Schur maps
+commute with transpose in these bases. Functoriality and compatibility with transpose give
+\[
+ u^tW_\nu(Z^t X E_n)v_{\nu,n}
+ =(W_\nu(Z)u)^t W_\nu(X) W_\nu(E_n)v_{\nu,n}
+ =(W_\nu(Z)u)^t W_\nu(X)v_{\nu,n'} .
+\] The identity uses
+\(W_\nu(E_n)v_{\nu,n}=v_{\nu,n'}\), with compatible highest
+vectors. Thus the coefficient contraction lands in the
+target highest-weight model. This explains the order
+\(Z^tX E_n\) in the substitution and the absence of a
+projection cost.
+
+\proofstep{Gaussian contraction of the two representations.}
+Use the Gaussian polynomial norm
+\(\|p\|_{\rm F}^2=\sum_\alpha\alpha!|p_\alpha|^2\).
+For rectangular \(Z\), a matrix coefficient
+\(p(Z)=w^*W_\nu(Z)u\) has
+\begin{equation}\label{eq:selected-fock-matrix}
+ \|p\|_{\rm F}^2=H(\nu)\|w\|^2\|u\|^2,\qquad
+ H(\nu)=\prod_{(i,j)\in\nu} h_{ij}.
+\end{equation}
+To see this, realize both Schur modules in tensor powers of
+degree \(q=|\nu|\) by Schur--Weyl duality, using the same
+unit vector \(s\) in the Specht factor of shape \(\nu\).
+The operator \(Z^{\otimes q}\) acts as \(W_\nu(Z)\) on
+the Schur factor and as the identity on that Specht factor.
+Integrate a coefficient of \(Z^{\otimes q}\) times its
+conjugate against independent standard complex Gaussians.
+
+The moment formula pairs positions by all \(\pi\in S_q\),
+giving the factor
+\(\sum_\pi |\langle s,\pi s\rangle|^2=q!/\dim[\nu]\).
+Indeed each pairing identifies the entry in position \(k\)
+with the conjugate entry in position \(\pi(k)\), both in
+its row and in its column. Indeed the average of the conjugates of the projector onto \(s\)
+is scalar on the irreducible Specht module. Its trace is one, so
+\[
+ \frac{1}{q!}\sum_{\pi\in S_q}\pi P_s\pi^{-1}
+     =\frac{1}{\dim[\nu]}I .
+\]
+Pairing both sides with \(s\) gives the asserted sum. The hook-length
+formula gives \(q!/\dim[\nu]=H(\nu)\). This argument also
+shows that the Fock normalizer on the square model for the
+partition itself is \(H(\nu)\).
+\cite{frame-robinson-thrall}
+
+\proofstep{Bounding the homogeneous coefficient.}
+For each label rescale to \(z_\tau=r_\tau Z_\tau\) and put
+\(g(z)=G((z_\tau/r_\tau)_\tau)\). With \(D=nn'\), take
+the torus Fourier projection of \(g\) onto multidegree
+\((q_\tau)_\tau\), denoted by \(g_{\mathbf q}\). On the
+product of spheres of radius \(\sqrt{q_\tau}\) its
+absolute value is at most \(S e^{\sum_\tau q_\tau/2}\).
+Use radius zero for a zero degree. Gaussian polar
+integration of this homogeneous component yields
+\[
+ \|g_{\mathbf q}\|_{\rm F}^2
+ \le S^2\prod_{\tau:q_\tau>0}
+ \frac{e^{q_\tau}(q_\tau+D-1)!}
+      {q_\tau^{q_\tau}(D-1)!}.
+\]
+The radial moment at one label is
+\((q+D-1)!/(D-1)!\) because the squared radius of a standard
+complex Gaussian vector in \(D\) dimensions has gamma
+density with shape \(D\).
+
+For \(q=0\) the factor is one.
+For \(q>0\) the factor is at most \(e(q+1)^D\).
+Indeed monotonicity of the logarithm gives
+\[
+ \log q!\le\log q+\int_1^q\log t\,dt
+            =\log q+q\log q-q+1 ,
+\]
+so \(e^q q!/q^q\le eq\), and
+\(\binom{q+D-1}{D-1}\le(q+1)^{D-1}\) by recording the first
+\(D-1\) entries of a weak composition of \(q\).
+
+\proofstep{Tensor products over the labels.}
+For general vectors in the tensor product over labels the
+Fock identity \eqref{eq:selected-fock-matrix} tensorizes.
+For example, polarizing its proof gives the product of the
+input and output Hermitian pairings for two matrix
+coefficients. Applying Fock Cauchy--Schwarz to the bilinear
+contraction with \(g_{\mathbf q}\) therefore gives the
+squared bound \(\|g_{\mathbf q}\|_{\rm F}^2
+\prod_\tau H(\nu_\tau)\Omega_\tau^{-q_\tau}\).
+
+To bound \(H(\nu)\), its row product formula gives
+\[
+ H(\nu)=\frac{\prod_i(\nu_i+n-i)!}
+               {\prod_{i<j}(\nu_i-\nu_j+j-i)}
+ \le \prod_i \nu_i!\,(q+1)^{n(n-1)/2}.
+\]
+Here each denominator factor is at least \(j-i\), and
+\(\binom{\nu_i+n-i}{n-i}\le(q+1)^{n-i}\).
+Concavity of \(\log\) gives
+\(k!\le e\sqrt{k}\,\exp(\varphi(k))\) for \(k\ge1\)
+by the trapezoid lower bound on its integral from \(1\)
+to \(k\). Thus
+\(\nu_i!\le(2q+2)\exp(\varphi(\nu_i))\), including
+\(\nu_i=0\). Since \(n(n+1)/2\le nn'\), multiplying
+these bounds proves \eqref{eq:selected-padded-constant}.
+\end{proof}
+
+\paragraph{The finite datum and the two levels.}
+
+The real estimate applies termwise. To use it in the class sum we must specify the finite levels on the two sides of the same entry.
+
+Use the untwisted reference tuple, and fix a word \(u\)
+and the two classes of one matrix entry. At the coupled
+step also fix their common coset. Put \(g=g_0g_1\),
+\(c=T_u g\), and write \(c_B=cc'\). For the integral level exponents \(A,B\) the reference scalars are
+\[
+ c'=g^{fB-1},\qquad c_A=g^{fA},\qquad fB\ge1 .
+\]
+Let \(H\) be the semilocal integral Hom module on the two
+class lattices at the selected places. In the actual
+finite datum \(\Xi\), the factor at the assigned prime is the
+indicator of the integral Hom condition there. For a type place \(v\), write \(H_v\) for its integral Hom lattice, \(\mathfrak p_v\) for the maximal ideal and \(f_v\) for the local factor. The two lattice frames give 
+\[
+ \operatorname{supp} f_v\subseteq H_v,\qquad f_v(x+y)=f_v(x)\quad(y\in\mathfrak p_vH_v).
+\]
+
+In ordinary
+steps this follows by unfolding the extra columns with
+the level character. For a place of residue size \(Q\),
+the character has conductor one. If \(u_i,v_i\) are
+the ranks including the extra rows, and \(s_i\) counts
+extra source columns, every free coordinate in a
+contributing matrix has valuation at least \(-s_i\).
+At reading depth \(B\) it ranges over at most \(Q^{B+s_i}\)
+residue choices. For each free entry the contribution from counting residues and
+integrating their cells is bounded by
+\[
+ Q^{B+s_i}\operatorname{vol}(\varpi^B O)=Q^{B+s_i}Q^{-B}=Q^{s_i},
+\]
+where \(\varpi\) is a uniformizer and \(O\) has measure one.
+The character on the shifted diagonal has argument integral after
+multiplication by \(Q\). Hence its value has absolute value one at
+every embedding. Multiplying the coordinate estimates and the inverse volume of
+the output unipotent gives
+\[
+ (Q^{B+s_i}Q^{-B})^{u_i v_i}\,Q^{v_i^2}
+     =Q^{s_i u_i v_i+v_i^2}\le Q^{2m^2N_m^2}.
+\]
+
+Here \(u_i,v_i\le N_m\), \(s_i+1\le m\), and the last factor
+on the left is the subgroup index in the padded integral matrix space. In the first coupled entry the
+prescribed integral column is inserted into the moved
+matrix test. In the last entry the top matrix test is
+multiplied by the normalized finite Fourier test on
+the last row. Both have residue invariance and bound
+one, the latter by the triangle inequality in the
+normalized residue average. In both cases the coset
+is integral in its decorated frame. The residue sizes
+at the type places multiply to \(g^f\). Therefore \(\Xi\)
+vanishes outside \(H\), is constant on classes modulo
+\(cH\), and, for an absolute \(C\), obeys the uniform bound
+\[
+      |\rho(\Xi(x))|\le\beta,\qquad \beta=g^{C f m^2 N_m^2}.
+\]
+\label{cor:selected-kernel-jets-1}
+
+\paragraph{The coefficient field of the two jets.}
+
+A coupled entry involves two jets at once. Their Galois conjugates can be averaged together only after both jets have been placed in one number field.
+
+\begin{lemma}[One field for the two jets in the coupled entry]\label{lem:coupled-jets-field}
+At the selected ranks and reference modulus \(M_0=c_Ac_B\),
+the chosen coefficient field contains the jets at every permitted
+class pair and indicator at each step, including both steps of a
+coupled entry. Writing \(K\) for the chosen field and \(a,b\) for any two coupled jet entries, the field of definition of both steps already satisfies
+\[
+ a,b\in K,\qquad ab\in K.
+\]
+Their products and class contractions therefore precede the choice of archimedean embedding.
+\end{lemma}
+
+\begin{proof}
+For the selected ranks \(a,b\), bad-place set \(S_b\), and
+positive modulus \(M_0=c_Ac_B\), consider the normalized
+indicator indexed by self-dual lattices \(L,L'\),
+\(c\mid M_0\), and \(x\in M_0^{-1}H_{S_b}(L,L')\).
+Here \(H_{S_b}\) is the semilocal Hom lattice in which
+the lift's indicator is defined. For fixed \(L,L',c\),
+the indicator depends on \(x\) modulo \(cH_{S_b}\).
+The quotient \(M_0^{-1}H_{S_b}/cH_{S_b}\) is finite.
+
+For \(H=H_{S_b}(L,L')\), multiplication by \(M_0\) gives
+\[
+ M_0^{-1}H/cH\xrightarrow{\ \sim\ }H/(cM_0 H),\qquad
+     x+cH\longmapsto M_0 x+cM_0 H.
+\]
+The local quotient vanishes where \(cM_0\) is a unit.
+Use one representative of each of the finitely many
+self-dual lattice classes at both ranks. For each pair
+and each divisor of \(M_0\), take the normalized Taylor
+coefficients of the resulting finite list of indicators
+through the total degree of the stage. These coefficients
+are algebraic by the CM Taylor comparison on the even-rank
+standard lattices and their translates. The hypotheses
+are the fixed nonzero period, the compatible ideal character,
+and split bad places where the period ideal is a unit.
+These hold for the principal curve ideal and the selected
+reference sequence.
+
+\proofstep{Changes of representatives.}
+Let \(g,h\) identify the source and target lattice representatives with the actual lattices. Composition with these identifications acts on Hom variables by
+\[
+ x\longmapsto h\circ x\circ g^{-1}.
+\] This gives a bijection of the finite semilocal
+quotients, since it identifies both \(M_0^{-1}H_{S_b}\)
+and \(cH_{S_b}\). Equivariance substitutes the resulting
+linear change \(L\) in the labelled Taylor variables.
+For a homogeneous term of total degree \(d\), write the
+normalized polynomial at the representative as
+\(\sum_{|\beta|=d} a_\beta Z^\beta\).
+
+For a coefficient with index \(\alpha\) the transported
+reading is
+\[
+      d_\alpha\sum_{|\beta|=d}a_\beta[Z^\alpha](LZ)^\beta .
+\]
+Here \(d_\alpha\) is the product of the differential rescaling
+in degree \(\alpha\) with the algebraic character ratio.
+The latter is a product of determinants to integral powers.
+The entries of \(L\) and those determinants use the labelled
+images of the auxiliary field. The differential rescalings
+use powers of the prescribed generators. Let \(F\) contain the representative coefficients, the entries
+of \(L\), the determinant factors and the differential generators.
+The multinomial theorem gives
+\[
+ [Z^\alpha](LZ)^\beta\in \mathbb Z[L_{ij}]\subset F
+ \quad\Longrightarrow\quad
+ d_\alpha\sum_{|\beta|=d}a_\beta[Z^\alpha](LZ)^\beta\in F.
+\] In particular, the coefficients of multidegree
+\((|\nu_\tau|)_\tau\), of total degree \(\sum_\tau|\nu_\tau|\),
+belong to \(F\).
+
+\proofstep{One finite set for both steps.}
+The coefficient-field choice in the selected sequence family
+uses this finite generation before the arithmetic row
+and column are realized. At fixed predata there are
+finitely many words and stages, and finitely many
+bad places from the conductors of the character family
+and the selected levels. Include the finite generators
+for all the permitted subsets of these places.
+
+For the
+canonical twisted choice, if \(Q\) is the product of the
+row prime norms, its two half moduli are
+\(Q^{m+1}\) and \(T_uQ^{m+1}\). Thus the modulus of the stage list is precisely the product
+\[
+ Q^{m+1}(T_uQ^{m+1})=T_u Q^{2m+2}.
+\] The family permits
+requiring any such finite collection of algebraic
+constants in the embedded coefficient field. Its
+construction imposes this requirement jointly with the
+column conditions. Thus the chosen field contains the
+jets for the actual pair and indicator of each step.
+In the coupled entry both consecutive kernels have
+their own stage data in this same list. Their products
+and the finite class contractions are therefore evaluated
+in this field before taking any embedding.
+\label{cor:selected-kernel-jets-2}
+\end{proof}
+
+\begin{proposition}[Coefficient mass in the torsion presentation]\label{prop:torsion-jet-mass}
+At a reference level \(c\) of the selected kernel, use the
+torsion presentation of the normalized entry and its finite-data
+bound \(\beta\). If \(a_\nu\) are its torsion-presentation coefficients, then for each embedding \(\sigma\)
+\[
+ \sum_\nu|\sigma(a_\nu)|\le\beta\,c^{2[E:\Q]nn'}.
+\]
+ This holds also
+for a vanishing entry.
+\end{proposition}
+
+\begin{proof}
+In that field the entry is a jet sum over
+\((c_A^{-1}H)/(c_B H)\).
+Let \(F_\ell(x)\) be the normalized theta function
+attached to the indicator of \(x+\ell H\), using
+the class-pair vacuum. For the reference levels, the
+odd integer \(c_Ac_B\) is supported on the specified
+split half places, where the period ideal is trivial.
+To compare the readings in \eqref{eq:unserved-reader}, write
+\(A,B\) for the half lattices at \(cc'\), and \(A_1,B_1\)
+for those at \(c\). The complementary exponents give
+\[
+ A\cap B_1\subseteq\Lambda,\qquad
+ B_1=(A\cap B_1)+(B\cap B_1),\qquad
+ \Lambda\cap A\subseteq A_1 .
+\]
+
+In the middle equality the expanding half of each conjugate pair
+supplies the local lattice. Put \(D_f=\Lambda\cap A\cap B\)
+and \(D_c=\Lambda\cap A_1\cap B_1\). The complementary exponents
+also give \(A\cap B\subseteq B_1\), hence \(D_f\subseteq D_c\).
+The inclusion \(\Lambda\cap A\subseteq\Lambda\cap A_1\) induces the finite map
+\[
+ (\Lambda\cap A)/D_f\longrightarrow (\Lambda\cap A_1)/D_c,
+ \qquad t+D_f\longmapsto t+D_c .
+\]
+This map is onto. Passing from \(A_1\) to \(A\) imposes stronger
+divisibility only where \(B_1\) expands; there the quotient allows
+zero as representative. At the other primes keep the prescribed
+residue. The Chinese remainder theorem gives one lift with all
+these local residues.
+
+\begin{construction}
+\[
+ \begin{array}{ccc}
+ H/(cc'H)&\longrightarrow&H/cH\\
+ x+y&\longmapsto&x \pmod{cH}\\[2pt]
+ \{F_{cc'}(x+y):y\in cH/(cc'H)\}&\xrightarrow{\ \mathrm{sum}\ }&F_c(x)
+ \end{array}
+\]
+\caption{Coarsening the Fourier readings in \eqref{eq:selected-kernel-regroup}. The lower arrow sums the fine readings in a single fibre of the upper quotient map.}\label{fig:fine-coarse-fourier}
+\end{construction}
+
+\proofstep{Regrouping the finite Fourier series.}
+First read the indicator of \(B_1\) in the fine Fourier sum
+with no outer translation. The indicator restricts the input
+sum to the subgroup \((A\cap B_1)/(A\cap B)\).
+For \(y\in B\) its alternating character \(\chi_y\) is already
+trivial on \(B\cap B_1\). The sum decomposition of \(B_1\) above
+and the self-duality of this lattice therefore give, successively,
+\[
+ \chi_y|_{A\cap B_1}=1
+ \quad\Longleftrightarrow\quad \chi_y|_{B_1}=1
+ \quad\Longleftrightarrow\quad y\in B_1 .
+\] Orthogonality now leaves exactly the
+coarse output representatives in \(B_1/(B_1\cap\Lambda)\).
+The two finite groups in the surjection have orders \(h_f,h_c\),
+the respective Fourier denominators in \eqref{eq:unserved-reader};
+each fibre therefore has size \(h_f/h_c\).
+Restrict \(\chi_y\) to
+\(B_0=(A\cap B_1)/(A\cap B)\). Then
+orthogonality gives
+\[
+ \frac{1}{|B_0|}\sum_{t\in B_0}\chi_y(t)=\mathbf1_{\{y\in B_1\}} .
+\]
+
+At a surviving frequency, counting the fibres of the preceding
+surjection gives the coarse normalization \((h_f/h_c)/h_f=1/h_c\).
+The semicharacter times the Weyl
+translate of the vacuum depends only on the output class,
+and the period and volume factors are common.
+
+Expanding the fine reading by its input cosets is thus the
+coarse reading at the origin. For a rational lift \(s\) of
+the centre, reindex the fine input classes by translation
+by \(s\) and act on both sides by \(\alpha(-s)U_{-s}\).
+The Weyl composition law and the semicharacter law on \(A\)
+give the translated fine indicators with
+their same normalization. In semilocal coordinates this is
+the partition of the coset modulo \(cH\), which proves
+\[
+ F_c(x)=\sum_{y\in cH/(cc'H)}F_{cc'}(x+y).
+\]
+Using the support and constancy of \(\Xi\) gives the
+identity of entire sums
+\begin{equation}\label{eq:selected-kernel-regroup}
+ \sum_{x\in c_A^{-1}H/(cc'H)}\Xi(x) F_{cc'}(x)
+        =\sum_{x\in H/cH}\Xi(x) F_c(x).
+\end{equation}
+
+In particular the larger denominator bound in the
+coefficient field and the refinement factor do not
+enter the archimedean count. The projective local
+Hom modules have rank \(nn'\) over the local integer
+rings, so
+\(\#(H/cH)\le c^{[E:\Q]nn'}\). Writing \(q_w\) for the residue size, the count is the partial
+product in the norm of \((c)\):
+\[
+ \prod_{w\ {\rm selected}}q_w^{nn' v_w(c)}
+   \le\prod_{w\mid c}q_w^{nn' v_w(c)}
+   = |N_{E/\Q}(c)|^{nn'} .
+\] The missing factors, when present,
+are positive integral powers in the full norm of \(c\).
+
+\proofstep{Bounding the number and sizes of the coefficients.}
+At level \(c\), write \(s\) for the rational lift of \(x\)
+in the half lattice and use \(S_A,S_B\) as in the
+finite Fourier reading. The expansion of \(F_c(x)\)
+uses translates at \(y-s\), \(y\in S_B\). With \(v\) the
+volume in the indicator transform, the two factors
+\(v^{-1/2}\) cancel the \(v\) in its Fourier measure.
+The phase multiplying the average at \(y\) is
+\(\alpha(s)\alpha(y)e^{\pi i E_H(s,y)}\), since the
+indicator translation is \(U_{-s}\). Write \(B_{\rm lat}\)
+for the contracting half lattice. The average is
+\[
+ \frac1{|S_A|}\sum_{t\in S_A}{\bf1}_{B_{\rm lat}}(t)
+                                e^{2\pi i E_H(t,y)}.
+\]
+All its phases, including the prefactor at \(y\),
+are roots of unity by rationality of \(E_H\) and the
+quadratic function defining \(\alpha\) on the Hom space.
+Thus each coefficient is algebraic and of absolute
+value at most one at every embedding.
+
+Multiplication
+by \(c\) sends the period lattice into the contracting
+half lattice, so \(|S_B|\le c^{[E:\Q]nn'}\). The rational
+lifts \(y-s\) give torsion points on the period torus.
+Together with \eqref{eq:selected-kernel-regroup} this
+bounds the sum of conjugate coefficient moduli in the
+torsion presentation by
+\begin{equation}\label{eq:selected-kernel-coeff-l1}
+             \beta\,c^{2[E:\Q]nn'} .
+\end{equation}
+The ideal character used to define the moved vacuum
+has been divided out in this presentation. The
+remaining ratio of frame determinant characters has
+modulus one at each embedding for the reference level.
+Indeed all frame changes here are at the type primes,
+where their uniformizer factors cancel against the tied
+normalized local character. The surviving residue
+characters have finite image. A zero entry satisfies the
+bound directly.
+\label{cor:selected-kernel-jets-3}
+\end{proof}
+
+\paragraph{The Gaussian bound after conjugation.}
+Fix an inducing embedding \(\rho\) of the defining field.
+The normalized theta vacuum in the two class lattices
+is the moved vector of Section~\ref{subsec:theta-normalization}.
+Here the two ranks are even, the period lattice is self-dual,
+and the chosen nonzero two-torsion point survives multiplication by both
+\((1+\sqrt{-d})/2\) and \((1-\sqrt{-d})/2\). The
+coefficientwise conjugation of the one-variable normalized
+theta and its torsion translates was described in
+Section~\ref{subsec:selected-period-means}. It applies both
+to the finite sum transporting the vacuum and to each
+further rational translate in the indicator expansion.
+Equivalently, the torsion transport acts on theta operators
+with their Weil pairing.
+
+If the phase changes by a root of unity \(\zeta\), the pointwise absolute bound is preserved, since
+\[
+ |\zeta a|=|\zeta|\,|a|=|a|.
+\]
+The induced CM type permutes the labels under embeddings
+fixing the quadratic field. For an embedding exchanging
+its two embeddings, also apply complex conjugation to the
+coordinates. This gives entire conjugate functions in the
+same labelled Euclidean metric, with the conjugate period
+area \(A_\rho\), and preserves the squared average of the
+vacuum. If the normalized sum is \(\sum_a c_aV_a\), its distinct
+translate characters are orthogonal, also after conjugation. Thus
+\[
+ \left\|\sum_a\zeta_a c_aV_a\right\|^2
+   =\sum_a |c_a|^2\,\|V_a\|^2\qquad(|\zeta_a|=1).
+\] In particular the conjugate norm
+squared equals \(N_\rho^{D_j}\) for
+\(D_j=f nn'\), as computed in
+Section~\ref{subsec:selected-period-means}.
+\label{cor:selected-kernel-jets-4}
+
+\begin{lemma}[Gaussian prefactor at a conjugate embedding]\label{lem:conjugate-jet-prefactor}
+For the selected even ranks and a theta vacuum with self-dual
+period lattice, assume its marked two-torsion point has nonzero
+images under both \((1+\sqrt{-d})/2\) and \((1-\sqrt{-d})/2\).
+The single-kernel Gaussian bound at an inducing embedding \(\rho\)
+has a prefactor \(S\) satisfying
+\[
+ S^2\le N_\rho^{D_j}(8+16D_jr_E)^{D_j} e^{2(C+4)U_u}.
+\]
+The bound applies to either kernel at the coupled step.
+\end{lemma}
+
+\begin{proof}
+Here is the pointwise bound with the covolume normalization.
+Let \(r_E\) be the root discriminant. Write the period
+lattice as the embedded module
+\(\delta\,\mathfrak c I\operatorname{Hom}(L,L')\),
+where \(\mathfrak c\) is the integral curve ideal of the
+quadratic field, \(\delta\) is the period scale, and
+\(I\bar I=\mathfrak D_{E/K}^{-1}\).
+For a nonzero \(x\in\mathfrak c I\operatorname{Hom}(L,L')\)
+the relative matrix trace \(v=\operatorname{tr}(x^*x)\)
+is totally positive in the real subfield. Local frames
+of the two self-dual modules show that
+\(x^*x L\subset \mathfrak c\bar{\mathfrak c}I\bar I L\),
+so this trace lies in
+\(\mathfrak c\bar{\mathfrak c}I\bar I\).
+
+Taking absolute ideal norms and using arithmetic-geometric
+mean over the \(f\) real embeddings gives
+\[
+ \sum_\tau \tau(v)
+    \ge f\,\mathrm N_{E/\Q}
+                 (\mathfrak c\bar{\mathfrak c}I\bar I)^{1/(2f)}
+    = f\,\mathrm N_{K/\Q}(\mathfrak c)\,\sqrt d/r_E .
+\]
+The area of the curve lattice is
+\(|\delta|^2\mathrm N(\mathfrak c)\sqrt d/2\).
+This gives minimum squared length at least
+\(2f A_\rho/r_E\) also for the conjugate period lattice.
+Its covolume is \(A_\rho^{D_j}\), by self-duality for
+the imaginary part of the Hermitian form
+\(H_\rho(z,z)=\|z\|^2/A_\rho\).
+
+\proofstep{The submean estimate on the period torus.}
+Let \(V\) be this conjugate theta vector or a Heisenberg
+translate of it. Its weighted squared absolute value
+\(|V(z)|^2 e^{-\pi H_\rho(z,z)}\) is periodic.
+Translation by \(U_w\) translates this density and preserves
+its mean. The ball of radius
+\(R=(A_\rho/(2r_E+1))^{1/2}\) embeds in the period torus. Indeed for the shortest nonzero
+period length \(\lambda_1\),
+\[
+ (2R)^2=\frac{4A_\rho}{2r_E+1}
+    <\frac{2A_\rho}{r_E}\le\lambda_1^2 .
+\]
+Two points of the ball therefore cannot differ by a nonzero period.
+
+Apply the submean inequality
+at zero to \(U_z V\) on that ball, then insert the Gaussian
+weight on the ball. Since its volume is
+\(\pi^{D_j}R^{2D_j}/D_j!\), the squared bound at \(z\)
+is
+\[
+ \frac{D_j!}{\pi^{D_j}}(2r_E+1)^{D_j}
+    e^{\pi/(2r_E+1)}
+    N_\rho^{D_j}\,e^{\pi\|z\|^2/A_\rho}
+ \le 3(2D_jr_E+1)^{D_j}
+    N_\rho^{D_j}\,e^{\pi\|z\|^2/A_\rho}.
+\]
+The last inequality uses \(D_j\ge1\) and \(r_E\ge1\).
+This bound covers all classes and all the translates
+in \eqref{eq:selected-kernel-coeff-l1}.
+
+\proofstep{Summing the torsion translates.}
+Apply the triangle inequality to their conjugate entire
+sum. It satisfies the Gaussian hypothesis above with
+\[
+ S=\beta\,c^{2[E:\Q]nn'}\sqrt{3(2D_jr_E+1)^{D_j}}\,
+                                  N_\rho^{D_j/2},
+ \qquad r_\tau=\sqrt{\pi/A_\rho}.
+\]
+The Taylor differential multiplier in label \(\tau\)
+is the conjugate of the generator of the coordinate axis
+\(d_\tau\). The normalized metric is consequently
+\(\Omega_\tau=A_\rho/(\pi|\rho(d_\tau)|^2)\),
+so \(|r_\tau\rho(d_\tau)|^2=\Omega_\tau^{-1}\).
+The formal jet in the coefficient field agrees with
+this conjugate analytic jet.
+
+Each relevant monomial has
+the prescribed total degree at each label, and comparison
+before applying \(\rho\) is by the multivariable Taylor
+coefficients, multiplied by their multi-index factorials
+and the labelled differential powers. The complex
+coefficient form is the Gaussian pairing normalized on
+the highest polynomial in each label as in
+Lemma~\ref{lem:padded-jet-estimate}. Thus the
+same operator bound holds on the embedded coefficient
+spaces. Finally \([E:\Q]=2f\) and
+\(D_j\le fm^2N_m^2\). Using \(3\le 8^{D_j}\) gives
+\[
+ S^2\le N_\rho^{D_j}(8+16D_jr_E)^{D_j}
+                       e^{2(C+4)U_u}.
+\]
+This is the single-entry prefactor used in the conjugate
+mean, including both entries of the last coupled step.
+\label{cor:selected-kernel-jets-5}
+\end{proof}

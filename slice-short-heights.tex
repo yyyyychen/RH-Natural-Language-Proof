@@ -1,0 +1,254 @@
+\paragraph{Small representatives of the three rational spans.}\label{par:shifted-small}
+Write \(L=x^\epsilon\), \(z=frL\), \(h=frn\), and \(d\) for the
+total degree of the harmonic polynomial at weight \(u\). Let \(A\)
+be the sum of all the flag entries of \(u\), so that \(d\le A\) and
+\(A+h+1\le |u|\). We use the selected size bounds
+\[
+ L\ge2,\qquad \log f,\ \log\operatorname{rd}(E),\
+            \log(1+A)\le2L,\qquad \log n\le L,\qquad r\le n .
+\]
+They hold at each of the three weights separately by coordinatewise
+domination by \(\kappa\). We give estimates independent of the
+lattice class and the embedding of \(K\).
+
+\begin{proposition}[Individual height bounds at the three weights]
+\label{prop:three-shifted-spanning-sets}
+Each of the three specified weights has a rational spanning set
+in its scaled theta lattice in which each chosen form \(g\) satisfies
+\[
+ H(s_uM_0^{frn}g)\le G_c|u|.
+\]
+Here \(H\) uses the normalization of the proof. The size bound is independent of the
+source lattice class and the coefficient embedding and is retained by
+any subset chosen as a basis.
+\end{proposition}
+
+\begin{proof}
+On a unimodular source lattice \(\Lambda\) of rank \(n\), choose
+\(2fn\) rationally independent vectors whose norm at every embedding
+is at most \(\rho=2f^{3/2}n^2\operatorname{rd}(E)\).
+Indeed for \(v\ne0\) in its dual for the trace of the Hermitian
+pairing, \(\langle v,\Lambda\rangle\subseteq\mathfrak D_E^{-1}\).
+Unimodularity then implies \(\mathfrak D_E v\subseteq\Lambda\).
+Hence \(\langle v,v\rangle\in\mathfrak D_E^{-2}\), using invariance
+of the different under conjugation. Its positive conjugates have
+product at least \(|\operatorname{disc}E|^{-2}\). Their sum is
+at least \(2f/\operatorname{rd}(E)^2\).
+
+For the \(2f\) positive conjugates \(a_\sigma\), the arithmetic--geometric mean bound gives
+\[
+  \sum_\sigma a_\sigma\ge 2f\Big(\prod_\sigma a_\sigma\Big)^{1/(2f)}\ge \frac{2f}{\operatorname{rd}(E)^2}.
+\]
+ Euclidean transference in
+dimension \(2fn\) bounds the last successive minimum of the
+original lattice by \(2fn\,\operatorname{rd}(E)/\sqrt{2f}\)
+in the trace norm, which suffices for the displayed \(\rho\).
+The source lattices are full and finitely generated since the
+admissible-level conditions sandwich them between two scalar
+multiples of the standard lattice.
+\cite{banaszczyk}\label{cor:slice-short-heights-1}
+
+\proofstep{The bounded harmonic grid.}
+Use these vectors for the two sets of row letters in the harmonic
+polynomial of the short rule. Here is a finite interpolation argument
+which controls their size even for very large row weights. Write
+\(a+b=r\) for the two block sizes. Start with three lists of lengths
+\(a,a,b\) of vectors \(e_i,e'_i,g_j\). Let 
+\[
+  B_{li}=\langle
+e'_l,e_i\rangle,
+\]
+ with the pairing linear in the first variable.
+
+In the second block use the letters
+\[
+ f_j=(\det B)g_j-\sum_{i,l}\langle g_j,e_i\rangle
+                         (\operatorname{adj}B)_{il}e'_l .
+\]
+They are integral and \(\langle f_j,e_i\rangle=0\) identically,
+including for singular \(B\). Use the products of leading minors
+with the row-gap exponents, on \(e\) and the conjugates of \(f\).
+They satisfy the flag weight and are harmonic because each mixed
+contraction pairs orthogonal letters. In the opposite convention
+conjugate both the lattice and its letters before making the
+construction. This gives the integral polynomial in the symmetric
+algebra of the original lattice.
+
+\proofstep{Spanning after extension to the splitting field.}
+For spanning, over a splitting field the independent embeddings
+and their conjugates are the separate factors of
+
+\[
+  E\otimes_{\Q}\overline{\Q}.
+\]
+ The simultaneous orbit of a highest
+minor product spans its highest-weight harmonic space under column
+changes: on each factor it generates the irreducible trace-free
+Schur representation with the two prescribed partitions. The
+condition \(a+b\le n\) permits the two opposite blocks of an
+invertible column frame and its dual. Such orthogonal pairs on the
+open orbit are obtained in the displayed parametrization by choosing
+the primed list dual to the first block and setting the last list
+equal to the desired perpendicular vectors. This prescription can
+be made in the split factors because all the signed embeddings
+are distinct.
+
+Express the three lists in the rational basis of
+\(2fn\) short vectors. The map from coefficients to the minor
+product is polynomial of degree at most 
+\[
+  D=(2r+1)d:
+\]
+the adjugate expression has degree at most \(2a+1\). Any linear
+functional annihilating its values at coordinates in
+\(\{0,\ldots,D\}\) annihilates the polynomial, by successive
+univariate interpolation. The grid therefore spans the same
+space in characteristic zero. Degree zero uses the constant
+polynomial when present, and the zero space uses the empty set.
+
+With \(d>0\), each grid vector has length at most
+
+\[
+  R=2fnD\rho
+\]
+ at every embedding. Cauchy--Schwarz and determinant
+expansion bound the length of every projected letter by
+\((a+1)!R^{2a+1}\). Each linear form on \(n\) coordinates has
+coefficient sum at most \(\sqrt n\) times its Euclidean norm.
+The determinant expansion in a leading minor of size \(i\) costs
+at most \(i!\le r^i\). Submultiplicativity thus gives, at every
+embedding,
+\[
+ \|P\|_1\le\{r\sqrt n\,(r+1)!\,R^{2r+1}\}^{d},
+ \qquad \log\|P\|_1\le140rLd .
+\]
+Indeed \(R\le e^{17L}\), \((r+1)!\le e^{4rL}\), and
+\(r\sqrt n\le e^{2L}\) under the size bounds above. The rule is
+linear in \(P\) for fixed lattice, marking and translates by the
+covariant derivative expression on each chart. Replacing its
+polynomial by this grid family preserves the rational span.
+\label{cor:slice-short-heights-2}
+
+\proofstep{The passage from coefficient height to Petersson norm.}
+Here are details of the passage from coefficient size to the
+supremum at an embedding. For a nonzero section choose an
+orthonormal frame at more than half the supremum of its invariant
+norm before the Lie algebra normalization. At that frame the first
+minimum \(\lambda\) of the period lattice satisfies
+\(\log(1/\lambda^2)\le80L\).
+In the rank-one period argument of the integral lower norm, take
+spread bound \(w\), transvection period \(M\), reference-lattice
+clearing integer \(N_A\), and polarization factor \(k_0\le2\).
+The period bound is
+\[
+ \lambda^2\ \ge\ k_0 e_0/N_A^2,\qquad
+ e_0=\min\{1,\pi/[M(fw+2)k_0\log 2]\}.
+\]
+
+In fact \(N_A v\) belongs to the reference lattice and if every
+majorant of that vector were below \(e_0\), the negative imaginary
+shift by \(1/(2k_0e_0)\) and Schwarz's lemma at the vanishing cusp
+would contradict the half-supremum choice. In the definite case a
+nonzero isotropic vector is already excluded. The rank-one data of
+the run give \[
+ \log M\le30L,\ \log(fw+2)\le5L,\ \log N_A\le4L,\qquad \log(1/k_0)\le3L.
+\] Thus \(-\log e_0\le36L\), which gives
+the asserted bound. Conjugate embeddings use the conjugate
+uniformization with the same norm.
+\label{cor:slice-short-heights-3}
+
+In normalized Gaussian coordinates the tensor period lattice has
+minimum at least \(\lambda/\rho\). A nonzero tensor has nonzero
+contraction with one of the \(2fn\) short vectors, and that contraction
+is a period of length at most \(\rho\) times the tensor norm. Its
+torus is principally polarized and has covolume one in these
+coordinates. For a theta function of mean squared norm one in
+dimension \(h\), the polydisc of radius
+\[
+ b_0=\min\{1/\sqrt{\pi h},\lambda/(4\rho\sqrt h)\}
+\]
+in every complex coordinate injects into the torus. Translate the
+function by the unitary Heisenberg operator to put its evaluation
+at zero. The submean bound for its squared modulus uses the
+polydisc volume \((\pi b_0^2)^h\). The Gaussian density changes
+on that polydisc by at most \(e\).
+
+Taking square roots in the submean estimate, the invariant supremum of the normalized function \(h_0\) satisfies
+\[
+  \|h_0\|_{\sup}\le\left(\frac{e}{(\pi b_0^2)^h}\right)^{1/2}=e^{1/2}(\sqrt\pi\,b_0)^{-h}.
+\]
+The logarithm of the last factor is at most \(55hL\), by the
+bounds on \(\lambda,\rho,f,r,n\). For a derivative of multi-index
+\(\alpha\) of degree \(d\), Cauchy's formula in the active variables
+with radii \(\sqrt{\alpha_i/\pi}\) costs at most
+\((\pi e d)^{d/2}\) times that supremum, since
+\(\alpha_i!\le\alpha_i^{\alpha_i}\). A homogeneous polynomial costs
+its coefficient sum times this factor. Changing from normalized
+letters to the original letters multiplies this by \(t^{d/2}\),
+where \(t=2\xi_R\) is the polarization scale. The Lie norm of the
+run contributes \((\pi t)^{-d/2}\).
+The factors involving the polarization scale \(t\) cancel, leaving
+\[
+  t^{d/2}(\pi t)^{-d/2}=\pi^{-d/2}.
+\]
+
+\proofstep{The unit-mean normalization.}
+For clarity, the unit mean normalization has no class-index cost in
+the short reading. Write \(J=[\Lambda:\Lambda\cap\mathcal O_E^n]^r\)
+with the index taken on the side specified by the tensor translate
+count. Equivalently it is the number of cosets in the projected
+vacuum sum before averaging. Distinct cosets have orthogonal
+translate characters on a common finite cover, so their sum has
+squared mean \(J\) times that of the tensor power of the initial
+vacuum. Projection divides the sum by \(J\). After removal of the
+initial vacuum metric its norm consequently has the extra factor
+\(1/\sqrt J\). In the rule the torsion count divided by its initial
+level index equals \(J\), whereas the arithmetic normalizing
+factor \(\beta_\Lambda\) has \(|\sigma\beta_\Lambda|^2=J\) and
+occurs inversely. The resulting factor is
+
+\[
+  J/(\sqrt J\sqrt J)=1.
+\]
+ The residual finite-character scalar
+has modulus one. The finite mean of translates can be bounded
+term by term, since all its coefficients have modulus at most
+\(p_{\rm type}^{\,h}\), with \(\log p_{\rm type}\le L\).
+These are the two normalizations in the short rule on the
+marked level.
+\label{cor:slice-short-heights-4}
+
+Including the factor two from evaluation near the supremum, the
+preceding estimates give each unscaled short representative the
+bound
+\[
+ \log\|g\|_{\sup,\sigma}
+ \le 140rLA+10LA+200hL\le400z|u|.
+\]
+In particular no count of the potentially large interpolation
+grid occurs in this bound. Finite dimension selects a finite spanning
+set \(\operatorname{Sh}(u)\) of the separate short representatives.
+
+\proofstep{Clearing the product lattice.}
+To put these forms in the lattice used for products, let
+\(M_0=g_0g_1\), and let \(s_u\) be the selected nonzero weight
+scalar, namely \(s_F,s_0,s_\kappa\) at the respective weights.
+The short rule contributes \(M_0^{frn}g\) to the unscaled
+theta lattice used here. Thus the actual integral columns
+are \(s_uM_0^{frn}g\). Their rational span is unchanged.
+
+The common scale bounds \(\log M_0\le\lambda_*\) and
+\(\log|\sigma s_u|\le2(\lambda_*+2\log p)|u|\), where \(p\)
+is the run prime, give the mean log bound
+\[
+ H(s_uM_0^{frn}g)
+ \le [400z+2(\lambda_*+2\log p)+\lambda_*]\,|u|
+ \le G_c |u|.
+\]
+For the last inequality the growth allowance contains \(1009z\)
+and \(2fr(\lambda_*+2\log p)\), as well as the nonnegative
+coefficient-field and lattice terms. Here \(fr\ge 12\).
+Every subset selected by independence at a later stage inherits
+the same individual bound.
+\label{cor:slice-short-heights-5}
+\end{proof}

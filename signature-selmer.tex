@@ -1,0 +1,213 @@
+\subsubsection*{The Selmer group on a signature lattice}
+\label{subsec:signature-selmer}
+
+With ray coordinates available, the remaining inputs to the square presentation concern the Selmer functor. We verify them on the lattice for one good signature, retaining its fixed twist and its local conditions.
+
+\begin{established}[Signature coefficients and local conditions]\label{hyp:signature-module-local}
+Let \(T\) denote the rank-\(r\) signature lattice including its
+prescribed scalar twist, \(O_0\) its coefficient DVR, and \(V\)
+its fraction-field representation. Write \(k\) for the residue
+field of the coordinate group ring \(\Lambda=O_0[(\mathbb Z/\ell^M)^{2R_*}]\) and \(\kappa\) for
+the inverse universal character. Put
+\[
+ T(B)=(T\otimes_{O_0}B)\otimes\kappa
+\]
+for an
+\(\mathfrak m\)-power torsion module \(B\). Let
+\(\Sigma\) consist of the places above \(\ell\), the specified
+type and distinguished places away from \(\ell\), and the
+selected pairs \(Q\). Define \(G_\Sigma=\operatorname{Gal}(E_\Sigma/E)\), where \(E_\Sigma\) is the maximal extension unramified outside \(\Sigma\). The global signature classes unramified away from \(\Sigma\) are exactly the classes on \(G_\Sigma\). At the finite non-\(\ell\) places in \(\Sigma\) the conditions are relaxed, so the remaining local tests are at \(v\mid\ell\).
+\end{established}
+\begin{proof}
+The underlying representation is unramified off its type places, the distinguished places and the places above \(\ell\), by Proposition~\ref{prop:signed-theta-data}. The universal character is unramified outside the chosen pairs and the prescribed ray places. Thus inertia outside \(\Sigma\) acts trivially on \(T(B)\). A cocycle representing an unramified class restricts to zero on each such inertia group because every coboundary there is zero. It vanishes on their conjugates and hence by continuity on the closed normal subgroup they generate. It therefore factors through \(G_\Sigma\); inflation gives the inverse, including for discrete torsion \(B\).
+\end{proof}
+
+\begin{lemma}[Variation in the signature coefficient module]\label{lem:signature-left-exact}
+For \(T(B)\) and \(S(B)\) in Lemma~\ref{hyp:signature-module-local},
+the finite local condition at \(v\mid\ell\) lifts under
+surjections of \(\mathfrak m\)-power torsion coefficient
+modules \(B\) and is reflected under injections. Every short exact coefficient sequence \(0\to B_1\to B_2\to B_3\to0\) induces an exact sequence
+\[
+ 0\longrightarrow S(B_1)\longrightarrow S(B_2)\longrightarrow S(B_3).
+\] Each of its classes comes from a
+finitely generated coefficient submodule.
+\end{lemma}
+
+\begin{proof}
+\proofstep{Describe the finite local condition as a span of integral cocycles.}
+For \(v\mid\ell\) we have \(\kappa|_{G_v}=1\). Let
+\(Z_v\) be the module of \(T\)-valued continuous cocycles on
+\(G_v\) whose rational classes belong to \(H^1_f(E_v,V)\).
+The local condition \(L_v(B)\) is the span in cohomology of
+\[
+ g\mapsto z(g)b,
+\]
+for \(z\in Z_v\) and \(b\in B\),
+using a basis of \(T\) to read this formula coordinatewise.
+All coboundaries lie in the corresponding span of cocycles:
+use the integral coboundaries of the coordinate basis vectors
+of \(T\). Thus a class belongs to \(L_v(B)\) precisely when
+any representing cocycle is such a finite sum. Maps of
+coefficient modules preserve this description. For a coefficient surjection \(q:B_1\twoheadrightarrow B\), take any lift \(b_1\) of \(b\). Termwise lifting follows from
+\[
+ q(z(g)b_1)=z(g)q(b_1)=z(g)b.
+\]
+
+
+\proofstep{Use saturation to read each local relation before enlarging coefficients.}
+The finite local condition was described after passing to the rational representation. Saturation identifies the integral relations that must be preserved on extending the coefficient module.
+
+Injections of coefficient modules reflect this condition.
+Here the integral assertion is at the level of functions on
+\(G_v\times\{1,\ldots,r\}\). The module \(Z_v\) is saturated
+in all integral functions: if \(az\in Z_v\) with \(a\ne0\),
+division in the rational vector space preserves the cocycle
+law, continuity and the finite local condition. Suppose a
+\(B'\)-valued function has image \(\sum_{j=1}^n z_j b_j\)
+under an inclusion \(B'\hookrightarrow B\). Discard zero
+terms.
+
+Take an entry \(a=z_1(i_0)\) of least valuation and put
+\[
+ u=z_1/a\in Z_v,
+\]
+with \(u(i_0)=1\). For the original function \(f\) with values in \(B'\), let
+\(\iota:B'\hookrightarrow B\) be the coefficient inclusion.
+With \(f(i_0)\in B'\), the subtraction gives
+\[
+ \iota\!\left(f-u f(i_0)\right)
+  =\sum_{j>1}\bigl(z_j-u z_j(i_0)\bigr)b_j .
+\]
+Each new cocycle belongs to \(Z_v\), and the representation
+has one fewer term. Induction puts \(f-u f(i_0)\) in the
+required span over \(B'\), which also contains \(u f(i_0)\). This argument works when
+\(B'\subset B\) has torsion quotient.
+
+\proofstep{Kill global invariants by reduction to the coefficient socle.}
+The absolute residual complement is irreducible of dimension
+\(r>1\), by the retained type tests. On a simple coefficient
+module the residual scalar twist preserves irreducibility and
+\(\kappa\) reduces to one. Hence
+\[
+ H^0(E,T(k))=0,
+\]
+also for
+the Tate dual. For arbitrary \(B\), a nonzero invariant vector
+would generate a cyclic module killed by a power of
+\(\mathfrak m\). Its last nonzero maximal-ideal power would
+give a nonzero invariant in the socle, where the coefficient
+space is a sum of copies of \(k\). This proves the same
+vanishing on all torsion modules.
+
+The long exact sequence of
+global cohomology now gives injectivity on \(H^1\) for
+inclusions and exactness at the middle for a short exact
+coefficient sequence. The local reflection just proved gives
+left exactness of \(S\). A continuous cocycle on a compact
+group with discrete target has finite image, so its coordinates
+generate a finitely generated torsion submodule. Local reflection
+puts the class into the Selmer group of that submodule. This
+proves the finite-generation assertion used in constructing
+the representing module.
+\end{proof}
+
+\paragraph{Cardinalities of the finite local conditions.}
+The good-signature isotypic condition gives \(H^0(E_v,V)=0\)
+at \(v\mid\ell\), and \(V\) is de Rham there. Set
+\(d_v=\dim H^1_f(E_v,V)\), the dimension over the coefficient
+field. The Bloch--Kato dimension formula gives
+\[
+ d_v=\sum_{\tau\mid v}\dim\big(D_{\rm dR}(V)_\tau/
+                                      \operatorname{Fil}^0\big).
+\]
+Here the coefficients split the embeddings, and in the formula
+each summand is the dimension of the indicated quotient.
+The signature filtration at conjugate embeddings has complementary
+quotient dimensions, with sum \(r\). As \([E:\mathbb Q]=2f\),
+let \(h_\tau\) be the quotient dimension at \(\tau\). Summation gives
+\[
+ \sum_{v\mid\ell}d_v
+   =\sum_{\{\tau,\bar\tau\}}(h_\tau+h_{\bar\tau})
+   =\frac{[E:\mathbb Q]}2\,r=fr .
+\]
+\cite{bloch-kato}
+
+The fraction-field space of finite cocycles has dimension
+\(r+d_v\), since coboundaries have dimension \(r\). Its
+intersection \(Z_v\) with integral functions is a full free
+lattice. Compactness bounds each of a finite basis of rational
+cocycles and hence clears its denominators. For finite generation,
+choose finitely many evaluations whose coordinate functionals
+span the dual of the rational space, giving an injection of
+the integral functions into a finite free module. Reduction of
+\(Z_v\) modulo its uniformizer injects into the functions
+over the residue field by saturation. Consequently the span
+of these cocycles with coefficients in \(k\) has cardinality
+\(|k|^{r+d_v}\). Dividing by the residual coboundaries, of
+size \(|k|^r/|H^0(E_v,T(k))|\), gives
+\begin{equation}\label{eq:signature-local-size}
+  \prod_{v\mid\ell}|L_v(k)|
+   =|k|^{fr}\prod_{v\mid\ell}|H^0(E_v,T(k))|.
+\end{equation}
+This calculation allows the reduction to have local invariants.
+
+\paragraph{Counting the obstruction to lifting a Selmer class.}
+Put \(D=T(k)\), \(m=|D|^f\), and evaluate cohomology on
+\(G_\Sigma\). Define
+\[
+ \begin{aligned}
+ A&=\ker\Big(H^2(E_\Sigma/E,D)\longrightarrow
+                   \prod_{v\mid\ell} H^2(E_v,D)\Big),\\
+ C&=\operatorname{coker}\Big(H^1(E_\Sigma/E,D)
+       \longrightarrow\prod_{v\mid\ell} H^1(E_v,D)/L_v(k)\Big).
+ \end{aligned}
+\]
+These groups are finite by local and global finiteness for a
+finite module, a finite ramification set containing all primes
+over \(\ell\), and a totally imaginary field. The last
+localization in degree two is surjective by Poitou--Tate:
+the cokernel of localization at all places of \(\Sigma\)
+is dual to the invariants of the Tate dual, which vanish.
+Projection to the places over \(\ell\) preserves surjectivity.
+The global Euler characteristic gives \(|H^1|=m|H^2|\)
+because there are \(f\) complex places and \(H^0=0\).
+The product of the local Euler characteristics at \(\ell\)
+gives
+\[
+ \prod_{v\mid\ell}|H^1(E_v,D)|=
+ m^2\prod_{v\mid\ell}|H^0(E_v,D)|\,|H^2(E_v,D)| ,
+\]
+where \(\sum_v[E_v:\mathbb Q_\ell]=2f\). Taking kernels
+and cokernels of the two displayed localization maps and using
+\eqref{eq:signature-local-size} yields \cite{milne-duality}
+\begin{equation}\label{eq:sig-obstruction}
+                        |S(k)|=|A|\,|C|.
+\end{equation}
+
+For
+\[
+ 0\to k\to B\to B''\to0,
+\]
+the connecting map on
+\(S(B'')\) has image in \(A\), since every allowed local class
+lifts to an allowed local class. On its kernel choose a global
+lift to \(H^1(G_\Sigma,T(B))\). Subtract an allowed local
+lift at each \(v\mid\ell\): the difference comes from
+\(H^1(E_v,D)\). Its tuple of preimages, modulo the local
+conditions and global image, records the remaining obstruction.
+For the cardinality bound one can allow choices: for each
+class in the kernel choose one global lift, local lifts and
+preimages.
+
+If two of the resulting classes in \(C\) agree,
+subtract a global \(D\)-class and use the local \(L_v(k)\)
+to put the difference of the global lifts in \(S(B)\).
+There are at most \(|C|\) cosets in the kernel modulo the Selmer image and at most \(|A|\) fibres. With \eqref{eq:sig-obstruction} this gives
+\[
+ \#\operatorname{coker}\bigl(S(B)\to S(B'')\bigr)\le |A|\,|C|\le |S(k)|.
+\]
+Together with left exactness and passage
+to finitely generated submodules this supplies the hypotheses
+of the square-presentation proof for every selected coordinate
+group ring. Its size may depend on the signature and the
+auxiliary level.

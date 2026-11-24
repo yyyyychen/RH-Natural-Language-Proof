@@ -1,0 +1,477 @@
+\begin{paramdefinition}[Frames, coarsening and sizes for the plane lattice]\label{hyp:coarsened-plane-frames}\label{par:plane-rank}
+\hypertarget{source-plane-rank}{}
+In the plane construction let \(r\) be the plane dimension and \(K\) its codimension in dimension \(k=r+K\). Write \(a\) for the lower bound on the boundary degrees \(b_x\).
+Let \(J\) be the number of frames, \(N\) the number of tops in a
+cycle, and \(N_s\) an upper bound for the number of letters in a
+segment. In the count use the lifted frame endpoints \(s_j,z_j\)
+with \(s_j\) the first position of frame \(j\). Segment \(j\)
+starts at \(s_{j-1}\) and ends at \(z_j\). Write \(Q\) for the
+original bound on \(p^{z_j-x}\). The coarsening uses
+\[
+ A=\frac{a}{8Yk^2N_s},\qquad L=\lfloor\log_p A\rfloor,\qquad
+ P_{j,x}=p^{L+s_{j-1}-x},\qquad H_j=p^{s_j-s_{j-1}}.
+\]
+Indeed the extra power at segment \(j\) is the largest power of
+\(p\) at most \(\lfloor A/p^{z_j-s_{j-1}}\rfloor\).
+
+Since \(A\ge Q\),
+this equals \(p^{L-(z_j-s_{j-1})}\). In particular \(P_{j,x}\le A\),
+\(P_{j+1,x}=P_{j,x}H_j\) on frame \(j\), and \(\prod_j H_j=q\).
+Use the separation bound \(p^{L_1-1}\ge128 k^2N_sY^2\) and the
+size bound
+\begin{equation}\label{eq:plane-count-size}
+  a\ge32pYk^2N_sQ^2(E_0+m_*+1).
+\end{equation}
+These are the separation and size inequalities for the plane model.
+The argument below uses them with \(p\ge13\), \(r\ge2\),
+\(Y\ge1\), \(N_s+r\le K\), \(a\le b_x\le 2a\), and the lifted
+frame assumptions of Section~\ref{sec:plane-lifts}.
+Put \(D_k(b)=\binom{b+k-1}{k-1}\).
+\end{paramdefinition}
+For the selected cycle, the separation and size comparisons in the proof of Proposition~\ref{prop:host-small-prime-test} use \(Y=x^{26}\), \(p^{L_1-1}\ge256k^2NY^2\) and \(\log Q=o(\log(a/b'))\). They hold uniformly over the admissible frames.
+
+
+\begin{lemma}[Frame and digit degrees in the coarsened lattice]\label{lem:plane-digit-frame-lattice}
+For the coarsened lattice of Definition~\ref{hyp:coarsened-plane-frames},
+the late degrees satisfy
+\[
+ a'_x=b_x-E'_x-E_x>0.
+\]
+
+The digit and outgoing choices produce the same total degree
+\(a'_x\) in the true coordinate at each top, with incoming
+degree \(b_{j+1,x}\ge W_{j+1,x}\ge kN_s+1\).
+The corresponding segment word families are independent over
+the residue field in the fixed digit and degree choices.
+\end{lemma}
+
+\begin{proof}
+\proofstep{The coarse degrees at the later tops.}
+At each late top \(x\) of segment \(j\), meaning one after the
+incoming frame, form the ordinary plane determinant of the last
+\(r\) preceding even rows and give it the exponent
+\[
+ g_{j,x}=\left\lfloor\frac{b_u}{k^2Yp^{z_j-u}}\right\rfloor,
+ \qquad u=\text{the earliest of those rows}.
+\]
+Write \(\mathcal D\) for the product over all these determinants
+with their original radices \(p^{z_j-y}\).
+
+At a top \(y\) its
+true degree \(E_y\) is at most \(4N_s a/(k^2Y)\). A determinant
+contributes at most \(g_{j,x}p^{z_j-y}\le 2a/(k^2Y)\), since
+\(y\ge u\). Each top occurs in at most two segments. Use coarsened
+true degrees \(a'_x=b_x-E'_x-E_x\), where \(E'_x\le E_0\) is the
+prior cleaning budget. In particular
+\[
+ a'_x\ge a/2,
+\]
+since
+\(4N_s/k^2\le 1/4\) follows from \(N_s+2r\le k\),
+\(r\ge2\), and \(E_0\le a/32\).
+
+At each top there is a unique occurrence after the incoming
+frame. Choose a coordinate digit vector \(\ell_x\in[0,P_{j,x})^k\)
+at this occurrence, with total \(|\ell_x|\equiv a'_x\pmod{P_{j,x}}\).
+All digit choices have \(|\ell_x|<kP_{j,x}\le a'_x\). Write
+\[
+ n_x=(a'_x-|\ell_x|)/P_{j,x}.
+\]
+At a top strictly between frames
+the degree in the segment is \(n_x\).
+
+At an outgoing frame row
+of segment \(j\) choose a degree \(e_x\in[0,rH_j)\) with
+\(e_x\equiv n_x\pmod{H_j}\). Use degree \(b_{j+1,x}=(n_x-e_x)/H_j\)
+when the same top reappears in the incoming frame. In fact
+\[
+ b_{j+1,x}>\frac{a'_x}{P_{j+1,x}}-k-r,
+ \qquad
+ W_{j+1,x}=\left\lfloor\frac{a'_x}{P_{j+1,x}}\right\rfloor-k-r-1,
+ \qquad b_{j+1,x}\ge W_{j+1,x}.
+\]
+The strict inequality uses \(H_j\ge1\) and \(e_x<rH_j\). Our size
+bounds give \(a'_x/P_{j+1,x}\ge4Yk^2N_s\), so
+\[
+ W_{j+1,x}\ge m_0=kN_s+1
+\]
+
+for \(m_0=kN_s+1\). The digit and frame degrees thus add to exactly
+\(a'_x\) at every top, with nonnegative incoming padding.
+
+\paragraph{The segment words.}
+Fix the digits of the intervening tops in segment \(j\). The pre-outgoing path degree at \(x\) is
+\[
+ B_x=\begin{cases}n_x,&\text{intervening top},\\ W_{j,x}-m_0,&\text{incoming row}.\end{cases}
+\]
+Write \(S=\sum_x B_x\)
+for this sum before the outgoing frame. Consider paths \(\mu\) in
+\(k\) rows with these degrees. The last \(r\) steps are vector
+steps of variable size. Just after the \(i\)-th outgoing step
+require that the first \(i\) entries are all \(S\), with indices
+starting at one.
+
+Write \(\nu,\kappa\) for the restrictions to the
+first \(r\) and the last \(K\) entries. Each is a signed Pieri
+path with sizes determined by its weight changes. Each covector step creates at most one further negative entry. Thus
+\[
+ \#\{i:\mu_i<0\}\le N_s\le K-r,
+\]
+so the first \(r\) entries of the dominant weight \(\mu\) stay nonnegative. They stay at most \(S\) before the outgoing
+frame by the sum of previous vector degrees. They stay at most
+\(S\) afterward by the head condition and dominance. The
+complement has zero degrees in the incoming frame because the
+first \(r\) steps are vectors.
+
+Impose the admissible path inequalities. At every
+late top \(x\), \(\nu_r\) before the step is at least \(2B_u/3\)
+for the earliest \(u\) of the preceding \(r\) vectors. The
+complement increase at a vector and the plane decrease at a
+covector are at most
+\[
+ \frac{\mathcal L a}{pkP_{j,x}}+
+   \mathbf 1_{x\text{ even}}\frac{4a}{P_{j,u}},
+ \qquad \mathcal L=C_{\mathcal L} N_s^2\log a.
+\]
+Let \(\mathcal T_j\) be the set of such paths with a choice of
+standard terminal tableau for \(\kappa\). Its size depends only on
+the intervening degrees and the fixed data.
+
+For the plane word use
+the tableau of its terminal rectangle \((S,\ldots,S)\), which is
+unique. Let \(d_i\) be the full strip size at outgoing row \(i\).
+It is at most \(2S\). At a vector step from \(\mu\) to \(\mu'\),
+interlacing gives \(\sum_h(\mu'_h-\mu_h)\le\mu'_1-\mu_k\).
+Here \(\mu'_1=S\), and \(\mu_k\ge-S\) since the total of all
+covector degrees is at most \(S\).
+
+\proofstep{Counting the outgoing decorations.}
+For each member of \(\mathcal T_j\), choose outgoing decoration
+exponents \(v_{i,h}\ge0\) for the \(r\) plane coordinates of
+outgoing row \(i\), with
+\begin{equation}\label{eq:plane-outgoing-decoration}
+ v_{i,h}+2S<H_j,\qquad d_i+\sum_h v_{i,h}=e_i.
+\end{equation}
+Use the product of the plane and complement words, the outgoing
+monomial with these exponents, and the same incoming factor for
+all paths at the chosen degrees. The incoming factor is the
+plane determinant of the incoming frame raised to \(m_0\), times
+one coordinate of each incoming row to degree \(b_{j,x}-W_{j,x}\).
+The product is in the indicated lattice \(M_j\). The signed strip
+interlacing at the plane boundary supplies the two inequalities
+between plane and complement at each late cut. The incoming determinant power shifts every plane coordinate of the weight by \(m_0\).
+
+If the old minimum is \(\nu_r\), then
+\[
+ \min_i(\nu_i+m_0)=\nu_r+m_0.
+\]
+The other added vector factors can only increase this minimum.
+The path bound on \(\nu_r\) before the step gives the absolute
+lower cutoff independently. The normal degree of the product
+at a vector is the complement strip size and at a covector it
+is the plane strip size. The path inequalities give the normal
+cutoff. Finally the exponents in each outgoing plane coordinate
+are less than \(H_j\) by \eqref{eq:plane-outgoing-decoration} and
+the bound
+\[
+ d_i\le2S.
+\]
+
+
+\proofstep{Independence in fixed degrees.}
+These products are independent at each fixed set of degrees,
+also over the residue field. First omit their common nonzero
+incoming factor. In the \(i\)-th outgoing plane row specialize
+all but coordinate \(r+1-i\) to zero. For each column
+\(c\in[1,S]\) of the plane word, the height increases by zero
+or one at each outgoing step. A rise wedges the sole surviving
+coordinate there. Reading back from the final full exterior
+subset, remove each of the coordinates at its rise. This leaves
+precisely the terminal subset for the column at the pre-outgoing
+cut, the complement of its rise coordinates. The coefficient is
+\(1\) or \(-1\) by the wedge rule.
+
+If \(R_c\) is the set of outgoing rises in column \(c\),
+its pre-outgoing terminal subset is
+\[
+       [1,r]\setminus\{r+1-i:i\in R_c\}.
+\]
+Thus the specialization of the product word is, up to sign,
+\[
+ \prod_{i=1}^r x_{i,r+1-i}^{\,\#\{c:i\in R_c\}}
+\]
+times the
+truncated plane word with those terminal subsets and the whole
+complement word. The variables \(x_{i,r+1-i}\) are the surviving
+outgoing coordinates.
+The terminal subsets of the truncated plane word are standard.
+At every outgoing cut the height on the left is at least the
+height on the right.
+
+If their current heights are \(h_L\ge h_R\), the remaining rises to the common terminal height obey
+\[
+ r-h_L\le r-h_R.
+\]
+Let \(D_L,D_R\) be the sets of removed coordinates in two adjacent columns. The surviving coordinates run in reverse order, so for every initial interval \([1,b]\), 
+\[
+ |D_L\cap[1,b]|\le|D_R\cap[1,b]|.
+\]
+ The retained
+subsets therefore have weakly increasing entries across a row.
+The truncated plane path and its subsets recover all
+plane heights, since each missing coordinate specifies the time
+of one rise. The two paths and their tableaux are therefore
+recovered from the standard words in the variables other than
+the outgoing plane variables.
+
+To include the decorations in this argument, take the terms of
+least total degree in the discarded coordinates in a putative
+relation. For each tuple of exponents in those coordinates and
+in the surviving outgoing plane coordinates, the displayed
+specializations are independent by the standard word basis
+in the remaining variables. Once the word indices are known, let \(a_i\) be their fixed antidiagonal exponents. The observed exponents \(b_i\) then recover each decoration by
+\[
+ d_i=b_i-a_i.
+\]
+This proves
+independence and also explains why it holds with the same
+coefficient ring as the residue rank calculation.
+
+\end{proof}
+
+\input{plane-path-count}
+
+\paragraph{Sum over outgoing rows and digits.}
+The last gap before the first outgoing position exceeds \(L_1\).
+Thus each pre-outgoing \(x\) has
+\(P_{j,x}\ge p^L p^{L_1+1}/H_j\). The positions are distinct, and
+\(B_x\le 2a/P_{j,x}\). Summing the geometric series and using
+\(a/p^L<8pYk^2N_s\) gives
+\[
+ S\le \frac{4aH_j}{p^L p^{L_1+1}},\qquad
+ 4YS\le H_j .
+\]
+
+For each outgoing row of a fixed path, the congruence
+\(d_i+\sum_h v_{i,h}\equiv n_i\pmod{H_j}\) has exactly
+\(H_j^{r-1}\) solutions with \(0\le v_{i,h}<H_j\). Each coordinate
+is uniform among these solutions since \(r\ge2\). The union
+bound removes at most \(2rS H_j^{r-2}\) solutions on requiring
+\(v_{i,h}<H_j-2S\) for all \(h\). Each surviving solution has
+\(d_i+\sum_h v_{i,h}<rH_j\), and so supplies a permitted outgoing
+degree. The count per row is at least
+\(H_j^{r-1}(1-r/(2Y))\) when this factor is nonnegative.
+
+\begin{proposition}[Rank after summing the coarsened families]\label{prop:coarse-plane-rank}
+With the admissible frame degrees and path count
+\eqref{eq:plane-good-path-count}, the coarsened generators
+span a residue space \(\overline\Lambda\) with
+\[
+ \dim\overline\Lambda\ge q^{-rK}(1-Nr^2 k/Y)\prod_xD_k(b_x).
+\]
+
+\end{proposition}
+
+\begin{proof}
+\proofstep{Summation using the degree at the outgoing row.}
+For fixed digits the number of decorated words depends only on the outgoing degree
+of its own segment. The incoming padding changes with adjacent
+outgoing degrees, but the independence and membership just
+proved hold at every such degree. Hence the sum of products
+of word counts over the outgoing choices factors across segments.
+For the digit sum at a top between frames, dividing each of the
+\(k\) exponents of a monomial of degree \(a'_x\) by \(P_{j,x}\)
+gives the identity \(\sum_{\ell_x} D_k(n_x)=D_k(a'_x)\).
+
+At a frame top there are exactly \(P_{j,x}^{k-1}\) digit choices
+by the sum congruence. Its incoming path factor in the next
+segment is \(D_k(W_{j+1,x}-m_0)\), so its full contribution is
+at least
+\[
+ \frac{1-r/(2Y)}{H_j^K}\,
+ (P_{j,x}H_j)^{k-1}D_k(W_{j+1,x}-m_0).
+\]
+This is where the complement dimension \(K\) in the exponent
+arises. The product of the factors \(H_j^{-K}\) over all \(r\)
+rows in each frame is \(q^{-rK}\).
+
+For the other factors, \(E'_x+E_x\le5b_x/(kY)\).
+The binomial product formula and Bernoulli's inequality give
+\(D_k(a'_x)\ge(1-5/Y)D_k(b_x)\). For an incoming radix
+\(P'=P_{j,x}H_j\), put \(B'=W_{j+1,x}-m_0\). The floor and
+padding lose at most \(4kN_s\) in the coarse degree.
+
+Since
+\(a'_x/P'\ge 4Yk^2N_s\),
+\[
+ P'B'\ge a'_x-4kN_sP'\ge(1-1/(kY))a'_x,\qquad
+ (P')^{k-1}D_k(B')\ge(1-1/Y)D_k(a'_x).
+\]
+For the latter comparison use \(P'(B'+i)\ge(1-1/(kY))(a'_x+i)\)
+for each \(1\le i\le k-1\). If \(1-Nr^2k/Y\le0\), the
+claimed lower bound is automatic. Otherwise every loss factor
+is in \([0,1]\). Since \(a\ge32Y\), \(J\le N\), and \(rJ\le N\),
+the product of all loss factors is at least
+\[
+ 1-N(5+1+r/2+1/32)/Y\ge 1-Nr^2k/Y.
+\]
+
+The next bound counts independent residue symbols in the
+coarse radices. The following paragraph then checks that the
+same families are admitted in the original radices, as needed
+for Lemma~\ref{lem:lift-plane-symbol}.
+
+To see that the dimension counts add, recover the choices from
+the exponent at each top. For a coordinate \(h\) in a shared
+frame row, write its true exponent as
+\[
+ \ell_{x,h}+P_{j,x}\bigl(a_{x,h}+H_j b_{x,h}\bigr).
+\]
+The digit \(\ell_{x,h}\) is the remainder modulo \(P_{j,x}\).
+The outgoing exponent \(a_{x,h}\) is less than \(H_j\)
+by the coordinate condition, so division of the quotient by
+\(H_j\) recovers \(a_{x,h}\) and \(b_{x,h}\). In a complement
+coordinate \(b_{x,h}=0\). The sum of the outgoing exponents
+recovers \(e_x\). At unshared tops there is no second quotient.
+Hence multiplication induces an injective map on the monomial
+tuples, and distinct choices of digit and outgoing degree give
+disjoint monomial supports. By
+\eqref{eq:plane-good-path-count} and the count just proved,
+\begin{equation}\label{eq:plane-coarse-rank}
+ \dim \overline\Lambda\ \ge\ q^{-rK}(1-Nr^2k/Y)\prod_xD_k(b_x).
+\end{equation}
+
+\end{proof}
+
+\paragraph{Return to the original radices.}
+\label{par:plane-rank-transfer}
+
+The count so far used coarsened digit classes. Returning to the original radices determines the rank available for the actual symbols.
+
+\begin{proposition}[Rank of symbols at the original radices]\label{prop:plane-original-symbol-rank}
+In the setting of Proposition~\ref{prop:coarse-plane-rank},
+uncoarsening and multiplication by the reserved determinants
+give integral original symbols of degrees \(b_x-E'_x\)
+satisfying the required prefix tests. Their span contains a direct summand of rank \(r_{\rm orig}\) satisfying the bound in \eqref{eq:plane-coarse-rank},
+\[
+ r_{\rm orig}\ge q^{-rK}(1-Nr^2k/Y)\prod_x D_k(b_x).
+\]
+
+\end{proposition}
+
+\begin{proof}
+It suffices to return the products of the counted words to
+the original symbol module. Use \(P^0_{j,x}=p^{z_j-x}\),
+\(F_j=P_{j,x}/P^0_{j,x}=p^{R_j}\). Euclidean division in the unique late segment gives
+\[
+ \ell_{x,h}=\ell^0_{x,h}+P^0_{j,x}u_{j,x,h},\qquad
+ 0\le\ell^0_{x,h}<P^0_{j,x},\quad 0\le u_{j,x,h}<F_j .
+\]
+
+To
+uncoarsen a counted segment product, raise its plane and
+complement factors to \(F_j\). Multiply each factor by the
+corresponding coordinate monomial of exponents \(u_{j,x,h}\)
+in the late rows. Multiply the plane factor also by the
+ordinary determinants of that segment with powers \(g_{j,x}\).
+All coefficients are integers. Indeed, for an integral factor \(A\) with integer coefficients, Frobenius gives
+\[
+ \overline{A(X)^{F_j}}=\overline{A}(X^{F_j})
+\]
+in the residue field, with coordinatewise powers on the right. Applying the original radices in every
+segment and multiplying by the remaining digits \(\ell^0\)
+therefore gives \(\overline{\mathcal D}\) times the coarsened
+product. In the integral polynomial the total degrees are
+the coarsened true degrees plus the exact determinant degrees
+\(E_x\), hence equal to \(b_x-E'_x\).
+
+\proofstep{The inequalities for the restored products.}
+We check the original inequalities on these integral products.
+The plane and complement letter supports are unchanged, since
+the digits are placed only in late rows and the determinants
+use earlier plane vectors. There are at most \(kN_s\) coordinate digits in a prefix and each has size at most \(F_j-1\). Their combined adverse change in separation is therefore at most
+\[
+ \sum_{x,h}u_{j,x,h}\le kN_s(F_j-1).
+\]
+An odd plane coordinate can lower the plane
+minimum by at most its exponent, and an even complement
+coordinate can raise the complement maximum by at most its
+exponent.
+
+The other coordinate types do not decrease the
+separation. The determinant associated to a given cut lies
+wholly before that cut, so it contributes \(g_{j,x}\) to the
+minimum. All other determinants have nonnegative minimum
+since they contain only vectors. Adding the determinant gain to the worst digit loss gives, at this cut,
+\[
+ \text{separation}\ge F_jm_0-kN_s(F_j-1)+g_{j,x}>m_*+g_{j,x}.
+\]
+For the strict inequality use the separation margin in \(m_0\) and
+\(F_j>a/(8pYk^2N_sQ)>m_*\) from \eqref{eq:plane-count-size} and
+the definition of \(L\).
+
+\proofstep{The rank lower bound at a plane.}
+For the absolute plane lower bound put \(M=b_u/P_{j,u}\) at
+the earliest preceding vector \(u\). The count assumptions
+include \(k\ge C_kN_s^2\log a\) with \(C_k\ge1088\). In
+particular \(a'_u\ge9b_u/10\) by the bound on \(E_u+E'_u\).
+Since \(u\) is pre-outgoing, the degree \(B_u\) used by the
+count satisfies \(B_u\ge 9M/10-4kN_s\) for either an
+incoming or an intervening row. Also \(M\ge8Yk^2N_s\ge
+40kN_s\). The plane minimum before the cut in the uncoarsened
+word is at least
+\[
+ F_j(2B_u/3-kN_s)\ge F_j M/2=\frac{b_u}{2P^0_{j,u}}.
+\]
+
+For the normal cutoff at \(x\), the extra digit degree is at
+most \(kF_j\). The gap \(x-u>L_1\) and \(F_jP^0_{j,u}\le A\)
+give \(kF_j\le a/(p^{L_1}P^0_{j,x})\). The term at an even
+\(x\) from the coarsened normal bound is
+\[
+ 4a/P^0_{j,u}\le a/(p^{L_1}P^0_{j,x}).
+\]
+Thus the total
+above \(\mathcal L a/(pkP^0_{j,x})\) is bounded by
+\(a/(p^{L_1}P^0_{j,x})\) at an odd top and by twice that at
+an even top. These imply both of the original order bounds.
+
+The original symbols produced this way have the thresholds,
+normal cutoffs and degrees needed by the precision induction.
+After the original radix substitutions, the total normal
+degree at each top is bounded by
+\(\mathcal L a/(pk)+10a p^{-L_1}+kQ\). Indeed there is one
+late occurrence, the incoming contribution is tangential,
+and the final digit costs at most \(kQ\). The same upper bound
+holds on supports of sums, so the total over all tops is at
+most
+\[
+ N(\mathcal L a/(pk)+10a p^{-L_1}+kQ)
+\]
+on the whole
+retained lattice.
+
+The determinant product has nonzero reduction. For each of
+its factors the preceding \(r\) even positions are distinct
+modulo \(n'\). An interval of length \(n'\) starting immediately
+after the earliest of those positions contains all \(r\) even
+positions of any given frame modulo \(n'\), each once. If the
+last position were at least that far from the earliest, there
+would be at least \(r\) later preceding positions in the same
+segment. Therefore the determinant monomials remain distinct
+under the positive-power substitutions and have coefficients
+\(\pm1\).
+
+Since the residue polynomial ring is a domain, multiplication by the nonzero determinant product has zero kernel,
+\[
+ \overline{\mathcal D}\sum_i a_iW_i=0\quad\Longrightarrow\quad\sum_i a_iW_i=0.
+\]
+Hence the
+products counted in \eqref{eq:plane-coarse-rank} remain independent
+after multiplying by \(\overline{\mathcal D}\). Complete their
+independent reductions to a basis of the ambient fixed-degree
+residue space. Lifting the additional basis vectors to the
+integral monomial lattice gives a basis by a change of basis
+with unit determinant. This gives an integral direct summand
+of the indicated rank generated by original symbols.
+\end{proof}

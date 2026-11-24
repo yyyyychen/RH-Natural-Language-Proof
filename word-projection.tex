@@ -1,0 +1,455 @@
+\subsubsection{Finite projections for the evaluation at the prime assigned to the sequence}
+\label{subsec:word-projection}
+
+The measure description turns the required finite projections into support conditions. We compute them in the Hom lattice to retain the distinction between the distinguished and conjugate places. The complex argument includes the factor
+\(\delta\) from the uniformization. Write \(e=e^\natural\)
+for the normalized vector, \(\pi\bar\pi=p\), and
+\(u=\pi/\bar\pi\). The local row conditions are at the
+places dividing \(\pi\). For the moment measure, the
+split factor chosen by the coefficient embedding is the
+one where \(\rho\) has positive valuation, where
+\(\rho=\pi\) in the distinguished branch and
+\(\rho=\bar\pi\) in the conjugate branch. The word
+generator belongs to the common CM subfield for the
+selected embeddings, so all derivation positions use this
+same choice.
+
+\begin{proposition}[Moment evaluations and the finite vacuum vector]\label{prop:word-reader-vacuum}
+On the marked Hom model, the translates \textup{\eqref{eq:tag-m6}} use the
+same moment measure at each selected coefficient place, with the point evaluations \textup{\eqref{eq:tag-m7}} for any finite list of jets.
+For \(x\) in the prescribed support, the finite vacuum in \textup{\eqref{eq:tag-m8}} is
+\[
+ \Theta_x=\frac1n W_{-t}\sum_{z\in R}W_z e,\qquad n=[M\cap A:M\cap A\cap B],
+\]
+where \(R\) represents \(B/(M\cap B)\). The expression is independent of the
+choice of the allowed rational lift \(t\).
+\end{proposition}
+
+\begin{proof}
+\proofstep{Read the connected torsion on the chosen split factor.}
+
+A translate by
+\[
+                        y=N_0(\bar\rho/\rho)m,\qquad m\in M,
+\tag{M6}\label{eq:tag-m6}
+\]
+qualifies for the preceding primary calculation with
+\(n=1\): \(\bar\rho/\rho=\bar\rho^2/p\) and
+the minus component of \(\bar\rho^2\) is divisible by
+\(p^2\). This also applies to the changed companion
+\(M''\) below. The prime-to-\(p\) translate may be
+written with \(W\) in place of \(U\) at the cost of a
+root of unity. Its exponent is rational because prime-to-\(p\)
+multiples lie in the lattice and the Hermitian pairing
+there is integral over the CM order. Thus whenever
+a list of jets is taken after a family of translates
+\eqref{eq:tag-m6}, the moment calculation gives simultaneous
+approximations on \(M\) with point evaluations
+\[
+                      \lambda(\kappa(z,y))P_m(z),
+\tag{M7}\label{eq:tag-m7}
+\]
+where \(P_m(z)\) denotes the monomial of the adjoint
+entries with the units in \eqref{eq:tag-m5}. All jets are algebraic
+in these frames. The same coefficients approximate
+every index in the list, including when the list
+contains different \(y\)'s.
+
+\proofstep{Compute the two half lattices and their integral cocycles.}
+
+Set
+
+\[
+  S=S_G\cup\{P:P\mid\pi\},
+\]
+ where \(S_G\) is the set
+of away positions and is disjoint from its conjugate.
+Write \(H_S\) for the ordinary Hom conditions at \(S\)
+with no conditions elsewhere, and let \(c_0,g\) be the
+prime-to-\(p\) denominator and level factors. At every
+place of \(S\) or its conjugate the period coefficient
+ideal is a unit, so \(M\) there is the Hom lattice of
+the selected self-dual source and target. Away from these
+places the coefficient ideal stays in \(M\).
+The half lattice \(B\) is specified place by place by
+\[
+  B_P=\begin{cases}pg\,M_P&P\in S,\\ (pg)^{-1}M_P&P\in\bar S,\\ M_P&P\notin S\cup\bar S.\end{cases}
+\]
+The other half lattice \(A\) uses the reciprocal scalings for \(c_0pg\).
+Both are integral for the Weyl cocycle.
+
+In fact the
+product of the scaling ideals with their conjugates is
+the unit ideal, so the Hermitian integrality
+\(\beta(M,M)\subset O\) also holds on each of these
+lattices. For \(v,w\) in either half lattice, take \(a,b\in\mathbb Z\)
+with 
+\[
+  \beta(v,w)=a+b(1+\sqrt{-d})/2.
+\]
+ The rational cocycle in
+\(W_v W_w\) is then integral by the identity
+\[
+             \RePart\beta(v,w)+\tfrac12\operatorname{Im}H(v,w)=a+b.
+\]
+
+\proofstep{Lift the marked indicator in its actual support.}
+
+For \(x\in c_0^{-1}H_S\) contributing to the reader,
+the local marked indicator imposes
+\(xD_v\subset D'_v\) and \(\ell'_v x=\ell_v\)
+at all \(v\mid\pi\). Choose a rational lift \(t\in A\)
+with \(t-x\in pgH_S\). Such a lift exists by
+approximation in the cosets at \(S\), with the remaining
+integral conditions on \(A\). At \(P\mid\pi\) this lift is
+integral because \(x\) is integral and the congruence
+has modulus divisible by \(p\). At the opposite primes
+it is integral because \(A\) has the positive scaling.
+It follows that \(c_0gt\in M\) at every place. From the
+definition of \(B\), \(g uM\subset B\), \(g u^{-1}B\subset M\)
+and the localization of \(B\) at \(p\) is that of \(uM\).
+
+\proofstep{Evaluate the finite transform and check independence of the lift.}
+
+The moved theta indicator in the reader is
+\[
+             \Theta_x=\frac1n W_{-t}\sum_{z\in R}W_z e ,
+\qquad
+        n=[M\cap A:M\cap A\cap B],\quad
+        R\text{ represents }B/(M\cap B).
+\tag{M8}\label{eq:tag-m8}
+\]
+In the finite transform of the zero-coset indicator, among
+the representatives of \(M\cap A\) modulo \(B\) only the
+zero coset contributes. The pairing with \(z\in B\) is
+trivial on its representative, by integrality on \(B\).
+Thus the sum in the transform is one and the character
+average supplies \(1/n\).
+The finite transform contributes the square root of the
+Hom volume, which cancels the inverse square root in
+the theta evaluation.
+
+The Weyl translates
+are well defined modulo \(M\cap B\), since these
+translations fix \(e\) and the cocycle on \(B\) is
+integral. Two lifts have difference in \(B\) by their
+congruences and the reciprocal scalings off \(S\).
+This difference fixes the sum in \eqref{eq:tag-m8}, and its
+composition with the lift contributes no phase by
+integrality on \(A\). Thus \eqref{eq:tag-m8} uses the original
+indicator for any such lift. In particular
+\(n\mid[M:M\cap B]\).
+\label{cor:word-projection-1}
+
+\end{proof}
+
+\begin{proposition}[The two projected moment approximations]\label{prop:word-projection-moments}
+On the selected pair with the ordinary measure of
+Proposition~\ref{prop:theta-measure-word}, the two finite
+projections and the away reader give precisely the moment
+condition \eqref{eq:tag-w6} used in Proposition~\ref{prop:word-moment-criterion}.
+For each local component \(v\) at \(p=T\), the two supports are
+\[
+ \begin{aligned}
+ x^*(\ker\ell'_v)&\subset D_v
+   &&\text{at the distinguished place, with factor }p^{-F},\\
+ xD_v&\subset D'_v,\quad \ell'_v x|_{D_v}=\ell_v|_{D_v}
+   &&\text{at the conjugate place, without that factor}.
+ \end{aligned}
+\]
+The two
+denominator powers of \(p\) are uniform in the jet list
+and the precision, also after the away reader.
+\end{proposition}
+
+\begin{proof}
+Use Proposition~\ref{prop:word-reader-vacuum} on these lattices.
+Since \(B\) agrees with \(uM\) at \(p\), the
+\(p\)-primary part of \(B/(M\cap B)\) has representatives
+in \(N_1uM\) for every sufficiently divisible
+prime-to-\(p\) integer \(N_1\) with \(g\mid N_1\).
+The other part has representatives in \(pB\):
+multiplication by \(p\) kills the first part and is
+invertible on the second. These statements follow
+also by localizing the quotient at \(p\) and away from
+\(p\), using \(p u M\subset M\),
+\(pM\subset uM\) and \(gpB\subset M\).
+
+Take sets of representatives \(R_1,R_2\) in those
+two lattices. Then \(R=R_1+R_2\) in \eqref{eq:tag-m8}, and
+\[
+        |R_1|=[uM:M\cap uM]=[M:M\cap uM].
+\tag{M9}\label{eq:tag-m9}
+\]
+Both sides of the second equality are the orders of
+dual quotients of the self-dual lattices \(M,uM\)
+under the alternating pairing. Their common order
+has \(p\)-valuation at least \(v_p(n)\), by the
+divisibility after \eqref{eq:tag-m8} and \(B_p=(uM)_p\).
+
+\proofstep{Project at the conjugate coefficient place using prime-to-\(p\) translates.}
+For each \(z_2\in R_2\), \(z_2-t\) is a prime-to-\(p\)
+translate, since 
+\[
+  gpB\subset M
+\]
+ and \(c_0gt\in M\).
+Take \(N_1\) divisible also by the finitely many
+integers \(N_0\) for these translates and by the
+denominator of \(t\). All are prime to \(p\).
+Every \(z_1\in R_1\) then has the form \eqref{eq:tag-m6}
+for \(\rho=\bar\pi\), with \(m\in M\) for each
+of these measures. Commuting \(W_{-t}\) past
+\(W_{z_1}\) in \eqref{eq:tag-m8} gives the factor
+\(\kappa(-t,z_1)\). Combining it with \eqref{eq:tag-m7}
+gives \(\kappa(z-t,z_1)\) on the point sample \(z\).
+This combination uses multiplicativity of the character in its first variable,
+\[
+  \kappa(z,z_1)\kappa(-t,z_1)=\kappa(z-t,z_1).
+\]
+The additional composition of \(W_{-t}\) with
+\(W_{z_2}\) gives a root of unity depending on
+\(z_2,t\). The cocycle on \(B\) is integral.
+
+For a sample \(z\in M\) the characters of \(z_1\)
+descend to the \(p\)-quotient in \eqref{eq:tag-m9}. At \(p\),
+\(z-t\) is integral in \(M\), and away from \(p\)
+the multiplier \(N_1\) clears the denominator
+of \(t\). Thus the pairing with the denominator
+lattice of that quotient is integral. Let \((uM)_p^\#\) denote the alternating dual of the local
+period lattice. Orthogonality on the finite quotient in \eqref{eq:tag-m9}
+gives
+\[
+ \sum_{z_1\in R_1}\kappa(z-t,z_1)
+   = |R_1|\mathbf 1_{(uM)_p^\#}(z-t)
+   = |R_1|\mathbf 1_{(uM)_p}(z-t).
+\]
+The prime-to-\(p\) conditions hold by the choice of \(N_1\).
+At \(p\), \(N_1\) is a unit and \(u\bar u=1\) makes \(uM\)
+self-dual, giving the last equality.
+
+At each
+\(P\mid\pi\) this gives
+\(z-t\in pM_P\), and \(t-x\in pgH_S\) gives
+\(z-x\in pM_P\). The point sample therefore obeys
+the second line of \eqref{eq:tag-w6}. For each surviving sample, write \(c\) for its original coefficient and \(\zeta\) for the accompanying root of unity. Its new coefficient is
+\[
+  c'=\zeta\,\frac{|R_1|}{n}\,c.
+\]
+ Equation \eqref{eq:tag-m9} proves that this
+coefficient is integral. The simultaneous approximations may be taken as
+precise as needed for the finitely many scalars before
+summation.
+\label{cor:word-projection-2}
+
+\proofstep{Keep the row-kernel support when projecting at the distinguished coefficient place.}
+
+Replace the target with the self-dual companion
+\(N''\) whose local lattices at \(P\mid\pi\) are the
+target row kernels and whose opposite lattices are
+their duals. At every other place leave the target
+lattice fixed. These local conditions define a
+global rational lattice by intersection. In the
+changed Hom period lattice \(M''\), put
+\(I=M\cap M''\) and 
+\[
+  k_0=[M:I]=[M'':I].
+\]
+The local Hom descriptions give
+\[
+     \pi M\subset M'',\qquad \bar\pi M''\subset M,\qquad
+                         k_0\mid p^{fN_i}.
+\tag{M10}\label{eq:tag-m10}
+\]
+At a first place the changed target imposes one
+residue row equation per source coordinate. There
+are \(f\) such places, each of residue cardinality
+\(p\). At an opposite place \(M''\) enlarges \(M\).
+At other primes the lattices agree. The half different
+is a unit at these unramified split factors, so the
+index is computed on these Hom lattices directly.
+
+Let 
+\[
+  C=c_0g\bar\pi I
+\]
+ and let \(J\) represent
+\(C/(C\cap pgH_S)\). At the row places \(C\) sends the
+source into the row kernel. At the away places
+\(C\subset pgH_{S_G}\), because the extra \(p\) is
+a unit there and the factor \(g\) clears the level.
+Thus both the row indicator and the away reader
+are constant on translates by \(C\). Moreover
+\(C\subset M\cap A\).
+
+Localizing the condition
+\(c_0g\bar\pi m\in pgH_S\) for \(m\in I\) gives
+\(m\in\pi M\): at \(P\mid\pi\) it is precisely
+the factor of \(p\) in the congruence, and at
+\(S_G\) the condition has already been supplied
+by \(g\). The other localizations impose no reader
+condition and \(\pi\) is a unit there. Therefore
+\[
+                  |J|=[I:\pi M],\qquad
+       v_p(n)\le v_p([M:\pi M])
+                  =v_p(k_0)+v_p(|J|).
+\tag{M11}\label{eq:tag-m11}
+\]
+For the inequality use \(g\pi M\subset B\), which
+follows from \(guM\subset B\) by multiplying by
+\(\bar\pi\). The factor \(g\) has zero \(p\)-valuation.
+
+We may group the total jet sum using \(J\) before
+applying a bound. In \(\sum_{j\in J}\Theta_{x+j}\)
+the lift in \eqref{eq:tag-m8} is \(t+j\), since it is in \(A\)
+and gives the required congruence. Write
+
+\[
+  W_{-(t+j)}=W_{-t}W_{-j}
+\]
+ by integrality on \(A\).
+As \(W_{-j}e=e\) for \(j\in C\), commuting it across
+\(W_z\) multiplies each term by the pairing character.
+It descends to the quotient defining \(J\), since
+\(C\cap pgH_S\subset B\) and the pairing is integral
+on \(B\). Precisely the \(z\in B\) that pair
+integrally with \(C\) survive, with multiplier \(|J|\).
+
+The surviving quotient of \(B\) modulo \(M\) is
+the direct sum of the images of \(B\cap M''\) and
+\(pB\). To verify it at \(p\), write the paired
+local lattices over \(\pi,\bar\pi\) with subscripts
+\(+,-\) for this calculation. Then
+\[
+ \begin{array}{c|cc}
+      &+&-\\ \hline
+ B   &pM_+&p^{-1}M_-\\
+ I   &M''_+&M_-\\
+ C   &M''_+&pM_-
+ \end{array}
+\]
+where multiplication by a unit has no effect. The
+annihilator of \(C\) in \(B\) is
+\(pM_+\oplus M''_-\), by duality between the
+two factors. This is \(B\cap M''\) at \(p\).
+Away from \(p\) the pairing with \(C\) is
+automatically integral, since \(gB\) is in \(M\)
+there and \(C\) has the factor \(c_0g\).
+The whole quotient away from \(p\) is supplied
+by \(pB\). The first summand has image of
+order \(k_0\) and represents \(M''/I\).
+\label{cor:word-projection-3}
+
+The normalized section for \(M''\) is the image
+of the normalized section for \(M\) under the
+same theta-line transfer with the determinant
+character. Thus, for \(R_1\) representing the
+image of \(B\cap M''\),
+\[
+                       \sum_{z\in R_1} W_z e
+                         =\sqrt{k_0}\,\kappa_0 e'',
+\tag{M12}\label{eq:tag-m12}
+\]
+where \(\kappa_0\) is the relative determinant
+character to the source half-rank. At each of
+the \(f\) places the determinant changes by a
+single row index and the opposite determinant
+by its inverse. The relative determinant ideal
+is generated by \(\pi/\bar\pi\) with the inverse
+orientation in the character. Applying the
+reflex character gives the product of
+\(\tau(\bar\pi/\pi)\) over the \(f\) positions.
+
+Since \(\pi\bar\pi=p\) and each factor before
+inversion is integral at \(p\), the norm of a
+ratio is at most \(p\). Thus
+\(\abs{\lambda(\kappa_0)}_p^2\le p^{fN_i}\).
+In \eqref{eq:tag-m12} the section and determinant character
+are those of the same basic theta move as in
+Section~\ref{subsec:word-measure}.
+\label{cor:word-projection-4}
+
+For each representative \(z_2\in pB\) the
+remaining term is the translate \(W_{z_2-t}e''\)
+times a root of unity and
+\[
+                             \frac{|J|\sqrt{k_0}}{n}\kappa_0 .
+\tag{M13}\label{eq:tag-m13}
+\]
+The composition of the surviving two sums
+gives \eqref{eq:tag-m12} before applying \(W_{-t}\),
+since the cocycle is integral on \(B\).
+Write \(v=z_2-t\). Some \(q\) prime to \(p\)
+has \(qv\in M\), so \(q\pi v\in M''\).
+Choose coefficients over the CM integer ring
+with \(a q\bar\pi+b\pi=1\). Then
+\(v_0=b\pi v\) is a prime-to-\(p\) translate
+in \(M''\) and the remaining displacement is
+\[
+ v-v_0=(1-b\pi)v=aq\bar\pi v=(\bar\pi/\pi)m,
+ \qquad m=aq\pi v\in M'' .
+\]
+
+For the measure of
+\(v_0\), split \(m=N_0 m_1+p m_2\) by
+B\'ezout since \(N_0\) is prime to \(p\).
+The term \(\bar\pi^2m_2\) belongs to \(M''\).
+Therefore \(W_v e''\) is a root of unity times
+the primary translate \eqref{eq:tag-m6} of \(W_{v_0}e''\),
+by the Weyl law and the fixed lattice of \(e''\).
+This allows the moment approximation on \(M''\)
+with integral measure coefficients. Each such point
+sample has its adjoint carrying the target row
+kernel into the source at every \(P\mid\pi\),
+by duality with the opposite target lattice.
+This is the first line of \eqref{eq:tag-w6}.
+By \eqref{eq:tag-m10} and \eqref{eq:tag-m11}, the valuation of \eqref{eq:tag-m13} is at least
+\[
+                   -\frac{v_p(k_0)}2-\frac{fN_i}{2}
+                   \ \ge -fN_i .
+\]
+The estimate uses the count of the refined reader
+cosets before bounding the coefficient. This
+recovers the stated power \(p^{-fN_i}\).
+
+\proofstep{Assemble the same finite list at the required precision after applying the away reader.}
+
+The finite jet sum is over
+\(c_0^{-1}H_S/(pgH_S)\). Writing \(E_1,E_2\) for the two prescribed row conditions and \(a_{\rm away}(x)\) for the away value, the coefficient at the coset of \(x\) is
+\[
+  \mathbf1_{E_1}(x)\,\mathbf1_{E_2}(x)\,a_{\rm away}(x).
+\]
+ In the distinguished
+case group the sum by translates of \(C\) before
+using \eqref{eq:tag-m13}. In the conjugate case take the
+individual cosets. A nonzero coefficient
+forces the two row conditions on the original
+coset representative \(x\). The away value is
+integral at the chosen place and is constant
+on the cosets just grouped. The product with
+the inverse of the determinant scalar of the
+unmodified source and target still has norm at
+most one.
+
+For rational jet indices this product
+of the scalar with each analytic jet is the
+specified coefficient-field jet, under the
+chosen coefficient embedding. Since the list
+of indices and the number of cosets are finite,
+we can choose the approximations before the
+finite assembly with precision high enough
+for all its scalars.
+For instance, given required precisions \(n_i\) at finitely many indices in the same local norm, one may take
+\[
+  n=\max_i n_i,\qquad p^{-n}\le p^{-n_i}\quad\text{for every }i .
+\]
+ The ultrametric inequality
+preserves integrality at repeated samples.
+Consequently the asserted simultaneous
+approximations in \eqref{eq:tag-w6} hold for the actual
+away reader and coefficient embeddings. The
+support and both powers of \(p\) are uniform
+in the derivative degrees, precision, reader
+and auxiliary coset levels.
+\end{proof}
+

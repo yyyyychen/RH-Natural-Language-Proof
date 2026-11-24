@@ -1,0 +1,152 @@
+\paragraph{Counting the short and boundary sections.}
+The orders on the slice control its finite contribution. Its archimedean rank estimate now requires a count of the sections that remain short and of those lost to the boundary. On a connected unfolded complex component put
+\(S_i=L_i\) for the \(s\) cutting sections and write
+\(w_0=L_0\) for the nonvanishing reference at their
+common zeros. The flat-section hypotheses are that these
+zeros consist, modulo the uniformizing group, of
+\(\delta_k\) distinct framed points, that
+\(u_i=S_i/w_0\) give analytic local coordinates there, and
+that the chosen short weight provides interpolation of the
+values at those points. The interpolation with the required
+vanishing of low Fourier coefficients will be used also for
+the lower bound on the selected subspace. Both interpolation conditions use the same point count \(\delta=\sum_k\delta_k\) as the heights.
+
+\begin{proposition}[Ranks of the full and short evaluation maps on the slice]
+\label{prop:slice-rank-shares}
+Assume the simultaneous cut consists on component \(k\) of
+\(\delta_k\) distinct framed points at which \(w_0\) is nonzero
+and the \(S_i/w_0\) are local coordinates. Assume interpolation
+of values at all these points in the short weight with the
+prescribed low modes zero. Put \(\delta=\sum_k\delta_k\). For the full rank \(R_j\), the rank deficit \(r_q\) of the rational good space, and the rank \(r_z\) of evaluation on the boundary,
+\[
+ R_j\le\delta\binom{T+2s+6}{s},\qquad \max(r_q,r_z)\le\frac{22s^2}{T}R_j\quad(s\ge2,\ T\ge11s^2).
+\]
+ The definite final lift
+uses the full space as its good space.
+\end{proposition}
+
+\begin{proof}
+\proofstep{An upper bound for the entire rank.}
+To bound the full rank from above put \(e=T+s+6\).
+The jets of order \(\le e\) at the \(\delta_k\) points have
+dimension \(\delta_k\binom{e+s}{s}\). A nonzero section
+\(v\) in the kernel vanishes to order \(e+1\) there.
+We give the maximum argument which excludes it. In the
+indefinite chart, use \(b_2,b_1,\xi\) of respective weights
+\((s+4)w_L-w_F,\ 2w_L-w_d,\ n w_d\), where
+\(n=i g_0^*/2>0\) in this analytic normalization.
+All three are nonzero on the component. Put \(S=\sum_i
+\|S_i\|^2\), the sum over the \(s\) cutting sections,
+and consider
+\[
+ \Phi=\frac{\|v\|^2\|b_2\|^2\|b_1\|^2
+                     \|\xi\|^{2/n}}{S^{e+1/2}} .
+\]
+
+The bounded section and the auxiliary factors satisfy the
+chart estimates for the first minimum. Near a cut point \(S\gg|u|^2\) and \(v=O(|u|^{e+1})\);
+the other numerator factors are bounded there. Thus
+\[
+ \Phi\ll \frac{|u|^{2(e+1)}}{|u|^{2(e+1/2)}}=|u|.
+\] Away from neighborhoods of the cut
+orbits the chart estimate gives \(S\gg e^{-2cP}\), and the
+numerator is \(O(e^{-4P/g_0^*})\). The hypotheses \(s+6+1/2<T\) and \(Tcg_0^*\le1\) give the strictly positive net decay exponent
+\[
+  \frac{4}{g_0^*}-2c(e+1/2)>0.
+\]
+ As the first minimum
+goes to zero, \(P\) tends to infinity. Thus every positive
+superlevel has compact representatives, away from the cut
+points.
+
+On a definite component compactness itself supplies
+this step with the bounded auxiliary factors in its chart.
+A common nonvanishing locus for the numerator and at
+least one cutting section exists by the identity theorem
+on the connected domain. In the case \(\delta_k=0\) the
+denominator has no common zero and the same argument applies.
+
+A positive maximum contradicts the Levi form. In a local
+holomorphic frame the weight of the numerator terms totals
+\(e w_L\), leaving a positive half of the strictly positive
+light-weight potential in \(\log\Phi\). The log absolute
+values of its individual holomorphic factors are
+pluriharmonic at a positive maximum.
+For a holomorphic factor \(h\) nonzero at the maximum this vanishing reads
+\[
+  {\cal L}(\log|h|)=0\qquad\text{locally on }\{h\ne0\}.
+\]
+ The remaining log
+sum of squares contributes the pullback of a
+Fubini--Study form by the map \([S_1:\cdots:S_s]\).
+This maps an \(s\)-dimensional tangent space to one of
+dimension \(s-1\).
+
+Choose a nonzero vector in the kernel
+of its differential. The Levi form of the log sum is zero
+on this vector and that of the remaining potential is
+strictly positive. At a maximum their sum must be
+nonpositive. This proves injectivity of the jet readings.
+Restriction of the global space to all components is
+injective, hence summing gives
+\[
+                      R_j\le\delta\binom{T+2s+6}{s}.
+\]
+
+\proofstep{The rank of the complementary sections.}
+For the complementary rank take forms \(v_j\) of weight
+\(w_F\) interpolating the point delta functions on one
+component, with their required low Fourier coefficients
+zero. For \(|\alpha|\le T\) the products
+\(v_j w_0^{T-|\alpha|}\prod_i S_i^{\alpha_i}\)
+belong to the prescribed analytic subspace. This uses
+stability of the low-mode vanishing condition under
+multiplication by the bounded light forms, whose Fourier
+indices are nonnegative. Independence follows by first
+taking the least total degree appearing in a relation,
+then taking that homogeneous Taylor coefficient at each
+point after dividing by \(w_0^T\). Its monomials are
+distinct and the value matrix of the \(v_j\) is invertible.
+One can extend the families separately by zero to the
+other components. The \hyperref[par:shifted-good]{descent of the low-mode space} gives
+
+\[
+  \dim H_g\ge\delta\binom{T+s}{s}.
+\]
+ This identifies
+\(r_q=R_j-\dim H_g\) after rationally spanning the cusp
+lattice. At the definite final lift the comparison uses
+all sections.
+
+\proofstep{Short restrictions and the boundary rank.}
+Likewise the \(|\alpha|<T-s\) products from the short
+restrictions are independent modulo the span of all
+boundary products. Apply the least-degree argument to
+a relation of degree less than \(T-s\) against sections
+vanishing to that order. There are \(R\delta\) of these
+independent classes. The boundary products can be tested
+by their rank on the generic coefficient functions: after
+extension of scalars their minors vanish precisely when
+the corresponding generic complex minors vanish. Taking
+a basis out of their short generating family gives
+
+\[
+  R\delta+r_z\le R_j.
+\]
+ This calculation also deals with a
+zero-dimensional vector space of readings.
+
+For \(s\ge2\) and \(T\ge11s^2\), put \(B=\binom{T+2s+6}{s}\).
+The fraction \(R/B\) is the product of the \(s\) factors
+\(1-(2s+7)/(T+2s+6-i)\) for \(0\le i<s\).
+A product of \(1-x_i\), \(0\le x_i\le1\), is at least
+\(1-\sum x_i\). Consequently
+\[
+ 0\le 1-R/B\le s(2s+7)/T\le22s^2/T .
+\]
+Since \(R_j/B\le\delta\), both deficient ranks are at most
+\(22s^2R_j/T\). This implies the weaker pre-final bound
+\(r_z\le r_q+22s^2R_j/T\) used in the slope sum. It uses
+no assumption that different primes admit independent
+choices of the short family. \label{cor:slice-shares-1}
+\end{proof}

@@ -1,0 +1,308 @@
+\subsection{Canonical lattice sizes and lowering by near elements}
+
+Unipotence does not by itself bound how many rational translates can be near a given point. The subspaces of unusually small covolume identify a flag that constrains all such translates.
+
+For a Hermitian lattice \(\Lambda\) at an adelic point,
+give each rational subspace and quotient its induced
+Euclidean metric at the real places. Write \(f=[E^+:\mathbb Q]\), with \(E^+\) the maximal totally real subfield of \(E\). The size of a nonzero lattice of rank \(j\) is its normalized covolume to the power \(1/(2fj)\). Normalize the real covolume by that of
+\(\mathcal O_E^j\) in the standard product metric.
+
+\begin{auxlemma}[The filtration by normalized covolume]
+\label{lem:metric-size-filtration}
+For an \(\mathcal O_E\)-lattice with the induced subspace and quotient
+metrics, there is a unique filtration by saturated sublattices
+whose grades are semistable and have strictly increasing sizes.
+Here a lattice of size \(t\) is semistable if every nonzero
+sublattice has size at least \(t\). If \(F(t)\) contains the grades
+of size at most \(t\), then
+\[
+ \operatorname{size}(Q)\le t < \operatorname{size}(I)
+\]
+for every nonzero torsion-free quotient \(Q\) of \(F(t)\) and
+every nonzero sublattice \(I\) of \(\Lambda/F(t)\), with the two
+assertions understood separately. Duality reverses this filtration
+and inverts the grade sizes.
+\end{auxlemma}
+\begin{proof}
+\proofstep{Covolumes and attainment.}
+
+For a saturated sublattice \(L'\subset L\) and the quotient
+\(L''=L/L'\) with its induced metrics, normalized sizes satisfy
+\[
+ \operatorname{size}(L)^{\operatorname{rk}L}
+ =\operatorname{size}(L')^{\operatorname{rk}L'}
+  \operatorname{size}(L'')^{\operatorname{rk}L''}.
+\]
+This follows by using the determinant norm of the subspace
+and the orthogonal projection to the quotient at the
+infinite places. The same identity for the integral
+determinants holds at every finite place. Saturating a
+submodule can only decrease its size.
+
+Among saturated sublattices of fixed rank there are only
+finitely many with bounded size. In a fixed determinant ideal
+class their exterior line lattices have the form
+\(\mathfrak a w\) in the exterior power of \(\Lambda\), for
+a fixed ideal representative \(\mathfrak a\). A bound for size
+gives a bound for the product of the archimedean norms of \(w\).
+Put \(b_v=\log\|w_v\|\) and \(\bar b=f^{-1}\sum_v b_v\).
+
+Choose a unit \(u\) with
+\[
+     \max_v |\log |u|_v+b_v-\bar b|\le C_E .
+\]
+Here each complex embedding is taken once. The vector
+\((\bar b-b_v)_v\) has sum zero, and \(C_E\) can be chosen as the
+radius of a fundamental domain for the logarithms of the units. Dirichlet's unit lattice is
+cocompact in the hyperplane of logarithms of product one.
+Then \(uw\) generates the same exterior line lattice, since
+\(u\) is a unit, and lies in a bounded set of the fixed fractional
+exterior lattice and there are only finitely many possibilities.
+If \(w\) represents that exterior line, the original
+saturated sublattice is recovered by
+\[
+ L=\{v\in\Lambda:v\wedge w=0\}.
+\]
+Indeed over \(E\) this kernel is the subspace spanned by the
+decomposable exterior vector, and saturation recovers its intersection
+with \(\Lambda\).
+
+\proofstep{The canonical increasing filtration.}
+
+Let \(C(L)\) be the normalized covolume of a lattice \(L\),
+with \(C(0)=1\) and \(C(L)=\operatorname{size}(L)^{2f\operatorname{rk}L}\).
+For two saturated sublattices \(U,V\), put \(I=U\cap V\) and
+\(W=(U+V)^{\rm sat}\). Project \(V\) orthogonally off \(U\).
+The quotient \(V/I\) maps to the image lattice by a
+volume-decreasing map, and saturation can only decrease the
+volume further. The determinant formula in the two exact sequences
+with quotients \(V/I\) and \(W/U\) therefore gives
+\[
+ C(I)C(W)\le C(U)C(V),\qquad
+ \operatorname{rk}I+\operatorname{rk}W
+                  =\operatorname{rk}U+\operatorname{rk}V .
+\]
+If \(U,V\) have the least size \(t\), put \(d_L=\operatorname{rk}L\).
+Then
+\[
+ t^{2f(d_I+d_W)}\le C(I)C(W)\le C(U)C(V)
+              =t^{2f(d_U+d_V)} .
+\]
+The two outer bounds coincide even when \(I=0\), with \(C(0)=1\).
+
+In particular
+\(W\) also has size \(t\). The maximal-rank minimizer is therefore
+unique. In the quotient by that minimizer, a sublattice of size at
+most \(t\) would have preimage of size at most \(t\) and larger
+rank, since the preimage's covolume is the product of the two
+factor covolumes. Thus the next step has strictly larger size. This constructs the increasing
+Harder--Narasimhan sizes. Each grade of size \(t\) is
+semistable, meaning that all its nonzero sublattices have
+size at least \(t\). For a grade \(G\) of size \(t\) and a nonzero torsion-free
+quotient \(Q=G/K\), multiplicativity and minimality give
+\[
+ C(Q)=\frac{C(G)}{C(K)}\le
+       \frac{t^{2f\operatorname{rk}G}}{t^{2f\operatorname{rk}K}}
+       =t^{2f\operatorname{rk}Q}.
+\]
+This includes \(K=0\).
+
+To prove uniqueness, intersect a nonzero sublattice \(L\) with a
+candidate filtration whose grade sizes are \(t_1<\cdots<t_a\).
+Let \(d_i\) be the ranks of the induced grades of \(L\).
+Each embeds integrally in its ambient grade. Orthogonal projection
+to the ambient quotient can only decrease volume, as can saturation.
+Multiplicativity on \(L\) therefore gives
+\[
+ C(L)\ge\prod_{i=1}^a t_i^{2fd_i}\ge t_1^{2f\operatorname{rk}L}.
+\]
+
+At equality all \(d_i\) for \(i>1\) vanish. The first step is thus
+the maximal-rank minimizer, and induction gives uniqueness on its
+quotient. Dualizing reverses the order of the
+grades and takes reciprocal sizes, by the determinant
+formula for a lattice and its integral dual. The quotient
+size property of a semistable grade makes the dual grade
+semistable. In particular if \(F(t)\) is the filtration
+step with sizes at most \(t\), every nonzero torsion-free
+quotient of \(F(t)\) has size at most \(t\), by duality and the
+least-size inequality. Every nonzero sublattice of
+\(\Lambda/F(t)\) has size strictly greater than \(t\).
+\end{proof}
+
+\begin{lemma}[The short flag of a self-dual Hermitian lattice]
+\label{lem:canonical-short-flag}
+The lattice has a canonical filtration with strictly increasing
+sizes and semistable grades. Write \(F(t)\) for its step of sizes
+at most \(t\). If the lattice is self-dual then its step \(S\) of
+sizes strictly below \(1/2\) satisfies \(S^\perp=F(2)\),
+\(\operatorname{rank}S\le q\), and the grades of \(S^\perp/S\)
+have sizes in \([1/2,2]\).
+If \(a\) is an integral endomorphism, functoriality in the size filtration gives 
+\[
+ \max_{v\mid\infty}\|a_v\|_{\rm op}\le\delta\quad\Longrightarrow\quad aF(t)\subseteq F(\delta t).
+\]
+ In particular, if
+\(\|\gamma-I\|_{\rm op}\le\delta<1/4\) at all real places,
+an integral unitary \(\gamma\) lies in the unipotent radical of
+the stabilizer of the short flag. For an empty short flag
+this forces \(\gamma=I\).
+\end{lemma}
+
+\begin{proof}
+Use Lemma~\ref{lem:metric-size-filtration} with the normalized
+covolume of the Hermitian lattice.
+\proofstep{The perpendicular step and endpoint sizes.}
+
+The Hermitian pairing makes the metric lattice self-dual.
+Let \(S\) contain exactly the grades of size strictly less than \(1/2\).
+Their dual grades have size strictly greater than \(2\). It follows that
+\[
+ S\subseteq S^\perp=F(2),\qquad \operatorname{rk}S\le q,\qquad
+ \tfrac12\le\operatorname{size}(G)\le2
+ \quad(G\text{ a grade of }S^\perp/S).
+\] This describes the short flag and
+fixes the treatment of the two endpoint sizes.
+
+\begin{construction}
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth]
+ \draw[->] (0,0)--(10.7,0) node[below left] {grade size};
+ \draw[line width=.8pt] (3,-.08)--(3,.10) (7,-.08)--(7,.10);
+ \node[below] at (3,-.06) {$1/2$};
+ \node[below] at (7,-.06) {$2$};
+ \node[above] at (1.4,.11) {$S$};
+ \node[above] at (5,.11) {$S^\perp/S$};
+ \node[above] at (8.9,.11) {$\Lambda/S^\perp$};
+ \draw[<->] (1.45,.58) to[bend left=13]
+   node[midway,above] {duality \(t\mapsto t^{-1}\)} (8.9,.58);
+\end{tikzpicture}
+\caption{The short filtration of Lemma~\ref{lem:canonical-short-flag}. Both boundary sizes belong to the middle quotient. The two outer groups of grades are dual.}\label{fig:short-reciprocal-grades}
+\end{construction}
+
+\proofstep{Lowering by a near element.}
+
+The canonical filtration is intrinsic to the lattice. It constrains the difference of a near element from the identity, forcing it to lower the appropriate steps.
+
+
+Suppose an integral endomorphism \(A\) of \(\Lambda\) has
+operator norm at most \(\delta\) at every real place.
+Let \(A_t:F(t)\to\Lambda/F(\delta t)\) be the induced map.
+If its image has rank \(j>0\), pass to the saturated source
+quotient \(Q_t\) and put \(I_t=(\operatorname{im}A_t)^{\rm sat}\)
+in the target. The complex determinant norm is at most
+\(\delta^j\) at each place. With the real squares and the
+normalization of \(C\) this gives
+\[
+ \frac{C(I_t)}{C(Q_t)}\le\delta^{2fj},\qquad
+ \operatorname{size}(I_t)\le
+            \delta\operatorname{size}(Q_t)\le\delta t .
+\]
+Saturation accounts for the inequality on the left.
+Every nonzero sublattice of the target has size strictly greater
+than \(\delta t\), so \(A_t=0\).
+
+Apply this with \(A=\gamma-I\) and the given \(0<\delta<1/4\).
+The case \(\delta=0\) gives \(\gamma=I\) directly. It gives identity action
+on each short grade, and the image of \(S^\perp=F(2)\)
+under \(A\) lies in \(S\). Unitarity gives identity action
+on the dual grades as well. Hence \(\gamma\) belongs to the
+unipotent radical of the stabilizer of the short flag. If
+the short flag is empty, this argument gives \(\gamma=I\).
+
+\end{proof}
+
+\subsection{Packing near elements on the flag blocks}
+
+Lowering the short flag places the near elements in its unipotent radical. To count them one still needs the lattice spacing in each independent block of that radical.
+
+\begin{lemma}[Near elements counted in the short-flag blocks]
+\label{lem:near-flag-packing}
+Use the grades of Lemma~\ref{lem:canonical-short-flag}.
+For integral elements in the unipotent radical of the short flag
+whose blocks of \(\gamma-I\) have Hilbert--Schmidt norms at
+most \(\delta\) at every real place, the number is bounded by 
+\[
+ \prod_{v\mid\infty}\prod_{\text{free blocks at }v}(1+12\delta/\lambda)^d.
+\]
+ Here \(d\) is the block
+dimension and
+\(\lambda=\tau_i/\tau_j,\tau_i\tau_j,\tau_i,\tau_i^2\)
+for the corresponding four block types in \(\mathcal L(\tau)\).
+\end{lemma}
+
+\begin{proof}
+\proofstep{Induction by block distance.}
+
+Complete the short flag by its perpendicular flag, using
+the single middle block \(S^\perp/S\). Choose orthogonal
+Euclidean complements at each real place, with dual blocks
+paired by the unitary signature matrix. Write the resulting
+blocks of \(\gamma-I\) in that order. They are strictly
+upper triangular and each has Hilbert--Schmidt norm at
+most \(\delta\). Count the possibilities in increasing
+distance from the block diagonal. For elements agreeing on
+all shorter distances, their difference maps each integral
+filtration step into the step lower by the current distance.
+Its blocks at that distance are therefore integral maps on
+the graded lattices.
+
+For two such elements write \(\gamma_i=1+A_i\) and
+\(D=A_1-A_2\). Subtracting the two unitary identities gives
+\[
+      D+D^\dagger=-(D^\dagger A_1+A_2^\dagger D).
+\]
+The right side lowers by at least one more step, since
+both \(A_i\) are strictly triangular. Thus at the current
+distance the adjoint blocks in the difference are negatives
+of one another's adjoints. It
+suffices to count one block in each such pair and the
+self-paired skew-Hermitian differences.
+
+\proofstep{Block separation and volume packing.}
+
+Once the successive free blocks are known, the remaining choices in each block form a separated set. This changes the problem from counting group elements to packing points in Euclidean balls.
+
+
+For a nonzero difference in one block the same
+kernel-to-saturated-image determinant argument bounds the
+geometric mean of the operator norms below by the ratio
+of the least target size to the largest source size.
+For a nonzero block difference \(D\), write
+\(l(D)=(\prod_v\|D_v\|_{\rm op})^{1/f}\). The resulting lower bounds are
+\[
+ l(D)\ge
+ \begin{cases}
+ \tau_i/\tau_j\ \text{or }\tau_i\tau_j,
+                        &\text{the two cross blocks at }i<j,\\
+ \tau_i/2,              &\text{a middle block and grade }i,\\
+ \tau_i^2,              &\text{the self-paired block at }i .
+ \end{cases}
+\]
+All the relevant Hilbert--Schmidt norms dominate the
+operator norms. For an available ratio \(l\), put disjoint
+product balls of radius \(l/2\) about the possible blocks
+at the real places. An overlap would bound all difference
+norms strictly below \(l\). In a self-paired block the
+possibilities lie in an affine space with skew-Hermitian
+direction, which is the space used for packing. Centering
+at any one candidate bounds all radii from that center
+by \(2\delta\).
+
+If a finite subset has \(M\) candidates, translation and scaling
+of product Lebesgue measure give
+\[
+ M(l/2)^d\operatorname{vol}(B_1)
+       \le(2\delta+l/2)^d\operatorname{vol}(B_1),\qquad
+ M\le(1+4\delta/l)^d ,
+\]
+where \(d\) includes all \(f\) places and \(B_1\) is the unit
+product ball in the free block coordinates. This reasoning also
+bounds an initially infinite candidate set, by applying the
+volume inequality to any finite subset. Iterating through
+the block distances determines the full matrices. The
+dimensions of the free blocks are those in
+\(\mathcal L(\tau)\) in \eqref{eq:count-flag-density-product}. Hence the number is at most
+the product over those factors with \(\lambda^d\)
+replaced by \((1+12\delta/\lambda)^d\), for
+\(\lambda=\tau_i/\tau_j,\tau_i\tau_j,\tau_i,\tau_i^2\).
+\end{proof}

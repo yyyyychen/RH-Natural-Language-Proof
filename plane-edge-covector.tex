@@ -1,0 +1,397 @@
+The final step at a single edge is to place the detecting
+functional in the target lattice of
+Proposition~\ref{prop:residue-plane-neighbor-test}.
+The dual-plane substitution accounts for the vanishing at
+the other incoming edges.
+\paragraph{Dual planes at the target.}
+\label{par:plane-dual-edge}
+\hypertarget{source-plane-edge-covector}{}
+For clarity write the distinguished edge in adapted coordinates as
+\(L_-=b W^k\), \(L_+=b D_p^{-1}W^k\), where
+\(D_t=\operatorname{diag}(tI_r,I_{k-r})\). Its dual edge goes
+from \(L_+^\vee=b^{-t}D_p W^k\) to
+\(L_-^\vee=b^{-t}W^k\).
+
+At each Frobenius position the middle
+frame on this dual edge is the inverse transpose of the original
+middle frame: in the original frame use \(bD_w^{-1}\), and in
+the dual use
+\[
+ b^{-t}D_p D_w^{-1}=b^{-t}D_w,
+\]
+with the
+indicated Frobenius action on \(b\). Distinct incoming edges at
+\(L_+\) give distinct outgoing edges at \(L_+^\vee\) by double
+duality. There they have distinct residue planes, since a lattice
+between a lattice and its \(p^{-1}\)-multiple is determined by
+its image in that quotient. For the standard target,
+\(bD_p^{-1}\in\mathrm{GL}_k(W)\); it gives the Witt frame
+whose inverse transpose is \(b^{-t}D_p\). Thus a single choice
+of distinguished frame in the one-sided realization handles all
+incoming competitors.
+
+\begin{lemma}[A one-sided plane symbol gives an integral dual-edge test]\label{lem:plane-dual-edge-test}
+For the edge from \(bW^k\) to \(bD_p^{-1}W^k\), use
+\(bD_w^{-1}\) and \(b^{-t}D_w\) as the respective middle frames.
+Let a detecting
+symbol of order \(o\) be realized to precision \(o+c_P\)
+at the distinguished dual edge and at least that order
+at its competitors. If \(D_X<c_P/2\), the resulting flat covector on the original edge has order \(o'\), conductor \(c'\) and depth \(D'\) satisfying
+\[
+ o'\le o,\qquad c'\ge c_P,\qquad D'\le D_X.
+\]
+
+\end{lemma}
+
+\begin{proof}
+\proofstep{The dual pairing on the target plane.}
+In flat polynomial coordinates use the bilinear form
+\(p^{\kappa_{\rm fl}}[P,Q]/\prod_i d_i!\).
+It is integral on coefficient lattices in inverse transpose
+frames. Indeed the factorial deficiency gives this in the
+standard coordinates; the substitution identity
+\[
+ [P(MX),Q(X)]=[P(X),Q(M^tX)]
+\]
+follows by writing the
+pairing as a constant-coefficient differentiation at zero.
+The identity applies to each letter, also when it carries the
+inverse transpose representation. The scalar adjustments to the two edge substitutions give 
+\[
+ w^{A_\mu}w^{A_\mu}=w^{2A_\mu}=p^{A_\mu},
+\]
+ precisely
+the normalized edge pairing for the flat weight \(\mu\), by
+Section~\ref{par:plane-middle-weights}.
+
+Take the integral polynomial realizing a detecting symbol
+\(\sigma\) of order \(o\), and view it as a flat section in the
+dual vertex frame. Divide it by \(w^o\), and pair by this form to
+obtain \(T\). At the target its order is at most \(o\), by
+integrality before division. In normalized coordinates on the
+dual edge its polynomial after division is \(\sigma+w^{c_P}E\)
+with integral \(E\); on any other dual edge at the same source
+it belongs to \(w^{c_P}O[\mathbf X]\). The inverse transpose
+calculation proves \(T\in R_e^{\prime\mu}\) and
+\[
+ T\in w^{c_P}R_{e'}^{\prime\mu}
+\]
+on every competing incoming
+edge. For any normalized integral input, the model error pairs into
+\(w^{c_P}O\), because the factorial rescaling is integral on
+the paired edge lattices. Its valuation is at least
+\[
+ c_P/2,
+\]
+
+strictly larger than the detected valuation bounded by \(D_X\).
+The valuation of the actual pairing therefore equals that
+of the model detecting value.
+
+\end{proof}
+
+\paragraph{Operators for the bounded remaining weights.}
+\label{par:plane-rho}
+First retain only the top positions in the full weight \(\lambda\).
+Write \(\lambda=\mu+\eta\) there, with \(\mu\) the flat weight
+and \(\eta\) the remaining weight. Its spread at each top is at
+most \(c_0\). We need two facts about the Schur lattices
+of Section~\ref{sec:edge-contraction}.
+
+First, for each of the weights \(\xi=\lambda,\mu\) there is a
+contravariant identification \(\Psi_\xi:V_\xi^*\longrightarrow
+V_\xi\) satisfying, simultaneously in every vertex frame \(g\),
+\[
+ p^{h_\xi} H_\xi(g^{-t})\ \subseteq \Psi_\xi\bigl(H_\xi(g)^*\bigr)\ \subseteq\ H_\xi(g^{-t}).
+\]
+In this display \(g\) denotes the tuple of the component frames
+and \(H^*\) the integral dual. The same inclusions hold with
+\(R_e^{\prime\xi},R_{e^\vee}^\xi\) in the middle and outside,
+since the two normalizations multiply the unscaled lattices by
+the same \(w^{-A_\xi}\).
+Here \(h_\xi\) is the sum over positions of
+\(\binom k2\lfloor\log_p(l+k-1)\rfloor\) at positive spreads
+\(l\), with zero at spread zero.
+
+\begin{proposition}[Uniform operators for the remaining weights]\label{prop:plane-bounded-weight-operators}
+With the bounded top and off-top spreads, the maps
+\(\rho_\beta\) of Proposition~\ref{prop:plane-restore-covector}
+satisfy its three lattice conditions with
+\(s=rNc_0+2rn'\mathrm{cpp}\). Every primitive vector
+has an image outside \(w^{2\kappa+1}R_e^\mu\) for some
+such map. On the restored model family in the prescribed range of parameters, the target depth \(D\), order \(o\) and conductor \(c\) satisfy
+\[
+ D\le D_X+\kappa\le54Nk^2\log_p a,\qquad o\le t_F+s,\qquad c=c_\star.
+\]
+
+\end{proposition}
+
+\begin{proof}
+\proofstep{Normalizing one position in the tensor.}
+To verify the normalization at one position, remove the determinant
+twist. Take the matrix-polynomial Fock form divided by the
+squared Fock norm of the highest polynomial \(v\), the product
+of the initial principal minors prescribed by the shape.
+This norm is a positive integer. Pairing with \(v\) gives evaluation
+at the identity: both vanish outside its weight by row and column
+degrees, and both take value one on \(v\). The highest weight
+space has dimension one. For a divided-power word applied to
+\(v\), transpose the word in the pairing. It follows that its
+pairing with any integral polynomial in the Schur lattice is
+integral.
+
+Conversely, integrality against the Schur lattice forces
+\[
+ Q\in O[\mathbf X]
+\]
+in the matrix coordinates.
+Indeed substitute a generic matrix \(M\) in the highest polynomial
+by the row action. The coefficients of the resulting polynomial
+in the entries of \(M\) are integral elements of the Schur
+lattice, by the minor expansion. Pair it with \(Q\) and transpose
+the row action. The result is \(Q\) evaluated on the generic
+transposed matrix, by the identity evaluation just proved.
+Hence every coefficient of \(Q\) is integral, and saturation
+of the standard monomial lattice gives the assertion.
+The same argument proves nondegeneracy. The divided-power span of
+\(v\) contains
+\[
+ p^{\binom k2\lfloor\log_p(l+k-1)\rfloor}
+\]
+
+times the Schur lattice by the trace argument of
+Section~\ref{sec:edge-contraction}. Thus the integral dual for the
+normalized form lies between the two asserted lattices. Restoring
+the determinant twists on inverse transpose frames cancels their
+two scalar factors. Tensoring the forms and integral dual bases
+adds the exponents and gives \(\Psi_\xi\). Its inverse pairing
+is a nonzero scalar times the matrix-polynomial Fock form.
+Here \(l+k-1\le a^2\) for both weights at a sufficiently late
+host: the flat degree is at most \(2a\), the residual spread
+is at most \(c_0\), and the host size bound gives
+\(2a+c_0+k\le a^2\). Consequently
+\[
+ \kappa=h_\lambda+h_\mu\le4L.
+\]
+
+Second, for residual sections \(s,\beta\) consider the flat
+endomorphism \(U_{s,\beta}\) defined by
+\[
+  [\theta(U_{s,\beta}F),\theta H]_{\rm mat}
+       =[\theta F\cdot s,\theta H\cdot\beta]_{\rm mat}.
+\]
+The matrix-polynomial form restricted to the image of the flat
+model is nondegenerate, by the preceding argument. The flat
+insertion \(\theta\) uses the first column or the cofactors.
+The maps \(U_{s,\beta}\) are linear in either residual input.
+At a single position their span is stable under commutators
+with the row operators \(E_{ij}=X_i\partial_j\).
+In fact transpose adjunction and the product rule move the
+commutator to the two terms applying row operators to \(s\) and
+to \(\beta\), with opposite signs and transposed indices.
+
+For cofactors the induced row action on the flat coordinates is
+the negative transpose action plus the scalar trace term, by
+Jacobi's identity. If the induced operator is \(A+\lambda I\), its commutator on
+an endomorphism \(U\) is
+\[
+ (A+\lambda I)U-U(A+\lambda I)=AU-UA .
+\]
+Thus the determinant twist introduces no extra row weight.
+The residual space is generated by products of flag minors with
+at most \(c_0\) columns. Each row occurs at most once in a
+column. Thus the commutator weight of a generator
+\(U_{s,\beta}\) has each coordinate between \(-c_0\) and \(c_0\):
+it is the difference, in one of the two orders, of the two
+residual row weights. The determinant twists cancel in this difference.
+
+\proofstep{Operators from the diagonal action.}
+For degree \(d\) the endomorphism representation of
+\(\operatorname{Sym}^d\) in characteristic zero has one summand for each of the highest weights
+\[
+ \lambda^{(i)}=(i,0,\ldots,0,-i),\qquad 0\le i\le d.
+\]
+Indeed \(\operatorname{Sym}^d\otimes
+(\operatorname{Sym}^d)^*\) is the bidegree \((d,d)\)
+space decomposed by the powers of the contraction in
+Section~\ref{sec:edge-transfer}; its harmonic quotients are
+the irreducible incidence spaces described there. For summand
+\(i\) the row word \(E_{1k}^i\) has that highest weight and
+is killed under commutator by every raising operator. Its action on a single monomial gives
+\[
+ E_{1k}^i X_k^d
+ =\frac{d!}{(d-i)!}X_1^i X_k^{\,d-i}\ne0
+ \qquad(0\le i\le d),
+\]
+including the identity at \(i=0\). Words of length at
+most \(i\) form a commutator-stable span by the product rule and
+the matrix-unit commutator. They therefore contain the entire
+summand.
+
+Complete reducibility now implies that the span of the
+\(U_{s,\beta}\) lies in words of length at most \(c_0\). Indeed
+any summand present has its highest weight present, and the
+weight bound just proved gives \(i\le c_0\).
+At several positions expand the residual sections in pure
+tensors and use factorization of the Fock form. Each term gives
+at most \(c_0\) row operators at each top. Changes of flat frame
+preserve this word space by conjugation. The word bound also holds when the flat degree is smaller than the allowed word length.
+
+For \(\beta\in R_{e^\vee}^{\eta}\), write \(m_\beta\) for
+multiplication by that residual section. Define
+\[
+   \Lambda_\beta T
+       =p^{h_\lambda}\Psi_\lambda^{-1}
+                      m_\beta\Psi_\mu T,\qquad
+   T(\rho_\beta u)=p^{A_\eta}(\Lambda_\beta T)(u).
+\]
+The second equality defines a linear map by finite-dimensional
+duality. The edge normalizations give
+\[
+ b_e^\mu(\rho_\beta u,T)=b_e^\lambda(u,\Lambda_\beta T).
+\]
+For \(T\in R_e^{\prime\mu}\), multiplication on the dual edge and
+the inclusions for \(\Psi_\xi\) give
+\[
+ \Psi_\mu T\in R_{e^\vee}^\mu,\qquad
+ m_\beta\Psi_\mu T\in R_{e^\vee}^\lambda,\qquad
+ p^{h_\lambda}R_{e^\vee}^\lambda\subseteq
+                              \Psi_\lambda(R_e^{\prime\lambda}).
+\]
+Thus \(\Lambda_\beta T\in R_e^{\prime\lambda}\).
+In unscaled dual bases the two lattice factors \(w^{-A}\) cancel
+the pairing factor \(w^{2A}\). The preceding adjoint identity
+and this perfectness imply
+\[
+ \rho_\beta R_e^\lambda\subseteq R_e^\mu.
+\]
+
+On an input
+\(u=\theta F\cdot s\), the definition of the two forms shows
+that its flat output is a scalar multiple of
+\(U_{s,\beta}F\) in polynomial coordinates. This proves
+membership in the exact operator span.
+
+\proofstep{Reservations for the remaining weights.}
+Put \(s_T=rNc_0\). Multiplying any \(\beta\) from the chosen
+dual edge by \(w^{s_T}\) puts it in the dual-edge source vertex
+lattice. To see this, at each position the edge normalization
+subtracts the top \(r\)-row weight sum. The largest possible
+difference between that sum and a sum on any
+\[
+ r
+\]
+rows is at
+most \(r\) times the weight spread, by the tableau weight bound.
+This proves the claim in an adapted diagonal frame, including
+determinant twists, and hence in every frame. Every outgoing normalized dual edge contains the vertex lattice.
+Hence the cost outside the distinguished edge is at most \(s_T\).
+For the target vertex, test against \(T\in(H_+^\mu)^*\). The vertex
+inclusions and \(p=w^2\) give
+\begin{equation}\label{eq:edge-target-adjoint}
+ \begin{aligned}
+ w^{s_T}\Lambda_\beta T &\in(H_+^\lambda)^*,\\
+ T(\rho_\beta u)&=w^{2A_\eta-s_T}
+          (w^{s_T}\Lambda_\beta T)(u)\in w^{2A_\eta-s_T}O
+                      \qquad(u\in H_+^\lambda).
+ \end{aligned}
+\end{equation}
+Testing every integral dual functional in \eqref{eq:edge-target-adjoint} yields
+\(\rho_\beta H_+^\lambda\subseteq w^{2A_\eta-s_T}H_+^\mu\).
+
+There is also a lower bound for this family of maps. The full
+lattice on the dual edge is the integral span of products
+\(y\beta\) from the flat and residual edge lattices. In a standard
+tableau product, the column heights of the sum shape are the
+union, with multiplicities, of those of the two shapes. Split
+the columns accordingly and take a tensor of these factorizations
+over the positions. The frame action, determinant twist and
+edge powers all multiply. Thus for every full dual integral
+functional \(G\), \(\Psi_\lambda G\) is an integral sum of these
+products.
+
+If
+\[
+ \Psi_\lambda G=\sum_i y_i\beta_i,
+\]
+take
+\(T_i=\Psi_\mu^{-1}(p^{h_\mu}y_i)\), which is flat
+dual integral. The multiplier in \(\Lambda_\beta\) then gives
+\[
+ p^\kappa G=\sum_i\Lambda_{\beta_i} T_i
+\]
+with
+\(\kappa=h_\lambda+h_\mu\). For the normalized pairings,
+\[
+ p^\kappa b_e^\lambda(u,G)
+       =\sum_i b_e^\mu(\rho_{\beta_i}u,T_i).
+\]
+Suppose \(\rho_\beta u\in w^{2\kappa+1}R_e^\mu\) for every
+integral choice of \(\beta\). Testing the displayed sum against the
+integral flat duals then gives, for every \(G\in R_e^{\prime\lambda}\),
+\[
+ p^\kappa b_e^\lambda(u,G)\in w^{2\kappa+1}O
+ \quad\Longrightarrow\quad b_e^\lambda(u,G)\in wO
+ \quad(p^\kappa=w^{2\kappa}).
+\]
+Perfectness gives \(u\in w R_e^\lambda\), a contradiction for a
+primitive \(u\). Thus at least one residual test detects it.
+
+\proofstep{Restoring the non-top tensor factor.}
+Restore the non-top tensor factor, of weight \(\xi\), by taking
+all contractions on it with \(p^{A_\xi}G\),
+\(G\in R_e^{\prime\xi}\), before applying the top maps.
+In a pair of normalized dual bases these contractions are
+ordinary coordinate extractions. Some extraction of a primitive
+tensor remains primitive. Thus this step adds no depth. The
+spread off the tops is at most \(2\mathrm{cpp}\), so
+\[
+ w^{2rn'\mathrm{cpp}}G
+\]
+belongs to the target dual vertex
+lattice and hence to all competing incoming dual edge lattices.
+
+For this inclusion, the passage from an intermediate to a target
+frame expands the first \(r\) directions once more by \(w^{-1}\);
+a coordinate functional then loses at most the difference of two
+\(r\)-row weight sums. On the target itself the contraction
+carries the additional scalar \(p^{A_\xi}\). Adding the competing-edge loss from these positions to the
+top contribution gives the budget
+\[
+ s=s_T+2rn'\mathrm{cpp},\qquad
+ 2A_\eta+2A_\xi-s=2(A_\lambda-A_\mu)-s .
+\]
+Here the right-hand exponent is the resulting target-vertex exponent.
+The flat
+degree is zero at every omitted position, so this contraction
+retains the top word allowance.
+
+Apply the adjoint calculation to the primitive restored model
+combination. The three resulting bounds are
+\begin{equation}\label{eq:restored-covector-budget}
+ \begin{aligned}
+ \text{endpoint order}&\le t_F+s\le\lceil t_{\rm II}\rceil,\\
+ \text{depth}&\le D_X+\kappa\le54Nk^2\log_p a\le D_{\rm II},\\
+ \text{competing conductor}&\ge c_P-s=c_\star,
+                    \qquad c_\star=8(D_{\rm II}+1).
+ \end{aligned}
+\end{equation}
+The last depth comparison and the endpoint bound in
+\eqref{eq:restored-covector-budget} are the host choices of Section~\ref{sec:host-edge-tests},
+with its absolute coefficient taken sufficiently large.
+On the source side cleaning
+the normal-degree components of the original flat generators
+costs at most \(\lfloor X\rfloor\) at the source, by the
+one-sided lift and division by the order of each component.
+Multiplication by a remaining-weight section from the chosen
+edge costs at most \(s\) at that vertex, by the same spread
+estimate. Thus the source order also fits. With \(c'=c_P\)
+one has \[
+ c'\ge2(D_X+\kappa+1),\qquad c'\ge c_\star+s.
+\]
+Section~\ref{par:plane-middle-weights} transfers the pairing
+to the clean combination and gives its competing source
+conductors. This completes the single-edge estimate with the
+order and depth fixed on the host and the stated quantifier over
+primitive combinations. \label{cor:plane-edge-covector-1}
+\end{proof}

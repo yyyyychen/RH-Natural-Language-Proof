@@ -1,0 +1,226 @@
+\paragraph{Integral sections for the height comparison.}
+\label{par:selected-height-sections}
+\hypertarget{source-selected-height-sections}{}
+\begin{established}[Complementary weights and the gaps of the selected rows]
+\label{hyp:height-section-weights}\label{cor:selected-height-sections-1}
+Fix the coefficient field, the two level primes and either orientation.
+Write \(u_0\) for the weight with zero row entries and central
+coordinate one in the group of weights. The auxiliary section before
+the last lift has weight \(i_\eta g_0^*u_0\). Put
+\[
+ w_1=2(w_L-u_0),\qquad w_2=(s+4)w_L-w_F,\qquad
+ d=s+2,\qquad T'=T+d .
+\]
+The two central degrees are \(2n_W-2\) and \((s+4)n_W-n_P\).
+The run satisfies
+\[
+ 8fr+4=n_P\le n_W,\qquad (s+4)\operatorname{DF}(w_L)+2
+       \le\min(g_0,g_1),\qquad s\ge3,\qquad T\ge40d .
+\]
+Every interior adjacent difference \(a\) in a nonempty block of
+\(\kappa\) satisfies \(a+2\ge T'(T'+2r)\). Each terminal entry \(a\)
+satisfies \(a\ge2T^2\); its offset is \(d_0=dn_W+2r\) in the
+positive block and zero in the negative block, with \(0\le d_0\le T\).
+\end{established}
+\begin{proof}
+The central degrees follow by addition of weights.
+Lemma~\ref{hyp:common-slice-scales} gives the degree and order bounds.
+Since \(D_L=\operatorname{DF}(w_L)\le 2frb\), \(s,f,r,k\) are
+polynomially bounded in \(x\), and the two primes satisfy
+\(g_i\ge(kb)^8\), the level inequality follows at all large scales.
+
+We give the row argument, including the margin needed at a block end.
+Let \(h=\eta_{\rm size}/m\) be the spacing of the central parameters,
+and \(\Delta\) the separation parameter of the outer ones. In the
+successive choices of Paragraph~\ref{par:window-successive-bounds}
+one can impose
+\[
+       h\ge4T^2+2t,\qquad
+       \Delta\ge(T+D_*+2)(T+D_*+2+2r).
+\]
+Indeed these lower bounds are fixed polynomials in \(x\) after
+Lemma~\ref{lem:rank-window}. In choosing the width and separation
+before rounding the nodes, adjoining either polynomial to their lower
+bounds costs \(O(\log x)\) on the logarithmic scale; the available
+upper bounds there are \(x^{\epsilon/4}\) for \(\log\eta_{\rm size}\)
+and \(x^{\epsilon/4}/2\) for \(\log\Delta\). Equivalently the
+degree-power lower bounds suffice with exponent three. For
+\(N=k+m(t+1)\), Lemma~\ref{hyp:common-slice-scales} gives
+\[
+    N\ge t\ge T,\qquad
+    (T+D_*+2)(T+D_*+2+2r)\le(41T/40)(81T/40)\le N^3 .
+\]
+These choices give \(G:=T'(T'+2r)\le\min(\Delta,h)\), since
+\(d\le T/40\) and \(2r\le T\).
+
+Fix an embedding and number its central nodes \(b_0,\ldots,b_{m-1}\).
+Their spacings and the corresponding integral centres \(e_i\) satisfy
+\[
+     h\le b_{i+1}-b_i\le h+1,\qquad |e_i-b_i-h/2|\le2 .
+\]
+
+The two errors come from rounding the nodes and their half-shifts.
+The decreasing list for the positive block consists of outer
+parameters \(v_0,\ldots,v_{k-2}\) followed by
+\(-b_0,\ldots,-b_{j-1}\). Within the outer list consecutive differences
+are at least \(\Delta\), by its spacing, and the central differences
+are at least \(h\). At the junction \(v_{k-2}\ge0\); the lower endpoint
+of the translated windows gives \(e_0\ge t\eta_{\rm size}\). Thus
+\[
+   v_{k-2}-(-b_0)\ge b_0\ge e_0-\eta_{\rm size}
+                   \ge(t-1)\eta_{\rm size}\ge h .
+\] In the reversed negative block the consecutive
+unshifted differences are again differences of adjacent \(b_i\)'s.
+Subtracting the row shift changes an interior difference by one; in
+particular \(a+2\ge G\) in either block.
+
+At lift \(1\le j\le m\), substitution of the last row in the two
+weight formulas gives respectively
+\[
+ e_{j-1}-b_{j-1}-(t+1)/2,\qquad
+ b_j-e_{j-1}-(t+1)/2 \quad(j<m).
+\]
+The centre error and the lower bound on node spacing make both at
+least \((h-4-t-1)/2\ge2T^2\), since \(t\ge5\).
+The positive offset is at most \(T\) by
+Lemma~\ref{hyp:common-slice-scales}; the empty last block at \(j=m\)
+requires no terminal inequality.
+\end{proof}
+
+\begin{proposition}[Bounded complementary sections at the selected weights]\label{prop:height-complementary-sections}
+For the run of Lemma~\ref{hyp:height-section-weights}, the weights \(w_1,w_2\) used at the
+corresponding lifts are admissible. There are integral
+sections \(t_1,t_2\) at these weights, nonzero on every
+component, with
+\[
+  \tfrac12\log\|t_1\|_{\sup,\sigma}\le P_4 sS_L,\qquad
+              \log\|t_2\|_{\sup,\sigma}\le P_4 sS_L
+\]
+with \(P_4=\max\{1,5(1009Z_b+\lambda_*)+162 Z_b^2/s\}\),
+where \(Z_b=frL\) is the parameter of Proposition~\ref{prop:slice-evaluation-net} and
+\(\lambda_*\) bounds the logarithmic cost of the integralizing scalar
+per unit of weight size. The choices use the fixed
+coefficient field and light columns. At the definite lift
+only \(t_2\) is needed.
+\end{proposition}
+
+\begin{proof}
+\proofstep{The allowable row-entry shifts.}
+Here is the row-entry check. Put \(d=s+2\) and \(T'=T+d\).
+At an interior gap in either sign block let \(a\) be the gap of
+\(\kappa\), and \(l=\lfloor(a+2)/T'\rfloor\) the corresponding
+gap of \(w_L\). The page gives \(a+2\ge T'(T'+2r)\). Write
+\(a+2=T'l+\rho\) with \(0\le\rho<T'\). The gap of \(w_2\) is
+\[
+ (T'+2)l-a=2l-\rho+2>0.
+\] At a last entry \(a\ge2T^2\) of
+\(\kappa\), put \(d_0=dn_W+2r\) in the positive block and
+\(d_0=0\) in the negative block.
+
+Now
+\(l=\lfloor(a-d_0)/T'\rfloor\) and \(0\le d_0\le T\).
+Because \(T\ge40d\), we have
+\[
+ T'\left(1+\tfrac32T\right)\le 2T^2-T .
+\]
+Write \(a-d_0=T'l+\rho\) with \(0\le\rho<T'\). The last entry
+of \(w_2\) in this block is positive, since
+\[
+ l=\left\lfloor\frac{a-d_0}{T'}\right\rfloor\ge\frac{3T}{2},
+ \qquad 2l-d_0-\rho>3T-T-T'=T-d>0 .
+\]
+The rows of \(w_1\) are twice the rows of \(w_L\).
+The row and central bounds for \(w_L\), with \(2,s+4\le T\),
+give \(w_1,w_2\le\kappa\) componentwise.
+For either weight \(u\), the rank and level tests follow from
+\[
+ \begin{aligned}
+ n(u)&\in\{2n_W-2,(s+4)n_W-n_P\}, &n(u)&\ge n_W\ge r,\\
+ \operatorname{DF}(u)+2&\le (s+4)\operatorname{DF}(w_L)+2,
+ &\operatorname{DF}(u)+2&\le\min(g_0,g_1).
+ \end{aligned}
+\]
+In particular 
+\[
+  g_0g_1\ge(\operatorname{DF}(u)+2)^2
+\ge4\operatorname{DF}(u)+4.
+\]
+ The size bounds are
+\(\lvert w_1\rvert\le2S_L\) and \(\lvert w_2\rvert\le(s+4)S_L\).
+\label{cor:selected-height-sections-2}
+
+\proofstep{The two sections from the nonvanishing jet test.}
+Fix \(u\in\{w_1,w_2\}\) among the weights needed at this lift.
+Work at a good complex embedding. On each component \(a\) choose an
+orthonormal frame. The positive last entries and \(n(u)\ge r\)
+allow the block determinant harmonic polynomial. Let \(D_u\) denote its nonzero leading differential operator.
+At the level just checked, Lemma~\ref{lem:ideal-lattice-jet} gives
+\[
+ d=\operatorname{ord}(D_u)\le\operatorname{DF}(u),\qquad
+        D_u\theta_\nu(0)\ne0\quad\text{for some }\nu .
+\]
+The corresponding theta evaluation is linear in the polynomial.
+The bounded grid of determinant polynomials in the proof of
+Proposition~\ref{prop:three-shifted-spanning-sets} spans the same
+harmonic space. Fix a translate \(\nu\) on which the jet is nonzero. If every grid
+polynomial vanished on this translate, linearity would give zero for the
+original polynomial there as well. Choose one grid rule \(F_a\) with
+nonzero value at this frame and translate.
+
+Let \(A_u\) be the sum of the flag entries and put \(h_u=frn(u)\).
+The grid estimate and the complex theta norm calculation in that
+proposition use only \(d\le A_u\), \(r\le n(u)\) and the logarithmic
+size bounds at \(u\). These hold by the coordinatewise bounds
+\(u\le\kappa\) above. Before applying the integralizing scalar they give
+at every embedding \(\sigma\)
+\[
+ \log\|F_a\|_{\sup,\sigma}
+ \le 140rL A_u+10L A_u+200h_uL
+ \le 400 Z_b |u| .
+\]
+Let \(x_a\) be the chosen frame on component \(a\), and put
+\(C=\{0,\ldots,M_c\}^{M_c}\).
+
+For fixed \(m_b\) with \(b\ne a\),
+the coefficient of \(m_a\) in \(\sum_b m_bF_b(x_a)\) is nonzero.
+Consequently
+\begin{equation}\label{eq:height-section-grid-avoidance}
+ \begin{aligned}
+ H_a&=\{m\in C:\textstyle\sum_b m_bF_b(x_a)=0\},&
+       |H_a|&\le(M_c+1)^{M_c-1},\\
+ \left|C\setminus\bigcup_a H_a\right|
+     &\ge (M_c+1)^{M_c-1}.&&
+ \end{aligned}
+\end{equation}
+By \eqref{eq:height-section-grid-avoidance} we can choose one \(m\)
+avoiding every zero locus and multiply \(\sum_b m_b F_b\)
+by the integralizing scalar \(s(u)\) of the theta module.
+This scalar is nonzero and has log
+absolute value at most \(\lambda_*|u|\) at every embedding.
+The scaled combination lies in the integral cusp lattice at \(u\),
+is nonzero on each analytic component and therefore on each
+algebraic component. Its log supremum is at most
+\[
+               (400Z_b+\lambda_*)|u|+2\log M_c .
+\]
+
+For this estimate \(M_c\ge1\) and \(\sum_a m_a\le M_c^2\).
+The marked-lattice count in Proposition~\ref{prop:slice-evaluation-net}
+gives \(\log M_c\le41Z_b^2\), hence also \(\log M_c\le81Z_b^2\).
+For \(|w_1|\le2S_L\), \(|w_2|\le(s+4)S_L\) and \(s\ge3\), put
+\[
+       P_4=\max\{1,5(1009Z_b+\lambda_*)+162 Z_b^2/s\}
+\]
+Since \(s+4\le5s\) and \(S_L\ge1\), the preceding bounds give
+\[
+ \tfrac12\log\|t_1\|_{\sup,\sigma}\le P_4 s S_L,\qquad
+           \log\|t_2\|_{\sup,\sigma}\le P_4 s S_L .
+\]
+The two selections take place over the original coefficient field.
+Their restrictions to an incidence field are nonzero because
+that field contains the corresponding component field. The
+selection uses only the section data of this run. In particular
+\(t_2\) serves both the thickened weight-\(w_F\) line and the
+comparison of its height with the light height.
+\label{cor:selected-height-sections-3}
+\end{proof}

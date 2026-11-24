@@ -1,0 +1,222 @@
+\paragraph{The rank removed by the arithmetic projector.}
+
+A separating section identifies the levels. The projector can still remove part of their rank, which is counted in the finite representation at the two level primes.
+
+Use the finite group of the two level primes in the same model.
+For this calculation twist its action by the inverse of the
+central form character $\chi$, so that the chosen character
+becomes the product Whittaker character $\lambda$ of $U$. At
+each residue factor its value is a nontrivial additive character
+of the sum on the first superdiagonal. This twist only multiplies
+the scalar in the pullback action. Write $V$ for the cusp space
+of weight $\kappa$ with that action and $V_\lambda$ for its
+character space. Its dimension is $d_0$.
+
+\begin{lemma}[Trace of the discarded central idempotent]
+\label{lem:paired-projector-rank-loss}
+For the character space of dimension \(d_0\), write \(r_{\rm bad}\) for the rank discarded by the bad-type projector. The ratios \(\beta_k\) from \eqref{eq:row-bad-share} give
+\[
+ r_{\rm bad}\le2d_0(\beta_0+\beta_1).
+\]
+ This comparison uses the integral
+arithmetic projector through its scalar extension.
+\end{lemma}
+
+\begin{proof}
+\proofstep{The finite type decomposition at the two level primes.}
+Let $H_k$ be the whole finite linear group at the $k$th level
+prime and the upper unitriangulars at the other. There is an
+$H_k$-equivariant embedding of $V$ into $a_k$ copies of the
+regular representation, with $a_k |H_k|\le 2|U|d_0$.
+For a definite form space use the free action on components,
+which gives equality with $|U|d_0$ in this bound. In the
+indefinite case, let $w$ be a separating section for $H=H_k$.
+Write $w_h$ for its ordinary pullbacks, indexed so that the
+ring action of $g$ sends $w_h$ to $w_{gh}$. The scalar twist belongs to the action on the form \(v\), while pullback permutes the separating sections. Consequently
+\[
+  g(w_h v)=w_{gh}\,g(v).
+\]
+
+Let $W$ be the invariant subspace of the span of all $w_h v$
+for $v\in V$. Consider the map
+\[
+ V\longrightarrow \operatorname{Map}(H,W),\qquad
+ v\longmapsto
+    \left(\sum_{g\in H}g(w_h v)\right)_{h\in H}.
+\]
+For $kv$ the tuple at $h$ becomes the tuple for $v$ at
+$k^{-1}h$, so the map intertwines the left regular action.
+If the tuple vanishes, the group determinant of the $w_h$
+gives $g(v)=0$ for each $g$ on a dense open set of every
+component. This gives injectivity. Conversely the map
+$(a_h)\mapsto\sum_h w_h a_h$ from $W^{\oplus H}$ has target weight $\kappa+2d$.
+
+If its value vanishes, applying each $g\in H$ gives the same
+invertible matrix of translates on the $a_h$ because $W$
+consists of invariants. Writing \(a_k=\dim W\), apply first the injection just constructed,
+then the three-weight comparison and finally the trace injection for \(U\):
+\[
+ a_k|H_k|\le\dim V_{\kappa+2d}
+ \le2\dim V_{\kappa-d}\le2|U|d_0 .
+\]
+The bounds on the irreducible multiplicities for $H_k$ are
+unchanged by extending the algebraic coefficient field through
+a different complex embedding. Indeed, over an algebraic
+closure they are the ranks of the central primitive idempotents
+divided by the corresponding irreducible degrees. A change of
+embedding permutes these idempotents and preserves their degrees.
+The regular representation contains each irreducible with
+multiplicity its degree. Thus the embedding bound also holds
+at the embedding used for the finite type projectors.
+\label{cor:paired-good-share-1}
+
+\proofstep{Tracing the central bad projector.}
+In the group algebra let $b_k$ be the central idempotent for
+bad tuples of semisimple labels at the $k$th prime, extended
+by the identity over the other prime. The two commuting central idempotents give the retained projector
+\[
+  e_{\rm good}=(1-b_0)(1-b_1)=1-b_0-b_1+b_0b_1.
+\]
+ Let $e_\lambda$
+be the normalized character idempotent of $U$.
+The operator $b_ke_\lambda$ is idempotent and belongs to
+$\mathbb C[H_k]$. The dimension discarded inside $V_\lambda$
+is at most the sum of the two ranks of these idempotents.
+
+For the regular representation of $H_k$ the trace of group
+algebra multiplication by $B$ is $|H_k|$ times the coefficient
+of $1$ in $B$. Indeed each diagonal entry on the group basis
+is that coefficient. Consequently, writing $\beta_k$ for that
+coefficient in $b_ke_\lambda$ divided by the coefficient in
+$e_\lambda$, the rank discarded is at most
+\begin{equation}\label{eq:row-bad-share}
+ \sum_k a_k\frac{|H_k|}{|U|}\,\beta_k
+ \ \le\ 2d_0(\beta_0+\beta_1).
+\end{equation}
+Here the projector image has its arithmetic meaning even if the
+cusp reading uses a different embedding from the type weights.
+Both the character kernel and its intersection with the kernel of
+the good idempotent are ranks of stacked algebraic linear maps.
+This is the use of the two embeddings in the selected comparison.
+\label{cor:paired-good-share-2}
+
+\end{proof}
+
+Let \(G=\operatorname{GL}_r(\mathbb F_g)\), \(g=g_k\), with upper
+unitriangular subgroup \(U\). For a monic degree-\(r\) polynomial
+\(P\) with unit constant coefficient let \(e_P\) be its central
+series projector. Write \(e_\psi\) for the idempotent of a standard
+nondegenerate character of \(U\) and \([1]\) for the coefficient
+of the identity in a group-algebra element.
+
+\begin{lemma}[Local weights of squarefree type labels]
+The numbers \(\omega_g(P)=[1](e_Pe_\psi)/[1]e_\psi\) are
+nonnegative, sum to one and are independent of the standard
+nontrivial additive character used to define \(\psi\). If \(P\)
+is squarefree, then
+\[
+        \omega_g(P)=\prod_{Q\mid P}(g^{\deg Q}-1)^{-1},
+\]
+where \(Q\) ranges over monic irreducible factors.
+\end{lemma}
+\begin{proof}
+In the regular representation \(\operatorname{tr}_{\rm reg}(a)
+=|G|[1]a\); the projectors \(e_Pe_\psi\) split the range of
+\(e_\psi\). Conjugation by a diagonal matrix with the prescribed
+successive ratios carries one standard character to the other,
+fixing each \(e_P\). This proves the first assertions.
+
+For squarefree \(P\) the dual element has distinct eigenvalues;
+its centralizer is the torus \(T=\prod_{Q\mid P}\mathbb F_{g^{\deg Q}}^\times\).
+The torus character is in general position. The Deligne--Lusztig
+degree and Gelfand--Graev multiplicity formulas for \(G\), whose
+center is connected, give one irreducible in this series of degree
+\(|G|_{g'}/|T|\), with Whittaker multiplicity one. Thus
+\[
+ \omega_g(P)=\frac{(|G|_{g'}/|T|)\cdot1}{|G|/|U|}=|T|^{-1}.
+\]
+\cite[\S\S5.24, 7.1, 7.4 and 10.7]{deligne-lusztig-finite}
+\end{proof}
+At the level prime \(g_k\), sum the products of these local
+weights over bad tuples, one factor per split place, to obtain
+\(\beta_k\). \label{cor:paired-good-share-3}
+
+\paragraph{Bounds for the four finite label exclusions.}
+Lemma~\ref{lem:finite-type-event-bounds} gives the four mass
+bounds used here.
+The finite type bound used on the selected family is
+\begin{align}
+ \beta_k\le{}&\frac{3f}{g}+\frac{23 f\log g}{\sqrt g}
+     +2fm\left(\frac1{4\min(q,d')}+\frac{1+\log r}{g-1}\right)
+       \notag\\
+     &+\frac r2(7/8)^f+\exp\left(-\frac{f}{5\log r}\right).
+ \label{eq:row-bad-types}
+\end{align}
+In this formula $q,d'$ are the fixed auxiliary primes at the
+point, and $d'$ is distinct from the determinant weight $d$.
+The hypotheses are $r\ge100$, $g\ge4096$, distinct odd $q,d'$
+with $\max(q,d')\ge16$ and $16qd'\mid g-1$, and the same
+character labels as in the projector. The squarefree mass is used
+as a subprobability. In degree $r\ge2$ there are $g^r-g^{r-1}$
+monic squarefree polynomials by the Euler product, and removing
+zero constant terms costs at most $g^{r-1}$.
+
+Since the torus
+order of each remaining label is at most $g^r$, the missing
+weight is at most $2/g$.
+The retained mass is consequently bounded below by
+\[
+  \frac{g^r-g^{r-1}-g^{r-1}}{g^r}=1-\frac2g .
+\]
+ A union over the $f$ places fits the
+first displayed term. The other terms use four events on the
+squarefree labels, namely a pair of roots with equal prime-to-$\ell$
+parts at a nonexcluded prime $\ell$, a matching part against a
+prescribed scalar or its inverse, a common proper divisor degree
+at all places, and the absence of a prime-degree factor of the
+specified large size at every place. These are the four tests of
+the finite type. We give the counting argument in the next
+paragraph.\label{cor:paired-good-share-4}
+
+\input{paired-type-mass}
+
+\begin{proposition}[A uniform bound on the removed rank]
+\label{prop:paired-good-rank}
+Use either run of Proposition~\ref{prop:linked-comparison-rows}
+and its retained projector in
+Proposition~\ref{prop:equivariant-selected-row}. Assume the
+finite labels of Lemma~\ref{lem:finite-type-event-bounds} and
+size bounds \eqref{eq:paired-bad-type-sizes}. Writing \(d_{\rm rem}\) for the removed rank at the lift, one has
+\[
+ \delta=\exp(-x^{e_z/7}),\qquad d_{\rm rem}\le\delta d_0,\qquad (1-\delta)d_0\le D_0.
+\]
+ The finite type bounds are applied
+with the same parameters as the central projector trace.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Summing the finite tests over the selected labels.}
+
+The size bounds for the type mass are
+\begin{equation}\label{eq:paired-bad-type-sizes}
+ f\ge x^2,\qquad f,m,r\le x^5,\qquad
+ g\ge \exp(8x^\epsilon),\qquad
+ \min(q,d')\ge\exp(x^{e_z/6}),\qquad
+ 0<e_z\le\epsilon<1 .
+\end{equation}
+The exponents \(e_z,\epsilon\) are fixed for the family. On these bounds every term in \eqref{eq:row-bad-types},
+including those with $\log g$, is $o(\exp(-x^{e_z/7}))$, uniformly
+in the place, lift and selected point. For the logarithm term use
+$\log g/\sqrt g\le O(g^{-1/4})$. For the last two terms use
+$\log r\le5\log x$ and $f\ge x^2$. At each level prime the resulting family bound is
+\[
+  4\beta_k\le\delta,\qquad \delta=\exp(-x^{e_z/7})\le\tfrac14.
+\]
+This threshold is common to the two runs and all the readings.
+By \eqref{eq:row-bad-share} the removed rank is at most
+$\delta d_0$. Using the tied rank equality from
+Section~\ref{subsec:selected-cusp-reading} at each lift gives
+$(1-\delta)d_0\le D_0$ on the retained row. Its numerator
+comparisons use the corresponding eigenspaces in the same row.
+\label{cor:paired-good-share-5}
+\end{proof}

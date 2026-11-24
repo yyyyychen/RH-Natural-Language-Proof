@@ -1,0 +1,143 @@
+\begin{lemma}[Three-letter lifting with positive outer signs]\label{lem:three-letter-positive-lift}
+For the same \(L=S_g\) and short-band indicator \(B\) as in
+Lemma~\ref{lem:three-letter-negative-lift}, and for chronological signs \(+,-,+\), the adjacent-level correction can be chosen with exponent \(e_3\) satisfying
+\[
+ e_3\le34L+1+\eta B.
+\] With the other short-arc branches, the
+single exponent \(E=\lfloor40S_g+\eta B\rfloor\) works on
+every eligible column of the chosen horizontal frames,
+in powers of \(\ell\) in the original DVR.
+\end{lemma}
+
+\begin{proof}
+\proofstep{Use the middle congruence with the two positive neighbor denominators.}
+Now consider \(+,-,+\). The denominator of \(f\) is
+\(D=q^zP_2^u\) and its middle congruence is modulo
+\(P_1^{v+S}\). Write \(C=v+S\), \(a_0=\lceil z/p\rceil\).
+We first show that the middle rational constant \(x/p^k\)
+has denominator at most \(p^s\), with
+\begin{equation}\label{eq:three-denominator}
+ s\le\max\{1,u-C/p+16L/5\}+1 .
+\end{equation}
+Put \(Q=u-(C-a_0+1)/p+2+\log_p u\), and use
+\(s=1+\lfloor\max(0,Qp/(p-1))\rfloor\).
+
+If \(D\in(p^s,P_1^C)\), multiply by \(q^{pa_0-z}\).
+Expanding \(P_1=p\varepsilon+Uq^p\) gives
+\(P_1^{a_0+s-1}\in(q^{pa_0},p^s)\).
+Hence \(P_1^{a_0+s-1}P_2^u\in(p^s,P_1^C)\).
+Cancelling this power of \(P_1\) modulo \(p^s\), and descending
+by \(\phi\), gives
+\[
+ P_1^u\in(p^s,q^{C-a_0-s+1}).
+\]
+
+Cancellation holds by reduction to a distinguished polynomial,
+and descent holds since the ring is free over its Frobenius
+image (Weierstrass division by \(\phi(q)-Y\)).
+The content inequality from the preceding paragraph would force
+\[
+ s\le\max(0,u-(C-a_0-s+1)/p+2+\log_p u),
+\]
+contrary to the choice. Here \(C-a_0-s+1>0\):
+\(a_0\le z/p+1\), \(20u\le b_0\) and the bound on \(s\)
+in \eqref{eq:three-denominator} gives \(a_0+s<C+1\) using
+\(160L\le b_0\).
+
+To verify that bound directly, use
+\((a_0-1)/p\le h/p^2\), \(u\le w\) and \(\log_p u\le\gamma_h\).
+Expanding the factor \(p/(p-1)=1+1/(p-1)\) charges at most
+\((w+h/p^2+2+\gamma_h)/(p-1)\) in addition to
+\(u-C/p+h/p^2+2+\gamma_h\), which fits the displayed allowance.
+This proves the bound on the content of \(D\); the middle
+congruence then gives
+\[
+ p^sx/p^k\in O.
+\]
+
+
+Put \(A=A_{c-2}\). If \(u<A+\eta+2\sigma+2\), separate the
+constant at cost \(s\) and lift both summands at \(R+\sigma\).
+Indeed the new remainder has numerator divisible by \(P_1^C\).
+We check that the size-dependent loss in
+\eqref{eq:three-denominator} fits the band allowance.
+By \eqref{eq:short-A},
+\[
+ u-C/p<\eta+\eta/p+\tfrac52 L+2\sigma+2.
+\]
+Inside the band this gives \(s\le\eta+14L+1\). Outside it,
+if \(pu\le b_0\) the excess \(u-C/p\) is nonpositive.
+If \(pu>b_0\), absence of the band gives
+\(u-b_0/p>2\eta\), while the last upper bound and
+\((C-b_0)/p\le(\eta+S)/p\) imply \(\eta<12L\).
+These bounds give
+\[
+ s\le 28L+1+\eta B
+\]
+on every arc.
+
+If \(u\ge A+\eta+2\sigma+2\), construct a filtered constant
+at the initial positive letter. The one-letter calculation with
+the coordinate \(q^{-u}d\) gives scalar comparison
+\(p^{2\sigma}(q-p)^A q^{G-u}\) modulo \(q^{G-\eta}\).
+The degree \(G-u+A\) is in the comparison range. Its leading coefficient is
+\[
+ [q^{G-u+A}]\,p^{2\sigma}(q-p)^A q^{G-u}=p^{2\sigma}.
+\] Equivalently, some coefficient
+in that range divides \(p^{2\sigma+1}\): expanding
+\(q^{A+2\sigma}\) in \((q-p)+p\) shows that divisibility of all
+the low coefficients by \(p^{2\sigma+1}\) is impossible.
+All these source coefficients lie in \(\mathcal F^u\). Thus
+after transport a source direction at positive level two maps
+to \(p^{2\sigma+1}d\). Only its filtration at level two has
+been prescribed. We choose the part of \(f\) to which it applies.
+
+Let
+\[
+ j=\max(0,\lfloor u-C/p-\eta/p^2\rfloor).
+\]
+There is a
+decomposition
+\[
+ P_2^u=p^j U_0+P_1^C q^\eta U_1,\qquad U_0,U_1\in\mathcal R .
+\]
+In the expansion of \((p\varepsilon_1+U'_1P_1^p)^u\), the
+term with \(P_1^{pr}\) is paid by its scalar coefficient if
+\(r\le C/p+\eta/p^2\). Otherwise factor off \(P_1^C\) and
+expand the remaining \(pr-C\) powers of \(P_1\).
+Any resulting term with \(q\)-degree below \(\eta\) has
+scalar valuation at least
+\(u-r+(pr-C)-\eta/p\ge u-C/p-\eta/p^2\).
+This proves the decomposition. Put \(e_4=(s-j)_+\) and
+\(x'=p^s x/p^k\).
+
+Take
+\[
+ f_a= p^{e_4+j-s}x' U_0/P_2^u.
+\]
+Then \(p^sf_a-p^{e_4}x'\) belongs to
+\(P_1^Cq^\eta P_2^{-u}\mathcal R\).
+The second rule lifts \(f_a\) at cost \(3\sigma+1\), using
+the source filtration at level two and the constant congruence
+at the omitted positive level zero. The remainder
+\(p^{e_4}f-f_a\) has numerator divisible by \(P_1^C\) over
+\(D\), by the middle congruence and saturation. It costs
+\(R+\sigma\). Since \(j\ge u-C/p-\eta/p^2-1\),
+\eqref{eq:three-denominator} gives
+\[
+ e_4\le 16L/5+\eta/p^2+2
+\]
+when the second term in the maximum is used; otherwise
+\(e_4\le2\). In particular \(R+3\sigma+1+e_4\le18L+1\).
+The two initial-positive cases therefore both fit
+\(34L+1+\eta B\). \label{cor:inert-short-positive-1}
+
+All the bounds for the individual scalar lifts are at most
+\(40S_g+\eta B\), since \(S_g\ge1\).
+They hold on every eligible column of every chosen horizontal
+frame; consequently the integer
+\(E=\lfloor40S_g+\eta B\rfloor\) can be used simultaneously.
+The exponents are in powers of \(\ell\) in the original DVR,
+including when its uniformizer has fractional normalized valuation.
+\end{proof}
+

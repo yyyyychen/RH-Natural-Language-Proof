@@ -1,0 +1,462 @@
+\subsection{The ordinary ranks of the retained digit classes}
+\label{sec:retained-rank}
+\hypertarget{source-retained-rank}{}
+
+A successful specialization controls the Gram form on the retained space. Estimate its ordinary dimension before multiplying the segment contributions in \eqref{eq:ordinary-class}.
+\begin{established}[Separation and degree reserves on the retained digit class]\label{hyp:retained-digit-degrees}
+Work in one compatible digit class. Write \(B=A_0^{\,*}\),
+\(M=\lceil m_0\rceil\), \(\delta=4/p^2\) and
+\(\epsilon=N_1\mathcal L/k\). The separation of the odd powers
+from the transition between the two lists is important here.
+We give the numerical details used from the separated regime.
+Let \(\Delta<1/6\) be its relative band width parameter, with
+\(40\epsilon\le\Delta\).
+
+At the first list
+\(p^{d_i}<(1-2\Delta)a/b'\), at the second
+\(p^{d_i}>(1+2\Delta)a/b'\). In the enlarged box
+\(|b_i/b'-1|\le b_e\le\Delta/2-18\epsilon\),
+\((E_0+Q)/a\le\epsilon\) and \(kQ\le\epsilon b'\).
+
+\begin{equation}\label{eq:coarse-split}
+ (1+\Delta)A_i<B\quad(i<\sigma),\qquad
+ B<(1-\Delta)A_i\quad(i\ge\sigma).
+\end{equation}
+The prefix sums satisfy
+
+\begin{equation}\label{eq:coarse-prefix}
+ \sum_{l<i} A_l\le\delta A_i,\qquad
+ \sum_{l<i} C_l\le\delta C_i .
+\end{equation}
+\end{established}
+\begin{proof}
+The inequalities for the box are verified on the selected host cycle in the size calculation of Proposition~\ref{prop:host-large-prime-test}. At each interior top the digit and floor identities give \[
+ \begin{gathered}
+ b_i-kP_i<P_i A_i\le b_i, \\ P_i p^{d_i}=p^G, \\ a-E_0-p^G<Bp^G\le a.
+\end{gathered}
+\] For the first inequality use
+\((1-2\Delta)(1+b_e)(1+\Delta)\le1-\epsilon\).
+
+For the second use
+\((1+2\Delta)(1-b_e-\epsilon)(1-\Delta)\ge1\).
+Both follow by expanding with the bounds on \(b_e,\Delta\).
+For consecutive indices \(P_i/P_{i+1}\ge p^2\), as both
+distances are odd. The bounds just used give
+the two ratio bounds
+\[
+       p^2A_i\le2A_{i+1},\qquad p^2C_i\le2C_{i+1},
+\]
+using \(a_i\in[a,a+2a/(kY)]\) and the digit error \(kP_i\). Summing the resulting geometric progressions gives \eqref{eq:coarse-prefix}.
+
+We may use \(B\ge a/(2Q)\), by the floor bound and
+\((E_0+Q)/a\le\epsilon\). With \(4 k^3 QY\le b'\),
+\(kY\mathcal L b'\le a\), \(\mathcal L\ge24\), and
+\(m_0\le b'/(kQY)\), we have
+\[
+ kM/B\le4b'/a\le1/30,\qquad M\le\epsilon B.
+\]
+Also \(k^3\le A_i,C_i,B-M\) by the digit and floor bounds,
+and \(k\ge10\) by \(40\epsilon\le\Delta\). These inequalities
+apply with absolute size constants, simultaneously on the
+enlarged box.
+\end{proof}
+
+\begin{proposition}[Ordinary rank of one retained digit class]\label{prop:retained-digit-rank}
+Fix a compatible digit class satisfying
+Lemma~\ref{hyp:retained-digit-degrees}, using the retained space
+in \eqref{eq:ordinary-class}.
+Let \(R_{\rm ret}\) be the ordinary rank of the retained space
+and \(N_{\rm mon}\) the unrestricted monomial count of this class. Then
+\[
+ R_{\rm ret}\ge N_{\rm mon}
+ (1-e^{-\mathcal L/8})(1-e^{-\mathcal L/3})(1-rM/B).
+\]
+For \(\mathcal L\ge24\) and \(kM/B\le1/30\), this fraction
+is greater than one half. When \(s=0\) there is no loss
+from the internal tests.
+\end{proposition}
+
+\begin{proof}
+\proofstep{The two counts.}
+For \(A\in\{B,B-M\}\), put \(V=\mathbb C^k\). The tensor and
+its dimension are
+\[
+ \mathcal T_A=\operatorname{Sym}^{A}V\otimes
+       \bigotimes_i(\operatorname{Sym}^{A_i}V\otimes
+                         \operatorname{Sym}^{C_i}V^*),\qquad
+ T(A)=D_k(A)\prod_i D_k(A_i)D_k(C_i).
+\]
+In characteristic zero, each Pieri step gives one copy of each
+allowed highest weight. For decreasing integer rows write
+\(\nu\succ\mu\) when \(\nu_j\ge\mu_j\ge\nu_{j+1}\) wherever
+the entries exist. From the zero weight add the initial strip of
+size \(A\). At each subsequent pair the allowable transitions are
+\[
+ \mu\ \longrightarrow\ \nu\ \longrightarrow\ \tau,\qquad
+ \nu\succ\mu,\quad |\nu|-|\mu|=A_i,\qquad
+ \nu\succ\tau,\quad |\nu|-|\tau|=C_i ,
+\]
+where \(|\mu|\) denotes the sum of the rows, including negative
+entries. These rules follow from their polynomial versions by a
+determinant twist and duality. Restriction to \(\mathrm{GL}_r\)
+appends one interlacing weight \(\lambda\) below the last weight,
+again with multiplicity one. \cite{fulton-harris}
+
+Let \(\mathcal P_A\) denote these entire paths and
+\(d_\lambda=\dim V_\lambda\). The terminal dimension and the
+independent choice of the last-coordinate exponent \(j_+\)
+give the two counts
+\begin{equation}\label{eq:retained-path-dimensions}
+ \sum_{\pi\in\mathcal P_A}d_{\lambda(\pi)}=T(A),\qquad
+ \sum_{j_+=0}^{b_+}D_r(b_+-j_+)=D_k(b_+).
+\end{equation}
+The second identity partitions degree-\(b_+\) monomials
+according to their exponent on the last variable.
+
+\proofstep{The row recursion for a counted path.}
+Number rows from zero. Let \(c_i\) be the first row before
+the \(i\)-th vector addition, \(c_0=A\), and \(c_s\) the final
+one. Let \(w_i\) be the increase in the sum of all other
+rows at the addition and \(h_i\) the decrease in the first
+row at the removal. Write
+\[
+ u_i=w_i+h_i,
+\]
+and let \(R_i\)
+be row 1 just after the addition.
+
+Write \(n_i=-\lambda_{r-s+i}\)
+and let \(d\) be the sum of \(\lambda\) minus the sum of the
+rows below the first row at the end. Deleting the first row
+after the initial letter gives a path in dimension \(r\)
+with alternating strip sizes \(w_i,C_i-h_i\) and one final
+addition of size \(d\) ending at \(\lambda\). Indeed the last
+interlacing is exactly such a horizontal addition. Record \((w_i,h_i)\) in the initial list. The tied positions and the endpoint have labels
+\[
+ (o_i,j_i)=(u_i,h_i),\qquad o_+=d+j_+.
+\]
+Conversely these data and
+the reduced path uniquely recover the large path at a
+specified \(A\). Its first rows at the three successive times
+of a pair must be
+\[
+ c_i,\quad c_i+A_i-w_i,\quad c_{i+1}=c_i+A_i-u_i .
+\]
+Thus sizes determine the restored entries. Their interlacing
+with the retained rows is the condition to check for the
+converse.
+
+\proofstep{Bounding the upper count by the unrestricted list.}
+For the upper bound start with a counted block, level and
+allowed path in dimension \(r\). The independent factors in \eqref{eq:retained-path-dimensions}
+give the count on this side as the sum of \(d_\lambda D_r(b_+-j_+)\) because each prefix
+cutoff takes the sum of the allowed prefix summands in the
+successive Pieri decompositions. The triangular lift of levels
+in Section~\ref{sec:segment-window} preserves this total rank.
+Reconstruct at \(A=B\), where \(c_i=K_i\). The first row of the
+reduced path just after its vector must be at most both
+\(K_i,K_{i+1}\). At a tie its cutoff gives the former and
+\(K_{i+1}\ge K_i\).
+
+In the initial list this first row is at
+most
+\[
+ \sum_{l\le i}w_l\le(1+\delta)A_i,
+\]
+since a covector
+step never increases it. Up through this pair every
+\(K_l\ge B-2s\mathcal L B/k\), by \(w_l\le A_l\) and the
+bound on \(h_l\). By \eqref{eq:coarse-split} and
+\[
+ \delta+3\epsilon\le\Delta/2,
+\]
+both required inequalities
+follow. The final cutoff gives \(\lambda_0\le K_s\). The strip
+degrees give \(0\le h_i\le C_i\), \(0\le w_i\le A_i\)
+also at the ties. These conditions suffice for every inserted
+horizontal strip and the final restriction. We have a
+weight-preserving injection into the unrestricted count,
+proving the upper bound of \eqref{eq:ordinary-class}.
+
+\proofstep{A lower bound by deletion.}
+For the lower bound start with \(A=B-M\), so the capacities
+reconstructed from the labels satisfy \(K_i=c_i+M\). Retain
+only paths satisfying, at every \(i\),
+\begin{equation}\label{eq:kept-tail}
+ u_i-R_i+\delta(A_i+r)\le \frac{\mathcal L}{k}\max(c_i,A_i),
+ \qquad n_i\ge (1-\mathcal L/k)C_i ,
+\end{equation}
+and \(j_+\le\mathcal L b_+/k\).
+We verify that these paths contribute to the block count at
+margin \(m_0\). Interlacing and \eqref{eq:coarse-prefix} give
+\[
+ 0\le R_i\le c_i,\qquad
+ R_i\le w_i+\delta A_i,\qquad
+ 0\le n_i\le(1+\delta)C_i .
+\]
+
+\proofstep{Keeping enough rows after deletion.}
+For the second bound the previous row 1 was at most the sum of
+previous vector additions below the first row. For the third,
+follow the bottom row just after pair \(i\). Until then its
+negative part was at most \(\sum_{l\le i} C_l\). A later vector
+step increases each row, a covector step decreases a row at
+most to the former next row, and \(\lambda_j\ge\mu_{j+1}\).
+Following these comparisons back proves the upper bound. A horizontal strip creates at most one new row of the corresponding sign. After \(i\) pairs, starting with the initial vector, the row counts thus satisfy 
+\[
+ \#\{a:\lambda_a>0\}\le i+1,\qquad\#\{a:\lambda_a<0\}\le i,
+\]
+ for the intermediate highest weight \(\lambda\). The inequalities about signs follow
+from the same interlacing, in particular row 1 is nonnegative
+after a vector step and the last \(s\) rows of \(\lambda\) are
+nonpositive (interlace downwards from the zero middle rows).
+
+In the initial list
+\[
+ c_i\le B+\delta A_i\le2B.
+\]
+
+Thus \eqref{eq:kept-tail} gives
+\(u_i\le A_i(1+\delta)+2\mathcal L B/k\) and
+\[
+ c_{i+1}\ge c_i-(\delta+2\mathcal L/k)B.
+\]
+Starting at
+\((1-\epsilon)B\) or higher gives
+\[
+ c_i\ge(1-4\epsilon)B\ge A_i
+\]
+throughout that list.
+Reinserting this comparison in \eqref{eq:kept-tail} gives
+\[
+ u_i\le A_i(1+\delta)+\mathcal L c_i/k,\qquad h_i=u_i-w_i\le\mathcal L c_i/k\le2\mathcal L B/k.
+\]
+In the tied list one has
+\(c_i\le B+\delta A_i<(1-\Delta+\delta)A_i\).
+
+Consequently \(u_i\le c_i+\mathcal L A_i/k\le A_i\).
+The final degree satisfies
+\[
+ d\le c_s+\sum_i(C_i-n_i)\le c_s+(\mathcal L/k)\sum_i C_i.
+\]
+In fact, on the final upper rows the increments of the
+restriction telescope by interlacing to at most \(c_s\)
+through the last middle row. On the last \(s\) rows the
+negative mass before restriction is at most \(\sum C_i\)
+and afterward equals \(\sum n_i\). This proves the first
+inequality even when some last rows vanish. Since
+\(C_i\le 2a/P_i\), the cutoff for \(o_+\) holds.
+The first rows of the reduced path at a tie and at the end
+are at most \(c_i\) and \(c_s\) by interlacing, exactly the
+cutoffs \(\lfloor K_i-m_0\rfloor\) and
+\(\lfloor K_s-m_0\rfloor\). Finally
+\[
+ j_i=h_i\le\min(o_i,C_i)
+\]
+
+and \(j_+\le\min(o_+,b_+)\), giving legal levels. The map is
+injective by the reconstruction above and preserves the
+weight of each path.
+
+\proofstep{Weight of discarded paths.}
+Write \(\eta=1/k^2\) and \(\tau=\mathcal L/(4k)\). Use the following coordinates for one step,
+\[
+ \begin{aligned} x&=c_i+r, & y&=(A_i+r)(1+\delta),\\ v&=R_i+r, & z&=u_i-R_i+\delta(A_i+r).\end{aligned}
+\]
+Then
+\(0\le v\le\min(x,y)\), \(z\ge0\), and
+\[
+ v(c_{i+1}+r)=v(x+y-v-z)
+             =xy-(x-v)(y-v)-vz\le xy .
+\]
+If the first inequality of \eqref{eq:kept-tail} fails then
+\(z>2\tau\max(x,y)\), since \(A_i\ge k^3\) and
+\(\max(x,y)\le2\max(c_i,A_i)\).
+For \(v\ge\min(x,y)/2\) the term \(vz\) exceeds \(\tau xy\).
+For smaller \(v\) the other term is at least \(xy/4\ge\tau xy\).
+Thus the step has the extra factor \(1-\tau\) on its upper
+bound.
+
+Also \(y\le e^{2\eta} A_i\) and
+\(n_i+r\le e^{2\eta} C_i\) since \(\delta\le\eta\) and
+\(r/C_i,r/A_i\le\eta\). A failure of the second inequality
+gives
+\[
+ n_i+r\le (1-\tau)e^{2\eta} C_i,
+\]
+by
+\(n_i<(1-4\tau)C_i\), \(r/C_i\le\eta\) and \(\eta\le\tau\).
+Multiplying and cancelling the successive \(c_i+r\) gives
+for any failed path, since \(\lambda_0\le c_s\) and
+\(A+r\le e^\eta A\),
+\[
+ \frac{(\lambda_0+r)\prod_i(R_i+r)(n_i+r)}{A\prod_i A_iC_i}
+ \le e^{(4s+1)\eta}(1-\tau).
+\]
+The \((r-1)\)-st power of the right side is at most
+\(e^{2-\mathcal L/5}\). Indeed \(2s+1\le r\) and
+\((r-1)/(4k)\ge1/5\).
+
+\proofstep{Converting the path loss into a dimension loss.}
+To turn this into a dimension bound, row \(s-i\) of
+\(\lambda\) is nonnegative and at most \(R_i\).
+Each remaining vector interlaces it with the next row,
+each covector can only decrease a fixed row, and the
+final restricted row is at most the corresponding full
+row. Its lower bound follows by interlacing with the zero
+middle rows, or with the nonnegative entries above them.
+Rows with \(s<j<r-s\) vanish.
+
+With \(V\) the standard representation, the desired occurrence is
+\[
+ V_\lambda\lhook\joinrel\longrightarrow \bigotimes_{\lambda_i>0}\operatorname{Sym}^{\lambda_i} V\,\otimes\!\bigotimes_{\lambda_i<0}\operatorname{Sym}^{-\lambda_i} V^*.
+\]
+Fill positive rows singly from the top, then negative
+rows singly from the bottom, using Pieri at each step.
+Consequently
+\[
+ d_\lambda\le D_r(\lambda_0)\prod_iD_r(R_i)D_r(n_i).
+\]
+Use \(z^{r-1}\le(r-1)!D_r(z)\le(z+r)^{r-1}\) and
+\(D_r(z)\le D_k(z)\) on the unrestricted tensor. A single
+failed path therefore has weight at most
+\(e^{2-\mathcal L/5}T(A)\).
+
+There are at most \((8a+1)^{(2s+3)(2s+1)}\) possible paths
+for \(s\ge1\). At each of at most \(2s+3\) weights only the
+top \(s+1\) and bottom \(s\) entries need be recorded.
+Each has absolute value at most \(4a\), since at a vector or
+covector step an individual absolute change is at most
+the degree, and
+\[
+ A+\sum_i(A_i+C_i)\le4a
+\]
+by the
+geometric progression of the \(P_i\), \(P_i\ge p\),
+\(A\le a\) and \(A_i,C_i\le 2a/P_i\).
+
+The same bound holds upon interlacing. Thus the log of the
+number is at most \(30N_1^2\log a\), using \(s\le N_1\)
+and \(a\ge25\). Increasing the absolute constant \(C_0\)
+if necessary, this and the additive 2 in the exponent
+are at most \(3\mathcal L/40\). The total failed weight
+is at most \(e^{-\mathcal L/8}T(A)\). For \(s=0\)
+there are no failures of \eqref{eq:kept-tail}.
+
+\proofstep{The loss at the last label.}
+For the last label put
+\[
+ J=\lfloor\mathcal L b_+/k\rfloor.
+\]
+
+The discarded monomials have last-coordinate exponent
+greater than \(J\). If \(J<b_+\), subtract \(J+1\) from the last coordinate
+of each discarded monomial. This bijects them with monomials
+of degree \(b_+-J-1\), so their proportion is
+\[
+ \frac{D_k(b_+-J-1)}{D_k(b_+)}
+ =\prod_{i=1}^r\left(1-\frac{J+1}{b_++i}\right)
+ \le \exp[-r(J+1)/(b_++r)]\le e^{-\mathcal L/3},
+\]
+using \(b_+\ge k\) and \(k\ge 3\). For \(J\ge b_+\)
+the discard is zero. Lastly
+\(D_k(B-M)/D_k(B)\ge1-rM/B\) by the binomial product.
+The two counts now give the lower bound in
+\eqref{eq:ordinary-class} with coefficient
+\begin{equation}\label{eq:rank-fraction}
+ (1-e^{-\mathcal L/8})(1-e^{-\mathcal L/3})(1-rM/B).
+\end{equation}
+It exceeds \(1/2\) because \(\mathcal L\ge24\) and
+\(kM/B\le1/30\). This completes the proof of
+\eqref{eq:operational-seg} at the stated depths.
+
+\end{proof}
+
+\paragraph{Multiplication around the cycle.}
+
+The ranks just estimated belong to individual segments. On closing the cycle the retained space has the product rank, so each discarded fraction must be charged before multiplying.
+
+On the cycle let \(R_I\) be the rank of the retained digit
+classes on segment \(I\), \(U\) the two-letter tensor space,
+and \(g\) the number of neighboring edges. Denote by
+\(\kappa_P\) the margin loss
+\[
+ \kappa_P=C_\kappa N\left(e^{-\mathcal L/8}
+   +\frac{kQ(m_0+N_1 k)}{b'}+\frac{1}{Y}+\frac{kE_0}{a}\right),
+\]
+where \(C_\kappa\) is absolute.
+
+\begin{lemma}[Product of retained ranks]\label{lem:cycle-retained-rank}
+For each segment of the cycle impose the degree separation
+and reserves of Lemma~\ref{hyp:retained-digit-degrees}.
+The retained ranks satisfy
+\[
+ \prod_I R_I\ge(1-\kappa_P)\frac{\dim U}{g}.
+\]
+
+This is the digit-class loss to be added to the exceptional
+fractions of Proposition~\ref{prop:segment-discard}.
+\end{lemma}
+
+\begin{proof}
+\proofstep{The losses on neighboring segments.}
+
+Let \(I\) index a segment, \(Q_I=p^{G_I}\), and let \(a_0\)
+denote the actual degree at its starting even top. Summing
+over the digits gives the full monomial dimensions at each
+odd top, as in Section~\ref{sec:segment-window}. At the start,
+\(B=\lfloor(a-E_0)/Q_I\rfloor\) and \(a\le a_0\le a+2a/(kY)\).
+For every \(1\le j\le r\),
+\[
+ \frac{Q_I(B+j)}{a_0+j}\ge 1-z,\qquad
+ z=\frac{2a/(kY)+E_0+Q}{a}.
+\]
+Indeed the difference between denominator and numerator
+is at most \(2a/(kY)+E_0+Q_I\), and \(Q_I\le Q\).
+In a nonvacuous lower bound \(z<1\), hence
+\(Q_I^r D_k(B)/D_k(a_0)\ge1-rz\).
+Every even start and every even end occur once.
+
+Also
+\(\prod_I Q_I=p^{n'}\) and the number of neighboring edges
+is \(g=1+p^{n'}+\cdots+p^{rn'}\ge\prod_I Q_I^r\).
+Multiplying the start factors and \eqref{eq:rank-fraction}
+therefore gives
+\begin{equation}\label{eq:retained-product}
+ \prod_I R_I\ge(1-\kappa_P)\dim U/g,\qquad
+ \kappa_P=C_\kappa N\left(e^{-\mathcal L/8}
+   +\frac{kQ(m_0+N_1 k)}{b'}+\frac{1}{Y}+\frac{kE_0}{a}\right).
+\end{equation}
+Here \(C_\kappa\) is absolute. In detail, per segment use
+\(rM/B\le2kQ(m_0+1)/a\), \(e^{-\mathcal L/3}\le
+e^{-\mathcal L/8}\), and \(rz\le2/Y+k(E_0+Q)/a\).
+For nonnegative losses whose sum is below one,
+the product of their complements is at least one minus
+their sum. Otherwise the assertion with enlarged
+\(C_\kappa\) is automatic. This argument explains why a
+fixed positive retained fraction per segment alone would
+not give the required rank.
+
+\proofstep{The specialization of the cycle parameters.}
+For the cycle with parameters from \eqref{eq:retained-product}, take
+\[
+ E_0=C_{E1}\left(\frac{a}{p^2}+\frac{b'}{p}
+       +\frac{\mathcal L N_1a}{pk}+\frac{\mathcal L b'}{k}\right)
+       +C_{E2}k^2N_1Q^2c,\qquad
+ m_0=C_m kN_1Qc+12c.
+\]
+In \eqref{eq:retained-product} take \(k^3Q^2cY\le b'\),
+\(k^3QY\le b'\), \(kb'\le a\), \(\mathcal L Y b'\le a\),
+\(8\log(NY)\le\mathcal L\le k\), and \(p\ge k^2Y^2\).
+The exponential is at most \(1/Y\). The three parts of the
+margin term, after division by \(N_1/Y\), are bounded by
+\(C_m,12,1\) respectively.
+
+After the same division each of
+the four \(C_{E1}\) terms in \(kE_0/a\) is at most \(C_{E1}\).
+The last term is at most \(C_{E2}\) since \(k^3Q^2cY\le b'\le a\).
+It follows that
+\(\kappa_P\le C_\kappa(C_m+4C_{E1}+C_{E2}+15)NN_1/Y\).
+  All these estimates use the
+same \(c,m_0\) and digit classes as the pairing tests.
+\end{proof}

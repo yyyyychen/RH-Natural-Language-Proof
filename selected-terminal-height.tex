@@ -1,0 +1,181 @@
+\subsubsection{The height bound for the terminal evaluation}
+\label{subsec:selected-terminal-height}
+
+At the compact end of the chain the height also includes the branching evaluation. Its two interlacing weights determine which coefficients have to be bounded.
+
+Use the reference sequence and the terminal point and row spaces at the refined levels of Section~\ref{subsec:terminal-realization}. At each
+real label \(z\), the terminal large and small weights
+\(\lambda,\sigma\) have ranks \(N=N_m\) and \(N-1\).
+They interlace and have the same last entry. Put
+\(A_i=\sigma_i-\lambda_{i+1}\) and \(B_i=\lambda_i-\sigma_i\)
+for \(1\le i<N\), and let
+\[
+ D_{0,z}=\sum_i A_i,\qquad
+ n_z=\sum_i\lambda_i-\sum_i\sigma_i=\lambda_1-D_{0,z}.
+\]
+The harmonic weight on the last diagonal coordinate is
+\(n_z=\lambda_N+\sum_i B_i\). In this equality the last
+entry of the full weight accounts for the determinant
+character in the polynomial model.
+
+\begin{proposition}[Height of the terminal evaluation]\label{prop:terminal-evaluation-height}
+For the reference sequence, let \(T\) inside the sum below
+denote the selected top labels and \(T_u\) the assigned prime.
+The logarithmic squared norm of terminal evaluation in the
+indicated point metrics is bounded above by
+\[
+ -\sum_{z\in T}a_z\log T_u
+ +O\!\left(L_a\bigl[|T|b'N+
+     f(S_c+m\eta)N+fN^2\bigr]\right).
+\]
+The implicit constant is uniform for the selected ranges of the parameters.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Separate the compact branching norm from its Capelli scalar.}
+Recall the branching embedding \(J=c_zJ_0\), where
+\(J_0h_\sigma=\xi_z\) and \(c_z\) is the nonzero integer
+obtained from the capped interlacing intervals. With the
+invariant metrics in which both highest vectors have norm
+one, \(J_0^*J_0=\|\xi_z\|^2\,1\) by Schur's lemma.
+Since \(J=c_zJ_0\), Schur's scalar for the normalized map gives the squared norm of the normalized transpose:
+\[
+ |c_z|^2\|\xi_z\|^2 .
+\] The branching polynomial \(\xi_z\)
+is a product of the initial-column flag minors in the
+smaller-rank model inside the large one. Its normalized
+squared norm is at most one. Indeed realize these minors
+as coefficients in tensor powers of exterior powers, with
+the wedge basis orthonormal. The tensor of the initial
+wedges spans the highest weight of the Cartan summand.
+
+Let \(u\) be the tensor of row wedges, of norm one, and
+\(P_{\rm Car}\) the orthogonal projection to the Cartan summand.
+The coefficient vector representing \(\xi_z\) is \(P_{\rm Car}u\), so
+\[
+ \|\xi_z\|^2=\|P_{\rm Car}u\|^2
+             =1-\|(I-P_{\rm Car})u\|^2\le1 .
+\]
+The unit of comparison is the initial wedge tensor
+itself, which gives \(h_\lambda\). In particular the
+weaker bound \(\log\|\xi_z\|^2\le N(N-1)\log(2a)/2\)
+follows since \(a\ge1\) and \(N\ge1\).
+
+For the Capelli scalar, let
+\(D_{1,z}=\sum_i\min(\lambda_i-\lambda_{i+1},D_{0,z})\).
+This is exactly the number of trial integers in the capped
+intervals after omitting the selected \(\sigma_i\).
+Each trial contributes \(N-1\) differences. Since all shifted
+weights and trial integers lie in the common spread interval,
+each difference has absolute value at most \(2a\), by the
+selected spread bound. Consequently
+\[
+             \log |c_z|\le (N-1)D_{1,z}\log(2a).
+\]
+\label{cor:selected-terminal-height-1}
+
+\proofstep{Use the signed degree in the common class metric.}
+At each class the last line is scaled by the fixed word
+element \(\pi_u\), with \(\pi_u\overline{\pi_u}=T_u\).
+The action in the transported evaluation includes
+\(\prod_z z(\pi_u)^{-n_z}\) with the full signed \(n_z\).
+Its squared modulus is \(T_u^{-\sum_z n_z}\).
+Both metrics in the terminal pairing use the same row
+class index and the same reciprocal stabilizer weights.
+In particular the large fibre at a row class is the
+terminal point fibre prescribed over that class. Applying
+Cauchy--Schwarz with these weights gives the squared
+pairing bound by
+\[
+ T_u^{-\sum_z n_z}\prod_z |c_z|^2\|\xi_z\|^2
+\]
+times the squared norms in the two terminal point metrics.
+This estimate starts after the coupled map of
+Section~\ref{subsec:selected-norms}; its two-kernel
+class sum is already in that map. The evaluation and
+quotient-metric comparisons in
+Section~\ref{subsec:selected-lift-scalar} give its
+bound on the framed spectral row.
+\label{cor:selected-terminal-height-2}
+
+\proofstep{Bound the head and the tail by interlacing.}
+
+Write the head Harish--Chandra coordinates at a label as
+\(u_0,\ldots,u_{k-1}\), with the interlacing coordinates with smaller weights
+\(v_0,\ldots,v_{k-2}\). Write \(b_\alpha,e_\alpha\),
+\(0\le\alpha<m\), for the two ends of the successive
+tail blocks of size \(t+1\). The coordinates with smaller weights lie
+in \([0,S_c]\), \(u_1<v_0\), and
+\(|b_\alpha-e_\gamma|\le\eta\). With zero-based indices the head entries in the large and
+small weights are, respectively,
+\[
+ u_i-\frac{k-1}{2}+i-\frac{m(t+1)}2,\qquad
+ v_i-\frac{k-2}{2}+i-\frac{m(t+1)}2 .
+\]
+Their difference on the shared indices is \(u_i-v_i-1/2\).
+The subsequent block \(\alpha\) in the large weight is constant at
+\(-e_\alpha+k/2+(2\alpha+1-m)(t+1)/2\).
+
+In each tail block the \(t\) later entries agree with
+the corresponding entries of the large weight in the
+shifted index for \(A_i\). The first entry in this tail block contributes the difference
+\[
+ e_\alpha-b_\alpha-\tfrac{t+1}{2}
+\]
+to \(D_{0,z}\).
+This follows by substituting the first coordinate
+\(-b_\alpha\) and the \(t\) successive coordinates
+from \(-e_\alpha\) in the shifted Harish--Chandra row
+of the small representation.
+\label{cor:selected-terminal-height-3}
+
+The head sum of \(A_i\) is at most
+\(v_0-u_{k-1}-k+3/2\) by telescoping with interlacing,
+and the tail contributes at most \(m\eta\).
+Off the top labels \(u_{k-1}=v_{k-2}-1/2\).
+At a top label \(z\), use
+\(b_z=-u_{k-1}-(k-1)/2\le2b'\).
+It follows that
+\[
+        D_{0,z}\le S_c+m\eta+2b'\,{\bf1}_T(z),
+\]
+where \(T\) is the set of top labels.
+
+To bound \(D_{1,z}\),
+cap the first gap and the gap between the head and the
+first tail block by \(D_{0,z}\). The head gaps left
+over telescope from the second to the \(k\)-th entry.
+Their sum is bounded by \(D_{0,z}+S_c\): subtract the
+single term comparing \(v_{k-2}\) with the last head
+entry and use \(u_1<v_0\), \(v_{k-2}\ge0\).
+The remaining tail gaps telescope to
+\(e_{m-1}-e_0-(m-1)(t+1)\le\eta\), since
+\(b_0\le e_0\) and \(|b_0-e_{m-1}|\le\eta\).
+Combining the two capped gaps, the remaining head gaps and
+the telescoping tail gives, respectively,
+\[
+ D_{1,z}\le2D_{0,z}+(D_{0,z}+S_c)+\eta
+                  =3D_{0,z}+S_c+\eta .
+\]
+
+At a top label \(\lambda_1=a_z-(N-k)/2\).
+Otherwise \(u_0-v_0\ge S_c\) and \(v_0\ge0\)
+give \(\lambda_1\ge S_c-(N-1)/2\), which is sufficient
+even when \(n_z\) is negative. Therefore
+\[
+ \sum_z n_z\ge \sum_{z\in T}a_z-2|T|b'-f(S_c+m\eta+N).
+\]
+Sum the logarithmic bounds for the branching scalars.
+Using \(\log(2a)=O(L_a)\) and
+\(\log T_u\le25mL\le25N L_a\) gives the logarithmic
+squared evaluation price
+\[
+ -\sum_{z\in T}a_z\log T_u
+ +O\!\left(L_a\bigl[|T|b'N
+        + f(S_c+m\eta)N+fN^2\bigr]\right).
+\]
+This is \(h_A\) with an absolute uniform error constant,
+on the same reference sequence as the \(h_B(j)\) bounds.
+\label{cor:selected-terminal-height-4}
+\end{proof}
+

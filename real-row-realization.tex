@@ -1,0 +1,373 @@
+\begin{established}[The real row and measured columns at the prescribed scale]\label{hyp:real-row-measured-models}
+Fix an arithmetic row specialization of Proposition~\ref{prop:joint-row-orders}. Let \(F_u^0\) be
+its degree-zero column form model for the word \(u\), including
+the chosen column values, the level at \(T_u\) and the two
+type markings. If \(V_{\rm good}\subset V_{\rm full}\) are the two rows recorded here, the dimension conditions used in the replacements are
+\[
+ \dim F_u^0>0\quad\text{for each word }u,\qquad\dim V_{\rm good}\le\dim V_{\rm full}.
+\]
+The local matrix models, Petersson measure and quotient measures on the flag fibres can all be computed in the same Hermitian coordinates. In these coordinates the unit lowest vectors satisfy the absolute Bessel bounds used for the finite term expansion.
+\end{established}
+\begin{proof}
+The dimension formula of Proposition~\ref{prop:marked-column-dimension} is a product of positive volume, weight and finite marking factors. The other dimension inequality follows from inclusion of vector spaces. Keep this row and these columns while making the following two
+replacements of the spectral data. In the first replacement use
+the scale of the actual Haar data of the form, the discrete-series
+parameters obtained from the labelled Harish--Chandra weights
+and signatures, and the numerical discriminant of the fixed
+scale context.
+
+For each finite place the local matrix model is
+obtained from the completion of the marked quadratic algebra
+with its involution. The adjoint form in the local matrix model comes from scalar extension of the same Hermitian form. For a Gram matrix \(H\) in the row or column coordinates, the adjoint is read locally by
+\[
+ A\longmapsto H^{-1}\bar A^{\,t}H ,
+\] This gives the placewise
+isomorphisms for the replaced spectral data, with the same
+exponent and size context. Division lattices, their height
+functions, the chosen character, and the localization grid
+are transported by the row identifications. The transport for
+the initial state carries the origin comparison, and that for
+the rebuilt state carries the origin and geometric norm
+comparisons.
+\label{cor:real-row-realization-1}
+
+Let \(X\) be the adelic unitary model of this Hermitian space.
+The measures in \(X\) are chosen together with the standard
+additive character. Start with the self-dual lattice from
+the reference form \(F_{u_*}^0\). At the marked split primes keep the fixed frames. For each finite place \(v\), take the self-dual Haar measure on the additive unipotent coordinates for the standard character \(\psi_v\). In the Fourier convention this means
+\[
+ \widehat{\widehat f}(x)=f(-x)\qquad(f\text{ a Schwartz--Bruhat function}).
+\]
+
+At the real places use the prescribed unit
+lowest vectors and the Bessel functions of the discrete
+series of the selected weight. The local choice is made
+for the weight gaps of the scale context. The stabilizer
+quotient measures come from the Gram fibres. Use the
+convergent unitary Siegel--Weil identity for the two
+stabilizers and the rational quotient density to normalize
+their covolumes simultaneously. In this normalization the
+Petersson measure and the product measures on the flag
+fibres refer to the same ambient Haar, as in the fibre
+comparison of Section~\ref{sec:absolute}. The gap bound
+gives the weighted absolute integrability of the Bessel
+functions through the matrix-coefficient estimate of Proposition~\ref{prop:bessel-sign-gap-decay} and the local Bessel projection in Section~\ref{sec:absolute}. These are the measure and decay
+conditions used in the finite term expansion.
+\label{cor:real-row-realization-2}
+\end{proof}
+
+\begin{proposition}[Identification of the measured columns and their fibres]\label{prop:measured-columns}
+For the Hermitian column models and measure of Lemma~\ref{hyp:real-row-measured-models}, match the ordered
+frames, the distinguished line of norm \(-T_u\), and the characters
+at both type primes. The resulting finite adelic transport induces an
+isometry of the degree-zero column spaces. For a nonempty term fibre \(\mathcal F\), write \(\mathcal F/U\) for its lift classes modulo flag unipotents, \(S\) for the marked target stabilizer and \(X_0\) for the target isotropic space. There is an injection
+\[
+ \mathcal F/U\lhook\joinrel\longrightarrow\operatorname{im}\bigl(S\to\operatorname{Aut}(X_0^\perp/X_0)\bigr),
+\]
+with finite target. Corank and the existence of a scalar lift are
+independent of the representatives of a pair with equal row reading.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Matching the local lattices.}
+For each sequence, two ordered frames have the same Gram matrix.
+Their hyperbolic pairs have pairing one, and the distinguished
+line has norm \(-T_u\). If \(A\) is the matching between their spans and \(G,G'\)
+are their Gram matrices in any bases, the Gram equalities give
+\(A^*G'A=G\). This extends by Witt's theorem. In the
+orthogonal complement the two degree-zero lattices are
+self-dual off \(T_u\). At an unramified inert place split off a unit-norm line at each step. If a chosen vector has unit norm \(a\), surjectivity of the norm on units gives a unit \(c\) with
+\[
+ N(c)=a^{-1},\qquad \langle cv,cv\rangle=N(c)a=1 .
+\] At a split place the two halves of a self-dual
+lattice are paired duals. At \(T_u\) the dual quotient on
+each split factor has length one. Indeed the primitive
+distinguished line splits rationally from its orthogonal
+complement in a self-dual middle lattice.
+
+Projection gives
+the two dual quotients the same length, and the norm
+\(-T_u\) gives that length at the split factors. In split
+coordinates the resulting lattice chain is a full lattice
+and the inverse image of a hyperplane modulo a uniformizer.
+A change of basis \(A\) on one factor forces the inverse transpose on the dual factor, since for paired coordinate vectors
+\[
+ (Ax)^t(A^{-t}y)=x^ty .
+\] At the two type
+primes a diagonal unit correction in the common finite
+reduction matches the superdiagonal characters in the
+chosen frames. Conjugation by the inverse of
+\(\operatorname{diag}(1,b,b^2,\ldots)\) multiplies all
+first-superdiagonal entries by \(b\). In reversed dual
+coordinates inverse transpose negates their sum. The
+primitive residue characters are related by a nonzero
+residue scalar, so one chooses \(b\) to match the inverse
+character in the sharp reading and lifts its entries to units.
+
+\proofstep{Transport of the class sets.}
+These local comparisons are identity at almost all places.
+They give a finite adelic transport identifying the
+column levels and compact models. For the induced bijection
+\(a\mapsto a'\) on double quotients, let \(\mathcal I_a\) be the
+unitary value comparison in the compact model at \(a\). It sends a
+class function \(F\) to \(F'\) with \(F'(a')=\mathcal I_a F(a)\).
+Covariance extends this identity to all representatives, and
+\[
+          \sum_{a'}\|F'(a')\|^2=\sum_a\|F(a)\|^2
+\]
+uses the bijection and the finer-level trivial stabilizers. The chosen unit vectors in the compact
+highest-weight representations identify the invariant
+norms. At the finer level the stabilizers are trivial by
+the split type-prime argument of
+Section~\ref{subsec:selected-word-level}. Indeed the class bijection preserves the values in the identified compact representations. With trivial stabilizers the norm comparison is simply reindexing: for a column function \(f\) and class bijection \(b\),
+\[
+ \sum_C\|f(C)\|^2=\sum_{C'}\|f(b^{-1}C')\|^2 .
+\] It identifies the actual column forms
+entering the Bessel and Gram computations.
+
+The finite
+term fibres use these very classes and their shorter
+and complete flag representatives. Fix one lift \(s_0\) of a term in a nonempty fibre. Write
+\(X_0\) for the isotropic space of its marked target flag and
+\(\Lambda'\) for its target lattice. Modulo the two flag unipotents the transition for any other lift is \(s_0 c\). If \(b_i\) are the marked flag basis vectors and \(v\) the marked vector, then \(c\) satisfies
+\[
+ c\Lambda'=\Lambda',\qquad c b_i=b_i\ (\text{each }i),\qquad c v=v .
+\] Choose one such \(c\) per lift. Its
+action on \(X_0^\perp/X_0\) lies in the finite image of the marked
+lattice stabilizer. Here the definite lattice automorphism bound
+applies with the signature at stage zero and the positive norm
+parameter \(T_{u'}\) of the target word. Write \(\bar c\) for the induced endomorphism of
+\(X_0^\perp/X_0\). If \(\bar c=\bar c'\), put \(u=c^{-1}c'\).
+
+The three conditions defining the flag-unipotent equivalence are
+\[
+ u|_{X_0}=1,\qquad u\Lambda'=\Lambda',\qquad
+ (u-1)X_0^\perp\subseteq X_0 .
+\]
+The last inclusion is just \(\bar c^{-1}\bar c'=1\); the first
+two follow from the marking and the integral lattice. Such \(c\) also normalizes
+the target flag unipotents, so the two lifts represent the same
+class. The chosen map into the finite image is injective.
+
+\proofstep{Independence of representatives.}
+Consider also a pair of lifts having the same row reading, and a
+second pair with the same respective terms and again equal row
+readings. In the transport just used, equality of the two marked
+embedding readings identifies the induced Levi actions. The neat
+level makes their rational stabilizer representatives equal. In particular the relative target transporter induces the identity on the flag quotient:
+\[
+ (c_2c_1^{-1})v-v\in X_0\qquad(v\in X_0^\perp).
+\] Conjugate it by the first lift. The new relative
+matrix differs from the old one by this conjugate and the
+lattice-preserving source and frame unipotents. They carry the
+space defining the scalar \(s_0(\cdot,\cdot)\) isomorphically
+onto the new space, preserving its codimension, and carry any
+scalar lift to a scalar lift. Interchange the two pairs to get
+the reverse implication. This proves representative independence
+before using absolute convergence to reindex the expansion.
+\cite{companion-row-count}\label{cor:real-row-realization-3}
+\end{proof}
+
+The product discrete series exists with the prescribed
+labelled real parameters. Its formal degrees are computed
+in the actual product Haar. In the real tie their product
+is the one at the true scale, and the finite factor is the
+value of the actual counting projector at the identity.
+The comparison of quotient volume with mass unfolds the
+same product measures and uses the definite genus
+decomposition. Hence the identity contribution in the
+measured model is exactly the predicted \(D_*\) of
+Section~\ref{sec:count}. In particular it uses the
+finite group quotient and level index of this row. The
+finite good operator is fixed under the conjugate reading
+in the matched frames. The local series projector has
+its coefficients paired by dualizing the supported tame
+labels and reversing their order. This is the coefficient
+identity which compares the two readings of the operator.
+\label{cor:real-row-realization-4}
+
+\begin{proposition}[The isometry of the refined row]\label{prop:refined-real-row}
+Let \(J\) be the sharp geometric level, \(n_P\) its level index
+in the normalization of the Petersson form, and \(M(J)\) the full
+multiplicity space. Evaluation at the chosen unit lowest vectors
+identifies \(M(J)\) with the conjugate measured row, with one positive
+squared-norm ratio \(c\). It respects the good projector. If \(j\) is the normalized composite on the arithmetic good row and \(V_{\rm full}\) the row before projection, then
+\[
+ \|jv\|^2=\|v\|^2\quad(v\text{ in the arithmetic good row}),\qquad \dim V_{\rm full}=D_{\mathrm{all}}.
+\]
+\end{proposition}
+
+\begin{proof}
+\proofstep{The two finite characters.}
+Let \(J\) be the geometric level defining the refined row space and \(K_2\) the
+corresponding subgroup in \(X\). Use the simultaneous
+finite reduction of the type frames to first match
+principal kernels. In the common finite group the two
+marked sharp levels are conjugate. Lift the finite
+conjugator inside the compact group and correct the
+finite translate. If \(\iota\) is the group identification,
+the corrected translate \(t\) satisfies
+\[
+ t^{-1}\iota^{-1}(K_2)t=J,\qquad
+ \chi_J(t^{-1}\iota^{-1}(k)t)=\overline{\chi_X(k)}
+ \quad(k\in K_2).
+\]
+\proofstep{Inverting lowest-vector evaluation.}
+The central idempotents are unchanged by this conjugation
+of frames. The real representation comparison uses the
+contragredient discrete series at the same infinitesimal
+character in the conjugate Hilbert space. Choose the
+geometric unit lowest vectors corresponding to those
+of \(X\). For an intertwiner in the full sharp multiplicity
+space \(M(J)\), evaluation at these lowest vectors after
+the translate \(t\) defines a map \(L\) onto the conjugate
+row space of \(X\). Automorphy and the displayed level
+and character conditions give the prescribed finite
+equivariance. At infinity, for a unit lowest vector \(w\)
+in a discrete series, let \(P_{v,w}\) be the operator
+of its normalized matrix coefficient taking the column
+\(w\) to \(v\). Schur orthogonality gives the rank-one matrix-unit identities
+\[
+ P_{w,w}^2=P_{w,w},\qquad P_{v,w}P_{w,w}=P_{v,w}.
+\]
+A row function \(f\) in the image of \(P_{w,w}\) gives the
+intertwiner \(v\mapsto P_{v,w}f\) by covariance under
+real translation of the matrix coefficients.
+
+Evaluation
+at \(w\) recovers \(f\). Apply the product of these
+operators, using the contragredient identification and
+the inverse finite translation. This gives surjectivity
+and the inverse to evaluation. The construction goes
+through the smooth discrete-series vectors, using the
+matrix-coefficient projection with the actual formal
+degrees. Rapid decay of cusp forms makes the evaluations
+square integrable.
+Petersson integration on the two identified quotients has
+a single positive ratio \(c\). With the real vectors of
+norm one this gives
+\[
+ \|LS\|^2=c\|S\|^2\qquad(S\in M(J)).
+\]
+The map is complex linear into the space of conjugated
+functions with its complex structure there. The
+finite action on both sides now intertwines with
+conjugation of its coefficients. Thus \(L\) carries the
+good part of \(M(J)\) onto the conjugate good subspace,
+as seen by applying the central good projector inside
+the full evaluation isomorphism.
+\label{cor:real-row-realization-5}
+
+\proofstep{Normalization on the good subspace.}
+The geometric realization of the arithmetic row
+\(E_{\rm row}\) is an isomorphism onto the linearized
+good multiplicity space at \(J\). In the multiplicity evaluation, write \(d\mu\) for the measure before sharp-level normalization. The Petersson measure on the row is
+\[
+ d\mu_{\rm sharp}=n_P^{-1}d\mu .
+\]
+The good space at \(J\) is contained in the principal
+model. Invert the faithful principal realization on
+this subspace to obtain the geometric row embedding.
+Its composition \(e_E\) with multiplicity realization
+has image the whole good space of \(M(J)\), by surjectivity
+of this geometric realization. Using the same unit tuple
+in both evaluations gives \(\|e_E x\|^2=n_P\|x\|^2\).
+
+It follows that
+\[
+             j=(c n_P)^{-1/2}L e_E
+\]
+is the isometry onto the conjugate good row space of the
+measured model. The full evaluation bijection identifies
+its full dimension with the recorded \(D_{\mathrm{all}}\).
+This dimension is from the full space at the refined level before applying
+the good projector. The two positive factors in \(j\) cancel
+exactly in the pairing for every host and every allowed
+word level.
+\label{cor:real-row-realization-6}
+\end{proof}
+
+For the second replacement choose the spectral datum
+using the row with its normalized Petersson measure and the comparison map \(j\). This choice fixes
+\(t,c,j\) before any replacement of the division lattices
+and heights on the word spaces. If a replacement retains
+the degree-zero levels and readings, the term fibres are
+carried by the two induced bijections of class labels.
+The fibre of a term is the image of its original finite
+fibre under those bijections, with equal function values.
+Write \(b\) for the isometry induced by reindexing the good space. The transported row map is the composite, so for every row vector \(v\),
+\[
+ j_{\rm new}=b\circ j,\qquad\|j_{\rm new}v\|=\|jv\|=\|v\|.
+\]
+
+To apply
+this comparison here take the original division lattices
+and their height function. Transport first through the
+symmetrized column form model, which preserves the
+degree-zero values, then through the equivalence to the
+actual rebuilt carriers of the same columns. It follows
+that the new comparison of the row spaces at the refined level uses the original
+column levels and actual column forms. The full
+dictionary, the real tie, the discriminant and the
+transported order and character data constitute the
+level-four output for this pass.
+\label{cor:real-row-realization-7}
+
+\begin{lemma}[The ambient lattices in the used tuples]\label{lem:real-ambient-tuples}
+At the sharp and bottom levels separately, inclusion of the used
+tuples in the full tuple list identifies their coefficient spaces,
+integral ambient lattices and positive Hermitian forms. Writing \(b\) for this identification at one of the two levels, \(\Lambda\) for the lattice, and \(H\) for the form, one has at each used tuple \(\mu\)
+\[
+ b\Lambda_{\mu,{\rm used}}=\Lambda_{\mu,{\rm full}},\qquad b^*H_{\mu,{\rm full}}=H_{\mu,{\rm used}}
+\]
+at every embedding where the form is positive. These identifications use the
+same degree-zero columns as Proposition~\ref{prop:refined-real-row}.
+\end{lemma}
+
+\begin{proof}
+The ambient lattices at the sharp and bottom levels use
+the rational coordinates of this row specialization. Fix one of these levels and a tuple \(\mu\). Let
+\(V_\mu\) be its coefficient-field coordinate space, with
+lattice \(\Lambda_\mu\) and Hermitian matrix \(H_\mu\).
+Scalar extension at the marked embedding sends its coordinate vectors to a
+basis at the marked embedding, and carries \(\Lambda_\mu\)
+onto the marked ambient lattice. At a positive embedding
+\(\sigma\), choose an orthonormal frame for
+\(\sigma(H_\mu)\).
+
+Let \(F\) send the marked basis coordinates to coordinates in this orthonormal frame at \(\sigma\). Thus \(F^*F=\sigma(H_\mu)\), and
+\[
+ \|F\sigma(x)\|^2=\sigma(x)^*F^*F\sigma(x)=\sigma(x)^*\sigma(H_\mu)\sigma(x).
+\] This is the positive form
+in the comparison of the ambient norms. At the marked
+embedding the original Hermitian and operator identities
+give the designated complex form and adjoint under the
+reading. Finite generation and spanning of the ambient
+lattice follow from those of \(\Lambda_\mu\) and the two
+identities for the basis and lattice.
+
+The used tuple list maps into the full tuple list by the
+same tuple of local character labels. The prescribed tuple
+map agrees with this inclusion because the row indices are
+defined by those labels. At either level the coordinate map on the selected tuples and the restriction of the full coordinate map agree on every basis vector. If these maps are \(f,g\),
+\[
+ f\!\left(\sum_i a_i e_i\right)=\sum_i a_i f(e_i)=\sum_i a_i g(e_i)=g\!\left(\sum_i a_i e_i\right).
+\] The identity on coordinates, with the
+dimension identified through that equality of indices,
+therefore identifies the rational readings, integral
+lattices and positive forms at every embedding where the
+form is positive. This constructs the two ambient
+identifications consumed by the division construction.
+The sharp and bottom matrices and lattices are taken from
+their respective levels.
+\label{cor:real-row-realization-8}
+\end{proof}
+
+Both passes have this construction at their own
+level-three states. The first level-four state is
+completed to a built member before taking its signed
+export. The rebuilt pass makes the corresponding choices
+on the carried specialization. Their division and theta
+constructions consume the corresponding real isometry and
+ambient identifications on that pass.
+\label{cor:real-row-realization-9}

@@ -1,0 +1,279 @@
+\subsubsection*{Finite-class lifting at full cyclotomic level}
+\label{subsec:ramified-lift}
+
+The preceding invariant bound treats a single lattice. Lifting finite cohomology classes across a surjection requires an additional estimate. We make the lift at the same full cyclotomic level before applying corestriction.
+
+\begin{established}[Full cyclotomic field and crystalline height]\label{hyp:full-cyclotomic-height}
+Let \(F_0/\mathbb Q_\ell\) be finite unramified, and set
+\(F_s=F_0(\mu_{\ell^s})\) for \(s\ge1\), with \(s\ge2\)
+at \(\ell=2\). The coefficient field contains \(F_s\),
+as in Section~\ref{subsec:ramified-ht}. Let \(T_1\to T_2\)
+be a surjection of integral crystalline lattices with
+source jumps in \([-h,h]\) at every embedding. Put
+\(H=2h\). For every embedding \(\tau\) and every generator \(\gamma\) of the full cyclotomic tower,
+\[
+ \operatorname{HT}_\tau(\ker f)\cup\operatorname{HT}_\tau(T_2)
+ \subseteq[-h,h],\qquad v_\ell(\chi(\gamma)-1)=s,
+ \qquad f:T_1\twoheadrightarrow T_2 .
+\]
+The integral comparison holds for these lattices.
+\end{established}
+\begin{proof}
+The filtered de Rham functor is exact with strict maps on crystalline representations. Thus the graded pieces of the kernel and quotient vanish outside the source window. Since \(F_0\) is unramified and the cyclotomic extension of \(\mathbb Q_\ell\) is totally ramified, restriction identifies the group above \(F_s\) with \(1+\ell^s\mathbb Z_\ell\). In the indicated range, including \(s\ge2\) at two, the logarithm takes this group isomorphically onto \(\ell^s\mathbb Z_\ell\) and preserves valuations. Any generator therefore has precisely the asserted valuation. Proposition~\ref{prop:ramified-integral-wach-comparison} and Lemma~\ref{lem:ramified-restricted-herr} identify the fixed lattices over this full cyclotomic base. In their notation
+\[
+ X=(1+\pi)^{\ell^{s-1}}-1,\qquad Q=\varphi(X)/X .
+\]
+\label{cor:full-cyclotomic-lifting-1}
+\end{proof}
+
+\begin{proposition}[Finite lifting over the full cyclotomic field]\label{prop:full-cyclotomic-finite-lift}
+For the crystalline surjection in Lemma~\ref{hyp:full-cyclotomic-height}, write \(f_*\) for its map on integral finite cohomology. Uniformly in the coefficient degree,
+\[
+ \ell^{32(2hs+1)}\operatorname{coker}(f_*)=0.
+\]
+The proof first lifts a representative after a Wach cokernel
+loss, then corrects its actual Herr defect in the kernel.
+At \(\ell=2\) the depth satisfies \(s\ge2\).
+\end{proposition}
+
+\begin{proof}
+\proofstep{Control the cokernel of the integral Wach map.}
+Write \(A\) for the integral Wach coefficient ring
+and \(N_i\) for the Wach lattices. On each coefficient
+letter, let \(\mathfrak a\) annihilate the quotient of
+\(N_2\) by the image of \(N_1\).
+The Wach length comparison gives
+\(\pi^c\in\mathfrak a\) for some \(c\).
+The height inclusions
+\(Q^h\varphi^*N_i\subset N_i\) and
+\(Q^hN_i\subset\varphi^*N_i\) give
+\[
+ Q^H\mathfrak a\subset A\varphi(\mathfrak a),
+\]
+with the transported ideal on the Frobenius letter.
+
+In fact multiplying by \(Q^h\) on either side of
+the original inclusion through the image passes from
+the Frobenius target to the original target and
+then back to the Frobenius source. The Frobenius
+coordinate basis over \(\varphi(A)\) is
+\(1,\epsilon,\ldots,\epsilon^{\ell-1}\), with
+\(\epsilon=1+\pi\), and \(\varphi(\epsilon)=\epsilon^\ell\).
+Thus the Frobenius extension of the annihilator is
+the ideal with precisely the original ideal as all
+its coefficient components. These statements use
+the same Wach map in the étale and height comparisons.
+
+The coefficient extraction can be written on the original and transported letters as
+\[
+ X^H\sum_j\epsilon^j\varphi(b_j)\in\mathfrak a\quad\Longrightarrow\quad X^H b_j\in\mathfrak a_{\rm prev}\quad(\text{each }j),
+\]
+where \(\mathfrak a_{\rm prev}\) is the corresponding annihilator on the preceding letter. Indeed multiply by \(Q^H\) before extracting the Frobenius components. Repeatedly perform
+this operation on \(X^H(\epsilon-1)^c\).
+Write \(f(\epsilon)=(\epsilon-1)^c\), and at each
+extraction write
+\[
+ f(\epsilon)=\sum_{j=0}^{\ell-1}\epsilon^j f_j(\epsilon^\ell).
+\]
+The leading term lies in \(j=c\bmod\ell\). After
+taking that component its coefficient is still one and its
+degree becomes \(\lfloor c/\ell\rfloor\).
+
+Iterate on that
+component; each extraction preserves the property that
+\(X^H\) times the current polynomial belongs to the
+annihilator on the corresponding letter. If \(d_j\) denotes the successive degrees, the monic extraction gives
+\[
+ d_0=c,\qquad d_{j+1}=\lfloor d_j/\ell\rfloor.
+\]
+Thus the degree becomes zero after finitely many steps and the terminal monic constant is one.
+Thus \(X^H\) lies in the annihilator. This step is uniform
+even if \(c\) depends on the lattice.
+
+Put \(u=\chi(\gamma)\).
+The full-level action on \(N_i/XN_i\) is trivial and \(\gamma(X)/X\equiv u\pmod X\), so
+\[
+ \gamma|_{X^jN_i/X^{j+1}N_i}=u^j\operatorname{id}.
+\]
+Apply the polynomials with roots
+\(u^0,\ldots,u^{H-1}\) and \(u^H,\ldots,u^{2H-1}\)
+to \(X^H y\) for \(y\in N_2\).
+The first result lies in \(X^H\operatorname{im}N_1\)
+by first lifting \(X^Hy\), then using the first
+polynomial on that lift. The other polynomial gives a vector in the deeper filtration step, and the common annihilator gives
+\[
+ X^{2H}N_2=X^H(X^HN_2)\subseteq X^H\operatorname{im}N_1.
+\]
+
+For \(H>0\), interpolate an inverse of the second
+polynomial at the roots of the first.
+Every denominator divides a product of the
+differences between one root \(u^i\) and all the
+other roots in \(0\le j<2H\).
+Its valuation is at most
+\[
+ (2H-1)s+v_\ell(i!)+v_\ell((2H-1-i)!)\le
+                 E_W:=2Hs+v_\ell((2H)!).
+\]
+Here the valuation of each nonzero difference is
+\(s+v_\ell(i-j)\), by the admitted cyclotomic depths.
+Write \(L_0(Z)=\prod_{i=0}^{H-1}(Z-u^i)\) and
+\(L_1(Z)=\prod_{i=H}^{2H-1}(Z-u^i)\).
+
+At each root of \(L_0\), Lagrange interpolation for
+\(\ell^{E_W}/L_1(u^i)\) gives a polynomial \(B\) with
+integral coefficients by the displayed denominator bound.
+Then \(\ell^{E_W}-BL_1\) vanishes at all the roots of
+\(L_0\), and monic division gives an integral \(A\) with
+\[
+    A L_0+B L_1=\ell^{E_W}.
+\]
+Applying this relation at \(\gamma\) to \(X^H N_2\) puts its
+image inside \(X^H\operatorname{im}N_1\). Cancelling \(X^H\)
+gives
+\[
+ \ell^{E_W}N_2\subseteq\operatorname{im}N_1.
+\]
+
+For \(H=0\), \(X^H=1\) already gives surjectivity.
+\label{cor:full-cyclotomic-lifting-2}
+
+\proofstep{Correct a defect in the kernel through the cyclotomic graded pieces.}
+
+For the Wach lattice \(N\) of the kernel let
+\(N_Q=Q^{-h}N\) in the étale module.
+The restricted Herr pairs lie in \(N_Q\oplus XN\),
+with differential
+\[
+ d(y,z)=(\gamma-1)y-(\varphi-1)z
+\]
+taking values in \(XN_Q\). This uses
+\(\gamma(Q)/Q\equiv1\bmod X\) and the height
+inclusion. The exactness comparison identifies
+the kernel of the map on these coordinates by
+intersection with the original Wach lattices.
+The following additional inputs of that comparison
+are used in the correction.
+
+\begin{itemize}
+\item \(N\) is \(\ell\)-saturated in \(N_Q\), and
+  \(Xy\in N\) for \(y\in N_Q\) implies \(y\in N\).
+  These follow by division for the monic cyclotomic
+  factors of \(Q\) in the free Wach lattices.
+\item \(1-\varphi\) is onto on \(X^{h+1}N\).
+  Indeed
+\[
+ \varphi(X^{h+1}N)\subseteq QX^{h+1}N,
+\]
+
+  and \(\varphi(Q)\) and all its iterates lie in
+  the maximal ideal. The geometric series converges
+  in the complete Wach lattice.
+\item With \(U\) the union of source jumps, put
+  \(J'=\bigl((U+\{1,\ldots,h\})\setminus\{0\}\bigr)
+  \cup\{1,\ldots,h\}\) and
+\[
+ P(Z)=\prod_{j\in J'}(Z-u^{-j}).
+\]
+
+  The polynomial \((Z-1)P(Z)\) annihilates
+  \(N_Q/N\) under \(\gamma\).
+  The following local calculation explains both the distinct factors and the integral conclusion.
+\end{itemize}
+To see why repeated jumps do not require repeated polynomial factors, invert \(\ell\) and separate the simple roots of \(Q\). Each is fixed by \(\gamma\), since its cyclotomic coordinate has order dividing \(\ell^s\). In the completed component take a filtration-adapted crystalline basis. In the logarithmic parameter \(t\) the generators are \(t^{-b}v_b\) for the jumps \(b\), with \(\gamma(t)=ut\). Modulo the original lattice, \(Q^{-h}N\) contributes the individual monomials \(t^{-b-j}v_b\), \(1\le j\le h\). In particular
+\[
+         \gamma(t^{-b-j}v_b)=u^{-(b+j)}t^{-b-j}v_b .
+\]
+The eigenvectors for equal exponents have the same eigenvalue. The single factor for that eigenvalue kills their whole span. Monic division and freeness make \(Q^{-h}N/N\) torsion-free over the coefficient DVR, so the same annihilating polynomial works integrally. Strictness places the kernel jumps among the source jumps. \label{cor:full-cyclotomic-lifting-3}
+
+Let \(c_G=\prod_{j=1}^h(u^j-1)\).
+Successively correcting powers \(X^j\) for
+\(1\le j\le h\) shows that for \(z\in XN\) one has
+\[
+ c_Gz=(\gamma-1)x+t,\qquad x\in XN,\quad t\in X^{h+1}N.
+\]
+In each degree the correction replaces multiplication
+by \(u^j-1\) by \(\gamma-1\) modulo the next degree.
+Suppose \(\omega\in XN_Q\) and
+\(\ell^k\omega=d(y,z)\) for a restricted pair.
+Then
+\[
+ c_G\ell^k\omega
+   =(\gamma-1)\bigl(c_Gy-(\varphi-1)x\bigr)
+                      -(\varphi-1)t.
+\]
+Here the first argument is in \(N_Q\) and the last
+term is in \(N\). Applying \(P(\gamma)\) puts the
+right side in \(N\) by the quotient comparison.
+Saturation gives \(P(\gamma)\omega\in N\), and
+since \(XN_Q\) is stable this lies in \(XN\).
+
+Apply the graded correction again to this vector.
+The remaining term in \(X^{h+1}N\) is a
+\((1-\varphi)\)-image there.
+Finally \(P(\gamma)-P(1)\) is divisible by
+\(\gamma-1\) with integral polynomial quotient.
+It follows that \(c_G P(1)\omega\) is the
+differential of a restricted pair.
+The valuation loss is
+\[
+ E_U = \sum_{j\in J'}(s+v_\ell(j))+hs+v_\ell(h!).
+\]
+
+\proofstep{Lift a finite extension, then kill the defect of its Herr representative.}
+Lifting an integral vector in a Wach module alone need not give the desired finite cohomology class. We apply the preceding correction to an extension representing that class and then pass to its Herr representative.
+
+
+A finite target cocycle defines a crystalline
+extension of the trivial lattice by the target
+lattice. A lift of \(\ell^{E_W}\) in the Wach module
+of the extension exists by the same cokernel
+bound, since the extension adds only the zero jump.
+Its Frobenius and cyclotomic differences give the
+restricted Herr pair representing the scaled
+class by the connecting comparison.
+A restricted pair lifted termwise from
+the target has a defect in \(XN_Q\) in the kernel,
+provided its target pair is a cocycle.
+For this defect \(z\), the rational comparison supplies some \(k\ge0\) and a restricted kernel pair \((a,b)\) with
+\[
+ \ell^k z=d(a,b).
+\]
+
+Indeed, for rational crystalline representations \(V_1\to V_2\) in the sequence the crystalline and de Rham functors are exact, the latter strictly filtered. In the Bloch--Kato presentation
+\[
+ H^1_f(F_s,V_i)=\operatorname{coker}\!\left[
+ D_{\rm cris}(V_i)\xrightarrow{(1-\varphi,\,\mathrm{can})}
+ D_{\rm cris}(V_i)\oplus D_{\rm dR}(V_i)/\mathrm{Fil}^0\right]
+\]
+the terms to the right are therefore surjective from \(i=1\) to \(i=2\). Lift the target class rationally. By Lemma~\ref{lem:ramified-restricted-herr}, adjust for the difference of its representative and the given target pair by a coboundary. Equivalently the differential of the termwise lift has zero class in the rational kernel complex. Clearing the finitely many coefficient denominators yields the displayed equality for some \(k\). \cite[Section~3]{bloch-kato-finite}
+\label{cor:full-cyclotomic-lifting-4}
+
+The cokernel bound lifts the two coordinates
+of the target representative after another
+\(\ell^{E_W}\). Subtract the kernel correction
+from the scaled lifted pair. This is now a
+restricted cocycle in the source and represents
+the desired finite lift by naturality.
+The lift of the extension, the lift of its coordinates and the correction of the defect require the respective multipliers
+\[
+ \ell^{E_W}\ell^{E_W}\ell^{E_U}=\ell^{2E_W+E_U}.
+\]
+
+Indeed \(J'\subseteq[-H,H]\setminus\{0\}\), so
+\[
+ \sum_{j\in J'}v_\ell(j)
+ \le 2\sum_{j=1}^H v_\ell(j)
+ =2\sum_{a\ge1}\lfloor H/\ell^a\rfloor\le2H.
+\]
+Also \(|J'|\le 2H\), \(h\le H\) and
+\(v_\ell((2H)!)\le2H\).
+These bounds give \(2E_W+E_U\le14Hs\) for \(s\ge1\)
+and in particular the stated allowance \(32(2hs+1)\).
+All bounds are independent of the coefficient
+degree and of the Wach cokernel's initial
+\(\pi\)-power. The restriction--corestriction
+argument returns the finite lift to the
+original local field and original lattices.
+\end{proof}
+

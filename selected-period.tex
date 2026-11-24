@@ -1,0 +1,285 @@
+\subsection{The selected reference tuple}\label{subsec:selected-period}
+\hypertarget{source-selected-period}{}
+
+To make this integral comparison on the chosen family, fix its point at scale \(x\) before identifying either level. Use its
+coefficient field \(K\), its reference tuple \(\mu_0\), and the
+tuples \(\mu(w)\) at its coefficient places. The base and row spaces at the refined levels have different level groups. The dimension in the
+congruence numerator is the rank of the adjoint of the
+\emph{base}-level theta projection at \(\mu_0\). The period maps for the sequences
+into the dual of the \emph{sharp} row lattice use the reference
+period and the projection to the row space at the refined level at each \(\mu(w)\).
+
+\paragraph{The level projection.}
+\begin{established}[The reference-level projection and its section]\label{hyp:reference-level-projection}\label{cor:selected-period-1}
+Let \(\rho\) and \(H\) be the finite level action and positive Hermitian
+Gram matrix on a marked lift block over \(K\). For its row character
+\(\psi_0\) on \(P_0\), put \(E_0=|P_0|^{-1}\sum_{g\in P_0}\psi_0(g)\rho(g)\).
+Let \(E,V,Z\) be the basis inclusions of the level space, the joint image with
+the central type projector, and the selected lift in good coordinates.
+With primes denoting orthogonal coordinate maps over \(K\),
+\[
+ P_j=Z'V'E,\qquad I_j=E'VZ,\qquad P_j I_j=1.
+\]
+\end{established}
+\begin{proof}
+The level action on the realized row of
+Construction~\ref{hyp:family-prescribed-realization} permutes the
+marked finite readings and preserves their Hermitian form.
+Averaging the twisted unitary action gives the orthogonal projector
+onto the \(\psi_0^{-1}\)-vectors. The central type projector commutes
+with it. For a basis inclusion \(B\) in a space with Gram matrix \(G\),
+\[
+ B'=(B^*GB)^{-1}B^*G,\qquad B'B=1 .
+\]
+The restricted Gram matrices are invertible by positivity at the good
+embedding. For \(Z\) use \(V^*HV/|P_0|\). Now \(EE'=E_0\),
+\(E_0V=V\), and \(V'V=1\), so \(P_jI_j=Z'V'EE'VZ=Z'Z=1\).
+\end{proof}
+
+\paragraph{The theta comparison.}
+
+In the projected coordinates the question is whether the theta map has any further kernel. Its comparison matrix on the selected quotient answers this question.
+
+Let \(J_j\) realize lift coefficient vectors in the complex source, and let \(W_j\) realize row coordinate vectors in the complex space \(M_j\). Write \(B_j\) for the base theta matrix in these row coordinates. The normalized
+row comparison gives \(B_j\) invertible and the image under \(W_j\)
+of the standard basis a basis of \(M_j\).
+
+\begin{proposition}[The base theta rank]\label{prop:base-theta-rank}
+On the reference tuple with the level projections of
+Lemma~\ref{hyp:reference-level-projection}, the theta operator \(\Theta_j\) and its coordinate maps satisfy
+\begin{equation}\label{eq:selected-theta-square}
+     \Theta_j J_j(v)=W_j(B_j P_j v).
+\end{equation}
+In particular \(\Theta_j\) is onto and its adjoint has rank
+\(d_j=D_0\), the number of primitive base row labels counted
+with their multiplicities. The good part at each used tuple
+\(\mu(w)\) has the same rank in the corresponding lift coordinates.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Identify the theta map on the selected summand.}
+The coordinate maps and the bases used with \(B_j\) are those
+of the projection \(P_j\). The Hilbert-space theta map
+agrees with the real model by evaluation on smooth tensors.
+Its restriction to the orthogonal complement of the selected
+lift subspace is zero, by the orthogonality relation for the
+level forms. The maps at the selected level satisfy \(P_jI_j=1\).
+Their adjoint relation for the level metric gives
+\[
+ v=I_jP_jv+(1-I_jP_j)v,\qquad
+ (1-I_jP_j)v\in (\operatorname{im}I_j)^\perp .
+\]
+The level-form identity kills the second summand under
+\(\Theta_jJ_j\).
+
+On the first summand the real theta matrix
+is \(B_j\) and \(W_j\) maps the row coordinates to \(M_j\).
+With phase one at the selected point, the two realizations agree on the projected vector:
+\[
+ \Theta_jJ_jI_jP_jv=W_jB_jP_jv .
+\] The primitive row conditions make the basis
+change \(B_j\) invertible and the images of the standard
+vectors under \(W_j\) a complex basis. The companion row
+record uses \eqref{eq:selected-theta-square} on the reference
+tuple and on the tuples indexed by finite places. Its tuple
+map sends the reference label to the record's \(\mu_0\) and
+the chosen place label to the record's \(\mu(w)\). The tuple
+coverage condition therefore allows the identity at every
+tuple of this realization.
+\label{cor:selected-period-2}
+
+\proofstep{Count the rank in the base and twisted coordinates.}
+For a standard basis vector \(e_a\) of the row, apply
+\eqref{eq:selected-theta-square} to \(I_j B_j^{-1}e_a\).
+Indeed \(P_j I_j=1\) gives
+\[
+ \Theta_j J_j I_j B_j^{-1}e_a
+       =W_j B_j P_jI_j B_j^{-1}e_a=W_j e_a .
+\]
+The vectors on the right are a basis, so \(\Theta_j\) is onto.
+If \(\Theta_j^* z=0\), surjectivity gives a preimage \(y\), and
+\[
+ \|z\|^2=\langle\Theta_j y,z\rangle
+        =\langle y,\Theta_j^*z\rangle=0 .
+\]
+Thus \(d_j=\dim_\C M_j\). At the base level the primitive
+type spaces \(E_c\) form a direct sum spanning the common
+base rows. Each type has the same dimension in the base
+rows and in the lift rows. The primitive type matching
+identifies the corresponding subspaces after the invertible
+basis changes on the two sides. The lift type spaces also
+span in direct sum, so \(\sum_c\dim E_c=\dim_\C M_j\).
+
+In the record let \(n_\sigma\) be the number
+of rows with label \(\sigma\). The base row comparisons
+identify \(\dim_\C E_c\) with
+\(\sum_{\sigma:\,c(\sigma)=c}n_\sigma\), where \(c(\sigma)\)
+is its type. Every label has exactly one type, so
+\[
+ d_j=\sum_c\dim E_c=\sum_c\sum_{\sigma:,c(\sigma)=c}n_\sigma
+                     =\sum_\sigma n_\sigma=D_0 .
+\] The same invertible row
+matrices at the other used tuples have the fixed row
+dimension. Thus the good part in the corresponding
+lift coordinates also has rank \(D_0\) at \(\mu(w)\).
+\end{proof}
+
+The rank comparison uses the selected reference tuple for every
+lift at every point. Write \(x_{\rm sel},x_{\rm row},x_{\rm lev}\) for the uniform
+thresholds for selection, row comparison and level surjectivity.
+The rank identity holds as soon as
+\[
+ x\ge\max\{x_{\rm sel},x_{\rm row},x_{\rm lev}\}.
+\] This maximum is taken on
+the family, before \(x\), the point index and the lift are
+varied. The level surjectivity calculation itself costs no
+power of \(x\). The division comparison will use an index
+for the two lattices induced by \(P_j\) and \(I_j\).
+
+\paragraph{The periods indexed by the sequences and the common row space at the refined level.}
+Write \(U_u^K\) for the coefficient space of column
+coordinates of a word \(u\). Let \(F_t^K\) be the sharp
+test space at tuple \(t\), and let
+\(q_t:F_t^K\to R^K\) denote the good-coordinate projection
+followed by the row basis change into the common row space at the refined level. The maps \(e_{\nu,u}\) and \(e_R\) identify the column
+and row coordinates with the division spaces. Write
+\(P_{u,t}\) for the rational period of the column chain
+against a test in \(F_t^K\).
+
+\begin{proposition}[One rational period pairing on the common row]\label{prop:common-rational-pairing}
+For each selected word \(u\), the reference period descends uniquely
+through \(q_0\) to a rational pairing \(B_u\) on the column and
+common row coordinates. At a used tuple \(t\) its value after the
+chosen embedding is \(\zeta_{u,t}\) times the corresponding period.
+At a place with the local orbit condition this scalar is a unit
+whenever it lies in the embedded coefficient field. If the scalar lies
+outside that field, both pairings vanish. In the same coordinates the local row lattice is
+\[
+ R_w=(q_{\mu(w)}M_{\mu(w)})_w ,
+\]
+where \(M_t\) is the lattice of integral tests at \(t\).
+\end{proposition}
+
+\begin{proof}
+The reference entry in the isometric period comparison
+has tuple factor one. If \(q_0 f=0\), the corresponding
+good row in that identity is zero, so \(P_{u,0}(\phi,f)=0\).
+The embedding into \(\C\) is injective, hence this is an
+identity over \(K\). Since extension of scalars from \(K\) to
+\(\C\) is exact, the kernel of the complexified quotient is
+\((\ker q_0)\otimes_K\C\), which the complex period also
+annihilates. Thus for any two lifts \(f_1,f_2\) with
+\(q_0 f_1=q_0 f_2\) the difference of period values is
+\(P_{u,0}(\phi,f_1-f_2)=0\). Define \(B_u\) on the rational
+quotient using any representative, as in
+\begin{equation}\label{eq:selected-pairing}
+ B_u(e_{\nu,u}\phi,e_R q_0 f)=P_{u,0}(\phi,f).
+\end{equation}
+The reference projection is onto by the primitive row
+comparison. Therefore \eqref{eq:selected-pairing} determines
+the rational pairing on all of \(R^K\).
+\label{cor:selected-period-3}
+
+\proofstep{The scalar away from the reference tuple.}
+For the other used tuples, the real theta identifications carry the good row of \(f\) to the image of \(q_t f\) in that same space. Compare this realization with the one at the reference tuple
+in the isometric period relation of
+Lemma~\ref{lem:joint-period} and its normalization. The
+isometries in the row and column variables are unchanged
+when \(t\) varies. Write \(\sigma\) for the coefficient embedding
+and \(\zeta_{u,t}\) for the comparison scalar, with
+\(\zeta_{u,0}=1\). Then
+\[
+ \sigma\bigl(B_u(e_{\nu,u}\phi,e_R q_t f)\bigr)
+       =\zeta_{u,t}\,\sigma(P_{u,t}(\phi,f)),
+\]
+At a place \(w\) with the local orbit condition for \(t=\mu(w)\),
+the factor has valuation zero whenever it is in \(\sigma(K)\).
+
+If \(P_{u,t}(\phi,f)\ne0\) for a rational test, the displayed
+identity gives
+\[
+ \zeta_{u,t}
+  =\sigma\bigl(B_u(e_{\nu,u}\phi,e_Rq_tf)/P_{u,t}(\phi,f)\bigr)
+       \in\sigma(K).
+\]
+So for a factor outside \(\sigma(K)\) all rational test
+periods vanish, and by the same identity so does \(B_u\) on
+those tests. At such tests the local valuation comparison
+is unchanged if its scalar is taken to be one. This is the matrix identity used
+away from the reference tuple.
+\label{cor:selected-period-4}
+
+\proofstep{Localization of the integral tests.}
+The row lattice with the prescribed local conditions \(R\) is obtained by imposing the
+local row conditions at all \(w\). In the above coordinates,
+the original integral tests \(M_t\subset F_t^K\) equal the intersection of the integral section module with the good
+level span. The rational map to this span and the integral realization of the sections use the same level basis. Hence the image
+in common row coordinates at \(w\) is
+\[
+                   R_w=(q_{\mu(w)} M_{\mu(w)})_w .
+\]
+For this equality one can first project the complex good
+span orthogonally to the complement of the quotient kernel.
+Writing \(\operatorname{pr}\) for this projection gives
+\(q_t\operatorname{pr}(F)=q_t(F)\) for every test \(F\).
+On the integral test module localization is exact, so
+\[
+   (M_t/(M_t\cap\ker q_t))_w
+       \ \simeq\ \operatorname{im}(q_t:(M_t)_w\to R^K_w).
+\]
+Here \(R^K_w\) denotes the common rational row over the
+local coefficient field.
+
+The integral span of the resulting
+images is the image of the integral test lattice, because
+the integral section module is closed under the coefficient
+ring and the good span is a vector space. Indeed, if \(q\) is the coordinate map to the good subspace on an integral
+test module \(L\), then at a prime \(w\) localization is flat, and
+\[
+ 0\longrightarrow (\ker(q|_L))_w\longrightarrow L_w
+       \xrightarrow{q_w}(\operatorname{im}(q|_L))_w\longrightarrow0
+\]
+under the natural identification inside the local rational row.
+
+The local images determine a global lattice in the common rational row \(V\). If \(I_w\) denotes the prescribed image in \(V_w\), gluing takes the intersection
+\[
+ \{v\in V:v\in I_w\text{ inside }V_w\text{ for every finite }w\}.
+\] The same calculation gives the base row lattice
+with its own level data. Let \(\tau_0\) be the distinguished embedding. The real-measure and lattice comparisons identify the metric on this rational row, place by place: 
+\[
+ \|v\|_\tau^2=\begin{cases}\|v\|_{\rm proj}^2,&\tau=\tau_0,\\ \operatorname{Gram}_\tau(v,v),&\tau\ne\tau_0.\end{cases}
+\]
+ Here the first norm is the normalized real metric of the projected forms. These are the metrics used to compute the slopes.
+\label{cor:selected-period-5}
+
+\proofstep{Compatibility with the selected realization.}
+Fix the chosen point throughout these identifications.
+Use the sections, level identifications and reference column chain at this point. Their rational pairings satisfy the isometric period identity. In the coordinates of this realization, the finite-level construction carries both row lattices, the theta identity and the pairings for every sequence. Any bundle identified with these data by the stated coordinate maps therefore has the same period identity. In particular
+the row identification in \eqref{eq:selected-pairing}
+is the one used in the localized equality, and the column
+identification is the endpoint of the reference chain.
+For the spectral comparison let \(E_1,E_2\) denote the two
+linear evaluations in the chosen real and adelic coordinates.
+
+If \(e_1,\ldots,e_{D_0}\) is the common rational row basis, then
+\[
+ E_1(e_a)=E_2(e_a)\ \ (1\le a\le D_0)
+       \quad\Longrightarrow\quad
+ E_1\!\left(\sum_a z_a e_a\right)
+      =\sum_a z_a E_2(e_a)=E_2\!\left(\sum_a z_a e_a\right)
+\]
+after extension of scalars. This evaluation identifies the good
+row space. Schur uniqueness
+of the conjugate real evaluation leaves a common row
+scalar. Normalizing the row and column similarities to
+isometries puts this scalar in the factor depending on the sequence, so one
+row isometry works for all the words. The identification of the sequence indices
+supplies the column isometry and the Bessel unfolding
+gives the spectral pairing. This gives the Bessel period identity on the selected point. The inputs to this
+application are the normalized bundle readings, primitive
+row conditions, supported theta chain, rational pairing
+law and the finite spectral realization. The period and
+lattice identities use these inputs at the same point
+as the rank calculation.
+\label{cor:selected-period-6}
+\end{proof}

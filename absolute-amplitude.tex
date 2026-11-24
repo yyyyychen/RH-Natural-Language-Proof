@@ -1,0 +1,931 @@
+\section{An absolute bound for the local orbital operator}
+\label{sec:absolute}
+\hypertarget{source-absolute-amplitude}{}
+
+The squared norm controls the cell. A nonzero preceding minor permits an additional pointwise estimate.
+
+Let \(\Delta_r\) denote the leading minor of order \(r\) of the matrix of pairings between the two frames. A Gram label with nonzero Gram invariant and \(\Delta_r\ne 0\) gives a normal form for the orbit of two flags. We use its leading minors to control the
+coordinates of that form and estimate the orbital operator
+with the normalization from Section~\ref{sec:local-amplitudes}.
+The bounds in terms of the Gram determinant and the nonzero
+minor sizes are used in the global row sum of
+Section~\ref{sec:row-sums}, which uses an \(L^2\) bound
+when \(\Delta_r=0\). For the two frames of Definition~\ref{hyp:paired-frame-moment-range}, the shell bound is \eqref{eq:side-moment}; the volume on each shell is measured in the free-root quotient of \eqref{eq:fibre-volume}.
+
+Fix a real place and two words. Work on a cell with nonzero Gram
+invariant and use
+\[
+ D=|\Delta_r|>0,\quad m=2r+2,\quad n=2r+k+1,\quad h=k-r-2,
+ \qquad r\ge1,\quad k\ge2r+6.
+\]
+Let \(D_e\) be the maximum of one and the reciprocals of the
+absolute values of the nonzero leading minors. In a block antidiagonal representative the
+nonzero leading minors of positive order occur at block ends.
+Taking a proper initial segment of the next block gives a
+singular submatrix. Thus \(D_e\) is the same maximum that enters
+the height estimates in Section~\ref{sec:row-sums}.
+
+Use the Witt space \(X\oplus W\oplus X^*\) with
+\(\dim X=r\), \(\dim W=k+1\) and \(W\) of signature \((k,1)\).
+Take as frame an ordered basis of \(X\) followed by the vector
+\(z\) on the negative line of \(W\). Write \(f_0,\ldots,f_r\) for this frame and \(F_{a-1}\) for the
+span of the columns before \(a\). Define
+\[
+ l_a(x)=\operatorname{dist}(x^{-1}f_a,x^{-1}F_{a-1})
+ \quad(0\le a\le r),\qquad S(x)=\max(1,\max_a l_a(x)).
+\]
+The corresponding primed functions use the primed frame ending in \(z'\).
+
+Let \(\Phi(x)=B(\sigma(x)v_0)\) and \(\Phi'(x)=B'(\sigma(x)v_0)\),
+where \(v_0\) belongs to the lowest compact type. Both Bessel
+maps use the same discrete series. The quotient measures for the
+two Bessel subgroups are denoted by \(d\nu_S,d\nu_{S'}\).
+If the definite representations have dimensions \(d_W,d_{W'}\),
+the normalizing scalar \(c_N>0\) satisfies
+\[
+ \int\|\Phi\|^2d\nu_S=c_Nd_W,\qquad
+ \int\|\Phi'\|^2d\nu_{S'}=c_Nd_{W'}.
+\]
+For the right-side stabilizer
+\(R=N'\cap\gamma^{-1}N\gamma\) let \(d\nu_R\) be the quotient
+of \(dg\) by its specified Haar measure. The operator is
+\[
+ J=c_N^{-1}\int_{R\backslash G}
+       \Phi(\gamma x)\otimes\Phi'(x)^*\,d\nu_R(x).
+\]
+
+\subsection{Length moments for both frames}
+
+Two vectors occur in the integrand, in different frames. Moment bounds for their lengths restrict the region that matters before its volume is estimated.
+
+At the standard character parameter write \(B_0\) for the
+Pieri weight bound and \(B_v=b_1\) for the smallest absolute value in the negative tail at this real place.
+For a unit highest-weight vector in the lowest compact type let
+\(dP\) be the squared normalized Bessel coefficient times the
+quotient measure. It has mass one in a nonzero model. Let
+\(T_z\) be the positive norm parameter of the negative line.
+The two
+estimates needed from the coefficient recursion are
+\[
+ \int l_0^{2j}dP\le A^j,\qquad
+ \int(l_{a+1}/l_a)^{2j}dP\le B_0^{4j},
+ \qquad A=n^2 T_z B_0^4(6B_v)^{2m}.
+\]
+
+\begin{paramdefinition}[Uniform range for the frame moments]\label{hyp:paired-frame-moment-range}
+At a marked real place, use the ordered row and the interlacing
+definite column of Definition~\ref{hyp:critical-level-weights}.
+Write \(\lambda\) for the row, \(u\) for the column, and put
+\[
+  B_v=b_1,\quad B_0=b^{\max(2,C_u)},\quad
+  \gamma=nm^{10},\quad q_0=km^5 .
+\]
+The ranges for the row, column and intermediate integral shifts are
+\begin{align}
+ 0\le\lambda_a\le B_v/8\ (a<k),\qquad
+ &-2B_v\le\lambda_a\le-B_v\ (a\ge k),\qquad
+ \|\lambda\|_\infty,\|u\|_\infty\le B_0,\label{eq:marked-pieri-windows}\\
+ \lambda_a-\lambda_{a+1}>\gamma,\qquad
+ &q_0\le\gamma/8,\qquad 100q_0,\ 10^6n^7\le B_v,\qquad
+ \|\nu\|_1\le q_0 .\nonumber
+\end{align}
+The initial parameter has \(\|\nu\|_1\le C_nkm^3\).
+Use \(m\ge |C_n|+25\), \(k\ge m^4\), \(2v\le b\),
+\(1\le g\le b^{2C_g}\), and \(T_z\le b^{C_Tm}\) in both orientations.
+\end{paramdefinition}
+
+\begin{auxlemma}[The marked pair is in the common moment range]\label{lem:marked-paired-moment-range}
+For the marked pair of words at one real place, let \(j\) be the minor order, \(q\) the chosen moment order and \(T_z\) the norm of the distinguished negative line in either orientation. Uniformly on the selected family,
+\[
+    \log T_z\ll m\log b,\qquad n^2,\,6B_v\le B_0^2,
+    \qquad \|\nu\|_1\le qj\ll km^3 .
+\]
+In particular Definition~\ref{hyp:paired-frame-moment-range} applies at both words.
+\end{auxlemma}
+\begin{proof}
+For the selected pair, the marked negative norm is \(T_z=T_u\) or
+\(T_{u'}\) in the two orientations, so Proposition~\ref{prop:assigned-prime} gives
+\[
+    0<\log T_z\ll m\log b .
+\]
+Both type primes are at most \(b^{C_g}\), and
+\(2v=\operatorname{rd}(E)\le b\). To check \eqref{eq:marked-pieri-windows}, denote the central spacing
+of Lemma~\ref{hyp:height-section-weights} by \(h=\eta_{\rm size}/m\).
+Its proof gives, with indices now starting at one,
+\[
+ b_m-b_1\le (m-1)(h+1)\le 2\eta_{\rm size}\le b_1 ,
+ \qquad b_1\ge(t-1)\eta_{\rm size}.
+\]
+
+The same window selection in Paragraph~\ref{par:window-successive-bounds}
+allows the following polynomial lower thresholds:
+\[
+ \min(4\Delta,h)> C_\ell k m^4+\gamma,\qquad
+ b_1\ge\max(32k\Delta,k^{40}) .
+\]
+Indeed the first fixes lower bounds for \(\Delta\) and \(h\);
+increasing \(\eta_{\rm size}\) by a factor polynomial in \(x\)
+after choosing \(\Delta\) gives the second. The logarithmic
+upper threshold for the width is twice that for \(\Delta\), as in
+the proof of Lemma~\ref{hyp:height-section-weights}.
+Definition~\ref{hyp:critical-level-weights} gives the head coordinates
+in \([0,4k\Delta]\) with consecutive spacing \(4\Delta\).
+The gap at the junction is at least \(b_1\). Hence the unshifted
+bounds hold for both words, with the same row. For the definite column the upper endpoint is \(u_1\le b^{C_u}\).
+Interlacing and the bound on the row give
+\[
+  -b^2\le\lambda_k<u_k\le u_i\le u_1\le b^{C_u},\qquad
+  \|u\|_\infty\le B_0 .
+\]
+
+Since \(n=k+m-1\le k^2\) and \(k\ge1000\) at the common threshold,
+\[
+ 10^6 n^7\le k^{16}\le b_1,\qquad
+ 100q_0=100km^5\le k^{8}\le b_1,\qquad
+ 8q_0\le nm^{10}.
+\]
+In particular unit shifts of total size at most \(q_0\) preserve
+the ordering and leave gaps at least \(\gamma-q_0\ge2\).
+The half-integral displacement between the definite and ambient
+lists and their interlacing follow from the binary choices in
+Definition~\ref{hyp:critical-level-weights}.
+Also \(B_v\le B_0\), so \(6B_v\le6B_0\le B_0^2\).
+The moment choice in
+Lemma~\ref{lem:row-moment-budget} permits at most \(qj\) unit shifts
+for a minor of order \(j\). The explicit comparison in the row sum is
+\[
+   \|\nu\|_1\le qj\le C_{\rm pr}km^3,\qquad
+   k\ge m^5(\log b)x^2.
+\]
+It gives the length and rank conditions simultaneously for both words.
+\end{proof}
+
+\input{paired-casimir-bounds}
+\input{paired-lowering-factor}
+
+\begin{proposition}[Length moments uniform in the two words]\label{prop:paired-frame-moments}
+For either marked word of Lemma~\ref{lem:marked-paired-moment-range}
+and an initial shift as in Definition~\ref{hyp:paired-frame-moment-range}, let \(l\) be any orthogonalized frame length and \(F\) its Bessel coefficient. In the measure of that moment, 
+\[
+ \int l^{2q}|F|^2\le H^{2q}\!\int|F|^2,\qquad q=24r^3+1.
+\]
+ The same \(H\) works for the primed and unprimed
+frames.
+\end{proposition}
+
+\begin{proof}
+\proofstep{The first length and successive ratios.}
+
+For the first bound, tensor the coefficient with the dual standard
+module and sum over an orthonormal basis of that module. The sum
+of squares of the finite coefficients is \(l_0^2\). There are at
+most \(n\) shifted parameters and \(n\) basis vectors. The
+squared lowering coefficient, multiplied by the ratio of the two
+formal degrees, is at most \(T_z B_0^4\) by
+Lemma~\ref{lem:paired-lowering-factor}. For a given basis vector
+Lemma~\ref{lem:paired-spectral-projections} bounds the sum of
+squared projection norms by \((6B_v)^{2m}\) times the original squared norm. Thus the
+single-step multiplier is at most
+\[
+           n^2(T_z B_0^4)(6B_v)^{2m}=A .
+\]
+An intermediate parameter may leave the range with a nonzero
+Bessel model for this definite column. At that parameter the
+period map and its contribution to the sum vanish. Starting from
+each remaining nonzero coefficient, the same bound applies at
+the next step. Iteration gives \(A^j\).
+
+For the ratio, the simple root carrying the
+orthogonalized \(a\)-th frame vector to the next has a Lie
+algebra representative of Hilbert--Schmidt norm at most \(2l_a\).
+Its character derivative has modulus \(2l_{a+1}\).
+Differentiate the Bessel relation along this root. After dividing
+its Cayley-basis coefficients by \(2l_a\), their squared moduli sum
+to at most one. If \(F_v\) denotes the coefficient of the vector
+\(v\), Cauchy--Schwarz gives
+\[
+   |F_v|^2(l_{a+1}/l_a)^2\le\sum_{i,j}|F_{E_{ij}v}|^2,\qquad
+   \sum_{i,j}\|E_{ij}v\|^2\le B_0^4\|v\|^2 .
+\]
+Lemma~\ref{lem:paired-lowest-casimir} supplies the second
+inequality. Each application
+raises the level by two. These recursions use
+\(\|\nu\|_1+j\le q_0\) and \(2j\le4n^2\) at the lowest type,
+where \(\nu\) is the integral shift and \(q_0=km^5\).
+Thus each intermediate vector lies in the range of the two lemmas.
+\label{cor:absolute-amplitude-1}
+
+\proofstep{An arbitrary frame length and lowest-type vector.}
+
+Write \(l_a=l_0\prod_{i<a}(l_{i+1}/l_i)\). H\"older with
+\(a+1\) equal exponents bounds its \(2q\)-moment by
+\((A B_0^{4r})^q\), using the preceding estimates up to
+\(j=(r+1)q\). The numerical hypotheses
+\(n^2\le B_0^2\), \(6 B_v\le B_0^2\) give
+\[
+ A B_0^{4r}\le \max(1,T_z)B_0^{20(r+1)}.
+\]
+The weighted squared integral is a compact-invariant quadratic
+form on the lowest type. Indeed right multiplication by the
+compact group preserves each length and the integral on the
+quotient. Finiteness on a highest vector implies finiteness on
+its finite linear span of translates.
+
+On an irreducible compact type, Schur's lemma makes the
+form a scalar. More generally, on an isotypic component
+\(V_\lambda\otimes M_\lambda\), its representing operator has the form
+\[
+     I_{V_\lambda}\otimes A_\lambda .
+\]
+Testing the highest-weight line tensored with the multiplicity
+vectors bounds \(A_\lambda\) and hence the entire form. For the chosen compact type the
+Bessel line is one dimensional. Replacing its distinguished map
+by the actual map multiplies both integrals by the same factor. If \(F'=cF\), then
+\[
+  \frac{\int l_a^{2q}|F'|^2\,d\nu_S}{\int|F'|^2\,d\nu_S}
+       =\frac{|c|^2\int l_a^{2q}|F|^2\,d\nu_S}{|c|^2\int|F|^2\,d\nu_S}
+       \qquad(c\ne0).
+\]
+
+\proofstep{Transport and the common range.}
+
+The moment estimate concerns one frame. The product integral requires the same moment order for the two transported distributions, even when the words differ.
+
+
+For the actual character, conjugate by the diagonal torus
+element taking \(2\pi/(vg)\) to the standard parameter, where
+\(g=g_0g_1\). This changes \(l_a\) by a factor of modulus at
+most \(\max(\pi/(vg),vg/\pi)^r\). It transports the quotient
+measure in both integrals. With \(2v\le b\), \(1\le g\le
+b^{2C_g}\), \(T_z\le b^{C_T m}\), and \(B_0=b^{\max(2,C_u)}\)
+we obtain
+\begin{equation}\label{eq:side-moment}
+ \int l_a^{2q}\|\Phi\|^2d\nu_S
+ \le H^{2q}\int\|\Phi\|^2d\nu_S.
+\end{equation}
+Here \(H=b^{m\max(C_M,0)}\) with
+\(C_M=2C_g+2+|C_T|+10\max(2,C_u)\).
+Interchanging the two words exchanges the negative lines,
+definite representations, Bessel maps and quotient measures.
+
+It preserves the common representation, the weight window, the
+scalar \(c_N\), and the size hypotheses. Thus the same \(H\)
+works for the primed moment. To check the uniform range, put
+\(q=24r^3+1\le25r^3\). For
+\(\|\nu\|_1\le C_nkm^3\), take \(m\ge |C_n|+25\)
+and \(k\ge m^4\). The required interpolation and degree ranges follow from
+\[
+     (r+1)q\le mk,\qquad
+     \|\nu\|_1+(r+1)q\le km^5,\qquad (r+1)q\le2n^2 .
+\]
+The spectral radius changes the threshold for \(m\).
+The constant \(C_M\) is independent of that radius.
+
+\end{proof}
+
+\begin{construction}
+\begin{tabular}{@{}ll@{}}\toprule
+Factor of \(l_a=l_0\prod_{i<a}(l_{i+1}/l_i)\) & Bound for its \(2j\)-moment\\\midrule
+Initial length \(l_0\) & \(A^j\)\\
+Each of the \(a\) successive ratios & \(B_0^{4j}\)\\\midrule
+Whole product, at exponent \(2q\) &
+\(\displaystyle\int l_a^{2q}\,dP\le (A B_0^{4a})^q\)\\\bottomrule
+\end{tabular}
+\caption{Combining frame-length moments at the standard character. H\"older uses \(j=(a+1)q\) for the \(a+1\) factors, within the common range for the two words.}\label{fig:frame-length-moment-factors}
+\end{construction}
+
+\subsection{A volume estimate in the common stabilizer quotient}
+
+Bounding the two lengths puts the pair of frames in a bounded region. The measure of that region must be taken modulo their common stabilizer, so counting all frame coordinates separately would give the wrong dimension.
+
+Let \(E\) be the matrix of a basis of the isotropic flag and
+\(Z\) its matrix of Hermitian pairings with the opposite
+isotropic flag. Thus \(|\det Z|=D\). For the orientation
+\((z,z',\gamma)\) let \(U_c\) be the Hermitian orthogonal
+complement of the two full frames \((E,z')\) and
+\(\gamma^{-1}(E,z)\). Project the columns of
+\(x^{-1}\gamma^{-1}E\) Euclidean-orthogonally onto
+\[
+ P_x=\{p\mid H_{\rm Witt}p=p,\ xp\in U_c+X\}.
+\]
+Define \(Y\) to be their Euclidean wedge norm divided by
+\(D\). Define \(Y'\) by reversing the frames and using
+\(\gamma^{-1},\gamma x\). Below let \(S=S(\gamma x)\) and
+\(S'=S'(x)\). \begin{lemma}[Gram and wedge bounds for two frames]\label{lem:paired-frame-wedges}
+For \(D=|\det Z|>0\) and the wedge norms on \(P_x\) and its
+frame-reversed counterpart, every \(x\) in the quotient chart satisfies
+\[
+ D\le S^r(S')^r,\qquad Y\le S^r/D,\qquad
+ Y'\le(S')^r/D,\qquad YY'D\le2^r.
+\]
+If either projected frame has rank less than \(r\), its wedge vanishes.
+\end{lemma}
+
+\begin{proof}
+\proofstep{Determinants and frame pairings.}
+
+Apply successive column subtractions to each full flag frame,
+with determinant one on its column indices. The Euclidean norm
+of the wedge is the product of the orthogonalized lengths.
+The two \(r\)-column wedges have norms at most \(S^r\) and
+\((S')^r\). Pairing the wedges by the exterior power of the Euclidean
+isometry \(H_{\rm Witt}\) and projecting by orthogonal contractions
+gives
+\[
+     D\le S^r(S')^r,\qquad DY\le S^r,\qquad DY'\le(S')^r .
+\]
+
+For the last bound, let \(P,Q\) be the column maps of the two
+projected frames. The operator obtained by contracting them
+with \(Z^{-1}\) between the frame indices has norm at most
+two. To see this, take vectors \(p,q\) in the two positive
+projection spaces. In common coordinates their images under
+\(\gamma x\) split as \(y_1+\xi_1,y_2+\xi_2\), with the
+\(y_i\) perpendicular to both frames and \(\xi_1\in\gamma X\),
+\(\xi_2\in X\). The mixed \(y,\xi\) terms vanish. Pairing
+against the opposite flag recovers the coordinates of each
+\(\xi_i\) by inverting \(Z\).
+
+Write \([\ ,\ ]\) for the Witt form. Orthogonality gives the
+contraction in absolute value as
+\[
+     |[\xi_1,\xi_2]|=|\langle q,p\rangle-[y_1,y_2]| ,
+\]
+with the conjugation convention immaterial to this equality of
+absolute values. Its
+restriction to the common complement is positive semidefinite.
+Indeed orthogonality to \(X\) kills the dual isotropic coordinates
+and orthogonality to the negative line leaves a positive
+definite quotient by \(X\). The isotropic and mixed terms vanish on each diagonal,
+so \([y_1,y_1]=\|p\|^2\), \([y_2,y_2]=\|q\|^2\).
+The contraction has absolute value bounded by
+\[
+  |\langle q,p\rangle|+|[y_1,y_2]|\le 2\|p\|\|q\|.
+\]
+Its \(r\)-th exterior power therefore has norm at most
+\(2^r\). This norm is \(\|\bigwedge^r P\|D^{-1}\|\bigwedge^r Q\|=YY'D\),
+also when a column matrix is rank deficient.
+
+\end{proof}
+
+Write \(dN=\kappa_N\,dn\) in the unipotent matrix coordinates
+and \(dR=s_R\,d\rho\) in the free roots of a normal form. The
+following fibre bound explains the dependence on \(k\). At fixed
+Iwasawa diagonal and middle Levi component, restrict to
+\(S,S'\le R_0\), \(y<Y\le2y\), with \(R_0\ge1\), \(y>0\).
+The Lebesgue volume in the unipotent coordinates modulo the
+free roots is at most
+\begin{equation}\label{eq:fibre-volume}
+ (4r)^{11r^2}R_0^{20r^3}D_e^{12r^2}
+       (\pi e/h)^{rh}(2y)^{2h}.
+\end{equation}
+
+The wedge bounds restrict the projected columns of the two frames. The remaining coordinates run over a fibre in the common stabilizer quotient and contribute its volume.
+
+\begin{proposition}[Fibre-wise volume in the free root coordinates]\label{prop:root-fibre-volume}
+Fix the Iwasawa diagonal and the middle Levi component.
+For \(S,S'\le R_0\) and \(y<Y\le2y\), where \(R_0\ge1\) and \(y>0\),
+write \(\mu\) for Lebesgue measure modulo the free roots at these fixed coordinates. The volume estimate \eqref{eq:fibre-volume} and the null-fibre assertion are 
+\[
+ \begin{aligned}\mu\{S,S'\le R_0,\ y<Y\le2y\}&\le(4r)^{11r^2}R_0^{20r^3}D_e^{12r^2}(\pi e/h)^{rh}(2y)^{2h},\\ \mu\{S,S'\le R_0,\ Y=0\}&=0.\end{aligned}
+\]
+
+\end{proposition}
+
+\begin{proof}
+Left multiplication by a block-upper unitriangular matrix inside
+each block eliminates the within-block entries of the upper
+unipotent matrix. The remaining coordinates are the off-block
+entries, \(r\) middle columns \(B_b\in\C^{k+1}\), and a
+skew-Hermitian \(r\)-by-\(r\) matrix. The within/off-block
+factorization has triangular Jacobian one. Relative to a
+positive diagonal and a middle Levi component \(m_0\),
+the bounds on these coordinates are, respectively,
+\[
+ R_1=R_0^{2r}D_e,\qquad
+ \|m_0^{-1} B_b\|\le M=rR_0^{2r-1}D_e,\qquad
+ R_3=rR_0^{4r-2}D_e^2.
+\]
+
+\proofstep{Coordinate bounds on the fibre.}
+
+For an off-block row, let \(A_l\) be the leading pairing
+matrix at the end \(l\) of its block. The required coordinates
+solve \(A_l z=b\) for the pairing vector \(b\) of the remaining
+column. If \(A_l[i:b]\) replaces column \(i\) by \(b\), then
+the column subtractions in the flag and Hadamard's bound give
+\[
+ |z_i|=\frac{|\det A_l[i:b]|}{|\det A_l|}
+           \le R_0^{2l}D_e\le R_1 .
+\]
+
+For a middle column use the \(r\)-by-\(r\) dual isotropic
+coordinate matrix \(A\) of the opposite frame.
+The expression \(A^{-1}b=(\operatorname{adj}A)b/\det A\)
+uses \(r\) cofactors in each coordinate. The orthogonalized
+wedge of \(r-1\) columns controls each cofactor. Keeping the
+positive diagonal in both this bound and the last column
+bound gives \(R_0^{2r-1}D_e\) for each summand and \(M\) after
+the sum. With the same inverse, the upper isotropic block
+bounds the entries of \(C+H\) by \(R_3\), where \(C\) is
+skew-Hermitian and \(H\) is its Hermitian quadratic correction.
+The quadratic correction satisfies \(H^*=H\), whereas \(C^*=-C\).
+Hence the entry bound passes to
+\[
+        C=\tfrac12\bigl((C+H)-(C+H)^*\bigr).
+\]
+\label{cor:absolute-amplitude-2}
+
+In this normal form, the positive projection space is contained
+in the middle \(\C^{k+1}\). Its description there is the kernel
+of three linear functionals. The negative coordinate vanishes
+and the images under \(m_0\) pair to zero against both middle
+line vectors. Their \(2\)-by-\(2\) Gram determinant is nonzero
+on the cell under consideration. Thus this space has dimension
+\(k-2\) or \(k-1\). Let \(\Pi\) be projection onto that middle space.
+
+In the paired
+normal form the projected column matrix is
+\(\Pi(m_0^{-1}B_b)U\), where \(U\) is the unitriangular
+matrix times the opposite isotropic pairing, with the prescribed
+adjoints and signs. In particular \(|\det U|=D\). Therefore
+\[
+  Y=\frac{\|\bigwedge^r(\Pi(m_0^{-1}B_b)U)\|}{D}
+    =\|\bigwedge^r(\Pi(m_0^{-1}B_b))\|.
+\]
+The equality also holds when the projected columns lose rank. The change
+\(B_b\mapsto m_0^{-1}B_b\) preserves Lebesgue measure because
+\(|\det m_0|=1\).
+
+To bound the volume, project further onto a fixed
+\(d=k-2\) dimensional plane in that space. Write \(V\) for
+the wedge norm there. Then \(V\le Y\). Integrate
+\((2y)^{2h}V^{-2h}\) over the column balls to dominate the
+indicator of \(Y\le2y\). Outside the set of linearly dependent
+columns, \(V\) is the product of the successive distances
+to the previous spans. The exceptional set is null, as is seen
+successively by Fubini. Given \(i<r\) previous independent
+columns, the integral of the next inverse distance power over
+the \(d\)-dimensional complex ball is bounded by
+\[
+ \frac{\pi^iM^{2i}}{i!}
+ \frac{\pi^{d-i} M^{2(d-i-h)}}{(d-i-1)!\,(d-i-h)}
+ \le \frac{\pi^d M^{2r}}{h!}.
+\]
+This follows by integration in polar coordinates perpendicular
+to the previous span. Here \(d=r+h\), so \(d-i-h\ge1\).
+
+Integrate the last column first and repeat. The three unused
+coordinates per column cost at most \((\pi M^2)^{3r}\).
+Using \(h!\ge(h/e)^h\), the middle-column bound is at most
+\[
+ (\pi M^2)^{3r}M^{2r^2}\pi^{r^2}
+                  (\pi e/h)^{rh}(2y)^{2h}.
+\]
+The other boxes contribute at most
+\((\pi R_1^2)^{r(r-1)/2}(\pi R_3^2)^{r(r-1)/2}(2R_3)^r\).
+Multiplication, using \(\pi\le4\) and \(r,R_0,D_e\ge1\),
+gives \eqref{eq:fibre-volume}. The bound is uniform in the
+diagonal, the middle element and the compact right translate.
+It also shows that \(Y=0\) is null in the fibres, by letting
+the Gram cutoff decrease to zero on each bounded box.
+
+\end{proof}
+
+\subsection{Dyadic summation and the measure factor}
+
+The moment bound controls the decay from one dyadic box to the next. Combining it with the quotient-volume bound on each box brings back the Haar scales in the original orbital integral.
+
+\begin{proposition}[Absolute estimate on a nondegenerate cell]\label{prop:absolute-cell-operator}
+For the two frames and the specified quotient measure, assume
+\(D=|\Delta_r|>0\), \(r\ge1\), \(k\ge2r+6\),
+the moments of Proposition~\ref{prop:paired-frame-moments}
+and the Haar scales in \eqref{eq:absolute-root-scales}. With \(h=k-r-2\) there is a constant
+\(C\), depending on the fixed family and measure constants, such that
+\[
+ \|J\|_{\rm op}\le (b^{Cm}D_e)^{Cr^3}
+                (C/(kv))^{rh}D^{-h}.
+\]
+\end{proposition}
+
+\begin{proof}
+\proofstep{Shells in the two frame lengths.}
+
+On the \(i'\)-th shell put \(S'\le 2^{i'}H\), with
+\(S'>2^{i'-1}H\) if \(i'>0\), and use the analogous shell
+\(i\) for \(S\). For \(q=24r^3+1\),
+\eqref{eq:side-moment} and the union bound over the \(r+1\)
+lengths give relative square mass at most
+\((r+1)4^q2^{-2qi'}\) on the primed shell. This covers
+\(i'=0\) by the unweighted mass bound. Set
+\(R_0=2^{i+i'}H\). Integrating Proposition~\ref{prop:root-fibre-volume} against this
+square mass gives, for each unit vector \(w'\),
+\begin{equation}\label{eq:side-piece}
+ \int_{\substack{i,i'\ {\rm shells}\\y<Y\le2y}}
+       |\langle w',\Phi'(x)\rangle|^2\,d\nu_R
+ \le K R_0^{20r^3} y^{2h} 2^{-2qi'},
+\end{equation}
+where
+\[
+ K=c_N\frac{\kappa_N}{s_R}(4r)^{11r^2}D_e^{12r^2}
+       (\pi e/h)^{rh}4^h(r+1)4^q.
+\]
+Indeed insert a nonnegative quotient cutoff of integral one
+over each \(R\)-fibre, and unfold using Weil integration. The
+normalized root cutoff for \(d\rho\) then has integral
+\(1/s_R\). Integration in \(dN\) gives \(\kappa_N\) times
+\eqref{eq:fibre-volume}. The primed shell is invariant under
+the primed Bessel subgroup.
+
+On the compact group of the primed side use Haar mass one.
+For unit \(w'\), Schur orthogonality gives
+\[
+ \int_{W'}|\langle w',\pi'(h)\Phi'(x)\rangle|^2\,dh
+       = \|\Phi'(x)\|^2/d_{W'} .
+\]
+The primed shell permits this average inside the quotient integral.
+The unweighted square mass is \(c_Nd_{W'}\). The scalar mass
+on the primed shell is bounded by
+\[
+   \frac{1}{d_{W'}}\int_{\{S'\text{ in shell }i'\}}
+                   \|\Phi'(x)\|^2d\nu_{S'}(x)
+      \le c_N(r+1)4^q2^{-2qi'}.
+\]
+Here the shell bound uses the moment for the primed frame. The fibre measure contributes its bound with
+\(\kappa_N/s_R\), giving \eqref{eq:side-piece}.
+The same unfolding transfers the fibrewise null sets to the
+quotient. In the reverse orientation send \(x\mapsto\gamma x\)
+and \(\rho\mapsto\gamma\rho\gamma^{-1}\).
+The transported action is
+\[
+    \gamma(\rho x)=(\gamma\rho\gamma^{-1})(\gamma x).
+\]
+
+It is therefore compatible with quotient integration. To compare
+the root measures, consider the reverse normal form.
+On a paired block the new upper unitriangular coordinate is
+obtained by inverse conjugate transpose and reversal of the
+indices, with ratios of pivot coefficients of modulus one.
+Inversion on the entry \(u_{ab}\) gives \(-u_{ab}\) plus a
+polynomial in entries closer to the diagonal. Its triangular
+Jacobian has absolute determinant one. Reindexing, complex
+conjugation and multiplication by phases preserve real
+Lebesgue measure as well. One obtains the same bound with
+\(\Phi(\gamma x),Y',i\) in place of \(\Phi'(x),Y,i'\).
+
+The wedge inequalities bound both positive Gram numbers by
+\(T=(rR_0^{2r-1}D_e)^r\), up to the already identified null set.
+For integers \(a,b'\ge0\), take boxes
+\[
+   T2^{-a-1}<Y\le T2^{-a},\qquad T2^{-b'-1}<Y'\le T2^{-b'} .
+\]
+Denote the two lower endpoints by \(y,y'\). On a nonempty box,
+\(yy'\le P=2^r/D\) and \(D\le R_0^{2r}\). Cauchy--Schwarz
+on the box and \eqref{eq:side-piece} in both orientations bound
+the integral of the product of two absolute scalar coefficients by
+\[
+ K R_0^{20r^3}(yy')^h2^{-q(i+i')}.
+\]
+Keep one power of \(yy'\), bounding the others by \(P^{h-1}\).
+
+Since \(1/P\le R_0^{2r}\) and
+\(T^2R_0^{2r}=r^{2r}D_e^{2r}R_0^{4r^2}\), the result is at most
+\[
+ Kr^{2r}D_e^{2r} H^{24r^3}P^h\,
+             2^{-i-i'-a-b'} .
+\]
+We used \(20r^3+4r^2\le24r^3\). All four geometric sums
+converge, with product at most 16. A finite basis on each
+side gives absolute integrability of the rank-one operator. Taking the supremum over unit test vectors gives the same
+bound on the norm of the integral without a dimension loss.
+After division by \(c_N\) we obtain
+\begin{equation}\label{eq:abs-raw}
+ \|J\|_{\rm op}\le \frac{\kappa_N}{s_R}
+ (4r)^{44r^3}D_e^{14r^2}H^{24r^3}
+        \left(\frac{8\pi e}{k}\right)^{rh}D^{-h}.
+\end{equation}
+For this simplification use \((k/h)^h\le e^{r+2}\) and
+\(4^h(2^r)^h\le8^{rh}\). The remaining factors satisfy
+\[
+ 16(r+1)4^{24r^3+1}r^{2r}e^{r(r+2)}(4r)^{11r^2}
+   \le (4r)^{44r^3}
+\]
+also at \(r=1\).
+
+\proofstep{Root Haar densities.}
+
+In the family normalization put \(N_R=\#\{\text{free complex
+roots of }R\}\le r^2\). With local norm parameters
+\(\theta,\theta'>0\), the factors in \eqref{eq:abs-raw} are
+\begin{equation}\label{eq:absolute-root-scales}
+ \kappa_N=(2v)^{-rk}\theta\,2^{r(k+1)+r(r-1)},\qquad
+ s_R=\theta'(vg)^{-N_R}.
+\end{equation}
+For the first identity, the tangent matrix of a unipotent element
+contains each complex coordinate and its adjoint partner, and
+each imaginary diagonal coordinate once. A paired complex coordinate \(\zeta\) contributes \(2|d\zeta|^2\)
+to the tangent metric and gives an area factor of two. The
+\(r(k+1)+r(r-1)\) such coordinates give density
+\[
+        2^{r(k+1)+r(r-1)}(2v)^{-rk}\theta
+\]
+after the specified Haar scaling.
+
+For the second identity, the root
+coordinates of the stabilizer of a normal cell are exactly the
+strict upper entries within each block. Reduction by the radical
+fixes the first \(r\) flag vectors, so those entries recover the
+block coordinates after conjugation. Their permutation preserves
+product Lebesgue measure. Each free root has density
+\(\kappa_{\rm host}/(\pi g)=1/(vg)\), where
+\(\kappa_{\rm host}=\pi/v\). The allowed scalar on the root
+measure is \(\theta'\). This also covers a stabilizer with no
+free roots.
+
+\proofstep{Insertion of the density ratio.}
+
+For \(b^{-|C_1|m^2}\le\theta,\theta'\le b^{|C_1|m^2}\),
+\(1\le v\le b/2\), \(1\le g\le b^{2C_g}\), this gives
+\[
+ \frac{\kappa_N}{s_R}
+ \le b^{2|C_1|m^2+(2+2C_g)r^2} v^{-rh}.
+\]
+More precisely the formula for the measures gives
+\[
+  \kappa_N/s_R=2^{r^2}(\theta/\theta')v^{-rk+N_R}g^{N_R}.
+\]
+Since \(N_R\le r^2\) and \(v\ge1\), the \(v\)-power is at most
+\(v^{-rh}\). The remaining factors use \(2\le b\) and the bounds
+on \(g,\theta,\theta'\). Inserting this bound and
+\eqref{eq:side-moment} into \eqref{eq:abs-raw} yields
+\[
+ \|J\|_{\rm op}\le (b^{Cm}D_e)^{Cr^3}
+                (C/(kv))^{rh}D^{-h}
+\]
+for \(C\ge8|C_1|+2|C_g|+46+24\max(C_M,0)+8\pi e\).
+Here \(4r\le b^m\) and \(m^2\le4mr^3\). This is the
+unweighted estimate in Section~\ref{sec:row-sums}. Its
+leading-minor iteration there supplies the size weight.
+
+\end{proof}
+
+\subsection{Multiplication by a leading minor}
+
+The frame moment in Proposition~\ref{prop:paired-frame-moments}
+estimates an integral on a one-sided quotient. To obtain decay at a
+specified pair of frames we first express multiplication by a minor
+as an identity of orbital operators \emph{at that pair}. The same
+identity will act on both norms used in the row sum.
+
+\begin{auxlemma}[A leading minor acting on an orbital amplitude]
+\label{lem:minor-orbital-shift}
+Fix the two definite types, characters and all Haar measures of
+Proposition~\ref{prop:local-operator-normalization}. Write
+\(\mu=\lambda+\nu\), \(p=r+1\), \(n=2r+k+1\), and let \(d_\mu\)
+be the formal degree for the fixed ambient Haar measure. Use a nonzero
+model on each side and set
+\[
+ M_\mu=\|J_\mu\|_{\rm cell}^2=C_{\rm cell}/d_\mu,\qquad
+ U_\mu=M_\mu^{-1/2}J_\mu .
+\]
+Take \(1\le l\le p\) and \(\|\nu\|_1\le C_nkm^3\) on the marked
+family of Lemma~\ref{lem:marked-paired-moment-range}, sufficiently
+late in terms of \(C_n\). At a matched cell in its quotient measure
+there are coefficients \(a_I\), independent of its representative
+\(\gamma\), such that
+\begin{align}
+ \Delta_l(\gamma)U_\mu(\gamma)
+    &=\sum_{|I|=l}a_I U_{\mu+\mathbf1_I}(\gamma),
+       \label{eq:minor-shift-unit}\\
+ \Delta_l(\gamma)J_\mu(\gamma)
+    &=\sum_{|I|=l}a_I\sqrt{d_{\mu+\mathbf1_I}/d_\mu}\,
+                       J_{\mu+\mathbf1_I}(\gamma).
+       \label{eq:minor-shift-raw}
+\end{align}
+A summand with a vanishing period on either side is omitted.
+For the choice \(H=b^{m\max(C_M,0)}\) in \eqref{eq:side-moment},
+the sum of the absolute coefficients in either line is at most
+\((nH)^{2l}\).
+\end{auxlemma}
+
+\begin{proof}
+Let \(F_l=\bigwedge^l\C^n\), with Hermitian form induced by
+\(H_{\rm Witt}\). Let \(\omega,\omega'\) be the ordered wedges of
+the first \(l\) columns on the two sides. With the pairing linear
+in its second argument take
+\[
+ \Delta_l(\gamma)=
+   [\omega,(\bigwedge\nolimits^l\gamma)\omega']_{F_l}.
+\]
+This is the determinant of the prefix pairing, including its last
+column \(z,z'\) when \(l=p\). Each period subgroup fixes its own
+prefix wedge since it adds only earlier columns. Consequently this
+finite-dimensional matrix coefficient is constant on the double orbit.
+
+Tensor the ambient representation with \(F_l\). Its weights are the
+multiplicity-one vectors \(\mathbf1_I\), \(|I|=l\). The translation
+principle in a regular chamber gives, on compact-finite vectors,
+\[
+ F_l\otimes{\cal H}_\mu
+       =\bigoplus_{|I|=l}{\cal H}_{\mu+\mathbf1_I}.
+\]
+Indeed the coherent family character identity gives one copy of each
+translate. They lie in the same chamber by
+\eqref{eq:marked-pieri-windows}, and their distinct infinitesimal
+characters split the sum
+\cite[\S4, (4.1) and the discussion preceding Proposition~4.3]{mpv-translation}.
+
+The invariant tensor form restricts on summand \(I\) to a sign
+\(\epsilon_I\) times its Hilbert form after rescaling the inclusion
+\(\iota_I\). Write \(P_I\) for its coordinate projection, so
+\(P_I\iota_I=1\).
+
+For one of the Schur-normalized periods \(\ell_\mu\), restriction to
+the invariant wedge defines a Bessel map on \({\cal H}_\mu\).
+Multiplicity one gives the scalar \(\kappa_I\) through
+\[
+ \ell_{\mu+\mathbf1_I}\big(P_I(\omega\otimes v)\big)
+               =\kappa_I\ell_\mu(v).
+\]
+Use \(\kappa'_I\) for the other side.
+
+Inserting
+\(\sum_I\iota_IP_I=1\) into the tensor matrix coefficient gives
+a sum of the shifted matrix coefficients with signs \(\epsilon_I\).
+Integrating on the original cell is legitimate term by term by the
+finite sum and the large-gap majorants in
+Proposition~\ref{prop:local-operator-normalization}. Its
+Schur formula contributes \(d_I/d_\mu\) to the coefficient of
+the shifted standard amplitude, where \(d_I=d_{\mu+\mathbf1_I}\).
+
+If \(J_\mu=\eta_\mu J_{\mu,{\rm std}}\), the full coefficient on
+\(J_{\mu+\mathbf1_I}\) and the one on \(U_{\mu+\mathbf1_I}\) are
+\[
+ b_I=\epsilon_I\kappa'_I\overline{\kappa_I}
+       \frac{d_I}{d_\mu}\frac{\eta_\mu}{\eta_{\mu+\mathbf1_I}},
+ \qquad
+ a_I=b_I\sqrt{d_\mu/d_I}.
+\]
+Indeed \(|\eta_\mu|=d_\mu\sqrt{d_Wd_{W'}}\) and the compact types
+are fixed. Consequently the two coefficient moduli are
+\[
+  |b_I|=|\kappa_I\kappa'_I|,\qquad
+  |a_I|=\sqrt{d_\mu/d_I}\,|\kappa_I\kappa'_I| .
+\]
+Terms with a zero Bessel map give zero in this computation.
+
+\proofstep{Size of the scalar on one side.}
+Normalize the one-sided models as isometries by multiplying
+\(\ell_\mu,\ell_{\mu+\mathbf1_I}\) by \(\sqrt{d_\mu},\sqrt{d_I}\).
+Write their coefficient functions as \(F_{\mu,v},F_{I,y}\).
+Let \(y\) be a unit vector of lowest compact type in the shifted
+summand and let \(x_j\) be the components of \(\iota_I y\) in an
+orthonormal coordinate basis \(e_j\) of the positive majorant of
+\(F_l\).
+
+Since the form on the summand has sign \(\epsilon_I\),
+\(\sum_j\|x_j\|^2\ge1\). Its signed adjoint and the quotient
+isometry give, with \(h_j(g)\) the \(j\)-th coordinate of
+\((\bigwedge^l g^{-1})\omega\) in the dual Hermitian basis,
+\[
+ |\kappa_I|\sqrt{d_\mu/d_I}\,\|x_j\|^2
+  =\left|\int h_j(g)\langle F_{I,y}(g),F_{\mu,x_j}(g)\rangle\,d\nu_S\right|.
+\]
+To see the projection here, expand \(e_j\otimes x_j\) into its
+summands before pairing the coefficient with \(F_{I,y}\). The
+other summands are orthogonal in the quotient representation since
+they are inequivalent discrete series. The surviving inner product
+with \(P_I(e_j\otimes x_j)\), using the Hermitian dual coordinate,
+has modulus \(\|x_j\|^2\).
+
+Cauchy--Schwarz and \(\int\|F_{\mu,x_j}\|^2=\|x_j\|^2\) bound
+\(|\kappa_I|^2(d_\mu/d_I)\|x_j\|^2\) by
+\(\int |h_j|^2\|F_{I,y}\|^2\), including \(x_j=0\).
+Sum in \(j\) and evaluate the Euclidean wedge norm by
+Gram--Schmidt. H\"older and \eqref{eq:side-moment} give
+\[
+ |\kappa_I|^2\,d_\mu/d_I
+ \le \int\!\Big(\prod_{a=0}^{l-1}l_a(g)^2\Big)\|F_{I,y}(g)\|^2d\nu_S
+ \le H^{2l}.
+\]
+For the last inequality the individual moment of order \(2l\)
+follows from the \(2(24r^3+1)\)-moment by H\"older in the
+probability measure \(\|F_{I,y}\|^2d\nu_S\). The primed side has
+the same bound. Both moments are taken at the shifted parameter.
+
+Finally the formal-degree formula gives \(d_I/d_\mu\le n^l\).
+For one raised entry at position \(i\) in decreasing order the
+increasing Vandermonde factors cost at most
+\(\prod_{j>i}(1+1/(j-i))\le n\); the others decrease. Raise the
+entries of \(I\) in increasing order of index, so all intermediate
+gaps stay positive. There are at most \(n^l\) possible \(I\).
+Together the two one-sided estimates and the count give
+\[
+ \sum_I|a_I|\le n^{3l/2}H^{2l},\qquad
+ \sum_I|b_I|\le n^{2l}H^{2l}.
+\]
+\end{proof}
+
+\begin{auxlemma}[Iteration at a fixed point of a cell]
+\label{lem:minor-orbital-iterate}
+Take \(B=b^{C_hm^2}\ge(nH)^{2p}\), and set
+\(s=\prod_{l=1}^p\max(1,|\Delta_l(\gamma)|/B)\).
+Let \(q\ge0\) be an integer with \(pq\le C_nkm^3\).
+For \(V=J\) or \(U\), with either operator or Hilbert--Schmidt norm,
+\[
+ \|V_\lambda(\gamma)\|
+ \le s^{-q/p}\max_{\|\nu\|_1\le pq}\|V_{\lambda+\nu}(\gamma)\|.
+\]
+Here the maximum ranges over integral shifts with both periods nonzero.
+The same inequality holds when the maximum is replaced by any common
+unweighted upper bound on those norms.
+\end{auxlemma}
+\begin{proof}
+If every minor has absolute value at most \(B\), the assertion uses
+\(\nu=0\). Otherwise choose \(l\) realizing the largest ratio
+\(R=|\Delta_l(\gamma)|/B>1\). Iterate \eqref{eq:minor-shift-unit}
+or \eqref{eq:minor-shift-raw} with this \emph{same} minor. At depth
+\(j\) every path has
+\[
+ \nu=\mathbf1_{I_1}+\cdots+\mathbf1_{I_j},\qquad
+ \|\nu\|_1=jl,\qquad
+ \sum_{\rm paths}|\text{product of coefficients}|\le B^j .
+\]
+The last inequality follows by summing over the children of each
+path in Lemma~\ref{lem:minor-orbital-shift}. Each path uses the same
+point, quotient measure and compact types. Division by
+\(|\Delta_l(\gamma)|^q\) gives \(R^{-q}\), and \(s\le R^p\).
+Since \(n\le b^{\max(2,C_u)}\), one may fix
+\(C_h\ge\max(C_M,0)+\max(2,C_u)\) before choosing \(C_n\) and the
+eventual size threshold.
+\end{proof}
+
+The absolute estimate was derived at one real place. Before multiplying it over places one must express it in the same coefficient and Haar normalization at every factor.
+
+\begin{proposition}[Normalized tensor product on an adelic term]\label{prop:tensor-cell-norm}
+With matching stabilizer measures in the real factors, the absolute
+integral over the stabilizer lattice has the stabilizer covolume
+as its measure factor. If \(J_v^{\rm aut}\) denotes the orbital operator at \(v\), the squared Hilbert--Schmidt norm including its finite factor is the expression of \eqref{eq:adelic-tensor-scale}: 
+\[
+ (s_{u,u'}\operatorname{vol}K_2)^2\operatorname{covol}(R_{\rm arith})^2\prod_v\|J_v^{\rm aut}\|_{\rm HS}^2.
+\]
+ Under the coefficient isometries
+the local squared norms gain the squares of the two vector
+scalars divided by the square of the Bessel normalization.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Agreement of stabilizer measures.}
+
+For the application to an adelic term choose the stabilizer
+Haar measure by its specified pushforward in the rational
+root coordinates. At the real places rescale each local Haar
+measure so its free-coordinate pushforward is Lebesgue with
+density \((vg)^{-N_R}\). Their product and the pinned global
+archimedean Haar measure are proportional, by uniqueness of
+Haar measure on the product stabilizer. Their coordinate
+pushforwards agree. Testing on a bounded coordinate box of
+positive measure fixes the proportionality at one. Left and
+right changes of double-coset representative conjugate the
+stabilizer on the corresponding side. Normal-form coordinates
+and the quotient integration formula transport together under
+these maps. Relevance gives equality of the two characters
+on the stabilizer, so their phases cancel in the rank-one
+integrand. Compact changes of representatives act by unitaries
+on the two coefficient spaces.
+
+\proofstep{Tensor factorization and coefficient normalization.}
+
+Set \(c_R=\operatorname{covol}(R_{\rm arith})\). The quotient
+integration formula and Fubini give
+\[
+   \int_{R_{\rm arith}\backslash G_\infty}(\text{paired integrand})
+        =c_R\bigotimes_v J_v^{\rm aut},\qquad
+   \left\|c_R\bigotimes_v J_v^{\rm aut}\right\|_{\rm HS}^2
+        =c_R^2\prod_v\|J_v^{\rm aut}\|_{\rm HS}^2 .
+\]
+The root measures on each \(J_v^{\rm aut}\) are the ones just
+compared. Write \(s_{u,u'}\) for the
+product normalization of the two finite-level column systems
+and \(R_{\rm arith}\) for their stabilizer lattice. Before
+transferring from the automorphic to the Bessel coefficient
+normalization, the squared norm of the normalized lift is
+\begin{equation}\label{eq:adelic-tensor-scale}
+ (s_{u,u'}\operatorname{vol}K_2)^2
+      \operatorname{covol}(R_{\rm arith})^2
+      \prod_v\|J_v^{\rm aut}\|_{\rm HS}^2 .
+\end{equation}
+The finite level character has modulus
+one.
+
+The local comparison of the two realizations multiplies
+\(\|J_v^{\rm aut}\|_{\rm HS}^2\) by the squared modulus of
+the product of the two vector-normalization scalars divided by
+the squared Bessel normalization. This follows by substituting
+the two transformed coefficient functions in the rank-one
+integral. It applies at a Witt lift of the term because the
+transformed quotient measure is the one for its transformed
+root measure. This explains which covolume and which local
+norms can occur together in the row product.
+\label{cor:absolute-amplitude-3}
+\end{proof}

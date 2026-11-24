@@ -1,0 +1,390 @@
+\subsection{Heights on the marked flag model}
+\label{subsec:flag-point-heights}
+
+The behavior near a wall will be inferred from heights on the compactified flag model. The height bounds must include the boundary as well as the open abelian locus.
+
+Fix the deep cover at a nonterminal letter of either run, with CM
+field \(E\), real degree \(f\), rank \(N\), and signature \((j,N-j)\).
+Write \(A\) for its auxiliary ample metrized line and \(h_A\) for
+the associated absolute point height. The perturbed line \(M_B(v,s)\)
+has a summand \(sA\). Its root part has weight
+\[
+ w=v-sd_0,
+\]
+where
+\(d_0\) is fixed on the cover. The arithmetic degree of a lattice over
+a number field will always be divided by the degree of the field.
+In this subsection constants may depend on the fixed cover. We shall
+use a threshold in \(s\) independent of \(B\), of the point and its
+field, and of the weight in a bounded set. This order of quantifiers
+will allow us to take a limit for each cover before applying a
+separate uniform estimate as the covers vary.
+
+\paragraph{Lie lattices.}
+
+The first height contribution is the degree of a line in the integral Lie algebra.
+
+Let \(\mathcal L\) be the integral Lie algebra of a semiabelian model
+over a number ring with principally polarized abelian generic fibre of
+dimension \(g\). Use the polarization metric \(\pi H_\sigma\) on the
+Lie algebra at each embedding, where \(H_\sigma\) is the Hermitian
+form of complex uniformization. Put
+\[
+ h_*=-\widehat{\deg}\mathcal L
+\]
+
+and \(H=\max(h_*,0)\). For \(g\le g_0\), every integral sublattice
+\(U\subset\mathcal L\) satisfies
+\begin{equation}\label{eq:flag-lie-slope}
+  \widehat{\deg} U\le \rk U\,C(g_0)\log(2+H).
+\end{equation}
+To see the logarithmic dependence, take a nonzero algebraic tangent
+direction \(x\) and let \(a\) be the degree of the saturated line it
+spans. Saturation of this line commutes with finite extension of the
+number field, by flatness and the torsion-free quotient. Both its
+normalized degree and its metric therefore persist over the fields
+used below.
+
+For an integer \(n\ge2\), put \(m=4n\) and let \(L\) be the
+\(m\)-th power of the symmetric theta line, with its rigidification.
+Over a finite extension take the semistable Moret--Bailly model
+of \((A,L)\). The line has a cubical extension and the polarization
+kernel of \(L^{\otimes 2}\) extends as a finite flat subgroup.
+On this model Bost's semistable direct-image theorem gives a semistable lattice of sections with the cubical probability \(L^2\) metric. Its rank is 
+\[
+ \operatorname{rk}H^0(A,L)=m^g=(4n)^g.
+\]
+ In the Faltings normalization
+of Gaudron's 2019 statement its slope is
+\[
+ -h_F/2+(g/4)\log(m/(2\pi^2)).
+\]
+For a principal polarization,
+\[
+ h_* = h_F+(g/2)\log\pi,
+\]
+because the tangent metric here is
+\(\pi H_\sigma\). Thus the slope in these norms is
+\[
+ \nu=-h_*/2+(g/4)\log(m/(2\pi)).
+\]
+
+\cite{bost-mb-flag}\label{cor:flag-point-heights-1}
+
+\begin{proposition}[Point-height bounds on the selected flag]
+\label{prop:selected-flag-point-heights}
+For the marked model the relative Lie lattices satisfy the
+slope bound \eqref{eq:flag-lie-slope}. The resulting interior
+and boundary point-height bounds use the same root metric.
+On every component there is a dense set on which the two inequalities hold simultaneously
+\[
+ |h_A|\le C,\qquad |h_0(w)|\le C\|w\|_\infty\quad\text{for all }w.
+\]
+ The set is fixed before
+\(B,v,s\).
+\end{proposition}
+
+\begin{proof}
+\proofstep{Filtering by the evaluations at successively chosen points.}
+Filter the space of sections by vanishing of the successive
+directional derivatives at zero. The first \(n+1\) quotients have
+rank one. Indeed \(\Theta^4\) separates the tangent at zero. Take two
+sections of \(\Theta^4\), one nonzero at zero and the other with order
+one along \(x\). Call the two sections \(s_0,s_1\). The powers satisfy
+\[
+ s_0^{\,n-i}s_1^i\in H^0(A,\Theta^{4n}),\qquad
+          \operatorname{ord}_{x,0}(s_0^{\,n-i}s_1^i)=i,
+                  \quad 0\le i\le n .
+\]
+Here the order is along the chosen tangent \(x\) at zero.
+They exhibit a nonzero class in each of the successive
+one-dimensional jet quotients.
+Evaluate the \(i\)-th derivative on the kernel of the preceding
+jets using the rigidification.
+
+The derivative is integral on an integral tangent and an integral section. In the group law this derivative is the
+coefficient of \(e_1\cdots e_i\) at the sum of \(i\) copies of that
+tangent, in the algebra with \(e_k^2=0\). A change of trivialization
+uses only its value at zero on this kernel. Writing \(j_i(s;x)\) for this derivative of a section \(s\) in the tangent \(x\), homogeneity of the multilinear coefficient gives
+\[
+ j_i(s;bx)=b^i j_i(s;x).
+\]
+Thus its finite-place image
+pairs integrally with the \(i\)-th power of the saturated tangent
+line.
+
+At an embedding let \(\rho\) be the shortest nonzero period in
+the \(H_\sigma\)-norm. The archimedean operator bound for this jet,
+after removing \(\|x\|_{\pi H_\sigma}^i\), is
+\[
+  \beta_i(\rho)=(e m i)^{i/2}\sqrt{e\,g!}\,
+       \max\{(2/(\sqrt\pi\rho))^g,m^{g/2}\}.
+\]
+Use \(1\) for the first factor when \(i=0\). In a translated
+Appell--Humbert frame the centred Gaussian is
+\(\exp(-\pi m H_\sigma(z,z))\) for the squared norm. A ball of
+radius
+\[
+ \min(\rho/2,1/\sqrt{\pi m})
+\]
+injects up to its boundary
+into the torus, and the Gaussian on it is at least \(e^{-1}\).
+
+The holomorphic mean-value inequality and the volume of this ball
+give the last two factors in the comparison of the supremum and
+probability \(L^2\) norms. The fundamental period parallelepiped
+has volume one in these coordinates by principality. Cauchy's
+inequality along the unit tangent with radius
+\(\sqrt{i/(\pi m)}\) in the \(H_\sigma\)-norm, and \(i!\le i^i\),
+give the first factor with the stated tangent metric. The calculation
+applies to every complex linear combination of sections in the
+kernel. \label{cor:flag-point-heights-2}
+
+\proofstep{The quotient heights and the product formula.}
+The determinant of a rank-one quotient and the product formula
+now give its normalized degree at most
+\[
+ -ia+\operatorname{mean}_\sigma\log\beta_i(\rho_\sigma).
+\]
+
+The remaining kernel has degree at most its rank times \(\nu\) by
+semistability. Subtracting this from the full degree gives
+\[
+ (n+1)\nu\le -\tfrac12n(n+1)a+
+           \sum_{i=0}^n\operatorname{mean}_\sigma\log\beta_i(\rho_\sigma).
+\]
+For principal polarization the matrix lemma bounds the mean of
+\(\rho_\sigma^{-2}\) by \(14\max(1,h_*-(g/2)\log\pi,\log(g!))\).
+Apply concavity of \(\log\) to \(1+\rho_\sigma^{-2}\). The mean in
+the last display is at most
+\[
+  \tfrac i2\log(e m n)+\tfrac g2\log m+
+        \tfrac g2\log(2+H)+O_g(1).
+\]
+Field extension repeats each base embedding equally often in this
+mean.
+
+Take \(n=2\lfloor H\rfloor+2\). Then \(H/n\le1\) and
+\(\log n\le\log(2+H)+\log 2\). Dividing by \(n(n+1)/2\) gives
+\(a\le\log(2+H)+O_g(1)\). Let \(U\) be a Hermitian sublattice of positive rank. The absolute
+Siegel lemma gives, after finite extension, a line \(L\subset U\)
+with
+\[
+    \widehat{\deg} L\ge \frac{\widehat{\deg} U}{\operatorname{rk}U}
+                         -\tfrac12\log\operatorname{rk}U-1.
+\]
+The inequality extends to \(L\) from its saturation \(L^{\rm sat}\) by
+\[
+ \widehat{\deg} L\le\widehat{\deg} L^{\rm sat},\qquad \operatorname{rk}L=\operatorname{rk}L^{\rm sat}.
+\]
+This proves \eqref{eq:flag-lie-slope}, taking
+a maximum over the finitely many dimensions up to \(g_0\). Rank zero
+contributes zero. \cite{matrix-flag,absolute-siegel-flag}
+
+\paragraph{Interior points.}
+Take the semiabelian integral model of the abelian variety at the
+given algebraic point after semistable extension. Its dimension is
+\(fN\). Pull the marked flag back with the same point, intersect the
+rational steps with the Lie lattice and give them the induced
+metrics. If \(W_k\) denotes this intersection, the determinant comparison reads
+\[
+ h_{\rm step}=-\widehat{\deg}(\det W_k)+O(1).
+\]
+Indeed the product of the successive local quotient generators is
+a determinant generator, and the product of their quotient norms is
+the Gram determinant norm. At the finitely many primes where
+integral eigenprojections require a denominator the field
+discriminant bounds the change in the normalized valuation.
+
+At infinity the polarized metric pulled back at the point
+is the Hodge Gram form in its marked frame. The successive Gram
+determinant ratios therefore agree at every embedding. If a rational determinant frame over \(K\) is rescaled by \(a\in K^\times\), the changes cancel by
+\[
+ \sum_v[K_v:\mathbb Q_v]\log |a|_v=0,
+\]
+with absolute values extending the standard ones. Applying the determinant comparison to the full Lie lattice gives
+\(h_F=h_*+O(1)\). If \(h_{\rm step}\) denotes any one of the step
+heights, \eqref{eq:flag-lie-slope} consequently gives
+\[
+                    h_{\rm step}\ge-C\log(2+\max(h_F,0))-C .
+\]
+Applying it to the entire lattice bounds the negative part of
+\(h_F\) by the same quantity in absolute value.
+\label{cor:flag-point-heights-3}
+
+\proofstep{Root heights in the interior metric.}
+At \(\tau\) write \(R_{\tau i}\), \(0\le i<N\), for the
+graded root heights in the Hodge metric and
+\[
+ P_{\tau k}= \sum_{i<k} R_{\tau i}.
+\]
+The first \(j\) entries are the
+graded Lie heights at \(\tau\). The remaining entries are
+the negatives of those at \(\bar\tau\) in reverse order.
+To bound the full sum \(P_{\tau N}\) in absolute value, use that
+the full determinant and its inverse have integral sections up
+to fixed denominators, nonzero at all generic-fibre points,
+on the determinant cover. The smooth reference metrics bound their
+norms above. Their changes to the Hodge metric for this central
+weight are bounded, since its potential extends smoothly. Thus the step height in the first block reads
+\[
+ h_{\rm step}(\tau,k)=-P_{\tau k}\qquad(k\le j).
+\]
+
+For \(k>j\) it is the step height of dimension \(N-k\) at
+\(\bar\tau\) minus \(P_{\tau N}\). Both have the preceding lower
+bound. Moreover the sum of the two unsigned-block Lie determinants
+in the Hodge metric, with negative sign, reads \(h_F+O(1)\) after
+summing over \(\tau\). The two block sums differ by \(P_{\tau N}\).
+Consequently
+\[
+  \sum_\tau -P_{\tau j}=\tfrac12 h_F+O(1).
+\]
+The field and level are fixed in these \(O(1)\) terms.
+\label{cor:flag-point-heights-4}
+
+Let \(\delta_{\tau k}=w_{\tau,k-1}-w_{\tau k}\) for \(1\le k<N\).
+For a dominant \(w\) of norm at most \(2\), and
+\(0\le b\le\min_\tau\delta_{\tau j}\), summation by parts gives
+\[
+ h_{\rm H}(w)=
+ \sum_\tau\Big(\sum_{k=1}^{N-1}\delta_{\tau k}(-P_{\tau k})
+                      -w_{\tau,N-1}P_{\tau N}\Big)
+ \ \ge\ \tfrac b2\max(h_F,0)-C\log(2+\max(h_F,0))-C .
+\]
+To get the inequality, reserve \(b\) at each middle gap. The
+remaining coefficients are nonnegative and their sum at each
+embedding is at most \(4\). This also shows why the possibly
+unbounded individual middle heights must first be added with a
+common coefficient.
+
+\paragraph{Boundary points.}
+Use the smooth reference metric at a boundary point and the actual
+extension by a torus of its polarized abelian part. After extending
+the residue number field one obtains its Lie lattice \(L\), a map
+\(q:L\to L'\) to the lattice of the abelian part, and a frame
+\(\epsilon\) of the torus. The rational map is onto and its integral
+kernel is the span of \(\epsilon\). On these data there is a fixed
+\(D\ge1\) such that
+\[
+   {\rm Gram}(\epsilon)\ \ge D^{-1}I,\qquad
+   {\rm Gram}(qv)\ \le D\,{\rm Gram}(v)
+\]
+for each tuple \(v\), at every embedding.
+
+For the first comparison
+split the torus over a finite cover of a dense open of each
+boundary stratum. Its cocharacter basis is saturated in the
+integral Lie algebra by the integral torus inclusion. Its norm
+comparison on the split stratum is the torus-frame bound. Apply
+Noetherian induction to the closed complement, keeping the maximum
+of the finitely many bounds. The second comparison comes from the
+local Hermitian bound on the map to the polarized quotient and a
+finite cover of the compact complex charts. Both comparisons are
+stable after extension to the common field of definition of the
+point and frame. \label{cor:flag-point-heights-5}
+
+\proofstep{The Lie quotient at the boundary.}
+For \(W\subset L\) put \(W_0=W\cap\ker q\). Its coordinate lattice
+in the torus basis has degree at most zero for the standard
+metric, by a nonzero integral minor and the product formula.
+Consequently
+\[
+ \widehat{\deg}W_0\le(\rk W_0)\log D/2.
+\]
+
+Using the quotient metric on \(W/W_0\), the second Gram inequality
+gives
+\[
+ \widehat{\deg}W\le \widehat{\deg}W_0+\widehat{\deg}(qW)
+                            +\tfrac12\rk(qW)\log D .
+\]
+In particular
+\[
+ h_*'=-\widehat{\deg}L'\le -\widehat{\deg}L+O(1),
+\]
+by taking \(W=L\) and using
+\(qL\subset L'\) of full rank. The smooth determinant height
+\(h_\omega=-\widehat{\deg}L+O(1)\) satisfies
+\[
+ |h_\omega|\le C(1+|h_A|)
+\]
+by ample height comparison.
+Also \(h_A\ge-C\), using a finite generating family in an ample
+power. Applying \eqref{eq:flag-lie-slope} to \(qW\) gives the
+lower bound \(-C\log(2+C+h_A)-C\) for each smooth step height,
+using the determinant comparison for the saturated marked steps
+of \(L\). The argument includes a zero-dimensional abelian part
+by taking \(qW=0\).
+
+The smooth root heights have the same signed reversal as the
+interior heights and bounded full sum at each \(\tau\). For
+\(k>j\) use the conjugate step of length \(N-k\), which contributes
+the same logarithmic loss. Summation by parts for dominant \(w\)
+of norm at most \(2\) therefore gives
+\[
+ h_0(w)\ge -C\log(2+C+h_A)-C .
+\]
+Here \(h_0(w)\) uses the empty finite-prime set and smooth metrics.
+\label{cor:flag-point-heights-6}
+
+\paragraph{Upper heights on a dense set.}
+
+The lower height bounds apply to arbitrary points. To bound the intersection in the other direction we need upper bounds on points that are dense in each component.
+
+Fix a component, embed it by a power of the ample line, and
+choose an affine chart on which the projective coordinate ratios
+\(z_1,\ldots,z_m\) are regular. Noether normalization gives a
+finite map
+\[
+ \pi\colon U\longrightarrow\mathbb A^d_K,\qquad
+ K[t_1,\ldots,t_d]\hookrightarrow K[U],\qquad
+ K(U)/K(t_1,\ldots,t_d)\text{ finite}.
+\]
+For \(0\ne a\in K[U]\), its field norm is nonzero.
+Clear denominators and restrict to the open set over which the
+norm specializes as the determinant of multiplication by \(a\).
+The tuples of roots of unity are Zariski dense in \(\mathbb A^d\),
+so take one in this open set on which the norm is nonzero. At that
+tuple the determinant is invertible; every point of its nonempty
+fibre lies in \(D(a)\). The union of the fibres over torsion tuples
+therefore meets every nonempty principal open of \(U\).
+
+Each \(z=z_j\) satisfies a monic equation
+\(z^s+\sum_{i<s}f_i(t)z^i=0\) with \(f_i\in K[t]\).
+Write \(f_i=\sum_\alpha c_{i\alpha}t^\alpha\). For a torsion tuple
+and an absolute value above \(v\) the monic root bound gives
+\[
+ \max(1,|z|_v)\le
+ \begin{cases}
+  1+\sum_{i,\alpha}|c_{i\alpha}|_v,& v\mid\infty,\\
+  \max(1,\max_{i,\alpha}|c_{i\alpha}|_v),& v\nmid\infty .
+ \end{cases}
+\]
+Let \(C_v\) be the maximum of these bounds over the finitely
+many coordinate ratios. It equals one outside a fixed finite
+set. With the normalized local weights \(n_v\) of \(K\), summing
+over the places of any point field above \(v\) gives
+\begin{equation}\label{eq:root-fibre-height}
+       h([1:z_1:\cdots:z_m])\le\sum_v n_v\log C_v.
+\end{equation}
+Passing from the projective height in \eqref{eq:root-fibre-height}
+to the fixed ample reference metric changes the bound by \(O(1)\).
+Lift these closed points to marked algebraic points using the
+component's point map. Its image contains every such closed point,
+which is the density test on the marked component.
+
+On the same set every smooth root height \(h_x\) is bounded in
+absolute value. On the common root model, twist the root and its
+dual by sufficiently high powers of the pulled-back ample line so
+that the resulting sections span on the generic fibre. Clear fixed denominators.
+For each point use a section nonzero there. Bounded norms of the
+finite list give both \(\pm h_x\le C_x(|h_A|+1)\).
+Thus one dense set per component satisfies
+\(|h_A|\le C\) and
+\[
+ |h_0(w)|\le C\|w\|_\infty
+\]
+simultaneously for all \(w\). The same dense set can thus be used as \(B,v,s\) vary in the subsequent intersection bounds.
+\label{cor:flag-point-heights-7}
+\end{proof}

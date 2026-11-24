@@ -1,0 +1,357 @@
+\subsubsection{An integral form with unit constant}
+\label{par:count-three-cusp-correction}
+
+Divisibility of one Eisenstein constant is only the first step toward a cusp form. An integral correcting form must change that constant while prescribing its values independently at the other cusps.
+
+\begin{proposition}[Cusp correction with unit constant term]\label{prop:unit-constant-cusp-correction}
+Let \(N\ge3\), \(\ell\) be odd and prime to \(N\), and
+\(\chi(-1)=(-1)^k\). With the separating weight \(m\) of
+\eqref{eq:count-three-correction-degree}, assume \(k\ge m+10\).
+For the correcting form \(F\), let \(a_n(F;c)\) denote the expansion coefficients at a cusp \(c\), in its chosen integral coordinates. Then 
+\[
+ a_n(F;c)\in O\quad\text{at every cusp},\qquad a_0(F;\infty)=1,
+\]
+ with \(O\) the coefficient DVR. This is
+the correction used for the primitive Eisenstein series.
+\end{proposition}
+
+\begin{proof}
+Let \(N\geq3\) with \(\ell\nmid N\), and let
+\(\zeta\) be a primitive \(N\)-th root of unity. We use its complex
+value for Fourier expansions and its \(\ell\)-adic value for
+integrality. For \(a\in(\Z/N)^\times\) and \(r\geq3\), take the
+normalized weight-\(r\) Eisenstein sum over \((c,d)\equiv(0,a)\bmod N\)
+with summand \((cz+d)^{-r}\). Denote it by \(E_{r,a}\). The normalization is
+\[
+ E_{r,a}(z)=\frac{N^r(r-1)!}{(-2\pi i)^r}
+          \sum_{(c,d)\equiv(0,a)\bmod N}(cz+d)^{-r}.
+\]
+Absolute convergence gives holomorphy and the right slash action of
+\(\gamma=\bigl(\begin{smallmatrix}*&*\\c_\gamma&d_\gamma\end{smallmatrix}\bigr)\)
+transports the row \((0,a)\) to \((ac_\gamma,ad_\gamma)\).
+
+In particular the form is modular on \(\Gamma_1(N)\). For
+\(\gamma\in\Gamma_0(N)\), the slash is \(E_{r,ad_\gamma}\).
+If \(c_\gamma\not\equiv0\bmod N\), the transported sum contains
+only terms with \(c\ne0\). Summing the absolute values over \(d\)
+gives a bound \(O_r((|c|\operatorname{Im} z)^{1-r})\) for
+\(\operatorname{Im} z\geq1\). Writing \(y=\operatorname{Im}z\ge1\) gives the explicit tail bound
+\[
+ \sum_{c\ne0}(|c|y)^{1-r}
+ =2y^{1-r}\sum_{c\ge1}c^{1-r}\longrightarrow0
+ \qquad(y\to\infty),
+\]
+since \(r>2\). The same bound on the
+nonconstant part and the convergent \(c=0\) sum give holomorphy
+at every cusp.
+
+Set \(L_r(x)=(x\,d/dx)^{r-1}(x/(1-x))\). Differentiating the
+partial fraction expansion of \(\pi\cot(\pi t)\) gives
+\[
+  \frac{(r-1)!}{(-2\pi i)^r}
+      \sum_{b\in\Z}(t+b)^{-r}
+     =L_r(e^{2\pi i t}).
+\]
+For \(\operatorname{Im}t>0\) the right side has expansion
+\(\sum_{e\geq1}e^{r-1}e^{2\pi i et}\). For the constant
+term take \(t=a/N\). For \(c>0\) use \(t=(cz+a)/N\).
+The terms with \(c<0\) give the contribution with \(-a\)
+and the factor \((-1)^r\). Thus at infinity
+\[
+ a_0(E_{r,a})=L_r(\zeta^a),\qquad
+ a_n(E_{r,a})=\sum_{e\mid n}e^{r-1}
+              \bigl(\zeta^{ae}+(-1)^r\zeta^{-ae}\bigr)
+       \quad(n\geq1).
+\]
+The numerator of \(L_r\) is integral and its denominator is
+\((1-x)^r\). Reduction is injective on the \(N\)-th roots of
+unity, so all these coefficients are integral at \(\ell\).
+
+We next separate the constant at \(a=1\) from that at any
+\(a=d\ne\pm1\), with the same weight in the two evaluations.
+In the residue field put \(t=x/(1-x)^2\) and
+\(u=(1+x)/(1-x)\) for \(x=\bar\zeta^a\). Direct differentiation gives
+\[
+ L_3(x)=tu,\qquad L_4(x)=t(1+6t),\qquad
+ L_5(x)=tu(1+12t),\qquad u^2=1+4t.
+\]
+At any unit label \(L_3(x)\ne0\), because \(x\ne1,-1\).
+
+In residue characteristic other than two or three, equality of
+both \(L_3^2\) and \(L_3L_5\) at \(x,y\) forces
+\(t(x)=t(y)\) by taking their quotient.
+In characteristic three \(L_4=t\) suffices. Clearing denominators
+in \(t(x)=t(y)\) gives \((x-y)(1-xy)=0\).
+For \(x=\bar\zeta\), \(y=\bar\zeta^d\), both alternatives
+are excluded. At least one of the three families
+\[
+      E_{4,a},\qquad E_{3,a}^2,\qquad E_{3,a}E_{5,a}
+\]
+therefore has constants at \(a=1,d\) differing by a unit.
+
+For each such \(d\) choose one family \(H_{d,a}\) of weight \(r_d\).
+For a level-one form \(L_{r_d}\) of weight \(r_d\)
+with integral coefficients and constant one, set
+\[
+        H'_{d,a}=H_{d,a}-a_0(H_{d,d})L_{r_d}.
+\] Such
+forms exist for all even nonnegative weights except two,
+by products of \(E_4\) and \(E_6\), including the empty product.
+The resulting family has zero constant at \(a=d\) and unit
+constant at \(a=1\). Multiplication of the correcting factors gives the even weight
+\begin{equation}\label{eq:count-three-correction-degree}
+                 m=\sum_{d\ne\pm1}r_d\le8\varphi(N).
+\end{equation}
+It has zero constants at all \(a\ne\pm1\) and retains a
+unit at \(a=1\). The same right slash rule holds for all the
+families, since the coefficients in these operations are fixed
+as \(a\) varies.
+
+For \(k\geq m+10\), multiply this family by \(E_{3,a}\) if
+\(k\) is odd and by \(E_{3,a}^2\) if \(k\) is even. Complete the weight with a product of \(E_4\) and \(E_6\) having constant term one.
+The forms \(F_a\) of weight \(k\) so obtained vanish at all
+cusps outside the \(\Gamma_0(N)\)-orbit of infinity by the
+weight-three factor. At infinity \(c_1=a_0(F_1)\) is a unit. The constant terms
+are
+\[
+       a_0(F_a)=
+       \begin{cases}
+       c_1,&a=1,\\
+       (-1)^kc_1,&a=-1,\\
+       0,&a\ne\pm1 .
+       \end{cases}
+\]
+The second case is obtained by slashing by \(-I\).
+
+For \(\chi(-1)=(-1)^k\), set
+\[
+    G=\frac{1}{2c_1}\sum_{a\in(\Z/N)^\times}\chi(a)^{-1}F_a .
+\]
+The right slash rule and reindexing \(a\mapsto ad_\gamma\)
+give \(G|_k\gamma=\chi(d_\gamma)G\) on \(\Gamma_0(N)\).
+Its coefficients are integral because \(2c_1\) is a unit.
+Its constant is one, and it vanishes away from the orbit of
+infinity. In particular the construction works at the level
+\(N=Mw\) with \(w\equiv1\bmod\ell\), even though
+\(\ell\mid\varphi(N)\).
+\label{cor:ordinary-count-iii-eigenform-1}
+
+\end{proof}
+
+\subsubsection{The cuspidal congruence}
+
+The integral correction can now be multiplied by the small Eisenstein constant. Subtracting it enforces cuspidality while preserving the positive Fourier coefficients modulo the maximal ideal.
+
+\begin{proposition}[A cuspidal congruence at the chosen conductor]\label{prop:count-three-cusp-congruence}
+For the primitive Eisenstein character \(\chi\) of conductor \(N=Mw\)
+and the small constant calculated for the seed, the cusp correction gives an integral cusp form \(f\) satisfying 
+\[
+ a_n(f)\equiv\sum_{e\mid n}\chi(e)e^{k-1}\pmod{\mathfrak m}\qquad(n\ge1).
+\]
+ The
+congruence includes the ordinary Hecke eigenvalue at \(\ell\)
+used in the lift.
+\end{proposition}
+
+\begin{proof}
+For the primitive character \(\chi=\phi\theta\) of conductor
+\(N=Mw\), the weight-\(k\) Eisenstein series \(E\) of character
+\(\chi\) is the sum of \(E_{k,a}\) with weights
+\(\chi(a)^{-1}/(2\mathcal G(\chi^{-1}))\) over the unit labels.
+Here \(\mathcal G(\chi^{-1})=\sum_a\chi(a)^{-1}\zeta^a\)
+is the nonzero primitive Gauss sum, with characters extended
+by zero on nonunits. Primitivity gives
+\(\sum_a\chi(a)^{-1}\zeta^{ae}=\chi(e)\mathcal G(\chi^{-1})\)
+also when \(e\) is a nonunit.
+
+For a nonunit, multiplying
+\(a\) by an element fixing \(e\) and on which \(\chi\) is
+nontrivial gives zero by primitivity. Parity then gives
+\[
+    a_n(E)=\sigma(n):=\sum_{e\mid n}\chi(e)e^{k-1}
+    \quad(n\geq1),\qquad a_0(E)=L(1-k,\chi)/2 .
+\]
+For the constant, the same Gauss-sum identity applied
+to \(\sum_{e\geq1} e^{k-1}\zeta^{ae}x^e\) for \(|x|<1\)
+gives the finite sum of \(L_k(\zeta^a x)\).
+
+At \(x=e^t\), the generalized Bernoulli generating
+function gives the continued value
+\[
+ \left.\left(\frac{d}{dt}\right)^{k-1}
+            \frac{\sum_{e=1}^N\chi(e)e^{et}}{1-e^{Nt}}
+       \right|_{t=0}=L(1-k,\chi).
+\]
+The primitive Gauss factor and parity give the normalization of
+the constant term above. The cusp vanishing and the character follow
+from the corresponding transformations of \(E_{k,a}\).
+Set \(f=E-a_0(E)G\). Its constant term at infinity is zero,
+and the other positive coefficients satisfy
+\[
+      a_n(f)\equiv a_n(E)=\sigma(n)\pmod{\mathfrak m}\qquad(n\ge1)
+\]
+because \(a_0(E)\in\mathfrak m\) and \(G\) has integral coefficients. At cusps in the orbit of infinity,
+the vanishing follows by applying the common character law
+to the zero constant of \(f\) at infinity. Here the smallness
+of \(a_0(E)\) is the earlier Bernoulli and Euler-factor
+calculation for the chosen \(k\).
+
+For a prime \(p\), the Hecke operator in this character space has
+coefficient \(a_{pn}+\chi(p)p^{k-1}a_{n/p}\), where the second
+term is zero if \(p\nmid n\), and \(\chi(p)=0\) if \(p\mid N\).
+The divisor sums satisfy the same formula with eigenvalue
+\(1+\chi(p)p^{k-1}\). In fact, if \(n=p^b n'\) with
+\(p\nmid n'\) and \(v=\chi(p)p^{k-1}\), this is the polynomial
+identity
+\[
+  (1+v+\cdots+v^{b+1})+v(1+v+\cdots+v^{b-1})
+      =(1+v)(1+v+\cdots+v^b),
+\]
+with the second sum empty at \(b=0\).
+Thus the reduction of \(f\) is a simultaneous Hecke
+eigenvector, nonzero since \(a_1(f)\equiv1\).
+
+\end{proof}
+
+\subsubsection{Simultaneous lifting and the ordinary line}
+
+A nonzero mod-\(\ell\) cusp form gives the desired residual eigenvalues. The second tensor factor requires one characteristic-zero eigenform realizing them simultaneously, including the ordinary eigenvalue at \(\ell\).
+
+\begin{proposition}[Eigensystem of the corrected cusp form]\label{prop:count-three-cuspidal-eigensystem}
+The cuspidal congruence of Proposition~\ref{prop:count-three-cusp-congruence}
+gives the simultaneous cuspidal eigenform \(g\) and the ordinary local line used for the rank-two factor. After a finite coefficient extension the normalized eigenform satisfies 
+\[
+ a_p(g)\equiv1+\chi(p)p^{k-1}\pmod{\varpi}\qquad(p\text{ prime}).
+\]
+ The weight can be
+fixed before the choice of the final deep layer.
+\end{proposition}
+
+\begin{proof}
+\proofstep{An ordinary eigensystem with the selected residual line.}
+
+Choose a finite local coefficient field \(E_\ell\) containing the
+coefficient fields of the forms in the construction, and let \(O\)
+be its valuation ring with uniformizer \(\varpi\). The
+character-\(\chi\) cusp space of level \(N\) has a model over
+this field. Indeed normalized newforms have algebraic
+coefficients in number fields, and the newform decomposition
+spans the cusp space. Since the character has conductor \(N\),
+every constituent is new at level \(N\). Both the character
+and the coefficients of \(f\) are in the chosen coefficient
+field, so \(f\) belongs to this model. One can check this by
+taking finitely many Fourier coefficients that identify the
+coordinates in a newform basis.
+
+Let \(V_O\) consist of the forms with all coefficients in \(O\).
+Take a finite list \(n_1,\ldots,n_s\) separating the forms. Its coefficient map gives
+\[
+ V_O\hookrightarrow O^s,\qquad h\longmapsto
+ (a_{n_1}(h),\ldots,a_{n_s}(h)).
+\]
+A submodule of a finite free module over a DVR is finite free.
+It also contains a basis after integral scaling, by
+integrality of the normalized newforms. It is finite free
+over \(O\). The coefficient formula makes it stable under
+all prime Hecke operators, including those at \(p\mid N\). The coefficient condition gives the saturated reduction
+\[
+       \ker(V_O\longrightarrow \text{residue expansions})
+                                      =\varpi V_O.
+\] The mod-\(\varpi\) eigenline of \(f\) therefore
+defines a character of the commutative \(O\)-algebra of
+Hecke operators on \(V_O\). Write \(\mathfrak m\) for its
+kernel. This algebra is finite and torsion-free over \(O\).
+Write \(\mathbb T\) for the Hecke algebra. A minimal
+prime \(\mathfrak p\subset\mathfrak m\) avoids the uniformizer
+since it is a nonzerodivisor.
+
+Normalize \(\mathbb T/\mathfrak p\)
+in its fraction field and choose a place over \(\mathfrak m\);
+this gives one characteristic-zero evaluation
+\[
+ \mathbb T\longrightarrow
+      \operatorname{Frac}(\mathbb T/\mathfrak p)
+\]
+with all the prescribed residual Hecke values.
+In the generic fibre the faithful module has a nonzero
+factor at \(\mathfrak p\). After extending scalars, the
+maximal ideal of that Artinian local factor acts nilpotently.
+If \(M_\mathfrak p\) is this local generic factor and
+\(\mathfrak n\) its maximal ideal, choose the last nonzero
+\(\mathfrak n^a M_\mathfrak p\). It is killed by \(\mathfrak n\),
+so a nonzero vector there is a common eigenvector.
+The eigenvector has nonzero first coefficient, since the
+Hecke recursion from a zero first coefficient would give
+zero coefficients at every positive index. Normalizing it
+gives a cuspidal eigenform \(g\) of level \(N\) and character
+\(\chi\) with
+\[
+    a_p(g)\equiv1+\chi(p)p^{k-1}\pmod{\varpi}
+       \qquad(p\text{ prime}),
+\]
+where \(\varpi\) now denotes a uniformizer after coefficient
+extension. This is the simultaneous lifting argument of
+Deligne and Serre. \cite[Lemma 6.11]{deligne-serre}
+
+Use the Galois representation of the weight-\(k\) newform
+\(g\), with arithmetic Frobenius polynomial
+\(X^2-a_p(g)X+\chi(p)p^{k-1}\) for \(p\nmid\ell N\).
+It is absolutely irreducible, with determinant
+\(D=\Phi\theta\). Since \(\theta\) has order \(\ell\), its residual character is trivial. At every good prime the trace congruence and determinant now give
+\[
+ \bar P_p(X)=X^2-(1+\bar\Phi(\operatorname{Frob}_p))X+
+ \bar\Phi(\operatorname{Frob}_p)
+ =(X-1)(X-\bar\Phi(\operatorname{Frob}_p)).
+\]
+Chebotarev and semisimplification yield \(\bar\Phi\oplus1\). For \(p\mid N\) the local component has conductor
+exponent equal to that of the central character, by primitivity
+of \(\chi\).
+
+It is principal series with one unramified factor.
+Indeed, for a supercuspidal parameter the two-dimensional
+irreducible Weil representation has invariants of dimension
+zero or two on each normal ramification group. Its determinant
+has conductor at most half as large by the Artin conductor
+formula. For a special representation the conductor is one
+with unramified central character if the twist is unramified.
+For a ramified twist of conductor exponent \(a>0\) the
+conductor is \(2a\), while that of its central character is
+at most \(a\). For two principal series characters with conductors
+\(a_1,a_2\), the conductor and determinant bounds read
+\[
+                a(W)=a_1+a_2,\qquad a(\det W)\le\max(a_1,a_2).
+\]
+At a ramified prime equality thus forces precisely one
+\(a_i\) to be zero. Local--global
+compatibility gives the two inertia characters \(1,\phi\theta\).
+Outside \(\ell N\) the representation is unramified.
+\cite{deligne-galois,carayol-local}
+
+Since \(k\geq3\) and \(\ell\nmid N\), the congruence at
+\(p=\ell\) gives \(a_\ell(g)\equiv1\). The unit root
+\(\alpha_\ell\) of the Hecke polynomial at \(\ell\) is
+congruent to one. The ordinary local theorem for this
+newform, or for its unit-root \(\ell\)-stabilization, gives
+an unramified quotient \(\nu\) with
+\(\nu(\operatorname{Frob}_\ell)=\alpha_\ell\) and invariant
+line of character \(D\nu^{-1}\). Its inertia character is
+\(\epsilon_\ell^{k-1}\). The two generators of its local data satisfy
+\[
+         \bar\nu|_{I_\ell}=1,\qquad
+         \bar\nu(\operatorname{Frob}_\ell)=1 .
+\]
+Hence \(\bar\nu\) is trivial on the decomposition group. The high-weight line thus reduces to \(\bar\Phi\)
+on that entire group, including when
+\(k-1\equiv0\bmod\ell-1\).
+For the dual of the attached representation the
+zero-exponent line has residual character one and determinant
+\(D^{-1}\); the twist by \(D\) gives exactly the preceding
+order of the characters. \cite{hida-ordinary-galois}\label{cor:ordinary-count-iii-eigenform-2}
+
+The weight was chosen after \(N\) and the initial positive
+exponent \(m_0\) of the quadratic factor. In addition to
+the cusp-correction cutoff \(m+10\), we may impose
+\(k\geq18m_0+3\) and the earlier congruence and coprimality
+conditions. No bound on the eventual deep layer is used in
+this choice.
+\end{proof}

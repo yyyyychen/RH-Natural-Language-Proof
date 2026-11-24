@@ -1,0 +1,396 @@
+\paragraph{Uniform estimates for the small-weight terms.}
+\label{par:thin-host}
+First isolate the terms that will disappear within the error allowance. A small weight
+sends the argument of its prime sum far beyond \(x\). The family of characters at this step grows with \(x\).
+
+\begin{lemma}[A uniform bound for character sums at large arguments]
+Let \(N\) be the modulus defining the auxiliary field from
+Section~\ref{sec:pair-selection}, so that
+\(\log N\ll_\psi x^{\epsilon/5}\log^2 x\), and put
+\(X'=\exp(x^{\epsilon/3})\). For each \(c>0\), uniformly over
+all primitive characters \(\chi\) induced from this auxiliary
+Galois group, one has
+\begin{equation}\label{eq:thin-host}
+    |G_\chi(y)|\le y\exp(-c x^{\epsilon/8})
+                  \qquad (y\ge X'/3)
+\end{equation}
+once \(x\) in the selected window exceeds a bound depending only on
+\(\psi,\epsilon,c\) and the fixed interval exponent.
+\end{lemma}
+
+\begin{proof}
+\proofstep{Use a uniform zero-free region.}
+The classical zero-free region for primitive Dirichlet characters of
+conductor \(f\) excludes zeros with
+\(\RePart s\ge1-c_0/\log(3f(2+|\Im s|))\), with the possible
+exception of one real zero of a nonprincipal real character.
+This region, the bound for the number of zeros in an interval of unit height, and the partial fraction
+expansion of the logarithmic derivative are used with absolute
+constants. For a real character the dyadic component factors through the units modulo eight. Indeed each unit congruent to one modulo eight is a square in \(\mathbb Z_2^\times\), and for a real character \(\chi_2\),
+\[
+ \chi_2(u^2)=\chi_2(u)^2=1\qquad(u\in\mathbb Z_2^\times).
+\]
+\cite{classical-region} Away from \(q,d\) the
+remaining odd conductor divides the fixed odd part of the target
+modulus. The two optional components at \(q,d\) are Legendre
+characters by cyclicity. 
+
+If a real character contains the quadratic factor at \(q\) or \(d\),
+the zero-free rectangles of Section~\ref{sec:pair-selection} give the following
+bound for a possible exceptional real zero \(\beta\):
+\[
+ L(\beta,\chi)=0\quad\Longrightarrow\quad \beta\le 1-1/400 .
+\] The other real characters
+belong to a fixed finite list. Nonvanishing at one for this list,
+with the pole removed for the zeta function, gives a fixed zero-free
+neighborhood of one. Decreasing \(c_0>0\) accordingly, the
+stated region holds throughout this family without an exception.
+
+\proofstep{Move the smoothed Perron integral.}
+Put \(v=\log y\), \(T=\exp(\sqrt v)\) and
+\(L=\log(3N(T+4))\). In the rectangle
+\(1-c_0/(2L)\le\sigma\le1+1/v\), \(|t|\le T\), the logarithmic
+derivative after removal of the pole of the zeta function is
+\(O(L^2)\). For the zeros \(\rho\) of the character under consideration in the band \(|\Im\rho-t|\le1\), the zero-free region gives \(|\sigma+it-\rho|\gg L^{-1}\). The unit-band zero count now gives
+\[
+ \sum_{|\Im\rho-t|\le1}\frac{1}{|\sigma+it-\rho|}
+ \ll L\,\#\{\rho:|\Im\rho-t|\le1\}\ll L^2 .
+\] Comparing
+the partial fractions at \(\sigma+it\) and \(2+it\) sums the other
+bands with inverse-square weights, at cost \(O(L)\).
+
+
+The smoothed Perron integral of
+\[
+       -\frac{L'}{L}(s,\chi)
+                      \frac{y^{s-1}}{s(s-1)}
+\]
+on \(\RePart s=1+1/v\), with measure \(ds/(2\pi i)\),
+equals \(S_\chi(y)/y\). Termwise inversion gives
+\((1/n-1/y)_+\), including value zero at \(n=y\).
+Absolute convergence and \(-\zeta'/\zeta(1+1/v)=O(v)\) bound
+the tails above \(T\) by \(O(v/T)\). Put \(\sigma_*=1-c_0/(2L)\) for the new vertical line.
+The residue at \(1\) is \(-L'(1,\chi)/L(1,\chi)\)
+when \(\chi\) is nonprincipal. For the zeta function,
+in the coordinate \(u=s-1\) the contribution is the coefficient of
+\(u^{-1}\) in
+\[
+     \left(u^{-1}-\gamma+O(u)\right)
+             \frac{e^{v u}}{u(1+u)}.
+\]
+It is \(v-1-\gamma\). Subtracting the respective residue
+gives \(G_\chi(y)/y\). 
+
+At height \(T\) each horizontal
+segment has bounded length and the factor \(1/(s(s-1))\)
+is \(O(T^{-2})\), so the horizontal error is \(O(L^2/T^2)\).
+On the new line the pole term of \(-\zeta'/\zeta\) is \(O(L)\).
+For \(|t|\le1\) one has
+\[
+ \frac{1}{|\sigma_*+it|\,|\sigma_*-1+it|}
+        \ll \frac{1}{\sqrt{(c_0/(2L))^2+t^2}},
+\]
+whose integral is \(O(1+\log(2L))\).
+For \(|t|\ge1\) the integrand is \(O(t^{-2})\).
+The exponential factor on this line is \(e^{-c_0 v/(2L)}\).
+With the log-derivative bound and the two original tails,
+this gives
+\[
+ \frac{|G_\chi(y)|}{y}
+  \ll v/T + L^2/T^2 + L^3 e^{-c_0 v/(2L)} .
+\]
+
+\proofstep{Compare the conductor with the argument.}
+Since \(v\ge x^{\epsilon/3}-\log 3\), the conductor bound gives
+\(\log(3N)\ll v^{3/5}\log^2(2v)\). Thus
+\(L\ll v^{49/80}\) uniformly, while \(31/80>3/8\).
+The exponential decay in \(v^{31/80}\) dominates every fixed
+multiple of \(x^{\epsilon/8}\) in the exponent, including the
+polynomial prefactors. This proves \eqref{eq:thin-host} using the
+same primes as the cohomology window.
+\end{proof}
+
+\paragraph{The centered sum on the finite group.}
+With the small weights under control we return to the whole finite group. Its
+characters will separate the contributions that survive the translation average.
+
+\begin{established}[Arguments of the inertia average]\label{hyp:inertia-fourier}
+Let \(P\subset H\) be the index-two subgroup of Definition~\ref{def:translate-scale},
+\(f_P=|P|=2n\), and \(\omega_P\) its quadratic character. For any lift
+\(j\), top \(t\in T\) and translate \(u\in A_0\), translation pairs
+\(H\setminus P\) with \(P\). On the selected chain put \(a=a_t\)
+and let \(w_g\) be the weight at the image of \(g\). Uniformly for large \(x\),
+\[
+                0<w_g\le a,\qquad a/w_g\ge1\quad(g\notin P).
+\]
+Write \(\chi_\omega\) for the primitive inducer of the inflation of
+\(\omega\in\widehat H\) by the Artin map.
+\end{established}
+\begin{proof}
+Translation by an element outside \(P\) interchanges the two cosets.
+The two ranges in Lemma~\ref{hyp:translate-weights} are positive.
+Since \(\log\eta\le x^{\epsilon/4}\), \(b=e^{x^\epsilon}\) and
+\(x/X'\to0\), both upper endpoints are at most \(2b\) eventually.
+The top interval has \(a_t\ge(x-1)b\), so the same threshold serves all indices.
+\end{proof}
+
+\begin{lemma}[Fourier expression with inertia]
+With the finite group and weights of Lemma~\ref{hyp:inertia-fourier},
+for the stated lift \(j\), top index \(t\) and translate \(u\), one has
+\begin{equation}\label{eq:color-balance}
+  \Delta_{j,t}(u)=
+  \RePart\frac1{f_P}\sum_{g\notin P}\sum_{\omega\in\widehat H}
+       \overline{\omega(g)}\,w_g G_{\chi_\omega}(a/w_g).
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+\proofstep{Invert the inertia averages.}
+For a prime \(p\), let \(I_p\) be its
+inertia subgroup and let \(F_p\) be a lift of its Frobenius in
+\(H\). For \(\nu\ge1\) one has
+\[
+ \chi_\omega(p^\nu)
+   =\omega(\nu F_p)\frac1{|I_p|}\sum_{v\in I_p}\omega(v).
+\]
+If \(\omega|_{I_p}\ne1\), the mean is zero, as is the value
+of the primitive character at the ramified prime. If
+\(\omega|_{I_p}=1\), the first factor is well defined on the
+Frobenius coset and equals \(\chi_\omega(p^\nu)\). Thus
+\[
+ \frac1{f_P}\sum_{\omega\in\widehat H}
+       \overline{\omega(g)}\chi_\omega(p^\nu)
+ =\frac{|H|}{f_P|I_p|}\,\mathbf 1_{g\in\nu F_p+I_p}
+ =\frac{2}{|I_p|}\,\mathbf 1_{g\in\nu F_p+I_p}.
+\] Multiplied by
+\(\log p\,(a/p^\nu-w_g)_+\) and summed over the prime powers
+\(p^\nu\) and elements \(g\notin P\),
+this gives the summand at lift \(j\) and index \(t\) in the arithmetic count.
+
+
+At primes split in \(\mathbb Q(\sqrt{-d})\) the entire coset
+lies in \(P\). At \(d\), write \(\nu F_d=(i,j,s)\). Definition~\ref{def:translate-scale} gives
+\[
+ (\nu F_d+I_d)\setminus P
+   =\{(i,j,s),(i+1,j,s)\}\setminus P=\{(1,j,s)\}.
+\]
+The last two coordinates are independent of the choice of the lift \(F_d\);
+the multiplicity is \(2/|I_d|=1\). At the other
+unramified primes each contributing Frobenius element has weight two.
+One may use any cutoff \(N_*\ge\max_g a/w_g\), since all terms
+beyond it vanish. Interchange the finite sums. On the character side, factor the positive weight \(w_g\) out of the coefficient of \(\Lambda(n)\chi_\omega(n)\):
+\[
+ (a/n-w_g)_+
+ =w_g\left(\frac{a/w_g}{n}-1\right)_+ .
+\]
+The inner sum is therefore the uncentered sum at \(a/w_g\).
+
+\proofstep{Compute the two centering terms.}
+The principal character contributes to the centering by
+\[
+ a\left(\log a-1-\gamma-f_P^{-1}\sum_{g\notin P}\log w_g\right).
+\]
+For a nonprincipal character the difference between the
+uncentered and centered terms before weighting is
+\(-aL'(1,\chi_\omega)/L(1,\chi_\omega)\) at each \(g\notin P\).
+The character coefficient sums to zero except for
+\(\omega_P\), where it sums to \(-f_P\).
+Write \(\ell_P\) for the real logarithmic derivative
+\(\RePart(L'(1,\chi_{\omega_P})/L(1,\chi_{\omega_P}))\).
+The contribution to the centering term is \(+a\ell_P\).
+Subtracting both contributions gives \eqref{eq:color-balance}.
+\end{proof}
+
+\paragraph{Replacing the weights before projection.}
+The projection is now explicit. To compare it with the prescribed character average at
+\(x\), we still have to account for the actual arguments at which the individual
+weights are evaluated.
+
+\begin{established}[Ranges of the two translated weights]\label{hyp:translate-weights}
+Use the selected auxiliary field of \eqref{eq:thin-host} and the scale
+of Lemma~\ref{lem:rescale-host-budget}. Put \(X'=e^{x^{\epsilon/3}}\),
+\(b=e^{x^\epsilon}\), \(b'=xb/X'\), \(e_1(s)=((1,0),s)\), and
+\(B_{t,u}=\{e_1(s+u-t):s\in T_2\}\). For every selected lift, top and
+translate,
+\[
+ |a_t/b-x|\le1,\qquad
+ \begin{cases} b\le w_g\le b+\eta+1,&g\in B_{t,u},\\
+                0<w_g\le2b',&g\in(H\setminus P)\setminus B_{t,u},
+ \end{cases}
+ \qquad\log\eta\le x^{\epsilon/4}
+\]
+at sufficiently large scale. Here \(x^{2+8\epsilon}\le n\le2x^{2+8\epsilon}\)
+and \(f_P=2n\).
+\end{established}
+\begin{proof}
+The top is chosen in the first interval of Section~\ref{subsec:frobenius-selection},
+so \(0\le a_t/b-x\le x/(kx^{13})\).
+For the signed rows of Construction~\ref{hyp:family-prescribed-realization},
+write \(b_v\) for the second top weight before the stage offset. The three
+integer windows in Lemma~\ref{lem:marked-signed-jumps} have centers
+and upper ends as follows, where \(w''=b/(nX')\):
+\[
+ \begin{array}{c|c}
+ \text{location before translation}&\text{range containing the weight}\\ \hline
+ s\in T_2 &[b,b+\eta+1]\\
+ \text{designated top} &[b_v+\lfloor b'/x\rfloor,b_v+\lfloor b'/x\rfloor+\eta+1]\\
+ \text{other small position} &[w'',w''+\eta+1].
+ \end{array}
+\]
+
+The floor permits an endpoint loss of one. Translation sends precisely
+the first set of positions to \(B_{t,u}\).
+The offsets have width \(\eta=2m\lceil x^{c_H}\rceil\), with \(c_H\)
+fixed before the final scale. Thus \(\log\eta=O(\log x)\).
+The interval for \(b_v\) in Section~\ref{subsec:frobenius-selection}
+has lower end \(b'\) and relative width \(2n\delta x^\epsilon\Lambda/k\),
+which tends to zero in the selected range. Also
+\[
+ (1+\eta)/b'\to0,\qquad w''/b'=1/(nx),\qquad
+                  \log\eta\le x^{\epsilon/4}.
+\]
+Both complementary windows consequently have upper end at most \(2b'\)
+for all sufficiently large \(x\).
+The period and level identifications in Proposition~\ref{prop:translate-completion}
+preserve these integral weights.
+\end{proof}
+
+\begin{proposition}[Averaging over translates]\label{prop:translate-fourier}
+Use the character-weight data of Lemma~\ref{hyp:inertia-fourier}
+with the translate weights of Lemma~\ref{hyp:translate-weights}
+at \(x\) in a selected window. Suppose that
+\(\sum_{j,t}\Delta_{j,t}(u)\le E\) for every \(u\in A_0\).
+For \(x\) above one threshold independent of \(u,t,j\) and the
+auxiliary field in that window, one has
+\begin{equation}\label{eq:fourier-compare}
+ \frac{Q\delta_2}{2}
+       \bigl(G_{\mathcal K}(x)-\Sigma(x)-4x^{1/2+\epsilon}\bigr)
+       \leq E+\frac{2Q}{x}.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+\proofstep{Replace the large weights and discard the small weights.}
+For the group elements with larger weights, change the weight from \(w_g\) to \(b\).
+The positive-part function is \(1\)-Lipschitz and both weights
+are at least \(b\). Consequently,
+\[
+ \begin{aligned}
+ |w_g S_{\chi_\omega}(a/w_g)-b S_{\chi_\omega}(a/b)|
+ &\le (w_g-b)\sum_{n\le a/b}\Lambda(n)
+ \ll (x+1)(\eta+1).
+ \end{aligned}
+\]
+The nonprincipal centering term is independent of \(w_g\).
+For the principal term, the difference is bounded by
+\(a|\log(w_g/b)|\le(a/b)(w_g-b)\). For a group element with a smaller weight,
+\(a/w_g\ge (x-1)X'/(2x)\ge X'/3\) for \(x\ge3\), so its entire
+contribution before multiplying by the character coefficient is at
+most \((x+1)b\exp(-c x^{\epsilon/8})\) by \eqref{eq:thin-host}.
+
+
+There are at most \(f_P\) terms in the \(g\)-sum and exactly
+\(2f_P\) in the character sum. After dividing by \(f_P\), the
+respective errors are bounded by
+\[
+ O(f_P(x+1)(\eta+1)),\qquad
+ 2f_P(x+1)b e^{-c x^{\epsilon/8}}.
+\]
+Divide these bounds by \(b/x\). For a fixed \(c>0\) they are, respectively,
+\[
+ \begin{aligned}
+ &O\!\left(x^{4+8\epsilon}\exp(x^{\epsilon/4}-x^\epsilon)\right)=o(1),\\
+ &O\!\left(x^{4+8\epsilon}\exp(-c x^{\epsilon/8})\right)=o(1).
+ \end{aligned}
+\]
+Only \(x,\epsilon,c\) and the fixed character enter these upper bounds. Consequently the contribution from the
+larger weights, denoted by \(\Theta_{u,t}\), satisfies
+\(\RePart\Theta_{u,t}\le\Delta_{j,t}(u)+2b/x\) for each lift.
+Its formula is
+\[
+  \Theta_{u,t}=\frac b{f_P}\sum_{s\in T_2}\sum_{\omega\in\widehat H}
+       \omega(-e_1(s+u-t))G_{\chi_\omega}(a_t/b).
+\]
+
+\proofstep{Project to the quotient characters.}
+Use the group \(\widehat H_0\) of Definition~\ref{def:translate-scale}, consisting of the characters trivial on
+\(0\times A_0\). For each \(s\in T_2\subset A_0\),
+\[
+ \frac1{|A_0|}\sum_{u\in A_0}\omega(-e_1(s+u-t))
+   =\omega(e_1(t))\mathbf 1_{\omega\in\widehat H_0}.
+\]
+The average of \(\Theta_{u,t}\) is therefore
+\[
+ \frac{b\delta_2}{2}
+ \sum_{\omega\in\widehat H_0}
+      \omega(e_1(t))G_{\chi_\omega}(a_t/b),
+ \qquad \frac{bn_2}{f_P}=\frac{b\delta_2}{2}.
+\] 
+
+The quotient by \(0\times A_0\) has order
+\(4o\). Its characters come from powers of the fixed character
+and their twists by the two quadratic characters of the prime
+pair. Indeed imposing triviality on \(A_0\) removes the growing
+real two-power factor. Write \(\eta_q,\eta_d\) for the quadratic characters of the auxiliary primes. The Chinese remainder theorem makes the target value and the two prime signs independent. On the quotient the characters thus have the parametrization
+\[
+ \psi^a\eta_q^b\eta_d^c,
+ \qquad 0\le a<o,\qquad b,c\in\{0,1\},
+\]
+where the product denotes the associated Artin character. For the powers of the target,
+the restriction to \(A\) is the associated character of \(A/A_0\):
+one can prescribe the target value and adjust both prime signs
+independently. Also \(e_1(0)\) generates inertia at \(d\), where
+the target is unramified. Thus its phase is one even for an odd
+target. 
+
+For the remaining characters trivial on \(0\times A_0\), let \(c_\chi\) denote the phase coefficient. Its modulus is at most one, so taking real parts gives
+\[
+ \sum_{\chi\ {\rm remaining}}\Re\!\left(c_\chi G_\chi(x)\right)\ge-\sum_{\chi\ {\rm remaining}}|G_\chi(x)|=-\Sigma(x).
+\]
+
+\proofstep{Average over the cosets represented in \(T\).}
+The proportions of \(T\) in the identity and other cosets of
+\(A/A_0\) are \(4/(3o+1)\) and \(3/(3o+1)\), respectively,
+each up to \(x^{-1+\epsilon}\) by Section~\ref{subsec:frobenius-selection}.
+For a nontrivial character \(\xi\) of \(A/A_0\), weight each of these
+proportions by the value of \(\xi\) on the corresponding coset. This gives
+\[
+ \frac1{n_T}\sum_{t\in T}\xi(t)
+  =\frac4{3o+1}+\frac3{3o+1}\sum_{c\ne A_0}\xi(c)
+     +O(o x^{-1+\epsilon})
+  =\frac1{3o+1}+O(o x^{-1+\epsilon}).
+\]
+The second equality uses \(\sum_c\xi(c)=0\). The mean for the
+trivial character is exactly one.
+
+For the fixed nonprincipal target characters the centered sums
+are \(O_\psi(x\log^2(2x))\) by their defining series.
+For all characters trivial on \(0\times A_0\), replacing \(a_t/b\) by \(x\) introduces an error of
+\(O_\psi(\log^2(2x))\), because for \(1\le y,y'\le x+1\) the positive-part kernel gives
+\[
+ |S_\chi(y)-S_\chi(y')|
+ \le |y-y'|\sum_{n\le x+1}\frac{\Lambda(n)}n
+ \ll |y-y'|\log^2(2x).
+\]
+The logarithmic derivatives are fixed on the target family and
+bounded by \(4\log x\) for the remaining characters in this sum. The elementary
+principal correction has derivative \(O(\log x)\). The total of
+these errors after averaging over the top indices is
+\(O_\psi((1+x^\epsilon)\log^2(2x))\), at most
+\(4x^{1/2+\epsilon}\) above a fixed threshold.
+
+If \(\mathcal A=m\sum_{t\in T}\RePart\bigl(|A_0|^{-1}
+                  \sum_{u\in A_0}\Theta_{u,t}\bigr)\),
+the character calculation bounds \(\mathcal A\) below by the left
+side of \eqref{eq:fourier-compare}. 
+
+On the other hand,
+\[
+ \mathcal A\le \frac1{|A_0|}\sum_{u\in A_0}
+                \sum_{j,t}\Delta_{j,t}(u) + \frac{2mn_Tb}{x}
+             \le E+\frac{2Q}{x}.
+\]
+Both bounds refer to the same translate family.
+\end{proof}
+
+Projection has identified the desired characters. Lemma~\ref{lem:comparison} first divides by the total weight \(Q=n_Tmb\), then by the surviving proportion \(\delta_2/2\). The resulting error tells us how strong the two lattice estimates on these chains must be.

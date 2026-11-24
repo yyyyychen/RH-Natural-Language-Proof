@@ -1,0 +1,205 @@
+\section{The period lattice and the frequency error}\label{sec:period-lattice}
+\hypertarget{source-lattice-estimates}{}
+
+A period sum and a sum over differences occur at successive sizes in the same block recursion. Poisson summation on the first lattice fixes the frequency scale on the second. Keeping the level and the different in that conversion is essential when the CM field varies. The extension of the
+archimedean kernels and their differential estimates are inputs
+to this part of the argument. \label{cor:lattice-estimates-1}
+
+Let \(E/F\) be a CM extension unramified at all finite places,
+let \(f=[F:\mathbb Q]\), and let \(\mathfrak d\) be the absolute
+different of \(E\). Use one complex embedding \(\sigma_v\) from each
+pair, and let \(d=|D_E|^{1/(2f)}\) be the root discriminant, where \(D_E\) is the discriminant of \(E\). For a block of size \(s\) starting
+at \(j\) in a recursion of length \(r+1\), use the exponent and sign
+\[
+ \nu=2r+3-2j-s,\qquad\epsilon_s=(-1)^s.
+\]
+For the positive integer level \(g\) define the period lattice
+\(L\) and the inverse-difference lattice \(L_{\rm diff}\) inside \(E\) by
+\begin{equation}\label{eq:period-and-difference-lattices}
+ \begin{aligned}
+ L&=\{t\in g\mathfrak d^\nu:t-\epsilon_s\bar t\in g^2\mathfrak d^\nu\},\\
+ L_{\rm diff}&=\{t\in I_L:t-\epsilon_s\bar t\in\mathfrak d^{-\nu}\},
+      \qquad I_L=g^{-1}\mathfrak d^{-\nu}.
+ \end{aligned}
+\end{equation}
+Both use the sign of the same block. The containing fractional ideal
+\(I_L\) need not by itself impose the conjugation congruence.
+\begin{lemma}[Period-lattice normalization]\label{lem:period-lattice-normalization}
+The trace dual of \(L\) for \(\operatorname{Tr}_{E/\mathbb Q}(lt/g)\)
+lies in \(I_D=g^{-1}\mathfrak d^{-\nu-1}\), because
+\(g^2\mathfrak d^\nu\subseteq L\). In particular \(I_L\) is the
+containing ideal \(I_D\) for the next block size at the same start.
+
+For \(\Lambda=d^{-\nu}\sigma(L)\), the index and Euclidean covolume are
+\[
+ [g\mathfrak d^\nu:L]=g^f,\qquad \operatorname{covol}(\Lambda)=(d/2)^f g^{3f}.
+\]
+ Put
+\(c=d^{-\nu}\). Its Euclidean dual consists of the vectors
+\(2\overline{\sigma(l)}/(gc)\) for \(l\) in the trace dual.
+\end{lemma}
+
+\begin{proof}
+The inclusion \(g^2\mathfrak d^\nu\subseteq L\) implies the
+trace-dual containment, since the inverse different is the
+trace dual of the ring of integers. At each
+finite place of \(F\) the different is extended from \(F\), so
+remove a local generator of \(g\mathfrak d^\nu\). In the resulting
+rank-two unramified quadratic algebra the map
+\(t\mapsto t-\epsilon_s\bar t\) modulo \(g\) has rank-one image.
+Indeed conjugation exchanges the two idempotents in the split
+case. In the field case it exchanges a basis consisting of a
+lift of a residue element and its conjugate. Such a residue
+element can be chosen as \(1\) plus a nonzero trace-free element
+in odd characteristic.
+
+In characteristic two, choose an element
+outside the ground field. Dependence on its conjugate would
+force the proportionality constant to square to one and hence
+to equal one. In the exchanged basis the map has matrix
+\[
+ \begin{pmatrix}1&-\epsilon_s\\-\epsilon_s&1\end{pmatrix}.
+\]
+Its columns are multiples of the primitive first column, since
+\(\epsilon_s^2=1\), also modulo the full ideal \((g)\) in residue
+characteristic two. The image has one copy of the local
+quotient by \(g\). The product of the local indices is
+\([g\mathfrak d^\nu:L]=\mathrm N_F(g)=g^f\).
+
+The unscaled embedding of an ideal \(J\) has covolume
+\(2^{-f}\sqrt{|D_E|}\,N(J)\), by converting each complex pair in
+the discriminant determinant to real and imaginary coordinates.
+The index computation multiplies that covolume by \(g^f\).
+As \(N(\mathfrak d)=|D_E|\), the real dilation in dimension \(2f\)
+gives
+\[
+ \operatorname{covol}\bigl(d^{-\nu}\sigma(L)\bigr)
+ =d^{-2f\nu}\,g^f\,2^{-f}|D_E|^{1/2}
+     g^{2f}|D_E|^\nu=(d/2)^f g^{3f}.
+\]
+Put \(c=d^{-\nu}\). The map
+\(l\mapsto 2\overline{\sigma(l)}/(gc)\) carries the trace dual
+onto the Euclidean dual of \(\Lambda\). Its inner product with
+\(c\sigma(t)\) is \(\operatorname{Tr}_{E/\mathbb Q}(lt/g)\).
+Every integral functional on \(L\) extends to a rational
+functional on \(E\), represented uniquely by the trace pairing.
+
+\end{proof}
+
+\begin{construction}
+\[
+\begin{array}{lll}
+\text{arithmetic coordinate}&\text{Euclidean coordinate}&\text{role}\\ \hline
+t\in L & c\,\sigma(t)\in\Lambda&\text{period}\\
+l\in L^{\vee_{\rm tr}}\subset g^{-1}\mathfrak d^{-\nu-1}
+    &2\overline{\sigma(l)}/(gc)\in\Lambda^\vee&\text{frequency}\\
+l=0 &0&\text{diagonal term}
+\end{array}
+\]
+\caption{The two coordinates for Fourier frequencies. A trace-dual element \(l\) is converted to the Euclidean frequency before Poisson summation.}\label{fig:period-dual-readings}
+\end{construction}
+
+\begin{lemma}[Uniform frequency majorant]\label{lem:lattice-frequency}
+For a nonzero fractional ideal \(I\) of \(E\), let \(N=\sqrt{N(I)}\).
+If \(H\ge1\), \(K\ge5/2\), and \(\rho_v\ge0\) satisfy
+\(\prod_v\rho_v\le NH^{-f}\), there is an absolute \(C\) such that
+\[
+ \sum_{0\ne l\in I}\prod_v
+  \min\{1,(\rho_v/|\sigma_v(l)|)^K\}
+  \le (C H^{-(K-5/2)})^f .
+\]
+\end{lemma}
+
+\begin{proof}
+If a size vanishes the sum is zero. Otherwise put
+\(P(l)=\prod_v\max(1,|\sigma_v(l)|/\rho_v)\).
+By \((l)\subseteq I\), \(\prod_v|\sigma_v(l)|\ge N\) for
+\(l\ne0\), so \(P(l)\ge H^f\). Extract
+\(H^{-f(K-5/2)}\) from \(P(l)^{-K}\).
+
+\proofstep{A uniform point count in each box.}
+In a box of complex radii \(R_v\), there are no nonzero ideal
+points if \(\prod_v R_v<N\). Otherwise scale each coordinate by
+\(R_v\). Distinct ideal elements are separated by
+\[
+ \Delta=(N/\prod_v R_v)^{1/f}\le1
+\]
+in the maximum of the
+complex moduli, by the norm bound on their difference. Disjoint
+products of disks of radius \(\Delta/2\) around these elements fit
+inside the product of disks of radius \(1+\Delta/2\). If \(m\) is their count, comparison of the two product volumes yields
+\[
+ m(\Delta/2)^{2f}\le(1+\Delta/2)^{2f},\qquad
+ m\le(3/\Delta)^{2f}=9^f\left(\prod_v R_v/N\right)^2 ,
+\]
+using \(\Delta\le1\).
+
+\proofstep{Summing the box estimates.}
+
+The separate box counts must still be summed uniformly when the archimedean scales differ. The decay factor assigned to each coordinate makes that sum possible without ordering the places.
+
+Assign index zero to \(|\sigma_v(l)|/\rho_v\le1\), and index
+\(j_v\ge1\) to values in \((2^{j_v-1},2^{j_v}]\). With
+\(J=\sum_v j_v\) the containing box has at most \(9^f2^{2J}\)
+points and \(P(l)^{-5/2}\le2^{5f/2}2^{-5J/2}\). Hence
+\[
+ \sum_{0\ne l\in I}P(l)^{-5/2}
+ \le 9^f 2^{5f/2}\sum_{(j_v)\in\mathbf Z_{\ge0}^f}2^{-\sum_v j_v/2}
+ =\left(\frac{9\cdot2^{5/2}}{1-2^{-1/2}}\right)^f .
+\]
+Multiplication by the extracted factor proves the claimed bound.
+\end{proof}
+
+The size estimates in the concrete recursion take \(H=\Theta\)
+on \(I_D\) and \(H=\Theta/2\) on \(I_L\), with \(K=5\) and
+\(\Theta>4\). Thus both errors are bounded by
+\[
+ (C_1\Theta^{-5/2})^f,
+\]
+with \(C_1\) absolute. Lemma~\ref{lem:selected-frequency-size} computes the thresholds for every block and allows \(\Theta=k\) at a sufficiently late scale. This estimate
+allows the degree, the different and the relative sizes at the
+archimedean places to vary.
+
+\paragraph{The diagonal term in Poisson summation.}
+
+A diagonal energy is known initially only at the lattice points. Comparing its value there with a full period uses positivity on the entire translated lattice.
+
+For Poisson summation suppose the size-one diagonal energy
+extends at \(c\sigma(t)\) to a nonnegative continuous function
+\(\phi\) dominated by \(C\prod_v(1+|z_v|)^{-3}\). For a compact set \(K\), the triangle inequality gives the majorant
+\[
+ w(z)=\prod_v(1+|z_v|)^{-3},\qquad
+ \sup_{x\in K}w(x+\lambda)\le C_K w(\lambda).
+\] Choose \(a>0\) so that the products of disks \(\lambda+B_a\) of coordinate radius \(a\) about distinct lattice points are disjoint.
+
+For \(z\in\lambda+B_a\), one has \(w(\lambda)\le(1+a)^{3f}w(z)\), and consequently
+\[
+ \sum_{\lambda\in\Lambda}w(\lambda)\le
+ \frac{(1+a)^{3f}}{\operatorname{vol}(B_a)}
+ \int_{\mathbb C^f}w(z)\,dz<\infty .
+\]
+The Weierstrass test gives uniform convergence on \(K\). Here the convergence is for a fixed lattice. The uniform frequency estimate enters below. For a fundamental domain \(\mathcal F\) and \(\mu\in\Lambda^\vee\),
+the character is invariant under translations by \(\Lambda\).
+Integrating the uniformly convergent periodization and unfolding gives
+\[
+ \frac1{\operatorname{covol}(\Lambda)}
+ \int_{\mathcal F}\sum_{\lambda\in\Lambda}\phi(x+\lambda)
+             e^{-2\pi i\langle\mu,x\rangle}\,dx
+ =\frac{\widehat\phi(\mu)}{\operatorname{covol}(\Lambda)} .
+\] The wave bound
+and Lemma~\ref{lem:lattice-frequency} make these coefficients
+absolutely summable. Uniqueness of Fourier coefficients on the
+torus identifies their series with the periodization. Thus for any finite \(S\subset z+\Lambda\), with \(\Lambda^\vee\)
+the Euclidean dual from Lemma~\ref{lem:period-lattice-normalization},
+\[
+ \sum_{x\in S}\phi(x)
+ \le \sum_{\lambda\in\Lambda}\phi(z+\lambda)
+ =\frac{\sum_{\mu\in\Lambda^\vee}
+             \widehat\phi(\mu)e^{2\pi i\langle\mu,z\rangle}}
+        {\operatorname{covol}(\Lambda)}
+ \le \frac{\widehat\phi(0)+\sum_{\mu\ne0}|\widehat\phi(\mu)|}
+          {\operatorname{covol}(\Lambda)} .
+\]
+The first inequality uses the nonnegativity of the extension
+\(\phi\) on the entire coset.
+ \label{cor:lattice-estimates-2}

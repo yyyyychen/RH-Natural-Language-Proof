@@ -1,0 +1,337 @@
+\subsubsection{The fitted starting fields for the even-order case}
+\label{par:count-ii-tower}
+
+To apply propagation in even order, the starting field must retain enough marked Galois elements to separate the ordinary labels. This requirement governs which character kernels one may impose.
+
+\begin{proposition}[Starting field and marked groups]\label{prop:count-ii-starting-field}
+Assume the even-order case of
+Lemma~\ref{lem:odd-prime-positive-ranges} and use its auxiliary
+character from Lemma~\ref{lem:marked-dyadic-character}.
+Write \(H_0\) for the subgroup cut out by the finite character conditions in \eqref{eq:count-ii-starting-groups}. The starting fields are specified by 
+\[
+ G_{F_0}=H_0,\qquad G_K=\ker\lambda,\qquad G_{k_0}=\ker\phi_0.
+\]
+ The marked normalizing and inertia elements
+are retained, and the chosen quadratic extension splits at the
+coefficient places used for the ordinary flag.
+\end{proposition}
+
+\begin{proof}
+\proofstep{The rational characters and the starting field.}
+
+Use the rational character data of
+Paragraph~\ref{par:dyadic-residual} and the \(\eta\) of
+conductor \(2^n\) there. The order of the prime-to-\(\ell\)
+part of \(\xi\) away from \(\ell\) is even in this case.
+Write \(\kappa_0\) for the \(\ell\)-primary part of \(\xi\)
+away from \(\ell\), and \(\ell^b\) for an exponent killing
+it. These factors are taken first on the character group
+and then on the two coprime conductor factors. In
+particular \(\kappa_0\) is unramified at \(\ell\) and away
+from \(S\).
+
+Let \(m_0\) be the order of the prime-to-\(\ell\)
+part of \(\xi\). Write \(\xi=\xi_{\ell'}\kappa_0\xi_{\ell,\ell}\), where the last factor is the \(\ell\)-primary component at \(\ell\). On the simultaneous kernel we have
+\[
+ \kappa_0(g)=1,\qquad \epsilon_\ell(g)=1\Longrightarrow\xi_{\ell,\ell}(g)=1,
+ \qquad \xi(g)^{m_0}=\xi_{\ell'}(g)^{m_0}=1 .
+\] On inertia at a place away from
+\(\ell\), the same implication holds using just
+\(\kappa_0=1\). On that part of inertia the residual cyclotomic factor is
+trivial, so \(\bar\Psi=1\) implies \(\bar\xi=1\). Reduction is
+injective on prime-to-\(\ell\) roots, giving
+\[
+              \xi^{m_0}=1,\ \bar\xi=1\ \Longrightarrow\ \xi=1 .
+\]
+
+Choose three quadratic signs \(\phi_0,\lambda,\lambda'\)
+of distinct odd prime conductors \(p_3,p,p'\) away
+from \(S\), with parities \(+,-,-\), respectively.
+To do so, given a parity \(s\in\{1,-1\}\) and
+the finite set of primes \(S'\) already used or
+required to split, take a prime
+\(P\equiv s\pmod{8\prod_{q\in S'}q}\) outside \(S'\)
+by Dirichlet's theorem. For odd \(q\in S'\), quadratic reciprocity gives
+\[
+ \left(\frac qP\right)
+ =\left(\frac{s}{q}\right)(-1)^{((q-1)/2)((P-1)/2)}=1 .
+\]
+
+For \(s=-1\) the two signs are each \((-1)^{(q-1)/2}\), and for \(s=1\) each is positive. Also \((2/P)=1\) since \(P\equiv\pm1\pmod8\). The quadratic character
+of conductor \(P\) has parity \(s\), is ramified at
+\(P\), and is unramified elsewhere at finite places.
+Start with \(S'=S\) and add each chosen prime before
+the next choice. An inertia element at any of the
+three conductors can change the corresponding sign
+independently. It fixes the values of \(\xi,\Psi,\omega,\eta,\kappa_0\),
+since these are unramified at the three primes.
+
+In \(G_{\Q}\) take the open subgroup
+\begin{equation}\label{eq:count-ii-starting-groups}
+ H_0=\{g:\bar\Psi(g)=\phi_0(g),\quad
+             \lambda(g)=\lambda'(g),\quad\kappa_0(g)=1\}.
+\end{equation}
+The signs in the first equality are taken in the
+residue field. This subgroup is open because the
+three conditions are finite character equalities,
+and it contains the commutator subgroup. It contains
+complex conjugation, since \(\Psi\) is even,
+\(\lambda,\lambda'\) are odd and \(\ell\) is odd.
+Its index is even since \(\lambda/\lambda'\) has
+order two.
+
+Let \(F_0\), \(K\) and \(k_0\) be the fixed
+fields of \(H_0\), \(\ker\lambda\) and \(\ker\phi_0\),
+respectively. The fixed fields have
+\[
+ \begin{gathered}
+ F_0/\Q\text{ abelian and totally real},\qquad 2\mid[F_0:\Q],\\
+ K/\Q\text{ imaginary quadratic},\qquad
+ k_0/\Q\text{ real quadratic}.
+ \end{gathered}
+\]
+The chosen congruences make \(K\) split at \(S\) and \(k_0\)
+split at \(2,\ell\). To check the ramification of \(L_0=F_0K\) over \(F_0\),
+for a rational inertia group \(I_v\) use \(I_v\cap H_0\).
+At \(p\), \(\lambda'|_{I_p}=1\) and
+\(\lambda=\lambda'\) on \(H_0\); away from \(p\), \(\lambda\)
+is already unramified. Thus
+\[
+                   \lambda|_{I_v\cap H_0}=1
+                         \qquad(v\text{ finite}).
+\]
+
+At \(p_3\) use \(\bar\Psi|_{I_{p_3}}=1\) because \(p_3\) lies
+outside the host conductor. The other places are already unramified
+for \(\phi_0\). Therefore
+\[
+ \phi_0|_{I_v\cap H_0}=1\quad(v\text{ finite}),
+\]
+so both quadratic composita are unramified over \(F_0\) there. The field \(F_0\) is tamely
+ramified at \(\ell\), because on inertia there all
+three quadratic signs and \(\kappa_0\) are trivial,
+and the residual \(\bar\Psi\) has order prime to
+\(\ell\). Inertia of \(F_0\) at \(\ell\) kills the
+entire diagonal residual representation since
+\(\eta\) is unramified there. Above each prime of
+\(F_0\) dividing \(\ell\), choose its extension to
+\(L_0\) inducing the original marked place of \(K\).
+Exactly one of the two extensions does so, since
+\(K\) splits at \(\ell\). Choose decomposition
+embeddings representing these places in the fixed
+algebraic closure.
+
+The subgroup contains local elements with the
+required large values of \(\bar\eta\). At \(\ell\) take
+the Frobenius lift \(f_\ell\) with \(\epsilon_\ell(f_\ell)=1\).
+Choose \(2^a u\), \(u\) odd, killing \(\xi\), as in
+the dyadic calculation. With
+\[
+ e=2^a u\ell^b,
+\]
+the chosen lift satisfies
+\[
+ \epsilon_\ell(f_\ell^e)=1,\qquad
+ \xi(f_\ell^e)=1,\qquad \kappa_0(f_\ell^e)=1.
+\]
+It therefore kills \(\Psi\), and all three auxiliary signs are trivial on this decomposition group. If the \(\bar\eta\)-value had order at most four, injectivity
+of reduction would give \(\eta(\ell)^{2^{a+2}u\ell^b}=1\).
+The dyadic test then gives
+\[
+                 2^n<\ell^2 2^{a+2}\le 2^{n_{\rm II}},
+\]
+contrary to \(n=n_{\rm II}\).
+
+At two use inertia with cyclotomic
+residue \(3\bmod 2^n\) for the \(2^n\)-th roots
+of unity. It exists by total ramification there.
+Raise it to \(2^{c_2(\xi)}\ell^b\) to kill the
+host and \(\kappa_0\). If its \(\bar\eta\)-value had order at most four, the same
+test with residue \(3\) would give
+\[
+       2^n<9\cdot2^{c_2(\xi)+2}<2^{c_2(\xi)+6}\le 2^n .
+\]
+Thus its order is greater than four.
+Its \(\omega\)-value is one. Denote this element by
+\(u_0\). Both local elements belong to \(G_{L_0}\).
+They are available at every place in question by
+conjugation, since the groups defining the fields
+are normal and the characters are abelian.
+
+We need two further elements of \(G_{L_0}\) with prescribed character values.
+Complex conjugation has \(\xi,\Psi,\eta,\omega\)-values
+\((\xi(-1),1,-1,-1)\). Set the three auxiliary signs
+to \((1,1,1)\) by the inertia adjustments above.
+The resulting element \(a_0\) has
+\[
+ (\bar\eta,\bar\Psi,\bar\omega)=(-1,1,-1).
+\]
+
+To construct the second element, recall that the even-order prime-to-\(\ell\)
+factor of \(\xi\) off \(\ell\) takes the value \(-1\).
+Choose an element with this value and
+\(\epsilon_\ell=1\), using the independent cyclotomic
+quotients at coprime moduli. Raise it to \(\ell^b\)
+to kill \(\kappa_0\) and set the auxiliary signs to
+\((-1,1,1)\). The adjustments preserve
+\(\epsilon_\ell=1\). If the resulting element \(g\) has \(\bar\eta(g)^2=1\), replace it by \(gu_0\). Indeed
+\[
+ \bar\eta(gu_0)^2=\bar\eta(u_0)^2\ne1,\qquad
+ \bar\Psi(gu_0)=\bar\Psi(g),\qquad \epsilon_\ell(gu_0)=1 ,
+\]
+using the marked values of \(u_0\) and triviality of the cyclotomic character on inertia at two.
+
+We obtain the marked normalizing element \(g_0\)
+with \(\bar\Psi(g_0)=-1\), \(\epsilon_\ell(g_0)=1\) and
+\(\bar\eta(g_0)^2\ne1\). The labels on it are the
+four distinct values \(-\bar\eta(g_0),-1,\bar\eta(g_0),1\),
+in the order allowed by the rational chart. In
+particular the quadratic sign stays nontrivial on
+\(G_{L_0}\cap\ker\epsilon_\ell\).
+
+The values needed for separation are
+\[
+ \begin{array}{c|ccc}
+       &\bar\eta &\bar\Psi &\bar\omega\\ \hline
+ a_0   &-1 &1 &-1\\
+ u_0   &\zeta &1 &1\\
+ g_0   &z &-1 &1
+ \end{array}
+ \qquad \operatorname{ord}(\zeta)>4,\quad z^2\ne1.
+\]
+The order of \(\zeta\) is a power of two. For even \(i\)
+the torus character \(\bar\eta^i\bar\Psi^j\) is \(1\) at
+\(a_0\), whereas for odd \(i\) it is \(\zeta^i\ne1\) at
+\(u_0\). Both cases distinguish the character from \(\bar\omega\). Every root character
+is nontrivial, using \(u_0\) for odd first exponent
+and \(g_0\) for the two roots \(\pm w_\Psi\).
+The first root also has order greater than four.
+Suppose a residual quadratic character trivial on
+\(\ker\omega\cap G_{L_0}\) permutes the four residual
+labels by multiplication. Applied to the trivial
+label it must equal one of the labels.
+
+Since \(u_0,g_0\in\ker\omega\), a putative twisting label \(\lambda\) must satisfy
+\[
+ (\lambda(u_0),\lambda(g_0))=(1,1).
+\]
+Both labels involving \(\bar\eta\) fail the first equality and the other nontrivial label fails the second. Thus \(\lambda=1\). At each place above \(\ell\) the local
+test of nontrivial \(\bar\eta\) with trivial sign and
+Teichm\"uller value is given by the Frobenius power
+constructed above. The quadratic restriction also
+makes \(\eta|_{G_{k_0}}\) totally odd and unramified
+at the two degree-one places above \(\ell\). Its
+value on their Frobenius has order greater than
+four, as does its restriction on inertia at either
+norm-two place.
+
+\end{proof}
+
+\subsubsection{Auxiliary inertia and deeper layers}
+
+The starting field supplies the marked elements. Enlarging it to kill auxiliary inertia must still leave enough primes with the same residual Frobenius behavior for the two level comparisons.
+
+\begin{proposition}[Auxiliary primes on the deep layer]\label{prop:count-ii-auxiliary-primes}
+After enlarging the even-order starting field to kill the added
+inertia, one can choose arbitrarily many distinct rational primes \(p\), outside the fixed bad set, splitting in \(L\). For a Frobenius \(f_p\) the two auxiliary levels use the simultaneous conditions 
+\[
+ \bar r(f_p)\text{ is scalar},\qquad \bar\epsilon_\ell(f_p)\ne1.
+\]
+ Both levels use the same scalar twist of \(\bar r\); twisting multiplies the Frobenius matrix by a scalar.
+\end{proposition}
+
+\begin{proof}
+The marked cup construction of
+Paragraph~\ref{par:marked-cup} enlarges \(F_0\) by
+the degree-\(\ell\) cyclotomic fields of the added
+rational primes. Write \(F_1\) for the resulting
+compositum. This is a finite abelian extension of
+odd degree over \(F_0\), unramified at \(\ell\).
+It kills the new inertia in the residual chain
+and preserves the tame property of the base
+field at \(\ell\). In every subsequent abelian
+\(\ell\)-power extension of \(F_1\), a common
+\(\ell\)-power of the marked elements belongs to
+the deeper absolute Galois group. Every marked finite value \(z\) used for these comparisons
+has order prime to \(\ell\), so
+\[
+             \operatorname{ord}(z^{\ell^a})=\operatorname{ord}(z)
+\]
+for all \(a\). The powers retain the required distinctions.
+
+Taking these powers also preserves the specified decomposition and inertia subgroups. The exact
+conditions \(\epsilon_\ell=1\) and \(\omega=1\)
+on the indicated elements persist too. The local
+frames are transported using the selected places
+on the same side of \(K\). The normalizing element
+at a new layer is the corresponding power of
+\(g_0\), so the residual labels stay distinct there.
+
+Use the cohomological bound \(C\) chosen on \(F_1\)
+as in the component argument, before extending
+the field further. To make the host restriction
+have order prime to \(\ell\), take the compositum
+of \(F_1\) with the degree-\(\ell^m\) layer of the
+cyclotomic \(\mathbf Z_\ell\)-extension of \(\Q\).
+Its absolute Galois subgroup is
+\[
+ G_{F_1}\cap\{g:\epsilon_\ell(g)^{\ell-1}
+                        \equiv1\pmod{\ell^{m+1}}\}.
+\]
+The kernel of \(\epsilon_\ell^{\ell-1}\) on
+\(G_{F_1}\) lies in \(\ker\xi^{m_0(\ell-1)}\).
+Indeed \(g^{\ell-1}\) has cyclotomic value one
+there and \(G_{F_1}\subseteq\ker\kappa_0\). This
+latter kernel is open. Writing \(H_m\) for the displayed nested subgroups, their
+intersection is \(\ker(\epsilon_\ell^{\ell-1}|_{G_{F_1}})\).
+They are compact, so the finite character kernel gives
+\[
+         H_m\subseteq\ker\xi^{m_0(\ell-1)}
+                  \qquad\text{for all sufficiently large }m .
+\]
+Otherwise the nonempty closed sets of counterexamples would have
+nonempty intersection, contrary to the assertion at the limit.
+
+The exponent \(m_0(\ell-1)\) is prime to \(\ell\).
+For degree growth choose a positive prime-to-\(\ell\)
+power \(s\) of the marked inertia element of
+infinite cyclotomic order such that \(s\in G_{F_1}\).
+This is possible by tameness. For a prescribed \(B\), none of the finitely many \(s^k\), \(1\le k<B\), lies in the limiting subgroup, since their cyclotomic images have infinite order. The subgroups decrease, so after taking one common depth,
+\[
+ s^iG_F=s^jG_F\quad\Longrightarrow\quad s^{j-i}\in G_F
+ \quad\Longrightarrow\quad i=j\qquad(0\le i,j<B).
+\]
+Choose \(B=30(C+1)^2\). Since the \(B\) powers have distinct images at all sufficiently
+deep levels,
+\[
+ [F:\Q]\ge[G_{F_1}:G_F]\ge B.
+\]
+Increase the depth
+once for this bound and the finite character condition; the fitted
+data are retained. The seed
+and the three residual lines can now be formed
+at this layer with the transported labels, the
+same \(K\), and the real quadratic character
+\[
+ \phi_0|_{G_F}.
+\]
+
+
+The transported \(a_0\) still has \(\bar\omega=-1\),
+so \(L=FK\) does not contain the \(\ell\)-th roots
+of unity. Take a power of the transported \(u_0\)
+whose \(\bar\eta\)-value is \(-1\) and multiply
+it by the transported \(a_0\). This gives an element
+of \(G_L\) with trivial residual diagonal characters
+and nontrivial mod-\(\ell\) cyclotomic value. Apply
+Chebotarev to the finite quotient given by \(L\),
+the residual characters and the mod-\(\ell\) cyclotomic
+character. This provides arbitrarily many rational
+primes split in \(L\) with these Frobenius values.
+The auxiliary-prime separation used in the two
+ordinary comparisons is therefore available at
+distinct primes outside the fixed bad set. A scalar
+twist still gives a single residual eigenvalue at
+each of these primes.
+\label{cor:ordinary-count-ii-tower-1}
+\end{proof}

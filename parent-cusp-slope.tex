@@ -1,0 +1,274 @@
+\paragraph{The maximal slope of the full cusp lattice.}
+\label{par:parent-full-cusp-slope}
+The full cusp lattice and its row have different roles in this field comparison. Let \(K_c\)
+be the field of the geometric cusp model at the base level,
+and \(K\) the field carrying the row. The size estimate for the
+recursive class sum bounds \(\log\operatorname{rd}(K_c)\) by
+\(217(frL)^2\), since the field of the core is the coefficient
+field in that estimate. We first work over \(K_c\), which is
+totally complex. Write \(\|\cdot\|_{\rm Pet}\) for the adelic probability
+Petersson norm multiplied by the Lie-frame factor \(a_i\)
+above. Use the same factor on sup norms. It cancels in their
+comparison. The integral lattice
+has full rank there. A nonzero good component is supplied by the
+base realization of rank \(D_0\). Thus every application of a
+maximal-slope or a logarithmic rank bound below has positive
+ambient rank. \label{cor:parent-cusp-slope-1}
+
+\begin{established}[Sizes on the completed parent]\label{hyp:parent-cusp-size}
+Use the geometric field \(K_c\), row field \(K\), and normalized
+Petersson metric in the common primitive frame. Choose a fixed exponent \(a\) with \(frn_V L\le X=x^a\le b\) on the late family, where
+\(L=\log b\ge10\), \(f\ge8\) and \(r\ge2\).
+Write \(s\) for the sum of the absolute frame powers, \(t=frn_V\)
+and \(w=1+s+t\). Summing the dominant weight bounds on the
+two signature blocks gives \(s\le8frb\), hence
+\(w\le10frb\) and \(\log w\le4L\).
+With \(\ell=2L\), the two-prime level \(M=g_0g_1\), the
+quadratic discriminant parameter \(d\) and \(d_E=|\operatorname{disc}E|\)
+satisfy
+\[
+ \log(fr)\le\ell,\quad \log M\le30\ell,\quad
+ \log d_E\le4f\ell,\quad \log d\le4\ell,\quad \log w\le2\ell.
+\]
+The marked CM period satisfies \(|\log\Omega|\le3L\).
+\end{established}
+\begin{proof}
+The ranks of Lemma~\ref{lem:window-parameter-choice} and the number of columns in the completed point grow at most polynomially in \(x\); \(b=\exp(x^\epsilon)\) eventually dominates each fixed power of \(x\). The upper box bound \(2b\) per entry, applied to the two frame lists and their determinant shifts, gives \(s\le8frb\). On the selected family \(frn_VL\le x^a\le b\), hence \(w\le10frb\) and \(\log w\le4L\) for large \(x\). For the same field and two primes the calculation of Lemma~\ref{lem:deep-cover-field-size} gives \(\log g_j\le9L+1\), and its bound for the root discriminant gives \(\log |\operatorname{disc} E|=2f\log\operatorname{rd}(E)\le 4f\ell\). The two-prime product and the marked discriminant then give the remaining logarithmic bounds. The period bound is the CM period estimate on the retained family used in Lemma~\ref{lem:terminal-centred-weights}.
+\end{proof}
+
+\begin{proposition}[A uniform upper bound for the parent maximal slope]
+\label{prop:parent-cusp-maximal-slope}
+For each lift of the completed parent with
+Lemma~\ref{hyp:parent-cusp-size}, the ambient integral cusp
+lattice satisfies
+\[
+  \mu_{\max}(\mathrm{lat}_{\rm all})\le x^A b
+\]
+for a fixed \(A\), uniformly in the row field. The maximal slope
+uses the normalized Petersson metric and the actual ambient
+lattice in the primitive frame.
+\end{proposition}
+
+\begin{proof}
+\proofstep{The lower norm bound for an integral cusp form.}
+For a nonzero integral form, apply the CM reading
+\eqref{eq:slice-cm-point-norm} with these powers. The cusp
+flow at level \(M\) uses the thickness
+\(e_0=\min(1,\pi/(2M\sqrt d(fw+2)\log2))\).
+The CM approximation there gives a frame bound
+\(\Lambda=R^{2q+1}\), where \(q\le r\) is the negative signature
+on this lift. To use the negative block, approximate its \(q\)
+axes in the signed Hermitian space and take the orthogonal
+complement. The graph bound is invariant under passage to its
+adjoint. The Gram determinant which clears the complementary
+projection then has size at most \((2A)^{2q}\) in the notation
+of the CM reading. This gives
+\[
+ R=\tfrac{1600}{3}r\sqrt{fw}\,(fr)^3d_E/\sqrt{e_0}.
+\]
+Indeed \(-\log e_0\le\log(2M\sqrt d f w)\).
+
+Taking logarithms in the formula for \(R\) gives
+\(\log R\le(4f+32)\ell\). The nonzero integral CM
+coefficient, with its dual letter metrics, now gives
+\(\operatorname{mean}_\sigma\log\|F\|_{\sup,\sigma}\ge-\lambda_s\),
+where
+\[
+ \lambda_s\le
+ \bigl((1+|\log\Omega|)/2+\ell+
+                  (2q+1)(6f+48)\ell\bigr)(s+t).
+\]
+Here the value line contributes half the logarithm of
+\(\Lambda\) per letter, and reading the frame coefficient costs
+at most \(s\log(r\Lambda)\). \label{cor:parent-cusp-slope-2}
+
+\proofstep{Returning to the Petersson norm.}
+For the passage back to the Petersson norm, let \(B\) be the
+bound on squared point evaluation. In a flag chart of complex
+dimension \(D=fr(r-1)/2\) take \(h=(200r^3(w+f))^{-1}\).
+On the part with larger weights the
+holomorphic submean inequality contributes
+\(8D!/(\pi h^2)^D\), including the variation of the frame norm
+and the choice of a point above half the supremum. Overlap
+of the charts is bounded by the number of integral transition
+matrices moving the frame on the subspace with larger weights into a fixed ball. Packing their
+entries as in the evaluation-net argument bounds this
+multiplicity by
+\[
+ \mathcal M(e_0)=(1+2(2fr)^2d_E/e_0)^{2fr^2}.
+\]
+Integration on the
+probability space introduces the upper level mass \(V_M\)
+from the measure comparison. Thus one can take
+\[
+ B=\frac{8D!}{(\pi h^2)^D}\mathcal M(e_0)V_M,\qquad
+             \|F\|_{\sup,\sigma}^2\le B\|F\|_{\rm Pet,\sigma}^2 .
+\]
+
+For clarity, the chart factor has logarithm at most
+\(3\log2+fr^2(12\ell+16\log2)/2\). In the packing bound use
+\(T=3fwM\sqrt d\ge e_0^{-1}\). Its logarithm is at most
+\(2\log2+35\ell\). The log multiplicity is at most
+\(2fr^2(\log16+2\log(fr)+\log d_E+\log T)\).
+The log mass is at most \(130fr^2\ell\).
+Adding gives \[
+ 0\le\log B\le250 f^2r^2\ell.
+\]
+These bounds use the equivariant frame character at the level,
+the even central weight, and the same Haar probability as the norm.
+\label{cor:parent-cusp-slope-3}
+
+\proofstep{The rank bound using the same finite net.}
+The dimension bound uses this identical \(B\). At an embedding
+of \(K_c\), a rationally independent frame of forms stays
+independent in the space of holomorphic readings by the
+descent in paragraph~\ref{par:slice-evaluation-net}. If \(F_1,\ldots,F_d\) is an orthonormal basis for the
+Petersson probability measure \(\mu\), the evaluation functional
+at \(z\) has squared norm \(\sum_i\|F_i(z)\|^2\). The evaluation
+inequality applies to every vector in their span, so
+\[
+ d=\int\sum_{i=1}^d\|F_i(z)\|^2\,d\mu(z)
+       \le\int B\,d\mu(z)=B.
+\]
+This is the same \(B\) as in the evaluation bound.
+
+Now in any nonzero integral sublattice of rank \(u\) and
+squared-norm slope \(\mu\), the Minkowski bound used for the
+short section gives a nonzero form with
+\[
+ 2\operatorname{mean}_{\sigma}\log\|F\|_{\rm Pet,\sigma}
+      \le -\mu+\log u+\log\operatorname{rd}(K_c).
+\]
+Indeed the Euclidean ball of radius one in each complex rank
+\(u\) contains the product of coordinate discs of radii
+\(1/\sqrt u\), and the covolume of the coefficient integers
+contributes the square root of the discriminant per rank.
+Taking the two averages with the same place multiplicities
+gives
+\[
+ \mu\le 2\lambda_s+2\log B+\log\operatorname{rd}(K_c)
+              \le x^{2a+4}b .
+\]
+For the last estimate \(2q+1\le3r\), \(6f+48\le12f\) and
+\(frL\le X\) give
+\[
+ \lambda_s\le760X^2 b.
+\]
+
+The other two contributions together are bounded by
+\[
+ 1000X^2+217X^2=1217X^2.
+\]
+The factor \(x^4\) absorbs their sum
+and the factor two on \(\lambda_s\) for \(x\ge10\).
+\label{cor:parent-cusp-slope-4}
+
+\proofstep{The actual ambient arithmetic lattice.}
+On the actual row the ambient integral forms are the
+\(\mathcal O_K\)-span of this lattice under the independent
+semilinear realization. The norm of every geometric vector
+at an extension \(\sigma\) is its geometric norm multiplied
+by the positive scalar \(c_\sigma\) of the measure comparison
+above. The direct and inverse comparisons amount to
+\[
+ e^{-122U}\le c_\sigma\le e^{122U}.
+\]
+
+Divide out this scalar. The normalized Gram on geometric
+vectors extends to their complex span, by polarization and
+density of the image of the totally complex field. Choosing
+the conjugate embedding conjugates the Gram and preserves
+its determinant. For the bound on arbitrary sublattices, let \(K'/K_c\) be a
+normal extension containing \(K\), and write \(M_c\) for the
+geometric lattice over \(K_c\). Give \(M_c\otimes\mathcal O_{K'}\)
+the normalized metric. The Galois group permutes its places
+by isometries, hence preserves the maximal destabilizing
+saturated lattice. Its rational span descends to \(V_c\) over
+\(K_c\).
+
+To identify its integral lattice, tensor the exact
+kernel sequence
+\[
+ 0\longrightarrow M_c\cap V_c\longrightarrow M_c
+       \longrightarrow (M_c\otimes K_c)/V_c
+\]
+with \(\mathcal O_{K'}\) over \(\mathcal O_{K_c}\).
+Flatness identifies its kernel with the saturated
+intersection over \(K'\). Normalized slopes of these extended
+lattices are unchanged by the ramification and archimedean
+multiplicity identities. Any sublattice over \(K\) also extends
+at its original normalized slope. The maximal destabilizing
+lattice over \(K'\) therefore bounds the slope over \(K\).
+Restoring \(c_\sigma\) changes any squared slope by at most
+\(244U\). Since \(U=fmbL\log\log x\le x^{a+1}b\) on our
+family by \(m\le rn_V\) and \(\log\log x\le x\), we have
+\(\mu_{\max}(\mathrm{lat}_{\rm all})\le x^A b\) for a fixed
+\(A\), uniformly in the row field and the lift.
+\label{cor:parent-cusp-slope-5}
+
+\end{proof}
+
+\paragraph{Rank on the two sides of the projection.}
+The metric comparison leaves a rank factor on each side. To identify these ranks, use
+the central projection to the retained tuples of
+semisimple labels in the same finite group at the base level.
+In the rational form frame the type space is the intersection
+of the kernels of the character equations. Adding the kernel
+of the retained projector gives the discarded space. Flatness
+and the fact that the full integral forms span compute the two
+lattice ranks from exactly these linear equations after any
+complex embedding. Twisting by the inverse central form
+character makes the first system the Whittaker character
+equations. The group order clears the projection on the full
+lattice, since its character coefficients times the order are
+algebraic integers. Inversion conjugates these coefficients at
+each embedding and the group acts unitarily, so the two parts
+are orthogonal. \label{cor:parent-cusp-slope-6}
+
+\begin{lemma}[Rank discarded in the primitive base frame]
+\label{lem:parent-projector-rank-loss}
+Use the retained central projector in
+Proposition~\ref{prop:equivariant-selected-row}, transported to the
+primitive base frame, with the finite label bounds of
+Proposition~\ref{prop:paired-good-rank}. Put \(\eta=\exp(-x^{e_z/7})\).
+The retained and discarded ranks \(d_g,d_b\) in the actual type lattice satisfy
+\[
+ d_b\le3\eta(d_b+d_g),\qquad d_g=D_0.
+\]
+
+\end{lemma}
+
+\begin{proof}
+\proofstep{Computing the finite bad-rank fraction.}
+In the definite model the two groups \(H_k\) in
+\eqref{eq:row-bad-share} act freely on the marked components.
+On a nonterminal deep cover use the inverse images of \(P\)
+(the character subgroup) and of \(H_k\) in its level
+automorphism group. The pullback action on forms differs
+from translation by a single character. Thus the product of
+a translated separating section and a translated form still
+has this character on the form factor. The invariant-sum map
+in the proof of \eqref{eq:row-bad-share} embeds the restriction
+to each inverse image \(H\) in \(a_H\) regular representations.
+
+Let \(r_+,r_-\) be the ranks at weights \(\kappa+2c_0\) and \(\kappa-c_0\). The determinant injections and the rank growth at shift two on this cover give
+\[
+ a_H|H|\le r_+\le\tfrac32 r_-\le\tfrac32|\pi^{-1}P|\,d_{\rm type}.
+\]
+Here \(c_0\) is the weight
+of the orbit-separating section on that cover, with the group
+determinant nonzero on every component. The regular trace on
+the inverse image reads the local semisimple-label share
+downstairs, since the averaging factor for the kernel cancels
+in the trace ratio. Using \eqref{eq:row-bad-types} for both
+primes, each discarded share is at most
+\(\eta=\exp(-x^{e_z/7})\) on the late family. Hence
+\[
+   d_b\le (3/2)(\eta+\eta)d_{\rm type}
+       =3\eta(d_b+d_g).
+\]
+The definite regular comparison has factor one and satisfies
+the same inequality. The retained image is the good space in
+the primitive base frame, of rank \(d_g=D_0\).
+\label{cor:parent-cusp-slope-7}
+\end{proof}

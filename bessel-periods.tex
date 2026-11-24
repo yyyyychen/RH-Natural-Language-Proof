@@ -1,0 +1,387 @@
+\section{The normalization of the real Bessel period}
+\label{sec:bessel-periods}
+
+The unipotent estimates ensure convergence in the required weight range. We still need to compare the period formed with a definite compact type with the Hilbert norm of the ambient discrete series. Interlacing selects the model for which that comparison is made. The resulting isometry and decay
+estimate enter the formal-degree calculation of the next
+chapter. Definition~\ref{hyp:real-bessel-measures} specifies the marked negative vector, its positive orthogonal complement and the unitary character of the flag radical. The quotient norm in Proposition~\ref{prop:real-period-norm} uses those measures.
+
+\begin{paramdefinition}[Real forms and period measures]\label{hyp:real-bessel-measures}
+Let \(n=k+2r+1\), let \(G=U(k+r,r+1)\), and choose the flag
+basis for \(G\). Write \(N\) for the unipotent radical of the parabolic stabilizing the isotropic flag. In the middle space of signature \((k,1)\), choose a negative vector \(z\) for the Hermitian form \(h\). Its compact stabilizer and the Bessel subgroup are specified by
+\[
+      h(z,z)=-T_z<0,\qquad W=z^\perp,\qquad S=U(W)N .
+\]
+In particular \(W\) is positive definite.
+
+The chosen
+unitary character \(\psi\) of \(N\) is nontrivial on each of the
+simple coordinates of the Bessel datum. The last coordinate pairs
+with \(z\). The compact group preserves \(\psi\). Its action on a fixed
+Haar measure on \(N\) has a positive real modulus, a continuous
+homomorphism from \(U(W)\) to \(\mathbb R_{>0}\). Its image is
+compact and hence is trivial. We use \(dh\,du\) on \(S=U(W)N\)
+with these choices of \(dh\) and \(du\).
+\end{paramdefinition}
+
+\subsection{Interlacing}
+
+The compact stabilizer acts on the target of the period. The relative model therefore uses its dual.
+
+Let \(\mu_1>\cdots>\mu_n\) and \(u_1>\cdots>u_k\) be the
+Harish-Chandra parameters of the large-group discrete series and
+compact module. Here \(k\) is even. The parameters of that dual in decreasing order are \(-u_k,\ldots,-u_1\). In the classical normalization of the
+real Gan--Gross--Prasad theorem, the anisotropic line in the
+complement has sign \((-1)^k=+1\). Negate both Hermitian forms
+to reach this normalization. The matrix groups are unchanged
+and both packets exchange their positive and negative labels.
+A diagonal change of the isotropic basis normalizes the simple
+character coefficients. Starting at the last coordinate, solve
+in turn for each consecutive ratio of the diagonal scalars.
+
+\begin{proposition}[Interlacing on the prescribed packet]
+Use Definition~\ref{hyp:real-bessel-measures} with \(k\) even and
+\(\mu_k,\ldots,\mu_n<u_k\). After negating the two Hermitian
+forms, take the first \(k-1\) entries negative and the tail
+alternating from a negative entry. For this signed packet the tempered Bessel criterion holds precisely when 
+\[
+ u_i>\mu_i>u_{i+1}\qquad(1\le i<k).
+\]
+
+\end{proposition}
+
+\begin{proof}
+For a discrete parameter, Atobe's labeling gives component value
+\((-1)^{i-1}\) at a positive entry in position \(i\), and \((-1)^i\)
+at a negative entry. The two ranks have opposite parity. In the
+epsilon criterion each factor associated with \(\mu_i,u_j\) is
+therefore the root number of a character of odd exponent
+\(2(\mu_i-u_j)\). This root number is \(-1\) for a positive exponent
+and \(1\) for a negative exponent, in the normalization of Atobe's
+Proposition~2.3. The required component values by the tempered
+Gan--Gross--Prasad theorem are
+\[
+ (-1)^{\#\{j:u_j<\mu_i\}},\qquad
+ (-1)^{\#\{i:\mu_i>u_j\}}
+\]
+at the large-group position \(i\) and the compact-dual position
+\(k+1-j\), respectively.
+
+After the sign change the first \(k-1\) large entries are negative
+and the tail alternates negative and positive. If
+\(u_i>\mu_i>u_{i+1}\) for \(1\le i<k\) and the tail lies below
+\(u_k\), the two counts are
+\[
+ \#\{j:u_j<\mu_i\}=\begin{cases}k-i&i<k,\\0&i\ge k,\end{cases}
+ \qquad \#\{i:\mu_i>u_j\}=j-1.
+\]
+Since \(k\) is even, the large component values are \((-1)^i\)
+before the tail and \(1\) on the tail. This matches the required labels, since the
+tail starts at the even position \(k\). The negative definite dual
+has component value \((-1)^{k+1-j}=(-1)^{j-1}\), and exactly \(j-1\)
+large parameters lie above \(u_j\).
+
+Conversely, let \(n_j=\#\{i:\mu_i>u_j\}\). The compact label
+requires \(n_j\equiv j-1\pmod2\). With the tail fixed below
+\(u_k\), at most \(k-1\) entries are available, and
+\[
+   n_{j+1}-n_j\ge1\quad(1\le j<k),\qquad n_k-n_1\le k-1.
+\]
+Every difference is therefore one. This proves the strict interlacing.
+These calculations use \href{https://eprints.lib.hokudai.ac.jp/repo/huscap/all/84508/Adv.%20math%20363_106984.pdf}{Atobe, Theorem 2.1 and Proposition 2.3},
+\href{https://doi.org/10.1215/00127094-2022-0018}{Xue's tempered Bessel theorem},
+and the conventions of \href{https://arxiv.org/html/2610.29483v1}{Chen, Li and Ren, Theorem 1.1 and Section 2}.
+
+\end{proof}
+
+\begin{construction}
+\begin{tabular}{@{}lll@{}}\toprule
+Entry & Count in the epsilon criterion & Packet sign\\\midrule
+\(\mu_i,\ i<k\) & \(\#\{j:u_j<\mu_i\}=k-i\) & \((-1)^i\)\\
+\(\mu_i,\ i\ge k\) & \(\#\{j:u_j<\mu_i\}=0\) & \(1\)\\
+\(u_j\) at dual position \(k+1-j\) & \(\#\{i:\mu_i>u_j\}=j-1\) & \((-1)^{j-1}\)\\\bottomrule
+\end{tabular}
+\caption{Component signs for even \(k\) under strict interlacing, with the remaining large-group entries below \(u_k\). The compact-dual counts determine each gap between adjacent \(u_j\).}\label{fig:interlacing-sign-counts}
+\end{construction}
+
+\subsection{From a rank-one period to the big-cell norm}
+
+Interlacing identifies the compact type. Its occurrence alone gives no scale for the integral, so we compute the rank-one operator using the previously fixed Haar measures.
+
+Write \(\sigma\) for the unitary discrete series and \(\pi\) for
+the compact representation. The period operator is
+\[
+ B(x,y)=\int_{U(W)\times N}
+ \overline{\psi(u)}\langle y,\sigma(hu)x\rangle\pi(h)^{-1}\,dh\,du.
+\]
+\begin{proposition}[Period factorization and quotient norm]\label{prop:real-period-norm}
+Use Definition~\ref{hyp:real-bessel-measures} and opposite-sign gaps
+large enough that \(h/(8\sqrt{2(r+1)})-1>2rn^2\), as in
+Proposition~\ref{prop:bessel-sign-gap-decay}. Then
+
+\[
+ B(x,y)=L(x)L(y)^*
+\]
+ on the smooth slot, with \(L\) unique up to unit phase when the period is
+nonzero. For a finite sum \(F\) of compact-finite coefficients with
+definite-type operator factors, let \(s\) be the sum of their
+contractions against the two Bessel maps. In the specified Haar
+measures the squared big-cell norm is \(c_{\rm meas}|s|^2/d_\sigma\).
+Here \(d_\sigma\) is the formal degree and \(c_{\rm meas}\) depends
+only on the measures and the cell setting.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Positivity and the scale of the period.}
+
+It is absolutely convergent for smooth \(x\) and compact-finite
+\(y\) in the range of gaps used here. We describe the decay
+argument below. Invariance of Haar gives equivariance in the
+first variable. The form on \(\sigma\otimes\pi^\vee\) obtained
+by pairing the operator against compact vectors is positive.
+Indeed, for a tensor \(v\) of compact-finite vectors, set
+\(\rho=\bar\psi(\sigma\otimes\pi^\vee)\) on \(S\). For right
+F\o lner sets \(A\) in this unimodular amenable group,
+\[
+ |A|^{-1}\left\|\int_A\rho(a)v\,da\right\|^2
+ =\int_S \frac{|A\cap As^{-1}|}{|A|}
+                   \langle v,\rho(s)v\rangle\,ds.
+\]
+The overlap factor tends to one and is bounded by one, so
+absolute integrability permits dominated convergence. The limit
+is the diagonal of the period form and is nonnegative. This
+argument applies to finite sums of compact-finite tensors.
+
+By Bessel uniqueness the form factors through a space of
+equivariant functionals of dimension at most one. For the nonzero form \(\mathcal B\), fix \(v_0\) with
+\(\mathcal B(v_0,v_0)>0\) and put
+\(b(v)=\mathcal B(v,v_0)/\sqrt{\mathcal B(v_0,v_0)}\),
+using the convention linear in \(v\).
+By uniqueness, each functional \(\mathcal B(\cdot,v')\)
+is proportional to \(b\). Evaluating at \(v_0\) and using
+Hermitian symmetry fixes its multiplier:
+\[
+                \mathcal B(v,v')=b(v)\overline{b(v')}.
+\]
+Under the tensor-dual correspondence \(b\) defines the
+map \(L:\sigma\to\pi\). The rank-one tensor on the right
+then gives \(B(x,y)=L(x)L(y)^*\) in the convention of
+the period operator. Another choice of \(v_0\) changes the
+functional by a unit phase.
+
+For the zero form take \(L=0\). The map is
+nonzero in the distinguished packet by
+\href{https://arxiv.org/pdf/1506.01452#page=181}{Beuzart--Plessis, Theorem 7.2.1}.
+The canonical integral there agrees with absolute integration
+in the current range. In its smooth dilation average, undo the
+Haar change of variables and use that the dilation test has
+integral one. This is justified by absolute convergence and the
+bounded range of the dilation variable. Density of compact-finite
+vectors and continuity give the factorization on the smooth slot.
+
+\proofstep{Contraction by Schur orthogonality.}
+
+The remaining scale comes from integrating against an ambient matrix coefficient and hence from the formal degree.
+
+
+Take two compact-finite coefficients
+\[
+ F(g)=\langle x,\sigma(g)y\rangle X,\qquad
+ F'(g)=\langle x',\sigma(g)y'\rangle X'.
+\]
+Let \(P(p)\) pair the two-sided translate of \(F\) with \(F'\)
+on the group. Write
+\[
+ p=(h_L,u_L,h_R,u_R),\qquad s_L=u_Lh_L,\qquad s_R=u_Rh_R.
+\]
+Schur orthogonality gives
+\[
+ P(p)=\frac{\langle y',\sigma(s_R)y\rangle
+                 \langle\sigma(s_L)x,x'\rangle}{d_\sigma}
+      \langle\pi(h_L)X\pi'(h_R)^{-1},X'\rangle_{\rm HS},
+\]
+where the Hilbert--Schmidt pairing is linear in its first slot.
+The two scalar coefficients of the period variables are absolutely
+integrable. Invert the left variables and conjugate the right
+unipotent by its compact variable to use the rank-one periods.
+If \(\xi(p)\) is the product character of the two sides, then
+\[
+ \int \xi(p)P(p)\,dp
+    =d_\sigma^{-1}\langle L(x),XL'(y)\rangle
+                \overline{\langle L(x'),X'L'(y')\rangle}.
+\]
+After the two measure-preserving changes of variables, the
+operator inside the pairing with \(X'\) is
+\[
+       L(x')L(x)^*\,X\,L'(y)L'(y')^* .
+\]
+Pairing this rank-one operator against \(X'\) gives the two scalar
+contractions in the formula. In a sum of such coefficients, write \(s\) for
+the sum of their scalar contractions against \(L,L'\).
+The pairing on the diagonal is \(|s|^2/d_\sigma\).
+
+\proofstep{Regularization at positive frequencies.}
+
+Disintegrate Haar measure on the group into the product of the period measures and the measure \(d\mu_{\rm cell}(q)\) on the open cell, where \(q\) denotes its coordinates. At two positive frequencies,
+regularize the translated group pairing by smooth averages of
+the two positive dilations \(a(t_i)\), with compactly supported
+weights of integral one. The simple coordinates are multiplied
+by \(t_i\). The Haar power \((t_1t_2)^\kappa\) in the averaging
+formula cancels after the substitutions in the period variables.
+
+
+For the Fourier phase at frequency \(\tau_i\) and simple coordinate \(\lambda_i\), use
+\[
+ (1-\partial_{t_i}^2)e^{it_i\tau_i\lambda_i}
+ =(1+\tau_i^2\lambda_i^2)e^{it_i\tau_i\lambda_i}.
+\]
+Integration by parts on the compactly supported weight gives
+a factor \((1+\tau_i^2\lambda_i^2)^{-1}\) on each side. The Xi bound gives
+an integrable majorant after these four derivatives and makes
+the regularized pairing continuous in the positive frequencies.
+When the translated pairing is integrable without the weights,
+Fubini and those substitutions give the ordinary pairing.
+
+\proofstep{The pointwise norm identity.}
+
+The averaged big-cell norm gives the same regularized pairing.
+Expand the square under smooth, compactly supported product tests
+in \((\tau_1,\tau_2)\). For each one-dimensional test \(\varphi\in C_c^\infty\),
+in the Fourier convention with phase \(e^{it\lambda}\),
+\[
+ (1+\lambda^2)|\widehat\varphi(\lambda)|
+ =|\widehat{\varphi-\varphi''}(\lambda)|
+ \le\|\varphi-\varphi''\|_1 .
+\]
+Applying this in each coordinate gives the product of the two decay factors. Disintegrate one
+of the two period integrals using the group Haar formula, and use
+unimodularity to move the quotient representative. The absolute
+coefficient majorant and the two Xi integrals justify the exchanges.
+The tests identify the squared norm and the regularized pairing
+\(I_\tau\) at almost every positive frequency pair. The single period
+converges absolutely at almost every cell point by the same Haar
+formula applied to the norm of a coefficient. Its value there is
+continuous in the frequencies. Approaching \(\tau\) by pairs
+\(\tau_n\) from the equality set gives by Fatou
+\[
+   \|J_\tau F\|_2^2\le\liminf_n\|J_{\tau_n}F\|_2^2=I_\tau .
+\]
+
+For a coefficient with five
+derivatives, changing the dilations changes it continuously in the
+four-derivative seminorm in that bound. Denote the coefficient dilation by \(F\mapsto F_t\)
+and the weighted \(L^2\) period by \(J_\tau F\).
+The covariance and the bound obtained from Fatou give
+\[
+ \|J_{t\tau}F\|_2=(t_1t_2)^{-\kappa/2}\|J_\tau F_t\|_2,
+ \qquad
+ \big|\|J_\tau F_t\|_2-\|J_\tau F\|_2\big|
+        \le \|J_\tau(F_t-F)\|_2 .
+\]
+As \(t\to(1,1)\), the right side tends to zero by the
+four-derivative seminorm bound. Both sides of the
+almost-everywhere squared-norm identity are now continuous in
+the positive frequency quadrant, giving equality at \((1,1)\). For arbitrary fixed
+Haar measures the result is
+\[
+  \int \|JF(g_q)\|_{\rm HS}^2\,d\mu_{\rm cell}(q)
+       = c_{\rm meas}|s|^2/d_\sigma,
+\]
+where \(c_{\rm meas}>0\) depends on the measures and the cell
+setting. It is independent of the representation in that setting.
+This is the scale used in Section~\ref{sec:local-amplitudes}.
+
+\end{proof}
+
+\subsection{Discrete-series translation and decay}
+
+Period factorization uses a gap condition. Translation within the open chamber supplies the necessary decay across the weight range.
+
+Fix the compact Cartan and its ordered Borel. The translation
+input used here is the tensor identity for cohomological
+induction with all shifts in the same open chamber. A Borel
+weight-line filtration then induces in a single good-range degree
+and gives the translated discrete series with their weight
+multiplicities. This is the discrete series case of \href{https://www.mathunion.org/fileadmin/ICM/Proceedings/ICM1978.2/ICM1978.2.ocr.pdf}{Zuckerman's coherent translation, Theorem B}.
+For the exterior standard powers and the dual standard the weights
+have multiplicity one. The shifts here remain ordered with distinct
+infinitesimal characters. The center splits the filtration. The
+signed Hermitian tensor form is orthogonal across these summands by
+Schur's lemma. Nondegeneracy gives a nonzero real multiple of each
+unitary form, which can be normalized to a sign.
+
+\begin{proposition}[Decay in terms of the opposite-sign gap]\label{prop:bessel-sign-gap-decay}
+When all opposite-sign gaps are at least \(h\), the coefficient of vectors \(v,w\) with sufficiently many derivatives satisfies 
+\[
+ |\langle v,\sigma(g)w\rangle|\ll_{v,w,m}\|g\|_{\rm HS}^{-m}\qquad(m\in\mathbb Z,\ 0\le m<h).
+\]
+
+For a fixed \(m\), the seminorms of the two vectors can be taken of
+order \(m(n-1)\). This bound also applies to a fixed derivative of
+the coefficient after differentiating the vectors.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Regular shifts and coefficient estimates.}
+
+Each product of a
+matrix entry of \(g\) and a coefficient is a standard-tensor
+coefficient. A one-coordinate integral shift can reach a compact
+wall, at which its coherent character vanishes by compact Weyl
+antisymmetry. It cannot cross the wall in that step. After \(j\) one-coordinate shifts an original opposite-sign
+gap has decreased by at most \(j\). If its initial size is at least
+\(h\), then throughout the expansion
+\[
+          \text{opposite-sign gap}\ge h-j>0\qquad(0\le j\le m<h).
+\]
+Thus the shifts cannot reach an opposite-sign wall. On the regular
+summands the split Casimir has simple spectrum, by the difference
+of the tensor and factor Casimir eigenvalues. The corresponding
+projections are polynomials in first-order Lie operators of degree
+at most \(n-1\).
+
+The tensor form bounds the squared unitary norm
+of a projected vector by its ordinary tensor Hilbert norm squared.
+Commuting the projection with derived group actions shows that
+this costs at most \(n-1\) derivatives in each seminorm. Induction
+on \(m\), starting with unitarity, bounds a coefficient times any
+monomial of \(m\) matrix entries by the two seminorms of order
+\(m(n-1)\). Choose a matrix entry of maximal modulus. Since
+\(\|g\|_{\rm HS}\le n\max_{a,b}|g_{ab}|\), the monomial
+with \(m\) copies of this entry gives
+\[
+     |\langle v,\sigma(g)w\rangle|\ll_{m,n}
+             \|g\|_{\rm HS}^{-m}\,p_m(v)p_m(w),
+\]
+where \(p_m\) uses derivatives through order \(m(n-1)\). Further fixed derivative orders change the
+coefficient vectors and preserve the exponent. The constants may
+depend on the coefficient and the derivatives.
+
+\proofstep{Integrability on the period subgroup.}
+
+Ambient decay yields convergence on the period subgroup only after integration in its unipotent coordinates.
+
+
+The gap hypotheses give room for the exponent
+\(a=h/(8\sqrt{2(r+1)})-1\), with \(m=\lceil a\rceil\). The
+polynomial growth required for the period follows directly from
+exponential coordinates on \(N\). Its dimension is
+\(r(2k+2r+1)\le 2rn\), and the logarithm of a unipotent matrix is
+polynomial of degree at most \(n-1\) in the entries minus the
+identity.
+
+In exponential coordinates that ball is contained in a ball
+of radius \(O(M^{n-1})\). Hence its Haar volume is
+\[
+     \operatorname{vol}\{n\in N:\|n\|\le M\}
+           \ll M^{(n-1)\dim N}\le M^{2rn^2}\qquad(M\ge1).
+\]
+The compact factor changes only the constant.
+The numerical exponent in the period application exceeds this
+power. The derivative constants suffice for the Fubini and cutoff
+arguments because the output norm has the exact measure factor
+\(c_{\rm meas}\). In the shift family Harish-Chandra's formal-degree
+formula gives \(d_\nu=c_H\operatorname{Vand}(\lambda+\nu)/
+\operatorname{Vand}(\rho_G)\) at fixed Haar. In particular, when
+both periods occur, the normalization \(|s_\nu|=d_\nu\) gives
+squared big-cell norm \(c_{\rm meas}d_\nu\).
+\end{proof}

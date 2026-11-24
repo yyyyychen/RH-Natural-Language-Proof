@@ -1,0 +1,338 @@
+\subsection{The cuspidal projection}\label{sec:count-projection}
+
+A sum of translated matrix coefficients has the desired trace interpretation only after its action on cuspidal forms is identified. Reproduction on the chosen compact type is the local step in this identification.
+
+\begin{auxlemma}[A compactly supported reproducing function]
+\label{lem:compact-type-reproducer}
+Let \(G\) be a real Lie group, \(K\) a compact subgroup, and \(\pi\)
+a strongly continuous unitary representation of \(G\). Suppose the
+irreducible \(K\)-type \(S\) occurs with multiplicity one.
+For any neighborhood of the identity there is a smooth function
+\(\alpha\) supported compactly in that neighborhood with
+\(\pi(\alpha)|_S=I_S\). For \(X\in\mathfrak g\) and \(w\in S\),
+\[
+ d\pi(X)w=\pi(\alpha_X)w,\qquad
+ \alpha_X(g)=\left.\frac{d}{dt}\alpha(\exp(-tX)g)\right|_{t=0}.
+\]
+\end{auxlemma}
+\begin{proof}
+Compactness of \(K\) gives a smaller neighborhood whose
+\(K\)-conjugates all lie in the prescribed one. Average a smooth,
+nonnegative approximate identity supported there over conjugation
+by \(K\), using probability Haar measure on \(K\). Conjugation by
+\(K\) preserves left Haar measure on \(G\), since its modular
+character is trivial on \(K\). The averaged functions \(a_j\) thus
+have integral one and \(\pi(a_j)\) commutes with \(K\). Schur's lemma
+and multiplicity one give
+\[
+ \pi(a_j)|_S=c_j I_S,\qquad
+ |c_j-1|=\|\pi(a_j)w-w\|\longrightarrow0\quad(\|w\|=1,\ w\in S).
+\]
+Choose \(c_j\ne0\) and set \(\alpha=a_j/c_j\). In
+\(\pi(\exp tX)\pi(\alpha)w\), left invariance moves \(\exp(tX)\)
+from the representation to the argument of \(\alpha\).
+Differentiation under this compactly supported integral gives the
+formula.
+\end{proof}
+
+\begin{proposition}[Cuspidal projection at the given level]
+For the finite idempotent of Definition~\ref{hyp:cuspidal-dimension}
+and the rank-one projectors onto the unit lowest vectors at infinity, the resulting global kernel projects
+onto the corresponding cuspidal copies with their isometric
+Petersson realizations. If \(f\) is one of the smooth right-level-invariant vectors used in the kernel, its constant term along any proper parabolic with unipotent radical \(U\) vanishes over the totally real base \(F=E^+\): 
+\[
+ \int_{U(F)\backslash U(\mathbb A_F)} f(ug)\,du=0\qquad\text{for every }g.
+\]
+ The same holds for right translates and differentiated vectors.
+\end{proposition}
+
+\begin{proof}
+\proofstep{The integrable real coefficient.}
+
+First consider a noncompact real group \(G_v=U(p,q)\).
+Write \(D_v(g)=\log\|g\|_{\rm op}\), which is the largest
+polar coordinate. This length is symmetric under inversion and
+subadditive. Proposition~\ref{prop:lowest-type-polar-decay} gives
+\[
+   |\langle w_v,\pi_v(g)w_v\rangle|
+      \le C e^{-cD_v(g)},\qquad c=\frac{h}{8\sqrt{2q}}.
+\]
+The bound follows directly for \(D_v(g)\ge1\) and, after increasing
+\(C\), for \(D_v(g)\le1\). The gap assumption gives \(c>100r^2\)
+at all the places in question. The constants in this paragraph
+serve only to prove convergence and vanishing.
+
+Let \(N_v\) be the unipotent radical of the stabilizer of a nonzero
+isotropic subspace of dimension \(j\). With respect to this
+subspace, a dual isotropic subspace and their common orthogonal
+complement, \(N_v\) is block upper triangular with three blocks
+and identity diagonal. The logarithm truncates after the quadratic term:
+\[
+             (n-I)^3=0,\qquad \log n=(n-I)-\tfrac12(n-I)^2 .
+\] In logarithmic coordinates Haar
+measure is Lebesgue measure by the two-step group law. The
+set \(D_v(n)\le R\) has volume \(O(e^{2r^2R})\), since its
+logarithms have norm \(O(e^{2R})\) in a real space of dimension at
+most \(r^2\).
+
+On the full group, the polar integration Jacobian
+is a product of hyperbolic sines of restricted roots, with
+multiplicities of total size at most \(r^2\). Indeed the compact
+directions transverse to the split diagonal give a factor
+\(\sinh\alpha(H)\) per real root direction. On the ball of radius \(R\), each positive root is at most \(2R\).
+Writing \(G_R,N_R\) for the two balls gives
+\[
+  \operatorname{vol}G_R\ll (1+R)^q e^{2r^2R},\qquad
+  \operatorname{vol}N_R\ll e^{2r^2R}.
+\]
+Hence \(e^{-(c/3)D_v}\) is integrable on both groups, since
+\(c/3>2r^2\).
+
+Suppress \(v\), and take inner products linear in the second
+variable. Let \(\mathcal V\) be the span of the translates of
+\(w\). A coefficient with both vectors in \(\mathcal V\) decays
+at rate \(c\) by subadditivity. We will also use this rate for
+\(\langle v,\pi(g)d\pi(X)w\rangle\), for \(v\in\mathcal V\).
+Apply Lemma~\ref{lem:compact-type-reproducer} to the lowest type.
+For \(v=\pi(a)w\) and \(g'\in\operatorname{supp}\alpha_X\),
+subadditivity gives \(D_v(a^{-1}gg')\ge D_v(g)-D_v(a)-D_v(g')\).
+Consequently
+\[
+ |\langle v,\pi(g)d\pi(X)w\rangle|
+ \le C e^{-cD_v(g)} e^{cD_v(a)}
+          \int_G |\alpha_X(g')|e^{cD_v(g')}\,dg' .
+\]
+Finite linear combinations give the bound on \(\mathcal V\).
+The same estimate on compact sets of translates permits
+differentiation of the averaged coefficient.
+
+Give \(N\backslash G\) its right invariant quotient measure, with
+the Weil integration formula for the chosen Haar measures. For
+\(v\in\mathcal V\) and \(u=w\) or \(u=d\pi(X)w\) set
+\[
+  F_{v,u}(Ng)=\int_N\langle v,\pi(ng)u\rangle\,dn,\qquad
+  I(v,v')=\int_N\langle v,\pi(n)v'\rangle\,dn .
+\]
+Write \(\psi(g)=\langle v,\pi(g)u\rangle\). For the integrals
+below absolute convergence follows by bounding
+\(|\psi(ng)\psi(g)|\) by a constant times
+\(e^{-cD_v(n)/2}e^{-cD_v(g)/2}\), using subadditivity.
+Unfold one of the two averages in the squared norm and apply
+formal-degree orthogonality to the integral on \(G\). This gives
+\[
+   \|F_{v,u}\|_2^2
+   =\int_N\int_G\psi(ng)\overline{\psi(g)}\,dg\,dn
+   =\frac{\|u\|^2}{d} I(v,v).
+\]
+Here inversion on \(N\) leaves Haar measure fixed.
+Taking \(u=w\) proves positivity of \(I\). Polarization gives
+the corresponding mixed norm identity.
+
+Let \(a(t)=\exp(tH)\) act by \(e^t,1,e^{-t}\) on the
+isotropic subspace, the orthogonal middle block and the dual
+subspace, respectively. It is central in the block Levi \(M\).
+Conjugation by \(a(t)\) multiplies Haar volumes on \(N\) by
+\(\delta(t)=e^{\kappa_N t}\), with
+\(|\kappa_N|\le2r^2\) from the weights 1 and 2 on the
+unipotent blocks. The operators
+\[
+   U(t)F(Ng)=\delta(t)^{-1/2}F(Na(t)g)
+\]
+are unitary on the quotient by the Weil integration formula.
+Changing variables \(n'=a(-t)na(t)\) in the defining integral gives
+\[
+  F_{v,w}(Na(t)g)=\delta(t)F_{\pi(a(-t))v,w}(Ng).
+\]
+Thus \(U(t)\) preserves the closed span of the \(F_{v,w}\).
+
+The generator is bounded on that closed span. In fact
+\(G=NMK\), since \(K\) acts transitively on the isotropic
+\(j\)-planes. This transitivity follows by sending the two
+orthonormal projection frames of such a plane into matching
+frames in the positive and negative spaces. At \(g=nmk\)
+the path \(Na(t)g\) equals \(Ng\exp(t\operatorname{Ad}(k^{-1})H)\).
+At \(t=0\) differentiate \(F_{v,w}\) along this path. For an
+orthonormal real Lie algebra basis \((X_i)_i\) in the
+Hilbert--Schmidt metric, the sum of squares of the coefficients
+of \(\operatorname{Ad}(k^{-1})H\) is \(\|H\|_{\rm HS}^2\).
+Write \(\operatorname{Ad}(k^{-1})H=\sum_i b_i(k)X_i\).
+At \(t=0\) the derivative of \(U(t)F_{v,w}\) is
+\[
+ -\tfrac{\kappa_N}{2}F_{v,w}(Ng)
+         +\sum_i b_i(k)F_{v,d\pi(X_i)w}(Ng).
+\]
+Pointwise Cauchy--Schwarz gives
+\[
+ \left|\sum_i b_i(k)F_{v,d\pi(X_i)w}(Ng)\right|^2
+        \le \|H\|_{\rm HS}^2\sum_i |F_{v,d\pi(X_i)w}(Ng)|^2 .
+\]
+
+The norm identity divides each integrated square by
+\(\|F_{v,w}\|_2^2\) with ratio
+\(\|d\pi(X_i)w\|^2/\|w\|^2\) when that denominator is nonzero.
+If it is zero, both squares vanish. The derivative is thus bounded
+by \(C_1\|F_{v,w}\|_2\), with \(C_1\) independent of \(v\).
+The group law and the invariant span give the same bound at other
+\(t\). Integrate in \(t\) to obtain
+\(\|(U(t)-1)F\|_2\le C_1|t|\|F\|_2\) and pass to the closed span.
+Strong continuity and the spectral theorem for this unitary
+group now give a bounded self-adjoint generator. For example,
+if \(\nu_F\) is the spectral measure of \(F\) in that closed span,
+Fatou's lemma gives
+\[
+ \int \lambda^2\,d\nu_F(\lambda)
+ \le\liminf_{t\to0}\frac{\|(U(t)-1)F\|_2^2}{t^2}
+ \le C_1^2\|F\|_2^2.
+\]
+
+On the other hand, \(D_v(na(t))\ge|t|\) by the eigenvalues
+of its triangular blocks, and
+\(D_v(n)\le D_v(na(t))+|t|\). Hence
+\(3D_v(na(t))\ge|t|+D_v(n)\).
+The mixed norm identity gives
+\[
+   |\langle F_{v,w},U(t)F_{v,w}\rangle|
+      \le C_v e^{-(c/3-r^2)|t|}.
+\]
+Indeed the bound for \(I(v,\pi(a(-t))v)\) follows by the
+coefficient estimate on \(\mathcal V\) at \(na(-t)\), with
+the two fixed vectors both equal to \(v\) there. The spectral
+measure of \(F_{v,w}\) for the bounded generator has compact
+support.
+
+For its scalar spectral measure \(\nu\) use
+\(\widehat\nu(t)=\int e^{it\lambda}\,d\nu(\lambda)\).
+The exponential bound of rate \(c/3-r^2>0\) gives the
+holomorphic function
+\[
+ H(z)=\frac1{2\pi}\int_{\mathbb R}
+                e^{-itz}\widehat\nu(t)\,dt
+       \qquad (|\operatorname{Im}z|<c/3-r^2).
+\]
+Fourier inversion on smooth compactly supported tests shows
+that \(H(\lambda)\,d\lambda=d\nu(\lambda)\) on the real line.
+Thus \(H\) vanishes on the intervals outside the compact
+spectral support. The identity theorem makes \(H=0\).
+Hence \(\|F_{v,w}\|_2^2=\nu(\mathbb R)=0\).
+Continuity in \(g\) and \(v=\pi(x^{-1})w\) give
+\[
+     \int_N\langle w,\pi(xny)w\rangle\,dn=0
+               \qquad (x,y\in G).
+\]
+This proves the local constant-term identity for all translates
+of the coefficient being used.
+
+Return to the adelic quotient \(Y=G(E^+)\backslash
+G(\mathbb A_{E^+})\). Use the real test function
+\[
+ \phi(g)=d\,\overline{\langle w,\pi(g)w\rangle},
+ \qquad g\in G_\infty,
+\]
+with
+\(d=\prod_v d_v\) and the tensor vector \(w\) fixed at the
+beginning of the section. The tensor product is irreducible
+and has Schur orthogonality with formal degree \(d\).
+For finite linear combinations \(v,u\) of translates of \(w\)
+write \(k_{v,u}(g)=d\,\overline{\langle v,\pi(g)u\rangle}\).
+The coefficient decay gives \(L^1\) for these functions, and
+orthogonality gives
+\[
+  k_{v,u}*k_{v',u'}=\langle u,v'\rangle k_{v,u'},
+       \qquad k_{v,u}^*=k_{u,v}.
+\]
+Therefore \(R(\phi)\) is an orthogonal projection in the
+archimedean right representation on \(L^2(Y)\).
+
+If \(F\) is
+fixed by it, \(v\mapsto R(k_{v,w})F\) extends with norm
+\(\|F\|\) to an intertwiner from \(\pi\), by these identities
+and the left-translation identity for \(k_{v,w}\). It sends
+\(w\) to \(F\). Conversely any such intertwiner \(T\) is determined by \(T(w)\).
+Since \(\pi(\phi)\) projects onto \(\mathbb C w\),
+\[
+                     R(\phi)T(w)=T(\pi(\phi)w)=T(w).
+\]
+As \(R(e)\) commutes with the archimedean representation,
+the vectors fixed by \(P=R(\phi\otimes e)\) are precisely the
+values at \(w\) of the intertwiners with image in \(R(e)L^2(Y)\).
+
+The integral kernel of \(P\) is the periodization
+\[
+   K(x,y)=\sum_{\gamma\in G(E^+)}
+                     (\phi\otimes e)(x^{-1}\gamma y).
+\]
+To justify this identity on compactly supported test functions,
+the sum is uniformly absolutely convergent on compact sets in
+both variables. The finite support restricts the entries of
+\(\gamma\) to a fixed fractional ideal for \(x,y\) in such
+sets. If the polar lengths at the real places are bounded by
+\(R_v\), the entry sizes are \(O(e^{R_v})\) at those places.
+Packing cells of the fixed entry lattice in the enlarged
+boxes gives \(O(\prod_v e^{2r^2R_v})\) eligible matrices.
+
+Choose integral shell endpoints \(R_v\ge0\) at the
+noncompact places. There the matrix coefficient is at most
+a constant times \(e^{-cR_v}\). Thus on each compact set in
+the two quotient coordinates, the sum is bounded by
+\[
+ C\sum_{(R_v)}\prod_{v\ {\rm noncompact}}e^{-(c-2r^2)R_v},
+\]
+which converges since \(c>2r^2\). At compact
+places the entry boxes are bounded. With convergence established,
+the kernel formula follows by unfolding \(Y\) in the convolution.
+
+For a proper rational maximal parabolic let \(N\) be its
+unipotent radical. The unipotent quotient
+\([N]=N(E^+)\backslash N(\mathbb A_{E^+})\) is compact,
+by a central series with successive additive quotients and
+compactness of the additive adelic quotient. Average \(K(nx,y)\)
+over \([N]\). Group the rational sum by left \(N(E^+)\)-cosets
+and unfold to integrals of
+\((\phi\otimes e)(x^{-1}n^{-1}\gamma y)\) over \(N(\mathbb A_{E^+})\).
+
+Absolute convergence of the sum of their absolute integrals
+follows from the compact-set bound for \(K\) with absolute values.
+Writing \(\gamma\) for a representative of a left
+\(N(E^+)\)-coset, the absolute convergence just proved allows
+the product integral
+\[
+ \int_{N(\mathbb A_{E^+})}(\phi\otimes e)(x^{-1}n^{-1}\gamma y)\,dn
+   =\prod_v\int_{N_v}(\phi\otimes e)_v(x_v^{-1}n_v^{-1}\gamma_v y_v)\,dn_v .
+\]
+The real constant-term factor is zero, so each coset integral
+vanishes. The local groups here are the radicals of the
+stabilizers of the corresponding isotropic subspaces. If there
+is no isotropic subspace over \(E\), there is no proper rational
+parabolic. Vanishing for maximal parabolics implies it for all
+proper parabolics by successive integration of their radicals.
+
+\proofstep{Pointwise vanishing of constant terms.}
+
+Cuspidal descent needs pointwise vanishing for the chosen smooth vectors.
+
+
+This constant-term vanishing extends from convolution of
+compactly supported test functions to the full range of \(P\).
+For a fixed compact set of \(x\)'s in the adelic group,
+averaging \(F(nx)\) over a compact set of representatives of
+\([N]\) defines a bounded map from \(L^2(Y)\) into local
+\(L^2\) in \(x\). Write \(Q,T\) for these two compact sets. Integrate the pointwise
+Cauchy--Schwarz bound over \(T\). With the fixed Haar measures,
+\[
+ \int_T\left|\int_{[N]}F(nx)\,dn\right|^2 dx
+ \ll_Q \int_Q\int_T |F(nx)|^2\,dx\,dn
+ \ll_Q \#\bigl(\Gamma\cap QT(QT)^{-1}\bigr)\,\|F\|_{L^2(Y)}^2 ,
+\]
+where \(\Gamma\) is the rational group.
+
+The last estimate unfolds
+each translate of \(T\) and bounds its overlap by the displayed
+finite cardinality. Thus the vanishing is preserved by \(L^2\)
+limits. The vectors \(F=T(w)\) have smooth representatives at
+the real places by the local compact smoothing used for \(w_v\),
+and are fixed by \(K_g\) at the finite places. For these
+representatives the constant terms vanish everywhere by
+continuity. Right translates, and hence their differentiated
+vectors, retain the constant-term identities used in the
+unipotent descent.
+\end{proof}

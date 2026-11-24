@@ -1,0 +1,563 @@
+\section{Selected ordinary multiplicities in rank three}
+\label{sec:rank-three-multiplicity}
+\hypertarget{source-ordinary-rank-three-multiplicity}{}
+
+Existence of a classical eigensystem sufficed to start the rank-four comparison. In the rank-three trace calculation the coefficient of each contributing eigensystem is its multiplicity in the specified ordinary module. Proposition~\ref{prop:ordinary-three-local-dimensions} computes the three local factors: the ordinary multiplicity above \(\ell\), the multiplicity of the prescribed tame type, and the contribution of the depth-one projector \eqref{eq:depth-one-projector-splitting} at the exceptional place.
+
+Let \(L/F\) be the CM extension in the rank-three ordinary
+setting, unramified at every finite place of \(F\), and let
+\(\ell\) be the coefficient prime. Use the definite unitary group of rank three for \(L/F\), compact at each real place, with the standard maximal compact subgroups at the finite places. Keep the
+chosen split places for the level and their orientations
+fixed. Denote the exceptional place of \(F\) by \(v_0\) and the chosen place of \(L\) above it by \(w\). Splitting and the residue-characteristic hypothesis require
+\[
+ L\otimes_F F_{v_0}\simeq L_w\times L_{\bar w},\qquad L_w\simeq F_{v_0},\quad \operatorname{char} k(v_0)\ne\ell .
+\] Its level is
+principal congruence of depth one. At the other split tame
+places the coefficient type is fixed. The places above
+\(\ell\) in the ordinary charts are split.
+
+Fix an arithmetic weight \(\lambda\), a level and coefficient
+type in this setting, and an eigensystem \(x\) of the
+localized ordinary Hecke module. Assume that its arithmetic
+eigenspace is nonzero and that its specialized determinant
+is the determinant of an absolutely irreducible
+representation. The localized ordinary operators have
+unit eigenvalues. We compare the multiplicity of \(x\)
+with that of another such point at the same algebraic weight
+exponents and level. Taking both multiplicities on the image of the same integral idempotent makes the comparison depend on dimensions at fixed level and weight.
+
+\subsection{The stable count at a fixed weight}
+\label{sec:rank-three-stable-count}
+
+The multiplicity has a global factor determined by the archimedean weight. At a cuspidal base change, the definite group has a unique contributing representation of the prescribed weight that is spherical at the inert places. Its multiplicity can therefore be determined before imposing the ordinary and tame projectors.
+
+\begin{proposition}[The stable count at the fixed algebraic weight]
+\label{prop:ordinary-stable-constituent-count}
+For rank \(1\le n\le4\), let
+\(\lambda^\infty\) be a fixed dominant weight at the
+infinite places. Let \(\pi\) be a regular algebraic
+conjugate self-dual cuspidal representation of
+\(\mathrm{GL}_n(\mathbb A_L)\), with the infinitesimal
+character prescribed by \(\lambda^\infty\), spherical at
+the nonsplit finite places.
+
+At a factorizable finite
+level \(K\) that is standard maximal compact at nonsplit
+places, write \(\sigma_i\), \(i\in I\), for the
+irreducible unitary constituents with the prescribed
+weight in the finite-level spectrum. The index set is
+finite and counts the summands of a direct sum of
+level-fixed spaces. Define \(I_\pi\) by agreement of the
+spherical Satake multisets of \(\sigma_i\) and \(\pi\) at
+all but finitely many split places. Assume the split
+components of \(\pi\) have vectors fixed by the
+prescribed split level. Then
+\[
+                   |I_\pi|=a_0(\lambda^\infty)>0,
+\]
+where \(a_0\) is chosen for \(L,n,\lambda^\infty\)
+before choosing \(\pi\), the places of the level, or
+the coefficient system.
+
+\end{proposition}
+
+\begin{proof}
+\proofstep{Identify the base change from the split Hecke operators.}
+Let \(F=L^+\) and let \(\sigma_i\) be one of the summands in \(I_\pi\). Since the group is definite, its real components belong to the discrete series. It is quasi-split at the finite places in the standard self-dual lattice model: at an inert place the extension is unramified and the standard Hermitian lattice is unimodular. Its stabilizer is hyperspecial. In particular the fixed vectors used at a nonsplit place belong to
+\[
+                   \sigma_{i,v}^{G(\mathcal O_{F_v})}.
+\] The field \(F\) has degree at least two since an imaginary quadratic extension of \(\mathbb Q\) cannot be unramified at every finite prime.
+
+Base change of \(\sigma_i\) gives a sum \(\Pi_i\) of discrete general linear constituents. For a discrete constituent of cuspidal rank \(m\) and segment length \(s\), the twists of its \(s\) summands in the rank-\(n\) Galois normalization are
+\[
+                         (m-n+s-1)/2-a,\qquad 0\le a<s,
+\]
+as in Section~\ref{sec:count-two-level-attachments}. Take their direct sum over all constituents. At all but finitely many places of \(L\) these summands recover the local unramified parameter of \(\Pi_i\). The algebraic regularity of the twists and their polarizations follow from the fixed algebraic infinitesimal character as in that section. \cite[Corollary~5.3]{labesse-cm} \cite[Theorem~2.1.1]{blggt}
+
+Compare with the similarly normalized attachment to \(\pi\). Agreement at the chosen half of a split place gives agreement at its conjugate by conjugate self-duality, with the same rank normalization on both sides. Hence the Frobenius polynomials agree at almost all places \(w\) split over \(F\). At an inert place above \(v\) the norm is \((\mathrm N v)^2\), so the omitted set has Dirichlet density zero:
+\[
+ \sum_{w\ {\rm inert}}(\mathrm Nw)^{-z}\le\sum_v(\mathrm Nv)^{-2z}=O(1)\qquad(z\downarrow1).
+\] Chebotarev density and Brauer--Nesbitt therefore give
+\[
+          r(\Pi_i)^{\rm ss}\simeq r(\pi)^{\rm ss}.
+\]
+Reading the characteristic polynomials at all their common unramified primes now gives equality of the almost-everywhere local parameters of \(\Pi_i\) and \(\pi\). Uniqueness of the general linear cuspidal support, with the segment exponents included, gives \(\Pi_i=\pi\). This is the general linear rigidity used in the proof of Labesse's multiplicity formula. \cite[proof of Theorem~5.4]{labesse-cm} \cite{moeglin-waldspurger}
+
+\proofstep{Recover the constituent from the cuspidal base change.}
+At a split place, base change identifies the component at the marked half with the unitary representation. At an inert place, \(K_v\)-invariance selects the spherical representation. Spherical base change is injective there: in the standard diagonal parametrization the conjugacy class is described by unordered inverse pairs, and, in odd rank, the additional middle entry. The base-change multiset recovers these pairs. At a real place of the compact group the dominant highest weight determines the representation uniquely. Consequently any two indices in \(I_\pi\) satisfy
+\[
+         \sigma_{i,v}\simeq\sigma_{i',v}\ (\text{all }v)
+           \quad\Longrightarrow\quad \sigma_i\simeq\sigma_{i'}.
+\]
+
+It remains to see that this representation occurs, with the required hyperspecial vectors. In the refined cuspidal trace identity in the proof of Labesse's Theorem~5.4, take the hyperspecial unit at every inert place. With the twisted intertwiner normalized to fix the spherical vector, its twisted trace on the projected line is one. At a split place transfer exchanges the two factors. On finite-dimensional images the identity
+\[
+ \operatorname{tr}\big((A\otimes B)\operatorname{swap}\big)=\operatorname{tr}(AB)
+\]
+follows by summing diagonal coefficients in a basis. Thus the matched level units have twisted trace \(\dim\pi_w^{K_v}>0\). At infinity use the discrete-series test of the prescribed weight. Once the general linear eigensystem is isolated, the twisted cuspidal term is nonzero; the discrete unitary sum therefore contains a constituent with these level and weight conditions. For the fields \(L=L^+K_0\) of \eqref{eq:constituent-cm-field}, this existence, including the hyperspecial condition, is also exactly Thorne's descent theorem. \cite[Theorem~5.4 and its proof]{labesse-cm} \cite[Theorem~4.4]{thorne-unitary-descent}
+
+\proofstep{Distinguish multiplicity from the dimension of the fixed space.}
+The unique constituent is cuspidal on the definite group and spherical at the inert places. Compactness at infinity supplies the discrete-series and ellipticity conditions in Labesse's multiplicity-one theorem. Hence its automorphic multiplicity is one. In the finite-level direct sum its contribution is one summand \(\sigma_f^K\), of possibly larger dimension. Thus, for its unique contributing isomorphism class \([\sigma]\),
+\[
+                |I_\pi|=m_{\rm cusp}(\sigma)=1 .
+\] The local dimensions used below are computed inside that summand. \cite[Theorem~5.4]{labesse-cm}
+\end{proof}
+
+\subsection{Which constituents contribute to the ordinary system}
+
+The stable identity counts a packet. The ordinary trace only sees those constituents in the packet that realize the chosen eigensystem with the prescribed local characters.
+
+\begin{lemma}[Constituents with the selected ordinary eigensystem]
+\label{lem:ordinary-contributing-constituents}
+For the nonzero ordinary eigenspace with an absolutely irreducible
+specialization, the contributing constituents are precisely the
+members of \(I_{\pi_x}\) with the prescribed local ordinary character.
+If \(i_*\) indexes one contributing constituent, then
+\[
+ i\in I_{\pi_x}\quad\Longrightarrow\quad
+     \sigma_{i,v}\simeq\sigma_{i_*,v}\qquad(v\text{ split}).
+\]
+These split components give the ordinary line, tame type and
+projected exceptional factor for each such constituent.
+\end{lemma}
+
+\begin{proof}
+\proofstep{Control at a common classical depth.}
+The characteristic-zero specialization at \(\lambda\)
+identifies the integral ordinary fiber with a space of
+classical forms with a prescribed algebraic coefficient
+representation. Let \(\lambda^\infty\) be its weight
+under the coefficient-field isomorphism with
+\(\mathbb C\). The finite-level decomposition at this
+weight may be taken at a common depth that kills the
+tame type on the deeper subgroup and contains the
+specified ordinary invariants. If \(c'_0\) bounds the tame-type level and \(b\) is the classical specialization's level parameter, the depth chosen for this test is
+\[
+ c'_0+b+1 .
+\] Expansion in the
+finite-level direct sum gives the direct sum of
+coefficient subspaces \(Y_i\) on the classical
+space. Here a constituent is first restricted to the
+right level and then paired with the algebraic and
+tame coefficient representations. The resulting
+subspaces are invariant under the Hecke operators,
+the level constraints and the exceptional-place
+operator.
+
+Write \(Z_x\) for the joint generalized eigenspace
+with the prescribed ordinary conditions. The nonzero eigenspace meets at least one summand. Choose \(i_*\) and a vector with
+\[
+ 0\ne v\in Y_{i_*}\cap Z_x .
+\] The characteristic
+polynomials on this summand are those of the
+specialized determinant, by the unramified Hecke
+polynomial identity. Equality on a dense set of
+Frobenius elements gives equality everywhere,
+and Brauer--Nesbitt identifies the semisimple
+representation attached to the summand with the
+given irreducible representation. The rank-three cuspidal transfer therefore attaches
+to \(\sigma_{i_*}\) a regular algebraic conjugate
+self-dual cusp \(\pi_x\) of the prescribed
+infinitesimal character. It is unramified at
+nonsplit places, where the unitary constituent
+has maximal-compact fixed vectors. At each chosen split place \(v\), denote the prescribed group at the common depth by \(K_v\). The decomposition of the constituent at this level gives
+\[
+ (\sigma_{i_*,v})^{K_v}\ne0 .
+\]
+
+If \(Y_i\cap Z_x\ne0\), use the cofinite split
+places outside the level and the ordinary set.
+At each such place the elementary Hecke generators
+act as scalars on the corresponding spherical
+line. For each elementary Hecke generator \(T_{w,j}\) let
+\(a_{w,j}\) be its eigenvalue in the specified system and
+\(b_{w,j}\) the scalar on the constituent. A nonzero
+\(v\in Y_i\cap Z_x\) satisfies
+\[
+ 0=(T_{w,j}-a_{w,j})^N v=(b_{w,j}-a_{w,j})^N v
+\]
+for some \(N\). Thus \(b_{w,j}=a_{w,j}\) for every \(j\).
+The Hecke polynomials agree with the same normalization.
+Since the Hecke polynomial recovers the multiset
+of Satake parameters, this gives \(i\in I_{\pi_x}\).
+
+\proofstep{The converse by the split component comparison.}
+One inclusion identifies the packet of every contributing form. For the converse, comparison at the split places must show that packet members with the prescribed local character really contribute to the localized module.
+
+Conversely the split component comparison shows that membership in the packet identifies the local components, namely
+\[
+ i\in I_{\pi_x}\quad\Longrightarrow\quad \sigma_{i,v}\simeq\sigma_{i_*,v}\qquad(v\text{ split}).
+\] In particular the spherical
+eigenvalues match every tested spherical operator.
+Here the sets of split level primes coincide, \(S'=S\), so no additional level variables occur. Within the classical
+ordinary conditions, the only remaining test is
+the ordinary joint generalized eigenspace of the
+local components at the places above \(\ell\).
+Its rank is at most one for the prescribed
+normalization and is positive for \(i_*\), by the
+ordinary calculation below.
+
+All members of the packet have the same local components at these places. With \(r_i\) denoting the ordinary rank just bounded,
+\[
+ 1\le r_{i_*}\le1,\qquad r_i=r_{i_*}=1\quad(i\in I_{\pi_x}).
+\]
+The factorization of the classical ordinary
+space into local components now identifies
+\(Y_i\cap Z_x\), with the exceptional projector
+inserted, with the tensor product of that
+ordinary line, the tame type space and the
+selected exceptional space. Its dimension is
+therefore independent of \(i\in I_{\pi_x}\).
+
+The same argument with the identity in place
+of the exceptional projector shows that the
+tame type space and the exceptional
+principal-congruence fixed space both have
+positive dimension. Indeed their tensor
+product with the ordinary line at \(i_*\)
+contains a nonzero vector. This supplies the
+nonvanishing hypothesis for projecting the
+exceptional space.
+
+\end{proof}
+
+\subsection{The three local dimensions}
+
+For the surviving constituents, the projected dimension is a product of local dimensions. The calculation separates the ordered ordinary line, the prescribed tame type and the exceptional split place, where the depth-one projector changes the dimension.
+
+\begin{proposition}[The ordinary, tame and depth-one dimensions]
+\label{prop:ordinary-three-local-dimensions}
+For each constituent in Lemma~\ref{lem:ordinary-contributing-constituents}, the ordinary joint
+eigenspaces at the places over \(\ell\) are lines. The fixed tame
+type has dimension \(d_{\mathrm{tame}}>0\) independent of the point
+at fixed tame labels. At the exceptional split place the prescribed
+depth-one projector has rank 
+\[
+ D_0=(q-1)^{n-1}
+\]
+ on the fixed
+vectors, with \(q\) the residue cardinality.
+\end{proposition}
+
+\begin{proof}
+\proofstep{The depth-one projector at the exceptional place.}
+At \(v_0\) write \(K_1\) for principal congruence in
+\(K=\mathrm{GL}_n(\mathcal O)\), where \(\mathcal O\)
+is the local integer ring. Let \(k\) have order \(q\)
+and let \(U\) be the upper unitriangular group. Fix a
+nontrivial additive character \(\bar\psi\) of \(k\).
+The characters
+\[
+  \chi_t(u)=\bar\psi\!\left(\sum_{i=1}^{n-1}t_i u_{i,i+1}\right),
+  \qquad t\in(k^\times)^{n-1},
+\]
+are distinct characters of \(U(k)\). Their projectors
+sum to the convolution idempotent
+\[
+ e=\frac{1}{|U(k)|}\sum_{u\in U(k)}
+    \prod_{i=1}^{n-1}\bigl(q\,\mathbf{1}_{u_{i,i+1}=0}-1\bigr)[u].
+\]
+For a simple entry \(x\in k\), additive orthogonality gives
+\[
+ \sum_{t\in k^\times}\bar\psi(-tx)
+ =\sum_{t\in k}\bar\psi(-tx)-1=q\,\mathbf{1}_{x=0}-1.
+\]
+
+Write \(e_t=|U(k)|^{-1}\sum_u\chi_t(u)^{-1}[u]\).
+Character orthogonality on the finite group gives
+\begin{equation}\label{eq:depth-one-projector-splitting}
+ e_t e_{t'}=\mathbf 1_{t=t'}e_t,\qquad
+ e=\sum_{t\in(k^\times)^{n-1}}e_t,\qquad
+ eW^{K_1}=\bigoplus_t W^{K_1}[\chi_t].
+\end{equation}
+Indeed the sum over the independent \(t_i\) factors into the simple-entry
+sums just evaluated. The denominator \(|U(k)|=q^{n(n-1)/2}\) is
+a unit in the coefficient ring at \(\ell\). The group acts through compact
+lifts on \(K_1\)-fixed vectors. In the ordinary module
+these translations are at a place distinct from the
+spherical and ordinary operators, so \(e\) commutes
+with their actions.
+
+Each contributing component \(W\) at \(v_0\) is a
+local component of a cuspidal transfer. In the Kirillov model the translates of a Whittaker functional \(\Lambda\) by the mirabolic group \(P\) separate vectors. Equivalently,
+\[
+ \bigcap_{g\in P}\ker\bigl(v\mapsto\Lambda(gv)\bigr)=\{0\}.
+\]
+\cite[\S5.2 and Corollary 8.2]{zelevinsky}
+Take the additive character on the local field of
+conductor the maximal ideal and use lifts of the
+\(t_i\) to units. Diagonal conjugation within the
+mirabolic group gives the separating functional
+for this choice of \(\chi_t\).
+
+Starting from \(0\ne w\in W^{K_1}\), choose a
+translate with nonzero Whittaker evaluation. By
+Iwasawa decomposition and equivariance it can be
+written \(D w_1\), where \(D=\operatorname{diag}(d_i)\)
+and \(w_1\in W^{K_1}\). Write \(x_{ij}(a)=1+aE_{ij}\), let \(\mathfrak p\) be the
+maximal ideal and let \(\widetilde t_i\) be the unit lift of \(t_i\).
+
+For \(a\in\mathfrak p\), the simple root group fixes \(w_1\). Thus
+\[
+ \Lambda(Dw_1)
+ =\Lambda(Dx_{i,i+1}(a)w_1)
+ =\psi(\widetilde t_i d_i d_{i+1}^{-1}a)\,\Lambda(Dw_1).
+\]
+The evaluation is nonzero and \(\psi\) has conductor \(\mathfrak p\);
+hence \((d_i/d_{i+1})\mathfrak p\subseteq\mathfrak p\).
+Consequently \(v(d_1)\ge\cdots\ge v(d_n)\). For \(i>j\), this gives
+\[
+ D^{-1}x_{ij}(a)D=x_{ij}(a d_j/d_i)\in K_1
+       \qquad(a\in\mathfrak p).
+\]
+So the lower and diagonal parts of \(K_1\) fix \(Dw_1\);
+the upper part preserves \(\Lambda(Dw_1)\) by its conductor. Gauss decomposition of
+\(K_1\) gives these three factors, since all pivots
+are units. Averaging over \(K_1\) and applying the
+\(\chi_t\)-projector preserve the nonzero evaluation.
+
+To prove uniqueness, let \(w\in W^{K_1}[\chi_t]\)
+have \(\Lambda(w)=0\) and suppose \(w\ne0\).
+Separation by the mirabolic translates gives a translate testing this nonzero vector, even though its original value is zero:
+\[
+ \Lambda(w)=0,\qquad \Lambda(gw)\ne0\quad\text{for some mirabolic }g.
+\] Starting above the last row,
+suppose the rows below row \(i\) are already upper
+unitriangular. For \(j\le i\) and \(a\in\mathcal O\),
+the conjugate of \(1+aE_{j,i+1}\) by \(g\) is upper
+unipotent. Its only possibly nonzero simple entry
+is \(ag_{ij}\) in position \((i,i+1)\), by the
+support of \(ge_j\) and of the \((i+1)\)-st row of
+\(g^{-1}\). Evaluating \(\Lambda(g x_{j,i+1}(a)w)\) in these two ways and dividing by
+\(\Lambda(gw)\ne0\) gives
+\[
+ \psi(\widetilde t_i a g_{ij})
+     =\psi(\widetilde t_i a\delta_{ij})\quad(a\in\mathcal O).
+\]
+
+As \(\widetilde t_i\) is a unit, the conductor condition gives
+\(g_{ij}-\delta_{ij}\in\mathfrak p\).
+Right multiplication by \(1+e_i b^{\mathsf T}\),
+with \(b_j=-g_{ij}/g_{ii}\) for \(j<i\),
+\(b_i=g_{ii}^{-1}-1\) and \(b_j=0\) for \(j>i\),
+is a correction in \(K_1\). It makes row \(i\)
+upper unitriangular and preserves the lower rows
+and the nonzero evaluation. Let \(k_1\in K_1\) be the product of the successive right corrections.
+The final matrix is \(u=gk_1\in U\). Since \(k_1 w=w\), this gives
+\[
+ 0\ne\Lambda(gw)=\Lambda(gk_1w)=\Lambda(uw)
+                   =\psi_U(u)\Lambda(w)=0,
+\]
+where \(\psi_U\) is the chosen Whittaker character on \(U\).
+Thus \(\Lambda\) is injective on each nonzero space
+\(W^{K_1}[\chi_t]\); each has dimension one.
+Summing these dimensions by \eqref{eq:depth-one-projector-splitting} gives
+\[
+                         D_0=(q-1)^{n-1}.
+\]
+
+\proofstep{The fixed tame coefficient type.}
+At a split tame place, the fixed coefficient type
+of Section~\ref{sec:count-two-level-data} gives
+zero monodromy and fixed inertia labels. These are
+the same Teichm\"uller lifts for both points.
+The labels extend to the Weil group, so Frobenius
+preserves every inertia isotypic space. Frobenius
+semisimplification expresses the parameter as a
+sum of Weil characters with exactly those inertia
+labels. The local components of cuspidal transfers
+are generic.
+
+By the segment classification,
+zero monodromy gives singleton segments, and the
+one-dimensional Weil characters give rank-one
+cuspidal factors \cite[Theorem 9.7]{zelevinsky}.
+Thus the local component is the irreducible
+normalized principal series of the resulting
+characters. For \(K_w=\mathrm{GL}_n(\mathcal O_{L_w})\) and upper
+triangular subgroup \(B_w\), Iwasawa decomposition gives
+\[
+ \left.\operatorname{Ind}_{B_w}^{\mathrm{GL}_n(L_w)}
+                      (\textstyle\bigotimes_i\chi_i)\right|_{K_w}
+   \simeq
+ \operatorname{Ind}_{B_w\cap K_w}^{K_w}
+                         (\textstyle\bigotimes_i\chi_i|_{\mathcal O_{L_w}^\times}).
+\]
+The modulus factor is trivial on \(B_w\cap K_w\).
+The unit characters agree by the stipulated inertia
+and local reciprocity. Tensor the compact isomorphisms
+and take invariants with the same fixed tame coefficient
+representation. This gives the common \(d_{\mathrm{tame}}>0\).
+
+\proofstep{The ordered uniformizer values of the ordinary line.}
+At a place over \(\ell\), put \(q_\ell=\ell^f\),
+where \(f\) is the residue degree. For the
+unnormalized translations by
+\(t_j=\operatorname{diag}(\varpi I_j,I_{n-j})\)
+write \(\mu_j\) for the prescribed eigenvalues and
+\(\mu_0=1\). Write
+\(a_i=\prod_\tau \tau(\varpi)^{\lambda_{\tau,n-1-i}}\)
+using the dominant weights with indices from zero.
+Under the isomorphism from the \(\ell\)-adic
+coefficient field to \(\mathbb C\), \(\mu_j\)
+corresponds to \(\prod_{i<j}a_i\) times a unit. Dividing
+successive products gives
+\[
+  \alpha_i=q_\ell^i\mu_{i+1}/\mu_i,\qquad
+  v_\ell(\alpha_i)=if+v_\ell(a_i).
+\]
+Dominance makes \(v_\ell(a_i)\) nondecreasing, so the
+valuations of the \(\alpha_i\) are strictly increasing.
+
+\proofstep{Injectivity of the projection to the Jacquet module.}
+For completeness, write \(U_0=U(\mathcal O)\),
+and act on \(U_0\)-invariants by the sum of the
+translations \(ut_j\) over
+\(U_0/t_jU_0t_j^{-1}\). The product of these operators
+is the translation sum for \(t=t_1\cdots t_n\), by
+using representatives for the successive
+subgroups. If \(\mathcal U_j\) is the translation sum for \(t_j\),
+the product \(\prod_j\mathcal U_j\) is invertible on
+the joint generalized eigenspace because each eigenvalue
+\(\mu_j\) is nonzero. On the other hand any vector of
+zero Jacquet image can be written
+\[
+                      v=\sum_m (u_m-1)w_m .
+\]
+Choose \(r\) with every \(u_m\in t^{-r}U_0t^r\).
+Averaging over this subgroup kills each summand and hence
+kills \(v\). After translation
+by \(t^r\), this says that the corresponding
+translation sum is zero. Consequently the
+Jacquet map is injective on the refined
+generalized eigenspace.
+
+\proofstep{Uniqueness of the selected torus ordering.}
+The exceptional projector and tame type have left the order of the torus characters as the remaining possible multiplicity. The ordinary eigenvalues distinguish that order.
+
+On the normalized Jacquet module the scalar multiplying the torus action of \(t_j\) is
+\[
+ q_\ell^{j(n-j)}\delta_B(t_j)^{1/2}=q_\ell^{j(n-j)/2}.
+\]
+If the Jacquet module of an irreducible
+component is nonzero, it has a character
+quotient. Frobenius reciprocity embeds the
+component into the corresponding principal
+series. Exactness of the Jacquet functor and
+the geometric lemma bound the dimension of
+any refined eigenspace by the number of
+permutations of the inducing characters with
+the prescribed torus eigenvalues
+\cite[\S2.12]{bernstein-zelevinsky}.
+Write each inducing character as
+\(\psi_i=\omega_i|\cdot|^{(n-1)/2}\).
+
+For a permutation \(\sigma\), inserting the modulus into the normalized operator gives the line eigenvalue
+\[
+ q_\ell^{-j(j-1)/2}\prod_{i<j}\omega_{\sigma(i)}(\varpi),\qquad \delta_B(t_j)=q_\ell^{-j(n-j)} .
+\]
+Thus the first \(j\) selected \(\omega\)-values
+at the uniformizer must have product
+\(q_\ell^{j(j-1)/2}\mu_j\). Successive quotients
+give the \(\alpha_i\), which are pairwise
+distinct. There is at most one such
+permutation, even before testing its
+characters on the units. This gives the
+claimed upper bound of one. Positivity on
+the initial contributing constituent
+forces equality there and throughout its
+split component comparison.
+
+\end{proof}
+
+\subsection{The same projected Hecke module at both points}
+
+The local dimensions can now be multiplied with the global packet multiplicity. Comparing two specializations requires the same projector on the same integral Hecke module, since a change of projector could change that product.
+
+\begin{construction}
+\[
+\begin{array}{lr}
+\text{contribution}&\text{factor in }\mu_e(x)\\ \hline
+\text{global multiplicity at the fixed weight}&a_0(\lambda^\infty)\\
+\text{ordered eigenspace above }\ell&1\ \text{at each place}\\
+\text{tame type}&d_{\mathrm{tame}}\\
+\text{exceptional depth-one projector}&D_0=(q-1)^{n-1}
+\end{array}
+\]
+\caption{Factors of the projected multiplicity at an irreducible arithmetic point. At fixed weight and local data each contributes the same factor at both points being compared.}\label{fig:ordinary-multiplicity-factors}
+\end{construction}
+
+\begin{proposition}[Multiplicity at fixed algebraic weight]\label{prop:ordinary-multiplicity-equal}
+For an irreducible arithmetic point \(x\) of the localized
+ordinary support, the selected multiplicity is
+\[
+ \mu_e(x)=a_0(\lambda^\infty)d_{\mathrm{tame}}D_0>0 .
+\]
+The local type, exceptional projector, level and algebraic
+weight exponents determine these factors. In particular the
+multiplicity is the same at any other such point \(y\) with
+those data, even if its finite-order characters differ.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Compatibility of control with the projector.}
+Let \(M\) be the finite free localized ordinary
+module over the weight ring \(\mathcal W\),
+at the level used for the determinant quotient.
+The determinant ring maps onto the Hecke
+image acting on \(M\). The kernel is the
+annihilator of \(M\). Since the projector commutes with both actions, the same splitting is defined over \(\mathcal W\) and over the determinant ring:
+\[
+ M=eM\oplus(1-e)M .
+\]
+
+For an arithmetic point \(x\) whose kernel contains
+the Hecke ideal, specialize \(M\) by the restriction
+of \(x\) to \(\mathcal W\). The arithmetic
+control map is Hecke-equivariant and gives an
+identification with the specified classical
+ordinary space after extension of scalars.
+The classical joint generalized eigenspace
+is \(Z_x\), and it is nonzero for \(x\)
+in the Hecke support. Write \(C\) for the Hecke-equivariant control map. Its compatibility with the integral translation sum gives
+\[
+ C\,(|U(k)|e)=(|U(k)|e)\,C .
+\] Dividing by the unit
+\(|U(k)|\) gives the equality of selected
+multiplicities before and after control.
+The spherical operators and the ordinary
+operators generate the Hecke action. Testing
+their generalized eigenvalues therefore gives
+the specialized local Hecke summand, and
+projecting commutes with this test.
+
+\proofstep{Multiplication of the three local dimensions.}
+The same idempotent now acts at the two specializations. The three local dimensions can therefore be multiplied with the global packet count to compare the two projected multiplicities.
+
+Now each contributing index has projected
+dimension \(d_{\mathrm{tame}}D_0\), which is
+positive in view of its unprojected
+nonvanishing. Proposition~\ref{prop:ordinary-stable-constituent-count}
+now gives
+\[
+             \mu_e(x)=a_0(\lambda^\infty)
+                             d_{\mathrm{tame}}D_0>0.
+\]
+At a second irreducible arithmetic point
+\(y\) in the same Hecke support with the same algebraic
+weight exponents, the stable transfer may change. The
+finite-order characters can change as well. Ordinary
+control uses the homomorphism from the weight ring
+at each point separately, on an open subgroup where
+its finite-order factors are trivial.
+All three factors on the right agree.
+In particular \(\mu_e(x)=\mu_e(y)\) on
+the idempotent range which controls the
+fixed-weight derivations. The comparison
+requires a common algebraic weight, level, tame type
+and exceptional projector. The constant
+\(a_0\) is fixed by the field, rank and
+archimedean weight. The proof allows the
+depth of classical specialization and
+the auxiliary trace tests to vary.
+\end{proof}

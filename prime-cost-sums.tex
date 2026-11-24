@@ -1,0 +1,274 @@
+\subsubsection*{Summation below the prime cutoff}
+\label{subsec:prime-cost-sums}
+\hypertarget{source-prime-cost-sums}{}
+
+The remaining sum below the cutoff contains contributions from both split and inert places as well as boundary terms. Their individual bounds have to be summed with the prime weights before the total can be compared to the allowed numerator. Write \(z=x^\epsilon\), \(b=\exp z\), and
+\(H=b+S_c+\eta_c+t+2\). Let \(k\) be the ambient rank parameter,
+and put \(N(m)=k+m(t+1)\).
+Write \(\delta\) for the density of the selected indices with the larger weights.
+\begin{established}[Size inequalities for the local table]\label{hyp:small-prime-table-ranges}
+The cutoff and the secondary threshold are
+\[
+ \ell_*=\frac{mb}{n t^2(N(m)+t)z^2+k n^2(S_c+t+z)},
+ \qquad A=\frac{kz}{m\delta}.
+\]
+Write \(X'=\exp(x^{\epsilon/3})\), \(b'=xb/X'\), and
+\(\omega=b/(nX')\). Let \(\eta_3=\eta_c+t+2\), let \(w_P\) be
+the upper place-weight size plus \((t+1)/2\), and put
+\(G_P=w_P+S_c+\eta_3\). For the selected ranks and weights, beyond a threshold depending on the fixed parameters,
+\[
+  \ell_*\le b/z,\quad z\le A,\quad r/A\le 2m/z,\quad(3+\log A)^2\le z,\quad H\le2b,\quad z\le b'.
+\]
+\[
+ \begin{gathered}
+ \eta_3\le4\eta_c,\qquad w_P+\eta_3\le9b',\qquad G_P\le10b',\\
+ r b'A\log x\le mb,\qquad r\eta_3\le4m\omega,\qquad
+ C(\eta_3+S_c+z)\le\omega/8 .
+ \end{gathered}
+\]
+\end{established}
+\begin{proof}
+Lemma~\ref{lem:window-parameter-choice} fixes the ranks before the scale and the weights of the retained positions before choosing the place. In this
+calculation \(x^{-\epsilon}\le\delta\le1\), \(r\le2k\),
+\(R\le N(m)+t\), \(m\le k\), and the ranks are at most a fixed
+power of \(x\). In particular \(\ell_*\le b/z\), and
+\[
+ z\le A,\qquad r/A\le 2m/z,\qquad
+ (3+\log A)^2\le z
+\]
+beyond one threshold. The last inequality follows from
+\(A\le k z^2\) and \(z/(\log x)^2\to\infty\).
+The size inputs also give \(H\le2b\).
+
+At the smaller places the two possible centers satisfy
+\[
+ \omega\le 5b'/4,\qquad b_v+\lfloor b'/x\rfloor\le5b'/4+b'/x .
+\]
+Here the bound for \(b_v\) is from Section~\ref{subsec:exceptional-range}. The widths \(S_c,\eta_c,t+2\) are \(o(b')\), and \(t+2\le3\eta_c\). Including these widths and the half shift gives \(w_P+\eta_3\le9b'\) and \(G_P\le10b'\) uniformly.
+
+For the fourth inequality the selected reserve bounds
+\(r(b'+S_c)A\log x\) by \(\delta mb\). The fifth follows from
+the reserve \(N(m)\eta_c\le\delta m\omega\) and \(r\le N(m)\).
+For the last inequality, the sizes of \(\eta_c,S_c,z\) are
+\(O(\omega/\sqrt x)\), with constants fixed before taking \(x\)
+large. For fixed \(\epsilon>0\) this follows also by comparing
+their bounds, \(x^{O(1)}\exp(x^{\epsilon/4})\), with \(\omega\).
+We have \(b'\ge z\) at large \(x\).
+\end{proof}
+
+\begin{proposition}[Summation up to the small-prime cutoff]\label{prop:small-prime-cost-total}
+Under the cutoff and size inequalities of Lemma~\ref{hyp:small-prime-table-ranges},
+let \(c_\ell\) be the sum of the local boundary, split and inert charges in the table at \(\ell\), before multiplication by \(\log\ell\). Then
+\[
+ \sum_{\ell\in P}(\log\ell)c_\ell\ll_C fmbz^2\qquad\bigl(P\subseteq\{\ell:5\le\ell\le\ell_*\}\text{ finite}\bigr).
+\] The threshold
+is uniform in the retained point and the subset of primes.
+\end{proposition}
+
+\begin{proof}
+For a set of integers \(2\le a\le L\), summing over all such
+integers gives
+\[
+ \sum \log a\le L\log L,\qquad
+ \sum \frac{\log a}{a}\le (1+\log L)^2.
+\]
+The second bound uses the harmonic sum and \(\log a\le\log L\).
+Replacing \(a\) by \(a-1\) in the denominator costs at most a
+factor two. These bounds apply to any subset of the indicated primes.
+The boundary cost \(Cfn t^2 R z^2\) consequently contributes at
+most \(C fmbz\), by the first term of the cutoff denominator.
+\proofstep{Split places.}
+The split cost is \((2fm+f)e_P(\ell)\), where
+\(e_P(\ell)=C(1+H/\ell+\log_\ell H)\). The other uses of \(e_P\)
+have coefficient at most \(2Cfm\). After multiplication by
+\(\log\ell\), the three terms in \(e_P\) sum to
+\[
+ O_C\!\left(\ell_*\log\ell_*+
+             H(1+\log\ell_*)^2+\ell_*\log H\right)
+       =O_C(bz^2).
+\]
+
+\proofstep{Inert places below the secondary threshold.}
+For inert \(\ell<A\) of order exceeding \(4L_w\) in the
+host's real cyclotomic quotient, the cost is \(4Cfr\) times
+\[
+ J_\ell=\frac{H}{(\ell-1)^{j_\ell+1}}
+         +(G_P+1)(j_\ell+1)+z,\qquad
+ j_\ell=\max(1,\lceil\log_{\ell-1}A\rceil).
+\]
+For \(\ell\ge5\), \((\ell-1)^{j_\ell}\ge A\) and
+\(j_\ell+1\le3+\log A\). The logarithm-weighted sum of the
+first term, including \(r\), is
+\(O(rH(1+\log A)^2/A)=O(mb)\).
+For the other terms it is
+\(O(rb'A(3+\log A)^2)=O(mbz)\). This uses the reserve for
+\(rb'A\) and \(G_P+1=O(b')\).
+
+The other inert primes have a contribution \(4CfrH/\ell^2\).
+At \(\ell\ge A\) use
+\[
+ \sum_{a\ge A}(\log a)/a^2=O((1+\log A)/A)
+\]
+by integral comparison, and \(r/A\le2m/z\). At \(\ell<A\)
+the order is at most \(4L_w\); here the ordinary tail bound at
+\(A\) gives no control. Put \(R_0=n/z\). The parameters of the auxiliary construction
+give \(3\le R_0\), \(k/m\le R_0^2\), \(n\le o2^e\) and
+\(2oL_w\le z\), where \(e\) is the host's dyadic exponent
+and \(o\) its fixed cyclic order parameter. Thus
+\[
+ 2^e/L_w\ge2R_0.
+\]
+
+The quotient
+\((\mathbb Z/2^{e+2}\mathbb Z)^\times/\{\pm1\}\) has order \(2^e\),
+so every order \(h\) on it is a power of two. By
+Lemma~\ref{lem:short-real-dyadic-order} an integer of order \(h\) is
+\(\pm1\pmod{2^{e+2-v_2(h)}}\).
+
+Consequently \(h\le4L_w\) forces the original integer to
+be \(\pm1\bmod M\), where
+\[
+ M=2^{e+2-\lfloor\log_2(4L_w)\rfloor}
+       \ \ge\ 2^e/L_w\ \ge\ 2R_0 .
+\]
+The same congruence holds if \(a=1\). There is no term at
+\(1\) in the sum of interest. All the other positive integers
+in these two residue classes are \(jM\pm1\) with \(j\ge1\).
+They are between \(jM/2\) and \(2jM\), so
+\[
+ \sum_{\substack{a\ge2\\a\equiv \pm1\bmod M}}
+            \frac{\log a}{a^2}
+   \le \frac8{M^2}\sum_{j\ge1}\frac{\log(2jM)}{j^2}
+   =O\!\left(\frac{1+\log M}{M^2}\right).
+\]
+The function \((1+\log u)/u^2\) is decreasing for \(u\ge1\).
+Multiplication by \(r\le2mR_0^2\) therefore gives
+\(O(m(1+\log R_0))\). This bound accounts for the small
+inert primes using only the dyadic quotient, with no estimate
+for primes in arithmetic progressions.
+
+The remaining inert terms cost \(4Cfr\) times
+\[
+  \frac{w_P+\eta_3}{\ell}+S_c+z+\eta_3 I_\ell .
+\]
+Here \(I_\ell\) is the indicator that some \(s\) between
+\(\omega\) and the upper place-weight size before the
+\((t+1)/2\) shift satisfies
+\[
+ |\ell s-b|\le
+   C\bigl(\ell(\eta_3+S_c+z)+b/\ell+s\bigr).
+\]
+For \(\ell\ge2C\) the right side is at most
+\(\ell s/8+b/2+\ell s/2\), by the selected reserves.
+It follows that \(\omega\le s\le4b/\ell\) in this band.
+Hence \(r\eta_3 I_\ell\le16mb/\ell\).
+
+At the finitely
+many \(\ell<2C\) we use \(r\eta_3\le4m\omega\le4mb\).
+Also \(r(w_P+\eta_3)\le9rb'\le9mb\), and the second
+term of the cutoff denominator gives
+\[
+ \ell_*r(S_c+z)\le2mb.
+\]
+The first and band terms
+are summed using \(\sum (\log\ell)/\ell\), and the
+constant term using \(\sum\log\ell\). Their total
+contribution is \(O_C(fmbz^2)\).
+
+The estimates above apply together to any finite subset of
+the primes \(5\le\ell\le\ell_*\). They give the desired
+\(O_C(fmbz^2)\) bound for the numerical table used in the
+weighted export. The threshold is common to all the retained points with the specified size inputs.
+The sum is therefore available for the actual row once each localization satisfies the corresponding local Galois estimate. \label{cor:prime-cost-sums-1}
+\end{proof}
+
+\subsubsection*{The exceptional range}
+\label{subsec:exceptional-range}
+
+Above \(\ell_*\), only the exceptional jump windows require this additional sum. We count the primes they can contain and bound the total weighted cost uniformly in the window data. Write
+\[
+ \mathcal D=mb/\ell_*,\qquad
+ U=x^{C+2}\exp(x^{\epsilon/4}),\qquad
+ s_+=\lfloor2b/\ell_*\rfloor .
+\]
+The selected parameters give \(U\ge1\),
+\(n,k,t,m,z,\eta_c\le U\), \(f,r\le2U\),
+\(R,N(m)+t\le4U^2\) and \(S_c\le4U\).
+Fixed polynomial rank bounds suffice after taking
+\(C\) large enough. The two summands of \(\mathcal D\)
+are at most \(4U^7\) and \(6U^4\) respectively, hence
+\[
+ \mathcal D\le10U^7.
+\]
+Since \(U^{14}=o(b)\), this
+gives \(\ell_*^2>8b\) beyond a common threshold.
+Also \(\ell_*>A\), since \(A\le k z^2\) grows
+polynomially in \(x\).
+
+The centers \(W\) of the exceptional windows are
+\(b,\omega\), and \(b_v+\lfloor b'/x\rfloor\) for the
+top places \(v\). Their number is at most \(2n+2\),
+using the bound \(2n\) for the number of top places.
+The weight construction gives
+\(\omega\le b_v\le 5b'/4\), so each center lies in
+\([\omega,2b]\) for large \(x\). The window about \(W\)
+contains the integers in
+\[
+[W-\eta_c-2s_+-3,\,
+  W+S_c+2\eta_c+2s_++4].
+\]
+All these integers are positive and less than \(3b\).
+Indeed \(s_+\le2\mathcal D/m\) and
+\(U^7=o(\omega)\) since \(n\) is polynomial,
+\(\omega=b/(nX')\) and \(\log X'=x^{\epsilon/3}\).
+This controls both endpoint displacements.
+
+The exceptional set consists of primes \(\ell>\ell_*\)
+dividing one of these integers. Two distinct such
+divisors would have product greater than
+\(\ell_*^2>8b\), so each integer contributes at most
+one prime. An interval of length \(D\) contains at
+most \(D+1\) integers. Thus the set has size at most
+\[
+ (2n+2)(S_c+3\eta_c+4s_++8)
+ \le(4U)(97U^7)=388U^8.
+\]
+Each prime in the set is less than \(3b\), so
+\(\log\ell\le3U\).
+\label{cor:prime-cost-sums-2}
+
+For these primes the boundary cost is
+\(Cfn t^2 R z^2\le8C U^8\). The envelopes for the
+pointwise row costs are the split cost and the second
+inert cost, since \(\ell>\ell_*>A\). For \(\ell>7\),
+\[
+\begin{split}
+ H/\ell^2 &\le H/\ell \le 2\mathcal D\le20U^7,\\
+ e_P(\ell)&=C(1+H/\ell+\log_\ell H)\le23C U^7.
+\end{split}
+\]
+For the flat part of the inert cost, the numerical
+expression is
+\((w_P+\eta_3)/\ell+S_c+z+\eta_3 I_\ell\),
+where \(I_\ell\in\{0,1\}\) is the band indicator.
+Here \(b'<\ell_*\) at the common threshold, by
+\(\mathcal D x/X'\to0\), and \(w_P+\eta_3\le9b'\).
+Thus the flat part is at most
+\(9+4U+U+4U\le18U^7\).
+
+The split envelope is at most \(138C U^9\).
+The inert envelope is at most
+\(608C U^9+92C^2U^9\), using
+\[
+ 4Cfr(20+18)U^7+2Cfm(23C U^7)
+       \le (608C+92C^2)U^9.
+\]
+Adding the boundary cost and multiplying by
+\(\log\ell\) gives the bound
+\(3000(C+1)^2 U^{10}\) per prime.
+This proves the exceptional contribution to the
+weighted sum from the pointwise row comparisons.
+The complementary large-prime range uses the
+congruence estimate with zero additional length
+outside these windows.
+\label{cor:prime-cost-sums-3}

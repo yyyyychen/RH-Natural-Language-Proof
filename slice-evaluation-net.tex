@@ -1,0 +1,552 @@
+\paragraph{Finite evaluations for the geometric index.}
+\label{par:slice-evaluation-net}
+
+A colength in the product module can be estimated by restricting sections to an evaluation set. The norm used for that restriction is fixed on the same run.
+
+Work on the run at weight \(\kappa\) with coefficient field
+\(K_0\), and write \(V_\kappa\) for its rational cusp space.
+The analytic evaluations below use the uniformization of this
+space on the level of the run. In particular they can be
+restricted to any of the cusp subspaces tested by the index.
+Put \(Z_b=frL\), where \(2f=[E:\Q]\) for the CM field \(E\), \(r\)
+is the rank and \(L=\log b\).
+
+\begin{proposition}[Finite evaluations on the selected run]\label{prop:slice-evaluation-net}
+Fix a run and lift in the form coordinates of
+Definition~\ref{def:common-row-lattices}. Use its rational cusp space
+\(V_\kappa\) of weight \(\kappa\) over \(K_0\), with \(Z_b=fr\log b\)
+and the
+archimedean and level sizes of \eqref{eq:slice-net-run-sizes}.
+For every embedding \(\sigma:K_0\hookrightarrow\C\) there is a nonempty finite set
+\(\mathcal N_\sigma\) of scalar evaluation functionals, linear over \(\sigma\).
+If \(m_\sigma=|\mathcal N_\sigma|\), they satisfy
+\begin{equation}\label{eq:slice-net-size}
+ \frac14\|F\|_{\sup,\sigma}\le
+    \max_{y\in\mathcal N_\sigma}|e_{\sigma,y}(F)|
+      \le\|F\|_{\sup,\sigma},\qquad
+ \log(16m_\sigma)\le1041Z_b^3 .
+\end{equation}
+Complex conjugation identifies the sets of functionals at conjugate embeddings, and the simultaneous evaluation map is injective after extending
+scalars from \(K_0\) to \(\C\) at each embedding.
+
+\end{proposition}
+
+\begin{proof}
+\proofstep{Reduction to a self-dual Hermitian lattice.}
+First use the embeddings sending the marked imaginary
+quadratic root to the chosen root. The components there are
+framed Hermitian domains with the character, principal
+congruence subgroup and scalar weight of the run. In each
+component write \(\Lambda\) for the symplectically self-dual
+period lattice with pairing
+\(\operatorname{Tr}_{E/\Q}(\xi H)\), for \(H\) its Hermitian
+form and \(\bar\xi=-\xi\). Divide \(\Lambda\) by the fixed
+rank-one fractional ideal \(I\) of the principal datum:
+\(L'=I^{-1}\Lambda\). The rank-one trace pairing is perfect,
+in the sense that
+\[
+ \operatorname{Tr}_{E/\Q}(\xi a\bar b x)\in\mathbb Z
+ \quad(a,b\in I)\qquad\Longleftrightarrow\qquad x\in\mathcal O_E.
+\]
+For every \(u\in E^r\), test the trace pairing of \(Iu\) with
+\(I L'=\Lambda\). The rank-one identity gives
+\[
+ \{u:H(u,L')\subseteq\mathcal O_E\}
+   =\{u:\operatorname{Tr}_{E/\Q}(\xi H(Iu,\Lambda))
+                        \subseteq\mathbb Z\}
+   = I^{-1}\Lambda = L'.
+\]
+The second equality uses the self-duality of \(\Lambda\).
+
+Take positive integers
+\(N_A,N_C,m_0\) with \(N_AI\subset\mathcal O_E\),
+\(N_C\in I\), and \(2m_0\xi\in\mathcal O_E\).
+Thus \(N_A\Lambda\subset L'\) and \(N_C L'\subset\Lambda\).
+The principal level \(g\) is the product of the two prescribed levels. Write \(T_v(\mu)=H(\mu,v)v\) in the convention
+linear in \(\mu\). For \(a\in\mathcal O_{E^+}\) the nilpotent
+part of the transvection with parameter \(Ma\),
+\(M=gN_AN_Cm_0\), takes values in \(g\Lambda\) because
+\[
+  N_A H(\Lambda,v)\subseteq\mathcal O_E,\qquad
+  N_C v\in\Lambda,\qquad 2m_0\xi\in\mathcal O_E .
+\]
+Since \(v\) is isotropic, \(T_v^2=0\), so the inverse has the
+negative of the same nilpotent part. The transvection preserves
+\(\Lambda\) and is trivial modulo \(g\). It belongs to the
+principal subgroup and the section character is trivial
+there. The same construction applies with the opposite
+choice of \(\xi\) on a component.
+
+\proofstep{The size conditions on the selected run.}
+Here are the bounds used on the selected run. Write \(d_E\)
+for the absolute discriminant, \(k_0=2|\tau(\xi)|\) on the
+chosen half, \(\lambda_{\tau,h}\) for the frame weight,
+\(S=\sum_{\tau,h}|\lambda_{\tau,h}|\), and choose
+\(W>0\) at least the sum of the spreads
+\(\max_h\lambda_{\tau,h}-\min_h\lambda_{\tau,h}\).
+The bounds on the selected parameters give
+\begin{equation}\label{eq:slice-net-run-sizes}
+ \log N_A\le4L,\quad \log N_C\le2L,\quad
+ \log m_0\le4L,\quad \log g\le19L,\quad 0<k_0\le2 .
+\end{equation}
+Here \(N_C\) is the norm of the ideal used in the rank-one
+datum. Thus \(\log M\le30L\).
+
+At \(\kappa\) we have
+\(f\le r\le n_\kappa\), \(f\ge16\),
+\(\log f\le2L\), \(\log n_\kappa\le L\) and
+\(\log d_E\le4fL\). The differential and central parts of the
+weight give \(W=D_F+fn_\kappa+1\) and
+\(S\le D_F+frn_\kappa/2\), where \(D_F\) is the sum of the
+nonnegative flag degrees. The size inequalities for this weight
+give \(\log(1+D_F)\le2L\). Since \(f\le r\le n_\kappa\le e^L\) and \(1+D_F\le e^{2L}\),
+\[
+ W\le2e^{2L}\le e^{3L},\qquad
+ 1+S\le e^{2L}+\tfrac12 e^{3L}\le e^{3L}
+\]
+in the selected range \(L\ge2\).
+These bounds use the fixed run's prescribed central weight,
+level and field. The two run orientations satisfy them
+separately. \label{cor:slice-evaluation-net-1}
+
+\proofstep{Bounding the section away from short isotropic directions.}
+For a cusp section on one component, write \(P(x)\) for its
+scalar in the frame \(x\), \(n(x)\) for the product of the
+absolute flag-minor ratios to powers
+\(-\lambda_{\tau,h}/2\), and \(U=\sup_x|P(x)|n(x)\).
+This is a finite supremum by the cusp condition. Let \(Q_{x,\tau}\)
+be the positive majorant of \(H_\tau\) obtained by reversing
+the negative part in the orthogonal flag of \(x\). Set
+\[
+ \varepsilon_* = \min\left(1,
+       \frac{\pi}{M(fW+2)k_0\log 2}\right).
+\]
+If \(U>0\), take a frame \(x\) with \(|P(x)|n(x)>U/2\).
+Every nonzero \(v\in L'\) then has
+\(Q_{x,\tau}(v)\ge\varepsilon_*\) at some \(\tau\).
+
+To prove this, assume all the majorants are smaller.
+The signed form is dominated by the positive majorant, so
+\(|\tau H(v,v)|\le Q_{x,\tau}(v)<\varepsilon_*\le1\) for every
+chosen embedding. Because \(H(v,v)\in\mathcal O_{E^+}\),
+\[
+      |\mathrm N_{E^+/\Q}H(v,v)|
+          =\prod_\tau |\tau H(v,v)|<1 .
+\]
+This rational integer is zero. Thus the small vector is isotropic
+and the rank-one transvection applies.
+On the complex transvection through \(x\) in direction \(v\),
+use the same parameter \(s\) at every \(\tau\).
+The condition on the \(\tau\)-flag is
+\(1+k_0Q_{x,\tau}(v)\Im s>0\).
+
+On the line \(\Im s=-t\), the upper bound \(Q_{x,\tau}(v)\le\varepsilon_*\)
+makes the margin explicit:
+\[
+ 1-k_0t Q_{x,\tau}(v)\ \ge\ 1-k_0t\varepsilon_*=\tfrac12,
+ \qquad t=(2k_0\varepsilon_*)^{-1}.
+\]
+This criterion and the norm comparison follow by taking the
+leading minors of the rank-one change of the frame Gram
+matrix. On \(\Im s=-t\), with \(t=1/(2k_0\varepsilon_*)\),
+the ratio of the original metric factor to the new one is
+at most \(2^{W/2}\), by telescoping the minor ratios with
+the weight differences. The whole function \(P(x(s))\) is
+holomorphic for \(\Im s>-2t\), and is \(M\)-periodic there.
+
+\proofstep{The cusp expansion and the maximum principle.}
+To see that it vanishes at the upper end, use the cusp
+expansion in the integral isotropic direction \(N_Cv\).
+The transvection is quadratic in its isotropic direction. Thus its parameter \(s'\) for \(N_Cv\) has to satisfy
+\[
+  N_C^2s'=s,\qquad s'=s/N_C^2.
+\]
+The Fourier frequencies are nonnegative in each real embedding
+by boundedness in the normalized metric: the metric changes
+at most polynomially in the positive imaginary directions,
+so a negative frequency would grow exponentially there.
+The zero frequency vanishes by cuspidality. The expansion
+is absolutely convergent at the original frame. Along the
+positive diagonal, each remaining exponential tends to zero
+and is bounded by one in modulus. This proves the upper-end
+vanishing. Put 
+\[
+  z=e^{2\pi i s/M}
+\]
+ and \(R=e^{2\pi t/M}\). Periodicity gives
+a holomorphic function \(F(z)=P(x(s))\); the upper-end limit gives
+\(F(0)=0\).
+
+Apply the maximum principle to \(F(z)/z\) on \(|z|\le R\):
+\[
+ |F(1)|\le R^{-1}\max_{|z|=R}|F(z)|
+        =e^{-2\pi t/M}\max_{\Im s=-t}|P(x(s))|.
+\] The result is
+\[
+ |P(x)|n(x)\le e^{-2\pi t/M} U\,2^{W/2}.
+\]
+Since \(2\pi t/M\ge(fW+2)\log 2\), the right side is strictly
+less than \(U/2\). Thus the set of frames whose squared first
+minimum for \(\sum_\tau Q_{x,\tau}\) on \(L'\) is at least
+\(\varepsilon_*\) contains a point at which each given nonzero component section nearly attains its supremum. This threshold is independent of
+the section. \label{cor:slice-evaluation-net-2}
+
+\proofstep{A finite grid of reduced frames.}
+We now construct one finite set on this part with larger weights. Use
+\[
+ B=\max\left(1,\frac{(2fr)^4d_E^2}{4\varepsilon_*}\right),
+ \qquad
+ \eta=\frac{1}{1000r^2(1+S)}.
+\]
+The Euclidean metric \(\sum_\tau Q_{x,\tau}\) has real
+dimension \(2fr\). Its dual lattice is obtained by applying
+twice the isometric sign involution of the majorant to the
+trace dual of \(L'\). Multiplication by \(d_E\) sends that
+trace dual into \(L'\), by Hermitian self-duality and the
+different. The Euclidean dual first minimum is therefore
+at least \(2\sqrt{\varepsilon_*}/d_E\). The real transference bound gives
+\[
+ \lambda_{2fr}(L')
+ \le\frac{2fr}{\lambda_1((L')^*)}
+ \le\frac{(2fr)d_E}{2\sqrt{\varepsilon_*}} .
+\]
+
+The vectors attaining the real rank span the \(E\)-space, since
+any proper \(E\)-subspace has smaller real dimension. Select \(r\)
+independent vectors over \(E\); the square of the displayed bound
+is at most \(B\). The larger factor \((2fr)^4\) also suffices in the transference estimate. \cite{banaszczyk}
+In an orthonormal flag their Hermitian Gram entries
+are bounded in absolute value by \(B\) at all embeddings.
+Orthonormalization here is right translation by an upper
+triangular frame change and preserves the normalized value of the section.
+
+There are at most \((1+2B)^{2fr^2}\) such Gram matrices.
+For each entry, Minkowski space packing in the maximum of the
+complex moduli gives \((1+2B)^{2f}\), since distinct integers
+of \(E\) differ by an element with some conjugate of modulus
+at least one.
+Using the entry bound independently at the \(r^2\) matrix positions gives
+\[
+  \big((1+2B)^{2f}\big)^{r^2}=(1+2B)^{2fr^2}.
+\]
+ Fix a Gram matrix \(A\).
+
+To classify the
+short bases modulo the principal congruence group, pair
+\(N_A\Lambda\) with each basis, and read the pairing vectors
+modulo the image of \(gN_AN_CA\) on \(\mathcal O_E^r\).
+The values on \(r\) generators of the corresponding finite
+quotient of \(\Lambda\) suffice. Such generators exist because
+a finite quotient by a nonzero scalar of a projective module
+of rank \(r\) is free of rank \(r\) over the quotient ring.
+With \(C=gN_AN_CA\), the required scalar is \(\det C\). Indeed
+\[
+ (\det C)\,\mathcal O_E^r
+ =C\,\operatorname{adj}(C)\mathcal O_E^r\subseteq C\mathcal O_E^r .
+\]
+If the residues agree, the isometry taking one basis to
+the other sends every \(x\in\Lambda\) to a vector differing
+from \(x\) by an element of \(gN_C\operatorname{span}_{\mathcal O_E}v\).
+Apply the same argument to the inverse to obtain equality of
+lattices. The isometry belongs to the principal subgroup.
+The size of the pairing quotient is
+
+\[
+  |N_{E/\Q}\det(gN_AN_CA)|\le(rgN_AN_CB)^{2fr},
+\]
+by the determinant expansion. The number of basis types per
+Gram matrix is at most its \(r\)-th power.
+
+For each representative basis \(v\), consider all orthonormal
+frames \(x\) in which its columns have squared majorant length
+at most \(B\). At \(\tau\) put \(C_\tau(x)=x_\tau^{-1}v_\tau\).
+Its entries have modulus at most \(\sqrt B\), and its
+determinant has fixed modulus
+\(d_\tau=|\tau(\det A)|^{1/2}\).
+Since \(\prod_\tau d_\tau\ge1\), one can use mesh sizes
+\[
+ \frac{\eta d_\tau}{2r^{r+1}(\sqrt B)^r}
+\]
+on the real and imaginary coordinates at \(\tau\).
+
+On an occupied cell the difference of the two coefficient
+matrices is bounded entrywise by the mesh, up to the factor
+\(\sqrt2\) from its real and imaginary coordinates. The identity
+\[
+ x_\tau^{-1}y_\tau-1
+   =(C_\tau(x)-C_\tau(y))\,
+        \frac{\operatorname{adj}C_\tau(y)}{\det C_\tau(y)}
+\]
+and the bound \((r-1)!(\sqrt B)^{r-1}\) on each cofactor
+give an entrywise error at most \(\eta\). Choose one
+actual frame per occupied cell. Write \(C=6r^2(rB)^r/\eta\). There are \(2r^2\) real coordinates at
+each of the \(f\) embeddings, each with at most \(C/d_\tau\) cells.
+Their product is bounded by
+\[
+ \prod_\tau (C/d_\tau)^{2r^2}
+ = C^{2fr^2}\bigl(\prod_\tau d_\tau\bigr)^{-2r^2}
+ \le C^{2fr^2}.
+\]
+
+\proofstep{Stability of section values on the grid.}
+For an orthonormal frame, an entrywise perturbation of radius
+\(10\eta\) stays in the domain. Indeed the principal
+Gram minors differ from the signed unit minors by perturbations
+of the identity. With entry radius \(u\le10\eta\), the Gram
+perturbation has entries bounded by \(2u+ru^2\le3u\).
+After multiplication by the diagonal signs on each principal
+block its operator norm is at most \(3ru\). The singular
+values lie between \(1-3ru\) and \(1+3ru\), so the log
+of the absolute determinant is bounded by \(9r^2u\). The signed determinant is positive by continuity along the
+segment from the orthonormal frame. If \(D_{\tau,h}\) denotes
+the absolute leading minor and \(D_{\tau,0}=1\), the metric
+has logarithm
+\[
+ \log n=-\tfrac12\sum_{\tau,h}\lambda_{\tau,h}
+             (\log D_{\tau,h}-\log D_{\tau,h-1}).
+\]
+
+Applying the minor estimates to both terms gives
+\(|\log n|\le9r^2uS\le0.09\). In particular \(n>0.91\)
+on the ball, so \(|P|\le U/0.91\) there.
+The Schwarz bound on each complex line through the origin,
+applied to the difference from the value at the orthonormal
+frame, changes the scalar by at most \(0.21U\) at radius
+\(\eta\). Thus a representative of a frame of norm greater
+than \(U/2\) has normalized norm at least
+\(0.91(1/2-0.21)U>U/4\).
+Both isometry and orthonormal flag change preserve the norm
+before this perturbation. A component with an empty set of indices with larger weights can use one arbitrary frame, since then every cusp
+section on it vanishes. \label{cor:slice-evaluation-net-3}
+
+\proofstep{Counting the grid and the components.}
+The resulting number \(N\) on a component satisfies
+\[
+ \log N\le
+   2fr^2\log(3N_AN_Cgr B^2)
+   +2fr^2\log(6r^2/\eta)+2fr^3\log(rB).
+\]
+The run bounds give \[
+ -\log\varepsilon_*\le41L,\qquad \log B\le65fL,
+\] and bound the three logarithms
+on the right by \(223fL,20fL,66fL\), respectively.
+After adding \(\log16\) the estimate is at most \(1000Z_b^3\).
+
+For the number of components, first pass from the period
+lattices to Hermitian self-dual lattices as above. They all
+lie in the same rational Hermitian space. In fact, if the
+determinant lattice in a chosen basis has fractional ideal
+\(J\), self-duality gives 
+\[
+  (\det H)J\bar J=\mathcal O_E.
+\]
+The ratio of two Hermitian determinants is therefore a local
+norm at every inert finite place, where its valuation is even
+and unit norms are surjective.
+At an inert unramified prime, for a uniformizer \(\pi\) fixed by conjugation and a unit \(u\), the determinant norm has
+\[
+  v\big(N(\pi^k u)\big)=2k .
+\]
+ Every element is a norm at a
+split place, and the selected extension \(E/E^+\) is unramified
+at every finite place. Equal signatures give equal determinant
+signs at the real places. Landherr's classification by signature
+and local determinant classes gives the asserted isometry.
+\cite{landherr}\label{cor:slice-evaluation-net-4}
+
+An integral self-dual lattice in this space has a majorant
+with squared first minimum at least \(f\). To see this, choose
+a complete flag in a maximal rational isotropic subspace
+and append its annihilators in reverse order. The annihilator
+grades pair perfectly with the opposite isotropic grades
+on the lattice. Indeed all the intersections defining the
+flag are saturated. A functional on one grade extends to
+the lattice, vanishing on the preceding flag term, and
+self-duality realizes it by a vector in the corresponding
+annihilator.
+For successive saturated isotropic stages \(I\subset J\), self-duality gives the perfect Hermitian pairing between the two grades
+\[
+  (I^\perp/J^\perp)\times(J/I)\longrightarrow{\cal O}_E,\qquad ([x],[y])\longmapsto h(x,y).
+\]
+ In a Witt basis the paired line ideals are
+therefore \(J_i\) and \(\bar J_i^{-1}\).
+
+At each chosen
+embedding give these lines squared metric factors
+\((\mathrm N J_i)^{-1/f}\) and \((\mathrm N J_i)^{1/f}\).
+They are reciprocal, as required for a majorant on a
+hyperbolic pair. Give the anisotropic middle space an
+orthogonal majorant at each embedding. For a nonzero vector \(v\), take its first nonzero
+graded image in the increasing flag. If that image is \(a\)
+in a line ideal \(J\), the product of its squared lengths
+at one embedding from each conjugate pair is
+\[
+ \prod_\tau\frac{|\tau(a)|^2}{(\mathrm N J)^{1/f}}
+      =\frac{|\mathrm N_{E/\Q}a|}{\mathrm N J}\ge1 .
+\]
+This applies to the opposite grade \(\bar J_i^{-1}\) as well,
+since its norm gives the reciprocal metric factor.
+
+If the
+image is in the anisotropic middle grade, its Hermitian
+square is a nonzero element of \(\mathcal O_{E^+}\); the
+product of the absolute values of its conjugates is at
+least one. Each absolute value is at most the squared
+majorant on this grade. In either case the full squared
+majorants dominate these lengths, so
+\(\prod_\tau Q_\tau(v)\ge1\) and AM--GM gives
+\(\sum_\tau Q_\tau(v)\ge f\).
+Transference at this majorant gives bounded bases with the
+above value of \(B\) with \(\varepsilon_*\) replaced by \(f\);
+call it \(B_0\). A Gram matrix \(A\) and the image of the
+lattice under pairing with its basis determine its isometry
+class. In the integral pairing coordinates an image \(M\) satisfies
+\[
+             \operatorname{im} A\subseteq M\subseteq\mathcal O_E^r .
+\]
+The finite-module argument counts \(M/\operatorname{im}A\)
+by at most \(r\) generators.
+
+This generator count gives at most \(((1+2B_0)rB_0)^{2fr^2}\) unmarked lattices. Evaluating the
+level marking on \(r\) generators gives at most
+\((g^\sharp)^{2fr^2}\) markings per lattice. Thus the number of
+components is bounded by
+\[
+          ((1+2B_0)rB_0 g^\sharp)^{2fr^2}.
+\] Here \(g^\sharp\) is the level for the full
+marking and \(\log g^\sharp\le30L\).
+Polarized complex torus uniformization identifies equal
+marked classes. In particular the components number at most
+\(\exp(41Z_b^2)\): use
+\(\log B_0\le (12+8f)L\), \(1+2B_0\le e^L B_0\) and
+\(2(56+16f)\le41fL\) for \(f\ge16, L\ge2\).
+Taking the disjoint union over components gives
+\[
+ \log(16m_\sigma)\le1000Z_b^3+41Z_b^2\le1041Z_b^3.
+\]
+\label{cor:slice-evaluation-net-5}
+
+\proofstep{Compatibility of scalar evaluation at the test frames.}
+At a selected frame \(y\) put
+\(e_{\sigma,y}(F)=l_\kappa n(y)P_F(y)\), where
+\(l_\kappa>0\) is the fixed Lie-frame factor of the
+run and \(P_F\) is the scalar representing \(F\) in these coordinates. The supremum defining
+\(\|F\|_{\sup,\sigma}\) uses this same factor. This proves
+\eqref{eq:slice-net-size}. These are complex frames. The
+field of definition used in the index is \(K_0\) for the
+sections, maps and integral lattices. Each evaluation functional is \(\sigma\)-semilinear on this \(K_0\)-space. The height and
+local chart construction both use this original field.
+
+\proofstep{Injectivity of the evaluation maps.}
+The map to analytic sections is injective after extension to
+\(\C\). Let \(A=K_0[t_1,\ldots,t_n]/I\) be a test
+algebra, where \(I\) is radical, and let \(y\) be a test
+frame over \(A\). For each \(K_0\)-algebra map
+
+\[
+  \phi:A\to\C
+\]
+ over \(\sigma\), base change of the
+section rule and complex uniformization identify
+\(\phi(F(y))\) with the analytic value at the induced complex frame times a scalar independent of \(F\).
+Suppose \(F_1,\ldots,F_h\) are independent over \(K_0\)
+and their analytic realizations satisfy \(\sum_i c_iP_{F_i}=0\).
+For a fixed test frame \(y\), the tensor
+\[
+                    b_y=\sum_i c_i\otimes F_i(y)
+                    \in\C\otimes_{K_0,\sigma} A
+\]
+evaluates to zero under every complex point, since the
+uniformization scalar at that point is independent of \(i\). This
+algebra is reduced because \(K_0\) has characteristic
+zero and is perfect. It is of finite type over \(\C\), so
+the Nullstellensatz says that the intersection of the
+kernels of its complex points is zero. \cite{test-algebra-base-change}
+Let \(V\) be the \(K_0\)-span of the coefficients \(c_i\) in
+\(\C\), using \(\sigma\) for the scalar action.
+
+The inclusion
+\(V\hookrightarrow\C\) remains injective after tensoring with
+\(A\) over the field \(K_0\), so the relation is already zero
+in \(V\otimes_{K_0}A\). For every dual basis element \(\theta\in V^\vee\),
+\[
+          0=(\theta\otimes1)b_y=\sum_i\theta(c_i)F_i(y)
+                                  \qquad\text{for every }y.
+\]
+The section \(\sum_i\theta(c_i)F_i\) is therefore zero,
+and independence forces all its coefficients to vanish. The dual basis separates
+points of \(V\), so all \(c_i\) vanish.
+The net controls the supremum for complex linear combinations of these sections as well, since these sums are still holomorphic
+cusp sections with the same transformation law. Thus simultaneous evaluation on the finite set is injective over \(\C\). At the other
+embeddings use the conjugates of the evaluation functionals on the chosen half.
+The two halves use the same supremum by the convention for
+the marked imaginary root, and conjugation preserves both
+the norm bounds and complex linear independence. \label{cor:slice-evaluation-net-6}
+
+\end{proof}
+
+Define the evaluation norm on the selected weight by
+\[
+ \|F\|_{2,\sigma}^2
+    =\frac1{m_\sigma}\sum_{y\in\mathcal N_\sigma}|e_{\sigma,y}(F)|^2 .
+\]
+Put \(P_d=1041Z_b^3(1+\log|\kappa|)\).
+
+\begin{proposition}[Evaluation norm and restricted rank]\label{prop:slice-evaluation-norm}
+This is a conjugation-compatible Hermitian norm with
+\[
+ \|F\|_{2,\sigma}\le\|F\|_{\sup,\sigma}
+       \le 4\sqrt{m_\sigma}\,\|F\|_{2,\sigma},\qquad
+ \dim_{K_0} V_\kappa\le m_\sigma.
+\]
+When the restricted share \(d_s\) is positive and \(T>s\),
+\(\log d_s\le1041Z_b^3\). On the selected scale
+\(P_d\le4164Z_b^4\).
+\end{proposition}
+
+\begin{proof}
+The absolute value of each evaluation is bounded by the supremum. Conversely, by
+\eqref{eq:slice-net-size}, \(\|F\|_{\sup,\sigma}\) is at most
+four times the largest absolute value on the finite set, which is at most
+\(\sqrt{m_\sigma}\,\|F\|_{2,\sigma}\). The finite evaluation
+map is injective, so the dimension bound follows from the
+number of complex coordinates.
+The run's weight size \(|\kappa|\ge1\) makes this one bound
+for the log of the squared-norm multiplier and for the log
+of the dimension.
+
+When \(d_s>0\) sections are selected by
+restriction to the cut, the share bound is
+\[
+ \binom{T-1}{s}d_s\le R_j\le\dim_{K_0}V_\kappa.
+\]
+The selected range has \(T>s\), so
+\(\log d_s\le1041Z_b^3\) before even using \(P_d\).
+For \(d_s=0\) its determinant height contribution is zero.
+This supplies the count in the height bound for the same
+restricted short sections. It also supplies the metric and
+rank bounds for the boundary determinant on the full cusp
+lattice. With \(1+\log|\kappa|\le4Z_b\) on the selected
+scale, the numerical absorption uses \(P_d\le4164Z_b^4\).
+
+\end{proof}
+
+\paragraph{Use of the evaluation norm in the index.}
+The distinguished-prime construction selects the light,
+short and auxiliary sections and the indicated restricted
+basis using the running scalars. The bounds on the local
+charts and lifts then apply to this family at all finite
+places. Replacing the auxiliary Hermitian norm by the
+finite evaluation norm carries these very sections, points,
+trivializations and branch orders through the comparison.
+For each embedding \(\sigma\) used for evaluation, the cost of using the finite evaluations in place of the supremum is controlled by
+\[
+  \|F\|_{2,\sigma}\le\|F\|_{\sup,\sigma}\le4\sqrt{m_\sigma}\,\|F\|_{2,\sigma}.
+\]
+The degrees of the projective cut and auxiliary section
+still use their specified metrics, and the heights of the
+generators still use the supremum. The finite norm enters the
+boundary determinant by the inequality just proved. This is
+the norm and count input to the four-term remainder below,
+on each orientation of the run separately.
+\label{cor:slice-evaluation-net-7}

@@ -1,0 +1,280 @@
+The detecting value must have a depth bound common to all
+primitive source combinations. We choose this bound from the
+weight data before choosing a detecting polynomial. Lemma~\ref{lem:lift-plane-symbol}
+then lifts the resulting flat symbol to the integral polynomial lattice.
+\paragraph{A depth fixed before the choice of a source.}
+\label{par:plane-uniform}
+\hypertarget{source-plane-return}{}
+Let
+\[
+ L=Nk^2\log_p a.
+\]
+Here \(a\) denotes the lower bound for
+the flat degrees on the tops, as in Section~\ref{par:plane-rank}.
+By the inequality on the selected parameters \(a\ge\max(p,4N,k,2)\), and the full
+degrees are at most \(2a\). There are at most \(N\) true letters
+in the signed model: their positions in the cycle are distinct tops.
+Each quotient degree is at most \(2a\) divided by its low radix.
+These statements hold before the digits, projections or unit
+monomial of the source have been chosen.
+
+\begin{proposition}[An integral lift of the detecting symbol at uniform depth and order]\label{prop:plane-uniform-symbol-return}
+Under the hypotheses on the frames and the parameter sizes, let \(X\) be the normal degree bound in the proof and put
+\[
+ D_X=\lceil49Nk^2\log_p a\rceil,\qquad t_F=\lfloor X\rfloor+Nc_0.
+\]
+ For each primitive polynomial
+in the exact model span there is a detecting flat symbol
+of order at most \(t_F\) at depth \(D_X\), realizable
+at the selected plane with competitor conductor \(c_P\).
+Both \(D_X\) and \(t_F\) are fixed by the weight and size
+data before choosing the primitive polynomial.
+\end{proposition}
+
+\begin{proof}
+\proofstep{The common bounds before choosing a source.}
+In \eqref{eq:plane-slice-depth} take for \(D_{\rm no}\) the sum of
+the integral projector exponents. At a complement cut of total
+degree \(D\), the trace projector bound gives
+\(\binom K2\lfloor\log_p(2D+K-1)\rfloor\), interpreted as zero
+for a scalar action. The estimate also holds in the factorial
+norm by self-adjointness. There are at most \(2N\) such cuts,
+since the segment with \(h+r\) listed tops has \(h+r+1\) cuts.
+Now
+\[
+ 2D+K\le4Na+k\le a^3;
+\]
+hence \(D_{\rm no}\le6L\).
+Counting carries at each true letter bounds the plane and
+complement factorial deficiencies by \(3Nr\log_p a\) and
+\(3NK\log_p a\), respectively. Their halves and the
+projector loss thus give \(D_n\le9L\).
+The full factorial loss \(\kappa_{\rm fl}\) is at most
+\(Nk\log_p(2a)\le 2Nk\log_p a\le20L\).
+
+Similarly \(e_d\le4k^2\log_p a\) and
+\(K_d\le4Nk\log_p a\), since \(2\sum_i d_i+r\le a^3\).
+There are at most \(N\) links and at most \(N\) chain cuts,
+so \[
+ D_b=D_m+D_l+3K_d\le20L.
+\] We may take the integer
+\[
+                         D_X=\lceil49L\rceil\le50L .
+\]
+Choose the absolute constant \(C\) in \(D_p\ge CL\) before
+taking the host sufficiently large. The conductor hypothesis gives
+\[
+ c_P\ge c_\star\ge8(D_p+1)>\max\{2D_X,4D_b\},
+ \qquad D_X\le50L,\quad D_b\le20L .
+\]
+
+For the second reserve in \eqref{eq:plane-gram-reserves}, write
+\(D=z_j-a_{j,1}\) and \(P=p^{z_{j+1}-z_j}\). Intervening letters
+have distinct distances \(m\ge D+L_1+1\) from \(z_j\).
+On a chain cut in segment \(j+1\) the oldest even predecessor
+lies at or after \(a_{j,1}\). These two facts give
+\[
+ b_j\le 2a\sum_{m\ge D+L_1+1}p^{-m}
+     \le 3a p^{-D-L_1-1},
+ \qquad B_u\ge \frac{a}{p^D P}.
+\]
+Set \(x=B_u/(Yk^2)\), so \(s_u=\lfloor x\rfloor\).
+
+At the tested letters \(B_u\ge a/Q\) and the host size bound
+give \(s_u\ge100r^2 c_P\); in particular \(x\le2s_u\).
+The spacing bound \(p^{L_1+1}\ge48rYk^2\) follows from the
+host spacing with \(r\le Y\) and \(N\ge1\). Hence
+\begin{equation}\label{eq:plane-cut-budget}
+ \frac{rb_j}{P}\le \frac{3rB_u}{p^{L_1+1}}
+       \le\frac{x}{16}\le\frac{s_u}{8},\qquad
+ 26r c_P\le\frac{s_u}{4},\qquad 128c_P\le s_u .
+\end{equation}
+The last two inequalities use \(r\ge2\). Adding the first two costs in \eqref{eq:plane-cut-budget} gives
+\[
+ rb_j/P+26r c_P\le3s_u/8
+\]
+on the same cut.
+
+\proofstep{An integral symbol from the model polynomial.}
+\label{par:plane-reassembly}
+Use the integral model polynomial \(Z_*\) given by the Gram
+estimate, and the complement test \(N_0\). Give each monomial
+in the model the segment positions of its letters. A block letter
+has its intervening position, \(L_{jm}\) and \(T_{jm}\) both have
+the outgoing position of that shared row, and \(W_{jm}\) has
+its incoming position in the next segment. Keep segment indices
+on variables even when their positions in the cycle agree. Place
+the complement variables only at the intervening and outgoing
+positions. These renamings commute with the signed action on a
+prefix and its inverse image. This follows on the variables;
+the frame rows are all even and translation by \(n'\) preserves
+parity. Coincidence of the label and tangent positions causes
+no loss for this assertion.
+
+\proofstep{Prefix orders in the model plane.}
+For the renamed plane polynomial the prefix before \(x_u\)
+has order at least
+\[
+                        t_u=T_u-s_u/2-60c_P .
+\]
+For \(u\le h\) the inverse image is the chain cut. The initial lower bound for the order is \(T_u-s_u/8\).
+The two losses in the Gram construction are at most \(3s_u/8\) and
+\(24c_P\), respectively. The resulting order is at least
+\[
+ (T_u-s_u/8)-(3s_u/8+24c_P)=T_u-s_u/2-24c_P\ge t_u .
+\]
+
+For \(u>h\) the inverse
+image consists of the model link and the outgoing label letters
+at earlier rows. These extra letters are vectors. Enlarging the
+torus action to them multiplies the previous transform by a
+commuting substitution with nonnegative powers, so the lower
+bound
+\[
+ T_u-3s_u/8-60c_P
+\]
+suffices. For the prefix through an
+intervening letter the chain cut at \(u+1\) gives \(t_{u+1}\).
+The renamed complement polynomial has upper orders at most
+\(k_u+4c_P\) and
+\[
+ k_{u+1}+4c_P
+\]
+before and through \(x_u\).
+
+These bounds hold on the full polynomials over \(O\). To use them
+segment by segment, take homogeneous components in each
+segment letter on the plane side. The complement letter degrees
+are already fixed. In one component all the permitted coefficients
+in a particular segment, after fixing monomials in the other
+segments, belong to the same integral submodule given by the
+prefix inequalities. In fact taking such coefficients commutes
+with the group of the specified segment. This submodule is
+saturated in the finite free module of the given degrees:
+its inequalities are vanishing conditions on Taylor or Laurent
+coefficients over the fraction field. The quotient is torsion free,
+hence free over the DVR.
+
+For the fixed segment degrees, let \(M_j\) be the full
+polynomial lattice and \(S_j\subset M_j\) the saturated
+submodule cut out by its prefix bounds. Choose an integral
+retraction
+\[
+ r_j:M_j\longrightarrow S_j,\qquad r_j|_{S_j}=\mathrm{id}_{S_j},
+\]
+possible since the quotient
+is free. Fixing all monomials outside \(j\) lands in \(S_j\),
+so the endomorphism \(r_j\) in factor \(j\) fixes the component
+\(A\). These endomorphisms commute and hence
+\[
+                   A=(\bigotimes_j r_j)A
+                           \in\bigotimes_j S_j.
+\]
+Applying the same map to a monomial expansion produces
+a finite integral sum of products of permitted factors.
+The identical argument on the complement introduces no
+denominators there either.
+
+\proofstep{Extracting factors with the true degrees.}
+Write \(A_j,G_j\) for the factors of a resulting pair. Both have
+the designated letter degrees. For an even intervening \(x_u\) take \(M=k_{u+1}+4c_P\),
+the upper order of \(G_j\) through the letter. The plane
+order before it is at least \(t_u\), and
+\[
+ t_u-M\ \ge\ m_*+s_u/2-64c_P\ \ge\ m_* .
+\]
+
+For an odd intervening \(x_u\) take \(M=k_u+4c_P\)
+before the letter. The plane order through it is at least
+\(t_{u+1}\) and
+\(t_{u+1}-M\ge m_*+s_{u+1}/2-64c_P\ge m_*\).
+The lower bounds follow from the respective inequalities
+for \(T_u,T_{u+1}\).
+The absolute lower bound before each letter is
+\(B_u/2-s_u\), since \(T_u\ge B_u/2\).
+These are exactly the two parity comparisons and absolute
+bound used in the determinant extraction.
+
+For clarity, consider the degree conditions in that extraction.
+At an intervening position \(y\), let \(d_{\rm low}(y)\) be the
+outer digit degree and \(d_A(y),d_G(y)\) the degrees of these two
+factors. The class equation gives
+\[
+  d_{\rm low}(y)+p^{z_j-y}\bigl(d_A(y)+d_G(y)\bigr)\le\deg(y).
+\]
+Thus the separate order contributions can be paid out of their sum. At an incoming position
+the only letter is \(W_{j-1,m}\), of degree \(b\), and the
+complementary degree is zero.
+
+Let \(R_{\rm low}\) be the original low radix and \(R_{\rm seg}\) the incoming segment radix at this letter. Substitution first multiplies the exponent by \(P_{j-1,m}\); passing to true degree then gives
+\[
+ b\ \longmapsto\ P_{j-1,m}b
+      \ \longmapsto\ R_{\rm low}P_{j-1,m}b=R_{\rm seg}b .
+\]
+This is the contribution from the incoming letter alone. Other terms at the shared letter have nonnegative degree, so if \(d_{\rm coll}\) is its total collapsed plane degree and \(d_{\rm true}\) its true degree, then
+\[
+ R_{\rm seg}b\le R_{\rm low}d_{\rm coll}\le d_{\rm true}.
+\] This argument applies
+to every model monomial used, each of which has the prescribed
+collapsed degrees. After collecting terms and projecting to a
+segment multidegree the same upper bound holds. In particular
+the upper allowance
+\[
+ 1.01\deg(y)/p^{z_j-y}
+\]
+holds in both
+places. The extraction proof in Section~\ref{sec:plane-lifts}
+only uses this upper inequality when estimating the earlier rows.
+It therefore applies also to components which have lost much of
+their degree in the incoming frame. This is the one-sided form
+of the realization lemma.
+
+\proofstep{Recovering the original low coordinates.}
+Multiply each product of segment factors by the original low
+label after applying the segment power substitutions. The sum
+is \(\operatorname{Asm}_\rho(\phi Z_*,N_0)\): the extra power
+on an incoming row is exactly \(P_{j-1,m}\) and the label has
+zero support off the tops. Within each fixed component the
+result has the required full degrees.
+
+In each true letter the substitutions multiply a segment degree by its radix. Summing over the contributing parts \(b\) therefore gives 
+\[
+ d_{\rm collapsed}=\sum_b P_b d_b,
+\]
+ where \(P_b,d_b\) are the radix and degree of the intervening, incoming or outgoing part. Restoring the label then gives the original degree
+by the class equation. Its normal degree is also constant: at
+an even top add its normal low digits to the low radix times the
+complement quotient degree; at an odd top use its plane digits
+and plane quotient degree. Sum these numbers over the tops.
+If \(S\) is the component of order \(o\), the one-sided realization gives an integral \(P\) with
+\[
+ P|_{\rm chosen}\equiv w^o S\pmod{w^{o+c_P}},\qquad P|_{\rm competitor}\equiv0\pmod{w^{o+c_P}}
+\]
+at every competing plane. This proves the symbol membership and its realization on the stated one-sided range.
+
+\proofstep{Keeping one order for all tested generators.}
+Finally fix an order before choosing \(H\). The counted generators
+have normal degree bounded by
+\[
+ X=N(\mathcal L a/(pk)+10a p^{-L_1}+kQ)
+\]
+by
+Section~\ref{par:plane-rank}. The common factor has normal degree zero. For a counted generator \(A\) and a product of \(j\le Nc_0\) row operators \(D_1,\ldots,D_j\), the per-operator increment bound gives
+\[
+ \deg_{\rm normal}(D_1\cdots D_j A)
+     \le \lfloor X\rfloor+j\le t_F,\qquad t_F=\lfloor X\rfloor+Nc_0,
+\]
+whenever the result is nonzero. Taking the span preserves this upper bound. The Fock form pairs only equal exponent tuples.
+
+If \(A=\sum_{o\le t_F}A_o\) is a tested input and
+\(Z=\sum_o Z_o\) is the assembled symbol, then the diagonal
+Fock pairing gives
+\[
+                  [A,Z]=\sum_{o\le t_F}[A_o,Z_o] .
+\]
+The discarded terms have disjoint exponent support from \(A\).
+After this deletion the ultrametric inequality selects a
+summand with pairing valuation no greater than that of the sum. We have proved the flat symbol estimate
+at the same \(D_X,t_F,c_P\) for every primitive polynomial in
+the exact model span. \label{cor:plane-return-1}
+\end{proof}

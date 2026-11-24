@@ -1,0 +1,907 @@
+\subsection{Lean declarations by source file}
+\label{sec:additional-concordance}
+
+To look up a construction by file, read across from its mathematical discussion to the
+declarations at the fixed revision.
+Within each group the files are in alphabetical order. \cite{release}
+
+\subsubsection{Family, rank and prime selection}
+When matching the rank selection in Lemma~\ref{lem:rank-window}, keep the strict upper
+endpoint of the twist range in view:
+\[
+ 1\le j<t,\qquad t\le\lfloor x^{400}\rfloor.
+\]
+{\small
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{.37\linewidth}@{\hspace{.025\linewidth}}>{\raggedright\arraybackslash}p{.605\linewidth}@{}}
+\toprule
+Mathematical source & Lean declarations \\ \midrule
+\endfirsthead
+\toprule
+Mathematical source & Lean declarations (continued) \\ \midrule
+\endhead
+\bottomrule
+\endlastfoot
+\hyperlink{source-automorphic-realization}{automorphic-realization.tex} & \code{Fine} \\[2pt]
+\hyperlink{source-auxiliary-coordinates}{auxiliary-coordinates.tex} & \code{del\allowbreak{}Of}, \code{delUTie\_\allowbreak{}of\_\allowbreak{}exists},
+\code{is\_\allowbreak{}univ\_\allowbreak{}char\_\allowbreak{}local} \\[2pt]
+\hyperlink{source-family-window}{family-window.tex} & \code{top\allowbreak{}Des\allowbreak{}Win}, \code{vwin\_\allowbreak{}of\_\allowbreak{}row} \\[2pt]
+\hyperlink{source-level-primes}{level-primes.tex} & \code{Norm\allowbreak{}One}, \code{Short\allowbreak{}Norm}, \code{type\allowbreak{}PrimesN}, \code{Upper\allowbreak{}Theory.T3.level\allowbreak{}Data} \\[2pt]
+\hyperlink{source-lift-exponent-models}{lift-exponent-models.tex} & \code{coefL}, \code{l\allowbreak{}Incl\_\allowbreak{}sum\allowbreak{}Exp}, \code{Frame\allowbreak{}Statement},
+\code{maximal\allowbreak{}Ideals\_\allowbreak{}meeting\_\allowbreak{}subspace\_\allowbreak{}cover},
+\code{Jrec7} \\[2pt]
+\hyperlink{source-lift-exponent-primes}{lift-exponent-primes.tex} & \code{cut\_\allowbreak{}incl}, \code{Ex\allowbreak{}Cut} \\[2pt]
+\hyperlink{source-lift-pieri-cost}{lift-pieri-cost.tex} & \code{expL\_\allowbreak{}real} \\[2pt]
+\hyperlink{source-lift-weight-exchange}{lift-weight-exchange.tex} & \code{weight\_\allowbreak{}lattice\_\allowbreak{}of\_\allowbreak{}norm} \\[2pt]
+\hyperlink{source-prime-cost-sums}{prime-cost-sums.tex} & \code{Mem\allowbreak{}Primes\allowbreak{}Over\allowbreak{}Of\allowbreak{}Mem}, \code{NEqRZero\allowbreak{}MulXPow}, \code{Export\allowbreak{}Bound\allowbreak{}Of\allowbreak{}Admissible} \\[2pt]
+\hyperlink{source-prime-selection}{prime-selection.tex} & \code{mean\allowbreak{}SqK}, \code{QH.stage}, \code{pair\allowbreak{}Ex} \\[2pt]
+\hyperlink{source-row-metric}{row-metric.tex} & \code{Frame\allowbreak{}Pf}, \code{ModelFPf}, \code{Univ\allowbreak{}Link\allowbreak{}Pf} \\[2pt]
+\hyperlink{source-row-mixed}{row-mixed.tex} & \code{Mix\allowbreak{}Local} \\[2pt]
+\end{longtable}}
+
+\subsubsection{Integral lattices, twists and local lengths}
+To compare lengths across coefficient extensions, the entries in this group use the
+normalization of Lemma~\ref{lem:retained-dvr-normalized-length} on a coefficient DVR
+\(O\):
+\[
+ e_O=\operatorname{ord}_O(\ell),\qquad \ell_O^{\rm norm}(M)=\operatorname{length}_O(M)/e_O \quad(M\text{ of finite length}).
+\]
+{\small
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{.37\linewidth}@{\hspace{.025\linewidth}}>{\raggedright\arraybackslash}p{.605\linewidth}@{}}
+\toprule
+Mathematical source & Lean declarations \\ \midrule
+\endfirsthead
+\toprule
+Mathematical source & Lean declarations (continued) \\ \midrule
+\endhead
+\bottomrule
+\endlastfoot
+\hyperlink{source-congruence-determinant}{congruence-determinant.tex} & \code{Normalized\allowbreak{}Ring\allowbreak{}Data}, \code{Distinct\allowbreak{}Eigenvalue\allowbreak{}Corner\allowbreak{}Perturbation},
+\code{Cup\allowbreak{}Kill\allowbreak{}Adm}, \code{Global\allowbreak{}Concrete\allowbreak{}Of}, \code{Global\allowbreak{}Module\allowbreak{}Of},
+\code{Lift\allowbreak{}Exponent\allowbreak{}Column}, \code{Col\allowbreak{}Lx},
+\code{Character\allowbreak{}Column\allowbreak{}Kernels\allowbreak{}Of\allowbreak{}Block\allowbreak{}ChiCOf\allowbreak{}Block\allowbreak{}Chi\allowbreak{}One} \\[2pt]
+\hyperlink{source-division-length}{division-length.tex} & \code{linkN\_\allowbreak{}of\_\allowbreak{}gd}, \code{vv\allowbreak{}Record},
+\code{divinN\_\allowbreak{}of\_\allowbreak{}hypV}, \code{jw\_\allowbreak{}le}, \code{Jrec7},
+\code{jexpU\_\allowbreak{}le\_\allowbreak{}jrec7},
+\code{sum\_\allowbreak{}exponent\_\allowbreak{}log\_\allowbreak{}le} \\[2pt]
+\hyperlink{source-inert-long-orbit}{inert-long-orbit.tex} & \code{h\allowbreak{}Cor}, \code{jointB\_\allowbreak{}of\_\allowbreak{}large},
+\code{final\allowbreak{}Arc\_\allowbreak{}holds}, \code{second\_\allowbreak{}rule\_\allowbreak{}first\_\allowbreak{}form}, \code{thmE\_\allowbreak{}of}, \code{RowBLong.main} \\[2pt]
+\hyperlink{source-inert-row-table}{inert-row-table.tex} & \code{arc\_\allowbreak{}setup\_\allowbreak{}theorem}, \code{sum\allowbreak{}AltW},
+\code{arc\_\allowbreak{}length\_\allowbreak{}bound\_\allowbreak{}theorem},
+\code{exists\_\allowbreak{}liftF\_\allowbreak{}le\_\allowbreak{}sg\_\allowbreak{}of\_\allowbreak{}thick},
+\code{RowNT.main}, \code{rowL\_\allowbreak{}of\_\allowbreak{}all\allowbreak{}Thick},
+\code{length\allowbreak{}Bound\allowbreak{}At\allowbreak{}Places\_\allowbreak{}of\_\allowbreak{}joint\allowbreak{}Cond} \\[2pt]
+\hyperlink{source-inert-thick-word}{inert-thick-word.tex} & \code{H2Bound}, \code{kernel\_\allowbreak{}rank\_\allowbreak{}bound},
+\code{content\allowbreak{}Bound\allowbreak{}Level\_\allowbreak{}of}, \code{Lemma\allowbreak{}Gs}, \code{LemmaDN},
+\code{LemmaDN0}, \code{pass3}, \code{pass4},
+\code{frobenius\_\allowbreak{}sq\_\allowbreak{}bound\_\allowbreak{}of\_\allowbreak{}local},
+\code{lattice\_\allowbreak{}bound\_\allowbreak{}three\_\allowbreak{}six\_\allowbreak{}of},
+\code{lattice\_\allowbreak{}bounds\_\allowbreak{}of\_\allowbreak{}local},
+\code{openC\_\allowbreak{}of\_\allowbreak{}steps} \\[2pt]
+\hyperlink{source-large-prime-length}{large-prime-length.tex} & \code{table\allowbreak{}Line\allowbreak{}Degree\allowbreak{}Two.Top\allowbreak{}Core} \\[2pt]
+\hyperlink{source-numerator-sums}{numerator-sums.tex} & \code{Nu\allowbreak{}Le}, \code{NuQDUnit}, \code{Nu\allowbreak{}Host}, \code{Mem\allowbreak{}Primes\allowbreak{}Over\allowbreak{}Of\allowbreak{}Mem},
+\code{Export\allowbreak{}Bound\allowbreak{}Of\allowbreak{}Admissible} \\[2pt]
+\hyperlink{source-ramified-cyclotomic}{ramified-cyclotomic.tex} & \code{HypW}, \code{loc\allowbreak{}All} \\[2pt]
+\hyperlink{source-retained-galois}{retained-galois.tex} & \code{Cyclotomic\allowbreak{}Norms.prime\allowbreak{}To\allowbreak{}Part}, \code{Exists\allowbreak{}Finite\allowbreak{}Chosen\allowbreak{}Set}, \code{EvOTaken\allowbreak{}All},
+\code{Is\allowbreak{}Good} \\[2pt]
+\hyperlink{source-retained-twist}{retained-twist.tex} & \code{Galois\allowbreak{}Side\allowbreak{}Twisted\allowbreak{}Selmer\allowbreak{}Auxiliary\allowbreak{}Primes}, \code{PropE}, \code{PropABCD},
+\code{Steps}, \code{DelUTie}, \code{twisted\allowbreak{}Rho\_\allowbreak{}conj\_\allowbreak{}lat\allowbreak{}Tpsi},
+\code{s\allowbreak{}Pi\allowbreak{}Top\_\allowbreak{}eq\_\allowbreak{}sTLoc},
+\code{sT\_\allowbreak{}le\_\allowbreak{}s\allowbreak{}Len},
+\code{twist\_\allowbreak{}kills\_\allowbreak{}selmer},
+\code{thmS\_\allowbreak{}of\_\allowbreak{}selmer\_\allowbreak{}functor} \\[2pt]
+\hyperlink{source-selected-cut}{selected-cut.tex} & \code{Nc}, \code{central\allowbreak{}Idem\allowbreak{}Coeff}, \code{exists\_\allowbreak{}good\_\allowbreak{}alt},
+\code{Eigen\allowbreak{}Action\allowbreak{}At\allowbreak{}Good\allowbreak{}Point}, \code{Card\allowbreak{}Roots\allowbreak{}Bar},
+\code{map\_\allowbreak{}Mj\allowbreak{}Sig\_\allowbreak{}eq},
+\code{good\allowbreak{}Part\_\allowbreak{}of\_\allowbreak{}lifts} \\[2pt]
+\hyperlink{source-small-prime-lengths}{small-prime-lengths.tex} & \code{loc\allowbreak{}All}, \code{LiftK}, \code{TBK}, \code{LiftKOf},
+\code{Invariants\allowbreak{}Killed\allowbreak{}Over\allowbreak{}Cyclotomic}, \code{Jump\allowbreak{}And\allowbreak{}Length\allowbreak{}Of\allowbreak{}Admitted}, \code{Loc\allowbreak{}Num},
+\code{Len\allowbreak{}Unit\allowbreak{}Invariants\allowbreak{}Le}, \code{Num\allowbreak{}Split}, \code{Num\allowbreak{}Cost}, \code{NRow\allowbreak{}Two},
+\code{NRow\allowbreak{}Three} \\[2pt]
+\hyperlink{source-special-prime-lengths}{special-prime-lengths.tex} & \code{HostJ} \\[2pt]
+\hyperlink{source-split-selmer}{split-selmer.tex} & \code{Norm.rN}, \code{design\_\allowbreak{}normalized},
+\code{Admissible\allowbreak{}At\allowbreak{}Good\allowbreak{}Points\allowbreak{}Of\allowbreak{}Coef\allowbreak{}Ring\allowbreak{}Taken\allowbreak{}At\allowbreak{}Live}, \code{row\allowbreak{}Mat\_\allowbreak{}at},
+\code{row\allowbreak{}Tie\_\allowbreak{}disp}, \code{clause4GK}, \code{clause5Row},
+\code{yt\allowbreak{}Target\_\allowbreak{}of}, \code{TBK}, \code{TbKOf},
+\code{trivial\_\allowbreak{}bound\_\allowbreak{}target\_\allowbreak{}of\_\allowbreak{}psi},
+\code{locQ}, \code{locS\_\allowbreak{}g}, \code{locS\_\allowbreak{}pde} \\[2pt]
+\hyperlink{source-theta-cover-integrality}{theta-cover-integrality.tex} & \code{has\allowbreak{}Sum\_\allowbreak{}evR\_\allowbreak{}arc}, \code{ser\allowbreak{}Int\allowbreak{}At\_\allowbreak{}record},
+\code{series\_\allowbreak{}bound}, \code{int\allowbreak{}Form\_\allowbreak{}descent\_\allowbreak{}below} \\[2pt]
+\hyperlink{source-toric-twist}{toric-twist.tex} & \code{Jet\allowbreak{}Lift\allowbreak{}Main.exists\_\allowbreak{}jet\allowbreak{}Lift} \\[2pt]
+\hyperlink{source-twist-euler}{twist-euler.tex} & \code{adm9}, \code{adm10}, \code{adm8}, \code{T3} \\[2pt]
+\hyperlink{source-unramified-split-length}{unramified-split-length.tex} & \code{lift\_\allowbreak{}wach} \\[2pt]
+\end{longtable}}
+
+\subsubsection{Projections, periods and jets}
+To follow a local period into the integral dual, use the shift in
+Proposition~\ref{prop:finite-period-shift},
+\[
+ \tau_w=\lfloor\sigma_w\rfloor,\quad I=\prod_w\mathfrak p_w^{-\tau_w},\quad B(IN)\subseteq R^\vee.
+\]
+{\small
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{.37\linewidth}@{\hspace{.025\linewidth}}>{\raggedright\arraybackslash}p{.605\linewidth}@{}}
+\toprule
+Mathematical source & Lean declarations \\ \midrule
+\endfirsthead
+\toprule
+Mathematical source & Lean declarations (continued) \\ \midrule
+\endhead
+\bottomrule
+\endlastfoot
+\hyperlink{source-baseline-jets}{baseline-jets.tex} & \code{jets\_\allowbreak{}two\_\allowbreak{}of}, \code{term\_\allowbreak{}jets} \\[2pt]
+\hyperlink{source-cm-models}{cm-models.tex} & \code{CM2}, \code{CM3}, \code{CM4}, \code{NRCM}, \code{Trans\allowbreak{}Unit} \\[2pt]
+\hyperlink{source-curve-exponents}{curve-exponents.tex} & \code{first\_\allowbreak{}level\_\allowbreak{}on\_\allowbreak{}curve}, \code{b\allowbreak{}Hyp\allowbreak{}Curve},
+\code{Til\allowbreak{}InvariantL\_\allowbreak{}of}, \code{Hyp\allowbreak{}Shape} \\[2pt]
+\hyperlink{source-cyclic-jets}{cyclic-jets.tex} & \code{ThmAGauss}, \code{ThmAGauss7},
+\code{local\_\allowbreak{}bound\_\allowbreak{}eleven\_\allowbreak{}comparison} \\[2pt]
+\hyperlink{source-finite-valuations}{finite-valuations.tex} & \code{Zero\allowbreak{}Above}, \code{Eval}, \code{nprime\allowbreak{}Mu\_\allowbreak{}at}, \code{One\allowbreak{}Letter\allowbreak{}Radius},
+\code{one\_\allowbreak{}letter\_\allowbreak{}unramified\_\allowbreak{}bound},
+\code{Is\allowbreak{}Expansion}, \code{Indef\allowbreak{}Cols.into\allowbreak{}Dual}, \code{shift\allowbreak{}Ideal\_\allowbreak{}sg\allowbreak{}Fl} \\[2pt]
+\hyperlink{source-frames}{frames.tex} & \code{FrameLA1}, \code{TheoremFSharp},
+\code{each\_\allowbreak{}unit\_\allowbreak{}bound\_\allowbreak{}statement},
+\code{ch\_\allowbreak{}top}, \code{Wall\allowbreak{}Pt}, \code{Chosen\allowbreak{}Wall} \\[2pt]
+\hyperlink{source-integral-jets}{integral-jets.tex} & \code{Is\allowbreak{}Entry\allowbreak{}All} \\[2pt]
+\hyperlink{source-prime-class-loss}{prime-class-loss.tex} & \code{loss\allowbreak{}Hyp\_\allowbreak{}at}, \code{joint\_\allowbreak{}core},
+\code{losses\_\allowbreak{}of\_\allowbreak{}small\_\allowbreak{}share\_\allowbreak{}weight} \\[2pt]
+\hyperlink{source-selected-class-counts}{selected-class-counts.tex} & \code{exists\_\allowbreak{}finset\_\allowbreak{}self\allowbreak{}Dual\_\allowbreak{}classes\_\allowbreak{}root\allowbreak{}Discr} \\[2pt]
+\hyperlink{source-selected-period}{selected-period.tex} & \code{l\allowbreak{}Prj\_\allowbreak{}surj\_\allowbreak{}at\_\allowbreak{}alt}, \code{Div\allowbreak{}Rows3G},
+\code{Div\allowbreak{}Rows3}, \code{Bessel\allowbreak{}Id} \\[2pt]
+\hyperlink{source-terminal-period}{terminal-period.tex} & \code{Pair\allowbreak{}At\allowbreak{}Class.pair\_\allowbreak{}integral}, \code{Period\allowbreak{}Class\allowbreak{}Sum\allowbreak{}Weyl},
+\code{Twisted\allowbreak{}Period\allowbreak{}Integral}, \code{period\_\allowbreak{}geTU} \\[2pt]
+\hyperlink{source-unserved-period}{unserved-period.tex} & \code{lattice\_\allowbreak{}pairs\_\allowbreak{}odd\_\allowbreak{}degree\_\allowbreak{}isometric},
+\code{jet\_\allowbreak{}bound\_\allowbreak{}ramified\_\allowbreak{}prime} \\[2pt]
+\end{longtable}}
+
+\subsubsection{The division estimates}
+For the passage from a branch order to a lattice index, the relevant comparison on the
+finite flat model is \eqref{eq:slice-order-comparison},
+\[
+ I_\lambda\le I^{\mathrm{ff}}_\lambda=\operatorname{length}_{R_0}\!\left(B(\tau)/\textstyle\sum_iR_0 b_i\right).
+\]
+{\small
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{.37\linewidth}@{\hspace{.025\linewidth}}>{\raggedright\arraybackslash}p{.605\linewidth}@{}}
+\toprule
+Mathematical source & Lean declarations \\ \midrule
+\endfirsthead
+\toprule
+Mathematical source & Lean declarations (continued) \\ \midrule
+\endhead
+\bottomrule
+\endlastfoot
+\hyperlink{source-paired-off-prime-trace}{paired-off-prime-trace.tex} & \code{c0'} \\[2pt]
+\hyperlink{source-paired-row-indices}{paired-row-indices.tex} & \code{Weight\allowbreak{}Algebra.Concl} \\[2pt]
+\hyperlink{source-run-index-length}{run-index-length.tex} & \code{MggK}, \code{g0 D}, \code{sumGP4},
+\code{concl\allowbreak{}AtM\_\allowbreak{}of\_\allowbreak{}atMInputs} \\[2pt]
+\hyperlink{source-selected-height-sections}{selected-height-sections.tex} & \code{Zb} \\[2pt]
+\hyperlink{source-slice-budget}{slice-budget.tex} & \code{absA}, \code{z\allowbreak{}Base} \\[2pt]
+\hyperlink{source-slice-heights}{slice-heights.tex} & \code{Ht\allowbreak{}Main} \\[2pt]
+\hyperlink{source-slice-integrals}{slice-integrals.tex} & \code{phiFD\_\allowbreak{}eq\_\allowbreak{}zero\_\allowbreak{}at\_\allowbreak{}last\_\allowbreak{}index} \\[2pt]
+\hyperlink{source-slice-interpolation}{slice-interpolation.tex} & \code{rhF} \\[2pt]
+\hyperlink{source-slice-metrics}{slice-metrics.tex} & \code{PP0v}, \code{large}, \code{nbR}, \code{CovQ} \\[2pt]
+\hyperlink{source-slice-orders}{slice-orders.tex} & \code{inputs\allowbreak{}Net\_\allowbreak{}rec\allowbreak{}Plus} \\[2pt]
+\hyperlink{source-slice-scales}{slice-scales.tex} & \code{TO} \\[2pt]
+\hyperlink{source-slice-short-analytic}{slice-short-analytic.tex} & \code{qq} \\[2pt]
+\hyperlink{source-word-division}{word-division.tex} & \code{err\allowbreak{}On} \\[2pt]
+\end{longtable}}
+
+\subsubsection{Integral symbols and plane tests}
+To follow the local factors into the plane test, compare their dimensions with the
+retained rank of the coarse symbols in \eqref{eq:plane-coarse-rank},
+\[
+ \dim\overline\Lambda\ge q^{-rK}(1-Nr^2 k/Y)\prod_xD_k(b_x).
+\]
+{\small
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{.37\linewidth}@{\hspace{.025\linewidth}}>{\raggedright\arraybackslash}p{.605\linewidth}@{}}
+\toprule
+Mathematical source & Lean declarations \\ \midrule
+\endfirsthead
+\toprule
+Mathematical source & Lean declarations (continued) \\ \midrule
+\endhead
+\bottomrule
+\endlastfoot
+\hyperlink{source-block-pairing}{block-pairing.tex} & \code{Factorial\allowbreak{}Unit\allowbreak{}Decomposition}, \code{io\allowbreak{}Block}, \code{orth\allowbreak{}At},
+\code{block\allowbreak{}Form\allowbreak{}At\_\allowbreak{}of},
+\code{symbol\_\allowbreak{}form\_\allowbreak{}of\_\allowbreak{}orthogonality},
+\code{ord\_\allowbreak{}all}, \code{Raw\allowbreak{}Tail\allowbreak{}At1}, \code{test\allowbreak{}Flat\allowbreak{}At1},
+\code{paired\_\allowbreak{}lift\_\allowbreak{}at\_\allowbreak{}of\_\allowbreak{}identity} \\[2pt]
+\hyperlink{source-column-lifts}{column-lifts.tex} & \code{Hyperplane\allowbreak{}Rank}, \code{Definite\allowbreak{}Rank\allowbreak{}One}, \code{col\allowbreak{}Fac},
+\code{pl\allowbreak{}Sum\_\allowbreak{}seg}, \code{cols\allowbreak{}At\_\allowbreak{}of} \\[2pt]
+\hyperlink{source-edge-transfer}{edge-transfer.tex} & \code{Tie\allowbreak{}Psi}, \code{Pair\allowbreak{}Lift\allowbreak{}At}, \code{admB2}, \code{Projection\allowbreak{}Lemma\allowbreak{}Base\allowbreak{}Level},
+\code{Rest\allowbreak{}Cloud\allowbreak{}Maps},
+\code{tensor\_\allowbreak{}bound\_\allowbreak{}of\_\allowbreak{}order\_\allowbreak{}bound},
+\code{dle\_\allowbreak{}abs}, \code{tle\_\allowbreak{}abs} \\[2pt]
+\hyperlink{source-graded-projectors}{graded-projectors.tex} & \code{Trace\allowbreak{}Isometry\allowbreak{}Weights}, \code{restricted\_\allowbreak{}saturation\_\allowbreak{}holds},
+\code{Gram\allowbreak{}Bound\allowbreak{}Unconditional\allowbreak{}Pos} \\[2pt]
+\hyperlink{source-host-edge-tests}{host-edge-tests.tex} & \code{ext\allowbreak{}Rec}, \code{Std\allowbreak{}Sub\allowbreak{}At}, \code{LPBase\allowbreak{}Change}, \code{Small\allowbreak{}Order\allowbreak{}Primes},
+\code{adm6},
+\code{linear\_\allowbreak{}programming\_\allowbreak{}input\_\allowbreak{}of\_\allowbreak{}hypotheses} \\[2pt]
+\hyperlink{source-interpolation}{interpolation.tex} & \code{Degree\allowbreak{}Dichotomy}, \code{InstM.eps}, \code{LPprime}, \code{KapIDef.mem} \\[2pt]
+\hyperlink{source-plane-digits}{plane-digits.tex} & \code{DIG}, \code{DER}, \code{V2} \\[2pt]
+\hyperlink{source-plane-edge-covector}{plane-edge-covector.tex} & \code{real\allowbreak{}At\_\allowbreak{}gen}, \code{tensor\_\allowbreak{}operators\_\allowbreak{}holds},
+\code{Rho\allowbreak{}At}, \code{rho\allowbreak{}AtG\_\allowbreak{}of\_\allowbreak{}pair},
+\code{rho\_\allowbreak{}peel} \\[2pt]
+\hyperlink{source-plane-flat-test}{plane-flat-test.tex} & \code{Norm\allowbreak{}Test}, \code{pick\_\allowbreak{}core}, \code{Rho\allowbreak{}At},
+\code{cloudBAt\_\allowbreak{}of\_\allowbreak{}rho},
+\code{test\_\allowbreak{}bound\_\allowbreak{}of\_\allowbreak{}two\_\allowbreak{}halves} \\[2pt]
+\hyperlink{source-plane-gram}{plane-gram.tex} & \code{PROJ}, \code{GaOK}, \code{StepB}, \code{StepC}, \code{StepBC}, \code{StepG},
+\code{StepP}, \code{StepE}, \code{StepDEF}, \code{Lift\allowbreak{}Bound\allowbreak{}Uniform} \\[2pt]
+\hyperlink{source-plane-lifts}{plane-lifts.tex} & \code{Frames.Valid}, \code{Conclusion4}, \code{Source\allowbreak{}Cleaning},
+\code{Source\allowbreak{}Cleaning.Conclusion5}, \code{XX'}, \code{Conclusion6}, \code{rest\allowbreak{}Ph},
+\code{Edge\allowbreak{}Step}, \code{s7}, \code{Scale\allowbreak{}Edges} \\[2pt]
+\hyperlink{source-plane-middle-weights}{plane-middle-weights.tex} & \code{Flat\allowbreak{}Src}, \code{Edge\allowbreak{}Fam\allowbreak{}Of}, \code{Scale\allowbreak{}Zpow\allowbreak{}Mono}, \code{card\_\allowbreak{}all},
+\code{count\_\allowbreak{}of\_\allowbreak{}exact}, \code{prim\allowbreak{}Step\_\allowbreak{}of} \\[2pt]
+\hyperlink{source-plane-orbit}{plane-orbit.tex} & \code{Rest\allowbreak{}Chain}, \code{rest\allowbreak{}Link}, \code{rest\allowbreak{}Word\_\allowbreak{}of\_\allowbreak{}steps},
+\code{restMEM\_\allowbreak{}of\_\allowbreak{}last} \\[2pt]
+\hyperlink{source-plane-rank}{plane-rank.tex} & \code{Dat.Is\allowbreak{}Good} \\[2pt]
+\hyperlink{source-plane-return}{plane-return.tex} & \code{size\allowbreak{}At\_\allowbreak{}of}, \code{num\allowbreak{}Step\_\allowbreak{}of},
+\code{proposition5\_\allowbreak{}at\_\allowbreak{}of\_\allowbreak{}three\_\allowbreak{}parts},
+\code{slack\_\allowbreak{}bound\_\allowbreak{}joint}, \code{rest\allowbreak{}Memb},
+\code{one\_\allowbreak{}sided\_\allowbreak{}lemma4\_\allowbreak{}realisable} \\[2pt]
+\hyperlink{source-plane-symbols}{plane-symbols.tex} & \code{XX'}, \code{rest\allowbreak{}Model},
+\code{generator\_\allowbreak{}pair\_\allowbreak{}conditions\_\allowbreak{}of\_\allowbreak{}admitted},
+\code{Path\allowbreak{}Weight\allowbreak{}Components}, \code{ConclusionB3},
+\code{canonical\_\allowbreak{}translate\_\allowbreak{}jet\_\allowbreak{}identity},
+\code{generator\_\allowbreak{}path\_\allowbreak{}homogeneous\_\allowbreak{}holds},
+\code{Conclusion6}, \code{Source\allowbreak{}Cleaning},
+\code{lemma4\_\allowbreak{}of\_\allowbreak{}remaining\_\allowbreak{}statements} \\[2pt]
+\hyperlink{source-retained-rank}{retained-rank.tex} & \code{Rest\allowbreak{}Up}, \code{Rest\allowbreak{}Low}, \code{brk\_\allowbreak{}core},
+\code{rank\_\allowbreak{}alternative\_\allowbreak{}lower}, \code{kap\_\allowbreak{}core} \\[2pt]
+\hyperlink{source-segment-window}{segment-window.tex} & \code{RestTM}, \code{win\allowbreak{}Lvl},
+\code{block\_\allowbreak{}dual\_\allowbreak{}family\_\allowbreak{}bound},
+\code{Gram\allowbreak{}Window\allowbreak{}Alt},
+\code{segment\_\allowbreak{}mean\_\allowbreak{}kappa\_\allowbreak{}bound} \\[2pt]
+\hyperlink{source-symbol-correction}{symbol-correction.tex} & \code{room\_\allowbreak{}of\_\allowbreak{}std}, \code{lemmaRData},
+\code{segment\allowbreak{}Block\allowbreak{}Of\allowbreak{}Monomial}, \code{seg\allowbreak{}Core\allowbreak{}At\_\allowbreak{}of\_\allowbreak{}num},
+\code{tcore\allowbreak{}At\_\allowbreak{}of\_\allowbreak{}seg}, \code{Fac\allowbreak{}Sys.liftable},
+\code{lemma44\_\allowbreak{}identity\_\allowbreak{}of\_\allowbreak{}raw\_\allowbreak{}tail} \\[2pt]
+\hyperlink{source-tied-gram}{tied-gram.tex} & \code{Gam\allowbreak{}Deg}, \code{Gam\allowbreak{}Lead}, \code{Gam\allowbreak{}Int}, \code{Gram\allowbreak{}Determinant\allowbreak{}Graded\allowbreak{}Hypothesis} \\[2pt]
+\hyperlink{source-tied-segments}{tied-segments.tex} & \code{tie\allowbreak{}OpsX\_\allowbreak{}main},
+\code{highest\_\allowbreak{}weight\_\allowbreak{}dim\_\allowbreak{}monotone},
+\code{monomial\_\allowbreak{}count}, \code{TheoremMC7} \\[2pt]
+\end{longtable}}
+
+\subsubsection{Local pairings and row counts}
+For the connection between row counts and nonvanishing of the period on the ramified
+column
+(Proposition~\ref{prop:pretransport-ramified-period}), the dimension
+\(d_u\) of the selected column satisfies \eqref{eq:linked-rank-window}:
+\[
+ D_*/(2\Gamma^2)\le d_u\le eD_*/\Gamma^2\le 3D_*/\Gamma^2.
+\]
+{\small
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{.37\linewidth}@{\hspace{.025\linewidth}}>{\raggedright\arraybackslash}p{.605\linewidth}@{}}
+\toprule
+Mathematical source & Lean declarations \\ \midrule
+\endfirsthead
+\toprule
+Mathematical source & Lean declarations (continued) \\ \midrule
+\endhead
+\bottomrule
+\endlastfoot
+\hyperlink{source-absolute-amplitude}{absolute-amplitude.tex} & \code{off\allowbreak{}Block\_\allowbreak{}le}, \code{radical\_\allowbreak{}coords\_\allowbreak{}le} \\[2pt]
+\hyperlink{source-block-recursion}{block-recursion.tex} & \code{herglotz\_\allowbreak{}germ}, \code{germ\allowbreak{}Step}, \code{pbc\_\allowbreak{}block\allowbreak{}LatV} \\[2pt]
+\hyperlink{source-lattice-estimates}{lattice-estimates.tex} & \code{Trace\allowbreak{}Dual}, \code{Block\allowbreak{}Frame}, \code{Inst\allowbreak{}Lattice\allowbreak{}Sums}, \code{Poisson\allowbreak{}Joint},
+\code{Formalism.Fourier\allowbreak{}Decay\allowbreak{}Alt.J} \\[2pt]
+\hyperlink{source-orbital-germ}{orbital-germ.tex} & \code{germ\_\allowbreak{}rate}, \code{germ\_\allowbreak{}expansion\_\allowbreak{}applies},
+\code{germ\_\allowbreak{}expansion\_\allowbreak{}top\_\allowbreak{}level}, \code{Germ\allowbreak{}RateB},
+\code{Germ\allowbreak{}Loc} \\[2pt]
+\hyperlink{source-selected-word-level}{selected-word-level.tex} & \code{rank\allowbreak{}TiesF\_\allowbreak{}of\_\allowbreak{}C2S\_\allowbreak{}alt},
+\code{chosen\allowbreak{}Proviso\_\allowbreak{}min} \\[2pt]
+\hyperlink{source-word-pairing}{word-pairing.tex} & \code{dk\_\allowbreak{}partial}, \code{Deg\allowbreak{}Wave}, \code{Deg\allowbreak{}Lift},
+\code{left\_\allowbreak{}fubini\_\allowbreak{}normalized\_\allowbreak{}tower} \\[2pt]
+\end{longtable}}
+
+\subsubsection{Cohomology and ordinary levels}
+For the local dimension calculation at the exceptional split place in
+Proposition~\ref{prop:ordinary-three-local-dimensions}, follow the depth-one projector
+through the decomposition in \eqref{eq:depth-one-projector-splitting},
+\[
+ eW^{K_1}=\bigoplus_{t\in(k^\times)^{n-1}} W^{K_1}[\chi_t],\qquad\dim eW^{K_1}=(q-1)^{n-1}.
+\]
+{\small
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{.37\linewidth}@{\hspace{.025\linewidth}}>{\raggedright\arraybackslash}p{.605\linewidth}@{}}
+\toprule
+Mathematical source & Lean declarations \\ \midrule
+\endfirsthead
+\toprule
+Mathematical source & Lean declarations (continued) \\ \midrule
+\endhead
+\bottomrule
+\endlastfoot
+\hyperlink{source-cohomology-full-block-extension}{cohomology/\allowbreak{}full-block-extension.tex} & \code{block\allowbreak{}Part}, \code{bl}, \code{VWin\allowbreak{}Pm} \\[2pt]
+\hyperlink{source-ordinary-count-ii-point-output}{ordinary/\allowbreak{}count-ii-point-output.tex} & \code{Pm\allowbreak{}AutO}, \code{VWin\allowbreak{}Pm}, \code{PureW}, \code{glueN}, \code{Kills\allowbreak{}Mu}, \code{safe4'} \\[2pt]
+\hyperlink{source-ordinary-level-attachments}{ordinary/\allowbreak{}level-attachments.tex} & \code{PartU}, \code{Au\allowbreak{}Teich\allowbreak{}Ex}, \code{ps\allowbreak{}Eig}, \code{low\allowbreak{}Val}, \code{Ord\allowbreak{}Scal},
+\code{TCore\allowbreak{}Eig} \\[2pt]
+\hyperlink{source-ordinary-level-data}{ordinary/\allowbreak{}level-data.tex} & \code{Type\allowbreak{}For\allowbreak{}Alt}, \code{TType\allowbreak{}Ex}, \code{TypesNZero\allowbreak{}Final}, \code{PType\allowbreak{}Ex},
+\code{TTheta\allowbreak{}Ex}, \code{Is\allowbreak{}Res}, \code{TRes\allowbreak{}Ex}, \code{Hd\allowbreak{}Ex} \\[2pt]
+\hyperlink{source-ordinary-linked-seeds}{ordinary/\allowbreak{}linked-seeds.tex} & \code{seed\allowbreak{}InW\_\allowbreak{}alt},
+\code{branch\_\allowbreak{}two\_\allowbreak{}w\_\allowbreak{}statement},
+\code{branch1W\_\allowbreak{}alt} \\[2pt]
+\hyperlink{source-ordinary-odd-primes}{ordinary/\allowbreak{}odd-primes.tex} & \code{red\allowbreak{}All}, \code{loss\allowbreak{}Le}, \code{gd\allowbreak{}Of\allowbreak{}Host},
+\code{one\allowbreak{}CharU\_\allowbreak{}of\_\allowbreak{}kato\allowbreak{}TwoW\_\allowbreak{}rig\_\allowbreak{}admI\_\allowbreak{}automorphy},
+\code{countV\_\allowbreak{}of\_\allowbreak{}finiteness\_\allowbreak{}duality\_\allowbreak{}euler\_\allowbreak{}host},
+\code{Psi\allowbreak{}Bound}, \code{kill\allowbreak{}Pow} \\[2pt]
+\hyperlink{source-ordinary-promodularity}{ordinary/\allowbreak{}promodularity.tex} & \code{h4}, \code{p\allowbreak{}From\allowbreak{}Aut}, \code{Birth\allowbreak{}Pm},
+\code{deep\_\allowbreak{}tower\_\allowbreak{}residue\_\allowbreak{}chain\_\allowbreak{}exists} \\[2pt]
+\hyperlink{source-ordinary-rank-three-multiplicity}{ordinary/\allowbreak{}rank-three-multiplicity.tex} & \code{SR.has\_\allowbreak{}of\_\allowbreak{}split}, \code{StableGA}, \code{StableSA},
+\code{RIdent}, \code{r\allowbreak{}Mult}, \code{Is\allowbreak{}Dec\allowbreak{}Of\allowbreak{}Glob\allowbreak{}Lev}, \code{TAt\allowbreak{}Same}, \code{TSph\allowbreak{}Same},
+\code{TCountE}, \code{Res\allowbreak{}Eq2}, \code{TZEq\allowbreak{}DimE}, \code{Mu\allowbreak{}HeckeE}, \code{TPart\allowbreak{}Rep},
+\code{TNumJE} \\[2pt]
+\hyperlink{source-ordinary-symplectic-cohomology}{ordinary/\allowbreak{}symplectic-cohomology.tex} & \code{lemmaP}, \code{nums}, \code{data\allowbreak{}Ex}, \code{ex\allowbreak{}Model}, \code{So\allowbreak{}Fin}, \code{So\allowbreak{}Bar},
+\code{sha\allowbreak{}Eq}, \code{sp4In0\_\allowbreak{}alt}, \code{pt\allowbreak{}Over}, \code{No\allowbreak{}End},
+\code{weyl\_\allowbreak{}complex\_\allowbreak{}of\_\allowbreak{}printed\_\allowbreak{}results},
+\code{countP\_\allowbreak{}alt}, \code{countQ\_\allowbreak{}alt} \\[2pt]
+\end{longtable}}
+
+\subsubsection{Linked ordinary components and marked points}
+To pass from the marked points to Hecke support, the component propagation in Proposition~\ref{prop:ordinary-component-propagation}
+and the three level-ring tests in Paragraph~\ref{par:fitted-arc}
+use the following sources.
+{\small
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{.37\linewidth}@{\hspace{.025\linewidth}}>{\raggedright\arraybackslash}p{.605\linewidth}@{}}
+\toprule
+Mathematical source & Lean declarations \\ \midrule
+\endfirsthead
+\toprule
+Mathematical source & Lean declarations (continued) \\ \midrule
+\endhead
+\bottomrule
+\endlastfoot
+\hyperlink{source-ordinary-closed-link}{ordinary/\allowbreak{}closed-link.tex} & \code{ch\allowbreak{}Bar\allowbreak{}Push}, \code{closure\_\allowbreak{}bc}, \code{gens\allowbreak{}Img} \\[2pt]
+\hyperlink{source-ordinary-linked-components}{ordinary/\allowbreak{}linked-components.tex} & \code{P1core}, \code{P3core}, \code{l51}, \code{l52}, \code{pres}, \code{epres},
+\code{gpos}, \code{l41}, \code{seedpt}, \code{jac}, \code{End\allowbreak{}Pt\allowbreak{}Of}, \code{All\allowbreak{}Good},
+\code{red\allowbreak{}Abs},
+\code{admissible\_\allowbreak{}typeI\_\allowbreak{}even\_\allowbreak{}level\_\allowbreak{}alt},
+\code{rigIUE\_\allowbreak{}alt}, \code{host\allowbreak{}RigidUE\_\allowbreak{}alt},
+\code{host\allowbreak{}NumberUE\_\allowbreak{}alt} \\[2pt]
+\hyperlink{source-ordinary-marked-points}{ordinary/\allowbreak{}marked-points.tex} & \code{N1}, \code{N3}, \code{N4} \\[2pt]
+\end{longtable}}
+
+\subsubsection{Marked patching systems and matrix representations}
+The passage from determinant data to a matrix algebra uses the trace-pairing criterion
+of
+Lemma~\ref{lem:matrix-span-by-traces}.
+{\small
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{.37\linewidth}@{\hspace{.025\linewidth}}>{\raggedright\arraybackslash}p{.605\linewidth}@{}}
+\toprule
+Mathematical source & Lean declarations \\ \midrule
+\endfirsthead
+\toprule
+Mathematical source & Lean declarations (continued) \\ \midrule
+\endhead
+\bottomrule
+\endlastfoot
+\hyperlink{source-ordinary-marked-patching}{ordinary/\allowbreak{}marked-patching.tex} & \code{dualN}, \code{N4}, \code{B1}, \code{TWPl.e\_\allowbreak{}inj}, \code{coh\allowbreak{}Ax\allowbreak{}Ar},
+\code{coh\allowbreak{}Ax\allowbreak{}Iso}, \code{B2} \\[2pt]
+\hyperlink{source-ordinary-patching-marking}{ordinary/\allowbreak{}patching-marking.tex} & \code{TWGrp.ProL}, \code{raw\_\allowbreak{}main}, \code{PFrom\allowbreak{}Aut\allowbreak{}Of}, \code{finN},
+\code{fin0}, \code{Lim}, \code{sys\_\allowbreak{}cover}, \code{loc\_\allowbreak{}fin},
+\code{in\_\allowbreak{}lim}, \code{s4} \\[2pt]
+\hyperlink{source-ordinary-patching-matrices}{ordinary/\allowbreak{}patching-matrices.tex} & \code{rf\allowbreak{}Ex}, \code{oo\allowbreak{}Ex}, \code{trinv}, \code{finE}, \code{f\_\allowbreak{}level},
+\code{f\_\allowbreak{}limit}, \code{gens\_\allowbreak{}kill}, \code{idem\_\allowbreak{}nil},
+\code{st\_\allowbreak{}coi\_\allowbreak{}lift}, \code{idem}, \code{units\_\allowbreak{}exist},
+\code{gr\_\allowbreak{}E}, \code{gr\_\allowbreak{}det}, \code{urep\_\allowbreak{}of},
+\code{urep\_\allowbreak{}stable}, \code{gr\_\allowbreak{}thick} \\[2pt]
+\end{longtable}}
+
+\subsubsection{Cotangent detection and the rank-three length}
+For a uniformizer \(\pi\) of \(O\), the passage from a conormal summand to its finite-depth contribution in
+Figure~\ref{fig:cotangent-smith-factors} uses one Smith summand at a
+time. For \(s,d\ge1\) its contribution has length
+\[
+ \operatorname{length}_O\operatorname{Hom}_O
+    \bigl(O/(\pi^d),O/(\pi^s)\bigr)=\min(d,s).
+\]
+{\small
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{.37\linewidth}@{\hspace{.025\linewidth}}>{\raggedright\arraybackslash}p{.605\linewidth}@{}}
+\toprule
+Mathematical source & Lean declarations \\ \midrule
+\endfirsthead
+\toprule
+Mathematical source & Lean declarations (continued) \\ \midrule
+\endhead
+\bottomrule
+\endlastfoot
+\hyperlink{source-ordinary-patching-cotangent}{ordinary/\allowbreak{}patching-cotangent.tex} & \code{S6}, \code{oo\allowbreak{}Ex}, \code{Lim}, \code{t1}, \code{K1}, \code{K2}, \code{K3},
+\code{coh\allowbreak{}Lim}, \code{k1F}, \code{k2F}, \code{k3F}, \code{test\allowbreak{}Ex}, \code{defUTest},
+\code{tr\allowbreak{}Lat}, \code{tr\allowbreak{}Bnd}, \code{loc\allowbreak{}Lemma}, \code{al\allowbreak{}Inj}, \code{tr\allowbreak{}Const},
+\code{dual\allowbreak{}Ex}, \code{defUPush}, \code{claim2}, \code{lift1}, \code{claim1}, \code{pres},
+\code{pres\allowbreak{}Out1}, \code{pres\allowbreak{}Out0}, \code{gal\allowbreak{}Out} \\[2pt]
+\hyperlink{source-ordinary-rank-three-length}{ordinary/\allowbreak{}rank-three-length.tex} & \code{LemmaM'}, \code{LemmaM} \\[2pt]
+\end{longtable}}
+
+
+\subsubsection*{Source concordance by mathematical chapter}
+For each mathematical chapter, the left column gives the source entry
+and the right column the pages on which its construction is used.
+Alp\"oge's announcement identifies the origin of the argument.
+The numbered entries for the formal development identify corresponding
+definitions and declarations.
+\newcommand{\corpagestart}{\def\lastcorpage{-1}\def\corpagedelim{}}
+\newcommand{\corpage}[1]{%
+  \edef\thiscorpage{\getpagerefnumber{#1}}%
+  \ifx\thiscorpage\lastcorpage\else
+    \corpagedelim\hyperlink{page.\thiscorpage}{\pageref*{#1}}%
+    \let\lastcorpage\thiscorpage\def\corpagedelim{, }%
+  \fi}
+
+\par\noindent\textit{Chapter 5}
+{\small\begin{longtable}{@{}p{.19\linewidth}@{\hspace{1em}}p{.73\linewidth}@{}}
+\toprule Source entry & Pages in the mathematical text \\ \midrule\endhead
+\cite{release-automorphic-start} & \corpagestart\corpage{cor:automorphic-realization-1}\corpage{cor:automorphic-realization-14}\corpage{cor:automorphic-realization-33} \\
+\cite{release-fine-adelic} & \corpagestart\corpage{cor:automorphic-realization-2}\corpage{cor:automorphic-realization-3}\corpage{cor:automorphic-realization-4}\corpage{cor:automorphic-realization-13} \\
+\cite{release-fine-multiplicity} & \corpagestart\corpage{cor:automorphic-realization-5}\corpage{cor:automorphic-realization-6}\corpage{cor:automorphic-realization-7}\corpage{cor:automorphic-realization-8}\corpage{cor:automorphic-realization-9}\corpage{cor:automorphic-realization-10} \\
+\cite{release-fine-test} & \corpagestart\corpage{cor:automorphic-realization-11}\corpage{cor:automorphic-realization-12} \\
+\cite{release-fitted-grid} & \corpagestart\corpage{cor:automorphic-realization-12} \\
+\cite{release-fitted-square} & \corpagestart\corpage{cor:automorphic-realization-12} \\
+\cite{release-ray-ramification} & \corpagestart\corpage{cor:automorphic-realization-15}\corpage{cor:automorphic-realization-17} \\
+\cite{release-same-galois-row} & \corpagestart\corpage{cor:automorphic-realization-16}\corpage{cor:automorphic-realization-17}\corpage{cor:automorphic-realization-18}\corpage{cor:automorphic-realization-19}\corpage{cor:automorphic-realization-20}\corpage{cor:automorphic-realization-21}\corpage{cor:automorphic-realization-22}\corpage{cor:automorphic-realization-40} \\
+\cite{release-isotypic-row} & \corpagestart\corpage{cor:automorphic-realization-23}\corpage{cor:automorphic-realization-24}\corpage{cor:automorphic-realization-25}\corpage{cor:automorphic-realization-26}\corpage{cor:automorphic-realization-41} \\
+\cite{release-marked-settings} & \corpagestart\corpage{cor:automorphic-realization-27}\corpage{cor:automorphic-realization-28}\corpage{cor:automorphic-realization-29}\corpage{cor:automorphic-realization-30}\corpage{cor:automorphic-realization-31}\corpage{cor:automorphic-realization-32}\corpage{cor:automorphic-realization-33} \\
+\cite{release-local-spectral} & \corpagestart\corpage{cor:automorphic-realization-34}\corpage{cor:automorphic-realization-35}\corpage{cor:automorphic-realization-37} \\
+\cite{release-local-blocks} & \corpagestart\corpage{cor:automorphic-realization-36}\corpage{cor:automorphic-realization-37} \\
+\cite{release-level-three-forcing} & \corpagestart\corpage{cor:automorphic-realization-38}\corpage{cor:automorphic-realization-43} \\
+\cite{release-row-order} & \corpagestart\corpage{cor:automorphic-realization-39}\corpage{cor:automorphic-realization-40}\corpage{cor:automorphic-realization-41}\corpage{cor:automorphic-realization-42} \\
+\cite{release-carried-series} & \corpagestart\corpage{cor:automorphic-realization-43}\corpage{cor:automorphic-realization-57}\corpage{cor:automorphic-realization-58}\corpage{cor:automorphic-realization-59}\corpage{cor:automorphic-realization-60}\corpage{cor:automorphic-realization-61} \\
+\cite{release-theta-coefficient-type} & \corpagestart\corpage{cor:automorphic-realization-44}\corpage{cor:automorphic-realization-45} \\
+\cite{release-signed-export-coefficients} & \corpagestart\corpage{cor:automorphic-realization-46}\corpage{cor:automorphic-realization-47}\corpage{cor:automorphic-realization-48} \\
+\cite{release-signed-export-hecke} & \corpagestart\corpage{cor:automorphic-realization-49} \\
+\cite{release-half-character} & \corpagestart\corpage{cor:automorphic-realization-50}\corpage{cor:automorphic-realization-51} \\
+\cite{release-signed-export-galois} & \corpagestart\corpage{cor:automorphic-realization-52}\corpage{cor:automorphic-realization-53} \\
+\cite{release-automorphic-export} & \corpagestart\corpage{cor:automorphic-realization-53}\corpage{cor:automorphic-realization-54} \\
+\cite{release-automorphic-transfer} & \corpagestart\corpage{cor:automorphic-realization-55}\corpage{cor:automorphic-realization-56}\corpage{cor:automorphic-realization-61} \\
+\cite{release-window-objects} & \corpagestart\corpage{cor:window-points-3}\corpage{cor:automorphic-realization-62} \\
+\cite{release-core-return} & \corpagestart\corpage{cor:automorphic-realization-62}\corpage{cor:automorphic-realization-64}\corpage{cor:automorphic-realization-65} \\
+\cite{release-core-move} & \corpagestart\corpage{cor:automorphic-realization-63}\corpage{cor:automorphic-realization-64} \\
+\cite{release-selected-completion} & \corpagestart\corpage{cor:automorphic-realization-66}\corpage{cor:automorphic-realization-71}\corpage{cor:automorphic-realization-72}\corpage{cor:linked-family-rows-1} \\
+\cite{release-reciprocal-pairing} & \corpagestart\corpage{cor:automorphic-realization-67}\corpage{cor:automorphic-realization-68} \\
+\cite{release-reciprocal-record} & \corpagestart\corpage{cor:automorphic-realization-69}\corpage{cor:automorphic-realization-70} \\
+\cite{release-division-real-input} & \corpagestart\corpage{cor:completed-division-1} \\
+\cite{release-division-row-sides} & \corpagestart\corpage{cor:completed-division-2}\corpage{cor:completed-division-4} \\
+\cite{release-division-lower} & \corpagestart\corpage{cor:completed-division-3} \\
+\cite{release-completed-realization} & \corpagestart\corpage{cor:completed-division-5}\corpage{cor:completed-division-10} \\
+\cite{release-linked-division-point} & \corpagestart\corpage{cor:completed-division-6}\corpage{cor:linked-family-rows-3} \\
+\cite{release-division-prime-models} & \corpagestart\corpage{cor:completed-division-7}\corpage{cor:completed-division-8} \\
+\cite{release-division-prime-action} & \corpagestart\corpage{cor:completed-division-9} \\
+\cite{release-division-common-coordinates} & \corpagestart\corpage{cor:completed-division-11} \\
+\cite{release-division-run-estimates} & \corpagestart\corpage{cor:completed-division-12}\corpage{cor:completed-division-13} \\
+\cite{release-slice-budget} & \corpagestart\corpage{cor:completed-division-12} \\
+\cite{release-parent-run-index} & \corpagestart\corpage{cor:completed-division-13} \\
+\cite{release} & \corpagestart\corpage{cor:selected-cut-2}\corpage{cor:small-prime-lengths-2}\corpage{cor:small-prime-lengths-3}\corpage{cor:retained-galois-1}\corpage{cor:retained-galois-2}\corpage{cor:retained-galois-3}\corpage{cor:retained-galois-4}\corpage{cor:retained-galois-5}\corpage{cor:congruence-determinant-1}\corpage{cor:congruence-determinant-2}\corpage{cor:congruence-determinant-3}\corpage{cor:congruence-determinant-4}\corpage{cor:split-selmer-1}\corpage{cor:split-selmer-2}\corpage{cor:split-selmer-3}\corpage{cor:split-selmer-4}\corpage{cor:split-selmer-5}\corpage{cor:split-selmer-6}\corpage{cor:split-selmer-7}\corpage{cor:retained-twist-1}\corpage{cor:retained-twist-2}\corpage{cor:retained-twist-3}\corpage{cor:toric-twist-1}\corpage{cor:toric-twist-3}\corpage{cor:toric-twist-4}\corpage{cor:toric-twist-5}\corpage{cor:twist-euler-1}\corpage{cor:twist-euler-2}\corpage{cor:theta-cover-integrality-2}\corpage{cor:theta-cover-integrality-3}\corpage{cor:theta-cover-integrality-4}\corpage{cor:theta-row-rank-1} \\
+ & \corpagestart\corpage{cor:theta-row-rank-2}\corpage{cor:theta-row-rank-3}\corpage{cor:twist-row-lattices-1}\corpage{cor:small-prime-lengths-4}\corpage{cor:numerator-sums-1}\corpage{cor:prime-cost-sums-1}\corpage{cor:division-length-5}\corpage{cor:family-window-4} \\
+\cite{release-lift-wach} & \corpagestart\corpage{cor:cut-wach-models-1}\corpage{cor:cut-wach-models-2}\corpage{cor:lift-weight-exchange-1} \\
+\cite{release-tied-reduction} & \corpagestart\corpage{cor:cut-wach-models-2}\corpage{cor:residue-wach-realization-1}\corpage{cor:residue-wach-realization-4} \\
+\cite{release-character-lift} & \corpagestart\corpage{cor:cyclotomic-character-lifting-1}\corpage{cor:cyclotomic-character-lifting-2}\corpage{cor:cyclotomic-character-lifting-3} \\
+\cite{release-parent-cut} & \corpagestart\corpage{cor:marked-localization-5}\corpage{cor:division-length-1}\corpage{cor:division-length-2}\corpage{cor:division-length-3} \\
+\cite{release-host-to-numerator} & \corpagestart\corpage{cor:family-window-1}\corpage{cor:family-window-2}\corpage{cor:division-length-4} \\
+\cite{release-fixed-division} & \corpagestart\corpage{cor:division-length-6}\corpage{cor:division-length-9} \\
+\cite{release-lift-exponents} & \corpagestart\corpage{cor:division-length-6}\corpage{cor:division-length-8}\corpage{cor:lift-pieri-cost-6}\corpage{cor:lift-exponent-models-3}\corpage{cor:lift-exponent-primes-1}\corpage{cor:lift-exponent-primes-3}\corpage{cor:lift-exponent-primes-4}\corpage{cor:lift-exponent-primes-5} \\
+\cite{release-selected-period} & \corpagestart\corpage{cor:division-length-7} \\
+\cite{release-dual-index} & \corpagestart\corpage{cor:division-length-7} \\
+\cite{release-parent-strict} & \corpagestart\corpage{cor:family-window-3} \\
+\cite{release-wach-lift} & \corpagestart\corpage{cor:full-cyclotomic-lifting-1}\corpage{cor:full-cyclotomic-lifting-2}\corpage{cor:full-cyclotomic-lifting-3}\corpage{cor:full-cyclotomic-lifting-4}\corpage{cor:row-metric-2} \\
+\cite{release-inert-words} & \corpagestart\corpage{cor:inert-row-lengths-1}\corpage{cor:inert-row-lengths-2}\corpage{cor:inert-long-orbit-1} \\
+\cite{release-arc-frames} & \corpagestart\corpage{cor:inert-row-table-1}\corpage{cor:inert-short-frame-1} \\
+\cite{release-short-exceptions} & \corpagestart\corpage{cor:inert-short-exceptions-1} \\
+\cite{release-arc-costs} & \corpagestart\corpage{cor:inert-short-two-1}\corpage{cor:inert-short-two-2}\corpage{cor:inert-short-positive-1} \\
+\cite{release-arc-middle} & \corpagestart\corpage{cor:inert-short-three-1} \\
+\cite{release-inert-filtered} & \corpagestart\corpage{cor:inert-thick-filtered-1} \\
+\cite{release-inert-initial} & \corpagestart\corpage{cor:inert-thick-initial-1}\corpage{cor:inert-thick-herr-1}\corpage{cor:inert-thick-herr-2} \\
+\cite{release-d53-linked} & \corpagestart\corpage{cor:linked-family-rows-3}\corpage{cor:linked-family-rows-4}\corpage{cor:joint-family-estimate-1} \\
+\cite{release-joint-selection} & \corpagestart\corpage{cor:joint-family-estimate-1} \\
+\cite{release-joint-charts} & \corpagestart\corpage{cor:joint-family-estimate-2}\corpage{cor:joint-family-estimate-3} \\
+\cite{release-joint-rational} & \corpagestart\corpage{cor:joint-family-estimate-2}\corpage{cor:joint-family-estimate-4} \\
+\cite{release-joint-identity} & \corpagestart\corpage{cor:joint-family-estimate-5} \\
+\cite{release-joint-record} & \corpagestart\corpage{cor:joint-family-estimate-6} \\
+\cite{release-joint-rank} & \corpagestart\corpage{cor:joint-family-estimate-7} \\
+\cite{release-joint-return} & \corpagestart\corpage{cor:joint-family-estimate-8} \\
+\cite{release-offwindow-jumps} & \corpagestart\corpage{cor:marked-localization-6}\corpage{cor:large-prime-length-1} \\
+\cite{release-offwindow-local} & \corpagestart\corpage{cor:large-prime-length-2}\corpage{cor:large-prime-length-4}\corpage{cor:large-prime-length-6} \\
+\cite{release-offwindow-residue} & \corpagestart\corpage{cor:residue-model-length-2}\corpage{cor:residue-model-length-5}\corpage{cor:large-prime-length-3} \\
+\cite{release-offwindow-cut} & \corpagestart\corpage{cor:large-prime-length-5} \\
+\cite{release-offwindow-global} & \corpagestart\corpage{cor:large-prime-length-7}\corpage{cor:large-prime-length-8} \\
+\cite{release-level-theta} & \corpagestart\corpage{cor:level-four-core-1}\corpage{cor:level-four-core-2} \\
+\cite{release-core-theta} & \corpagestart\corpage{cor:level-four-core-2} \\
+\cite{release-divisor-support} & \corpagestart\corpage{cor:level-four-core-3}\corpage{cor:level-four-core-6} \\
+\cite{release-quotient-sphere} & \corpagestart\corpage{cor:level-four-core-4} \\
+\cite{release-divisor-local-values} & \corpagestart\corpage{cor:level-four-core-5} \\
+\cite{release-divisor-graft} & \corpagestart\corpage{cor:level-four-core-6} \\
+\cite{release-core-filling} & \corpagestart\corpage{cor:level-four-core-7} \\
+\cite{release-core-kernel} & \corpagestart\corpage{cor:level-four-core-8}\corpage{cor:level-four-core-9}\corpage{cor:level-four-core-12} \\
+\cite{release-positive-stage-charts} & \corpagestart\corpage{cor:level-four-core-9} \\
+\cite{release-positive-stage-integrality} & \corpagestart\corpage{cor:level-four-core-10} \\
+\cite{release-positive-stage-rank} & \corpagestart\corpage{cor:level-four-core-11} \\
+\cite{release-built-core} & \corpagestart\corpage{cor:level-four-core-13}\corpage{cor:level-four-core-14} \\
+\cite{release-window-two-pass} & \corpagestart\corpage{cor:window-points-2}\corpage{cor:real-row-realization-9}\corpage{cor:level-four-core-14} \\
+\cite{release-lift-link} & \corpagestart\corpage{cor:lift-crystalline-depth-1}\corpage{cor:lift-crystalline-depth-2}\corpage{cor:lift-crystalline-depth-3}\corpage{cor:lift-crystalline-depth-4} \\
+\cite{release-lift-models} & \corpagestart\corpage{cor:lift-exponent-models-1}\corpage{cor:lift-exponent-models-2}\corpage{cor:lift-crystalline-depth-3}\corpage{cor:lift-crystalline-depth-4}\corpage{cor:lift-graded-inclusion-1}\corpage{cor:lift-exponent-models-3} \\
+\cite{release-weyl-cut} & \corpagestart\corpage{cor:lift-exponent-primes-2} \\
+\cite{release-frame-galois} & \corpagestart\corpage{cor:lift-frame-galois-1}\corpage{cor:lift-frame-galois-2}\corpage{cor:lift-frame-galois-3}\corpage{cor:lift-frame-galois-4}\corpage{cor:lift-frame-galois-5} \\
+\cite{release-lift-graded} & \corpagestart\corpage{cor:lift-pieri-cost-5}\corpage{cor:lift-pieri-cost-6}\corpage{cor:lift-graded-inclusion-1} \\
+\cite{release-lift-pieri} & \corpagestart\corpage{cor:lift-pieri-cost-1}\corpage{cor:lift-pieri-cost-2}\corpage{cor:lift-pieri-cost-3}\corpage{cor:lift-pieri-cost-4} \\
+\cite{release-lift-exchange} & \corpagestart\corpage{cor:lift-weight-exchange-1}\corpage{cor:lift-weight-exchange-2} \\
+\cite{release-d53-divisor} & \corpagestart\corpage{cor:linked-family-rows-1} \\
+\cite{release-d53-class-pin} & \corpagestart\corpage{cor:linked-family-rows-2} \\
+\cite{release-d53-point-rows} & \corpagestart\corpage{cor:linked-family-rows-4} \\
+\cite{release-marked-signature} & \corpagestart\corpage{cor:marked-localization-1}\corpage{cor:marked-localization-3} \\
+\cite{release-point-split} & \corpagestart\corpage{cor:selected-cut-1}\corpage{cor:marked-localization-1} \\
+\cite{release-marked-family} & \corpagestart\corpage{cor:marked-localization-2}\corpage{cor:marked-localization-4}\corpage{cor:marked-localization-10} \\
+\cite{release-marked-jumps} & \corpagestart\corpage{cor:marked-localization-5}\corpage{cor:marked-localization-6} \\
+\cite{release-marked-rows} & \corpagestart\corpage{cor:marked-localization-7}\corpage{cor:marked-localization-8}\corpage{cor:marked-localization-9}\corpage{cor:marked-localization-10} \\
+\cite{release-loc-all} & \corpagestart\corpage{cor:marked-localization-8}\corpage{cor:small-prime-lengths-1}\corpage{cor:ramified-cyclotomic-1} \\
+\cite{release-type-lifting} & \corpagestart\corpage{cor:marked-localization-9}\corpage{cor:special-prime-lengths-3}\corpage{cor:special-prime-lengths-4}\corpage{cor:special-prime-lengths-5} \\
+\cite{release-exceptional-primes} & \corpagestart\corpage{cor:prime-cost-sums-2}\corpage{cor:prime-cost-sums-3} \\
+\cite{release-ht} & \corpagestart\corpage{cor:ramified-cyclotomic-2}\corpage{cor:ramified-cyclotomic-3}\corpage{cor:ramified-cyclotomic-4} \\
+\cite{release-real-provision} & \corpagestart\corpage{cor:real-row-realization-1}\corpage{cor:real-row-realization-4} \\
+\cite{release-measured-spectral} & \corpagestart\corpage{cor:real-row-realization-2}\corpage{cor:real-row-realization-3} \\
+\cite{release-fibre-kernel} & \corpagestart\corpage{cor:real-row-realization-3} \\
+\cite{release-real-degree} & \corpagestart\corpage{cor:real-row-realization-4} \\
+\cite{release-real-evaluation} & \corpagestart\corpage{cor:real-row-realization-5}\corpage{cor:real-row-realization-6} \\
+\cite{release-real-replace} & \corpagestart\corpage{cor:real-row-realization-7}\corpage{cor:real-row-realization-9} \\
+\cite{release-real-ambient} & \corpagestart\corpage{cor:real-row-realization-8} \\
+\cite{release-residue-polar} & \corpagestart\corpage{cor:residue-frobenius-inverse-1}\corpage{cor:residue-model-length-5} \\
+\cite{release-residue-models} & \corpagestart\corpage{cor:residue-model-length-1}\corpage{cor:residue-model-length-2}\corpage{cor:residue-model-length-3}\corpage{cor:residue-model-length-4} \\
+\cite{release-residue-characters} & \corpagestart\corpage{cor:residue-model-length-6}\corpage{cor:residue-model-length-7}\corpage{cor:residue-model-length-8} \\
+\cite{release-residue-sen} & \corpagestart\corpage{cor:residue-wach-realization-2}\corpage{cor:residue-wach-realization-3}\corpage{cor:residue-wach-realization-4} \\
+\cite{release-row-metric} & \corpagestart\corpage{cor:special-prime-lengths-8}\corpage{cor:row-metric-1}\corpage{cor:row-metric-2}\corpage{cor:row-metric-3}\corpage{cor:row-coordinates-1}\corpage{cor:row-mixed-1}\corpage{cor:row-colength-1} \\
+\cite{release-ram-primes} & \corpagestart\corpage{cor:special-prime-lengths-7}\corpage{cor:special-prime-lengths-8}\corpage{cor:row-metric-2}\corpage{cor:special-prime-lengths-9}\corpage{cor:special-prime-lengths-10} \\
+\cite{release-retained-rank} & \corpagestart\corpage{cor:selected-cut-2} \\
+\cite{release-point-adjoint} & \corpagestart\corpage{cor:selected-point-adjoint-1}\corpage{cor:selected-point-adjoint-5}\corpage{cor:selected-point-adjoint-6} \\
+\cite{release-point-theta-pole} & \corpagestart\corpage{cor:selected-point-adjoint-2}\corpage{cor:selected-point-adjoint-3}\corpage{cor:selected-point-adjoint-4} \\
+\cite{release-type-primes} & \corpagestart\corpage{cor:special-prime-lengths-1}\corpage{cor:special-prime-lengths-2}\corpage{cor:special-prime-lengths-6} \\
+\cite{release-run-cover} & \corpagestart\corpage{cor:split-level-sections-1} \\
+\cite{release-cover-weber} & \corpagestart\corpage{cor:split-level-sections-1}\corpage{cor:split-level-sections-2} \\
+\cite{release-run-twist} & \corpagestart\corpage{cor:split-level-sections-3} \\
+\cite{release-run-cover-coeff} & \corpagestart\corpage{cor:split-level-sections-4} \\
+\cite{release-arc} & \corpagestart\corpage{cor:theta-cover-integrality-1} \\
+\cite{release-jet} & \corpagestart\corpage{cor:toric-twist-2} \\
+\cite{release-split-ordinary} & \corpagestart\corpage{cor:unramified-split-length-1}\corpage{cor:unramified-split-length-4}\corpage{cor:unramified-split-length-5}\corpage{cor:unramified-split-length-6} \\
+\cite{release-unram-wach} & \corpagestart\corpage{cor:unramified-split-length-2}\corpage{cor:unramified-split-length-3}\corpage{cor:unramified-split-length-4} \\
+\cite{release-band-transport} & \corpagestart\corpage{cor:unramified-split-length-7} \\
+\cite{release-window-design} & \corpagestart\corpage{cor:window-points-1}\corpage{cor:window-points-4}\corpage{cor:window-points-5} \\
+\cite{release-point-kit} & \corpagestart\corpage{cor:window-points-4} \\
+\bottomrule\end{longtable}}
+\par\noindent\textit{Chapter 6}
+{\small\begin{longtable}{@{}p{.19\linewidth}@{\hspace{1em}}p{.73\linewidth}@{}}
+\toprule Source entry & Pages in the mathematical text \\ \midrule\endhead
+\cite{release-marked-sharp} & \corpagestart\corpage{cor:frame-height-limit-1}\corpage{cor:frame-height-limit-5} \\
+\cite{release-frame-height} & \corpagestart\corpage{cor:frame-height-limit-2}\corpage{cor:frame-height-limit-4}\corpage{cor:frame-height-limit-5} \\
+\cite{release-frame-gains} & \corpagestart\corpage{cor:frame-height-limit-3} \\
+\cite{release} & \corpagestart\corpage{cor:frames-1}\corpage{cor:frames-7} \\
+\cite{release-selected-frame-height} & \corpagestart\corpage{cor:frames-2} \\
+\cite{release-fixed-division} & \corpagestart\corpage{cor:frames-3}\corpage{cor:frames-6}\corpage{cor:frames-10} \\
+\cite{release-selected-reference-slopes} & \corpagestart\corpage{cor:frames-4}\corpage{cor:frames-5} \\
+\cite{release-small-share-loss} & \corpagestart\corpage{cor:frames-8}\corpage{cor:prime-class-loss-3}\corpage{cor:frames-9}\corpage{cor:frames-10} \\
+\cite{release-point-kit} & \corpagestart\corpage{cor:frames-10} \\
+\cite{release-numerical-window} & \corpagestart\corpage{cor:frames-11}\corpage{cor:frames-12} \\
+\cite{release-point-prime-loss} & \corpagestart\corpage{cor:prime-class-loss-1}\corpage{cor:prime-class-loss-3} \\
+\cite{release-orbit-prime-loss} & \corpagestart\corpage{cor:prime-class-loss-2} \\
+\bottomrule\end{longtable}}
+\par\noindent\textit{Chapter 7}
+{\small\begin{longtable}{@{}p{.19\linewidth}@{\hspace{1em}}p{.73\linewidth}@{}}
+\toprule Source entry & Pages in the mathematical text \\ \midrule\endhead
+\cite{release-fixed-level-support} & \corpagestart\corpage{cor:period-level-support-1}\corpage{cor:period-level-support-2}\corpage{cor:period-level-support-3} \\
+\cite{release-served-period} & \corpagestart\corpage{cor:period-transport-1} \\
+\cite{release-selected-classes} & \corpagestart\corpage{cor:selected-class-counts-1}\corpage{cor:selected-class-counts-2}\corpage{cor:selected-class-counts-3}\corpage{cor:selected-period-means-3} \\
+\cite{release-selected-kernel} & \corpagestart\corpage{cor:selected-kernel-jets-1}\corpage{cor:selected-kernel-jets-3}\corpage{cor:selected-kernel-jets-4}\corpage{cor:selected-kernel-jets-5} \\
+\cite{release-selected-jet-field} & \corpagestart\corpage{cor:selected-kernel-jets-2} \\
+\cite{release-arch-mean} & \corpagestart\corpage{cor:selected-kernel-jets-4}\corpage{cor:selected-period-means-1}\corpage{cor:selected-period-means-2}\corpage{cor:selected-period-means-3} \\
+\cite{release-selected-scalar} & \corpagestart\corpage{cor:selected-lift-scalar-1}\corpage{cor:selected-lift-scalar-2}\corpage{cor:selected-lift-scalar-3}\corpage{cor:selected-lift-scalar-4}\corpage{cor:selected-lift-scalar-5}\corpage{cor:selected-lift-scalar-6}\corpage{cor:selected-lift-scalar-8} \\
+\cite{release-selected-row-eval} & \corpagestart\corpage{cor:selected-lift-scalar-7}\corpage{cor:selected-lift-scalar-8} \\
+\cite{release-selected-norms} & \corpagestart\corpage{cor:selected-norms-1}\corpage{cor:selected-norms-2}\corpage{cor:selected-norms-3}\corpage{cor:selected-norms-4} \\
+\cite{release-selected-period} & \corpagestart\corpage{cor:selected-period-1}\corpage{cor:selected-period-2}\corpage{cor:selected-period-3}\corpage{cor:selected-period-4}\corpage{cor:selected-period-5}\corpage{cor:selected-period-6} \\
+\cite{release-selected-terminal} & \corpagestart\corpage{cor:selected-terminal-height-1}\corpage{cor:selected-terminal-height-2}\corpage{cor:selected-terminal-height-3}\corpage{cor:selected-terminal-height-4} \\
+\cite{release-terminal-frames} & \corpagestart\corpage{cor:selected-terminal-height-1} \\
+\bottomrule\end{longtable}}
+\par\noindent\textit{Chapter 8}
+{\small\begin{longtable}{@{}p{.19\linewidth}@{\hspace{1em}}p{.73\linewidth}@{}}
+\toprule Source entry & Pages in the mathematical text \\ \midrule\endhead
+\cite{release-baseline-jets} & \corpagestart\corpage{cor:baseline-jets-1}\corpage{cor:baseline-jets-2} \\
+\cite{release} & \corpagestart\corpage{cor:cyclic-jets-1}\corpage{cor:integral-jets-1}\corpage{cor:curve-exponents-1}\corpage{cor:cm-models-1}\corpage{cor:finite-valuations-1} \\
+\cite{release-selected-column-join} & \corpagestart\corpage{cor:column-orbit-length-1}\corpage{cor:column-orbit-length-2} \\
+\cite{release-column-index} & \corpagestart\corpage{cor:column-orbit-length-2} \\
+\cite{release-second-period} & \corpagestart\corpage{cor:complementary-period-1} \\
+\cite{release-fitted-grid} & \corpagestart\corpage{cor:fitted-evaluation-1}\corpage{cor:fitted-evaluation-2} \\
+\cite{release-fitted-row-norms} & \corpagestart\corpage{cor:fitted-evaluation-3}\corpage{cor:fitted-evaluation-4}\corpage{cor:fitted-evaluation-5}\corpage{cor:fitted-evaluation-6}\corpage{cor:fitted-row-height-1} \\
+\cite{release-parent-metric} & \corpagestart\corpage{cor:fitted-row-height-2} \\
+\cite{release-parent-square} & \corpagestart\corpage{cor:fitted-row-height-3} \\
+\cite{release-fitted-square-height} & \corpagestart\corpage{cor:fitted-square-ratios-4}\corpage{cor:fitted-square-ratios-5}\corpage{cor:fitted-square-ratios-6}\corpage{cor:fitted-square-ratios-7}\corpage{cor:fitted-row-height-4} \\
+\cite{release-fitted-row-grid} & \corpagestart\corpage{cor:fitted-row-height-5} \\
+\cite{release-fitted-row-height} & \corpagestart\corpage{cor:fitted-row-height-5} \\
+\cite{release-fitted-square} & \corpagestart\corpage{cor:fitted-square-ratios-1}\corpage{cor:fitted-square-ratios-2}\corpage{cor:fitted-square-ratios-3}\corpage{cor:fitted-square-ratios-7} \\
+\cite{release-fitted-test-slope} & \corpagestart\corpage{cor:fitted-test-slope-1}\corpage{cor:fitted-test-slope-2}\corpage{cor:fitted-test-slope-3} \\
+\cite{release-incident-entry} & \corpagestart\corpage{cor:hecke-entry-capacities-1} \\
+\cite{release-gain-numbers} & \corpagestart\corpage{cor:hecke-entry-capacities-2} \\
+\cite{release-column-period} & \corpagestart\corpage{cor:hecke-period-1} \\
+\cite{release-site-pair} & \corpagestart\corpage{cor:incident-sections-1}\corpage{cor:incident-sections-2} \\
+\cite{release-site-series} & \corpagestart\corpage{cor:incident-sections-2} \\
+\cite{release-site-moves} & \corpagestart\corpage{cor:incident-sections-3}\corpage{cor:incident-sections-4} \\
+\cite{release-site-reading} & \corpagestart\corpage{cor:incident-sections-5} \\
+\cite{release-ramified-column} & \corpagestart\corpage{cor:ramified-column-1} \\
+\cite{release-selected-column-metric} & \corpagestart\corpage{cor:selected-column-metric-1}\corpage{cor:selected-column-metric-2}\corpage{cor:selected-column-metric-3}\corpage{cor:selected-column-metric-4}\corpage{cor:selected-column-metric-5} \\
+\cite{release-unserved-period} & \corpagestart\corpage{cor:unserved-period-2}\corpage{cor:terminal-period-1} \\
+\cite{release-terminal-frames} & \corpagestart\corpage{cor:terminal-realization-1}\corpage{cor:terminal-realization-2} \\
+\cite{release-terminal-points} & \corpagestart\corpage{cor:terminal-realization-3}\corpage{cor:terminal-realization-4} \\
+\cite{release-unserved-charts} & \corpagestart\corpage{cor:unserved-kernel-charts-1}\corpage{cor:unserved-kernel-charts-2}\corpage{cor:unserved-kernel-charts-3}\corpage{cor:unserved-period-1} \\
+\cite{release-word-chart} & \corpagestart\corpage{cor:word-measure-1}\corpage{cor:word-measure-2} \\
+\cite{release-word-translation} & \corpagestart\corpage{cor:word-measure-2} \\
+\cite{release-word-primary} & \corpagestart\corpage{cor:word-measure-3} \\
+\cite{release-word-measure} & \corpagestart\corpage{cor:word-measure-4}\corpage{cor:word-measure-6} \\
+\cite{release-word-normalized} & \corpagestart\corpage{cor:word-measure-5}\corpage{cor:word-projection-4} \\
+\cite{release-word-frame} & \corpagestart\corpage{cor:word-measure-6} \\
+\cite{release-word-point} & \corpagestart\corpage{cor:word-period-2}\corpage{cor:word-moments-1} \\
+\cite{release-word-move} & \corpagestart\corpage{cor:word-period-1} \\
+\cite{release-word-transfer} & \corpagestart\corpage{cor:word-period-2} \\
+\cite{release-word-vacuum} & \corpagestart\corpage{cor:word-projection-1} \\
+\cite{release-word-conjugate} & \corpagestart\corpage{cor:word-projection-2} \\
+\cite{release-word-moments} & \corpagestart\corpage{cor:word-projection-3}\corpage{cor:word-projection-4} \\
+\bottomrule\end{longtable}}
+\par\noindent\textit{Chapter 9}
+{\small\begin{longtable}{@{}p{.19\linewidth}@{\hspace{1em}}p{.73\linewidth}@{}}
+\toprule Source entry & Pages in the mathematical text \\ \midrule\endhead
+\cite{release-division-level-pins} & \corpagestart\corpage{cor:division-level-pins-1}\corpage{cor:division-level-pins-2}\corpage{cor:division-level-pins-3} \\
+\cite{release-selected-column-join} & \corpagestart\corpage{cor:division-level-pins-1}\corpage{cor:division-level-pins-2}\corpage{cor:word-division-3}\corpage{cor:word-division-5} \\
+\cite{release-dual-index} & \corpagestart\corpage{cor:division-level-pins-3} \\
+\cite{release-fixed-division} & \corpagestart\corpage{cor:division-level-pins-3}\corpage{cor:word-division-2}\corpage{cor:word-division-6}\corpage{cor:word-division-7}\corpage{cor:word-division-8}\corpage{cor:word-division-9} \\
+\cite{release-slice-lift} & \corpagestart\corpage{cor:generic-slice-lifting-1}\corpage{cor:generic-slice-lifting-2} \\
+\cite{release-row-share} & \corpagestart\corpage{cor:paired-character-share-1} \\
+\cite{release-rank-model} & \corpagestart\corpage{cor:paired-cusp-ranks-1}\corpage{cor:paired-cusp-ranks-2}\corpage{cor:paired-cusp-ranks-7} \\
+\cite{release-rank-translates} & \corpagestart\corpage{cor:paired-cusp-ranks-3}\corpage{cor:paired-cusp-ranks-4}\corpage{cor:paired-cusp-ranks-5}\corpage{cor:paired-cusp-ranks-6} \\
+\cite{release-rank-jets} & \corpagestart\corpage{cor:paired-cusp-ranks-8}\corpage{cor:paired-cusp-ranks-9} \\
+\cite{release-rank-projector} & \corpagestart\corpage{cor:paired-row-reading-4}\corpage{cor:paired-good-share-1}\corpage{cor:paired-good-share-2}\corpage{cor:paired-good-share-3}\corpage{cor:paired-good-share-5} \\
+\cite{release-rank-types} & \corpagestart\corpage{cor:paired-good-share-3}\corpage{cor:paired-good-share-4}\corpage{cor:paired-type-mass-1}\corpage{cor:paired-type-mass-2}\corpage{cor:paired-type-mass-3} \\
+\cite{release-row-trace-generators} & \corpagestart\corpage{cor:paired-off-prime-trace-1}\corpage{cor:paired-off-prime-trace-2}\corpage{cor:paired-off-prime-trace-3}\corpage{cor:paired-off-prime-trace-7}\corpage{cor:paired-off-prime-trace-9} \\
+\cite{release-row-trace-evaluation} & \corpagestart\corpage{cor:paired-off-prime-trace-4}\corpage{cor:paired-off-prime-trace-5}\corpage{cor:paired-off-prime-trace-6}\corpage{cor:paired-off-prime-trace-7} \\
+\cite{release-row-trace-translate} & \corpagestart\corpage{cor:paired-off-prime-trace-4}\corpage{cor:paired-off-prime-trace-8} \\
+\cite{release-selected-reading} & \corpagestart\corpage{cor:slice-shifted-theta-2}\corpage{cor:paired-off-prime-trace-5}\corpage{cor:paired-row-reading-1}\corpage{cor:paired-row-reading-2}\corpage{cor:paired-row-reading-3}\corpage{cor:paired-row-reading-4} \\
+\cite{release-row-trace} & \corpagestart\corpage{cor:paired-twist-index-1}\corpage{cor:paired-off-prime-trace-9}\corpage{cor:paired-twist-index-2} \\
+\cite{release-selected-form-tie} & \corpagestart\corpage{cor:paired-row-indices-1}\corpage{cor:paired-row-indices-3}\corpage{cor:paired-row-indices-7} \\
+\cite{release-run-remainder} & \corpagestart\corpage{cor:paired-row-indices-2}\corpage{cor:run-index-length-2}\corpage{cor:paired-row-indices-3} \\
+\cite{release-paired-depth} & \corpagestart\corpage{cor:slice-finite-depth-2}\corpage{cor:slice-unscaled-depth-4}\corpage{cor:paired-row-indices-4}\corpage{cor:paired-twist-index-5}\corpage{cor:paired-row-indices-5}\corpage{cor:paired-row-indices-6} \\
+\cite{release-depth-good-blocks} & \corpagestart\corpage{cor:slice-unscaled-depth-5}\corpage{cor:slice-unscaled-depth-6}\corpage{cor:slice-unscaled-depth-8}\corpage{cor:slice-unscaled-depth-9}\corpage{cor:paired-row-indices-6} \\
+\cite{release-depth-odd-flow} & \corpagestart\corpage{cor:slice-unscaled-depth-7}\corpage{cor:slice-unscaled-depth-8}\corpage{cor:slice-unscaled-depth-9}\corpage{cor:paired-row-indices-6} \\
+\cite{release-parent-run-index} & \corpagestart\corpage{cor:paired-row-indices-7}\corpage{cor:paired-row-indices-8}\corpage{cor:word-division-1} \\
+\cite{release-slice-scale-record} & \corpagestart\corpage{cor:slice-scales-1}\corpage{cor:slice-scales-2}\corpage{cor:slice-scales-3}\corpage{cor:slice-scales-4}\corpage{cor:paired-row-indices-8} \\
+\cite{release-selected-tuple-rank} & \corpagestart\corpage{cor:paired-row-reading-5} \\
+\cite{release-tied-twist} & \corpagestart\corpage{cor:paired-twist-index-3} \\
+\cite{release-tuple-image} & \corpagestart\corpage{cor:paired-twist-index-4}\corpage{cor:paired-twist-index-5} \\
+\cite{release-geometric-index} & \corpagestart\corpage{cor:run-index-length-1}\corpage{cor:run-index-length-2} \\
+\cite{release-height-eta} & \corpagestart\corpage{cor:selected-auxiliary-cusp-1}\corpage{cor:selected-auxiliary-cusp-2}\corpage{cor:selected-auxiliary-cusp-3}\corpage{cor:selected-auxiliary-cusp-4}\corpage{cor:selected-auxiliary-cusp-6}\corpage{cor:selected-auxiliary-cusp-7} \\
+\cite{release-torus-level} & \corpagestart\corpage{cor:selected-auxiliary-cusp-5} \\
+\cite{release-height-sections} & \corpagestart\corpage{cor:selected-height-sections-1}\corpage{cor:selected-height-sections-2}\corpage{cor:selected-height-sections-3} \\
+\cite{release-selected-slice} & \corpagestart\corpage{cor:selected-slice-1}\corpage{cor:selected-slice-2} \\
+\cite{release-selected-points} & \corpagestart\corpage{cor:selected-slice-3}\corpage{cor:slice-orders-2} \\
+\cite{release-slice-budget} & \corpagestart\corpage{cor:slice-budget-1}\corpage{cor:slice-budget-2}\corpage{cor:slice-budget-3}\corpage{cor:slice-scales-4} \\
+\cite{release-slice-cm} & \corpagestart\corpage{cor:slice-integral-norm-4}\corpage{cor:slice-shifted-theta-3}\corpage{cor:slice-cm-coefficients-1}\corpage{cor:slice-cm-coefficients-3}\corpage{cor:slice-budget-2} \\
+\cite{release-slice-chow} & \corpagestart\corpage{cor:slice-chow-1} \\
+\cite{release-slice-arc-model} & \corpagestart\corpage{cor:slice-cm-transference-1}\corpage{cor:slice-integral-norm-2}\corpage{cor:slice-integral-norm-5}\corpage{cor:slice-cm-coefficients-2}\corpage{cor:slice-cm-arc-model-1}\corpage{cor:slice-cm-arc-model-2}\corpage{cor:slice-cm-arc-model-3}\corpage{cor:slice-cm-arc-model-4}\corpage{cor:slice-cm-arc-model-5} \\
+\cite{release-slice-cm-bounds} & \corpagestart\corpage{cor:slice-integral-norm-1}\corpage{cor:slice-integral-norm-2}\corpage{cor:slice-integral-norm-3}\corpage{cor:slice-integral-norm-4}\corpage{cor:slice-cm-coefficients-1}\corpage{cor:slice-cm-coefficients-2}\corpage{cor:slice-cm-coefficients-3}\corpage{cor:slice-cm-arc-model-5}\corpage{cor:slice-cm-coefficients-4}\corpage{cor:slice-cm-coefficients-5}\corpage{cor:slice-cm-coefficients-6}\corpage{cor:slice-cm-coefficients-7} \\
+\cite{release-slice-net-inputs} & \corpagestart\corpage{cor:slice-evaluation-net-1} \\
+\cite{release-slice-net-analysis} & \corpagestart\corpage{cor:slice-evaluation-net-2}\corpage{cor:slice-evaluation-net-3} \\
+\cite{release-slice-net-components} & \corpagestart\corpage{cor:slice-evaluation-net-4}\corpage{cor:slice-evaluation-net-5} \\
+\cite{release-slice-net-evaluation} & \corpagestart\corpage{cor:slice-evaluation-net-6} \\
+\cite{release-slice-net-index} & \corpagestart\corpage{cor:slice-evaluation-net-7} \\
+\cite{release-finite-point-depth} & \corpagestart\corpage{cor:slice-finite-depth-1}\corpage{cor:slice-finite-depth-2}\corpage{cor:slice-finite-depth-3}\corpage{cor:slice-finite-depth-7}\corpage{cor:slice-unscaled-depth-1} \\
+\cite{release-finite-point-jets} & \corpagestart\corpage{cor:slice-finite-depth-3}\corpage{cor:slice-finite-depth-4}\corpage{cor:slice-finite-depth-6}\corpage{cor:slice-finite-depth-7}\corpage{cor:slice-scales-3} \\
+\cite{release-light-chart} & \corpagestart\corpage{cor:slice-light-integral-1}\corpage{cor:slice-light-integral-2}\corpage{cor:slice-light-integral-3}\corpage{cor:slice-finite-depth-4} \\
+\cite{release-light-level-jets} & \corpagestart\corpage{cor:slice-finite-depth-5}\corpage{cor:slice-finite-depth-6} \\
+\cite{release-light-orientation} & \corpagestart\corpage{cor:slice-light-integral-4}\corpage{cor:slice-light-integral-5}\corpage{cor:slice-finite-depth-6} \\
+\cite{release-slice-heights} & \corpagestart\corpage{cor:slice-heights-1}\corpage{cor:slice-heights-3} \\
+\cite{release-definite-slice-height} & \corpagestart\corpage{cor:slice-heights-2} \\
+\cite{release-slice-cm-norm} & \corpagestart\corpage{cor:slice-integral-norm-1}\corpage{cor:slice-integral-norm-2}\corpage{cor:slice-integral-norm-5}\corpage{cor:slice-integral-norm-6}\corpage{cor:slice-integral-norm-7} \\
+\cite{release-slice-incidence} & \corpagestart\corpage{cor:slice-integrals-1}\corpage{cor:slice-integrals-2} \\
+\cite{release-slice-end} & \corpagestart\corpage{cor:slice-integrals-3} \\
+\cite{release-slice-flat} & \corpagestart\corpage{cor:slice-interpolation-1} \\
+\cite{release-slice-cusp-decay} & \corpagestart\corpage{cor:slice-short-analytic-6}\corpage{cor:slice-interpolation-2} \\
+\cite{release-slice-interp} & \corpagestart\corpage{cor:slice-interpolation-3}\corpage{cor:slice-interpolation-4} \\
+\cite{release-slice-descent} & \corpagestart\corpage{cor:slice-interpolation-4}\corpage{cor:slice-short-division-3} \\
+\cite{release-slice-light} & \corpagestart\corpage{cor:slice-light-1}\corpage{cor:slice-light-2}\corpage{cor:slice-light-3}\corpage{cor:slice-light-integral-5} \\
+\cite{release-shifted-cover} & \corpagestart\corpage{cor:slice-shifted-theta-1}\corpage{cor:slice-marked-theta-cover-1} \\
+\cite{release-shifted-free} & \corpagestart\corpage{cor:slice-marked-theta-cover-2}\corpage{cor:slice-marked-theta-cover-3} \\
+\cite{release-slice-metric} & \corpagestart\corpage{cor:slice-metrics-1}\corpage{cor:slice-metrics-2}\corpage{cor:slice-metrics-4} \\
+\cite{release-slice-chart} & \corpagestart\corpage{cor:slice-metrics-3} \\
+\cite{release-slice-orders} & \corpagestart\corpage{cor:slice-orders-1}\corpage{cor:slice-orders-2}\corpage{cor:slice-orders-3} \\
+\cite{release-slice-shares} & \corpagestart\corpage{cor:slice-shares-1} \\
+\cite{release-slice-short-containment} & \corpagestart\corpage{cor:slice-shifted-theta-1}\corpage{cor:slice-shifted-theta-2}\corpage{cor:slice-short-division-3} \\
+\cite{release-shifted-good} & \corpagestart\corpage{cor:slice-shifted-theta-3} \\
+\cite{release-slice-short-weights} & \corpagestart\corpage{cor:slice-short-analytic-1}\corpage{cor:slice-short-analytic-2} \\
+\cite{release-slice-short-poin} & \corpagestart\corpage{cor:slice-short-analytic-3} \\
+\cite{release-slice-short-flow} & \corpagestart\corpage{cor:slice-short-analytic-4}\corpage{cor:slice-short-analytic-5}\corpage{cor:slice-short-analytic-7} \\
+\cite{release-slice-short-division} & \corpagestart\corpage{cor:slice-short-division-1}\corpage{cor:slice-short-division-2} \\
+\cite{release-shifted-small} & \corpagestart\corpage{cor:slice-short-heights-1}\corpage{cor:slice-short-heights-2} \\
+\cite{release-shifted-sup} & \corpagestart\corpage{cor:slice-short-heights-3}\corpage{cor:slice-short-heights-4} \\
+\cite{release-shifted-scalars} & \corpagestart\corpage{cor:slice-short-heights-5} \\
+\cite{release-slice-split-frame} & \corpagestart\corpage{cor:slice-split-frame-1}\corpage{cor:slice-split-frame-2}\corpage{cor:slice-split-frame-3} \\
+\cite{release-depth-flags} & \corpagestart\corpage{cor:slice-unscaled-depth-1}\corpage{cor:slice-unscaled-depth-2}\corpage{cor:slice-unscaled-depth-3}\corpage{cor:slice-unscaled-depth-4} \\
+\cite{release-lift-exponents} & \corpagestart\corpage{cor:word-division-2}\corpage{cor:word-division-6} \\
+\cite{release-parent-joint} & \corpagestart\corpage{cor:word-division-4}\corpage{cor:word-division-5} \\
+\cite{release-parent-metric} & \corpagestart\corpage{cor:word-division-4} \\
+\bottomrule\end{longtable}}
+\par\noindent\textit{Chapter 10}
+{\small\begin{longtable}{@{}p{.19\linewidth}@{\hspace{1em}}p{.73\linewidth}@{}}
+\toprule Source entry & Pages in the mathematical text \\ \midrule\endhead
+\cite{release} & \corpagestart\corpage{cor:host-edge-tests-1}\corpage{cor:host-edge-tests-2}\corpage{cor:plane-symbols-1}\corpage{cor:plane-symbols-2}\corpage{cor:plane-orbit-1}\corpage{cor:plane-return-1}\corpage{cor:plane-edge-covector-1}\corpage{cor:plane-lifts-1} \\
+\bottomrule\end{longtable}}
+\par\noindent\textit{Chapter 11}
+{\small\begin{longtable}{@{}p{.19\linewidth}@{\hspace{1em}}p{.73\linewidth}@{}}
+\toprule Source entry & Pages in the mathematical text \\ \midrule\endhead
+\cite{release-surface-cover} & \corpagestart\corpage{cor:hodge-surface-degree-1}\corpage{cor:hodge-surface-degree-6} \\
+\cite{release-surface-arr} & \corpagestart\corpage{cor:hodge-surface-degree-2}\corpage{cor:hodge-surface-degree-5} \\
+\cite{release-surface-torsion} & \corpagestart\corpage{cor:hodge-surface-degree-3}\corpage{cor:hodge-surface-degree-4} \\
+\cite{release-surface-uniform} & \corpagestart\corpage{cor:hodge-surface-degree-7}\corpage{cor:hodge-surface-degree-8} \\
+\bottomrule\end{longtable}}
+\par\noindent\textit{Chapter 12}
+{\small\begin{longtable}{@{}p{.19\linewidth}@{\hspace{1em}}p{.73\linewidth}@{}}
+\toprule Source entry & Pages in the mathematical text \\ \midrule\endhead
+\cite{release-flag-test} & \corpagestart\corpage{cor:covolume-flag-test-1}\corpage{cor:covolume-flag-test-2}\corpage{cor:covolume-flag-test-15} \\
+\cite{release-flag-difference} & \corpagestart\corpage{cor:covolume-flag-test-3}\corpage{cor:covolume-flag-test-6} \\
+\cite{release-flag-swap} & \corpagestart\corpage{cor:covolume-flag-test-4}\corpage{cor:covolume-flag-test-5} \\
+\cite{release-flag-vandermonde} & \corpagestart\corpage{cor:covolume-flag-test-7}\corpage{cor:covolume-flag-test-10} \\
+\cite{release-flag-boundary} & \corpagestart\corpage{cor:covolume-flag-test-8}\corpage{cor:covolume-flag-test-9} \\
+\cite{release-flag-finite} & \corpagestart\corpage{cor:covolume-flag-test-11}\corpage{cor:covolume-flag-test-12}\corpage{cor:covolume-flag-test-13} \\
+\cite{release-flag-lattice} & \corpagestart\corpage{cor:covolume-flag-test-14} \\
+\cite{release-flag-slope} & \corpagestart\corpage{cor:covolume-flag-test-16} \\
+\bottomrule\end{longtable}}
+\par\noindent\textit{Chapter 13}
+{\small\begin{longtable}{@{}p{.19\linewidth}@{\hspace{1em}}p{.73\linewidth}@{}}
+\toprule Source entry & Pages in the mathematical text \\ \midrule\endhead
+\cite{release-component-rank} & \corpagestart\corpage{cor:covolume-component-ranks-1}\corpage{cor:covolume-component-ranks-2}\corpage{cor:covolume-component-ranks-3}\corpage{cor:covolume-component-ranks-4} \\
+\cite{release-deep-short} & \corpagestart\corpage{cor:covolume-hilbert-samuel-1}\corpage{cor:covolume-hilbert-samuel-2} \\
+\cite{release-component-hs} & \corpagestart\corpage{cor:covolume-hilbert-samuel-3}\corpage{cor:covolume-hilbert-samuel-4}\corpage{cor:covolume-hilbert-samuel-5} \\
+\cite{release-wall-squeeze} & \corpagestart\corpage{cor:covolume-wall-shape-1} \\
+\cite{release-wall-shape} & \corpagestart\corpage{cor:covolume-wall-shape-2} \\
+\cite{release-wall-primes} & \corpagestart\corpage{cor:covolume-wall-shape-3}\corpage{cor:covolume-wall-shape-4} \\
+\cite{release-wall-hook} & \corpagestart\corpage{cor:covolume-wall-shape-5} \\
+\cite{release-wall-det} & \corpagestart\corpage{cor:covolume-wall-shape-6}\corpage{cor:covolume-wall-shape-7} \\
+\cite{release-wall-consumer} & \corpagestart\corpage{cor:covolume-wall-shape-8} \\
+\cite{release-boundary-trait} & \corpagestart\corpage{cor:deep-boundary-orders-1}\corpage{cor:deep-boundary-orders-2} \\
+\cite{release-boundary-auxiliary} & \corpagestart\corpage{cor:deep-boundary-orders-3}\corpage{cor:deep-boundary-orders-4} \\
+\cite{release-boundary-jets} & \corpagestart\corpage{cor:deep-boundary-orders-5}\corpage{cor:deep-boundary-orders-7} \\
+\cite{release-boundary-translate} & \corpagestart\corpage{cor:deep-boundary-orders-6} \\
+\cite{release-deep-cm-frames} & \corpagestart\corpage{cor:deep-cover-denominators-1}\corpage{cor:deep-cover-denominators-2} \\
+\cite{release-slice-cm-norm} & \corpagestart\corpage{cor:deep-cover-denominators-1} \\
+\cite{release-deep-cm-denominators} & \corpagestart\corpage{cor:deep-cover-denominators-3}\corpage{cor:deep-cover-denominators-4}\corpage{cor:deep-cover-denominators-5}\corpage{cor:deep-cover-denominators-6} \\
+\cite{release-deep-matching} & \corpagestart\corpage{cor:deep-cover-denominators-7}\corpage{cor:deep-cover-denominators-8} \\
+\cite{release-deep-short-clearing} & \corpagestart\corpage{cor:deep-cover-denominators-9}\corpage{cor:deep-cover-denominators-10}\corpage{cor:deep-cover-denominators-11} \\
+\cite{release-deep-core} & \corpagestart\corpage{cor:deep-cover-on-core-1}\corpage{cor:deep-cover-on-core-2}\corpage{cor:deep-cover-on-core-3}\corpage{cor:deep-cover-on-core-4}\corpage{cor:deep-cover-on-core-5} \\
+\cite{release-cover-weber} & \corpagestart\corpage{cor:deep-cover-on-core-4} \\
+\cite{release-deep-model} & \corpagestart\corpage{cor:deep-cover-on-core-5}\corpage{cor:deep-cover-on-core-6}\corpage{cor:deep-cover-on-core-7}\corpage{cor:deep-cover-on-core-11} \\
+\cite{release-deep-lattice-regularity} & \corpagestart\corpage{cor:deep-cover-on-core-8}\corpage{cor:deep-cover-on-core-10} \\
+\cite{release-deep-lattice-clearing} & \corpagestart\corpage{cor:deep-cover-on-core-9} \\
+\cite{release-deep-shifts} & \corpagestart\corpage{cor:deep-cover-on-core-10} \\
+\cite{release-component-short-readings} & \corpagestart\corpage{cor:deep-short-readings-1}\corpage{cor:deep-short-readings-2}\corpage{cor:deep-short-readings-3}\corpage{cor:deep-short-readings-4} \\
+\cite{release-wall-jets} & \corpagestart\corpage{cor:flag-point-heights-1}\corpage{cor:flag-point-heights-2} \\
+\cite{release-wall-lie-points} & \corpagestart\corpage{cor:flag-point-heights-3}\corpage{cor:flag-point-heights-4} \\
+\cite{release-wall-boundary} & \corpagestart\corpage{cor:flag-point-heights-5}\corpage{cor:flag-point-heights-6} \\
+\cite{release-wall-dense} & \corpagestart\corpage{cor:flag-point-heights-7} \\
+\cite{release-wall-truncation} & \corpagestart\corpage{cor:flag-wall-polynomial-1}\corpage{cor:flag-wall-polynomial-2}\corpage{cor:flag-wall-polynomial-3} \\
+\cite{release-wall-continuity} & \corpagestart\corpage{cor:flag-wall-polynomial-4}\corpage{cor:flag-wall-polynomial-5} \\
+\cite{release-wall-vertical-change} & \corpagestart\corpage{cor:flag-wall-polynomial-6} \\
+\cite{release-wall-geometric} & \corpagestart\corpage{cor:flag-wall-polynomial-7} \\
+\cite{release-wall-smoothing} & \corpagestart\corpage{cor:flag-wall-positivity-1}\corpage{cor:flag-wall-positivity-2} \\
+\cite{release-wall-lattices} & \corpagestart\corpage{cor:flag-wall-positivity-3} \\
+\cite{release-wall-ht-nef} & \corpagestart\corpage{cor:flag-wall-positivity-4}\corpage{cor:flag-wall-positivity-5} \\
+\cite{release-wall-dr-nef} & \corpagestart\corpage{cor:flag-wall-positivity-6}\corpage{cor:flag-wall-positivity-8}\corpage{cor:flag-wall-positivity-9} \\
+\cite{release-wall-curve-extension} & \corpagestart\corpage{cor:flag-wall-positivity-7} \\
+\bottomrule\end{longtable}}
+\par\noindent\textit{Chapter 14}
+{\small\begin{longtable}{@{}p{.19\linewidth}@{\hspace{1em}}p{.73\linewidth}@{}}
+\toprule Source entry & Pages in the mathematical text \\ \midrule\endhead
+\cite{release-wall-components} & \corpagestart\corpage{cor:covolume-component-transfer-1}\corpage{cor:covolume-component-transfer-2} \\
+\cite{release-wall-volume} & \corpagestart\corpage{cor:covolume-component-transfer-3}\corpage{cor:covolume-component-transfer-4}\corpage{cor:covolume-component-transfer-5} \\
+\cite{release-wall-transfer} & \corpagestart\corpage{cor:covolume-component-transfer-6}\corpage{cor:covolume-component-transfer-7} \\
+\cite{release-wall-height} & \corpagestart\corpage{cor:covolume-component-transfer-8}\corpage{cor:covolume-component-transfer-9}\corpage{cor:covolume-component-transfer-12}\corpage{cor:covolume-component-transfer-17} \\
+\cite{release-deep-flat-budget} & \corpagestart\corpage{cor:deep-cover-flat-degree-1}\corpage{cor:covolume-component-transfer-10}\corpage{cor:covolume-component-transfer-11} \\
+\cite{release-deep-section} & \corpagestart\corpage{cor:covolume-component-transfer-13}\corpage{cor:covolume-component-transfer-14}\corpage{cor:covolume-component-transfer-15} \\
+\cite{release-deep-traces} & \corpagestart\corpage{cor:covolume-component-transfer-16} \\
+\cite{release-wall-ratio} & \corpagestart\corpage{cor:covolume-component-transfer-18}\corpage{cor:covolume-component-transfer-21} \\
+\cite{release-wall-mass} & \corpagestart\corpage{cor:covolume-component-transfer-19}\corpage{cor:covolume-component-transfer-20}\corpage{cor:parent-cusp-slope-3} \\
+\cite{release-row-covolume} & \corpagestart\corpage{cor:covolume-component-transfer-21}\corpage{cor:covolume-component-transfer-22}\corpage{cor:covolume-component-transfer-23}\corpage{cor:covolume-component-transfer-24} \\
+\cite{release-division-level-pins} & \corpagestart\corpage{cor:covolume-component-transfer-24} \\
+\cite{release-fixed-division} & \corpagestart\corpage{cor:covolume-component-transfer-24} \\
+\cite{release-deep-flat-sum} & \corpagestart\corpage{cor:deep-cover-flat-degree-1}\corpage{cor:deep-cover-flat-degree-9}\corpage{cor:deep-cover-flat-degree-10}\corpage{cor:deep-cover-flat-degree-11} \\
+\cite{release-deep-flat-generator} & \corpagestart\corpage{cor:deep-cover-flat-degree-2}\corpage{cor:deep-cover-flat-degree-4} \\
+\cite{release-deep-flat-residue} & \corpagestart\corpage{cor:deep-cover-flat-degree-3}\corpage{cor:deep-cover-flat-degree-7} \\
+\cite{release-deep-flat-local} & \corpagestart\corpage{cor:deep-cover-flat-degree-4}\corpage{cor:deep-cover-flat-degree-5}\corpage{cor:deep-cover-flat-degree-7} \\
+\cite{release-deep-flat-vertical} & \corpagestart\corpage{cor:deep-cover-flat-degree-5}\corpage{cor:deep-cover-flat-degree-6}\corpage{cor:deep-cover-flat-degree-7} \\
+\cite{release-deep-flat-cm} & \corpagestart\corpage{cor:deep-cover-flat-degree-8}\corpage{cor:deep-cover-flat-degree-9}\corpage{cor:deep-cover-flat-degree-10} \\
+\cite{release-parent-cusp} & \corpagestart\corpage{cor:parent-cusp-slope-1}\corpage{cor:parent-cusp-slope-2}\corpage{cor:parent-cusp-slope-4} \\
+\cite{release-parent-evaluation} & \corpagestart\corpage{cor:parent-cusp-slope-3} \\
+\cite{release-parent-extension} & \corpagestart\corpage{cor:parent-cusp-slope-5}\corpage{cor:parent-cusp-slope-6} \\
+\cite{release-parent-projection} & \corpagestart\corpage{cor:parent-cusp-slope-7} \\
+\bottomrule\end{longtable}}
+\par\noindent\textit{Chapter 15}
+{\small\begin{longtable}{@{}p{.19\linewidth}@{\hspace{1em}}p{.73\linewidth}@{}}
+\toprule Source entry & Pages in the mathematical text \\ \midrule\endhead
+\cite{release} & \corpagestart\corpage{cor:lattice-estimates-1}\corpage{cor:lattice-estimates-2} \\
+\bottomrule\end{longtable}}
+\par\noindent\textit{Chapter 17}
+{\small\begin{longtable}{@{}p{.19\linewidth}@{\hspace{1em}}p{.73\linewidth}@{}}
+\toprule Source entry & Pages in the mathematical text \\ \midrule\endhead
+\cite{release} & \corpagestart\corpage{cor:orbital-germ-1}\corpage{cor:orbital-germ-2} \\
+\bottomrule\end{longtable}}
+\par\noindent\textit{Chapter 18}
+{\small\begin{longtable}{@{}p{.19\linewidth}@{\hspace{1em}}p{.73\linewidth}@{}}
+\toprule Source entry & Pages in the mathematical text \\ \midrule\endhead
+\cite{release} & \corpagestart\corpage{cor:word-pairing-1}\corpage{cor:word-pairing-2}\corpage{cor:word-pairing-3}\corpage{cor:word-pairing-4}\corpage{cor:word-pairing-5} \\
+\bottomrule\end{longtable}}
+\par\noindent\textit{Chapter 19}
+{\small\begin{longtable}{@{}p{.19\linewidth}@{\hspace{1em}}p{.73\linewidth}@{}}
+\toprule Source entry & Pages in the mathematical text \\ \midrule\endhead
+\cite{release} & \corpagestart\corpage{cor:block-recursion-1}\corpage{cor:block-recursion-2} \\
+\bottomrule\end{longtable}}
+\par\noindent\textit{Chapter 23}
+{\small\begin{longtable}{@{}p{.19\linewidth}@{\hspace{1em}}p{.73\linewidth}@{}}
+\toprule Source entry & Pages in the mathematical text \\ \midrule\endhead
+\cite{release} & \corpagestart\corpage{cor:absolute-amplitude-1}\corpage{cor:absolute-amplitude-2}\corpage{cor:absolute-amplitude-3} \\
+\bottomrule\end{longtable}}
+\par\noindent\textit{Chapter 24}
+{\small\begin{longtable}{@{}p{.19\linewidth}@{\hspace{1em}}p{.73\linewidth}@{}}
+\toprule Source entry & Pages in the mathematical text \\ \midrule\endhead
+\cite{release-row-envelope} & \corpagestart\corpage{cor:row-sums-1} \\
+\bottomrule\end{longtable}}
+\par\noindent\textit{Chapter 25}
+{\small\begin{longtable}{@{}p{.19\linewidth}@{\hspace{1em}}p{.73\linewidth}@{}}
+\toprule Source entry & Pages in the mathematical text \\ \midrule\endhead
+\cite{release} & \corpagestart\corpage{cor:geometry-dimension-1} \\
+\bottomrule\end{longtable}}
+\par\noindent\textit{Chapter 26}
+{\small\begin{longtable}{@{}p{.19\linewidth}@{\hspace{1em}}p{.73\linewidth}@{}}
+\toprule Source entry & Pages in the mathematical text \\ \midrule\endhead
+\cite{release-selected-exponent} & \corpagestart\corpage{cor:selected-exponent-1}\corpage{cor:selected-exponent-2} \\
+\cite{release-selected-row-gram} & \corpagestart\corpage{cor:selected-row-gram-1}\corpage{cor:selected-row-gram-2}\corpage{cor:selected-row-gram-3}\corpage{cor:selected-row-gram-4}\corpage{cor:selected-row-gram-5}\corpage{cor:selected-row-gram-6}\corpage{cor:selected-row-gram-7}\corpage{cor:selected-row-gram-8}\corpage{cor:selected-row-gram-9} \\
+\cite{release-selected-frame-height} & \corpagestart\corpage{cor:selected-row-gram-9} \\
+\cite{release-selected-word-rank} & \corpagestart\corpage{cor:selected-word-level-1}\corpage{cor:selected-word-level-2} \\
+\bottomrule\end{longtable}}
+\par\noindent\textit{Appendix A}
+{\small\begin{longtable}{@{}p{.19\linewidth}@{\hspace{1em}}p{.73\linewidth}@{}}
+\toprule Source entry & Pages in the mathematical text \\ \midrule\endhead
+\cite{alpoge} & \corpagestart\corpage{cor:cohomology-host-windows-1} \\
+\bottomrule\end{longtable}}
+\par\noindent\textit{Appendix B}
+{\small\begin{longtable}{@{}p{.19\linewidth}@{\hspace{1em}}p{.73\linewidth}@{}}
+\toprule Source entry & Pages in the mathematical text \\ \midrule\endhead
+\cite{alpoge} & \corpagestart\corpage{cor:cohomology-local-global-1} \\
+\bottomrule\end{longtable}}
+\par\noindent\textit{Appendix C}
+{\small\begin{longtable}{@{}p{.19\linewidth}@{\hspace{1em}}p{.73\linewidth}@{}}
+\toprule Source entry & Pages in the mathematical text \\ \midrule\endhead
+\cite{release-host-dyadic} & \corpagestart\corpage{cor:cohomology-cohomology-1} \\
+\cite{alpoge} & \corpagestart\corpage{cor:cohomology-height-1}\corpage{cor:cohomology-height-2}\corpage{cor:cohomology-height-3}\corpage{cor:cohomology-height-4}\corpage{cor:cohomology-cohomology-2}\corpage{cor:ordinary-odd-primes-1}\corpage{cor:ordinary-odd-primes-2}\corpage{cor:ordinary-odd-primes-3}\corpage{cor:ordinary-odd-primes-4}\corpage{cor:ordinary-odd-primes-5}\corpage{cor:ordinary-symplectic-cohomology-1}\corpage{cor:ordinary-residual-characters-1}\corpage{cor:ordinary-residual-characters-2}\corpage{cor:ordinary-symplectic-cohomology-2}\corpage{cor:ordinary-symplectic-cohomology-3}\corpage{cor:ordinary-symplectic-cohomology-4}\corpage{cor:ordinary-symplectic-cohomology-5}\corpage{cor:ordinary-symplectic-cohomology-6}\corpage{cor:ordinary-symplectic-cohomology-7}\corpage{cor:ordinary-symplectic-cohomology-8}\corpage{cor:ordinary-symplectic-cohomology-9}\corpage{cor:ordinary-promodularity-1}\corpage{cor:ordinary-ordinary-patching-1}\corpage{cor:ordinary-promodularity-2}\corpage{cor:ordinary-promodularity-3}\corpage{cor:ordinary-promodularity-4}\corpage{cor:ordinary-promodularity-5}\corpage{cor:ordinary-promodularity-6}\corpage{cor:ordinary-promodularity-7}\corpage{cor:ordinary-count-ii-tower-1}\corpage{cor:ordinary-promodularity-8}\corpage{cor:ordinary-mixed-hilbert-1} \\
+ & \corpagestart\corpage{cor:ordinary-mixed-hilbert-2}\corpage{cor:ordinary-mixed-hilbert-3}\corpage{cor:ordinary-promodularity-9}\corpage{cor:ordinary-promodularity-10}\corpage{cor:ordinary-promodularity-11}\corpage{cor:ordinary-promodularity-12}\corpage{cor:ordinary-promodularity-13}\corpage{cor:ordinary-count-ii-point-output-1}\corpage{cor:ordinary-count-ii-point-output-2}\corpage{cor:ordinary-count-ii-point-output-3}\corpage{cor:ordinary-count-ii-point-output-4}\corpage{cor:ordinary-count-ii-point-output-5}\corpage{cor:ordinary-count-ii-point-output-6}\corpage{cor:ordinary-count-iii-tower-1}\corpage{cor:ordinary-count-iii-seed-1}\corpage{cor:ordinary-count-iii-eigenform-1}\corpage{cor:ordinary-count-iii-eigenform-2}\corpage{cor:ordinary-count-iii-seed-2}\corpage{cor:ordinary-count-iii-seed-3}\corpage{cor:ordinary-count-iii-admission-1}\corpage{cor:ordinary-count-iii-admission-2}\corpage{cor:ordinary-count-iii-admission-3}\corpage{cor:ordinary-count-iii-admission-4}\corpage{cor:ordinary-count-iii-chain-1}\corpage{cor:ordinary-count-iii-chain-2}\corpage{cor:ordinary-count-iii-components-1}\corpage{cor:ordinary-count-iii-point-output-1}\corpage{cor:ordinary-count-iii-point-output-2}\corpage{cor:cohomology-full-block-extension-1}\corpage{cor:ordinary-symplectic-cohomology-10}\corpage{cor:ordinary-symplectic-cohomology-11}\corpage{cor:ordinary-symplectic-cohomology-12} \\
+ & \corpagestart\corpage{cor:ordinary-symplectic-cohomology-13}\corpage{cor:ordinary-symplectic-cohomology-14}\corpage{cor:ordinary-symplectic-cohomology-15}\corpage{cor:ordinary-symplectic-cohomology-16}\corpage{cor:ordinary-symplectic-cohomology-17}\corpage{cor:ordinary-symplectic-cohomology-18}\corpage{cor:ordinary-symplectic-cohomology-19}\corpage{cor:ordinary-symplectic-cohomology-20}\corpage{cor:ordinary-symplectic-cohomology-21}\corpage{cor:ordinary-odd-primes-6}\corpage{cor:ordinary-odd-primes-7}\corpage{cor:ordinary-odd-primes-8}\corpage{cor:ordinary-odd-primes-9}\corpage{cor:ordinary-odd-primes-10}\corpage{cor:ordinary-odd-primes-11}\corpage{cor:ordinary-odd-primes-12}\corpage{cor:ordinary-odd-primes-13} \\
+\bottomrule\end{longtable}}
+\par\noindent\textit{Appendix D}
+{\small\begin{longtable}{@{}p{.19\linewidth}@{\hspace{1em}}p{.73\linewidth}@{}}
+\toprule Source entry & Pages in the mathematical text \\ \midrule\endhead
+\cite{alpoge} & \corpagestart\corpage{cor:ordinary-level-data-1}\corpage{cor:ordinary-level-data-2} \\
+\bottomrule\end{longtable}}
+\par\noindent\textit{Appendix E}
+{\small\begin{longtable}{@{}p{.19\linewidth}@{\hspace{1em}}p{.73\linewidth}@{}}
+\toprule Source entry & Pages in the mathematical text \\ \midrule\endhead
+\cite{alpoge} & \corpagestart\corpage{cor:ordinary-level-attachments-1}\corpage{cor:ordinary-level-attachments-2} \\
+\bottomrule\end{longtable}}
+\par\noindent\textit{Appendix I}
+{\small\begin{longtable}{@{}p{.19\linewidth}@{\hspace{1em}}p{.73\linewidth}@{}}
+\toprule Source entry & Pages in the mathematical text \\ \midrule\endhead
+\cite{alpoge} & \corpagestart\corpage{cor:ordinary-patching-marking-1}\corpage{cor:ordinary-patching-marking-2}\corpage{cor:ordinary-patching-matrices-1}\corpage{cor:ordinary-patching-matrices-2}\corpage{cor:ordinary-patching-matrices-3}\corpage{cor:ordinary-patching-matrices-4}\corpage{cor:ordinary-patching-matrices-5}\corpage{cor:ordinary-patching-matrices-6}\corpage{cor:ordinary-patching-matrices-7}\corpage{cor:ordinary-patching-matrices-8}\corpage{cor:ordinary-patching-cotangent-1}\corpage{cor:ordinary-patching-cotangent-2}\corpage{cor:ordinary-patching-cotangent-3}\corpage{cor:ordinary-patching-cotangent-4}\corpage{cor:ordinary-patching-cotangent-5}\corpage{cor:ordinary-patching-cotangent-6}\corpage{cor:ordinary-patching-cotangent-7}\corpage{cor:ordinary-patching-cotangent-8}\corpage{cor:ordinary-patching-cotangent-9}\corpage{cor:ordinary-patching-cotangent-10}\corpage{cor:ordinary-patching-cotangent-11}\corpage{cor:ordinary-patching-cotangent-12}\corpage{cor:ordinary-patching-cotangent-13}\corpage{cor:ordinary-patching-cotangent-14}\corpage{cor:ordinary-closed-link-1}\corpage{cor:ordinary-marked-patching-1} \\
+\bottomrule\end{longtable}}
+\par\noindent\textit{Appendix J}
+{\small\begin{longtable}{@{}p{.19\linewidth}@{\hspace{1em}}p{.73\linewidth}@{}}
+\toprule Source entry & Pages in the mathematical text \\ \midrule\endhead
+\cite{alpoge} & \corpagestart\corpage{cor:ordinary-marked-points-1} \\
+\bottomrule\end{longtable}}
+\par\noindent\textit{Appendix K}
+{\small\begin{longtable}{@{}p{.19\linewidth}@{\hspace{1em}}p{.73\linewidth}@{}}
+\toprule Source entry & Pages in the mathematical text \\ \midrule\endhead
+\cite{alpoge} & \corpagestart\corpage{cor:ordinary-fitted-arithmetic-1}\corpage{cor:ordinary-fitted-arithmetic-2}\corpage{cor:ordinary-fitted-arithmetic-3}\corpage{cor:ordinary-fitted-arithmetic-4}\corpage{cor:ordinary-fitted-arithmetic-5} \\
+\bottomrule\end{longtable}}
+\par\noindent\textit{Appendix M}
+{\small\begin{longtable}{@{}p{.19\linewidth}@{\hspace{1em}}p{.73\linewidth}@{}}
+\toprule Source entry & Pages in the mathematical text \\ \midrule\endhead
+\cite{alpoge} & \corpagestart\corpage{cor:ordinary-rank-three-length-1}\corpage{cor:ordinary-rank-three-length-2}\corpage{cor:ordinary-rank-three-length-3}\corpage{cor:ordinary-rank-three-length-4}\corpage{cor:ordinary-rank-three-length-5}\corpage{cor:ordinary-rank-three-length-6}\corpage{cor:ordinary-rank-three-length-7}\corpage{cor:ordinary-rank-three-length-8} \\
+\bottomrule\end{longtable}}
+\par\noindent\textit{Appendix N}
+{\small\begin{longtable}{@{}p{.19\linewidth}@{\hspace{1em}}p{.73\linewidth}@{}}
+\toprule Source entry & Pages in the mathematical text \\ \midrule\endhead
+\cite{alpoge} & \corpagestart\corpage{cor:cohomology-count-two-seed-1}\corpage{cor:cohomology-count-two-normalization-1}\corpage{cor:cohomology-count-two-normalization-2}\corpage{cor:cohomology-count-two-chain-1}\corpage{cor:cohomology-count-two-chain-2}\corpage{cor:cohomology-count-two-chain-3}\corpage{cor:cohomology-count-two-chain-4} \\
+\bottomrule\end{longtable}}

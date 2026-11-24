@@ -1,0 +1,295 @@
+\paragraph{Values of the light and auxiliary sections at finite places.}
+\label{par:slice-finite-depth}
+
+A bound for the light lattice over the coefficient field gives no local order by itself. The light and auxiliary sections must be compared in the integral frames at each finite place.
+
+Fix either run and an allowed lift \(j\). At a coefficient place
+\(\lambda\mid p\) put \(e_2=\operatorname{ord}_{\lambda}(p)\).
+For an evaluation in a complete discrete valuation ring above
+\(\lambda\) of relative ramification \(e\), use
+
+\[
+  v_\lambda=\operatorname{ord}/e=e_2v_p,
+\]
+ where \(v_p(p)=1\).
+The chart depth is the infimum of \(v_\lambda\) of the values of the covariant differential operators on integral formal germs and integral harmonic
+differential polynomials of the light weight. One takes the
+infimum over charts at the point, the supremum over algebraic
+integral framed points, and then the maximum with zero. Write
+\(e_2\nu_W(\lambda)\) for this last quantity. Chart independence
+identifies the infimum over charts at the extended point with
+that on the split chart. The extended point is among the
+algebraic points in the defining supremum. Its relative
+ramification is the denominator used in the depth.
+For ramification index \(e\), the order to use after base change is normalized by
+\[
+  \frac{\operatorname{ord}_{V'}(a)}{e}=\operatorname{ord}_{V}(a)\qquad(a\in V\setminus\{0\}).
+\]
+The \hyperref[par:unscaled-light-depth]{unscaled estimates}
+use this normalization. \label{cor:slice-finite-depth-1}
+
+Let \(D_L=D_F\) be the differential degree of \(w_L\) and
+\(M=g_0g_1\) the product of the two distinct level primes.
+The valuation of the integer correction in
+\eqref{eq:light-global-scalar} is \(e_2 b_p\). The level
+primes, the two primes \(q,d\), and the primes dividing
+\(Q_S\) are disjoint. Thus
+\[
+ b_p=
+ \begin{cases}
+ D_L\operatorname{ord}_p(Q_S),&p\text{ one of the designated small primes},\\
+ \lceil D_L/2\rceil,&p=q,d,\\
+ 0,&\text{otherwise},
+ \end{cases}
+\]
+The baseline uses
+\[
+ \nu_*=
+ \begin{cases}
+ D_L/(p-1),&p=g_0,g_1,\\
+ \nu_W(\lambda)+b_p,&\text{otherwise}.
+ \end{cases}
+\]
+The normalization tie is
+\begin{equation}\label{eq:slice-finite-baseline}
+                     \nu_\lambda=e_2\nu_* .
+\end{equation}
+The exponent used for the index is the rounding of
+\(T(\nu_\lambda+e_2{\bf1}_{\rm bad})\) in the construction
+field. An extension to a place \(v\) of relative ramification
+\(e_1\) multiplies this exponent by \(e_1\). Thus there is
+only one rounding before the place comparison.
+\label{cor:slice-finite-depth-2}
+
+\begin{proposition}[Finite depths on the selected light lattice]
+\label{prop:slice-finite-readings}
+For the baseline in \eqref{eq:slice-finite-baseline}, every allowed
+integral framed point before the definite lift at which the value of \(\eta\) has finite valuation satisfies
+\[
+ \min_l v_\lambda(w_l(y))\le
+ \nu_\lambda+\frac{c}{2i_\eta}v_\lambda(\eta(y)).
+\]
+The auxiliary valuation is nonnegative, allowing \(+\infty\) if that
+section vanishes. At the definite lift the upper bound is
+\(\nu_\lambda\). These comparisons use \(v_\lambda=\operatorname{ord}/e\)
+in every allowed coefficient extension.
+\end{proposition}
+
+\begin{proof}
+\proofstep{The finite boundary term at a framed point.}
+Let \(\phi_\lambda(y)\ge0\) be the finite boundary function of
+an algebraic integral framed point \(y\). The local
+uniformization of \(y\) has lattice rank \(r_0\le N_0=2fm\).
+Its short basis for the integral quadratic form of the
+uniformization supplies an upper bound \(\Phi\) for the basis
+values and a cross-term bound \(J_0\) in the translates.
+The short-basis comparison gives
+\[
+ 0\le\Phi\le eR_0N_0^3\phi_\lambda(y),\qquad
+ \frac{R_0(N_0^4 n_W+2N_0^3)D_L^2}{g_i}\le c\quad (i=0,1).
+\]
+Here \(R_0=(\operatorname{rd}E)^2/(4f)\)
+is the discriminant factor of the chart.
+
+The bounds also
+give \(D_L J_0<g_i\), \(4D_L+4\le g_i\), and
+\(n_W\ge2(p_j+q_j)\) with \(p_j,q_j\) the signature ranks.
+At the definite lift \(\Phi,J_0,\phi_\lambda\) are zero.
+These hypotheses use the actual polarized chart, the level
+marking with conjugate coprime half-level ideals, and the
+theta coefficient expansion for its integral germs.
+\label{cor:slice-finite-depth-3}
+
+In the following comparisons \(e\) is the ramification of
+the split chart over the construction field. If \(p\nmid M\),
+the half-level elements are units, since each is integral and
+its product with its conjugate is a unit. The local interpolation
+on the uniformized copies uses this unit condition, the short
+basis above, 
+\[
+  4D_L+4\le M,
+\]
+ and \(D_LJ_0<M\). On the finite
+list of monomials of degree at most \(D_L\), harmonicity, row
+degrees and unipotent invariance impose coefficient equations.
+After clearing their denominators, let \(A\) be the matrix
+of these homogeneous equations on the finite coefficient
+module \(P\) over \(\mathcal O_{K_0}\).
+
+If \(O'\) is the local
+coefficient ring, torsion-freeness over the Dedekind domain
+gives the exact kernel identity
+\[
+ \ker(A\otimes O')=(\ker A)\otimes_{\mathcal O_{K_0}}O' .
+\]
+Thus every local jet polynomial is an integral linear
+combination of the original harmonic coefficient polynomials.
+For any integral
+germ whose jet has finite valuation, the translated section estimate
+gives a term with order at most the order of the jet plus
+\(D_L^2\Phi/M\). The term uses one of the original integral
+polynomials. After translation the value has the form
+\(u\mathcal D_{w_L}(\alpha)f(y')\) for \(f\in\mathcal T_{w_L}\)
+and \(\operatorname{ord}(u)=0\), by the normalized translation
+identity. This identity keeps the marking and the factor
+\(M^{-\deg P}\) of \eqref{eq:light-rule-value}.
+
+At the level
+prime the same identity will include a nonunit determinant.
+Here the determinant is a unit. Denote the least unscaled valuation at the point by \(b_{\rm loc}\), using the local order divided by \(e\). Taking the infimum over the integral germs and polynomials gives
+\[
+  b_{\rm loc}\le e_2\nu_W(\lambda)+\frac{D_L^2\Phi}{eM}.
+\]
+Equations \eqref{eq:light-frame-order} and
+\eqref{eq:light-global-scalar} give the bound
+\(\nu_\lambda+c\phi_\lambda(y)\) on the original light columns,
+using \(M\ge g_i\) and the short-basis estimate.
+\label{cor:slice-finite-depth-4}
+
+\proofstep{The calculation at a level prime.}
+If \(p=g_i\), set \(g'=g_{1-i}\).
+The half-level generator for \(p\) and its conjugate have
+product \(p\) and are coprime. Here the marked factor is
+\(\bar\pi_i\), and in the translated evaluation the scalar acts by \(\pi_i\pi_{1-i}=\alpha\). At each conjugate pair
+of embeddings exactly one reads \(\pi_i\) as a nonunit.
+Their product is a nonunit and their B\'ezout identity
+forbids two nonunits. Allocate disjoint copy blocks to the two resulting types.
+For a label \(\tau\), write \(\Delta_{\tau,s}\) for the leading
+minor of size \(s\) in its block. Set the next exponent after its
+last row to zero and take the polynomial
+\[
+ H(X)=\prod_{\tau,s}\Delta_{\tau,s}(X)^{a_{\tau,s}-a_{\tau,s+1}},
+ \qquad
+ \deg_{\tau,i}H=\sum_{s\ge i}(a_{\tau,s}-a_{\tau,s+1})
+                    =a_{\tau,i}.
+\]
+The total degree is \(D_L\), and the upper flag operations fix
+each \(\Delta_{\tau,s}\). Every conjugate contraction pairs
+derivatives in a single copy.
+
+In each such copy at least one
+of the two conjugate types is absent, so every mixed partial
+in that contraction kills \(H\). This proves harmonicity over
+the original coefficient ring.
+The level Hodge--Tate jet comparison in this chart
+applies when \(D_L<p-1\), \(4D_L+4\le g'\),
+\(D_LJ_0<g'\), \(n_W\ge2(p_j+q_j)\), and the
+level marking is split. In the chart's valuation scale the Hodge--Tate
+inclusion for the polarized split semiabelian model gives integral
+multiplicative characters whose differentials span a module
+containing \(c_0\) times the full tangent dual for
+
+\[
+  \operatorname{ord}(c_0)=\operatorname{ord}(p)/(p-1).
+\]
+Use a \((p-1)\)-st root of \(p\) in the valued coefficient
+extension for \(c_0\). The split eigenspace projectors modulo
+\(p\) and the integral dual frame give the same inclusion
+after projecting the differentials to each label. Let \(P_s\) be projection onto the first \(s\) rows and
+let \(J_s\) be the ideal of the \(s\)-minors of the projected
+character matrix. It is the determinant ideal of the image
+lattice in those rows. The inclusion of \(c_0 O'^s\) gives
+\[
+                 c_0^s O'\subset J_s,\qquad
+                 \operatorname{ord}(J_s)\le s\operatorname{ord}(c_0).
+\]
+One can realize the minimum with nested column pivots.
+
+In
+the first row choose a coefficient of minimum valuation and
+subtract integral multiples of that column from the others.
+With first pivot \(m\) these operations put the top \(s\) rows
+in block form \(\begin{pmatrix}m&0\\ *&B_s\end{pmatrix}\).
+An \(s\)-minor omitting the first column vanishes, and one
+containing it is \(m\) times an \((s-1)\)-minor of \(B_s\).
+Thus
+\[
+        J_s=m\,I_{s-1}(B_s)
+\]
+where \(I_{s-1}\) denotes the maximal-minor ideal. Repeat on the
+remaining rows, using integral column operations that fix the pivots
+already chosen. This
+gives the stated leading-minor bounds in one nested choice.
+Different labels of one type may assign pivots to the same copy.
+
+\proofstep{Evaluation on the chosen finite eigenspaces.}
+For each label pull its chosen character back by a CM element
+acting modulo \(p\) as the projector onto that label. On a
+given copy take the product of these pullbacks over all its
+assigned labels. For the assigned characters \(\chi_\tau\) on one copy, their product has logarithmic differential
+\[
+  d\log\!\left(\prod_\tau\chi_\tau\right)=\sum_\tau d\log\chi_\tau .
+\]
+On projection to any one label the other summands vanish
+modulo \(p\), and the chosen pivot survives. Indeed the copy
+indices used within that label are distinct. Thus a single
+character on each copy realizes all the prescribed minor
+matrices modulo \(p\).
+
+In the block where \(\pi_i\) is a nonunit the powered minors
+therefore cost at most its degree times
+\(\operatorname{ord}(p)/(p-1)\).
+For powered minors of degrees \(d_b\), summing their individual costs gives
+\[
+  \sum_b d_b\,\frac{\operatorname{ord}(p)}{p-1}\le D_L\,\frac{\operatorname{ord}(p)}{p-1}.
+\]
+ The comparison with the
+covariant eigencharacter jets is modulo \(p\). The bound
+\(D_L<p-1\) puts this determinant product strictly below
+that order, so the error cannot change its valuation.
+\label{cor:slice-finite-depth-5}
+
+The local eigencharacter section on each of the \(p_j+q_j\)
+nonunit-block copies costs at most \(r_0\Phi/(4g')\) in addition.
+On the unit block the jet comparison produces a unit value before multiplication by the section factors. If the required jet degree on a copy
+is \(d_b\), its section factor costs at most \(d_b^2\Phi/g'\).
+Since the degrees \(d_b\) are nonnegative and sum to at most \(D_L\),
+the total section cost on these copies satisfies
+\[
+ \sum_b d_b^2\,\Phi/g'\le\left(\sum_b d_b\right)^2\Phi/g'
+                         \le D_L^2\Phi/g'.
+\] The covariant evaluations of
+the two blocks multiply, since the differential polynomial on
+each block uses only that block's variables. The expansion into
+marked translates at the companion level costs at most another
+\(D_L^2\Phi/g'\) for the selected term. The term is chosen by
+the ultrametric inequality after expanding the covariant differential expression with integral coefficients.
+
+The selected term reads \(u\mathcal D_{w_L}(\alpha)f(y')\) with unit-valued \(u\) and
+\(f\in\mathcal T_{w_L}\). The determinant equals the scalar's
+determinant by \eqref{eq:light-oriented-determinant}, and
+the integer correction in \eqref{eq:light-global-scalar}
+is a unit here. Thus the term has the normalized valuation
+of \(a_W f\) at \(y\), by \eqref{eq:light-frame-order}.
+After division by \(e\) the first cost becomes
+\(e_2D_L/(p-1)\). The remaining cost is at most
+\[
+       \frac{((p_j+q_j)r_0/4+2D_L^2)\Phi}{e g'}
+       \le \frac{R_0(N_0^4n_W+2N_0^3)D_L^2}{g'}
+                         \phi_\lambda(y).
+\]
+Here \(p_j+q_j\le n_W\), \(r_0\le N_0\), and \(D_L\ge1\).
+The least valuation of a scaled section is again at most
+\(\nu_\lambda+c\phi_\lambda(y)\).
+\label{cor:slice-finite-depth-6}
+
+\proofstep{Adding the auxiliary cusp section before the final lift.}
+Before the last lift the auxiliary cusp comparison gives
+\(2i_\eta\phi_\lambda(y)\le v_\lambda(\eta(y))\)
+with \(i_\eta>0\) for the same frame, point and boundary
+function. We therefore have, at points where the auxiliary section has finite valuation,
+\begin{equation}\label{eq:slice-tied-depth}
+ \min_l v_\lambda(w_l(y))\le
+ \nu_\lambda+\frac{c}{2i_\eta}v_\lambda(\eta(y)),
+ \qquad v_\lambda(\eta(y))\ge0 .
+\end{equation}
+Nonnegativity also holds when the auxiliary section vanishes and its valuation is infinite. At the definite lift the local
+bound is simply \(\nu_\lambda\). Rechoosing the short and
+complementary bases keeps the light columns and the
+auxiliary section fixed. Thus the inequalities hold on
+the actual two runs. They are independent of the
+framed point and the degree and ramification of its
+coefficient extension. The \hyperref[par:slice-valued-orders]{normal-chart passage} uses these same
+sections even when the branch field is transcendental.
+\label{cor:slice-finite-depth-7}
+\end{proof}

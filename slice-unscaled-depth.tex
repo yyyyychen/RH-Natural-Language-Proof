@@ -1,0 +1,329 @@
+\paragraph{Bounding the unscaled depth by covariant differential operators.}
+\label{par:unscaled-light-depth}
+All orders in this paragraph are in units of \(v_p(p)=1\).
+They give bounds for \(\nu_W(\lambda)\) by the
+\hyperref[par:slice-finite-depth]{definition of chart depth}.
+A covariant differential operator on an integral germ may be evaluated over a complete algebraically closed valued extension of the chart field. Its value depends on a finite jet of the germ. Over the extension,
+these jets are integral linear combinations of coefficient
+monomials. The integral harmonic coefficient lattice
+extends as well. Indeed, in the fixed multidegree the
+harmonicity equations are linear over the original
+valuation ring. Their kernel extends under flat scalar
+extension, since the new valuation ring is torsion-free
+over the original DVR.
+
+If \(H\) is the matrix of the harmonicity equations and \(V\subset V'\) the extension of valuation rings, this says
+\[
+  (\ker H)\otimes_V V'=\ker(H\otimes_V V').
+\]
+ The covariance operators commute
+with coefficient extension. By bilinearity and the
+ultrametric inequality, each lower bound on the original valuations also holds after scalar extension, in the same units. Thus any extended test giving a finite valuation bounds the original infimum from above.
+\label{cor:slice-unscaled-depth-1}
+
+\begin{proposition}[Upper bounds for the unscaled chart depth]
+\label{prop:primitive-light-covariants}
+At every allowed finite place, primitive columns in the local
+eigenspaces bound the unscaled depth \(\nu_W(\lambda)\) used in
+Proposition~\ref{prop:slice-finite-readings}. Use the
+\hyperref[par:slice-finite-depth]{weighted chart depth} with \(v_p(p)=1\).
+At the small primes the eigenflag and colength estimate is
+\eqref{eq:light-small-prime-depth}; at \(q,d\) the integral
+Hodge--Tate estimate is \(\nu_W\le D_L/(p-1)\). On the good charts
+the bounds use monomials or alternating pairs of Frobenius orbits. In the balanced level-one conjugating case write \(C_{\rm lead}\) for the leading flow cost. The degree contributions \(D_a\) enter as
+\[
+ C_{\rm lead}=\frac1{p^2-1}\sum_a D_a.
+\]
+
+\end{proposition}
+
+\begin{proof}
+\proofstep{Choice of primitive columns in each eigenspace.}
+For each label \(\tau\) of rank \(r_\tau>0\), let
+\(a_{\tau,1}\ge\cdots\ge a_{\tau,r_\tau}\ge0\) be the
+light row weights, and put \(a_{\tau,r_\tau+1}=0\).
+Choose \(r_\tau\) columns of integral characters on that
+frame, with disjoint column sets for distinct labels.
+The chosen number of rows permits this. If their derivative
+matrix has leading minors \(\Delta_{\tau,i}\), use the
+product of the corresponding determinant polynomials to
+the powers \(a_{\tau,i}-a_{\tau,i+1}\).
+Row \(j\) occurs precisely in the minors of sizes \(i\ge j\).
+Its exponent is therefore
+\[
+ \sum_{i=j}^{r_\tau}(a_{\tau,i}-a_{\tau,i+1})=a_{\tau,j}.
+\] A harmonic
+contraction pairs conjugate types in the same column.
+Each column belongs to a single type, so every contraction
+kills the polynomial. Its coefficients are integral.
+
+In formal logarithm coordinates the character derivatives
+evaluate the determinant product with no factorial loss.
+If \(v_p(\Delta_{\tau,i})\le h_\tau\) for each \(i\), this
+product has valuation at most 
+\[
+  \sum_\tau a_{\tau,1}h_\tau.
+\]
+The integral covariant character-germ comparison replaces the
+ordinary reading by this product plus an error of strictly
+higher valuation. It uses the integral pairing and chooses
+auxiliary eigenvalues congruent to one to accuracy greater
+than the order of the nonzero product. Thus the covariant
+reading has the same valuation.
+\label{cor:slice-unscaled-depth-2}
+
+For the bounds on the minors, start with a finite collection
+of differential columns attaining the chart colength.
+In the fixed first flag row choose an entry of least valuation
+and use its column to clear that row in every other column
+by integral multiples.
+For a pivot \(a\ne0\) of least valuation and another entry \(b\) on its row, the clearing step uses
+\[
+  v_p(b/a)\ge0,\qquad b-(b/a)a=0 .
+\]
+ At each step take the minimum in the
+next fixed flag row of the residual columns. Each residual pivot comes from an original
+column after earlier column subtractions.
+
+For the nested
+sequence the leading determinants are unchanged by these
+subtractions and have valuations equal to the partial sums
+of pivot valuations. Since each pivot is integral, the
+partial sum is at most the full sum, which is the valuation
+of the determinant ideal.
+If \(p_1,\ldots,p_n\) are the successive nonzero integral pivots, the cost of any initial segment is bounded by
+\[
+  \sum_{j=1}^{i}v_p(p_j)\le\sum_{j=1}^{n}v_p(p_j)\qquad(i\le n).
+\]
+ This choice of integral characters over the original ring gives the required leading minors.
+\label{cor:slice-unscaled-depth-3}
+
+\proofstep{The Hodge and colength inputs at the small primes.}
+At the designated small primes use the split auxiliary
+quadratic field. The selected CM half is partitioned by the
+host places of the split blocks. If a block has \(n_w\)
+embeddings and discriminant coefficient \(d_w\), the CM
+character comparison on the integral chart bounds the
+product of its absolute determinant lower bounds below by
+\(|p|^{n_wq_j(1/(p-1)+d_w/2)}\).
+Taking logarithms and dividing by \(\log|p|<0\), then using
+\(\sum_w n_w=f\) and \(\sum_w n_w d_w=fv_d(p)\), gives
+\[
+        \sum_{\tau\text{ in the selected half}} h_\tau
+            \le fq_j(1+v_d(p)/2).
+\]
+On the complementary half the integral Hodge--Tate
+character inclusion contains \(p\) times the tangent
+dual, since \(v_p(p)=1\ge1/(p-1)\).
+
+Its restriction projects onto \(p\) times the dual of the
+integral rank-\(q_j\) eigendirection frame, with determinant
+cost at most \(q_j\) for each label.
+The small-prime page bounds the first light row of the
+selected half by \((2b+S_c)/T\), and the sum of the first
+rows of the complementary half by \(f\eta_0/T\).
+With \(S_e=S_c+\eta_0\), \(q_j\le m\) and
+\(v_d(p)\le v_d\), the determinant product gives
+\begin{equation}\label{eq:light-small-prime-depth}
+              T\nu_W\le m(2+v_d)(2fb+fS_e).
+\end{equation}
+This uses the summed colength once on the selected half.
+The global comparison may use \(2fb\) as a majorant for
+the weight sum of any lift. At \(q,d\) the crude integral
+Hodge--Tate bound, obtained by using the degree of each
+label in the determinant reading, is
+
+\[
+  \nu_W\le D_L/(p-1).
+\]
+The CM colength and Hodge--Tate inclusions are local inputs
+on the given uniformization and eigendirection frames.
+\label{cor:slice-unscaled-depth-4}
+
+\paragraph{Depth bounds at good primes and odd shifts.}
+On the unramified chart, order the embedding labels by their
+residue Frobenius. Let \(C_\tau\) be the character colength at label \(\tau\). If \(\tau_h\) denotes its \(h\)-th successor, the unramified estimate uses the ranks of the conjugate eigenspaces
+\[
+  C_\tau\le\sum_{h\ge1}p^{-h}r_{\overline{\tau_h}}.
+\]
+ The row systems use this same
+labelled orbit. The characteristic-zero frame and the
+integral chart give the character and monomial blocks with
+the prescribed types.
+\label{cor:slice-unscaled-depth-5}
+
+\proofstep{The diagonal monomial on a split block.}
+For a monomial block use formal curve coordinates with
+identity linear part on the rows of the indicated half.
+The product of the leading minor polynomials has
+diagonal monomial with coefficient one. For each minor,
+the identity permutation uniquely maximizes the sum of
+the products of the row and column indices, by the
+rearrangement inequality.
+For increasing row and column sequences \((r_i),(c_i)\), strictness for a nonidentity permutation reads
+\[
+  \sum_i r_ic_{\sigma(i)}<\sum_i r_ic_i\qquad(\sigma\ne1).
+\]
+ This identifies its diagonal
+term uniquely even inside the product. If \(b_i\) are the diagonal monomial exponents, the
+prescribed germ derivative reads \(\prod_i b_i!\) because
+the coefficient of this monomial is one and the higher
+total-degree terms give zero. The single-half covariant
+factor is one. Legendre's formula gives the loss
+\[
+         \sum_i v_p(b_i!)=\sum_i\sum_{a\ge1}\lfloor b_i/p^a\rfloor
+                 \le \frac{\sum_i b_i}{p-1},
+\]
+with zero loss when all \(b_i<p\).
+
+If a first-row
+exponent is at most \(s_0(p-1)\), its integral weight gaps
+can be distributed among \(s_0\) row slots of capacity
+\(p-1\), by filling the slots successively and splitting
+gaps at the boundaries. Later rows use only a subset of
+the gaps. Different labels of one type reuse the slots
+using their labelled coordinates. When 
+\[
+  4rf s_0\le n_W,
+\]
+there are enough rows of each type to obtain a monomial of valuation zero on the whole chart. In particular, \(p>D_L\) permits \(s_0=1\).
+In the split case the character block of exponent \(u\)
+costs \(u m/(p-1)\) on the distinguished part and the
+complementary monomials use the remaining degree.
+\label{cor:slice-unscaled-depth-6}
+
+For an alternating pair of orbits the selected inert-prime
+hypothesis gives \(p\ge5\). Put \(n=k-1\ge1\) and let
+\(d_0\) be its orbit length. An odd shift \(1\le i<d_0\) uses block
+exponents \(p^i y,y\).
+On that pair the total degree consumed is
+\[
+  p^iy+y=(p^i+1)y .
+\]
+ The adapted chain begins with at least
+\(n-((i-1)/2+2)(m-j)\) independent residue directions,
+loses at most \(m-j\) at each of \((i-1)/2\) successive
+semilinear steps and loses at most \(j\) in the final
+pairing. Hence at least \(n-(i+1)m\) rows remain.
+
+An integral completion of the opposite-side vectors puts
+their retained pairing in negative identity form. The
+integral gauge estimates and the odd-level jet theorem on
+this chart then give admissible \(y\) in every window of
+the specified length, as well as \(y=0\). For positive
+\(y\), write \(\gamma=p/(p^2-1)\). The block cost is at most
+\[
+  n\gamma(p^i+1)y-ny+n(1+\log_p n)
+                 +\frac{(i+1)m}{p-1}(p^i+1)y .
+\]
+The term with \(m\) bounds the factorials of the lost
+rows. At \(y=0\) the cost is zero. This uses the odd-level
+jet estimate at the stated row ranks, normal form of its
+mixed gauge coefficients and integral curve inputs.
+\label{cor:slice-unscaled-depth-7}
+
+\proofstep{The cost of the alternating orbit.}
+To see how the blocks give the orbit price, write \(W_a\)
+for the distinguished exponents at the light weight and
+\(w_a>0\) for the target exponents. The degree comparison
+gives \((1-\theta)w_a\le T W_a\le w_a+C_1S_e\) with
+\(0\le\theta\le1\) and \(n\theta\le5m\).
+Set \(V_a=(1-\theta)w_a/T\).
+The directed odd shifts allocate nonnegative variables
+\(x_{a,i}\) with constraints
+\[
+         \sum_i p^i x_{a,i}+\sum_i x_{a-i,i}\le nV_a .
+\]
+
+On demands \(D_a=nV_a\), define the cost
+\(F_p(D)=\gamma\sum_a D_a-\max\sum_{a,i}x_{a,i}\).
+Summing the constraints proves that the maximum is at
+most \(\sum_a D_a/(p+1)\). The cost is nonnegative,
+homogeneous and invariant under cyclic shifts.
+If levels \(i\ge I=i_0(k,p)\) are discarded from a
+maximizer, the lost flow is at most \(p^{-I}\sum_aD_a\).
+Round each remaining \(x_{a,i}/n\) down to an allowed
+integer \(y_{a,i}\), with loss at most the window size
+\(S\) in this quotient. Then
+\[
+ u_a=W_a-\sum_i p^i y_{a,i}-\sum_i y_{a-i,i}\ge0
+\]
+is an integer character-block exponent.
+
+In the total cost
+the leading character term and leading odd terms sum to
+\(n\gamma\sum_a W_a\), by the displayed equality and
+cyclic reindexing. The saving from the rounded flow loses
+at most \(d_0 I n S\). The positive odd factorial costs
+are at most \(2I m\sum_a V_a/(p-1)\) since
+\(p^i+1\le2p^i\) and \(i+1\le I\) on the retained levels.
+The character cost beyond its leading term is at most
+\(m\sum_aW_a/(p-1)\) and the additive odd cost is at most
+\(d_0 I n(1+\log_p n)\).
+The chart range with these odd blocks has
+\[
+ I\le5\log k,\qquad S+1+\log_p n\le707 n^2\log k.
+\]
+Multiplying the rounding and additive window costs by \(T\) gives the combined upper bound
+\[
+     3535 d_0 Tn^3(\log k)^2 .
+\]
+
+The discarded levels cost at most
+\(p^{-I}k\sum_a w_a\).
+Replacing \(V_a\) by \(W_a\) and paying the remaining
+monomial degrees adds at most a fixed multiple of
+\((m(\sum_a w_a)\log k+d_0 kS_e)/p\) on the light-weight
+and row-budget comparisons. For the sum over orbits, the total
+length is at most \(f\). Use the uniform weight bound
+\(\widehat W=2fb\). Below the threshold
+\(p_0=mb/(Tf n^3\log b)\),
+\[
+ Tf n^3(\log k)^2
+ < \frac{mb(\log k)^2}{p\log b}
+ \le \frac{m\widehat W\log k}{p}.
+\]
+Thus the absolute window loss fits the weight allowance with
+its fixed numerical multiplier. At \(p\ge p_0\) the typed row
+supply on the selected chart gives the zero-depth monomial
+allocation, including equality at the threshold.
+\label{cor:slice-unscaled-depth-8}
+
+\proofstep{Vanishing of the depth at large nonsplit primes.}
+At large nonsplit primes the leading cost has a direct
+bound. If \(d_0\ge2\) and all demand ratios are at most \(p\), the system
+\(p x_a+x_{a-1}=D_a\) has the cyclic solution
+\[
+ x_a=\frac{\sum_{i=0}^{d_0-1}(-p^{-1})^iD_{a-i}}
+                {p(1-(-p^{-1})^{d_0})}.
+\]
+Pair successive terms in the numerator. Each pair is
+nonnegative and in odd length the leftover term is
+positive for positive demands. This realizes the upper
+bound on the total flow using only level one. Thus
+\[
+ F_p(D)=\sum_a D_a/(p^2-1).
+\]
+The selected target ratios give the required balance for
+\(p>X_2\), so the leading cost is at most
+\(2k\sum_a w_a/p^2\).
+
+At smaller primes the forced content is the orbit average
+of the orbit programmes. Cyclic invariance gives their sum
+over representatives in the place formula. When a
+Frobenius power is conjugation, choose the first
+admissible odd level on the same typed chart and the
+programme comparison for that orbit. For Frobenius equal to
+conjugation choose level one directly and write
+
+\[
+  W=(p+1)y+u
+\]
+ with \(y\) in the jet window and
+\(0\le u\le(p+1)S\). This gives the explicit
+\(1/(p^2-1)\) leading term in that case.
+The cost comparison for the first conjugating odd level
+and the block supplies in the respective charts are used
+with these hypotheses.
+\label{cor:slice-unscaled-depth-9}
+\end{proof}

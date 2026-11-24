@@ -1,0 +1,513 @@
+\paragraph{Degrees of the CM lines.}
+
+The approximation determines the CM lines. Their contribution to the section height involves both the finite ideal and the norms of its chosen frame at infinity.
+
+For a metrized line \(L\) over a number field let
+\(I(L)\) be its fractional ideal and \(q_\sigma(L)\) its
+metric on the chosen coordinate at \(\sigma\). We use the
+normalized degree
+\[
+ \operatorname{ndeg}L
+   =-\frac{\sum_w\operatorname{ord}_w I(L)\log\mathrm Nw+
+                   \sum_\sigma\log q_\sigma(L)}
+              {[K':\mathbb Q]} .
+\]
+The product formula makes this independent of the coordinate.
+For the CM object of dimension \(g\), use its Riemann
+metric on the Lie lattice \(\mathrm{Lie}\) and the integral
+theta line \(\mathcal T\) with the normalized \(L^2\) metric.
+\begin{lemma}[The principal cubical theta degree]\label{lem:slice-principal-theta-degree}
+For this CM Lie lattice and the normalized principal theta line,
+the degree comparison is
+\begin{equation}\label{eq:slice-cm-theta-degree}
+ \operatorname{ndeg}(\mathcal T^\vee)
+      =-\tfrac12\operatorname{ndeg}(\det\mathrm{Lie})
+                         +\tfrac{g}{4}\log(2\pi).
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+The theta generator comes from the rigidification of
+the principal symmetric cubical line. The analytic length
+is the mean of its squared Gaussian norm on a period
+parallelepiped, with its square root taken, and the Lie
+determinant length is the square root of the Riemann
+determinant in the same frame. To see the comparison, write
+\(\mathcal D=\det\mathrm{Lie}\) and use the powered cubical invariant
+of the rigidified symmetric principal line. For the chosen theta
+and Lie coordinates it is a scalar \(k\in (K')^\times\) for an
+integer power parameter \(a>0\) depending on the dimension.
+Multiplying the theta generator by \(u\) and changing the Lie
+frame by \(M\) multiplies \(k\) by \(u^{-8a}\det(M)^{4a}\).
+The invariant in integral theta and Lie generators is a unit, by
+the integral cubical identity.
+
+Comparing those generators with
+the chosen coordinates gives
+\[
+ (k)=I(\mathcal T)^{8a}I(\mathcal D)^{-4a}.
+\]
+This is an equality of fractional ideals. One may compare over a
+valued extension, since both sides acquire the same factor of the
+ramification index. At a complex embedding \(\sigma\), the same
+invariant in a theta uniformization satisfies
+\[
+ |\sigma(k)|\,q_\sigma(\mathcal T)^{8a}
+       q_\sigma(\mathcal D)^{-4a}=(2\pi)^{2ga}.
+\]
+Here the complex cubical formula uses the mean square of the theta
+generator, and the period quotient has volume
+\(\pi^g |\det W|^2/q_\sigma(\mathcal D)^2\) in the corresponding
+complex uniformization frame \(W\). Thus the volume factor uses
+the Lie determinant of the same frame. Let \(d=[K':\mathbb Q]\). Summing the complex identities and
+using the product formula for \(k\) replaces
+\(\sum_\sigma\log|\sigma(k)|\) by the finite log norm of the
+displayed ideal. Thus
+\[
+      -8ad\,\operatorname{ndeg}(\mathcal T)
+             +4ad\,\operatorname{ndeg}(\mathcal D)
+             =2gad\log(2\pi).
+\]
+Divide by \(8ad\) and use duality for the degree of a
+metrized line. \label{cor:slice-integral-norm-1}
+\end{proof}
+
+For an abelian CM differential line \(\ell_k\), put \(\Omega=2\operatorname{ndeg}\ell_k\). The CM differential degree formula gives the same real number for every abelian line in both constructions. The toric differential lines on the arc have degree zero.
+\label{cor:slice-integral-norm-2}
+
+\begin{lemma}[Degree of a CM coefficient line]\label{lem:cm-coefficient-line-degree}
+With the theta degree identity \eqref{eq:slice-cm-theta-degree}
+and the abelian letter metrics above, the value line of an arc
+coefficient satisfies \eqref{eq:slice-cm-line-degree}. For the coefficient line \(\mathcal L_\mu\), the bound is
+\[
+ \operatorname{ndeg}\mathcal L_\mu\le P_\Lambda(\mathcal A+frn),\qquad P_\Lambda=\tfrac12(1+|\Omega|+\log\Lambda).
+\]
+
+\end{lemma}
+
+\begin{proof}
+\proofstep{Compensating the norms of the CM letters.}
+The abelian letters \(u_k\) form a basis over \(K'\). Each
+scaled line \(I(\ell_k)u_k\) is inside the completed Lie
+lattice. Thus their exterior product is inside its determinant
+lattice. Over each complex embedding their lengths are at
+most \(\Lambda q_\sigma(\ell_k)\).
+To combine the two estimates, identify the exterior line of
+the \(u_k\) with \(K'\) via that exterior product. The
+determinant ideal contains \(\prod_k I(\ell_k)\), and
+Hadamard bounds the determinant metric by
+\(\Lambda^g\prod_k q_\sigma(\ell_k)\).
+
+Taking degrees with the indicated sign gives
+\[
+ \operatorname{ndeg}(\det\mathrm{Lie})
+             \ge g\,\Omega/2-g\log\Lambda .
+\]
+By \eqref{eq:slice-cm-theta-degree},
+\(\operatorname{ndeg}(\mathcal T^\vee)\le g P_\Lambda\),
+where
+\[
+             P_\Lambda=\frac{1+|\Omega|}{2}
+                                  +\tfrac12\log\Lambda .
+\]
+Here \(\log(2\pi)<2\). Every dual letter has degree
+at most \(P_\Lambda\) since \(\Lambda\ge1\).
+The arc has abelian dimension \(f(r-2)\le fr\).
+The line \(\mathcal L_\mu\) of the arc coefficient therefore
+has
+\begin{equation}\label{eq:slice-cm-line-degree}
+    \operatorname{ndeg}\mathcal L_\mu
+           \le P_\Lambda(\mathcal A+frn).
+\end{equation}
+This is exactly the degree of the line in the finite and
+complex comparisons. All three bounds for the arc
+coefficient now have their dependence on \(\Lambda\), \(n'\),
+\(\Omega\), and the actual cutoff specified.
+\label{cor:slice-integral-norm-3}
+
+\end{proof}
+
+\paragraph{Uniformity of the radius and torsion order.}
+
+The detecting CM point may depend on the form. The approximation radius and the allowed torsion order must nevertheless be bounded before that point is chosen.
+
+Put \(w_0=S_\kappa+r\), \(N_A=d_E=|\operatorname{disc}E|\),
+\(N_C=\mathrm N\mathfrak c_K\), and \(M_0=g_0g_1\).
+The split approximation compares the two cusp times using
+a positive time lower bound \(e_{\rm sp}\), and uses
+\(\rho_{\rm sp}=1/(12\pi(c_1+w_0))\) for the approximation.
+With
+\begin{align*}
+ N_0&=M_0d_E^2,\qquad N_2=4f,\\
+ H_0&=N_C^2(2+4f^4\operatorname{rd}(E)^2 N_A^2),\\
+ K_0'&=1+N_0H_0(2c_1+1),\\
+ R_0&=w_0+N_2\log(2K_0' N_2)+N_2+2 ,
+\end{align*}
+the time bound is
+\[
+ e_{\rm sp}=\min\{1,f^2/(N_0^2N_C^2c_1R_0)\},
+ \qquad e_{\rm sp}^{-1}\le\max\{1,N_0^2N_C^2c_1R_0\}.
+\] The coefficients in the bounds
+for the split complementary frame are
+\begin{align*}
+ B_{\rm ind}&=f(2f(r-2))^3 d_E N_A
+                     \sqrt{N_C^2\operatorname{rd}(E)e_{\rm sp}^{-1}},\\
+ B_{\rm rad}&=2\cdot4\sqrt{r-2}\cdot
+         4(f(r-2))^3d_E\sqrt{e_{\rm sp}^{-1}}\cdot40\rho_{\rm sp}^{-1}.
+\end{align*}
+
+The choice is \(n'=1+\lceil1000B_{\rm ind}\rho_{\rm sp}^{-1}\rceil\)
+and \(\Lambda=\max(1,B_{\rm rad}^{2q_j-1})\).
+Fix this order before choosing the detecting frame.
+The split approximation theorem then chooses a frame
+where multiplication by this order makes the abelian
+projection of the cusp lattice integral. The constants
+are the same for all choices of arc on a lift.
+
+\begin{lemma}[Uniform order and radius for the detecting arcs]\label{lem:uniform-cm-arc-size}
+Use the split approximation with the selected weight and
+cutoff \(c_1\), and the fixed parameters above. For \(z=frL\),
+the order \(n'\) and radius bound \(\Lambda\) satisfy
+\[
+ \max(\log n',\log\Lambda)\le200(K_*z)^2,\qquad K_*=20+8|C_A|+|C_K|.
+\]
+ These choices precede selection
+of a detecting arc. The three coefficient allowances in
+the proof each have the bound
+\((17+2K_*+200K_*^4)z^4S_\kappa\).
+\end{lemma}
+
+\begin{proof}
+\proofstep{Uniform bounds for the conductor and radius.}
+Here is the quantitative consequence used in the division
+budget. Use \(z=frL\) as in the run and
+\(K_*=20+|C_A|+7|C_A|+|C_K|\).
+The size inequalities put \(f,r,d_E,M_0,N_C,c_1,w_0\)
+below 
+\[
+  U=e^{K_*z}.
+\]
+ For \(c_1\) this uses
+\(Tc\le1\) and \(q_j\le r\). For \(w_0\) use
+\(S_\kappa\le C_Kkfb\), \(k\le r\), \(\log b=L\).
+The size comparison also gives
+\(|\Omega|\le |C_A|L\le K_*z\).
+The bound for \(\log d_E\) is \(|C_A|z\), and the bound
+for \(\log M_0\) is \(18L+2\).
+
+Let \(U\ge2\), count exponents of \(U\) by addition
+under multiplication, and charge a sum of two terms by
+one plus the larger exponent. Since \(\operatorname{rd}(E)\le d_E\)
+and \(\log v\le v\) for \(v>0\), this gives
+\(N_0\le U^3\), 
+\[
+  H_0\le U^{13},
+\]
+ \(K_0'\le U^{20}\),
+\(R_0\le U^{30}\), and \(e_{\rm sp}^{-1}\le U^{50}\).
+Also \(\rho_{\rm sp}^{-1}\le U^8\).
+Substitution gives \(n',B_{\rm rad}\le U^{100}\), including
+the rounding in \(n'\). Thus \(\log n'\le100K_*z\),
+while
+\[
+ \log\Lambda\le(2q_j-1)\max(0,\log B_{\rm rad})
+                         \le 200rK_*z .
+\]
+Because \(K_*z\ge r\) and \(K_*z\ge1\), both are at most
+\(200(K_*z)^2\).
+
+Combining them with the coefficient and degree bounds
+shows that \(C_{\rm arch}\), \(B_{\rm deg}\), and the
+normalized mean of the finite baseline each cost at most
+\((17+2K_*+200K_*^4)z^4 S_\kappa\).
+It is the upper bound on \(\log\max(1,c_1)\), together
+with the fixed frequency restriction, that is used here.
+\label{cor:slice-integral-norm-4}
+
+\end{proof}
+
+\paragraph{The lower norm of an integral form of arbitrary weight.}
+\label{subsec:deep-cm-interior}
+In this paragraph the ambient abelian dimension is \(fr\).
+Keep the coefficient-field and level data of the run fixed,
+and write \(Z=fr+L+\log d_E+|\Omega|\) in the normalization
+of the preceding CM estimates.
+
+\begin{proposition}[Lower norm at the actual weight]\label{prop:slice-lower-integral-norm}
+Use the coefficient field and the two-prime level \(g_0g_1\)
+of an orientation in Proposition~\ref{prop:linked-comparison-rows}.
+Set \(Z=fr+\log b+\log|\operatorname{disc} E|+|\Omega|\).
+For a nonzero integral cusp form \(F\) on this run of dominant
+weight \(v_0\) with \(|v_0|\ge1\), the normalized supremum norms satisfy
+\[
+ \operatorname{mean}_\sigma\log\|F\|_{\sup,\sigma}
+ \ge -3000Z^2(1+\log|v_0|)|v_0| .
+\]
+The coefficient \(3000\) is independent of the run, the
+weight and the form.
+\end{proposition}
+
+\begin{proof}
+For the lower norm one uses an interior CM frame of the full
+abelian dimension \(g=fr\). Let \(F\) be nonzero in the integral
+cusp lattice at a dominant weight \(v_0\), and put \(S=|v_0|\ge1\).
+The normalized supremum at the distinguished good embedding
+is finite and positive. Take a frame where the reading exceeds
+half the supremum. The quantitative CM frame selection starts
+with this frame. Write \(p_0\le r\) for the positive rank of
+its Hermitian space in the signed frame convention and put
+\[
+ d_E=|\operatorname{disc}E|,\qquad
+ M=g_0g_1\,\mathrm N\mathfrak c_K\,d_{\rm lev},\qquad
+ e_0=\min\left\{1,\frac{\pi}{M(fS+2)k_0\log 2}\right\}.
+\]
+Here \(d_{\rm lev}\) is the positive level discriminant in the
+transvection parameter and \(k_0>0\) is the polarization scale of
+the component lattice. The principal level gives the integral
+real transvections with period \(M\).
+
+At a half-maximal frame,
+the nonnegative Fourier modes along these transvections
+force at least one majorant \(e_0\) at every nonzero lattice
+vector in the reference lattice. Indeed, if all the majorants
+\(H_\tau\) are less than \(e_0\le1\), the integral Hermitian
+norm and the bound of each of its conjugates by \(H_\tau\)
+force that norm to be zero. Along the isotropic flow the
+domain condition is \(1+\operatorname{Im}\zeta\,k_0 H_\tau>0\).
+Set 
+\[
+  t_0=1/(2k_0e_0).
+\]
+ The flow section is then holomorphic
+on a strip containing \(\operatorname{Im}\zeta=-t_0\),
+is \(M\)-periodic, and tends to zero at the cusp.
+
+On
+\(\operatorname{Im}\zeta=-t_0\) each of the factors in the
+majorant change lies between \(1/2\) and \(1\). The
+weight-spread sum is at most \(S\), so the raw section
+has norm at most \(2\cdot 2^{S/2}\) times its modulus at
+the starting frame. This uses the half-supremum bound
+for the normalized section. Under \(u=e^{2\pi i\zeta/M}\)
+the function extends holomorphically across \(u=0\)
+with value zero. Apply the maximum principle to its
+quotient by \(u\) in the disc of radius \(e^{2\pi t_0/M}\).
+At \(\zeta=0\) it yields
+
+\[
+  1\le 2^{1+S/2}\exp(-2\pi t_0/M).
+\]
+The definition of \(e_0\) gives
+\[
+ 2\pi t_0/M\ge(fS+2)\log 2>(1+S/2)\log 2,
+\]
+a contradiction.
+
+\proofstep{Moving to an interior frame.}
+Orthonormalize the starting flag with its order and signs
+unchanged. The normalized reading and the positive majorants
+are preserved. Put
+\[
+ \rho_0=(10\sqrt{rS})^{-1},\qquad \rho=3\rho_0/5,\qquad
+ \mu=4(fr)^3d_E\sqrt{f/e_0},\qquad A=4\sqrt r\,\mu/\rho.
+\]
+The majorant lower bound implies the hypothesis of the previous
+lattice estimate with \(\lambda=\sqrt{e_0/f}\). Thus \(\mu\)
+bounds both the covering radius and the lengths of an independent
+spanning family. Approximate the first \(p_0\) axes, scaled by \(A\),
+simultaneously at all embeddings by lattice vectors. A matrix with
+these vectors as columns has top block \(A I+E_+\) and bottom
+block \(E_-\), with \(\|E_\pm\|\le\sqrt r\,\mu\le A\rho/4\).
+
+The columns of this matrix span the positive graph of 
+\[
+  Z=E_-(A I+E_+)^{-1},
+\]
+ and
+\(\|Z\|\le\rho/3=\rho_0/5\) at every embedding. The absence
+of a positive block gives the zero graph. Taking the graph as
+the positive part and its Hermitian orthogonal as the negative
+part defines the common CM structure on these lattice subspaces.
+
+For the complementary letters let \(G\) be the Gram matrix
+over \(E\) of the positive columns. It is positive definite
+at every inducing embedding. The orthogonal projection onto
+the positive space is given by \(G^{-1}\) in the coordinates
+of those columns. Multiplying the complementary projection
+by \(\det G\) therefore carries the short lattice vectors into
+the original lattice by the adjugate formula and integral
+Hermitian pairings.
+The matrix identity clearing the projection is
+\[
+  (\det G)G^{-1}=\operatorname{adj}(G).
+\]
+ The resulting vectors span the orthogonal
+complement. Select an independent family there.
+
+At each
+embedding the graph has norm less than \(1/3\), and the
+complementary projection in the original Euclidean norm
+has norm at most \((1+\|Z\|^2)/(1-\|Z\|^2)\le2\).
+This follows by writing the negative graph as \((Z^*y,y)\)
+and inverting its Gram matrix \(-(I-ZZ^*)\) for the projection.
+Hadamard on the positive Gram matrix gives
+\(|\tau(\det G)|\le(2A)^{2p_0}\). Hence the positive
+and negative letters all have absolute Hermitian lengths
+at most \((2A)^{2p_0+1}\). In the absence of one block
+the bound follows directly for the other block by the
+same approximation or short basis. Substitution of the approximation radius gives
+\[
+ \Lambda=X^{2p_0+1},\qquad
+ X=\frac{1600}{3}\,r\sqrt f\sqrt S\,(fr)^3 d_E\,e_0^{-1/2}.
+\]
+The upper estimate on \(\Lambda\) uses any larger bound
+for the chosen letters as well.
+
+\proofstep{Retaining a nonzero value through the move.}
+To see that the new frame still detects \(F\), use the
+holomorphic chart with positive graph \(tZ\) and unchanged
+negative coordinate axes. For each signed leading Gram determinant \(\Delta_i\) in this frame, the chart gives
+\[
+  (1-\|tZ\|^2)^r\le|\Delta_i|\le1.
+\]
+For leading blocks confined to the positive axes this is the
+Gram matrix \(I-(tZ)^*(tZ)\) restricted to those axes.
+
+When negative axes are included, the Schur complement removes
+their projection from \(tZ\), and gives the same bound.
+The full determinant has absolute value one. Thus for
+\(|t|<5\) the change in the log norm factor, with weight
+spread at most \(S\), has absolute value at most
+\(4Sr\|tZ\|^2\le1/25\), by summing the log minor bounds.
+The half-maximal hypothesis bounds the raw reading on
+that disc by \(2e^{1/25}<3\) times its modulus at zero.
+If the raw reading \(F_0(t)\) vanished at \(t=1\), apply
+Schwarz's lemma to
+
+\[
+  H(u)=F_0(1+4u)/(3|F_0(0)|)
+\]
+ on the unit disc.
+We have \(H(0)=0\), so
+\[
+      \tfrac13=|H(-1/4)|\le\tfrac14 .
+\]
+This contradiction proves that the moved frame still
+detects the section.
+The graph's majorant is within a factor
+\((1+\|Z\|)/(1-\|Z\|)\le2\) of the original. Indeed the
+matrix with the positive and negative graph columns is
+\(I+J_Z\), where \(J_Z\) is self-adjoint with off-diagonal
+blocks \(Z,Z^*\). Consequently the new majorant, represented by \(H_{\rm new}\) in the old frame, satisfies
+\[
+  H_{\rm new}=(I-J_Z)(I+J_Z)^{-1}.
+\]
+ This proves the
+majorant comparison without changing the polarization.
+
+\proofstep{Polynomial evaluation on the algebraic CM model.}
+The arithmetic CM realization uses the lattice of this
+basis, its two CM types and the original marking. The
+tangent coordinates and the normalized theta generator
+are algebraic over a finite extension \(K'\); all finite
+comparisons use the corresponding integral models.
+\label{cor:slice-integral-norm-5}
+
+The section at this CM point gives a homogeneous polynomial
+\(G(X')\) of frame degree \(\mathcal A\), in the entries of the
+block matrices \(X'\).
+With \(X'\) the frame variables, homogeneity means
+\[
+  G(cX')=c^{\mathcal A}G(X') .
+\]
+ Since the section is nonzero in this frame, \(G\ne0\). Choose a nonzero coefficient \(a_\mu\).
+At every finite place normalize the theta line and use an
+integral eigenbasis of the Lie lattice. The defining
+integrality test on \(F\) bounds the normalized polynomial
+by one on integral changes of that basis with unit block
+determinants. Reduction over an extension with infinite
+residue field, or over arbitrarily large finite residue
+extensions, gives integral coefficients by the same
+determinant test as for the arc. The \(I(\ell_k)\)-scaled
+CM letters are integral in this basis. Substituting their
+integral coordinate matrices preserves this integrality.
+Undoing the scaling gives
+\(a_\mu\in I(\mathcal L_\mu)\) at every place, with
+
+\[
+  \mathcal L_\mu=(\mathcal T^\vee)^n
+\otimes\bigotimes_{\tau,i,k}(\ell_{\tau k}^\vee)^{\mu_{\tau i k}}.
+\]
+The finite order defect of the toroidal arc is absent in
+this interior calculation.
+\label{cor:slice-integral-norm-6}
+
+\proofstep{Comparing the archimedean and integral coefficient bounds.}
+At \(\sigma\) take the polydisc of radii
+\(q_\sigma(\ell_{\tau k})^{-1}\) in the CM matrices.
+Each resulting row has length at most \(r\Lambda\) in the
+Riemann metric, by the triangle inequality. For invertible
+blocks, orthogonalize the rows in the ordering of the flag.
+The triangular factor acts by the weight character.
+Each diagonal length of that factor is at most the
+length of the original row, and all its flag exponents
+are nonnegative.
+
+In the orthonormal frame the supremum
+bound applies with the fixed theta metric. Consequently
+\[
+ |G(X')|q_\sigma(\mathcal T)^{-n}
+    \le \|F\|_{\sup,\sigma|K}(r\Lambda)^{\mathcal A}.
+\]
+The bound extends to singular blocks by continuity.
+Cauchy's formula in the entries of \(X'\) then bounds
+\(|\sigma a_\mu|q_\sigma(\mathcal L_\mu)\) by the same
+right side. The coefficient is integral in its line, so
+\[
+ -\operatorname{ndeg}\mathcal L_\mu
+       \le \operatorname{mean}_\sigma
+                      \log(|\sigma a_\mu|q_\sigma(\mathcal L_\mu)).
+\]
+This is the product formula for \(a_\mu\), using
+\(\operatorname{ord}_w a_\mu\ge\operatorname{ord}_w I(\mathcal L_\mu)\).
+Apply \eqref{eq:slice-cm-line-degree} with \(g=fr\) and
+cancel the multiplicity of extensions of each embedding of
+\(K\). It follows that
+\begin{equation}\label{eq:slice-cm-point-norm}
+  \operatorname{mean}_\sigma\log\|F\|_{\sup,\sigma}
+       \ge -P_\Lambda(\mathcal A+frn)
+                   -\mathcal A\log(r\Lambda).
+\end{equation}
+This bound is independent of the degree of the CM field over which the chosen data are defined.
+
+\proofstep{Summing the dependence on the weight.}
+For the norm budget set \(Z=fr+L+\log d_E+|\Omega|\).
+The chosen principal level gives
+\(\log(Mk_0)\le 19L+3+\log d_E\), using the two level
+prime bounds and the upper bound for \(k_0\).
+Since \((fS+2)\log2\le 3fS\) and \(\pi>3\),
+\[
+ -\log e_0\le 19L+6+\log d_E+f+\log S .
+\]
+
+Taking the logarithm of \(X\) gives
+\(0\le\log X\le600 Z+\log S\), using
+\(\log(1600/3)<7\), \(Z\ge fr\ge1\) and
+\(\log fr\le fr\). Thus
+\(\log\Lambda\le1800 Z^2(1+\log S)\).
+The weight convention gives
+\(\mathcal A+frn\le S\) and \(\mathcal A\le S\).
+Inserting these bounds into \eqref{eq:slice-cm-point-norm}
+yields
+\begin{equation}\label{eq:slice-integral-norm}
+        \operatorname{mean}_\sigma\log\|F\|_{\sup,\sigma}
+                    \ge -3000 Z^2(1+\log |v_0|)|v_0|.
+\end{equation}
+The absolute coefficient \(3000\) works on both runs,
+also when \(v_0\) is the large multiple of the light weight
+used in the Chow estimate. The estimates for \(X\) and the
+letter metric are the necessary dependence on the weight
+of that multiple. They permit the choice of the nonzero
+coefficient to vary with \(F\).
+\label{cor:slice-integral-norm-7}
+\end{proof}

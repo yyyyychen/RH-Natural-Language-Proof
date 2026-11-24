@@ -1,0 +1,452 @@
+\paragraph{Detecting frames on the admitted cover.}
+Choose the coefficient embedding used to construct the cover.
+A nonzero algebraic section has nonzero pullback to at least one component of the complex uniformization. The marked period domains cover the complex moduli
+components, and its values in frames determine the section on each component. On a component where it does not vanish identically, let \(s(y)\) be its normalized modulus as a function of the frame. Choose \(y_0\) there with
+\[
+ s(y_0)>\tfrac12\sup_y s(y)>0.
+\]
+Cuspidality bounds the section. If \(H\) is the positive majorant at this frame and \(L_{\rm ref}\) the reference lattice, discreteness and positive definiteness give 
+\[
+ \min_{0\ne v\in L_{\rm ref}}H(v,v)>0.
+\]
+
+The positive minimum gives the lattice lower bound for the interior CM approximation used in
+\hyperref[subsec:deep-cm-interior]{the lower-norm argument}.
+Let \(u_1,\ldots,u_a\) be the simultaneous approximants to the positive axes
+in the Hermitian space \((V,h)\) over \(E\). The two spaces used in the construction are
+\[
+ P=\operatorname{span}_E\{u_1,\ldots,u_a\},\qquad
+ P^{\perp_h}=\{v\in V:h(v,u_j)=0\text{ for }1\le j\le a\}.
+\]
+The short-disc argument preserves the nonzero value of the section. Its input is the
+period lattice in the uniformization of the deep cover, related to
+the reference lattice by the fractional ideal in the frame
+construction. The resulting adapted basis supplies the two CM
+types, their Riemann lattice and the original marked polarization.
+
+The CM realization uses this lattice and its level-\(N\) marking.
+After a finite coefficient extension \(K/F\) it gives a CM point
+\(z\) with an integral CM model and with the specified complex base
+point. The comparison uses the marked fibre isomorphism with the
+universal abelian variety, so the complex point belongs to the
+same component of the very cover from which we started.
+\label{cor:deep-cover-denominators-1}
+
+\begin{lemma}[Algebraic frame detecting a section]
+\label{lem:deep-cover-detecting-frames}
+For a section \(s\) on an admitted component, let \(\mathcal F\) denote the algebraic interior CM frames preserving its marking. Then
+\[
+ s\ne0\quad\Longrightarrow\quad \exists\,y\in\mathcal F,\qquad s(y)\ne0.
+\]
+
+The detecting frame is allowed to depend on the section.
+\end{lemma}
+
+\begin{proof}
+\proofstep{Moving a detected frame to an algebraic point.}
+The given nonzero complex frame may be different from the
+algebraic reference frame \(y_0\) of \(z\). Fix the theta generator
+first. On the variety of block frame changes over \(K\), evaluation
+is a regular function of the matrix entries with the block
+determinants inverted. A change of the theta generator multiplies
+it by a nonzero scalar given by the central exponent. Consequently
+the rational function in the matrix entries is nonzero, since
+its complex evaluation is nonzero.
+
+If \(N\) is the numerator and \(Y_\tau\) the block variables, consider
+\[
+ P(Y)=N(Y)\prod_\tau\det Y_\tau\ne0.
+\]
+A nonzero value of \(P\) tests the numerator and all invertibility conditions simultaneously. A polynomial over an infinite field cannot vanish on
+all tuples of its elements, by induction on the number of
+variables. It follows that some tuple over \(K\) gives an
+invertible block change with a nonzero evaluation. This is the
+detecting frame \(y\). The argument applies also at a nonzero
+central exponent, which only alters the theta factor of the
+frame change.
+\label{cor:deep-cover-denominators-2}
+
+\end{proof}
+
+\paragraph{One denominator for the evaluation at a frame.}
+
+A rational frame detects a nonzero section. Passing from that evaluation to an integral test requires a denominator that accounts for every graded-line exponent.
+
+Write \(e_c\) for the central exponent and \(e_{\tau i}\) for the
+flag exponents, with \(m_\tau\) letters in block \(\tau\). For fixed
+\(z,y_0\) and exponents put
+\[
+ k_\tau=\sum_{i=1}^{m_\tau}\max(0,-e_{\tau i}),\qquad
+ D_e=\sum_{\tau,i}(e_{\tau i}+k_\tau).
+\]
+For every section \(f\) of the weight there is a polynomial
+\(P_f\) in the block variables, of total degree \(D_e\) when
+nonzero, such that
+\[
+ P_f(Y)=\prod_\tau\det(Y_\tau)^{k_\tau}\,f(Y\cdot y_0).
+\]
+We use the convention that \(Y\) is the transpose of the
+frame-change matrix, so the formula fixes the coefficient
+convention. Here is the reason the indicated determinant factors
+suffice. The evaluation is regular on the invertible blocks and
+diagonal scaling gives column weights \(e_{\tau i}\) in the
+transposed convention. A uniform determinant twist adds
+\(k_\tau\) to each of these weights. In a block, a possible
+remaining denominator is a power of its irreducible
+determinant.
+
+On the open subset of its singular divisor where
+the first \(m_\tau-1\) columns are independent, right
+multiplication by an upper unitriangular matrix subtracts a
+linear combination of those columns from the last. The
+resulting last column is a local parameter times a fixed
+transverse column on an open chart. Weight equivariance under
+scaling that column gives order
+\[
+ e_{\tau,m_\tau}+k_\tau\ge0
+\]
+along the divisor.
+The other blocks may be taken invertible on this chart.
+The argument applies separately to each block
+and also to a one-dimensional block. In the polynomial ring
+there is therefore no remaining determinant denominator.
+Simultaneous scaling of all block entries now gives degree
+\(D_e\). In particular only finitely many monomials can occur,
+independently of \(f\).
+\label{cor:deep-cover-denominators-3}
+
+\begin{lemma}[One denominator at a fixed frame]
+\label{lem:deep-cover-frame-clearing}
+For a fixed section \(s\) and algebraic frame \(y\), let \(b=s(y)\) be its evaluation in the indicated coordinates. There is one nonzero coefficient scalar \(c\) such that
+\[
+ v(cb)\ge0\qquad\text{at all finite valuations }v.
+\]
+ The comparison uses its homogeneous block
+polynomial and the determinant factors appearing in the frame
+change.
+\end{lemma}
+
+\begin{proof}
+\proofstep{The local check of the frame polynomial.}
+At a finite place \(w\) of \(K\), complete the integral CM
+model. It has an integral eigenbasis for the individual
+eigenspace lattices and a unit generator for the local theta
+line. These data yield the valued frame tests for the same
+cover, also after an extension of the valued field. In this
+frame the determinant-twisted polynomial of a section with
+nonnegative test orders has integral coefficients. Indeed, for
+integral frame-change matrices of unit block determinants the
+evaluations are integral.
+
+If \(P\) had a coefficient \(a\) of negative minimal order, normalization would give
+\[
+ v(a)<0,\qquad a^{-1}P\in\mathcal O_w[Y],\qquad \overline{a^{-1}P}\ne0.
+\]
+The reduced polynomial times the block determinants is
+nonzero. It has a nonzero evaluation after passing to a large
+enough residue extension, contradicting the order inequality in
+the lifted integral frames. This uses the full family of valued
+tests. An integral basis here is taken in each individual
+eigenspace, which can be compared with the reference letters
+even at a place where the decomposition into eigenspaces is
+only a generic-fibre decomposition.
+\label{cor:deep-cover-denominators-4}
+
+\proofstep{Returning to the original frame.}
+To return to \(y_0\), let \(G_\tau\) be the transition blocks
+to the integral eigenbasis and let \(s\ne0\) compare the theta
+generators, in the direction where the new generator is \(s\)
+times the old. Choose nonzero constants \(c_{\tau j}\) clearing
+the rows of \(G_\tau^{-1}\) when returning the reference letters
+to that basis. Substitution into the integral polynomial and
+the theta and determinant transformations show that
+\[
+ \left(\prod_\tau\det(G_\tau)^{k_\tau}\right)^{-1}
+ s^{e_c}\left(\prod_{\tau,i,j}c_{\tau j}^{\mu_{\tau ij}}\right)
+ [Y^\mu]P_f\quad\text{is integral at }w .
+\]
+This is a coefficient statement. Each column rescaling
+contributes once for each occurrence of an entry of that column
+in the monomial. Substitution of the remaining integral
+matrices introduces no additional denominator.
+
+For any exceptional \(w\), the finitely many possible \(\mu\)
+give a single local lower bound on all coefficient orders.
+Outside the places where the fractional letter and theta ideals
+or the determinant comparison have support, the letter scalars
+are \(1\) and \(s\) is a unit. In this case the inverse
+transition blocks are integral and the product of their
+original block determinants is integral. For each \(\tau\) the required individual determinant is
+\[
+ \det G_\tau=\Bigl(\prod_\sigma\det G_\sigma\Bigr)\prod_{\sigma\ne\tau}\det(G_\sigma^{-1}).
+\]
+Every factor on the right is integral. The displayed
+formula then gives integral coefficients at every such \(w\).
+Thus the finite exceptional set is fixed by the CM data and
+the weight before varying \(f\). At each exceptional place
+take a power of a nonzero integer in its prime ideal of
+sufficient order. Their product \(t\) clears the coefficients
+simultaneously at all places.
+\label{cor:deep-cover-denominators-5}
+
+For the algebraic detecting frame \(y\) let \(Y\) be the
+transition tuple from \(y_0\) and \(c\) the central scalar.
+Then
+\[
+ f(y)=c^{e_c}\prod_\tau\det(Y_\tau)^{-k_\tau}P_f(Y).
+\]
+The values of the finitely many degree-\(D_e\) monomials
+at \(Y\), times the fixed multiplier in this expression,
+have a common denominator after multiplication by \(t^{-1}\).
+It gives the required scalar for all integral \(f\). The
+scalar may be taken to be a positive rational integer
+by clearing in \(K\). This proof also works for the shifted
+weights since \(e_c\) and the exponents were fixed integers
+throughout.
+\label{cor:deep-cover-denominators-6}
+
+\end{proof}
+
+\paragraph{Matching a large nonnegative weight.}
+Let \(B=4[E:\Q]r+4\). The cubical invariant on the marked
+cover has a fourth root \(\rho\), with \(\rho^4=a_Z\mathcal I\)
+on each component \(Z\), where \(a_Z\in F^\times\) and
+\(\mathcal I\) has nonnegative test orders. Multiply by a
+single \(t_1\in\mathcal O_F\setminus\{0\}\) with
+\[
+ t_1^4a_Z\in\mathcal O_F
+\]
+for every \(Z\).
+The fourth-power identity gives nonnegative orders for
+\(t_1\rho\). Thus \(u=\rho^{-1}\) and \(u'=t_1\rho\) have
+product \(t_1\), with \(u'\) integral at all tests.
+The exponents of \(u^B\) add central column count \(2B\)
+and subtract \(B\) in every flag coordinate.
+
+At every label a parallel flat determinant unit and its
+inverse are bounded on the complex component, and both
+have a finite clearing scalar there. Take the common
+positive period \(a\) of their parallel exponent steps.
+Their products and inverses realize a prescribed shift
+\(aw_\tau\) at each label, in the opposite directions on
+the two blocks in the flag exponents. Clearing the
+inverse on all finitely many components gives a pair
+\(\phi,\phi'\) with \(\phi\phi'=t_2\in F^\times\) and
+\(\phi'\) integral at every test.
+\label{cor:deep-cover-denominators-7}
+
+\begin{lemma}[Clearing a high-column form]
+\label{lem:deep-weight-shifts}
+Suppose the two block weights of the cusp form \(f\) have
+gap \(\lambda_p-\lambda_{p+1}\ge1\) at each label. Let \(B\) be
+the common determinant shift and \(a>0\) the period of the parallel
+flat units. For every integer \(b\ge2B+a\) one can choose \(w_\tau\in\mathbb Z\) so that, for \(F_b=f^bu^B\phi\), each block weight \(\lambda_{\tau,i}(F_b)\) and the column count \(n(F_b)\) satisfy
+\[
+ \min_{\tau,i}\lambda_{\tau,i}(F_b)\ge0,\qquad n(F_b)=2B.
+\]
+ The determinant and flat
+multipliers are generically invertible on the component. The two complementary short
+expansions then give one clearing scalar for the original
+high-column form at all valuations, with no uniform bound on
+its size as the form or level varies.
+\end{lemma}
+
+\begin{proof}
+\proofstep{The possible determinant shifts.}
+At a label write the nonincreasing block weight as
+\(\lambda_1,\ldots,\lambda_{p+q}\) with
+\(\lambda_p-\lambda_{p+1}\ge1\).
+Choose an integer \(b\ge 2B+a\) and write
+\[
+ b\lambda_p-B=am+R,\qquad 0\le R<a.
+\]
+Use \(w_\tau=-m\) here. In the \(p\)-block the target
+exponents \(b\lambda_i+aw_\tau-B\) are at least \(R\).
+In the conjugate block, in reverse index order, the target
+exponents \(-b\lambda_i-aw_\tau-B\) are at least
+\[
+ b-2B-R\ge0.
+\]
+In both blocks they form nonincreasing
+sequences. This gives an admissible nonnegative weight of even
+column count \(2B\) for \(f^b u^B\phi\). Its inverse multiplier
+up to scalar is \((u')^B\phi'\).
+
+\proofstep{Preservation of the cusp condition.}
+To check the cusp condition, factor off a single \(f\).
+If the remaining section is nonzero, its block exponents
+are dominant by the vanishing of sections with a negative
+adjacent gap on a flag fibre. Its central exponent is even.
+The framed uniformization and the fourth-root comparison
+therefore make it holomorphic with the corresponding
+weight. With \([E:\Q]/2>2\), Koecher's argument on the
+unitary period domains makes its Fourier--Jacobi support
+nonnegative at each cusp. Write the product as \(fg\), where \(f\) is the
+original cusp factor and \(g\) is the remaining section.
+Fourier--Jacobi expansion gives
+\[
+    [fg]_0=\sum_{\nu+\mu=0}[f]_\nu[g]_\mu
+           =[f]_0[g]_0=0 .
+\]
+The pointed nonnegative support gives the middle equality
+and the cusp condition on \(f\) gives the last. Thus the product
+belongs to the high-column cusp space. The zero product
+satisfies the same assertion.
+\label{cor:deep-cover-denominators-8}
+
+\paragraph{One scalar for all valuations of a high-column form.}
+We use the short theta generator comparison on the odd marked
+level \(N\), with auxiliary level and comparison modulus both
+one. The added comparison rule is the constant rule one, and
+its torsion coefficient has prescribed trivial character. The
+uniformized components have the same rational Hermitian form
+and the same marked polarization vector. Their principal
+congruence actions may differ by central roots of unity. Let \(w_E=|\mu(E)|\) and replace the high-column form \(h\) by
+\(h^{w_E}\). Every resulting frame exponent \(a\), including the
+half-column contribution, is divisible by \(w_E\), so the discrepancy
+in the central action disappears:
+\[
+                     \zeta^a=1\qquad(\zeta\in\mu(E)).
+\] The column count only increases.
+
+\proofstep{Two theta expansions with different prime conditions.}
+Here are the two comparisons used for this form. For any
+positive integer \(b_0\), the short theta forms with an
+auxiliary unimodular lower-row lattice trivial at the primes
+of \(b_0N\) span its complex realization. The hypotheses on the column count \(n\) include 
+\[
+ n\in2\mathbb Z,\qquad n\ge4[E:\Q]r+4.
+\]
+The target weights are dominant. Raising to the power \(w_E\)
+above kills the central multiplier, and the additional target
+character is trivial. To impose the auxiliary conditions while
+keeping this target, set
+\[
+ B=2b_0N,\qquad S=\mathcal O_E^n,\qquad
+ H=U(S\otimes_{\mathcal O_E}E)
+\]
+for the standard positive definite Hermitian form.
+The definite unitary integral in
+Proposition~\ref{prop:span-original-theta} uses a source marking
+at \(B\). Its doubled kernel is in the convergent range of the
+Siegel--Weil formula since \(n\ge4[E:\mathbb Q]r+4\).
+\cite[Theorem~2]{yamana-siegel-weil}
+
+For a finite adelic representative \(h=(h_v)_v\) the lattice of
+the class has local components \(h_vS_v\). At every \(v\mid B\)
+prescribe the following coset for the new representative:
+\[
+ K_v(B)=\{k\in H(E^+_v):kS_v=S_v,\ (k-1)S_v\subset BS_v\},
+ \qquad u_v\in K_v(B)h_v^{-1}.
+\]
+To choose a single rational \(u\), use the Cayley chart
+\[
+ X^*=-X,\qquad C(X)=(1-X)(1+X)^{-1}.
+\]
+Its complement in the group, given by \(\det(1+u)=0\), has empty
+interior at each finite place. Choose a parameter in each prescribed
+open coset and approximate the parameters in the skew-Hermitian
+vector space over \(E^+\). The resulting \(u\in H(E^+)\) gives
+a lattice \(\Lambda\) with
+\[
+ \Lambda_v=S_v\quad(v\mid B),\qquad \Lambda^\vee=\Lambda .
+\]
+Let \(e_1,e_2\) be the exponents of the finite groups
+\(S/(S\cap\Lambda)\) and \(\Lambda/(S\cap\Lambda)\). Their
+localizations vanish at the primes of \(B\). Hence with
+\(e=\operatorname{lcm}(e_1,e_2)\) we have
+\[
+ (e,B)=1,\qquad e\Lambda\subset S,\qquad eS\subset\Lambda .
+\]
+
+The rational unitary change reindexes the summation in the theta
+kernel. Its real action preserves harmonicity and the target row
+weight. Refining a compact open source level \(K\) to \(K'\)
+preserves the integral of a function invariant under \(K\), since
+\[
+           \sum_{k\in K/K'}\operatorname{vol}(kK')
+                       =[K:K']\operatorname{vol}(K')
+                       =\operatorname{vol}(K).
+\]
+Use these representatives in the inverse-overlap and reproducing
+calculation of Proposition~\ref{prop:span-original-theta}, before
+the good-type projection. The target half-level is fixed. Extend
+the component functions to their distinct orbits as at
+\ref{cor:slice-shifted-theta-1}. The extra target ideal is the unit
+ideal, so the lower-row congruence is the same for the arithmetic
+and analytic evaluations. Expanding each polynomial in integral
+harmonic rows gives the required short rules on the same components.
+
+Let \(W\) be the \(F\)-span of the rules in the section space \(V\). Scalar extension gives the test
+\[
+ v\in W\quad\Longleftrightarrow\quad (v+W)\otimes1=0\text{ in }(V/W)\otimes_F\mathbb C.
+\]
+Indeed an
+\(F\)-basis of the subspace generated by the rules can be
+extended to a basis of the section space, and any nonzero
+coordinate outside the subspace would remain nonzero at the
+coefficient embedding.
+\label{cor:deep-cover-denominators-9}
+
+For each resulting short rule \(g\), choose its nonzero scalar
+\(t_g\) and positive auxiliary integer \(n_g\). The two sets of
+primes at which the scalar clears all test denominators are
+\[
+       \{\ell:\ell\mid b_0\}\ \cup\ \{\ell:\ell\nmid n_g\}.
+\]
+The same \(t_g\) works throughout this union. Here \(n_g\) is the
+odd integer for its theta sum. To see the scope of the
+integrality calculation, let \(\ell\) be a prime at which the
+unimodular lattice is trivial and write
+\(N=\ell^cN'\), \(n_g=\ell^{c+d}n'\), with
+\(\ell\nmid N'n'\). The \(\ell\)-primary part of the torsion
+classes is read using \(\ell^c\) and the prime-to-\(\ell\)
+modulus \(n'\).
+
+The replacement isomorphism on the local
+lattice uses \(\ell^d\) and its Hermitian norm
+\(\ell^{2d}\), removing the extra depth in the index and
+polynomial denominators of the short sum. The class estimate
+then costs only the level power, the discriminant factor of the CM field
+and the fixed generator comparison. In the notation of the
+short sum, with flag degree \(D\), these are cleared by
+\[
+ t_g=\beta_H(\Lambda)\,
+       \#\{\text{level tuples}\}\,
+       N^{D}\prod_{\ell\mid C_E}\ell^{|\operatorname{disc}E|D}.
+\]
+The normalized local order inequality holds on the lifted
+integral frame, and normalized orders are preserved by the
+valued base change. The trivial-lattice condition holds at
+\(\ell\mid b_0\) by construction and at \(\ell\nmid n_g\)
+by the lattice's level condition.
+\label{cor:deep-cover-denominators-10}
+
+\proofstep{A clearing scalar on the remaining tests.}
+Now use a finite expansion with \(b_0=1\). Replacing its
+generators by \(t_g g\) and clearing the coefficients in
+\(F\) gives a scalar \(s_1\in\mathcal O_F\setminus\{0\}\)
+making the powered form integral away from the primes
+dividing
+\[
+ n_* =\prod_g n_g.
+\]
+Use a second finite expansion
+with \(b_0=n_*\). It gives a scalar
+\(s_2\in\mathcal O_F\setminus\{0\}\) making the same
+powered form integral at all tests over the primes dividing
+\(n_*\). Every test thus gives nonnegative order after
+multiplication by \(s_1s_2\), since the other factor is
+integral.
+
+If the power was \(w\ge1\), then whenever the values have finite valuation,
+\[
+ wv(s_1s_2 h)=v(s_1s_2 h^w)+(w-1)v(s_1s_2)\ge0 .
+\]
+A zero value is integral as well. This provides the
+simultaneous denominator for the original high-column
+form, using a possibly different short expansion for the
+exceptional prime set. None of these finite denominators
+needs a uniform size as \(N\), the weight or the form varies.
+\label{cor:deep-cover-denominators-11}
+\end{proof}

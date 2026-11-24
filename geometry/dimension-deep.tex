@@ -1,0 +1,169 @@
+\subsection{Covering the short unipotent orbit}\label{sec:count-orbit}
+
+In a deep part of the quotient, the lattice filtration has a large gap. The unipotent radical attached to this gap has a small set of representatives modulo its rational points, which allows cuspidality to control the value of a form.
+
+\begin{proposition}[Covering in the chosen short flag]\label{prop:short-orbit-cover}
+In Definition~\ref{hyp:cuspidal-dimension}, take \(q\ge1\) and suppose the smallest size \(\tau(x)\) in the canonical lattice filtration is less than \(1/2\). From the filtration in
+Lemma~\ref{lem:canonical-short-flag} choose a step with consecutive
+size ratio \(u\le(2\tau(x))^{1/q}\). Modulo its rational lattice
+stabilizer and the finite level, the short unipotent orbit admits
+representatives \(\exp A\exp Y\) in the real coordinates at \(x\),
+where
+\[
+    \|A\|+\|Y\|\le \rho,\qquad
+    \rho=\tfrac14 r^2\sqrt f\,g d_E(2\tau(x))^{1/q}.
+\]
+\end{proposition}
+
+\begin{proof}
+\proofstep{Choose a step by the product of ratios.}
+
+Let \(\tau=t_1<t_2<\cdots<t_a<1/2\) be the short sizes
+from Lemma~\ref{lem:canonical-short-flag} and put \(t_{a+1}=1/2\).
+There are \(a\le q\) ratios since the sum of the short ranks
+is at most \(q\). Then
+\[
+ \prod_{i=1}^a t_i/t_{i+1}=2\tau,\qquad
+ \min_i t_i/t_{i+1}\le(2\tau)^{1/a}\le(2\tau)^{1/q}.
+\]
+Use a pair \(t,t'\) attaining one such ratio \(u\).
+Let \(S\) be the saturated isotropic step ending at \(t\),
+of rank \(j\). For the middle block \(Z=S^\perp/S\), the extreme sizes are
+\[
+ t_{\max}(S)=t,\qquad t_{\min}(Z)\ge t',\qquad t_{\min}(S^\vee)=1/t ,
+\]
+where the inequality for the middle block is needed only when it is nonzero.
+
+\proofstep{Integral Witt coordinates and congruence lattices.}
+
+Use an integral Witt splitting
+\(\Lambda=S\oplus Z\oplus S^\vee\).
+To obtain it, extend functionals on the saturated summand
+\(S\) to \(\Lambda\) and use self-duality to identify
+\(\Lambda/S^\perp\) with \(S^\vee\).
+Choose a section by projectivity. Its Hermitian form can
+be killed by subtracting an \(S\)-valued correction,
+since the pairing between \(S\) and this section is perfect.
+In detail, choose an integral scalar \(\theta\) with
+\(\theta+\bar\theta=1\). It exists since the trace of the
+unramified quadratic integral extension is surjective at
+each prime, and so globally. Use a correction whose pairing
+with the section is \(\theta\) times that section's form.
+Indeed, if \(H_0\) is the Hermitian form of the section, the two
+cross terms sum to
+\[
+                  \theta H_0+\bar\theta H_0=H_0 .
+\]
+Take the orthogonal complement of the resulting hyperbolic
+pair to split off \(Z\).
+
+The radical of the stabilizer of \(S\) has a two-step
+Lie algebra with coordinates \(X:Z\longrightarrow S\)
+and \(Y:S^\vee\longrightarrow S\), where \(Y\) is
+skew-Hermitian. The other first-layer block is
+\(-X^\dagger\). At the real places use the orthogonal Witt
+coordinates. Two such splittings inducing the same maps on
+the graded spaces differ by an element of the radical, as
+their change of splitting is unitary, block triangular and
+the identity on the graded spaces. Conjugation by it acts
+trivially on the first-layer quotient and on the center.
+Thus the congruence lattice supplies \(2g\operatorname{Hom}(Z,S)\)
+in the first block.
+
+For the first layer in the integral splitting, write
+\[
+ A_X=\begin{pmatrix}0&X&0\\0&0&-X^\dagger\\0&0&0\end{pmatrix},
+ \qquad
+ \exp(A_X)=
+ \begin{pmatrix}1&X&-XX^\dagger/2\\
+                 0&1&-X^\dagger\\0&0&1\end{pmatrix}.
+\]
+For \(X\in2g\operatorname{Hom}(Z,S)\) every off-diagonal
+entry is integral and divisible by \(g\). In particular, writing
+\(X=2gX_0\) makes the central entry
+\[
+ -XX^\dagger/2=-2g^2X_0X_0^\dagger
+                   \in g\operatorname{Hom}(S^\vee,S).
+\]
+The center supplies \(g\) times the skew-Hermitian sublattice
+of \(\operatorname{Hom}(S^\vee,S)\).
+
+\proofstep{Dual minima of the two coordinate lattices.}
+
+Here are the covering bounds for these lattices. In the
+product Hilbert--Schmidt norm the Euclidean dual of
+\(\operatorname{Hom}(Z,S)\) identifies with
+\(2\mathfrak D_E^{-1}\operatorname{Hom}(S,Z)\), where
+\(\mathfrak D_E\) is the absolute different. This follows
+from the matrix trace pairing on projective modules and
+the factor 2 relating field trace and the real product
+pairing over the complex places. Multiplication of a
+lattice by the codifferent multiplies every filtration
+size by \(d_E^{-1}\), from its ideal norm and the same
+exterior-volume normalization. The determinant comparison
+for nonzero maps therefore bounds the geometric mean of
+the local norms of a nonzero dual matrix below by
+\(2d_E^{-1}t'/t\). For a nonzero vector \(B\) in this dual, the quadratic and
+geometric means give
+\[
+ \Big(\sum_v\|B_v\|_{\rm HS}^2\Big)^{1/2}
+ \ge\sqrt f\Big(\prod_v\|B_v\|_{\rm HS}\Big)^{1/f}
+ \ge 2\sqrt f\,d_E^{-1}t'/t .
+\] The first-layer lattice has
+real dimension \(2fj(r-2j)\).
+
+For the center, the skew-Hermitian sublattice is primitive
+in the full matrix lattice. An integer functional on it
+extends to the full lattice, so its Euclidean dual is the
+orthogonal skew projection of the full dual. The projection \(B\mapsto (B-B^\dagger)/2\) places the dual of the
+central lattice in \(\mathfrak D_E^{-1}\operatorname{Hom}(S,S^\vee)\).
+The extreme sizes of \(S\) and its dual thus give
+\[
+                  \|B\|\ge \sqrt f\,d_E^{-1}/t^2
+                         \qquad(B\ne0\text{ in the dual}).
+\] The center has real dimension
+\(fj^2\).
+
+\proofstep{Cover each layer by transference.}
+
+The dual minimum bounds give a covering radius in each additive layer. Combining these coverings must respect the order of the unipotent extension.
+
+
+For a full Euclidean lattice of dimension \(d\), its
+covering radius times the length of the shortest nonzero
+dual vector is at most \(d/2\)
+\cite[Theorem~2.2]{banaszczyk}. Apply this to the two
+computed dual minima. Including the level \(2g\) in the
+first layer and both its adjoint blocks, its radius is at most
+\[
+ \sqrt2\,(2g)\frac{j(r-2j)\sqrt f\,d_E}{2}\frac{t}{t'}
+        \le\frac{r^2\sqrt f\,g d_E}{4\sqrt2}\frac{t}{t'} .
+\]
+In the center, including level \(g\), the radius is at most
+\[
+        \frac{g j^2\sqrt f\,d_E}{2}t^2
+        \le\frac{r^2\sqrt f\,g d_E}{32}\frac{t}{t'} ,
+\]
+using \(t t'\le1/4\). First reduce the first block by an
+integral congruence lift, then reduce the resulting center,
+which already includes the commutator correction.
+The two displayed radii can be added after this central correction.
+For the gap \(t/t'\le(2\tau)^{1/q}\) this gives
+\[
+ \|A\|+\|Y\|\le r^2\sqrt f\,g d_E\frac{t}{t'}
+       \left(\frac{1}{4\sqrt2}+\frac1{32}\right)
+ \le \frac{r^2\sqrt f\,g d_E}{4}(2\tau)^{1/q}=:\rho .
+\]
+
+The radical is two-step with vector-group center and
+vector-group quotient. Additive approximation at the
+finite adeles in these two groups shows that each class
+on its adelic orbit modulo the finite level has a real
+representative. Apply the real covering just proved to
+that representative. A rational left correction from
+the lattice stabilizer at level \(g\) gives only a right
+level translate at the point, so the value of each projected
+function is unchanged. After conjugating into the real
+coordinates at \(x\), the representative acts by a product
+\(\exp A\exp Y\) with \(\|A\|+\|Y\|\le\rho\).
+\end{proof}

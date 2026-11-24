@@ -1,0 +1,191 @@
+\paragraph{The row at the chosen comparison.}
+\label{par:linked-family-rows}
+Fix a completed member \(q\) and its division pair from
+Proposition~\ref{prop:completed-division-pair}. Choose a recursive
+realization, a normalization of its real rows and the identification
+between these realizations on the pair. Write \(P\) for the resulting point. The row,
+periods, finite groups, coefficient field and numerical functions
+at \(P\) are those of the pair. In particular its two level rows
+are the ones in Section~\ref{subsec:completed-division}. The
+following verifications hold for each compatible comparison on
+the bundle. Thus they also hold if an additional condition, such
+as the one on the evaluation grid, selects the comparison.
+
+\begin{proposition}[The two rows at a compatible choice of comparison]\label{prop:linked-comparison-rows}
+At every compatible comparison on the completed bundle, let \(q_0\) be projection to the sharp good row and \(P_{u,0}\) the reference pairing of word \(u\). The factorization is characterized by
+\[
+ F-F'\in\ker q_0\quad\Longrightarrow\quad P_{u,0}(\phi,F)=P_{u,0}(\phi,F')\quad\text{for all }\phi.
+\] At either level the rational row and its integral
+submodule have the corresponding divisor comparisons of
+the original division pair, on all tuples used by the real
+row. Any later choice of a comparison satisfying an extra
+condition therefore still gives these rows and their pairings.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Use the sharp reference period to test the kernel of the good projection.}
+Fix a word \(u\), and use its selected Poincar\'e operator from
+Section~\ref{subsec:selected-completion-period}. Let \(R_P\) be the
+rational row, \(R_P^\sharp\) its common sharp good row and
+\(q_0:R_P\to R_P^\sharp\) the good projection. In the complex
+realization write \(I_u\) for the column isometry and \(I_R\) for
+the isometry on the good row at the refined level. Unfolding by
+Lemma~\ref{lem:joint-period} gives, for the sharp tests of this
+operator,
+\[
+ \iota\bigl(P_{u,0}(\phi,F)\bigr)
+  =\mathcal P_{u,0}\bigl(I_u\phi, I_R(q_0 F)\bigr),
+\]
+where \(\mathcal P_{u,0}\) denotes the resulting complex theta
+pairing.
+
+The normalized factor is one at the reference tuple
+of Section~\ref{sec:transport}. The reference tuple is obtained
+from the full diagonal and the dimension of the ramified space
+there, before applying either division estimate. If \(F-F'\in\ker q_0\),
+the difference of the right sides vanishes for every \(\phi\).
+The coefficient embedding is injective, so the vanishing difference implies
+\[
+ F-F'\in\ker q_0\quad\Longrightarrow\quad P_{u,0}(\phi,F)=P_{u,0}(\phi,F')\qquad(\text{every }\phi).
+\] This defines the rational
+reference pairing on the quotient without choosing an integral
+representative.
+
+\proofstep{Read the quotient pairing on the transported integral lattices.}
+
+The rational pairing obtained this way is the one characterized by
+the Gram equations in Proposition~\ref{prop:rational-period-factor}.
+For each of the two levels, the rational row comparison identifies
+the down-lift and the theta map in the same coordinates. To see what
+is integral, let \(M_w\) be the localization of the glued lattice
+at a place \(w\).
+
+For the coordinate identification \(a\) coming
+from the completed pair, its lattice and form are transported by
+\[
+ M_w\longmapsto aM_w,\qquad
+ B_w(\phi,F)\longmapsto B_w(a^{-1}\phi,a^{-1}F).
+\]
+Here \(a\) denotes the respective coordinate map in each argument.
+Thus the localized orders, lattice indices and dual indices are
+computed on the identified modules. The reference form descends
+because of the kernel calculation above. A nonreference tuple of
+the real row occurs as the tuple of a place obtained by the inverse
+place bijection of the host. Hence for each used tuple \(\mu\) one of two comparisons is available:
+\[
+ \mu=\mu_0\quad\text{or}\quad \mu=\mu(w)\ \text{for a place }w\text{ on the nonreference support}.
+\]
+The measured intersection comparison supplies the surjections
+onto the good coordinates and the separation of the primitive types.
+The equality of the bounded real realizations identifies the real
+datum and its face in both calculations.
+\label{cor:linked-family-rows-1}
+
+On a nonreference summand, let \(c\) be an integral level coordinate
+reading to an admitted source value and \(\pi_{\rm src}(c)\) its
+projection to the lift source. Write \(x=\Theta\pi_{\rm src}(c)\)
+in form coordinates and choose \(x=\sum_h a_h f_h\), with \(f_h\)
+rational forms in the expansion model and \(a_h\) in the row field.
+If \({\rm ev}_w\) denotes the local expansion map, the divisor theta
+identity and the signed series comparison give the same value
+\[
+        {\rm ev}_w(x)=\sum_h\iota_w(a_h)\,{\rm ev}_w(f_h).
+\]
+
+To check independence of the expansion, subtract the two expressions for \(x\) in the extended space and use linearity:
+\[
+ \sum_h b_h f_h=0\quad\Longrightarrow\quad \sum_h b_h\,{\rm ev}_w(f_h)=0 .
+\] The completed
+division comparison transports \(\pi_{\rm src}\), the rational form
+coordinates and \({\rm ev}_w\) through the update of periods and
+sizes. Consequently the displayed equality can be checked either
+before or after the update. In the chosen rational basis, evaluation on the row is the composite 
+\[
+ x\longmapsto(a_h)_h\longmapsto(\iota_w(a_h))_h\longmapsto\sum_h \iota_w(a_h)\,{\rm ev}_w(f_h).
+\]
+ Its restrictions to the integral expansion lattice and theta sublattice give the integral evaluation and the assigned series, respectively.
+\label{cor:linked-family-rows-2}
+
+Forget the grid in the arithmetic member of
+Section~\ref{subsec:automorphic-realization}. The norm choice,
+the signed series used for the exponent, the two type maps, the
+base and local level groups, the kernel field and the selected
+half primes remain those of this member. The changes in the
+Petersson scalar, in the lift scalars and in the error have no
+effect on the maps of finite ideles or integral host rings.
+
+Fix a preliminary frame and its finite support data. If \(S\)
+is an allowed support, put
+\[
+    M(S)=g_0g_1\!\!\prod_{\substack{q\text{ a residue cardinality}\\
+                         q\text{ of a place in }S}}\!q ,
+\]
+with each distinct cardinality used once, as in the level of the
+member. By the support bound the possible \(M(S)\) belong to a
+finite list. If \(A_M\) generates the embedded ray field at level \(M\), one finite request suffices:
+\[
+ A=\bigcup_{M\text{ in the level list}} A_M,\qquad |A|\le\sum_M |A_M|<\infty .
+\] The Artin comparison of
+Section~\ref{subsec:automorphic-realization} identifies these ray
+fields and the type and character values in the chosen embedding.
+The two canonical frames on the same core give the same half-level
+ideals as the divisor, including the half-error divisibility.
+
+The integral field reading identifies the coefficient rings. After
+passing to fractions it identifies the degree and absolute
+discriminant used in the size bound with those of the recorded core.
+The single-index support test uses the case with zero error and
+height constants. These comparisons give the field, rank, series
+and level requirements in the two runs. A coordinate isomorphism preserves each of the module equalities in the comparison. For submodules \(U,V\) in an identified row and its isomorphism \(b\),
+\[
+ U=V\quad\Longleftrightarrow\quad b(U)=b(V).
+\]
+\label{cor:linked-family-rows-3}
+
+At infinity the intertwiner is defined on the prescribed lowest
+compact type of the polynomial Weil representation. Regularity,
+admissibility and finite multiplicity give the Harish--Chandra
+modules. Apply Casselman--Wallach globalization to this intertwiner
+and cuspidal rapid decay to its integrals, as in
+Section~\ref{sec:transport}. Let \(T\) be the difference of two such intertwiners,
+and let \(V_0\) be the span of the compact translates of the
+distinguished lowest vectors. Equality on the test vectors gives
+\(T(V_0)=0\).
+
+At the Harish--Chandra module level,
+\[
+ V=U(\mathfrak g_{\mathbb C})V_0,\qquad
+ T(Xv)=X T(v)=0
+ \quad\bigl(X\in U(\mathfrak g_{\mathbb C}),\ v\in V_0\bigr).
+\]
+Thus \(T=0\) on the module and, by continuity, on its globalization. This explains the injective reading used for the geometric
+action. The conjugate frame is read by the transported coefficient
+map. When \(n_V\ge8fr+4\), the stable theta span and the form
+isomorphism of Section~\ref{subsec:selected-cusp-reading}
+apply to these weights. Since the normalized map and the extended
+intertwiner agree on every vector of the common orthonormal basis,
+they agree on the row. In particular evaluation and the two
+linear readings assign the same form at either frame.
+
+At a supported finite type, let \(e_{\rm good}\) be the central
+idempotent of Section~\ref{subsec:automorphic-realization}. For a
+vector \(f\) in its image and a finite type-group element \(g\),
+\[
+       e_{\rm good}(g f)=g(e_{\rm good}f)=g f .
+\]
+The chosen nonzero component therefore generates a module for
+the supported split factors in the same constituent. Apply
+Green's regular cuspidal character and the depth-zero type
+correspondence to the factor actions. Normalized induction and
+uniqueness of cuspidal support give the multiset of the local
+parameter. The marked local Galois identification reads it at
+the coefficient choice of \(P\). This applies to each required
+label with the threshold on the family of members. The primitive
+base lifting isomorphism is rational and bijective in its
+phase-one coordinates and has the uniform positive rank \(D_0\).
+The tuple map, level subgroups and base character therefore
+refer to this same row on the two conjugate sides.
+\label{cor:linked-family-rows-4}
+
+\end{proof}
+

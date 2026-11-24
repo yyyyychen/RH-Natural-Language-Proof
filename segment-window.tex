@@ -1,0 +1,582 @@
+\subsection{The segment lattice and the last sampled degree}
+\label{sec:segment-window}
+\hypertarget{source-segment-window}{}
+
+For the segment application, the variables in \eqref{eq:ties} range over an enlarged integer box. The final sampled degree contributes a separate rank loss.
+\begin{paramdefinition}[The sampled degrees and size conditions for a segment]\label{hyp:segment-sampling}
+Write \(s\) for the number of odd tops
+between successive even tops. Put \(r=k-1\), \(P_i=p^{G-d_i}\)
+where \(G\) is the length of this segment and \(d_i\) are the
+increasing distances of its odd tops from its start. Its \(s+1\)
+sampled degrees are \(a_i\) at those tops and \(a_+\) at the next
+even top. They range over the same enlarged integer interval
+\[
+ W=[a,\lfloor a+a/(kY)+x_a\rfloor],
+\]
+where
+\(0\le x_a\le2\mathcal L b'/k\) and
+\(\mathcal L=C_0N_1^2\log a\). The \(b_i,b_+\) are held fixed
+in the enlarged second interval.
+
+In particular \(b_i,b_+\le5b'/2\).
+Write \(\lambda=1+\log_p(8a+r)\), reserve \(N\) for the number of
+tops in the cycle, and put \(Q=p^{G'}\), \(G\le G'\).
+The local size hypotheses include
+\[
+ k\ge5,\; 2s+2\le r,\; s\le N_1,\;
+ p\ge k^2Y^2,\quad pb'<a,\quad kQ\le b',\quad
+ 4\mathcal L<k,\quad kY^2\log a\le a/b'.
+\]
+The parameter \(a\) in the integer construction is the rounded
+lower endpoint. We use the inequalities on that integer.
+\end{paramdefinition}
+The host realization uses the good cycle of Section~\ref{subsec:frobenius-selection}. The estimates preceding Proposition~\ref{prop:host-large-prime-test} verify these inequalities with the rounded endpoint and the enlarged box. In particular the two growing scales there satisfy
+\[
+        a/b'=X',\qquad \log Q=o(\log b').
+\]
+
+
+\begin{lemma}[One lattice prescription on a digit box]\label{lem:segment-common-digit-lattice}
+Fix the second degrees and a nonempty digit class. On the
+product of admissible first-degree progressions both the
+retained label conditions and the allowed levels
+\(\mathbf j\) are independent of the sampled first degrees.
+The last shifted vector order \(o_+\) is less than \(a\).
+On the lattice at each permitted level one has
+\[
+ B_0(u,v)=B_0(v,u)\qquad(u,v\in L_{\mathbf j}).
+\]
+
+\end{lemma}
+
+\begin{proof}
+\proofstep{The integral digit class.}
+A digit class consists of vectors \(\rho_i,\tau_i\) of length \(k\)
+with entries from \(0\) to \(P_i-1\). Write \(|\rho|=\sum_c\rho_c\).
+Retain the class at these degrees when both coarse degrees are nonnegative integers, where
+\[
+ A_i=(b_i-|\rho_i|)/P_i,\qquad C_i=(a_i-|\tau_i|)/P_i .
+\]
+Put \(A_0^{\,*}=\lfloor(a-E_0)/p^G\rfloor\), using a star to
+distinguish this starting capacity from the individual \(A_i\).
+The odd tops split at an index \(\sigma\) into an
+initial list and a final list of \(t=s-\sigma\) tied pairs
+(\(0\le\sigma\le s\)).
+
+For a block label use integers
+\((w_i,h_i)\) at the initial positions, \(o_i\) at tied positions,
+and \(o_+\) at the end. Set \(u_i=w_i+h_i\) or \(o_i\), respectively,
+and \(K_l=A_0^{\,*}+\sum_{i<l}(A_i-u_i)\), numbering positions from zero.
+The retained labels are the nonnegative choices satisfying
+\begin{align*}
+ w_i&\le A_i,\quad h_i\le C_i,\quad
+ w_i+h_i\le A_i(1+4/p^2)+\mathcal L K_i/k,\quad
+ h_i\le2\mathcal L A_0^{\,*}/k &&(i<\sigma),\\
+ o_i&\le A_i,\quad o_i\le K_i+\mathcal L A_i/k &&(i\ge\sigma),\\
+ o_+&\le K_s+(\mathcal L/k+4/p^2)\sum_i2a/P_i+\mathcal L b_+/k .
+\end{align*}
+For a nonempty class, the admissible \(a_i\)'s form a product of
+arithmetic progressions of steps \(P_i\). On that entire product,
+\[
+ P_iC_i\ge a-kP_i\ge a-b',
+ \qquad P_iA_i\le5b'/2,\qquad
+ P_i\,2\mathcal L A_0^{\,*}/k\le a/2.
+\]
+
+Since \(pb'<a\) and \(p\ge k^2Y^2\), these imply both
+\(C_i\ge A_i\) and \(C_i\ge 2\mathcal L A_0^{\,*}/k\).
+Thus the restriction \(h_i\le C_i\) follows from its fixed
+cutoff, and each minimum defining an internal tied level
+is its fixed vector degree \(o_i\).
+Also \(o_+\le a\). For this, \(A_0^{\,*}\le a/25\),
+\(K_s\le a/25+5sb'/2\), \(sb'\le a/8\), and
+\[
+ \sum P_i^{-1}\le p/(p-1)\le25/24,
+\]
+by the strictly decreasing
+powers. Inserting these and \(b_+\le5b'/2\), \(kb'\le a/4\),
+in the displayed upper bound gives \(o_+<a\).
+
+The chain now has \(2s+1\) alternating vector and covector letters,
+starting and ending with a vector. Their degrees are
+\((w_i,C_i-h_i)\) in the initial list, \((o_i,C_i)\) in the
+tied list, and \(o_+\) at the end. Adjoin a covector \(\xi\) of
+degree \(b_+\). The differences between the sampled and tied vector degrees give the decorations
+\[
+ z_i=A_i-o_i,\qquad z_+=a_+-o_+.
+\]
+
+The capacities at the prefixes ending in a tied vector and at
+the end of the chain are \(K_i,K_s\). Subtract the prescribed
+common margin \(m_0\) and take floors there to obtain the cutoffs
+on first highest weights.
+
+\proofstep{The level parameters and their order.}
+A level consists of integers \(j_i\) for the ties, including the
+last one \(j_+\), between zero and the minimum of the two
+corresponding degrees. Subtract \(j_i\) from both degrees of that
+pair. The index set of levels is fixed over the class since
+\(C_i\ge A_i\ge o_i\) at the tied positions. Let \(V\) be the
+constrained chain space at the reduced degrees and \(L_V\) its
+coefficient lattice over \(\mathbb Z_p\). Before restoring the scalar
+variables the lattice at a level is
+\[
+ L_{\mathbf j}=L_V\otimes_{\mathbb Z_p}
+       \mathbb Z_p[\xi]_{b_+-j_+}.
+\]
+The factors use disjoint variables.
+
+Write \(d_F\) for the product
+of the factorials of all the reduced degrees, including the
+degree of \(\xi\). Write \(T\) for the product of the \(t\) internal
+operators \(\Phi_{z_i}\) on the reduced pairs.
+The two forms required on \(L_{\mathbf j}\) are
+\[
+ B_0(f,g)=\langle Tf,g\rangle/d_F,\qquad
+ B_z(f,g)=\langle\Phi_z Tf,g\rangle/d_F,\quad z=a_+-o_+ .
+\]
+The first form is symmetric since every \(U^lD^l\) is self-adjoint
+and the operators on distinct ties commute.
+
+\end{proof}
+
+\begin{proposition}[Uniform mean on a segment]\label{prop:segment-discard}
+Fix a segment \(I\) with the degree and size conditions of
+Definition~\ref{hyp:segment-sampling}. Hold fixed the margin of
+the lattice prescription in Lemma~\ref{lem:segment-common-digit-lattice}
+and the \(s+1\) second weights. With \(s+1\) sampled first-weight
+coordinates, the equal-weight average of the discarded
+fractions over the enlarged interval box satisfies
+\[
+ \mathbb E_{\mathbf a,a_+}\kappa_I\le C_A(s+1)N_1/Y
+\]
+at the depth \eqref{eq:segment-mean-depth}. The same absolute constant
+works for the depth allowance and the mean.
+\end{proposition}
+
+The proof uses the several-pair estimate separately at the
+internal degrees and at the last degree. It then transports
+the resulting ranks to the factorial lattice and changes back
+from the auxiliary sampling law to equal weights on the box.
+
+\begin{proof}
+\proofstep{The internal degrees.}
+Freeze the untied coordinates \(a_i\) and the digits and level.
+At a tied position with radix \(P=P_i\) the new covector degree
+\(n_i=(a_i-|\tau_i|)/P-j_i\) runs through an interval of
+consecutive integers of length \(H_i\). Its law is uniform there.
+One has \(H_iP\ge a/(2kY)\), since the interval in \(a_i\)
+has length at least \(a/(kY)-1\), and
+\(2(1+P)kY\le4b'Y\le a\). All points of this residue class above
+\(a\) exceed \(|\tau_i|\).
+
+Let \(S_i^+\) be the prefix degree
+through its vector at the largest values of the other tied
+coordinates. Then
+\[
+ P S_i^+\le 5b'/2+(2s+1)2a/p,\qquad
+ P\min n_i\ge a-kP-5b'/2.
+\]
+The first bound uses \(P_i/P_l\le1/p\) for every earlier position
+and the bound \(2a\) on each degree before division by its radix.
+The vector at \(i\) has \(Po_i\le b_i\).
+
+The second bound follows
+from \(Pj_i\le b_i\) and \(|\tau_i|<kP\).
+They imply \(S_i^+\le\min n_i\), since \(kP\le b'\),
+\(b'<a/p\), \(2s+1\le k-2\) and \(p\ge k^2\).
+They also give
+\[
+ S_i^+/H_i\le7/Y
+\]
+by multiplying the
+first upper bound by \(2kY^2/a\) and using \(p\ge k^2Y^2\).
+All the reduced degrees and internal decorations are at most \(2a\).
+The last vector satisfies the stronger bound \(o_+\le a\) above.
+The degree-size condition of \eqref{eq:ties} follows from
+\(2s+2\le r\) and \(p\ge k^2\).
+
+\proofstep{The allowance for the internal degrees.}
+Use \(\kappa=3(s+2)r^2\lambda\), \(E=Y\kappa\), and write
+\begin{equation}\label{eq:segment-mean-depth}
+ d=t(Y+1)\kappa+\kappa,\qquad d'=\lfloor Yd\rfloor.
+\end{equation}
+In \eqref{eq:ties} the required lower bound on \(\kappa\) for
+\(2s+1\) letters is \(\tfrac32(2s+3)r^2\lambda\).
+The coefficient of each endpoint dimension is at most \(31/Y\)
+because its three terms are bounded by \(14/Y,2/Y\) and
+\(14\lambda/(Y^2\kappa)\).
+
+Write \(b_V\) for the failed rank on
+\(L_V\) at depth \(\lfloor d\rfloor\) and \(\widehat a_i\) for
+replacement of \(a_i\) alone by its largest compatible value.
+Averaging first over these progressions, then over the frozen
+coordinates, gives
+\begin{equation}\label{eq:seg-interior}
+ \sum_{\mathbf a} b_V(\mathbf a)
+   \le \frac{31}{Y}\sum_{i\ {\rm tied}}\sum_{\mathbf a}
+                     \dim V(\widehat a_i).
+\end{equation}
+This includes \(t=0\), where the unmodified form already has
+sufficient depth. Tensoring each pair of successful vectors with
+each monomial \(\xi^\nu\) preserves the depth for \(B_0\).
+On the partner put the integral multiplier
+\((b_+-j_+)!/\prod\nu_c!\). Thus the failed rank for \(B_0\)
+is at most \(b_V d_\xi\), with
+\(d_\xi=\binom{b_+-j_++r-1}{r-1}\).
+
+\proofstep{The last parameter.}
+Choose an orthogonal basis of \(L_{\mathbf j}\) for \(B_0\) over
+\(\mathbb Z_p\). After clearing a common denominator, a pairing
+of least valuation can be realized on a single vector. If all
+diagonals have greater valuation and \(B_0(u,v)\) is minimal,
+use
+\[
+ B_0(u+v,u+v)=B_0(u,u)+2B_0(u,v)+B_0(v,v).
+\]
+Since \(2\) is a unit, the middle summand has strictly smallest valuation. The resulting
+primitive vector splits off by subtracting integral multiples.
+Induction, with a basis of the radical appended, gives the
+assertion. Take the part \(f_1,\ldots,f_h\) of this basis with
+nonzero diagonal of valuation at most \(\lfloor d\rfloor\).
+Smith reduction identifies \(h\) with the successful rank.
+
+Let \(o=o_+-j_+\), \(n=b_+-j_+\), \(J=\min(o,n)\),
+\(q=o+n+r-1\). For the last pair write \(U=x\cdot\xi\) acting
+by multiplication, \(D=\sum_c\partial_{x_c}\partial_{\xi_c}\).
+Set
+\[
+ M_l(u,v)=
+ \frac{\langle U^lD^l Tu,v\rangle}{(l!)^2\binom Jl\,d_F}\quad(0\le l\le J).
+\]
+The matrix with entries
+\[
+ p^{x_0}\sum_{l=0}^J(-1)^l
+       \binom{q+z-l}{J-l} M_l(f_i,f_j)
+   =p^{x_0}\binom{q+z}{J}B_z(f_i,f_j)
+\]
+is a polynomial in \(z\) with integral binomial-basis
+coefficients for the following choice. Put \(a_*=(3s+2)a\),
+\(L_*=\lfloor\log_p(8a_*+r)\rfloor+1\) and
+\[
+ x_0=\big((t+1)(r+1)+(2s+2)r+2(t+1)\big)L_* .
+\]
+For the coefficient bound, expand \(D^l\) by multi-indices
+\(|\alpha|=l\). After the two divided derivatives in every
+coordinate, division by \((l!)^2\) costs the inverse multinomial
+\(\binom l\alpha^{-1}\). Its valuation loss is at most
+\((r-1)L_*\) by the factorial formula.
+
+The additional reciprocal
+binomial costs at most \(L_*\). The same reasoning applies to
+every operator in \(T\) with its own denominator
+\[
+ \binom{o_i'+n_i'+r+z_i-1}{l},
+\]
+where primes indicate
+reduced degrees. Finally the monomial norm divided by \(d_F\)
+costs at most one multinomial per letter, altogether at most
+\(((2s+2)r+2(t+1))L_*\). Multiplication by \(U^l\) has integral
+coefficients. Vandermonde's identity for each binomial in
+\(q+z-l\) now proves integrality. The coefficient of \(\binom zJ\)
+is exactly \(p^{x_0}B_0(f_i,f_j)\). Its diagonal entries are nonzero. Thus the coefficient of the highest power of \(z\) in the determinant is
+\[
+ (J!)^{-h}\prod_{i=1}^h p^{x_0} B_0(f_i,f_i).
+\]
+Consequently the determinant has degree \(hJ\), and the
+leading coefficient has valuation at most
+\(h(x_0+\lfloor d\rfloor-v_p(J!))\).
+
+\proofstep{A Smith estimate over the last interval.}
+Apply \eqref{eq:smith-average} with \(H=|W|\), shift \(a-o_+\),
+\(e=\lceil\log_p(a+1)\rceil\) in place of \(h\) there, and depth
+\(d'+1\). Both \(J+1,H\le a+1\).
+The integral nonzero factor \(p^{x_0}\binom{q+z}{J}\) only
+increases Smith valuations. Integer valuations mean that the
+failed directions of the rescaled matrix at depth \(d'\) are
+precisely those counted at \(d'+1\).
+Legendre's formula gives
+\[
+ J/(p-1)-v_p(J!)\le L_*.
+\]
+
+Since \(3s+2\le p\), \(L_*\le2\lambda\), and for \(r\ge4,t\le s\)
+direct multiplication gives \(x_0+L_*\le\kappa\).
+Also \[
+ \begin{gathered}
+ J/H\le(5b'/2)kY/a\le1/(2Y), \\ e\le\kappa, \\ d\ge\kappa, \\ d'+1\ge Yd.
+\end{gathered}
+\]
+The mean number lost on this orthogonal subsystem is therefore
+at most
+\[
+ h\left(\frac{J}{H}+
+   \frac{x_0+\lfloor d\rfloor+L_*+Je/H}{d'+1}\right)
+ \le \frac{5h}{Y}.
+\]
+Combining with the directions already missing in \(B_0\)
+bounds the mean failed rank of \(B_z\) on the full level by
+\(d_\xi b_V+5d_\xi\dim V/Y\). This last average uses \(a_+\)
+with \(\mathbf a,b_i,b_+\) still fixed.
+
+\proofstep{From the levels to the factorial lattice.}
+Introduce one extra pair of scalar variables \(Z_i,S_i\) at each
+tie, including the last pair. In the following products \(i\)
+runs over all \(t+1\) pairs. Write \(E_i=Z_iS_i+U_i\).
+The rational block space is spanned by
+\[
+ \left(\prod_i E_i^{j_i}Z_i^{z_i}\right) f,\qquad
+               f\in L_{\mathbf j},\quad \mathbf j\text{ admissible}.
+\]
+Extension of scalars to the coefficient field \(K=\operatorname{Frac}O\)
+gives precisely the span in the definition of the segment lattice.
+In fact a highest-weight cutoff is the largest prefix-stable
+subspace of a monomial support condition. In fixed multidegree it is
+the common kernel of maps obtained by applying words in the matrix
+units and projecting to the forbidden weight spaces. There are only
+finitely many independent equations, all with rational coefficients.
+Kernels, their finite intersections and their dimensions commute
+with field extension. The integral coefficient intersections span
+these spaces over the fraction fields by clearing denominators.
+
+\proofstep{The normalized form on one pair of letters.}
+For one pair with reduced degrees \(o,n\) and decoration \(z\),
+let \(H\) be harmonic projection in \(r+1\) variables at degrees
+\(o+z,n\). Write \(F=D+\partial_Z\partial_S\).
+For \(f\) independent of \(Z,S\),
+\[
+ H(Z^z f)=\sum_{l=0}^{\min(o,n)}
+  \frac{(-1)^l E^l Z^z D^l f}{(l!)^2\binom{o+n+r+z-1}{l}}.
+\]
+Indeed \[
+ F(E^l v)=E^lFv+l(r+1+\deg_x v+\deg_y v+l-1) E^{l-1}v\,;
+\] the coefficients telescope and the map is the
+identity modulo \(E\). The Fock adjoint of \(E\) is \(F\), so
+\(H\) is self-adjoint. Replace \(Z_i^{z_i}\) in the level map
+by \(f\mapsto H_i(Z_i^{z_i} f)\), taking products of these
+commuting maps, followed by \(\prod E_i^{j_i}\).
+This gives a map \(\Theta_{\mathbf j}\). The terms other than the
+original generator have larger total level. They belong to the
+indicated higher-level spaces. For a prefix including both letters
+the contraction \(D_i\) is equivariant. Before the pair it acts on disjoint variables.
+
+In either case, for the corresponding prefix action \(g\),
+\[
+ D_i(gf)=g(D_i f).
+\]
+At the intermediate prefix
+it differentiates the vector. The span of the derivatives there
+is an image of the old representation tensored with the dual
+standard representation, so each highest weight is obtained by
+subtracting one box by the dual Pieri rule. This preserves the
+upper cutoff. At the last pair the covector derivative acts only
+on \(\xi\). Thus the replacement is triangular, with identity
+diagonal, among the rational generators. The original level spaces
+are independent because in \(E_i^{j_i}\) the term of greatest \(S_i\)-degree
+is \((Z_i S_i)^{j_i}\). Extract successive lexicographically
+largest scalar multidegrees in a relation. Their coefficients are
+exactly the separate polynomials \(f\). Summing the dimensions of these independent level spaces gives
+\[
+ \dim(\text{block})=\sum_{\mathbf j}d_\xi\dim V.
+\]
+
+
+\proofstep{Orthogonality of distinct levels.}
+Images of distinct levels under \(\Theta\) are orthogonal. In a
+pair with unequal levels move \(E\)'s across the pairing as
+\(F\)'s until a positive power of \(F\) hits a harmonic vector.
+For equal levels, moving all \(E\)'s across gives
+\(j!(r+1+o+n+z)^{\overline{j}}\) at this pair. Self-adjointness
+reduces the pairing of the two harmonic projections to that of
+\(Z^zf\) with \(H(Z^zg)\). Only the term of \(S\)-degree zero
+survives, yielding \(z!\langle f,\Phi_z g\rangle\).
+Multiplying the identities gives the raw Fock pairing of the images
+as \(\ell_{\mathbf j}d_F B_z\), where
+\[
+ \ell_{\mathbf j}=\prod_i (j_i!)^2
+       \binom{o_i'+n_i'+r+z_i+j_i}{j_i} z_i!.
+\]
+Here \(o_i',n_i'\) are the reduced degrees of that pair.
+The same operator bound used for \(M_l\) shows that
+\(p^U\Theta_{\mathbf j}f\) has integral coefficients for every
+\(f\in L_{\mathbf j}\), with
+\[
+ U=(t+1)\lceil (r+1)(1+\log_p(8a_*+r))\rceil.
+\]
+
+For this bound expand \(D_i^l\) before multiplying by the
+extended \(E_i^l\), which is integral. All the relevant
+factorial arguments are at most \(8a_*+r\).
+This argument only needs membership in the rational block span
+and the asserted coefficient bound.
+
+\proofstep{Uniform denominator and depth bounds.}
+Let \(M=\max_{\mathbf j}v_p(\ell_{\mathbf j}d_F)\).
+For each of the good systems in \(B_z\) at depth \(d'\), apply
+\(p^U\Theta_{\mathbf j}\) on both sides and multiply the partners
+by \(p^M/(\ell_{\mathbf j}d_F)\). The scalar in the raw pairing is
+\[
+ p^{2U}\frac{p^M}{\ell_{\mathbf j}d_F}\,\ell_{\mathbf j}d_F\,p^{d'}=p^e,\qquad e=d'+2U+M.
+\]
+Orthogonality between distinct levels makes the combined matrix \(p^eI\). The factorial metric on the actual
+block absorbs almost all of \(M\). More explicitly, with
+\[
+ v=v_p,\quad v(w)=1/2,\quad
+ b_*=\prod_{i<\sigma}(A_i-w_i)!\,h_i!,
+\]
+that lattice consists of polynomials in the rational block span
+whose monomials \(c_\nu X^\nu\) satisfy
+\[
+ 2v(c_\nu)+v_p(\nu!)+v_p(b_*)\ge0;
+\]
+
+\(\nu!=\prod_j\nu_j!\). Its pairing is \(b_*\) times raw Fock.
+For any supported \(\nu\) in this block and \emph{any} level,
+the total of the factorial arguments in
+\(\prod_i(j_i!)^2 z_i!\, d_F\) is exactly \(|\nu|\).
+Each restored power of \(E_i\) contributes two degrees and each \(Z_i\) contributes one. Thus
+\[
+ |\nu|=\sum_i (2j_i+z_i)+\text{total reduced degree},
+\]
+the sum of the factorial arguments just listed. Legendre's formula shows at
+each power of \(p\) that the difference of the sums of the
+floors in these factorials and in \(\nu!\) is at most the number
+of variables in \(\nu\). Each of the \(t+1\) binomials in
+\(\ell_{\mathbf j}\) adds at most one at that power.
+
+Each single
+coordinate exponent is at most \(8a_*+r\), by the pairwise
+bidegrees and disjoint support. Thus, writing
+\(L_0=\lfloor\log_p(8a_*+r)\rfloor\),
+\[
+ M-v_p(\nu!)\le [(2s+2)r+3(t+1)]L_0.
+\]
+Since \(3s+2\le p\), \(L_0\le\lambda\) and
+\(U\le(t+1)((r+1)(\lambda+1)+1)\).
+It follows that
+\[
+ 2U+M-v_p(\nu!)\le
+ L_{\rm pass}=10(s+1)(r+1)\lambda+\kappa_0,\qquad
+ \kappa_0=2Nk\log_p a .
+\]
+For \(F_0=\lfloor d'+L_{\rm pass}\rfloor\), multiply both systems
+by \(w^{F_0-e-v_p(b_*)}\). The exponent can be negative.
+The monomial inequality just proved, and the integrality before
+this multiplication, put every resulting vector in the factorial
+lattice.
+
+Since \(v(w)=1/2\), the new cross matrix is scalar with valuation
+\[
+ v_p(b_*)+e+2v(w)\bigl(F_0-e-v_p(b_*)\bigr)=F_0.
+\]
+Smith reduction in the full lattice now gives at least
+as many good directions as this scalar matrix has rows. For
+example, apply Smith reduction to the full form after clearing
+denominators. A restriction by integral columns and rows cannot
+increase the number of factors dividing a fixed scalar. Modulo
+one more uniformizer power than that scalar, the image of the
+restriction factors through a module generated by the low Smith
+columns. Nakayama's lemma gives the assertion. One can then take
+the saturated span of the corresponding left Smith vectors in the
+full lattice. Thus passage to saturation preserves the partner
+criterion even if the initially constructed systems span a
+nonsaturated module.
+
+The depth needed in the final segment test is at most
+\[
+ Yd+L_{\rm pass}\le C_A Y^2 N_1^2 k^2\lambda+2\kappa_0=:D_I .
+\]
+For the inequality use \(t\le s\le N_1\), \(N_1,Y\ge1\),
+\(s+2\le3N_1\), and \(d=(tY+t+1)\kappa\). A constant
+\(C_A\ge56\) suffices for this depth estimate.
+
+\proofstep{Returning to equal weights on the box.}
+
+Write \(D_k(u)=\binom{u+k-1}{k-1}\) for \(u\ge0\), zero
+otherwise. For a compatible digit class \(\delta\), put
+\[
+ m_\delta(\mathbf a)=D_k(A_0^{\,*})D_k(b_+)
+                  \prod_i D_k(A_i)D_k(C_i).
+\]
+The ordinary retained-rank comparison needed here is
+\begin{equation}\label{eq:ordinary-class}
+ \tfrac12 m_\delta(\mathbf a)\ \le\
+   \sum_{\beta\ {\rm retained\ in}\ \delta}
+       \sum_{\mathbf j} d_\xi\dim V_{\beta,\mathbf j}(\mathbf a)
+   \ \le\ m_\delta(\mathbf a).
+\end{equation}
+This comparison concerns dimensions in characteristic zero.
+Its role and its required margin are recorded below.
+Let \(g_\delta(\mathbf a,a_+)\) be the sum over these levels
+of their failed ranks in \(B_z\) at depth \(d'\).
+The preceding construction supplies a bound by \(g_\delta\) on
+the failed rank of the actual block sum.
+
+For each class the
+level set is fixed over its box of compatible degrees.
+Summing \eqref{eq:seg-interior} and the last-parameter estimate
+therefore gives
+\[
+ \sum_{\mathbf a,a_+}g_\delta
+ \le \frac{|W|}{Y}
+      \sum_{\mathbf a}\left[31\sum_{i\ {\rm tied}}
+         m_\delta(\widehat a_i)+5m_\delta(\mathbf a)\right].
+\]
+Only one \(D_k(C_i)\) changes at the endpoint. If it changes from
+\(D_k(u)\) to \(D_k(v)\), then \(P_i u\ge a-b'\ge3a/4\),
+\(P_i(v-u)\le a/(kY)+x_a\), and
+\(r x_a\le 2\mathcal L b'\le a/8\).
+The binomial product gives \(D_k(v)/D_k(u)\le
+\exp(r(v-u)/u)\le e^3\).
+
+\proofstep{Returning to ordinary rank weights.}
+Sum over all classes and set \(m(\mathbf a)=\sum_\delta
+m_\delta(\mathbf a)\). For each letter every degree-\(a_i\)
+monomial has a unique expression for its exponent vector as
+\(\tau_i+P_i\gamma\). Hence
+\(\sum_{\tau_i}D_k(C_i)=D_k(a_i)\), and likewise for \(A_i,b_i\).
+It follows that
+\[
+ m(\mathbf a)=D_k(A_0^{\,*})D_k(b_+)
+                  \prod_i D_k(b_i)D_k(a_i).
+\]
+If \(C_A(t+1)N_1/Y\ge1\) the segment bound is automatic.
+Otherwise \(s\le N_1\le Y\). Throughout the box
+\(\max m/\min m\le\exp(sr(1/(kY)+x_a/a))\le e^3\)
+when \(m>0\). Indeed \(s\le Y\),
+\(rx_a\le2\mathcal L b'\), and
+\(kY^2\log a\le a/b'\), \(4\mathcal L<k\) give
+\(sr x_a/a\le1\) for \(a\ge e\).
+
+The size assumptions imply
+\(a\ge p b'\ge25\).
+If \(D_k(A_0^{\,*})=0\), \eqref{eq:ordinary-class} forces all
+ranks to vanish and the bad share is zero by definition.
+Otherwise divide the total failed rank at each point by its
+actual retained rank, which is at least \(m(\mathbf a)/2\).
+The result for the \emph{unweighted} box average is
+\begin{equation}\label{eq:operational-seg}
+ \mathbb E_{\mathbf a,a_+}\kappa_I
+    \le \frac{2 e^3(31 e^3 t+5)}{Y}
+    \le \frac{C_A(s+1)N_1}{Y}
+\end{equation}
+for one absolute \(C_A\) in both the depth and the mean.
+The margin and second weights were held fixed throughout. For
+each segment its odd positions and its next even position are
+distinct, hence each assignment of these \(s+1\) weights has the
+same number of extensions to the full enlarged box. This proves
+the required sampling law on the cycle. Section~\ref{sec:retained-rank} proves the ordinary-rank comparison
+used here.
+
+  The factorial-lattice calculation and the digit-class sum give the closed bound for the Gram estimate.
+For the mean bound, use \(m_0=C_m kN_1Qc+12c\) and \(D_I\) as above. In its interval
+\(a=\lceil a_{\rm real}\rceil\) and
+\[
+ x_a=\lfloor a_{\rm real}+a_{\rm real}/(kY)\rfloor+ \lfloor J_0\rfloor+c_{\rm cl}-(a+a/(kY)),
+\]
+
+where \(J_0=\mathcal L b'/k\) uses the integer lower endpoint.
+Thus \(W\) is precisely the enlarged interval used in the
+edge comparison. Its numerical hypotheses require
+\(0\le x_a\le2J_0\), \(0\le m_0\le b'/(kQY)\).
+\end{proof}

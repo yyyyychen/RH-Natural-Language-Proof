@@ -1,0 +1,1533 @@
+\section{Transfer matrices for signed sequences and spectral interpolation}\label{sec:word-pairing}
+\hypertarget{source-word-pairing}{}
+
+The orbital germ can be paired against many vectors, one for each sequence of signs and spectral parameters. Comparing two such vectors requires an explicit change of form when a tensor factor is adjoined. Positivity at the real interpolation nodes will then bound their mixed pairing. The resulting bound applies to the selected
+differentiated coefficients in Section~\ref{sec:block-recursion} by
+the two residual operator comparisons in
+Lemma~\ref{hyp:selected-orbital-coefficient-bounds}.
+
+At a complex place, a letter specifies a sign and a spectral parameter. Each letter added to a word acts in a new two-dimensional tensor factor. The two substitutions in \eqref{eq:word-signed-updates} define the transfer for the longer word. Proposition~\ref{prop:real-node-positivity} gives the positivity needed to interpolate its radial form.
+
+\subsection{Changing the signs of added letters}
+
+A change in the sign of one factor alters the product of transfers. The adjoint and determinant identities below keep track of the induced change in its Hermitian form.
+
+Let \(T_v(z)\) be the \(2\)-by-\(2\) transfer for a word \(v\), on an auxiliary space \(A=\mathbb C^2\). Its entries act on the tensor product of the initial representation space with the two-dimensional factors already adjoined.
+Let \(A_v\) be its form operator. The adjoint identities at regular
+real parameters give
+\[
+ A_v^*=A_v,\qquad (A_vT_v(y))^*=A_vT_v(y).
+\]
+Let \(B=\C^2\) be a second auxiliary space, let \(P\) be the
+flip of \(A\) and \(B\), and put
+\(J=\left(\begin{smallmatrix}0&1\\-1&0\end{smallmatrix}\right)\).
+Write \(T_A,T_B\) for the same transfer acting in the indicated auxiliary factor and \(q_v\) for its scalar quantum determinant. The two-parameter relation and the determinant identities are
+\begin{align}
+ ((z-y)I-P)T_A(z)T_B(y)
+  &=T_B(y)T_A(z)((z-y)I-P),\label{eq:word-rtt}\\
+ T_v(y)JT_v(y+1)^t&=q_v(y)J,\qquad
+ T_v(y+1)^t JT_v(y)=q_v(y)J .
+ \label{eq:word-qdet}
+\end{align}
+
+To adjoin a letter, tensor the old representation space with \(B\); the old operators act trivially on this new factor.
+Write \(Q=P^{t_B}\), the outer product of
+\(e_1\otimes e_1+e_2\otimes e_2\) with its transpose.
+For the positive letter at \(y\) and its dual negative letter
+at \(y+1\), the recursions are
+\begin{align}
+ T_+(z)&=T_A(z)\frac{(z-y)I-P}{z-y-1},
+ & A_+&=A_vT_B(y),\notag\\
+ T_-(z)&=\frac{(y+1-z)I-Q}{y-z}T_A(z),
+ & A_-&=A_vT_B(y+1)^{t_B}.\label{eq:word-signed-updates}
+\end{align}
+The positive letter multiplies \(q_v(z)\) by
+\((z-y+1)/(z-y)\). The negative letter at \(u\) multiplies it
+by \((u-z)/(u-z-1)\).
+
+\begin{lemma}[The identities are preserved by adjoining a letter]\label{lem:word-update-identities}
+Where all denominators are nonzero, adjoining either letter in
+\eqref{eq:word-signed-updates} preserves the adjoint identities
+and \eqref{eq:word-rtt}--\eqref{eq:word-qdet}. If \(D(z)\) and \(D'(z)\) are the determinants before and after adjoining the letter, respectively, then 
+\[
+ D'(z)=D(z)\begin{cases}(z-y+1)/(z-y),&\text{positive letter }y,\\ (u-z)/(u-z-1),&\text{negative letter }u.\end{cases}
+\]
+
+\end{lemma}
+
+\begin{proof}
+Put \(S=P_{12}\), \(T=P_{23}\) and \(R=P_{13}\). In comparing
+\((aI-S)((a+b)I-R)(bI-T)\) with the product in reverse order,
+the terms with at most one flip agree. For the terms with two,
+use \(SR=RT=TS\) and \(TR=RS=ST\). The two-flip contributions
+on the two sides both equal
+\[
+    bSR+(a+b)ST+aRT=(a+b)(TS+ST)
+                     =aTR+(a+b)TS+bRS.
+\]
+The three-flip terms agree since \(SRT=TRS=R\). The normalized positive factor thus satisfies
+the Yang--Baxter identity.
+The negative factor is a scalar multiple of the conjugate positive
+factor with shift \(z-u+1\), using
+\(J_B^{-1}P J_B=I-Q\). The determinant for the positive factor
+with parameter \(D\) is \((D+1)/D\).
+
+For its positive-order entry the numerator is
+\[
+ (DI-e_{11})((D+1)I-e_{22})-e_{21}e_{12}=(D+1)(D-1)I .
+\]
+The scalar conjugation of the negative factor gives its determinant.
+The quantum determinants multiply because the transfer families
+for the old word and the added rational factor have commuting
+entries and their two-auxiliary products preserve the alternating
+line. Hermitian symmetry for \(A_+T_+(z)\) follows by applying
+\eqref{eq:word-rtt} after taking adjoints. For \(A_-T_-(z)\)
+use the partial transpose at \(B\) of the relation with spectral
+order \(u,z\). It gives
+\[
+ T_B(u)^{t_B}((u-z)I-Q)T_A(z)
+  =T_A(z)((u-z)I-Q)T_B(u)^{t_B}.
+\]
+The partial transpose reverses the order of the scalar factors
+on \(B\) and retains the order of the operator coefficients.
+Starting from the actual two-by-two transfer, these identities
+hold on the regular domain of each word. \label{cor:word-pairing-1}
+
+\end{proof}
+
+\begin{proposition}[Changing signs in a list of letters]
+Let \(v\) be a word and let \(L\) consist of added positive
+letters at separated admissible real nodes. Let \(\bar L\)
+use their dual negative letters at the shifted nodes.
+Here \(\Psi\) is the tail-first product of the maps
+\(-T_B(y)^{-1}J_B\) on the successively updated words, and
+\(J_L\) is the product of the \(J_B\) on the added slots.
+If \(B_L\) is positive semidefinite on the coefficient domain
+and that domain contains the transformed vectors \(\Psi x'\),
+then
+\[
+ \big|\langle J_L A_v x,x'\rangle\big|^2
+     \prod_{y\in L}q_v(y)
+ \le B_L(x,x)\,\langle A_{\bar L v}x',x'\rangle .
+\]
+The factors \(q_v(y)\) are positive at the chosen cut nodes.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Conjugation at one new letter.}
+If \(q_v(y)\ne0\), set \(\Psi_y=-T_B(y)^{-1}J_B\).
+Equation~\eqref{eq:word-qdet} gives a two-sided inverse and gives
+\(\Psi_y=-q_v(y)^{-1}J_BT_B(y+1)^{t_B}\). Direct substitution
+into the word forms yields
+\[
+ \Psi_y^* A_+ = J_B A_v,\qquad
+ \Psi_y^* A_+ \Psi_y = q_v(y)^{-1}A_-.
+\]
+In \eqref{eq:word-rtt}, multiply on both sides by \(T_B(y)^{-1}\)
+and insert \(-J_B\). The identity \(J_B^{-1}P J_B=I-Q\) gives
+\begin{equation}\label{eq:word-conjugation}
+ T_+(z)\Psi_y=\frac{z-y}{z-y-1}\Psi_y T_-(z).
+\end{equation}
+
+\proofstep{Conjugation of the full list.}
+
+Let \(L\) be a list of added positive letters and \(\bar L\)
+the list of their duals at the shifted parameters. Process
+the letters from the tail. The product \(\Psi=\Psi_y\Psi_0\)
+uses the tail transformation \(\Psi_0\) and then the one at
+\(y\) on the preceding positive form. In the transfer
+conjugation the new rational factor commutes with \(\Psi_0\)
+because it uses a free position. Thus the conjugation
+scalars in \eqref{eq:word-conjugation} multiply. At \(y+1\)
+the tail's scalar is
+\(\prod_{u\text{ in tail}}(y-u+1)/(y-u)=q_{\mathrm{tail}\,v}(y)/q_v(y)\).
+It cancels the extra tail factor in the one-letter determinant.
+With \(J_L\) the product of all the \(J_B\) on the added
+positions, induction now gives
+\[
+ \Psi^*A_{Lv}=J_L A_v,\qquad
+ \Psi^*A_{Lv}\Psi=\frac{A_{\bar L v}}{\prod_{y\in L}q_v(y)} .
+\]
+All denominators are nonzero at separated admissible nodes.
+
+\proofstep{Using positivity and checking the determinant signs.}
+
+The conjugating operators now identify the two mixed forms. Their signs still matter, since the subsequent Fourier estimate uses positivity of the diagonal forms.
+
+
+Consequently, if \(B_L(x,x')=\langle A_{Lv}x,x'\rangle\)
+is positive semidefinite on the coefficient domain and
+the domain contains \(\Psi x'\), Cauchy--Schwarz gives
+\begin{equation}\label{eq:word-size}
+ \big|\langle J_L A_v x,x'\rangle\big|^2
+     \prod_{y\in L}q_v(y)
+ \le B_L(x,x)\,\langle A_{\bar L v}x',x'\rangle .
+\end{equation}
+We use the convention that the pairing is linear in the first
+argument. The factors \(q_v(y)\) are positive on the cut.
+Indeed the initial determinant is
+\[
+ -TT'\prod_{i=1}^k
+   (y+\tfrac12+u_i)(y+\tfrac12+u'_i).
+\]
+
+On cut \(\ell\), the number \(-y-\tfrac12\) is strictly
+between the interlacing parameters \(u_\ell,u'_\ell\).
+Both earlier parameters exceed it and both later ones
+are smaller. Exactly one pair has opposite signs.
+The positive and negative rational factors of the old word
+are all positive at nodes of distance more than two.
+With at most \(N\) old letters and distance at least
+\(N^2+1\) from each relevant pole, the absolute log of their
+product is at most \(2N/(N^2+1)\le1/2\) for \(N\ge4\).
+
+\end{proof}
+
+\begin{construction}
+\begin{tabular}{@{}lll@{}}\toprule
+Added letters & Pull back on one side & Pull back on both sides\\\midrule
+One letter at \(y\) & \(\Psi_y^* A_+=J_B A_v\) &
+\(\Psi_y^* A_+\Psi_y=A_-/q_v(y)\)\\
+Tail first, through \(L\) & \(\Psi^* A_{Lv}=J_L A_v\) &
+\(\displaystyle\Psi^* A_{Lv}\Psi=
+ \frac{A_{\bar L v}}{\prod_{y\in L}q_v(y)}\)\\\bottomrule
+\end{tabular}
+\caption{Changing the signs of letters at separated admissible nodes. The two columns give the mixed and diagonal forms used in the positive-block inequality.}\label{fig:pullback-of-word-forms}
+\end{construction}
+
+\subsection{Positivity at real interpolation nodes}
+
+The transfer identities compare forms algebraically. To use Cauchy--Schwarz on a mixed pairing, the terminal form must also have the correct sign on the compact types actually present.
+
+\begin{proposition}[Positivity of the terminal density on the type space]\label{prop:real-node-positivity}
+At each real interpolation node \(y\) of cut \(\ell\), impose
+\(-y\) at distance at least two from both endpoints
+\(u_\ell,u'_\ell\), the type interlacing in \eqref{eq:word-type-interlacing}
+and spacing greater than two for the updates \eqref{eq:word-signed-updates}.
+If \(Q_y\) is the form defined by the terminal transfer at this node, then 
+\[
+ Q_y(T,T)\ge0\qquad(T\text{ in the Hilbert--Schmidt space of compact types}).
+\]
+
+\end{proposition}
+
+\begin{proof}
+\proofstep{Triangular congruence at the terminal level.}
+
+Let \(A_v=F^*DF\) be the old form and write
+\(T(z)=\left(\begin{smallmatrix}a(z)&b(z)\\c(z)&d(z)\end{smallmatrix}\right)\)
+for \(F T_v(z)F^{-1}\). The induction uses \(d(z)=Gx(z)\),
+where \(G>0\) is a multiplication operator and the \(x(z)\)
+commute with one another and with \(D\) and \(G\). For real
+regular \(y\), \(d(y)\) is self-adjoint and \(DT(y)\) is
+Hermitian.
+
+At the next positive letter put \(e=d(y)^{-1}c(y)\).
+The right column in the first equation in \eqref{eq:word-qdet}
+gives \(c(y+1)=e d(y+1)\) and
+\(a(y)-b(y)e=q_v(y)d(y+1)^{-1}\).
+The adjoint then gives the congruence
+\[
+ DT(y)=H_e^*
+   \operatorname{diag}\big(Dq_v(y)d(y+1)^{-1},Dd(y)\big)H_e,
+ \qquad H_e=\begin{pmatrix}1&0\\e&1\end{pmatrix}.
+\]
+For a negative letter use \(T(y)^t\), \(e=d(y)^{-1}b(y)\),
+and the second determinant equation at \(y-1\). Its top
+diagonal is \(Dq_v(y-1)d(y-1)^{-1}\) and the bottom
+diagonal is \(Dd(y)\).
+
+For either new letter, the 22-entry of the new transfer,
+before the new shear, is
+\[
+ \frac{1}{u-1}
+ \begin{pmatrix}u d(z)&0\\-f(z)&(u-1)d(z)\end{pmatrix},
+\]
+where \(u=z-y,f=c\) for a positive letter and \(u=y-z,f=b\)
+for a negative letter. Equation~\eqref{eq:word-rtt} gives
+\([d(z),d(y)]=0\) and \(u[e,d(z)]=f(z)-d(z)e\).
+Conjugation by \(H_e\) thus diagonalizes this entry, replacing
+\(x(z)\) by \(x(z)\operatorname{diag}(u/(u-1),1)\).
+
+After \(H_e\), apply the commuting diagonal normalization of the actual frame. For the two letter signs these matrices are 
+\[
+ D_+=\operatorname{diag}(\zeta^{-1},G\bar\zeta^{-1}),\qquad D_-=\operatorname{diag}(\bar\zeta^{-1},G\zeta^{-1}).
+\]
+ This makes the form
+diagonal \(D=(|\zeta|^2/G)^{|v|}C\).
+At a new letter the two diagonal multipliers of \(C\) are
+\[
+  \big(q_v(y)/x(y+1),x(y)\big)
+  \quad\hbox{or}\quad
+  \big(q_v(y-1)/x(y-1),x(y)\big),
+\]
+respectively. All these multipliers commute, and the shear is
+invertible wherever the indicated inverses exist.
+
+The initial \(x\) acts through functions on the finite types.
+At type \(\rho\) it is
+\((-1)^{k-\ell}\prod_{j=1}^{k-1}(z+\rho_j)\), where
+\begin{equation}\label{eq:word-type-interlacing}
+ \max(u_{j+1},u'_{j+1})+\tfrac12
+ \le \rho_j \le \min(u_j,u'_j)-\tfrac12
+ \qquad(1\le j<k).
+\end{equation}
+At cut \(\ell\) there is a margin of at least two from both
+ends of the interval between \(u_\ell,u'_\ell\) to \(-y\).
+Thus \(x(y+\delta)>0\) for \(|\delta|\le1\). For \(|\delta|\le1\) the interlacing bounds give
+\[
+  y+\delta+\rho_j>0\quad(j<\ell),\qquad
+  y+\delta+\rho_j<0\quad(j\ge\ell).
+\]
+The sign \((-1)^{k-\ell}\) makes their product positive.
+The determinant argument applies also at \(y-1\). Spacing greater than
+two preserves all of these signs under the rational
+updates, so \(C\) has positive type values.
+
+\proofstep{The form on the actual type space.}
+
+To see positivity on the actual fiber, use the pointwise
+type identity for the unscaled transfer. The operator
+with type values \(x_C(\rho,z)=\prod_j(z+\rho_j)\) acts by
+right composition on the finite-dimensional compact
+type space with a Capelli operator \(K_g(z)\).
+This operator is self-adjoint for real \(z\).
+The compact Lie action has \(E_{ab}^*=E_{ba}\), and taking
+adjoints in the column-ordered determinant gives the
+row formula after simultaneous reversal of both index
+lists. The disjoint interlacing intervals determine each root's
+index, so the polynomial determines the type:
+\[
+ \prod_j(z+\rho_j)=\prod_j(z+\rho'_j)\quad\Longrightarrow\quad\rho=\rho'.
+\]
+Avoid the finitely many equality points of distinct polynomials
+when choosing real \(z_0\).
+
+For any positive function \(f\) on the
+types, interpolate a polynomial \(p\) with
+\(p(x_C(\rho,z_0))=f(\rho)\) and \(p=1\) at the other
+eigenvalues of \(K_g(z_0)\). The algebra of type functions
+then acts by \(V\mapsto Vp(K_g(z_0))\) for \(f\).
+In a compact eigenbasis \(K_g(z_0)e_j=\lambda_j e_j\),
+\[
+       \langle V,Vp(K_g(z_0))\rangle_{\rm HS}
+        =\sum_j p(\lambda_j)\|Ve_j\|^2\ge0 .
+\] Applied after the congruence, this proves
+positivity of the terminal density from the top transfer
+and type identities. \label{cor:word-pairing-2}
+
+\end{proof}
+
+\begin{proposition}[Decay of the wave pairing]\label{prop:wave-pairing-decay}
+On a stable compact class on which the four Jacquet intertwining
+identities hold, and at the real nodes of
+Proposition~\ref{prop:real-node-positivity}, let \(f_s\) be the wave and \(\beta\) the pairing. The single-site identity and Jacquet intertwining give 
+\[
+ s\,\beta(f_s F,F')=\beta(f_s\Theta_1 F,\Theta_0 F')-\beta(f_s\Theta_3 F,\Theta_2 F').
+\]
+ Iterating this identity \(n+3\) times on the stable compact class gives the weighted wave pairing bound.
+The resulting bound includes the factor \((1+|t|^2)^2\)
+from the first Hermitian minor. For the selected arithmetic
+coefficients use Lemma~\ref{hyp:selected-orbital-coefficient-bounds}.
+\end{proposition}
+
+\begin{proof}
+\proofstep{The density change at a single site.}
+
+At lower levels let \(Q_i(w)\) be the word form operator
+and \(B_i(w)\) the ordered product of site operators.
+The site rule \(Q_i=B_i^*Q_{i+1}B_i\) rewrites the next
+density as \(D_{(B_i^*)^{-1}Q_i x,B_i y}(t)\), where
+\(D_{u,v}(t)\) is the ordinary pairing with coordinate
+\(c_i=t\), multiplied by \(|t|^{-2}\).
+The one-letter density rule has the form
+\[
+ D_{I_+u,B_+v}=D_{u,v}-\partial_{\bar t}D_{u,Ev},
+ \qquad D_{I_-u,B_-v}=D_{u,v}+\partial_t D_{u,Ev},
+\]
+where \(E=e_{10}\) acts on the new slot. To see the signs,
+write \(P,\bar P\) for the two coordinate raising operators,
+so \([P,t]=t\), \([\bar P,\bar t]=\bar t\), and
+\(P^*=-\bar P\). The site matrices are
+\begin{align*}
+ B_+&=\begin{pmatrix}y+P&-t\\t^{-1}&0\end{pmatrix},&
+ I_+&=\begin{pmatrix}0&-\bar t^{-1}\\\bar t&y+1-\bar P\end{pmatrix},\\
+ B_-&=\begin{pmatrix}y-\bar P&-\bar t\\\bar t^{-1}&0\end{pmatrix},&
+ I_-&=\begin{pmatrix}0&-t^{-1}\\t&y-1+P\end{pmatrix}.
+\end{align*}
+The commutators give \(I_\pm=(B_\pm^*)^{-1}\).
+Expanding the two components in the ordinary pairing cancels
+the parameter \(y\).
+
+Let \(L_E\) be the ordinary pairing of
+\(u_1,v_0\). The additional terms are
+\(\bar t^{-1}L_E-\partial_{\bar t}L_E\) for the positive
+letter and \(-t^{-1}L_E+\partial_t L_E\) for the negative
+letter, using the ordinary pairing Leibniz rule.
+The two terms are already weighted derivatives. In fact
+\[
+ \begin{aligned}
+ |t|^{-2}(\bar t^{-1}L_E-\partial_{\bar t}L_E)
+     &=-\partial_{\bar t}(|t|^{-2}L_E),\\
+ |t|^{-2}(-t^{-1}L_E+\partial_tL_E)
+     &=\partial_t(|t|^{-2}L_E).
+ \end{aligned}
+\]
+The signs follow from differentiating \((t\bar t)^{-1}\).
+Since the new slot is free in the tail word,
+induction expands the step density into derivatives of
+order at most \(n=|w|\). Its order-zero term is
+\(D_{Q_i x,y}\).
+
+\proofstep{Integrating the density step.}
+
+This step uses the compact-class integrability
+of both \(D\) and \(W D\), \(W(t)=(1+|t|^2)^2\), and
+Fourier bounds \(O((1+|\xi|)^{-n-3})\) for both.
+For a real multi-index \(\alpha\) with \(|\alpha|\le n\),
+the differentiated inverse Fourier integrals are absolutely
+convergent, since in two dimensions
+\[
+       \int_{\mathbb R^2}
+            (1+|\xi|)^{|\alpha|-n-3}\,d^2\xi<\infty .
+\]
+They give continuous bounded extensions through zero. For
+\(D=W^{-1}(WD)\) the product rule then bounds each derivative
+by \(O((1+|t|)^{-4})\).
+
+For a positive-order derivative write
+\(\partial^\alpha D=\partial_j(\partial^{\alpha-e_j}D)\) with \(\alpha_j>0\), in real coordinates. On a disk the divergence theorem gives
+\[
+ \left|\int_{|t|\le R}\partial^\alpha D\right|
+ \le 2\pi R \sup_{|t|=R}|\partial^{\alpha-e_j}D|=O(R^{-3}).
+\]
+The full-plane integral therefore vanishes. Fubini integrates
+\(D_{Q_i x,y}\) to the preceding form. With \(x=y\) the
+density at \(t\ne0\) is nonnegative by the positivity
+at level \(i+1\), which proves positivity at level
+\(i\).
+
+\proofstep{Fourier decay from the wave identity.}
+
+The wave identity can be iterated only on a class stable under its operators. Each iteration then trades a derivative bound on that class for decay in the frequency.
+
+
+The decay follows from an identity for the first-coordinate
+wave \(f=f_s\). It commutes with the multiplications \(c_j\)
+and the raising operators \(P_j\) for \(j>0\), and satisfies
+\([P_0,f]=s f c_0\). Let \(A(Y),B(Y)\) be the first column
+of \(B_{+,r-1}(Y)\cdots B_{+,0}(Y)\) formed with the
+different site operators. For each last site \(j>0\), expand
+\[
+ A(Y+1)fB(Y)-B(Y+1)fA(Y).
+\]
+The terms with both previous upper entries cancel by
+\((Y+1+P_j)c_j^{-1}=c_j^{-1}(Y+P_j)\).
+The terms with one lower entry give exactly the shorter
+product, since the different sites commute. At site zero the
+difference is
+\((Y+1+P_0)fc_0^{-1}-c_0^{-1}f(Y+P_0)=s f\).
+
+To express this identity by operators and their adjoints, put
+\(C=\prod_j c_j\), and let \(\tilde A,\tilde B\) be the
+first column for the negative site matrices. Let \(l(Y)\) and
+\(m(Y+1)\) be the two lower ratios of the starting transfer
+used in the congruence. The shifted determinant and the
+base adjoint give \(m(Y+1)^*=l(Y)\). For a regular real \(Y\)
+set
+\begin{align*}
+ \Theta_0&=\bar C\tilde A(Y+1),&
+ \Theta_1&=C^{-1}\big(l(Y)A(Y)+B(Y)\big),\\
+ \Theta_2&=\bar C^{-1}
+       \big(m(Y+1)\tilde A(Y+1)+\tilde B(Y+1)\big),&
+ \Theta_3&=C A(Y).
+\end{align*}
+The wave commutes with the starting transfer.
+The ratios thus cancel in
+\(\Theta_0^* f\Theta_1-\Theta_2^* f\Theta_3\).
+The stars of \(\tilde A(Y+1),\tilde B(Y+1)\) are
+\(A(Y+1),B(Y+1)\) by the site adjoint and commutation of
+different sites. The difference is therefore \(s f\).
+
+After smooth ambient realization of the four operators
+and Jacquet intertwining, the base adjoint gives
+\[
+  s\,\beta(f_s F,F')
+   =\beta(f_s\Theta_1 F,\Theta_0 F')
+        -\beta(f_s\Theta_3 F,\Theta_2 F').
+\]
+On the stable compact class, the base bound is uniform in
+\(s\) because the wave is unitary. Iterating the identity
+\(n+3\) times gives the required decay. The weight
+\((1+|t|^2)^2\) comes from multiplication by the same
+polynomial in the first Hermitian minor on the ambient
+space, which passes through the period integral.
+These identities use the following realization and measure
+comparison on the regular radial cell. \label{cor:word-pairing-3}
+
+\end{proof}
+
+\subsection{Ambient differential operators and measures}
+
+The bounds on differentiated pairings were obtained in radial variables. To apply them to an orbital integral on the group we must identify those derivatives and their integration measure in the ambient coordinates.
+
+At each place let \(h\) be the Hermitian form, \(e_j,e_j^*\)
+the null pairs, and \(z,z'\) the positive vectors in the
+middle space. The cross minors \(D_j(g)\) are the leading
+minors of the pairings of the two flags, with \(z,z'\)
+appended at the end. Put \(T=h(z,z)\), \(T'=h(z',z')\) and
+\[
+ G_f(g)=|D_{r+1}(g)|^2-TT'|D_r(g)|^2 .
+\]
+In the radial cell \(g=w(c)g_0\), \(G_f=|C|^2G\).
+Here \(w(c)\) sends \(e_j\) to \(c_j e_j^*\) and \(e_j^*\)
+to \(\bar c_j^{-1}e_j\), fixing the middle space.
+The factor \(G_f^{-1}\) in the ambient realization thus
+represents \((C\bar C G)^{-1}\).
+
+\begin{proposition}[Radial realization on the regular cell]\label{prop:regular-cell-realization}
+In Witt coordinates on the regular radial cell, the ambient
+cofactors give the radial denominators and the null-site recurrences,
+whose terminal entries are the geometric cofactor actions. Their
+identification on the selected types is proved in
+Lemma~\ref{hyp:selected-orbital-coefficient-bounds}. With the product Haar
+measure from the null-vector coordinates, let \(F(t,x),G(t,x)\) be two jointly smooth compact slice coefficients satisfying \eqref{eq:word-slice-sobolev} with integrable residual derivative bounds. For either real parameter derivative \(\partial\) the pairing obeys 
+\[
+ \partial\!\int F\overline G\,dx=\int\!\big((\partial F)\overline G+F\,\overline{\partial G}\big)\,dx.
+\]
+
+\end{proposition}
+
+\begin{proof}
+\proofstep{Realization of the radial denominators.}
+
+Construct a cofactor vector \(b\) in the left null space
+plus the line \(z\) from the first \(r\) columns of the
+cross matrix. It is perpendicular to the transformed right
+null space. Its \(z\)-coefficient has modulus \(|D_r|\)
+and \(|h(b,gz')|=|D_{r+1}|\), by determinant expansion.
+Project \(g^{-1}b\) to the residual Hermitian space and
+off \(z'\). The coefficients \(\omega\) in a fixed
+negative orthonormal frame satisfy
+\[
+ \|\omega\|^2=|h(b,gz')|^2/T'-h(b,b)=G_f/T' .
+\]
+Let \(C_{\widehat a,\widehat b}\) denote the quantum
+\((k-1)\)-minor with row \(a\) and column \(b\) omitted.
+
+For the unit vector \(\nu=(T'/G_f)^{1/2}\omega\) the
+operator on its orthogonal complement is
+\[
+       \sum_{a,b}(-1)^{a+b}\bar\nu_a\nu_b
+                         C_{\widehat a,\widehat b}.
+\]
+Indeed the wedge of a unitary complement frame is the
+contraction of the volume by \(\nu\), up to a unit phase
+that cancels between the two lists. At a regular real parameter \(Y\), let \(S\) consist of the distinct type values \(x_0(\rho,Y)\). They are nonzero on the locus in question. The polynomial
+\[
+ p_Y(X)=\sum_{a\in S}\frac{1}{a}
+             \prod_{b\in S\setminus\{a\}}\frac{X-b}{a-b}
+\]
+satisfies \(p_Y(a)=1/a\) for every \(a\in S\). The type algebra then realizes \(x(Y)^{-1}\)
+by this polynomial in the compact type operator. The
+result is equivariant under the compact stabilizers.
+All its coefficient derivatives have polynomial growth
+on \(G_f\ge\varepsilon>0\), because \(\omega\) is
+polynomial and the coefficients have denominators that
+are powers of \(G_f\).
+
+\proofstep{Contracting the Capelli minors.}
+
+The differential factors left after this multiplication
+are Capelli minors. In the positive residue of size
+\(r+k\), the row list has the \(r\) first null directions
+and all middle directions except \(w_a\), with coefficient
+\((-1)^a h(w_a,z')\). The coefficient for column list
+\(J\) is
+\[
+ \det(g^{-1}e_{r-1},\ldots,g^{-1}e_0,g^{-1}z,e_J).
+\]
+On the cell this determinant vanishes unless \(J\) includes
+the \(r\) first null directions and omits just one middle
+direction. In that case it contributes \(\bar C\) times
+the corresponding component of \(g_0^{-1}z\), with its
+cofactor sign. The mirror residue uses opposite null
+directions, the dual determinants, and the conjugate
+coordinate \(C\). The two residues are equivariant since
+the two index lists transform by dual exterior powers,
+so the determinant scalars of the fixed wedge and the
+variable wedge cancel.
+
+For the positive residue let \(F_j\) be the contracted
+minor with the first \(j\) null rows and columns removed,
+restricted with weight \(\prod_a|c_a|^{2(r-a)+k}\).
+Write \(\varphi\) for the restricted coefficient.
+Then
+\begin{align*}
+ F_r&=-T_{21}(Y)\varphi,\\
+ F_{r-1}&=(Y+P_{r-1})F_r-c_{r-1}^{-1}T_{22}(Y)\varphi,\\
+ F_j&=(Y+P_j)F_{j+1}-(c_{j+1}/c_j)F_{j+2}
+                       \qquad (j+2\le r).
+\end{align*}
+The terminal equality is the single middle cofactor
+defining the transfer entry. To derive the interior
+formula, expand along the first column. The diagonal gives the torus derivative and the shift
+\(Y+r-j+k/2\). For the \(j\)-th radial factor \(a_j=|c_j|^{2(r-j)+k}\),
+\[
+                     c_j\partial_{c_j}a_j
+                        =(r-j+k/2)a_j .
+\]
+On the conjugated expression, the contribution of the
+radial factor subtracts its logarithmic derivative. This leaves
+\[
+ Y+P_j+r-j+k/2-c_j a_j^{-1}\partial_{c_j}a_j=Y+P_j .
+\]
+
+For the off-diagonal cofactor expand the remaining
+minor in reverse row order. Its left and right root characters
+and cofactor sign give the multiplier
+\[
+      (-1)\cdot(c_{j+1}/c_j)\cdot 1=-c_{j+1}/c_j .
+\]
+This term removes two adjacent null indices at the same spectral parameter. At the last site the
+two root characters are middle covectors. With the
+first cofactor they give the signed double contraction
+defining \(T_{22}\), times \(c_{r-1}^{-1}\).
+
+To keep track of the mirror, write \((d_j,H_j)=(c_j,P_j)\)
+on the positive side and \((d_j,H_j)=(\bar c_j,-\bar P_j)\)
+on the mirror side. Set
+\[
+ S_j=\begin{pmatrix}Y+H_j&-d_j\\d_j^{-1}&0\end{pmatrix},
+ \qquad
+ U=\begin{cases}(T_{21},T_{22})&\text{on the positive side},\\
+                 (T_{12},T_{22})&\text{on the mirror side}.
+   \end{cases}
+\]
+
+For \(0\le j\le r\) let \((a_j,b_j)=U S_{r-1}\cdots S_j\),
+with \((a_r,b_r)=U\). Multiplication on the right gives
+\[
+ a_j=a_{j+1}(Y+H_j)+b_{j+1}d_j^{-1},\qquad
+ b_j=-a_{j+1}d_j .
+\]
+In particular,
+\[
+ b_{j+1}d_j^{-1}=
+ \begin{cases}
+  -a_{j+2}d_{j+1}d_j^{-1},&j+2\le r,\\
+  T_{22}d_{r-1}^{-1},&j=r-1 .
+ \end{cases}
+\]
+The last term is shared by both signs. With the sign of
+the contracted minor, \(F_j=-a_j\varphi\); in particular its
+terminal value is \(-T_{21}\varphi\) or \(-T_{12}\varphi\),
+respectively. For \(r=0\) the empty site product gives these
+terminal values directly:
+\[
+    r=0:\qquad F_0^+=-T_{21}(Y)\varphi,\qquad
+                    F_0^-=-T_{12}(Y)\varphi .
+\]
+
+Thus the two ordered products act on the residual operators
+\(\Theta_1,\Theta_2\). For \(\Theta_0,\Theta_3\) the same
+first-column expansion uses only the null directions, so the
+minors have rank \(r\).
+
+\proofstep{Restriction of the measure.}
+
+The restriction weight has a Haar interpretation.
+In a complex Hermitian space of dimension \(m\), the
+image \(ge\) of a fixed null vector is measured on the
+null cone. Where \(ge=c e^*+v+a e\) and \(c\ne0\),
+write \(v=c x\), \(a=c b\).
+There are \(m-1\) complex coordinates in \((x,b)\), giving
+Jacobian \(|c|^{2(m-1)}\) in \((v,a)\) at fixed \(c\).
+The null equation becomes
+\[
+ 2\operatorname{Re}(a\bar c)+h(v,v)
+              =|c|^2(2\operatorname{Re}b+h(x,x))=0 .
+\]
+The delta measure of the real equation is multiplied by
+\(|c|^{-2}\). After dividing by the unipotent Haar factors
+in \(x,\operatorname{Im}b\), the radial measure is thus
+\[
+    |c|^{2(m-1)}|c|^{-2}\,d^2c .
+\]
+The first factor is the square of the restriction weight.
+
+At the terminal group \(U(1,k)\), use the orbit of
+\(z'\). At fixed \(\zeta=h(z,gz')\), the negative part
+of \(gz'\) has squared norm \(|\zeta|^2/T-T'\).
+If \(u\) is the radial variable in the \(2k\) real negative
+coordinates, the norm condition sets
+\(u^2=|\zeta|^2/T-T'\). Changing variables from \(u\) to
+\(u^2\) gives the radial density
+\[
+        u^{2k-1}\,du=\tfrac12 (u^2)^{k-1}\,d(u^2).
+\]
+This yields \((|\zeta|^2-TT')^{k-1}d^2\zeta\) on the
+positive Gram locus, up to a fixed positive scalar. The compact
+stabilizers act unitarily and disappear from the
+Hilbert--Schmidt pairing. This gives the same Haar
+scale in the terminal and radial pairings.
+
+\proofstep{Domain of the differentiated pairing.}
+
+Applying the radial identity inside an integral requires a common domain for its differentiated vectors.
+
+
+The differentiated ordinary pairing can be justified
+on a disk avoiding \(t=0\) once the restricted coefficients
+have a jointly smooth residual realization with support in
+a common compact set. Uniform \(L^2\) estimates there for
+all fixed derivative orders follow from the residual
+pairing bound. Applying the one-dimensional Sobolev estimate successively in the two real directions controls the supremum. On a smaller disk in the coordinates \(t_1,t_2\), a coefficient \(F(t,x)\) satisfies
+\begin{equation}\label{eq:word-slice-sobolev}
+ \sup_t |F(t,x)|^2
+ \ll\int_{\text{larger disk}}
+ \left(|F|^2+|\partial_1F|^2+|\partial_2F|^2+
+             |\partial_1\partial_2F|^2\right)(t,x)\,d^2t .
+\end{equation}
+The residual derivative bounds make the right side integrable
+in \(x\). Cauchy--Schwarz and dominated
+differentiation then give the ordinary Leibniz rule.
+For the adjoint comparison, use the regular orbit coordinates above. Write \(J\) for normalized integration along the two-sided orbit with its character and compact-type action.
+
+If \(f\) is a smooth equivariant slice coefficient supported over a compact subset of the regular parameter domain, it has a compact ambient representative. Indeed choose finitely many relatively compact orbit charts over its support and a subordinate smooth partition of unity. In each group fibre choose a smooth bump of integral one in local orbit coordinates, including the smooth Haar density. Multiplying by the partition function and summing gives a compactly supported \(\varphi\) whose fibre integral is one there. Equivariance cancels the character and compact actions in
+\[
+ J(\varphi f)(g)=f(g)\int\varphi(p\cdot g)\,dp=f(g).
+\]
+Use the Haar measure on each orbit, or the corresponding quotient measure after dividing by its stabilizer. The bump is extended by zero inside the regular open set.
+
+For an invariant operator \(\Theta\) with the smooth coefficients constructed on the cell, equivariance of its translated expression gives \(J\Theta F=\Theta JF\). The same argument applies to its formal adjoint: changing variables in the defining integration-by-parts identity conjugates both test functions by the same measure-preserving group action. Compact support permits differentiation under the orbit integral. Pair the compact lift \(F\) with the equivariant pullback of \(JF'\) to the group. In the ambient integration by parts multiply this pullback by a smooth compact cutoff equal to one near \(\operatorname{supp} F\). Its derivatives vanish on that neighborhood. Unfolding the product measure first against \(\Theta F\), then against \(F\), gives
+\[
+ \beta(\Theta JF,JF')=\beta(J\Theta F,JF')
+       =\beta(JF,J\Theta^*F')=\beta(JF,\Theta^*JF').
+\]
+The formal adjoint includes the density derivative in these coordinates. The identity holds for the four operators of Proposition~\ref{prop:wave-pairing-decay} on their common compact regular support. \label{cor:word-pairing-4}
+
+\end{proof}
+
+\begin{auxlemma}[Removal of the radial cutoff]\label{lem:radial-cutoff-transfer}
+Use the full cross-minor polynomial \(G_f=|D_{r+1}|^2-TT'|D_r|^2\) on the regular cell \(G_f>0\). Its value there is \(|C|^2G\), including the prefix determinant factor. For a word \(w\) of length at most \(N\), denote its signed Casimir product by \(Q_w\). Write \(E_j(F,w;c)\) for the diagonal density after \(j\) consecutive size-one blocks, including the orbital Jacobians. Suppose \(F=G_f^{p_0}h\), \(2p_0\ge N\), and the uncut base pairing is absolutely integrable. Assume the finitely many differentiated top densities in the proof admit an integrable majorant, also along smooth compact exhaustion at fixed radial cutoff. Then
+\[
+ \RePart\beta(Q_wF,F)
+       =\int_{\mathbb C^{r+1}} E_{r+1}(F,w;c)\,dc .
+\]
+\end{auxlemma}
+\begin{proof}
+For a compact coefficient supported in the regular cell, integrate the last size-one coordinate first. The defining fibre integral gives
+\[
+ E_j(F,w;c)=\int_{\mathbb C} E_{j+1}(F,w;c,t)\,d^2t
+          \quad(0\le j\le r).
+\]
+At \(j=r\) the product of the square roots of the two orbital Jacobians is part of \(E_{r+1}\). The latter is a sum of squared norms. Successive integration therefore preserves positivity and Tonelli gives the assertion for compact coefficients, since the zero-coordinate hyperplanes have measure zero. Off the positive cell, the top density is defined to be zero, including at \(G_f=0\).
+
+Choose a smooth \(0\le\chi\le1\) vanishing below \(\delta>0\) and equal to one on \([1,\infty)\). Use the cut coefficient
+\[
+                    F_\varepsilon=\chi(G_f/\varepsilon)G_f^{p_0}h .
+\] Conjugating each radial operator by \(G_f^z\) replaces the derivative in \(\log G_f\) by that derivative plus \(z\). The Leibniz expansion consequently contains only bounded factors \(((u\partial_u)^j\chi)(G_f/\varepsilon)\). A word of length \(a\le N\) costs \(G_f^{-a}\) in the squared radial coefficient.
+
+For the standard top coordinates let \(d(c)=\prod_{i=1}^{r+1}c_i\) and let \(a=|w|\). The Jacquet coefficient of each differentiated component carries \(|d(c)|^{-a}\), while its squared length in the top form carries \((|d(c)|^2/G_f)^a\). On the positive cell with all \(c_i\ne0\) their product after squaring is exactly
+\[
+       (|d(c)|^2/G_f)^a\,|d(c)|^{-2a}=G_f^{-a}.
+\]
+This cancellation uses the full product, including the last coordinate.
+
+Extract \(G_f^{2p_0-N}\) and use \(G_f^{N-a}\le1+G_f^{2N}\). Cauchy--Schwarz in the finite expansion gives
+\[
+ 0\le E_{r+1}(F_\varepsilon,w;c)
+ \le C_w G_f^{2p_0-N}\sum_j E_{r+1}(T_j h,\varnothing;c),
+\]
+where the finitely many \(T_j\) are the products appearing in the expansion, also allowing multiplication by \(G_f^N\). The integrability hypothesis concerns this right side and its majorant under compact exhaustion of \(h\). The constant can depend on the word and place. At fixed \(\varepsilon\) smooth compact exhaustion and dominated convergence give the compact identity for \(F_\varepsilon\).
+
+Take \(0<\eta<\min(1,\delta)\) and let \(F'_\varepsilon=\chi(G_f/(\eta\varepsilon))F\). Its cutoff equals one on a neighborhood of the support of \(F_\varepsilon\). Polarize the compact identity over the reals. The signed Casimirs commute, and the compact adjoint identity allows their product to move to the first argument. Since \(G_f\) is constant on each orbit and \(Q_w\) is local, the left side becomes
+\[
+ \RePart\beta(Q_wF'_\varepsilon,F_\varepsilon)
+       =\RePart\beta(Q_w F,F_\varepsilon).
+\]
+It converges by the integrability of the uncut pairing. On the right, the mixed density is bounded by the arithmetic mean of the two diagonal densities. Each is bounded by the displayed integrable majorant. Both cutoffs equal one locally at every fixed positive point for small enough \(\varepsilon\). Dominated convergence gives the asserted identity.
+\end{proof}
+
+\begin{auxlemma}[An integrable bound for the empty-word densities]\label{lem:empty-word-exhaustion}
+Put \(R=r+1\), \(n=2r+k+1\), \(A_B=2(k+r)R+1\) and \(a(g)=\max(1,\|g\|_{\rm HS})\). Let \(h\) be a smooth coefficient on the real group. Consider a finite family of ambient differential operators \(T\), written in left or right invariant derivatives with polynomial matrix coefficients of degree at most \(d\). Suppose all the required invariant derivatives of \(h\) are \(O(a^{-A})\), where
+\[
+              A\ge A_B+1+d+2Rp_0,\qquad 0\le N\le2p_0 .
+\]
+Then \(G_f^{2p_0-N}E_R(Th,\varnothing;c)\) is integrable. A single integrable function also bounds these densities along a smooth compact exhaustion of \(h\), for every \(T\) in the family.
+\end{auxlemma}
+\begin{proof}
+On the positive cell write \(q=(c_1,\ldots,c_R)\) and let \(w(q)\,dq\) be the orbital measure of Proposition~\ref{prop:real-period-norm}. For the empty word define \(\mathcal JH(q)=w(q)^{1/2}JH(g_q)\), extended by zero off the cell. Both orbital Jacobians are square roots of the same weight, so
+\[
+       E_R(H,\varnothing;q)=\|\mathcal JH(q)\|_{\rm HS}^2 .
+\]
+
+For a smooth coefficient \(H\), let \(p_{A_B,4}(H)\) be the maximum of \(\sup_g a(g)^{A_B}\|D H(g)\|\) over invariant monomials of order at most four in fixed Lie algebra bases. The regularization in Proposition~\ref{prop:real-period-norm} gives
+\[
+                    \|\mathcal JH\|_2\le C\,p_{A_B,4}(H).
+\]
+
+Indeed two integrations by parts in each dilation insert \((1+|\lambda_L|^2)^{-1}(1+|\lambda_R|^2)^{-1}\) in the real character coordinates. For the minor weight \(F_s\) of Proposition~\ref{prop:xi-group-majorant}, the degree bounds give \(a^{-A_B}\ll F_s\). Thus, with \(u,v\) the period translations, the group majorant is
+\[
+ \int F_s(u^{-1}gv)a(g)^{-A_B}\,dg\ll\Xi(u)\Xi(v).
+\]
+The two character-weighted unipotent integrals converge by Proposition~\ref{prop:xi-flag-unipotent}. Testing the frequencies and applying Fatou as in Proposition~\ref{prop:real-period-norm} proves the norm bound for arbitrary smooth \(H\) in the indicated decay class.
+
+Since \(G_f\) is constant on each orbit and is a polynomial of degree at most \(2R\), for \(G_f>0\) we have
+\[
+ G_f^{2p_0-N}\|\mathcal JTh\|^2
+       \le \|\mathcal JTh\|^2+\|\mathcal J(G_f^{p_0}Th)\|^2 .
+\]
+Multiplication by \(G_f^{p_0}\) costs at most \(2Rp_0\) powers of \(a\). An invariant derivative replaces a matrix entry by a fixed linear combination of entries. Thus it preserves the degree of a polynomial, and both terms on the right are integrable by the norm estimate.
+
+Take \(h_j=\rho(2^{-2j}\|g\|_{\rm HS}^2)h\), where \(\rho\in C_c^\infty([0,\infty))\) equals one on \([0,1]\). Positive-order derivatives of the cutoff are uniformly bounded since they are supported where \(\|g\|_{\rm HS}\asymp 2^j\). The one unused power of decay gives, for \(S=T\) and \(S=G_f^{p_0}T\),
+\[
+ p_{A_B,4}\bigl(S(h_j-h)\bigr)\ll_S 2^{-j},\qquad
+ \int\sum_{j\ge0}\|\mathcal JS(h_j-h)\|^2\,dq<\infty .
+\]
+For each \(S\) the function \(2\|\mathcal JSh\|^2+2\sum_j\|\mathcal JS(h_j-h)\|^2\) therefore dominates \(\|\mathcal JSh_j\|^2\) almost everywhere for every \(j\). Summing over the finite list of operators proves the assertion. All constants here may depend on the place and on the finite word.
+\end{proof}
+
+For the selected parameters the numerical decay condition can be checked before performing any orbital integration. Write \(m=2R\) for the flag length, so that the row rank is \(n=k+m-1\). Section~\ref{sec:selected-row-gram} bounds the initial gap between opposite signs below by \(C_\ell n^{19}f^5\log b\). The total change of the parameter has \(\ell^1\)-norm at most \(km^5\), as in Section~\ref{sec:absolute}. Hence the gap after the shift satisfies, for all sufficiently large selected scales,
+\[
+     h_{\rm gap}\ge C_\ell n^{19}f^5\log b-km^5\ge n^{19}/2 .
+\]
+
+Proposition~\ref{prop:bessel-sign-gap-decay} gives \(A_f=n^9<h_{\rm gap}\) for the initial smooth compact-finite coefficient and each required fixed derivative. This exponent also absorbs the polynomial change of type, of degree at most \(n_0R\), and the factor \(G_f^{p_0}\). Indeed, for \(N\le20R\), \(n_0\le30R^2+6\) and \(p_0=O(R^2)\) with fixed implied constant,
+\[
+ R^4(Nn^2+n^3)\le21n^7,\qquad n_0R+2Rp_0=O(n^3).
+\]
+Thus a fixed constant multiplying the first bound is harmless once \(n\) is sufficiently large.
+
+These comparisons apply to the five-derivative global recursion and to the shorter auxiliary point recursion. The latter uses \(p_0=2R\), which permits only \(N\le4R\) in Lemma~\ref{lem:radial-cutoff-transfer}. Three Fourier integrations suffice in that point estimate. After scaling the complex frequency plane to unit radius, its tail and its reciprocal lattice sum are bounded by
+\[
+         2\pi\int_1^\infty t^{1-3}\,dt=2\pi,\qquad
+                       \sum_{j\ge1}O(j)j^{-3}<\infty .
+\]
+Consequently one may use \(N=3R\) for this auxiliary induction. The full fifth-order Fourier recursion has its own word length bound. Inserting \(N=5R\) in the same auxiliary cutoff estimate would violate \(N\le2p_0\).
+
+\begin{auxlemma}[Transport of a compact orbital transform]\label{lem:compact-radial-transport}
+Let \(S(g)=a\phi(g)b^{-1}\), where \(\phi\) is an isomorphism of
+the two framed unitary groups and \(a,b\) are fixed. Carry the left
+integrating group by \(s\mapsto a\phi(s)a^{-1}\), the right group by
+\(t\mapsto b\phi(t)b^{-1}\), and carry their characters, coefficient
+maps and Haar measures by these isomorphisms. Write \(J\) and
+\(J'\) for the resulting orbital transforms on compact tests, allowing
+integration over any fixed initial list of these groups.
+If \(I\) is the fixed identification of the coefficient spaces, then
+\[
+ (\mathcal U H)(Sg)=I H(g),\qquad
+ J'(\mathcal U H)(Sg)=I JH(g).
+\]
+If a radial operator \(P\) is intertwined with an ambient operator
+\(T\) on these tests, the transported operators satisfy the same
+identity. The order of \(T\) and its coefficient degree in matrix
+entries and their conjugates are preserved under the fixed left
+and right translations and Witt change of basis.
+\end{auxlemma}
+\begin{proof}
+For each pair of integration variables the identity
+\[
+ S(s^{-1}gt)=(a\phi(s)a^{-1})^{-1}S(g)(b\phi(t)b^{-1})
+\]
+gives the transformed integrand. The character and compact actions
+are their original matrices in the new coefficient bases. Change
+variables successively in the prescribed integrals, using the
+transported stabilizer quotient when an orbit has isotropy. Compact
+tests on the regular cell have the bounded integration variables of
+Lemma~\ref{lem:compact-prefix-amplitude}. Thus the same calculation
+applies before any subsequent integration. Denote by
+\(\mathcal U_{\rm rad}\) the induced transport on the slice,
+including its density. Conjugating \(PJ=JT\) gives
+\[
+ (\mathcal U_{\rm rad}P\mathcal U_{\rm rad}^{-1})J'
+          =J'(\mathcal U T\mathcal U^{-1}).
+\]
+An invariant first derivative changes by a constant change of Lie
+algebra basis. A matrix entry in the two fixed frames changes by a
+linear combination of matrix entries, and the inverse change has the
+same property. This proves both degree assertions.
+\end{proof}
+
+Here is a finite test for the operator comparison. For a fixed spectral parameter \(Y\), denote the first columns of the two ordered site products of Proposition~\ref{prop:regular-cell-realization} by \((A_r,B_r)^t\) and \((A_r^\vee,B_r^\vee)^t\). Let \(C=\prod_{j=1}^r c_j\) and let \(T_{ij}=T_{ij}(Y)\) be the residual transfer entries, with indices \(1,2\). The four radial operators to be compared in the standard frames are
+\[
+\begin{aligned}
+ CA_r,\qquad &\bar C A_r^\vee,\\
+ \bar C(T_{21}A_r+T_{22}B_r),\qquad&
+ C(T_{12}A_r^\vee+T_{22}B_r^\vee).
+\end{aligned}
+\]
+
+The two first-column cofactor recurrences in Proposition~\ref{prop:regular-cell-realization} specify the quantum minors representing the first pair. For the second pair the complement contraction represents each coefficient by a determinant of fixed frame columns, group matrix columns and coordinate columns. For example, adjoining constant coordinate columns to a list \(Y(g)\) of \(R\) moving columns gives coefficients proportional to
+\[
+           \det\bigl(Y(g),e_{i_1},\ldots,e_{i_{n-R}}\bigr).
+\]
+The proportionality constants use the fixed change of frame. In particular there is no variable determinant in their denominators.
+
+A quantum minor is a signed sum of ordered products of invariant first derivatives and scalar shifts. Its order is at most its size, hence at most \(n\). The determinants in the two null minors and the two complement contractions involve at most \(n\) moving columns per exterior frame. Each entry of \(g^{-1}\) on the unitary group is linear in the conjugate entries of \(g\). The bound \(8Rn\) for each basic polynomial coefficient allows these determinants and the cross minors.
+
+If \(\operatorname{res}_{\rm reg}\) denotes restriction of an orbital transform to the regular cell, the comparison for each displayed operator \(P\) asks for
+\[
+             P\,\operatorname{res}_{\rm reg}(JH)=\operatorname{res}_{\rm reg}(J(T_PH)),\qquad
+ \operatorname{ord}(T_P)\le n,\qquad \deg_{\rm coeff}(T_P)\le8Rn ,
+\]
+on the same compact test space, with the signed transfer entries and measures of the selected frame. The bound on a product follows directly. In the Leibniz expansion, invariant differentiation preserves the degree of a coefficient, and multiplying two coefficients adds their degrees. Thus a product of \(a\le N\) such operators has order at most \(a n\) and degree at most \(8Rna\). Allowing the extra multiplier \(G_f^N\) in Lemma~\ref{lem:radial-cutoff-transfer} gives the sufficient bound
+\[
+                       d\le8RnN+2RN .
+\]
+
+The null recurrence reduces the comparison to the residual compact
+types before taking a single null site. Use the unsigned transfer
+here; the signed initial transfer at the cut \(\ell\) multiplies
+every entry by \((-1)^{k-\ell}\). Let \(u,u'\) be the two shifted
+compact weights and \(\rho=(\rho_1,\ldots,\rho_{k-1})\) their common
+interlacing type. Write \(x(Y)\) and \(x_j(Y)\) for the diagonal
+operators with entries
+\[
+ x(\rho,Y)=\prod_{i=1}^{k-1}(Y+\rho_i),\qquad
+ x_j(\rho,Y)=\prod_{i\ne j}(Y+\rho_i)\quad(1\le j<k).
+\]
+
+After absorbing the residual Haar weight, in the scalar type coordinate \(\zeta=h(z,g_0z')\), put
+\[
+ \begin{aligned}
+ G&=|\zeta|^2-TT',&
+ a_\rho&=\tfrac12\sum_{i=1}^k(u_i+u_i')-\sum_{i=1}^{k-1}\rho_i,\\
+ \nabla&=\partial_\zeta+a_\rho\bar\zeta/G,&
+ \nabla^*&=-\partial_{\bar\zeta}+a_\rho\zeta/G,\\
+ l_0(Y)&=-\nabla-(Y+\tfrac12)\bar\zeta/G,&
+ m_0(Y)&=-\nabla^*-(Y-\tfrac12)\zeta/G .
+ \end{aligned}
+\]
+
+The symbol \(m_0(Y)\) here is a differential operator. Let \(S_j\)
+carry the \(\rho\)-line to the \(\rho+e_j\)-line and be zero when the
+latter is absent. The three unsigned residual entries required of the
+geometric cofactor operators are
+\begin{equation}\label{eq:three-residual-cofactors}
+ \begin{aligned}
+ T_{22}(Y)&=Gx(Y),\\
+ T_{21}(Y)&=Gx(Y)l_0(Y)+\sum_{j=1}^{k-1}S_jx_j(Y),\\
+ T_{12}(Y)&=Gx(Y)m_0(Y)+\sum_{j=1}^{k-1}x_j(Y)S_j^* .
+ \end{aligned}
+\end{equation}
+
+The order of each diagonal factor matters, since a shift changes
+\(\rho_j\). For an admissible upward step, the squared matrix
+element to compare on the source line is
+\[
+ \frac{-q(-\rho_j-1)}
+ {\displaystyle\prod_{i\ne j}
+       (\rho_i-\rho_j)(\rho_i-\rho_j-1)},\qquad
+ q(Y)=-TT'\prod_{i=1}^k(Y+\tfrac12+u_i)(Y+\tfrac12+u'_i).
+\]
+
+The factors in the denominator are evaluated only on the interlacing
+types with the prescribed gaps. The two off-diagonal identities
+also compare the maps between the lines, including their phases
+in a common compact frame. At \(r=0\) the two first columns of the
+empty site products equal \((1,0)^t\), so the two complementary
+lifts act by \(T_{21}\) and \(T_{12}\). For \(r\ge1\) the last site
+introduces \(T_{22}\) in both lifts. These are the terminal
+comparisons to which the recurrences of
+Proposition~\ref{prop:regular-cell-realization} apply.
+
+\begin{auxlemma}[The residual double cofactor]\label{lem:residual-double-cofactor}
+Fix the two compact types and their measures as in \eqref{eq:three-residual-cofactors}. If \(F_\rho(\zeta)\) is the component of a smooth compact orbital transform on a common interlacing type \(\rho\), the unsigned double cofactor on the regular cell acts by
+\[
+     (T_{22}(Y)F)_\rho(\zeta)
+        = (|\zeta|^2-TT')\prod_{i=1}^{k-1}(Y+\rho_i)F_\rho(\zeta).
+\]
+\end{auxlemma}
+\begin{proof}
+At a point \(g_0\) with \(G>0\), write \(u=g_0^{-1}z\) and take a
+fixed orthonormal basis of \(E_0=\langle u,z'\rangle^{\perp_h}\)
+in the middle group; its dimension is \(k-1\). Complete it by a
+basis of \(\langle u,z'\rangle\). In the signed double contraction
+the exterior coefficients are those of \(u\wedge z'\) and its
+Hermitian dual. In this basis the only surviving minor deletes the
+first two rows and columns. Its scalar coefficient is
+\[
+ -\det\begin{pmatrix}h(u,u)&h(u,z')\\h(z',u)&h(z',z')\end{pmatrix}
+       =|h(u,z')|^2-TT'=G .
+\]
+One may make this change of basis separately at each evaluation
+point: the exterior coefficients multiply the ordered differential
+minor after its derivatives act. The minors transform in the two
+exterior powers because antisymmetrization commutes with a constant
+change of basis on every tensor factor.
+
+In the remaining compact directions let \(E_{ij}\) be the
+complexified infinitesimal matrix units. Put \(m=k-1\) and
+\(w=Y+(k-2)/2\). The remaining minor is the column determinant
+\[
+ \sum_{\sigma\in S_m}\operatorname{sgn}(\sigma)
+   \prod_{j=1}^m{}^{\longrightarrow}
+       \bigl(E_{\sigma(j),j}+(w-j+1)\delta_{\sigma(j),j}\bigr).
+\]
+
+For a coefficient \(J\) with \(J(g_0 t)=J(g_0)\pi'(t)\),
+differentiation on the right gives this same element in \(d\pi'\)
+on the input of \(J(g_0)\), in the displayed order. On a
+\(U(k-1)\) constituent of highest weight \(\lambda\) its eigenvalue
+is \(\prod_{i=1}^m(w+\lambda_i-i+1)\). 
+Branching on the two
+sides is multiplicity free; equivariance under the common
+\(U(k-1)\) retains just their shared types. With
+\(\rho_i=\lambda_i-i+1+(k-2)/2\) the eigenvalue is
+\(x(\rho,Y)\). This is the compact branching rule and Capelli
+eigenvalue formula of \cite[Theorems 2.1 and 2.20,
+equation (2.39)]{molev-branching}. For \(k=1\) the determinant
+and the product are empty and both equal one.
+\end{proof}
+
+\begin{auxlemma}[Commuting a cofactor past a matrix entry]\label{lem:residual-cofactor-commutator}
+For the unsigned geometric cofactor operators in the residual group,
+multiplication by the matrix coordinate \(\zeta=h(z,g_0z')\) obeys
+\[
+ [T_{21}(Y),\zeta]=-T_{22}(Y),\qquad
+ [T_{21}(Y),\bar\zeta]=0.
+\]
+\end{auxlemma}
+\begin{proof}
+Complexify the right infinitesimal action, writing
+\(E_{ab}g=g e_{ab}\) with \(e_{ab}\) the usual matrix unit.
+For ordered lists \(I,J\) of length \(d\) denote the column minor
+with shifts \(w-j+1\) by \(Q_{I,J}(w)\). For a fixed covector
+\(\alpha\) and a vector \(v\), let \(M\) multiply by \(\alpha g v\).
+Then
+\[
+ [Q_{I,J}(w),M]
+   =\sum_{p,q=1}^d(-1)^{p+q}(\alpha g)_{I_p}v_{J_q}
+              Q_{I\setminus I_p,J\setminus J_q}(w-1).
+\]
+
+Here the scalar coefficient multiplies after the indicated minor acts.
+To check the shift, expand by the product rule. The terms contributing
+to the commutator differentiate the coordinate in a nonempty set of
+columns \(j_1<\cdots<j_s=q\). With \(a_j=I_{\sigma(j)}\),
+\(b_j=J_j\), their matrix-unit product contributes
+\[
+ (\alpha g)_{a_{j_1}}\,
+ \delta_{b_{j_1},a_{j_2}}\cdots\delta_{b_{j_{s-1}},a_q}\,v_{b_q}.
+\]
+
+Cycle these \(s\) row labels under the alternating sum, moving the
+first to \(q\). The sign is \((-1)^{s-1}\). Summing over the
+selected columns before \(q\) therefore replaces the factor at
+each \(j<q\) by
+\[
+ E_{a_jb_j}+(w-j+1)\delta_{a_jb_j}-\delta_{a_jb_j}
+                    =E_{a_jb_j}+(w-j)\delta_{a_jb_j}.
+\]
+At \(j>q\) its new position after deleting \(q\) is \(j-1\),
+so the unchanged shift \(w-j+1\) also belongs to the minor at
+\(w-1\). Fixing \(a_q=I_p\) supplies \((-1)^{p+q}\).
+
+Now let \(y=g_0^{-1}z\) and write \(x^\flat=h(x,\cdot)\).
+The single contraction \(T_{21}\) has row covector \((z')^\flat\)
+and column vector \(y\), with an overall minus sign. For \(M=\zeta\)
+the formula inserts the second covector \(y^\flat\) and the second
+vector \(z'\). The contracted row wedge is
+\[
+ (z')^\flat\wedge y^\flat=-y^\flat\wedge(z')^\flat .
+\]
+The column wedge is \(y\wedge z'\). Including the minus sign in
+the definition of the double contraction gives the first identity.
+
+Finally \(\bar\zeta=(z')^\flat g_0^{-1}z\). If any ordered set of
+derivatives acts on this factor, use
+\[
+ E_{a_1 b_1}\cdots E_{a_s b_s}g_0^{-1}
+       =(-1)^s e_{a_s b_s}\cdots e_{a_1 b_1}g_0^{-1}.
+\]
+The last selected row \(a_s\) occurs only in \((z')^\flat_{a_s}\);
+the omitted row already carries the same covector. Interchanging
+these two rows reverses the alternating sign with all other factors
+fixed. The terms cancel in pairs and prove the second identity.
+\end{proof}
+
+\begin{auxlemma}[Single cofactors on the compact type lines]\label{lem:residual-single-cofactors}
+Use the two compact types \(u,u'\) and the regular residual group
+of Lemma~\ref{lem:residual-double-cofactor}. With the radial Haar
+weight absorbed into a vector \(F\) of smooth orbital coefficients, the actions in \eqref{eq:three-residual-cofactors} are
+\[
+\begin{aligned}
+ T_{21}(Y)F &= Gx(Y)l_0(Y)F+\sum_{j<k}S_j x_j(Y)F,\\
+ T_{12}(Y)F &= Gx(Y)m_0(Y)F+\sum_{j<k}x_j(Y) S_j^*F .
+\end{aligned}
+\]
+Here \(1\le j<k\). The sums vanish for \(k=1\). In the oriented coefficient frames of Lemma~\ref{lem:oriented-terminal-fibre} conjugate these actions by the change of frame computed in the proof.
+\end{auxlemma}
+\begin{proof}
+\proofstep{One noncompact derivative in each term.}
+Write \(m=k-1\), \(h=\operatorname{diag}(1,-I_k)\),
+\(z=\sqrt{T}\,e_0\), \(z'=\sqrt{T'}\,e_0\) after identifying the
+two middle spaces by their marked isometry. Put
+\(s=\sqrt{TT'}\), \(a=\zeta/s\) and \(t=(|a|^2-1)^{1/2}>0\). Use the section
+\[
+ g=\begin{pmatrix}a&t\\t&\bar a\end{pmatrix}\oplus I_m,\qquad
+ G=s^2t^2 .
+\]
+Let \(J\) be the residual coefficient, with
+\(J(k_L g k_R)=\pi_L(k_L)J(g)\pi_R(k_R)\) for compact rotations
+of the negative directions. Indices \(1,\ldots,k\) refer to these
+directions and index 1 to the negative direction in the displayed
+plane. Write \(E^L,E^R\) for the compact matrix units on the two
+types, and \(R_{ij}\) for complex right differentiation on the group.
+
+Set \(w=Y+k/2\). In the compact Lie algebra define ordered minors
+\[
+ M_b=(-1)^{b+1}Q_{\widehat b,\widehat1}(w-1),\qquad
+ Q_k(w)=\sum_{b=1}^k(E_{b1}+w\delta_{b1})M_b .
+\]
+Hats in this formula omit indices from \(1,\ldots,k\). In the
+single contraction, the fixed covector is \((z')^\flat\) and
+\(g^{-1}z=\sqrt T(\bar a,-t,0,\ldots,0)^t\).
+Expanding along its two surviving columns gives
+\[
+ C(Y)J=-\bar\zeta\,JQ_k^R(w)-st\sum_{b=1}^k(R_{b0}J)M_b^R ,
+ \qquad C(Y)=T_{21}(Y).
+\]
+The first column of each differential minor acts last on the
+function, so every factor in \(M_b^R\) acts on the compact input.
+For \(b\ge2\), direct multiplication gives
+\[
+ g e_{b0}=t^{-1}(e_{b1}g-\bar a\,g e_{b1}),\qquad
+ (R_{b0}J)(g)=t^{-1}(E^L_{b1}J-\bar a\,J E^R_{b1}).
+\]
+The second terms cancel the corresponding entries of \(Q_k^R(w)\).
+What remains is
+\begin{equation}\label{eq:single-angular-expansion}
+ C(Y)J=-\{\bar\zeta J(E^R_{11}+w)+st R_{10}J\}M_1^R
+                   -s\sum_{b=2}^k E^L_{b1}J M_b^R .
+\end{equation}
+
+\proofstep{The diagonal derivative and its Haar weight.}
+For a common \(U(m)\)-type \(\rho\), write
+\[
+ s_L=\sum u_i-\sum\rho_i,\qquad s_R=\sum u'_i-\sum\rho_i .
+\]
+These integers are the character exponents on the remaining negative
+coordinate. To see this, factor its diagonal rotation as
+\[
+ \operatorname{diag}(\theta,I_m)
+   =(\theta I_k)\operatorname{diag}(1,\theta^{-1}I_m),
+     \qquad |\theta|=1 .
+\]
+The two central characters subtract, and the half-sum shifts in
+either highest-weight row have sum zero.
+
+Temporarily write the two off-diagonal entries of the active plane as
+\(b,c\). Relative to the section \(b=c=t\), the compact character
+on this type line multiplies its scalar coefficient \(f_\rho(\zeta)\)
+by \((c/|c|)^{s_L}(b/|b|)^{s_R}\). Right differentiation at the section
+gives
+\[
+ R_{10}\zeta=st,\quad R_{10}\bar\zeta=0,\quad
+ R_{10}\log(c/|c|)=\bar a/(2t),\quad
+ R_{10}\log(b/|b|)=-\bar a/(2t).
+\]
+For example \(R_{10}g=ge_{10}\) and
+\(R_{10}\bar g=\bar g e_{01}\) on these two coordinates,
+by differentiating the inverse unitary matrix.
+Thus the diagonal of the expression in braces in
+\eqref{eq:single-angular-expansion} is
+\[
+ G\partial_\zeta+\bar\zeta(Y+k/2+a_\rho),\qquad
+                   a_\rho=(s_L+s_R)/2 .
+\]
+
+The residual Haar density in the \(\zeta\)-plane is proportional to
+\(G^{k-1}d^2\zeta\): at fixed positive coordinate \(a\), the
+negative part of a vector of Hermitian norm one lies on the sphere
+of squared radius \(|a|^2-1\) in \(\mathbb C^k\). Integrating the
+delta measure in the radial variable gives power \(k-1\).
+Multiplying the coefficient by \(G^{(k-1)/2}\) transfers its squared
+norm to flat area. In that realization
+\[
+ G^{(k-1)/2}(G\partial_\zeta)G^{-(k-1)/2}
+        =G\partial_\zeta-\tfrac{k-1}{2}\bar\zeta .
+\]
+Since \(M_1^R\) is the compact determinant on \(U(m)\) at \(w-1\),
+Lemma~\ref{lem:residual-double-cofactor} supplies its eigenvalue
+\(x(\rho,Y)\). We obtain the diagonal \(Gx(Y)l_0(Y)\).
+
+\proofstep{The angular minors.}
+Let \(A_k(U)\) be the quantum adjugate of the compact matrix
+\(E=(E_{ab})\): entry \((i,j)\) is the signed minor deleting row
+\(j\) and column \(i\) with initial shift \(U\). The column
+determinant identity is
+\[
+         A_k(U)(E+(U-k+1)I)=Q_k(U)I .
+\]
+It follows by antisymmetrizing the ordered product on the \(k\)
+tensor factors: the final column either completes the determinant
+or repeats an earlier column. Equivalently, use the evaluation
+representation in \cite[Proposition~2.7(4) and
+Remarks~2.8(1), 2.11]{mno-yangians}. Its first row at \(U=w-1\)
+is precisely \((M_b)\).
+
+Let \(K'=\{2,\ldots,k\}\) and \(E'=E_{K',K'}\). The part of
+this row outside the first column gives
+\[
+ (M_b)_{b\in K'}(E'+(U-k+1)I)
+          =-Q_m(U)(E_{1b})_{b\in K'} .
+\]
+Both sides act from a compact type \(V_\sigma\) tensored with the
+dual standard representation of \(U(m)\). The row
+\((E_{1b})\) intertwines this action with the action on the
+target, by the matrix-unit commutator; the same is true of the
+quantum minors by exterior covariance.
+
+For an ordinary highest weight \(\lambda\), multiply the alternant in
+the Weyl character formula by \(\sum_b z_b^{-1}\). Expanding it
+over permutations lowers one row exponent at a time. Therefore
+\[
+ \operatorname{ch}(V_\lambda)\sum_{b=1}^m z_b^{-1}
+      =\sum_{j:\ \lambda-e_j\ {\rm dominant}}
+                        \operatorname{ch}(V_{\lambda-e_j}).
+\]
+A deletion violating dominance repeats an exponent and its alternant
+vanishes. This proves the required multiplicity-one dual Pieri rule.
+
+On the summand
+\(V_\rho\) with \(\sigma=\rho+e_j\), the matrix \(E'\) acts
+on the tuple by the scalar \(\sigma_j+(m-1)/2\).
+Indeed its quadratic Casimir on the tensor product is
+\(C_\sigma+m-2E'\), whereas the eigenvalue difference
+\(C_{\sigma-e_j}-C_\sigma\) is \(1-2\sigma_j\).
+Consequently the factor multiplying \((M_b)\) above has value
+\[
+     \sigma_j+(m-1)/2+U-k+1=Y+\rho_j .
+\]
+The numerator \(Q_m(U)\) has value \(x(\rho,Y)\). Divide at
+regular \(Y\) and extend polynomially. For source and target
+projections \(P_\sigma,P_\rho\) the resulting component is
+\[
+ P_\rho M_b P_\sigma=-x_j(\rho,Y)P_\rho E_{1b}P_\sigma .
+\]
+All other components vanish.
+
+Inserting this into
+\eqref{eq:single-angular-expansion} gives the actual shift
+from the \(\rho\)-line to the \(\sigma\)-line:
+\[
+ S_j(J_\rho)=s\sum_{b=2}^k
+      P^L_\sigma E^L_{b1}J_\rho E^R_{1b}P^R_\sigma ,
+ \qquad \sigma=\rho+e_j .
+\]
+An absent common target gives zero. No scalar phase has been
+discarded in this identity.
+
+\proofstep{Norm and sign of a type shift.}
+For one compact type \(u\), denote by \(B_{u,j}\) the scalar on
+\(V_\rho\) of \(\sum_b P_\rho E_{1b}P_\sigma E_{b1}P_\rho\),
+where \(b\in K'\). Equivariance and Schur's lemma make it scalar.
+The first column of the same adjugate identity gives on \(V_\rho\)
+\[
+ \prod_{i=1}^k(Y+u_i-\tfrac12)
+ =x(\rho,Y)(Y-k/2+s_L)
+                -\sum_j x_j(\rho,Y) B_{u,j}.
+\]
+Here only the allowed summands contribute. Evaluating at
+\(Y=-\rho_j\) gives
+\[
+ B_{u,j}=-\frac{\prod_i(u_i-\rho_j-\tfrac12)}
+                    {\prod_{i\ne j}(\rho_i-\rho_j)} .
+\]
+Use the analogous identity with \(u'\) on the right. Let
+\(d_\rho=\dim V_\rho\). The covariant map
+\(A:V_\rho\otimes\mathbb C^m\to V_\sigma\) with components
+\(P_\sigma E_{b1}P_\rho\) has
+\(A A^*=B_{u,j}d_\rho I/d_\sigma\) by taking traces. The
+Pieri multiplicity is one, so the two such maps on left and right
+differ from the same coisometry by scalar factors.
+
+Normalize the intertwining line in Hilbert--Schmidt norm by dividing
+an isometry of the two copies of \(V_\rho\) by \(\sqrt{d_\rho}\).
+The squared coefficient of the displayed shift is then
+\[
+ TT' B_{u,j} B_{u',j}\frac{d_\rho}{d_\sigma},
+ \qquad
+ \frac{d_\sigma}{d_\rho}
+   =\prod_{i\ne j}\frac{\rho_i-\rho_j-1}{\rho_i-\rho_j}.
+\]
+The second identity is the Weyl dimension formula. Substitution
+in the first expression gives the squared norm following
+\eqref{eq:three-residual-cofactors}.
+
+To determine the sign, order the compact coordinates as
+\(2,\ldots,k,1\) and identify the shared lower rows of their
+orthonormal Gelfand--Tsetlin bases. Write
+\(p_i=\lambda_{m,i}-i+1\) and
+\(q_i=\lambda_{m+1,i}-i+1\) for two adjacent rows of a pattern.
+In the usual rational basis the coefficient of a permitted raising
+step in \(E_{m,m+1}\) has sign
+\[
+ \operatorname{sgn}\left(
+ -\frac{\prod_{b=1}^{m+1}(p_j-q_b)}
+             {\prod_{b\ne j}(p_j-p_b)}
+ \right)=-\frac{(-1)^j}{(-1)^{j-1}}=1 .
+\]
+The interlacing inequalities give the indicated numbers of negative
+factors. Rescaling basis vectors by their positive norms preserves
+this sign. See \cite[Theorem~2.3, (2.6)--(2.8)]{molev-branching}.
+
+For an allowed shift take the same lower pattern in the source
+and destination. At level \(d<m\) use the initial \(d\) ordinary
+highest weights of the source row. Dominance of the raised row
+preserves interlacing. The common positive matrix entry then fixes
+the phase of each Pieri map. Their product on the chosen
+intertwining lines is positive. In the two smallest ranks the
+angular part of \(T_{21}\) specializes to
+\[
+ k=1:\quad 0, \qquad
+ k=2:\quad s\,E^L_{21}J E^R_{12}.
+\]
+
+\proofstep{The mirror and the two compact frames.}
+The adjoint of a right infinitesimal matrix unit on Haar measure
+is \(E_{ab}^*=\epsilon_a\epsilon_b E_{ba}\) for the signature
+signs \(\epsilon_a\). The row and column versions of a quantum minor
+therefore interchange the two lists under adjoint, multiplied by
+the product of their signs. Applying this to the single contraction
+moves its one variable covector through the minor. For a coordinate
+row \(v=\alpha g\) the precise ordered identity is
+\[
+ \sum_j(-1)^{p+j} Q_{\widehat j,\widehat p}(w)M_{v_j}
+     =\sum_j(-1)^{p+j} M_{v_j} Q_{\widehat j,\widehat p}(w-1),
+\]
+with \(M\) denoting multiplication.
+
+To prove it, use the scalar
+commutator in Lemma~\ref{lem:residual-cofactor-commutator}.
+For each surviving row, exchange the newly selected row with the
+omitted row. The resulting negative cofactors are the difference
+between the minors at \(w-1\) and \(w\): lower the shifts one column
+at a time, so that columns before the deleted column have already
+been lowered. This proves the displayed identity. The signature
+factors convert the components of \(g^{-1}z\) to those of its
+Hermitian covector. The shifted single contraction consequently
+satisfies, on compactly supported smooth tests,
+\[
+                   T_{12}(Y)=T_{21}(\bar Y)^* .
+\]
+
+After absorption of the Haar weight, the flat-area adjoint of
+\(\partial_\zeta\) is \(-\partial_{\bar\zeta}\) and
+\([\nabla^*,G]=-\zeta\). Moving the adjoint across \(G\) gives
+the factor \(m_0(Y)\) in \eqref{eq:three-residual-cofactors};
+adjunction of the angular part gives \(\sum_jx_j(Y)S_j^*\).
+
+Finally the cofactor orientation of
+Lemma~\ref{lem:oriented-terminal-fibre} sends \(c/a\) to the
+positive real ray and \(-\bar b/\bar a\) to the same ray.
+Thus the two active compact rotations from \(b=c=t\) have factors
+\(\zeta/|\zeta|\) and \(-\zeta/|\zeta|\), respectively. On the
+\(\rho\)-line their combined change of coordinates is
+\[
+ U_\rho(\zeta)=(-1)^{s_R}(\zeta/|\zeta|)^{s_L+s_R},
+ \qquad U_{\rho+e_j}/U_\rho=-\bar\zeta/\zeta .
+\]
+Transport the derivative as well:
+\(U_\rho\partial_\zeta U_\rho^{-1}
+=\partial_\zeta-a_\rho/\zeta\). This single conjugation
+identifies both signed entries, including their relative phases.
+\end{proof}
+
+\begin{auxlemma}[Cofactor comparison on the selected compact types]\label{hyp:selected-orbital-coefficient-bounds}
+Fix a realized local coefficient, its two prescribed types and its
+marked real place. Transport the restricted coefficient to the
+flat-area coordinates of Lemma~\ref{lem:residual-single-cofactors};
+denote this restriction by \(\mathcal R\). For all four displayed
+operators \(P\), the compact test space and the polynomial ambient
+lifts above satisfy
+\[
+          P\mathcal R JH=\mathcal R J(T_P H),\qquad
+          \operatorname{ord}(T_P)\le n,\quad
+          \deg_{\rm coeff}(T_P)\le8Rn .
+\]
+For the radial limit take word lengths in the range
+\[
+       |w|\le N\le2p_0,\qquad
+       A_B+1+8RnN+2RN+2Rp_0+n_0R\le A_f .
+\]
+The estimates preceding the lemma allow a common scale threshold.
+Constants for each orbital integral may depend on its fixed word,
+place, shell and cutoffs.
+\end{auxlemma}
+\begin{proof}
+Proposition~\ref{prop:regular-cell-realization} computes the
+initial null minors and the ordered recurrence for the two
+complementary contractions on the regular cell. The terminal
+entries in that recurrence are now identified by
+Lemmas~\ref{lem:residual-double-cofactor}
+and~\ref{lem:residual-single-cofactors}.
+The two initial columns are \((1,0)^t\) when the site sequence
+is empty. Applying the ordered null matrices successively yields
+the stated four expressions for every length.
+
+The common change from unweighted oriented coordinates to flat area
+in the positive-real section multiplies the \(\rho\)-component by
+\(G^{(k-1)/2}U_\rho^{-1}\). This depends only on the residual
+variable, and hence commutes with the null-site derivatives.
+On an enlarged tensor space carry it on the initial factor.
+Conjugating both sides of the intertwining identity changes neither
+the ambient test nor its differential lift. In the norm the same
+operation absorbs the residual density exactly once:
+\[
+    |G^{(k-1)/2}U_\rho^{-1}J_\rho|^2d^2\zeta
+             =|J_\rho|^2G^{k-1}d^2\zeta .
+\]
+The covariant change to the signature frame is
+Lemma~\ref{lem:compact-radial-transport}.
+\end{proof}
+
+The actual two-parameter relation used by these two entries can
+also be read off directly. Write \(D(Y)=T_{22}(Y)\),
+\(C(Y)=T_{21}(Y)\) and \(x_\alpha(Y)=x(\alpha,Y)\).
+For \(\sigma=\rho+e_j\), the two diagonal polynomials satisfy
+\[
+ x_\sigma(u)-(u-v)(x_\sigma(u)-x_\rho(u))
+            =(v+\rho_j+1)x_j(\rho,u).
+\]
+Together with \(C_{\sigma\rho}(u)=x_j(\rho,u)(S_j)_{\sigma\rho}\),
+this is the \((\sigma,\rho)\) component of the first relation below.
+The diagonal uses
+\([C_{\rho\rho}(v),G]=-\bar\zeta Gx_\rho(v)\), and all remaining
+type blocks vanish. Thus on compact tests,
+\begin{equation}\label{eq:residual-entry-test}
+ \begin{aligned}
+ (u-v)[D(u),C(v)]&=D(u)C(v)-D(v)C(u),\\
+ [C(v),\zeta]&=-D(v),& [C(v),\bar\zeta]&=0 .
+ \end{aligned}
+\end{equation}
+
+For these lifts Lemma~\ref{lem:empty-word-exhaustion} supplies the common integrable bound. At level zero the signed Casimirs in \(Q_w\) are invariant differential operators. Applying the same norm estimate to \(Q_wF\) and \(F=G_f^{p_0}h\) gives absolute convergence by Cauchy--Schwarz on the cell. Thus the uncut base pairing and the top integrals need no additional assumption of integrability. For the compact tests the identification of the partial amplitudes is
+given by Lemmas~\ref{lem:oriented-terminal-fibre}
+and~\ref{lem:compact-radial-transport}. Lemma~\ref{hyp:selected-orbital-coefficient-bounds} identifies the two
+singly contracted lifts with the signed entries on those same types. A bound on a fixed set \(G_f\ge\varepsilon\) alone does not control the powers of \(G_f^{-1}\) as \(\varepsilon\) decreases.
+
+\subsection{The two polynomial degrees}
+
+Interpolation takes place in the added spectral parameter. Its degree bound must distinguish the two vector components, since only the first retains the highest-degree coefficient.
+
+\begin{proposition}[Degree and leading coefficient of a letter]\label{prop:letter-polynomial-degree}
+Write \(P_{j,e}(Y)\) for component \(e\) of a letter at level \(j\). Then 
+\[
+ \deg_Y P_{j,e}\le j-e\qquad(e=0,1).
+\]
+ The leading degree-\(j\)
+coefficient in component zero is the original coefficient and
+is uniform under fixed shifts of \(Y\). For the slice integrals assume compact support and the required
+decay at \(j+1\) distinct real parameters. The wave coefficient
+has degree \(2j\) as in \eqref{eq:word-leading-wave}; for an ending
+block of size \(s\) the averaged lift has coefficient at degree \(2j-s\)
+as in \eqref{eq:word-leading-lift}.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Degrees of the two quantum minors.}
+
+Consider the coefficient operator for a letter of real
+parameter \(Y\) at level \(j\). Its two components use
+quantum minors of sizes \(j\) and \(j-1\), with the same
+normalizing pivot determinant. In the column-ordered
+expression each factor is a differential operator plus
+a scalar linear in \(Y\) times a Kronecker delta.
+The degree is at most the size of the minor. In the zero
+component the degree-\(j\) scalar minor cancels the denominator.
+Writing \(C_e(Y)\) for the result of applying component \(e\)
+to an input coefficient \(C\), this gives
+\[
+ \deg_Y C_e\le j-e,\qquad [Y^j]C_0(Y+v)=C
+                                  \quad(v\text{ fixed}).
+\]
+At \(j=0\), \(C_0=C\) and \(C_1=0\). These identities pass through the
+slice integral by writing the polynomial coefficients as
+finite linear combinations of its values at \(j+1\)
+distinct real parameters. The compact support and decay
+conditions for those values imply the same conditions
+for each coefficient.
+
+\proofstep{The leading wave coefficient.}
+
+The degree estimate gives the number of interpolation coefficients. Recovering the original wave requires also identifying the coefficient of highest degree.
+
+
+The wave comparison uses the two-slot expression
+\(\langle A_1,D_0\rangle-\langle A_0,D_1\rangle\).
+The operation on the first left component is a common
+linear wave action on \(C_1+uC_0\), where \(u\) is the
+wave parameter. The \(2j\)-coefficient is
+\begin{equation}\label{eq:word-leading-wave}
+ [Y^{2j}]\langle uC_0,D_0\rangle
+       =u\langle [Y^j]C_0,[Y^j]D_0\rangle .
+\end{equation}
+The terms involving \(C_1\) or \(D_1\) have degree at most
+\(2j-1\). The surviving coefficient is the preceding
+wave pairing multiplied by \(u\). The triangular wave matrix
+is an isometry of the word form because it is a gauge
+transformation of the initial transfer. At a positive
+position the two copies of the gauge matrix \(G\) commute
+with the flip. In the negative position use its transpose
+and inverse:
+\[
+  [P,G\otimes G]=0,\qquad [Q,G^T\otimes G^{-1}]=0.
+\]
+These commutations propagate the isometry through the recursions.
+
+\proofstep{The leading lift coefficient.}
+
+For the lift, the first component is right-averaged before
+it enters the pairing. A history ending with a block of
+size \(s\) and parameter \(\tau\) has pivot
+\(\operatorname{diag}(Z_h,\tau w_s)\). Among minors of
+its first \(j-1\) rows, only the ordered columns omitting
+the first column of the last block can contribute.
+
+On those columns the scalar cofactor is
+\[
+        \det\operatorname{diag}(Z_h,\tau w_{s-1})
+              =\det Z_h\,\tau^{s-1}\det w_{s-1}.
+\]
+After right averaging, each last-column expansion of the
+remaining differential minor uses just the adjacent
+nilpotent generator, whose character is one. The dual
+last-row expansion uses the row-ordered quantum minor
+and decreases its spectral shift by one at each step.
+After \(s-1\) expansions the remaining operator is
+the zero component at level \(j-s\). The full pivot has
+determinant \(\det Z_h\,\tau^s\det w_s\), so the scalar
+cofactor contributes
+\[
+ \frac{\det Z_h\,\tau^{s-1}\det w_{s-1}}
+      {\det Z_h\,\tau^s\det w_s}=(-1)^{s-1}\tau^{-1}.
+\]
+Use its conjugate on the dual side. The exact improvement
+depends on the right character of the averaged
+coefficient and on passing that average through the
+slice using its normalized product Haar measure.
+
+Let \(F_{\rm low},F'_{\rm low}\) be the preceding zero
+components. On the two sides the averaged first components
+have top terms \(Y^{j-s}(-1)^{s-1}\tau^{-1}F_{\rm low}\)
+and \(Y^{j-s}(-1)^{s-1}{\tau'}^{-1}F'_{\rm low}\), with
+the dual read in the conjugate convention above. The zero
+components have top terms of degree \(j\). Thus each paired
+term has total degree at most \(2j-s\), and taking the
+coefficient of that degree in their difference gives
+\begin{equation}\label{eq:word-leading-lift}
+       (-1)^{s-1}(\tau^{-1}-{\tau'}^{-1})
+                  \langle F_{\rm low},F'_{\rm low}\rangle .
+\end{equation}
+
+For a polynomial of degree at most \(d\), choosing distinct
+real \(Y_0,\ldots,Y_d\) extracts its degree-\(d\) coefficient
+as \(\sum_i P(Y_i)/\prod_{h\ne i}(Y_i-Y_h)\). Use this
+formula once for each letter for both the wave and the lift. This is the degree calculation used
+in the positive block construction in
+Section~\ref{sec:block-recursion}.  \label{cor:word-pairing-5}
+\end{proof}

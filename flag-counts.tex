@@ -1,0 +1,740 @@
+\section{Counting flags in the definite row lattices}\label{sec:flag-counts}
+
+An orbital estimate gives the size of one term. Its contribution to the Gram sum also depends on how many integral flag pairs have the given relative position, each counted with its stabilizer weight. We compute
+these weights by decomposing the orbits and passing to the
+unimodular quotient of the primitive flag. The counts feed
+the orbital row sum in Section~\ref{sec:row-sums}. Proposition~\ref{prop:flag-row-mass} applies the genus mass defined below to the marked row; Proposition~\ref{prop:primitive-flag-means} imposes the primitive-line condition on that same mass.
+
+Let \(E/F\) be CM and unramified at finite places, with
+\(f=[F:\mathbb Q]\) and \(R=\mathcal O_E\). For an integral Hermitian lattice \((A,h_A)\) define its dual in its span and its discriminant factors by
+\[
+ A^\#=\{x\in A\otimes_R E:h_A(x,A)\subseteq R\},\qquad \Delta(A)=|A^\#/A|,\qquad d(A)=\sqrt{\Delta(A)}.
+\]
+For a definite genus \(\mathcal G\) of integral Hermitian lattices its mass is 
+\[
+ \operatorname{mass}(\mathcal G)=\sum_{[A]\in\mathcal G}|\operatorname{Aut}_R(A,h_A)|^{-1},
+\]
+ where the sum runs over isometry classes and \(\operatorname{Aut}_R(A,h_A)\) is the group of integral isometries of the Hermitian form on \(A\). Let \(m_j\)
+be the mass of the standard unimodular genus of rank \(j\).
+
+\subsection{The row mass and primitive means}
+
+Removing a primitive marked line changes the genus at the primes dividing its norm. We first compute this change for one row, before imposing the conditions of a second flag.
+
+A row \(\Lambda\) is a unimodular lattice with prescribed
+intersection \(X_R\) with the isotropic flag span \(X\).
+Its middle quotient contains a primitive negative line \(Rz\)
+of norm \(-T\), where \(T\geq3\) is completely split. The
+off-line definite lattice has rank \(k\). Write \(N=T^f\)
+and give each row the reciprocal order of its stabilizer
+on the middle quotient.
+
+\begin{proposition}[Mass of the rows]\label{prop:flag-row-mass}
+The mass of the possible off-line lattices is
+\[
+ M=m_k\left(\frac{T^k-1}{T-1}\right)^f.
+\]
+The total row mass is \((T-1)^f M\). For an invariant
+function of the definite lattice, the normalized row
+average equals its normalized genus average.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Splitting off the isotropic flag.}
+The primitive submodule \(X_R\oplus Rz\) has projective
+quotient. Restriction of the dual and unimodularity give
+integral dual partners to \(X_R\) that are orthogonal to
+\(z\). Write \(H\) for the Gram matrix of the partners in dual bases.
+Subtract \(aH\), regarded as a map back to \(X_R\), for
+\(a\in R\) with \(a+\bar a=1\). Surjectivity of unramified
+trace at every finite place gives such an \(a\). The new Gram
+matrix of the partners is
+\[
+ H-(aH)^*-aH=(1-\bar a-a)H=0 .
+\]
+Their pairing with \(X_R\) is intact, so together they span a
+unimodular hyperbolic summand.
+Carrying it to the fixed hyperbolic summand acts by the
+identity on \(X^\perp/X\) and fixes \(z\). Two lifts with
+the same middle lattice are therefore equivalent under
+an isometry acting trivially on the middle quotient.
+
+\proofstep{Gluing along the discriminant modules.}
+
+The middle lattice is a primitive unimodular extension
+of \(Rz\) and its definite orthogonal lattice \(A\) of rank
+\(k\). Its gluing group injects in both discriminant modules.
+Unimodularity forces the injections to be onto, and
+integrality identifies the gluing with the graph of an
+anti-isometry of the pairings. Both modules are \(R/(T)\).
+
+At each place over \(T\) the split residue factors of \(R/(T)\)
+are paired by conjugation. An isometry multiplies them by \(u,v\)
+with \(uv=1\). As there are \(f\) places, the count for a
+fixed \(A\) is
+\[
+    \prod_{\mathfrak t\mid T}|\mathbb F_T^\times|=(T-1)^f .
+\]
+The single genus of \(A\) has unramified split stabilizer
+index \((T^k-1)/(T-1)\) at each place over \(T\). Indeed a
+paired split lattice with one elementary divisor of length
+one is stabilized by the preimage of a line stabilizer.
+Such lattices are obtained by imposing one residue hyperplane
+in each pair of factors of a unimodular lattice. Thus, for
+\(N=T^f\), the mass is
+\[
+ M=m_k\left(\frac{T^k-1}{T-1}\right)^f\geq m_kN^{k-1}.
+\]
+\proofstep{Passing from genus weights to row weights.}
+
+The row weight is the reciprocal order of the stabilizer's
+image on the middle quotient. Over \(A\) this is the
+stabilizer of the anti-isometry in \(\operatorname{Aut}(A)\).
+Let \(\mathcal G(A)\) be the \((T-1)^f\) anti-isometries
+over \(A\). For a function \(F\) of its definite lattice, the
+contribution of the rows over \(A\) is
+\[
+ \sum_{[\alpha]\in\operatorname{Aut}(A)\backslash\mathcal G(A)}
+        \frac{F(A)}{|\operatorname{Aut}(A)_\alpha|}
+   =\frac{|\mathcal G(A)|}{|\operatorname{Aut}(A)|}F(A).
+\]
+Summing over definite classes gives raw mass \((T-1)^fM\)
+when \(F=1\). Dividing the same identity for general \(F\) by
+that mass gives the normalized genus average.
+
+\end{proof}
+
+The mass formula determines the average over rows. The pair count also needs the mean number of primitive sublattices of prescribed rank and determinant in this genus.
+
+\begin{proposition}[Primitive sublattice means]\label{prop:primitive-flag-means}
+For fixed determinant \(d\), the mean number of primitive
+rank-\((k-s)\) sublattices is at most
+\[
+ (d/N)^k(dN)^{C(s+\log f)}\,\frac{m_{k-s}m_s}{m_k}
+ \quad(2\le s\le k-2)
+\]
+with \(C\) absolute. In ranks one and zero the packing
+bound is \((9\mathrm{rd}(E))^{kf}d^k\).
+For \(s=1\), \(k\ge3\), and \(d,N\le H\), the mean is at most
+\[
+ (d/N)^{k-1}(e\pi/(kv))^{kf}h_E
+ (4k\sqrt{\mathrm{rd}(E)})^f H^{11+3\log_2 f},
+ \qquad v=\mathrm{rd}(E)/2 .
+\]
+\end{proposition}
+
+\begin{proof}
+\proofstep{Counting lattices of fixed index and discriminant.}
+Put \(\ell=\log_2(2f)\). A rank \(j\) projective module
+has at most \(I^{j+\ell}\) sublattices of index \(I\).
+At a prime \(\mathfrak p\) of residue cardinality \(q\), a
+sublattice of colength \(a\) is the end of a chain of \(a\)
+successive index-\(q\) lattices. At each step the quotient by
+\(\mathfrak p\) has \( (q^j-1)/(q-1)\le q^j\) hyperplanes.
+Thus the number for any fixed list \((a_{\mathfrak p})\)
+of local colengths is at most
+\[
+  \prod_{\mathfrak p}q^{j a_{\mathfrak p}}=I^j .
+\]
+
+For \(p^e\parallel I\), the list above \(p\) satisfies
+\(\sum_{\mathfrak p\mid p}f_{\mathfrak p}a_{\mathfrak p}=e\).
+Repeat each \(\mathfrak p\) exactly
+\(f_{\mathfrak p}a_{\mathfrak p}\) times to encode the list as a
+sorted word of length \(e\) in at most \(2f\) letters. This
+is injective. Since \(2^e\le p^e\) and \(\ell=\log_2(2f)\),
+the number of lists, also bounding the ideal factors of norm \(I\),
+is at most
+\[
+  \prod_{p^e\parallel I}(2f)^e\le
+  \prod_{p^e\parallel I}(p^e)^\ell=I^\ell .
+\] Maximal integral lattices in a fixed unramified
+Hermitian space lie in one genus. At a split place the
+two components are dual.
+
+At an inert place diagonalize
+using the residual trace, including at two. A maximal
+diagonal form has unit entries and at most one uniformizer
+entry, since two such entries give a residual isotropic
+vector admitting division by the uniformizer. The local
+mass correction in the second case is
+\((q^j-(-1)^j)/(q+1)\leq q^j\). \cite{gan-hanke-yu}
+The mass of a maximal lattice of discriminant order \(D_0\)
+is thus at most \(m_jD_0^{j/2}\).
+Combine this mass with the inclusion count at index
+\(I=\sqrt{D/D_0}\). At the resulting discriminant \(D\) the bound is
+\[
+     m_jD_0^{j/2}(D/D_0)^{(j+\ell)/2}
+         \le m_jD^{(j+\ell)/2}.
+\]
+
+\proofstep{Gluing bounds in middle corank.}
+
+For a primitive \(U\subset A\) of rank \(j=k-s\) and
+determinant \(d\), let \(B=A\cap U^\perp\). Write \(L=A/(U\oplus B)\) for the gluing group.
+It injects in each discriminant module because \(U\) and \(B\)
+are primitive in \(A\). The determinant-index formula gives
+\[
+ \Delta(U)\Delta(B)=|L|^2\Delta(A)=|L|^2N^2 .
+\]
+Using \(|L|\le\Delta(U)=d^2\) gives
+\(\Delta(B)\le d^2N^2\). Witt's theorem gives one orbit per Hermitian type. The determinant-ideal parity at inert places and
+positive signatures determine the type by local-global
+classification, with at most \((d^2)^\ell\) choices.
+\cite{landherr}
+
+
+Write \(D_U=U^\#/U\) and \(D_B=B^\#/B\). Projection embeds each gluing graph into \(D_B\). At each prime of the integer ring this module is a quotient of a free module of rank \(s\) over a DVR, so its submodules need at most \(s\) generators. Only finitely many primes occur. The Chinese remainder theorem combines their generating lists, padded to length \(s\), into one global list. Padding a generating tuple with zero gives a surjection from a subset of \((D_U\oplus D_B)^s\) to the set \(\mathcal G\) of allowed graphs. Hence
+\[
+ |\mathcal G|\le(|D_U|\,|D_B|)^s
+               \le(d^2\cdot d^2N^2)^s.
+\]
+An isometry of a glued lattice preserving the marked sublattice restricts to isometries of \(U\) and its orthogonal complement \(B\).
+
+Conversely, a pair of isometries preserves the overlattice precisely when it preserves its graph in the discriminant modules. With \(H=\operatorname{Aut}(U)\times\operatorname{Aut}(B)\), orbit--stabilizer therefore gives the mass at these two isometry classes:
+\[
+       \sum_{[L]\in H\backslash\mathcal G}\frac1{|H_L|}
+           =\frac{|\mathcal G|}{|H|},\qquad H_L=\operatorname{Stab}_H(L).
+\]
+Apply the two fixed-discriminant mass bounds, sum over
+\(\Delta(B)\leq d^2N^2\), and divide by \(M\). This proves
+\[
+ \operatorname{Mean}\#\{U:d(U)=d\}\leq
+ (d/N)^k(dN)^{C(s+\log f)}\frac{m_{k-s}m_s}{m_k}
+ \quad(2\leq s\leq k-2)
+\]
+for an absolute \(C\). In rank one the line lattice
+has covolume \(d(\mathrm{rd}(E)/2)^f\).
+The product of disks of radius
+\[
+ R_0=(\mathrm{rd}(E)d^{1/f})^{1/2}
+\]
+contains a nonzero vector by Minkowski's theorem.
+Distinct vectors have
+maximum norm separation at least one by integrality and
+the norm formula. Packing gives
+\[
+ (9\mathrm{rd}(E))^{kf}d^k,
+\]
+which also bounds the rank-zero count.
+
+\proofstep{The corank-one gluing bound.}
+
+For \(s=1\), \(T A^\#\subset A\), and the projection of
+\(A^\#\) to the line of \(B\) equals \(B^\#\) by primitivity.
+Write \(B_{\mathrm{disc}}=B^\#/B\). The projected gluing
+module \(L_B\) is cyclic and satisfies
+\[
+       T B_{\mathrm{disc}}\subseteq L_B\subseteq B_{\mathrm{disc}}.
+\]
+There are at most \(N^2\) such choices by counting divisors of
+the annihilator of \(B_{\mathrm{disc}}/T B_{\mathrm{disc}}\).
+For a generator \(e\) of \(L_B\), evaluation at \(e\) gives the injection
+\[
+  \operatorname{Hom}(L_B,U^\#/U)\hookrightarrow U^\#/U,\qquad
+  \phi\longmapsto\phi(e).
+\]
+The target has at most \(d^2\) elements. Thus the choices of projected
+module and graph map together cost at most \(N^2d^2\).
+
+For one determinant ideal of \(F\) of norm \(d\),
+the mass bound in rank \(j\) sharpens to \(m_j d^{j+1}\).
+The inert index and mass factor cost together at most
+\(q^{ja_v}\) at exponent \(a_v\), and splitting adds
+at most \(a_v+1\) choices of the two local indices.
+There are at most \(d^{\log_2 f}\) ideals of norm \(d\).
+In rank one the inert mass factor is one and the sublattice
+of given inert index is unique. Summing line masses up to
+determinant \(dN\) costs at most \(m_1(dN)^{2+\log_2 f}\).
+These bounds give a numerator at most
+\[
+ m_{k-1}m_1d^{k-1}d^{4+\log_2 f}N^2(dN)^{2+\log_2 f}.
+\]
+
+For every \(k\ge2\), divide the unimodular mass formula
+\eqref{eq:row-self-dual-mass} in rank \(k\) by the formula in rank
+\(k-1\), with the same definite compact and finite stabilizer
+normalizations. Since \(E/F\) is unramified at finite places,
+\(|D_E|=|D_F|^2\) and \(|D_F|^{1/f}=2v\). Cancelling the common factors gives
+\begin{equation}\label{eq:adjacent-unimodular-genus-masses}
+ \frac{m_k}{m_{k-1}}
+ =((k-1)!(v/\pi)^k)^f(2v)^{-f/2}L_F(k,\eta^k),
+ \qquad v=\mathrm{rd}(E)/2 ,
+\end{equation}
+with \(\eta\) the quadratic character of \(E/F\).
+
+For \(k\geq3\), \(L_F(k,\eta^k)\geq2^{-f}\), by the
+Euler factors, and \((k-1)!\geq(k/e)^k/k\) by integration.
+In rank one the unimodular forms in each ideal class
+differ by a positive unit modulo norms. Squares are norms,
+so \(m_1\leq2^fh_E\). For \(d,N\leq H\) the normalized
+corank-one mean is at most
+\[
+ (d/N)^{k-1}(e\pi/(kv))^{kf}
+ h_E(4k\sqrt{\mathrm{rd}(E)})^f H^{11+3\log_2 f}.
+\]
+
+\end{proof}
+
+\begin{construction}
+\begin{tabular}{@{}lll@{}}\toprule
+Gluing datum & Where it is chosen & Number of choices\\\midrule
+Cyclic projection \(L_B\) &
+\(T B_{\rm disc}\subseteq L_B\subseteq B_{\rm disc}\) & \(\le N^2\)\\
+Graph above \(L_B=\langle e\rangle\) &
+\(\phi\mapsto\phi(e)\in U^\#/U\) & \(\le d^2\)\\\bottomrule
+\end{tabular}
+\caption{The two choices in corank-one gluing. Each projected module admits at most \(d^2\) graph maps, so the product bound is \(N^2d^2\).}\label{fig:corank-one-gluing-data}
+\end{construction}
+
+\subsection{Integral frame classes over a sublattice}
+
+The cross pairings fix a rational relative position. To count integral representatives of that position, one must bound the choices of frames that give it over a prescribed sublattice.
+
+Write \(Z\) for the cross Gram of the augmented frames,
+\(\Delta_j\) for its leading minors with \(\Delta_0=1\), and \(Y\) for the
+first \(r\) rows. The relevant cells express \(Z\), up to
+column signs, as unitriangular factors around a block
+anti-diagonal monomial matrix with constant scalar on
+each reversed block.
+
+\begin{lemma}[Heights of the reduced frame]\label{lem:reduced-flag-heights}
+Write \(Z=LWU\), with unitriangular \(L,U\) and a scalar times reversal
+on each diagonal block of \(W\). Assume nonzero Gram invariant,
+\(\mathrm{rd}(E)\le b\), \(T,T'\le b^{C_Tm}\), and \(f\le b^{C_g}\).
+The first \(r\) rows have a nonzero full-row minor \(\delta\).
+The reduced frame has the direct and reciprocal normalized
+height bounds \(H_C(Z)\) of \eqref{eq:reduced-flag-height}
+for a sufficiently large fixed \(C\),
+and the three arithmetic factors satisfy 
+\[
+ \max\!\left\{\operatorname N_E(\delta),\ \prod_\tau|\tau G|,\ \operatorname N_E(\mathfrak d)^r\right\}\le H_C(Z)^2.
+\]
+
+\end{lemma}
+
+\begin{proof}
+Deleting the last row and its
+monomial pivot column gives a full row minor \(\delta\).
+For the last block, of size \(r+1-l\) and pivot scalar \(t\),
+the two determinant identities are
+\[
+ |\delta|=|\Delta_l||t|^{r-l},\qquad
+ |\Delta_{r+1}|=|\Delta_l||t|^{r+1-l}.
+\] In the leading \(l\) positions all pivots are retained.
+At the last block, take precisely the pivot columns of the
+remaining \(r-l\) rows. In the Cauchy--Binet expansion, the
+triangular factors force this set of intermediate columns.
+Their principal triangular minors have determinant one. Thus
+the selected determinant has exactly \(r-l\) factors of \(t\)
+after the leading \(\Delta_l\), while the full determinant
+has \(r+1-l\).
+
+Integral operations in decreasing pivot order reduce
+both triangular factors to entries of size at most
+\(\sqrt{2f}\,\mathrm{rd}(E)\). This covering bound follows
+from Euclidean transference and the inverse different
+description of the dual. \cite{banaszczyk}
+Cauchy--Binet bounds every minor of the reduced
+representative by
+\[
+ 4^{r+1}((r+1)!)^2(\sqrt{2f}\,\mathrm{rd}(E))^{2(r+1)}
+ \prod_{j=1}^{r+1}\max(1,|\Delta_j|)\max(1,|\Delta_j|^{-1})
+\]
+at each embedding, with a zero minor contributing one.
+The block factors are bounded by the displayed product
+as each block gives the ratio of its two boundary
+determinants. The product formula bounds reciprocal
+products for all nonzero integral minors and for
+\(G=|\Delta_{r+1}|^2-TT'|\Delta_r|^2\) by the direct
+products. Here \(|x|^2=x\bar x\). The frame weights are
+at most one with reciprocal products at most
+\(\mathrm{rd}(E)^{2(r+1)^2}\).
+
+At the embedding \(\tau\), let \(G_{z,\tau}\) be the scaled Gram determinant and let \(d_{j,\tau}(Z)\) be the absolute value of the scaled leading minor of order \(j\).
+For \(m=2r+2\) set
+\begin{equation}\label{eq:reduced-flag-height}
+ H_C(Z)=b^{C^2m^3f}\left(\prod_{\tau,j}
+ \max(1,d_{j,\tau}(Z)/b^{Cm^2})\right)^4.
+\end{equation}
+Under \(\mathrm{rd}(E)\leq b\), \(T,T'\leq b^{C_Tm}\),
+and \(f\leq b^{C_g}\), these direct and reciprocal
+normalized products are at most \(H_C\), for fixed
+sufficiently large \(C\). The unnormalizing powers and
+cutoff cost at most \(b^{(C+1)m^3 f+O_{C_g,C_T}(m^2f)}\).
+For \(Q=H_C^2\) we also have
+\(\operatorname N_E(\delta),\prod_\tau|\tau G|,
+\operatorname N_E(\mathfrak d)^r\leq Q\), where
+\(\mathfrak d\) is the different.
+
+\end{proof}
+
+\begin{proposition}[Frames over a fixed sublattice]\label{prop:integral-flag-frames}
+In the nonzero-Gram case, assume the height bounds of
+Lemma~\ref{lem:reduced-flag-heights} and put \(Q=H_C(Z)^2\). If \(P\subset A\) has rank
+\(k-s\) and determinant at most \(D\), then
+\[
+ \#\mathrm{Fr}(Z,P)
+ \le N^{2r}D^r\,9^{sf}(D^2N^2Q)^{s+sr}Q^{2r^2}.
+\]
+Here \(\mathrm{Fr}(Z,P)\) consists of terms of Gram class \(Z\)
+whose orthogonal lattice contains \(P\) after projection along
+the isotropic span.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Reducing to a specified integral lift.}
+Choose a split row and an exact Gram representative.
+The right integral upper unitriangular operation
+reparametrizes the second frame. The adjoint of the
+left operation preserves the inverse different powers
+on \(X_R\), and extends by inverse adjoint on the dual
+partners and a shift of \(z\) into \(X_R\).
+For an integral map \(S\) from the middle lattice to \(X_R\), use the two transformations
+\[
+    w\longmapsto w+Sw,\qquad
+    y\longmapsto y-S^*y-aSS^*y .
+\]
+The first sends middle vectors into the graph of \(S\).
+Its new cross pairing with the dual partners vanishes because
+of \(-S^*\). The new partners' Gram vanishes by \(a+\bar a=1\),
+so this is the required integral isometry.
+
+\proofstep{Counting lifts and cofactor vectors.}
+
+The lift \(p+\phi(p)\) of \(p\in P\) is unique because
+\(Y\) has full row rank. Shifts of \(\phi\) come from
+maps \(A^\#\to X_R\), as the middle lattice projects
+onto \(A^\#\). In local invariant-factor coordinates for \(P\subset A^\#\cap EP\),
+restriction to \(P\) multiplies each lift coordinate by the associated
+elementary divisor. There are \(r\) target copies, so the number of
+lift classes is at most
+\[
+        [A^\#\cap EP:P]^r\le N^{2r}D^r .
+\] Fix one lift. Let \(S_0=A\cap P^\perp\), of rank
+\(s\), with \(\Delta(S_0)\leq D^2N^2\) by the gluing
+bound. Its discriminant module has annihilator \(I\)
+of norm at most \(D^2N^2\). The frame projections
+\(w_b\) to \(P^\perp\) lie in \(S_0^\#\).
+
+For the signed cofactor vector \(c\) of \(Y\),
+\[
+ T h\!\left(\sum c_bw_b,\sum c_bw_b\right)=G .
+\]
+Indeed the same combination of the frame vectors lies
+in \(X^\perp\), has norm \(-T'|\Delta_r|^2\), and pairs
+with \(z\) by a signed \(\Delta_{r+1}\).
+Orthogonality to the lift puts its positive part in
+\(P^\perp\). Thus \(G>0\) at every embedding in the
+nonzero-Gram case. For a difference \(x\ne0\) of cofactor combinations,
+\(\bar I h(x,x)\subset R\). As the norm of the nonzero integral
+ideal \(h(x,x)\bar I\) is at least one, the product over the
+chosen complex embeddings satisfies
+\[
+ \prod_\tau h_\tau(x,x)\ge (\operatorname N_E I)^{-1/2}.
+\]
+Divide the squared norms by the squared radii \(|\tau G|\).
+Their geometric mean gives normalized separation
+\((D^2N^2Q)^{-1/(2f)}\). Packing in the resulting product of
+balls gives at most \(9^{sf}(D^2N^2Q)^s\) possibilities.
+
+\proofstep{Counting the remaining frame entries.}
+
+Fixing the integral lift removes the ambiguity from the common sublattice. The residual multiplicity is now a count of entries of the two frames with specified pairings.
+
+
+At fixed cofactor combination tuple differences are
+\(vY\), where Cramer's rule puts \(v\) in
+\((\delta^{-1}S_0^\#)^r\). Integral Eichler shifts
+from \(S_0^r\) realize changes by \(vY\) and fix the
+lift. There remain at most \((D^2N^2Q)^{sr}\)
+classes. At fixed projections, two frames differ
+only in \(X\). For the difference matrix \(B\), the pairing identity gives
+\[
+ B^*Y+Y^*B=0\quad\Longrightarrow\quad Y^*Bz=0\qquad(z\in\ker Y).
+\]
+ Since \(Y\)
+is onto, \(Y^*\) is injective. Thus \(B=CY\), and
+\[
+       0=Y^*(C^*+C)Y\quad\Longrightarrow\quad C^*=-C.
+\] The entries of \(C\) lie in
+\(\delta^{-1}\mathfrak d^{-r}\) by Cramer's rule.
+Integral skew matrices act by central isotropic
+shifts, leaving at most \(Q^{2r^2}\) classes. Thus
+\begin{equation}\label{eq:flag-over-P}
+ \#\mathrm{Fr}(Z,P)\leq
+ N^{2r}D^r9^{sf}(D^2N^2Q)^{s+sr}Q^{2r^2}.
+\end{equation}
+
+\end{proof}
+
+\subsection{Pairs and the generic determinant}
+
+A pair has more structure than either frame separately. Their common sublattice bounds the ambiguity in assembling them, while its orthogonal determinant distinguishes the generic count.
+
+\begin{proposition}[Pair counts through an integral sublattice]\label{prop:flag-pair-counts}
+For the paired terms with full row rank in the projection and
+\(d(M_0)I_1I_2\le D\), the common sublattice has discriminant
+size at most \(D\) and the two term classes determine the pair
+class under the stated congruence conditions. Write \(H=H_XH_Y\)
+for the product of the reduced label heights and \(N=T^f\). For
+\(2\le s\le k\), \(D\le H^3\), the count per unit of total row mass is at most
+\begin{equation}\label{eq:flag-pair-mass-factor}
+ (D/N)^k H^{E_s}(csf)^{6sf}\Xi_s(H),\qquad
+ E_s=c\big((s+m)m+2+\log_2 f\big),
+\end{equation}
+where \(c\ge1\) is an absolute counting constant and
+\[
+ \Xi_s(H)=
+ \begin{cases}
+    m_{k-s}m_s/m_k,&2\le s\le k-2,\\
+    (ck)^{kf}(HN)^{ck},&s=k-1,k .
+ \end{cases}
+\]
+In the generic
+case the orthogonal determinant is
+
+\[
+ D_0=g^{-mf}\prod_\tau G_{z,\tau},
+\]
+ and at common rank \(k-1\)
+the full orthogonal lattice of the first term can be used in the
+partner bound.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Finding the common integral sublattice.}
+
+For two terms the projected ordinary orthogonal lattices
+\(U_i\) lie in the projected enlarged congruence lattices
+\(A_i\) with the same ranks and indices \(I_i\) as before
+projection. The projection is injective on the rational
+orthogonal complement because \(Y\) has full row rank.
+The pair correspondence gives \(M_0\subset A_1\cap A_2\).
+Indeed the paired vectors differ by \(X\), and the
+comparison isometry transports the second representative
+of the level relation while preserving its congruence.
+The map \(x\mapsto(x+U_1,x+U_2)\) now gives an injection
+\[
+ M_0/(M_0\cap U_1\cap U_2)\longrightarrow A_1/U_1\oplus A_2/U_2 .
+\]
+With \(P=M_0\cap U_1\cap U_2\), the injection bounds
+\([M_0:P]\) by \(I_1I_2\). In the determinant convention here,
+\[
+       d(P)=d(M_0)[M_0:P]\le d(M_0)I_1I_2\le D.
+\]
+
+\proofstep{Eliminating the comparison isometry.}
+
+The pair class is determined by its term classes.
+The relative comparison isometry of a fixed pair
+acts trivially modulo \(g\) on the definite quotient
+of an augmented flag complement by its isotropic span.
+For an integral \(x\) in the complement,
+the level congruence of the two isotropic lattices
+makes \(h(x,X_R)\) divisible by \(g\). Unimodularity
+extends the integral pairing \(h(x,X_R)/g\) to a vector \(l_0\)
+of the row lattice \(\Lambda\). Therefore
+\[
+       l=x-g l_0\equiv x\pmod{g\Lambda},\qquad h(l,X_R)=0 .
+\]
+
+Applying
+pair compatibility to \(l,x\) under both maps gives
+the congruence on the quotient. The quotient isometry
+has finite order by definiteness. The integral
+principal congruence subgroup at \(g\geq3\) is
+torsion free, by the binomial expansion at an odd
+prime dividing \(g\), or modulo \(4\) for a power of
+two. The maps also agree on the negative line modulo
+the isotropic space, which proves uniqueness on the
+entire quotient used in the pair class.
+
+Multiply \eqref{eq:flag-over-P} for the two terms.
+\proofstep{Summing over saturations.}
+
+The common lattice need not be saturated. Summing over its possible saturations is what turns the discriminant bound into a bound for integral pairs.
+
+
+For a saturation of determinant \(d\), at most
+\((D/d)^{k+\ell+1}\) sublattices lie over it.
+In the primitive means, multiplication by the sublattice bound gives
+\[
+     (d/N)^k(D/d)^{k+\ell+1}=(D/N)^k(D/d)^{\ell+1}.
+\]
+If
+\(H=H_C(Z')H_C(Z'')\) and \(D\leq H^{A_d}\)
+with fixed \(A_d\), use \(Q\leq H^2\) in the two
+counts and absorb all residual powers in
+\(H^{C((s+m)m+1+\ell)}(Csf)^{6sf}\).
+Use the middle-corank mass comparison when \(s\le k-2\) and
+the packing bound in the other range. The extra factor is thus
+\[
+   \begin{cases}
+     m_{k-s}m_s/m_k,&s\le k-2,\\
+     (Ck)^{kf}(HN)^{Ck},&s>k-2.
+   \end{cases}
+\]
+
+\proofstep{Computing the generic determinant.}
+
+The generic term has an additional determinant saving.
+The Gram of the two augmented frames has determinant
+\((-1)^{r+1}G\) by the rank-one block determinant
+identity. Incorporating both flag lattices' different
+powers gives determinant \(\prod_\tau G_{z,\tau}\).
+The primitive hull quotient is zero away from \(g\).
+At primes over \(g\), genericity generates it by the
+classes of \(g^{-1}(e'_b-\sum e_a\xi_{ab})\), with
+augmented frames. These generators are independent
+over \(R/(g)\) because the rational flag spaces are
+complementary and the different powers are units
+at those primes. The index is \(\operatorname N_E(g)^{r+1}=g^{mf}\).
+
+By unimodular gluing the hull and its orthogonal complement have
+equal discriminant modules in size. In the determinant convention
+\(d\), division by the hull index gives
+\[
+       D_0=g^{-mf}\prod_\tau G_{z,\tau}.
+\]
+Use \eqref{eq:flag-over-P} with \(s=1\), \(D=D_0\)
+and the corank-one mean. The same divisor sum gives
+\((D_0/N)^k\) at the cost of one factor \(N/d\).
+The residual powers are at most \(H_C^{Cr^2}\).
+Here \(h_E\leq\mathrm{rd}(E)^{f(1+\ell)}\) by Minkowski
+and ideal counting, and \(\log f\leq\sqrt r\) and
+\((kb)^8\leq g\leq b^{C_g}\) absorb the class factor.
+For a reduced label \(Z\), the normalized mean number of generic
+first terms is therefore bounded by \(H_C(Z)^{Cr^2} n_Z\), where
+\begin{equation}\label{eq:generic-first-term-factor}
+ (e\pi/(kv))^{kf}(D_0/N)^k
+ =\prod_\tau\left(\frac{e\pi G_{z,\tau}g^{-m}}{Tkv}\right)^k=n_Z .
+\end{equation}
+
+\proofstep{Recovering integrality of the partner.}
+
+For a fixed first generic term a partner of common
+rank \(k-1\) contains its entire orthogonal lattice
+modulo \(X\). Indeed every integral \(x\) of the first
+complement has a rational partner \(y\).
+Compatibility writes \(x-\beta x=g l+x_0+x_2\), where
+\(l\in\Lambda\) and the \(x_i\) are integral isotropic vectors
+of the indicated flags. The two rational flag components of
+\(g l\) are
+\[
+     g l=(x-y-x_0)+(y-\beta x-x_2).
+\]
+The vector \(l\) lies in the primitive hull of the second term's
+two flag lattices. Genericity puts \(g l\) in their integral sum.
+Its first component \(x-y-x_0\) is consequently integral, so
+\(y\) is integral too.
+The fixed lattice has determinant at most \(H_C(Z')\),
+so \eqref{eq:flag-over-P} with \(s=1\) bounds the
+partner count by \(C^f(H_C(Z')H_C(Z''))^{Cr^2}\).
+
+\end{proof}
+
+\subsection{Covolume of the simultaneous flag stabilizer}
+
+The multiplicity count leaves one measure factor in the unfolding. Its size is controlled by writing the common stabilizer in coordinates adapted to the same pair of flags.
+
+\begin{proposition}[Covolume in root coordinates]\label{prop:flag-stabilizer-covolume}
+Assume that \(Z\) has nonzero Gram invariant and the block
+factorization and height bounds of Lemma~\ref{lem:reduced-flag-heights}. Write \(R_{\rm stab}\) for the stabilizer lattice of the two flags in the term normalization. For a sufficiently large fixed \(C\), 
+\[
+ \operatorname{covol}(R_{\rm stab})\le H_C(Z)^{Cr^2}.
+\]
+
+\end{proposition}
+
+\begin{proof}
+Put \(n=r+1\) and write the sign-corrected Gram as \(Z=LWU\).
+For an upper unitriangular \(a\), the other triangularity condition
+becomes
+\[
+ ZaZ^{-1}\text{ lower unitriangular}
+ \quad\Longleftrightarrow\quad
+ W(UaU^{-1})W^{-1}\text{ lower unitriangular}.
+\]
+Conjugation by \(L\) preserves the lower unitriangular group.
+Conjugation by \(W\) then selects exactly the upper roots within
+its reversed blocks. These root coordinates
+have Lebesgue Haar measure, since multiplication in
+order of increasing root height is triangular with
+diagonal entries one. The column signs preserve it.
+
+\proofstep{Integral lifts of root entries.}
+
+If the entries of \(a-1\) lie in \(I=(G^2\Delta_n)\),
+the pair \(b,a\) acts on the two frames, with
+\[
+      b=(Za^{-1}Z^{-1})^*,\qquad b^*Za=Z .
+\]
+The upper-triangular actions with fixed last diagonal entry preserve
+the internal forms, and the matrix identity preserves the cross
+Gram. Extend by identity on their
+common orthogonal complement. Let \(A_{\rm joint}\) be the Gram matrix on the common frame
+span. In its projection the only possible denominator divides
+\(\det A_{\rm joint}=(-1)^nG\). Cramer's rule gives
+\[
+  a-1, b-1, a^{-1}-1, b^{-1}-1\in G M_n(R).
+\]
+The changes on the two frames therefore clear the denominator
+of the projection. The resulting isometry preserves the
+integral row. It acts unipotently on the isotropic
+flags, and trivially on the quotient by each
+isotropic span in its perpendicular space.
+Indeed it fixes the negative line there and is
+unipotent and unitary on the positive complement.
+
+\proofstep{Denominators in the triangular coordinates.}
+
+Let \(d_i\) be the nonzero leading determinants at
+the block boundaries, \(d_0=1\), and \(P_0=\prod_{i>0}d_i\).
+Block Gaussian elimination gives a factorization with
+identity diagonal blocks in \(L\). In block row \(i\),
+the upper factor is \(W_i^{-1}\) times the Schur row,
+whose entries have denominators dividing \(d_{i-1}\).
+For \(j>i\) the off-diagonal block in column \(i\) is the
+last block of
+\[
+   Z_{j,\le i}Z_{\le i,\le i}^{-1}
+     =d_i^{-1} Z_{j,\le i}\operatorname{adj}(Z_{\le i,\le i}).
+\]
+Its denominator thus divides \(d_i\).
+
+For the scalar \(t_i\) of a block of size \(h_i\), use
+\[
+ (d_{i-1}t_i)^{h_i}=\pm d_{i-1}^{h_i-1}d_i,\qquad
+ (d_i/t_i)^{h_i}=\pm d_i^{h_i-1}d_{i-1}.
+\]
+The elements \(d_{i-1}t_i\) and \(d_i/t_i\) are integral by
+integral closedness. Thus \(P_0^2U\) and \(P_0^2LW\) are integral,
+and \(U^{-1}=Z^{-1}LW\) makes \(\Delta_nP_0^2U^{-1}\) integral. Any other right triangular factor
+changes the root coordinates by an inner conjugation
+and preserves their measure.
+
+\proofstep{Fundamental domains and Haar volume.}
+
+The bounded denominators determine a root lattice. Its volume in the prescribed measure is the factor needed in the orbital integral.
+
+
+The level ideal \(J=I(\Delta_nP_0^4)\) on the root
+entries thus gives integral simultaneous lifts.
+Use root translations in increasing height to put
+each entry in an additive fundamental domain of
+the embedded \(J\). Each additive fundamental domain has covolume
+\((\mathrm{rd}(E)/2)^f\operatorname N_EJ\). The product has volume
+\[
+       \big((\mathrm{rd}(E)/2)^f\operatorname N_EJ\big)^{d_W},
+       \qquad d_W\le n^2 ,
+\]
+where \(d_W\) counts the roots.
+Writing \(S=\prod_{\tau,j}\max(1,|\Delta_j|_\tau)\),
+we have \(\operatorname N_EJ\leq(2TT')^{4f}S^{20}\).
+After multiplying by the measure factor
+\(\mathrm{rd}(E)^{2fn^3}\) of the term normalization,
+this volume is at most \(H_C(Z)^{Cr^2}\) for fixed
+sufficiently large \(C\), by the same size conversion
+as for the Gram minors.
+\end{proof}

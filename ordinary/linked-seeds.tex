@@ -1,0 +1,651 @@
+\section{Ordinary components from rank-two newforms and their adjoints}
+\label{sec:linked-seeds}
+\hypertarget{source-ordinary-linked-seeds}{}
+
+The rank-three trace estimate and the estimate over \(\Q(i)\)
+use a comparison in ranks two and three on a common
+CM field. Rank two enters because a rank-three deformation can preserve
+its middle line together with the plane on its two outer coordinates.
+A rank-two newform and the trace-zero adjoint of a second newform provide the two starting eigenpoints. To propagate support one must also identify the Hecke ideals containing these points. These ideals
+specify the starting components for the support comparison
+in Appendix~\ref{sec:linked-components}. Formula~\eqref{eq:marked-newform-choices} records the weights and characters that realize the two residual label sets on the marked field. Proposition~\ref{prop:marked-rank-two-three-seeds} identifies the resulting ordinary flags.
+
+\subsection{Two choices of a classical newform}
+\label{subsec:marked-newform-parameters}
+
+The two newforms need different weights and nebentypus characters to give the prescribed labels over the marked field.
+
+Write \(\epsilon\) for the \(\ell\)-adic cyclotomic character, and fix
+an identification \(\iota:\overline{\Q}_\ell\simeq\C\). The marked
+field data are an odd prime \(\ell\), an abelian CM extension \(L/\Q\),
+an imaginary quadratic field \(K\subset L\) of character \(\eta\),
+and a finite character \(\chi'\) of \(G_\Q\). The two characters
+factor through \((\Z/N_0)^\times\), with \((N_0,\ell)=1\).
+There is a prime \(w\nmid N_0\) with \(\chi'(w)=\eta(w)=1\) and
+a nontrivial character \(\theta\bmod w\) of order \(\ell\)
+trivial on \(G_L\). These requirements give
+\[ \ell\mid w-1,\qquad w\ne\ell,\qquad \theta(-1)=1 . \]
+
+For complex conjugation \(c\) the marking requires
+\(\chi'(c)=(-1)^j\). The scalar character to be imposed on the frame is
+\[
+ \Psi(g)=\epsilon(g)^j\chi'(g) .
+\] There is
+\(g_*\in G_L\) with \(\bar\Psi(g_*)^2\ne1\). A bar denotes
+reduction in the residue field of \(\overline{\Q}_\ell\).
+In the application \(\chi'\) has order prime to \(\ell\),
+\(\bar\Psi\) equals the prescribed residual scalar on the frame,
+and \(\chi'\ne\eta\). The level integer \(M\ne0\) is divisible
+by \(2\ell\). The extension \(L/L^+\) is unramified at all finite
+places and split over the primes dividing \(M\), and
+\(\chi'|_{G_L}\) is unramified outside \(M\). These are the
+field and character conditions used in the two seed constructions.
+
+We need eigenforms at each of the following parameters. In either
+row \(m\equiv j\bmod(\ell-1)\) can be taken arbitrarily large.
+\begin{equation}\label{eq:marked-newform-choices}
+\begin{array}{c|c|c|c}
+\text{seed}&k&\phi&\text{operation on the attachment}\\ \hline
+2&2m+1&(\chi')^2\eta&\text{twist by }(\epsilon^m\chi')^{-1}\\
+3&m+1&\chi'\eta&\text{take the trace-zero adjoint}
+\end{array}
+\end{equation}
+In the first row \(\phi\) is odd, and in the second row it is
+nontrivial by \(\chi'\ne\eta\). In both rows
+\(\phi(c)=(-1)^k\) and \(\phi(w)=1\). Take the primitive character
+of conductor \(f\mid N_0\) associated to \(\phi\). We have \(f>1\).
+The exact conductor of \(\gamma=\phi\theta\) is \(fw\).
+
+\begin{lemma}[Newform seeds with the prescribed congruences]
+\label{lem:ordinary-newform-seeds}
+For the field and character data of
+Section~\ref{subsec:marked-newform-parameters}, the two rows of
+\eqref{eq:marked-newform-choices} give ordinary seed representations. With
+\(\Phi=\epsilon^{k-1}\phi\) and the auxiliary character \(\theta\) of
+conductor \(w\), the initial two-dimensional attachment
+\(\rho:G_{\mathbb Q}\to\mathrm{GL}_2(\overline{\mathbb Q}_\ell)\) satisfies
+\[
+       \det\rho=\Phi\theta,\qquad
+       \bar\rho^{\rm ss}\simeq 1\oplus\bar\Phi.
+\] The
+choice at rank three is shared by both exceptional levels.
+The classical existence, congruence and Galois attachment used
+in the construction are the cited inputs.
+\end{lemma}
+
+\begin{proof}
+\proofstep{The Eisenstein congruences for the two newform choices.}
+For this application one needs the Eisenstein congruence for both
+parities. Here is a calculation of its constant valid in every
+admissible large weight. With \(L_k(X)=(X\,d/dX)^{k-1}(X/(1-X))\)
+as in the cusp correction of Section~\ref{sec:count-three-tensor},
+one has the rational identity
+\[
+    \sum_{h=0}^{w-1}L_k(X\zeta_w^h)=w^kL_k(X^w).
+\]
+It follows by summing the power series for \(|X|<1\), since only
+indices divisible by \(w\) survive. For a primitive \(fw\)-th
+root \(z\), put \(z_f=z^w\). The constant of the normalized
+Eisenstein series at infinity is
+\[
+  \frac{1}{2\tau(\gamma^{-1})}
+     \sum_{a\in(\Z/fw)^\times}\gamma^{-1}(a)L_k(z^a).
+\]
+The primitive Gauss-sum product is \(\gamma(-1)fw\), and both
+factors are integral at \(\ell\). The denominator is a unit.
+Each lift of a unit \(u\bmod f\), including the lift divisible by
+\(w\), evaluates \(L_k\) at a nonidentity prime-to-\(\ell\) root.
+Its denominator \((1-z^a)^k\) is a unit.
+
+We may therefore replace
+\(\theta^{-1}\) by 1 modulo the maximal ideal. For each \(u\)
+first sum over all lifts using the identity, then remove the
+one lift \(wb\) with \(wb\equiv u\bmod f\). The reduced numerator is
+\[
+    \bigl(w^k-\phi^{-1}(w)\bigr)
+       \sum_{u\in(\Z/f)^\times}\phi^{-1}(u)L_k(z_f^u)=0
+       \quad\bmod\mathfrak m .
+\]
+This proves the smallness needed for the integral cusp correction.
+The separator of unit cusp labels constructed above has weight at
+most \(8\varphi(fw)\). Completing its weight, summing with the
+nebentypus and dividing by twice a unit gives the integral form
+with constant one. The subtraction and simultaneous Hecke lift in
+the proof of the Eigenform in the rank-four construction now apply for
+\(k\ge 8\varphi(fw)+10\) of the indicated parity. In particular
+the lower cutoff can be fixed before \(m\) varies on its progression.
+The constants, coefficient fields and levels in this calculation
+are taken for the indicated characters.
+
+\proofstep{The ordinary Galois attachment.}
+Their Galois attachments determine the marked points.
+
+In either row let \(\rho\) be the ordinary attachment of the
+resulting normalized newform of weight \(k\) and level \(fw\).
+Set \(\Phi=\epsilon^{k-1}\phi\). With the arithmetic Frobenius
+convention for the newform we have
+\[
+  \det\rho=\Phi\theta,\qquad
+  \bar\rho^{\,\mathrm{ss}}=1\oplus\bar\Phi,\qquad
+  \rho|_{I_p}\simeq1\oplus\phi\theta\quad(p\ne\ell).
+\]
+The last assertion follows from equality of the conductor with the
+central character conductor at each ramified prime, as in the
+prime-index eigenform argument. On \(D_\ell\) the ordinary flag has
+successive characters \(\Phi\theta\nu^{-1},\nu\), where \(\nu\)
+is unramified, with Frobenius the unit root of the Hecke polynomial.
+The congruence \(a_\ell\equiv1\) makes \(\bar\nu=1\) on the
+whole decomposition group. The inertial exponents of the flag
+are \(k-1,0\). We use the absolute irreducibility and local
+compatibility of the cuspidal newform attachment.
+\cite{deligne-galois,carayol-local,hida-ordinary-galois}
+
+\end{proof}
+
+\begin{lemma}[Irreducibility of the two restricted seeds]
+\label{lem:marked-newform-restriction}
+For the two newforms of Lemma~\ref{lem:ordinary-newform-seeds}, write \(\rho_1,\rho_2\) for their attachments in the order of
+\eqref{eq:marked-newform-choices}. Their irreducibility ranges are
+\[
+ \begin{aligned}
+ \mathbb Q\subseteq K'\subseteq L&\quad\Longrightarrow\quad
+                 \rho_1|_{G_{K'}}\text{ is irreducible},\\
+ H\le G_{\mathbb Q}\text{ open}&\quad\Longrightarrow\quad
+                 \rho_2|_H\text{ is irreducible}.
+ \end{aligned}
+\]
+\end{lemma}
+\begin{proof}
+Suppose an open normal subgroup \(H\) has an invariant line for
+\(\rho\). Its orbit under \(G_\Q\) consists of \(H\)-invariant
+lines and contains at least two, by irreducibility over \(\Q\).
+On \(H\cap I_\ell\) the two ordinary exponents are distinct and
+the image of \(\epsilon\) is infinite. Some element thus has two
+distinct eigenvalues. Its two eigenlines exhaust the orbit.
+Their common stabilizer \(D\) has index two and contains \(H\).
+For every \(s\notin D\), the matrix interchanges the lines and
+has trace zero. The residual trace identity gives
+\(\bar\Phi(s)=-1\). Applying the same identity to \(sh\) for
+\(h\in D\) gives \(\bar\Phi|_D=1\). A reducible restriction therefore satisfies
+\[
+                  \bar\Phi|_H=1,\qquad \bar\Phi^2=1
+                       \ \text{on }G_\Q .
+\]
+
+In the first row \(\bar\Phi|_{G_L}=\bar\Psi^2\), so the first
+consequence at \(H=G_L\) contradicts the marker \(g_*\).
+In the second row \(\bar\Phi|_{G_L}=\bar\Psi\), and the second
+consequence contradicts the same marker. Passing to the normal
+core of any open subgroup shows that the second attachment stays
+irreducible on every open subgroup. The first assertion suffices
+for every intermediate field between \(\Q\) and \(L\).
+
+\end{proof}
+
+\subsection{The marked representations}
+
+The two newforms now have the required irreducibility properties on restriction. To locate their points in the marked representation rings we must also identify their ordered local characters and the effect of the common scalar twist.
+
+\begin{construction}
+\[
+\begin{array}{lll}
+\text{seed}&\text{ordered data on restriction}&\text{support to be met}\\ \hline
+r_2&\bar\Psi,\bar\Psi^{-1}\quad\text{(residue)}&J_2\\
+r_3=\operatorname{Ad}^0\rho&\alpha/\beta,1,\beta/\alpha&
+        J_3\ \text{and }J_0\text{ separately}
+\end{array}
+\]
+\caption{The two seeds before the common level twist. The adjoint column uses a diagonal rank-two parameter with characters \(\alpha,\beta\).}\label{fig:ordinary-seed-ranks}
+\end{construction}
+
+\begin{proposition}[The two polarized marked seed representations]
+\label{prop:marked-rank-two-three-seeds}
+Take the two attachments in Lemma~\ref{lem:ordinary-newform-seeds}
+with the operations in \eqref{eq:marked-newform-choices}. Their marked
+rank-two twist and rank-three adjoint are polarized and have the
+ordered ordinary flags. Before the common level twist, the rank-two
+restriction has determinant one, residual labels
+\((\bar\Psi,\bar\Psi^{-1})\) and ordinary inertia exponents
+\((m,-m)\). On a diagonal rank-two parameter the adjoint construction gives
+\[
+ \operatorname{Ad}^0(\alpha\oplus\beta)
+      \simeq(\alpha/\beta)\oplus1\oplus(\beta/\alpha),\qquad
+ \det\operatorname{Ad}^0(\alpha\oplus\beta)=1 .
+\] In rank two the restriction to
+\(G_L\) is irreducible. In rank three the adjoint remains irreducible
+on every open subgroup of \(G_L\), using
+Lemma~\ref{lem:marked-newform-restriction}.
+\end{proposition}
+
+\begin{proof}
+\proofstep{The rank-two polarization and its local flag.}
+For rank two let \(\Xi=\epsilon^m\chi'\) and
+\(\sigma=\rho\otimes\Xi^{-1}\) on \(G_\Q\).
+The untwisted determinant in this row is \(\Xi^2\eta\theta\),
+hence \(\det\sigma=\eta\theta\). The rational residual
+characters of \(\sigma\) are \(\bar\Psi\bar\eta,\bar\Psi^{-1}\).
+On restriction to \(G_L\) the characters \(\eta,\theta\) disappear.
+The ordered residual labels, tame inertia labels away from \(\ell\),
+and ordinary inertia exponents of \(r_2=\sigma|_{G_L}\) are
+\[
+  (\bar\Psi,\bar\Psi^{-1}),\qquad
+  (\chi',(\chi')^{-1}),\qquad (m,-m),
+\]
+where characters in the display are restricted to the relevant
+groups. The ordered reductions at \(D_\ell\) use \(\bar\nu=1\).
+
+For the pairing put \(J=\left(\begin{smallmatrix}0&1\\-1&0\end{smallmatrix}\right)\)
+and \(C=\sigma(c)\). Since \(C^2=1\) and \(\det C=-1\),
+\(C^tJC=-J\) gives \((JC)^t=JC\). For \(s\in G_L\),
+\(\det\sigma(s)=1\), so
+\[
+             \sigma(s)^t(JC)\sigma(csc^{-1})=JC .
+\]
+Thus the pairing of the seed before the level twist is symmetric
+with multiplier one.
+
+
+At the level use the specified restriction \(\kappa_2=\kappa|_{G_L}\)
+of the algebraic Hecke character twist on \(K\). The two labelled infinity exponents and the polarization character of the twist satisfy
+\[
+ (h_\tau,h_{\bar\tau})=(-1,0)\ \text{up to order},\qquad\kappa\kappa^c=\epsilon^{-1}.
+\]
+Its inertia away from \(\ell\) has bounded prime-to-\(\ell\) order and is trivial away from the discriminant. Here is the construction. Put
+\(D=|\operatorname{disc}K|\ge3\), so \(\ell\nmid D\), and fix an
+embedding \(\tau:K\hookrightarrow\C\). On the subgroup of
+\((\mathcal O_K/D)^\times\) generated by rational units modulo
+\(D\) and global units, prescribe \(\eta\) on the former and
+\(\tau\) on the latter. Their intersection comes from \(1,-1\).
+Indeed the two exceptional unit groups are the fourth and sixth
+roots of unity, whose nonrational elements have coefficient
+\(\pm1\) on the second integral basis element.
+
+The sign prescriptions on their common element agree because
+\[
+ \eta(-1)=-1=\tau(-1).
+\] The character has order
+prime to \(\ell\), since \(\ell\) is odd and prime to \(D\).
+It factors through the quotient by the \(\ell\)-Sylow subgroup
+and extends there to a character \(e\), by extension of characters
+of finite abelian groups. On ideles with unit finite components take
+\(x_\infty^{-1} e(x_f\bmod D)\), using \(\tau\) for the archimedean
+coordinate. This character is trivial on diagonal global units.
+It extends trivially over \(K^\times\), then to all ideles by
+divisibility of \(\C^\times\). The original subgroup of ideles
+is open, giving continuity.
+
+At an inert prime \((p)\) with \(p\nmid\ell D\), divide by the diagonal idele \(p\). The remaining value on a uniformizer idele is
+\[
+ p\,\eta(p)^{-1}=p(-1)^{-1}=-p .
+\]
+Thus the associated \(\ell\)-adic character satisfies
+\(\kappa(t^2)=-\epsilon(t)^{-1}\) at an arithmetic Frobenius
+\(t\) at such a prime, with the inverse dictated by the chosen Artin reciprocity convention. Chebotarev and continuity give the identity on
+the entire nontrivial coset of \(G_K\). For \(s\in G_K\) let \(t=sc\). Since \(c^2=1\),
+\[
+ t^2=s(csc^{-1}),\qquad
+ \epsilon(t)=-\epsilon(s),\qquad
+ \kappa(s)\kappa(csc^{-1})=\kappa(t^2)=\epsilon(s)^{-1}.
+\]
+The two twists in the conjugate pairing therefore contribute
+the multiplier \(\epsilon^{-1}\).
+Base change the newform with its
+algebraic twist \(\Xi^{-1}\) to \(K\), twist there by the character
+of \(\kappa\), and base change to \(L\) through a cyclic tower.
+
+At a cyclic step loss of cuspidality would give a nontrivial
+self-twist by a character \(\nu\) trivial on the upper field.
+Local Galois compatibility at the unramified Frobenii and
+Chebotarev give an invertible intertwiner satisfying
+\[
+       A\rho(g)A^{-1}=\nu(g)\rho(g).
+\]
+For \(g\) in the upper Galois group it commutes with the
+absolutely irreducible restriction, so \(A\) is scalar. Substituting \(A=cI\), with \(c\ne0\), in the intertwining identity gives 
+\[
+ \rho(g)=\nu(g)\rho(g)\quad\Longrightarrow\quad\nu(g)=1\qquad\text{for every }g,
+\]
+ since \(\rho(g)\) is invertible. This contradicts the choice of twist. The finite-place operations on
+parameters are restriction and multiplication by a character.
+The two distinct algebraic weights at each embedding stay distinct
+under their common shift. The pairing and unramified comparison
+give conjugate self-duality of the regular algebraic cusp in the chosen algebraic normalization, by strong multiplicity one.
+\cite{arthur-clozel,clozel-rajan}
+
+\proofstep{The adjoint seed in rank three.}
+For rank three take the second newform. Its adjoint action on the trace-zero endomorphisms is
+\[
+ r_3(g)X=\rho(g)X\rho(g)^{-1},\qquad g\in G_L,\quad X\in\operatorname{End}^0(V_\rho).
+\] Equivalently, this representation is \(\operatorname{Sym}^2(\rho)\otimes(\det\rho)^{-1}\). The identification
+sends \(vw\) to the endomorphism
+\(x\mapsto v(w\wedge x)+w(v\wedge x)\) valued in
+\(V\otimes\det V\). The formula is equivariant. In a basis \(e_1,e_2\), identify
+\(e_1\wedge e_2\) with \(1\). The three symmetric tensors map to
+\[
+ e_1^2\longmapsto 2E_{12},\qquad
+ e_1e_2\longmapsto E_{22}-E_{11},\qquad
+ e_2^2\longmapsto-2E_{21}.
+\]
+These span the trace-zero matrices since \(2\) is a unit. If the two eigenvalues on an element
+are \(a,b\), the three adjoint eigenvalues are \(a/b,1,b/a\),
+including multiplicities for a Jordan matrix. The stable
+trace-zero lattice of an integral model therefore has the
+prescribed residual characteristic polynomials.
+
+In an upper
+triangular basis for the ordinary flag, the upper root line and
+the trace-zero Borel give an invariant flag with those ordered
+ratios of the diagonal characters. Applying this also to the
+diagonal tame inertia groups gives, respectively,
+\[
+ (\bar\Psi,1,\bar\Psi^{-1}),\qquad
+ (\chi',1,(\chi')^{-1}),\qquad (m,0,-m).
+\]
+Let \(A_c=\operatorname{Ad}(\rho(c))\) on \(\mathfrak{sl}_2\).
+The trace form is nondegenerate and invariant and \(A_c\)
+is an isometry with \(A_c^2=1\). Thus
+\(P(X,Y)=\operatorname{tr}(X A_cY)\) is symmetric.
+Since \(A_c r_3(cgc^{-1})=r_3(g) A_c\), invariance gives
+\(P(r_3(g)X,r_3(cgc^{-1})Y)=P(X,Y)\).
+For \(r_3'=\epsilon^{-1}r_3\) on the marked level, the
+same calculation gives
+\[
+ P(r_3'(g)X,r_3'(cgc^{-1})Y)=\epsilon(g)^{-2}P(X,Y).
+\]
+
+\proofstep{Irreducibility on every open subgroup.}
+To prove absolute irreducibility of \(r_3\) on every open subgroup,
+suppose a nonzero proper subspace is stable. Its dimension is one
+or two, and in the latter case its trace-orthogonal line is stable.
+Let \(0\ne X\in\mathfrak{sl}_2\) span the stable line.
+For each \(g\) of the open subgroup there is \(a_g\ne0\)
+with \(\rho(g)X\rho(g)^{-1}=a_gX\). Hence for an eigenvector
+\(v\) of \(X\) of eigenvalue \(\lambda\),
+\[
+                   X\rho(g)v=a_g^{-1}\lambda\,\rho(g)v .
+\]
+The set of eigenlines is therefore invariant. It has one
+or two elements: a scalar with trace zero in characteristic
+zero is zero, and \(X\ne0\). The stabilizer of one eigenline
+is closed by continuity and has finite index at most two,
+hence is open. This contradicts irreducibility of the
+original attachment on every open subgroup.
+
+\paragraph{The rank-three cusp and its local conditions.}
+Base change the second newform to \(L\) by a cyclic tower as
+above. At each step a character self-twist obstructing cuspidality
+would intertwine two representations identical on the next
+Galois group, where the intertwiner must be scalar. The same
+argument excludes any nontrivial self-twist of the resulting cusp.
+Taking central characters of the rank-two self-twist gives
+\[
+ \pi\simeq\pi\otimes\chi\quad\Longrightarrow\quad \omega_\pi=\omega_\pi\chi^2\quad\Longrightarrow\quad\chi^2=1 .
+\] Its class field character has open kernel.
+On that kernel the Galois intertwiner commutes with
+the absolutely irreducible restriction, hence is scalar
+and forces the character to be trivial on the whole group.
+Apply Gelbart--Jacquet's adjoint lift to the unitarization of
+this cusp. Their cuspidality criterion now applies. The adjoint has trivial central character.
+
+On each toral
+rank-two parameter its three lines are
+\[
+                  \alpha/\beta,\quad 1,\quad\beta/\alpha .
+\]
+The two infinity weights differ by \(m\), so these three weights
+are regular. In the algebraic normalization the attached
+representation is \(\epsilon^{-1}r_3\). Indeed the common
+rank-two scalar cancels in the ratios, and the rank-three
+factor \(|\det|^{(1-3)/2}\) multiplies each parameter at a
+geometric Frobenius of norm \(q\) by \(q\). This is
+\(\epsilon^{-1}\) there. Equality at unramified primes identifies
+the semisimple attachment by Chebotarev. The self-duality of
+the adjoint and its invariance under conjugation of \(L\)
+give conjugate self-duality of the cusp. \cite{gelbart-jacquet}
+
+\proofstep{Local conditions on the attached cusps.}
+We check the local size condition on the actual attached cusps
+in both ranks. For \(p\nmid fw\), let \(\alpha_p,\beta_p\) be the parameters after unitary normalization. Purity for a holomorphic newform of weight \(k\ge2\) gives
+\[
+ |\alpha_p|=|\beta_p|=1 .
+\] This statement about
+complex Satake parameters includes \(p=\ell\). At \(p\mid fw\)
+the conductor argument gives a principal series with distinct
+unit restrictions of its two characters and zero monodromy.
+If the inducing characters are \(\chi_1,\chi_2\),
+unitarity identifies the multisets \(\{\chi_1,\chi_2\}\)
+and \(\{\bar\chi_1^{-1},\bar\chi_2^{-1}\}\).
+
+On units the values of \(\chi_i\) are roots of unity, so
+\[
+ |\chi_i(u)|=1\quad\Longrightarrow\quad\overline{\chi_i(u)}^{-1}=\chi_i(u)\qquad(u\text{ a unit}).
+\] The two restrictions
+to units are distinct, so the permutation identifying the two
+multisets fixes both indices:
+\[
+ \chi_i=\bar\chi_i^{-1},\qquad
+               |\chi_i(\varpi_v)|=1\quad (i=1,2).
+\]
+This labels the two modulus-one uniformizer values without
+interchanging the two inertial characters. Restricting Weil parameters
+in cyclic base change preserves these properties of absolute
+values and zero monodromy. On rank three the three ratios
+therefore have absolute value one on uniformizers everywhere.
+On rank two an algebraic Hecke character has absolute value
+a real power of the adelic norm, since the idele classes of norm
+one are compact. Its twist gives a common real exponent \(t\)
+for the entire cusp. The inducing characters on either cusp
+have absolute value \(q_v^t\) on a uniformizer at every finite
+place \(v\) for one \(t\) in the normalization in use.
+
+In
+particular their magnitudes are strictly between
+\(q_v^{t-1/2}\) and \(q_v^{t+1/2}\). For any two of these inducing characters the strict bounds on magnitudes at a uniformizer give
+\[
+ q_v^{-1}<|\chi_i(\varpi_v)/\chi_j(\varpi_v)|<q_v.
+\]
+Their ratio is therefore different from \(|\cdot|^{\pm1}\), and normalized induction stays irreducible even if an inertia character becomes trivial over \(L\). This proves the toral condition at every
+finite place. Strong multiplicity one gives the same condition
+for every cusp with the specified unramified attachment.
+\cite{deligne-weil,carayol-local,bernstein-zelevinsky,arthur-clozel,gelbart-jacquet}
+
+At \(v\mid\ell\) the ordered Galois characters have distinct
+algebraic exponents differing by multiples of \(m\) at every
+embedding. After the common shift, write their exponents as \(h_i\).
+At every embedding the cyclotomic ratio
+\(\kappa_i/(\epsilon\kappa_j)\) has exponent
+\[
+                       h_i-h_j-1\in m\mathbb Z-1 .
+\]
+Here \(m\ge2\), so the exponent is nonzero even for \(i=j\).
+Every positive power has nonzero exponent on the open
+inertia subgroup killing the finite parts. This proves the potential
+nonresonance of the flags in the seed condition.
+
+\proofstep{Descent and the possible local twists.}
+It remains to identify the local components of the adjoint up to the allowed twists.
+
+The unitary spectral comparison gives another realization of the adjoint transfer. To compare it with the classical adjoint lift used here, twist the Galois representation of the second newform by an algebraic character
+\(\lambda\) on \(G_L\) with
+\(\lambda\lambda^c=(\epsilon^{m+1}\chi'\eta\theta)^{-1}\).
+Thus the rank-two multiplier becomes \(\epsilon^{-1}\), and
+the two local exponents still differ by \(m\). Twisting by a character multiplies every representing matrix by a scalar. The rank-two adjoint is therefore unchanged:
+\[
+ (\lambda(g)\rho(g))X(\lambda(g)\rho(g))^{-1}=\rho(g)X\rho(g)^{-1}.
+\] In the unitary comparison fix one
+prime above each bad split place. A single sufficiently deep
+level there kills all the local smooth characters.
+
+At the additional regular split Frobenii write \(a=\alpha/\beta\) for the input ratio. The two tests read respectively
+\[
+ (a,1,a^{-1})\quad\text{in rank three},\qquad a^2\quad\text{as the rank-two ratio}.
+\]
+The output levels and infinity types are fixed as the test
+set grows. Their finite spectra therefore have a constituent
+satisfying the tests simultaneously, by the finite intersection
+property. In the rank-two alternative, put
+\(u=\operatorname{tr}(\rho)^2/\det(\rho)-2\). The required
+identity is \(u'=u^2-2\) on the regular open set after
+Chebotarev. On this set it implies the character identity
+\[
+ \operatorname{tr}(\operatorname{Sym}^4\rho/\det(\rho)^2)+1
+ =\operatorname{tr}(\operatorname{Ad}^0\rho)
+    +\operatorname{tr}(\operatorname{Ad}^0\rho').
+\]
+
+To see the obstruction, take a coset of an open normal subgroup
+inside the set. The identity component of the projective
+Zariski closure of \(\rho\) is \(\mathrm{PGL}_2\). A proper
+connected subgroup is solvable, hence fixes a line, contrary
+to irreducibility on open subgroups. The five-dimensional
+summand stays irreducible on the subgroup. Write \(A\) for the invertible matrix of the translating element on the five-dimensional summand. Its translated trace cannot vanish identically. Indeed vanishing on the subgroup would give, by the full matrix span,
+\[
+ \operatorname{tr}(AX)=0\ \text{for every }X\in M_5\quad\Longrightarrow\quad A=0,
+\]
+by perfectness of the trace pairing.
+
+It cannot occur in a sum of coefficients of representations
+of dimension at most three. This last assertion follows by
+applying the simple block projector in the semisimple quotient
+of the group algebra image on the direct sum, or by taking
+the linear dual of its matrix coefficient spaces on constituent
+blocks. The translated traces on reducible summands may be
+computed on a filtration stable under the translating element,
+by first semisimplifying as representations of the whole group.
+Their restrictions to the normal subgroup are then semisimple.
+In the remaining rank-three case the polarization relates the traces at \(g\) and \(g^{-1}\). Its
+open-set twist test identifies the attachment with the
+cyclotomic twist of the adjoint. Varying the chosen place and
+using strong multiplicity one gives the local identifications
+at all bad places.
+
+\end{proof}
+
+\subsection{Admission at the three levels}
+
+The marked representations supply the ordered characters and determinants. To start the component comparison, their evaluations must factor through the Hecke quotients for the prescribed levels, including each of the two rank-three ideals.
+
+Let \(A_n\) be the representation ring of the marked frame, \(B_n\) its degree-zero subalgebra and \(B_{0,n}\) the universal ordinary determinant-pair ring for the level. The determinant and the ordered characters of the scalar twist define the maps
+\[
+ B_{0,n}\xrightarrow{\ \Phi_n\ } B_n\lhook\joinrel\longrightarrow A_n,
+\]
+with \(\Phi_n\) surjective. In rank three take two levels,
+each with one exceptional prime, the two primes distinct. Use
+one coefficient extension containing the tame scalar data.
+At rank two denote the Hecke ideal by \(J_2\), and at the two
+rank-three levels by \(J_3,J_0\), with the corresponding determinant
+rings and maps in rank three taken separately. The same
+untwisted \(A_3,B_3\) and the same \(\kappa_3=\epsilon^{-1}\)
+enter both maps. The choice of \(m\) for the adjoint is made
+once for these two levels. The rank-two weight can be chosen
+independently.
+
+\begin{proposition}[Admission on all three ordinary supports]
+\label{prop:ordinary-linked-seed-admission}
+For each of \(J_2,J_3,J_0\), with its own quotient map
+\(\Phi_n\), there is a prime \(P\) of the marked representation
+ring for which
+\[
+ \Phi_n(J)\subseteq P\cap B_n,\qquad
+ B_n/(P\cap B_n)\simeq C,\qquad
+ \dim C=1+n[L^+:\mathbb Q].
+\]
+The rank-three seed is shared while the two rank-three quotient
+maps remain separate.
+\end{proposition}
+
+\begin{proof}
+\proofstep{The actual points of the three ordinary supports.}
+On tame inertia away from \(\ell\) the prescribed residual
+character on the frame has the reduction of \(\chi'\). Let \(m\) be the prime-to-\(\ell\) order of \(\chi'\). Since reduction is injective on \(\mu_m\),
+\[
+ \bar\chi'(g)=1\quad\Longrightarrow\quad\chi'(g)=1\qquad(g\text{ in tame inertia}).
+\] The diagonal inertia
+description shows that \(r_n\) kills the required tame kernel.
+On the level chart apply the same test to the joint ordered
+labels of \(\kappa_n r_n\). Their inertia orders divide the
+product of the two fixed prime-to-\(\ell\) orders. The tame
+kernel of this chart is again killed, including inertia at
+the chosen exceptional prime, which avoids the conductors.
+
+At \(\ell\) take the twisted flags of the constructed
+representations. Their reductions have exactly the prescribed
+order. These factorizations are continuous, since the maps of
+the profinite groups are quotient maps. By the universal property of the determinant pair, these continuous data give a point over the coefficient integers \(O\):
+\[
+ x:B_{0,n}\longrightarrow O .
+\]
+The twisted cusp, its unramifiedness at the exceptional prime,
+and its regular ordinary nonresonant flag put \(J\) in \(\ker x\)
+by the classical point theorem for this Hecke level. This
+reasoning applies to each of \(J_2,J_3,J_0\) and gives an
+irreducible untwisted specialization in the frame in each case.
+
+\proofstep{The dimension needed at the starting components.}
+Each starting point now lies on the required Hecke support. Propagation also needs a component of sufficient dimension through each point; this is the remaining condition to check.
+
+We need a component of large dimension. Choose a minimal prime \(Z\) over \(J\) lying in \(\ker x\), and pass to the generic field of this component:
+\[
+ J\subseteq Z\subseteq\ker x,\qquad C=B_{0,n}/Z,\qquad E=\overline{\operatorname{Frac}(C)} .
+\]
+The universal determinant gives a semisimple representation
+\(R\) over \(E\). At \(x\), choose \(n^2\) group elements whose
+images span the full matrix algebra of the seed. The determinant
+of the matrix of traces of pairwise products is nonzero, by the
+nondegenerate trace pairing. Those traces lift to the same traces
+in \(C\), so the matrices span \(\operatorname{Mat}_n(E)\)
+for \(R\) as well.
+
+In particular \(R\) is absolutely irreducible.
+The kernel of \(U=\kappa_n^{-1}R\) is the common equality set
+\[
+                \operatorname{tr}U(hg)=\operatorname{tr}U(h)
+                        \qquad\text{for all }h .
+\]
+This follows by pairing \(U(g)-1\) against the full span. It
+proves the kernel closed in the level Galois group, since
+the traces come from the continuous determinant and scalar.
+Conjugate duality makes the kernel invariant under the
+involution. The same trace test after multiplying a putative
+relation by all \(U(h)\) turns the ordinary product and
+exceptional unramified determinant relations into matrix
+relations.
+
+If a remaining marked tame inertia element \(g\) has trivial
+untwisted residual label, some fixed prime-to-\(\ell\) power
+of \(g\) kills the scalar and is in the tame kernel of the level.
+Thus for some positive integer \(a\) prime to \(\ell\), the test on the scalar and on the tame kernel gives
+\[
+ U(g)^a=1,\qquad(a,\ell)=1 .
+\]
+Each eigenvalue \(\alpha\) reduces to one in an integral
+extension at a prime over the residual point, since the residual
+polynomial is \((X-1)^n\). Factor \(\alpha^a-1\). The second factor reduces to \(a\ne0\) and hence is a unit:
+\[
+ 0=(\alpha-1)\underbrace{(1+\alpha+\cdots+\alpha^{a-1})}_{\text{unit}}\quad\Longrightarrow\quad \alpha=1 .
+\] Separability of
+\(X^a-1\) gives \(U(g)=1\). Consequently \(U\) descends to the
+frame with its polarization and its ordered flag relations.
+Putting it in the marked frame normal form gives a map
+\(\xi:A_n\to E\) whose restriction to \(B_n\) takes values in
+\(C\).
+
+Indeed the degree-zero matrix products and flag
+characters in this normal form belong to the trace and
+ordinary-character algebra, as in the frame construction.
+Retwisting recovers the generic pair on \(B_{0,n}\), so by
+universality the composite \(B_{0,n}\to B_n\to C\) is the
+quotient map. For \(P=\ker\xi\) we have proved
+\[
+       \Phi_n(J)\subseteq P\cap B_n,\qquad
+       B_n/(P\cap B_n)\simeq C,\qquad
+       \dim C=1+n[L^+:\Q].
+\]
+For the dimension, \(B_{0,n}/J\) is finite and torsion-free
+over the power series weight ring of relative dimension
+\(n[L^+:\Q]\) over a DVR. A minimal prime is associated,
+so it cannot contain a nonzero weight scalar. Its domain
+quotient is finite integral over the weight ring, which gives
+the displayed equality. We have a point of the required
+dimension for each of the three actual ideals.
+\end{proof}

@@ -1,0 +1,209 @@
+\subsubsection*{The upper limit in the slope integral}
+\label{par:marked-height-limit}
+
+The preceding rank estimate bounds the integrand in the slope comparison. To integrate it, we also need a cutoff independent of the chosen translate.
+
+Let \(R\) be the direct row space at the refined level and write
+\(\bar\kappa\) for the mean logarithm of the period scalar.
+The target of the period map is \(R^\vee\).
+
+\begin{proposition}[Uniform upper limit for the slope integral]
+\label{prop:marked-frame-height}
+For the selected family, use the integral models of
+Section~\ref{subsec:division-level-pins} and the period shifts
+of Section~\ref{sec:word-division}. There is a middle exponent \(c_{HH}\),
+chosen as a function of the outer parameters and \(\epsilon\), for which
+the mean \(s\) in Lemma~\ref{lem:frame-slope} satisfies
+\begin{equation}\label{eq:marked-frame-height}
+          s-\mu_{\min}(R^\vee)\le b x^{c_{HH}} .
+\end{equation}
+The bound holds at every point of the family above one threshold.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Apply the sharp row comparison before changing level.}
+On the integral models of
+Section~\ref{subsec:division-level-pins} the uncut numerator
+bound of Section~\ref{subsec:division-length} holds for
+every lift at the same point. Thus the projection and
+functional comparisons in Section~\ref{sec:word-division}
+use all their original place-to-tuple assignments. The
+sharp primitive coordinate map takes the arithmetic lattice
+onto \(R\) and carries its Gram at every infinite place to
+the chosen Gram. It therefore preserves maximal slope:
+it takes subspaces bijectively to subspaces and preserves
+the covolume of the induced lattice on each one.
+
+At each
+embedding the period scalar of this comparison is the one
+in the base-level formula. Its log mean is consequently
+\(\bar\kappa\) in both. If \(C_f\ge1\) covers the base
+functional estimate in Proposition~\ref{prop:descended-row-height},
+level passage gives
+\[
+    \mu_{\max}(R)+\bar\kappa
+       \le b x^{C_f}+14\log|G|\le b x^{C_f+1}
+       \qquad (x\ge56).
+\]
+Here \(\log|G|\le4b\) and \((x-1)x^{C_f}\ge56\).
+In this application the numerator is needed for the
+surjectivity and functional bounds before passing
+levels. \label{cor:frame-height-limit-1}
+
+\proofstep{Reduce the upper limit to five pointwise terms.}
+For each sequence \(u\) write \(M_u\) for its reference lattice,
+\(N_u\) for its shifted lattice, and \(h_u\) for the numerical
+height, including the period shift. The column rank bound and the ramified rank estimate give
+\(\operatorname{rk}N_u>0\). Use \(\mu(N_u)\le\mu_{\max}(N_u)\)
+in \eqref{eq:upper-slopes} and add and subtract \(\bar\kappa\).
+For every \(u\) the result is
+\[
+ \begin{aligned}
+ \mu(N_u)-h_u+\mu_{\max}(R)
+ &\le \mu_{\max}(M_u)+(G_a+F-E_u)+CmB_0\\
+ &\quad -(h_u+\bar\kappa)+(\mu_{\max}(R)+\bar\kappa).
+ \end{aligned}
+\]
+Here \(C\) bounds the same error in every word of the selected
+family. Each term on the right needs a common upper bound
+before taking the rank-weighted mean.
+
+\proofstep{Bound the two slope costs in terms of the rank parameters.}
+Put \(P=1+f+k+m+t+N_m+L\) and \(M=\max(C_t,5)+3\),
+where \(C_t\) is the outer rank exponent. The size conditions
+give \(P\le x^M\) eventually. Indeed the terms other than
+\(N_m\) are bounded by powers of \(x\) from the size bounds
+on the host, the ranks and \(L=x^\epsilon\). Substitution of the chain rank into the sum gives the bound
+\[
+ P=1+f+k+m+t+\bigl(k+m(t+1)\bigr)+L\le 8x^{M-1}\le x^M
+ \qquad(x\ge9) .
+\]
+Also \(B_0=fmbL\), \(a,b',S_c\le Pb\),
+\(\log(kv)\le3P\), and \(\log T_u\le C_T' mL\)
+by the count on the selected sequences.
+
+In the reference maximal
+slope estimate of Proposition~\ref{prop:level-zero-column-slopes}
+the three upper costs are fixed multiples of
+\[
+ |T|a\log(kv),\quad
+ f(b'+S_c)\big(k\log(kv)+\log T_u\big),\quad fk^2 L .
+\]
+Substitute \(|T|,f,k,m,L\le P\) in these three costs.
+They are bounded, respectively, by
+\[
+ 3P^3b,\qquad (6+2|C_T'|)P^4b,\qquad P^4 .
+\]
+For the middle term use
+\(k\log(kv)+\log T_u\le(3+|C_T'|)P^2\).
+The fixed linear-combination coefficients are absorbed at
+large \(x\) using \(P\le x^M\), so the first term costs at
+most \(b x^{4M+1}\). The third term \(CmB_0\) has the
+same bound because \(mB_0=fm^2bL\le P^4b\).
+\label{cor:frame-height-limit-2}
+
+\proofstep{Bound the gain and the forced term before subtracting the centered exponent.}
+The unweighted gain at \(p\le X''\) is at most
+\(4m|T|a/p\) and the subtracted share is nonnegative.
+Above \(X''\) there is no gain. Thus the squared-norm weight
+gives
+\[
+ G_a\le 2\sum_{p\le X''}(\log p)\frac{4m|T|a}{p}
+          \le16m|T|a\log(1+X'').
+\]
+The forced term of one lift is at most \(16P^7 b/p\) to that
+cutoff. In fact its type and ramified negative contributions
+are bounded above by zero.
+
+On an inert orbit the coefficient
+per label is bounded by \(2/p\) using
+\(p/(p^2-1)\le2/p\). The sum has at most \(2f\) labels after
+averaging around the orbit, each with size at most
+\((k-1)4P^5 b\). This includes the shorter orbit with
+coefficient \(1/(p^2-1)\). The zero cases contribute nothing.
+For the forced term, the logarithmic prime weights give
+\[
+  \sum_{j=1}^{m}\sum_{p\le X''}(\log p)\frac{16P^7 b}{p}
+  \ll m P^7 b\log(1+X'')\ll P^9 b .
+\]
+Here \(\log(1+X'')\le4P\) and \(m\le P\).
+The full-support exponent estimate gives \(-E_u\le CmB_0\),
+since each lift's top logarithm contribution is nonnegative.
+The two bounds give the stated upper bound \(b x^{9M+2}\)
+on the second term for sufficiently large \(x\). \label{cor:frame-height-limit-3}
+
+\proofstep{Estimate the period-free height at each infinite place.}
+The fourth term is the negative of the period-free height
+in Section~\ref{sec:word-division}. Its three parts are
+the negative top size term, the negative sum of kernel
+terms, and the positive sum of lower hook terms. The first
+costs \(O((1+|C_T'|+|C_{\rm sz}|)P^4b)\). Its sequence-dependent part has at most \(P\) terms of size \(2Pb\log T_u\); the size correction uses \(L_a\le4P\). The respective upper bounds are therefore
+\[
+ 2P^2 b\log T_u,\qquad 4P^3 b L_a|C_{\rm sz}|\le16P^4b|C_{\rm sz}|.
+\]
+For a kernel at one real place write \(Y=11P^5b\).
+The entries of the row weights obey \(|\nu_i|\le Y\)
+by addition of the top, short and chain offsets.
+Here \(\log Y\le16P\) and \(|\log\Omega|\le7P\).
+
+For every \(\nu_i\), including those of modulus below one, the common lower estimate reads
+\[
+ \varphi(\nu_i)-\nu_i\log\Omega\ge -Y\log Y-Y-1-7PY .
+\] There are at most \(P\) summands. At the same place
+the positive hook numerator has at most \(P\) log gamma
+terms with arguments in \([2,10P^5b]\).
+The lower endpoint uses the gap above the last entry
+\(-b_{j-1}\), and the upper endpoint uses the same weight
+bounds. Each \(\log\Gamma(y)\le y\log y\) on this range.
+The hook denominator consists of differences of the decreasing
+integral weight shifted by the index difference. They are
+at least one and can be dropped in an upper bound.
+
+The two bounds at one place follow explicitly from \(Y=11P^5b\):
+\[
+ \begin{aligned}
+ P(Y\log Y+Y+1+7PY)&=O(P^7b),\\
+ P(10P^5b)\log(10P^5b)&=O(P^7b).
+ \end{aligned}
+\]
+Here the first line bounds the negative kernel terms and the second
+bounds the positive hook numerator. The kernel
+corrections per lift are bounded by
+\(|C_{\rm sz}|(f N_m^2 L_a+fm^3 N_m^2 L)\);
+the hook correction is bounded by \(|C_{\rm sz}| f R^2
+\log(b\,\operatorname{rd}(E)g_0g_1 R)\), with this
+logarithm at most \(6P^2\). After summing over at most
+\(P\) places and \(P\) lifts the cost is \(O(P^9b)\).
+Consequently \(-(h_u+\bar\kappa)\le b x^{9M+1}\)
+eventually. \label{cor:frame-height-limit-4}
+
+\proofstep{Choose the exponent, then take the rank-weighted mean.}
+Choose the middle height parameter \(c_{HH}\) at least
+\[
+     1+\max\{4M+1,9M+2,9M+1,C_f+1\}.
+\]
+The threshold for it uses only the outer parameters and
+\(\epsilon\). Indeed the sharp functional exponent is
+obtained from the base functional bound at the middle choice
+made as a function of the outer parameters. The four
+remaining powers just computed involve only \(C_t\).
+Constants multiplying these powers, including the constants
+of the upper slope and the size terms, enter the eventual
+scale threshold. This permits later constants to depend
+on the middle choice.
+
+For \(x\ge9\) the sum of five terms
+with exponents at most \(c_{HH}-1\) is at most \(b x^{c_{HH}}\).
+With \(r_u=\operatorname{rk}N_u\), multiply by \(r_u\) and
+divide the summed inequality by \(\sum_u r_u>0\). This gives
+\[
+     \frac{\sum_u r_u(\mu(N_u)-h_u)}{\sum_u r_u}
+       +\mu_{\max}(R)\le b x^{c_{HH}}.
+\]
+The first term is \(s\), since the list in
+Lemma~\ref{lem:frame-slope} includes slopes with multiplicities.
+Hermitian duality gives \(\mu_{\min}(R^\vee)=-\mu_{\max}(R)\).
+This gives the bound in the proposition, using the sharp
+functional bound and the reference column slope at the same
+selected point. \label{cor:frame-height-limit-5}
+\end{proof}

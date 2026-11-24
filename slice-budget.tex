@@ -1,0 +1,328 @@
+\paragraph{The height of the boundary columns.}
+The arithmetic proof of Proposition~\ref{prop:geometric-run-index}
+must use one bound for each of the two determinant costs
+in \eqref{eq:geometric-four-terms}. The boundary determinant
+below is evaluated in the trace dual. The complementary
+determinant is evaluated by CM coefficient functionals.
+\hypertarget{source-slice-budget}{}
+\begin{lemma}[Short trace-dual tests for boundary columns]
+Let \(r_z>0\), \(d=R_j\) and \(n=[K:\mathbb Q]\). For every
+\(B>d\sqrt n\exp(P_LS_\kappa+P_d/2)\) the \(K\)-dual of the
+column space has a spanning family of functionals \(\phi\) satisfying the two bounds
+\[
+ \phi(M)\subseteq\mathfrak D_K^{-1},\qquad |\sigma\phi(v)|\le B\|v\|_{2,\sigma}\quad(\text{every }\sigma).
+\]
+
+\end{lemma}
+\begin{proof}
+Equip \(M\) with the Euclidean norm from the sum of the
+conjugate-compatible squared \(L^2\) norms. Its real dimension
+is \(nd\). The height bound \(H(v)\ge-P_LS_\kappa\) for integral
+\(v\ne0\), the inequalities
+\(\|v\|_{2,\sigma}\le\|v\|_{\sup,\sigma}
+ \le e^{P_d/2}\|v\|_{2,\sigma}\), and arithmetic--geometric mean give
+\[
+ \lambda_1(M)\ge\sqrt n\,e^{-P_LS_\kappa-P_d/2},\qquad
+ \lambda_{nd}(M^*)\le \frac{nd}{\lambda_1(M)}<B .
+\]
+The second inequality is Banaszczyk's transference theorem.
+By nondegeneracy of trace the rational functional attached to
+an integral dual vector is \(v\mapsto{\rm Tr}_{K/\mathbb Q}\phi(v)\).
+Testing on \(av\) for every \(a\in\mathcal O_K\) gives the
+codifferent condition. Each Hermitian component of its Riesz
+vector has norm at most its full Euclidean norm. Applying these
+facts to the spanning short dual vectors gives both assertions.
+\cite{banaszczyk}\label{cor:slice-budget-1}
+\end{proof}
+
+\begin{proposition}[The boundary determinant cost]\label{prop:slice-boundary-determinant-cost}
+For the selected \(r_z\) boundary columns and the norm bounds
+above, the finite costs \(G_\lambda\) have finite support and satisfy
+\[
+ \langle G\rangle\le r_z H_z S_\kappa,\qquad H_z=2G_c+P_{rw}+P_L+\tfrac32(P_d+P_O).
+\]
+
+If there are no columns, the cost is zero.
+\end{proposition}
+
+\begin{proof}
+\proofstep{The determinant of the boundary columns.}
+The boundary columns are independent over \(F\), so some
+minor of their values on these functionals is a nonzero
+polynomial. Choose one nonzero coefficient \(A\in K\).
+At each prime, multiplying all its rows by an element of
+order \(v_\lambda(\mathfrak D_K)\) makes the functionals
+integral there. The definition of \(G_\lambda\) gives
+\[
+ 0\le G_\lambda\le v_\lambda(A)+r_z v_\lambda(\mathfrak D_K).
+\]
+This proves finite support and supplies one coefficient for
+all primes, though the minimizing coefficient may vary.
+
+For each embedding, expand that coefficient multilinearly
+in the coefficient vectors \(z_{i,\gamma}\) of the columns.
+Every determinant is a pairing of exterior products, bounded
+by \(B^{r_z}\prod_i\|z_{i,\gamma_i}\|_{2,\sigma}\)
+by Cauchy--Schwarz and Hadamard. Summing bounds over
+\emph{all} tuples of indices therefore gives
+\[
+ \log |\sigma A|\le r_z\log B+
+       \sum_i\log\left(\sum_\gamma\|z_{i,\gamma}\|_{2,\sigma}\right).
+\]
+For column \(i\) write \(a=T-s\). Its coefficient sum is
+at most \((N e^{m_\sigma})^a\|t_i^0\|_{\sup,\sigma}\),
+by expanding the light products, where \(m_\sigma\) bounds
+all the light log suprema. Its mean is bounded in logarithm
+by \(a(\log N+G_c S_L)+G_c S_0\). The weight size convention
+gives \[
+ \begin{gathered}
+ aS_L+S_0=S_\kappa+a, \\ a\le S_\kappa, \\ a\log N\le P_{rw}a(S_L-1)\le P_{rw}S_\kappa.
+\end{gathered}
+\]
+Use the product formula for \(A\) and
+\(\mathrm N\mathfrak D_K=|\operatorname{disc}K|\).
+
+Let \(B\) decrease to the transference bound. Since
+\(\log d\le P_d\), \(\log n\le P_O\) and
+\(\log|\operatorname{disc}K|/n\le P_O\), this proves
+the asserted \(\langle G\rangle\le r_z H_z S_\kappa\).
+For no boundary columns the determinant is one and the price
+is zero.
+
+\end{proof}
+
+\paragraph{The complementary quotient and its CM determinant.}
+
+The boundary-column estimate leaves the determinant of a complementary quotient. Its torsion-free lattice and CM evaluation give the second determinant contribution.
+
+Write \(Q=M/(M\cap H_g)\) and \(\rho=r_q\). It is torsion-free
+over \(\mathcal O_K\). Choose \(\theta_1,\ldots,\theta_\rho\)
+out of the short spanning sections of weight \(\kappa\) to be
+a rational basis modulo \(H_g\). Here the short-section price
+for each mean log norm is at most \(H_\theta\). We explain
+the coindex of their images. At the definite end \(\rho=0\)
+and the price is zero.
+
+\begin{proposition}[The complementary determinant cost]\label{prop:slice-complement-determinant-cost}
+For the chosen \(r_q\) basis sections of the complementary
+quotient, assume the CM coefficient and line bounds below.
+For the stated \(P_Q\), the weighted quotient length satisfies
+\[
+ \langle L_Q\rangle\le2r_qP_Q S_\kappa.
+\]
+ The coefficient argument uses the same value-line
+coordinates at finite and archimedean places. At the definite
+lift the quotient and its cost are zero.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Coefficient functionals on the complementary quotient.}
+Before the last lift, the functionals used in the coefficient
+test extract a monomial in formal frame letters and a Laurent
+coefficient on a CM arc. Evaluation is linear in the section.
+The frame polynomial is homogeneous of degree \(A\), the sum of the nonnegative flag exponents, so a nonzero test has that total monomial degree. Its value is
+measured in a one-dimensional space with the dual theta
+generator to power \(n_\kappa\) (the central weight) and the dual differential
+generators to the powers in this monomial. Thus an arc
+functional \(\phi_i\) has offsets \(s_{iw}\) at finite places
+and logarithmic norm offsets \(a_{i\sigma}\) at infinity.
+The finite offsets have finite support. Over its coefficient
+field the three CM estimates used are
+\begin{align*}
+ w(\phi_i(v))+s_{iw}&\ge-e_{w/\lambda} b_\lambda,\\
+ \log|\sigma\phi_i(v)|+a_{i\sigma}
+    &\le \log\|v\|_{\sup,\sigma|K}+C_{\rm arch},\\
+ \bigg(\sum_w s_{iw}\log {\rm N}w
+       -\sum_{\sigma} a_{i\sigma}\bigg)/[K':\mathbb Q]
+    &\le B_{\rm deg}.
+\end{align*}
+
+In this formula \(v\in M\) has nonzero reading, and \(\sigma\)
+runs over embeddings. The last inequality concerns the
+degree of the value line. In particular its two terms must
+use the same differential and theta coordinates. These
+bounds apply to any conjugate of the test and persist
+after a number-field extension: finite orders and their offsets
+multiply by relative ramification, and the archimedean
+data pull back along embeddings. The common baseline for
+the allowed torsion order \(n'\) is
+\[
+ b_\lambda=A\max\{v_\lambda(|\operatorname{disc}E|),
+                               v_\lambda(n')\}.
+\]
+It is nonnegative and its mean is at most
+\(A(\log|\operatorname{disc}E|+\log n')\) by norming the
+two principal ideals. A change of generator of the value
+line changes its two offsets by a principal divisor, so
+the degree inequality is unaffected.
+
+The CM annihilation and detection of low coefficients give
+common rational kernel \(H_g\) in the rational cusp space. To select independent rows on its quotient, include
+all coefficient-field conjugates of the tests. Over \(K\)
+the coordinate readings of a test in any basis of its finite
+value field are linear combinations over a normal closure
+of the conjugate readings, by the invertible embedding
+matrix.
+For a value field of degree \(n\), a basis \(b_1,\ldots,b_n\) and its distinct embeddings \(\sigma_i\), the inversion uses
+\[
+  \det\bigl(\sigma_i(b_j)\bigr)_{i,j=1}^n\ne0 .
+\]
+ The coordinate readings have trivial common kernel
+on the rational quotient. Select a finite spanning subfamily
+of its dual and put the finitely many fields involved inside
+one normal extension \(K'/K\). There are then \(\rho\)
+independent conjugate readings \(\phi_i\) with the same
+bounds as above. This selection requires no bound for
+\([K':K]\).
+
+\proofstep{The determinant of the chosen CM evaluations.}
+Set 
+\[
+  d_\theta=\det(\phi_i(\theta_j))\ne0.
+\]
+For a local basis of \(Q_\lambda\) lift its elements to
+\(M_\lambda\). Clearing denominators away from \(\lambda\)
+preserves the finite inequality. The determinant on this
+basis has order at least \(-\sum_i s_{iw}-\rho e_{w/\lambda}
+b_\lambda\). Changing to the \(\theta_j\) adds precisely
+\(e_{w/\lambda} L_{Q,\lambda}\) by the elementary divisor
+theorem. Averaging over the places above \(\lambda\) gives
+\[
+ L_{Q,\lambda}\le n_\lambda+\rho b_\lambda,\qquad
+ n_\lambda=
+ \frac{\sum_{w\mid\lambda} f_{w/\lambda}
+                    (w(d_\theta)+\sum_i s_{iw})}{[K':K]} .
+\]
+This signed quantity has finite support. Bounding only its
+positive part would spoil the ensuing product formula.
+
+At \(\sigma\) factor \(e^{-a_{i\sigma}+C_{\rm arch}}\) from
+row \(i\) in the determinant estimate, then use the column
+norm bound \(\sqrt\rho\|\theta_j\|_{\sup,\sigma|K}\).
+Hadamard followed by the product formula for \(d_\theta\)
+therefore gives
+\[
+ \langle n\rangle\le
+ \rho\big(H_\theta+C_{\rm arch}+B_{\rm deg}
+                              +\tfrac12\log\rho\big).
+\]
+When \(\rho=0\) use the empty determinant. This gives the
+length on completing \(Q_\lambda\), since flatness preserves
+the kernel and the finite-length quotient. In particular
+both the baseline and the degree price are taken at this
+lift. There is no induction on earlier local coindices.
+
+\proofstep{The final cost in the selected rank.}
+For the run under consideration \(A\le S_\kappa\), and
+the selected radius and torsion estimates bound
+\(C_{\rm arch}\), \(B_{\rm deg}\) and \(\langle b\rangle\)
+each by \(C_0 z^4 S_\kappa\). The bounds use \(r\ge3\),
+the good level, \(\log {\rm N}\mathfrak c_K\le L\) in
+the size data, the positive central and last weights,
+\(S_\kappa\le C_K kfb\), \(T,c>0\) and \(Tc\le1\).
+For the cutoff parameter fixed at seven one may use
+\(K_*=20+|C_A|+7|C_A|+|C_K|\) and
+
+\[
+  C_0=17+2K_*+200K_*^4.
+\]
+ The selected dimension bound
+gives \(\log\rho\le1041z^3\) when \(\rho\ge1\).
+With \(H_\theta\le z^4 S_\kappa\) the two estimates above
+give \[
+ \langle n\rangle\le\rho P_Q S_\kappa,\qquad \langle b\rangle\le P_Q S_\kappa,
+\] with
+\(P_Q=(1+3C_0+1041)z^4\). Their sum gives the required
+\(2r_q P_Q S_\kappa\) for the fourth price. The degree uses the same line as the two coefficient bounds.
+The numerical comparison for the radius and torsion order
+is at the chosen weight and cutoff on this lift. \label{cor:slice-budget-2}
+
+\end{proof}
+
+\paragraph{Absorbing all four terms at the selected scale.}
+
+The four bounds can now be compared at the scale fixed for both orientations. The numerical inequalities below show how their sum fits the allowed remainder.
+
+Put \(P=C_2z^{A_2}\) with \(z=fr\log b\), and put \(P_D=H_z,\ P'_Q=2P_Q\), or increase these to the nonnegative majorants for the comparison. The numerical conditions used here are
+\begingroup\small
+\begin{equation}\label{eq:slice-remainder-scales}\begin{aligned}
+ T S_L&\le2 S_\kappa,&
+ |w_F|&\le(s+2)S_L+5fr^2T,&Tc_+g_0^*&\le1,\\
+ 60G_c+180P_H+44P_D+22P'_Q&\le P^2s,&
+ 5G_cfr^2+P_d&\le P^3,& P_\eta&\le P,\\
+ S_\kappa&\le C_K kfb,&4C_K&\le P^2 f,&
+             P^3 T^2&\le b,\\
+ P^4s^3kf&\le Tm\delta_2,&
+ 1\le m&\le k,&f,T,g_0^*&\ge1 .
+\end{aligned}\end{equation}
+\endgroup
+Here \(0<\delta_2\le1\) and \(P\ge87\). In the pre-final
+case \(c_+=c\); omit the auxiliary term in the final case.
+The coefficient bounds are polynomial bounds in the same
+\(z\). For example the cutoff used for the field, integral
+section and quotient constants includes \(z\ge
+C_L+|C_K|+|C_q(C_A,C_K)|\) and \(z\ge10^9\).
+It controls \(C_q z^4\) by \(z^5\). Once these fixed
+constants are chosen the cutoff is independent of the run
+place, component, lift, short sections, \(V\) and \(h\).
+\label{cor:slice-budget-3}
+
+\input{slice-scales}
+
+\begin{proposition}[The remainder at the selected scale]\label{prop:scaled-geometric-remainder}
+On either selected run with \(0<\delta_2\le1\), \(P\ge87\),
+the bounds \eqref{eq:slice-remainder-scales}, and the common
+choice in Lemma~\ref{lem:common-slice-scales}, the weights
+and branch lattices in Proposition~\ref{prop:local-product-colength}
+satisfy
+\[
+ \langle r\rangle\le R_j fmb\,\delta_2.
+\]
+
+The choice of scale precedes the place and the tested subspace.
+\end{proposition}
+
+\begin{proof}
+To check the consumption of these inequalities, use
+\(R\delta\le d\) and the rank bounds in the four prices.
+The light part of \(H_s\) above, after separating
+\(5G_c fr^2T\), is at most
+\((s+4)(s+1)(3G_c+9P_H) S_L\).
+For instance the coefficient of \(G_c\) before this
+simplification is
+\((s+2)+2(s+4)(s+1)+(s+1)\).
+
+For the \(P_H\) terms use \(P_{rw}\le P_H\) and
+\(\tfrac43s(s+4)+\tfrac23s+3(s+1)
+ \le3(s+4)(s+1)\). With \(s\ge2\),
+\((s+4)(s+1)\le10s^2\). Division by \(d>0\) now gives
+\begin{align*}
+ \langle r\rangle/d\le{}&
+ (60G_c+180P_H+44P_D+22P'_Q)s^2 S_\kappa/T\\
+ &+(5G_cfr^2+P_d)T+\tfrac12 P_\eta T c_+ .
+\end{align*}
+For the first summand, combine the allowance
+\(P^2s\) with \(S_\kappa\le C_K kfb\) and obtain
+\[
+ \frac{P^2s^3S_\kappa}{T}
+ \le\frac{C_K}{P^2}\,mb\delta_2
+ \le\tfrac14 fmb\delta_2 .
+\]
+The first inequality uses \(P^4s^3kf\le Tm\delta_2\);
+the second uses \(4C_K\le P^2f\).
+For the second summand use its coefficient bound \(P^3\)
+and \(P^3T^2\le b\).
+
+Since \(Tf m\delta_2\ge4\), the
+resulting allowance \(P^3T\le b/T\) is at most
+\(\tfrac14 fmb\delta_2\). Finally \(Tc_+g_0^*\le1\)
+and \(P_\eta\le P\) give
+\(\tfrac12P_\eta T c_+\le P^3T\).
+Adding these three estimates proves the asserted remainder bound.
+Rank zero has zero lengths. This yields the weighted
+remainder in \eqref{eq:geometric-run-index} for either
+selected run with its own degree normalization. In
+particular the paired trace calculation can use its
+\(12fmb\) allowance without a factor for the number of
+branches, primes or choices of a subspace.
+\end{proof}

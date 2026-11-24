@@ -1,0 +1,858 @@
+\subsubsection{Base and enlarged ordinary modules}
+\label{par:ordinary-functions}
+
+To control these ideals on nearby components, the two ordinary levels must admit compatible integral modules at auxiliary level. Reduction by the augmentation ideal should recover the specified base module.
+
+\begin{proposition}[Ordinary modules for the auxiliary system]\label{prop:ordinary-level-modules}
+For the stated tame coefficient, residual localization and weight
+character, the enlarged ordinary modules are finite projective over
+their auxiliary group algebras. Denote one such module by \(M_N\), its auxiliary group by \(\Delta_N\), the ordinary weight ring by \(\Lambda\) and the module at the auxiliary Iwahori level by \(M_0\). Base change along the augmentation gives 
+\[
+ M_N\otimes_{\Lambda[\Delta_N]}\Lambda\simeq M_0
+\]
+ for the associated Hecke quotient. The
+classical evaluations considered below separate the characteristic-zero
+Hecke action on these modules.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Integral coefficients and the fixed residual localization.}
+
+Use the definite unitary group for the standard Hermitian
+form over the CM field \(L\). Keep the tame coefficient
+type, the split place \(v_0\) with principal congruence
+level, and the ordinary \(\ell\)-adic data of the initial
+level. The auxiliary product of groups \(\mathrm{GL}_n(L_w)\)
+acts by right translation at the chosen places over
+\(L^+\). The level at these places is initially
+hyperspecial. Their later replacement by compact open
+subgroups makes no change to the weight character or
+to the tame coefficient type. Write \(\Lambda\) for the
+weight algebra before adjoining the formal variable
+\(s\).
+
+At a selected place \(v\mid\ell\), local reciprocity identifies
+the pro-\(\ell\) inertia units modulo torsion with
+\[
+                         U_v\simeq\Z_\ell^{d_v}.
+\]
+Here \(d_v\) is the local degree. Fixed residual and torsion
+values leave the coordinate group \(\prod_{v\mid\ell}U_v^n\).
+Using a basis in each \(U_v\), the completed group algebra is
+\[
+ \Lambda=O\left[\!\left[\prod_{v\mid\ell}U_v^n\right]\!\right]
+       \simeq O[[w_1,\ldots,w_{n\sum_{v\mid\ell}d_v}]],
+       \qquad \sum_{v\mid\ell}d_v=[L^+:\Q].
+\]
+For a basis element \(u_{v,a}\) of \(U_v\), the
+corresponding coordinates are \([u_{v,a}]_i-1\), one for
+each diagonal slot \(i\).
+Use the induced character \(\theta\) of the product of
+the compact diagonal tori. The inverse and cyclotomic
+shifts converting Galois inertia to this torus character
+are fixed twists, so the generators of the same free
+lattice also give coordinates for \(\theta\).
+
+The ordinary function space can be defined over any
+complete Noetherian local coefficient ring \(A\) with
+finite residue field carrying these data. Its functions
+on the finite adeles are invariant on the left by the
+rational unitary group, transform by the coefficient
+type at the fixed tame level, and are invariant by the
+upper unipotent subgroup \(N\) of the integral groups
+at the \(\ell\)-adic places.
+
+For \(f\) in the function space the local conditions on
+the right are
+\[
+ f(xn)=f(x),\qquad f(xt)=\theta(t)^{-1}f(x),\qquad
+ f(x\bar n)\equiv f(x)\pmod{\mathfrak m_A^j}
+          \quad(\bar n\in\bar N_{d(j)}).
+\]
+Here \(n\in N\), \(t\in T\), and \(\bar N_d\) has off-diagonal
+entries in the \(d\)-th power of the local uniformizer ideal. For
+\(d\ge1\) put
+\[
+ J_d=N T\bar N_d.
+\]
+These conditions
+are closed under uniform limits for the filtration
+\(V_j\) by functions with values in \(\mathfrak m_A^j\).
+Indeed a limit modulo \(\mathfrak m_A^j\) equals one
+eventual member of its sequence, which has the required
+lower unipotent invariance to that precision.
+
+The stabilizers at the tame level and any of the
+\(J_d\) are trivial. A rational stabilizer preserves
+the definite Hermitian form at infinity and is in a
+conjugate of a compact subgroup at every finite place.
+This bounds its positive and negative powers locally,
+so all characteristic roots are units at every finite
+place. They have absolute value one at every
+archimedean embedding. Kronecker's theorem makes the characteristic roots \(\alpha_i\) roots of unity. At an archimedean embedding the matrix \(a\) is diagonalizable, since it is unitary. For \(h=\operatorname{lcm}_i\operatorname{ord}(\alpha_i)\) this gives
+\[
+ a^h\sim\operatorname{diag}(\alpha_1^h,\ldots,\alpha_n^h)=1 .
+\]
+The embedding is faithful, so the rational element also satisfies \(a^h=1\).
+
+At \(v_0\) the stabilizer is conjugate into
+\(1+p_0M_n(\mathcal O_{L_w})\), with \(p_0\) odd and
+unramified in \(L\).
+The matrix logarithm is injective on
+\(1+p_0 M_n(\mathcal O_{L_w})\), since the exponential
+and logarithm converge there and are mutual inverses.
+For a matrix \(a\) of finite order \(h\) in this congruence
+subgroup,
+\[
+                    h\log a=\log(a^h)=0.
+\]
+The matrix logarithm is injective and the field has characteristic
+zero, so \(a=1\). The argument
+continues to apply when auxiliary places move and
+when their compact levels change.
+
+Let \(z\) at the \(\ell\)-adic places be the
+strictly dominant diagonal translation, contracting
+\(N\) by conjugation and contracting \(\bar N_d\) by
+inverse conjugation. The ordinary operator \(U_z\)
+is the sum of translations by \(b z\) over
+\(b\in N/zNz^{-1}\) at these places. For each
+\(j\), take \(c\ge1\) such that \(\theta\) on the diagonal
+congruence subgroup \(T_c\) is trivial modulo
+\(\mathfrak m_A^j\). The operator lowers the depth of
+lower unipotent invariance modulo this ideal from
+\(d+1\) to \(d\) whenever \(d\ge c\).
+
+In fact set \(J'_d=N T_c\bar N_d\).
+The Iwahori factorization gives
+\[
+ J'_d z J'_{d+1}
+   =\coprod_{b\in N/zNz^{-1}} b z J'_{d+1}.
+\]
+Here \(z^{-1}\bar N_d z\subset\bar N_{d+1}\),
+the torus commutes with \(z\), and the upper
+unipotent intersection is \(zNz^{-1}\). Thus
+the sum is invariant by \(J'_d\) on
+\(J'_{d+1}\)-invariants. The compact torus normalizes
+\(N\) and commutes with \(z\), preserving the
+\(\theta^{-1}\)-equivariance throughout. This proves
+the lowering assertion. Iterating the lowering assertion for a function of depth \(d\) modulo \(V_j\) gives
+\[
+ \operatorname{depth}(U_z^a f\bmod V_j)\le\max(c,d-a)
+ \qquad (a\ge0).
+\]
+Thus the relevant threshold for the iterate index \(a\) is
+\[
+ a\ge\max(0,d-c)\quad\Longrightarrow\quad \text{depth of the iterate}\le c.
+\]
+
+
+That space has finitely many value coordinates, one
+vector of coefficients for each double coset of the
+tame level and \(J_c\). For any list of values there
+is an \(A\)-linear lift to the original function space.
+Choose representatives. In their right cosets use
+the tame type and the diagonal part of the
+\(\bar N_c T N\) factorization to extend the values.
+Trivial stabilizers give well-defined values.
+Right multiplication by \(N\) keeps the diagonal
+part, and multiplication by \(T\) gives exactly
+its character. Right multiplication by \(\bar N_c\)
+changes the diagonal coordinates only modulo the
+diagonal congruence subgroup \(T_c\), by triangular
+elimination. This gives the specified reduction and
+the required continuity at smaller lower unipotent
+subgroups. Let \(b_j\) be evaluation on these cosets and \(a_j\)
+the lifting just described. Evaluation recovers the lifted coordinates at this precision,
+\[
+ b_ja_j\equiv\mathrm{id}\pmod{\mathfrak m_A^j}.
+\]
+This gives the finite depth-\(c\) coordinate module.
+
+Every orbit is eventually periodic modulo \(V_j\) because its
+depth-\(c\) coordinate module is finite. For a periodic orbit
+of period \(a_j\), each \(h!\) with \(h\ge a_j\) is divisible by
+\(a_j\). Thus
+\[
+                    e_{\rm ord}=\lim_{h\to\infty}U_z^{h!}
+\]
+exists and projects onto the functions periodic at every precision. On those functions
+\(U_z\) acts invertibly, by the inverse on each
+periodic orbit and passage to the limit. The
+projector preserves the filtration and commutes with
+the away-from-\(\ell\) action. Put \(M=e_{\rm ord}S_A\),
+where \(S_A\) denotes the original function space.
+For \(f\in M\), periodicity and eventual membership
+in the depth-\(c\) space give
+\[
+   f-e_{\rm ord}a_j b_j(f)\in V_j .
+\]
+Here \(b_j\) takes a function in \(V_i\) to values
+in \(\mathfrak m_A^i\).
+
+If \(f\in M\cap V_i\), the
+approximation at \(j=i+1\) writes it modulo \(V_{i+1}\)
+as a linear combination of the columns of
+\(e_{\rm ord}a_{i+1}\), with coefficients in
+\(\mathfrak m_A^i\). Replace these columns modulo
+\(V_1\) by combinations of the columns of
+\(e_{\rm ord}a_1\). The error is in \(V_{i+1}\).
+Successive approximation and completeness now give
+\[
+   M\cap V_i=\mathfrak m_A^i M.
+\]
+Lift a basis of \(M/(M\cap V_1)\) and evaluate it in the
+finite depth coordinates. The evaluation columns have full rank
+modulo \(\mathfrak m_A\), so a maximal minor is a unit.
+Successively using the value filtration equality now gives
+\[
+       A^{\dim_k M/(M\cap V_1)}\xrightarrow{\;\sim\;} M
+\]
+from the chosen lifts. This
+proves finite freeness over \(A\).
+
+For a normal auxiliary sublevel with quotient
+\(\Delta\), the double cosets with full
+\(\ell\)-Iwahori and the smaller auxiliary level
+form a free \(\Delta\)-set. This follows from the
+same stabilizer calculation and disjointness of
+the auxiliary and \(\ell\)-adic factors. Choose one
+point in each \(\Delta\)-orbit. The indicator function
+of the resulting subset pulls back to the adeles,
+where multiplication by it preserves the function
+space. Project after multiplying, to obtain an
+\(A\)-linear endomorphism \(B\) of \(M\). The translates
+of the chosen subset partition the double cosets, so
+\(\sum_{\delta\in\Delta}\delta B\delta^{-1}=1\).
+The action map \(A[\Delta]\otimes_A M\to M\) has the
+\(A[\Delta]\)-linear section
+\[
+ f\longmapsto\sum_{\delta\in\Delta}
+                \delta\otimes B(\delta^{-1}f).
+\]
+Thus \(M\) is projective over \(A[\Delta]\).
+Global localization at a residual Hecke eigensystem
+takes a direct summand.
+
+In fact a finite commutative
+algebra of commuting Hecke operators over a complete
+local ring decomposes by the maximal ideals of its
+residue algebra. The residual localization idempotent \(e_\mathfrak m\)
+lifts and commutes with \(\Delta\). It exhibits
+\[
+       M=e_\mathfrak m M\oplus(1-e_\mathfrak m)M
+\]
+as auxiliary group-algebra modules. The same
+argument selects the further residual torus tuple
+on the module at an auxiliary cover. Over the
+local group ring used below, the resulting finite
+projective modules are free.
+
+\proofstep{Separation by classical weights and control at the selected type.}
+
+The auxiliary module is an integral object varying with weight. Classical specializations must distinguish its elements if their tame types and operators are to determine the same ordinary module.
+
+
+For the classical evaluations in this construction
+it suffices to use algebraic weight zero. At a smooth
+specialization of the compact torus weight character,
+the depth \(c\) killing its finite part can be fixed
+at every precision over the coefficient DVR
+of the specialization. Write \(\mathcal O_x\) for the specialization DVR. For \(u\in\bar N_c\) lowering at each precision gives
+\[
+ f(gu)-f(g)\in\bigcap_{j\ge1}\mathfrak m_{\mathcal O_x}^{,j}=0 .
+\]
+Hence each specialized ordinary function is invariant by \(\bar N_c\). It is a classical automorphic
+form of weight zero with the fixed tame type and
+the specified compact torus character at \(\ell\).
+The specialization of the integral ordinary module
+identifies with this ordinary space over the new
+DVR. Let \(\mathcal O_x\) be the specialization DVR with
+residue field \(k_x\), and let \(V_c(k_x)\) be the finite space
+of depth-\(c\) functions of its fixed type. Its ordinary
+reduction is
+\[
+ V_c(k_x)^{\rm ord}=\bigcap_{a\ge0}\operatorname{im}
+                       (U_z^a:V_c(k_x)\to V_c(k_x)).
+\]
+
+With \(V=V_c(k_x)\), the chain of images stabilizes as soon as two successive dimensions agree. For that index \(a_0\),
+\[
+ U_z^{a_0}V=U_z^{a_0+1}V=\bigcap_{a\ge0}U_z^a V .
+\] Lift any fixed set of depth-\(c\) values to the
+DVR and apply the integral projector to obtain every element
+of that stable image. Conversely periodicity puts the reduction
+of any ordinary function in the stable image. The equality of
+the value and coefficient filtrations identifies both reduced
+modules with \(V_c(k_x)^{\rm ord}\). The specialization map between the two finite free
+\(\mathcal O_x\)-modules reduces to the identity of
+\(V_c(k_x)^{\rm ord}\). In lifted bases let \(S\) be its matrix. The identity on the common reduction gives
+\[
+ \det S\equiv1\pmod{\mathfrak m_{\mathcal O_x}},
+ \qquad S^{-1}=(\det S)^{-1}\operatorname{adj}(S)\in M_h(\mathcal O_x),
+\]
+where \(h\) is the common rank. The projections to residual Hecke summands
+and the auxiliary translations commute with it.
+
+We can impose that the \(n\) smooth characters of
+the compact diagonal torus at each place above
+\(\ell\) be pairwise distinct. Index the free weight
+coordinates by a place, a diagonal index
+\(i\in\{0,\ldots,n-1\}\), and a generator of the free
+unit lattice at that place. In each coordinate the
+specialization has the form \(c\zeta-1\), where the
+fixed offset \(c\) accounts for the reference weight
+and the reciprocity normalization. Fix an integer
+\(M\ge1\) such that every offset satisfies
+\(c^M\equiv1\) in the residue field. For each coordinate
+choose an \(M\)-th root \(\omega\) with
+\(c\omega\equiv1\). Take
+\[
+ \zeta=\omega\zeta_{\ell^{M(i+nb)}}
+\]
+
+for \(b\ge1\), using primitive roots for the indicated
+\(\ell\)-power orders. Raising to \(M\) removes \(\omega\) and gives
+\[
+ \operatorname{ord}(\zeta^M)
+   =\frac{\ell^{M(i+nb)}}{\gcd(M,\ell^{M(i+nb)})}
+   =\ell^{M(i+nb)-v_\ell(M)} .
+\]
+This exponent is positive and strictly increases with \(i+nb\).
+The integers \(i+nb\) for different \(i\) are disjoint modulo
+\(n\), so roots assigned to different diagonal indices cannot
+be equal. Indeed equality of the two selected roots would force equality of their orders after raising to \(M\). The strict dependence of that order on the exponent gives
+\[
+ i+nb=i'+nb'\quad\Longrightarrow\quad i\equiv i'\pmod n
+ \quad\Longrightarrow\quad i=i'
+\]
+for the specified representatives \(0,\ldots,n-1\).
+
+At each place the character values on the
+first free unit generator are among these \(\zeta\)'s,
+up to the common choice of inversion in reciprocity, so
+they detect all the required differences. The finite
+torsion character stays fixed. These choices are independent
+and are smooth, since a character of the free unit lattice
+with finite-order values on a basis has open kernel.
+
+Each of the coordinate sets \(c\zeta-1\) is infinite
+inside the open unit disc. A nonzero integral power
+series in one variable has only finitely many zeros
+there by Weierstrass preparation. For example, write
+\[
+ F=\sum_{j\ge0}F_j(X_2,\ldots,X_d)X_1^j.
+\]
+
+If \(F\) vanishes at all tuples, then at every tuple in the
+last \(d-1\) sets the one-variable series vanishes on the
+infinite first set. Since the resulting one-variable series is zero,
+\[
+      F_j(x_2,\ldots,x_d)=0
+      \qquad\text{for all }j\text{ and all remaining tuples}.
+\]
+Induction on \(d\) gives \(F=0\). Each tuple uses a finite extension of
+the coefficient field, so the partially evaluated
+series in this argument still have integral coefficients.
+For a free basis \(e_i\) and \(v=\sum_i F_i e_i\), detection of the module follows coefficientwise:
+\[
+ v(x)=0\text{ at every selected }x\quad\Longrightarrow\quad
+ F_i(x)=0\text{ for all }i,x\quad\Longrightarrow\quad F_i=0\text{ for all }i .
+\]
+
+The global determinant action uses the classical
+Galois attachments for the admitted packets. The
+inputs here are the polarized attachment, the
+ordinary local flag with its ordered characters
+at \(\ell\), the prescribed inertia at the tame
+type, and local--global compatibility at the
+split auxiliary places. On the residual summand consider the finite algebra
+\[
+ \Lambda\big[T,U:T\text{ spherical away from the level},
+       \ U\text{ a normalized ordinary translation at }\ell\big]
+\]
+in the endomorphism ring. Its action determines the determinant.
+
+At a smooth weight just constructed, take the complex realization through the chosen coefficient isomorphism.
+Write classical automorphic forms as sums of forms
+in the admitted automorphic constituents. This
+decomposition gives a spanning statement also after
+the local conditions are imposed. Apply the tame
+level and type projection, and average against the
+smooth torus character on \(J_d\) at a common depth
+\(d\) at which the character extends. If \(P\) is this composite projector and \(V_\pi\) is an admitted constituent, then
+\[
+ P(V_\pi)\subset V_\pi,\qquad P\Bigl(\sum_\pi V_\pi\Bigr)=\sum_\pi P(V_\pi).
+\]
+Thus imposing the local conditions preserves the spanning description. The two sets of generalized eigenvalues give the coprime factorization
+\[
+ m=m_{\rm ord}m_{\rm other},\qquad \gcd(m_{\rm ord},m_{\rm other})=1
+\]
+of the minimal polynomial on this finite-dimensional space.
+
+Choose \(p\) by the Chinese remainder theorem.
+\[
+ p\equiv1\pmod{m_{\rm ord}},\qquad
+ p\equiv0\pmod{m_{\rm other}},\qquad P_{\rm ord}=p(U_z).
+\] Apply it to each summand. If \(P_{\rm type},P_\theta,P_{\rm ord}\) are these three
+projections in the order applied, follow them by the
+residual Hecke idempotent \(e_{\mathfrak m}\) acting on
+the ordinary module. For the constituent decomposition
+\(V_x=\bigoplus_\pi V_x(\pi)\), the projected space is
+\[
+ e_{\mathfrak m}P_{\rm ord}P_\theta P_{\rm type}V_x
+    =\bigoplus_\pi
+          e_{\mathfrak m}P_{\rm ord}P_\theta P_{\rm type}V_x(\pi).
+\]
+Each operator preserves each summand on its domain. Thus each
+nonzero summand carries the corresponding constituent's
+local parameters.
+
+On each nonzero intersection the spherical Hecke
+operators act through the spherical character of the
+constituent. At a place above \(\ell\), use the Jacquet
+map for the upper unipotent group over the local field.
+If \(v\) is in its kernel, write
+\(v=\sum_i(\pi(n_i)-1)v_i\) with \(n_i\) in the full
+upper unipotent group. All \(n_i\) belong to \(z^{-a}Nz^a\)
+once \(a\) is large. For \(H=z^{-a}Nz^a\) containing every \(n_i\), right invariance of probability Haar gives
+\[
+ \int_H \pi(h)(\pi(n_i)-1)v_i\,dh
+ =\int_H \pi(hn_i)v_i\,dh-\int_H\pi(h)v_i\,dh=0 .
+\]
+For an \(N\)-fixed \(v\), double-coset decomposition writes
+\(U_z^a v\) as this average followed by \(\pi(z^a)\) and the
+index \([N:z^aNz^{-a}]\), with the indicated normalization.
+
+If \(v\) is fixed by \(N\), write \(A_a v\) for this
+probability average. The double coset sum gives
+\[
+       U_z^a v=[N:z^aNz^{-a}]\,\pi(z^a)A_av=0.
+\]
+Since \(U_z\) is invertible on its ordinary part, \(v=0\). In the quotient, every term in the sum for
+an ordinary translation has the same image. The
+normalized translation therefore acts as the torus
+action times the fixed index and normalization factors.
+A character quotient of the Jacquet module with the
+specified torus type embeds the irreducible local
+constituent into its principal series by Frobenius
+reciprocity. The inducing characters
+have pairwise distinct restrictions to the units,
+hence no ratio is an unramified norm power. The
+principal series is irreducible by the criterion for
+unlinked singleton segments \cite[Theorem 4.2]{zelevinsky}.
+The geometric lemma lists the permutations in its
+Jacquet module with multiplicity one
+\cite[Sections 2.9 and 2.12]{bernstein-zelevinsky}.
+
+Let \(\eta_i\) be the restrictions of the inducing characters to units, numbered in the specified order. A Jacquet constituent indexed by \(w\) has this type precisely when
+\[
+ (\eta_{w(1)},\ldots,\eta_{w(n)})=(\eta_1,\ldots,\eta_n).
+\]
+The \(\eta_i\) are pairwise distinct, so only the identity permutation contributes. Its Jacquet space
+is one-dimensional, on which every normalized
+ordinary translation acts by the corresponding
+torus scalar. Multiplicities of the same constituent
+carry the same scalars. Thus each nonzero intersection
+supplies a scalar evaluation of the core Hecke algebra.
+
+Let \(\mathbb T\) be the core Hecke algebra and
+\(\mathcal X\) the detecting evaluations just constructed,
+with coefficient fields \(E_x\). The map
+\[
+                 \mathbb T\longrightarrow\prod_{x\in\mathcal X}E_x
+\]
+is injective. Indeed a kernel operator vanishes on every
+contributing constituent at each chosen weight. Its action
+on a basis vector therefore has coefficients vanishing at
+all chosen weights and is zero by weight density.
+The source is compact and the product of coefficient fields
+is Hausdorff. Therefore the injective map is a homeomorphism
+onto its closed image.
+For a fixed Galois element \(g\), approximate its conjugacy
+class by split good Frobenius classes. The image of their
+\(i\)-th characteristic coefficient converges in the product
+to the tuple \((a_i(r_x(g)))_{x\in\mathcal X}\), where \(a_i\)
+is the \(i\)-th coefficient of \(\det(X-r_x(g))\)
+under the common convention.
+
+The tuple lies in the closed
+image. Define the desired coefficient as the unique element
+\[
+ c_i(g)\in\mathbb T,\qquad
+      \bigl(c_i(g)_x\bigr)_{x\in\mathcal X}
+        =\bigl(a_i(r_x(g))\bigr)_{x\in\mathcal X}.
+\] The tuple is continuous in \(g\), so its
+preimage is continuous as well. The characteristic
+coefficients on group elements determine the
+whole determinant law. The integral determinant
+formula for a sum expresses its coefficients in
+the characteristic coefficients of cyclic products
+of the summands \cite[Section 1]{chenevier}.
+For the value \(R\) of any of the determinant, polarization or local relations, classical compatibility gives
+\[
+ R\in\bigcap_{x\in\mathcal X}\ker(\mathbb T\to E_x)=0 .
+\]
+Thus the identities descend to the finite algebra. This gives the
+map from the universal ordinary determinant ring,
+using the characters given by the normalized
+ordinary torus operators. Its kernel on the base
+module cuts out its support.
+
+On replacing the new levels by hyperspecial
+levels, the underlying ordinary functions on the
+new and old systems agree, including their weight
+characters. The enlarged Galois ramification set
+removes some spherical operators from the list
+used to select the residual block. The two blocks
+are the same. At a classical eigensystem in the
+common block, the characteristic polynomials modulo
+the residue maximal ideal coincide with the
+chosen residual polynomials at the remaining good
+primes.
+
+Write \(\overline P_g\) and \(\overline P'_g\) for the two residual characteristic polynomials. Their coefficients are continuous, so the dense set of good Frobenius classes gives
+\[
+ \overline P_g(X)=\overline P'_g(X)\qquad(\text{every }g).
+\]
+This includes the removed good primes, which are still hyperspecial at this level. The ordinary operators at \(\ell\)
+are identical in the two lists. Separation by
+classical eigensystems then identifies the integral
+summands. The determinant actions agree after
+pullback along the quotient of Galois groups,
+by equality of the characteristic coefficients
+at the common good primes and continuity.
+The ordered local characters agree because the
+weight character and normalized ordinary
+operators agree. This is the hyperspecial module
+identification needed in the transfer.
+
+\end{proof}
+
+\subsubsection{Integral transfer at the auxiliary places}
+\label{par:ordinary-level}
+
+The modules at the two levels have now been identified under augmentation. For patching one also needs the Hecke operators to correspond integrally, with the possible discrepancy in the trace relations controlled uniformly.
+
+\begin{proposition}[Transfer and nilpotence at the auxiliary level]\label{prop:ordinary-integral-transfer}
+At the split auxiliary places of this ordinary system the
+augmentation comparison is integral and the double-coset
+operators satisfy \eqref{eq:hecke-transfer-identities}.
+For a trace relation \(r\) in the comparison and the product
+\(f_N\) of the local factors below, the integral module \(M_N\) satisfies 
+\[
+ (f_Nr)^{n!}M_N=0.
+\]
+
+\end{proposition}
+
+\begin{proof}
+\proofstep{Finite group quotient and the augmentation trace.}
+
+At a split auxiliary place let \(K_v=\mathrm{GL}_n(\mathcal O_v)\),
+let \(I_v\) be the inverse image of the upper triangular
+Borel in \(K_v\), and put \(I_{1,v}=\ker(I_v\to\Delta_v)\),
+where
+\[
+ \Delta_v=((k_v^\times)_\ell)^n
+\]
+is the
+\(\ell\)-primary part of the residue torus. If \(Q_v=|k_v|\)
+and \(a_v=v_\ell(Q_v-1)\), each of its \(n\) factors
+has order \(\ell^{a_v}\). Take products of the groups over the
+auxiliary places, and write \(\Delta=\prod_v\Delta_v\).
+
+For the ordinary module at product level \(I_1\), the
+variables \(1+y_{vi}\) act by the generators of \(\Delta_v\).
+The group algebra over the ordinary weight ring has the
+presentation in Paragraph~\ref{par:ordinary-patching}. It is
+local because it is finite over the local weight ring and its
+residue algebra is the group algebra of a finite abelian
+\(\ell\)-group in characteristic \(\ell\). For the residue field \(k\) the group algebra becomes
+\[
+ k[\Delta]\simeq k[y_{vi}:v,i]/(y_{vi}^{\ell^{a_v}}:v,i),
+\]
+since \((1+y)^{\ell^{a_v}}-1=y^{\ell^{a_v}}\) in characteristic \(\ell\). The augmentation ideal upstairs is generated by the \(y_{vi}\).
+
+The trace from \(I_1\) to \(I\) gives
+\[
+            M_\Delta\longrightarrow M^\Delta,\qquad
+              [m]\longmapsto\sum_{\delta\in\Delta}\delta m .
+\]
+On a free group-algebra module this sends the standard
+coinvariant basis to the orbit-sum basis of the invariants. The same isomorphism holds on each
+projective summand because both functors commute with direct
+sums. Thus the trace identifies the augmentation fibre
+at \(I_1\) with the fixed module at \(I\). It commutes
+with the determinant action and the local torus operators.
+We give the further comparison of this \(I\)-fixed module
+with the hyperspecial module.
+
+Use one auxiliary place temporarily, with residue size
+\(Q\), uniformizer \(\varpi\), and write \(X_i\) for
+\(Q^{i-1}\) times the torus operator at the diagonal tuple
+with \(\varpi\) in slot \(i\). Put \(P=O[X_1,\ldots,X_n]\),
+\(S=P^{\mathfrak S_n}\), and
+\[
+ \Delta_X=\prod_{i<j}(X_j-X_i),\qquad
+ D_Q=\prod_{i<j}(X_j-QX_i),\qquad
+ d(g)=\sum_{w\in\mathfrak S_n} w(g/\Delta_X).
+\]
+Then \(d\) takes values in \(S\), and the pairing
+\((g,h)\mapsto d(gh)\) is perfect over \(S\).
+Indeed \(P\) is the ordered splitting algebra of the
+universal monic polynomial with coefficients the signed
+elementary symmetric functions. Adjoin its roots in
+order \(X_n,\ldots,X_1\), dividing out the linear factor
+after each adjunction.
+
+For a monic adjunction of degree \(r\) with root \(t\),
+let \(d_r\) extract the coefficient of \(t^{r-1}\).
+Its pairing matrix satisfies
+\[
+             d_r(t^it^j)=0\quad(i+j<r-1),\qquad
+             d_r(t^it^j)=1\quad(i+j=r-1).
+\] It is therefore
+perfect. Lagrange interpolation expresses its coefficient
+functional over the fraction field as the sum of the values
+at the roots divided by the derivative of the polynomial.
+Composing these functionals gives the displayed formula for
+\(d\), with denominator \(\Delta_X\) at the ordered tuple.
+\proofstep{Perfect pairings and double-coset identities.}
+
+In particular this formula and perfectness hold integrally.
+
+Write \(E_Q=\sum_w T_w\), with measure of the Iwahori
+equal to one. This element acts as the unnormalized trace
+\(I\to K_v\), since \(K_v\) is the union of the finite
+Bruhat cells. For bases \((a_b)_b,(c_b)_b\) of \(P\) dual
+over \(S\) under \(d\), the identities in the Iwahori
+Hecke algebra are
+\begin{equation}
+\label{eq:hecke-transfer-identities}
+ E_Q g E_Q=d(D_Qg)E_Q,\qquad
+ \sum_b a_b E_Q c_b=D_Q .
+\end{equation}
+Here a polynomial means multiplication through the
+Bernstein torus subalgebra. To see the identities, use
+the Bernstein presentation
+\cite[Sections 1.5 and 1.15]{haines-kottwitz-prasad}.
+With the integral variables above, its action on the
+spherical polynomial module is
+\[
+ T_{s_i}g=Q s_i(g)+(Q-1)X_i\frac{g-s_i(g)}{X_i-X_{i+1}}.
+\]
+The normalization follows by taking the ratios of the
+Hecke translations at
+\(\operatorname{diag}(\varpi\mathbf 1_i,\mathbf 1_{n-i})\)
+for successive \(i\), and multiplying the resulting
+\(i\)-th ratio by \(Q^{i-1}\). The coefficient of the reflection \(s_i\) in the fraction field is
+\[
+       Q-(Q-1)\frac{X_i}{X_i-X_{i+1}}
+                  =\frac{X_i-QX_{i+1}}{X_i-X_{i+1}}.
+\]
+
+In the expansion of
+\(T_w\) the coefficient of \(w\) comes from taking each
+reflection term in a reduced expression and is nonzero.
+The remaining terms are indexed by proper subwords.
+This proves faithfulness on the algebra spanned by the
+Bernstein monomials times \(T_w\), using independence of
+the field automorphisms. The coefficient of the reversing
+permutation \(w_0\) in \(E_Q\) is
+\(w_0(D_Q/\Delta_X)\), since the reduced expression
+encounters each positive root once. The equality
+\(T_{s_i}E_Q=Q E_Q\) puts the image of \(E_Q\) in the
+symmetric polynomials by the displayed action of \(T_{s_i}\).
+
+Write \(E_Q=\sum_w c_w w\). Since its output is symmetric,
+\[
+ \sum_w c_w w=\sigma E_Q=\sum_w\sigma(c_w)\,\sigma w ,
+ \qquad c_{\sigma w}=\sigma(c_w)
+\]
+by independence of the distinct automorphisms. The known coefficient at \(w_0\) therefore gives \(c_w=w(D_Q/\Delta_X)\) for every \(w\). Thus \(E_Q\) acts as \(g\mapsto d(D_Qg)\).
+Both identities in \eqref{eq:hecke-transfer-identities}
+follow from this action, using \(\sum_b a_b d(c_b h)=h\)
+in the second. Faithfulness gives the identities before
+passing to any global module.
+
+Let \(V\) be the ordinary fixed module at \(I\) and \(H\)
+the hyperspecial one. For all the auxiliary places at once,
+take tensor products of the polynomial and symmetric
+algebras, the coefficient functionals and the dual bases.
+Let \(e\) be the composite of the traces \(E_{Q_v}\)
+to hyperspecial level, and let \(D=\prod_v D_{Q_v}\).
+The local identities commute across places. The action of
+symmetric polynomials on \(H\) is specified by
+\[
+ e_k(X_{v,1},\ldots,X_{v,n})\big|_H
+   =(-1)^k[Z^{n-k}]\det(Z-\rho(\varphi_v)).
+\]
+For this equality \(\det(Z-\rho(\varphi_v))\) denotes
+the characteristic polynomial of the universal
+determinant on the hyperspecial module.
+
+At a separating
+characteristic-zero evaluation, the usual Satake
+isomorphism identifies the symmetric action with the
+elementary symmetric functions of the algebraically
+normalized Satake parameters. These are the roots of the
+Galois Frobenius polynomial by local--global compatibility.
+If the specialization of the vector is zero, the equality
+on it holds as well. Separation thus proves the displayed
+equality on the integral module. This shows that
+\(P\otimes_S H\), with all places included in \(P,S\),
+is precisely the module obtained by adjoining the ordered
+Frobenius roots to \(H\).
+
+Define \(F:P\otimes_S H\to V\) by \(F(g\otimes h)=gh\).
+Define \(G:V\to P\otimes_S H\) by
+\[
+ G(v)=\sum_b a_b\otimes e(c_b v).
+\]
+The second map is \(P\)-linear. In fact the tensor
+\(\sum_b a_b\otimes c_b\) corresponds to the identity
+under the perfect pairing, so multiplication by \(g\)
+on its first factor agrees with multiplication on the
+second factor. Both maps commute with the global
+determinant action, since the translations commute with
+that action and hyperspecial restriction gives the same
+determinant there. The second identity in
+\eqref{eq:hecke-transfer-identities} gives \(FG=D\)
+on \(V\).
+
+For hyperspecial \(h\) the first identity gives
+\(E_{Q_v}(g h)=d(D_{Q_v}g)h\) at that place. Indeed
+\(E_{Q_v}h=[K_v:I_v]h\), and the nonzero index cancels
+on the torsion-free integral module. Apply this at each place. The composite on a pure tensor is
+\[
+      GF(g\otimes h)=\sum_b a_b\otimes d(Dc_bg)\,h
+                                      =Dg\otimes h .
+\]
+The last equality is duality of the bases over \(S\).
+The polynomial \(D\) divides \(f_N\) from
+Paragraph~\ref{par:ordinary-patching}. Multiply \(G\) by \(f_N/D\). The common scalar of the two composites becomes
+\[
+ (f_N/D)D=f_N.
+\]
+All of these maps
+are integral. They respect projection to a marked
+simultaneous residual tuple, since they commute with each
+of the ordered variables. They also respect coefficient
+extension and the subsequent finite truncations.
+
+At the covering level \(I_1\), use the split torus action
+on fixed vectors obtained by forming the dominant
+translation operators and inverting them, then taking
+ratios to obtain all translations. The Iwahori--Matsumoto
+relations make each such translation invertible in the
+pro-unipotent Iwahori Hecke algebra when \(Q\) is a unit
+\cite[Theorem 1 and its corollary]{vigneras-iwahori}.
+Pass to \(I_1\) by the idempotent averaging the
+prime-to-\(\ell\) part of the residue torus. Writing \(e\) for this averaging idempotent and \(T\) for a translation, commutation gives the inverse explicitly in the corner algebra:
+\[
+ (eTe)(eT^{-1}e)=e=(eT^{-1}e)(eTe).
+\]
+
+The dominant translation coset sums have the same upper unipotent representatives at both levels. The torus operators for diagonal units
+are the actions of the
+residue torus. Under geometric Artin reciprocity the
+marked Frobenius \(\varphi_v\) goes to \(\varpi\) and the
+marked tame element \(\tau_v\) goes to a unit \(\delta_v\)
+which generates the cyclic \(\ell\)-quotient of
+\(k_v^\times\). Thus the action of \(1+y_{vi}\) is the
+torus operator at the tuple supported in slot \(i\)
+with value \(\delta_v\).
+
+At a classical evaluation let \(\chi\) be a joint torus
+eigencharacter of the relevant irreducible local
+constituent at \(I_1\), and let \(\chi_i\) denote its
+restriction to slot \(i\). The Jacquet comparison sends
+this character to the inducing datum. In normalized
+induction its characters are
+\[
+ \psi_i(a)=\chi_i(a)\,Q^{(i-1)\operatorname{ord}(a)}
+                         |a|^{(n-1)/2}.
+\]
+The factor multiplying \(\chi_i\) is the square root of
+the Borel modulus, whose exponent on the \(i\)-th
+coordinate is \((n+1-2i)/2\). The common twist in the
+algebraic normalization of local Langlands cancels
+\(|a|^{(n-1)/2}\). After cancellation the Weil character on a reciprocity element is
+\[
+         a\longmapsto Q^{(i-1)\operatorname{ord}(a)}\chi_i(a).
+\]
+At \(a=\varpi\) this is the \(X_i\)-eigenvalue. At the unit
+\(a=\delta_v\) it is the eigenvalue of \(1+y_{vi}\).
+
+Suppose the local factor of \(f_N\) is nonzero at this
+eigencharacter. The normalized inducing characters are
+pairwise unlinked: a quotient by a single power
+\(|\cdot|^{\pm1}\) would make two of the \(X_i\) values
+differ by a factor of \(Q\). Hence the constituent is
+the irreducible principal series of these characters
+\cite[Theorem 4.2]{zelevinsky}. Its local parameter, in
+algebraic normalization, is the sum of the listed
+characters, with zero monodromy. By characteristic-zero
+local--global compatibility, the attached Galois
+representation has this Frobenius-semisimplified
+Weil--Deligne parameter.
+
+If only the Weil semisimplification is compared, the
+distinct roots \(a_i\) still give simple Frobenius eigenlines.
+The Frobenius relation for the monodromy operator \(N\)
+gives, in one of the two reciprocal Frobenius conventions,
+\[
+                    (a_i/a_j-Q)N_{ij}=0 .
+\]
+The excluded pairs have neither ratio \(Q\) nor ratio
+\(Q^{-1}\), so all entries are zero in either convention. The resulting local
+Frobenius eigenspaces are one-dimensional and on each
+one inertia acts by the corresponding Weil character.
+\proofstep{Pass from the torus eigenvalues to the integral module.}
+
+The calculation with torus eigenvalues gives relations after specialization. A nilpotence statement on the integral module is needed before these relations can be used in patching.
+
+
+Consequently the two matrix relations for
+\(\varphi_v,\tau_v\) in Paragraph~\ref{par:ordinary-patching}
+hold, with the product in the second relation on the
+left of \(\rho(\tau_v)-(1+y_{vi})\).
+
+At a classical evaluation with local factor zero,
+multiplying the trace relations by that factor gives
+zero at the joint eigenvalues anyway. To obtain the
+same relation on an integral module, for each irreducible constituent \(\pi\) use the Jacquet map
+\[
+ \pi^{I_1}\lhook\joinrel\longrightarrow J_B(\pi).
+\]
+For injectivity
+one uses the Iwahori decomposition of \(I_1\) and a
+strictly contracting diagonal element. A fixed vector
+which maps to zero in the Jacquet module is killed by
+averaging over a sufficiently expanded compact unipotent
+subgroup. On the fixed space the corresponding
+dominant translation, up to its nonzero index scalar,
+is invertible. Let \(I(\chi)\) be the inducing principal series. The Bruhat filtration of its Borel Jacquet module \(J_BI(\chi)\) has one line for each permutation, so
+\[
+ \dim J_BI(\chi)=\sum_{w\in S_n}1=n!.
+\]
+The Jacquet functor is exact, so the dimension for the
+constituent is at most \(n!\)
+\cite[Sections 2.9 and 2.12]{bernstein-zelevinsky}.
+
+In a simultaneous triangularization on this complex
+space, a polynomial vanishing at each joint torus eigenvalue
+has zero diagonal. In dimension \(h=\dim\pi^{I_1}\le n!\), take the flag \(V_j\) spanned by the first \(j\) basis vectors in the triangularization. Then
+\[
+ B V_j\subset V_{j-1}\quad\Longrightarrow\quad
+ B^h V_h\subset V_0=0\quad\Longrightarrow\quad B^{n!}=0 .
+\] Apply this to the trace relations
+multiplied by the local factor of \(f_N\) and then
+multiply by any remaining factors of \(f_N\). Separating
+classical evaluations show that \((f_N r)^{n!}\)
+annihilates the full integral module, where \(r\) is the
+trace relation in question. The bound \(n!\) is independent
+of the conductor of the tame character, the weight,
+the depth \(N\) and the dimensions of the global modules.
+\end{proof}

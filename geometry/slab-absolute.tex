@@ -1,0 +1,149 @@
+\subsubsection{Absolute convergence on the finite slabs}
+
+The phase calculation gives a term for every rational relative position. Interchanging the sum of these terms with the period integrals requires absolute convergence, which can first be proved on bounded slabs.
+
+\begin{proposition}[Absolute unfolding on a finite slab]\label{prop:gram-absolute-slab}
+Take two scalar test functions from the columns on the marked row of Definition~\ref{hyp:full-gram-row}.
+Assume at each noncompact real place that
+\(h/(8\sqrt{2q})>6r^2\) in \eqref{eq:count-polar-decay}, where
+\(q\) is the smaller signature rank. Write \(I\) for the unfolded pairing integrand and \(d\mu\) for the real quotient measures. Then 
+\[
+ \int_{\mathcal S}|I|\,d\mu<\infty\qquad(\mathcal S\text{ any finite slab}).
+\]
+ Thus the complex pairing may be
+unfolded and regrouped.
+\end{proposition}
+
+\begin{proof}
+\proofstep{A lattice multiplicity majorant.}
+
+Put \(G=G(\mathbb A_F)\), \(\Gamma=G(F)\), and write \(p,p'\)
+for two scalar seeds from the column spaces.
+For a compact set \(U_0\subset G\) containing the identity put
+\[
+ M_{U_0}(x)=\sup_{y\in G}\#\{\delta\in\Gamma:\delta y\in xU_0\}.
+\]
+This function is left \(\Gamma\)-invariant. Enlarge \(U_0\) by left
+multiplication by the finite level \(K_2\), so that it is also invariant
+under right multiplication of \(x\) by \(K_2\). For a nonempty fibre choose \(\delta_0\) in it. Then
+\[
+ \delta\longmapsto\delta\delta_0^{-1}\in
+       \Gamma\cap xU_0U_0^{-1}x^{-1},\qquad
+ M_{U_0}(x)\le C(x):=\#(\Gamma\cap xU_0U_0^{-1}x^{-1}).
+\]
+The measurable majorant \(C(x)\) has the same invariances.
+
+On a finite slab \(x=(g,a_\rho k)\), put \(L(g)=\prod_v\|g_v\|_{\rm op}\)
+in signature coordinates. The majorant is \(O(L(g)^{4r^2})\).
+Indeed the finite matrix entries of the rational elements being counted
+belong to a common fractional ideal \(\mathfrak a\) by compactness. After changing
+to a fixed rational basis, each archimedean coordinate at \(v\) is
+bounded by \(C_v\|g_v\|_{\rm op}^2\), since \(g_v^{-1}=J_vg_v^*J_v\)
+for the signature matrix \(J_v\) and \(\|g_v\|_{\rm op}\ge1\).
+
+For a fundamental parallelotope \(P\) of the fractional ideal let
+\(B(\mathbf R)\) be the product of complex discs of radii \(R_v\ge1\).
+The disjoint translates of \(P\) centered at the lattice points give
+\[
+ \#(\mathfrak a\cap B(\mathbf R))\operatorname{vol}(P)
+ \le \operatorname{vol}(B(\mathbf R)+P)
+ \le \prod_v\pi(R_v+D_v)^2\ll_{\mathfrak a}\prod_v R_v^2 ,
+\]
+where \(D_v\) bounds the radius of the projection of \(P\) at \(v\).
+The rational matrix is determined
+by its \(r^2\) entries. Taking \(R_v=C_v\|g_v\|_{\rm op}^2\)
+for each entry gives the product bound
+\[
+ O\!\left(\prod_v(C_v\|g_v\|_{\rm op}^2)^{2r^2}\right)
+      =O(L(g)^{4r^2}).
+\]
+The constants here may depend on the fixed word pair and compact set.
+
+Let \(B_u\) be the real Bessel subgroup, the product of the
+unipotent and compact stabilizers over the infinite places.
+On the slab for \(\rho\), let \(\Lambda_\rho\subset B_u\)
+be the residual rational lattice unipotent. Its quotient in
+\(B_u\) has bounded representatives by the lattice unipotent
+fundamental set and compactness of the definite group. For \(s\in B_u\)
+choose \(\lambda\in\Lambda_\rho\) with \(\lambda s^{-1}\)
+in the bounded set of representatives. The finite relation \(\lambda_f a_\rho\in a_\rho K_2\) and the
+two invariances of the majorant give
+\[
+ C((g,a_\rho))=C((\lambda_\infty g,a_\rho)),\qquad
+ L(\lambda_\infty g)\le L(\lambda_\infty s^{-1})L(sg)\ll_\rho L(sg).
+\]
+The constant is uniform in \(s\) because the first factor ranges
+over the bounded set of representatives.
+
+In particular the bound on the original count holds throughout the
+period integration. For the fixed translate \(g_0\) and the product
+\(\varphi\) of lowest-vector coefficients the two pointwise bounds are
+\[
+ C((g,a_\rho))\le C_0L(sg)^{4r^2}\quad(s\in B_u),\qquad
+ \|W_u(g)\|\ll \int_{B_u}|\varphi(g_0^{-1}sg)|\,ds .
+\]
+The finitely many column evaluations are bounded and the finite
+characters have modulus one. Multiply the period bound by the
+counting majorant and use the estimate in terms of \(sg\) inside
+the period integral. Submultiplicativity absorbs \(g_0\) in the
+constant. Weil integration bounds the weighted seed integral over
+the slab, up to the fixed finite level volume and the constants
+above, by
+\[
+ \operatorname{vol}(\Lambda_\rho\backslash B_u)
+       \int_{G_\infty}|\varphi(y)|L(y)^{4r^2}\,dy .
+\]
+Factor the last integral over the real places by Tonelli.
+
+At a noncompact place set \(D_v(g)=\log\|g\|_{\rm op}\).
+On the shell \(n\le D_v(g)<n+1\), \eqref{eq:count-polar-decay}
+and the polar volume bound in Section~\ref{sec:count-projection}
+give, with a constant depending on the fixed data,
+\[
+ \int_{n\le D_v<n+1}|\varphi_v(g)|\,\|g\|_{\rm op}^{4r^2}\,dg
+ \ll (1+n)^q
+      \exp\!\left[-n\left(\frac{h}{8\sqrt{2q}}-6r^2\right)\right].
+\]
+Here \(4r^2\) comes from the lattice weight and \(2r^2\) from
+volume growth. The strict inequality in Proposition~\ref{prop:gram-absolute-slab}
+makes the series summable. At a compact place \(\|g_v\|_{\rm op}=1\) in
+signature coordinates and the coefficient is bounded on a set of
+finite volume.
+There are finitely many slabs modulo the rational seed group.
+Thus both the weighted and ordinary absolute seed integrals
+are finite on its quotient.
+
+At each real place use Lemma~\ref{lem:compact-type-reproducer}
+for the lowest type of the right seed. Use right convolution \(p'(y)\mapsto\int a(\omega)p'(y\omega)\,d\omega\).
+The right seed transforms by \(p'(yk)=\chi_2(k)^{-1}p'(y)\) on \(K_2\).
+Thus the finite factor of the reproducer is
+\[
+ a_f(k)=\frac{\chi_2(k)}{\operatorname{vol}(K_2)}
+      \quad(k\in K_2),\qquad a_f(k)=0\quad(k\notin K_2).
+\]
+Tensor \(a_f\) with the real functions. The result
+\(a\) is bounded, compactly supported and reproduces the seed
+under right convolution. Enlarge \(U_0\) to contain its support and
+be left \(K_2\)-invariant. Convolution with the reproducer gives a fixed \(A<\infty\) such that
+\[
+ |p'(y)|\le A\int_{U_0}|p'(y\omega)|\,d\omega .
+\]
+Take a transversal \(\mathcal D\) for \(S_{u'}\backslash\Gamma\).
+
+Apply the inequality at \(\delta x\) and tile the integrals by
+left \(S_{u'}\)-translates of a fundamental domain. At \(y\) in
+that domain the resulting indicators count
+\(\delta^{-1}s y\in xU_0\) with \(\delta\in\mathcal D\),
+\(s\in S_{u'}\). The products \(\delta^{-1}s\) run once through
+\(\Gamma\). Thus Tonelli gives
+\[
+ \sum_{\delta\in\mathcal D}|p'(\delta x)|
+ \le A M_{U_0}(x)\int_{S_{u'}\backslash G}|p'(y)|\,dy .
+\]
+Integrating against \(|p(x)|\) over the left seed quotient is
+finite by the weighted estimate. Each slab embeds in that quotient
+up to null sets. Since the absolute integrand is invariant under
+right \(K_2\), divide the integral over the slab by the positive
+level volume to obtain its real absolute integral. This proves
+absolute convergence for complex unfolding and regrouping.
+\end{proof}

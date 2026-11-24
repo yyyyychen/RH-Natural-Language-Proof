@@ -1,0 +1,674 @@
+\section{From the boundary of the weight chamber to a slope}
+\label{sec:flag-wall-slope}
+
+The two tests of Section~\ref{sec:covolume-flag-test} give values of the arithmetic functional on specific polynomials. A slope estimate at the chosen weight requires information on the whole weight polynomial. To turn this information into
+a slope estimate, we use the limiting behavior at the walls to
+constrain a homogeneous weight polynomial. The integral
+comparison on the deep cover then supplies short sections and
+bounds on the moving degree. The next chapter returns the
+component estimates to the original level.
+
+Fix a marked flag space of rank \(N\) as in Section~\ref{sec:covolume-flag-test}. At each inserted prime, compute the mixed arithmetic test on the common integral model of Lemma~\ref{lem:flag-finite-frobenius-model}. For its embedding set \(\mathcal T\), let \(d_F=|\mathcal T|\binom N2\) and \(n=d_F+1\). To a weight array \(u=(u_{\tau i})\) associate the class
+\[
+ L_u=-\sum_{\tau,i}u_{\tau i}x_{\tau i}.
+\]
+Let \(\Phi_B\) be the
+linear functional obtained by taking the smoothing limit of the
+normalized arithmetic degree at cutoff \(B\ge2\). We determine
+\(\Phi_{B_0}\) on forms of degree \(n\), for a fixed real
+\(B_0\ge2\), by varying an auxiliary integer cutoff \(B\).
+
+In particular the weight can later determine \(B_0\).
+The arithmetic and reference functionals on the same array of weights are
+\begin{equation}\label{eq:wall-weight-polynomials}
+ H_B(u)=\Phi_B(L_u^n),\qquad H(u)=h_{\rm fl}(L_u^n).
+\end{equation}
+The geometric top-degree polynomial is
+\[
+ G(u)=\deg_{\rm fl}(L_u^{d_F})
+   =d_F!\prod_{\tau}\prod_{a<b}\frac{u_{\tau a}-u_{\tau b}}{b-a}.
+\]
+The last equality follows by expanding the power and taking
+the signed top coefficient. In the resulting determinant the
+factorials in the multinomial coefficient give
+\(\prod_{i=0}^{N-1} i!=\prod_{a<b}(b-a)\) per embedding.
+Thus \(G\) is positive in the open dominant chamber, where
+the entries at each embedding decrease strictly.
+
+\input{flag-point-heights}
+\input{flag-wall-positivity}
+
+\subsection{The arithmetic degree near a wall}
+
+The height bounds and vertical positivity can now be applied to weights approaching a chamber wall. The geometric degree tends to zero at the wall. Upper and lower height bounds then control the arithmetic intersection on the wall patch.
+
+\input{flag-wall-polynomial}
+
+\begin{lemma}[Vanishing on split walls]\label{lem:flag-wall-small}
+Fix the marked flag model, and let \(B\) tend to infinity through
+integers. At each embedding take the wall patch of weights
+\(\|u\|_\infty\le1/2\) with \(u_{j-1}=u_j\) at that embedding
+and all other successive gaps at least \(1/(4N)\).
+Let \(\mathcal W\) be the union of these patches. For the fixed marked model,
+\[
+ \sup_{u\in\mathcal W}|H_B(u)|=O\!\left(\frac{\log B}{B}\right).
+\]
+
+\end{lemma}
+
+\begin{proof}
+\proofstep{Squeezing the arithmetic self-intersection.}
+For \(C,a>0\), maximize the error term in \eqref{eq:flag-actual-ht}:
+\[
+ \sup_{z>0}(C\log z-az)=C\log(C/a)-C,\qquad z_{\max}=C/a .
+\]
+In the interior substitute \((a,z)=(t/4,2+h)\); on the boundary
+substitute \((t^2,2+C+h_A)\). For \(B\ge2\)
+and \(0<t\le1/2\), the minimum height is consequently at least
+\(-C'\log(B/t^2)\), and the height on the dense set is at most
+\(C'\log B\). On the semipositive fibrewise nef line of
+Section~\ref{subsec:flag-wall-positivity} these squeeze its
+component self-intersection between the two bounds multiplied
+by \(n\) times its geometric degree. If \(I\) is the arithmetic self-intersection and \(d_{\rm geom}\)
+the geometric degree, shifting every height by \(-e\) gives
+\[
+                         I_{-e}=I-ne\,d_{\rm geom}.
+\]
+
+At the lower bound the shifted line is
+arithmetically nef and has nonnegative self-intersection. At an
+upper bound increased by any \(\delta>0\) the shifted line has
+strictly negative height on a dense set. A nonzero small integral
+section of a positive power would have nonnegative height off
+its zero locus, contradicting density. Its arithmetic volume is
+therefore zero. The arithmetic volume inequality for a smooth
+semipositive, relatively nef Hermitian line bounds its
+self-intersection above by that volume. Let \(\delta\downarrow0\).
+The change to an integral power on an inducing model multiplies both
+sides of each comparison by the same positive factor. The constants
+here are uniform for the bounded weights and the auxiliary cutoff
+on each fixed model. \label{cor:covolume-wall-shape-1}
+
+\proofstep{Perturbing the weight across the wall.}
+Set \(c_0=1/(4N)\). At one embedding \(\tau_0\) use the compact wall patch 
+\[
+ \begin{gathered}u_{\tau_0,j-1}=u_{\tau_0,j},\qquad \|u\|_\infty\le\tfrac12,\\ u_{\tau,i}-u_{\tau,i+1}\ge c_0\qquad((\tau,i)\ne(\tau_0,j-1)).\end{gathered}
+\]
+ Start with rational \(u\) there.
+Take
+\[
+ t=5f/B
+\]
+and add \(2t\) to all entries of the first
+block at \(\tau_0\) only, obtaining \(v\). The distinguished
+gap is exactly \(2t\) and the other gaps stay fixed. For large
+\(B\),
+\[
+ t^2\|d_0\|_\infty\le t/2,
+\]
+so all adjacent gaps
+of \(v-t^2d_0\) are at least \(t\). Its norm is at most one.
+Since
+\[
+ (B-2)t\ge4f
+\]
+for \(B\ge10\), this gives the nef
+inequality. The Vandermonde product gives \(0\le G(v)\ll t\)
+because its distinguished difference is \(2t\) and all other
+factors are bounded. Also \(\log(B/t^2)\le3\log B\).
+The height squeeze on each component now bounds the absolute
+total self-intersection by \(O(\log B/B)\).
+
+\proofstep{Returning to the wall.}
+Compare the polynomial readings at \((v-t^2d_0,t^2)\) and
+\((u,0)\). On the unit cube a monomial of degree \(m\) has
+Lipschitz constant at most \(m\) for the sup norm, by telescoping
+its factors. There are finitely many monomials and components.
+The change costs \(O(t\log B)\), and agreement with the actual
+intersections costs \(O(t^2)\). Thus
+\begin{equation}\label{eq:flag-wall-small}
+   \sup_{\tau_0}\ \sup_{u\text{ on the wall patch at }\tau_0}
+                 |H_B(u)|\ll \log B/B .
+\end{equation}
+For real weights use componentwise rounding down on the mesh
+\(1/(4Nm)\), \(m\) integral. The endpoints of the interval and
+the minimum gap are multiples of that mesh, so both inequalities
+and the wall equality persist. Continuity gives the bound on
+the closed patch.
+
+\end{proof}
+
+\begin{established}[Wall vanishing, alternation and permutation of the embeddings]\label{hyp:flag-wall-symmetry}
+For the full marked object of Definition~\ref{hyp:covolume-flag-degrees}, the reference polynomial \(H\) is nonnegative in the dominant chamber and vanishes when a split gap closes. For any adjacent exchange \(s\) within a block and each cutoff \(B\ge2\),
+\[
+       (H_B-VH)(su)=-(H_B-VH)(u).
+\]
+There is a transitive permutation group of \(\mathcal T\) preserving \(H_B,H,G\) for all \(B\). The arithmetic degree in this assertion sums over the marked component set.
+\label{cor:covolume-wall-shape-2}
+\end{established}
+\begin{proof}
+On the reference product of complete flags write an integral dominant line as a tensor product of nonnegative powers of the Pl\"ucker lines and determinant lines. The quotient metrics are induced by the standard Hermitian norm. Their Pl\"ucker coordinates are integral sections, of sup norm at most one, generating each line, so these lines are arithmetically nef. The standard determinant frame has norm one. When two adjacent weights agree the line, including its metric, descends to the partial flag omitting that step. If \(\pi\) is the resulting projection, then
+\[
+ \widehat c_1(\pi^*\overline L)^{d_F+1}
+           =\pi^*\widehat c_1(\overline L)^{d_F+1};
+\]
+its arithmetic degree is zero by the projection formula since the relative dimension is positive. Rational approximation inside the face and homogeneity give the assertions for real weights. Every permutation of equal flag factors preserves the reference height and the product for \(G\).
+
+For reference the two conclusions just proved read
+\[
+       H(u)\ge0\ (u\text{ dominant}),\qquad
+       u_{\tau,j-1}=u_{\tau,j}\Longrightarrow H(u)=0
+       \quad(u\text{ dominant}).
+\]
+
+For two adjacent roots write \(t=(x+y)/2\) and \(v=y-x\). The even part under exchange consists of monomials \(v^{2i}M(t,\ldots)\). The rank-two formula in Proposition~\ref{lem:arithmetic-flag-alternation} evaluates each as \(h_i\) times its geometric predecessor on both flag spaces. The latter geometric degrees differ by the volume factor \(V\). If \(\operatorname{Sym}_s=(1+s)/2\), the equality on the even monomials gives
+\[
+             \operatorname{Sym}_s(H_B-VH)=0 .
+\]
+
+For the marked arithmetic functional let \(K\) be the marked imaginary quadratic field and \(\Psi\) the host Galois subgroup fixing it. The selected embeddings form a torsor under right translation by \(\Psi\): for two labels \(\tau,\tau'\) take \(g=\tau^{-1}\tau'\) in torsor coordinates. The two half-level ideals are extended from the marked quadratic order, so \(g\) fixes them. Precomposing the PEL endomorphism action with \(g\), and transporting the labels of the marking by the same map, gives an invertible change of moduli data. Its inverse uses \(g^{-1}\). For the twisted endomorphism action \(\iota^g=\iota\circ g\), its eigenspaces satisfy
+\[
+   \operatorname{Lie}(A,\iota^g)_\tau
+           =\operatorname{Lie}(A,\iota)_{\tau\circ g^{-1}} .
+\]
+The transport preserves polarization, complex conjugation and the flag on each eigenspace. Write \(C\mapsto gC\) for the induced bijection of components.
+
+Use the transported toroidal fan for the conjugate moduli problem. At a finite place transport also the test lattice: the cutoff selects rational primes and the de Rham or Hodge--Tate construction commutes with the transported action. At infinity the polarization carries the flag metrics and their cutoffs isometrically. Thus for any fan \(\Sigma\) and smoothing radius \(R\), change of variables gives
+\[
+ \sum_C\widehat{\deg}_{C,\Sigma,B,R}(L_{u\circ g}^{n})
+       =\sum_C\widehat{\deg}_{gC,g\Sigma,B,R}(L_u^n).
+\]
+It suffices to use a common refinement of the fans. On that refinement the geometric and finite intersections satisfy the projection formula. In the archimedean difference of the two smoothed powers, each term contains one difference of cutoff potentials, supported toward the boundary; the integrable bounds and telescoping estimate in the proof of Proposition~\ref{prop:arithmetic-wall-polynomial} make its integral tend to zero at fixed \(B\). Taking \(R\to\infty\) gives \(H_B(u\circ g)=H_B(u)\), as required.
+\end{proof}
+
+\begin{construction}
+\[
+\begin{array}{ll}
+\text{within-block alternation}&\prod_{i<k\text{ in a common block}}(u_i-u_k)\\
+\text{vanishing on the cross-block walls}&\prod_{i<j\le k}(u_i-u_k)\\ \hline
+\text{remaining block sums}&\alpha_\tau\!\sum_{i<j}u_{\tau i}
+                      +\beta_\tau\!\sum_{i\ge j}u_{\tau i}
+\end{array}
+\]
+\caption{How the vanishing conditions factor a wall polynomial. At each embedding the last quotient is linear and symmetric within each of the two blocks.}\label{fig:wall-kernel-steps}
+\end{construction}
+
+\begin{proposition}[The two coefficients left by a split wall]\label{prop:flag-two-moving-shifts}
+For the fixed marked model of Lemma~\ref{hyp:flag-wall-symmetry}
+there are real \(a_B,b_B\) such that
+for each fixed homogeneous polynomial \(F\) of degree \(n\),
+\begin{equation}\label{eq:flag-moving-shifts}
+ \Phi_B(F)=V\bigl(h_{\rm fl}(F)
+                  -a_B\mathsf S(F)-b_B\mathsf T(F)\bigr)
+                     +O_F(\log B/B).
+\end{equation}
+The implied constant may depend on the fixed model and \(F\).
+The coefficients \(a_B,b_B\) are common to all \(F\).
+\end{proposition}
+
+\begin{proof}
+\proofstep{Factoring by the wall equations.}
+In the finite-dimensional space of block-antisymmetric forms
+of degree \(n\), take the common kernel of the evaluations on
+all wall patches. Its elements are precisely
+\[
+  G(u)\sum_\tau\left(\alpha_\tau\sum_{i<j}u_{\tau i}
+                    +\beta_\tau\sum_{i\ge j}u_{\tau i}\right).
+\]
+Indeed, antisymmetry supplies each within-block difference as
+a factor. A patch contains a relatively open subset of its
+hyperplane. To see this, take all other gaps strictly between \(1/(4N)\)
+and \(1/(2N)\) and center the entries. A polynomial vanishing
+there is divisible by the distinguished cross-block difference.
+Permuting either block gives every cross-block difference.
+The distinct linear factors are relatively prime in pairs
+and their product has degree \(d_F\). The linear quotient
+must have constant coefficients within each block because
+both the dividend and the Vandermonde are alternating there.
+
+Let \(\mathcal K\) be the common kernel of the wall evaluations
+calculated above. Fix a complement \(\mathcal L\), and choose
+wall evaluations that form a basis of \(\mathcal L^\vee\).
+For \(Q_B=H_B-VH\), decompose
+\[
+ Q_B=Q_{B,\mathcal K}+E_B
+\]
+
+with \(E_B\in\mathcal L\). In a fixed basis \(f_1,\ldots,f_h\) of \(\mathcal L\), let \(A_{ij}=f_j(u_i)\) for the chosen wall points \(u_i\). The evaluation functionals span \(\mathcal L^\vee\): a vector they all annihilate belongs to \(\mathcal L\cap\mathcal K=0\). We may therefore take \(A\) invertible. Writing \(c_B\) for the coefficient vector of \(E_B\) gives
+\[
+ A c_B=(Q_B(u_i))_{i=1}^h,\qquad
+ \|c_B\|_\infty\le\|A^{-1}\|_\infty\max_i|Q_B(u_i)|.
+\]
+At this fixed model the matrix is independent of \(B\). Equation~\eqref{eq:flag-wall-small} thus gives
+\[
+ \|E_B\|_{\rm coeff}=O(\log B/B).
+\]
+
+Average both summands over the finite transitive relabeling
+group. This leaves their sum equal to \(Q_B\), preserves
+\(\mathcal K\), and keeps the coefficient bound because each
+relabeling permutes the monomials. In the averaged kernel part
+the first-block coefficient is the same at every embedding,
+and the second-block coefficient is likewise constant.
+Write them as \(nV(a_B+b_B)\) and \(nVb_B\), respectively.
+The derivative degrees in Section~\ref{sec:covolume-flag-test}
+identify these two terms with the \(\mathsf S,\mathsf T\) terms
+in \eqref{eq:flag-moving-shifts}.
+
+\proofstep{Passing from weights to test polynomials.}
+To see this first on \(L_u^n\), its derivative in \(x_{\tau i}\)
+has degree reading
+\[
+ -nG(u)u_{\tau i}.
+\]
+For a monomial
+\(x^m\) of degree \(n\) the error in its functional value is
+the coefficient of \(u^m\) in the polynomial error divided by
+\((-1)^n\binom{n}{m}\). Each is \(O(\log B/B)\). Linearity
+gives \eqref{eq:flag-moving-shifts}. No bound for the size of the
+inverse evaluation matrix as \(N\) varies is needed in this limit.
+
+\end{proof}
+
+\paragraph{Passing to a fixed real cutoff.}
+Write \(P_{\tau,k}=P^-_{\tau,k}+P^+_{\tau,k}\).
+Every homogeneous \(F\) of degree \(n\) has a presentation
+\begin{equation}\label{eq:flag-power-sum-presentation}
+ F=\sum_\tau\sum_{k=1}^N P_{\tau,k}Q_{\tau,k},
+ \qquad \deg Q_{\tau,k}=n-k .
+\end{equation}
+with homogeneous cofactors (possibly zero). For a single
+embedding the ideal of the first \(N\) power sums equals the
+ideal of positive elementary symmetric functions by Newton's
+identities over \(\R\). Modulo this ideal the complete symmetric
+function of degree \(i+1\) in \(x_i,\ldots,x_{N-1}\) vanishes because
+its generating series there is \(\prod_{a<i}(1-x_a z)\).
+Thus one reduces \(x_i^{i+1}\) to smaller powers of \(x_i\)
+with later variables. In increasing order of \(i\) this leaves
+monomials of degree at most \(\binom N2\) per embedding. Taking
+the homogeneous part of the reductions gives the presentation.
+\label{cor:covolume-wall-shape-3}
+
+\begin{proposition}[The fixed-cutoff expansion]\label{prop:flag-fixed-prime-expansion}
+Fix \(B_0\) and a marked model satisfying the prime-change
+formulas of Section~\ref{sec:covolume-flag-test}.
+For a homogeneous \(F\) of degree \(n\), choose any power-sum
+presentation \eqref{eq:flag-power-sum-presentation}. There are constants \(a,b_0\), independent of \(F\),
+such that
+\[
+ \Phi_{B_0}(F)=V\bigl(h_{\rm fl}(F)
+                 -a\mathsf S(F)-b_0\mathsf T(F)\bigr)
+                   +\sum_{p\notin\mathcal P_{B_0}}R_p(Q).
+\]
+For each fixed presentation the series is absolutely convergent.
+\end{proposition}
+
+\begin{proof}
+\proofstep{Corrected coefficients at the fixed real cutoff.}
+Put \(\mathcal P'=\mathcal P_B\setminus\mathcal P_{B_0}\) for
+\(B\ge B_0\). At a new good prime the de Rham minus Hodge--Tate
+comparison of the power sum has a reference term
+\(-k C(P^-_{\tau,k-1}Q_{\tau,k})\log p/(p-1)\).
+Here \(C=V\deg_{\rm fl}\), including the exponent-zero convention.
+For an embedding label \(\alpha\), write \(\mathrm{Lie}_\alpha\) for the corresponding Lie eigenspace bundle and \(\operatorname{ch}_{k-1}(\mathrm{Lie}_\alpha)\) for its signed power sum divided by \((k-1)!\). Let \(\varphi_p\) be the Frobenius permutation of the labels. The successive Frobenius quotients contribute
+\[
+ k!\log p\sum_{l\ge1}p^{-kl}
+ C\big(\operatorname{ch}_{k-1}(\mathrm{Lie}_{\varphi_p^l\tau})
+                                      Q_{\tau,k}\big).
+\]
+These formulas follow from the periodic quotient
+identity in Section~\ref{sec:covolume-flag-test} by expanding the
+geometric series around the Frobenius orbit.
+
+Changing the
+cofactor's flags after the power sum has changed contributes zero
+by vertical restriction of the trivialized Tate bundle.
+The reference terms sum to \(-V\mathsf S(F)\log p/(p-1)\) because
+terms with a derivative on the cofactor still have a full power
+sum as factor and have zero geometric degree. For \(k=1\) the
+Lie rank is \(j\) or \(N-j\), according to the Frobenius type.
+Let
+\[
+ \kappa_p=\sum_{l\ge1}p^{-l}\operatorname{rk}(\mathrm{Lie}_{\varphi_p^l\tau})
+\]
+for a plus embedding \(\tau\).
+This is the same for every such \(\tau\). They are indexed by
+the host subgroup of the Galois group, and multiplying by any
+of its elements preserves membership in the subgroup and its
+conjugate coset.
+
+Since the total derivative of \(P_{\tau,1}\)
+at \(\tau\) is \(N\), the \(k=1\) terms sum to
+\(V\mathsf T(F)\kappa_p\log p/N\). Denote the remaining sum at
+\(p\), over \(\tau\) and \(k\ge2\), by \(R_p(Q)\).
+Telescoping over the new primes and taking the smoothing limit
+for this finite set gives the exact change from \(B\) to \(B_0\).
+For fixed \(Q\) its higher-order terms satisfy
+\(\abs{R_p(Q)}\ll_Q \log p/p^2\) since the possible Chern
+readings are finite and
+\[
+ \sum_{l\ge1}p^{-kl}=1/(p^k-1).
+\]
+
+\label{cor:covolume-wall-shape-4}
+
+The finite telescoping identity and
+Proposition~\ref{prop:flag-two-moving-shifts} combine to give
+\[
+ \Phi_{B_0}(F)=V(h_{\rm fl}(F)-A_B\mathsf S(F)-D_B\mathsf T(F))
+                    +\sum_{p\in\mathcal P'}R_p(Q)+o_F(1),
+\]
+where the reference and rank-one prime terms have been incorporated
+into the corrections
+\[
+ A_B=a_B+\sum_{p\in\mathcal P'}\frac{\log p}{p-1},
+ \qquad D_B=b_B-\frac1N\sum_{p\in\mathcal P'}\kappa_p\log p .
+\]
+The bound \(R_p(Q)=O_Q(\log p/p^2)\) applies to each fixed
+presentation, so it remains to take the limits of \(A_B,D_B\).
+For the two calibration polynomials the derivative rows are
+\((2I,0)\) and \((j,N)\). In these two rows the preceding
+identity says that both \(2I A_B\) and \(jA_B+ND_B\)
+converge, because every other term has a limit. Since
+\(I\ne0\) and \(N>0\), this first gives \(A_B\to a\), then
+\(D_B\to b_0\). Substituting for an arbitrary \(F\) yields
+\begin{equation}\label{eq:flag-fixed-shifts}
+ \Phi_{B_0}(F)=V(h_{\rm fl}(F)-a\mathsf S(F)-b_0\mathsf T(F))
+                        +\sum_{p\notin\mathcal P_{B_0}}R_p(Q).
+\end{equation}
+The constants came from the two calibration rows. The finite
+telescoping identity holds for all power-sum presentations, so
+the limiting formula does also.
+
+\end{proof}
+
+\begin{paramdefinition}[Weight gaps and cutoff for the quantitative prime tail]\label{hyp:flag-prime-tail}
+For the numerical application suppose \(u\) is strictly
+dominant and \(g>0\) bounds below each split gap and the
+distance from each entry in the smaller block to every other
+entry at the same embedding. In a tie take the first block.
+Set \(j_s=\min(j,N-j)\), \(U_\tau=\max_i u_{\tau i}-\min_i
+u_{\tau i}\), and take
+\[
+ B_0=4fN^2(1+\|u\|_\infty/g),\qquad F=L_u^n .
+\]
+Since \(f(N-1)>2\), this cutoff is at least \(48\).
+Qualitative convergence for a fixed presentation in
+\eqref{eq:flag-fixed-shifts} must now be strengthened. The
+individual polynomials \(Q_{\tau,k}\) need no size bound.
+For \(2\le k\le N\), consider the normalized intersection numbers
+\[
+ K(\tau,k;\sigma,i)=
+  \frac{k\deg_{\rm fl}(x_{\sigma i}^{k-1}Q_{\tau,k})}{nG(u)} .
+\]
+\end{paramdefinition}
+
+\begin{proposition}[Uniform absolute bound for the prime tail]\label{prop:flag-uniform-prime-tail}
+Let \(u\) satisfy Definition~\ref{hyp:flag-prime-tail}. Take
+\(B_0=4fN^2(1+\|u\|_\infty/g)\), \(j_s=\min(j,N-j)\),
+and \(U_\tau=\max_i u_{\tau i}-\min_i u_{\tau i}\).
+For \(F=L_u^n\), the tail in \eqref{eq:flag-fixed-shifts}
+satisfies
+\[
+ \frac{\sum_{p\notin\mathcal P_{B_0}}|R_p(Q)|}{nVG(u)}
+                         \le 8\log4\, j_s\sum_\tau U_\tau .
+\]
+The bound is independent of the choice of homogeneous cofactors.
+\end{proposition}
+
+\begin{proof}
+We give the coefficient calculation underlying the uniform bound.
+For \(\rho=(N-1,N-2,\ldots,0)\) and a decreasing exponent
+list \(b\) let \(D_b(z)=\det(z_i^{b_l}/b_l!)_{i,l}\). Put
+\[
+   D=D_\rho,\qquad
+   J_k=\sum_{h=0}^{k-1}(-1)^hD_{\rho+(k-h,1^h)} .
+\]
+Partitions in this formula are padded to length \(N\).
+The alternating coefficient of the power-sum presentation gives
+\[
+ K(\tau,k;\sigma,i)=
+ \begin{cases}
+ -\partial_i^{k-1}J_k(u_\tau)/D(u_\tau),&\sigma=\tau,\\
+ -\big(J_k(u_\tau)/D(u_\tau)\big)
+    \partial_i^{k-1}D(u_\sigma)/D(u_\sigma),&\sigma\ne\tau .
+ \end{cases}
+\]
+Here is one derivation. Multiply the presentation by
+\(x_{\sigma i}^{k-1}\), alternate at every embedding and
+extract the coefficient at the exponent list \(\rho\) at the
+embeddings other than \(\tau\).
+
+At \(\tau\) use the signed sum
+of the hook lists \(\rho+(k-h,1^h)\) divided by \(k\).
+Use the same overall sign as in \(\deg_{\rm fl}\).
+After factoring off each Vandermonde these are ordinary Schur
+coefficients. The hook sum pairs with the power sum \(p_k\)
+in the scalar product for which Schur functions are orthonormal, since
+\[
+ p_k=\sum_h(-1)^h s_{(k-h,1^h)}.
+\]
+
+Multiplication by \(p_l\) is adjoint to \(l\partial/\partial p_l\),
+by the power-sum scalar product. Thus only the factor
+\(P_{\tau,k}\) survives and its multiplier \(k\) cancels the
+division. These identities apply in symmetric degree at most
+\(k\le N\) at the selected embedding. At any other embedding
+the coefficient sought has symmetric degree zero.
+Expanding the other side by the multinomial theorem gives a
+determinant \(D\) at each ordinary embedding and \(J_k\) at
+\(\tau\). Inserting \(x_{\sigma i}^{k-1}\) lowers its exponent
+in the multinomial coefficient, which differentiates row \(i\)
+there \(k-1\) times. Division by \(nG(u)\) cancels the common
+factorials and the unmodified determinants. The sign comes from
+\[
+ L_u=-\sum u_{\tau i}x_{\tau i}.
+\]
+\cite{macdonald-symmetric}\label{cor:covolume-wall-shape-5}
+
+\proofstep{Translation invariance of the normalized derivative.}
+The quotient \(J_k/D\) is homogeneous of degree \(k\)
+and its coefficient absolute sum is at most \(2^{k-1}/k!\).
+In fact the \(h\)-th determinant ratio before the column
+factorials is the hook Schur polynomial, with nonnegative
+coefficients and value \(\binom{N+k-h-1}{k}\binom{k-1}{h}\)
+at \((1,\ldots,1)\), by the hook-content formula. Multiplication by the column factorial ratio and summation over the
+hooks give the coefficient bound (a missing hook contributes zero)
+\[
+ \sum_h\frac{(N-1-h)!}{(N+k-h-1)!}
+       \binom{N+k-h-1}{k}\binom{k-1}{h}
+ \le\frac1{k!}\sum_{h=0}^{k-1}\binom{k-1}{h}=\frac{2^{k-1}}{k!},
+\]
+where the sum on the left is over the hooks occurring in the determinant.
+Both \(D\) and \(J_k\) are invariant under common translation
+for \(k\ge2\).
+
+For \(D\) this is the Vandermonde formula.
+For \(J_k\), differentiating in the translation lowers one
+column exponent by one with coefficient one. Terms with a
+repeated exponent vanish. The surviving ways of removing
+a box from the arm or leg give the same determinant for
+successive hooks with opposite signs. This also proves the
+translation identity for every partial derivative.
+
+Translate the \(\tau\)-variables by \(-u_{\tau i}\), so their
+absolute values are at most \(U_\tau\).
+Translation invariance and the coefficient bound give the first
+estimate below; the separation of the smaller-block coordinate \(i\)
+gives the second:
+\[
+ \left|\partial^l(J_k/D)\right|
+       \le \frac{2^{k-1}}{k!}k^l U_\tau^{k-l},\qquad
+ \left|\frac{\partial_i^a D(u_\sigma)}{D(u_\sigma)}\right|\le(N/g)^a .
+\] Indeed,
+differentiate the product of its \(N-1\) factors involving
+that index and use the prescribed separation at \(\sigma\).
+Leibniz' formula in the equal-embedding case and the product
+formula at distinct embeddings now give
+\[
+ |K(\tau,k;\sigma,i)|\le
+ \frac{2^{k-1}}{k!}U_\tau\,[N(1+U_\tau/g)]^{k-1}
+ \le U_\tau(B_0/2)^{k-1}.
+\]
+This use of translation is essential for the spread in the
+last estimate. A common shift of the weight at an embedding
+can make its sup norm much larger than its spread.
+
+The \((k,l,\tau)\)-summand of \(R_p(Q)/(nVG(u))\) is
+\(p^{-kl}\log p\) times a signed sum of the normalized
+coefficients \(K(\tau,k;\sigma,i)\) in the Frobenius block.
+The full power sum of degree \(k-1>0\) has zero pairing
+in the flag ring, so replacing this block by its complement
+only reverses the sum's sign. Thus there are at most \(j_s\)
+entries to count at each \((k,l,\tau)\). Using the preceding
+coefficient bound, first sum in \(l\), then in \(k\):
+\[
+ \begin{split}
+ \frac{|R_p(Q)|}{nVG(u)}
+ &\le j_s\sum_\tau U_\tau\,\log p
+     \sum_{k=2}^{N}(B_0/2)^{k-1}\sum_{l\ge1}p^{-kl}\\
+ &\le 2 B_0 j_s\sum_\tau U_\tau \frac{\log p}{p^2}
+                                      \qquad(p>B_0).
+ \end{split}
+\]
+
+For the second inequality use
+\(\sum_{l\ge1}p^{-kl}\le2p^{-k}\) and
+\(\sum_{k\ge2}(B_0/(2p))^{k-2}\le2\).
+All primes at most \(B_0\) are in \(\mathcal P_{B_0}\).
+On \(2^a B_0<p\le 2^{a+1}B_0\), the Chebyshev estimate
+\(\sum_{p\le t}\log p\le t\log4\) bounds the sum of
+\(\log p/p^2\) by \(2^{1-a}\log4/B_0\).
+Sum over \(a\ge0\) to obtain \(4\log4/B_0\). Multiplication
+gives the claimed tail bound.
+
+\end{proof}
+
+\paragraph{The component mean.}
+
+The polynomial estimates concern the marked components separately. The slope estimate on the cover uses their mean with equal weights.
+
+\begin{proposition}[Lower bound for the mean of the component slopes]\label{prop:flag-component-mean-lower}
+Use \(B_0,u\) of Definition~\ref{hyp:flag-prime-tail} on the
+marked component models. Let \(s_c\) be the limiting normalized
+slope computed from the component degree in Proposition~\ref{prop:arithmetic-wall-polynomial}, and put
+\[
+ \ell_{B_0}=\log(B_0\operatorname{rd}_E)
+                      +|\RePart (L'/L)(1,\chi_K)|.
+\]
+For rational \(u\) in the strict chamber one has
+\[
+ \frac{1}{\#\{c\}}\sum_c s_c
+ \ge-C_*\left(\ell_{B_0}\sum_{\tau,i}|u_{\tau i}|
+                              + j_s\sum_\tau U_\tau\right).
+\]
+The slope average uses equal component weights; the sum of
+the common component weights is \(V\).
+\end{proposition}
+
+\begin{proof}
+Write \(\ell_B=\log(B\operatorname{rd}_E)
+ +|\RePart (L'/L)(1,\chi_K)|\), where \(\chi_K\) is the
+quadratic character of the host construction. Assume the
+determinant height bound \(\abs{H_{\tau,c}}\le C_f N\ell_{B_0}\)
+on the prescribed component lines. The two calibrations in
+Section~\ref{sec:covolume-flag-test} give
+\[
+ -a\le C(r_*)\ell_{B_0},\qquad |ja+Nb_0|\le C_f N\ell_{B_0},
+\] with at most fifteen
+level primes. Write \(m_\tau=N^{-1}\sum_i u_{\tau i}\).
+
+For a decreasing list the centered first-block sum
+\(b_\tau=\sum_{i<j}(u_{\tau i}-m_\tau)\) is nonnegative.
+Also \(b_\tau\le\sum_i|u_{\tau i}|\) by writing it as the
+first-block sum times \(1-j/N\) minus the second-block sum
+times \(j/N\). The contribution of the shifts divided by
+\(nVG(u)\) is \(\sum_\tau(a b_\tau+(ja+Nb_0)m_\tau)\).
+The main term \(H(u)\) is nonnegative. Apply
+Proposition~\ref{prop:flag-uniform-prime-tail} to the residual
+prime terms in \eqref{eq:flag-fixed-shifts}. The lower bound on
+\(a\) controls \(a b_\tau\) because \(b_\tau\ge0\), and the bound on
+\(|ja+Nb_0|\) controls the other term since
+\[
+ N|m_\tau|\le\sum_i |u_{\tau i}|.
+\]
+Adding the estimates gives
+\begin{equation}\label{eq:flag-slope-lower}
+ \frac{\Phi_{B_0}(L_u^n)}{nVG(u)}
+ \ge-C_*\left(\ell_{B_0}\sum_{\tau,i}|u_{\tau i}|
+                           +j_s\sum_\tau U_\tau\right).
+\end{equation}
+One can use
+\[
+ C_*=C(r_*)+\max(C_f,0)+8\log4.
+\]
+
+In particular the constants from the wall and coefficient
+extraction steps are absent.
+
+\proofstep{An upper bound for the determinant height.}
+On the marked model one can take \(C_f=11\).
+At its interior test point in component \(c\), the empty-prime
+determinant is the determinant of the \(j\) successive Lie
+lines at \(\tau\) tensored with the inverse determinant of the
+\(N-j\) lines at \(\bar\tau\). In a finite field of definition
+take the two eigenframes on the semistable fibre. The local
+determinant ideals are generated by their maximal minors in the
+integral Lie lattice. Their Hermitian Gram determinants give
+the squared complex norms. Exactness of the successive
+filtrations makes the sum of the graded degrees the degree of
+each determinant, including the order of each local ideal.
+The flat-degree comparison for the polarized CM action identifies
+their difference with
+\[
+ (2j-N)\RePart\log\Omega(E,\chi_K)/2.
+\]
+
+Here the comparison on full auxiliary level is applied to the
+transported fibre and its two determinant models. Normalized
+degree is invariant under its finite field extension. The CM
+period estimate bounds the absolute value by
+\(7N(\log\operatorname{rd}_E+|\RePart (L'/L)(1,\chi_K)|)\).
+\label{cor:covolume-wall-shape-6}
+
+Changing to the cutoff metric at the same point changes local
+log norms only at the specified finite primes. The absolute
+change per rational prime, after taking normalized place
+weights, is at most
+\[
+ N\left(\frac{\log p}{p-1}+v_{\rm diff}(E,p)\log p\right).
+\]
+Indeed the local bound has the additional factor
+\(-\log|p|_v/\log p\) and its normalized sum over \(v\mid p\)
+is at most one in the conventions of the local reading.
+The sum of the different terms is at most
+\(\log\operatorname{rd}_E\). Summation up to \(B_0\)
+with the exceptional primes included as in
+Section~\ref{sec:covolume-flag-test} gives total change at most
+\[
+ 4N(\log B_0+\log\operatorname{rd}_E).
+\]
+This proves the
+claimed determinant bound on every component using the indicated
+flat-degree comparison. \label{cor:covolume-wall-shape-7}
+
+\proofstep{Passing to the component mean.}
+For rational \(u\) the strict gaps imply that \(u-sd_0\)
+is dominant for all sufficiently small positive rational
+\(s\). Polynomial agreement gives limit \(P_{B_0,c}(u,0)\)
+for the arithmetic self-intersection of \(M_{B_0}(u,s)\)
+on \(c\). Its geometric degree tends to \(w_cG(u)>0\).
+The quotient by \(n\) times the latter degree thus has
+limit
+\[
+ s_c=P_{B_0,c}(u,0)/(nw_cG(u)).
+\]
+The geometric
+component-volume comparison gives equal \(w_c\), hence
+\[
+   \frac{1}{\#\{c\}}\sum_c s_c=\frac{\Phi_{B_0}(L_u^n)}{nVG(u)} .
+\]
+This equality explains the occurrence of an arithmetic mean of
+slopes on the deep cover. The bound in \eqref{eq:flag-slope-lower}
+is for that mean. \label{cor:covolume-wall-shape-8}
+\end{proof}

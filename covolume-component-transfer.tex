@@ -1,0 +1,1522 @@
+\section{The component estimate on the selected levels}
+\label{sec:flag-component-transfer}
+
+The degree calculation gives a number for each component of a deep cover of the
+original core. The division estimate, however, uses a lattice at a selected level. To
+pass between them we compare component measures and follow the lattice through the
+level maps. The two signed
+refinements retain their own levels. This transfer provides the
+component estimate used in the common comparison of
+Section~\ref{subsec:joint-family-estimate}. The component index
+\(Z\) always refers to the deep cover in
+Lemma~\ref{hyp:covolume-deep-component}. For each CM label \(\tau\)
+the determinant line used in the transfer is the ratio of the two
+Lie-eigenspace determinants. Definition~\ref{hyp:flat-determinant-frames}
+specifies its frame metrics, and Proposition~\ref{prop:deep-flat-line-degree}
+computes the normalized degree.
+
+\begin{established}[Nonterminal component and level]\label{hyp:covolume-deep-component}
+At the nonterminal lift \(j\) of the original core, put
+\((p,q)=(p_j,q_j)\) and write \(N_{\rm lev}\) for the deep level.
+The signature, Hermitian rank and level are
+\[
+ (p_j,q_j)=(k+j-1,m-j),\qquad r=p_j+q_j=k+m-1,\qquad
+ N_{\rm lev}=g_0g_1\,15^e .
+\]
+Here \(0<q<p\), \(f(r-1)>2\), and both marked type primes divide
+\(N_{\rm lev}\).
+\end{established}
+\begin{proof}
+The ordered row in Section~\ref{subsec:paired-row-indices} moves one
+negative coordinate to the positive block at each lift. Its initial
+sizes are \(k-1,m\), and \(j<m\) gives \(q>0\). The selected
+ranges \(k\ge m^4\), \(m\ge 2\) and \(f\ge8\) give the strict
+inequalities. Section~\ref{subsec:deep-cover-on-core} takes principal
+level \(g_0g_1\,15^e\) and auxiliary level one, so
+\[
+ \{\ell:\ell\mid N_{\rm lev}\}\subseteq\{3,5,g_0,g_1\}.
+\]
+\end{proof}
+
+\begin{lemma}[Equality of component measures]\label{lem:deep-component-measures}
+For the nonterminal lift and level of
+Lemma~\ref{hyp:covolume-deep-component}, write \(w_c\) for the component weights in the normalized flag degree and \(\mathcal C\) for the component set. The weights are equal, so
+\[
+ w_c=\frac1{|\mathcal C|}\sum_{a\in\mathcal C}w_a\qquad(c\in\mathcal C).
+\]
+
+\end{lemma}
+
+\begin{proof}
+\proofstep{Congruence groups in a common Hermitian space.}
+Complex uniformization at a fixed embedding identifies each
+weight \(w_c\), up to a common factor, with the Riemannian
+covolume of an arithmetic subgroup on the product of special
+unitary domains. Transport the full-level polarized lattices
+of two components to the same Hermitian space with its CM type.
+The arithmetic groups are the inverse images of congruence
+stabilizers on the finite adeles. An integral unitary
+determinant has all its conjugates of modulus one and hence
+is torsion.
+
+Let \(n\ge3\) be the principal level and \(u\) the determinant.
+If \(u\ne1\), its congruence and the bound at every complex embedding
+would give
+\[
+ n^{[E:\Q]}\le |N_{E/\Q}(u-1)|
+       =\prod_{\sigma:E\hookrightarrow\C}|\sigma(u)-1|
+       \le 2^{[E:\Q]} .
+\]
+Thus the arithmetic group at this level has determinant one.
+Write \(F=E^+\), \(H=\operatorname{SU}(V)\) for the common
+Hermitian space, and let \(K_i\subset H(\mathbb A_{F,f})\) be
+the two finite level stabilizers. In the moduli uniformization
+the components lie in the same finite adelic orbit of marked
+lattices. A finite adelic unitary isometry \(g\) therefore gives
+\[
+ K_2=gK_1g^{-1},\qquad K_{12}=K_1\cap K_2,\qquad
+ \Gamma_i=H(F)\cap K_i\quad(i=1,2,12).
+\]
+\label{cor:covolume-component-transfer-1}
+
+\proofstep{The index ratio and strong approximation.}
+The group \(H\) is simply connected and absolutely almost
+simple. Since \(p,q>0\) at a real place, the archimedean product
+has a noncompact factor. Strong approximation thus gives
+\[
+         \overline{H(F)}=H(\mathbb A_{F,f})
+\]
+in the finite adelic topology (Platonov--Rapinchuk,
+\emph{Algebraic Groups and Number Theory}, Theorem~7.12).
+\cite[the strong approximation theorem]{milne-pel-period-domain}
+
+Each coset of \(K_{12}\) in \(K_i\) is open
+and meets \(H(F)\), hence
+\[
+ [\Gamma_i:\Gamma_{12}]=[K_i:K_{12}]
+    =\frac{\operatorname{vol}_f(K_i)}{\operatorname{vol}_f(K_{12})}
+      \qquad(i=1,2).
+\]
+Conjugation by the finite adelic unitary element \(g\) preserves
+Haar measure on \(H\). Indeed, over a splitting field its adjoint
+action on \(\mathfrak{sl}_r\) has determinant one. Conjugation on
+all matrices has determinant \((\det g)^r(\det g^{-1})^r=1\)
+and fixes the complementary scalar line. The same determinant
+identity holds at every finite place. The two indices are therefore
+equal. Both real quotients are covered by the quotient for
+\(\Gamma_{12}\), of degrees \([\Gamma_i:\Gamma_{12}]\).
+Dividing its volume by these equal degrees proves \(w_c=w_{c'}\).
+\label{cor:covolume-component-transfer-2}
+
+\end{proof}
+
+\paragraph{Passage from intersections to counts.}
+To turn the component degree into a count, start with the integral strictly decreasing
+weight \(u\) with
+gap parameter \(g\) and \(B=B_0(u,g)\) of the preceding
+section. For a moduli component \(Z\) let \(c\) be its flag
+component under the component bijection. Write
+\(W=w_cG(u)>0\), \(a(s)\) for the arithmetic
+self-intersection on \(c\), and \(d(s)\) for its geometric
+degree. We have \(d(s)\to W\) and \(a(s)/(nd(s))\to s_c\)
+along positive rationals \(s\downarrow0\). Let \(\delta\)
+denote the normalized top degree from cusp-form ranks on \(Z\).
+Write \(V_Z(t)\) for its logarithmic count volume at exponential
+radius \(e^{kt}\), on multiples \(k\) of eight, normalized by the
+field degree and arithmetic Hilbert growth factor.
+
+\begin{lemma}[Volume slope on a component]
+Put \(c_0=2h_{\rm HT}(B)\|u\|_1\) and \(s'_Z=s_c-c_0\). Then
+\[
+ V_Z(t)\ge W(s'_Z+t)_+\ge\delta(s'_Z+t)_+\qquad(t\in\mathbb R).
+\]
+For \(E(u,g)=\ell_B\|u\|_1+q\sum_\tau U_\tau\) the arithmetic
+mean satisfies \(\operatorname{mean}_Z s'_Z\ge-(C_*+88)E(u,g)\).
+\end{lemma}
+\begin{proof}
+At the staircase weight \(u^0\) of successive gaps one the nef
+limiting sections dominate cusp growth, with degree \(w_cG(u^0)\).
+The normalized cusp degree at \(u\) multiplies the reference growth
+by \(G(u)/G(u^0)\), hence \(\delta\le w_cG(u)=W\). \label{cor:covolume-component-transfer-3}
+The arithmetic section-volume inequality for the perturbed
+semipositive, fibrewise nef line, whose sections are cuspidal, gives
+for some finite \(A\) depending on the model and weight, and every
+sufficiently small positive rational \(s\),
+\[
+ V_Z(t)\ \ge\
+ \max\{0,\ a(s)/n+d(s)(t-c_0-As)\},\qquad
+ c_0=2h_{\rm HT}(B)\|u\|_1 .
+\]
+Here \(h_{\rm HT}(B)\) is the normalized finite Hodge--Tate cost.
+The archimedean comparison shrinks the logarithmic radius by \(O(s)\).
+
+At a finite place it costs \(s a_v+2 h_v(B)\|u\|_1\) with
+finite support, where \(\sum_v h_v(B)/[F:\Q]=h_{\rm HT}(B)\).
+After division by \([F:\Q]\), their total is
+\[
+ s\,\frac{\sum_v a_v}{[F:\Q]}
+       +2\|u\|_1\frac{\sum_v h_v(B)}{[F:\Q]}
+   = O_{Z,u}(s)+c_0 .
+\] These comparisons use the
+actual integral mixed metrics of \(Z\).
+\label{cor:covolume-component-transfer-4}
+
+Since \(d(s)\to W\), \(a(s)/(nd(s))\to s_c\), and \(A\) is fixed
+on the model, the expression inside the positive part tends to
+\(W(s_c+t-c_0)\). This proves the pointwise estimate. By
+\eqref{eq:flag-slope-lower} the mean of \(s_c\) is at least
+\(-C_*E(u,g)\); the finite-place sum gives
+\(c_0\le88\ell_B\|u\|_1\le88E(u,g)\). Subtraction gives the mean
+bound. \label{cor:covolume-component-transfer-5}
+\end{proof}
+
+\paragraph{Field of definition.}
+The component bounds will be combined over a coefficient field. To keep track of this
+field, observe that the toroidal system in the slope computation can be chosen on
+the moduli space of the given deep cover. At each residue
+characteristic a factor of level at least three survives
+removal of that characteristic's power, since one of
+\(g_0,g_1\) survives. Enlarge the coefficient field \(F\)
+so as to contain both the required roots of unity and a field
+of definition of the coefficient curve at the auxiliary level.
+The CM field, ranks and signatures are preserved under this
+change of the datum. To descend the inequality to \(F\),
+use the bijection of marked components preserving the
+idempotents in their evaluation rules. Cusp growth has the
+same top degree after extension, by expansion in a field basis.
+\label{cor:covolume-component-transfer-6}
+
+\begin{lemma}[Descent of the count inequality]
+Let \(F'/F\) be a finite extension over which the coefficient curve
+and the required level roots of unity are defined, with the marked
+components identified under scalar extension. Write \(\mu_{F'},\mu_F\) for the corresponding normalized component slopes. Every lower bound descends,
+\[
+ \mu_{F'}\ge B\quad\Longrightarrow\quad\mu_F\ge B.
+\]
+
+\end{lemma}
+\begin{proof}
+Write \(d=[F':F]\), and take an \(F\)-basis \(b_i\) of \(F'\)
+with trace dual \(b_i^\vee\). Choose \(N_0>0\) making all
+\(N_0b_i^\vee\) integral. On \(f=\sum_i b_i f_i\) the maps
+\(f\mapsto\operatorname{Tr}_{F'/F}(N_0b_i^\vee f)=N_0f_i\)
+are jointly injective. Trace preserves the component and cusp
+conditions. On each fixed mixed chart evaluation commutes with trace;
+integrality of the scaled dual elements thus gives the required
+finite integrality tests for every image.
+
+At each
+embedding, summing the absolute values of the conjugates of
+\(N_0b_i^\vee\) bounds the norm of its image by \(A'\|f\|_\infty\),
+with \(A'\) independent of \(k\). For the integral norm balls
+in the two fields this gives
+\[
+ \#B_{F'}(e^{kt})\le\#B_F(A'e^{kt})^d .
+\]
+For any \(\eta>0\), use this inequality at \(t-\eta\) and take
+\(k\) large enough that \(A'e^{-k\eta}\le1\). The factor \(d\)
+in the logarithm cancels against the field degree. Thus the lower
+bound at \(t-\eta\) over \(F'\) is also a lower bound at \(t\)
+over \(F\); let \(\eta\downarrow0\) in its continuous positive part.
+\label{cor:covolume-component-transfer-7}
+\end{proof}
+
+\input{deep-thick-evaluation}
+\input{deep-thin-evaluation}
+\paragraph{Use of the shifted weight.}
+The intersection estimate applies at a shifted weight. To recover the height needed on the quotient of weight \(u_1\), take its prescribed
+shift \(u'=u'(u_1)\), the gap \(g\) in its budget and the
+bounds \(s'_Z\) just proved for \(u'\). Write \(D_Z>0\)
+for the image degree at \(u_1\) and \(H_Z\) for its normalized Chow
+height in Proposition~\ref{prop:component-arithmetic-degree}. A hyperplane
+has the Petersson norm at infinity and the component section lattice
+at finite places. Write \(c_s\) for a log bound for its short integral
+generators, and \(c_m\ge0\) for the norm cost of the carrying
+section from \(u'\). Take \(h=h_{\rm HT}(B)\|u'\|_1\).
+\begin{established}[Rank shares and length costs on the selected quotient]\label{hyp:covolume-shift-costs}
+Put \(J_Z=\binom{T-1}{d}D_Z\), \(z=7(d^2/T+d\rho)\) and
+\(U=fmbL\log\log x\). Uniformly for the nonterminal quotient weights and the deep components, beyond a common scale,
+\[
+  (1-z)r_Z\le J_Z\le r_Z,\qquad
+  T\max(E(u',g),h)\le C_b U,
+\]
+\[
+    [6d+10+T(z+2\rho)]c_s\le C_sU,\qquad Tc_m\le C_mU.
+\]
+Here \(u'=u_1-3r\omega_{\rm H}\); the carrying cost is measured per unit weight and includes the finite places.
+\end{established}
+\begin{proof}
+The moving rank and the upper bound at the same quotient weight are proved in Propositions~\ref{prop:deep-moving-rank-lower} and~\ref{prop:deep-shifted-rank-upper}. They give \(J_Z\le r_Z\le(1+z)J_Z\); use \((1-z)(1+z)\le1\). The logarithm of the generator norm satisfies \(c_s\le P(\kappa/T+1)\) by the component generator bound in the Hilbert--Samuel calculation. Since \(d\ge2\), \(z\ge7d^2/T\) and \(z\ge7d\rho\), we have
+\[
+ 6d+10+T(z+2\rho)\le4Tz,
+ \qquad 4Tz c_s\le4zP\kappa+4zTP\le8b .
+\]
+The last step uses \(zP\kappa\le b\), \(z\le1/2\) and \(TP\le\sqrt b\), the inequalities used in \eqref{eq:deep-hs-budget}.
+
+For the arithmetic cost let \(S\) bound the head width before division and let \(c_0\) be the determinant shift there. The \(k-1\) head entries are centered by their common reference entry; only the \(m=r-k+1\) tail entries retain a displacement of order \(b\). Euclidean division at length \(T\), including the staircase and the Hodge correction, therefore gives
+\[
+ T\|u'\|_1\le f\{rS+8mb+r(c_0+4r)\}\le834fmb .
+\]
+
+Indeed the selected reserve gives \(P S\le100w''\le800b\), \(r\le P\) and \(c_0\le22 f^2r^4\), while \(f^2r^5\le P\le b\). The same bound applies before the Hodge correction. Write \(h_0\) for the undivided split-gap parameter. The quotient satisfies
+\[
+   \|u'\|_\infty\le 8b/T,\qquad g=h_0/(4T),\qquad
+   fr^2\le P\le h_0,\quad
+   1\le B=4fr^2(1+\|u'\|_\infty/g)\le132b.
+\]
+
+Here the positive quotients at the smaller block have distance at least \(g\) from all other entries at their label. For completeness write \(w_\tau\) for the undivided tail scale and \(I_\tau\) for the \(m=r-k+1\) outer indices. The divided-array estimates read
+\[
+ U_\tau\le 3w_\tau/(2T),\qquad
+       |u'_{\tau i}|\ge w_\tau/(4T)\quad(i\in I_\tau).
+\]
+
+Indeed dividing the extreme entries costs at most a unit per coordinate. The staircase and Hodge adjustment together cost at most \(c_0+4r\) before division; the separation reserve in the selected quotient absorbs this and the head width into \(w_\tau/4\). Since \(q\le m\),
+\[
+        q U_\tau\le 6\sum_{i\in I_\tau}|u'_{\tau i}|.
+\]
+ From \(\log B\le L+\log132\), the period identity \(|\log\Omega|\le3L\), the discriminant bound and the prime allowance \(\{3,5,g_0,g_1\}\) one obtains
+\[
+ \ell_B+6\le100L,\qquad h_{\rm HT}(B)\le100L.
+\]
+For the finite term sum \(\log p/(p-1)\) over the rational primes up to \(B\) by the factorial bound \(\sum_{p\le B}\log p/(p-1)\ll1+\log B\); at the primes of the level there are at most four additional summands. These estimates prove the two length bounds for \(E\) and \(h\), after one enlargement of \(C_b\).
+
+It remains to pay for the section taking weight \(u'\) to \(u_1\). Use the same product of \(r\) theta null values at labels generating the marked quotient modulo \(5^4\) as in Lemma~\ref{lem:deep-boundary-uniform-order}, choosing one product \(F\) nonzero on \(Z\). Put \(a(y)=\|F(y)^2\|\) in the normalized metric and \(\phi=2f/(\operatorname{rd}(E)^2\lambda^2)\).
+The single-tuple estimate \eqref{eq:eta-period-decay} yields a \(P_0\ll(frL)^2\) with
+\[
+ \log a(y)\le P_0/625\quad\text{everywhere},\qquad
+ \log a(y)\le (P_0-\phi)/625\quad(M_Z\lambda^2<b).
+\]
+
+For the second comparison we need the active part of the torus bound, write \(M_0=g_0g_1\). The deep level satisfies \(M_Z=M_0 15^e\ge bM_0\); hence \(M_Z\lambda^2<b\) implies \(\lambda<M_0^{-1/2}\le h\) for the torus cutoff. In \eqref{eq:eta-period-decay} put \(R=5\), square the product and absorb its logarithmic power in the difference between \(\pi\phi/625\) and \(\phi/625\). The resulting constant is bounded by the single-tuple calculation in Proposition~\ref{prop:auxiliary-scalar-section}.
+
+Divide the evaluation norm estimate according to the same two ranges. Lemmas~\ref{lem:deep-thick-evaluation} and~\ref{lem:deep-thin-evaluation} give, with \(\beta=P_0+B_1\),
+\[
+        a(y)\le e^\beta,\qquad
+        a(y)^3\le e^\beta\mathcal B_{u_1,Z}(y),
+        \qquad T\beta\ll U .
+\]
+For the length bound, \(TP\le\sqrt b\), \(P\ge(frL)^{12}\) and \(T\|u_1\|_1\le834fmb\) absorb both polynomial terms in \(P_0+B_1\). The exponent \(-3\phi/625\) in the thin range is sufficient against \(-\phi/625\) in the lower bound for the evaluation norm.
+
+The carrying section is \(F^{24}\) times the inverse central root to power \(3r\) and the flat line of parallel weight \(-12r\). The central degrees cancel, and the resulting weight is \(24r\omega_{\rm H}=8(u_1-u')\). The finite orders of the two constant factors enter the degree of that flat section; the remaining theta factor has the boundary order of Lemma~\ref{lem:deep-boundary-uniform-order}. In the normalized metric the identity for the eighth multiple reads
+\[
+      \operatorname{wt}(\theta)=8(u_1-u'),\qquad \|F^{24}\|=a^{12}.
+\]
+ To read the contribution per unit of the shift, raise the Bergman estimate to the eighth power and take the sixteenth root:
+\[
+      a^{24}\le e^{8\beta}\mathcal B^8,\qquad
+      \|F^{24}\|^{1/8}=a^{3/2}\le e^{\beta/2}\mathcal B^{1/2}.
+\]
+The logarithmic norm cost is therefore at most \(\beta/2\). Summing the orders in the flat line and using the determinant degree computation of Proposition~\ref{prop:deep-flat-line-degree} gives the remaining increment
+\[
+ \frac{3r\cdot2fr\log(2\pi)}{8}
+       -\frac{12r\cdot f(p-q)\log\Omega}{16}
+       \ \le\ 10P .
+\]
+
+Indeed \(|p-q|\le r\), \(|\log\Omega|\le3L\), and \(P\ge(frL)^{12}\). The scalar used to represent the flat line cancels by the product formula. Thus \(c_m\le \max(0,\beta/2+10P)\) and \(Tc_m\ll U\). This completes the four uniform estimates.
+\end{proof}
+\begin{lemma}[The shifted slope at the selected length]
+Suppose the shifted degree satisfies
+\(\delta'_Z\ge(1-\rho)D_Z\), \(0\le\rho<1\), on the deep good model.
+Use the component-degree bound \eqref{eq:deep-component-degree}, the
+Hilbert--Samuel error budget \eqref{eq:deep-hs-budget}, and the
+rank shares and length costs in Lemma~\ref{hyp:covolume-shift-costs}.
+Write \(\mu_{\rm deep}(u_M)\) for the squared-metric slope of the deep cusp lattice at \(u_M=u_W-c_0\omega_{\rm H}\). Then
+\[
+ \mu_{\rm deep}(u_M)\ge-C_U U,\qquad C_U=2(3C_1+C_2+4).
+\]
+
+\end{lemma}
+\begin{proof}
+Short generation gives \(H_Z+c_s\ge0\). Multiplication by the
+carrying section and the birational upper count for the image give
+for every \(\eta>0\)
+\[
+ \delta'_Z(s'_Z+c_s)\le V_Z(c_s)
+ \le D_Z(H_Z+c_s+c_m+h+\eta).
+\]
+For \(s'_Z+c_s>0\) divide by \(D_Z\) and use the degree
+comparison. For \(s'_Z+c_s\le0\) the right side is nonnegative.
+Letting \(\eta\) decrease to zero gives the component inequality
+\[
+ (1-\rho)\max(0,s'_Z+c_s)\le H_Z+c_s+c_m+h .
+\]
+
+In the length budget for each quotient the length times
+\(E(u',g)\) and the length times \(h\) are bounded by
+\(C_b U\), where \(U\) is the error unit on this run.
+The short-generator and carrying costs have the corresponding
+bounds with constants \(C_s,C_m\). In particular the two length costs in the shifted height are
+\[
+ T(c_m+h)\le(C_m+C_b)U,\qquad
+ T(C_*+88)E(u',g)\le(C_*+88)C_b U.
+\]
+Together with the short generators these give
+\(C_1=C_s+C_m+C_b+(C_*+88)C_b\).
+\label{cor:covolume-component-transfer-8}
+
+Here the short-generator cost has its own multiplier
+\(6d+10+T(z+2\rho)\), where \(d\) is the flag dimension,
+\(T\ge3d+5\) is the chosen length and \(z<1\) the share
+loss. We give the step that turns the component height into
+a bound for the full lattice. Put
+\(J_Z=\binom{T-1}{d} D_Z\) and let \(r_Z\) be the section
+rank in the unshifted weight.
+
+For \(0\le z<1\), Lemma~\ref{hyp:covolume-shift-costs} gives
+\[
+                    (1-z)r_Z\le J_Z\le r_Z .
+\]
+Equation~\eqref{eq:deep-component-degree} puts all \(D_Z\) in
+\([D_*,D_* /(1-\rho)]\) for some \(D_*>0\).
+Set \(X=(C_*+88)E(u',g)\), \(c=c_m+h\) and
+\(H_Z^+=H_Z+c_s\). The preceding component inequalities imply
+\[
+ \frac{\sum_Z J_Z H_Z^+}{\sum_Z r_Z}
+ \ge (1-z)(1-\rho)^2(c_s-X)-c .
+\]
+Indeed \(\sum r_Z\le \#\{Z\}\min J_Z/((1-z)(1-\rho))\) and
+\(\operatorname{mean}_Z(s'_Z+c_s)_+\ge c_s-X\).
+
+In the numerator
+bound the positive terms using \(\min J_Z\); for the term
+\(-c\sum J_Z\) use \(\sum J_Z\le\sum r_Z\).
+Equation~\eqref{eq:deep-hs-budget} bounds the ordinary
+Petersson degree of the deep geometric cusp lattice of
+weight \(u_M=u_W-c_0\omega_{\rm H}\) below by
+\[
+ J_Z\{T H_Z-3(d+1)|H_Z|-A\log(2+|H_Z|)-R\},
+ \qquad A\log\max(A,1)+R\le C_2 U ,
+\]
+with \(A>0\) and \(R\ge0\).
+Here \(C_2=10240\) suffices since \(b\le U\).
+The logarithmic term can be absorbed into the linear error:
+\[
+ A\log(2+|H_Z|)\le A\log\max(A,1)+2+|H_Z| .
+\]
+Indeed, apply \(\log v\le v-1\) to \(v=(2+|H_Z|)/\max(A,1)\).
+Use \(|H_Z|\le H_Z^++c_s\) in the bracket. Its coefficient
+of \(H_Z^+\) is at least \(T-3d-4>0\).
+
+Put \(b_d=3d+4\) and \(\alpha=(1-z)(1-\rho)^2\).
+After summation and division by \(\sum_Z r_Z\), the coefficient
+lost on \(c_s\) is bounded by
+\[
+ (T+b_d)-(T-b_d)\alpha
+      = T(1-\alpha)+b_d(1+\alpha)
+      \le T(z+2\rho)+6d+8 .
+\]
+Here \(0\le\alpha\le1\), \(1-\alpha\le z+2\rho\) and
+\(\sum J_Z\le\sum r_Z\) bound the negative contributions.
+The other losses are at most \(TX+Tc+C_2U+2\).
+Each of the short, \(TX\) and \(Tc\) terms is at most
+\(C_1U\). The squared-norm slope is at least twice the sum
+of component degrees divided by the sum of their ranks.
+Thus for \(U\ge1\) the squared-metric lower bound on the
+deep quotient lattice at \(u_M\) holds
+with \(C_U=2(3C_1+C_2+4)\). \label{cor:covolume-component-transfer-9}
+
+\end{proof}
+
+We have a slope bound at the shifted weight. Before it can be used on the row we must
+restore its determinant weight and account for the change in metric. Let
+\(\Lambda_M\) be the deep cusp lattice at \(u_M\) with
+its squared Petersson metric and let \(\Lambda_-\) be the
+deep row lattice at the negative shift. The flat line
+from \(\Lambda_M\) to \(\Lambda_-\) restores the determinant weight of the row
+and the prescribed theta root. Let
+\(w_\tau\) be the integral parallel shifts at the embedding labels, \(\omega\) the
+logarithmic CM period in the specified data, and \(c_{1,\tau}\) the
+flat-line coefficients in the slope comparison.
+
+\input{deep-cover-flat-degree}
+
+\begin{lemma}[Slope change under the determinant twist]
+For the flat twist from \(\Lambda_M\) to \(\Lambda_-\),
+\[
+ \mu(\Lambda_-)-\mu(\Lambda_M)\ge-M_i-(11C_A+83)U .
+\]
+\end{lemma}
+\begin{proof}
+The degree calculation gives
+\[
+ c_{1,\tau}=-\tfrac12(p-q)\omega
+           -q\bigl(\log d_0-\log\operatorname{rd}(E)\bigr).
+\]
+Since \([E:\Q]=2f\), the discriminant bound reads
+\[
+       0\le \log\operatorname{rd}(E)
+       =\frac{\log|\operatorname{disc}E|}{2f}\le2L_{\rm sc}.
+\]
+Since \(0\le\log d_0\le L_{\rm sc}\), the last term in the
+identity has absolute value at most \(2qL_{\rm sc}\).
+Together with \(|\omega|\le3L_{\rm sc}\) and \(p+q=r\), this gives
+\[
+ |c_{1,\tau}|\le(3|p-q|/2+2q)L_{\rm sc}
+          \le(7/2)rL_{\rm sc}\le9rL_{\rm sc}.
+\]
+\label{cor:covolume-component-transfer-10}
+
+In the bad-prime allowance every prime divides
+\(15g_0g_1 C_E\), where \(C_E\) is the conductor
+parameter containing the prime divisors of the CM field discriminant, including \(2\) and \(d_0\).
+This uses \(N_{\rm lev}=g_0g_1\,15^e\) and auxiliary level one.
+Thus the sum of the logarithms of the distinct bad primes
+is at most \(\log(15g_0g_1 C_E)\). The parameter bound
+\(C_E^{36}t^{150}\le b^{1/2}\) with \(t\ge1\) and
+\(\log b\le8L_{\rm sc}\) implies \(\log C_E\le L_{\rm sc}\).
+The two bounds \(\log g_k\le9L_{\rm sc}+1\) now give
+\[
+ \sum_{p\ {\rm bad}}\log p
+ \le\log 15+\log g_0+\log g_1+\log C_E
+ \le 19 L_{\rm sc}+2+\log 15\le20L_{\rm sc},
+\]
+since \(L_{\rm sc}\ge10\). This proves the allowance \(40L_{\rm sc}\)
+used below on the chosen deep level even as \(e\) grows.
+\label{cor:covolume-component-transfer-11}
+
+Combining the flat-degree estimate with the bounds for the shifts \(w_\tau\) gives
+\[
+ \begin{split}
+ |M_i-(p-q)\omega\textstyle\sum_\tau w_\tau|&\le C_A U,\\
+ q L_{\rm sc}\textstyle\sum_\tau|w_\tau|&\le C_A U,\qquad
+ |c_{1,\tau}+(p-q)\omega/2|\le3qL_{\rm sc}.
+ \end{split}
+\]
+The even column count is \(2m_0\). The combined weight of
+the base line, the parallel shift by \((w_\tau)_\tau\) and the
+\(m_0\)-th theta root has exactly the exponents of the
+negative-shift line. Indeed this parallel weight is subtracted from the
+base weight in the definition of the unshifted quotient and
+is restored in the parallel twist. The finite valuation rules,
+cusp conditions, metric factor at every embedding and hence
+the Petersson norms depend on these combined exponents.
+
+The flat-line twist preserves rank. Its normalized degree
+increment per rank in the squared metric is bounded below by
+\[
+ 2\left(\sum_\tau w_\tau c_{1,\tau}
+       -q\ell_d\sum_\tau|w_\tau|
+       -m_0fr\{\tfrac12\log(2\pi)+\ell_d\}-\ell_S\right)
+\]
+on the unramified deep charts. Here \(\ell_d\le2L_{\rm sc}\)
+is the different allowance and \(\ell_S\le40L_{\rm sc}\)
+the sum of bad-prime logarithms. Twice the first sum is at
+least \(-M_i-7C_AU\) by the three preceding inequalities for \(w_\tau\) and \(c_{1,\tau}\).
+The second loss costs at most \(4C_A U\). Using
+\(2m_0\le n_V\), \(frn_V L_{\rm sc}\le b\le U\) and
+\(10\le L_{\rm sc}\le U\), the last two losses cost at most
+\(3U+80U\). Adding the four losses gives the stated lower bound.
+Write \(C_F=11C_A+83\). \label{cor:covolume-component-transfer-12}
+\end{proof}
+
+\begin{auxlemma}[Simultaneous evaluation above an unramified point]
+\label{lem:adjoint-etale-fibre}
+Let \(f:M\to Y\) be a generically finite surjective morphism of smooth
+projective complex varieties of common dimension \(d\ge1\). Let \(A\)
+be a nef and big integral line bundle on \(Y\), and \(P\) a nef line
+bundle on \(M\). Choose \(y\) in the finite \'etale locus such that
+\(A^{\dim V}\cdot V>0\) for every positive-dimensional integral
+\(V\ni y\). Put \(h=d(d+1)/2\). For \(m\ge h+1\), the evaluation
+on the entire reduced fibre is surjective:
+\[
+ H^0(M,L)\longrightarrow\bigoplus_{z\in f^{-1}(y)} L(z),
+ \qquad L=K_M+m f^*A+P .
+\]
+\end{auxlemma}
+\begin{proof}
+Each positive intersection at \(y\) is an integer and is at least
+one. On \(Y\) use the rational divisor \(N=(h+1/2)A\). For a
+subvariety of dimension \(i\) through \(y\) one has
+\[
+       N^i\cdot V\ge(h+1/2)^i>h^i,\qquad
+       \sum_{i=1}^d i/h=1 .
+\]
+Koll\'ar's isolated non-klt point theorem, applied to the smooth
+pair \((Y,0)\), gives an effective rational divisor \(D\equiv N\)
+whose non-klt locus near \(y\) consists of \(y\) alone.
+\cite[Theorem~6.4]{kollar-pairs-adjoint}
+
+Put \(J=\mathcal J(M,f^*D)\), the multiplier ideal. Discrepancies
+and multiplier ideals pull back under an \'etale morphism, as one
+sees by pulling back a log resolution over the \'etale open.
+Consequently the points of \(f^{-1}(y)\) are isolated components of
+the support of \(\mathcal O_M/J\). Since \(f\) is generically finite,
+\(f^*A\) is nef and big. Moreover
+\[
+    L-K_M-f^*D\equiv (m-h-1/2) f^*A+P
+\]
+is nef and big. Nadel vanishing gives \(H^1(M,L\otimes J)=0\).
+Thus every section of \(L\otimes(\mathcal O_M/J)\) lifts to \(M\).
+The Artinian local scheme at each isolated point is open and closed
+in this support. A chosen residue value lifts there, and one may
+take zero on all the other components. This gives all the indicated
+values simultaneously. \cite[Theorem~2.16 and proof of Theorem~5.8]{kollar-pairs-adjoint}
+\end{proof}
+
+The twist has put the slope at the desired weight. Descent to the selected level next
+requires a section whose translates can be separated by character traces. Let \(S\) be
+the finite level group, acting on the right, and let \(\chi\) be the prescribed
+character.
+\begin{lemma}[A short section separating the translates]
+\label{lem:deep-short-orbit-section}
+For the selected Hodge shift \(W\) there is a short integral
+section \(v\) such that \(\det(v^{hg})_{h,g\in S}\) is a
+non-zero-divisor. Its log supremum norm satisfies
+\[
+ \log\|v\|_{\sup}=O\big((frL_{\rm sc})^9\big)
+\]
+provided the component generating families have size \(N_c\),
+Petersson bound \(\Lambda\) and pointwise factor \(\beta\) with
+\(\log N_c,\log\beta=O(z_0^3)\), \(\log\Lambda=O(z_0^9)\) and
+\(z_0=frL_{\rm sc}\), at the prescribed deep level of
+Lemma~\ref{hyp:covolume-deep-component}.
+\end{lemma}
+\begin{proof}
+The same section must give a nonzero determinant on every component.
+The chosen Hodge exponent \(c_0\) exceeds
+\(r+\binom{d_X+1}{2}\), with \(d_X\) the dimension of the
+moduli component. At a complex framed point over its generic
+point consider its \(S\)-orbit. The marking at a prime
+greater than \(r+1\) is selected as follows. The deep level
+\(N_{\rm lev}\) is divisible by \(g_0g_1\). In the marked type frame the first
+level subgroup is upper unitriangular at both type primes.
+
+For the other subgroup, indexed by \(k\), use the type prime
+with index different from \(k\), where it is upper
+unitriangular. At a place over the chosen \(g=g_j\), the
+half-level marking determines an ideal \(\mathfrak I\) containing
+the marking ideal. The complete splitting and squarefree
+support of \((g)\) give
+\[
+  \mathcal O_E/\mathfrak I=\mathbf F_g,\qquad
+  g\notin\mathfrak I^2,\qquad g>r+1.
+\]
+In the marked reduction the matrices are unitriangular. Hence
+\[
+             (s-I)^r\equiv0\pmod{\mathfrak I}
+                   \qquad (s\in S).
+\]
+
+If two translates have the same underlying complex moduli
+point, their relative level change fixes that point. Pulling
+the universal group and the level isomorphism back to it
+gives a finite-order \(\mathcal O_E\)-linear automorphism
+\(\alpha\) of its semiabelian fibre. At \(\mathfrak I\) the
+Tate-module identification reads its reduction on
+\(\mathfrak I\)-torsion by the marked action, up to inversion.
+Here the \(\mathfrak I\)-torsion is the part of the marking
+obtained by multiplying by a generator of
+\(\mathfrak m_b\mathfrak I^{-1}\) at \(\mathfrak I\),
+where \(\mathfrak m_b\) is the marking ideal. Its dimension
+is at most \(r\); the corresponding free
+\(\mathcal O_{E,\mathfrak I}^{\wedge}=\mathbf Z_g\) Tate module
+has rank at most \(r\). Every eigenvalue \(\zeta\) of \(\alpha\)
+is torsion and reduces to one. Its order is therefore a power
+of \(g\). A nontrivial one would satisfy
+\[
+ g-1\le[\mathbf Q_g(\zeta):\mathbf Q_g]
+       \le\operatorname{rk}_{\mathbf Z_g}T_{\mathfrak I}\le r<g-1 .
+\]
+Thus all eigenvalues equal one; finite order gives semisimplicity
+in characteristic zero.
+
+To see faithfulness on the fibre, use the period
+lattice of its complex exponential map. Its rational span
+is a vector space over \(E\). Tensoring with \(E_{\mathfrak I}\)
+gives the rational Tate module just used, so the action on
+the period lattice itself is trivial. The period lattice of
+a complex semiabelian variety spans its Lie algebra over
+\(\C\), by the torus and abelian quotient. Thus \(\alpha\) acts as the identity on the fibre and hence on its
+level lattice quotient. The marking is faithful. If \(x\) is the
+framed point, this proves the required orbit separation:
+\[
+                x^g=x^h\quad\Longrightarrow\quad g=h
+                              \qquad(g,h\in S),
+\]
+where equality means equality of the underlying moduli points.
+
+Let \(X\) be the smooth projective toroidal moduli component, of
+dimension \(d_X\), and \(\Gamma\subseteq S\) its stabilizer. Taking
+the closure of the graph of all its translates and normalizing gives
+an equivariant modification \(X'\to X\) and a finite quotient
+\(q:X'\to X'/\Gamma\). These modifications are isomorphisms over
+the common interior. Writing \(Z^\circ\) for the interior of this component gives
+\[
+ X'|_{Z^\circ}=Z^\circ,\qquad
+ (X'/\Gamma)|_{Z^\circ/\Gamma}=Z^\circ/\Gamma .
+\]
+
+The Hodge line \(\lambda\) has the linearization induced by
+pullback of invariant differentials. The level isomorphisms on the
+dense interior extend to the semiabelian models and satisfy the group
+law by uniqueness. \cite[I, Proposition~2.7]{faltings-chai}
+A stabilizer at a boundary point acts on its semiabelian fibre.
+The same marked Tate-module argument above makes this action trivial,
+hence also its action on the determinant of invariant differentials.
+Thus \(\lambda\) descends at the first power.
+
+Indeed, near an orbit choose a local generator at one point. Prescribe
+its translates at the other points and lift by the Chinese remainder
+theorem on an affine inverse image of the quotient. Averaging the
+lift over \(\Gamma\) gives an invariant section with the same values,
+because the point stabilizers act trivially on the fibres. It is a
+generator on an invariant neighborhood of that orbit. The invariant
+transition units descend and define a line \(A\) with
+\[
+                 q^*A=\lambda|_{X'} .
+\]
+
+The notation on the right denotes pullback from \(X\).
+The full Hodge determinant \(\omega\) comes from the ample line
+on the minimal compactification, whose contraction is an isomorphism
+on the open moduli space. On the full flag its weight is
+\((1,\ldots,1;-1,\ldots,-1)\) at each CM label. Our Hodge
+shift has weight \((0,\ldots,0;-1,\ldots,-1)\). Thus
+\[
+  2\lambda-\omega \quad\text{has constant weight }-1
+            \quad\text{at each label}.
+\]
+Such a weight and its negative are dominant. The two curve
+inequalities identify its numerical class with zero. Since
+\(\omega\) is big and nef, the same holds for \(\lambda\).
+\cite[Remark~16.2(2)]{lan-ramified-models}
+
+Resolve the quotient and the graph over it, with both modifications
+isomorphisms over a common dense open. Denote the induced morphisms
+by \(f:M\to Y\) and \(a:M\to X\), writing \(A\) also for the
+pullback to \(Y\). Then
+\[
+ f^*A=a^*\lambda,\qquad
+ A^i\cdot V>0\quad(\dim V=i>0,\ y\in V)
+\]
+at a general quotient point \(y\). Indeed nefness descends by the
+projection formula on curves. Writing \(D=\deg f\) gives
+\[
+         D\,A^{d_X}=(f^*A)^{d_X}=\lambda^{d_X}>0 .
+\]
+Write \(a_0 A=H+E\) with \(H\) ample and \(E\) effective.
+For \(y\notin\operatorname{Supp} E\), the mixed intersections on
+each \(V\ni y\) satisfy
+\[
+     (a_0 A)^i\cdot V\ge H^i\cdot V>0 .
+\]
+In characteristic zero the generically finite map is finite \'etale
+after shrinking this open. The framed point was chosen above the
+generic point over the number field, so it and its translates belong
+to these opens after the chosen complex embedding.
+
+
+Write \(D_\partial\) for the toroidal boundary and
+\(\kappa=K_X+D_\partial\) for its logarithmic canonical line. With
+\(m=1+\binom{d_X+1}{2}\), the chosen \(c_0\) has \(c_0-m\ge r\).
+The pullback of \(P_X=(c_0-m)\lambda-\kappa\) to the full flag
+has dominant weight: subtracting the logarithmic canonical weight
+uses at most \(r\) of the Hodge gap. The curve criterion of
+Section~\ref{subsec:component-rank-comparison} and surjectivity of
+the flag projection therefore give \(P_X\) nef. We have
+\[
+ K_X+m\lambda+P_X=c_0\lambda-D_\partial.
+\]
+
+Apply Lemma~\ref{lem:adjoint-etale-fibre} on \(M\) with \(P=a^*P_X\).
+The regular top forms on a smooth projective modification push
+forward to the canonical bundle on \(X\): they agree off the
+exceptional images, of codimension at least two, and extend there
+in the locally free canonical sheaf. Pullback of regular top forms
+gives the reverse inclusion. Hence its sections descend at this
+same weight and their values at the orbit points agree up to
+invertible frame changes.
+
+The canonical boundary section converts these section values into values of cusp forms.
+Indeed, if \(P_1,\ldots,P_t\) are the generic orbit points in
+this component and \(b_\partial\) is the boundary section, then in
+the chosen frames
+\[
+ \operatorname{ev}(b_\partial s)
+   =\operatorname{diag}\bigl(b_\partial(P_1),\ldots,b_\partial(P_t)\bigr)
+                        \operatorname{ev}(s).
+\]
+Each \(P_i\) lies off the boundary, so this diagonal map is an automorphism of the space of section values. These are the
+geometric separation and weight hypotheses used here.
+\label{cor:covolume-component-transfer-13}
+
+
+Extend the component sections by zero. At the framed test point
+\(x_Z\) chosen over each component \(Z\), their values span the
+delta function at the identity of \(S\). For a section \(v\)
+with this evaluation vector the group determinant at \(x_Z\) is
+\[
+ \det\big(v^{hg}(x_Z)\big)_{h,g\in S}
+                =\det\big(\mathbf1_{hg=1}\big)_{h,g\in S}=\pm1 .
+\]
+Thus the determinant section is nonzero at the generic point
+of \(Z\); write \(D_Z\) for its polynomial in the coefficients
+of \(v\) at that point.
+
+Let \(F\) be the common field of definition of the marked level and
+its section space. Extension of scalars in the equalizer of sections
+on a finite affine cover gives
+\[
+ H^0(X_F,\mathcal L)\otimes_{F,\iota}\mathbb C
+     \simeq H^0(X_{\mathbb C},\mathcal L_{\mathbb C}).
+\]
+Thus a finite rational section space supports these tests for all
+\(Z\). The product \(\prod_Z D_Z\) on it is nonzero, and
+rational tuples over the infinite coefficient field are Zariski
+dense. Hence a rational section has \(D_Z(v)\ne0\) on every
+component. These generic tests detect non-zero-divisors: the
+components are reduced and integral, and the frame torus
+separates distinct weights. \label{cor:covolume-component-transfer-14}
+
+Expand this section in the short generators on each component.
+When a coefficient on \(Z_0\) varies, the determinant on \(Z\)
+becomes \(\det(A_Z+tB_Z)\), nonzero at the current value of \(t\).
+Outside \(S Z_0\), \(B_Z=0\). Thus
+\[
+ \#\{t:\text{some determinant vanishes}\}
+   \le \sum_{Z\in S Z_0}\deg_t\det(A_Z+tB_Z)\le |S|^2 .
+\]
+Choose a value in \(\{0,\ldots,|S|^2\}\) avoiding these roots,
+and repeat for the other coefficients.
+
+At each frame only one component contributes. With \(N_c\)
+generators per component, Petersson bound \(\Lambda\), and comparison
+factor \(\beta\), the triangle inequality gives
+\[
+                   \|v\|_{\sup}\le N_c |S|^2\beta\Lambda .
+\] Here \(z_0=frL_{\rm sc}\),
+\(8fr+10\le c_0\le22 f^2r^4\), and the chosen short
+families and weight estimates give
+\(\log N_c\le C_3 z_0^3\), \(\log\Lambda\le2C_3z_0^9\)
+and \(\log\beta\le C_1' z_0^3\).
+Thus the replacement by integral coefficients preserves the
+order \(O(z_0^9)\) in the logarithm uniformly. Pullback by a
+level automorphism is an isometry, and pointwise multiplication
+followed by integration bounds every translate multiplier by
+this same sup norm. \label{cor:covolume-component-transfer-15}
+\end{proof}
+
+\begin{construction}
+\[
+\begin{array}{lc}
+\text{step on a nonterminal cover}&\text{upper bound for slope lost}\\ \hline
+\text{character trace in the squared norm}&2b\\
+\text{relative rank allowance }b/K & AU+5b\\
+\text{descent of the coefficient lattice}&2b\\ \hline
+\text{total beyond the deep bound }-M_i-AU&AU+9b
+\end{array}
+\]
+\caption{The losses in passing from the shifted deep lattice to the base type. Here \(A=C_F+C_U\), and \(0<b\le\min(K,U)\) on the selected family.}\label{fig:component-trace-budgets}
+\end{construction}
+
+\paragraph{The definite endpoint.}
+At the last lift \(q_m=0\), so the underlying definite quotient has finitely many components. Descent by traces between two positive-dimensional covers does not compute its degree. We compute the degree on each definite point and then pass to its type orbit. Put \(r=p_m\), let \(\Sigma\) be the chosen CM type, and set \(\ell=\log\Omega\). At \(\tau\in\Sigma\) write \(\alpha_\tau\) for the partition of the polynomial representation at the terminal weight, \(d_\tau=\dim S_{\alpha_\tau}(\mathbb C^r)\), and \(n\) for the even theta exponent. The total weights in this normalization are
+\[
+ \lambda_{\tau a}=\alpha_{\tau a}+n/2\quad(1\le a\le r),\qquad
+ M_m=r\ell\sum_{\tau\in\Sigma}w_{m\tau}.
+\]
+
+\begin{auxlemma}[Evaluation and determinant of the definite Schur lattice]\label{lem:definite-schur-gram}
+Let \(\alpha\) be a partition with at most \(r\) parts. Realize its dual Weyl lattice in flag polynomials on \(r\)-by-\(r\) matrices with the semistandard bideterminant basis of Proposition~\ref{prop:integral-terminal-branching}. Write \(d\) for its rank. At an orthonormal frame use the invariant norm with the extremal coefficient of norm one. If \(G_\alpha\) is the Gram matrix in the integral basis, then
+\[
+ 0<\det G_\alpha\le d^d,\qquad
+       |F(u)|\le\|F\|\quad (u\in U(r)).
+\]
+At the selected definite endpoint these determinants cost at most \(3U\) in the squared slope, summed over the CM type.
+\end{auxlemma}
+\begin{proof}
+With Haar probability \(du\), Schur orthogonality identifies the squared norm of a flag polynomial with \(d\int_{U(r)}|F(u)|^2du\). Indeed these functions are matrix coefficients with a fixed unit extremal vector, as in Section~\ref{subsec:selected-column-metric}. Each integral basis polynomial is a product of minors. A minor of \(u\) is a matrix entry of \(\bigwedge^a u\) between coordinate unit vectors and has modulus at most one. Thus each diagonal Gram entry is at most \(d\). Positive definiteness and Hadamard's inequality give
+\[
+     0<\det G_\alpha\le\prod_{j=1}^d(G_\alpha)_{jj}\le d^d .
+\]
+For an orthonormal basis \(F_j\), the function \(\sum_j|F_j(u)|^2\) is constant by transitivity and unitary invariance. Its integral is \(d\cdot d^{-1}=1\). Cauchy--Schwarz gives the asserted evaluation bound. Tensoring at the CM labels preserves this operator bound, and tensoring by a Hermitian line introduces exactly its own norm.
+
+To estimate the accumulated determinants take \(L=2L_{\rm sc}\). The terminal partition differs from the compact highest weight only by the scalar shift of all entries, or by taking the dual according to the frame convention. Both operations preserve the dimension. The selected weight bound in Lemma~\ref{lem:covolume-metric-factor} gives \(\alpha_i-\alpha_j\le2e^{2L}\) for \(i<j\). For \(L\ge2\), Weyl's formula gives
+\[
+ \log d_\tau
+ =\sum_{i<j}\log\!\left(1+\frac{\alpha_{\tau i}-\alpha_{\tau j}}{j-i}\right)
+ \le \tfrac32r^2L,\qquad
+ \sum_{\tau\in\Sigma}\log d_\tau\le3fr^2 L_{\rm sc}\le3U .
+\]
+Here \(r^2\le b\) and \(m\log\log x\ge1\) on the selected run. This dimension estimate uses only the weight bound from that lemma.
+\end{proof}
+
+\begin{auxlemma}[Total displacement of the terminal weights]\label{lem:terminal-centred-weights}
+On the selected size range, with the weights and period of the definite endpoint,
+\[
+ \left|\ell\sum_{\tau,a}(\lambda_{\tau a}-w_{m\tau})\right|
+     \le |\ell|\sum_{\tau,a}|\lambda_{\tau a}-w_{m\tau}|\le 100U .
+\]
+\end{auxlemma}
+\begin{proof}
+Fix \(\tau\), put \(e=w_{m\tau}\) and use \(r=k+m-1\). The terminal weight formula for the first \(k-1\) coordinates has the same head parameters and rank shifts as in the Fock-degree calculation of Proposition~\ref{prop:selected-exponent-centering}. Number these coordinates starting at one, and denote their head parameters by \(0\le v_a\le S_c\). With \(t\) the block-length parameter and \(n=n_V\) even, they are
+\[
+ \lambda_{\tau a}
+   =\left\lfloor v_a+e-(r-a)-\tfrac{t+1}{2}\right\rfloor
+            +\tfrac{n_V}{2}\qquad(1\le a\le k-1).
+\]
+Thus each of these differences from \(e\) has absolute value at most \(S_c+r+t+n_V+2\), including the rounding error.
+
+The remaining \(m\) coordinates use the node offsets at the same place. Before adding the rank shift their absolute values are at most the width \(2\eta_c\) of the offset window. The rank shift is at most \(2r\), as in the same Fock-degree calculation. Since \(0\le e\le3b\), \(\eta_c\le b\) and \(r\le b\), these coordinates obey
+\[
+   |\lambda_{\tau a}-e|\le 2\eta_c+2r+3b\le7b
+                   \qquad(k\le a\le r).
+\]
+
+The selected size inequalities give \(rS_c\le16b\), \(r^2\le rn_V\le b\), \(t\le n_V\) and \(r\le b\). For the first inequality one may use \(r\le2k\) and the selected bound \(kS_c\le 8b\). The second follows from \(frn_VL_{\rm sc}\le b\). Consequently
+\[
+ \sum_a|\lambda_{\tau a}-e|
+     \le r(S_c+r+t+n_V+2)+7mb\le21b+7mb .
+\]
+There are \(f\) labels and \(|\ell|\le3L_{\rm sc}\) in the selected CM data. Since \(m\ge1\), \(\log\log x\ge1\) eventually and \(U=fmbL_{\rm sc}\log\log x\), the right side summed with the period weight is at most \(84U\).
+\end{proof}
+
+\begin{definition}[Valuative frames on a definite component]\label{hyp:terminal-cm-fibre-comparison}
+Use the geometric row and the level markings of
+Construction~\ref{hyp:family-prescribed-realization}. At the terminal signature
+\((r,0)\), its components over the splitting coefficient field \(K\) are
+points. A test of integrality at a place \(v\) consists of a framed generic point
+over a complete discrete valuation ring \(R\) above \(v\).
+It is read on a semiabelian extension of its underlying polarized point.
+Write \(M\) for its Lie lattice and \(\Theta\) for its rigidified principal
+theta line. A finite frame \((e_{\tau,j},s)\) satisfies
+\[
+  \bigoplus_{j=1}^r R e_{\tau,j}
+      =M\cap(M_{\operatorname{Frac}R})_\tau
+         \quad(\tau\in\Sigma),\qquad Rs=H^0(A_R,\Theta).
+\] The geometric lattice consists of the rational cusp forms
+whose values belong to \(R\) in every such test. At infinity the test
+uses the tangent metric \(\pi H\) of the polarization and the squared
+cubical norm of the generator integrated against Haar probability.
+These conventions fix both a lattice and a metric.
+
+Write \(C_\tau,T\) for the coefficient determinant and theta lines,
+\(c_{\tau,Z},t_Z\) for their unsquared degrees and set
+\[
+ \Delta_Z=\max\!\left(0,\sum_\tau c_{\tau,Z}-2t_Z\right),
+ \qquad C_D=105 .
+\]
+\end{definition}
+
+At \(q_m=0\) the conjugate determinant has rank zero. The coefficient
+and flat determinant generators transform inversely. Their integral
+eigenframes and polarized metrics in
+Definition~\ref{hyp:flat-determinant-frames} are dual. Applying
+Proposition~\ref{prop:deep-flat-line-degree} gives
+\[
+       c_{\tau,Z}=-\widehat{\deg}_{\rm flat}(\mathcal L_\tau)
+                  =-r\ell/2 .
+\]
+
+\begin{auxlemma}[The theta comparison on a principal CM fibre]\label{lem:terminal-principal-theta-comparison}
+After finite base extension to a field \(K\) containing all conjugates of \(E\), take a semistable Moret--Bailly model of the principally polarized CM point, with rigidified symmetric cubical theta line \(\Theta\), integral \(\mathcal O_E\)-action and finite flat polarization kernel for \(\Theta^2\). Write \(M\) for its integral Lie lattice with the polarization metric \(\pi H_\sigma\), and \(B\) for the direct image of \(\Theta\) with the cubical probability \(L^2\) metric. Put \(M_\tau=M\cap(M_K)_\tau\), \(C_\tau^0=(\det M_\tau)^\vee\), and \(T^0=B^\vee\).
+
+Let \(C_\tau,T\) be the actual metrized coefficient lines of degrees \(c_{\tau,Z},t_Z\). Define the line measuring the difference of frames and its degree by
+\[
+ \mathcal E_Z=\left(\bigotimes_{\tau\in\Sigma}\bigl(C_\tau\otimes(C_\tau^0)^\vee\bigr)\right)
+             \otimes(T^0\otimes T^\vee)^{\otimes2},
+     \qquad d_Z=\widehat{\deg}\mathcal E_Z .
+\]
+For the definite signature, let \(g=fr\) and let \(I_Z\) be the normalized logarithmic order of \(M/(\bigoplus_{\tau\in\Sigma}M_\tau)\). Then
+\begin{equation}\label{eq:terminal-theta-frame-defect}
+ \sum_{\tau\in\Sigma}c_{\tau,Z}-2t_Z
+      = I_Z-\tfrac g2\log(2\pi)+d_Z,\qquad
+      0\le I_Z\le g\log\operatorname{rd}(E).
+\end{equation}
+In particular, on matched integral and metric frames \(d_Z=0\), and the whole theta contribution to \eqref{eq:terminal-cm-loss} satisfies \(n\Delta_Z\le2U\).
+\end{auxlemma}
+\begin{proof}
+For a principal theta line \(h^0(\Theta)=1\). In the notation \(h_*=-\widehat{\deg}\det M\) of Section~\ref{subsec:flag-point-heights}, the direct-image formula at the first power of \(\Theta\) is
+\[
+ \widehat{\deg} B=-\tfrac12 h_*-\tfrac g4\log(2\pi),\qquad
+ 2\widehat{\deg} T^0=-\widehat{\deg}\det M+\tfrac g2\log(2\pi).
+\]
+This is the rank-one case of Bost's formula for the cubical direct image, also expressed in the frame convention in \eqref{eq:slice-cm-theta-degree}. \cite[Gaudron, 2019, \S2.3.2]{bost-mb-flag}
+The exponent \(n\) of the automorphic weight is applied to this one coefficient line. A section evaluated on a theta generator of squared norm \(N_\sigma\) has coefficient-frame factor \(N_\sigma^{-1/2}\). Thus the standard coefficient line is the dual of the direct image; taking \(H^0(\Theta^n)\) would change its rank.
+
+Since \(q_m=0\), the conjugate half contributes no generic Lie eigenspaces. The polarization pairs the \(\mathcal O_E\)-action with its complex conjugate under the adjoint, so the distinct complex eigenspaces are orthogonal in the Hermitian metric. The remaining determinant discrepancy is the finite index:
+\[
+ \widehat{\deg}\det M=\sum_{\tau\in\Sigma}\widehat{\deg}\det M_\tau+I_Z .
+\]
+
+At finite places the integral decomposition can fail even at this signature. Let \((u_j)_j\) be an integral basis of \(\mathcal O_E\) and \((u_j^*)_j\) its trace-dual basis. The projector \(e_\tau=\sum_j u_j\otimes\tau(u_j^*)\) belongs to \(E\otimes K\); evaluation at embedding \(\rho\) gives \(\delta_{\rho\tau}\) by trace duality. Since \(u_j^*\in\mathfrak d_E^{-1}\), multiplication by \(\tau(\mathfrak d_E)\) clears the denominators of \(e_\tau\). At a finite place \(v\) of \(K\) it follows that
+\[
+ \bigoplus_\tau M_{\tau,v}\subset M_v
+      \subset\bigoplus_\tau \tau(\mathfrak d_E)^{-1}M_{\tau,v},\qquad
+ \operatorname{length}_{\mathcal O_{K,v}}(M_v/\textstyle\bigoplus_\tau M_{\tau,v})
+     \le r\sum_{\tau\in\Sigma}v(\tau\mathfrak d_E).
+\]
+The normalized sum of \(v(\tau\mathfrak d_E)\log\mathrm Nv\) is \(\log\operatorname{rd}(E)\) for each \(\tau\). This proves the index bound. Subtracting twice the degree of \(T^0\) from the sum of the degrees of \(C_\tau^0\) and adding \(d_Z\) gives \eqref{eq:terminal-theta-frame-defect}.
+
+The comparison can be tested on the actual fibres. For \(0\ne e\in\mathcal E_Z\otimes K\) write its finite lattice as \(J_v e\) locally and its length as \(q_\sigma(e)\) at each complex embedding. Then
+\[
+ d_Z=-\frac{\sum_v v(J_v)\log\mathrm Nv+\sum_\sigma\log q_\sigma(e)}
+                    {[K:\mathbb Q]},\qquad
+ n\Delta_Z\le n g\log\operatorname{rd}(E)+n\max(0,d_Z).
+\]
+The right side is independent of the rational frame by the product formula. On the selected family \(n=n_V\), \(frn_V L_{\rm sc}\le b\), \(\log\operatorname{rd}(E)\le2L_{\rm sc}\), and \(b\le U\). This proves the stated allowance.
+\end{proof}
+
+\begin{auxlemma}[The integral lattice at the selected definite points]
+\label{lem:terminal-valuative-realization}
+Use the geometric lattice of Definition~\ref{hyp:terminal-cm-fibre-comparison}.
+At each terminal point the integral polynomial fibre in the tangent and
+theta frames contributes its full rank to the geometric cusp space.
+The selected level subgroup acts freely on the points and preserves
+the corresponding lattices and norms. In the notation of
+Lemma~\ref{lem:terminal-principal-theta-comparison}, one has
+\begin{equation}\label{eq:terminal-cm-loss}
+ C_\tau=C_\tau^0,\qquad T=T^0,\qquad d_Z=0,\qquad n\Delta_Z\le2U .
+\end{equation}
+The equalities of lines are isometries with their integral structures.
+\end{auxlemma}
+\begin{proof}
+\proofstep{Retain one marking prime to the residue characteristic.}
+The terminal abelian variety \(A\) has dimension \(fr\), is principally
+polarized, and has an \(\mathcal O_E\)-action. Its Lie algebra has type
+\(r\Phi\) for the selected CM type \(\Phi\). In characteristic zero
+the idempotent decomposition shows that the CM-type ideal
+\[
+ J_\Phi=\ker\!\left(\mathcal O_E\otimes\mathcal O_{E^*}
+    \longrightarrow \prod_{\tau\in\Phi}\overline{\mathbb Q},
+              \ a\otimes b\longmapsto(\tau(a)b)_\tau\right)
+\]
+annihilates \(\operatorname{Lie}A\); here \(E^*\) is the reflex field
+in the fixed algebraic closure. The integral moduli stack of these
+principally polarized triples with this ideal condition is proper and
+smooth of relative dimension zero over \(\mathcal O_{E^*}\).
+\cite[Theorem~35]{amir-khosravi-serre}
+
+Fix a place \(v\) of \(K\). Forget the part of the level above its residue
+characteristic and retain the principal marking at one of the two
+distinct split primes \(g_0,g_1\) prime to that characteristic.
+Adding this marking gives a finite \'etale cover of the stack over the
+local base: the relevant half of the \(g_i\)-torsion is finite \'etale,
+and its bases form a finite \'etale sheaf. For a marked split factor its geometric fibre is a torsor under
+\[
+ \operatorname{Aut}_{\mathbb F_{g_i}}
+     \bigl(A[\mathfrak g](\overline{k})\bigr)
+           \simeq\mathrm{GL}_r(\mathbb F_{g_i}),\qquad \mathfrak g\mid g_i .
+\]
+
+This cover has trivial inertia. Indeed a polarized automorphism \(u\) commuting with \(E\) has finite
+order. On the marked \(\mathfrak g\)-part of the Tate lattice,
+\(\mathfrak g\mid g_i\), it acts trivially modulo \(g_i\).
+The principal congruence kernel in \(\mathrm{GL}_r(\mathbb Z_{g_i})\)
+is torsion-free since \(g_i\) is odd. The action on this part is faithful:
+\[
+ \operatorname{End}^0_{E}(A)\ \lhook\joinrel\longrightarrow\
+ \operatorname{End}^0_{E}(A)\otimes_E E_{\mathfrak g}
+ \ \lhook\joinrel\longrightarrow\
+ \operatorname{End}_{E_{\mathfrak g}}(V_{\mathfrak g}A).
+\]
+For the second injection take the \(\mathfrak g\)-factor of the
+faithful rational Tate-module realization of endomorphisms at
+\(g_i\), which is invertible in the residue field.
+This applies on special as well as generic fibres.
+
+The marked cover is therefore a proper algebraic space, and its given
+\(K_v\)-point extends over \(\mathcal O_{K_v}\). Write \(\mathcal M_{\Phi,\mathfrak g}\) for this space and \(\mathcal A\)
+for its universal abelian scheme. For a testing trait \(R\) above \(v\)
+the good model is the pullback
+\[
+  \operatorname{Spec} R\longrightarrow\operatorname{Spec}\mathcal O_{K_v}
+      \xrightarrow{\,\widetilde A\,}\mathcal M_{\Phi,\mathfrak g},
+    \qquad A_R=(\widetilde A^*\mathcal A)_R .
+\]
+All evaluations retain the original generic level.
+
+\proofstep{Identify all integral and metric frames.}
+Any semiabelian extension in a test is canonically the base change
+of this good model. Indeed the identity of the generic fibres and its
+inverse both extend over a normal trait by the extension theorem for
+homomorphisms of semiabelian schemes. Uniqueness makes the extensions inverse.
+\cite[Chapter~I, Proposition~2.7]{faltings-chai}
+
+On this abelian scheme the rigidified theta line extends uniquely
+up to the isomorphism inducing the chosen rigidification. One may
+extend a Cartier divisor from the generic fibre by closure on the regular
+scheme, and rigidify along zero. For two extensions \(\Theta_1,\Theta_2\) the ratio of a fixed
+generic isomorphism is given by a vertical divisor. The special fibre
+\(A_k\) is integral. If \(e\) denotes the zero section, the divisor and
+its pullback therefore have the form
+\[
+      D=m[A_k],\qquad e^*D=m[\operatorname{Spec} k].
+\]
+
+Compatibility with the given rigidifications forces \(m=0\). The cubical structure is the canonical
+one on the rigidified extension. The polarization remains principal,
+and formation of the rank-one module of sections commutes with base
+change (the higher cohomology of an ample line on an abelian variety
+vanishes). Writing \(M=\operatorname{Lie} A_R\) for the good lattice,
+the two tests are consequently
+\[
+    M_\tau=\bigcap_{a\in\mathcal O_E}\ker(a-\tau(a)\operatorname{id}_M),
+       \qquad B=H^0(A_R,\Theta).
+\]
+The first kernel is the intersection of the generic eigenspace with
+\(M\), and commutes with flat extension of traits. The coefficient
+coordinates take the two duals \((\det M_\tau)^\vee\) and \(B^\vee\).
+The metrics in Definition~\ref{hyp:terminal-cm-fibre-comparison} are exactly
+the dual metrics used in Lemma~\ref{lem:terminal-principal-theta-comparison}.
+This proves \eqref{eq:terminal-cm-loss}, including at ramified primes.
+
+\proofstep{Take sections supported at a point.}
+In the split definite quotient a rule of the given weight over a point
+is an element of the corresponding polynomial representation tensored
+with its theta line power. This follows by evaluating in a frame and
+then using the weight transformation law in all other frames.
+Let \(X_K\) denote the finite split quotient and \(V_Z\) its coefficient
+space at \(Z\). Each point is open and closed and the definite group
+has no cuspidal boundary. The extension map is
+\[
+ \iota_Z:V_Z\longrightarrow\bigoplus_{Z'\in X_K}V_{Z'},\qquad
+    (\iota_Z v)_{Z'}=
+       \begin{cases}v&Z'=Z,\\0&Z'\ne Z.\end{cases}
+\]
+
+On its own point an integral polynomial
+has integral values in all the frames just identified, by the integral
+change-of-basis action on the Schur lattice. On the other points all
+tests have value zero. Thus extension by zero supplies an integral map
+whose image spans the entire rational fibre. This uses precisely the
+valuative lattice, even when two marked generic points have the same
+specialization on a model retaining the full level.
+
+Write \(P\) for the selected type subgroup of the two-prime level
+quotient. If \(s\in P\) fixes \(Z\), its action on the marking is realized
+by a polarized \(\mathcal O_E\)-linear automorphism \(u\) of \(A_Z\):
+\[
+    sZ=Z\quad\Longrightarrow\quad
+       u\circ\eta_i=\eta_i\circ s_i \qquad(i=0,1),
+\]
+where \(\eta_i\) denotes the retained part of the principal marking
+and \(s_i\) its matrix at \(g_i\). 
+
+The matrices are unipotent on a split half at both primes, as in the orbit
+calculation in this chapter. On the part at \(g_i\) the automorphism lies in the inverse image of the cyclic unipotent subgroup generated
+by its reduction. Write \(u_i\) for its action on this Tate lattice. The reduction kernel
+is pro-\(g_i\) and the cyclic image is a \(g_i\)-group. Hence, by the
+faithfulness already proved,
+\[
+    \operatorname{ord}(u)=\operatorname{ord}(u_i)=g_i^{a_i}
+       \quad(i=0,1),\qquad (g_0,g_1)=1 .
+\]
+Thus \(u=1\). Faithfulness of the marking gives the identity in the type group. Transport
+changes only the marking and carries both the valuative frames and the
+polarized Hermitian norm to those of the translated point.
+\end{proof}
+
+\begin{auxlemma}[The terminal fibre gives the type slope]\label{lem:terminal-cm-type-slope}
+For the geometric lattice of Lemma~\ref{lem:terminal-valuative-realization}, the type slope at the terminal lift satisfies
+\[
+ \mu_m\ge-M_m-C_D U
+       =-r\log\Omega\sum_{\tau\in\Sigma}w_{m\tau}-C_D U .
+\]
+\end{auxlemma}
+\begin{proof}
+For a partition \(\alpha\) put \(s=|\alpha|\), \(d=\dim S_\alpha\). The determinant of the polynomial representation is a character of \(\mathrm{GL}_r\). Restricting to diagonal matrices, permutation symmetry gives equal exponents on the \(r\) entries, while a scalar \(zI\) acts as \(z^s I_d\). Therefore
+\[
+ \det S_\alpha(g)=(\det g)^{sd/r}.
+\]
+The exponents can also be read directly from the diagonal weights. The determinant of a tensor product satisfies \(\det(A\otimes B)=(\det A)^{\dim B}(\det B)^{\dim A}\), so the normalized determinant degrees add. The integral and metric comparisons give for the squared fibre slope
+\[
+ \mu_Z\ge 2\sum_\tau\frac{|\alpha_\tau|}{r}c_{\tau,Z}
+                       -\sum_\tau\log d_\tau+2nt_Z.
+\]
+Since \(2t_Z\ge\sum_\tau c_{\tau,Z}-\Delta_Z\), substitution gives
+\[
+ \mu_Z\ge-\ell\sum_{\tau,a}\lambda_{\tau a}
+                      -\sum_\tau\log d_\tau-n\Delta_Z
+             \ge-M_m-C_D U
+\]
+by \eqref{eq:terminal-cm-loss} and Lemmas~\ref{lem:definite-schur-gram} and~\ref{lem:terminal-centred-weights}. The sign in the weight term is fixed by the common scalar \(-\ell\); no absolute value is needed before summing.
+
+For a representative vector \(v\) on \(Z\), the section
+\[
+             v\longmapsto\sum_{g}\chi(g)^{-1}g v
+\]
+has type \(\chi\). Its restriction to \(Z\) recovers \(v\), by freeness of the orbit. Conversely, a rational section of this type is determined by its values at one representative per orbit. Taking the direct sum therefore gives an integral map of full rank into the type lattice. The finite index of its image can only increase the degree of the target. For each orbit let \(m_Z\) be its mass in quotient probability measure. Only one translate can contribute at a point of that orbit. The tensor evaluation bound of Lemma~\ref{lem:definite-schur-gram}, invariance of the norm and \(|\chi(g)|=1\) give
+\[
+ \left\|\sum_{Z,g}\chi(g)^{-1}g v_Z\right\|_\sigma^2
+    \le\sum_Z m_Z\|v_Z\|_{Z,\sigma}^2
+    \le\sum_Z\|v_Z\|_{Z,\sigma}^2 ,
+ \qquad m_Z\ge0,\quad\sum_Zm_Z=1 .
+\]
+The induced map on highest exterior powers is thus contractive at each embedding. Hence \(\mu_m\) is at least the rank-weighted mean of the \(\mu_Z\).
+\end{proof}
+
+\begin{proposition}[Descent by the character traces]\label{prop:covolume-trace-descent}
+Write \(\mu_i\) for the slope of the base type on the nonterminal cover. Then
+\[
+ \mu_i\ge-M_i-\{2(C_F+C_U)+9\}U.
+\]
+ At the terminal lift Lemma~\ref{lem:terminal-cm-type-slope} gives \(\mu_m\ge-M_m-C_D U\).
+\end{proposition}
+\begin{proof}
+For \(h\in S\) form the character trace
+\[
+ \phi_h(f)=\sum_{g\in S}\chi(g)^{-1} f^g v^{hg}.
+\]
+The level action preserves integrality and cuspidality, and the
+even weights give the required target weight. Reindexing shows
+that each trace transforms by \(\chi\). Put \(A=(v^{hg})_{h,g}\). Vanishing of the traces gives the system
+\[
+ A\bigl(\chi(g)^{-1} f^g\bigr)_{g\in S}=0,\qquad
+ \operatorname{adj}(A) A=(\det A) I .
+\]
+The determinant is a non-zero-divisor, hence \(f=0\). In the
+opposite direction, translate a relation \(\sum_h f_hv^h=0\)
+on type vectors by each \(g\). Cancelling \(\chi(g)\) gives the
+transposed system, hence injectivity and
+\(|S|\operatorname{rk} L_{\rm deep}\le\operatorname{rk} L_+\).
+\label{cor:covolume-component-transfer-16}
+
+At each embedding, with \(B_v\) a bound for multiplication by
+each translate of \(v\), isometry of the action and \(|\chi(g)|=1\)
+give
+\[
+ \|\phi_h(f)\|\le |S|B_v\|f\|,\qquad
+ \sum_{h\in S}\|\phi_h(f)\|^2\le |S|^3 B_v^2\|f\|^2 .
+\]
+The uniform height and level estimates for the chosen section
+give \(\log B_v\le C z_0^9\), \(\log |S|\le45z_0^2\),
+where \(z_0=fr L_{\rm sc}\). Eventually \(z_0\ge2C+200\)
+and \(z_0^{12}\le b\). Thus its squared-norm factor satisfies
+\[
+ \log(|S|^3 B_v^2)\le135z_0^2+2Cz_0^9\le2z_0^{12}\le2b.
+\] Write \(K=P\kappa_i\) for the size bound on
+\(|M_i|\) and the log size of a spanning family in the deep
+type lattice. The selected
+family has \(0<b\le\min(K,U)\). On the deep cover the
+negative-shift lattice has squared-norm slope at least
+\(-M_i-(C_F+C_U)U\).
+
+The shifted-rank comparison on the same cover gives
+\[
+ \operatorname{rk}L_+\le(1+b/K)\operatorname{rk}L_-,
+ \qquad
+ \frac{\operatorname{rk}L_+-\operatorname{rk}L_-}
+      {\operatorname{rk}L_-}\le b/K .
+\]
+The same relative rank allowance applies after summing over the
+trace targets. Writing
+\(v=-M_i-(C_F+C_U)U-2b\), the resulting slope is at least
+\(v-(b/K)(|v|+2K)\). Descent through the coefficient ring
+costs another \(2b\). To combine the rank and descent costs put \(A=C_F+C_U\). Since
+\(|M_i|\le K\), \(b/K\le1\), and \(b\le U\),
+\[
+ \frac bK (|v|+2K)
+   \le b+AU+2b+2b=AU+5b .
+\]
+The rank loss and the two metric losses of \(2b\) each thus give
+a base type slope of at least
+\[
+                    -M_i-\{2(C_F+C_U)+9\}U .
+\]
+This uses the trace maps, minimum-slope, degree, share and
+Hilbert--Samuel bounds on the stated integral models.
+At the terminal lift Lemma~\ref{lem:terminal-cm-type-slope} applies instead. \label{cor:covolume-component-transfer-17}
+\end{proof}
+\paragraph{Norm used for the arithmetic row.}
+The bound so far uses the geometric metric. The arithmetic row carries an adelic norm,
+so we must compare the two on the type lattice just estimated. Fix its scalar-model embedding, the local
+compact lowest types of dimensions \(d_{\tau,i}\), and a
+fundamental domain \(\mathcal F_i\) for the corresponding
+adelic group modulo its rational points. Use the Haar measure
+\(\mu_i\) with the real density and finite-level normalization
+of the scalar model. For a scalar section \(f\), write
+\(\|f\|_{\rm P}=a_i\|f\|_{{\rm Pet},1}\), where
+\(\|f\|_{{\rm Pet},1}\) is the Petersson norm with quotient
+probability measure and \(a_i>0\) is the norm factor of the
+specified Lie frame in this weight. The adelic scalar evaluation contains this same factor.
+\begin{lemma}[Normalization of the type metric]\label{lem:covolume-type-metric}
+The squared multiplicity norm is \(R_i\|f\|_{\rm P}^2\), where
+\[
+            R_i=\mu_i(\mathcal F_i)\prod_\tau d_{\tau,i}.
+\]
+\end{lemma}
+\begin{proof}
+Evaluate on the tensor of the prescribed unit
+lowest-type vectors. The scalar attached to the form is this value or its complex conjugate. Multiplying it by \(a_i^{-1}\)
+gives a function on the probability quotient whose \(L^2\)
+norm is \(\|f\|_{{\rm Pet},1}\), by the scalar Petersson
+comparison on the chosen model. Schur orthogonality gives
+the squared evaluation integral as the squared multiplicity
+norm divided by \(\prod_\tau d_{\tau,i}\). Let \(d\mu_{i,1}\) be quotient probability measure. The measure
+conversion in this calculation is
+\[
+        d\mu_i=\mu_i(\mathcal F_i)\,d\mu_{i,1}.
+\]
+It multiplies the squared scalar integral by precisely this volume. Cuspidality gives
+the integrability used here. For the conjugate coefficient
+embedding the canonical good embedding is the same and
+complex conjugation preserves the squared norm of this scalar. This gives the multiplier \(\sqrt{R_i}\) at every
+embedding of the actual row field.
+\label{cor:covolume-component-transfer-18}
+
+For a finer compact open \(K\subset K_0\), keeping the real
+density and giving the chosen finite level volume one
+multiplies the Haar measure by \([K_0:K]\). The quotient
+probability measures agree under passage to the coarser
+level: on the full adelic quotient a constant change of
+Haar cancels against total mass, and the pushforwards are
+the probability measures on the respective level quotients.
+Writing \(p:Y_K\to Y_{K_0}\) for the projection and
+\(\mu_{K,1},\mu_{K_0,1}\) for the quotient probability measures gives
+\[
+ p_*\mu_{K,1}=\mu_{K_0,1},\qquad
+ \int_{Y_K}|p^*s|^2\,d\mu_{K,1}
+    =\int_{Y_{K_0}}|s|^2\,d\mu_{K_0,1}.
+\] The multiplicity comparison at
+the finer level uses that level's own Haar volume. Apply this
+calculation to each run's marked subgroup and independently
+transport its Lie frame and rational coefficient reading.
+The later finite coordinate factor \(n_P^{-1}\) in squared
+norm comes from the row frame isometry.
+
+\end{proof}
+
+\begin{lemma}[Size of the metric factor]\label{lem:covolume-metric-factor}
+Use the marked-level factor \(R_i\) of Lemma~\ref{lem:covolume-type-metric}.
+Let \(L\ge2\) with \(r+3\le frn_V\le e^L\), normalized absolute
+weight sum at most \(e^{2L}\), and
+\[
+ \log(g_0g_1)\le30L,\qquad
+ \log\operatorname{rd}_E+|\RePart(L'/L)(1,\chi_K)|\le2L .
+\]
+Then at each marked level
+\[
+ -fr^2\log64\le\log R_i\le122fr^2 L .
+\]
+In particular \(|\log R_i|\le244U\) for \(L=2L_{\rm sc}\) eventually.
+\end{lemma}
+\begin{proof}
+Let
+\(K\subset K_0\) be the selected level and full level and
+\(I=[K_0:K]\). Cover a fundamental set by translates
+indexed by the finite lattice classes at full level and
+then by the \(I\) level cosets. In real unitary coordinates
+the determinant torus and the special unitary factor give
+an upper density and box factor \((1000fr^3)^{fr^2}\).
+The finite translates are represented by self-dual lattices.
+
+Grouping them by their determinant class, with the
+congruence-three marking, bounds the sum of the special
+unitary covolumes by
+\[
+ T_E=h_E\,3^{2f+2fr^2}\,
+       \operatorname{rd}_E^{\,f(r^2-1)/2}
+       \left(\sqrt r\prod_{a=2}^r\zeta(a)\right)^f .
+\]
+Here \(h_E\) is the class number. This is the special
+unitary Tamagawa comparison for the unramified CM extension
+and the specified self-dual integral lattice with the tangent
+Riemannian Haar measure. The determinant class count and the
+index of the level-three marking account for the class number
+and powers of three. Subadditivity on the fundamental set
+therefore gives \(\mu_i(\mathcal F_i)\le I(1000fr^3)^{fr^2}T_E\).
+\label{cor:covolume-component-transfer-19}
+
+For the reverse inequality take special unitary double-coset
+representatives at full level. A determinant sector of the real
+domain times special unitary fundamental sets packs into the
+unitary quotient with lower factor \(32^{-fr^2}\). Overlaps
+can occur only by a rational unitary transformation with
+integral determinant. In the chosen sector it has determinant
+one and the special unitary representatives then coincide.
+The sum of these special unitary covolumes is
+\[
+ |\operatorname{disc}(E^+)|^{(r^2-1)/2}
+             (\sqrt r)^f/P_{\rm fin} .
+\]
+
+In the Tamagawa formula the tangent normalization contributes
+the index of the chosen integral Lie basis times
+\((\sqrt r)^f\), and the inverse index from the rational
+volume form cancels it. For the unramified local factors,
+\[
+ 0<P_{\rm fin}\le\left(\prod_{a=2}^r\zeta(a)\right)^f\le2^{fr}.
+\]
+Inserting this upper bound into the denominator bounds the sum
+of covolumes below by \(2^{-fr^2}\).
+Passage to the smaller level increases mass in the
+level-normalized Haar measure. Since \(d_{\tau,i}\ge1\),
+this gives \(\log R_i\ge-fr^2\log64\).
+\label{cor:covolume-component-transfer-20}
+
+For the upper comparison take the size parameter \(L\ge2\)
+with \(frn_V\le e^L\), normalized absolute weight sum at
+most \(e^{2L}\), \(\log(g_0g_1)\le30L\) and
+\(\log\operatorname{rd}_E+|\RePart(L'/L)(1,\chi_K)|\le2L\).
+Bounding each finite reduction group by all matrices over its
+residue field gives the index budget
+\[
+ I\le(g_0g_1)^{2fr^2},\qquad
+ \log I\le2fr^2\log(g_0g_1)\le60fr^2L .
+\]
+The discriminant and class-number bound in the preceding
+upper estimate gives
+\(\log\mu_i(\mathcal F_i)\le fr^2\log(r+3)+119fr^2L\).
+
+The block Weyl dimension product bounds
+\(\log d_{\tau,i}\le 3r^2 L/2\) on each of the \(f\) labels.
+The selected ranks give \(r+3\le frn_V\), so
+\(\log(r+3)\le L\). In the formula for the squared metric multiplier this yields
+\[
+ \log R_i=\log\mu_i(\mathcal F_i)+\sum_\tau\log d_{\tau,i}
+    \le (1+119+3/2)fr^2L\le122fr^2L .
+\] With \(L=2L_{\rm sc}\)
+on the chosen run, \(r^2\le b\) and
+\(U=fmbL_{\rm sc}\log\log x\ge fr^2 L_{\rm sc}\).
+
+The two estimates imply the asserted absolute bound for \(R_i\).
+\end{proof}
+
+\begin{lemma}[Integral change of field for the type]\label{lem:covolume-integral-descent}
+The integral type lattice is the scalar extension of the
+smaller-field lattice. With \(\mu_{\rm row}\) its squared-norm slope under the row metric and \(\mu_{\rm small}\) the smaller-field slope,
+\[
+ \mu_{\rm row}\ge\mu_{\rm small}-244U.
+\]
+
+\end{lemma}
+\begin{proof}
+In a rational basis of the cusp model the type subspace is
+the simultaneous kernel of the row actions minus their prescribed
+eigenvalues; the latter belong to the smaller field. A finite
+subsystem cuts out the same kernel. If \(M\) is the integral
+cusp lattice and \(T\) this rational type subspace, its integral
+part is \(\ker(M\to M_{\mathbb Q}/T)\), where \(M_{\mathbb Q}\)
+denotes its span over the smaller coefficient field. The larger integer ring is torsion-free
+over the smaller Dedekind ring, hence flat. Tensoring this kernel
+therefore gives the intersection defining the type over the
+larger field. At each embedding the norm multiplier is
+\(\sqrt{R_i}\le e^{122U}\); in the squared degree the change per
+rank is at least \(-244U\). \label{cor:covolume-component-transfer-21}
+\end{proof}
+
+\input{parent-cusp-slope}
+
+\paragraph{The normalized covolume in the division bound.}
+We can now express the covolume in the units used by the division estimate. At lift
+\(j\) put
+\[
+ M_j=\sum_\rho(p_j-q_j)w_{j\rho}\log\Omega,
+ \qquad U=B_0\log\log x ,
+\]
+where \((p_j,q_j)=(k+j-1,m-j)\) is the signature of the
+base realization at weight \(\kappa_j\).
+
+\begin{proposition}[Covolume on the selected base row]\label{prop:selected-base-covolume}
+Fix the completed family of Proposition~\ref{prop:completed-division-pair}.
+At nonterminal lifts take the model and level of
+Lemma~\ref{hyp:covolume-deep-component} with the weight and
+slope estimates of Proposition~\ref{prop:covolume-trace-descent};
+at the terminal lift use Lemmas~\ref{lem:terminal-valuative-realization} and~\ref{lem:terminal-cm-type-slope}. Use the metric and
+integral descent of Lemmas~\ref{lem:covolume-type-metric}--\ref{lem:covolume-integral-descent}.
+There is a constant \(C_0\) such that the
+normalized log covolume \(L_{3,j}\) of the good base lift of
+rank \(D_0>0\) satisfies
+\[
+ L_{3,j}\le M_j+(C_0+1)U .
+\]
+The constant and scale cutoff can be taken before choosing the
+translate, sequence, or lift.
+\end{proposition}
+
+\begin{proof}
+\proofstep{The ambient type slope.}
+Write \(C_0=244+\max(C_D,2(C_F+C_U)+9)\), where \(C_D\)
+is the terminal constant. The common metric change costs at
+most \(244U\) by Lemma~\ref{lem:covolume-metric-factor}. The two input
+budgets for the coefficient of \(U\) are therefore
+\[
+ 244+C_D\le C_0,\qquad 244+2(C_F+C_U)+9\le C_0 .
+\]
+They give \(\mu_{\rm type}\ge-M_i-C_0 U\) by the terminal type estimate or by
+Proposition~\ref{prop:covolume-trace-descent} with the metric
+comparison of Lemmas~\ref{lem:covolume-type-metric} and~\ref{lem:covolume-metric-factor}. In the nonterminal case the heights and positivity
+used in the wall calculation are those of Sections~\ref{subsec:flag-point-heights}
+and~\ref{subsec:flag-wall-positivity} on this component. Their constants
+enter the vanishing wall error at fixed model. The smaller-block tail
+estimate controls the change of field and weight.
+
+Let \(e_g\) be the self-adjoint good idempotent and
+\(e_b=1-e_g\). The order \(s_0\) of the projection group clears
+their denominators and satisfies \(2\log s_0\le b\). For the
+integral type lattice \(\Lambda\) put
+\(\Lambda_a=\Lambda\cap e_a\Lambda_{\mathbb Q}\),
+\(d_a=\operatorname{rk}\Lambda_a\) for \(a=g,b\).
+Projection gives an injection
+\[
+ \Lambda/(\Lambda_g\oplus\Lambda_b)
+ \lhook\joinrel\longrightarrow s_0^{-1}\Lambda_b/\Lambda_b,
+ \qquad [v]\longmapsto[e_bv].
+\]
+Indeed \(s_0e_bv\in\Lambda_b\); if \(e_bv\in\Lambda_b\), then
+\(v-e_bv\in\Lambda_g\). The normalized squared-degree index
+is at most \(2d_b\log s_0\). Orthogonality at all infinite
+places makes the determinant metric multiplicative, hence
+\[
+ (d_g+d_b)\mu_{\rm type}\le
+ d_g\mu_g+d_b(\mu_{\max}+2\log s_0),
+\]
+with \(\mu_{\max}\) the maximal slope of the ambient
+lattice.
+
+The preceding ambient slope and regular trace estimates give
+\(d_b\le3\eta(d_g+d_b)\) with
+\(\eta=e^{-x^{e_z/7}}\) and
+\(\mu_{\max}\le x^A b\) for a fixed exponent \(A\).
+Take \(B'\) such that \(|M_i|\le x^{B'}b\).
+For \(\eta\le1/12\), \(d_b\le4\eta d_g\). Put
+\(Q=(x^A+x^{B'}+C_0+1)U\), an upper bound for each of
+\(\mu_{\max},2\log s_0,-\mu_{\rm type}\). Rearranging the degree
+inequality gives
+\[
+ \mu_g\ge\mu_{\rm type}
+ -\frac{d_b}{d_g}(\mu_{\max}+2\log s_0-\mu_{\rm type})
+ \ge\mu_{\rm type}-12\eta Q .
+\]
+Since \(e_z>0\) is fixed, \(12\eta Q\le U\) eventually uniformly.
+\label{cor:covolume-component-transfer-22}
+
+Transport the good lattice into the independent base frame,
+whose rank is \(D_0=d_g>0\). The normalized norm at each
+embedding equals the geometric norm times \(s=1/\sqrt{n_P}\le1\),
+with \(n_P\) the number of indices in the level normalization.
+Log covolume per rank in the squared metric therefore satisfies
+\[
+ L_{3,i}=-\mu_g+\operatorname{mean}_{v\mid\infty}\log s^2
+              \le M_i+(C_0+1)U .
+\]
+This is the base-level estimate used before the sharp-level
+comparison at the same row. The arithmetic application in
+Section~\ref{sec:word-division} requires both this estimate and the direct-row functional bound.
+If their thresholds on the fixed family are \(x_{\rm cov}\) and
+\(x_{\rm fun}\), use
+\[
+ x\ge\max\{x_{\rm cov},x_{\rm fun}\}.
+\]
+Both estimates then hold for every translate, sequence and lift
+allowed by Proposition~\ref{prop:selected-base-covolume}.
+\label{cor:covolume-component-transfer-23}
+
+The two blocks used in the Hodge calculation are precisely
+the \(p_j\) positive and \(q_j\) negative entries of the
+base realization at weight \(\kappa_j\). The flag Chern calculation
+uses these two block ranks, and the determinant shift and theta-root
+twist use the weights of this base realization.
+In particular the negative block enters the covolume through
+the signed signature. The geometric model and the form
+frame keep the cut, weight and complex Gram when identifying
+the base row, so the signed term in the fixed-scale determinant
+is precisely \(M_j\). At each orientation the auxiliary
+evaluation lattice used for the four-term index has its own
+finite chart conditions. These are checked on the common cusp
+space before passage to the base and sharp lattices.
+\label{cor:covolume-component-transfer-24}
+\end{proof}

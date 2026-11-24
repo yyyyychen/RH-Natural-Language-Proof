@@ -1,0 +1,185 @@
+The tensor with the dual standard representation carries an invariant
+Hermitian form of mixed signature. To estimate the norms of its
+projections we first separate the diagonal and off-diagonal parts of
+the split Casimir. Throughout this calculation put
+\[
+  \mu=\lambda+\nu,\quad
+  I=\{1,\ldots,k-1\},\quad I'=\{k,\ldots,n\},\quad |I'|=m .
+\]
+
+Write \(E_{ab}\) for the complex matrix units acting on the
+discrete series, and \(\varepsilon_a\) for their coordinate signs.
+The compact roots join coordinates of the same sign. Let
+\(\rho_c,\rho_n\) be the half sums of the positive compact and
+noncompact roots, respectively, in the order defined by \(\mu\).
+Thus the lowest compact type has highest weight \(L\), and its
+compact Casimir eigenvalue \(K\) and the full eigenvalue \(c\) are
+\begin{equation}\label{eq:paired-lowest-casimirs}
+ \rho=\rho_c+\rho_n,\quad L=\mu+\rho_n-\rho_c,\quad
+ K=\|\mu+\rho_n\|_2^2-\|\rho_c\|_2^2,\quad
+ c=\|\mu\|_2^2-\|\rho\|_2^2 .
+\end{equation}
+Say that a vector has level at most \(j\) if its compact types
+have compact Casimir at most \((\sqrt K+4nj)^2\), and every
+diagonal weight \(\omega\) in that vector satisfies
+\(\|\omega-L\|_1\le j\). The highest vector has level zero.
+
+\begin{auxlemma}[Matrix units on the permitted compact types]\label{lem:paired-lowest-casimir}
+For the weights of Lemma~\ref{lem:marked-paired-moment-range}, at
+any level \(j\le4n^2+2\),
+\[
+  n\sum_{a\ne b}\|E_{ab}w\|^2\le (B_v/16)^2\|w\|^2,
+  \qquad \sum_{a,b}\|E_{ab}w\|^2\le B_0^4\|w\|^2 .
+\]
+\end{auxlemma}
+\begin{proof}
+The adjoint relation \(E_{ab}^*=\varepsilon_a\varepsilon_b E_{ba}\)
+expresses the sum of the squares as twice the compact Casimir minus
+the full Casimir. For each occurring diagonal weight one has
+\[
+ \sum_a\omega_a^2\ge \sum_a L_a^2-2\|L\|_\infty j
+ \ge\sum_a L_a^2-8B_vj .
+\]
+Indeed \(|\mu_a|\le 3B_v\) and
+\(|L_a-\mu_a|\le n\) by the root counts.
+
+Orthogonality of diagonal weight spaces now bounds the off-diagonal
+square sum by \(D_j\|w\|^2\), where
+\[
+ D_j=2(\sqrt K+4nj)^2-c-\sum_a L_a^2+8B_vj .
+\]
+
+The terms of order \(B_v^2\) cancel. Coordinatewise the unshifted
+summand of \(2K-c-\sum L_a^2\) is, with
+\(U=(\rho_n)_a,\ T=(\rho_c)_a\),
+\[
+       2\mu_a(U+T)+(U+T)^2-4T^2+\rho_a^2 .
+\]
+The root counts give \(|U|,|T|,|U+T|,|\rho_a|\le n\).
+By \eqref{eq:paired-lowest-casimirs}, \(\sqrt K\le4nB_v\).
+Using \(j\le5n^2\), we obtain
+\begin{align*}
+ D_j &\le n(12nB_v+4n^2)+64n^2j B_v+32n^2j^2+8B_vj\\
+     &\le 500n^4B_v \le \frac{B_v^2}{256n}.
+\end{align*}
+
+The last two inequalities use \(10^6 n^7\le B_v\).
+The unshifted coordinates have magnitude at most \(2B_v\);
+the initial shift costs at most \(B_v/100\), and the lowest-type
+shift and the level cost at most \(n+j\). Hence
+\[
+ \max_a |\omega_a|\le 2B_v+B_v/100+n+j\le3B_v,\qquad
+ 9nB_v^2+B_v^2/(256n)\le B_0^4
+\]
+since \(B_0\ge B_v\ge10^6n^7\). Adding the diagonal squares proves
+the second inequality.
+\end{proof}
+
+\begin{auxlemma}[Sum of the squared dual Pieri projections]\label{lem:paired-spectral-projections}
+In the dual standard tensor, write \(R_s\) for the projection onto
+the unitary summand with parameter \(\mu-e_s\), endowed with the norm
+induced up to sign by the invariant Hermitian form. For any coordinate
+vector \(e_c\) and any \(w\) of level \(j\le4n^2\),
+\[
+        \sum_s\|R_s(e_c\otimes w)\|^2
+                       \le (6B_v)^{2m}\|w\|^2 .
+\]
+\end{auxlemma}
+\begin{proof}
+Write \(x=e_c\otimes w\) and let \(p_s\) project back into the tensor
+product. In the positive direct-sum norm, its invariant form and
+split Casimir are
+\[
+ [y,y]=\sum_a\varepsilon_a\|y_a\|^2,\qquad
+ (Sy)_a=-\sum_b E_{ab}y_b,\qquad
+ Sp_s=s_s p_s,\quad s_s=-\mu_s+(1-n)/2 .
+\]
+These eigenspaces and their signed isometries are the dual Pieri
+decomposition used in Lemma~\ref{lem:weighted-fitted-translate}.
+The distinct eigenvalues differ by integers; the eigenspaces are
+orthogonal for \([\,,\,]\) since \(S\) is self-adjoint for this form.
+
+Work on the finite-dimensional span \(V_x=\sum_s\C p_s x\).
+The coordinates of elements of \(V_x\) have level at most \(j+2\).
+In fact the coordinate injection, equivariant projection and
+coordinate extraction have combined weight change \(e_a-e_c\).
+
+For the compact type, the coordinate maps factor through tensoring
+by the standard module and its dual. In one such tensor step the
+compact infinitesimal action is \(X\otimes 1+1\otimes X\).
+Using a compact orthonormal basis \((X_i)\) gives
+\[
+ \left(\sum_i\|X_i y\|^2\right)^{1/2}
+ \le (C+\sqrt n)\|y\|
+\]
+on a tensor of a type of Casimir at most \(C^2\) with a standard
+or dual standard module. Indeed each input Casimir is bounded there
+by \(C^2\) and \(n\), and the triangle inequality applies in the
+direct sum over \(i\). Compact equivariance transports this bound
+to the image compact types. 
+In the abstract shifted summand, a weight \(\omega-e_c\) is
+measured from \(L-e_s\), so
+\[
+ \|(\omega-e_c)-(L-e_s)\|_1\le j+2 .
+\]
+
+The corresponding \(\sqrt K\) changes by at most \(\sqrt n\). To see the latter estimate, the two compact
+highest weights differ by a standard weight; each type occurs
+in the tensor of the other with the standard or its dual by
+the compact Pieri rule. Thus the bound \(4n(j+2)\) in the definition
+of the new level allows both tensor operations. The same argument
+applies to one matrix unit, since their compact module is a summand
+of the standard tensor its dual.
+
+Write \(S=D+O\) with \((Dy)_a=-E_{aa}y_a\). The two intervals
+containing the spectrum of the individual diagonal entries on these
+weight spaces, and also the numbers \(s_a\), are
+\[
+  [-5B_v/32,B_v/32]\quad(a\in I),\qquad
+  [31B_v/32,65B_v/32]\quad(a\in I').
+\]
+Indeed the change from \(-\lambda_a\) to a diagonal eigenvalue is
+at most \(B_v/100+n+j+2\le B_v/32\).
+By Cauchy--Schwarz in each row and Lemma~\ref{lem:paired-lowest-casimir},
+\[
+ \|Oy\|^2\le n\sum_b\sum_{a\ne b}\|E_{ab}y_b\|^2
+            \le (B_v/16)^2\|y\|^2,\qquad \|Sy\|\le3B_v\|y\|
+ \quad(y\in V_x).
+\]
+
+On the circle \(|\zeta+B_v/16|=9B_v/16\), both intervals have
+distance at least \(15B_v/32\) from \(\zeta\). Subtracting the bound
+for \(O\) and inverting on \(V_x\) gives
+\[
+ \|(\zeta-S)^{-1}\|\le \frac{32}{13B_v},\qquad
+ P=\sum_{s\in I}p_s=\frac{1}{2\pi i}\oint(\zeta-S)^{-1}\,d\zeta,
+ \qquad \|P\|\le18/13 .
+\]
+For \(s\in I'\) interpolate only on the remaining \(m\) eigenvalues.
+Their separation is at least one, and \(\|1-P\|<3\), so
+\[
+ p_s=\prod_{t\in I',\ t\ne s}\frac{S-s_t}{s_s-s_t}(1-P),
+ \qquad \|p_s\|\le 3(6B_v)^{m-1}.
+\]
+
+For \(s\in I\) and \(y=p_s x\), the equation
+\((D-s_s)y=-Oy\) on the coordinates \(I'\) has diagonal gap
+at least \(30B_v/32\). Thus
+\[
+  \sum_{a\in I'}\|y_a\|^2\le \|y\|^2/225,\qquad
+  [y,y]\ge (1-2/225)\|y\|^2 ,
+\]
+because every coordinate in \(I\) has positive sign.
+The positive summands therefore add without cancellation in
+\([Px,Px]\), whereas each remaining signed norm is bounded by its
+positive direct-sum norm. It follows that
+\[
+ \begin{aligned}
+ \sum_s\|R_sx\|^2
+ &= [Px,Px]+\sum_{s\in I'}|[p_s x,p_s x]|\\
+ &\le\big((18/13)^2+9m(6B_v)^{2(m-1)}\big)\|x\|^2
+ \le(6B_v)^{2m}\|w\|^2 .
+ \end{aligned}
+\]
+Here the final comparison uses \(m\le n\le B_v\).
+\end{proof}

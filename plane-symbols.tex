@@ -1,0 +1,320 @@
+\paragraph{Integral generators after determinant extraction.}
+\hypertarget{source-plane-symbols}{}
+This part of the proof of Proposition~\ref{prop:residue-plane-neighbor-test}
+gives the integral source polynomial on a single plane.
+The determinant factors extracted above remain part of the
+symbol. The result of the lifting is as follows.
+
+\begin{lemma}[Lifting a plane symbol]\label{lem:lift-plane-symbol}
+Fix a selected plane and the determinant factors of
+Lemma~\ref{lem:plane-determinant-reserve}. Suppose that a residue symbol
+\(\sigma\) has normal degree \(o\) and belongs to the prescribed
+span of digit monomials times products of segment symbols,
+with their prefix and multidegree conditions. Write \(\Pi\) for the selected plane. At precision \(c'\) there is one integral polynomial \(P\) with the following two restrictions
+\[
+ P|_\Pi\equiv w^o\sigma\pmod{w^{o+c'}},\qquad P|_{\Pi'}\equiv0\pmod{w^{o+c'}}\quad(\Pi'\text{ competing}).
+\]
+ It may be projected to the required
+true multidegree. The column factors used in the lift have
+prescribed order at most \(2Q\).
+\end{lemma}
+
+\begin{proof}
+\proofstep{A paired path after the determinant extraction.}
+Split the coordinate module into its plane and complement,
+\[
+ O^k=E\oplus C,\qquad E=O^r,\quad C=O^K,\quad K=k-r.
+\]
+At a top indexed by \(s\)
+the even letters are vectors and the odd letters are covectors.
+Fix one segment with end index \(z\). Its prescribed coarse
+degree in a letter is the sum of its \(E\)-degree and its
+\(C\)-degree. A segment symbol belongs to the span of the products \(A(E)G(C)\) satisfying the prefix bounds. To put the summands at the prescribed coarse
+degrees, decompose \(A\) and \(G\) into homogeneous components
+in every letter and keep the pairs whose degrees sum to the
+prescribed ones. If \(\pi_\alpha\) extracts a multihomogeneous component, each prefix substitution \(g\) is linear within its letters. Hence
+\[
+ \pi_\alpha(gF)=g\,\pi_\alpha(F).
+\]
+Each component retains the same bounds. The
+normal-degree cutoff is a condition on the original segment
+symbol used in the rank argument. The realization here
+applies to this whole span after the multidegree projection.
+
+Apply the determinant extraction to \(A\) in each summand.
+The determinants have fixed degrees in each coarse letter, so
+the quotient \(A'\) also has fixed degrees. For every top \(s\)
+after the incoming frame, let \(a_{<s},a_{\le s}\) denote the
+minimum Laurent exponents of \(A'\) under the two prefix actions
+ending before and at \(s\). Let \(g_{<s},g_{\le s}\) denote the
+corresponding maximum exponents of \(G\). The remaining
+separation says
+\[
+  g_{\le s}\le a_{<s}\quad(s\ {\rm even}),\qquad
+  g_{<s}\le a_{\le s}\quad(s\ {\rm odd}).
+\]
+The complemented factor has degree zero in the incoming frame.
+
+\proofstep{Integral basis after removing the determinant factors.}
+Use the integral Pieri basis from
+Section~\ref{sec:column-lifts} for the two factors separately.
+The prefix filtration used there also works with a lower
+bound on the last entry of the intermediate weight. In each
+column the signed subset weight on one coordinate lies
+between the contributions from the smallest and largest
+entries of the intermediate weight. In the product it lies
+between those two entries. This gives both bounds upon
+conjugating the one-coordinate torus.
+
+Conversely, over the
+fraction field, the requirement that every conjugate torus
+act within the specified range selects exactly the isotypic
+summands whose first and last entries lie within that range.
+Indeed the permitted subspace is invariant under the prefix
+group. On each copy of \(V_\lambda\) in \(V_\lambda\otimes M_\lambda\), the extrema of the coordinate weights \(\mu\) are
+\[
+ \max\mu=\lambda_1,\qquad \min\mu=\begin{cases}\lambda_r,&\text{plane},\\\lambda_K,&\text{complement}.\end{cases}
+\]
+Complete reducibility gives the assertion. Splitting
+successively by Pieri at the prefixes as in that section proves
+the dimension formula for the intersection. The allowed basis
+words span the intersection over \(O\) because the full basis is
+unimodular.
+
+Use the actual lower prefix exponents of \(A'\) as its lower
+bounds and the actual upper prefix exponents of \(G\) as its
+upper bounds, discarding zero summands. If \(\nu\) and
+\(\kappa\) are the paths in any resulting product of basis
+words, then for even \(s\) one has
+\[
+ \kappa_1(\le s)\le\nu_r(<s).
+\]
+For odd \(s\) one has
+\(\kappa_1(<s)\le\nu_r(\le s)\).
+These inequalities give exactly the interlacing across the
+boundary between the \(r\)-th and \((r+1)\)-st rows of the
+concatenated path \(\lambda=(\nu,\kappa)\). Each separate path already interlaces within its own rows.
+
+For the boundary, if \(\lambda_i(s)\) denotes the combined
+row weight after \(s\), the inequalities say
+\[
+ \lambda_r(s-1)\ge\lambda_{r+1}(s)\quad(s\ \mathrm{even}),
+ \qquad
+ \lambda_r(s)\ge\lambda_{r+1}(s-1)\quad(s\ \mathrm{odd}).
+\]
+The two row weights are nondecreasing at vector steps and
+nonincreasing at covector steps. Thus the displayed boundary
+inequality and the separate interlacings give dominance
+both before and after each step. In the incoming frame
+the complement stays at zero and plane entries are nonnegative
+and increasing, so interlacing also holds there. Each strip's
+size is the sum of the two sizes, and the concatenated path
+starts at zero.
+
+\paragraph{Full order of the two-block columns.}
+\label{par:plane-column-orders}
+Fix a column \(b\) of a concatenated path, and write \(h\) for
+its height at a cut. A positive column uses the exterior
+degree \(h\); a nonpositive column uses dual exterior degree
+\(k-h\), as in Section~\ref{sec:column-lifts}. All changes of
+height are by one, rising at a vector and falling at a
+covector. For a subset \(I\) of size \(h\) in a positive column,
+\[
+ \#(I\cap C)=h-\#(I\cap E)\ge h-\min(r,h).
+\]
+Here the intersections count coordinate indices in the two summands. Equality characterizes the subsets of smallest normal cost. For a
+nonpositive column
+\[
+ h>r
+\]
+at every cut. Indeed it starts at
+\(k\) and loses at most one per letter, and the segment length
+plus \(r\) is at most \(K\). The subsets of smallest cost
+in the dual tensor use only complement indices.
+
+The costly transitions have precisely the two forms
+\[
+ h\longrightarrow h+1\quad(h\ge r,\ \text{vector}),\qquad h\longrightarrow h-1\quad(h\le r,\ \text{covector}).
+\]
+In a nonpositive
+column only the first possibility occurs. This is the normal
+coordinate selected when both exterior subsets have their
+prescribed plane occupancy. For a positive column, define the
+defect of a subset as \(\min(r,h)\) minus its plane occupancy.
+For a nonpositive column its defect is its plane occupancy.
+In either case, along a sequence of wedge and contraction
+terms, write \(n_i=1\) if the \(i\)-th letter
+uses a normal coordinate and \(c_i=1\) if that step is
+costly, taking both indicators to be zero in the other
+case. The defect \(\delta_i\) then satisfies
+\[
+                    \delta_i-\delta_{i-1}=n_i-c_i .
+\]
+This follows from the change in occupancy in the wedge
+or contraction operation and the change in the target
+occupancy \(\min(r,h)\).
+
+For example, at a positive rise from \(h<r\), adding a
+complement index increases the defect by one. At a positive
+fall from \(h\le r\), removing a complement index decreases
+it by one. When \(h>r\) a rise on a plane index decreases the
+defect and a fall on that index increases it. The dual
+operations wedge on a covector and contract on a vector,
+which increase and decrease its plane occupancy when the
+plane index is used.
+
+\proofstep{The allowed path of the restored column.}
+The segment letters are the increasing enumeration of a set of
+distinct top positions \(s_i\). Their radices
+\[
+ \omega_i=p^{z-s_i}>0
+\]
+are strictly decreasing. Let
+\(\delta_i\) be the defect just after letter
+\(i\), with \(\delta_0=0\). The excess of weighted normal cost
+over the weighted count of costly steps is
+\[
+ \sum_{i<M}\delta_i(\omega_i-\omega_{i+1})+\delta_M\omega_M
+\]
+for a segment of \(M\) letters. Thus the lowest part is
+computed by keeping defect zero throughout. In positive
+columns the plane operations then take place with no
+complement indices in the subset. All remaining operations
+act on the complement past the plane indices.
+
+In the
+nonpositive columns the plane exterior degree in the dual
+tensor stays zero. With the right wedge and contraction
+conventions, an operation on a complement index counts only
+larger complement indices for its sign, and every active
+operation on a plane index counts only larger plane indices.
+The defect-zero recursion therefore splits without a sign
+change into the two column recursions for \(\nu\) and
+\(\kappa\). For terminal coordinates take their union in the
+corresponding blocks. Writing \(\operatorname{in}\) for the component of smallest normal degree, we obtain for the column polynomials \(C_b\)
+\[
+ \operatorname{in}\Bigl(\prod_b C_b\Bigr)=\prod_b\operatorname{in}(C_b).
+\]
+The defect-zero recursion identifies the right side with the prescribed paired word.
+
+For the true lift, use the same exterior recursion in the
+designated twisted frame. Between successive used indices
+\(s<t\), raise every entry to \(p^{t-s}\), then perform the
+operation at \(t\). After the last operation power up to \(z\).
+Take \(\omega_i=p^{z-s_i}\), where \(s_i\) is the index of
+letter \(i\). The column has degree \(\omega_i\) in each used
+true letter. Its prescribed order is
+\[
+             d_b=\sum_{i\ {\rm costly}}\omega_i\le 2Q .
+\]
+The bound follows from the strict spacing of the used integer
+indices and the geometric sum starting at the largest power,
+which is at most \(Q\).
+
+\proofstep{The order in a neighboring plane.}
+For any tested plane, measure the running exterior tensor in
+its own twisted frame. Suppose at a stage the common order is
+at least \(d\), and every entry with positive defect has order
+at least \(d+1\). This holds before the first operation.
+For the passage \(s<t\) put \(P=p^{t-s}\) and write the
+adapted coordinates at \(s\) as \(w^d U\). If \(L_s,L_t\)
+are the changes of exterior coordinates from the designated
+frame to the tested frame at the two times, then
+\[
+       (w^d U L_s^{-1})^{[P]} L_t
+                 = w^{Pd}\big(U^{[P]}+pV\big)
+\]
+with \(V\) integral. Entrywise Frobenius is additive modulo
+\(p\), and \((L_s^{-1})^{[P]}\equiv L_t^{-1}\pmod p\)
+because the matrices and their inverse minors come from the
+unramified ring and its successive Frobenius twists.
+
+Since
+\(p=w^2\) and \(P\ge2\), the terms in positive-defect entries
+now have order at least \(Pd+2\). At a free step the free
+coordinates take defect-zero subsets to defect-zero subsets,
+and the normal coordinates contribute a factor \(w\).
+At a costly step the free part kills the entries at defect
+zero. The normal part carries them to the new defect-zero
+subsets and contributes \(w\). Use as a common lower bound immediately before the linear step the order \(Pd\).
+After a costly step the required order is \(d'=Pd+1\).
+Thus the guaranteed lower bounds for the two contributions are
+\[
+ \begin{aligned}
+ \text{defect zero, normal factor }w &: \quad Pd+1=d',\\
+ \text{positive defect, integral factor} &: \quad Pd+2\ge d'+1 .
+ \end{aligned}
+\]
+Only the first contribution can affect the leading coefficient.
+At a free step the required order stays \(Pd\), and a normal
+factor again raises it. These inequalities apply in every frame.
+
+At the designated frame the change-of-frame matrices are
+identities. After division by the prescribed power of \(w\)
+the leading recursion simply keeps the defect-zero part. The
+powering between steps and up to \(z\) commutes with its
+additions and multiplications modulo \(w\), where the
+characteristic is \(p\). Its result is therefore the
+defect-zero coarse column with the substitution
+\[
+ X_{i,a}\mapsto X_{s_i,a}^{p^{z-s_i}}.
+\]
+
+Consequently the integral true column is a factor of order
+\(d_b\) for the correction lemma. The product of its
+normalized leading expressions is the desired paired symbol
+after this substitution, with the full normal degree equal
+to the sum of the column orders.  \label{cor:plane-symbols-1}
+
+\paragraph{Digits, normal degree, and the final projection.}
+Let \(X^\ell\) be the common digit monomial. At every top
+each digit is less than the letter's radix, which is at
+most \(Q\). Thus its total normal degree at that top is at
+most \(kQ\). Spend one \(T_s\) for each normal digit factor
+and use the leading order-one formulas for that coordinate.
+If \(d_s\) normal digit factors are used at this frame, the reserve of \(T_s\) becomes
+\[
+ T_s^{kQ-d_s},\qquad kQ-d_s\ge0.
+\]
+It and the tangential digit variables are integral tangential coefficients. This
+expresses \(X^\ell\prod_s T_s^{kQ}\) as a sum of products of
+normalized leading expressions of universal order-one
+factors with integral tangential coefficients. Every term has
+the full normal degree of the digit monomial.
+
+\proofstep{Recovering the true letter degree.}
+Now start with a symbol \(\sigma\) of normal degree \(o\),
+presented as \(X^\ell\) times a sum of products of the
+transformed segment symbols. The extracted determinant
+product is common to these summands. In the distinguished
+coordinates it gives the identity
+\[
+  \sigma =
+  F_*\,H\,X^\ell\!\prod_s T_s^{kQ}\,S + p^{c'}Y',
+\]
+where \(S\) is the sum of products of transformed residual
+segments and \(Y'\) is integral. After expanding residual
+segments in paired words, every summand on the right outside
+the error has normal degree equal to the sum of the
+appropriate column and digit orders. Since \(F_*,H\) are
+tangential, take the component of normal degree \(o\).
+The resulting main terms, after multiplication by \(w^o\),
+are products of leading expressions of combined order \(o\),
+with the reserves for precision \(c'\) contained in \(F_*\).
+The error acquires order at least \(o+2c'\).
+
+Apply the correction lemma to each surviving term, then add.
+For the resulting integral true polynomial \(P\), the two tests read
+\[
+ \begin{aligned}P|_{\rm designated}&\equiv w^o\sigma\pmod{w^{o+c'}},\\ P|_{\rm competing}&\equiv0\pmod{w^{o+c'}}\qquad(\text{each competitor}).\end{aligned}
+\]
+If \(\sigma\) has a prescribed true multidegree,
+project the resulting polynomial on that multidegree.
+Every plane substitution is linear within each true
+letter, so the projection commutes with all the substitutions
+and preserves all divisibilities.  Its uniform order
+bound on a key factor is \(2Q\), and its precision is the
+prescribed \(c'\) at every plane. The determinant estimate above
+also proves the one-sided version used for the dual test in
+Section~\ref{par:plane-reassembly}. \label{cor:plane-symbols-2}
+\end{proof}

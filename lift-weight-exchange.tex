@@ -1,0 +1,159 @@
+\paragraph{What the residual lines imply about the head.}
+\hypertarget{source-lift-weight-exchange}{}
+Let \(H=h_0\) and \(K=\lfloor H/(p-1)\rfloor\).
+Here \(p>y>8\), \(p\) is unramified in the CM field, and
+the large-prime inequalities give \(t+2K<p\).
+Use all embeddings of the CM field at \(p\). At the conjugate embedding use the decreasing sequence obtained by reflection and reversal. In zero-based coordinates the operation is
+\[
+ (u^c)_a=H-u_{r-1-a}\quad(0\le a<r),\qquad (u^c)^c=u .
+\] The
+bottom of the new block is \(H-(B+t-1)\). Write
+\(\sigma i\) for the source label of the Frobenius matrix
+ending at \(i\).
+
+In the local cyclic indexing it is \(i-1\).
+This permutation commutes with conjugation. The Galois attachment can use either
+orientation for the whole family. Pulling back the two
+sequences and the block along that involution identifies its
+\(J\) with \(U'\), and its line weights with
+\(b_{i,s}=B_i+s\) at each embedding \(i\). A calculation at
+the transported label then reads at \(i,\sigma i\) in the
+original labels. Reflection preserves the characteristic-polynomial comparison. Indeed, for any list of residues of length \(r\),
+\[
+ \prod_{a=0}^{r-1}\bigl(X-(H-u_a)\bigr)=(-1)^r\prod_{a=0}^{r-1}\bigl((H-X)-u_a\bigr).
+\]
+
+\begin{proposition}[A depth bound from the residual lines]\label{prop:residual-head-depth}
+For the shifted highest weights, conjugate labels and consecutive
+line block just specified, the deficit at a head cut satisfies
+\[
+ \sum_{a<k_c+j}(\lambda_{i,a}-\mu_{i,a})
+   \le qH+(p m_{\sigma i}+m_i)(t+2K).
+\]
+Here \(m_i\) counts the original shifted weights outside the consecutive
+block at \(i\) whose residues occur in the block enlarged by \(K\)
+at each end. The count \(m_{\sigma i}\) uses the Frobenius source label. At the indices satisfying the shape and
+prime exclusions of Section~\ref{subsec:lift-exponent-primes},
+both corrections vanish and the depth is at most \(\lfloor qh\rfloor\),
+uniformly over the occurring Hecke ideal and the weight \(\mu\).
+\end{proposition}
+
+\begin{proof}
+Use the norm coordinate of Section~\ref{subsec:cut-wach-models},
+written \(X=Z\) in this calculation, with the same terminal
+Hodge labels. Apply its construction to
+the lattice of the congruent weight \(\mu\), to the inverse
+images of the residual flag and to the specified scalar lines.
+Their coefficient extension is over the selected place. Their
+jumps are respectively \(U'_{i,a}\) and \(b_{i,s}\) and lie
+in \([0,H]\). Write \(F\) for the residue field. In the resulting
+\(F[[X]]\) lattice the reduced Frobenius has an integral right
+inverse up to \(X^H\). For any \(d\)-rowed minor \(M\) of the reduced Frobenius matrix the elementary divisors give
+\[
+ \operatorname{ord}_X M\ \ge\ s_i(d),\qquad s_i(d)=\sum_{a=r-d}^{r-1}U'_{i,a}.
+\]
+The first cyclotomic matrix coefficient \(\Theta_i\) has
+characteristic roots \(-\bar c U'_{i,a}\).
+The residual filtration gives the same ranks and marked lines in
+\(F((X))\) by exact 'etale realization.
+
+Its intersection with
+\(F[[X]]^r\) is a saturated flag, so extending bases at successive
+steps gives one basis adapted to it. Each marked line occupies its own
+diagonal block. Its two chosen generators in the Laurent
+line differ by a unit times \(X^{\kappa_{i,s}}\), with the
+sign fixed so that Frobenius in the adapted basis has order
+\[
+        \alpha_{i,s}=b_{i,s}+p\kappa_{\sigma i,s}-\kappa_{i,s}.
+\]
+In fact Frobenius sends the parameter to \(X^p\), and the
+reduced rank-one Frobenius is a unit times \(X^{b_{i,s}}\).
+The latter follows from the rank-one determinant, whose
+order before reduction is \(b_{i,s}\) at \(X-p\) by height
+and the local elementary divisor. Integrality gives
+\(\alpha_{i,s}\ge0\) and the height inverse gives
+\(\alpha_{i,s}\le H\) on the singleton block. The inverse
+is block triangular after inverting \(X\), so the two
+diagonal entries multiply to \(X^H\).
+
+\proofstep{From the determinant to the minor estimate.}
+To constrain individual head weights we pass from the determinant to a minor.
+
+For the cyclotomic generator, \(\gamma(X)/X\) has first
+terms \(1+\bar c X\) modulo \(X^2\) in this reduced
+coordinate. For a unit \(v=v_0+v_1X+O(X^2)\), the constant and linear terms cancel in the quotient:
+\[
+ \gamma(v)\equiv v_0+v_1X\equiv v\pmod{X^2},\qquad \gamma(v)/v\equiv1\pmod{X^2}.
+\] The coefficient of \(X\) on the same marked line
+is therefore \(-\bar c(b_{i,s}-\kappa_{i,s})\).
+An integral basis change conjugates this first coefficient by
+its constant matrix, since the cyclotomic action fixes the
+change of basis modulo \(X^2\).
+
+Taking characteristic
+polynomials of the block triangular matrix and cancelling
+the nonzero common scalar shows that the residues
+\(b_{i,s}-\kappa_{i,s}\), counted with multiplicity, occur
+among those of \(U'_i\). The determinant of the Frobenius
+minor on the marked positions is the product of their
+diagonal entries. The minor divisibility then gives
+\begin{equation}\label{eq:lift-line-minor}
+       s_i(t)\le\sum_s b_{i,s}
+              +p\sum_s\kappa_{\sigma i,s}-\sum_s\kappa_{i,s}.
+\end{equation}
+The flag and the rank-one comparison here come from the
+same residual representation at the same maximal ideal.
+\label{cor:lift-weight-exchange-1}
+
+Since \(b_{i,s}\) and \(\alpha_{i,s}\) belong to \([0,H]\),
+we have \(|p\kappa_{\sigma i,s}-\kappa_{i,s}|\le H\).
+For fixed \(s\), let \(j\) maximize \(\lvert\kappa_{j,s}\rvert\).
+Apply the relation at \(i=\sigma^{-1}j\), where the term
+with coefficient \(p\) is \(\kappa_{j,s}\). The triangle inequality at this predecessor gives
+\[
+ p|\kappa_{j,s}|\le H+|\kappa_{\sigma^{-1}j,s}|
+            \le H+|\kappa_{j,s}| .
+\]
+Hence every \(|\kappa_{i,s}|\le H/(p-1)\).
+To bound the sum of the shifts, enlarge the block
+\(I=[B_i,B_i+t-1]\) by \(K\) at both ends to \(I^+\).
+
+Let \(m_i\) count original weights outside \(I\) whose
+residue occurs in \(I^+\). The strict length bound makes
+reduction modulo \(p\) injective on the integers in \(I^+\).
+The \(t\) shifted entries \(b_{i,s}-\kappa_{i,s}\) lie
+there. Match their residues to distinct occurrences among
+the \(U_i\) using the two multiset comparisons. At most
+\(m_i\) are matched outside \(I\). All other matches are
+equalities in \(I^+\). Pair the remaining shifted entries
+arbitrarily with the unused block entries. Each difference
+is bounded by \(t+2K\), so
+\[
+                \left|\sum_s\kappa_{i,s}\right|
+                            \le m_i(t+2K).
+\]
+This also holds at \(\sigma i\), where the exceptional count
+uses its own block. Reflection preserves the count because it
+carries the block, its enlargement and residue congruence
+bijectively to their reflected versions.
+
+\proofstep{Returning to the head of the weight.}
+The deficit of the first \(k_c+j\) weights equals the excess
+of the rest by equality of total sums. Of the last \(t+q\)
+entries of \(U'_i\), the smallest \(t\) have sum \(s_i(t)\)
+and the other \(q\) are at most \(H\) apiece. In \(U_i\)
+the corresponding total is at least \(\sum_s b_{i,s}\)
+because the bottom \(q\) entries are nonnegative. Equation~\eqref{eq:lift-line-minor}
+thus proves
+\[
+ \sum_{a<k_c+j}(\lambda_{i,a}-\mu_{i,a})
+   \le qH+(p m_{\sigma i}+m_i)(t+2K).
+\]
+The staircase cancels term by term on the left. The shape
+and prime exclusions of Section~\ref{subsec:lift-exponent-primes}
+give \(m_i=m_{\sigma i}=0\). Every surviving highest
+weight at this index with a larger weight therefore has depth at most
+\(i_i=\lfloor qh\rfloor\), with the choice of
+\(\mu\) and of the occurring Hecke ideal unrestricted.
+\label{cor:lift-weight-exchange-2}
+\end{proof}
