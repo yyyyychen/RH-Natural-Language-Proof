@@ -2,7 +2,7 @@
 
 [English](README.md) · 简体中文
 
-本项目以[Levent Alpöge 的 Lean 证明](https://github.com/leanprover-community/riemann-hypothesis/blob/a172c464fd4bcfc4f53e394dcba45d742b1409a6/src/Main.lean#L4)为基础，在 GPT 的辅助下写成了这份[自包含的黎曼猜想自然语言证明（PDF）](main.pdf)。这是独立维护的个人项目，不代表 Levent Alpöge 本人或任何组织。
+本项目以[Levent Alpöge 的 Lean 证明](https://github.com/leanprover-community/riemann-hypothesis/blob/a172c464fd4bcfc4f53e394dcba45d742b1409a6/src/Main.lean#L4)为基础，在 GPT 的辅助下写成了这份[自包含的黎曼猜想自然语言证明（PDF）](main.pdf)。这是独立维护的个人项目，不代表 Levent Alpöge 本人或任何组织。 [直接下载 PDF](https://github.com/yyyyychen/RH-Natural-Language-Proof/raw/refs/heads/main/main.pdf)
 
 ---
 
