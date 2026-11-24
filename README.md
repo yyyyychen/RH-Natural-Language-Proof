@@ -12,8 +12,8 @@ This project presents a [self-contained natural-language proof of the Riemann hy
 - Combine the sums for a family of Dirichlet characters into a real sum $G(x)$. Its positive weights keep the zero multiplicities from cancelling, so the pole survives. The arithmetic goal is a one-sided upper bound on $G(x)$. [§1.3](main.pdf#page=23)
 - Recover $G(x)$ from a chain of theta lifts. A finite Fourier average selects the desired character contributions from the local arithmetic data, leaving an error to estimate. [§1.4](main.pdf#page=25)
 - Bound that error on the same chain. Period pairings connect the complex integrals to integral lattices. Geometry controls the lattice indices, while interpolation and Gram matrix estimates control how many independent directions survive. [§§1.5–1.8](main.pdf#page=31)
-- Choose the chain length $m$ near $\sqrt{x}$ to balance errors of sizes $x/m$ and $m$. This gives $G(x)\le x^{1/2+9\varepsilon}$ throughout $[Y,Y^{3/2}]$ for arbitrarily large $Y$ and sufficiently small $\varepsilon>0$. [§1.9](main.pdf#page=40)
-- Return to the zero. Choose $1/2+9\varepsilon<\operatorname{Re}(\rho)$. The interval bound controls a pair of high derivatives of the Laplace transform, while a nearby pole forces incompatible growth. This rules out zeros on the right of the critical line in the strip. The functional equation then rules them out on the left. [§§1.10–1.11](main.pdf#page=41)
+- Choose the chain length $m$ near $\sqrt{x}$ to balance errors of sizes $x/m$ and $m$. This gives $G(x)\le x^{1/2+9\varepsilon}$ throughout $[Y,Y^{3/2}]$ for arbitrarily large $Y$ and sufficiently small $\varepsilon \gt 0$. [§1.9](main.pdf#page=40)
+- Return to the zero. Choose $1/2+9\varepsilon \lt \operatorname{Re}(\rho)$. The interval bound controls a pair of high derivatives of the Laplace transform, while a nearby pole forces incompatible growth. This rules out zeros on the right of the critical line in the strip. The functional equation then rules them out on the left. [§§1.10–1.11](main.pdf#page=41)
 
 ---
 
