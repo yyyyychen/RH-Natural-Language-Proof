@@ -2,7 +2,9 @@
 
 English · [简体中文](README.zh-CN.md)
 
-This project presents a [self-contained natural-language proof of the Riemann hypothesis (PDF)](RH-Natural-Language-Proof.pdf), written with help from GPT and based on [Levent Alpöge’s Lean proof](https://github.com/leanprover-community/riemann-hypothesis/blob/a172c464fd4bcfc4f53e394dcba45d742b1409a6/src/Main.lean#L4). This is an independently maintained personal project and does not represent Alpöge or any organization. [Download the PDF directly](https://github.com/yyyyychen/RH-Natural-Language-Proof/raw/refs/heads/main/RH-Natural-Language-Proof.pdf)
+**[Download the complete PDF (1,714 pages)](https://github.com/yyyyychen/RH-Natural-Language-Proof/releases/latest/download/RH-Natural-Language-Proof.pdf)** · [Alternative download](https://raw.githubusercontent.com/yyyyychen/RH-Natural-Language-Proof/main/RH-Natural-Language-Proof.pdf)
+
+This project presents a [self-contained natural-language proof of the Riemann hypothesis (PDF preview)](RH-Natural-Language-Proof.pdf), written with help from GPT and based on [Levent Alpöge’s Lean proof](https://github.com/leanprover-community/riemann-hypothesis/blob/a172c464fd4bcfc4f53e394dcba45d742b1409a6/src/Main.lean#L4). This is an independently maintained personal project and does not represent Alpöge or any organization.
 
 ---
 
